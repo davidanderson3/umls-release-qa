@@ -123,8 +123,7 @@ the TDE and is not processed</li>
       <th>Description</th>
       <th>Representation</th>
     </tr>
-<!-- xml row -->
-    <tr>
+<!-- xml row --> <tr>
       <td valign="top"><span class="file_field_name">&lt;kindDef
 reference="false"&gt;<br>
 &lt;name&gt;UMDNS_Kind&lt;/name&gt;<br>
@@ -132,33 +131,31 @@ reference="false"&gt;<br>
 &lt;id&gt;21&lt;/id&gt;<br>
 &lt;namespace&gt;N3800&lt;/namespace&gt;<br>
 &lt;/kindDef&gt;<br>
-      </span>
-      </td>
+      </span> </td>
       <td valign="top">UMDNS_Kind &#8211; identifies active, non-retired
 UMDNS concepts.</td>
-      <td valign="top">ll concepts with UMDNS_Kind are included in the
-Metathesaurus, however the kind is not represented explicitly (e.g. as
-an attribute)</td>
+      <td valign="top">All concepts with UMDNS_Kind are included in the
+Metathesaurus.&nbsp; The kind is not represented explicitly as an
+attribute.<br>
+      </td>
     </tr>
 <!--//xml row -->
 <!-- xml row --><tr>
-      <td valign="top"><span class="file_field_name">
-&lt;kindDef reference="false"&gt;<br>
+      <td valign="top"><span class="file_field_name">&lt;kindDef
+reference="false"&gt;<br>
 &lt;name&gt;Retired_Kind&lt;/name&gt;<br>
 &lt;code&gt;K25&lt;/code&gt;<br>
 &lt;id&gt;25&lt;/id&gt;<br>
 &lt;namespace&gt;N3800&lt;/namespace&gt;<br>
-&lt;/kindDef&gt;
-      </span></td>
+&lt;/kindDef&gt; </span></td>
       <td valign="top">Retired_Kind &#8211; identifies those UMDNS concepts
 that have been retired from the nomenclature. </td>
       <td valign="top">Retired concepts are not included in the UMLS
-Metathesaurus</td>
+Metathesaurus.</td>
     </tr>
 <!--//xml row -->
 <!-- xml row --><tr>
-      <td valign="top"><span class="file_field_name">
-&lt;propertyDef&gt;<br>
+      <td valign="top"><span class="file_field_name">&lt;propertyDef&gt;<br>
 &lt;name&gt;ATTRIBUTE&lt;/name&gt;<br>
 &lt;code&gt;P6&lt;/code&gt;<br>
 &lt;id&gt;6&lt;/id&gt;<br>
@@ -174,42 +171,36 @@ production&lt;/pickListItem&gt;<br>
 &lt;pickListItem&gt;Previously Trackable Device&lt;/pickListItem&gt;<br>
 &lt;/pickList&gt;<br>
 &lt;/propertyDef&gt;<br>
-      </span>
-      </td>
+      </span> </td>
       <td valign="top">This element is not included in the
 Metathesaurus.</td>
       <td valign="top">N/A</td>
     </tr>
 <!--//xml row -->
 <!-- xml row --><tr>
-      <td valign="top"><span class="file_field_name">
-&lt;propertyDef&gt;<br>
+      <td valign="top"><span class="file_field_name">&lt;propertyDef&gt;<br>
 &lt;name&gt;CODE_IN_SOURCE&lt;/name&gt;<br>
 &lt;code&gt;P4&lt;/code&gt;<br>
 &lt;id&gt;4&lt;/id&gt;<br>
 &lt;namespace&gt;N3800&lt;/namespace&gt;<br>
 &lt;range&gt;real_long_string&lt;/range&gt;<br>
 &lt;/propertyDef&gt;<br>
-      </span>
-      </td>
+      </span> </td>
       <td valign="top">Contains the UMDNS code either (1) as assigned
 by the ECRI legacy system (through July 2005) or (2) as assigned by the
 Apelon TDE.
 Associated only with UMDNS preferred concepts, entry terms, related
 terms or hierarchical terms. UMDNS synonyms are not associated with a
-CODE_IN_SOURCE.
-      </td>
-      <td valign="top">
-MRCONSO.CODE,SCUI,SDUI for PT, RT, SY and HT atoms.<br>
+CODE_IN_SOURCE. </td>
+      <td valign="top">MRCONSO.CODE,SCUI,SDUI for PT, RT, SY and HT
+atoms.<br>
 MRCONSO.CODE,SCUI for ET atoms.<br>
 The SDUI value for ETs is the CODE_IN_SOURCE value of the associated
-PT.
-      </td>
+PT. </td>
     </tr>
 <!--//xml row -->
 <!-- xml row --><tr>
-      <td valign="top"><span class="file_field_name">
-&lt;propertyDef&gt;<br>
+      <td valign="top"><span class="file_field_name">&lt;propertyDef&gt;<br>
 &lt;name&gt;DEFINITION&lt;/name&gt;<br>
 &lt;code&gt;P5&lt;/code&gt;<br>
 &lt;id&gt;5&lt;/id&gt;<br>
@@ -226,20 +217,18 @@ PT.
 &lt;pickListItem&gt;NotReleasable&lt;/pickListItem&gt;<br>
 &lt;pickListItem&gt;Copyediting&lt;/pickListItem&gt;<br>
 &lt;/pickList&gt;<br>
-&lt;/qualifierDef&gt;
-      </span></td>
+&lt;/qualifierDef&gt; </span></td>
       <td valign="top">The DEFINITION property contains the UMDNS
 definition value. <br>
 The Definition_Status qualifier qualifies the "DEFINITION" property.
 MRDEF.DEF.</td>
-      <td valign="top">
-Only definitions with the qualifier "Releasable" are included in the
+      <td valign="top">Only definitions with the qualifier "Releasable"
+are included in the
 UMLS Metathesaurus.</td>
     </tr>
 <!--//xml row -->
 <!-- xml row --><tr>
-      <td valign="top"><span class="file_field_name">
-&lt;propertyDef&gt;<br>
+      <td valign="top"><span class="file_field_name">&lt;propertyDef&gt;<br>
 &lt;name&gt;PREFERRED_TERM&lt;/name&gt;<br>
 &lt;code&gt;P3&lt;/code&gt;<br>
 &lt;id&gt;3&lt;/id&gt;<br>
@@ -247,8 +236,7 @@ UMLS Metathesaurus.</td>
 &lt;range&gt;string&lt;/range&gt;<br>
 &lt;containsIndex/&gt;<br>
 &lt;/propertyDef&gt;<br>
-      </span>
-      </td>
+      </span> </td>
       <td valign="top">When present, this element value is redundant to
 the conceptDef name, and is not used in Metathesaurus source processing.</td>
       <td valign="top">N/A</td>
