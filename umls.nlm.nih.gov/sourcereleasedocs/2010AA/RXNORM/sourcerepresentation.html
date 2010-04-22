@@ -112,7 +112,7 @@ that source's data files.</p>
 &nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br>
 <br>
 1.&nbsp; New RxNorm source:&nbsp; MSH2010_2009_08_17<br>
-<p>2.&nbsp; New attributes added to RxNorm:</p>
+<p>2.&nbsp; New attributes added:</p>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
@@ -275,7 +275,7 @@ particular RRF file but are processed within another file.</p>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
-      <th>Field Number</th>
+      <th>#</th>
       <th>Field Name</th>
       <th>Description</th>
       <th>Representation</th>
@@ -394,12 +394,10 @@ the concept</td>
 <br>
 <a name="file2"></a>
 <h4 class="file_field_name">file: RXNDOC.RRF</h4>
-<p>Example: ATN|ACCEPTED_THERAPEUTIC_USE_FOR|expanded_form|Accepted
-Therapeutic Use For|</p>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
-      <th>Field Number</th>
+      <th>#</th>
       <th>Field Name</th>
       <th>Description</th>
       <th>Representation</th>
@@ -433,11 +431,10 @@ Therapeutic Use For|</p>
 <br>
 <a name="file3"></a>
 <h4 class="file_field_name">file: RXNREL.RRF</h4>
-<p>Example: |947|AUI|SY||950|AUI||||RXNORM||||||</p>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
-      <th>Field Number</th>
+      <th>#</th>
       <th>Field Name</th>
       <th>Description</th>
       <th>Representation</th>
@@ -446,7 +443,7 @@ Therapeutic Use For|</p>
       <td class="file_field_name">1</td>
       <td>RXCUI1</td>
       <td>Unique identifier of first concept</td>
-      <td>MRREL.CUI1 populated by the Metathesaurus CUI of RXCUI1</td>
+      <td>MRREL.CUI1 populated by the Metathesaurus CUI of RXAUI1</td>
     </tr>
     <tr>
       <td class="file_field_name">2</td>
@@ -460,7 +457,8 @@ Therapeutic Use For|</p>
       <td>Name of the column in RXNCONSO.RRF that contains the
 identifier used for the first concept or first atom in source of the
 relationship (either 'AUI' or 'CUI')</td>
-      <td>Not processed</td>
+      <td>MRREL.STYPE1<br>
+      </td>
     </tr>
     <tr>
       <td class="file_field_name">4</td>
@@ -473,7 +471,7 @@ or atom</td>
       <td class="file_field_name">5</td>
       <td>RXCUI2</td>
       <td>Unique identifier of second concept</td>
-      <td>MRREL.CUI2 populated by the Metathesaurus CUI of RXCUI2</td>
+      <td>MRREL.CUI2 populated by the Metathesaurus CUI of RXAUI2</td>
     </tr>
     <tr>
       <td class="file_field_name">6</td>
@@ -487,7 +485,8 @@ or atom</td>
       <td>Name of the column in RXNCONSO.RRF that contains the
 identifier used for the second concept or second atom in source of the
 relationship (either 'AUI' or 'CUI')</td>
-      <td>Not processed</td>
+      <td>MRREL.STYPE2<br>
+      </td>
     </tr>
     <tr>
       <td class="file_field_name">8</td>
@@ -548,25 +547,10 @@ relationship (either 'AUI' or 'CUI')</td>
 <br>
 <a name="file4"></a>
 <h4 class="file_field_name">file: RXNSAB.RRF</h4>
-<p>Example: C2718327|C1140261|NDDF_2009_12_04|NDDF|National Drug Data
-File Plus Source Vocab
-ulary|NDDF|2009_12_04|||2009AB||;;First DataBank Customer Support;1111
-Bayhill D
-rive;;San Bruno;CA;United States;94066;phone: 800-633-3453;;e-mail:
-cs@firstdata
-bank.com;|;;First DataBank Customer Support;1111 Bayhill Drive;;San
-Bruno;CA;Uni
-ted States;94066;phone: 800-633-3453;;e-mail:
-cs@firstdatabank.com;|3||||CDD,DF,
-IN,CDA,CDC,MTH_RXN_CDC|AMBIGUITY_FLAG|ENG|UTF-8|Y|Y|National Drug Data
-File Plus
-|;;;;National Drug Data File Plus Source Vocabulary 2008;;;December 04,
-2009;San Bruno, CA;First DataBank;;;;;;;;|
-</p>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
-      <th>Field Name</th>
+      <th>#</th>
       <th>Description</th>
       <th>Representation</th>
     </tr>
@@ -724,12 +708,11 @@ File Plus
 </table>
 <br>
 <a name="file5"></a>
-<h4 class="file_field_name">file: RXNSAT.RRF and RXNSATOCD.RRF</h4>
-<p>Example: 19|||286|AUI|112116001|||UMLSCUI|RXNORM|C0000163|||</p>
+<h4 class="file_field_name">file: RXNSAT.RRF</h4>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
-      <th>Field Name</th>
+      <th>#</th>
       <th>Description</th>
       <th>Representation</th>
     </tr>
@@ -815,13 +798,12 @@ contains the identifier to which the attribute is attached</td>
   </tbody>
 </table>
 <br>
-<p>Note: Attributes with SAB=MSH plus UMLSCUI and UMLSAUI are not
+<p>Note: Attributes with SAB=MSH plus ATNs UMLSCUI and UMLSAUI are not
 processed.</p>
 <br>
 <br>
 <a name="file6"></a>
-<h4 class="file_field_name">file: RXNSTY.RRF and RXNSTYOCD.RRF</h4>
-<p>Example: 19|T110|A1.4.1.2.1.9.1|Steroid|||</p>
+<h4 class="file_field_name">file: RXNSTY.RRF</h4>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
@@ -893,7 +875,8 @@ synonymous or to one or more related current RXCUIs where possible.</p>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
-      <th>Field Number</th>
+      <th>#<br>
+      </th>
       <th>Field Name</th>
       <th>Description</th>
       <th>Representation</th>
@@ -937,18 +920,19 @@ appeared in</td>
 <h4 class="file_field_name">file: RXNCONSOOCD.RRF</h4>
 <p>This file contains information about RxNorm OCD term type atoms
 only. For field name, description, and representation information see
-RXNCONSO.RRF.</p>
+<a href="#file1">RXNCONSO.RRF.</a></p>
 <br>
 <a name="file11"></a>
 <h4 class="file_field_name">file: RXNSATOCD.RRF</h4>
 <p>This file lists each OCD concept, atom, or relationship attribute
 that does not have a sub-element structure. For field name,
-description, and representation information see RXNSAT.RRF.</p>
+description, and representation information see <a href="#file5">RXNSAT.RRF.</a></p>
 <br>
 <a name="file12"></a>
 <h4 class="file_field_name">file: RXNSTYOCD.RRF</h4>
 <p>This file lists each semantic type assigned to each OCD concept. For
-field name, description, and representation information see RXNSTY.RRF.</p>
+field name, description, and representation information see <a
+ href="#file6">RXNSTY.RRF.</a></p>
 <br>
 </div>
 </div>
