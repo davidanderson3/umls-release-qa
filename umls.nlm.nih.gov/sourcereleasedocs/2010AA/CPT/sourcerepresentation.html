@@ -1,200 +1,384 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
 <!-- begin tabbed navigation area -->
-<div class="section-4"> 
- <ul id="menu"> 
-       <li id="nav-1"> 
-          <a href="index.html">Synopsis</a> 
-       </li> 
-       <li id="nav-2"> 
-          <a href="mrsab.html">MRSAB.RRF</a> 
-       </li> 
- 
-       <li id="nav-3"> 
-          <a href="sourcemetastats.html">Statistics and sample data</a> 
-          <ul id="subnav-3"> 
-             <li> 
-                <a href="termtypes.html">Terms and term types</a> 
-             </li> 
-             <li> 
- 
-                <a href="attributes.html">Attributes</a> 
- 
-             </li> 
-             <li> 
-                <a href="relationships.html">Relationships</a> 
-             </li> 
-             <li> 
-                <a href="semtypes.html">Semantic Types</a> 
- 
-             </li> 
-             <li> 
- 
-                <a href="overlap.html">Source Overlap</a> 
-             </li> 
-          </ul> 
-       </li>
-
-       <li id = "nav-4">
-       <a href = "representation.html">Representation</a>
-         <ul id = "subnav-4">
-          <li>
-            <a href = "sourcerepresentation.html" id  = "sourcerep">Source Representation</a>
-          </li>
-          <li>
-
-            <a href = "metarepresentation.html">Metathesaurus Representation</a>
-
-          </li>
-         </ul>
-       </li>
- </ul>
+</head>
+<body>
+<div class="section-4">
+<ul id="menu">
+  <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
+  <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
+  <li id="nav-3"> <a href="sourcemetastats.html">Statistics and sample
+data</a>
+    <ul id="subnav-3">
+      <li> <a href="termtypes.html">Terms and term types</a> </li>
+      <li> <a href="attributes.html">Attributes</a> </li>
+      <li> <a href="relationships.html">Relationships</a> </li>
+      <li> <a href="semtypes.html">Semantic Types</a> </li>
+      <li> <a href="overlap.html">Source Overlap</a> </li>
+    </ul>
+  </li>
+  <li id="nav-4"> <a href="representation.html">Representation</a>
+    <ul id="subnav-4">
+      <li> <a href="sourcerepresentation.html" id="sourcerep">Source
+Representation</a> </li>
+      <li> <a href="metarepresentation.html">Metathesaurus
+Representation</a> </li>
+    </ul>
+  </li>
+</ul>
 </div>
 <!-- end tabbed navigation area -->
-
-<br/><br/><br/>
-<a name = "top"/></a>
-
-<span class = "nav">Skip to: <a href = "#general">Notes</a>, <a href = "#change_summary">Summary of Changes</a>, <a href = "#file_summary">Summary of Source-Provided Files</a> <a href = "#file_details">Source-Provided File Details</a></span>
-
-<a name = "general"/></a>
-<div id = "rep_general" class = "rep_block_level_one">
+<br>
+<br>
+<br>
+<a name="top"></a>
+<span class="nav">Skip to: <a href="#general">Notes</a>, <a
+ href="#change_summary">Summary of Changes</a>, <a href="#file_summary">Summary
+of Source-Provided Files</a> <a href="#file_details">Source-Provided
+File Details</a></span>
+<a name="general"></a>
+<div id="rep_general" class="rep_block_level_one">
 <h3>Notes</h3>
-<p>CPT data files are submitted by the American Medical Association (AMA).  The files processed for the UMLS Metathesaurus are available for licensing at the <a href = "https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=prod1510002"> AMA Bookstore</a>.
-
+<p>CPT data files are submitted by the American Medical Association
+(AMA). The files processed for the UMLS Metathesaurus are available for
+licensing at the <a
+ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=prod1510002">
+AMA Bookstore</a>.
 </p>
-<p> The information provided here applies explicitly to the English version of CPT.  The Spanish translation of CPT (CPTSP) was last updated in 2001, and much of the information on this page is not applicable.  </p>
+<p> The information provided here applies explicitly to the English
+version of CPT. The Spanish translation of CPT (CPTSP) was last updated
+in 2001, and much of the information on this page is not applicable. </p>
 </div>
-<div id = "rep_change_summary" class = "rep_block_level_one">
-<a name = "change_summary"/></a>
-<h3>Summary of Changes</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)
-
-<p>No changes have been made to the original data file format.  During UMLS source processing, certain relationships are generated between CPT concepts based on string parsing.
-For example, &quot;Anesthesia for closed chest procedures; needle biopsy of pleura&quot; (CODE = 00522) is given an RO relationship
-to &quot;Anesthesia for closed chest procedures; pneumocentesis&quot; (CODE = 00524).  The algorithm to create these relationships has changed slightly, resulting in a greater number of
-relationships being generated.  These relationships are not submitted or reviewed by the AMA, and are attributed to SAB = &quot;MTHCH&quot;.</p>
+<div id="rep_change_summary" class="rep_block_level_one">
+<a name="change_summary"></a>
+<h3>Summary of Changes</h3>
+&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)
+<p>No changes have been made to the original data file format. During
+UMLS source processing, certain relationships are generated between CPT
+concepts based on string parsing.
+For example, "Anesthesia for closed chest procedures; needle biopsy of
+pleura" (CODE = 00522) is given an RO relationship
+to "Anesthesia for closed chest procedures; pneumocentesis" (CODE =
+00524). The algorithm to create these relationships has changed
+slightly, resulting in a greater number of
+relationships being generated. These relationships are not submitted or
+reviewed by the AMA, and are attributed to SAB = "MTHCH".</p>
 </div>
-
-<div id = "rep_file_summary" class = "rep_block_level_one">
-<a name = "file_summary"/></a>
-
-<h3>Summary of Source-Provided Files</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)
-<p>The complete English language CPT distribution includes the following:</p>
-
-<div class = "rep_block_level_two">
+<div id="rep_file_summary" class="rep_block_level_one">
+<a name="file_summary"></a>
+<h3>Summary of Source-Provided Files</h3>
+&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)
+<p>The complete English language CPT distribution includes the
+following:</p>
+<div class="rep_block_level_two">
 <!-- Make a table of each file that comes from the source   -->
 <h4>Documentation and Reference</h4>
-
-<table class = "elements" border = "0" cellspacing = "0">
-<tr><th>File Name</th><th>Description</th></tr>
-<tr><td  class = "file_field_name">CPT2010README.txt</td><td>Describes the release files content and layouts</td></tr>
-
-<tr><td  class = "file_field_name">CPTCodeResquencing.doc</td><td>Technical Notes on CPT® Code Resequencing</td></tr>
-<tr><td  class = "file_field_name">EvalManagemantGuidelines.pdf</td><td>Evaluation and Management Guidelines Upper/Lower Case</td></tr>
-<tr><td  class = "file_field_name">AnesthesiaGuidelines.pdf</td><td>Anesthesia Guidelines Upper/Lower Case</td></tr>
-<tr><td  class = "file_field_name">SurgeryGuidelines.pdf</td><td>Surgery Guidelines Upper/Lower Case</td></tr>
-
-<tr><td  class = "file_field_name">RadiologyGuidelines.pdf</td><td>Radiology Guidelines Upper/Lower Case</td></tr>
-<tr><td  class = "file_field_name">PathLabGuidelines.pdf </td><td>Pathology Guidelines Upper/Lower Case</td></tr>
-
-<tr><td  class = "file_field_name">MedicineGuidelines.pdf</td><td>Medicine Guidelines Upper/Lower Case</td></tr>
-<tr><td  class = "file_field_name">AppendixB.pdf</td><td>Summary of Additions, Deletions, and Revisions from Appendix B of CPT 2010</td></tr>
-<tr><td  class = "file_field_name">AppendixI.pdf</td><td>Listing of Genetic Testing Code Modifiers from Appendix I of CPT 2010</td></tr>
-<tr><td  class = "file_field_name">AppendixN.pdf</td><td>Summary of Resequenced CPT Codes from Appendix N of CPT 2010</td></tr>
-
-<tr><td  class = "file_field_name">AbbreviationKey.doc</td><td>Truncation convention list for the Medium descriptions</td></tr>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>File Name</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td class="file_field_name">CPT2010README.txt</td>
+      <td>Describes the release files content and layouts</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">CPTCodeResquencing.doc</td>
+      <td>Technical Notes on CPT&reg; Code Resequencing</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">EvalManagemantGuidelines.pdf</td>
+      <td>Evaluation and Management Guidelines Upper/Lower Case</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">AnesthesiaGuidelines.pdf</td>
+      <td>Anesthesia Guidelines Upper/Lower Case</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">SurgeryGuidelines.pdf</td>
+      <td>Surgery Guidelines Upper/Lower Case</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">RadiologyGuidelines.pdf</td>
+      <td>Radiology Guidelines Upper/Lower Case</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">PathLabGuidelines.pdf </td>
+      <td>Pathology Guidelines Upper/Lower Case</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">MedicineGuidelines.pdf</td>
+      <td>Medicine Guidelines Upper/Lower Case</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">AppendixB.pdf</td>
+      <td>Summary of Additions, Deletions, and Revisions from Appendix
+B of CPT 2010</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">AppendixI.pdf</td>
+      <td>Listing of Genetic Testing Code Modifiers from Appendix I of
+CPT 2010</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">AppendixN.pdf</td>
+      <td>Summary of Resequenced CPT Codes from Appendix N of CPT 2010</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">AbbreviationKey.doc</td>
+      <td>Truncation convention list for the Medium descriptions</td>
+    </tr>
+  </tbody>
 </table>
-
-<br/>
-
-<h4>Data Files</h4><a name = "data_files"></a>
-<table class = "elements" border = "0" cellspacing = "0">
-<tr><th>File Name</th><th>Description</th></tr>
-<tr><td  class = "file_field_name">LONGULF.txt *</td><td>Long Description Upper/Lower Case - Fixed-Field Format</td></tr>
-<tr><td  class = "file_field_name">LONGUF.TXT *</td><td>Long Description Upper Case - Fixed-Field Format</td></tr>
-<tr><td  class = "file_field_name"><a href = "#file1">LONGULT.TXT</a></td><td>Long Description Upper/Lower Case - Tab-Delimited Format</td></tr>
-<tr><td  class = "file_field_name">LONGUT.TXT *</td><td>Long Description Upper Case - Tab-Delimited Format</td></tr>
-<tr><td  class = "file_field_name"><a href = "#file2">MEDU.TXT</a></td><td>Medium Description Upper Case - Fixed-Field Format</td></tr>
-<tr><td  class = "file_field_name"><a href = "#file3">SHORTU.TXT</a></td><td>Short Description Upper Case - Fixed-Field Format</td></tr>
-<tr><td  class = "file_field_name"><a href = "#file4">MODUL.TXT</a></td><td>Appendix A Modifiers Upper/Lower Case - Not a set format</td></tr>
-<tr><td  class = "file_field_name"><a href = "#file5">PQRI 2010 Adjunct File.xls</a></td><td>This file is provided as an adjunct to the CPT 2010 file. This file contains codes that are effective January 1, 2010, but (1) do not appear in the CPT 2010 file or book  (due to publication deadlines), (2) are revised from the CPT 2010 file or book, or (3) have been deleted from the material that appears in the CPT 2010 file or book. The codes in this file are expected to be used for reporting purposes for the PQRI 2010 program. The remainder of the codes that have been added for PQRI 2010 can be found in the CPT 2010 file.</td></tr>
-<tr><td  class = "file_field_name"><a href = "#file5">CPT 2010 Adjunct File.xls</a></td><td>Includes revisions and additions to H1N1 related codes made in response to an urgent request received from the Assistant Secretary for Preparedness & Response within the Department of Health & Human Services (HHS).  These codes have been included in this file for the most up-to-date information on the CPT code set, but due to print deadlines, are not included in the 2010 CPT codebook. These codes will be included in the CPT 2011 code book, barring any further actions on this issue by the CPT Editorial Panel.</td></tr>
+<br>
+<h4>Data Files</h4>
+<a name="data_files"></a>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>File Name</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td class="file_field_name">LONGULF.txt *</td>
+      <td>Long Description Upper/Lower Case - Fixed-Field Format</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">LONGUF.TXT *</td>
+      <td>Long Description Upper Case - Fixed-Field Format</td>
+    </tr>
+    <tr>
+      <td class="file_field_name"><a href="#file1">LONGULT.TXT</a></td>
+      <td>Long Description Upper/Lower Case - Tab-Delimited Format</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">LONGUT.TXT *</td>
+      <td>Long Description Upper Case - Tab-Delimited Format</td>
+    </tr>
+    <tr>
+      <td class="file_field_name"><a href="#file2">MEDU.TXT</a></td>
+      <td>Medium Description Upper Case - Fixed-Field Format</td>
+    </tr>
+    <tr>
+      <td class="file_field_name"><a href="#file3">SHORTU.TXT</a></td>
+      <td>Short Description Upper Case - Fixed-Field Format</td>
+    </tr>
+    <tr>
+      <td class="file_field_name"><a href="#file4">MODUL.TXT</a></td>
+      <td>Appendix A Modifiers Upper/Lower Case - Not a set format</td>
+    </tr>
+    <tr>
+      <td class="file_field_name"><a href="#file5">PQRI 2010 Adjunct
+File.xls</a></td>
+      <td>This file is provided as an adjunct to the CPT 2010 file.
+This file contains codes that are effective January 1, 2010, but (1) do
+not appear in the CPT 2010 file or book (due to publication deadlines),
+(2) are revised from the CPT 2010 file or book, or (3) have been
+deleted from the material that appears in the CPT 2010 file or book.
+The codes in this file are expected to be used for reporting purposes
+for the PQRI 2010 program. The remainder of the codes that have been
+added for PQRI 2010 can be found in the CPT 2010 file.</td>
+    </tr>
+    <tr>
+      <td class="file_field_name"><a href="#file5">CPT 2010 Adjunct
+File.xls</a></td>
+      <td>Includes revisions and additions to H1N1 related codes made
+in response to an urgent request received from the Assistant Secretary
+for Preparedness &amp; Response within the Department of Health &amp;
+Human Services (HHS). These codes have been included in this file for
+the most up-to-date information on the CPT code set, but due to print
+deadlines, are not included in the 2010 CPT codebook. These codes will
+be included in the CPT 2011 code book, barring any further actions on
+this issue by the CPT Editorial Panel.</td>
+    </tr>
+  </tbody>
 </table>
-<br/>
-
-<p>Notes:  The current license agreement for including CPT in the Metathesaurus includes the above files.  The AMA has recently begun distributing the CPT® Developer's Toolkit which includes additional data such as a hierarchy, relationships and additional attributes.  The NLM is currently evaluating CPTDTK, and working with the AMA to determine whether it would be appropriate to license the DTK content for the Metathesaurus.  For more information on CPTDTK, please see the AMA website.  </p>
-<p>The standard CPT data files distributed by the AMA do not include a hierarchy.  The NLM  uses the printed book and other resources to generate a hierarchy during Metathesaurus source processing.  This hierarchy has not been reviewed by the AMA.  In addition, the NLM generates relationships between CPT codes based on string parsing.  The hierarchy and relalationships are attributed to SAB = MTHCH.
+<br>
+<p>Notes: The current license agreement for including CPT in the
+Metathesaurus includes the above files. The AMA has recently begun
+distributing the CPT&reg; Developer's Toolkit which includes additional
+data such as a hierarchy, relationships and additional attributes. The
+NLM is currently evaluating CPTDTK, and working with the AMA to
+determine whether it would be appropriate to license the DTK content
+for the Metathesaurus. For more information on CPTDTK, please see the
+AMA website. </p>
+<p>The standard CPT data files distributed by the AMA do not include a
+hierarchy. The NLM uses the printed book and other resources to
+generate a hierarchy during Metathesaurus source processing. This
+hierarchy has not been reviewed by the AMA. In addition, the NLM
+generates relationships between CPT codes based on string parsing. The
+hierarchy and relalationships are attributed to SAB = MTHCH.
 </p>
-<p>Not included:   All information from the CPT data files is included in the UMLS representation.<br/>
-* Certain fields and files may not be directly processed because they contain redundant data.
+<p>Not included: All information from the CPT data files is included in
+the UMLS representation.<br>
+* Certain fields and files may not be directly processed because they
+contain redundant data.
 </p>
-
 </div>
 </div>
-
-<a name = "file_details"/>
-<div id = "rep_file_details" class = "rep_block_level_one">
-<h3>Source-Provided File Details</h3>&nbsp;&nbsp;<span class = "nav">return to <a href = "#top">top</a></span>
-
-<p>Details on format of input files and representation of source data.  Consult the CPT documentation for additional details.</p>
-
-<div class = "rep_block_level_two">
-<a name = "file1"/></a>
-<h4 class = "file_field_name">file:LONGULT.txt</h4>&nbsp:&nbsp;<span class = "nav">return to <a href = "#data_files">Data Files</a></span>
-
+<a name="file_details">
+</a>
+<div id="rep_file_details" class="rep_block_level_one">
+<h3><a name="file_details">Source-Provided File Details</a></h3>
+<a name="file_details">&nbsp;&nbsp;<span class="nav">return to </span></a><a
+ href="#top">top</a>
+<p>Details on format of input files and representation of source data.
+Consult the CPT documentation for additional details.</p>
+<div class="rep_block_level_two">
+<a name="file1"></a>
+<h4 class="file_field_name">file:LONGULT.txt</h4>
+&nbsp;:&nbsp;<span class="nav">return to <a href="#data_files">Data
+Files</a></span>
 <p>Long Descriptions</p>
-<table class = "elements" border = "0" cellspacing = "0">
-<tr><th>Field Name</th><th>Description</th><th>Representation</th></tr>
-
-<tr><td  class = "file_field_name">CPT Code</td><td> 5-digit alpha-numeric code </td><td> MRCONSO.CODE<br>MRCONSO.SCUI<br>(TTY=&quot;PT&quot;)</td></tr>
-
-<tr><td  class = "file_field_name">CPT Long Description</td><td> Mixed-case alpha-numeric string </td><td> MRCONSO.STR</td></tr>
-
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">#</span><br>
+      </td>
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Representation</th>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">1<br>
+      </td>
+      <td class="file_field_name">CPT Code</td>
+      <td> 5-digit alpha-numeric code </td>
+      <td> MRCONSO.CODE<br>
+MRCONSO.SCUI<br>
+(TTY="PT")</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">2<br>
+      </td>
+      <td class="file_field_name">CPT Long Description</td>
+      <td> Mixed-case alpha-numeric string </td>
+      <td> MRCONSO.STR</td>
+    </tr>
+  </tbody>
 </table>
-<br/>
-
-<a name = "file2"/></a>
-<h4 class = "file_field_name">file:MEDU.txt</h4>&nbsp:&nbsp;<span class = "nav">return to <a href = "#data_files">Data Files</a></span>
+<br>
+<a name="file2"></a>
+<h4 class="file_field_name">file:MEDU.txt</h4>
+&nbsp;:&nbsp;<span class="nav">return to <a href="#data_files">Data
+Files</a></span>
 <p>Medium Descriptions</p>
-
-<table class = "elements" border = "0" cellspacing = "0">
-<tr><th>Field Name</th><th>Description</th><th>Representation</th></tr>
-
-<tr><td  class = "file_field_name">CPT Code</td><td> 5-digit alpha-numeric code </td><td> MRCONSO.CODE<br>MRCONSO.SCUI<br>(TTY=&quot;SY&quot;)</td></tr>
-<tr><td  class = "file_field_name">CPT Medium Description</td><td> Uppercase alpha-numeric string </td><td> MRCONSO.STR</td></tr>
-
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">#</span><br>
+      </td>
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Representation</th>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">1<br>
+      </td>
+      <td class="file_field_name">CPT Code</td>
+      <td> 5-digit alpha-numeric code </td>
+      <td> MRCONSO.CODE<br>
+MRCONSO.SCUI<br>
+(TTY="SY")</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">2<br>
+      </td>
+      <td class="file_field_name">CPT Medium Description</td>
+      <td> Uppercase alpha-numeric string </td>
+      <td> MRCONSO.STR</td>
+    </tr>
+  </tbody>
 </table>
-<br/>
-
-<a name = "file3"/></a>
-<h4 class = "file_field_name">file:SHORTU.txt</h4>&nbsp:&nbsp;<span class = "nav">return to <a href = "#data_files">Data Files</a></span>
+<br>
+<a name="file3"></a>
+<h4 class="file_field_name">file:SHORTU.txt</h4>
+&nbsp;:&nbsp;<span class="nav">return to <a href="#data_files">Data
+Files</a></span>
 <p>Short Descriptions</p>
-<table class = "elements" border = "0" cellspacing = "0">
-<tr><th>Field Name</th><th>Description</th><th>Representation</th></tr>
-
-<tr><td  class = "file_field_name">CPT Code</td><td>5-digit alpha-numeric code</td><td> MRCONSO.CODE<br>MRCONSO.SCUI<br>(TTY=&quot;AB&quot;)</td></tr>
-<tr><td  class = "file_field_name">CPT Short Description</td><td> Uppercase alpha-numeric string </td><td> MRCONSO.STR</td></tr>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">#</span><br>
+      </td>
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Representation</th>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">1<br>
+      </td>
+      <td class="file_field_name">CPT Code</td>
+      <td>5-digit alpha-numeric code</td>
+      <td> MRCONSO.CODE<br>
+MRCONSO.SCUI<br>
+(TTY="AB")</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">2<br>
+      </td>
+      <td class="file_field_name">CPT Short Description</td>
+      <td> Uppercase alpha-numeric string </td>
+      <td> MRCONSO.STR</td>
+    </tr>
+  </tbody>
 </table>
-
-<br/>
-
-<a name = "file4"/></a>
-<h4 class = "file_field_name">file:MODUL.txt</h4>&nbsp:&nbsp;<span class = "nav">return to <a href = "#data_files">Data Files</a></span>
-<p>Modifiers.  This file is not a set format and must be manual edited before Metathesaurus source processing. </p>
-<table class = "elements" border = "0" cellspacing = "0">
-<tr><th>Field Name</th><th>Description</th><th>Representation</th></tr>
-<tr><td  class = "file_field_name">CPT Code</td><td> 2-digit alpha-numeric code </td><td> MRCONSO.CODE<br>MRCONSO.SCUI<br>(TTY=&quot;MP&quot;)</td></tr>
-
-<tr><td  class = "file_field_name">CPT Modifier Description (generally, after the table character)</td><td>Mixed-case alpha-numeric string </td><td> MRCONSO.STR<br>MRSAT.ATN=&quot;CPF&quot;<br>The MP atom is generally created by extracting the text before the first &quot;:&quot;.  Material appearing after the first &quot;:&quot is included in the CPF attribute.</td></tr>
+<br>
+<a name="file4"></a>
+<h4 class="file_field_name">file:MODUL.txt</h4>
+&nbsp;:&nbsp;<span class="nav">return to <a href="#data_files">Data
+Files</a></span>
+<p>Modifiers. This file is not a set format and must be manual edited
+before Metathesaurus source processing. </p>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; font-weight: bold;">#<br>
+      </td>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">Field
+Name</span><br>
+      </td>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">Description</span><br>
+      </td>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">Representation</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">1</span><br>
+      </td>
+      <td class="file_field_name">CPT Code</td>
+      <td> 2-digit alpha-numeric code </td>
+      <td> MRCONSO.CODE<br>
+MRCONSO.SCUI<br>
+(TTY="MP")</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">2<br>
+      </td>
+      <td class="file_field_name">CPT Modifier Description (generally,
+after the table character)</td>
+      <td>Mixed-case alpha-numeric string </td>
+      <td> MRCONSO.STR<br>
+MRSAT.ATN="CPF"<br>
+The MP atom is generally created by extracting the text before the
+first ":". Material appearing after the first ":" is included in the
+CPF attribute.</td>
+    </tr>
+  </tbody>
 </table>
-<br/>
-
-
-<a name = "file5"/></a>
-<h4 class = "file_field_name">files:PQRI 2010 Adjunct File.xls; CPT 2010 Adjunct File.xls</h4>&nbsp:&nbsp;<span class = "nav">return to <a href = "#data_files">Data Files</a>
-<p>These files contain additions, revisions and deletions to the long, medium and short descriptions.  These changes are applied manually to information for PT, SY and AB atoms.</p>
-<br/>
-
+<br>
+<a name="file5"></a>
+<h4 class="file_field_name">files:PQRI 2010 Adjunct File.xls; CPT 2010
+Adjunct File.xls</h4>
+&nbsp;:&nbsp;<span class="nav">return to <a href="#data_files">Data
+Files</a>
+<p>These files contain additions, revisions and deletions to the long,
+medium and short descriptions. These changes are applied manually to
+information for PT, SY and AB atoms.</p>
+<br>
+</span></div>
 </div>
-</div>
-
-
-
+</body>
+</html>
