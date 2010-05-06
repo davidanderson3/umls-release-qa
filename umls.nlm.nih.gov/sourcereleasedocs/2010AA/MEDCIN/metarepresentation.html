@@ -61,7 +61,7 @@
 
 </div>
 <div id = "rep_change_summary" class = "rep_block_level_one">
-<h3>Original Files:</h3><br/>The UMLS uses the following four vertical bar-delimited MEDCIN files:
+<h3>Original Files:</h3><br/>The Metathesaurus uses the following four pipe-delimited MEDCIN files:
 <ul>
     <li>UMLS_MEDCIN_CONCEPTS2009-12-30.TXT</li>
     <li>UMLS_MEDCIN_DESCRIPTIONS2009-12-30.TXT</li>
@@ -94,29 +94,29 @@ Identifiers are assigned as follows:<br/>
 	<tr>
 		<td>MEDCIN</td>
 		<td>FN</td>
-		<td>CODE = MEDCINID from UMLS_MEDCIN_CONCEPTS2009-12-30.TXT<br>
-		STR = CONCEPT_DESCRIPTION from UMLS_MEDCIN_CONCEPTS2009-12-30.TXT<br>
-		SCUI = MEDCINID from UMLS_MEDCIN_CONCEPTS2009-12-30.TXT</td>
+		<td>CODE = MEDCINID from UMLS_MEDCIN_CONCEPTSyyyy-mm-dd.TXT<br>
+		STR = CONCEPT_DESCRIPTION from UMLS_MEDCIN_CONCEPTSyyyy-mm-dd.TXT<br>
+		SCUI = MEDCINID from UMLS_MEDCIN_CONCEPTSyyyy-mm-dd.TXT</td>
 	</tr>
 
 	<tr>
 		<td>MEDCIN</td>
 		<td>PT</td>
 		<td>CODE = MEDCINID from lines of
-		UMLS_MEDCIN_DESCRIPTIONS2009-12-30.TXT having PREF_FLAG_ID=1<br>
-		STR = DESCRIPTION from lines of UMLS_MEDCIN_DESCRIPTIONS2009-12-30.TXT
+		UMLS_MEDCIN_DESCRIPTIONSyyyy-mm-dd.TXT having PREF_FLAG_ID=1<br>
+		STR = DESCRIPTION from lines of UMLS_MEDCIN_DESCRIPTIONSyyyy-mm-dd.TXT
 		having PREF_FLAG_ID=1<br>
-		SCUI = MEDCINID from lines of UMLS_MEDCIN_DESCRIPTIONS2009-12-30.TXT
+		SCUI = MEDCINID from lines of UMLS_MEDCIN_DESCRIPTIONSyyyy-mm-dd.TXT
 		having PREF_FLAG_ID=1</td>
 	</tr>
 	<tr>
 		<td>MEDCIN</td>
 		<td>SY</td>
 		<td>CODE = MEDCINID from lines of
-		UMLS_MEDCIN_DESCRIPTIONS2009-12-30.TXT having PREF_FLAG_ID=0<br>
-		STR = DESCRIPTION from lines of UMLS_MEDCIN_DESCRIPTIONS2009-12-30.TXT
+		UMLS_MEDCIN_DESCRIPTIONSyyyy-mm-dd.TXT having PREF_FLAG_ID=0<br>
+		STR = DESCRIPTION from lines of UMLS_MEDCIN_DESCRIPTIONSyyyy-mm-dd.TXT
 		having PREF_FLAG_ID=0<br>
-		SCUI = MEDCINID from lines of UMLS_MEDCIN_DESCRIPTIONS2009-12-30.TXT
+		SCUI = MEDCINID from lines of UMLS_MEDCIN_DESCRIPTIONSyyyy-mm-dd.TXT
 		having PREF_FLAG_ID=0</td>
 	</tr>
 	<tr>
@@ -125,7 +125,8 @@ Identifiers are assigned as follows:<br/>
 		<td>One XM (cross mapping set) atom is generated with:<br>
 		CODE = "MTHU000001"<br>
 		STR = "Medcin to SNOMEDCT Mappings"<br>
-		SCUI = "" (blank)</td>
+		SCUI = "" (blank)<br>
+		This data is added during Metathesaurus source processing.</td>
 	</tr>
 </table>
 </div>
@@ -143,12 +144,12 @@ Identifiers are assigned as follows:<br/>
 	<tr>
 		<td>PREF_FLAG_ID</td>
 		<td>AUI</td>
-		<td>PREF_FLAG_ID from UMLS_MEDCIN_DESCRIPTIONS2009-12-30.TXT</td>
+		<td>PREF_FLAG_ID from UMLS_MEDCIN_DESCRIPTIONSyyyy-mm-dd.TXT</td>
 	</tr>
 	<tr>
 		<td>PREF_FLAG_ID</td>
 		<td>RUI</td>
-		<td>PREF_FLAG_ID from UMLS_MEDCIN_SNOMED2009-12-30.TXT</td>
+		<td>PREF_FLAG_ID from UMLS_MEDCIN_SNOMEDyyyy-mm-dd.TXT</td>
 	</tr>
 </table>
 </div>
@@ -172,7 +173,7 @@ Identifiers are assigned as follows:<br/>
 		PAR</td>
 		<td>(blank)</td>
 		<td>Hierarchical relationships derived from the NODEKEY values in
-		UMLS_MEDCIN_HIERARCHY2009-12-30.TXT. The final two-character token is
+		UMLS_MEDCIN_HIERARCHYyyyy-mm-dd.TXT. The final two-character token is
 		removed from each concept's NODEKEY to produce the NODEKEY of the
 		concept's parent. These two concepts are then linked by a pair of
 		PAR/CHD relationships.</td>
@@ -183,7 +184,7 @@ Identifiers are assigned as follows:<br/>
 		RO<br />
 		SY</td>
 		<td>&nbsp;(many RELA values)</td>
-		<td>Relationships are created for the MEDCIN-to-SNOMEDCT mappings in UMLS_MEDCIN_SNOMED2009-12-30.TXT. The REL and RELA are set corresponding to the RELATIONSHIPTYPE field.</td>
+		<td>Relationships are created for the MEDCIN-to-SNOMEDCT mappings in UMLS_MEDCIN_SNOMEDyyyy-mm-dd.TXT. The REL and RELA are set corresponding to the RELATIONSHIPTYPE field.</td>
 	</tr>
 </table>
 </div>
@@ -191,6 +192,6 @@ Identifiers are assigned as follows:<br/>
 <a name = "mappings"/></a><br/>
 <h3>Mappings (MRMAP)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)<br/>
 
-<p>No mappings are represented for MEDCIN. (The MEDCIN-to-SNOMEDCT relationships provided in the UMLS_MEDCIN_SNOMED2009-12-30.TXT file are represented in the Metathesaurus as relationships (MRREL) rather than mappings.)</p> 
+<p>No mappings are represented for MEDCIN. (The MEDCIN-to-SNOMEDCT relationships provided in the UMLS_MEDCIN_SNOMEDyyyy-mm-dd.TXT file are represented in the Metathesaurus as relationships (MRREL) rather than mappings.)</p> 
 </div>
 </div>
