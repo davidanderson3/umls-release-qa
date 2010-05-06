@@ -87,20 +87,20 @@
 
 	<tr>
 		<td class="file_field_name"><a href="#file1">UMLS_MEDCIN_CONCEPTS2009-12-30.TXT</a></td>
-		<td>Concepts - Vertical Bar-Delimited Format</td>
+		<td>Concepts - Pipe-Delimited Format</td>
 	</tr>
 
 	<tr>
 		<td class="file_field_name"><a href="#file2">UMLS_MEDCIN_DESCRIPTIONS2009-12-30.TXT</a></td>
-		<td>Descriptions - Vertical Bar-Delimited Format</td>
+		<td>Descriptions - Pipe-Delimited Format</td>
 	</tr>
 	<tr>
 		<td class="file_field_name"><a href="#file3">UMLS_MEDCIN_HIERARCHY2009-12-30.TXT</a></td>
-		<td>Hierarchy - Vertical Bar-Delimited Format</td>
+		<td>Hierarchy - Pipe-Delimited Format</td>
 	</tr>
 	<tr>
 		<td class="file_field_name"><a href="#file4">UMLS_MEDCIN_SNOMED2009-12-30.TXT</a></td>
-		<td>MEDCIN to SNOMEDCT mappings - Vertical Bar-Delimited Format</td>
+		<td>MEDCIN to SNOMEDCT mappings - Pipe-Delimited Format</td>
 	</tr>
 
 
@@ -181,8 +181,8 @@
 		<td>3</td>
 		<td>PREF_FLAG_ID</td>
 		<td>1=preferred, 0=non-preferred</td>
-		<td>0 =&gt; MRCONSO.TTY="PT",<br>
-		1 =&gt; MRCONSO.TTY="SY"<br>
+		<td>0 =&gt; MRCONSO.TTY="SY",<br>
+		1 =&gt; MRCONSO.TTY="PT"<br>
 		MRSAT.ATN=PREF_FLAG_ID</td>
 	</tr>
 </table>
@@ -203,8 +203,7 @@
 		<td>1</td>
 		<td class="file_field_name">MEDCINID</td>
 		<td>MEDCIN concept ID</td>
-		<td>MRCONSO.CODE<br>
-		MRCONSO.SCUI</td>
+		<td>MRHIER.CUI populated by the Metathesaurus CUI corresponding to MEDCINID.</td>
 	</tr>
 	<tr>
 		<td>2</td>
@@ -214,7 +213,7 @@
 		for this concept. The NODEKEY value is a series of two-character
 		tokens (some of which include a space character), e.g., &quot; CDA D
 		P&quot; breaks down as &quot; C&quot;, &quot;DA&quot;, &quot; D&quot;,
-		and &quot; P&quot;, and removing the last token (" CDA D", in this
+		and &quot; P&quot;, and removing the last token (yielding  &quot;CDA D", in this
 		example) yields the NODEKEY value of this concept's hierarchical
 		parent.</td>
 	</tr>
