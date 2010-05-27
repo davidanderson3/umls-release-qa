@@ -1,8 +1,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-
-<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"><!-- begin tabbed navigation area -->
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+  <title></title>
 </head>
 <body>
 <div class="section-4">
@@ -32,11 +33,11 @@ Representation</a> </li>
 <br>
 <br>
 <br>
-<a name="top">
-<span class="nav">Skip to: </span></a><a href="#termtypes">Atoms</a>, <a
+<a name="top"></a>
+<span class="nav">Skip to: </span><a href="#termtypes">Atoms</a>, <a
  href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
 <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a>
-<p><b>VSAB:</b> HCPT2010, HCDT2007-2008D, HCPT2010, MTHHH2010</p>
+<p><b>VSAB:</b> HCPT2010, HCDT2007-2008D, MTHHH2010</p>
 <div id="rep_identifiers" class="rep_block_level_one">
 <h3>Summary of Changes:</h3>
 <p>No changes have been made to the format of original data files to
@@ -49,28 +50,21 @@ Centers for Medicare &amp; Medicaid Services (CMS). The file used for
 excluded from Metathesaurus processing.</p>
 <h3>Identifiers</h3>
 <ul>
-  <li>CODE:
-    <br>
-For HCPCS, HCPT, HCDT atoms: Field 1 (HCPCS Procedure or Modifier Code;
-Character positions 1-5)<br>
+  <li>CODE: For HCPCS, HCPT, HCDT atoms: Field 1 (HCPCS Procedure or
+Modifier Code;
+Character positions 1-5).<br>
 For MTHHH atoms: An MTHU# is generated during Metathesaurus source
-processing
-  </li>
-  <li>SAUI: <br>
-Not Applicable</li>
-  <li>SCUI: <br>
-Same as "CODE"</li>
-  <li>SDUI: <br>
-Not Applicable
-  </li>
+processing </li>
+  <li>SAUI: Not Applicable</li>
+  <li>SCUI: Same as "CODE"</li>
+  <li>SDUI: Not Applicable </li>
 </ul>
 <br>
 <div id="rep_termtypes" class="rep_block_level_two">
 <a name="termtypes"></a><br>
 <h3>Atoms (MRCONSO)</h3>
-&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)
-SAB
-assignment:<br>
+&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br>
+SAB assignment:<br>
 Atoms created from the HCPCS data file are assigned to an SAB based on
 their code:<br>
 <ul>
@@ -92,8 +86,7 @@ STR = Short Description SCUI=procedure/modifier code (character
 positions 1-5)<br>
 TTY = "AB" is assigned to atoms with a Record id code of "3" and no
 "Termination Date"<br>
-SUPPRESS = "Y" &nbsp;
-      </td>
+SUPPRESS = "Y" &nbsp; </td>
     </tr>
     <tr>
       <td>AM</td>
@@ -102,8 +95,7 @@ STR = Short Description SCUI=procedure/modifier code (character
 positions 1-5)<br>
 TTY = "AM" is assigned to atoms with a Record id code of "7" and no
 "Termination Date"<br>
-SUPPRESS = "Y"
-      </td>
+SUPPRESS = "Y" </td>
     </tr>
     <tr>
       <td>HT</td>
@@ -114,8 +106,7 @@ SCUI = "MTHU#", assigned during Metathesaurus source processing<br>
 Note: The standard HCPCS data files do not include a hierarchy. The
 National Library of Medicine uses the printed book and other resources
 to generate a hierarchy during Metathesaurus source processing. This
-hierarchy has not been reviewed by CMS.
-      </td>
+hierarchy has not been reviewed by CMS. </td>
     </tr>
     <tr>
       <td>MP</td>
@@ -133,8 +124,7 @@ positions 1-5)<br>
 TTY = "AB" is assigned to atoms with a Record id code of "3" and no
 "Termination Date"<br>
 SUPPRESS = "Y"<br>
-This data is added during Metathesaurus source processing.
-      </td>
+This data is added during Metathesaurus source processing. </td>
     </tr>
     <tr>
       <td>MTH_PT</td>
@@ -143,8 +133,7 @@ STR = Plain text version of Long Description SCUI = procedure/modifier
 code (character positions 1-5). <br>
 TTY = "PT" is assigned to atoms with a Record id code of "3" and no
 "Termination Date." <br>
-This data is added during Metathesaurus source processing.
-      </td>
+This data is added during Metathesaurus source processing. </td>
     </tr>
     <tr>
       <td>OA</td>
@@ -153,8 +142,7 @@ STR = Short Description SCUI=procedure/modifier code (character
 positions 1-5)<br>
 TTY = "OA" is assigned to atoms with a Record id code of "3" and a
 non-blank "Termination Date."<br>
-SUPPRESS = "O"
-      </td>
+SUPPRESS = "O" </td>
     </tr>
     <tr>
       <td>OAM</td>
@@ -163,8 +151,7 @@ STR = Short Description<br>
 SCUI = procedure/modifier code (character positions 1-5). <br>
 TTY = "OAM" is assigned to atoms with a Record id code of "7" and a
 non-blank "Termination Date."<br>
-SUPPRESS = "O"
-      </td>
+SUPPRESS = "O" </td>
     </tr>
     <tr>
       <td>OM</td>
@@ -173,8 +160,7 @@ STR = Long Description; SCUI=procedure/modifier code (character
 positions 1-5).<br>
 TTY = "OM" is assigned to atoms with a Record id code of "7" and a
 non-blank "Termination Date."<br>
-SUPPRESS = "O"
-      </td>
+SUPPRESS = "O" </td>
     </tr>
     <tr>
       <td>OP</td>
@@ -183,8 +169,7 @@ STR = Long Description<br>
 SCUI = procedure/modifier code (character positions 1-5)<br>
 TTY = "OP" is assigned to atoms with a Record id code of "3" and a
 non-blank "Termination Date."<br>
-SUPPRESS = "O"
-      </td>
+SUPPRESS = "O" </td>
     </tr>
     <tr>
       <td>PT</td>
@@ -192,8 +177,7 @@ SUPPRESS = "O"
 STR = Long Description<br>
 SCUI = procedure/modifier code (character positions 1-5)<br>
 TTY = "PT" is assigned to atoms with a Record id code of "3" and no
-"Termination Date."
-      </td>
+"Termination Date." </td>
     </tr>
   </tbody>
 </table>
@@ -318,24 +302,21 @@ positions 257-259)</td>
 PAR<br>
 SIB</td>
       <td>&nbsp;</td>
-      <td>
-Hierarchy created by the NLM during Metathesaurus source processing.
+      <td>Hierarchy created by the NLM during Metathesaurus source
+processing.
 This hierarchy has not been reviewed by CMS, and is attributed to
-SAB="MTHHH"
-      </td>
+SAB="MTHHH" </td>
     </tr>
     <tr>
       <td>RQ</td>
       <td>mapped_from<br>
-mapped_to
-      </td>
-      <td>
-HCPCS Cross Reference Code (character positions 205-209). A small
+mapped_to </td>
+      <td>HCPCS Cross Reference Code (character positions 205-209). A
+small
 number of cross references are provided to invalid codes or ranges of
 codes.<br>
 These are not made into relationships, however the data is included in
-the HXR attribute.
-      </td>
+the HXR attribute. </td>
     </tr>
     <tr>
       <td>SY</td>
@@ -349,19 +330,16 @@ has_expanded_form</td>
 mth_has_plain_text_form</td>
       <td>Connects original HCPCS atoms containing non-ascii characters
 with their plain text form.
-This data is added during Metathesaurus source processing.
-      </td>
+This data is added during Metathesaurus source processing. </td>
     </tr>
   </tbody>
 </table>
 </div>
 </div>
 <div id="mappings" class="rep_block_level_one">
-<a name="mappings"><br>
-</a>
-<h3><a name="mappings">Mappings (MRMAP)</a></h3>
-<a name="mappings">&nbsp;&nbsp;<span class="nav">(return to </span></a><a
- href="#top">top</a>)
+<a name="mappings"></a>
+<h3>Mappings (MRMAP)</h3>
+<span class="nav">&nbsp;(return to </span><a href="#top">top</a>)
 <p>No mapping data is included for HCPCS</p>
 </div>
 </body>
