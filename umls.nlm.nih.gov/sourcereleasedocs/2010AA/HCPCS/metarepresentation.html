@@ -30,9 +30,9 @@ Representation</a> </li>
   </li>
 </ul>
 </div>
-<br>
-<br>
-<br>
+<br/>
+<br/>
+<br/>
 <a name="top"></a>
 <span class="nav">Skip to: </span><a href="#termtypes">Atoms</a>, <a
  href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
@@ -52,21 +52,21 @@ excluded from Metathesaurus processing.</p>
 <ul>
   <li>CODE: For HCPCS, HCPT, HCDT atoms: Field 1 (HCPCS Procedure or
 Modifier Code;
-Character positions 1-5).<br>
+Character positions 1-5).<br/>
 For MTHHH atoms: An MTHU# is generated during Metathesaurus source
 processing </li>
   <li>SAUI: Not Applicable</li>
   <li>SCUI: Same as "CODE"</li>
   <li>SDUI: Not Applicable </li>
 </ul>
-<br>
+<br/>
 <div id="rep_termtypes" class="rep_block_level_two">
-<a name="termtypes"></a><br>
+<a name="termtypes"></a><br/>
 <h3>Atoms (MRCONSO):</h3>
-&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br>
-SAB assignment:<br>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+SAB assignment:<br/>
 Atoms created from the HCPCS data file are assigned to an SAB based on
-their code:<br>
+their code:<br/>
 <ul>
   <li>MTHHH: All hierarchical terms</li>
   <li>HCPT: 2 or 5-digit numeric code or 4 digits followed by T or F</li>
@@ -81,26 +81,26 @@ their code:<br>
     </tr>
     <tr>
       <td>AB</td>
-      <td>CODE = procedure/modifier code (character positions 1-5)<br>
+      <td>CODE = procedure/modifier code (character positions 1-5)<br/>
 STR = Short Description SCUI = procedure/modifier code (character
-positions 1-5)<br>
+positions 1-5)<br/>
 TTY = "AB" is assigned to atoms with a Record id code of "3" and no
-"Termination Date"<br>
+"Termination Date"<br/>
 SUPPRESS = "Y" &nbsp; </td>
     </tr>
     <tr>
       <td>AM</td>
-      <td>CODE = procedure/modifier code (character positions 1-5)<br>
+      <td>CODE = procedure/modifier code (character positions 1-5)<br/>
 STR = Short Description SCUI = procedure/modifier code (character
-positions 1-5)<br>
+positions 1-5)<br/>
 TTY = "AM" is assigned to atoms with a Record id code of "7" and no
-"Termination Date"<br>
+"Termination Date"<br/>
 SUPPRESS = "Y" </td>
     </tr>
     <tr>
       <td>HT</td>
       <td>CODE = "MTHU#", assigned during Metathesaurus source
-processing <br>
+processing <br/>
 STR = value of Metathesaurus Hierarchical Term<br>
 SCUI = "MTHU#", assigned during Metathesaurus source processing<br>
 Note: The standard HCPCS data files do not include a hierarchy. The
@@ -110,79 +110,79 @@ hierarchy has not been reviewed by CMS. </td>
     </tr>
     <tr>
       <td>MP</td>
-      <td>CODE = procedure/modifier code (character positions 4-5)<br>
+      <td>CODE = procedure/modifier code (character positions 4-5)<br/>
 STR = Long Description; SCUI = procedure/modifier code (character
 positions 1-5). TTY = MP is assigned to atoms with a Record id code of
-"7" and no "Termination Date."<br>
+"7" and no "Termination Date."<br/>
       </td>
     </tr>
     <tr>
       <td>MTH_AB</td>
-      <td> CODE = procedure/modifier code (character positions 1-5)<br>
+      <td> CODE = procedure/modifier code (character positions 1-5)<br/>
 STR = Short Description SCUI = procedure/modifier code (character
-positions 1-5)<br>
+positions 1-5)<br/>
 TTY = "AB" is assigned to atoms with a Record id code of "3" and no
-"Termination Date"<br>
-SUPPRESS = "Y"<br>
+"Termination Date"<br/>
+SUPPRESS = "Y"<br/>
 These data is added during Metathesaurus source processing. </td>
     </tr>
     <tr>
       <td>MTH_PT</td>
-      <td>CODE = procedure/modifier code (character positions 1-5)<br>
+      <td>CODE = procedure/modifier code (character positions 1-5)<br/>
 STR = Plain text version of Long Description SCUI = procedure/modifier
-code (character positions 1-5). <br>
+code (character positions 1-5). <br/>
 TTY = "PT" is assigned to atoms with a Record id code of "3" and no
-"Termination Date." <br>
+"Termination Date." <br/>
 This data is added during Metathesaurus source processing. </td>
     </tr>
     <tr>
       <td>OA</td>
-      <td>CODE = procedure/modifier code (character positions 1-5)<br>
+      <td>CODE = procedure/modifier code (character positions 1-5)<br/>
 STR = Short Description SCUI=procedure/modifier code (character
-positions 1-5)<br>
+positions 1-5)<br/>
 TTY = "OA" is assigned to atoms with a Record id code of "3" and a
-non-blank "Termination Date."<br>
+non-blank "Termination Date."<br/>
 SUPPRESS = "O" </td>
     </tr>
     <tr>
       <td>OAM</td>
-      <td>CODE = procedure/modifier code (character positions 4-5)<br>
+      <td>CODE = procedure/modifier code (character positions 4-5)<br/>
 STR = Short Description<br>
-SCUI = procedure/modifier code (character positions 1-5). <br>
+SCUI = procedure/modifier code (character positions 1-5). <br/>
 TTY = "OAM" is assigned to atoms with a Record id code of "7" and a
-non-blank "Termination Date."<br>
+non-blank "Termination Date."<br/>
 SUPPRESS = "O" </td>
     </tr>
     <tr>
       <td>OM</td>
-      <td> CODE = procedure/modifier code (character positions 4-5)<br>
+      <td> CODE = procedure/modifier code (character positions 4-5)<br/>
 STR = Long Description; SCUI=procedure/modifier code (character
-positions 1-5).<br>
+positions 1-5).<br/>
 TTY = "OM" is assigned to atoms with a Record id code of "7" and a
-non-blank "Termination Date."<br>
+non-blank "Termination Date."<br/>
 SUPPRESS = "O" </td>
     </tr>
     <tr>
       <td>OP</td>
-      <td> CODE = procedure/modifier code (character positions 1-5)<br>
+      <td> CODE = procedure/modifier code (character positions 1-5)<br/>
 STR = Long Description<br>
-SCUI = procedure/modifier code (character positions 1-5)<br>
+SCUI = procedure/modifier code (character positions 1-5)<br/>
 TTY = "OP" is assigned to atoms with a Record id code of "3" and a
-non-blank "Termination Date."<br>
+non-blank "Termination Date."<br/>
 SUPPRESS = "O" </td>
     </tr>
     <tr>
       <td>PT</td>
-      <td>CODE = procedure/modifier code (character positions 1-5)<br>
+      <td>CODE = procedure/modifier code (character positions 1-5)<br/>
 STR = Long Description<br>
-SCUI = procedure/modifier code (character positions 1-5)<br>
+SCUI = procedure/modifier code (character positions 1-5)<br/>
 TTY = "PT" is assigned to atoms with a Record id code of "3" and no
 "Termination Date." </td>
     </tr>
   </tbody>
 </table>
 </div>
-<a name="attributes"></a><br>
+<a name="attributes"></a><br/>
 <h3>Attributes (MRSAT):</h3>
 &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
 <div id="rep_attributes" class="rep_block_level_two">
@@ -281,13 +281,13 @@ positions 257-259)</td>
 </table>
 </div>
 <div id="rep_definitions" class="rep_block_level_two">
-<a name="definitions"></a><br>
+<a name="definitions"></a><br/>
 <h3>Definitions (MRDEF):</h3>
 &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
 <p>No definitions are included with the standard format HCPCS release.</p>
 </div>
 <div id="rep_relationships" class="rep_block_level_two">
-<a name="relationships"></a><br>
+<a name="relationships"></a><br/>
 <h3>Relationships (MRREL):</h3>
 &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
 <table class="elements" border="0" cellspacing="0">
@@ -314,7 +314,7 @@ mapped_to </td>
       <td>HCPCS Cross Reference Code (character positions 205-209). A
 small
 number of cross references are provided to invalid codes or ranges of
-codes.<br>
+codes.<br/>
 These are not made into relationships, however the data is included in
 the HXR attribute. </td>
     </tr>

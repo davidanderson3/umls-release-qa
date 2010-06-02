@@ -31,9 +31,9 @@ Representation</a> </li>
   </li>
 </ul>
 </div>
-<br>
-<br>
-<br>
+<br/>
+<br/>
+<br/>
 <a name="top">
 <span class="nav">Skip to: </span></a><a href="#termtypes">Atoms</a>, <a
  href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
@@ -65,22 +65,22 @@ from their PT (different SCUI) but members of the same descriptor (same
 SDUI). Identifiers are assigned as follows:
 </p>
 <ul>
-  <li>CODE: <br>
+  <li>CODE: <br/>
 For termtypes "PT", "ET", "RT", "HT": populated by the "CODE_IN_SOURCE"
-property.<br>
+property.<br/>
 For termtype "SY": populated by the "CODE_IN_SOURCE" value of the "PT" </li>
-  <li>SAUI: <br>
+  <li>SAUI: <br/>
 Not Applicable</li>
-  <li>SCUI: <br>
+  <li>SCUI: <br/>
 Same as "CODE"</li>
-  <li>SDUI: <br>
-For termtypes "PT", "SY", "ET": CODE of "PT"<br>
-For termtype "HT": CODE of "HT"<br>
+  <li>SDUI: <br/>
+For termtypes "PT", "SY", "ET": CODE of "PT"<br/>
+For termtype "HT": CODE of "HT"<br/>
 For termtype "RT": CODE of "RT" (An "RT" may have multiple "PT"s, so we
 can't use code of "PT") </li>
 </ul>
-<br>
-<a name="termtypes"><br>
+<br/>
+<a name="termtypes"><br/>
 </a>
 <h3><a name="termtypes">Atoms (MRCONSO):</a></h3>
 <a name="termtypes"> <span class="nav">(</span></a><a href="#top">
@@ -95,12 +95,12 @@ return to top</a>)
     <tr>
       <td valign="top">PT</td>
       <td>CODE = value of &lt;CODE_IN_SOURCE&gt; property<br>
-STR = value of &lt;conceptDef&gt;&lt;name&gt;<br>
+STR = value of &lt;conceptDef&gt;&lt;name&gt;<br/>
 SCUI = value of &lt;CODE_IN_SOURCE&gt; property<br>
 SDUI = value of &lt;CODE_IN_SOURCE&gt; property<br>
-      <br>
+      <br/>
 Termtypes are assigned based on the value of the "DEVICE_TYPE"
-property. "PT"s are created where the "DEVICE_TYPE" is one of:<br>
+property. "PT"s are created where the "DEVICE_TYPE" is one of:<br/>
       <ul>
         <li>CATEGORY EXPANDED BELOW entry with SEE ALSO references</li>
         <li>CATEGORY EXPANDED BELOW entry</li>
@@ -113,10 +113,10 @@ property. "PT"s are created where the "DEVICE_TYPE" is one of:<br>
     <tr>
       <td valign="top">HT</td>
       <td>CODE = value of &lt;CODE_IN_SOURCE&gt; property<br>
-STR = value of &lt;conceptDef&gt;&lt;name&gt;<br>
+STR = value of &lt;conceptDef&gt;&lt;name&gt;<br/>
 SCUI = value of &lt;CODE_IN_SOURCE&gt; property<br>
 SDUI = value of &lt;CODE_IN_SOURCE&gt; property<br>
-      <br>
+      <br/>
 Termtypes are assigned based on the value of the "DEVICE_TYPE"
 property. "HT"s are created where the "DEVICE_TYPE" is:
       <ul>
@@ -127,10 +127,10 @@ property. "HT"s are created where the "DEVICE_TYPE" is:
     <tr>
       <td>RT</td>
       <td>CODE = value of &lt;CODE_IN_SOURCE&gt; property<br>
-STR = value of &lt;conceptDef&gt;&lt;name&gt;<br>
+STR = value of &lt;conceptDef&gt;&lt;name&gt;<br/>
 SCUI = value of &lt;CODE_IN_SOURCE&gt; property<br>
 SDUI = value of &lt;CODE_IN_SOURCE&gt; property<br>
-      <br>
+      <br/>
 Termtypes are assigned based on the value of the "DEVICE_TYPE"
 property. "RT"s are created where the "DEVICE_TYPE" is:
       <ul>
@@ -141,20 +141,20 @@ property. "RT"s are created where the "DEVICE_TYPE" is:
     <tr>
       <td valign="top">SY</td>
       <td>CODE = value of &lt;CODE_IN_SOURCE&gt; property of associated
-"PT"<br>
+"PT"<br/>
 STR = value of the "SYNONYM" property<br>
-SCUI = value of &lt;CODE_IN_SOURCE&gt; property of associated "PT"<br>
-SDUI = value of &lt;CODE_IN_SOURCE&gt; property of associated "PT"<br>
-      <br>
+SCUI = value of &lt;CODE_IN_SOURCE&gt; property of associated "PT"<br/>
+SDUI = value of &lt;CODE_IN_SOURCE&gt; property of associated "PT"<br/>
+      <br/>
 SYs are created when a "SYNONYM" property exists </td>
     </tr>
     <tr>
       <td valign="top">ET</td>
       <td>CODE = value of &lt;CODE_IN_SOURCE&gt; property<br>
-STR = value of &lt;conceptDef&gt;&lt;name&gt;<br>
+STR = value of &lt;conceptDef&gt;&lt;name&gt;<br/>
 SCUI = value of &lt;CODE_IN_SOURCE&gt; property<br>
-SDUI = value of &lt;CODE_IN_SOURCE&gt; property of associated "PT"<br>
-      <br>
+SDUI = value of &lt;CODE_IN_SOURCE&gt; property of associated "PT"<br/>
+      <br/>
 Termtypes are assigned based on the value of the "DEVICE_TYPE"
 property. ETs are created where the "DEVICE_TYPE" is:
       <ul>
@@ -165,7 +165,7 @@ property. ETs are created where the "DEVICE_TYPE" is:
   </tbody>
 </table>
 </div>
-<a name="attributes"><br>
+<a name="attributes"><br/>
 </a>
 <h3><a name="attributes">Attributes (MRSAT):</a></h3>
 <a name="attributes"> <span class="nav">(</span></a><a href="#top">
@@ -192,7 +192,7 @@ following:
         <li>NIR entry</li>
         <p>Note: In the original data, some synonyms have a qualifier
 of "Synonym_Device_Type," and some are assigned a blank or incorrect
-DEVICE_TYPE.<br>
+DEVICE_TYPE.<br/>
 For consistency, in the Metathesaurus, all SY atoms are defaulted to
 "Device is a SEE reference."
 DEVTYPE is attached to AUI for SY atoms; for all other atoms, it is
@@ -208,7 +208,7 @@ Attached to AUI. </td>
   </tbody>
 </table>
 </div>
-<a name="definitions"><br>
+<a name="definitions"><br/>
 </a>
 <h3><a name="definitions">Definitions (MRDEF):</a></h3>
 <a name="definitions"> <span class="nav">(</span></a><a href="#top">
@@ -227,7 +227,7 @@ with other qualifier values are excluded.</td>
   </tbody>
 </table>
 </div>
-<a name="relationships"><br>
+<a name="relationships"><br/>
 </a>
 <h3><a name="relationships">Relationships (MRREL):</a></h3>
 <a name="relationships"> <span class="nav">(</span></a><a href="#top">
@@ -260,7 +260,7 @@ RO<br>
         <li>PT - ET: RO</li>
         <li>PT - RT: RN</li>
       </ul>
-(The Preferred term is narrower than Related term)<br>
+(The Preferred term is narrower than Related term)<br/>
 It has been acknowledged that this default may result in a small number
 of semantically incorrect relationships but this is considered the best
 default </td>
@@ -269,7 +269,7 @@ default </td>
 </table>
 </div>
 </div>
-<a name="mappings"><br>
+<a name="mappings"><br/>
 </a>
 <h3><a name="mappings">Mappings (MRMAP):</a></h3>
 <a name="mappings"> <span class="nav">(</span></a><a href="#top">
