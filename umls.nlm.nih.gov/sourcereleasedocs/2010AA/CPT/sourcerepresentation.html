@@ -1,7 +1,10 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
 <!-- begin tabbed navigation area -->
+  <title></title>
 </head>
 <body>
 <div class="section-4">
@@ -35,7 +38,9 @@ Representation</a> </li>
 <a name="top"></a>
 <span class="nav">Skip to: <a href="#general">Notes</a>, <a
  href="#change_summary">Summary of Changes</a>, <a href="#file_summary">Summary
-of Source-Provided Files</a> <a href="#file_details">Source-Provided
+of
+Source-Provided
+Files</a> <a href="#file_details">Source-Provided
 File Details</a></span>
 <a name="general"></a>
 <div id="rep_general" class="rep_block_level_one">
@@ -52,7 +57,7 @@ in 2001, and much of the information on this page is not applicable. </p>
 </div>
 <div id="rep_change_summary" class="rep_block_level_one">
 <a name="change_summary"></a>
-<h3>Summary of Changes</h3>
+<h3>Summary of Changes:</h3>
 &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
 <p>No changes have been made to the original data file format. During
 UMLS source processing, certain relationships are generated between CPT
@@ -209,7 +214,7 @@ hierarchy. The NLM uses the printed book and other resources to
 generate a hierarchy during Metathesaurus source processing. This
 hierarchy has not been reviewed by the AMA. In addition, the NLM
 generates relationships between CPT codes based on string parsing. The
-hierarchy and relalationships are attributed to SAB = MTHCH.
+hierarchy and relalationships are attributed to SAB = "MTHCH".
 </p>
 <p>Not included: All information from the CPT data files is included in
 the UMLS representation.<br>
@@ -221,7 +226,8 @@ contain redundant data.
 <a name="file_details">
 </a>
 <div id="rep_file_details" class="rep_block_level_one">
-<h3><a name="file_details">Source-Provided File Details</a></h3>
+<h3><a name="file_details">Source-Provided Files: Summary<br>
+</a></h3>
 <a name="file_details">&nbsp;&nbsp;<span class="nav">return to </span></a><a
  href="#top">top</a>
 <p>Details on format of input files and representation of source data.
@@ -229,7 +235,7 @@ Consult the CPT documentation for additional details.</p>
 <div class="rep_block_level_two">
 <a name="file1"></a>
 <h4 class="file_field_name">file:LONGULT.txt</h4>
-&nbsp;:&nbsp;<span class="nav">return to <a href="#data_files">Data
+&nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
 Files</a></span>
 <p>Long Descriptions</p>
 <table class="elements" border="0" cellspacing="0">
@@ -248,7 +254,7 @@ Files</a></span>
       <td> 5-digit alpha-numeric code </td>
       <td> MRCONSO.CODE<br>
 MRCONSO.SCUI<br>
-(TTY="PT")</td>
+(TTY = "PT")</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">2<br>
@@ -262,7 +268,7 @@ MRCONSO.SCUI<br>
 <br>
 <a name="file2"></a>
 <h4 class="file_field_name">file:MEDU.txt</h4>
-&nbsp;:&nbsp;<span class="nav">return to <a href="#data_files">Data
+&nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
 Files</a></span>
 <p>Medium Descriptions</p>
 <table class="elements" border="0" cellspacing="0">
@@ -281,7 +287,7 @@ Files</a></span>
       <td> 5-digit alpha-numeric code </td>
       <td> MRCONSO.CODE<br>
 MRCONSO.SCUI<br>
-(TTY="SY")</td>
+(TTY = "SY")</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">2<br>
@@ -295,7 +301,7 @@ MRCONSO.SCUI<br>
 <br>
 <a name="file3"></a>
 <h4 class="file_field_name">file:SHORTU.txt</h4>
-&nbsp;:&nbsp;<span class="nav">return to <a href="#data_files">Data
+&nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
 Files</a></span>
 <p>Short Descriptions</p>
 <table class="elements" border="0" cellspacing="0">
@@ -314,7 +320,7 @@ Files</a></span>
       <td>5-digit alpha-numeric code</td>
       <td> MRCONSO.CODE<br>
 MRCONSO.SCUI<br>
-(TTY="AB")</td>
+(TTY = "AB")</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">2<br>
@@ -328,7 +334,7 @@ MRCONSO.SCUI<br>
 <br>
 <a name="file4"></a>
 <h4 class="file_field_name">file:MODUL.txt</h4>
-&nbsp;:&nbsp;<span class="nav">return to <a href="#data_files">Data
+&nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
 Files</a></span>
 <p>Modifiers. This file is not a set format and must be manual edited
 before Metathesaurus source processing. </p>
@@ -352,7 +358,7 @@ Name</span><br>
       <td> 2-digit alpha-numeric code </td>
       <td> MRCONSO.CODE<br>
 MRCONSO.SCUI<br>
-(TTY="MP")</td>
+(TTY = "MP")</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">2<br>
@@ -361,10 +367,10 @@ MRCONSO.SCUI<br>
 after the table character)</td>
       <td>Mixed-case alpha-numeric string </td>
       <td> MRCONSO.STR<br>
-MRSAT.ATN="CPF"<br>
+MRSAT.ATN = "CPF"<br>
 The MP atom is generally created by extracting the text before the
 first ":". Material appearing after the first ":" is included in the
-CPF attribute.</td>
+"CPF" attribute.</td>
     </tr>
   </tbody>
 </table>
@@ -372,11 +378,11 @@ CPF attribute.</td>
 <a name="file5"></a>
 <h4 class="file_field_name">files:PQRI 2010 Adjunct File.xls; CPT 2010
 Adjunct File.xls</h4>
-&nbsp;:&nbsp;<span class="nav">return to <a href="#data_files">Data
+&nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
 Files</a>
 <p>These files contain additions, revisions and deletions to the long,
 medium and short descriptions. These changes are applied manually to
-information for PT, SY and AB atoms.</p>
+information for "PT", "SY" and "AB" atoms.</p>
 <br>
 </span></div>
 </div>
