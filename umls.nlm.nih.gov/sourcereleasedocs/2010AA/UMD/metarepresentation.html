@@ -1,246 +1,282 @@
-
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
 <!-- begin tabbed navigation area -->
-<div class="section-4"> 
- <ul id="menu"> 
-       <li id="nav-1"> 
-          <a href="index.html">Synopsis</a> 
-       </li> 
-       <li id="nav-2"> 
-          <a href="mrsab.html">MRSAB.RRF</a> 
-       </li> 
- 
-       <li id="nav-3"> 
-          <a href="sourcemetastats.html">Statistics and sample data</a> 
-          <ul id="subnav-3"> 
-             <li> 
-                <a href="termtypes.html">Terms and term types</a> 
-             </li> 
-             <li> 
- 
-                <a href="attributes.html">Attributes</a> 
- 
-             </li> 
-             <li> 
-                <a href="relationships.html">Relationships</a> 
-             </li> 
-             <li> 
-                <a href="semtypes.html">Semantic Types</a> 
- 
-             </li> 
-             <li> 
- 
-                <a href="overlap.html">Source Overlap</a> 
-             </li> 
-          </ul> 
-       </li>
-       <li id = "nav-4">
-       <a href = "representation.html">Representation</a>
-         <ul id = "subnav-4">
-          <li>
-            <a href = "sourcerepresentation.html">Source Representation</a>
-          </li>
-          <li>
-            <a href = "metarepresentation.html" id = "umlsrep">Metathesaurus Representation</a>
-          </li>
-         </ul>
-       </li>
- </ul>
- </div>
-<br/><br/><br/>
-<a name = "top"/>
-<span class = "nav">Skip to: <a href = "#termtypes">Atoms</a>, <a href = "#attributes">Attributes</a>, <a href = "#definitions">Definitions</a>, <a href = "#relationships">Relationships</a>, <a href = "#mappings">Mappings</a></span>
-
+  <title></title>
+</head>
+<body>
+<div class="section-4">
+<ul id="menu">
+  <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
+  <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
+  <li id="nav-3"> <a href="sourcemetastats.html">Statistics and sample
+data</a>
+    <ul id="subnav-3">
+      <li> <a href="termtypes.html">Terms and term types</a> </li>
+      <li> <a href="attributes.html">Attributes</a> </li>
+      <li> <a href="relationships.html">Relationships</a> </li>
+      <li> <a href="semtypes.html">Semantic Types</a> </li>
+      <li> <a href="overlap.html">Source Overlap</a> </li>
+    </ul>
+  </li>
+  <li id="nav-4"> <a href="representation.html">Representation</a>
+    <ul id="subnav-4">
+      <li> <a href="sourcerepresentation.html">Source Representation</a>
+      </li>
+      <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
+Representation</a> </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<br>
+<br>
+<br>
+<a name="top">
+<span class="nav">Skip to: </span></a><a href="#termtypes">Atoms</a>, <a
+ href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
+<a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a>
 <p><b>VSAB</b>:UMD2010</p>
-<div id = "general" class = "rep_block_level_one">
-
-<div id = "rep_identifiers" class = "rep_block_level_one">
+<div id="general" class="rep_block_level_one">
+<div id="rep_identifiers" class="rep_block_level_one">
 <h3>Summary of Changes:</h3>
-<p>No changes have been made to the original data files or to representation of UMDNS in 2010AA.</p>
+<p>No changes have been made to the original data files or to
+representation of UMDNS in 2010AA.</p>
 </div>
-<div id = "rep_identifiers" class = "rep_block_level_one">
-<h3>Original Files:</h3>
-<p>The UMLS uses an xml version of UMDNS which is created with the TDE tool from Apelon, Inc.  The file used for 2010AB is &quot;UMDNS20090903a_rev2.xml&quot; (the defined view).  (<a href = "http://apelon.com/dtd/tde/ontylog.dtd">http://apelon.com/dtd/tde/ontylog.dtd</a>)</p>
+<div id="rep_identifiers" class="rep_block_level_one">
+<h3>Source Provided Files:</h3>
+<p>The UMLS uses an xml version of UMDNS which is created with the TDE
+tool from Apelon, Inc. The file used for 2010AB is
+"UMDNS20090903a_rev2.xml" (the defined view). (<a
+ href="http://apelon.com/dtd/tde/ontylog.dtd">http://apelon.com/dtd/tde/ontylog.dtd</a>)</p>
 </div>
-
-<div id = "rep_identifiers" class = "rep_block_level_one">
-<h3>Identifiers</h3>
-<p>UMDNS includes both “concepts,” i.e. collections of synonymous atoms, and “descriptors,” i.e. collections of concepts that are considered to be closely related (but not necessarily synonymous).
-Therefore, atoms with TTY=SY are assigned the same Source-asserted Concept Identifer (SCUI), and Source-asserted Descriptor Identifier (SDUI) as their PT.
-However, atoms with TTY=ET are considered to be in a different concept from their PT (different SCUI) but members of the same descriptor (same SDUI).  Identifiers are assigned as follows:
+<div id="rep_identifiers" class="rep_block_level_one">
+<h3>Identifiers:</h3>
+<p>UMDNS includes both &#8220;concepts,&#8221; i.e. collections of synonymous
+atoms, and &#8220;descriptors,&#8221; i.e. collections of concepts that are
+considered to be closely related (but not necessarily synonymous).
+Therefore, atoms with TTY=SY are assigned the same Source-asserted
+Concept Identifer (SCUI), and Source-asserted Descriptor Identifier
+(SDUI) as their PT.
+However, atoms with TTY=ET are considered to be in a different concept
+from their PT (different SCUI) but members of the same descriptor (same
+SDUI). Identifiers are assigned as follows:
 </p>
 <ul>
-<li>CODE: <br/>For termtypes PT, ET, RT, HT:  populated by the &quot;CODE_IN_SOURCE&quot; property.<br/>  
-For termtype SY:  populated by the CODE_IN_SOURCE value of the PT
-</li>
-<li>SAUI: <br/>Not Applicable</li>
-<li>SCUI: <br/>Same as &quot;CODE&quot;</li>
-<li>SDUI: <br/>For termtypes PT, SY, ET:  CODE of PT<br/>
-For termtype HT: CODE of HT<br/>
-For termtype RT:CODE of RT (An RT may have multiple PTs, so we can't use code of PT)
-</li>
+  <li>CODE: <br>
+For termtypes "PT", "ET", "RT", "HT": populated by the "CODE_IN_SOURCE"
+property.<br>
+For termtype "SY": populated by the "CODE_IN_SOURCE" value of the "PT" </li>
+  <li>SAUI: <br>
+Not Applicable</li>
+  <li>SCUI: <br>
+Same as "CODE"</li>
+  <li>SDUI: <br>
+For termtypes "PT", "SY", "ET": CODE of "PT"<br>
+For termtype "HT": CODE of "HT"<br>
+For termtype "RT": CODE of "RT" (An "RT" may have multiple "PT"s, so we
+can't use code of "PT") </li>
 </ul>
-<br/>
-
-<a name = "termtypes"/><br/>
-<h3>Atoms (MRCONSO)</h3> <span class = "nav">(return to <a href = "#top">top</a></span>)
-<div id = "rep_termtypes" class = "rep_block_level_two">
-<table class = "elements" border = "0" cellspacing = "0">
-<tr><th>Term Type</th><th>Origin</th></tr>
-<tr><td valign = "top">PT</td><td>
-CODE = value of &lt;CODE_IN_SOURCE&gt; property<br/>
-STR = value of &lt;conceptDef&gt;&lt;name&gt;<br/>
-SCUI = value of &lt;CODE_IN_SOURCE&gt; property<br/>
-SDUI = value of &lt;CODE_IN_SOURCE&gt; property<br/><br/>
-
-Termtypes are assigned based on the value of the &quot;DEVICE_TYPE&quot; property.  PTs are created where the DEVICE_TYPE is one of:<br/>   
-<ul>
-<li>CATEGORY EXPANDED BELOW entry with SEE ALSO references</li>
-<li>CATEGORY EXPANDED BELOW entry</li>
-<li>Device has SEE ALSO references</li>	
-<li>Main Device Term</li>
-<li>NIR entry</li> 
-</ul>
-</td>
-</tr>
-
-<tr>
-<td valign = "top">HT</td>
-<td>
-CODE = value of &lt;CODE_IN_SOURCE&gt; property<br/>
-STR = value of &lt;conceptDef&gt;&lt;name&gt;<br/>
-SCUI = value of &lt;CODE_IN_SOURCE&gt; property<br/>
-SDUI = value of &lt;CODE_IN_SOURCE&gt; property<br/><br/>
-
-Termtypes are assigned based on the value of the &quot;DEVICE_TYPE&quot; property.  HTs are created where the DEVICE_TYPE is:
-
-<ul>
-<li>Hierarchical Term</li>
-</ul>
-</td>
-</tr>
-
-<tr><td>RT</td>
-<td>
-CODE = value of &lt;CODE_IN_SOURCE&gt; property<br/>
-STR = value of &lt;conceptDef&gt;&lt;name&gt;<br/>
-SCUI = value of &lt;CODE_IN_SOURCE&gt; property<br/>
-SDUI = value of &lt;CODE_IN_SOURCE&gt; property<br/><br/>
-
-Termtypes are assigned based on the value of the &quot;DEVICE_TYPE&quot; property.  RTs are created where the DEVICE_TYPE is:
-
-<ul>
-<li>Device is a USE MORE SPECIFIC TERM entry.</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td valign="top">SY</td>
-<td>
-CODE = value of &lt;CODE_IN_SOURCE&gt; property of associated PT<br/>
-STR = value of the &quot;SYNONYM&quot; property<br/>
-SCUI = value of &lt;CODE_IN_SOURCE&gt; property of associated PT<br/>
-SDUI = value of &lt;CODE_IN_SOURCE&gt; property of associated PT<br/><br/>
-
-SYs are created when a &quot;SYNONYM&quot; property exists
-</td>
-</tr>
-<tr>
-<td valign = "top">ET</td>
-<td>
-CODE = value of &lt;CODE_IN_SOURCE&gt; property<br/>
-STR = value of &lt;conceptDef&gt;&lt;name&gt;<br/>
-SCUI = value of &lt;CODE_IN_SOURCE&gt; property<br/>
-SDUI = value of &lt;CODE_IN_SOURCE&gt; property of associated PT<br/><br/>
-
-Termtypes are assigned based on the value of the &quot;DEVICE_TYPE&quot; property.  ETs are created where the DEVICE_TYPE is:
-<ul>
-<li>Device is a SEE reference.</li>
-</ul>
-
-</td>
-</tr>
-
-
-
+<br>
+<a name="termtypes"><br>
+</a>
+<h3><a name="termtypes">Atoms (MRCONSO):</a></h3>
+<a name="termtypes"> <span class="nav">(</span></a><a href="#top">
+return to top</a>)
+<div id="rep_termtypes" class="rep_block_level_two">
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>Term Type</th>
+      <th>Origin</th>
+    </tr>
+    <tr>
+      <td valign="top">PT</td>
+      <td>CODE = value of &lt;CODE_IN_SOURCE&gt; property<br>
+STR = value of &lt;conceptDef&gt;&lt;name&gt;<br>
+SCUI = value of &lt;CODE_IN_SOURCE&gt; property<br>
+SDUI = value of &lt;CODE_IN_SOURCE&gt; property<br>
+      <br>
+Termtypes are assigned based on the value of the "DEVICE_TYPE"
+property. "PT"s are created where the "DEVICE_TYPE" is one of:<br>
+      <ul>
+        <li>CATEGORY EXPANDED BELOW entry with SEE ALSO references</li>
+        <li>CATEGORY EXPANDED BELOW entry</li>
+        <li>Device has SEE ALSO references</li>
+        <li>Main Device Term</li>
+        <li>NIR entry</li>
+      </ul>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">HT</td>
+      <td>CODE = value of &lt;CODE_IN_SOURCE&gt; property<br>
+STR = value of &lt;conceptDef&gt;&lt;name&gt;<br>
+SCUI = value of &lt;CODE_IN_SOURCE&gt; property<br>
+SDUI = value of &lt;CODE_IN_SOURCE&gt; property<br>
+      <br>
+Termtypes are assigned based on the value of the "DEVICE_TYPE"
+property. "HT"s are created where the "DEVICE_TYPE" is:
+      <ul>
+        <li>Hierarchical Term</li>
+      </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>RT</td>
+      <td>CODE = value of &lt;CODE_IN_SOURCE&gt; property<br>
+STR = value of &lt;conceptDef&gt;&lt;name&gt;<br>
+SCUI = value of &lt;CODE_IN_SOURCE&gt; property<br>
+SDUI = value of &lt;CODE_IN_SOURCE&gt; property<br>
+      <br>
+Termtypes are assigned based on the value of the "DEVICE_TYPE"
+property. "RT"s are created where the "DEVICE_TYPE" is:
+      <ul>
+        <li>Device is a USE MORE SPECIFIC TERM entry.</li>
+      </ul>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">SY</td>
+      <td>CODE = value of &lt;CODE_IN_SOURCE&gt; property of associated
+"PT"<br>
+STR = value of the "SYNONYM" property<br>
+SCUI = value of &lt;CODE_IN_SOURCE&gt; property of associated "PT"<br>
+SDUI = value of &lt;CODE_IN_SOURCE&gt; property of associated "PT"<br>
+      <br>
+SYs are created when a "SYNONYM" property exists </td>
+    </tr>
+    <tr>
+      <td valign="top">ET</td>
+      <td>CODE = value of &lt;CODE_IN_SOURCE&gt; property<br>
+STR = value of &lt;conceptDef&gt;&lt;name&gt;<br>
+SCUI = value of &lt;CODE_IN_SOURCE&gt; property<br>
+SDUI = value of &lt;CODE_IN_SOURCE&gt; property of associated "PT"<br>
+      <br>
+Termtypes are assigned based on the value of the "DEVICE_TYPE"
+property. ETs are created where the "DEVICE_TYPE" is:
+      <ul>
+        <li>Device is a SEE reference.</li>
+      </ul>
+      </td>
+    </tr>
+  </tbody>
 </table>
 </div>
-
-<a name = "attributes"/><br/>
-<h3>Attributes (MRSAT)</h3>  <span class = "nav">(return to <a href = "#top">top</a></span>)
-<div id = "rep_attributes" class = "rep_block_level_two">
-<table class = "elements" border = "0" cellspacing = "0">
-<tr><th>Attribute Name</th><th>Origin of ATV</th></tr>
-<td valign="top">DEVTYPE</td>
-<td>
-The value of the &quot;DEVICE_TYPE&quot; property.  One of the following:
-<ul>
-<li>CATEGORY EXPANDED BELOW entry with SEE ALSO references</li>
-<li>CATEGORY EXPANDED BELOW entry</li>
-<li>Device has SEE ALSO references</li>
-<li>Device is a SEE reference</li>
-<li>Device is a USE MORE SPECIFIC TERM entry</li>
-<li>Hierarchical Term</li>
-<li>Main Device Term</li>
-<li>NIR entry</li>
-<p>Note:  In the original data, some synonyms have a qualifier of &quot;Synonym_Device_Type,&quot; and some are assigned a blank or incorrect DEVICE_TYPE.<br/>
-For consistency, in the Metathesaurus, all SY atoms are defaulted to &quot;Device is a SEE reference.&quot;
-DEVTYPE is attached to AUI for SY atoms; for all other atoms, it is attached to CODE.</p>
-</ul>
-</td>
-</tr>
-<tr>
-<td valign="top">SYCODE</td>
-<td>
-The value of the &quot;Synonym_Code&quot; qualifier, if present.  Attached to AUI.
-</td>
-</tr>
+<a name="attributes"><br>
+</a>
+<h3><a name="attributes">Attributes (MRSAT):</a></h3>
+<a name="attributes"> <span class="nav">(</span></a><a href="#top">
+return to top</a>)
+<div id="rep_attributes" class="rep_block_level_two">
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>Attribute Name</th>
+      <th>Origin of ATV</th>
+    </tr>
+    <tr>
+      <td valign="top">DEVTYPE</td>
+      <td>The value of the "DEVICE_TYPE" property. One of the
+following:
+      <ul>
+        <li>CATEGORY EXPANDED BELOW entry with SEE ALSO references</li>
+        <li>CATEGORY EXPANDED BELOW entry</li>
+        <li>Device has SEE ALSO references</li>
+        <li>Device is a SEE reference</li>
+        <li>Device is a USE MORE SPECIFIC TERM entry</li>
+        <li>Hierarchical Term</li>
+        <li>Main Device Term</li>
+        <li>NIR entry</li>
+        <p>Note: In the original data, some synonyms have a qualifier
+of "Synonym_Device_Type," and some are assigned a blank or incorrect
+DEVICE_TYPE.<br>
+For consistency, in the Metathesaurus, all SY atoms are defaulted to
+"Device is a SEE reference."
+DEVTYPE is attached to AUI for SY atoms; for all other atoms, it is
+attached to CODE.</p>
+      </ul>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">SYCODE</td>
+      <td>The value of the "Synonym_Code" qualifier, if present.
+Attached to AUI. </td>
+    </tr>
+  </tbody>
 </table>
 </div>
-
-<a name = "definitions"/><br/>
-<h3>Definitions (MRDEF)</h3> <span class = "nav">(return to <a href = "#top">top</a></span>)
-<div id = "rep_definitions" class = "rep_block_level_two">
-<table class = "elements" border = "0" cellspacing = "0">
-<tr><th>ORIGIN</th></tr>
-<tr><td valign = "top">The value of the &quot;DEFINITION &quot; property, where value of the &quot;Definition _Status&quot; qualifier = &quot;Releasable.&quot;  Definitions with other qualifier values are excluded.</td></tr>
+<a name="definitions"><br>
+</a>
+<h3><a name="definitions">Definitions (MRDEF):</a></h3>
+<a name="definitions"> <span class="nav">(</span></a><a href="#top">
+return to top</a>)
+<div id="rep_definitions" class="rep_block_level_two">
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>ORIGIN</th>
+    </tr>
+    <tr>
+      <td valign="top">The value of the "DEFINITION " property, where
+value of the "Definition _Status" qualifier = "Releasable." Definitions
+with other qualifier values are excluded.</td>
+    </tr>
+  </tbody>
 </table>
 </div>
-
-<a name = "relationships"/><br/>
-<h3>Relationships (MRREL)</h3> <span class = "nav">(return to <a href = "#top">top</a></span>)
-<div id = "rep_relationships" class = "rep_block_level_two">
-<table class = "elements" border = "0" cellspacing = "0">
-<tr><th>Relationship</th><th>Relationship Label/Inverse Relationship Label</th><th>ORIGIN</th></tr>
-        
-<tr>
-<td valign = "top">CHD<br/>PAR<br/>SIB</td>
-<td>isa/inverse_isa</td>
-<td>
-Hierarchy extracted from &quot;&lt;definingConcept&gt;&lt;concept&gt;&quot; values in original xml data
-</td>
-</tr>
-
-<tr>
-<td valign = "top">RB/RN<br/>RO<br/></td>
-<td>&nbsp;&nbsp;</td>
-<td>
-Relationships are assigned based on termtypes:
-<ul>
-<li>PT - PT:  RO</li>
-<li>PT - ET:  RO</li>
-<li>PT - RT:  RN</li>
-</ul>
-(The Preferred term is narrower than Related term)<br/>
-
-It has been acknowledged that this default may result in a small number of semantically incorrect relationships but this is considered the best default
-</td>
-</tr>
-
+<a name="relationships"><br>
+</a>
+<h3><a name="relationships">Relationships (MRREL):</a></h3>
+<a name="relationships"> <span class="nav">(</span></a><a href="#top">
+return to top</a>)
+<div id="rep_relationships" class="rep_block_level_two">
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>Relationship</th>
+      <th>Relationship Label/Inverse Relationship Label</th>
+      <th>ORIGIN</th>
+    </tr>
+    <tr>
+      <td valign="top">CHD<br>
+PAR<br>
+SIB</td>
+      <td>isa/inverse_isa</td>
+      <td>Hierarchy extracted from
+"&lt;definingConcept&gt;&lt;concept&gt;"
+values in original xml data </td>
+    </tr>
+    <tr>
+      <td valign="top">RB/RN<br>
+RO<br>
+      </td>
+      <td>&nbsp;&nbsp;</td>
+      <td>Relationships are assigned based on termtypes:
+      <ul>
+        <li>PT - PT: RO</li>
+        <li>PT - ET: RO</li>
+        <li>PT - RT: RN</li>
+      </ul>
+(The Preferred term is narrower than Related term)<br>
+It has been acknowledged that this default may result in a small number
+of semantically incorrect relationships but this is considered the best
+default </td>
+    </tr>
+  </tbody>
 </table>
 </div>
 </div>
-<a name = "mappings"/><br/>
-<h3>Mappings (MRMAP)</h3> <span class = "nav">(return to <a href = "#top">top</a></span>)
-<div id = "mappings" class = "rep_block_level_one">
-<p>No mapping data is included for UMDNS</p> 
+<a name="mappings"><br>
+</a>
+<h3><a name="mappings">Mappings (MRMAP):</a></h3>
+<a name="mappings"> <span class="nav">(</span></a><a href="#top">
+return to top</a>)
+<div id="mappings" class="rep_block_level_one">
+<p>No mapping data is included for UMDNS</p>
 </div>
+</div>
+</body>
+</html>
