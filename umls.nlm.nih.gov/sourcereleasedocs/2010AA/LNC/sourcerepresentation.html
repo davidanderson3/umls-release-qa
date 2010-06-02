@@ -1,7 +1,10 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
 <!-- begin tabbed navigation area -->
+  <title></title>
 </head>
 <body>
 <div class="section-4">
@@ -20,7 +23,7 @@ data</a>
   </li>
   <li id="nav-4"> <a href="representation.html">Representation</a>
     <ul id="subnav-4">
-      <li> <a href="sourcerepresentation.html" id="umlsrep">Source
+      <li> <a href="sourcerepresentation.html" id="sourcerep">Source
 Representation</a> </li>
       <li> <a href="metarepresentation.html">Metathesaurus
 Representation</a> </li>
@@ -32,7 +35,8 @@ Representation</a> </li>
 <br>
 <br>
 Skip to: <a href="#general">Notes</a>, <a href="#change_summary">Summary
-of Changes</a>, <a href="#file_summary">Summary of Source-Provided
+of
+Changes</a>, <a href="#file_summary">Summary of Source-Provided
 Files</a>, <a href="#file_details">Source-Provided File Details</a>
 <br>
 <div id="rep_general" class="rep_block_level_one">
@@ -62,7 +66,7 @@ subsources.<br>
 <a name="change_summary"></a>
 <h3>Summary of Changes in this version</h3>
 &nbsp;
-<span class="nav">(return to <a href="#top">top</a></span>)
+<span class="nav">(<a href="#top">return to top</a></span>)
 <p>The subsource assignment algorithm was adjusted to assign three new
 subsources:<br>
 </p>
@@ -74,8 +78,7 @@ Assessment Method.
 A new method for detection of delirium. Ann Intern Med. 1990; 113:
 941-948.
 Confusion Assessment Method: Training Manual and Coding Guide,
-Copyright 2003, Sharon K. Inouye, M.D., MPH.
-  </li>
+Copyright 2003, Sharon K. Inouye, M.D., MPH. </li>
   <li>LNC_MDS20</li>
   <li>LNC_MDS30<br>
 LOINC includes data from two versions of the Minimum
@@ -94,13 +97,14 @@ SAB LNC_MDS was removed:
 Its content remains and is divided between the two new sources
 LNC_MDS20 and LNC_MDS30.</p>
 <h4>New Termtype: OLC</h4>
-<p>Obsolete Long Common Name (SUPPRESS = O). Previously, all atoms
-created from field 46, LONG_COMMON_NAME, were represented with TTY = LC.</p>
+<p>Obsolete Long Common Name (SUPPRESS = "O"). Previously, all atoms
+created from field 46, LONG_COMMON_NAME, were represented with TTY =
+"LC".</p>
 </div>
 <div id="rep_file_summary" class="rep_block_level_one"><br>
-<h3>Summary of Source-Provided Files</h3>
+<h3>Source-Provided Files: Summary</h3>
 &nbsp;
-<span class="nav">(return to <a href="#top">top</a></span>)
+<span class="nav">(<a href="#top">return to top</a></span>)
 <p>The complete LOINC distribution includes the following.</p>
 <div class="rep_block_level_two"><!-- Make a table of each file that comes from the source   -->
 <h4>Documentation and Reference</h4>
@@ -160,9 +164,9 @@ Fields that are not used are indicated by "Not used" in the
 </div>
 <div id="rep_file_details" class="rep_block_level_one">
 <a name="file_details"></a>
-<h3>Source-Provided File Details</h3>
-<a name="file_details">&nbsp;&nbsp;<span class="nav">(return to </span></a><a
- href="#top">top</a>)
+<h3>Source-Provided Files: Details</h3>
+<a name="file_details">&nbsp;&nbsp;<span class="nav">(</span></a><a
+ href="#top">return to top</a>)
 <p>Details on format of input files and representation of source data.
 Consult the LOINC documentation for additional details.</p>
 <div class="rep_block_level_two">
@@ -192,11 +196,11 @@ inserting a colon (":") between each element.</td>
       <td>
       <ul>
         <li>First segment of colon-separated fully-specified name,
-MRCONSO.STR, TTY = LN or LO</li>
+MRCONSO.STR, TTY = "LN" or "LO"</li>
         <li>First segment of colon-separated fully-specified name,
-MRCONSO.STR, TTY = LX or OLX (with expansions)</li>
-        <li>Subfield 1 = MRCONSO.STR, TTY = CN</li>
-        <li>MRCONSO.STR, TTY = CX (subfield 1, with expansions)</li>
+MRCONSO.STR, TTY = "LX" or "OLX" (with expansions)</li>
+        <li>Subfield 1 = MRCONSO.STR, TTY = "CN"</li>
+        <li>MRCONSO.STR, TTY = "CX" (subfield 1, with expansions)</li>
         <li>Entire field: MRSAT.ATN = LOINC_COMPONENT</li>
       </ul>
       </td>
@@ -209,9 +213,9 @@ MRCONSO.STR, TTY = LX or OLX (with expansions)</li>
       <td>
       <ul>
         <li>Second segment of colon-separated fully-specified name,
-MRCONSO.STR, TTY = LN or LO</li>
+MRCONSO.STR, TTY = "LN" or "LO"</li>
         <li>Second segment of colon-separated fully-specified name,
-MRCONSO.STR, TTY = LX or OLX (with expansions)</li>
+MRCONSO.STR, TTY = "LX" or "OLX" (with expansions)</li>
         <li>MRSAT.ATN = LOINC_PROPERTY</li>
       </ul>
       </td>
@@ -224,9 +228,9 @@ MRCONSO.STR, TTY = LX or OLX (with expansions)</li>
       <td>
       <ul>
         <li>Third segment of colon-separated fully-specifie name,
-MRCONSO.STR, TTY = LN or LO</li>
+MRCONSO.STR, TTY = "LN" or "LO"</li>
         <li>Third segment of colon-separated fully-specified name,
-MRCONSO.STR, TTY = LX or OLX (with expansions)</li>
+MRCONSO.STR, TTY = "LX" or "OLX" (with expansions)</li>
         <li>MRSAT.ATN = LOINC_TIME_ASPECT</li>
       </ul>
       </td>
@@ -239,10 +243,10 @@ MRCONSO.STR, TTY = LX or OLX (with expansions)</li>
       <td>
       <ul>
         <li>Fourth segment of colon-separated fully-specified name,
-MRCONSO.STR, TTY = LN or LO</li>
+MRCONSO.STR, TTY = "LN" or "LO"</li>
         <li>Fourth segment of colon-separated fully-specified name,
-MRCONSO.STR, TTY = LX or OLX (with expansions)</li>
-        <li>First subfield: MRCONSO.STR, TTY = LS (with expansions)</li>
+MRCONSO.STR, TTY = "LX" or "OLX" (with expansions)</li>
+        <li>First subfield: MRCONSO.STR, TTY = "LS" (with expansions)</li>
         <li>MRSAT.ATN = LOINC_SYSTEM</li>
       </ul>
       </td>
@@ -255,9 +259,9 @@ MRCONSO.STR, TTY = LX or OLX (with expansions)</li>
       <td>
       <ul>
         <li>Fifth segment of colon-separated fully-specified name,
-MRCONSO.STR, TTY = LN or LO</li>
+MRCONSO.STR, TTY = "LN" or "LO"</li>
         <li>Fifth segment of colon-separated fully-specified name,
-MRCONSO.STR, TTY = LX or OLX (with expansions)</li>
+MRCONSO.STR, TTY = "LX" or "OLX" (with expansions)</li>
         <li>MRSAT.ATN = LOINC_SCALE_TYP</li>
       </ul>
       </td>
@@ -269,9 +273,9 @@ MRCONSO.STR, TTY = LX or OLX (with expansions)</li>
       </td>
       <td>
       <li>Sixth segment of colon-separated fully-specified name,
-MRCONSO.STR, TTY = LN or LO</li>
+MRCONSO.STR, TTY = "LN" or "LO"</li>
       <li>Sixth segment of colon-separated fully-specified name,
-MRCONSO.STR, TTY = LX or OLX (with expansions)</li>
+MRCONSO.STR, TTY = "LX" or "OLX" (with expansions)</li>
       <li>MRSAT.ATN = LOINC_METHOD_TYP</li>
       <li>Used in the subsource assignment algorithm</li>
       </td>
@@ -281,7 +285,7 @@ MRCONSO.STR, TTY = LX or OLX (with expansions)</li>
       <td>RELAT_NMS</td>
       <td>Field no longer maintained.<br>
 Replaced by field 38, RelatedNames2</td>
-      <td>MRSAT.ATN = LRN</td>
+      <td>MRSAT.ATN = "LRN"</td>
     </tr>
     <tr>
       <td>9</td>
@@ -291,9 +295,9 @@ observations together. See Table 21 in the LOINC Users&#8217; Guide for
 values.</td>
       <td>
       <ul>
-        <li>MRCONSO.STR, TTY = HS</li>
-        <li>MRCONSO.STR, TTY = HC (with expansions)</li>
-        <li>MRSAT.ATN = LCL</li>
+        <li>MRCONSO.STR, TTY = "HS"</li>
+        <li>MRCONSO.STR, TTY = "HC" (with expansions)</li>
+        <li>MRSAT.ATN = "LCL"</li>
         <li>Used to build hierarchy</li>
         <li>Used in the subsource assignment algorithm</li>
       </ul>
@@ -309,29 +313,31 @@ values.</td>
       <td>11</td>
       <td>DT_LAST_CH</td>
       <td>Date last changed; format is YYYYMMDD</td>
-      <td>MRSAT.ATN = LLR</td>
+      <td>MRSAT.ATN = "LLR"</td>
     </tr>
     <tr>
       <td>12</td>
       <td>CHNG_TYPE</td>
-      <td>Change Type Code: DEL = delete (deprecate); ADD = add; NAM =
-change to Analyte/Component (field #2); MAJ = change to name field
-other than #2 (#3 - #7); MIN = change to field other than name; UND =
+      <td>Change Type Code: "DEL" = delete (deprecate); "ADD" = add;
+"NAM" =
+change to Analyte/Component (field #2); "MAJ" = change to name field
+other than #2 (#3 - #7); "MIN" = change to field other than name; "UND"
+=
 undelete</td>
-      <td>MRSAT.ATN = LCT</td>
+      <td>MRSAT.ATN = "LCT"</td>
     </tr>
     <tr>
       <td>13</td>
       <td>COMMENTS</td>
       <td>Free-text comments relating to the test result</td>
-      <td>MRSAT.ATN =SOS</td>
+      <td>MRSAT.ATN = "SOS"</td>
     </tr>
     <tr>
       <td>14</td>
       <td>ANSWERLIST</td>
       <td>Contents of this field have been moved to structured lists
 which may be viewed using RELMA</td>
-      <td>MRSAT.ATN = LAL</td>
+      <td>MRSAT.ATN = "LAL"</td>
     </tr>
     <tr>
       <td>15</td>
@@ -339,24 +345,23 @@ which may be viewed using RELMA</td>
       <td>Deprecated or superseded status indicated by DEL</td>
       <td>
       <ul>
-        <li>For records with STATUS = &#8220;DEL,&#8221; an obsolete TTY is
-assigned, and MRCONSO.SUPPRESS = O
-        </li>
-        <li>MRSAT.ATN = LCS
-        </li>
+        <li>For records with STATUS = "DEL", an obsolete TTY is
+assigned, and MRCONSO.SUPPRESS = "O" </li>
+        <li>MRSAT.ATN = "LCS" </li>
       </ul>
       </td>
     </tr>
     <tr>
       <td>16</td>
       <td>MAP_TO</td>
-      <td>For codes with status="DEL", contains the LOINC code of the
+      <td>For codes with status = "DEL", contains the LOINC code of the
 new term that should be used</td>
       <td>
       <ul>
-        <li>Used to create mapped_to relationships between LN and LO
+        <li>Used to create mapped_to relationships between "LN" and
+"LO"
 atoms</li>
-        <li>MRSAT.ATN = LMP</li>
+        <li>MRSAT.ATN = "LMP"</li>
       </ul>
       </td>
     </tr>
@@ -384,7 +389,7 @@ atoms</li>
       <td>REFERENCE</td>
       <td>References to medical literature, product announcements or
 other written sources.</td>
-      <td>MRSAT.ATN=LRF</td>
+      <td>MRSAT.ATN = "LRF"</td>
     </tr>
     <tr>
       <td>21</td>
@@ -392,8 +397,8 @@ other written sources.</td>
       <td>Exact synonym for the "core component" of the component name.</td>
       <td>
       <ul>
-        <li>MRCONSO.STR, TTY=SN</li>
-        <li>MRCONSO.STR, TTY=SX (with expansions)</li>
+        <li>MRCONSO.STR, TTY = "SN"</li>
+        <li>MRCONSO.STR, TTY = "SX" (with expansions)</li>
       </ul>
       </td>
     </tr>
@@ -401,18 +406,18 @@ other written sources.</td>
       <td>22</td>
       <td>MOLAR_MASS</td>
       <td>Molecular weights, contributed by IUPAC</td>
-      <td>MRSAT.ATN = LMM</td>
+      <td>MRSAT.ATN = "LMM"</td>
     </tr>
     <tr>
       <td>23</td>
       <td>CLASSTYPE</td>
-      <td>1=Laboratory; 2=Clinical class; 3=Claims attachments;
+      <td>1 = Laboratory; 2 = Clinical class; 3 = Claims attachments;
 4=Surveys</td>
       <td>
       <ul>
-        <li>MRCONSO.STR, TTY = HC</li>
-        <li>MRCONSO.STR, TTY = HS (with expansions)</li>
-        <li>MRSAT.ATN = LCN</li>
+        <li>MRCONSO.STR, TTY = "HC"</li>
+        <li>MRCONSO.STR, TTY = "HS" (with expansions)</li>
+        <li>MRSAT.ATN = "LCN"</li>
         <li>Used to build hierarchy</li>
       </ul>
       </td>
@@ -421,33 +426,33 @@ other written sources.</td>
       <td>24</td>
       <td>FORMULA</td>
       <td>Regression equation details</td>
-      <td>MRSAT.ATN = LFO</td>
+      <td>MRSAT.ATN = "LFO"</td>
     </tr>
     <tr>
       <td>25</td>
       <td>SPECIES</td>
       <td>Indicates which non-human species this code applies to</td>
-      <td>MRSAT.ATN = LSP</td>
+      <td>MRSAT.ATN = "LSP"</td>
     </tr>
     <tr>
       <td>26</td>
       <td>EXMPL_ANSWERS</td>
       <td>Examples of valid answers</td>
-      <td>MRSAT.ATN = LEA</td>
+      <td>MRSAT.ATN = "LEA"</td>
     </tr>
     <tr>
       <td>27</td>
       <td>ACSSYM</td>
       <td>Chemical name synonyms, alternative names and chemical
 formulae, supplied by CAS</td>
-      <td>MRSAT.ATN = LCA; an attribute is created for each
+      <td>MRSAT.ATN = "LCA"; an attribute is created for each
 comma-separated value in this field</td>
     </tr>
     <tr>
       <td>28</td>
       <td>BASE_NAME</td>
       <td>Chemical base name from CAS</td>
-      <td>MRSAT.ATN = LCB</td>
+      <td>MRSAT.ATN =&nbsp; "LCB"</td>
     </tr>
     <tr>
       <td>29</td>
@@ -460,13 +465,13 @@ comma-separated value in this field</td>
       <td>NAACCR_ID</td>
       <td>North American Association of Central Cancer Registries
 Identification Number</td>
-      <td>MRSAT.ATN = LNC</td>
+      <td>MRSAT.ATN = "LNC"</td>
     </tr>
     <tr>
       <td>31</td>
       <td>CODE_TABLE</td>
       <td>Examples on CR0050 Cancer Registry</td>
-      <td>MRSAT.ATN = LNE</td>
+      <td>MRSAT.ATN = "LNE"</td>
     </tr>
     <tr>
       <td>32</td>
@@ -484,59 +489,59 @@ Identification Number</td>
       <td>34</td>
       <td>SURVEY_QUEST_TXT</td>
       <td>Question from survey instrument</td>
-      <td>MRSAT.ATN = LQT</td>
+      <td>MRSAT.ATN = "LQT"</td>
     </tr>
     <tr>
       <td>35</td>
       <td>SURVEY_QUEST_SRC</td>
       <td>Name of survey instrument and item/question number</td>
-      <td> MRSAT.ATN = LQS</td>
+      <td> MRSAT.ATN = "LQS"</td>
     </tr>
     <tr>
       <td>36</td>
       <td>UNITS_REQUIRED</td>
       <td>Y/N indicates whether units are required for OBX segment in a
 HIPAA attachment</td>
-      <td>MRSAT.ATN = LUR</td>
+      <td>MRSAT.ATN = "LUR"</td>
     </tr>
     <tr>
       <td>37</td>
       <td>SUBMITTED_UNITS</td>
       <td>Moved to RELMA</td>
-      <td>MRSAT.ATN = LSU</td>
+      <td>MRSAT.ATN = "LSU"</td>
     </tr>
     <tr>
       <td>38</td>
       <td>RELATEDNAMES2</td>
       <td>Synonyms for each part of the fully-specified LOINC name
 (component, property, time, system, scale, method)</td>
-      <td>MRSAT.ATN = LRN2</td>
+      <td>MRSAT.ATN = "LRN2"</td>
     </tr>
     <tr>
       <td>39</td>
       <td>SHORTNAME</td>
       <td>Concatenation of the fully-specified LOINC name</td>
-      <td>MRCONSO.STR, TTY = OSN, OOSN</td>
+      <td>MRCONSO.STR, TTY = "OSN", "OOSN"</td>
     </tr>
     <tr>
       <td>40</td>
       <td>ORDER_OBS</td>
       <td>Defines term as an order only, observation only, both, or
 Subset</td>
-      <td>MRSAT.ATN = LOR</td>
+      <td>MRSAT.ATN = "LOR"</td>
     </tr>
     <tr>
       <td>41</td>
       <td>CDISC_COMMON_TESTS</td>
       <td>Y indicates member of subset used by CDISC in clinical trials</td>
-      <td>MRSAT.ATN = LCD</td>
+      <td>MRSAT.ATN = "LCD"</td>
     </tr>
     <tr>
       <td>42</td>
       <td>HL7_FIELD_SUBFIELD_ID</td>
       <td>Indicates that the content should be delivered in the named
 field/subfield of the HL7 message.</td>
-      <td>MRSAT.ATN = HL7_FIELD_SUBFIELD</td>
+      <td>MRSAT.ATN = "HL7_FIELD_SUBFIELD"</td>
     </tr>
     <tr>
       <td>43</td>
@@ -544,7 +549,7 @@ field/subfield of the HL7 message.</td>
       <td>External copyright holder information</td>
       <td>
       <ul>
-        <li>MRSAT.ATN = COPYRIGHT</li>
+        <li>MRSAT.ATN = "COPYRIGHT"</li>
         <li>Used in the subsource assignment algorithm</li>
       </ul>
       </td>
@@ -553,56 +558,56 @@ field/subfield of the HL7 message.</td>
       <td>44</td>
       <td>EXAMPLE_UNITS</td>
       <td>Indicates representative units</td>
-      <td>MRSAT.ATN = EXAMPLE_UNITS</td>
+      <td>MRSAT.ATN = "EXAMPLE_UNITS"</td>
     </tr>
     <tr>
       <td>45</td>
       <td>INPC_PERCENTAGE</td>
       <td>Percent of overall result volume within the INPC</td>
-      <td>MRSAT.ATN = INPC_PERCENTAGE</td>
+      <td>MRSAT.ATN = "INPC_PERCENTAGE"</td>
     </tr>
     <tr>
       <td>46</td>
       <td>LONG_COMMON_NAME</td>
       <td>Readable version of LOINC term</td>
-      <td>MRCONSO.ATN = LC, OLC</td>
+      <td>MRCONSO.ATN = "LC, OLC"</td>
     </tr>
     <tr>
       <td>47</td>
       <td>HL7_V2_DATATYPE</td>
       <td>HL7 version 2.x datatype</td>
-      <td>MRSAT.ATN = HL7_V2_DATATYPE</td>
+      <td>MRSAT.ATN = "HL7_V2_DATATYPE"</td>
     </tr>
     <tr>
       <td>48</td>
       <td>HL7_V3_DATATYPE</td>
       <td>HL7 version 3.0 datatype</td>
-      <td>MRSAT.ATN = HL7_V3_DATATYPE</td>
+      <td>MRSAT.ATN = "HL7_V3_DATATYPE"</td>
     </tr>
     <tr>
       <td>49</td>
       <td>CURATED_RANGE_AND_UNITS</td>
       <td>List of normal ranges and associated units</td>
-      <td> MRSAT.ATN = CURATED_RANGE_AND_UNITS</td>
+      <td> MRSAT.ATN = "CURATED_RANGE_AND_UNITS"</td>
     </tr>
     <tr>
       <td>50</td>
       <td>DOCUMENT_SECTION</td>
       <td>Classification of whether this code can be used as a full
 document, section of a document, or both</td>
-      <td> MRSAT.ATN = DOCUMENT_SECTION</td>
+      <td> MRSAT.ATN = "DOCUMENT_SECTION"</td>
     </tr>
     <tr>
       <td>51</td>
       <td>DEFINITION_DESCRIPTION_HELP</td>
       <td>Similar to comments; describes term and how to use it.</td>
-      <td> MRSAT.ATN = DEFINITION_DESCRIPTION_HELP</td>
+      <td> MRSAT.ATN = "DEFINITION_DESCRIPTION_HELP"</td>
     </tr>
     <tr>
       <td>52</td>
       <td>EXAMPLE_UCUM_UNITS</td>
       <td>Example units of measure expressed as UCUM units</td>
-      <td> MRSAT.ATN = EXAMPLE_UCUM_UNITS</td>
+      <td> MRSAT.ATN = "EXAMPLE_UCUM_UNITS"</td>
     </tr>
   </tbody>
 </table>
@@ -640,7 +645,7 @@ used to create relationships between LOINC PARTS and LOINC IDs.</td>
     <tr>
       <td>3</td>
       <td>NAME_CASE_INSENSITIVE</td>
-      <td>MRCONSO.STR, TTY = LPN</td>
+      <td>MRCONSO.STR, TTY = "LPN'</td>
     </tr>
     <tr>
     </tr>
@@ -649,9 +654,9 @@ used to create relationships between LOINC PARTS and LOINC IDs.</td>
       <td>DISPLAY_NAME</td>
       <td>
       <ul>
-        <li>MRCONSO.STR, TTY = LPDN (only DISPLAY_NAME values that
+        <li>MRCONSO.STR, TTY = "LPDN" (only "DISPLAY_NAME" values that
 contain the pattern "Allergen Mix" are included as LPDN atoms</li>
-        <li>MRSAT.ATN = SOS</li>
+        <li>MRSAT.ATN = "SOS"</li>
       </ul>
       </td>
     </tr>
@@ -678,9 +683,9 @@ contain the pattern "Allergen Mix" are included as LPDN atoms</li>
       <td>1</td>
       <td>LOINC_NUM</td>
       <td>LOINC CODE</td>
-      <td>A relationship (STYPE = &#8220;CODE&#8221;) is created between the LOINC
+      <td>A relationship (STYPE = "CODE") is created between the LOINC
 CODE and the LOINC PART.<br>
-The REL = RO;<br>
+The REL = "RO";<br>
 The RELA is assigned based on the LOINC_PARTS.PART_TYPE of the
 L_PART_ID as follows: <br>
       <table class="elements_inner" cellpadding="0" cellspacing="0">
@@ -766,8 +771,7 @@ time_monitor_of</td>
 "SUPERSYSTEMMULTI-AXIAL" <br>
 appear in the current
 "LOINC_PART_LINKS" file, therefore no relationships are created for
-those PART TYPE values.
-      </p>
+those PART TYPE values. </p>
       </td>
     </tr>
     <tr>
