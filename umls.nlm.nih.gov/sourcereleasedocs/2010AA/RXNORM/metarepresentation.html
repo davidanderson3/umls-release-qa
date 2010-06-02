@@ -1,6 +1,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
 <!-- begin tabbed navigation area -->
 </head>
 <body>
@@ -38,18 +40,19 @@ Representation</a> </li>
 <p><b>VSAB:</b>RXNORM_09AB_100301F</p>
 <div id="rep_identifiers" class="rep_block_level_one">
 <h3>Summary of Changes</h3>
-<p>The VANDF relationship <span class="file_field_name">'RO|has_print_name'</span>
-and <span class="file_field_name">'RO|print_name_of'</span> was
-changed to <span class="file_field_name">'SY|has_print_name'</span>
-and <span class="file_field_name">'SY|print_name_of'</span>.</p>
+<p>The VANDF relationship <span class="file_field_name">"RO|has_print_name"</span>
+and <span class="file_field_name">"RO|print_name_of"</span> was
+changed to <span class="file_field_name">"SY|has_print_name"</span>
+and <span class="file_field_name">"SY|print_name_of"</span>.</p>
 </div>
 <br>
 <div id="rep_change_summary" class="rep_block_level_one">
-<h3>Original Files:</h3>
+<h3>Source Provided Files:</h3>
 <p>RXNORM_09AB_100301F release data files are available Data files are
 released monthly and <a
  href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">available
-by download</a>.</p>
+by
+download</a>.</p>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
@@ -109,7 +112,7 @@ by download</a>.</p>
 <br>
 </div>
 <div id="rep_identifers" class="rep_block_level_one">
-<h3>Identifiers</h3>
+<h3>Identifiers:</h3>
 <ul>
   <li>CODE: RXNCONSO.CODE</li>
   <li>SAUI: RXNCONSO.RXAUI for RXNORM atoms; RXNCONSO.SAUI for other
@@ -120,37 +123,39 @@ sources. (Currently SCUI is blank for other sources).</li>
 </ul>
 <div id="rep_termtypes" class="rep_block_level_two">
 <a name="atoms"></a>
-<h3>Atoms (MRCONSO)</h3>
-&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)
+<h3>Atoms (MRCONSO):</h3>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
 <br>
 <br>
 <h4>Term Type</h4>
 <p>Term types are extracted from field 13 of RXNCONSO.RRF and
 RXNCONSOOCD.RRF.</p>
 <h4>Suppressibility</h4>
-<p>For selected term types (e.g., BPCK, DF, GPCK, SBDC, SBDF, SBD,
-SCDC, SCD, SY), the suppressibility value can be either 'O' or 'N'. All
-others, the value is 'N'. Suppressibility values are extracted from
+<p>For selected term types (e.g., "BPCK", "DF", "GPCK", "SBDC", "SBDF",
+"SBD",
+"SCDC", "SCD", "SY"), the suppressibility value can be either "O" or
+"N". All
+others, the value is "N". Suppressibility values are extracted from
 field 17 of RXNCONSO.RRF.</p>
 </div>
 <div id="rep_attributes" class="rep_block_level_two">
 <a name="attributes"></a><br>
-<h3>Attributes (MRSAT)</h3>
-&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br>
+<h3>Attributes (MRSAT):</h3>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br>
 <p>All attribute names are extracted from field 9 of RXNSAT.RRF and
 RXNSATOCD.RRF except for RXCUI and RXAUI which are created using
 RXNCONSO.RRF.</p>
 </div>
 <div id="rep_definitions" class="rep_block_level_two">
 <a name="definitions"></a><br>
-<h3>Definitions (MRDEF)</h3>
-&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br>
+<h3>Definitions (MRDEF):</h3>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br>
 <p>There are no DEFINITIONS present in RxNorm.</p>
 </div>
 <div id="rep_relationships" class="rep_block_level_two">
 <a name="relationships"></a><br>
-<h3>Relationships (MRREL)</h3>
-&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br>
+<h3>Relationships (MRREL):</h3>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br>
 <p>All relationships are extracted from field 4 (REL) and field 8
 (RELA) of RXNREL.RRF</p>
 <table class="elements" border="0" cellspacing="0">
@@ -173,20 +178,20 @@ SIB</td>
       <td>RXNORM</td>
       <td>RB/RN</td>
       <td>contained_in/contains</td>
-      <td valign="top">Connects the SBD, SCD with its drug delivery
+      <td valign="top">Connects the "SBD", "SCD" with its drug delivery
 device.</td>
     </tr>
     <tr>
       <td>RXNORM</td>
       <td>RB/RN</td>
       <td>has_form/form_of</td>
-      <td valign="top">Connects the PIN with its IN.</td>
+      <td valign="top">Connects the "PIN" with its "IN".</td>
     </tr>
     <tr>
       <td>RXNORM</td>
       <td>RB/RN</td>
       <td>has_quantified_form/quantified_form_of</td>
-      <td valign="top">Creates relationships using the SBD or SCD.</td>
+      <td valign="top">Creates relationships using the "SBD" or "SCD".</td>
     </tr>
     <tr>
       <td>RXNORM</td>
@@ -202,38 +207,41 @@ VANDF<br>
       </td>
       <td>RB/RN</td>
       <td>inverse_isa/isa</td>
-      <td valign="top">Connects the PT with its clinical drug name and
-connects the SCD &amp; SBD to its drug form.</td>
+      <td valign="top">Connects the "PT" with its clinical drug name
+and
+connects the "SCD" &amp; "SBD" to its drug form.</td>
     </tr>
     <tr>
       <td>RXNORM</td>
       <td>RB/RN</td>
       <td>precise_ingredient_of/has_precise_ingredient</td>
-      <td valign="top">Connects the BN with its PIN.</td>
+      <td valign="top">Connects the "BN" with its "PIN".</td>
     </tr>
     <tr>
       <td>RXNORM</td>
       <td>RO</td>
       <td>precise_ingredient_of/has_precise_ingredient</td>
-      <td valign="top">Connects the SCDC with its PIN.</td>
+      <td valign="top">Connects the "SCDC" with its "PIN".</td>
     </tr>
     <tr>
       <td>RXNORM</td>
       <td>RO</td>
       <td>consists_of/consists</td>
-      <td valign="top">Connects the SCD, SBD with its drug component.</td>
+      <td valign="top">Connects the "SCD", "SBD" with its drug
+component.</td>
     </tr>
     <tr>
       <td>RXNORM</td>
       <td>RO</td>
       <td>constitutes</td>
-      <td valign="top">Connects the SCD, SBD with its drug component.</td>
+      <td valign="top">Connects the "SCD", "SBD" with its drug
+component.</td>
     </tr>
     <tr>
       <td>MMSL</td>
       <td>RO</td>
       <td>contained_in/contains</td>
-      <td valign="top">Connects GN atoms with other GN atoms.</td>
+      <td valign="top">Connects "GN" atoms with other "GN" atoms.</td>
     </tr>
     <tr>
       <td>RXNORM<br>
@@ -241,7 +249,8 @@ NDDF<br>
       </td>
       <td>RO</td>
       <td>dose_form_of/has_dose_form</td>
-      <td valign="top">Connects the SCD, SCDF, SBD, and SBDF with the
+      <td valign="top">Connects the "SCD", "SCDF", "SBD", and "SBDF"
+with the
 dose form.</td>
     </tr>
     <tr>
@@ -266,20 +275,22 @@ VANDF<br>
       </td>
       <td>RO</td>
       <td>ingredient_of/has_ingredient</td>
-      <td valign="top">Connects the SCDF, SCDC to its ingredients;
-connects the SBD, SBDC, SBDF to its fully-specified drug brand name.</td>
+      <td valign="top">Connects the "SCDF", "SCDC" to its ingredients;
+connects the "SBD", "SBDC", "SBDF" to its fully-specified drug brand
+name.</td>
     </tr>
     <tr>
       <td>RXNORM</td>
       <td>RO</td>
       <td>reformulated_to/reformation_of</td>
-      <td valign="top">Creates relationships using BN.</td>
+      <td valign="top">Creates relationships using "BN".</td>
     </tr>
     <tr>
       <td>VANDF</td>
       <td>SY</td>
       <td>has_print_name/print_name_of</td>
-      <td valign="top">Connects the AB to its clinical drug name or its
+      <td valign="top">Connects the "AB" to its clinical drug name or
+its
 Metathesaurus created name.</td>
     </tr>
   </tbody>
@@ -287,8 +298,8 @@ Metathesaurus created name.</td>
 </div>
 <div id="mappings" class="rep_block_level_two">
 <a name="mappings"></a><br>
-<h3>Mappings (MRMAP)</h3>
-&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br>
+<h3>Mappings (MRMAP):</h3>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br>
 <p>There are no mappings present in RxNorm.</p>
 </div>
 </div>

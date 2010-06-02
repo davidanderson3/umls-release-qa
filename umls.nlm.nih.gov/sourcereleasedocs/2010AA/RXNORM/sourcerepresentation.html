@@ -1,3 +1,11 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+  <title></title>
+</head>
+<body>
 <div class="section-4">
 <ul id="menu">
   <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
@@ -23,9 +31,9 @@ Representation</a> </li>
 </ul>
 </div>
 <!-- end tabbed navigation area -->
-<br/>
-<br/>
-<br/>
+<br>
+<br>
+<br>
 <a name="top"></a>
 <span class="nav">Skip to: <a href="#general">Notes</a>,
 <a href="#change_summary">Summary of Changes</a>, <a
@@ -40,7 +48,8 @@ RXNORM_09AB_100301F.</p>
 by the National Library of Medicine. Data files are released monthly
 and <a
  href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">available
-by download</a>. Within each Metathesaurus cycle, RxNorm is updated
+by
+download</a>. Within each Metathesaurus cycle, RxNorm is updated
 multiple times. This document reflects the latest cumulative update.
 The scope of RxNorm is determined by the combined scope of its source
 vocabularies which include the following:</p>
@@ -98,14 +107,14 @@ RxNorm release files, however, they are not processed as part of RxNorm
 for the Metathesaurus except in assigning RXCUI and RXAUI attributes.
 Any MSH or SNOMEDCT data seen in the Metathesaurus comes directly from
 that source's data files.</p>
-<br/>
+<br>
 </div>
 <div id="rep_change_summary" class="rep_block_level_one">
 <a name="change_summary"></a>
 <h3>Summary of Changes</h3>
-&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
-<br/>
-1.&nbsp; New RxNorm source:&nbsp; MSH2010_2009_08_17 <br/>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br>
+<br>
+1.&nbsp; New RxNorm source:&nbsp; MSH2010_2009_08_17 <br>
 <p>2.&nbsp; New attributes added:</p>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
@@ -153,18 +162,17 @@ that source's data files.</p>
     </tr>
   </tbody>
 </table>
-<p>Note:<br/>
-The new attribute, RXN_STRENGTH, contains the strength and unit
-data parts for each SCDC atom.</p>
-<p>The attribute name, RXN_IN_STRENGTH_FLAG, was renamed to
-RXN_IN_EXPRESSED_FLAG.</p>
+<p>Note:<br>
+The new attribute, "RXN_STRENGTH", contains the strength and unit
+data parts for each "SCDC" atom.</p>
+<p>The attribute name, "RXN_IN_STRENGTH_FLAG", was renamed to
+"RXN_IN_EXPRESSED_FLAG".</p>
 </div>
 <div id="rep_file_summary" class="rep_block_level_one">
 <a name="file_summary"></a>
-<h3>Summary of Source-Provided Files</h3>
-&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)
-<div class="rep_block_level_two">
-<br/>
+<h3>Source-Provided Files: Summary</h3>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
+<div class="rep_block_level_two"><br>
 <!-- Make a table of each file that comes from the source   -->
 <h4>Documentation and Reference</h4>
 <table class="elements" border="0" cellspacing="0">
@@ -182,7 +190,7 @@ the loading process of these files into a RDBMS (Oracle in this case).</td>
     </tr>
   </tbody>
 </table>
-<br/>
+<br>
 <h4>RXN RRF files</h4>
 <a name="RXN_RRF_files"></a>
 <table class="elements" border="0" cellspacing="0">
@@ -250,7 +258,8 @@ have been appended to them.</p>
 <a name="file_details"></a>
 <div id="rep_file_details" class="rep_block_level_one">
 <h3>Source-Provide File Details</h3>
-<a name="file_details">&nbsp;&nbsp;<span class="nav">(return to </span></a><a href="#top">top</a>)
+<a name="file_details">&nbsp;&nbsp;<span class="nav">(return to </span></a><a
+ href="#top">top</a>)
 <p>RxNorm uses the Rich Release Format (RRF) of the Metathesaurus.
 There are some fields that are not populated by RxNorm and are marked
 as "(no value provided)" in the description column with "Not
@@ -259,12 +268,13 @@ do contain data such as the term status field (TS) but the data is not
 extracted because the fields are computed during Metathesaurus
 production. These fields are marked as "Not processed" in the
 Representation column.</p>
-<p>Also, some fields such as 'CODE' may appear in multiple RXN RRF
+<p>Also, some fields such as CODE may appear in multiple RXN RRF
 files. These fields are redundant and are not always used within a
 particular RRF file but are processed within another file.</p>
 <div class="rep_block_level_two">
 <a name="file1"></a>
-<h4 class="file_field_name">file: RXNCONSO.RRF</h4><br/>
+<h4 class="file_field_name">file: RXNCONSO.RRF</h4>
+<br>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
@@ -277,7 +287,7 @@ particular RRF file but are processed within another file.</p>
       <td class="file_field_name">1</td>
       <td>RXCUI</td>
       <td>RxNorm unique identifier for concept (concept ID)</td>
-      <td>MRCONSO.SCUI if SAB=RXNORM; MRSAT.ATN='RXCUI'</td>
+      <td>MRCONSO.SCUI if SAB = "RXNORM"; MRSAT.ATN= "RXCUI"</td>
     </tr>
     <tr>
       <td class="file_field_name">2</td>
@@ -320,7 +330,7 @@ the concept</td>
       <td class="file_field_name">8</td>
       <td>RXAUI</td>
       <td>Unique identifier for atom (RxNorm atom ID)</td>
-      <td>MRCONSO.SAUI if SAB=RXNORM; MRSAT.ATN='RXAUI'</td>
+      <td>MRCONSO.SAUI if SAB = "RXNORM"; MRSAT.ATN = "RXAUI"</td>
     </tr>
     <tr>
       <td class="file_field_name">9</td>
@@ -384,7 +394,7 @@ the concept</td>
     </tr>
   </tbody>
 </table>
-<br/>
+<br>
 <a name="file2"></a>
 <h4 class="file_field_name">file: RXNDOC.RRF</h4>
 <table class="elements" border="0" cellspacing="0">
@@ -421,7 +431,7 @@ the concept</td>
     </tr>
   </tbody>
 </table>
-<br/>
+<br>
 <a name="file3"></a>
 <h4 class="file_field_name">file: RXNREL.RRF</h4>
 <table class="elements" border="0" cellspacing="0">
@@ -450,8 +460,7 @@ the concept</td>
       <td>Name of the column in RXNCONSO.RRF that contains the
 identifier used for the first concept or first atom in source of the
 relationship (either 'AUI' or 'CUI')</td>
-      <td>MRREL.STYPE1
-      </td>
+      <td>MRREL.STYPE1 </td>
     </tr>
     <tr>
       <td class="file_field_name">4</td>
@@ -478,8 +487,7 @@ or atom</td>
       <td>Name of the column in RXNCONSO.RRF that contains the
 identifier used for the second concept or second atom in source of the
 relationship (either 'AUI' or 'CUI')</td>
-      <td>MRREL.STYPE2
-      </td>
+      <td>MRREL.STYPE2 </td>
     </tr>
     <tr>
       <td class="file_field_name">8</td>
@@ -537,13 +545,14 @@ relationship (either 'AUI' or 'CUI')</td>
     </tr>
   </tbody>
 </table>
-<br/>
+<br>
 <a name="file4"></a>
 <h4 class="file_field_name">file: RXNSAB.RRF</h4>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
       <th>#</th>
+      <th>Field Name</th>
       <th>Description</th>
       <th>Representation</th>
     </tr>
@@ -699,13 +708,14 @@ relationship (either 'AUI' or 'CUI')</td>
     </tr>
   </tbody>
 </table>
-<br/>
+<br>
 <a name="file5"></a>
 <h4 class="file_field_name">file: RXNSAT.RRF</h4>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
       <th>#</th>
+      <th>Field Name</th>
       <th>Description</th>
       <th>Representation</th>
     </tr>
@@ -790,16 +800,17 @@ contains the identifier to which the attribute is attached</td>
     </tr>
   </tbody>
 </table>
-<br/>
+<br>
 Note: Attributes with SAB=MSH plus ATNs UMLSCUI and UMLSAUI are not
 processed.
-<br/>
-<br/>
+<br>
+<br>
 <a name="file6"></a>
 <h4 class="file_field_name">file: RXNSTY.RRF</h4>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
+      <th>#</th>
       <th>Field Name</th>
       <th>Description</th>
       <th>Representation</th>
@@ -843,22 +854,23 @@ processed.
   </tbody>
 </table>
 <p>Note: STYs are subject to editing.</p>
-<br/>
+<br>
 <a name="file7"></a>
 <h4 class="file_field_name">file: RXNATOMARCHIVE.RRF</h4>
 <p>This file is created by RxNorm for use in tracking the archival of
 names (atoms) no longer provided by RxNorm drug source providers, or
-atoms no longer used by the RxNorm system. Only atoms with SAB=RXNORM
+atoms no longer used by the RxNorm system. Only atoms with SAB =
+"RXNORM"
 will be in the archive. This information is not processed for the
 Metathesaurus as part of RxNorm.</p>
-<br/>
+<br>
 <a name="file8"></a>
 <h4 class="file_field_name">file: RXNCUICHANGES.RRF</h4>
 <p>This file provides information about changes to the concept_id
 (RXCUI) for atoms in RxNorm from release to release. It is not
 cumulative. This information is not processed for the Metathesaurus as
 part of RxNorm.</p>
-<br/>
+<br>
 <a name="file9"></a>
 <h4 class="file_field_name">file: RXNCUI.RRF</h4>
 <p>This file of retired CUIs will show each RxNorm Concept Unique
@@ -868,7 +880,7 @@ synonymous or to one or more related current RXCUIs where possible.</p>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
-      <th>#<br/>
+      <th>#<br>
       </th>
       <th>Field Name</th>
       <th>Description</th>
@@ -908,24 +920,27 @@ appeared in</td>
     </tr>
   </tbody>
 </table>
-<br/>
+<br>
 <a name="file10"></a>
 <h4 class="file_field_name">file: RXNCONSOOCD.RRF</h4>
-<p>This file contains information about RxNorm OCD term type atoms
+<p>This file contains information about RxNorm "OCD" term type atoms
 only. For field name, description, and representation information see
 <a href="#file1">RXNCONSO.RRF.</a></p>
-<br/>
+<br>
 <a name="file11"></a>
 <h4 class="file_field_name">file: RXNSATOCD.RRF</h4>
-<p>This file lists each OCD concept, atom, or relationship attribute
+<p>This file lists each "OCD" concept, atom, or relationship attribute
 that does not have a sub-element structure. For field name,
 description, and representation information see <a href="#file5">RXNSAT.RRF.</a></p>
-<br/>
+<br>
 <a name="file12"></a>
 <h4 class="file_field_name">file: RXNSTYOCD.RRF</h4>
-<p>This file lists each semantic type assigned to each OCD concept. For
+<p>This file lists each semantic type assigned to each "OCD" concept.
+For
 field name, description, and representation information see <a
  href="#file6">RXNSTY.RRF.</a></p>
-<br/>
+<br>
 </div>
 </div>
+</body>
+</html>
