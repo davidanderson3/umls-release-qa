@@ -1,6 +1,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
+
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
 <!-- begin tabbed navigation area -->
 </head>
 <body>
@@ -49,10 +51,10 @@ pneumocentesis"(code 00524). The algorithm to create these
 relationships has been changed slightly, resulting in a greater number
 of relationships being generated.
 These relationships are not submitted or reviewed by the American
-Medical Association (AMA), and are attributed to SAB="MTHCH".</p>
+Medical Association (AMA), and are attributed to SAB= "MTHCH".</p>
 </div>
 <div id="rep_change_summary" class="rep_block_level_one">
-<h3>Original Files:</h3>
+<h3>Source Provided Files:</h3>
 <br>
 The UMLS uses tab-delimited CPT files submitted by the AMA. The files
 used for 2010 are:
@@ -66,15 +68,14 @@ used for 2010 are:
 File.xls," and "PQRI 2010 Adjunct File.xls."</p>
 </div>
 <div id="rep_identifers" class="rep_block_level_one">
-<h3>Identifiers</h3>
+<h3>Identifiers:</h3>
 <br>
 Identifiers are assigned as follows:<br>
 <ul>
   <li>CODE: For CPT atoms: The CPT Code in the appropriate file (e.g.
 in LONGULT.txt for a PT).<br>
 For MTHCH atoms: An MTHU# is generated during Metathesaurus source
-processing
-  </li>
+processing </li>
   <li>SAUI: Not Applicable</li>
   <li>SCUI: Same as CODE</li>
   <li>SDUI: Not Applicable</li>
@@ -82,8 +83,8 @@ processing
 <p></p>
 <div id="rep_termtypes" class="rep_block_level_two">
 <a name="atoms"></a>
-<h3>Atoms (MRCONSO)</h3>
-&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br>
+<h3>Atoms (MRCONSO):</h3>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
@@ -94,14 +95,12 @@ processing
     <tr>
       <td>CPT</td>
       <td>AB</td>
-      <td>
-CODE = value of CPT Code in SHORTU.txt<br>
+      <td>CODE = value of CPT Code in SHORTU.txt<br>
 STR = value of CPT Short Description in SHORTU.txt<br>
 SCUI = value of CPT Code in SHORTU.txt<br>
 Note: A small number of additions, revisions and deletions have been
 applied from the files "CPT 2010 Adjunct File.xls" and "PQRI 2010
-Adjunct File.xls"
-      </td>
+Adjunct File.xls" </td>
     </tr>
     <tr>
       <td>CPT</td>
@@ -112,15 +111,14 @@ SCUI = value of the CODE indicated in MODUL.txt<br>
 Note: Although the file MODUL.txt is not delivered in a set format, in
 general, the modifier code can be found in character positions 1-2, and
 the MP string is found after the tab and before the first ":" on a
-given line. Data appearing after the ":" is included in the CPF
+given line. Data appearing after the ":" is included in the "CPF"
 attribute.<br>
       </td>
     </tr>
     <tr>
       <td>CPT</td>
       <td>MTH_PT</td>
-      <td>CODE = value of CPT Code (positions 1-5) in LONGULT.txt
-      <br>
+      <td>CODE = value of CPT Code (positions 1-5) in LONGULT.txt <br>
 STR = value of CPT Long Description (positions 7 through length of long
 descriptor) in LONGULT.txt, with non-ascii characters converted to
 ascii using the lvg tool<br>
@@ -143,7 +141,7 @@ Adjunct File.xls"<br>
     <tr>
       <td>CPT</td>
       <td>MTH_SY</td>
-      <td>CCODE = value of CPT Code (positions 1 through 5) in MEDU.txt<br>
+      <td>CODE = value of CPT Code (positions 1 through 5) in MEDU.txt<br>
 STR = value of CPT Medium Description (positions 7 through 55) in
 MEDU.txt<br>
 SCUI = value of CPT Code (positions 1 through 5) in MEDU.txt<br>
@@ -153,7 +151,7 @@ This data is added during Metathesaurus source processing<br>
     <tr>
       <td>CPT</td>
       <td>SY</td>
-      <td>CCODE = value of CPT Code (positions 1 through 5) in MEDU.txt<br>
+      <td>CODE = value of CPT Code (positions 1 through 5) in MEDU.txt<br>
 STR = value of CPT Medium Description (positions 7 through 55) in
 MEDU.txt, with non-ascii characters converted to ascii using the lvg
 tool<br>
@@ -173,7 +171,7 @@ Note: The standard CPT data files distributed by the AMA do not include
 a hierarchy. The National Library of Medicine uses the printed book and
 other resources to generate a hierarchy during Metathesaurus source
 processing. This hierarchy has not been reviewed by the AMA and is
-attributed to SAB = MTHCH.<br>
+attributed to SAB = "MTHCH".<br>
       </td>
     </tr>
   </tbody>
@@ -181,8 +179,8 @@ attributed to SAB = MTHCH.<br>
 </div>
 <div id="rep_attributes" class="rep_block_level_two">
 <a name="attributes"></a><br>
-<h3>Attributes (MRSAT)</h3>
-&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br>
+<h3>Attributes (MRSAT):</h3>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
@@ -194,8 +192,8 @@ attributed to SAB = MTHCH.<br>
       <td>The complete value of the modifier string from MODUL.txt.
 Note: Although the file MODUL.txt is not delivered in a set format, in
 general the modifier code can be found in character positions 1-2, and
-the MP string is found after the tab and before the ":" on a given
-line. Data appearing after the ":" is included in the CPF attribute.<br>
+the "MP" string is found after the tab and before the ":" on a given
+line. Data appearing after the ":" is included in the "CPF" attribute.<br>
       </td>
     </tr>
   </tbody>
@@ -203,15 +201,15 @@ line. Data appearing after the ":" is included in the CPF attribute.<br>
 </div>
 <div id="rep_definitions" class="rep_block_level_two">
 <a name="definitions"></a><br>
-<h3>Definitions (MRDEF)</h3>
-&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br>
+<h3>Definitions (MRDEF):</h3>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br>
 <p>No definitions are included with the standard format CPT release.
 </p>
 </div>
 <div id="rep_relationships" class="rep_block_level_two">
 <a name="relationships"></a><br>
-<h3>Relationships (MRREL)</h3>
-&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br>
+<h3>Relationships (MRREL):</h3>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
@@ -226,7 +224,7 @@ PAR</td>
       <td>(no rela)</td>
       <td>Hierarchy created by the NLM during Metathesaurus source
 processing. This hierarchy has not been reviewed by the AMA, and is
-attributed to SAB="MTHCH."</td>
+attributed to SAB = "MTHCH."</td>
     </tr>
     <tr>
       <td>RN<br>
@@ -240,7 +238,7 @@ procedures on arteries of forearm, wrist, and hand; not otherwise
 specified" (code01840). There may be inconsistencies in these
 relationships due to issues such as inconsistent punctuation. These
 relationships are not submitted or reviewed by the AMA and are
-attributed to SAB="MTHCH".</td>
+attributed to SAB= "MTHCH" .</td>
     </tr>
     <tr>
       <td>RO</td>
@@ -253,14 +251,13 @@ closed chest procedures; pneumocentesis" (code 00524). There may be
 inconsistencies in these relationships due to issues such as
 inconsistent punctuation. These relationships are not submitted or
 reviewed by the American Medical Association (AMA), and are attributed
-to SAB="MTHCH".
-      </td>
+to SAB = "MTHCH". </td>
     </tr>
     <tr>
       <td>SY</td>
       <td>expanded_form_of<br>
 has_expanded_form</td>
-      <td>Connects a PT with its SY and AB</td>
+      <td>Connects a "PT" with its "SY" and "AB"</td>
     </tr>
     <tr>
       <td>SY</td>
@@ -275,8 +272,8 @@ source processing</td>
 </div>
 <div id="mappings" class="rep_block_level_two">
 <a name="mappings"></a><br>
-<h3>Mappings (MRMAP)</h3>
-&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br>
+<h3>Mappings (MRMAP):</h3>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br>
 <p>No mappings are represented for CPT.</p>
 </div>
 </div>
