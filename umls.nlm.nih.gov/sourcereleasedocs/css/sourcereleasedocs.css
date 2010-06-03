@@ -1,6 +1,44 @@
-h2,h4 {
+h2,h3,h4 {
 display:inline;
 
+}
+
+
+.file_field_name{
+font-family:monospace;
+
+}
+
+.elements {
+border-bottom:solid 1px black;
+border-right:solid 2px black;
+border-top:none;
+border-left:none;
+margin-bottom:5px;
+margin-top:10px;
+width:100%;
+
+}
+
+.elements td {
+vertical-align:top;
+padding: 10px;
+border-right:none;
+border-left:solid 1px #ccc;
+border-bottom:solid 1px black;
+}
+
+.rep_block_level_one {
+margin-top:5px;
+border-bottom:solid 1px #ccc;
+width:80%;
+padding-top:15px;
+
+}
+
+.rep_block_level_two {
+margin-left: 2%;
+width:90%;
 }
 
 

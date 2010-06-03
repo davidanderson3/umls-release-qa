@@ -1,0 +1,159 @@
+#menu {
+   margin : 0;
+   padding-left:0;
+   
+}
+
+#menu ul, #menu li	{
+	display : inline;
+	list-style-type : none;
+	margin:0;
+	padding:0;
+	
+	
+}
+
+
+#menu li#nav-2 {
+font-size:inherit;
+position:relative;
+left:0;
+}
+
+
+
+#menu a:link, #menu a:visited	{
+	background : #E8EBF0;
+	border : 1px solid #ccc;
+	/*border-bottom:none;*/
+	color : #666;
+	font-weight : normal;
+	/*line-height : 14px;*/
+	font-size:small;
+	margin-right : 2px;
+	padding : 2px 10px 2px 10px;
+	text-decoration : none;
+	
+}
+
+
+
+#menu a:link.active, #menu a:visited.active	{
+	background : #fff;
+	border-bottom : 1px solid #fff;
+	color : #000;
+}
+
+#menu a:hover	{
+	color : #f00;
+}
+
+div.section-1,
+div.section-2,
+div.section-3,
+div.section-4 {
+margin-top: 20px;
+margin-left:0px;
+
+}
+
+
+div.section-3 #menu ul#subnav-3 a#ttys{
+
+background : #e7eab7;
+color : #0072c2;
+
+}
+
+
+div.section-3 #menu ul#subnav-3 a#rels{
+
+background : #e7eab7;
+color : #0072c2;
+
+}
+
+
+div.section-3 #menu ul#subnav-3 a#atns{
+
+background : #e7eab7;
+color : #0072c2;
+
+}
+
+div.section-3 #menu ul#subnav-3 a#stys{
+
+background : #e7eab7;
+color : #0072c2;
+
+}
+
+div.section-3 #menu ul#subnav-3 a#ovr{
+
+background : #e7eab7;
+color : #0072c2;
+
+}
+
+
+
+
+div.section-1 #menu li#nav-1 a, 
+div.section-2 #menu li#nav-2 a,
+div.section-3 #menu li#nav-3 a,
+div.section-4 #menu li#nav-4 a {
+	background : #e7eab7;
+	/*border-bottom : 1px solid #fff;*/
+	color : #0072c2;
+		
+}
+
+#menu #subnav-1,
+#menu #subnav-2,
+#menu #subnav-3,
+#menu #subnav-4 {
+	display : none;
+	width: 90%;
+}
+
+div.section-1 #menu ul#subnav-1, 
+div.section-2 #menu ul#subnav-2,
+div.section-3 #menu ul#subnav-3,
+div.section-4 #menu ul#subnav-4 {
+	display :block;
+	float:left;
+	width:100%;
+	margin-top:5px;
+	
+}
+
+div.section-1 #menu ul#subnav-1 a:hover, 
+div.section-2 #menu ul#subnav-2 a:hover,
+div.section-3 #menu ul#subnav-3 a:hover,
+div.section-4 #menu ul#subnav-4 a:hover {
+	background : #e7eab7;
+}
+
+
+div.section-1 #menu ul#subnav-1 a, 
+div.section-2 #menu ul#subnav-2 a,
+div.section-3 #menu ul#subnav-3 a,
+div.section-4 #menu ul#subnav-4 a {
+	background : #fff;
+	/*border : none;*/
+	float:left;
+	border-left:none;
+	border-bottom:none;
+	color : #999;
+	font-size : smaller;
+	font-weight : bold;                                    
+	line-height : 10px;
+	margin-right : 4px;
+	padding : 2px 10px 2px 10px;
+	text-decoration : none;
+}
+
+ #menu ul a:hover {
+	color : #f00 !important;
+}
+
