@@ -1,0 +1,405 @@
+h2,h4 {
+display:inline;
+
+}
+
+
+#counts, #mrsab, #summary {
+
+margin-top:40px;
+width:100%;
+padding-top:15px;
+border-top:solid 1px #ccc;
+
+}
+
+#samples {
+width:100%;
+margin-top:20px;
+
+}
+
+#explain {
+width:100%;
+margin-top:20px;
+padding-top:20px;
+border-bottom:solid 1px #ccc;
+border-top:solid 1px #ccc;
+
+}
+
+.updatedsources th {
+
+text-align:left;
+
+}
+
+.sectionlabel {
+
+font-size:medium;
+color: #A53720;
+}
+
+
+
+
+#counts h2,#explain h2,#samples h3 {
+
+font-size:medium;
+color: #A53720;
+font-weight:normal;
+}
+
+
+/* Begin MRSAB.RRF area */
+
+table.mrsabviewer th {
+text-align:left;
+
+}
+
+#mrsab table.mrsabviewer {
+
+width:100%;
+font-size:medium;
+
+}
+
+.mrsabviewer tr.slcsccscit {
+
+margin-top:30px;
+
+}
+
+
+/*legend symbols for source release index page*/
+
+.symbol {
+
+color:#CC6633;
+font-weight:bold;
+font-size:smaller;
+
+}
+
+
+
+
+
+/* End MRSAB.RRF area */
+
+
+#counts table {
+
+width:60%;
+
+
+}
+
+
+
+#counts table th.metalabel {
+width:40%;
+text-align:left;
+
+}
+
+#counts table th.definition {
+width:40%;
+text-align:left;
+
+}
+
+#counts table th.count {
+width:20%;
+text-align:right;
+
+}
+
+
+#counts table td.metalabel {
+
+width:10%;
+
+
+}
+
+#counts table td.definition {
+
+padding:2px 2px 2px 2px;
+width:40%;
+text-align:justify;
+
+}
+
+#counts table td.count {
+
+width:10%;
+text-align:right;
+
+}
+
+div.sample{
+
+margin-left:1%;
+width:100%;
+margin-top:10px;
+border-bottom:solid 1px #0072c2;
+margin-bottom:20px;
+
+
+}
+
+div.sample table {
+
+margin-top:15px;
+
+}
+
+div.sample table th{
+
+background-color:#e7eab7;
+text-align:left;
+padding-left:2px;
+
+}
+
+
+div.sample .nav {
+font-family:Arial, Helvetica, sans-serif;
+font-weight:bolder;
+font-size:larger;
+
+}
+
+div.sample table tr.samplerow {
+
+line-height:20px;
+
+}
+
+div.sample table tr.samplerow td, div.sample table tr.inversesamplerow td {
+
+color:#0072c2;
+
+}
+
+div.sample table tr.inversesamplerow td.rel,div.sample table tr.inversesamplerow td.rela  {
+
+color:#CC6633;
+
+}
+
+td.aui,td.aui1,td.aui2,td.saui,td.sdui,td.code,td.cui,td.cui1,td.cui2,td.scui,td.lui,td.sui,td.metaui,td.rel {
+
+width:5%;
+margin-right:10px;
+
+}
+
+td.atn,td.atv {
+
+width:5%;
+max-width:10%;
+
+}
+
+td.rela {
+
+width:7%;
+
+}
+
+
+
+td.stype,td.stype1,td.stype2 {
+
+width:5%;
+margin-right:5px;
+
+}
+
+td.str {
+width:15%;
+margin-right:5px;
+
+}
+
+p.jumptags {
+	
+font-size:75%;	
+display:inline;	
+	
+}
+
+
+
+/*Javascript boxes start here*/
+
+.metaDrawBox  {
+
+
+color:#0072c2;	
+background-color:#fff;
+width:95%;
+
+}
+
+.metaDrawBox th, .metaDrawBox td {
+
+font-size:smaller;
+text-align:left;
+width:10%;
+
+}
+
+#placeholder {
+
+z-index:100;
+/*width:900px;*/
+width:90%;
+padding:10px 10px 10px 10px;
+background-color:#331F13; 
+border:outset 1px #ffb675;
+
+}
+
+.tableHolder {
+
+width:100%;
+background-color:#fff;
+
+
+
+}
+
+
+.metaBoxHeader {
+
+
+height:30px;
+width:100%;
+font-family:Arial, Helvetica, sans-serif;
+padding:2px 0px 0px 0px;
+background-color:#fff;
+border-bottom:solid 1px #cce0ec;
+
+}
+
+.metaBoxFooter {
+
+
+height:30px;
+padding:2px 0px 0px 0px;
+background-color:#fff;
+width:100%;
+
+
+}
+
+
+.tl{
+
+width:15px;
+height:15px;
+background-image:url('images/tl.gif');
+display:block;
+position:absolute;
+top:9px;
+left:9px;
+float:left;
+border-bottom:solid 1px white;
+padding:0;
+background-repeat:no-repeat;
+border:none;
+}
+
+
+
+.tr{
+
+width:15px;
+height:15px;
+background-image:url('images/tr.gif');
+position:absolute;
+top:9px;
+right:9px;
+float:right;
+padding:0;
+background-repeat:no-repeat;
+border:none;
+
+}
+
+
+.br{
+
+width:15px;
+height:15px;
+background-image:url('images/br.gif');
+position:absolute;
+bottom:9px;
+right:9px;
+float:right;
+padding:0;
+background-repeat:no-repeat;
+
+}
+
+
+.bl{
+
+width:15px;
+height:15px;
+background-image:url('images/bl.gif');
+position:absolute;
+bottom:9px;
+left:9px;
+float:left;
+padding:0;
+background-repeat:no-repeat;
+border:none;
+
+}
+
+
+
+.boxHeader {
+
+color:#000;
+display:block;
+text-align:center;
+font-size:larger;
+font-weight:bold;
+margin-bottom:2px;
+
+}
+
+
+.boxNotesLeft {
+
+font-size:smaller;
+text-align:left;
+margin-left:20px;
+
+}
+
+.boxNotesRight {
+
+display:block;
+border-bottom:solid 1px red;
+margin-right:20px;
+position:absolute;
+right:5px;
+top:10px;
+
+}
+
+.boxNotesRight a {
+
+color:red;
+text-decoration:none;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size:smaller;
+}
+
