@@ -1,12 +1,3 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-<head>
-  <meta http-equiv="content-type"
- content="text/html; charset=ISO-8859-1">
-<!-- begin tabbed navigation area -->
-  <title></title>
-</head>
-<body>
 <div class="section-4">
 <ul id="menu">
   <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
@@ -34,34 +25,34 @@ Representation</a> </li>
 <br/>
 <br/>
 <br/>
-<a name="top">
-<span class="nav">Skip to: </span></a><a href="#termtypes">Atoms</a>, <a
+<a name="top"></a>
+<span class="nav">Skip to:</span><a href="#termtypes">Atoms</a>, <a
  href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
 <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a>
 <p><b>VSAB</b>:UMD2010</p>
 <div id="general" class="rep_block_level_one">
-<div id="rep_identifiers" class="rep_block_level_one">
+<div class="rep_block_level_one">
 <h3>Summary of Changes:</h3>
 <p>No changes have been made to the original data files or to
 representation of UMDNS in 2010AA.</p>
 </div>
-<div id="rep_identifiers" class="rep_block_level_one">
+<div class="rep_block_level_one">
 <h3>Source Provided Files:</h3>
 <p>The UMLS uses an xml version of UMDNS which is created with the TDE
 tool from Apelon, Inc. The file used for 2010AB is
 "UMDNS20090903a_rev2.xml" (the defined view). (<a
  href="http://apelon.com/dtd/tde/ontylog.dtd">http://apelon.com/dtd/tde/ontylog.dtd</a>)</p>
 </div>
-<div id="rep_identifiers" class="rep_block_level_one">
+<div class="rep_block_level_one">
 <h3>Identifiers:</h3>
 <p>UMDNS includes both &#8220;concepts,&#8221; i.e. collections of synonymous
 atoms, and &#8220;descriptors,&#8221; i.e. collections of concepts that are
 considered to be closely related (but not necessarily synonymous).
-Therefore, atoms with TTY=SY are assigned the same Source-asserted
+Therefore, atoms with TTY = "SY" are assigned the same Source-asserted
 Concept Identifer (SCUI), and Source-asserted Descriptor Identifier
 (SDUI) as their PT.
-However, atoms with TTY=ET are considered to be in a different concept
-from their PT (different SCUI) but members of the same descriptor (same
+However, atoms with TTY = "ET" are considered to be in a different concept
+from their "PT" (different SCUI) but members of the same descriptor (same
 SDUI). Identifiers are assigned as follows:
 </p>
 <ul>
@@ -80,11 +71,8 @@ For termtype "RT": CODE of "RT" (An "RT" may have multiple "PT"s, so we
 can't use code of "PT") </li>
 </ul>
 <br/>
-<a name="termtypes"><br/>
-</a>
-<h3><a name="termtypes">Atoms (MRCONSO):</a></h3>
-<a name="termtypes"> <span class="nav">(</span></a><a href="#top">
-return to top</a>)
+<a name="termtypes"></a>
+<h3>Atoms (MRCONSO):</h3>&nbsp;<span class="nav">(<a href="#top">return to top</a>)</span>
 <div id="rep_termtypes" class="rep_block_level_two">
 <table class="elements" border="0" cellspacing="0">
   <tbody>
@@ -165,11 +153,8 @@ property. ETs are created where the "DEVICE_TYPE" is:
   </tbody>
 </table>
 </div>
-<a name="attributes"><br/>
-</a>
-<h3><a name="attributes">Attributes (MRSAT):</a></h3>
-<a name="attributes"> <span class="nav">(</span></a><a href="#top">
-return to top</a>)
+<a name="attributes"></a>
+<h3>Attributes (MRSAT):</h3>&nbsp;<span class="nav">(<a href="#top">return to top</a>)</span>
 <div id="rep_attributes" class="rep_block_level_two">
 <table class="elements" border="0" cellspacing="0">
   <tbody>
@@ -189,15 +174,15 @@ following:
         <li>Device is a USE MORE SPECIFIC TERM entry</li>
         <li>Hierarchical Term</li>
         <li>Main Device Term</li>
-        <li>NIR entry</li>
-        <p>Note: In the original data, some synonyms have a qualifier
+        <li>NIR entry</li>      
+      </ul>
+      Note: In the original data, some synonyms have a qualifier
 of "Synonym_Device_Type," and some are assigned a blank or incorrect
 DEVICE_TYPE.<br/>
 For consistency, in the Metathesaurus, all SY atoms are defaulted to
 "Device is a SEE reference."
 DEVTYPE is attached to AUI for SY atoms; for all other atoms, it is
-attached to CODE.</p>
-      </ul>
+attached to CODE.
       </td>
     </tr>
     <tr>
@@ -208,11 +193,9 @@ Attached to AUI. </td>
   </tbody>
 </table>
 </div>
-<a name="definitions"><br/>
-</a>
-<h3><a name="definitions">Definitions (MRDEF):</a></h3>
-<a name="definitions"> <span class="nav">(</span></a><a href="#top">
-return to top</a>)
+<br/>
+<a name="definitions"></a>
+<h3>Definitions (MRDEF):</h3>&nbsp;<span class="nav">(<a href="#top">return to top</a>)</span>
 <div id="rep_definitions" class="rep_block_level_two">
 <table class="elements" border="0" cellspacing="0">
   <tbody>
@@ -227,11 +210,9 @@ with other qualifier values are excluded.</td>
   </tbody>
 </table>
 </div>
-<a name="relationships"><br/>
-</a>
-<h3><a name="relationships">Relationships (MRREL):</a></h3>
-<a name="relationships"> <span class="nav">(</span></a><a href="#top">
-return to top</a>)
+<br/>
+<a name="relationships"></a>
+<h3>Relationships (MRREL):</h3>&nbsp;<span class="nav">(<a href="#top">return to top</a>)</span>
 <div id="rep_relationships" class="rep_block_level_two">
 <table class="elements" border="0" cellspacing="0">
   <tbody>
@@ -268,15 +249,11 @@ default </td>
   </tbody>
 </table>
 </div>
-</div>
-<a name="mappings"><br/>
-</a>
-<h3><a name="mappings">Mappings (MRMAP):</a></h3>
-<a name="mappings"> <span class="nav">(</span></a><a href="#top">
-return to top</a>)
+<br/>
+<a name="mappings"></a>
+<h3>Mappings (MRMAP):</h3>&nbsp;<span class="nav">(<a href="#top">return to top</a>)</span>
 <div id="mappings" class="rep_block_level_one">
 <p>No mapping data is included for UMDNS</p>
 </div>
 </div>
-</body>
-</html>
+</div>
