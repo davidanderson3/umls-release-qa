@@ -28,9 +28,9 @@ Representation</a> </li>
   </li>
 </ul>
 </div>
-<br>
-<br>
-<br>
+<br/>
+<br/>
+<br/>
 <a name="top"></a>
 <span class="nav">Skip to: <a href="#termtypes">Atoms</a>, <a
  href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
@@ -48,7 +48,7 @@ Representation</a> </li>
   <li>LNC229_RHO_2008</li>
   <li>LNC229_WHO_2006</li>
 </ul>
-<p><b>Notes:</b><br>
+<p><b>Notes:</b><br/>
 In addition to the LNC SAB, LOINC includes nine subsources, which are
 assigned by an algorithm using field 43 (EXTERNAL_COPYRIGHT_NOTICE),
 field 9 (CLASS) and field 7 (METHOD_TYP).
@@ -63,7 +63,7 @@ Its content remains and is divided between the two new sources
 LNC_MDS20 and LNC_MDS30.</p>
 <h4>Three subsources were added:</h4>
 <ul>
-  <li>LNC_CAM: <br>
+  <li>LNC_CAM: <br/>
 Adapted from: Inouye SK, vanDyck CH, Alessi CA, Balkin S, Siegal AP,
 Horwitz RI. Clarifying confusion: The Confusion Assessment Method.
 A new method for detection of delirium. Ann Intern Med. 1990; 113:
@@ -72,7 +72,7 @@ Confusion Assessment Method: Training Manual and Coding Guide,
 Copyright 2003, Sharon K. Inouye, M.D., MPH.
   </li>
   <li>LNC_MDS20</li>
-  <li>LNC_MDS30<br>
+  <li>LNC_MDS30<br/>
 LOINC includes data from two versions of the Minimum Data Set (MDS):
 2.0 and 3.0.
 MDS is part of the U.S. federally mandated process for clinical
@@ -141,7 +141,7 @@ extracted from LOINCManual.pdf.
 </p>
 <div id="rep_identifiers" class="rep_block_level_one">
 <h3>Overview</h3>
-<br>
+<br/>
 <h4>Identifiers</h4>
 <p>LOINC Identifiers in the UMLS are generally based on field 1 of
 LOINCDB.TXT (LOINC_NUM), or field 1 of LOINC_PARTS (L_PART_ID).
@@ -176,7 +176,7 @@ Expansions may also include converting patterns such as "little e" or
 &#8220;super little b" to &#8220;e" or "^b" respectively.
 </p>
 <div id="rep_termtypes" class="rep_block_level_two">
-<a name="termtypes"></a><br>
+<a name="termtypes"></a><br/>
 <h4>Atoms</h4>
 &nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
 <table class="elements" border="0" cellpadding="0">
@@ -187,154 +187,154 @@ Expansions may also include converting patterns such as "little e" or
     </tr>
     <tr>
       <td class="file_field_name">CN</td>
-      <td>Official component name:<br>
+      <td>Official component name:<br/>
 CODE = MTHU#, assigned during Metathesaurus source processing; same as
-CODE for respective CX, SN and SX as applicable.<br>
+CODE for respective CX, SN and SX as applicable.<br/>
 STR = LOINCDB.TXT field 2, subfield 1 (COMPONENT).</td>
     </tr>
     <tr>
       <td class="file_field_name">CX</td>
-      <td>Component, with abbreviations expanded:<br>
+      <td>Component, with abbreviations expanded:<br/>
 CODE = MTHU#, assigned during Metathesaurus source processing; same as
-CODE for respective CN, SN and SX as applicable.<br>
+CODE for respective CN, SN and SX as applicable.<br/>
 STR = Expanded form of LOINCDB.TXT field 2, subfield 1 (COMPONENT).</td>
     </tr>
     <tr>
       <td class="file_field_name">HC</td>
-      <td>Hierarchical class:<br>
+      <td>Hierarchical class:<br/>
 CODE = MTHU#, assigned during Metathesaurus source processing (same as
-CODE for respective HS).<br>
+CODE for respective HS).<br/>
 STR = expanded form of LOINCDB.TXT field 9 for CLASS or expanded form
-of LOINCDB.TXT field 23 for CLASSTYPE.<br>
+of LOINCDB.TXT field 23 for CLASSTYPE.<br/>
 An additional HC atom, &#8220;LOINCCLASSTYPES,&#8221; is added during Metathesaurus
-source processing as a hierarchical placeholder.<br>
+source processing as a hierarchical placeholder.<br/>
       </td>
     </tr>
     <tr>
       <td class="file_field_name">HS</td>
-      <td>Short or alternate version of hierarchical term:<br>
+      <td>Short or alternate version of hierarchical term:<br/>
 CODE = MTHU#, assigned during Metathesaurus source processing (same as
-CODE for respective HC).<br>
+CODE for respective HC).<br/>
 STR = value of LOINCDB.TXT field 9 for CLASS, or value of LOINCDB.TXT
 field 23 for CLASSTYPE.</td>
     </tr>
     <tr>
       <td class="file_field_name">LC</td>
-      <td>Long common name:<br>
-CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br>
-STR = LOINCDB.TXT field 46 (LONG_COMMON_NAME)<br>
-TTY = LC is assigned if field 15 is not = "DEL"<br>
+      <td>Long common name:<br/>
+CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br/>
+STR = LOINCDB.TXT field 46 (LONG_COMMON_NAME)<br/>
+TTY = LC is assigned if field 15 is not = "DEL"<br/>
       </td>
     </tr>
     <tr>
       <td class="file_field_name">LN</td>
-      <td>Official fully-specified name:<br>
-CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br>
+      <td>Official fully-specified name:<br/>
+CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br/>
 STR = LOINCDB.TXT fields 2-7, concatenated with colons, i.e.
-F2:F3:F4:F5:F6:F7<br>
-TTY = LN is assigned if field 15 is not = "DEL"<br>
+F2:F3:F4:F5:F6:F7<br/>
+TTY = LN is assigned if field 15 is not = "DEL"<br/>
       </td>
     </tr>
     <tr>
       <td class="file_field_name">LO</td>
-      <td>Obsolete official fully specified name:<br>
-CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br>
+      <td>Obsolete official fully specified name:<br/>
+CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br/>
 STR = LOINCDB.TXT fields 2-7, concatenated with colons, i.e.
-F2:F3:F4:F5:F6:F7<br>
-TTY = LO is assigned if field 15 = "DEL"<br>
-SUPPRESS = "O"<br>
+F2:F3:F4:F5:F6:F7<br/>
+TTY = LO is assigned if field 15 = "DEL"<br/>
+SUPPRESS = "O"<br/>
       </td>
     </tr>
     <tr>
       <td class="file_field_name">LPDN</td>
-      <td>Parts display name:<br>
-CODE = LOINC_PARTS_*.txt field 1 (L_PART_ID)<br>
-STR = LOINC_PARTS_*.txt field 4 (DISPLAY_NAME)<br>
+      <td>Parts display name:<br/>
+CODE = LOINC_PARTS_*.txt field 1 (L_PART_ID)<br/>
+STR = LOINC_PARTS_*.txt field 4 (DISPLAY_NAME)<br/>
 LPDN atoms are only created for strings containing the pattern
 &#8220;Allergen Mix.&#8221;</td>
     </tr>
     <tr>
       <td class="file_field_name">LPN</td>
-      <td>Parts name:<br>
-CODE = LOINC_PARTS_*.txt field 1 (L_PART_ID)<br>
-STR = LOINC_PARTS_*.txt field 3 (NAME_CASE_INSENSITIVE)<br>
+      <td>Parts name:<br/>
+CODE = LOINC_PARTS_*.txt field 1 (L_PART_ID)<br/>
+STR = LOINC_PARTS_*.txt field 3 (NAME_CASE_INSENSITIVE)<br/>
 An additional LPN, &#8220;LOINCPARTS,&#8221; is added during Metathesaurus source
 processing as a hierarchical placeholder.</td>
     </tr>
     <tr>
       <td class="file_field_name">LS</td>
-      <td>Expanded system/sample type:<br>
-CODE = MTHU#, assigned during Metathesaurus source processing<br>
+      <td>Expanded system/sample type:<br/>
+CODE = MTHU#, assigned during Metathesaurus source processing<br/>
 STR = Expanded form of LOINCDB.TXT field 5, subfield 1 (SYSTEM).</td>
     </tr>
     <tr>
       <td class="file_field_name">LX</td>
-      <td>Expanded obsolete fully specified name:<br>
-CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br>
+      <td>Expanded obsolete fully specified name:<br/>
+CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br/>
 STR = Expanded form of LOINCDB.TXT fields 2-7, concatenated with
-colons, i.e. F2:F3:F4:F5:F6:F7<br>
+colons, i.e. F2:F3:F4:F5:F6:F7<br/>
 TTY = LX is assigned if field 15 is not = &#8220;DEL&#8221;</td>
     </tr>
     <tr>
       <td class="file_field_name">OLC</td>
-      <td>Obsolete long common name:<br>
-CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br>
-STR = LOINCDB.TXT field 46 (LOINC_COMMON_NAME)<br>
+      <td>Obsolete long common name:<br/>
+CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br/>
+STR = LOINCDB.TXT field 46 (LOINC_COMMON_NAME)<br/>
 TTY = OLC is assigned if field 15 = "DEL"<span
- style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;"></span><br>
-SUPPRESS = O<br>
+ style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;"></span><br/>
+SUPPRESS = O<br/>
       </td>
     </tr>
     <tr>
       <td class="file_field_name">OLX</td>
-      <td>Expanded obsolete fully specified name:<br>
-CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br>
+      <td>Expanded obsolete fully specified name:<br/>
+CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br/>
 STR = Expanded form of LOINCDB.TXT fields 2-7, concatenated with
-colons, i.e. F2:F3:F4:F5:F6:F7<br>
-TTY = OLX is assigned if field 15 = "DEL"<br>
-SUPPRESS = O<br>
+colons, i.e. F2:F3:F4:F5:F6:F7<br/>
+TTY = OLX is assigned if field 15 = "DEL"<br/>
+SUPPRESS = O<br/>
       </td>
     </tr>
     <tr>
       <td class="file_field_name">OOSN</td>
-      <td>Obsolete official short name:<br>
-CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br>
-STR = LOINCDB.TXT field 39 (SHORTNAME)<br>
-TTY = OOSN is assigned if field 15 = "DEL"<br>
-SUPPRESS = "O"<br>
+      <td>Obsolete official short name:<br/>
+CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br/>
+STR = LOINCDB.TXT field 39 (SHORTNAME)<br/>
+TTY = OOSN is assigned if field 15 = "DEL"<br/>
+SUPPRESS = "O"<br/>
       </td>
     </tr>
     <tr>
       <td class="file_field_name">OSN</td>
-      <td>Official short name:<br>
-CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br>
-STR = LOINCDB.TXT field 39 (SHORTNAME)<br>
+      <td>Official short name:<br/>
+CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br/>
+STR = LOINCDB.TXT field 39 (SHORTNAME)<br/>
 TTY OSN is assigned if field 15 is not = &#8220;DEL&#8221;</td>
     </tr>
     <tr>
       <td class="file_field_name">SN</td>
-      <td>Official component synonym:<br>
+      <td>Official component synonym:<br/>
 CODE = MTHU#, assigned during Metathesaurus source processing. Same as
-code for respective CN, CX and SX as applicable.<br>
+code for respective CN, CX and SX as applicable.<br/>
 STR = LOINCDB.TXT field 21 (EXACT_CMP_SY)</td>
     </tr>
     <tr>
       <td class="file_field_name">SX</td>
-      <td>Mixed-case component synonym with expanded abbreviations:<br>
+      <td>Mixed-case component synonym with expanded abbreviations:<br/>
 CODE = MTHU#, assigned during Metathesaurus source processing. Same as
-code for respective CN, CX and SN as applicable.<br>
+code for respective CN, CX and SN as applicable.<br/>
 STR = Expanded form of LOINCDB.TXT field 21 (EXACT_CMP_SY).</td>
     </tr>
     <tr>
       <td class="file_field_name">XM</td>
-      <td>Cross-mapping set:<br>
+      <td>Cross-mapping set:<br/>
 This data is added during Metathesaurus source processing</td>
     </tr>
   </tbody>
 </table>
 </div>
 <div id="rep_attributes" class="rep_block_level_two">
-<a name="attributes"></a><br>
+<a name="attributes"></a><br/>
 <h4>Attributes</h4>
 &nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
 <table class="elements" border="0" cellpadding="0">
@@ -553,7 +553,7 @@ This data is added during Metathesaurus source processing</td>
     </tr>
     <tr>
       <td class="file_field_name">SOS</td>
-      <td>LOINCDB.TXT field 13<br>
+      <td>LOINCDB.TXT field 13<br/>
 LOINC_PARTS field 4 (DISPLAY_NAME)</td>
     </tr>
     <tr>
@@ -580,28 +580,28 @@ LOINC_PARTS field 4 (DISPLAY_NAME)</td>
 </table>
 </div>
 <div id="rep_definitions" class="rep_block_level_two">
-<a name="definitions"></a><br>
+<a name="definitions"></a><br/>
 <h4>Definitions</h4>
 &nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
 <p>There are no text definitions for LOINC or LOINC subsources</p>
 </div>
 <div id="rep_relationships" class="rep_block_level_two">
-<a name="relationships"></a><br>
+<a name="relationships"></a><br/>
 <h4>Relationships</h4>
 &nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
 <table class="elements" border="0" cellpadding="0">
   <tbody>
     <tr>
       <th>REL</th>
-      <th>RELA<br>
+      <th>RELA<br/>
 inverse_RELA</th>
       <th>Origin</th>
     </tr>
     <tr>
-      <td>CHD<br>
-PAR<br>
+      <td>CHD<br/>
+PAR<br/>
 SIB</td>
-      <td><br>
+      <td><br/>
       </td>
       <td>The hierarchy is extracted from:
       <ul>
@@ -612,7 +612,7 @@ SIB</td>
     </tr>
     <tr>
       <td>RO</td>
-      <td>analyzed_by<br>
+      <td>analyzed_by<br/>
 analyzes</td>
       <td>Connects LS to LN or LO</td>
     </tr>
@@ -624,131 +624,131 @@ Attachment).</td>
     </tr>
     <tr>
       <td>RO</td>
-      <td>has_adjustment<br>
+      <td>has_adjustment<br/>
 adjustment_of</td>
       <td>Connects LPN where PART_TYPE = "ADJUSTMENT" with LN or LO, as
 per LOINC_PART_LINKS_*.txt</td>
     </tr>
     <tr>
       <td>RO</td>
-      <td>has_challenge<br>
+      <td>has_challenge<br/>
 challenge_of</td>
       <td>Connects LPN where PART_TYPE = "CHALLENGE" with LN or LO, as
 per LOINC_PART_LINKS_*.txt</td>
     </tr>
     <tr>
       <td>RO</td>
-      <td>has_class<br>
+      <td>has_class<br/>
 class_of</td>
       <td>Connects LPN where PART_TYPE = "CLASS" with LN or LO, as per
 LOINC_PART_LINKS_*.txt</td>
     </tr>
     <tr>
       <td>RO</td>
-      <td>has_component<br>
+      <td>has_component<br/>
 component_of</td>
       <td>Connects LPN where PART_TYPE = "COMPONENT" with LN or LO, as
 per LOINC_PART_LINKS_*.txt</td>
     </tr>
     <tr>
       <td>RO</td>
-      <td>has_divisor<br>
+      <td>has_divisor<br/>
 divisor_of</td>
       <td>Connects LPN where PART_TYPE = "DIVISORS" with LN or LO, as
 per LOINC_PART_LINKS_*.txt</td>
     </tr>
     <tr>
       <td>RO</td>
-      <td>has_evaluation<br>
+      <td>has_evaluation<br/>
 evaluation_of</td>
       <td>Connects CN to LO or LX with CLASSTYPE of 4 (Surveys).</td>
     </tr>
     <tr>
       <td>RO</td>
-      <td>has_fragments_for_synonyms<br>
+      <td>has_fragments_for_synonyms<br/>
 fragments_for_synonyms_of</td>
       <td>Connects LPN where PART_TYPE = "FRAGMENTS FOR SYNONYMS" with
 LN or LO, as per LOINC_PART_LINKS_*.txt</td>
     </tr>
     <tr>
       <td>RO</td>
-      <td>has_method<br>
+      <td>has_method<br/>
 method_of</td>
       <td>Connects LPN with PART_TYPE = "METHOD" with LOINC CODE
 indicated in LOINC_PART_LINKS_*.txt</td>
     </tr>
     <tr>
       <td>RO</td>
-      <td>has_property<br>
+      <td>has_property<br/>
 property_of</td>
       <td>Connects LPN where PART_TYPE = "PROPERTY" with LN or LO, as
 per LOINC_PART_LINKS_*.txt</td>
     </tr>
     <tr>
       <td>RO</td>
-      <td>has_scale<br>
+      <td>has_scale<br/>
 scale_of</td>
       <td>Connects LPN where PART_TYPE = "SCALE" with LN or LO, as per
 LOINC_PART_LINKS_*.txt</td>
     </tr>
     <tr>
       <td>RO</td>
-      <td>has_suffix<br>
+      <td>has_suffix<br/>
 suffix_of</td>
       <td>Connects LPN where PART_TYPE = "SUFFIX" with LN or LO, as per
 LOINC_PART_LINKS_*.txt</td>
     </tr>
     <tr>
       <td>RO</td>
-      <td>has_supersystem<br>
+      <td>has_supersystem<br/>
 supersystem_of</td>
       <td>Connects LPN where PART_TYPE = "SUPER SYSTEM" with LN or LO,
 as per LOINC_PART_LINKS_*.txt</td>
     </tr>
     <tr>
       <td>RO</td>
-      <td>has_system<br>
+      <td>has_system<br/>
 system_of</td>
       <td>Connects LPN where PART_TYPE = "SYSTEM" with LN or LO, as per
 LOINC_PART_LINKS_*.txt</td>
     </tr>
     <tr>
       <td>RO</td>
-      <td>has_time_aspect<br>
+      <td>has_time_aspect<br/>
 has_time_aspect</td>
       <td>Connects LPN where PART_TYPE = "TIME" with LN, as per
 LOINC_PART_LINKS_*.txt</td>
     </tr>
     <tr>
       <td>RO</td>
-      <td>has_time_modifier<br>
+      <td>has_time_modifier<br/>
 time_modifier_of</td>
       <td>Connects LPN where PART_TYPE = "TIME MODIFIER" with LN, as
 per LOINC_PART_LINKS_*.txt</td>
     </tr>
     <tr>
       <td>RO</td>
-      <td>measured_by<br>
+      <td>measured_by<br/>
 measures</td>
       <td>Connects CN to LO or LX with CLASSTYPE of 1 (Laboratory) or 2
 (Clinical).</td>
     </tr>
     <tr>
       <td>RQ</td>
-      <td>mapped_from<br>
+      <td>mapped_from<br/>
 mapped_to</td>
       <td>Connects an LO with an LN, indicating possible synonymy
 between a current code and a retired code, as per LOINCDB.TXT field 12</td>
     </tr>
     <tr>
       <td>SY</td>
-      <td>common_name_of<br>
+      <td>common_name_of<br/>
 has_common_name</td>
       <td>Connects an LN or LO with its LC or OLC respectively</td>
     </tr>
     <tr>
       <td>SY</td>
-      <td>expanded_form_of<br>
+      <td>expanded_form_of<br/>
 has_expanded_form</td>
       <td>Connects original and expanded forms of atoms, including: SX
 &lt;--&gt; SN; CN &lt;--&gt; CX; LN &lt;--&gt; LX; OLX &lt;--&gt; LO;
