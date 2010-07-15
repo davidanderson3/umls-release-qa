@@ -1,3 +1,8 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+</head>
+<body>
 <div class="section-4">
 <ul id="menu">
   <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
@@ -19,397 +24,674 @@ data</a>
       <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
 Representation</a></li>
     </ul>
-  </li> 
+  </li>
 </ul>
 </div>
-<br/>
-<br/>
-<br/>
+<br>
+<br>
+<br>
 <a name="top"></a>
 <span class="nav">Skip to: <a href="#atoms">Atoms</a>, <a
  href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
 <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
 <div id="general" class="rep_block_level_one">
-<p><b>VSAB:</b> MDR12_1</p>
+<p><b>VSAB:</b> MSH2010_2010_02_22</p>
 <div id="rep_identifiers" class="rep_block_level_one">
 <h3>Summary of Changes:</h3>
 <p>No changes have been made to the original data files or to
-representation of MedDRA in 2010AA.</p>
-</div>
-<div id="rep_change_summary" class="rep_block_level_one">
-<h3>Source Provided Files:</h3>
-&nbsp;&nbsp;The UMLS uses MedDRA files distributed in the MedAscii
-directory:<br/>
-<ul>
-  <li>hlgt.asc  </li>
-  <li>hlgt_hlt.asc</li>
-  <li>hlt.asc</li>
-  <li>hlt_pt.asc</li>
-  <li>intl_ord.asc</li>
-  <li>llt.asc</li>
-  <li>mdhier.asc</li>
-  <li>meddra_release.asc</li>
-  <li>pt.asc</li>
-  <li>meddra_history.asc</li>
-  <li>soc.asc</li>
-  <li>soc_hlgt.asc</li>
-  <li>smq_content.asc</li>
-  <li>smq_list.asc</li>
-</ul>
-<br/>
+representation of MeSH in 2010AA.</p>
 </div>
 <div id="rep_identifers" class="rep_block_level_one">
-<h3>Identifiers:</h3>
-<p>Overview: Lower Level Terms ("LT"s) in MedDRA have any of the
-following relationships to their "PT":</p>
+<h3>Source Provided Files:</h3>
+&nbsp;&nbsp;The UMLS uses MeSH xml files downloaded from <a
+ href="http://www.nlm.nih.gov/mesh/filelist.html">http://www.nlm.nih.gov/mesh/filelist.html</a><br>
 <ul>
-  <li>Synonyms: Different terms for the same concept inherent in the
-"PT"
-(e.g., "PT" Arthritis and its subordinate "LT" Joint inflammation)</li>
-  <li>Lexical variants: Different word forms for the same expression.
-These include full names vs. abbreviations and direct vs. inverted word
-order (e.g., "PT" Acquired immunodeficiency syndrome and its
-subordinate
-"LT" AIDS or "PT" Biopsy tongue and its subordinate "LT" Tongue biopsy).</li>
-  <li>Quasi-synonyms: Quasi-synonyms are terms that are not precisely
-the same meaning as another term, but are treated as synonymous in a
-given terminology. These include site and laterality descriptions
-(e.g., "PT" Otitis externa and its subordinate "LT" Bilateral otitis
-externa).</li>
-  <li>Sub-element: Sub-elements (of the parent "PT") are represented by
-"LT"s with more detailed information such as anatomic specificity
-(e.g.,
-"PT"Contusion with LT Bruising of face or "LT" Bruising of leg).</li>
-  <li>Identical "LT": One "LT" is identical to its "PT" for data entry
-purposes (e.g., "PT" Dementia Alzheimer&#8217;s type and its subordinate "LT"
-Dementia Alzheimer&#8217;s type). In this instance, the "LT" and parent "PT"
-have
-the same MedDRA code but appear at both levels.</li>
+  <li>desc2010.xml <br>
+  </li>
+  <li>qual2010.xml<br>
+  </li>
+  <li>supp2010.xml<br>
+  </li>
 </ul>
-<p>Since MedDRA does not indicate which "LT"s share the same meaning
-with
-their "PT", all "LT"s are assigned the same the same Source-asserted
-Descriptor Identifer (SDUI).&nbsp; A descriptor is a collection of
-concepts (or atoms if there is no concept level organization) that are
-considered to be closely related (but not necessarily synonymous).</p>
-<p>Identifiers are assigned as follows:<br/>
+Identifiers:<br>
+<br>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2"
+ cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;">Descriptor Records<br>
+      </td>
+      <td style="vertical-align: top;">Qualifier Records<br>
+      </td>
+      <td style="vertical-align: top;">Supplementary Concept Records<br>
+      </td>
+      <td style="vertical-align: top;">Hierarchical Terms<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">CODE<br>
+      </td>
+      <td style="vertical-align: top;">DescriptorUI<br>
+      </td>
+      <td style="vertical-align: top;">QualifierUI<br>
+      </td>
+      <td style="vertical-align: top;">SupplementalRecordUI<br>
+      </td>
+      <td style="vertical-align: top;">Identifier generated during
+source processing, in the format U######<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">SAUI<br>
+      </td>
+      <td style="vertical-align: top;">Not applicable<br>
+      </td>
+      <td style="vertical-align: top;">Not applicable<br>
+      </td>
+      <td style="vertical-align: top;">Not applicable <br>
+      </td>
+      <td style="vertical-align: top;">Not applicable<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">SCUI<br>
+      </td>
+      <td style="vertical-align: top;">ConceptUI<br>
+      </td>
+      <td style="vertical-align: top;">ConceptUI<br>
+      </td>
+      <td style="vertical-align: top;">ConceptUI<br>
+      </td>
+      <td style="vertical-align: top;">Not applicable </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">SDUI<br>
+      </td>
+      <td style="vertical-align: top;">DescriptorUI<br>
+      </td>
+      <td style="vertical-align: top;">QualifierUI<br>
+      </td>
+      <td style="vertical-align: top;">SupplementalRecordUI<br>
+      </td>
+      <td style="vertical-align: top;">Identifier generated during
+source processing, in the format U###### (same as CODE) </td>
+    </tr>
+  </tbody>
+</table>
+<p><a name="termtypes"></a>
 </p>
-<ul>
-  <li>CODE: Populated by the "code" fields in original data files, e.g.
-the code for an "LT" or "OL" atom comes from the llt_code field in
-llt.asc</li>
-  <li>SAUI: Not Applicable</li>
-  <li>SCUI: Not Applicable</li>
-  <li>SDUI: Populated by the "code" fields in original data files,
-except for TTY = "LT" and TTY = "OL", where the pt_code field from
-llt.asc
-is used.
-This is because every "PT" has one identical "LT" for data entry
-purposes.
-In addition, LTs may be synonyms, lexical variants, quasi-synonyms, or
-sub-elements of their "PT".
-Therefore, the pt_code is represented in MRCONSO as a Source-asserted
-Descriptor Identifier (SDUI), indicating that the "LT" and "PT" are
-closely
-related but not necessarily synonymous.
-</li>
-</ul>
-<p></p>
 <div id="rep_termtypes" class="rep_block_level_two">
-<a name="termtypes"></a>
 <h3>Atoms (MRCONSO):</h3>
-&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
+&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
       <th>Term Type</th>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">Description</span><br>
+      </td>
       <th>Origin</th>
     </tr>
     <tr>
-      <td>AB</td>
-      <td>CODE = soc_code field of soc.asc<br/>
-STR = soc_abbrev field of soc.asc<br/>
-SDUI = soc_code field of soc.asc<br/>
+      <td>CE<br>
+      </td>
+      <td style="vertical-align: top;">Entry term for a Supplementary
+Concept<br>
+      </td>
+      <td>CODE = SupplementaryRecordUI<br>
+STR = value of &lt;TermList&gt;&lt;Term&gt;&lt;String&gt;<span
+ style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;; color: rgb(31, 73, 125);"></span><br>
+SCUI = ConceptUI<br>
+SDUI = SupplementaryRecordUI<br>
+TTY = CE is assigned to records from supp*xml where:<br>
+      <span class="SpellE">RecordPreferredTermYN = "N"</span><br>
+      <span class="SpellE">ConceptPreferredTermYN = "N"<br>
+      </span><span class="SpellE">IsPermutedTermYN = "N"</span><br>
       </td>
     </tr>
     <tr>
-      <td>HG</td>
-      <td>CODE = hlgt_code field of hlgt.asc<br/>
-STR = hlgt_name field of hlgt.asc<br/>
-SDUI = hlgt_code field of hlgt.asc<br/>
+      <td>DEV<br>
+      </td>
+      <td style="vertical-align: top;">Descriptor entry version<br>
+      </td>
+      <td>CODE = DescriptorUI<br>
+STR = value of &lt;TermList&gt;&lt;Term&gt;&lt;EntryVersion&gt;<br>
+SCUI = ConceptUI<br>
+SDUI = DescriptorUI </td>
+    </tr>
+    <tr>
+      <td>DSV<br>
+      </td>
+      <td style="vertical-align: top;">Descriptor sort version<br>
+      </td>
+      <td>CODE = DescriptorUI<br>
+STR = value of &lt;TermList&gt;&lt;Term&gt;&lt;SortVersion&gt;<br>
+SCUI = ConceptUI<br>
+SDUI = DescriptorUI </td>
+    </tr>
+    <tr>
+      <td>EN<br>
+      </td>
+      <td style="vertical-align: top;">Non-print entry term<br>
+      </td>
+      <td>CODE = DescriptorUI<br>
+STR = value of &lt;TermList&gt;&lt;Term&gt;&lt;SortVersion&gt;<br>
+SCUI = ConceptUI<br>
+SDUI = DescriptorUI </td>
+    </tr>
+    <tr>
+      <td>EP<br>
+      </td>
+      <td style="vertical-align: top;">Print entry term<br>
+      </td>
+      <td>CODE = DescriptorUI<br>
+STR = <br>
+SCUI = ConceptUI<br>
+SDUI = DescriptorUI </td>
+    </tr>
+    <tr>
+      <td>HS<br>
+      </td>
+      <td style="vertical-align: top;">Short/alternate form of
+hierarchical term<br>
+      </td>
+      <td>CODE = Identifier generated during
+source processing, in the format U######<br>
+STR = <br>
+SCUI = Not populated<br>
+SDUI = Identifier generated during
+source processing, in the format U######<br>
+This data is added during Metathesaurus source processing<br>
       </td>
     </tr>
     <tr>
-      <td>HT</td>
-      <td>CODE = hlt_code field of hlt.asc<br/>
-STR = hlt_name field of hlt.asc<br/>
-SDUI = hlt_code field of hlt.asc<br/>
+      <td>HT<br>
+      </td>
+      <td style="vertical-align: top;">Hierarchical term<br>
+      </td>
+      <td>CODE = Identifier generated during
+source processing, in the format U######<br>
+STR = <br>
+SCUI = Not populated<br>
+SDUI = Identifier generated during
+source processing, in the format U######<br>
+This data is added during Metathesaurus source processing<br>
       </td>
     </tr>
     <tr>
-      <td>LT</td>
-      <td>CODE = llt_code field of llt.asc<br/>
-STR = llt_name field of llt.asc<br/>
-SDUI = pt_code field of llt.asc.<br/>
+      <td>MH<br>
+      </td>
+      <td style="vertical-align: top;">Main heading<br>
+      </td>
+      <td>CODE = DescriptorUI<br>
+STR = <br>
+SCUI = ConceptUI<br>
+SDUI = DescriptorUI </td>
+    </tr>
+    <tr>
+      <td>N1<br>
+      </td>
+      <td style="vertical-align: top;">Chemical Abstracts Service Type
+1 name of a chemical<br>
+      </td>
+      <td>CODE = SupplementalRecordUI<br>
+STR = <br>
+SCUI = ConceptUI<br>
+SDUI = SupplementalRecordUI</td>
+    </tr>
+    <tr>
+      <td>NM<br>
+      </td>
+      <td style="vertical-align: top;">Name of Supplementary Concept </td>
+      <td>CODE = SupplementalRecordUI<br>
+STR = <br>
+SCUI = ConceptUI<br>
+SDUI = SupplementalRecordUI<br>
+      <span class="SpellE">RecordPreferredTermYN = "Y"</span><br>
+      <span class="SpellE">ConceptPreferredTermYN = "Y"<br>
+      </span><span class="SpellE">IsPermutedTermYN = "N"</span><br>
       </td>
     </tr>
     <tr>
-      <td>MTH_HG</td>
-      <td>CODE = hlgt_code field of hlgt.asc<br/>
-STR = hlgt_name field of hlgt.asc, with Americanization or abbreviation
-expansion algorithm applied<br/>
-SDUI = hlgt_code field of hlgt.asc.<br/>
-This data is added during Metathesaurus source processing<br/>
+      <td>PCE<br>
+      </td>
+      <td style="vertical-align: top;">Preferred entry term for
+Supplementary Concept<br>
+      </td>
+      <td>CODE = DescriptorUI<br>
+STR = <br>
+SCUI = ConceptUI<br>
+SDUI = DescriptorUI<br>
+      <span class="SpellE">RecordPreferredTermYN = "N"</span><br>
+      <span class="SpellE">ConceptPreferredTermYN = "Y"<br>
+      </span><span class="SpellE">IsPermutedTermYN = "N"</span><br>
       </td>
     </tr>
     <tr>
-      <td>MTH_HT</td>
-      <td>CODE = hlt_code field of hlt.asc<br/>
-STR = hlt_name field of hlt.asc, with Americanization or abbreviation
-expansion algorithm applied<br/>
-SDUI = hlt_code field of hlt.asc.<br/>
-This data is added during Metathesaurus source processing<br/>
+      <td>PEN<br>
       </td>
+      <td style="vertical-align: top;">Preferred non-print entry term<br>
+      </td>
+      <td>CODE = DescriptorUI<br>
+STR = <br>
+SCUI = ConceptUI<br>
+SDUI = DescriptorUI </td>
     </tr>
     <tr>
-      <td>MTH_LT</td>
-      <td>CODE = llt_code field of llt.asc<br/>
-STR = llt_name field of llt.asc, with Americanization or abbreviation
-expansion algorithm applied<br/>
-SDUI = pt_code field of llt.asc.<br/>
-LT atoms are created where llt_currency field of llt.asc = "Y"<br/>
-This data is added during Metathesaurus source processing<br/>
+      <td>PEP<br>
       </td>
+      <td style="vertical-align: top;">Preferred entry term<br>
+      </td>
+      <td>CODE = DescriptorUI<br>
+STR = <br>
+SCUI = ConceptUI<br>
+SDUI = DescriptorUI </td>
     </tr>
     <tr>
-      <td>MTH_OL</td>
-      <td>CODE = llt_code field of llt.asc<br/>
-STR = llt_name field of llt.asc, with Americanization or abbreviation
-expansion algorithm applied<br/>
-SDUI = pt_code field of llt.asc.<br/>
-SUPRESS = "Y"<br/>
-OL atoms are created where llt_currency field of llt.asc = "Y"<br/>
-This data is added during Metathesaurus source processing<br/>
+      <td>PM <br>
       </td>
+      <td style="vertical-align: top;">Machine permutation<br>
+      </td>
+      <td>CODE = DescriptorUI<br>
+STR = <br>
+SCUI = ConceptUI<br>
+SDUI = DescriptorUI </td>
     </tr>
     <tr>
-      <td>MTH_OS</td>
-      <td>CODE = soc_code field of soc.asc<br/>
-STR = soc_name field of soc.asc, with Americanization or abbreviation
-expansion algorithm applied<br/>
-SDUI = soc_code field of soc.asc<br/>
-This data is added during Metathesaurus source processing<br/>
+      <td>PXQ<br>
       </td>
+      <td style="vertical-align: top;">Preferred qualifier term<br>
+      </td>
+      <td>CODE = QualifierUI<br>
+STR = <br>
+SCUI = ConceptUI<br>
+SDUI =QualifierUI </td>
     </tr>
     <tr>
-      <td>MTH_PT</td>
-      <td>CODE = pt_code field of pt.asc<br/>
-STR = pt_name field of pt.asc, with Americanization or abbreviation
-expansion algorithmn applied<br/>
-SDUI = pt_code field of pt.asc<br/>
-This data is added during Metathesaurus source processing.<br/>
+      <td>QAB<br>
       </td>
+      <td style="vertical-align: top;">Qualifier abbreviation<br>
+      </td>
+      <td>CODE = QualifierUI<br>
+STR = <br>
+SCUI = ConceptUI<br>
+SDUI = QualifierUI </td>
     </tr>
     <tr>
-      <td>MTH_SMQ</td>
-      <td>CODE = smq_code field of SMQ_List.asc<br/>
-STR = smq_name field of SMQ_List.asc, with Americanization or
-abbreviation expansion algorithm applied<br/>
-SDUI = smq_code field of SMQ_List.asc<br/>
-This data is added during Metathesaurus source processing.<br/>
+      <td style="vertical-align: top;">QEV<br>
       </td>
+      <td style="vertical-align: top;">Qualifier entry version<br>
+      </td>
+      <td style="vertical-align: top;">CODE = QualifierUI<br>
+STR = <br>
+SCUI = ConceptUI<br>
+SDUI = QualifierUI</td>
     </tr>
     <tr>
-      <td>OL</td>
-      <td>CODE = llt_code field of llt.asc<br/>
-STR = llt_name field of llt.asc<br/>
-SDUI = pt_code field of llt.asc<br/>
-SUPPRESS = "Y"<br/>
-OL atoms are created where llt_currency field of llt.asc = "N"<br/>
+      <td style="vertical-align: top;">QSV<br>
       </td>
+      <td style="vertical-align: top;">Qualifier sort version<br>
+      </td>
+      <td style="vertical-align: top;">CODE = QualifierUI<br>
+STR = <br>
+SCUI = ConceptUI<br>
+SDUI = QualifierUI</td>
     </tr>
     <tr>
-      <td>OS</td>
-      <td>CODE = soc_code field of soc.asc<br/>
-STR = soc_name field of soc.asc<br/>
-SDUI = soc_code field of soc.asc<br/>
+      <td style="vertical-align: top;">TQ<br>
       </td>
+      <td style="vertical-align: top;">Preferred qualifier term<br>
+      </td>
+      <td style="vertical-align: top;">CODE = QualifierUI<br>
+STR = <br>
+SCUI = ConceptUI<br>
+SDUI = QualifierUI</td>
     </tr>
     <tr>
-      <td>PT </td>
-      <td>CODE = pt_code field of pt.asc<br/>
-STR = pt_name field of pt.asc<br/>
-SDUI = pt_code field of pt.asc<br/>
+      <td style="vertical-align: top;">XQ<br>
       </td>
-    </tr>
-    <tr>
-      <td>SMQ</td>
-      <td>CODE = smq_code field of SMQ_List.asc<br/>
-STR = smq_name field of SMQ_List.asc<br/>
-SDUI = smq_code field of SMQ_List.asc<br/>
+      <td style="vertical-align: top;">Alternate name for a qualifier<br>
       </td>
-    </tr>
-    <tr>
-      <td>XM</td>
-      <td> This data is added during Metathesaurus source processing </td>
+      <td style="vertical-align: top;">CODE = QualifierUI<br>
+STR = <br>
+SCUI = ConceptUI<br>
+SDUI = QualifierUI</td>
     </tr>
   </tbody>
 </table>
 </div>
 <div id="rep_attributes" class="rep_block_level_two">
-<a name="attributes"></a><br/>
+<a name="attributes"></a><br>
 <h3>Attributes (MRSAT):</h3>
-&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
+&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br>
+<br>
+<br>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
       <th>Attribute Name</th>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">Description</span><br>
+      </td>
       <th>Origin</th>
     </tr>
     <tr>
-      <td>FROMRSAB</td>
-      <td>This data is added during Metathesaurus source processing</td>
+      <td>AN<br>
+      </td>
+      <td style="vertical-align: top;">MeSH Annotation - an informative
+MeSH note written primarily for
+indexers or catalogers that may also be useful in explaining the use of
+a MeSH term to online searchers.</td>
+      <td><br>
+      </td>
     </tr>
     <tr>
-      <td>FROMVSAB</td>
-      <td>This data is added during Metathesaurus source processing</td>
+      <td>AQL<br>
+      </td>
+      <td style="vertical-align: top;">MeSH Allowable Qualifier - list
+of allowable qualifier
+abbreviations for MeSH main headings (e.g. AA, CL, CS, DF, DU, IM, I,P
+ME, PK)</td>
+      <td><br>
+      </td>
     </tr>
     <tr>
-      <td>MAPSETRSAB</td>
-      <td>This data is added during Metathesaurus source processing</td>
+      <td>CX<br>
+      </td>
+      <td style="vertical-align: top;">MeSH Consider Also Note - other
+word roots or prefixes that should
+be consulted for concepts related to this MeSH concept, e.g., the value
+for "Heart" is "consider also terms at cardi- and myocardi-".</td>
+      <td><br>
+      </td>
     </tr>
     <tr>
-      <td>MAPSETTYPE</td>
-      <td>This data is added during Metathesaurus source processing</td>
+      <td>DC<br>
+      </td>
+      <td style="vertical-align: top;">MeSH Descriptor class - type of
+MeSH term the concept name represents.</td>
+      <td><br>
+      </td>
     </tr>
     <tr>
-      <td>MAPSETVERSION</td>
-      <td>This data is added during Metathesaurus source processing</td>
+      <td>DQ<br>
+      </td>
+      <td style="vertical-align: top;">MeSH Date Qualifier Established
+YYYYMMDD - date the qualifier became available for indexing MEDLARS
+citations.</td>
+      <td><br>
+      </td>
     </tr>
     <tr>
-      <td>MAPSETVSAB</td>
-      <td>This data is added during Metathesaurus source processing</td>
+      <td>DX<br>
+      </td>
+      <td style="vertical-align: top;">MeSH Date major descriptor
+established YYYYMMDD - first day of the
+Index Medicus publication month in which the descriptor (in any form)
+was available for searching as a major descriptor.</td>
+      <td><br>
+      </td>
     </tr>
     <tr>
-      <td>MISO</td>
-      <td>Serial code for international System Organ Class sort order.
-Extracted from the intl_ord_code field of intl_ord.asc.</td>
+      <td>EC_OF<br>
+      </td>
+      <td style="vertical-align: top;">MeSH Entry combination OF - an
+invalid MeSH main
+heading/subheading combination that is a cross reference to a single
+MeSH main heading or a main heading/subheading combination that should
+be used in its place. Has a format of SDUI/Qualifier</td>
+      <td><br>
+      </td>
     </tr>
     <tr>
-      <td>MPS</td>
-      <td>The primary System Organ Class to which a preferred term is
-linked. Extracted from the pt_soc_code field of pt.asc.</td>
+      <td>EC<br>
+      </td>
+      <td style="vertical-align: top;">MeSH Entry combination - an
+invalid MeSH main heading/subheading
+combination that is a cross reference to a single MeSH main heading or
+a main heading/subheading combination that should be used in its place.</td>
+      <td><br>
+      </td>
     </tr>
     <tr>
-      <td>MTH_MAPFROMCOMPLEXITY</td>
-      <td>This data is added during Metathesarus source processing</td>
+      <td>FR<br>
+      </td>
+      <td style="vertical-align: top;">MeSH Frequency</td>
+      <td><br>
+      </td>
     </tr>
     <tr>
-      <td>MTH_MAPFROMEXHAUSTIVE</td>
-      <td>This data is added during Metathesaurus source processing</td>
+      <td>FX<br>
+      </td>
+      <td style="vertical-align: top;">MeSH MH Mapping - maps a MeSH MH
+to a 'See Related' MH.</td>
+      <td><br>
+      </td>
     </tr>
     <tr>
-      <td>MTH_MAPSETCOMPLEXITY</td>
-      <td>This data is added during Metathesaurus source processing</td>
+      <td>HM<br>
+      </td>
+      <td style="vertical-align: top;">MeSH Heading Mapped To - heading
+mapped to attribute in C-MeSH
+containing repeating (MH or MH/SH) elements (e.g. HM = PYRROLIDINONES,
+HM = *TARTRATES, HM = ESTRONE/* analogs &amp; derivatives)</td>
+      <td><br>
+      </td>
     </tr>
     <tr>
-      <td>MTH_MAPTOCOMPLEXITY</td>
-      <td>This data is added during Metathesaurus source processing</td>
+      <td>HN<br>
+      </td>
+      <td style="vertical-align: top;">History Note - for MeSH history
+notes, the year when the current
+form of the MeSH term was established as a major and/or minor
+descriptor.</td>
+      <td><br>
+      </td>
     </tr>
     <tr>
-      <td>MTH_MAPTOEXHAUSTIVE</td>
-      <td>This data is added during Metathesaurus source processing</td>
+      <td>II<br>
+      </td>
+      <td style="vertical-align: top;">MeSH Indexing Information - for
+MeSH chemical terms (Term Type=NM),
+MeSH headings that may be relevant to articles that are also assigned
+the NM term.</td>
+      <td><br>
+      </td>
     </tr>
     <tr>
-      <td>MXR</td>
-      <td>Extracted from the whoart_code, harts_code, costart_sym,
-icd9_code, icd9cm_code, icd10_code, or jart_code in original files,
-e.g. the pt_icd9cm_code field in pt.asc. For codes in sources that are
-present in the Metathesaurus, a mapped_to relationship may also be
-created.</td>
+      <td style="vertical-align: top;">LT<br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
     </tr>
     <tr>
-      <td>SMQ_ALGO</td>
-      <td>Extracted from the SMQ_Algorithm field of SMQ_List.asc</td>
+      <td>MDA</td>
+      <td style="vertical-align: top;">MeSH date of entry YYYYMMDD -
+date the term was added to the MeSH
+file, which is prior to the date the term became available for indexing
+and searching MEDLARS citations. Terms that have been part of MeSH for
+many years may have no value in this elemen</td>
+      <td><br>
+      </td>
     </tr>
     <tr>
-      <td>SMQ_LEVEL</td>
-      <td>Extracted from the SMQ_level field of SMQ_List.asc</td>
+      <td>MMR<br>
+      </td>
+      <td style="vertical-align: top;">MeSH revision date YYYYMMDD -
+date of the last major revision to the term's MeSH record.</td>
+      <td><br>
+      </td>
     </tr>
     <tr>
-      <td>SMQ_SOURCE</td>
-      <td>Extracted from the SMQ_source field of SMQ_List.asc</td>
+      <td>MN<br>
+      </td>
+      <td style="vertical-align: top;">MeSH hierarchical number for the
+concept in the MeSH tree
+structures. This number also appears in the HCD subelement of the REL
+and CXT elements.</td>
+      <td><br>
+      </td>
     </tr>
     <tr>
-      <td>SMQ_STATUS</td>
-      <td>Extracted from the Status field of SMQ_List.asc</td>
+      <td>OL<br>
+      </td>
+      <td style="vertical-align: top;">MeSH Online Note - information
+helpful to online searchers of MEDLINE, especially when the history of
+a term or cross-reference has implications for online searching. This
+is a potential source of useful information for rules for search
+interface programs.<br>
+      </td>
+      <td><br>
+      </td>
     </tr>
     <tr>
-      <td>SMQ_TERM_ADDVERSION</td>
-      <td>Extracted from the Term_addition_version field of
-SMQ_Content.asc</td>
+      <td>PA<br>
+      </td>
+      <td style="vertical-align: top;">
+      <table border="1" cellpadding="2" cellspacing="2" width="100%">
+        <tbody>
+          <tr>
+            <td>Pharmacologic Action of MeSH main headings (MH) for
+drugs and
+supplementary concept names (NM). The information in this element is
+also represented by an "isa" relationship between the MH or NM concept
+and the MeSH concept name for the class of drugs with a particular
+pharmacologic action.</td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+      <td><br>
+      </td>
     </tr>
     <tr>
-      <td>SMQ_TERM_CAT</td>
-      <td>Extracted from the Term_category field of SMQ_Content.asc</td>
+      <td>PI</td>
+      <td style="vertical-align: top;">
+      <table border="1" cellpadding="2" cellspacing="2" width="100%">
+        <tbody>
+          <tr>
+            <td>MeSH heading or heading/subheading combination(s)
+followed by a date range in parentheses (YYYY).</td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+      <td><br>
+      </td>
     </tr>
     <tr>
-      <td>SMQ_TERM_LEVEL</td>
-      <td>Extracted from the Term_level field of SMQ_Content.asc</td>
+      <td>PM<br>
+      </td>
+      <td style="vertical-align: top;">Public MeSH note - combines key
+information from the HN and PI elements in a format that is printed in
+the MeSH publications.</td>
+      <td><br>
+      </td>
     </tr>
     <tr>
-      <td>SMQ_TERM_LMVERSION</td>
-      <td>Extracted from the Term_last_modified_version field of
-SMQ_Content.asc</td>
+      <td>QA<br>
+      </td>
+      <td style="vertical-align: top;">
+      <table border="1" cellpadding="2" cellspacing="2" width="100%">
+        <tbody>
+          <tr>
+            <td>MeSH Topical Qualifier Abbreviation - for MeSH
+subheadings (Term
+Type=TQ), an abbreviation that may be used in place of the full text of
+the abbreviation in searching on NLM's system and possibly on other
+systems offering NLM data.</td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+      <td><br>
+      </td>
     </tr>
     <tr>
-      <td>SMQ_TERM_SCOPE</td>
-      <td>Extracted from the Term_scope field of SMQ_Content.asc</td>
+      <td>RN<br>
+      </td>
+      <td style="vertical-align: top;">Registry Number - series of
+numbers and hyphens (any leading zeros
+in an RN are dropped) or a series of numbers and periods, preceded by EC</td>
+      <td><br>
+      </td>
     </tr>
     <tr>
-      <td>SMQ_TERM_STATUS</td>
-      <td>Extracted from the Term_status field of SMQ_Content.asc</td>
+      <td>RR<br>
+      </td>
+      <td style="vertical-align: top;">The Chemical Abstracts Registry
+numbers for salts, optical isomers,
+or isotope-labeled versions of the concept followed by the relationship
+of this RR to the RN (in parentheses.) Applies to chemicals only. These
+numbers can be used as links to information in a number of chemical and
+toxicological databases.</td>
+      <td><br>
+      </td>
     </tr>
     <tr>
-      <td>SMQ_TERM_WEIGHT</td>
-      <td>Extracted from the Term_weight field of SMQ_Content.asc</td>
+      <td>SC<br>
+      </td>
+      <td style="vertical-align: top;">MeSH Supplemental record class.</td>
+      <td><br>
+      </td>
     </tr>
     <tr>
-      <td>SOS</td>
-      <td>Extracted from the SMQ_note field of SMQ_List.asc</td>
+      <td style="vertical-align: top;">SOS<br>
+      </td>
+      <td style="vertical-align: top;">Scope Statement</td>
+      <td style="vertical-align: top;"><br>
+      </td>
     </tr>
     <tr>
-      <td>TORSAB</td>
-      <td>This data is added during Metathesaurus source processing</td>
+      <td>SRC<br>
+      </td>
+      <td style="vertical-align: top;">MeSH Literature source of
+chemical name - a citation to an article
+in a journal indexed for MEDLINE in which the chemical has been
+identified. (Note: Not to be confused with source abbreviation of SRC)</td>
+      <td><br>
+      </td>
     </tr>
     <tr>
-      <td>TOVSAB</td>
-      <td>This data is added during Metathesaurus source processing</td>
+      <td>TERMUI<br>
+      </td>
+      <td style="vertical-align: top;">Term unique identifier</td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">TH<br>
+      </td>
+      <td style="vertical-align: top;">MeSH Thesaurus ID - identifies
+thesauri other than MeSH in which the MeSH heading or cross-reference
+is included.</td>
+      <td style="vertical-align: top;"><br>
+      </td>
     </tr>
   </tbody>
 </table>
 </div>
 <div id="rep_definitions" class="rep_block_level_two">
-<a name="definitions"></a><br/>
+<a name="definitions"></a><br>
 <h3>Definitions (MRDEF):</h3>
-&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
+&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
       <th>ORIGIN</th>
     </tr>
     <tr>
-      <td>Extracted from the SMQ_description field of smq_list.asc.
-DEFINITIONs are present only for TTY = "SMQ", and include a description<br/>
-of the SMQ including inclusion and exclusion criteria</td>
+      <td>Extracted from ...</td>
     </tr>
   </tbody>
 </table>
 </div>
 <div id="rep_relationships" class="rep_block_level_two">
-<a name="relationships"></a><br/>
+<a name="relationships"></a><br>
 <h3>Relationships (MRREL):</h3>
-&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
+&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
@@ -418,74 +700,105 @@ of the SMQ including inclusion and exclusion criteria</td>
       <th>ORIGIN</th>
     </tr>
     <tr>
-      <td>CHD<br/>
-PAR<br/>
+      <td>CHD<br>
+PAR<br>
 SIB</td>
       <td>(no rela)</td>
-      <td valign="top">Hierarchy extracted from hlt_pt.asc,
-hlgt_hlt.asc, soc_hlgt.asc files (can also be computed from mdhier.asc).</td>
+      <td valign="top"><br>
+      </td>
     </tr>
     <tr>
-      <td>RQ</td>
-      <td>classifies/classified_by</td>
-      <td>Connects a "PT" to its "LT"s or "OL"s. Data is derived from
-the
-llt_code and pt_code fields of llt.asc.</td>
+      <td>AQ<br>
+QB<br>
+      </td>
+      <td>(no rela)<br>
+      </td>
+      <td><br>
+      </td>
     </tr>
     <tr>
-      <td>RQ</td>
-      <td>mapped_to/mapped_from</td>
-      <td>Connects a MedDRA atom to a CODE from another source included
-in the Metathesaurus. Data is derived from the icd9cm_code and
-costart_sym fields in original data files, e.g. a "PT" gets a mapping
-relationship to the value present in the pt_icd9cm_code field of pt.asc.<br/>
-Due to version differences, some code values provided by MedDRA for
-other sources are not present in the Metathesaurus, so relationships
-cannot be created. Therefore, complete MedDRA-asserted cross-reference
-data is included in the "MXR" attribute.<br/>
-Note that in many cases UMLS editors have determined that the MedDRA
-atom has the same meaning as the code in the other source, so they will
-share the same CUI in addition to the mapping relationship.</td>
+      <td style="vertical-align: top;">RB<br>
+RN<br>
+      </td>
+      <td style="vertical-align: top;">(no rela)<br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
     </tr>
     <tr>
-      <td>RO</td>
-      <td>has_member/member_of_cluster</td>
-      <td>Connects a Standardised MedDRA Query (SMQ) with subordinate
-terms. Derived from the SMQ_code and Term_code fields of
-SMQ_content.asc.</td>
+      <td>RB<br>
+RN<br>
+      </td>
+      <td>inverse_isa<br>
+isa<br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td>RB<br>
+RN<br>
+      </td>
+      <td>mapped_from<br>
+mapped_to<br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td>RO<br>
+      </td>
+      <td>entry_combination_of<br>
+has_entry_combination<br>
+      </td>
+      <td><br>
+      </td>
     </tr>
     <tr>
       <td>SY</td>
-      <td>expanded_form_of/has_expanded_form</td>
-      <td>Connects atoms with TTY = "OS" (Organ System) to their short
-forms (TTY = "AB").</td>
+      <td>entry_version_of<br>
+has_entry_version<br>
+      </td>
+      <td><br>
+      </td>
     </tr>
     <tr>
-      <td>SY</td>
-      <td>mth_british_form_of/mth_has_british_form</td>
-      <td>Connects atoms with British spelling to atoms with American
-spelling. This data is added during Metathesaurus source processing.</td>
+      <td style="vertical-align: top;">SY<br>
+      </td>
+      <td style="vertical-align: top;">expanded_form_of<br>
+has_expanded_form<br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
     </tr>
     <tr>
-      <td>SY</td>
-      <td>mth_has_expanded_form/mth_expanded_form_of</td>
-      <td>Connects original MedDRA atoms with atoms with expanded
-abbreviations. For example, "excl" has been expanded to "excluding".
-This data is added during Metathesaurus source processing.</td>
+      <td style="vertical-align: top;">SY<br>
+      </td>
+      <td style="vertical-align: top;">has_permuted_term<br>
+permuted_term_of<br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">SY<br>
+      </td>
+      <td style="vertical-align: top;">has_sort_version<br>
+sort_version_of<br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
     </tr>
   </tbody>
 </table>
 </div>
 <div id="mappings" class="rep_block_level_two">
-<a name="mappings"></a><br/>
+<a name="mappings"></a><br>
 <h3>Mappings (MRMAP):</h3>
-&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
-<p>Two Mapsets ("XM" atoms, along with associated attributes and
-mappings), are included for MedDRA. These are extracted from the
-ICD9_CM code and COSTART symbol fields in the relevant MedDRA files.<br/>
-An &#8220;RQ|mapped_to&#8221; REL/RELA are assigned. When possible, these mappings
-are also present in MRREL.RRF, however due to version issues a small
-portion of this data cannot be represented in MRREL.RRF. </p>
+&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br>
+<p>No Mapsets are created for MeSH. </p>
 </div>
 </div>
 </div>
+</body>
+</html>
