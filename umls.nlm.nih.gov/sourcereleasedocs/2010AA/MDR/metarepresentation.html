@@ -144,10 +144,12 @@ STR = value of &lt;TermList&gt;&lt;Term&gt;&lt;String&gt;<span
  style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;; color: rgb(31, 73, 125);"></span><br>
 SCUI = ConceptUI<br>
 SDUI = SupplementaryRecordUI<br>
-TTY = CE is assigned to records from supp*xml where:<br>
+File:&nbsp; supp*xml<br>
+TTY = CE is assigned to records where:<br>
       <span class="SpellE">RecordPreferredTermYN = "N"</span><br>
       <span class="SpellE">ConceptPreferredTermYN = "N"<br>
-      </span><span class="SpellE">IsPermutedTermYN = "N"</span><br>
+      </span>PrintFlagYN = "N"<br>
+      <span class="SpellE">IsPermutedTermYN = "N"</span><br>
       </td>
     </tr>
     <tr>
@@ -158,7 +160,9 @@ TTY = CE is assigned to records from supp*xml where:<br>
       <td>CODE = DescriptorUI<br>
 STR = value of &lt;TermList&gt;&lt;Term&gt;&lt;EntryVersion&gt;<br>
 SCUI = ConceptUI<br>
-SDUI = DescriptorUI </td>
+SDUI = DescriptorUI<br>
+File: desc*xml<br>
+      </td>
     </tr>
     <tr>
       <td>DSV<br>
@@ -168,7 +172,9 @@ SDUI = DescriptorUI </td>
       <td>CODE = DescriptorUI<br>
 STR = value of &lt;TermList&gt;&lt;Term&gt;&lt;SortVersion&gt;<br>
 SCUI = ConceptUI<br>
-SDUI = DescriptorUI </td>
+SDUI = DescriptorUI<br>
+File: desc*xml<br>
+      </td>
     </tr>
     <tr>
       <td>EN<br>
@@ -176,9 +182,16 @@ SDUI = DescriptorUI </td>
       <td style="vertical-align: top;">Non-print entry term<br>
       </td>
       <td>CODE = DescriptorUI<br>
-STR = value of &lt;TermList&gt;&lt;Term&gt;&lt;SortVersion&gt;<br>
+STR = value of &lt;TermList&gt;&lt;Term&gt;&lt;String&gt;<br>
 SCUI = ConceptUI<br>
-SDUI = DescriptorUI </td>
+SDUI = DescriptorUI<br>
+File: desc*xml<br>
+TTY = EN is assigned to records where:<br>
+RecordPreferredTermYN = "N"<br>
+ConceptPreferredTermYN = "N"<br>
+PrintFlagYN = "N"<br>
+IsPermutedTermYN = "N"<br>
+      </td>
     </tr>
     <tr>
       <td>EP<br>
@@ -186,9 +199,16 @@ SDUI = DescriptorUI </td>
       <td style="vertical-align: top;">Print entry term<br>
       </td>
       <td>CODE = DescriptorUI<br>
-STR = <br>
+STR = value of &lt;TermList&gt;&lt;Term&gt;&lt;String&gt;<br>
 SCUI = ConceptUI<br>
-SDUI = DescriptorUI </td>
+SDUI = DescriptorUI<br>
+File: desc*xml<br>
+TTY = EP is assigned to records where:<br>
+RecordPreferredTermYN = "N"<br>
+ConceptPreferredTermYN = "N"<br>
+PrintFlagYN = "Y"<br>
+IsPermutedTermYN = "N"<br>
+      </td>
     </tr>
     <tr>
       <td>HS<br>
@@ -198,7 +218,7 @@ hierarchical term<br>
       </td>
       <td>CODE = Identifier generated during
 source processing, in the format U######<br>
-STR = <br>
+STR = Created from data provided by MeSH; not released in xml format<br>
 SCUI = Not populated<br>
 SDUI = Identifier generated during
 source processing, in the format U######<br>
@@ -212,7 +232,7 @@ This data is added during Metathesaurus source processing<br>
       </td>
       <td>CODE = Identifier generated during
 source processing, in the format U######<br>
-STR = <br>
+STR = Created from data provided by MeSH; not released in xml format<br>
 SCUI = Not populated<br>
 SDUI = Identifier generated during
 source processing, in the format U######<br>
@@ -225,9 +245,16 @@ This data is added during Metathesaurus source processing<br>
       <td style="vertical-align: top;">Main heading<br>
       </td>
       <td>CODE = DescriptorUI<br>
-STR = <br>
+STR = value of &lt;TermList&gt;&lt;Term&gt;&lt;String&gt;<br>
 SCUI = ConceptUI<br>
-SDUI = DescriptorUI </td>
+SDUI = DescriptorUI<br>
+File: desc*xml<br>
+TTY = EP is assigned to records where:<br>
+RecordPreferredTermYN = "Y"<br>
+ConceptPreferredTermYN = "Y"<br>
+PrintFlagYN = "Y"<br>
+IsPermutedTermYN = "N"<br>
+      </td>
     </tr>
     <tr>
       <td>N1<br>
@@ -236,21 +263,26 @@ SDUI = DescriptorUI </td>
 1 name of a chemical<br>
       </td>
       <td>CODE = SupplementalRecordUI<br>
-STR = <br>
+STR = value of &lt;TermList&gt;&lt;Term&gt;&lt;CASN1Name&gt;<br>
 SCUI = ConceptUI<br>
-SDUI = SupplementalRecordUI</td>
+SDUI = SupplementalRecordUI<br>
+File:&nbsp; supp*xml<br>
+      </td>
     </tr>
     <tr>
       <td>NM<br>
       </td>
       <td style="vertical-align: top;">Name of Supplementary Concept </td>
       <td>CODE = SupplementalRecordUI<br>
-STR = <br>
+STR = value of &lt;TermList&gt;&lt;Term&gt;&lt;String&gt;<br>
 SCUI = ConceptUI<br>
 SDUI = SupplementalRecordUI<br>
+File: supp*xml<br>
+TTY = NM is assigned to records where:<br>
       <span class="SpellE">RecordPreferredTermYN = "Y"</span><br>
       <span class="SpellE">ConceptPreferredTermYN = "Y"<br>
-      </span><span class="SpellE">IsPermutedTermYN = "N"</span><br>
+      </span>PrintFlagYN = "Y"<br>
+      <span class="SpellE">IsPermutedTermYN = "N"</span><br>
       </td>
     </tr>
     <tr>
@@ -260,11 +292,14 @@ SDUI = SupplementalRecordUI<br>
 Supplementary Concept<br>
       </td>
       <td>CODE = DescriptorUI<br>
-STR = <br>
+STR = value of &lt;TermList&gt;&lt;Term&gt;&lt;String&gt;<br>
 SCUI = ConceptUI<br>
 SDUI = DescriptorUI<br>
+File: supp*xml<br>
+TTY = PCE is assigned to records where:<br>
       <span class="SpellE">RecordPreferredTermYN = "N"</span><br>
       <span class="SpellE">ConceptPreferredTermYN = "Y"<br>
+PrintFlagYN = "N"<br>
       </span><span class="SpellE">IsPermutedTermYN = "N"</span><br>
       </td>
     </tr>
@@ -274,9 +309,15 @@ SDUI = DescriptorUI<br>
       <td style="vertical-align: top;">Preferred non-print entry term<br>
       </td>
       <td>CODE = DescriptorUI<br>
-STR = <br>
+STR = value of &lt;TermList&gt;&lt;Term&gt;&lt;String&gt;<br>
 SCUI = ConceptUI<br>
-SDUI = DescriptorUI </td>
+SDUI = DescriptorUI<br>
+File: desc*xml<br>
+TTY = PEN is assigned to records where:<br>
+      <span class="SpellE">RecordPreferredTermYN = "N"</span><br>
+      <span class="SpellE">ConceptPreferredTermYN = "Y"<br>
+PrintFlagYN = "N"<br>
+      </span><span class="SpellE">IsPermutedTermYN = "N"</span> </td>
     </tr>
     <tr>
       <td>PEP<br>
@@ -284,9 +325,16 @@ SDUI = DescriptorUI </td>
       <td style="vertical-align: top;">Preferred entry term<br>
       </td>
       <td>CODE = DescriptorUI<br>
-STR = <br>
+STR = value of &lt;TermList&gt;&lt;Term&gt;&lt;String&gt;<br>
 SCUI = ConceptUI<br>
-SDUI = DescriptorUI </td>
+SDUI = DescriptorUI<br>
+File: desc*xml<br>
+TTY = PEP is assigned to records where:<br>
+      <span class="SpellE">RecordPreferredTermYN = "N"</span><br>
+      <span class="SpellE">ConceptPreferredTermYN = "Y"<br>
+PrintFlagYN = "Y"<br>
+      </span><span class="SpellE">IsPermutedTermYN = "N"</span><br>
+      </td>
     </tr>
     <tr>
       <td>PM <br>
@@ -294,9 +342,16 @@ SDUI = DescriptorUI </td>
       <td style="vertical-align: top;">Machine permutation<br>
       </td>
       <td>CODE = DescriptorUI<br>
-STR = <br>
+STR = value of &lt;TermList&gt;&lt;Term&gt;&lt;String&gt;<br>
 SCUI = ConceptUI<br>
-SDUI = DescriptorUI </td>
+SDUI = DescriptorUI<br>
+File: desc*xml<br>
+TTY = PM is assigned to records where:<br>
+      <span class="SpellE">RecordPreferredTermYN = "N"</span><br>
+      <span class="SpellE">ConceptPreferredTermYN = "N"<br>
+PrintFlagYN = "N"<br>
+      </span><span class="SpellE">IsPermutedTermYN = "Y"</span><br>
+      </td>
     </tr>
     <tr>
       <td>PXQ<br>
