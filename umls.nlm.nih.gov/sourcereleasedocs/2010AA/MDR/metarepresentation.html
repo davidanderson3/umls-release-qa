@@ -778,8 +778,10 @@ Files:&nbsp; dmesh*xml, qmesh*xml<br>
       <th>Relationship</th>
       <th>Relationship Label<br>
 Inverse Relationship Label</th>
-      <th>Origin<br>
+      <th style="font-weight: normal;">Origin<br>
       </th>
+      <td style="vertical-align: top;">XML File(s)<br>
+      </td>
     </tr>
     <tr>
       <td>CHD<br>
@@ -791,6 +793,9 @@ values in the &lt;TreeNumber&gt; tags in dmesh and qmesh.&nbsp;
 Official MeSH xml release files do not include the top levels of a
 hierarchy, so additional top level concepts are created and maintained
 in separate files. </td>
+      <td style="vertical-align: top;">desc*.xml<br>
+qual*.xml<br>
+      </td>
     </tr>
     <tr>
       <td>AQ<br>
@@ -800,6 +805,8 @@ QB<br>
       </td>
       <td>Connect descriptors with allowable qualifiers.&nbsp;
 Extracted from the &lt;AllowableQualifiersList&gt; tag in desc*.xml </td>
+      <td style="vertical-align: top;">desc*.xml<br>
+      </td>
     </tr>
     <tr>
       <td style="vertical-align: top;">RB<br>
@@ -807,7 +814,15 @@ RN<br>
       </td>
       <td style="vertical-align: top;">(no rela)<br>
       </td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">Connect: &lt;ConceptRelation&gt;
+&lt;ConceptUI1&gt; to &lt;ConceptRelation&gt;&lt;ConceptUI2&gt;<br>
+Created where:<br>
+&lt;ConceptRelation RelationName="NRW"&gt;<br>
+&lt;ConceptRelation RelationName="BRD"&gt;<br>
+      </td>
+      <td style="vertical-align: top;">desc*.xml<br>
+qual*.xml<br>
+supp*.xml<br>
       </td>
     </tr>
     <tr>
@@ -817,7 +832,15 @@ RN<br>
       <td>inverse_isa<br>
 isa<br>
       </td>
-      <td><br>
+      <td>
+      <p><span class="SpellE"></span><span class="SpellE">Connect: </span>[&lt;DescriptorRecord&gt;&lt;DescriptorUI&gt;
+or &lt;SupplementalRecord&gt;&lt;SupplementalRecordUI&gt;] to <span
+ class="SpellE">&lt;</span><span class="SpellE"></span><span
+ class="SpellE">PharmacologicalAction</span>&gt;&lt;<span class="SpellE">DescriptorReferredTo</span>&gt;&lt;<span
+ class="SpellE">DescriptorUI</span>&gt;</p>
+      </td>
+      <td style="vertical-align: top;">desc*.xml<br>
+supp*.xml<br>
       </td>
     </tr>
     <tr>
@@ -827,7 +850,27 @@ RN<br>
       <td>mapped_from<br>
 mapped_to<br>
       </td>
-      <td><br>
+      <td><span style="">Connect: </span>&lt;SupplementalRecord&gt;&lt;SupplementalRecordUI&gt;
+to <span style="">&lt;HeadingMappedTo&gt;&lt;DescriptorReferredTo&gt;&lt;DescriptorUI&gt;</span><br>
+      </td>
+      <td style="vertical-align: top;">supp*.xml<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RO<br>
+      </td>
+      <td style="vertical-align: top;">(no rela)<br>
+      </td>
+      <td style="vertical-align: top;">SDUI - SDUI:<br>
+Connect: <br>
+&lt;DescriptorRecord&gt;&lt;DescriptorUI&gt; to &lt;<span class="SpellE">SeeRelatedDescriptor</span>&gt;&lt;<span
+ class="SpellE">DescriptorReferredTo</span>&gt;&lt;<span class="SpellE">DescriptorUI</span>&gt;<br>
+      <br>
+SCUI - SCUI:&nbsp;&nbsp; <br>
+Connect: &lt;ConceptRelation&gt;&lt;ConceptUI1&gt; to
+&lt;ConceptRelation&gt;&lt;ConceptUI2&gt;<br>
+Created where: &lt;ConceptRelation RelationName="REL"&gt;</td>
+      <td style="vertical-align: top;">desc*.xml<br>
       </td>
     </tr>
     <tr>
@@ -836,7 +879,10 @@ mapped_to<br>
       <td>entry_combination_of<br>
 has_entry_combination<br>
       </td>
-      <td><br>
+      <td>Connect: &lt;DescriptorRecord&gt;&lt;DescriptorUI&gt; to
+&lt;EntryCombination&gt;&lt;ECOUT&gt;&lt;DescriptorReferredTo&gt;&lt;DescriptorUI&gt;
+      </td>
+      <td style="vertical-align: top;">desc*xml<br>
       </td>
     </tr>
     <tr>
@@ -844,7 +890,11 @@ has_entry_combination<br>
       <td>entry_version_of<br>
 has_entry_version<br>
       </td>
-      <td><br>
+      <td>Connect:&nbsp; AUI of
+&lt;TermList&gt;&lt;Term&gt;&lt;String&gt; with AUI of string in
+&lt;EntryVersion&gt; tag<br>
+      </td>
+      <td style="vertical-align: top;">desc*.xml<br>
       </td>
     </tr>
     <tr>
@@ -853,7 +903,10 @@ has_entry_version<br>
       <td style="vertical-align: top;">expanded_form_of<br>
 has_expanded_form<br>
       </td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">Connect:&nbsp; AUI of
+&lt;TermList&gt;&lt;Term&gt;&lt;String&gt; with AUI of string in
+&lt;Abbreviation&gt; tag </td>
+      <td style="vertical-align: top;">qual*.xml<br>
       </td>
     </tr>
     <tr>
@@ -862,7 +915,11 @@ has_expanded_form<br>
       <td style="vertical-align: top;">has_permuted_term<br>
 permuted_term_of<br>
       </td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">For atoms with the same TERMUI,
+connects: AUI of string where IsPermutedTermYN="N" to AUI of string
+where IsPermutedTermYN="Y"<br>
+      </td>
+      <td style="vertical-align: top;">desc*.xml<br>
       </td>
     </tr>
     <tr>
@@ -871,7 +928,10 @@ permuted_term_of<br>
       <td style="vertical-align: top;">has_sort_version<br>
 sort_version_of<br>
       </td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">Connect:&nbsp; AUI of
+&lt;TermList&gt;&lt;Term&gt;&lt;String&gt; with AUI of string in
+&lt;SortVersion&gt; tag </td>
+      <td style="vertical-align: top;">desc*.xml<br>
       </td>
     </tr>
   </tbody>
