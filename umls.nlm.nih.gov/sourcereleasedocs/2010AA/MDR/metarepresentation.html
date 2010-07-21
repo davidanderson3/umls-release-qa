@@ -55,8 +55,7 @@ representation of MeSH in 2010AA.</p>
 </ul>
 Identifiers:<br>
 <br>
-<table style="text-align: left; width: 100%;" border="1" cellpadding="2"
- cellspacing="2">
+<table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
       <td style="vertical-align: top;"><br>
@@ -359,9 +358,16 @@ PrintFlagYN = "N"<br>
       <td style="vertical-align: top;">Preferred qualifier term<br>
       </td>
       <td>CODE = QualifierUI<br>
-STR = <br>
+STR = value of &lt;TermList&gt;&lt;Term&gt;&lt;String&gt;<br>
 SCUI = ConceptUI<br>
-SDUI =QualifierUI </td>
+SDUI =QualifierUI<br>
+File: qual*xml<br>
+TTY = PXQ is assigned to records where:<br>
+      <span class="SpellE">RecordPreferredTermYN = "N"</span><br>
+      <span class="SpellE">ConceptPreferredTermYN = "Y"<br>
+PrintFlagYN = "N"<br>
+      </span><span class="SpellE">IsPermutedTermYN = "N"</span><br>
+      </td>
     </tr>
     <tr>
       <td>QAB<br>
@@ -369,7 +375,7 @@ SDUI =QualifierUI </td>
       <td style="vertical-align: top;">Qualifier abbreviation<br>
       </td>
       <td>CODE = QualifierUI<br>
-STR = <br>
+STR = value of &lt;TermList&gt;&lt;Term&gt;&lt;Abbreviation&gt;<br>
 SCUI = ConceptUI<br>
 SDUI = QualifierUI </td>
     </tr>
@@ -379,7 +385,7 @@ SDUI = QualifierUI </td>
       <td style="vertical-align: top;">Qualifier entry version<br>
       </td>
       <td style="vertical-align: top;">CODE = QualifierUI<br>
-STR = <br>
+STR = value of &lt;TermList&gt;&lt;Term&gt;&lt;EntryVersion&gt;<br>
 SCUI = ConceptUI<br>
 SDUI = QualifierUI</td>
     </tr>
@@ -389,7 +395,7 @@ SDUI = QualifierUI</td>
       <td style="vertical-align: top;">Qualifier sort version<br>
       </td>
       <td style="vertical-align: top;">CODE = QualifierUI<br>
-STR = <br>
+STR = value of &lt;TermList&gt;&lt;Term&gt;&lt;SortVersion&gt;<br>
 SCUI = ConceptUI<br>
 SDUI = QualifierUI</td>
     </tr>
@@ -399,9 +405,16 @@ SDUI = QualifierUI</td>
       <td style="vertical-align: top;">Preferred qualifier term<br>
       </td>
       <td style="vertical-align: top;">CODE = QualifierUI<br>
-STR = <br>
+STR = value of &lt;TermList&gt;&lt;Term&gt;&lt;String&gt;<br>
 SCUI = ConceptUI<br>
-SDUI = QualifierUI</td>
+SDUI = QualifierUI<br>
+File: qual*xml<br>
+TTY = TQ is assigned to records where:<br>
+      <span class="SpellE">RecordPreferredTermYN = "Y"</span><br>
+      <span class="SpellE">ConceptPreferredTermYN = "Y"<br>
+PrintFlagYN = "Y"<br>
+      </span><span class="SpellE">IsPermutedTermYN = "N"</span><br>
+      </td>
     </tr>
     <tr>
       <td style="vertical-align: top;">XQ<br>
@@ -409,9 +422,16 @@ SDUI = QualifierUI</td>
       <td style="vertical-align: top;">Alternate name for a qualifier<br>
       </td>
       <td style="vertical-align: top;">CODE = QualifierUI<br>
-STR = <br>
+STR = value of &lt;TermList&gt;&lt;Term&gt;&lt;String&gt;<br>
 SCUI = ConceptUI<br>
-SDUI = QualifierUI</td>
+SDUI = QualifierUI<br>
+File: qual*xml<br>
+TTY = XQ is assigned to records where:<br>
+      <span class="SpellE">RecordPreferredTermYN = "N"</span><br>
+      <span class="SpellE">ConceptPreferredTermYN = "N"<br>
+PrintFlagYN = "N"<br>
+      </span><span class="SpellE">IsPermutedTermYN = "N"</span><br>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -428,301 +448,304 @@ SDUI = QualifierUI</td>
       <th>Attribute Name</th>
       <td style="vertical-align: top;"><span style="font-weight: bold;">Description</span><br>
       </td>
-      <th>Origin</th>
+      <th>Origin: XML tag<br>
+      </th>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">XML
+file(s)</span><br>
+      </td>
     </tr>
     <tr>
       <td>AN<br>
       </td>
-      <td style="vertical-align: top;">MeSH Annotation - an informative
-MeSH note written primarily for
-indexers or catalogers that may also be useful in explaining the use of
-a MeSH term to online searchers.</td>
-      <td><br>
+      <td style="vertical-align: top;">Annotation</td>
+      <td>Annotation<br>
+      </td>
+      <td style="vertical-align: top;">desc*.xml<br>
+qual*.xml<br>
       </td>
     </tr>
     <tr>
       <td>AQL<br>
       </td>
-      <td style="vertical-align: top;">MeSH Allowable Qualifier - list
-of allowable qualifier
-abbreviations for MeSH main headings (e.g. AA, CL, CS, DF, DU, IM, I,P
-ME, PK)</td>
-      <td><br>
+      <td style="vertical-align: top;">Allowable Qualifier List<br>
+      </td>
+      <td>AllowableQualifiersList<br>
+      </td>
+      <td style="vertical-align: top;">desc*xml<br>
       </td>
     </tr>
     <tr>
       <td>CX<br>
       </td>
-      <td style="vertical-align: top;">MeSH Consider Also Note - other
-word roots or prefixes that should
-be consulted for concepts related to this MeSH concept, e.g., the value
-for "Heart" is "consider also terms at cardi- and myocardi-".</td>
-      <td><br>
+      <td style="vertical-align: top;">Consider Also Note&nbsp;</td>
+      <td>ConsiderAlso<br>
+      </td>
+      <td style="vertical-align: top;">desc*.xml<br>
       </td>
     </tr>
     <tr>
       <td>DC<br>
       </td>
-      <td style="vertical-align: top;">MeSH Descriptor class - type of
-MeSH term the concept name represents.</td>
-      <td><br>
+      <td style="vertical-align: top;">Descriptor class<br>
+      </td>
+      <td>&lt;DescriptorRecord DescriptorClass&gt;<br>
+      </td>
+      <td style="vertical-align: top;">desc*.xml<br>
       </td>
     </tr>
     <tr>
       <td>DQ<br>
       </td>
-      <td style="vertical-align: top;">MeSH Date Qualifier Established
-YYYYMMDD - date the qualifier became available for indexing MEDLARS
-citations.</td>
-      <td><br>
+      <td style="vertical-align: top;">Date Qualifier Established<br>
+      </td>
+      <td>&lt;DateEstablished&gt;&lt;Year&gt;&lt;Month&gt;&lt;Day&gt;<br>
+      </td>
+      <td style="vertical-align: top;">qual*.xml<br>
       </td>
     </tr>
     <tr>
       <td>DX<br>
       </td>
-      <td style="vertical-align: top;">MeSH Date major descriptor
-established YYYYMMDD - first day of the
-Index Medicus publication month in which the descriptor (in any form)
-was available for searching as a major descriptor.</td>
-      <td><br>
+      <td style="vertical-align: top;">Date major descriptor
+established<br>
+      </td>
+      <td>&lt;DateEstablished&gt;&lt;Year&gt;&lt;Month&gt;&lt;Day&gt;<br>
+      </td>
+      <td style="vertical-align: top;">desc*.xml<br>
       </td>
     </tr>
     <tr>
       <td>EC_OF<br>
       </td>
-      <td style="vertical-align: top;">MeSH Entry combination OF - an
-invalid MeSH main
-heading/subheading combination that is a cross reference to a single
-MeSH main heading or a main heading/subheading combination that should
-be used in its place. Has a format of SDUI/Qualifier</td>
-      <td><br>
+      <td style="vertical-align: top;">Entry combination of<br>
+      </td>
+      <td>&lt;EntryCombination&gt;&lt;ECIN&gt;&lt;&lt;DescriptorName&gt;/&lt;EntryCombination&gt;&lt;QualifierName&gt;
+      </td>
+      <td style="vertical-align: top;">desc*.xml<br>
       </td>
     </tr>
     <tr>
       <td>EC<br>
       </td>
-      <td style="vertical-align: top;">MeSH Entry combination - an
-invalid MeSH main heading/subheading
-combination that is a cross reference to a single MeSH main heading or
-a main heading/subheading combination that should be used in its place.</td>
-      <td><br>
+      <td style="vertical-align: top;">Entry combination</td>
+      <td>&lt;EntryCombination&gt;&lt;ECOUT&gt; </td>
+      <td style="vertical-align: top;">desc*.xml<br>
       </td>
     </tr>
     <tr>
       <td>FR<br>
       </td>
-      <td style="vertical-align: top;">MeSH Frequency</td>
-      <td><br>
+      <td style="vertical-align: top;">MeSH frequency</td>
+      <td>&lt;Frequency&gt;<br>
+      </td>
+      <td style="vertical-align: top;">supp*.xml<br>
       </td>
     </tr>
     <tr>
       <td>FX<br>
       </td>
-      <td style="vertical-align: top;">MeSH MH Mapping - maps a MeSH MH
-to a 'See Related' MH.</td>
-      <td><br>
+      <td style="vertical-align: top;">See Related' mapping<br>
+      </td>
+      <td>&lt;<span class="SpellE">SeeRelatedDescriptor</span><span
+ style="">&gt;</span> </td>
+      <td style="vertical-align: top;">desc*.xml<br>
       </td>
     </tr>
     <tr>
       <td>HM<br>
       </td>
-      <td style="vertical-align: top;">MeSH Heading Mapped To - heading
-mapped to attribute in C-MeSH
-containing repeating (MH or MH/SH) elements (e.g. HM = PYRROLIDINONES,
-HM = *TARTRATES, HM = ESTRONE/* analogs &amp; derivatives)</td>
-      <td><br>
+      <td style="vertical-align: top;">Heading Mapped To</td>
+      <td>&lt;HeadingMappedToList&gt;&lt;HeadingMappedTo&gt;&lt;DescriptorUI&gt;<br>
+      </td>
+      <td style="vertical-align: top;">supp*.xml<br>
       </td>
     </tr>
     <tr>
       <td>HN<br>
       </td>
-      <td style="vertical-align: top;">History Note - for MeSH history
-notes, the year when the current
-form of the MeSH term was established as a major and/or minor
-descriptor.</td>
-      <td><br>
+      <td style="vertical-align: top;">History Note<br>
+      </td>
+      <td>&lt;HistoryNote&gt;<br>
+      </td>
+      <td style="vertical-align: top;">desc*.xml, qual*.xml<br>
       </td>
     </tr>
     <tr>
       <td>II<br>
       </td>
-      <td style="vertical-align: top;">MeSH Indexing Information - for
-MeSH chemical terms (Term Type=NM),
-MeSH headings that may be relevant to articles that are also assigned
-the NM term.</td>
-      <td><br>
+      <td style="vertical-align: top;">Indexing Information</td>
+      <td>&lt;IndexingInformationList&gt;&lt;IndexingInformation&gt;&lt;DescriptorUI&gt;<br>
+      </td>
+      <td style="vertical-align: top;">supp*.xml<br>
       </td>
     </tr>
     <tr>
       <td style="vertical-align: top;">LT<br>
       </td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">Lexical tag<br>
       </td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">&lt;LexicalTag&gt;<br>
+Only LexicalTags with value = "LAB" or "TRD" are included in the
+Metathesaurus<br>
+      </td>
+      <td style="vertical-align: top;">desc*.xml<br>
+supp*.xml<br>
       </td>
     </tr>
     <tr>
       <td>MDA</td>
-      <td style="vertical-align: top;">MeSH date of entry YYYYMMDD -
-date the term was added to the MeSH
-file, which is prior to the date the term became available for indexing
-and searching MEDLARS citations. Terms that have been part of MeSH for
-many years may have no value in this elemen</td>
-      <td><br>
+      <td style="vertical-align: top;">Date of entry<br>
+      </td>
+      <td>&lt;DescriptorRecord|QualifierRecord|SupplementaryRecord&gt;&lt;DateCreated&gt;&lt;Year&gt;&lt;Month&gt;&lt;Day&gt;<br>
+      </td>
+      <td style="vertical-align: top;">desc*.xml<br>
+qual*.xml<br>
+supp*.xml<br>
       </td>
     </tr>
     <tr>
       <td>MMR<br>
       </td>
-      <td style="vertical-align: top;">MeSH revision date YYYYMMDD -
-date of the last major revision to the term's MeSH record.</td>
-      <td><br>
+      <td style="vertical-align: top;">Revision date<br>
+      </td>
+      <td>&lt;DateRevised&gt;&lt;Year&gt;&lt;Month&gt;&lt;Day&gt;<br>
+      </td>
+      <td style="vertical-align: top;">desc*.xml<br>
+qual*.xml<br>
+supp*.xml<br>
       </td>
     </tr>
     <tr>
       <td>MN<br>
       </td>
-      <td style="vertical-align: top;">MeSH hierarchical number for the
-concept in the MeSH tree
-structures. This number also appears in the HCD subelement of the REL
-and CXT elements.</td>
-      <td><br>
+      <td style="vertical-align: top;">Hierarchical number for
+tree structures.</td>
+      <td>&lt;TreeNumber&gt; </td>
+      <td style="vertical-align: top;">desc*.xml<br>
+qual*.xml<br>
       </td>
     </tr>
     <tr>
       <td>OL<br>
       </td>
-      <td style="vertical-align: top;">MeSH Online Note - information
-helpful to online searchers of MEDLINE, especially when the history of
-a term or cross-reference has implications for online searching. This
-is a potential source of useful information for rules for search
-interface programs.<br>
+      <td style="vertical-align: top;">Online note<br>
       </td>
-      <td><br>
+      <td>&lt;OnlineNote&gt;<br>
+      </td>
+      <td style="vertical-align: top;">desc*.xml<br>
+qual*.xml<br>
       </td>
     </tr>
     <tr>
       <td>PA<br>
       </td>
-      <td style="vertical-align: top;">
-      <table border="1" cellpadding="2" cellspacing="2" width="100%">
-        <tbody>
-          <tr>
-            <td>Pharmacologic Action of MeSH main headings (MH) for
-drugs and
-supplementary concept names (NM). The information in this element is
-also represented by an "isa" relationship between the MH or NM concept
-and the MeSH concept name for the class of drugs with a particular
-pharmacologic action.</td>
-          </tr>
-        </tbody>
-      </table>
+      <td style="vertical-align: top;">Pharmacologic action<br>
       </td>
-      <td><br>
+      <td>&lt;PharmacologicalAction&gt;&lt;DescriptorReferredTo&gt;&lt;DescriptorUI&gt;<br>
+      </td>
+      <td style="vertical-align: top;">desc*.xml<br>
+supp*.xml<br>
       </td>
     </tr>
     <tr>
       <td>PI</td>
-      <td style="vertical-align: top;">
-      <table border="1" cellpadding="2" cellspacing="2" width="100%">
-        <tbody>
-          <tr>
-            <td>MeSH heading or heading/subheading combination(s)
-followed by a date range in parentheses (YYYY).</td>
-          </tr>
-        </tbody>
-      </table>
+      <td style="vertical-align: top;">Previous indexing<br>
       </td>
-      <td><br>
+      <td>&lt;PreviousIndexing&gt;<br>
+      </td>
+      <td style="vertical-align: top;">desc*.xml<br>
+supp*.xml<br>
       </td>
     </tr>
     <tr>
       <td>PM<br>
       </td>
-      <td style="vertical-align: top;">Public MeSH note - combines key
-information from the HN and PI elements in a format that is printed in
-the MeSH publications.</td>
-      <td><br>
+      <td style="vertical-align: top;">Public note<br>
+      </td>
+      <td>&lt;PublicMeSHNote&gt;<br>
+      </td>
+      <td style="vertical-align: top;">desc*.xml<br>
       </td>
     </tr>
     <tr>
       <td>QA<br>
       </td>
-      <td style="vertical-align: top;">
-      <table border="1" cellpadding="2" cellspacing="2" width="100%">
-        <tbody>
-          <tr>
-            <td>MeSH Topical Qualifier Abbreviation - for MeSH
-subheadings (Term
-Type=TQ), an abbreviation that may be used in place of the full text of
-the abbreviation in searching on NLM's system and possibly on other
-systems offering NLM data.</td>
-          </tr>
-        </tbody>
-      </table>
+      <td style="vertical-align: top;">Topical qualifier abbreviation<br>
       </td>
-      <td><br>
+      <td>&lt;TermList&gt;&lt;Term&gt;&lt;Abbreviation&gt; </td>
+      <td style="vertical-align: top;">qual*.xml<br>
       </td>
     </tr>
     <tr>
       <td>RN<br>
       </td>
-      <td style="vertical-align: top;">Registry Number - series of
-numbers and hyphens (any leading zeros
-in an RN are dropped) or a series of numbers and periods, preceded by EC</td>
-      <td><br>
+      <td style="vertical-align: top;">Registry Number<br>
+      </td>
+      <td>&lt;RegistryNumber&gt; (any leading zeroes are dropped)<br>
+      </td>
+      <td style="vertical-align: top;">desc*.xml<br>
+supp*.xml<br>
       </td>
     </tr>
     <tr>
       <td>RR<br>
       </td>
-      <td style="vertical-align: top;">The Chemical Abstracts Registry
-numbers for salts, optical isomers,
-or isotope-labeled versions of the concept followed by the relationship
-of this RR to the RN (in parentheses.) Applies to chemicals only. These
-numbers can be used as links to information in a number of chemical and
-toxicological databases.</td>
-      <td><br>
+      <td style="vertical-align: top;">Related Chemical Abstracts
+Registry number<br>
+      </td>
+      <td>&lt;RelatedRegistryNumber&gt;<br>
+      </td>
+      <td style="vertical-align: top;">desc*.xml<br>
+supp*.xml<br>
       </td>
     </tr>
     <tr>
       <td>SC<br>
       </td>
-      <td style="vertical-align: top;">MeSH Supplemental record class.</td>
-      <td><br>
+      <td style="vertical-align: top;">Supplemental record class</td>
+      <td>&lt;SupplementalRecord SCRClass&gt; </td>
+      <td style="vertical-align: top;">supp*.xml<br>
       </td>
     </tr>
     <tr>
       <td style="vertical-align: top;">SOS<br>
       </td>
-      <td style="vertical-align: top;">Scope Statement</td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">Scope statement</td>
+      <td style="vertical-align: top;">&lt;Note&gt;<br>
+      </td>
+      <td style="vertical-align: top;">supp*.xml<br>
       </td>
     </tr>
     <tr>
       <td>SRC<br>
       </td>
-      <td style="vertical-align: top;">MeSH Literature source of
-chemical name - a citation to an article
-in a journal indexed for MEDLINE in which the chemical has been
-identified. (Note: Not to be confused with source abbreviation of SRC)</td>
-      <td><br>
+      <td style="vertical-align: top;">Literature source of
+chemical name</td>
+      <td>&lt;Source&gt;<br>
+      </td>
+      <td style="vertical-align: top;">supp*.xml<br>
       </td>
     </tr>
     <tr>
       <td>TERMUI<br>
       </td>
       <td style="vertical-align: top;">Term unique identifier</td>
-      <td><br>
+      <td>&lt;TermUI&gt;<br>
+      </td>
+      <td style="vertical-align: top;">desc*.xml<br>
+qual*.xml<br>
+supp*.xml<br>
       </td>
     </tr>
     <tr>
       <td style="vertical-align: top;">TH<br>
       </td>
-      <td style="vertical-align: top;">MeSH Thesaurus ID - identifies
-thesauri other than MeSH in which the MeSH heading or cross-reference
-is included.</td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">Thesaurus ID<br>
+      </td>
+      <td style="vertical-align: top;">&lt;ThesaurusID&gt;<br>
+      </td>
+      <td style="vertical-align: top;">desc*.xml<br>
+supp*.xml<br>
       </td>
     </tr>
   </tbody>
@@ -738,7 +761,9 @@ is included.</td>
       <th>ORIGIN</th>
     </tr>
     <tr>
-      <td>Extracted from ...</td>
+      <td>XML tag:&nbsp; &lt;ScopeNote&gt;<br>
+Files:&nbsp; dmesh*xml, qmesh*xml<br>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -751,16 +776,21 @@ is included.</td>
   <tbody>
     <tr>
       <th>Relationship</th>
-      <th>Relationship Label/Inverse Relationship Label</th>
-      <th>ORIGIN</th>
+      <th>Relationship Label<br>
+Inverse Relationship Label</th>
+      <th>Origin<br>
+      </th>
     </tr>
     <tr>
       <td>CHD<br>
 PAR<br>
 SIB</td>
       <td>(no rela)</td>
-      <td valign="top"><br>
-      </td>
+      <td valign="top">Represent the hierarchy as created from the
+values in the &lt;TreeNumber&gt; tags in dmesh and qmesh.&nbsp;
+Official MeSH xml release files do not include the top levels of a
+hierarchy, so additional top level concepts are created and maintained
+in separate files. </td>
     </tr>
     <tr>
       <td>AQ<br>
@@ -768,8 +798,8 @@ QB<br>
       </td>
       <td>(no rela)<br>
       </td>
-      <td><br>
-      </td>
+      <td>Connect descriptors with allowable qualifiers.&nbsp;
+Extracted from the &lt;AllowableQualifiersList&gt; tag in desc*.xml </td>
     </tr>
     <tr>
       <td style="vertical-align: top;">RB<br>
@@ -849,6 +879,14 @@ sort_version_of<br>
 </div>
 <div id="mappings" class="rep_block_level_two">
 <a name="mappings"></a><br>
+<h3>Hierarchy (MRHIER):</h3>
+&nbsp;&nbsp;<span class="nav">(return to <a
+ href="metarepresentation.html#top">top</a></span>)<a name="mappings"></a><br>
+<br>
+The hierarchy is created from values in the &lt;TreeNumber&gt; tags in
+desc*.xml and qual*.xml.&nbsp; Official MeSH xml release files do not
+include the top levels of a hierarchy, so additional top level concepts
+are created and maintained in separate files.<br>
 <h3>Mappings (MRMAP):</h3>
 &nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br>
 <p>No Mapsets are created for MeSH. </p>
