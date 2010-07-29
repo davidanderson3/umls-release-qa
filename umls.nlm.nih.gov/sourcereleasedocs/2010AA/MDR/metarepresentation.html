@@ -1,6 +1,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
+
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
 </head>
 <body>
 <div class="section-4">
@@ -519,7 +521,8 @@ established<br>
       </td>
       <td style="vertical-align: top;">Entry combination of<br>
       </td>
-      <td>&lt;EntryCombination&gt;&lt;ECIN&gt;&lt;&lt;DescriptorName&gt;/&lt;EntryCombination&gt;&lt;QualifierName&gt;
+      <td>&lt;EntryCombination&gt;&lt;ECIN&gt;&lt;DescriptorName&gt;/&lt;EntryCombination&gt;&lt;QualifierName&gt;
+
       </td>
       <td style="vertical-align: top;">desc*.xml<br>
       </td>
@@ -815,7 +818,7 @@ RN<br>
       <td style="vertical-align: top;">(no rela)<br>
       </td>
       <td style="vertical-align: top;">Connect: &lt;ConceptRelation&gt;
-&lt;ConceptUI1&gt; to &lt;ConceptRelation&gt;&lt;ConceptUI2&gt;<br>
+&lt;Concept1UI&gt; to &lt;ConceptRelation&gt;&lt;Concept2UI&gt;<br>
 Created where:<br>
 &lt;ConceptRelation RelationName="NRW"&gt;<br>
 &lt;ConceptRelation RelationName="BRD"&gt;<br>
@@ -834,7 +837,8 @@ isa<br>
       </td>
       <td>
       <p><span class="SpellE"></span><span class="SpellE">Connect: </span>[&lt;DescriptorRecord&gt;&lt;DescriptorUI&gt;
-or &lt;SupplementalRecord&gt;&lt;SupplementalRecordUI&gt;] to <span
+or
+&lt;SupplementalRecord&gt;&lt;SupplementalRecordUI&gt;] to <span
  class="SpellE">&lt;</span><span class="SpellE"></span><span
  class="SpellE">PharmacologicalAction</span>&gt;&lt;<span class="SpellE">DescriptorReferredTo</span>&gt;&lt;<span
  class="SpellE">DescriptorUI</span>&gt;</p>
@@ -851,7 +855,8 @@ RN<br>
 mapped_to<br>
       </td>
       <td><span style="">Connect: </span>&lt;SupplementalRecord&gt;&lt;SupplementalRecordUI&gt;
-to <span style="">&lt;HeadingMappedTo&gt;&lt;DescriptorReferredTo&gt;&lt;DescriptorUI&gt;</span><br>
+to
+      <span style="">&lt;HeadingMappedTo&gt;&lt;DescriptorReferredTo&gt;&lt;DescriptorUI&gt;</span><br>
       </td>
       <td style="vertical-align: top;">supp*.xml<br>
       </td>
@@ -867,8 +872,8 @@ Connect: <br>
  class="SpellE">DescriptorReferredTo</span>&gt;&lt;<span class="SpellE">DescriptorUI</span>&gt;<br>
       <br>
 SCUI - SCUI:&nbsp;&nbsp; <br>
-Connect: &lt;ConceptRelation&gt;&lt;ConceptUI1&gt; to
-&lt;ConceptRelation&gt;&lt;ConceptUI2&gt;<br>
+Connect: &lt;ConceptRelation&gt;&lt;Concept1UI&gt; to
+&lt;ConceptRelation&gt;&lt;Concept2UI&gt;<br>
 Created where: &lt;ConceptRelation RelationName="REL"&gt;</td>
       <td style="vertical-align: top;">desc*.xml<br>
       </td>
@@ -881,6 +886,7 @@ has_entry_combination<br>
       </td>
       <td>Connect: &lt;DescriptorRecord&gt;&lt;DescriptorUI&gt; to
 &lt;EntryCombination&gt;&lt;ECOUT&gt;&lt;DescriptorReferredTo&gt;&lt;DescriptorUI&gt;
+
       </td>
       <td style="vertical-align: top;">desc*xml<br>
       </td>
