@@ -423,11 +423,10 @@ Files</a></span><br>
       </td>
       <td style="vertical-align: top; font-weight: bold;">End<br>
       </td>
-      <th>Description</th>
       <th>Representation</th>
     </tr>
     <tr>
-      <td class="file_field_name">ICD-10-CM Code<br>
+      <td class="file_field_name">ICD-10-CM Code (source) <br>
       </td>
       <td style="vertical-align: top;">7<br>
       </td>
@@ -435,9 +434,9 @@ Files</a></span><br>
       </td>
       <td style="vertical-align: top;">7<br>
       </td>
-      <td>Source (from) code<br>
-      </td>
-      <td><br>
+      <td>MRMAP.RRF.FROMID<br>
+MRMAP.RRF.FROMEXPR<br>
+Decimal point added as appropriate<br>
       </td>
     </tr>
     <tr>
@@ -449,13 +448,11 @@ Files</a></span><br>
       </td>
       <td style="vertical-align: top;">8<br>
       </td>
-      <td>filler<br>
-      </td>
       <td>not used<br>
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">ICD-9-CM Code<br>
+      <td style="vertical-align: top;">ICD-9-CM Code (target)<br>
       </td>
       <td style="vertical-align: top;">5<br>
       </td>
@@ -463,9 +460,9 @@ Files</a></span><br>
       </td>
       <td style="vertical-align: top;">13<br>
       </td>
-      <td style="vertical-align: top;">Target (to) code<br>
-      </td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">MRMAP.RRF.TOID<br>
+MRMAP.RRF.TOEXPR<br>
+Decimal point added as appropriate<br>
       </td>
     </tr>
     <tr>
@@ -476,14 +473,12 @@ Files</a></span><br>
       <td style="vertical-align: top;">14<br>
       </td>
       <td style="vertical-align: top;">14<br>
-      </td>
-      <td style="vertical-align: top;">filler<br>
       </td>
       <td style="vertical-align: top;">not used<br>
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">Approximate<br>
+      <td style="vertical-align: top;">Approximate flag<br>
       </td>
       <td style="vertical-align: top;">1<br>
       </td>
@@ -491,13 +486,20 @@ Files</a></span><br>
       </td>
       <td style="vertical-align: top;">15<br>
       </td>
-      <td style="vertical-align: top;">flag<br>
-      </td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">Value of 1 (indicates the entry
+is not equivalent):<br>
+      <div style="margin-left: 40px;">MRREL.RRF.REL=RO<br>
+MRREL.REL.RELA=approximately_mapped_to<br>
+      </div>
+      <br>
+Value of 0:&nbsp; <br>
+      <div style="margin-left: 40px;">MRREL.RRF.REL=SY<br>
+MRREL.RRF.RELA=mapped_to<br>
+      </div>
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">No map<br>
+      <td style="vertical-align: top;">No map flag<br>
       </td>
       <td style="vertical-align: top;">1<br>
       </td>
@@ -505,13 +507,12 @@ Files</a></span><br>
       </td>
       <td style="vertical-align: top;">16<br>
       </td>
-      <td style="vertical-align: top;"><br>
-      </td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">Value of 1:<br>
+MRREL.RRF.REL=XR<br>
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">Combination<br>
+      <td style="vertical-align: top;">Combination flag<br>
       </td>
       <td style="vertical-align: top;">1<br>
       </td>
@@ -519,9 +520,9 @@ Files</a></span><br>
       </td>
       <td style="vertical-align: top;">17<br>
       </td>
-      <td style="vertical-align: top;"><br>
-      </td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">Value of "1" indicates that more
+than one code is required.&nbsp; This is implied in MRMAP.RRF by
+non-zero values in MAPSUBSETID.<br>
       </td>
     </tr>
     <tr>
@@ -533,13 +534,15 @@ Files</a></span><br>
       </td>
       <td style="vertical-align: top;">18<br>
       </td>
-      <td style="vertical-align: top;"><br>
-      </td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">MRMAP.RRF.MAPSUBSETID (first
+subfield, before the ":")<br>
+Anything with the same FROMEXPR and MAPSUBSETID values should be "OR'd"
+together<br>
+      <span style="font-size: 22pt; font-family: Calibri; color: black;"></span>
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">Choice<br>
+      <td style="vertical-align: top;">Choice list<br>
       </td>
       <td style="vertical-align: top;">1<br>
       </td>
@@ -547,9 +550,10 @@ Files</a></span><br>
       </td>
       <td style="vertical-align: top;">19<br>
       </td>
-      <td style="vertical-align: top;"><br>
-      </td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;">MRMAP.RRF.MAPSUBSETID (second
+subfield, after the ":")<br>
+Anything with the same FROMEXPR and MAPSUBSETID values should be "OR'd"
+together<br>
       </td>
     </tr>
   </tbody>
@@ -562,30 +566,136 @@ Files</a></span><br>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
-      <th>#</th>
-      <th>Field Name</th>
-      <th>Description</th>
+      <th>Field <br>
+      </th>
+      <th>Length</th>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">Begin</span><br>
+      </td>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">End</span><br>
+      </td>
       <th>Representation</th>
     </tr>
     <tr>
+      <td class="file_field_name">ICD-9-CM Code (source)<br>
+      </td>
+      <td>5<br>
+      </td>
       <td style="vertical-align: top;">1<br>
       </td>
-      <td class="file_field_name"><br>
+      <td style="vertical-align: top;">5<br>
       </td>
-      <td><br>
+      <td>MRMAP.RRF.FROMID<br>
+MRMAP.RRF.FROMEXPR<br>
+Decimal point added as appropriate</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">filler<br>
       </td>
-      <td><br>
+      <td style="vertical-align: top;">1<br>
+      </td>
+      <td style="vertical-align: top;">6<br>
+      </td>
+      <td style="vertical-align: top;">6<br>
+      </td>
+      <td style="vertical-align: top;">not used<br>
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">2<br>
+      <td style="vertical-align: top;">ICD-10-CM code (target)<br>
       </td>
-      <td class="file_field_name"><br>
+      <td style="vertical-align: top;">7<br>
       </td>
-      <td><br>
+      <td style="vertical-align: top;">7<br>
       </td>
-      <td><br>
+      <td style="vertical-align: top;">13<br>
       </td>
+      <td style="vertical-align: top;">MRMAP.RRF.TOID<br>
+MRMAP.RRF.TOEXPR<br>
+Decimal point added as appropriate</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">filler<br>
+      </td>
+      <td style="vertical-align: top;">1<br>
+      </td>
+      <td style="vertical-align: top;">14<br>
+      </td>
+      <td style="vertical-align: top;">14<br>
+      </td>
+      <td style="vertical-align: top;">not used<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">Approximate flag<br>
+      </td>
+      <td style="vertical-align: top;">1<br>
+      </td>
+      <td style="vertical-align: top;">15<br>
+      </td>
+      <td style="vertical-align: top;">15<br>
+      </td>
+      <td style="vertical-align: top;">Value of 1 (indicates the entry
+is not equivalent):<br>
+      <div style="margin-left: 40px;">MRREL.RRF.REL=RO<br>
+MRREL.REL.RELA=approximately_mapped_to<br>
+      </div>
+      <br>
+Value of 0:&nbsp; <br>
+      <div style="margin-left: 40px;">MRREL.RRF.REL=SY<br>
+MRREL.RRF.RELA=mapped_to</div>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">No map flag<br>
+      </td>
+      <td style="vertical-align: top;">1<br>
+      </td>
+      <td style="vertical-align: top;">16<br>
+      </td>
+      <td style="vertical-align: top;">16<br>
+      </td>
+      <td style="vertical-align: top;">Value of 1:<br>
+MRREL.RRF.REL=XR</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">Combination flag<br>
+      </td>
+      <td style="vertical-align: top;">1<br>
+      </td>
+      <td style="vertical-align: top;">17<br>
+      </td>
+      <td style="vertical-align: top;">17<br>
+      </td>
+      <td style="vertical-align: top;">Value of "1" indicates that more
+than one code is required.&nbsp; This is implied in MRMAP.RRF by
+non-zero values in MAPSUBSETID.</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">Scenario<br>
+      </td>
+      <td>1<br>
+      </td>
+      <td style="vertical-align: top;">18<br>
+      </td>
+      <td style="vertical-align: top;">18<br>
+      </td>
+      <td>MRMAP.RRF.MAPSUBSETID (first subfield, before the ":")<br>
+Anything with the same FROMEXPR and MAPSUBSETID values should be "OR'd"
+together </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">Choice<br>
+      </td>
+      <td style="vertical-align: top;">1<br>
+      </td>
+      <td style="vertical-align: top;">19<br>
+      </td>
+      <td style="vertical-align: top;">19<br>
+      </td>
+      <td style="vertical-align: top;">MRMAP.RRF.MAPSUBSETID (second
+subfield, after the ":")<br>
+Anything with the same FROMEXPR and MAPSUBSETID values should be "OR'd"
+together</td>
     </tr>
   </tbody>
 </table>
@@ -598,30 +708,95 @@ Files</a></span><br>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
-      <th>#</th>
       <th>Field Name</th>
-      <th>Description</th>
+      <th>Length</th>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">Begin</span><br>
+      </td>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">End</span><br>
+      </td>
       <th>Representation</th>
     </tr>
     <tr>
+      <td class="file_field_name">ICD-10-CM Code<br>
+      </td>
+      <td>8<br>
+      </td>
       <td style="vertical-align: top;">1<br>
       </td>
-      <td class="file_field_name"><br>
+      <td style="vertical-align: top;">8<br>
       </td>
-      <td><br>
+      <td>MRMAP.RRF.FROMID<br>
+MRMAP.RRF.FROMEXPR<br>
+Decimal point added as appropriate </td>
+    </tr>
+    <tr>
+      <td class="file_field_name">Number of ICD-9-CM mapped to<br>
       </td>
-      <td><br>
+      <td>1<br>
+      </td>
+      <td style="vertical-align: top;">9<br>
+      </td>
+      <td style="vertical-align: top;">9<br>
+      </td>
+      <td>not used<br>
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">2<br>
+      <td style="vertical-align: top;">1st ICD-9-CM code mapped to<br>
       </td>
-      <td class="file_field_name"><br>
+      <td style="vertical-align: top;">6<br>
       </td>
-      <td><br>
+      <td style="vertical-align: top;">10<br>
       </td>
-      <td><br>
+      <td style="vertical-align: top;">15<br>
       </td>
+      <td style="vertical-align: top;">Used in MRMAP.RRF.TOEXPR; if
+multiple ICD-9-CM codes are included, they concatenated with "AND"<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">2nd ICD-9-CM code mapped to</td>
+      <td style="vertical-align: top;">6<br>
+      </td>
+      <td style="vertical-align: top;">16<br>
+      </td>
+      <td style="vertical-align: top;">21<br>
+      </td>
+      <td style="vertical-align: top;">Used in MRMAP.RRF.TOEXPR; if
+multiple ICD-9-CM codes are included, they concatenated with "AND"</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">3rd ICD-9-CM code mapped to</td>
+      <td style="vertical-align: top;">6<br>
+      </td>
+      <td style="vertical-align: top;">22<br>
+      </td>
+      <td style="vertical-align: top;">27<br>
+      </td>
+      <td style="vertical-align: top;">Used in MRMAP.RRF.TOEXPR; if
+multiple ICD-9-CM codes are included, they concatenated with "AND"</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">4th ICD-9-CM code mapped to</td>
+      <td style="vertical-align: top;">6<br>
+      </td>
+      <td style="vertical-align: top;">28<br>
+      </td>
+      <td style="vertical-align: top;">33<br>
+      </td>
+      <td style="vertical-align: top;">Used in MRMAP.RRF.TOEXPR; if
+multiple ICD-9-CM codes are included, they concatenated with "AND"</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">5th ICD-9-CM code mapped to</td>
+      <td style="vertical-align: top;">6<br>
+      </td>
+      <td style="vertical-align: top;">34<br>
+      </td>
+      <td style="vertical-align: top;">39<br>
+      </td>
+      <td style="vertical-align: top;">Used in MRMAP.RRF.TOEXPR; if
+multiple ICD-9-CM codes are included, they concatenated with "AND"</td>
     </tr>
   </tbody>
 </table>
