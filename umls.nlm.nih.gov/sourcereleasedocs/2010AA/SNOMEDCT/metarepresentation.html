@@ -48,7 +48,7 @@
  </ul>
  </div>
 <br/><br/><br/>
-<a name = "top"/></a>
+<a name = "top"></a>
 <span class = "nav">Skip to: <a href = "#atoms">Atoms</a>, <a href = "#attributes">Attributes</a>, <a href = "#definitions">Definitions</a>, <a href = "#relationships">Relationships</a>, <a href = "#mappings">Mappings</a></span>
 
 <div id = "general" class = "rep_block_level_one">
@@ -108,7 +108,7 @@ Identifiers are assigned as follows:
 </ul>
 
 <div id = "rep_termtypes" class = "rep_block_level_two">
-<a name = "atoms"/></a>
+<a name = "atoms"></a>
 <h3>Atoms (MRCONSO)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)<br/>
 
 <table class="elements" border="0" cellspacing="0">
@@ -120,100 +120,109 @@ Identifiers are assigned as follows:
 	<tr>
 		<td>SNOMEDCT</td>
 		<td>FN</td>
-		<td>An FN (Fully specified Name) atom is created for each line of sct1_Descriptions_en_INT_yyyymmdd.txt having DESCRIPTIONTYPE=3, DESCRIPTIONSTATUS=0, and a LANGUAGECODE of "en" or "en-US", as follows:
-		<DIV STYLE="margin:4pt">CODE, SCUI = CONCEPTID<br>
-		SAUI = DESCRIPTIONID<br>STR = TERM<br>SUPPRESSIBLE=N</div></td>
+		<td>An FN (Fully specified Name) atom is created for each line of sct1_Descriptions_en_INT_yyyymmdd.txt having DESCRIPTIONTYPE=3, DESCRIPTIONSTATUS=0, and a LANGUAGECODE of "en" or "en-US", as follows:<br/>
+		CODE, SCUI = CONCEPTID<br/>
+		SAUI = DESCRIPTIONID<br/>STR = TERM<br/>SUPPRESSIBLE=N</td>
 	</tr>
 	<tr>
 		<td>SNOMEDCT</td>
 		<td>OF</td>
-		<td>An OF (Obsolete Fully specified name) atom is created for each line of sct1_Descriptions_en_INT_yyyymmdd.txt having DESCRIPTIONTYPE=3, a DESCRIPTIONSTATUS other than 0, and a LANGUAGECODE of "en" or "en-US", as follows:
-		<DIV STYLE="margin:4pt">CODE, SCUI = CONCEPTID<br>
-		SAUI = DESCRIPTIONID<br>STR = TERM<br>SUPPRESSIBLE=O</div></td>
+		<td>An OF (Obsolete Fully specified name) atom is created for each line of sct1_Descriptions_en_INT_yyyymmdd.txt having DESCRIPTIONTYPE=3, a DESCRIPTIONSTATUS other than 0, and a LANGUAGECODE of "en" or "en-US", as follows:<br/>
+		CODE, SCUI = CONCEPTID<br/>
+		SAUI = DESCRIPTIONID<br/>STR = TERM<br/>SUPPRESSIBLE=O</td>
 	</tr>
 	<tr>
 		<td>SNOMEDCT</td>
 		<td>PT</td>
-		<td>A PT (Preferred Term) atom is created for each line of sct1_Descriptions_en_INT_yyyymmdd.txt having DESCRIPTIONTYPE=1, DESCRIPTIONSTATUS=0, and a LANGUAGECODE of "en" or "en-US", as follows:
-		<div STYLE="margin:4pt">CODE, SCUI = CONCEPTID<br>
-		SAUI = DESCRIPTIONID<br>
-		STR = TERM<br>SUPPRESSIBLE=N</div>Such PT atoms are also created for lines of sct1_Descriptions_en_INT_yyyymmdd.txt having DESCRIPTIONTYPE=0 and DESCRIPTIONSTATUS=0 if, when you look up that line's DESCRIPTIONID in the MEMBERID field of the der1_Subsets_en-US_INT_yyyymmdd.txt file, the value of MEMBERSTATUS there is 1. (Note that these atoms are actually preferred only in the US English subset and are synonyms in the GB English subset.)</td>
+		<td>A PT (Preferred Term) atom is created for each line of sct1_Descriptions_en_INT_yyyymmdd.txt having DESCRIPTIONTYPE=1, DESCRIPTIONSTATUS=0, and a LANGUAGECODE of "en" or "en-US", as follows:<br/>
+		CODE, SCUI = CONCEPTID<br/>
+		SAUI = DESCRIPTIONID<br/>
+		STR = TERM<br/>SUPPRESSIBLE=N<br/>
+                Such PT atoms are also created for lines of sct1_Descriptions_en_INT_yyyymmdd.txt having DESCRIPTIONTYPE=0 and DESCRIPTIONSTATUS=0 if,
+                when you look up that line's DESCRIPTIONID in the MEMBERID field of the der1_Subsets_en-US_INT_yyyymmdd.txt file, the value of MEMBERSTATUS there is 1.
+                (Note that these atoms are actually preferred only in the US English subset and are synonyms in the GB English subset.)</td>
 	</tr>
 	<tr>
 		<td>SNOMEDCT</td>
 		<td>PTGB</td>
-		<td>A PTGB (Preferred Term in the GB English dialect) atom is created for each line of sct1_Descriptions_en_INT_yyyymmdd.txt having DESCRIPTIONTYPE=1, DESCRIPTIONSTATUS=0, and a LANGUAGECODE of "en-GB", as follows:
-		<div STYLE="margin:4pt">CODE, SCUI = CONCEPTID<br>
-		SAUI = DESCRIPTIONID<br>
-		STR = TERM<br>SUPPRESSIBLE=N</div></td>
+		<td>A PTGB (Preferred Term in the GB English dialect) atom is created for each line of sct1_Descriptions_en_INT_yyyymmdd.txt having DESCRIPTIONTYPE=1, DESCRIPTIONSTATUS=0, and a LANGUAGECODE of "en-GB", as follows:<br/>
+		CODE, SCUI = CONCEPTID<br/>
+		SAUI = DESCRIPTIONID<br/>
+		STR = TERM<br/>SUPPRESSIBLE=N</td>
 	</tr>
 	<tr>
 		<td>SNOMEDCT</td>
 		<td>OP</td>
-		<td>An OP (Obsolete Preferred term) atom is created for each line of sct1_Descriptions_en_INT_yyyymmdd.txt having DESCRIPTIONTYPE=1 and a DESCRIPTIONSTATUS other than 0, as follows:
-		<DIV STYLE="margin:4pt">CODE, SCUI = CONCEPTID<br>
-		SAUI = DESCRIPTIONID<br>STR = TERM<br>SUPPRESSIBLE=O</div></td>
+		<td>An OP (Obsolete Preferred term) atom is created for each line of sct1_Descriptions_en_INT_yyyymmdd.txt having DESCRIPTIONTYPE=1 and a DESCRIPTIONSTATUS other than 0, as follows:<br/>
+		CODE, SCUI = CONCEPTID<br/>
+		SAUI = DESCRIPTIONID<br/>STR = TERM<br/>SUPPRESSIBLE=O</td>
 	</tr>
 	<tr>
 		<td>SNOMEDCT</td>
 		<td>SY</td>
-		<td>An SY (Synonym) atom is created for each line of sct1_Descriptions_en_INT_yyyymmdd.txt having DESCRIPTIONTYPE=2, DESCRIPTIONSTATUS=0, and a LANGUAGECODE of "en" or "en-US", as follows:
-		<div STYLE="margin:4pt">CODE, SCUI = CONCEPTID<br>
-		SAUI = DESCRIPTIONID<br>
-		STR = TERM<br>SUPPRESSIBLE=N</div>Such SY atoms are also created for lines of sct1_Descriptions_en_INT_yyyymmdd.txt having DESCRIPTIONTYPE=0 and DESCRIPTIONSTATUS=0 if, when you look up that line's DESCRIPTIONID in the MEMBERID field of the der1_Subsets_en-US_INT_yyyymmdd.txt file, the value of MEMBERSTATUS there is 2.  (Note that these atoms are actually synonyms only in the US English subset and are preferred in the GB English subset.)</td>
+		<td>An SY (Synonym) atom is created for each line of sct1_Descriptions_en_INT_yyyymmdd.txt having DESCRIPTIONTYPE=2, DESCRIPTIONSTATUS=0, and a LANGUAGECODE of "en" or "en-US", as follows:<br/>
+		CODE, SCUI = CONCEPTID<br/>
+		SAUI = DESCRIPTIONID<br/>
+		STR = TERM<br/>SUPPRESSIBLE=N<br/>
+                Such SY atoms are also created for lines of sct1_Descriptions_en_INT_yyyymmdd.txt having DESCRIPTIONTYPE=0 and DESCRIPTIONSTATUS=0 if, when you look up that line's DESCRIPTIONID
+                in the MEMBERID field of the der1_Subsets_en-US_INT_yyyymmdd.txt file, the value of MEMBERSTATUS there is 2.  (Note that these atoms are actually synonyms only in the US English subset and are preferred in the GB English subset.)</td>
 	</tr>
 	<tr>
 		<td>SNOMEDCT</td>
 		<td>SYGB</td>
-		<td>An SYGB (Synonym in the GB English dialect) atom is created for each line of sct1_Descriptions_en_INT_yyyymmdd.txt having DESCRIPTIONTYPE=2, DESCRIPTIONSTATUS=0, and a LANGUAGECODE of "en-GB", as follows:
-		<div STYLE="margin:4pt">CODE, SCUI = CONCEPTID<br>
-		SAUI = DESCRIPTIONID<br>
-		STR = TERM<br>SUPPRESSIBLE=N</div></td>
+		<td>An SYGB (Synonym in the GB English dialect) atom is created for each line of sct1_Descriptions_en_INT_yyyymmdd.txt having DESCRIPTIONTYPE=2, DESCRIPTIONSTATUS=0, and a LANGUAGECODE of "en-GB", as follows:<br/>
+		CODE, SCUI = CONCEPTID<br/>
+		SAUI = DESCRIPTIONID<br/>
+		STR = TERM<br/>SUPPRESSIBLE=N</td>
 	</tr>
 	<tr>
 		<td>SNOMEDCT</td>
 		<td>IS</td>
-		<td>An IS (obsolete Synonym) atom is created for each line of sct1_Descriptions_en_INT_yyyymmdd.txt having DESCRIPTIONTYPE=2 and a DESCRIPTIONSTATUS other than 0, as follows:
-		<DIV STYLE="margin:4pt">CODE, SCUI = CONCEPTID<br>
-		SAUI = DESCRIPTIONID<br>STR = TERM<br>SUPPRESSIBLE=O</div></td>
+		<td>An IS (obsolete Synonym) atom is created for each line of sct1_Descriptions_en_INT_yyyymmdd.txt having DESCRIPTIONTYPE=2 and a DESCRIPTIONSTATUS other than 0, as follows:<br/>
+		CODE, SCUI = CONCEPTID<br/>
+		SAUI = DESCRIPTIONID<br/>STR = TERM<br/>SUPPRESSIBLE=O</td>
 	</tr>
 	<tr>
 		<td>SNOMEDCT</td>
-		<td>MTH_FN,<br>MTH_OF,<br>MTH_PT,<br>MTH_PTGB,<br>MTH_OP,<br>MTH_SY,<br>MTH_SYGB,<br>MTH_IS</td>
-		<td>Special MTH_* forms are algorithmically generated for atoms with the termtypes listed above, in two situations:
-		<DIV STYLE="margin:4pt">(1) If the STR contains one or more non-ASCII UTF-8 characters, an MTH_* form is generated in which these characters are converted to pure ASCII using the -f:q5 flow of the UMLS lvg (lexical variant generation) tool, and<br/><br/>
+		<td>MTH_FN,<br/>MTH_OF,<br/>MTH_PT,<br/>MTH_PTGB,<br/>MTH_OP,<br/>MTH_SY,<br/>MTH_SYGB,<br/>MTH_IS</td>
+		<td>Special MTH_* forms are algorithmically generated for atoms with the termtypes listed above, in two situations:<br/>
+		If the STR contains one or more non-ASCII UTF-8 characters, an MTH_* form is generated in which these characters are converted to pure ASCII using the -f:q5 flow of the UMLS lvg (lexical variant generation) tool, and<br/><br/>
 		(2) If the STR contains the markup syntax SNOMEDCT uses to indicate superscripts ("^sup^") and/or subscripts ("&gt;sub&lt;"), two MTH_* forms are generated:
-		<div style="margin:8pt">1. One in which the markup syntax is removed, e.g., "CO&gt;2&lt;" becomes "CO2", and
-		<br>2. One in which the markup syntax is converted to an xml-style syntax using "&lt;sup&gt; for superscripts and "&lt;sub&gt;" for subscripts, e.g.,
-		"CO&gt;2&lt;" becomes "CO&lt;sub&gt;2&lt;/sub&gt;".</div></div></td>
+                <ol>
+		<li>One in which the markup syntax is removed, e.g., "CO&gt;2&lt;" becomes "CO2", and</li>
+		<li>One in which the markup syntax is converted to an xml-style syntax using "&lt;sup&gt; for superscripts and "&lt;sub&gt;" for subscripts, e.g.,
+		"CO&gt;2&lt;" becomes "CO&lt;sub&gt;2&lt;/sub&gt;".
+                </li>
+                </ol>
+                </td>
 	</tr>
 	<tr>
 		<td>SNOMEDCT</td>
 		<td>OB</td>
-		<td>An OB (obsolete) atom is created for each line of sct1_Descriptions_en_INT_yyyymmdd.txt having DESCRIPTIONTYPE=0 and a DESCRIPTIONSTATUS other than 0, as follows:
-		<div STYLE="margin:4pt">CODE, SCUI = CONCEPTID<br>
-		SAUI = DESCRIPTIONID<br>
-		STR = TERM<br>SUPPRESSIBLE=O</div></td>
+		<td>An OB (obsolete) atom is created for each line of sct1_Descriptions_en_INT_yyyymmdd.txt having DESCRIPTIONTYPE=0 and a DESCRIPTIONSTATUS other than 0, as follows:<br/>
+		CODE, SCUI = CONCEPTID<br/>
+		SAUI = DESCRIPTIONID<br/>
+		STR = TERM<br/>SUPPRESSIBLE=O</td>
 	</tr>
 	<tr>
 		<td>SNOMEDCT</td>
 		<td>SB</td>
-		<td>One SB (Subset) atom is generated for each line of der1_Subsets_en-GB_INT_yyyymmdd.txt and der1_Subsets_en-US_INT_yyyymmdd.txt, as follows:
-		<div STYLE="margin:4pt">CODE, SCUI = SUBSETID<br>
-		STR = SUBSETNAME</div></td>
+		<td>One SB (Subset) atom is generated for each line of der1_Subsets_en-GB_INT_yyyymmdd.txt and der1_Subsets_en-US_INT_yyyymmdd.txt, as follows:<br/>
+		CODE, SCUI = SUBSETID<br/>
+		STR = SUBSETNAME</td>
 	</tr>
 	<tr>
 		<td>SNOMEDCT</td>
 		<td>XM</td>
-		<td>One XM (cross Mapping set) atom is generated for each line of der1_CrossMapSets_ICD9_INT_yyyymmdd.txt, as follows:
-		<div STYLE="margin:4pt">CODE, SCUI = MAPSETID<br>
-		STR = "SNOMEDCT_yyyy_mm_dd to ICD9CM_vvvv Mappings" (where vvvv is the value of MAPSETSCHEMEVERSION)</div></td>
+		<td>One XM (cross Mapping set) atom is generated for each line of der1_CrossMapSets_ICD9_INT_yyyymmdd.txt, as follows:<br/>
+		CODE, SCUI = MAPSETID<br/>
+		STR = "SNOMEDCT_yyyy_mm_dd to ICD9CM_vvvv Mappings" (where vvvv is the value of MAPSETSCHEMEVERSION)</td>
 	</tr>
 </table>
 </div>
 
 <div id = "rep_attributes" class = "rep_block_level_two">
-<a name = "attributes"/></a><br/>
+<a name = "attributes"></a><br/>
 <h3>Attributes (MRSAT)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)<br/>
 <table class="elements" border="0" cellspacing="0">
 	<tr>
@@ -452,9 +461,9 @@ pt id may be  mapped to one or more ICD-9-CM codes", attached to the XM atom for
 </table>
 </div>
 <div id="rep_definitions" class="rep_block_level_two">
-<a name="definitions"></a><br>
+<a name="definitions"></a><br/>
 <h3>Definitions (MRDEF)</h3>
-&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br>
+&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
@@ -467,7 +476,7 @@ pt id may be  mapped to one or more ICD-9-CM codes", attached to the XM atom for
 </table>
 </div>
 <div id = "rep_relationships" class = "rep_block_level_two">
-<a name = "relationships"/></a><br/>
+<a name = "relationships"></a><br/>
 <h3>Relationships (MRREL)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)<br/>
 <table class="elements" border="0" cellspacing="0">
 	<tr>
@@ -499,9 +508,9 @@ pt id may be  mapped to one or more ICD-9-CM codes", attached to the XM atom for
 </table>
 </div>
 <div id="mappings" class="rep_block_level_two">
-<a name="mappings"></a><br>
+<a name="mappings"></a><br/>
 <h3>Mappings (MRMAP)</h3>
-&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br>
+&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
 <p>The Metathesaurus includes SNOMEDCT's mappings (an XM atom, along with associated attributes and mappings) to ICD9CM.
 These are taken from the der1_CrossMapSets_ICD9_INT_yyyymmdd.txt, der1_CrossMapTargets_ICD9_INT_yyyymmdd.txt, and der1_CrossMaps_ICD9_INT_yyyymmdd.txt files.</p>
 </div>
