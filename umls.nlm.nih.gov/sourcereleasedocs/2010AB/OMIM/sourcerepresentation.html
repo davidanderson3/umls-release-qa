@@ -30,9 +30,9 @@ Representation</a> </li>
 </ul>
 </div>
 <!-- end tabbed navigation area -->
-<br>
-<br>
-<br>
+</br>
+</br>
+</br>
 <a name="top"></a>
 <span class="nav">Skip to: <a href="#general">Notes</a>, <a
  href="#change_summary">Summary of Changes</a>, <a href="#file_summary">Summary
@@ -49,7 +49,7 @@ File Details</a></span>
 <h3>Summary of Changes:</h3>
 &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
 <p>No changes have been made to the original data file format or to
-representation of OMIM in 2010AB.<br>
+representation of OMIM in 2010AB.</br>
 </p>
 </div>
 <div id="rep_file_summary" class="rep_block_level_one">
@@ -60,8 +60,8 @@ representation of OMIM in 2010AB.<br>
 processing using Entrez Programming Utilities.&nbsp; Entrez Programming
 Utilities are tools that provide access to Entrez data outside of the
 regular web query interface and may be helpful for retrieving search
-results for future use in another environment.&nbsp; <br>
-<span style="font-weight: bold;"><br>
+results for future use in another environment.&nbsp; </br>
+<span style="font-weight: bold;"></br>
 </span></p>
 <h4><span style="font-weight: bold;"></span>Documentation and Reference</h4>
 <p></p>
@@ -76,27 +76,27 @@ results for future use in another environment.&nbsp; <br>
       <td class="file_field_name"><a
  href="http://www.ncbi.nlm.nih.gov/dtd/NCBI_Mim.mod.dtd">http://www.ncbi.nlm.nih.gov/dtd/NCBI_Mim.mod.dtd</a>
       </td>
-      <td>XML dtd<br>
+      <td>XML dtd</br>
       </td>
     </tr>
     <tr>
       <td class="file_field_name"><a
- href="http://www.ncbi.nlm.nih.gov/Omim/omimfaq.html">http://www.ncbi.nlm.nih.gov/Omim/omimfaq.html</a><br>
+ href="http://www.ncbi.nlm.nih.gov/Omim/omimfaq.html">http://www.ncbi.nlm.nih.gov/Omim/omimfaq.html</a></br>
       </td>
-      <td>FAQ<br>
+      <td>FAQ</br>
       </td>
     </tr>
     <tr>
       <td class="file_field_name"><a
  href="http://eutils.ncbi.nlm.nih.gov/corehtml/query/static/eutils_help.html">http://eutils.ncbi.nlm.nih.gov/corehtml/query/static/eutils_help.html</a>
       </td>
-      <td>Information about Entrez Programming Utilities<br>
+      <td>Information about Entrez Programming Utilities</br>
       </td>
     </tr>
   </tbody>
 </table>
-<br>
-<h4>XML Data<br>
+</br>
+<h4>XML Data</br>
 </h4>
 <b>Not included</b>:&nbsp;
 </div>
@@ -104,7 +104,7 @@ results for future use in another environment.&nbsp; <br>
 <div id="rep_file_details" class="rep_block_level_one">Data from the
 following tags are not included in Metathesaurus
 source processing, in general because they do not contain
-terminological content:<br>
+terminological content:</br>
 &lt;Mim-entry_copyright&gt;, &lt;Mim-entry_seeAlso&gt;,
 &lt;Mim-entry_text&gt;, &lt;Mim-entry_textfields&gt;,
 &lt;Mim-entry_hasSummary&gt;,&nbsp; &lt;Mim-entry_summary&gt;,
@@ -120,31 +120,31 @@ terminological content:<br>
 <h3>Source-Provided Data: Details</h3>
 &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
 <p>The following is a list of elements available for &lt;source&gt;
-data in XML format<br>
+data in XML format</br>
 </p>
-<p><span style="font-weight: bold;">Required Elements:</span><br>
+<p><span style="font-weight: bold;">Required Elements:</span></br>
 </p>
 <div class="rep_block_level_two">
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
       <th>Element</th>
-      <td style="vertical-align: top;"><span style="font-weight: bold;">Description</span><br>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">Description</span></br>
       </td>
       <th>Representation</th>
     </tr>
     <tr>
       <td>&lt;Mim-entry_mimNumber&gt; </td>
-      <td style="vertical-align: top;">Unique identifier<br>
+      <td style="vertical-align: top;">Unique identifier</br>
       </td>
-      <td>MRCONSO.CODE<br>
-MRCONSO.SDUI<br>
+      <td>MRCONSO.CODE</br>
+MRCONSO.SDUI</br>
       </td>
     </tr>
     <tr>
       <td>&lt;Mim-entry_mimType&gt; </td>
       <td style="vertical-align: top;">The type of OMIM records
-(asterisk (*), number (#), plus (+), percent (%), caret (^), or none)<br>
+(asterisk (*), number (#), plus (+), percent (%), caret (^), or none)</br>
       <p><b>An asterisk (*)</b> before an entry number indicates a gene
 of known sequence.</p>
       <p><b>A number symbol (#)</b> before an entry number indicates
@@ -166,188 +166,188 @@ this phenotype from that in another entry is unclear.</p>
       <p><b>A caret symbol (^)</b> before an entry number means the
 entry no longer exists because it was removed from the database or
 moved to another entry as indicated.</p>
-      <br>
+      </br>
       </td>
-      <td>MRSAT.ATN = "MIMTYPEMEANING"<br>
-      <br>
-MRSAT.ATN = "MIMTYPEVALUE"<br>
-      <br>
-MRSAT.ATN = "MIMTYPE"<br>
-      <br>
+      <td>MRSAT.ATN = "MIMTYPEMEANING"</br>
+      </br>
+MRSAT.ATN = "MIMTYPEVALUE"</br>
+      </br>
+MRSAT.ATN = "MIMTYPE"</br>
+      </br>
 Records with a &lt;Mim-entry_mimType&gt; value of caret (^) are
-obsolete and are not included in Metathesaurus source processing.<br>
-      <br>
+obsolete and are not included in Metathesaurus source processing.</br>
+      </br>
       <table style="text-align: left; width: 100%;" border="1"
  cellpadding="2" cellspacing="2">
         <tbody>
           <tr>
-            <td style="vertical-align: top;">MIMTYPE<br>
+            <td style="vertical-align: top;">MIMTYPE</br>
             </td>
-            <td style="vertical-align: top;">MIMTYPEVALUE<br>
+            <td style="vertical-align: top;">MIMTYPEVALUE</br>
             </td>
-            <td style="vertical-align: top;">MIMTYPEMEANING<br>
+            <td style="vertical-align: top;">MIMTYPEMEANING</br>
             </td>
           </tr>
           <tr>
-            <td style="vertical-align: top;">0<br>
+            <td style="vertical-align: top;">0</br>
             </td>
-            <td style="vertical-align: top;">none<br>
+            <td style="vertical-align: top;">none</br>
             </td>
             <td style="vertical-align: top;">Other, mainly phenotypes
-with suspected Mendelian basis<br>
+with suspected Mendelian basis</br>
             </td>
           </tr>
           <tr>
-            <td style="vertical-align: top;">1<br>
+            <td style="vertical-align: top;">1</br>
             </td>
-            <td style="vertical-align: top;">star<br>
+            <td style="vertical-align: top;">star</br>
             </td>
-            <td style="vertical-align: top;">Gene with known sequence<br>
+            <td style="vertical-align: top;">Gene with known sequence</br>
             </td>
           </tr>
           <tr>
-            <td style="vertical-align: top;">3<br>
+            <td style="vertical-align: top;">3</br>
             </td>
-            <td style="vertical-align: top;">pound<br>
+            <td style="vertical-align: top;">pound</br>
             </td>
             <td style="vertical-align: top;">Phenotype description,
-molecular basis known<br>
+molecular basis known</br>
             </td>
           </tr>
           <tr>
-            <td style="vertical-align: top;">4<br>
+            <td style="vertical-align: top;">4</br>
             </td>
-            <td style="vertical-align: top;">plus<br>
+            <td style="vertical-align: top;">plus</br>
             </td>
             <td style="vertical-align: top;">Gene with known sequence
-and phenotype<br>
+and phenotype</br>
             </td>
           </tr>
           <tr>
-            <td style="vertical-align: top;">5<br>
+            <td style="vertical-align: top;">5</br>
             </td>
-            <td style="vertical-align: top;">perc<br>
+            <td style="vertical-align: top;">perc</br>
             </td>
             <td style="vertical-align: top;">Mendelian phenotype or
-locus, molecular basis unknown<br>
+locus, molecular basis unknown</br>
             </td>
           </tr>
         </tbody>
       </table>
-      <br>
+      </br>
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">&lt;Mim-entry_title&gt;<br>
+      <td style="vertical-align: top;">&lt;Mim-entry_title&gt;</br>
       </td>
       <td style="vertical-align: top;">Contains the preferred term <span
  class="western__Char"></span>naming the entry.&nbsp; May include
 semicolon-separated acronyms. </td>
-      <td style="vertical-align: top;">MRCONSO.TTY = "PT"<br>
-      <br>
-Information before the first semicolon is used ot create PT atoms<br>
+      <td style="vertical-align: top;">MRCONSO.TTY = "PT"</br>
+      </br>
+Information before the first semicolon is used ot create PT atoms</br>
       </td>
     </tr>
   </tbody>
 </table>
 </div>
-<p><span style="font-weight: bold;">Optional Elements</span><br>
+<p><span style="font-weight: bold;">Optional Elements</span></br>
 </p>
-<br>
+</br>
 <p> </p>
 <div class="rep_block_level_two">
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
       <th>Element</th>
-      <td style="vertical-align: top;"><span style="font-weight: bold;">Description</span><br>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">Description</span></br>
       </td>
       <th>Representation</th>
     </tr>
     <tr>
       <td>&lt;Mim-entry_symbol&gt;</td>
       <td style="vertical-align: top;">One or more commas-separated
-gene symbols<br>
+gene symbols</br>
       </td>
-      <td>MRSAT.ATN = "GENESYMBOL"<br>
+      <td>MRSAT.ATN = "GENESYMBOL"</br>
       </td>
     </tr>
     <tr>
       <td>&lt;Mim-entry_locus&gt;</td>
       <td style="vertical-align: top;">Notation for one or more loci
 for the genes associated with this entry</td>
-      <td>MRSAT.ATN = "GENELOCUS"<br>
+      <td>MRSAT.ATN = "GENELOCUS"</br>
       </td>
     </tr>
     <tr>
       <td>&lt;Mim-entry_aliases_E&gt;</td>
-      <td style="vertical-align: top;">Synonyms/acronyms<br>
+      <td style="vertical-align: top;">Synonyms/acronyms</br>
       </td>
-      <td>MRCONSO.TTY = "SYN"<br>
-MRCONSO.TTY = "ACR"<br>
-      <br>
-Information before the first semicolon is used to create SYN atoms<br>
-      <br>
-Information after the semicolon is parsed to create ACR atoms<br>
-      <br>
-SYN atom is not created if the string already exists as an ACR atom<br>
+      <td>MRCONSO.TTY = "SYN"</br>
+MRCONSO.TTY = "ACR"</br>
+      </br>
+Information before the first semicolon is used to create SYN atoms</br>
+      </br>
+Information after the semicolon is parsed to create ACR atoms</br>
+      </br>
+SYN atom is not created if the string already exists as an ACR atom</br>
       </td>
     </tr>
     <tr>
       <td>&lt;Mim-entry_included_E&gt; </td>
-      <td style="vertical-align: top;">Entry terms/acronyms<br>
+      <td style="vertical-align: top;">Entry terms/acronyms</br>
       </td>
-      <td>MRCONSO.TTY = "ET"<br>
-MRCONSO.TTY = "ACR"<br>
-      <br>
+      <td>MRCONSO.TTY = "ET"</br>
+MRCONSO.TTY = "ACR"</br>
+      </br>
       <span class="western__Char" style="text-decoration: none;">Information
 before
-the first semicolon is used to create ET atoms<br>
-      <br>
+the first semicolon is used to create ET atoms</br>
+      </br>
       </span>Information after the semicolon is parsed to create ACR
-atoms<br>
-      <br>
-The pattern ", INCLUDED" is removed from the string<br>
+atoms</br>
+      </br>
+The pattern ", INCLUDED" is removed from the string</br>
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">&lt;Mim-allelic-variant_name&gt;<br>
+      <td style="vertical-align: top;">&lt;Mim-allelic-variant_name&gt;</br>
       </td>
       <td style="vertical-align: top;">Allelic variant name.&nbsp; Most
 allelic variants represent disease-producing mutations.&nbsp; A few
 polymorphisms are included.&nbsp; For most genes, only selected
-mutations are included as specific entries.<br>
+mutations are included as specific entries.</br>
       </td>
-      <td style="vertical-align: top;">MRCONSO.TTY = "PTAV"<br>
-      <br>
+      <td style="vertical-align: top;">MRCONSO.TTY = "PTAV"</br>
+      </br>
 The value of tag = "Mim-allelic-variant_name&gt; is concatenated with
 information parsed after the first comma in the value of tag =
-"&lt;Mim-allelic-variant_mutation&gt;&lt;Mim-text_text&gt;"<br>
+"&lt;Mim-allelic-variant_mutation&gt;&lt;Mim-text_text&gt;"</br>
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">&lt;Mim-allelic-variant_aliases_E&gt;<br>
+      <td style="vertical-align: top;">&lt;Mim-allelic-variant_aliases_E&gt;</br>
       </td>
-      <td style="vertical-align: top;">Allelic variant aliases<br>
+      <td style="vertical-align: top;">Allelic variant aliases</br>
       </td>
-      <td style="vertical-align: top;">MRCONSO.TTY = "ETAV"<br>
-      <br>
+      <td style="vertical-align: top;">MRCONSO.TTY = "ETAV"</br>
+      </br>
 If the pattern ", INCLUDED" is found in the string, it is removed and
-an ETAV atom is created<br>
-      <br>
+an ETAV atom is created</br>
+      </br>
 If the pattern ", INCLUDED" is not found in the string, a SYN atom is
-created<br>
+created</br>
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">&lt;Mim-allelic-variant_mutation&gt;&lt;Mim_text_text&gt;<br>
+      <td style="vertical-align: top;">&lt;Mim-allelic-variant_mutation&gt;&lt;Mim_text_text&gt;</br>
       </td>
       <td style="vertical-align: top;">The type of mutations which show
-statistical correlation to the particular disorders.<br>
+statistical correlation to the particular disorders.</br>
       </td>
-      <td style="vertical-align: top;">MRCONSO.TTY = "PTAV"<br>
-MRCONSO.TTY = "SYN"<br>
-      <br>
+      <td style="vertical-align: top;">MRCONSO.TTY = "PTAV"</br>
+MRCONSO.TTY = "SYN"</br>
+      </br>
 For PTAV atoms, the value of tag = "Mim-allelic-variant_name&gt; is
 concatenated with
 information parsed after the first comma in the value of tag =
@@ -355,10 +355,10 @@ information parsed after the first comma in the value of tag =
     </tr>
     <tr>
       <td>&lt;Mim-entry_clinicalSynopsis&gt;&lt;Mim-index-term_key&gt;</td>
-      <td style="vertical-align: top;">Clinical synopsis header terms<br>
+      <td style="vertical-align: top;">Clinical synopsis header terms</br>
       </td>
-      <td>MRCONSO.TTY = "HT"<br>
-      <br>
+      <td>MRCONSO.TTY = "HT"</br>
+      </br>
 Values are excluded from Metathesaurus source processing if they meet
 any of the following criteria:
       <ul>
@@ -366,7 +366,7 @@ any of the following criteria:
 not yet been reviewed by OMIM </li>
         <li>Have an
 &lt;Mim-entry_synopsisEditHistory&gt;&lt;Mim-date_year&gt; before 1996 </li>
-        <li>Do not have a "MIM-entry_synopsisEditHistory" tag<br>
+        <li>Do not have a "MIM-entry_synopsisEditHistory" tag</br>
         </li>
       </ul>
       </td>
@@ -374,24 +374,24 @@ not yet been reviewed by OMIM </li>
     <tr>
       <td style="vertical-align: top;">&lt;Mim-entry_clinicalSynopsis&gt;&lt;Mim-index-term_terms_E&gt;</td>
       <td style="vertical-align: top;">Clinical synopsis terms, may be
-subheadings or leaf nodes<br>
+subheadings or leaf nodes</br>
       </td>
-      <td style="vertical-align: top;">MRCONSO.TTY = "HT"<br>
-MRCONSO.TTY = "PTCS"<br>
-      <br>
+      <td style="vertical-align: top;">MRCONSO.TTY = "HT"</br>
+MRCONSO.TTY = "PTCS"</br>
+      </br>
       <span class="western__Char">If the value is contained within
 square brackets, the entry is considered a subheading and TTY = "HT" is
 assigned; otherwise it is considered a leaf node and TTY= "PTCS" is
-assigned</span><br>
+assigned</span></br>
       </td>
     </tr>
     <tr>
       <td>&lt;Mim-entry_synopsisEditHistory&gt;&lt;Mim-date_year&gt;</td>
-      <td style="vertical-align: top;">Clinical synopsis year<br>
+      <td style="vertical-align: top;">Clinical synopsis year</br>
       </td>
       <td>Used to determine which clinical synposes records to process
 for inclusion in the Metathesaurus.&nbsp; Records added before 1996 are
-not processed.&nbsp; <br>
+not processed.&nbsp; </br>
       </td>
     </tr>
   </tbody>
