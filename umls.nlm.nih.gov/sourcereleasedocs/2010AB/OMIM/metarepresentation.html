@@ -1,0 +1,806 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+</head>
+<body>
+<div class="section-4">
+<ul id="menu">
+  <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
+  <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
+  <li id="nav-3"> <a href="sourcemetastats.html">Statistics and sample
+data</a>
+    <ul id="subnav-3">
+      <li> <a href="termtypes.html">Terms and term types</a> </li>
+      <li> <a href="attributes.html">Attributes</a> </li>
+      <li> <a href="relationships.html">Relationships</a> </li>
+      <li> <a href="semtypes.html">Semantic Types</a> </li>
+      <li> <a href="overlap.html">Source Overlap</a> </li>
+    </ul>
+  </li>
+  <li id="nav-4"> <a href="representation.html">Representation</a>
+    <ul id="subnav-4">
+      <li> <a href="sourcerepresentation.html">Source Representation</a>
+      </li>
+      <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
+Representation</a> </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<br>
+<br>
+<br>
+<a name="top"></a>
+<span class="nav">Skip to: <a href="#atoms">Atoms</a>, <a
+ href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
+<a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+<div id="general" class="rep_block_level_one">
+<p><b>VSAB:</b> <br>
+</p>
+<div id="rep_identifiers" class="rep_block_level_one">
+<h3>Summary of Changes</h3>
+<p>No changes have been made to the format of original data files or to
+UMLS source processing.<br>
+</p>
+</div>
+<div id="rep_change_summary" class="rep_block_level_one">
+<h3>Source Provided Files:</h3>
+XML records are downloaded and formatted for Metathesaurus source
+processing using Entrez Programming Utilities.&nbsp; Entrez Programming
+Utilities are tools that provide access to Entrez data outside of the
+regular web query interface and may be helpful for retrieving search
+results for future use in another environment.&nbsp; <br>
+<br>
+The DTD is available here:<br>
+<a href="http://www.ncbi.nlm.nih.gov/dtd/NCBI_Mim.mod.dtd">http://www.ncbi.nlm.nih.gov/dtd/NCBI_Mim.mod.dtd</a><br>
+<br>
+For additional information, please consult:&nbsp;
+http://eutils.ncbi.nlm.nih.gov/corehtml/query/static/eutils_help.html.<br>
+</div>
+<div id="rep_identifers" class="rep_block_level_one">
+<h3>Identifiers:</h3>
+Identifiers are assigned as follows:<br>
+<ul>
+  <li>CODE: <br>
+  </li>
+  <ul>
+    <li>For termtypes ACR, ET, PT, SYN: &lt;Mim-entry_mimNumber&gt;<br>
+    </li>
+    <li>For termtypes ETAV, PTAV: &lt;Mim-entry_mimNumber&gt;.<span
+ class="western__Char" style="text-decoration: none;">&lt;Mim-allelic-variant_number&gt;
+(e.g.
+"606158.0015")<br>
+      </span></li>
+    <li>For termtypes HT, PTCS:&nbsp; an MTHU# assigned during
+Metathesaurus source processing</li>
+  </ul>
+  <li>SAUI:&nbsp; not applicable<br>
+  </li>
+  <li>SCUI:&nbsp; not applicable<br>
+  </li>
+  <li>SDUI:&nbsp; same as CODE<br>
+  </li>
+</ul>
+<p></p>
+<div id="rep_termtypes" class="rep_block_level_two">
+<a name="atoms"></a>
+<h3>Atoms (MRCONSO):</h3>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br>
+<br>
+Note:&nbsp; Entries with &lt;Mim-entry_mimType&gt; value of "2" (caret)
+are not included in Metathesaurus source processing.&nbsp; This value
+indicates that an entry no longer exists because it was removed from
+the database or moved to another entry as indicated.<br>
+<br>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>Term Type</th>
+      <th>Origin</th>
+    </tr>
+    <tr>
+      <td>ACR<br>
+      </td>
+      <td>CODE: &lt;Mim-entry_mimNumber&gt;<br>
+      <br>
+STRING: <br>
+      <div style="margin-left: 40px;">value of tag =
+&lt;Mim-entry_title&gt; <br>
+      </div>
+      <div style="margin-left: 80px;">Information after semicolon is
+parsed to create ACR atoms<br>
+      <br>
+      </div>
+      <div style="margin-left: 40px;">value of tag =
+&lt;Mim-entry_included_E&gt; <br>
+      </div>
+      <div style="margin-left: 80px;">Information after semicolon is
+parsed to create ACR atoms<br>
+The pattern ", INCLUDED" is removed
+from the string<br>
+      <br>
+      </div>
+      <div style="margin-left: 40px;">value of tag =
+&lt;Mim-entry_aliases_E&gt; <br>
+      </div>
+      <div style="margin-left: 80px;">Information after semicolon is
+parsed to create ACR atoms<br>
+      <br>
+      </div>
+SDUI:&nbsp; &lt;Mim-entry_mimNumber&gt;<br>
+      </td>
+    </tr>
+    <tr>
+      <td>ET<br>
+      </td>
+      <td>CODE: &lt;Mim-entry_mimNumber&gt;<br>
+      <br>
+      <span class="western__Char" style="text-decoration: none;">STRING:<br>
+      </span>
+      <div style="margin-left: 40px;"><span class="western__Char"
+ style="text-decoration: none;">value of tag
+=
+&lt;Mim-entry_included_E&gt; </span><br>
+      <span class="western__Char" style="text-decoration: none;"> </span></div>
+      <div style="margin-left: 80px;"><span class="western__Char"
+ style="text-decoration: none;">Information before the first semicolon
+is used to create ET atoms<br>
+      </span></div>
+      <div style="text-align: left; margin-left: 80px;"><span
+ class="western__Char" style="text-decoration: none;">The pattern ",
+INCLUDED" is removed
+from the string<br>
+      <br>
+      </span></div>
+      <div style="text-align: left;">SDUI: &lt;Mim-entry_mimNumber&gt;<br>
+      </div>
+      </td>
+    </tr>
+    <tr>
+      <td>ETAV<br>
+      </td>
+      <td>CODE: &lt;Mim-entry_mimNumber&gt;.<span class="western__Char"
+ style="text-decoration: none;">&lt;Mim-allelic-variant_number&gt;<br>
+      <br>
+STRING: <br>
+      </span>
+      <div style="margin-left: 40px;">value of tag =
+&lt;Mim-allelic-variant_aliases_E&gt;<br>
+      <div style="margin-left: 40px;">If the pattern
+", INCLUDED" is found in the string, it is removed and an ETAV atom is
+created<br>
+If the pattern ", INCLUDED" is not found in the string,
+a SYN atom is created<br>
+      </div>
+      </div>
+      <div style="margin-left: 40px;"><br>
+      </div>
+SDUI:&nbsp; &lt;Mim-entry_mimNumber&gt;.<span class="western__Char"
+ style="text-decoration: none;">&lt;Mim-allelic-variant_number&gt;</span>
+      <div style="margin-left: 40px;"> </div>
+      </td>
+    </tr>
+    <tr>
+      <td>HT<br>
+      </td>
+      <td>CODE:&nbsp; An MTHU# assigned during Metathesaurus source
+processing<br>
+      <br>
+STRING:<br>
+      <div style="margin-left: 40px;">value of tag = <span
+ class="western__Char">&lt;Mim-index-term_key&gt;</span><br>
+      <span class="western__Char"> </span></div>
+      <div style="margin-left: 80px;">Values are excluded from
+Metathesaurus source processing if they meet any of the following
+criteria:</div>
+      <div style="margin-left: 40px;">
+      <ul>
+        <ul>
+          <li>The string mixed-case/lower-case.&nbsp; These values have
+not yet been reviewed by OMIM</li>
+          <li>Have an edit date where the year is before 1996</li>
+          <li>Do not have a "MIM-entry_synopsisEditHistory"</li>
+        </ul>
+      </ul>
+      </div>
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:TrackMoves/>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <w:DoNotOptimizeForBrowser/>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;}
+</style>
+<![endif]--><br>
+      <div style="margin-left: 40px;"><span class="western__Char">value
+of tag = </span><span class="western__Char">&lt;</span><span
+ class="western__Char"></span><span class="western__Char">Mim-index-term_terms_E&gt;&nbsp;
+
+      </span><br>
+      <span class="western__Char"> </span></div>
+      <div style="margin-left: 80px;"><span class="western__Char">If
+the value is contained within square brackets, the entry is considered
+a subheading and TTY = "HT" is assigned; otherwise it is considered a
+leaf node and TTY= "PTCS" is assigned<br>
+      <br>
+      </span></div>
+      <span class="western__Char">SDUI:&nbsp; An MTHU# assigned during
+Metathesaurus source processing</span><br>
+      <div style="margin-left: 80px;">
+      <div style="margin-left: 40px;"><span class="western__Char"></span></div>
+      </div>
+      </td>
+    </tr>
+    <tr>
+      <td>PT<br>
+      </td>
+      <td>CODE: &lt;Mim-entry_mimNumber&gt;<br>
+      <br>
+STRING: <br>
+      <div style="margin-left: 40px;">value of tag =
+&lt;Mim-entry_title&gt; <br>
+      <div style="margin-left: 40px;">Information before the first
+semicolon is used to create PT atoms<br>
+      </div>
+      </div>
+      <div style="margin-left: 40px;"><br>
+      </div>
+SDUI: &lt;Mim-entry_mimNumber&gt;<br>
+      </td>
+    </tr>
+    <tr>
+      <td>PTAV<br>
+      </td>
+      <td>CODE: &lt;Mim-entry_mimNumber&gt;.<span class="western__Char"
+ style="text-decoration: none;">&lt;Mim-allelic-variant_number&gt;<br>
+      <br>
+STRING: <br>
+      </span>
+      <div style="margin-left: 40px;">value of tag = <span
+ class="western__Char" style="text-decoration: none;">&lt;Mim-allelic-variant_name&gt;
+concatenated
+with
+information after the first comma from tag =
+&lt;Mim-allelic-variant_mutation&gt;&lt;Mim-text_text&gt;</span><span
+ class="western__Char" style="text-decoration: none;"></span><br>
+      <span class="western__Char" style="text-decoration: none;"></span></div>
+      <span class="western__Char" style="text-decoration: none;"><b><br>
+      </b></span>SDUI: &lt;Mim-entry_mimNumber&gt;.<span
+ class="western__Char" style="text-decoration: none;">&lt;Mim-allelic-variant_number&gt;</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td>PTCS<br>
+      </td>
+      <td>CODE:&nbsp; An MTHU# assigned during Metathesaurus source
+processing<br>
+      <br>
+      <div style="margin-left: 40px;">value of tag =
+&lt;Mim-index-term_terms_E&gt;<br>
+      </div>
+      <div style="margin-left: 40px;">
+      <div style="margin-left: 40px;"><span class="western__Char">If
+the
+value is contained within square brackets, the entry is considered a
+subheading and TTY = "HT" is assigned; otherwise it is considered a
+leaf node and TTY= "PTCS" is assigned</span><br>
+      <span class="western__Char"></span></div>
+      <span class="western__Char"><br>
+      </span></div>
+SDUI:&nbsp; An MTHU# assigned during Metathesaurus source processing<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">SYN<br>
+      </td>
+      <td style="vertical-align: top;">CODE: &lt;Mim-entry_mimNumber&gt;<br>
+      <br>
+STRING: <br>
+      <div style="margin-left: 40px;">value of tag =
+&lt;Mim-entry_aliases_E&gt;<br>
+      </div>
+      <div style="margin-left: 80px;">Information before the semicolon
+is used to create a SYN atom<br>
+SYN atom is not created if the string already exists as an ACR atom<br>
+      <br>
+      </div>
+      <div style="margin-left: 40px;">value of tag =
+&lt;Mim-allelic-variant_aliases_E&gt;<br>
+      </div>
+      <div style="margin-left: 80px;">If the pattern
+", INCLUDED" is found in the string, it is removed and an ETAV atom is
+created<br>
+If the pattern ", INCLUDED" is not found in the string,
+a SYN atom is created<br>
+      <br>
+      </div>
+      <div style="margin-left: 40px;">value of tag =
+&lt;Mim-allelic-variant_mutation&gt;&lt;Mim-text_text&gt;<br>
+      </div>
+      <br>
+SDUI: &lt;Mim-entry_mimNumber&gt;<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div id="rep_attributes" class="rep_block_level_two">
+<a name="attributes"></a><br>
+<h3>Attributes (MRSAT):</h3>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>Attribute Name</th>
+      <th>Origin</th>
+    </tr>
+    <tr>
+      <td>GENELOCUS<br>
+      </td>
+      <td>tag = &lt;Mim-entry_locus&gt;<br>
+      <div style="margin-left: 40px;">Comma-separated values are parsed
+to create one or more attributes <br>
+      </div>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">GENESYMBOL<br>
+      </td>
+      <td style="vertical-align: top;">tag = <span
+ class="western__Char" style="text-decoration: none;">&lt;Mim-entry_symbol&gt;<br>
+      </span>
+      <div style="margin-left: 40px;">Comma-separated values are parsed
+to create one or more attributes <br>
+      </div>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">MIMTYPE<br>
+      </td>
+      <td style="vertical-align: top;">tag = &lt;Mim-entry_mimType&gt;<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">MIMTYPEMEANING<br>
+      </td>
+      <td style="vertical-align: top;">Textual description of the
+mimType, extracted from OMIM documentation<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">MIMTYPEVALUE<br>
+      </td>
+      <td style="vertical-align: top;">&lt;Mim-entry_mimType value&gt;<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">MOVED_FROM<br>
+      </td>
+      <td style="vertical-align: top;">Extracted from tag =
+&lt;MIM-entry_title&gt; where the value contains the pattern "MOVED TO"<br>
+The "MOVED_FROM" attribute is created for the current entry, the ATV is
+the obsolete &lt;Mim-entry_mimNumber&gt;.&nbsp; No atom is created for
+the obsolete entry. </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div id="rep_definitions" class="rep_block_level_two">
+<a name="definitions"></a><br>
+<h3>Definitions (MRDEF):</h3>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br>
+<p>No definitions are included in the OMIM data.<br>
+</p>
+</div>
+<div id="rep_relationships" class="rep_block_level_two">
+<a name="relationships"></a><br>
+<h3>Relationships (MRREL):</h3>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>REL</th>
+      <th>RELA<br>
+Inverse RELA</th>
+      <th>ORIGIN</th>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">PAR<br>
+CHD<br>
+      <br>
+      </td>
+      <td style="vertical-align: top;">(no rela)<br>
+      </td>
+      <td style="vertical-align: top;">Hierarchy representing the
+clinical synopses.<br>
+      <br>
+All atoms with TTY = "HT" or "PTCS" participate in the hierarchy&nbsp; <br>
+      </td>
+    </tr>
+    <tr>
+      <td>RO<br>
+      </td>
+      <td>allelic_variant_of<br>
+has_allelic_variant<br>
+      </td>
+      <td>Connects PTAV atom to its PT atom<br>
+      </td>
+    </tr>
+    <tr>
+      <td>RO<br>
+      </td>
+      <td>has_inheritance_type<br>
+inheritance_type_of<br>
+      </td>
+      <td>Connects PTCS atom treed under "INHERITANCE" to PT atom<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RO<br>
+      </td>
+      <td style="vertical-align: top;">has_manifestation<br>
+manifestation_of<br>
+      </td>
+      <td style="vertical-align: top;">Connects PTCS atom not treed
+under inheritance to PT atom<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RO<br>
+      </td>
+      <td style="vertical-align: top;">related_to<br>
+      </td>
+      <td style="vertical-align: top;">Connects ET atom to PT atom<br>
+Connects ETAV atom to PTAV atom<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RQ<br>
+      </td>
+      <td style="vertical-align: top;">alias_of<br>
+has_alias<br>
+      </td>
+      <td style="vertical-align: top;">Connects SYN atom to PT or PTAV
+atom </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">SY<br>
+      </td>
+      <td style="vertical-align: top;">expanded_form<br>
+has_expanded_form<br>
+      </td>
+      <td style="vertical-align: top;">Connects ACR atom to ET, PT or
+SYN atom<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div id="mappings" class="rep_block_level_two">
+<a name="mappings"></a><br>
+<h3>Mappings (MRMAP):</h3>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br>
+<p>No mappings to external sources are processed from OMIM
+data.<br>
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>
