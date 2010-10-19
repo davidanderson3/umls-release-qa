@@ -32,9 +32,9 @@ Representation</a> </li>
 </ul>
 </div>
 <!-- end tabbed navigation area -->
-</br>
-</br>
-</br>
+<br>
+<br>
+<br>
 <a name="top"></a>
 <span class="nav">Skip to: <a href="#general">Notes</a>, <a
  href="#change_summary">Summary of Changes</a>, <a href="#file_summary">Summary
@@ -52,13 +52,11 @@ File Details</a></span>
 <h3>Summary of Changes</h3>
 &nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)
 <p>There have been no changes to the SNOMEDCT format.&nbsp;
-Metathesaurus processing, the follwing changes have occurred for 2010AB:</br>
+Metathesaurus processing, the follwing changes have occurred for 2010AB:<br>
 </p>
 <ul>
-  <li>&nbsp; Value of "UMLSREL" attribute correctly set to RO or RN,
-reflecting the values of MRREL.REL </li>
   <li>&nbsp; Value of "MTH_UMLSMAPSETSEPARATOR" attribute correctly set
-to "AND" which is used in MRMAP.RRF and MRSMAP.RRF</br>
+to "AND" which is used in MRMAP.RRF and MRSMAP.RRF<br>
   </li>
 </ul>
 <p>In the future, the new SNOMEDCT RF2 format will be processed, and
@@ -137,7 +135,7 @@ following files:</p>
     </tr>
   </tbody>
 </table>
-</br>
+<br>
 <h4>Developer Toolkit</h4>
 <a name="data_files"></a>
 <table class="elements" border="0" cellspacing="0">
@@ -208,7 +206,7 @@ following files:</p>
     </tr>
   </tbody>
 </table>
-</br>
+<br>
 <h4>Data Files</h4>
 <a name="data_files"></a>
 <table class="elements" border="0" cellspacing="0">
@@ -386,7 +384,7 @@ fully defined</td>
     </tr>
   </tbody>
 </table>
-</br>
+<br>
 <a name="file2"></a>
 <h4 class="file_field_name">file:sct1_Descriptions_en_INT_yyyymmdd.txt</h4>
 &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
@@ -410,10 +408,10 @@ Files</a></span>
       <td>2</td>
       <td class="file_field_name">DESCRIPTIONSTATUS*</td>
       <td>Description Status</td>
-      <td>MRSAT.ATN="DESCRIPTIONSTATUS"</br>
-      </br>
+      <td>MRSAT.ATN="DESCRIPTIONSTATUS"<br>
+      <br>
 A combination of the "DESCRIPTIONSTATUS," "DESCRIPTIONTYPE," and
-"LANGUAGECODE" values are used to determine MRCONSO.TTY assignment</br>
+"LANGUAGECODE" values are used to determine MRCONSO.TTY assignment<br>
       </td>
     </tr>
     <tr>
@@ -433,7 +431,7 @@ populated by the Metathesaurus CUI corresponding to CONCEPTID</td>
       <td>5</td>
       <td>INITIALCAPITALSTATUS</td>
       <td>1=capitalization status of first character of TERM is
-significant,</br>
+significant,<br>
 0=capitalization status of first character of TERM is not significant</td>
       <td>MRSAT.ATN="INITIALCAPITALSTATUS"</td>
     </tr>
@@ -444,10 +442,10 @@ significant,</br>
 Synonym (2), or the FullySpecifiedName (3) of the associated concept; a
 value of 0 indicates the type will be assigned by a Subset that
 includes the term</td>
-      <td>MRSAT.ATN="DESCRIPTIONTYPE"</br>
-      </br>
+      <td>MRSAT.ATN="DESCRIPTIONTYPE"<br>
+      <br>
 A combination of the "DESCRIPTIONSTATUS," "DESCRIPTIONTYPE," and
-"LANGUAGECODE" values are used to determine MRCONSO.TTY assignment</br>
+"LANGUAGECODE" values are used to determine MRCONSO.TTY assignment<br>
       </td>
     </tr>
     <tr>
@@ -457,21 +455,21 @@ A combination of the "DESCRIPTIONSTATUS," "DESCRIPTIONTYPE," and
 term, optionally followed by a hyphen and a subcode string indicating a
 dialect; if the dialect is general to an entire country, the subcode
 will be the two-letter ISO 3166 country code</td>
-      <td>MRSAT.ATN="LANGUAGECODE"</br>
-      </br>
+      <td>MRSAT.ATN="LANGUAGECODE"<br>
+      <br>
 A combination of the "DESCRIPTIONSTATUS," "DESCRIPTIONTYPE," and
-"LANGUAGECODE" values are used to determine MRCONSO.TTY assignment</br>
+"LANGUAGECODE" values are used to determine MRCONSO.TTY assignment<br>
       </td>
     </tr>
   </tbody>
 </table>
-</br>
+<br>
 &nbsp;*&nbsp; TTY assignment is based on a combination of fields from
 sct1_Descriptions_en_INT_yyyymmdd.txt: DESCRIPTIONSTATUS,
 DESCRIPTIONTYPE, and LANGUAGECODE.&nbsp; In some cases, the
 MEMBERSTATUS field of der1_Subsets_en-US_INT_yyyymmdd.txt may be a
-factor.&nbsp; The assignments are as follows:</br>
-</br>
+factor.&nbsp; The assignments are as follows:<br>
+<br>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
@@ -484,10 +482,10 @@ factor.&nbsp; The assignments are as follows:</br>
       <td>0</td>
       <td>0</td>
       <td>en</td>
-      <td>PT or SY: </br>
-TTY assigned based on MEMBERSTATUS field of </br>
-der1_Subsets_en-US_INT_yyyymmdd.txt </br>
-(1 ==&gt; PT; 2 ==&gt; SY) </br>
+      <td>PT or SY: <br>
+TTY assigned based on MEMBERSTATUS field of <br>
+der1_Subsets_en-US_INT_yyyymmdd.txt <br>
+(1 ==&gt; PT; 2 ==&gt; SY) <br>
 See TTY descriptions for details.</td>
     </tr>
     <tr>
@@ -569,13 +567,13 @@ See TTY descriptions for details.</td>
       <td>OP</td>
     </tr>
     <tr>
-      <td>6</br>
+      <td>6<br>
       </td>
       <td>1</td>
-      <td>en-us</br>
+      <td>en-us<br>
       </td>
       <td>OP</td>
-      <td></br>
+      <td><br>
       </td>
     </tr>
     <tr>
@@ -658,10 +656,10 @@ See TTY descriptions for details.</td>
     </tr>
   </tbody>
 </table>
-</br>
+<br>
 <a name="file3"></a>
 <h4 class="file_field_name">file:sct1_Relationships_Core_INT_yyyymmdd.txt</h4>
-</br>
+<br>
 &nbsp; <span class="nav">return to <a href="#data_files">Data Files</a></span>
 <p>Relationships</p>
 <table class="elements" border="0" cellspacing="0">
@@ -691,12 +689,13 @@ to CONCEPTID1</td>
       <td>SNOMEDCT Concept ID of concept representing the relationship
 between the related concepts</td>
       <td>A relationship-name mapping is used to set MRREL.REL and
-MRREL.RELA based on this value. </br>
-      </br>
+MRREL.RELA based on this value. <br>
+      <br>
 These mappings are expressed as attributes with MRSAT.ATN="UMLSREL" and
 MRSAT.ATN="UMLSRELA", specifying the REL and RELA values used for eacah
-RELATIONSHIPTYPE. </br>
-      </td>
+RELATIONSHIPTYPE.&nbsp;&nbsp; For historical reasons, however, the
+UMLSREL attribute values "RT" and "NT" are used for REL values in
+MRREL.RRF of "RO" and "RN", respectively </td>
     </tr>
     <tr>
       <td>4</td>
@@ -712,10 +711,10 @@ to CONCEPTID2</td>
 qualifying (1), historical (2), or other additional (3) characteristic
 of the source concept.</td>
       <td>MRSAT.ATN="CHARACTERISTICTYPE" where MRSAT.METAUI is the
-MRREL.RUI assigned where MRREL.SRUI = this relationship's RELATIONSHIPID</br>
-      </br>
+MRREL.RUI assigned where MRREL.SRUI = this relationship's RELATIONSHIPID<br>
+      <br>
 Also used to create MRSAT.ATN="AQ" where CHARACTERISTICTYPE = 1
-(qualifier) and REFINABILITY = 2 (mandatory)</br>
+(qualifier) and REFINABILITY = 2 (mandatory)<br>
       </td>
     </tr>
     <tr>
@@ -725,10 +724,10 @@ Also used to create MRSAT.ATN="AQ" where CHARACTERISTICTYPE = 1
 may not (0) be refined when using this relationship as a clinical data
 entry template.</td>
       <td>MRSAT.ATN="REFINABILITY" where MRSAT.METAUI is the MRREL.RUI
-assigned where MRREL.SRUI = this relationship's RELATIONSHIPID</br>
-      </br>
+assigned where MRREL.SRUI = this relationship's RELATIONSHIPID<br>
+      <br>
 Also used to create MRSAT.ATN="AQ" where CHARACTERISTICTYPE = 1
-(qualifier) and REFINABILITY = 2 (mandatory)</br>
+(qualifier) and REFINABILITY = 2 (mandatory)<br>
       </td>
     </tr>
     <tr>
@@ -742,7 +741,7 @@ RELATIONSHIPGROUP values are associated.</td>
     </tr>
   </tbody>
 </table>
-</br>
+<br>
 <a name="file4"></a>
 <h4 class="file_field_name">file:sct1_ComponentHistory_Core_INT_yyyymmdd.txt</h4>
 &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
@@ -790,7 +789,7 @@ attribute value.</td>
     </tr>
   </tbody>
 </table>
-</br>
+<br>
 <a name="file5"></a>
 <h4 class="file_field_name">file:sct1_References_Core_INT_yyyymmdd.txt</h4>
 &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
@@ -827,7 +826,7 @@ to REFERENCEDID</td>
     </tr>
   </tbody>
 </table>
-</br>
+<br>
 <a name="file6"></a>
 <h4 class="file_field_name">file:sct1_TextDefinitions_en-US_INT_yyyymmdd.txt</h4>
 &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
@@ -870,7 +869,7 @@ table</td>
     </tr>
   </tbody>
 </table>
-</br>
+<br>
 <a name="file7"></a>
 <h4 class="file_field_name">file:der1_CrossMapSets_ICD9_INT_yyyymmdd.txt</h4>
 &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
@@ -889,7 +888,7 @@ Files</a></span>
       <td class="file_field_name">MAPSETID</td>
       <td>SNOMEDCT Cross Map Set ID</td>
       <td>MRCONSO.SCUI and CODE for an atom with SAB="SNOMEDCT",
-TTY="XM";</br>
+TTY="XM";<br>
 for attributes, MRSAT.CUI populated by the Metathesaurus CUI
 corresponding to the XM atom for this MAPSETID</td>
     </tr>
@@ -902,13 +901,13 @@ corresponding to the XM atom for this MAPSETID</td>
     <tr>
       <td>3</td>
       <td class="file_field_name">MAPSETTYPE</td>
-      <td>Indicates the type of maps in this set:</br>
-0 =&gt; Unspecified</br>
-1 =&gt; Single (all one-to-one maps)</br>
+      <td>Indicates the type of maps in this set:<br>
+0 =&gt; Unspecified<br>
+1 =&gt; Single (all one-to-one maps)<br>
 2 =&gt; Multiple (some one-to-many maps, but no maps to a list of
-choices)</br>
+choices)<br>
 3 =&gt; Choices (some maps specify a choice of multiple one-to-one
-maps, but no one-to-many maps)</br>
+maps, but no one-to-many maps)<br>
 4 =&gt; Flexible (some one-to-many maps, and some maps specifying
 choices)</td>
       <td>MRSAT.ATN="MAPSETTYPE"</td>
@@ -955,7 +954,7 @@ maps and cross map targets</td>
     </tr>
   </tbody>
 </table>
-</br>
+<br>
 <a name="file8"></a>
 <h4 class="file_field_name">file:der1_CrossMapTargets_ICD9_INT_yyyymmdd.txt</h4>
 &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
@@ -1006,7 +1005,7 @@ this target applies</td>
     </tr>
   </tbody>
 </table>
-</br>
+<br>
 <a name="file9"></a>
 <h4 class="file_field_name">file:der1_CrossMaps_ICD9_INT_yyyymmdd.txt</h4>
 &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
@@ -1071,7 +1070,7 @@ Map applies</td>
     </tr>
   </tbody>
 </table>
-</br>
+<br>
 <a name="file10"></a>
 <h4 class="file_field_name">file:der1_Subsets_en-GB_INT_yyyymmdd.txt</h4>
 &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
@@ -1090,7 +1089,7 @@ Files</a></span>
       <td class="file_field_name">SUBSETID</td>
       <td>SNOMEDCT ID for this subset</td>
       <td>MRCONSO.SCUI and CODE for an atom with SAB="SNOMEDCT",
-TTY="SB";</br>
+TTY="SB";<br>
 for attributes, MRSAT.CUI populated by the Metathesaurus CUI
 corresponding to the SB atom for this SUBSETID</td>
     </tr>
@@ -1143,7 +1142,7 @@ will be the two-letter ISO 3166 country code</td>
     </tr>
   </tbody>
 </table>
-</br>
+<br>
 <a name="file11"></a>
 <h4 class="file_field_name">file:der1_SubsetMembers_en-GB_INT_yyyymmdd.txt</h4>
 &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
@@ -1189,7 +1188,7 @@ MRSAT.ATN="SUBSETMEMBER"</td>
     </tr>
   </tbody>
 </table>
-</br>
+<br>
 <a name="file12"></a>
 <h4 class="file_field_name">file:der1_Subsets_en-US_INT_yyyymmdd.txt</h4>
 &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
@@ -1208,7 +1207,7 @@ Files</a></span>
       <td class="file_field_name">SUBSETID</td>
       <td>SNOMEDCT ID for this subset</td>
       <td>MRCONSO.SCUI and CODE for an atom with SAB="SNOMEDCT",
-TTY="SB";</br>
+TTY="SB";<br>
 for attributes, MRSAT.CUI populated by the Metathesaurus CUI
 corresponding to the SB atom for this SUBSETID</td>
     </tr>
@@ -1261,7 +1260,7 @@ will be the two-letter ISO 3166 country code</td>
     </tr>
   </tbody>
 </table>
-</br>
+<br>
 <a name="file13"></a>
 <h4 class="file_field_name">file:der1_SubsetMembers_en-US_INT_yyyymmdd.txt</h4>
 &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
@@ -1307,7 +1306,7 @@ MRSAT.ATN="SUBSETMEMBER"</td>
     </tr>
   </tbody>
 </table>
-</br>
+<br>
 </div>
 </div>
 </body>

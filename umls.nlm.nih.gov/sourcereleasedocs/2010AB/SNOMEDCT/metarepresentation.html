@@ -30,9 +30,9 @@ Representation</a> </li>
   </li>
 </ul>
 </div>
-</br>
-</br>
-</br>
+<br>
+<br>
+<br>
 <a name="top"></a>
 <span class="nav">Skip to: <a href="#atoms">Atoms</a>, <a
  href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
@@ -43,13 +43,11 @@ Representation</a> </li>
 <div id="rep_identifiers" class="rep_block_level_one">
 <h3>Summary of Changes</h3>
 <p>There have been no changes to the SNOMEDCT format.&nbsp;
-Metathesaurus processing, the follwing changes have occurred for 2010AB:</br>
+Metathesaurus processing, the follwing changes have occurred for 2010AB:<br>
 </p>
 <ul>
-  <li>&nbsp; Value of "UMLSREL" attribute correctly set to RO or RN,
-reflecting the values of MRREL.REL</li>
   <li>&nbsp; Value of "MTH_UMLSMAPSETSEPARATOR" attribute correctly set
-to "AND" which is used in MRMAP.RRF and MRSMAP.RRF</br>
+to "AND" which is used in MRMAP.RRF and MRSMAP.RRF<br>
   </li>
 </ul>
 <p>In the future, the new SNOMEDCT RF2 format will be processed, and
@@ -57,7 +55,7 @@ this document will be updated to reflect the changes.</p>
 </div>
 <div id="rep_change_summary" class="rep_block_level_one">
 <h3>Original Files:</h3>
-</br>
+<br>
 The Metathesaurus SNOMEDCT data is taken from the following
 tab-delimited SNOMEDCT files, found in the specified folders:
 <ul>
@@ -102,7 +100,7 @@ tab-delimited SNOMEDCT files, found in the specified folders:
 </div>
 <div id="rep_identifers" class="rep_block_level_one">
 <h3>Identifiers</h3>
-</br>
+<br>
 Identifiers are assigned as follows:
 <ul>
   <li>CODE: CONCEPTID</li>
@@ -113,7 +111,7 @@ Identifiers are assigned as follows:
 <div id="rep_termtypes" class="rep_block_level_two">
 <a name="atoms"></a>
 <h3>Atoms (MRCONSO)</h3>
-&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)</br>
+&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
@@ -125,9 +123,9 @@ Identifiers are assigned as follows:
       <td>An FN (Fully Specified Name) atom is created for each line of
 sct1_Descriptions_en_INT_yyyymmdd.txt having DESCRIPTIONTYPE=3,
 DESCRIPTIONSTATUS=0, and a LANGUAGECODE of "en" as follows:
-      <div style="margin: 4pt;">CODE, SCUI = CONCEPTID</br>
-SAUI = DESCRIPTIONID</br>
-STR = TERM</br>
+      <div style="margin: 4pt;">CODE, SCUI = CONCEPTID<br>
+SAUI = DESCRIPTIONID<br>
+STR = TERM<br>
 SUPPRESSIBLE=N</div>
       </td>
     </tr>
@@ -137,9 +135,9 @@ SUPPRESSIBLE=N</div>
 each line of sct1_Descriptions_en_INT_yyyymmdd.txt having
 DESCRIPTIONTYPE=3, a DESCRIPTIONSTATUS other than 0, and a LANGUAGECODE
 of "en" as follows:
-      <div style="margin: 4pt;">CODE, SCUI = CONCEPTID</br>
-SAUI = DESCRIPTIONID</br>
-STR = TERM</br>
+      <div style="margin: 4pt;">CODE, SCUI = CONCEPTID<br>
+SAUI = DESCRIPTIONID<br>
+STR = TERM<br>
 SUPPRESSIBLE=O</div>
       </td>
     </tr>
@@ -148,9 +146,9 @@ SUPPRESSIBLE=O</div>
       <td>A PT (Preferred Term) atom is created for each line of
 sct1_Descriptions_en_INT_yyyymmdd.txt having DESCRIPTIONTYPE=1,
 DESCRIPTIONSTATUS=0, and a LANGUAGECODE of "en" or "en-US", as follows:
-      <div style="margin: 4pt;">CODE, SCUI = CONCEPTID</br>
-SAUI = DESCRIPTIONID</br>
-STR = TERM</br>
+      <div style="margin: 4pt;">CODE, SCUI = CONCEPTID<br>
+SAUI = DESCRIPTIONID<br>
+STR = TERM<br>
 SUPPRESSIBLE=N</div>
 PT atoms are also created for lines of
 sct1_Descriptions_en_INT_yyyymmdd.txt having DESCRIPTIONTYPE=0 and
@@ -166,9 +164,9 @@ English subset.)</td>
 created for each line of sct1_Descriptions_en_INT_yyyymmdd.txt having
 DESCRIPTIONTYPE=1, DESCRIPTIONSTATUS=0, and a LANGUAGECODE of "en-GB",
 as follows:
-      <div style="margin: 4pt;">CODE, SCUI = CONCEPTID</br>
-SAUI = DESCRIPTIONID</br>
-STR = TERM</br>
+      <div style="margin: 4pt;">CODE, SCUI = CONCEPTID<br>
+SAUI = DESCRIPTIONID<br>
+STR = TERM<br>
 SUPPRESSIBLE=N</div>
       </td>
     </tr>
@@ -177,9 +175,9 @@ SUPPRESSIBLE=N</div>
       <td>An OP (Obsolete Preferred term) atom is created for each line
 of sct1_Descriptions_en_INT_yyyymmdd.txt having DESCRIPTIONTYPE=1 and a
 DESCRIPTIONSTATUS other than 0, as follows:
-      <div style="margin: 4pt;">CODE, SCUI = CONCEPTID</br>
-SAUI = DESCRIPTIONID</br>
-STR = TERM</br>
+      <div style="margin: 4pt;">CODE, SCUI = CONCEPTID<br>
+SAUI = DESCRIPTIONID<br>
+STR = TERM<br>
 SUPPRESSIBLE=O</div>
       </td>
     </tr>
@@ -188,9 +186,9 @@ SUPPRESSIBLE=O</div>
       <td>An SY (Synonym) atom is created for each line of
 sct1_Descriptions_en_INT_yyyymmdd.txt having DESCRIPTIONTYPE=2,
 DESCRIPTIONSTATUS=0, and a LANGUAGECODE of "en" or "en-US", as follows:
-      <div style="margin: 4pt;">CODE, SCUI = CONCEPTID</br>
-SAUI = DESCRIPTIONID</br>
-STR = TERM</br>
+      <div style="margin: 4pt;">CODE, SCUI = CONCEPTID<br>
+SAUI = DESCRIPTIONID<br>
+STR = TERM<br>
 SUPPRESSIBLE=N</div>
 SY atoms are also created for lines of
 sct1_Descriptions_en_INT_yyyymmdd.txt having DESCRIPTIONTYPE=0 and
@@ -206,9 +204,9 @@ English subset.)</td>
 for each line of sct1_Descriptions_en_INT_yyyymmdd.txt having
 DESCRIPTIONTYPE=2, DESCRIPTIONSTATUS=0, and a LANGUAGECODE of "en-GB",
 as follows:
-      <div style="margin: 4pt;">CODE, SCUI = CONCEPTID</br>
-SAUI = DESCRIPTIONID</br>
-STR = TERM</br>
+      <div style="margin: 4pt;">CODE, SCUI = CONCEPTID<br>
+SAUI = DESCRIPTIONID<br>
+STR = TERM<br>
 SUPPRESSIBLE=N</div>
       </td>
     </tr>
@@ -217,43 +215,43 @@ SUPPRESSIBLE=N</div>
       <td>An IS (obsolete Synonym) atom is created for each line of
 sct1_Descriptions_en_INT_yyyymmdd.txt having DESCRIPTIONTYPE=2 and a
 DESCRIPTIONSTATUS other than 0, as follows:
-      <div style="margin: 4pt;">CODE, SCUI = CONCEPTID</br>
-SAUI = DESCRIPTIONID</br>
-STR = TERM</br>
+      <div style="margin: 4pt;">CODE, SCUI = CONCEPTID<br>
+SAUI = DESCRIPTIONID<br>
+STR = TERM<br>
 SUPPRESSIBLE=O</div>
       </td>
     </tr>
     <tr>
-      <td>MTH_FN</br>
-MTH_OF</br>
-MTH_PT</br>
-MTH_PTGB</br>
-MTH_OP</br>
-MTH_SY</br>
-MTH_SYGB</br>
+      <td>MTH_FN<br>
+MTH_OF<br>
+MTH_PT<br>
+MTH_PTGB<br>
+MTH_OP<br>
+MTH_SY<br>
+MTH_SYGB<br>
 MTH_IS</td>
       <td>Special MTH_* forms are algorithmically generated for atoms
 with the termtypes listed above, in two situations:
       <div style="margin: 4pt;">(1) If the STR contains one or more
 non-ASCII UTF-8 characters, an MTH_* form is generated in which these
 characters are converted to pure ASCII using the -f:q5 flow of the UMLS
-lvg (lexical variant generation) tool</br>
-      </br>
+lvg (lexical variant generation) tool<br>
+      <br>
 (2) If the STR contains the markup syntax SNOMEDCT uses to indicate
 superscripts ("^sup^") and/or subscripts ("&gt;sub&lt;"), two MTH_*
 forms are generated:
       <div
  style="margin-top: 8pt; margin-right: 8pt; margin-bottom: 8pt;">1. One
 in which the markup syntax is
-removed, e.g., "CO&gt;2&lt;" becomes "CO2"</br>
+removed, e.g., "CO&gt;2&lt;" becomes "CO2"<br>
 2. One in which the markup syntax is converted to an xml-style syntax
 using "&lt;sup&gt; for superscripts and "&lt;sub&gt;" for subscripts,
-e.g., "CO&gt;2&lt;" becomes "CO&lt;sub&gt;2&lt;/sub&gt;".</br>
-      </br>
-      </br>
-      </br>
+e.g., "CO&gt;2&lt;" becomes "CO&lt;sub&gt;2&lt;/sub&gt;".<br>
+      <br>
+      <br>
+      <br>
 This
-data is added during Metathesaurus source processing</br>
+data is added during Metathesaurus source processing<br>
       </div>
       </div>
       </td>
@@ -263,9 +261,9 @@ data is added during Metathesaurus source processing</br>
       <td>An OB (obsolete) atom is created for each line of
 sct1_Descriptions_en_INT_yyyymmdd.txt having DESCRIPTIONTYPE=0 and a
 DESCRIPTIONSTATUS other than 0, as follows:
-      <div style="margin: 4pt;">CODE, SCUI = CONCEPTID</br>
-SAUI = DESCRIPTIONID</br>
-STR = TERM</br>
+      <div style="margin: 4pt;">CODE, SCUI = CONCEPTID<br>
+SAUI = DESCRIPTIONID<br>
+STR = TERM<br>
 SUPPRESSIBLE=O</div>
       </td>
     </tr>
@@ -274,7 +272,7 @@ SUPPRESSIBLE=O</div>
       <td>One SB (Subset) atom is generated for each line of
 der1_Subsets_en-GB_INT_yyyymmdd.txt and
 der1_Subsets_en-US_INT_yyyymmdd.txt, as follows:
-      <div style="margin: 4pt;">CODE, SCUI = SUBSETID</br>
+      <div style="margin: 4pt;">CODE, SCUI = SUBSETID<br>
 STR = SUBSETNAME</div>
       </td>
     </tr>
@@ -282,7 +280,7 @@ STR = SUBSETNAME</div>
       <td>XM</td>
       <td>One XM (cross Mapping set) atom is generated for each line of
 der1_CrossMapSets_ICD9_INT_yyyymmdd.txt, as follows:
-      <div style="margin: 4pt;">CODE, SCUI = MAPSETID</br>
+      <div style="margin: 4pt;">CODE, SCUI = MAPSETID<br>
 STR = "SNOMEDCT_yyyy_mm_dd to ICD9CM_vvvv Mappings" (where vvvv is the
 value of MAPSETSCHEMEVERSION)</div>
       </td>
@@ -291,9 +289,9 @@ value of MAPSETSCHEMEVERSION)</div>
 </table>
 </div>
 <div id="rep_attributes" class="rep_block_level_two">
-<a name="attributes"></a></br>
+<a name="attributes"></a><br>
 <h3>Attributes (MRSAT)</h3>
-&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)</br>
+&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
@@ -446,7 +444,7 @@ Set</td>
       <td>MTH_MAPFROMCOMPLEXITY</td>
       <td>CODE</td>
       <td>"SINGLE_SCUI", attached to the XM atom for the Cross Map
-Set;&nbsp; this data is added during Metathesaurus Source processing.</br>
+Set;&nbsp; this data is added during Metathesaurus Source processing.<br>
       </td>
     </tr>
     <tr>
@@ -569,7 +567,10 @@ der1_CrossMapSets_ICD9_INT_yyyymmdd.txt</td>
       <td>SCUI</td>
       <td>The relationship type for MRREL.RRF, attached to the atoms
 for each RELATIONSHIPTYPE value used in
-sct1_Relationships_Core_INT_yyyymmdd.txt. </br>
+sct1_Relationships_Core_INT_yyyymmdd.txt. Note that this will normally
+be the same as the REL value used in MRREL.RRF for this relationship,
+except that when the UMLSREL value is given as "RT" or "NT", the REL
+value in MRREL.RRF will be "RO" or "RN", respectively. <br>
       </td>
     </tr>
     <tr>
@@ -583,9 +584,9 @@ sct1_Relationships_Core_INT_yyyymmdd.txt.</td>
 </table>
 </div>
 <div id="rep_definitions" class="rep_block_level_two">
-<a name="definitions"></a></br>
+<a name="definitions"></a><br>
 <h3>Definitions (MRDEF)</h3>
-&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)</br>
+&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
@@ -599,9 +600,9 @@ file</td>
 </table>
 </div>
 <div id="rep_relationships" class="rep_block_level_two">
-<a name="relationships"></a></br>
+<a name="relationships"></a><br>
 <h3>Relationships (MRREL)</h3>
-&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)</br>
+&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
@@ -610,7 +611,7 @@ file</td>
       <th>ORIGIN</th>
     </tr>
     <tr>
-      <td>CHD</br>
+      <td>CHD<br>
 PAR</td>
       <td>(blank)</td>
       <td>Hierarchical relationships are derived from rows of
@@ -618,9 +619,9 @@ sct1_Relationships_Core_INT_yyyymmdd.txt where RELATIONSHIPTYPE is
 116680003 ("Is a"). </td>
     </tr>
     <tr>
-      <td>RB</br>
-RN</br>
-RO</br>
+      <td>RB<br>
+RN<br>
+RO<br>
 SY</td>
       <td>&nbsp;(many RELA values)</td>
       <td>These are derived from rows of
@@ -640,9 +641,9 @@ code in the TARGETCODES field.</td>
 </table>
 </div>
 <div id="mappings" class="rep_block_level_two">
-<a name="mappings"></a></br>
+<a name="mappings"></a><br>
 <h3>Mappings (MRMAP)</h3>
-&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)</br>
+&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br>
 <p>The Metathesaurus includes SNOMEDCT's mappings (an XM atom, along
 with associated attributes and mappings) to ICD9CM.
 These are taken from the der1_CrossMapSets_ICD9_INT_yyyymmdd.txt,
