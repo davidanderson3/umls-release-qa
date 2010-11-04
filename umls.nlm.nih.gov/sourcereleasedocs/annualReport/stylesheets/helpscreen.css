@@ -2,12 +2,6 @@
 /* CSS Document */
 
 
-body{
-	
-font-family:"Myriad Pro",Helvetica,Arial,sans-serif;	
-	
-}
-
 
 /* Banner background font,height,width,margin*/
 #banner {
@@ -27,35 +21,6 @@ font-family:"Myriad Pro",Helvetica,Arial,sans-serif;
 	top:5%;
 }
 
-
-/* UMLS Terminology Services Text  */
-h1 {
-	
-	
-	display: inline;
-	font-size: 1.6em;
-	font-weight: bolder;
-	
-}
-
-/* Help screen document for Basic View */
-h2 {
-	
-	display:inline;
-	font-size: 1em;
-	font-weight: bold;
-}
-
-
-h3{
-margin-top: 10%;
-margin-bottom: 0;
-margin-left:35%;
-padding-bottom: 0; 
-font-size:.9em;
-
-
-}
 
 /* Logo-text */
 
@@ -81,6 +46,11 @@ background-color:#fff;
 
 /*Logo-text-color*/
 .orange {
+	margin-top: 10%;
+	margin-bottom: 0;
+	margin-left:35%;
+	padding-bottom: 0; 
+	font-size:.9em;
 	color: #FF9900;
 	
 }
@@ -92,7 +62,17 @@ background-color:#fff;
 
 /*UMLS Terminology Services Text color*/
 .green {
+	display: inline;
+	font-size: 1.6em;
+	font-weight: bolder;
 	color: #78a22f;
 
 }
-
+.black {
+	margin-top: 10%;
+	margin-bottom: 0;
+	margin-left:35%;
+	padding-bottom: 0; 
+	font-size:.9em;
+	color:black;
+}
