@@ -1,0 +1,98 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body{
+	
+font-family:"Myriad Pro",Helvetica,Arial,sans-serif;	
+	
+}
+
+
+/* Banner background font,height,width,margin*/
+#banner {
+	background-color:#e7eeeb;
+	height:90px;
+	width:100%;
+	margin-top: 5px;
+	
+}
+
+#headings {
+	width:50%;
+	position:relative;
+	text-align:center;
+	float:left;
+	left:5%;
+	top:5%;
+}
+
+
+/* UMLS Terminology Services Text  */
+h1 {
+	
+	
+	display: inline;
+	font-size: 1.6em;
+	font-weight: bolder;
+	
+}
+
+/* Help screen document for Basic View */
+h2 {
+	
+	display:inline;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+
+h3{
+margin-top: 10%;
+margin-bottom: 0;
+margin-left:35%;
+padding-bottom: 0; 
+font-size:.9em;
+
+
+}
+
+/* Logo-text */
+
+
+
+/*Logo position*/
+#logo {
+float:left;
+width:225px;
+height:100%;
+background:url('../../images/umls_tree_sm.jpg');
+background-repeat:no-repeat;
+background-color:#fff;
+
+	
+}
+
+
+
+/*Logo text positioning*/
+
+
+
+/*Logo-text-color*/
+.orange {
+	color: #FF9900;
+	
+}
+
+/*Banner-Background*/
+.greengray {
+	color:#bac8c8;
+}
+
+/*UMLS Terminology Services Text color*/
+.green {
+	color: #78a22f;
+
+}
+
