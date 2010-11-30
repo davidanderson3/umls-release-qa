@@ -1,8 +1,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-
-<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
 </head>
 <body>
 <div class="section-4">
@@ -50,7 +50,7 @@ created from external files for Metathesaurus representation.
 The information provided here applies explicitly to the English version
 of MeSH.</p>
 <p>The majority of it is also relevant to translations maintained in
-the MeSH translation system (Croation, Czech, French, German, Italian,
+the MeSH translation system (Croatian, Czech, French, German, Italian,
 and Latvian).
 Other translations, including Dutch, Finnish, Japanese, Portuguese,
 Russian, Spanish, and Swedish are included in the UMLS but are
@@ -73,12 +73,14 @@ The following changes have been made in Metathesaurus source processing:<br/>
  style="font-size: 10pt; color: black; font-family: 'Verdana','sans-serif';">"Biological
 
 
+
       <span class="GramE">Sciences" is now "</span>Phenomena and
 Processes"</span></p>
     </li>
     <li>
       <p><span
  style="font-size: 10pt; color: black; font-family: 'Verdana','sans-serif';">"Natural
+
 
 
       <span class="GramE">Sciences is now "</span>Disciplines and
@@ -95,14 +97,16 @@ Descriptor" is now "Topical Descriptor"</span></p>
  style="font-size: 10pt; color: black; font-family: 'Verdana','sans-serif';">Added
 representation
 of
-"&lt;QualifierReferredTo&gt;" tag data for
+"&lt;QualifierReferredTo&gt;"
+tag data for
 &lt;HeadingMappedTo&gt; tags:</span></li>
   <ul>
     <li><span
  style="font-size: 10pt; color: black; font-family: 'Verdana','sans-serif';">For
 &lt;HeadingMappedTo&gt;
 tags
-that include a &lt;QualifierReferredTo&gt;
+that
+include a &lt;QualifierReferredTo&gt;
 tag, the relationship between the Supplemental Concept and the
 qualifier was dropped in previous versions.&nbsp; Now, a
 "RO|mapping_qualifier_of/has_mapping_qualifier" relationship is
@@ -116,7 +120,8 @@ same value for MRREL.RG (relationship group) is assigned.</span></li>
  style="font-size: 10pt; color: black; font-family: 'Verdana','sans-serif';">Change
 in
 STYPE
-for AQ/QB relationships:&nbsp; Relationships between Main
+for
+AQ/QB relationships:&nbsp; Relationships between Main
 Headings and their Allowable Qualifiers are now created with STYPE =
 "SDUI" instead of STYPE = "SAUI," to better represent MeSH source
 semantics.</span></li>
@@ -126,7 +131,8 @@ semantics.</span></li>
  style="font-size: 10pt; color: black; font-family: 'Verdana','sans-serif';">Dropped
 "QA"
 attribute:&nbsp;
-MRSAT.ATN = "QA" is no longer created.&nbsp; This
+MRSAT.ATN
+= "QA" is no longer created.&nbsp; This
 data is already represented in MRCONSO.RRF as an atom with TTY = "QAB."</span></li>
 </ul>
 </div>
@@ -417,8 +423,7 @@ Record Type: D<br/>
 Repeating element: yes<br/>
 Required element: no</td>
       <td>MRSAT.ATN = AQL<br/>
-MRREL.REL = AQ/QB
-      </td>
+MRREL.REL = AQ/QB </td>
     </tr>
     <tr>
       <td>5</td>
@@ -658,8 +663,7 @@ Required element: no</td>
 Value is &lt;Year&gt;&lt;Month&gt;&lt;Day&gt;<br/>
 e.g., "19900308"<br/>
 Note: MDA attributes are created from data at the Descriptor (SDUI)
-level. They are not created from data at the Term (AUI) level.
-      </td>
+level. They are not created from data at the Term (AUI) level. </td>
     </tr>
     <tr>
       <td>19</td>
@@ -700,8 +704,7 @@ Repeating element: no<br/>
 Required element: no</td>
       <td>MRSAT.ATN = MMR<br/>
 Value is &lt;Year&gt;&lt;Month&gt;&lt;Day&gt;<br/>
-e.g. 20000621
-      </td>
+e.g. 20000621 </td>
     </tr>
     <tr>
       <td>21</td>
@@ -714,8 +717,7 @@ Record Type: D, Q, SCR<br/>
 Repeating element: yes<br/>
 Required element: no</td>
       <td>See &lt;DateCreated&gt;, &lt;DateRevised&gt;,
-&lt;DateEstablished&gt;
-      </td>
+&lt;DateEstablished&gt; </td>
     </tr>
     <tr>
       <td>22</td>
@@ -946,8 +948,7 @@ Required element: no</td>
 &nbsp;&nbsp;TTY = QEV (qmesh)<br/>
 &nbsp;&nbsp;TTY = DEV (dmesh)<br/>
 MRREL.REL=SY<br/>
-MRREL.RELA=entry_version_of
-      </td>
+MRREL.RELA=entry_version_of </td>
     </tr>
     <tr>
       <td>33</td>
@@ -1005,8 +1006,7 @@ Subelement of: &lt;SupplementalRecord&gt;<br/>
 Record Type: SCR<br/>
 Repeating element: no<br/>
 Required element: yes</td>
-      <td> See &lt;HeadingMappedTo&gt;
-      </td>
+      <td> See &lt;HeadingMappedTo&gt; </td>
     </tr>
     <tr>
       <td>36</td>
@@ -1056,12 +1056,10 @@ Subelement of: &lt;IndexingInformationList&gt;<br/>
 Record Type: SCR<br/>
 Repeating element: yes<br/>
 Required element: yes</td>
-      <td>MRSAT.ATN = II
-      <br/>
+      <td>MRSAT.ATN = II <br/>
       <br/>
 Note: QualifierReferredTo data is not currently represented in the
-etathesaurus
-      </td>
+etathesaurus </td>
     </tr>
     <tr>
       <td>38</td>
