@@ -38,7 +38,7 @@ File Details</a></span>
 <h3>Notes</h3>
 <p>MeSH for the Metathesaurus is processed from the xml files.  In addition to data from the xml files, top levels of the hierarchy are created from external files for Metathesaurus representation.
 The information provided here applies explicitly to the English version of MeSH.</p>
-<p>The majority of it is also relevant to translations maintained in the MeSH translation system (Croation, Czech, French, German, Italian, and Latvian).
+<p>The majority of it is also relevant to translations maintained in the MeSH translation system (Croatian, Czech, French, German, Italian, and Latvian).
 Other translations, including Dutch, Finnish, Japanese, Portuguese, Russian, Spanish, and Swedish are included in the UMLS but are submitted in different formats and the details below may not apply.
 For additional information about translations, see translation sources representation.</p>
 </div>
@@ -182,7 +182,7 @@ Required element: no</td><td>	MRCONSO.STR (TTY = QAB)<br/>
 MRSAT.ATN= QA
 </td></tr>
 <tr><td>4</td><td>&lt;AllowableQualifier&gt;<br/>
-Description: A specific Qualifier allowed in combination with the Descriptor for indexing. Example: 
+Description: A specific Qualifier allowed in combination with the Descriptor for indexing. Example:
 &lt;AllowableQualifier&gt;<br/>
    &lt;QualifierReferredTo&gt;<br/>
       &lt;QualifierUI&gt;Q000819&lt;/QualifierUI&gt;<br/>
@@ -743,7 +743,7 @@ Repeating element: no<br/>
 Required element: no</td><td>See &lt;PharmacologicalAction&gt;</td></tr>
 
 <tr><td>47</td><td>PreferredConceptYN<br/>
-Description: Attribute of the &lt;Concept&gt; element, indicating whether or not the concept is the preferred concept of the record. The preferred concept is the meaning of the term which names the record. The preferred concept is frequently a broader concept that includes narrower sub-concepts, but may also be one among several distinct concepts. In any case the preferred concept is selected as the primary or most prominent representation among the concepts in the literature to be indexed by the record. Example: 
+Description: Attribute of the &lt;Concept&gt; element, indicating whether or not the concept is the preferred concept of the record. The preferred concept is the meaning of the term which names the record. The preferred concept is frequently a broader concept that includes narrower sub-concepts, but may also be one among several distinct concepts. In any case the preferred concept is selected as the primary or most prominent representation among the concepts in the literature to be indexed by the record. Example:
 &lt;Concept PreferredConceptYN="Y"&gt;<br/>
 Subelement of: not applicable; attribute of &lt;Concept&gt;<br/>
 Record Type: D, Q, SCR<br/>
@@ -753,11 +753,11 @@ Required element: yes</td><td>Not directly processed</td></tr>
 <tr><td>48</td><td>&lt;PreviousIndexing&gt;<br/>
 Description: Different usage in Descriptors and SCRs:<br/>
 
-In Descriptors: Free-text field referring to Descriptors or Descriptor/Qualifier combinations which were used to index the concept in the MEDLINE databases before the Descriptor was created. Intended to enable users of new Descriptors to find similar concepts indexed before the Descriptor was created. Includes dates of the format (YYYY) for a single year or (YYYY-YYYY) for a range of years. May include descriptive text referring to a group of Descriptors as "specifics". References are not currently maintained when a &lt;DescriptorName&gt; or &lt;QualifierName&gt; changes. Example: 
+In Descriptors: Free-text field referring to Descriptors or Descriptor/Qualifier combinations which were used to index the concept in the MEDLINE databases before the Descriptor was created. Intended to enable users of new Descriptors to find similar concepts indexed before the Descriptor was created. Includes dates of the format (YYYY) for a single year or (YYYY-YYYY) for a range of years. May include descriptive text referring to a group of Descriptors as "specifics". References are not currently maintained when a &lt;DescriptorName&gt; or &lt;QualifierName&gt; changes. Example:
 &lt;PreviousIndexing&gt;Hypertension/complications (1972-1999)&lt;/PreviousIndexing&gt;
 Subelement of: &lt;PreviousIndexingList&gt;
 
-In SCRs: The Descriptors or Descriptor/Qualifier combinations refer to the Heading Mapped to which the NM was previously mapped. Thus the reference often exists concurrently with the SCR, unlike the Descriptor PI, though the PI may also include information on the history of the concept, such as if it was previously a descriptor. Descriptor term is in upper case, unlike the Descriptor PI. Example: 
+In SCRs: The Descriptors or Descriptor/Qualifier combinations refer to the Heading Mapped to which the NM was previously mapped. Thus the reference often exists concurrently with the SCR, unlike the Descriptor PI, though the PI may also include information on the history of the concept, such as if it was previously a descriptor. Descriptor term is in upper case, unlike the Descriptor PI. Example:
 &lt;PreviousIndexing&gt;ASPARTIC ACID/*analogs (75-91)&lt;/PreviousIndexing&gt;<br/>
 Subelement of: &lt;PreviousIndexingList&gt;<br/>
 Record Type: D, SCR<br/>
@@ -789,7 +789,7 @@ Repeating attribute: no<br/>
 Required attribute: yes</td><td>Used to compute TTY assignments.  See Term Type section  for details</td></tr>
 
 <tr><td>51</td><td>&lt;PublicMeSHNote&gt;<br/>
-Description: Free-text information about the history of changes in the record that may be helpful to the user of Index Medicus. This includes the date the record was created in MeSH, changes in the preferred term, earlier status as a &lt;SupplementalRecord&gt;, etc. Unlike the &lt;HistoryNote&gt;, MeSH terms reflect the MeSH vocabulary printed in the Index Medicus (discontinued 2005) at that point in time, not as updated for online databases. In Descriptors, applies only to records having DescriptorClass value of 1. MeSH terms are in upper case. Example: 
+Description: Free-text information about the history of changes in the record that may be helpful to the user of Index Medicus. This includes the date the record was created in MeSH, changes in the preferred term, earlier status as a &lt;SupplementalRecord&gt;, etc. Unlike the &lt;HistoryNote&gt;, MeSH terms reflect the MeSH vocabulary printed in the Index Medicus (discontinued 2005) at that point in time, not as updated for online databases. In Descriptors, applies only to records having DescriptorClass value of 1. MeSH terms are in upper case. Example:
 &lt;PublicMeSHNote&gt;2004; see NORWALK-LIKE VIRUSES 2002-2003; for SMALL ROUND-STRUCTURED VIRUSES<br/>
 see NORWALK VIRUS 1992-2001<br/>
 &lt;/PublicMeSHNote&gt;<br/>
@@ -800,7 +800,7 @@ Repeating element: no<br/>
 Required element: only in records in which &lt;DescriptorClass&gt; has a value of 1.</td><td>MRSAT.ATN = PM</td></tr>
 
 <tr><td>52</td><td>&lt;QualifierName&gt;<br/>
-Description: Term that uniquely names its &lt;QualifierRecord&gt; and, along with the &lt;QualifierUI&gt;, is used to represent the Qualifier in other elements. The same term as the preferred &lt;Term&gt; of the preferred &lt;Concept&gt; of the Qualifier record. Comparable to, and the source of, the MEDLINE element of the same name. (Note that the MEDLINE element has different attributes.) Example: 
+Description: Term that uniquely names its &lt;QualifierRecord&gt; and, along with the &lt;QualifierUI&gt;, is used to represent the Qualifier in other elements. The same term as the preferred &lt;Term&gt; of the preferred &lt;Concept&gt; of the Qualifier record. Comparable to, and the source of, the MEDLINE element of the same name. (Note that the MEDLINE element has different attributes.) Example:
 &lt;QualifierName&gt;
     &lt;String&gt;biosynthesis&lt;/String&gt;
 &lt;/QualifierName&gt;
@@ -810,7 +810,7 @@ Repeating element: yes
 Required element: yes</td><td>Not directly processed</td></tr>
 
 <tr><td>53</td><td>&lt;QualifierRecord&gt;<br/>
-Description: Cluster of one or more concepts used in combination with a &lt;DescriptorRecord&gt; for subject indexing and retrieval. Identified uniquely by a &lt;QualifierUI&gt; and &lt;QualifierName&gt;. A Qualifier. A Qualifier record. Also known as a Subheading. Example: 
+Description: Cluster of one or more concepts used in combination with a &lt;DescriptorRecord&gt; for subject indexing and retrieval. Identified uniquely by a &lt;QualifierUI&gt; and &lt;QualifierName&gt;. A Qualifier. A Qualifier record. Also known as a Subheading. Example:
 &lt;QualifierRecord QualifierType = "1"&gt;<br/>
 ...<br/>
 &lt;/QualifierRecord&gt;<br/>
@@ -828,7 +828,7 @@ Required element: yes<br/>
 	</td><td>Not directly processed</td></tr>
 
 <tr><td>55</td><td>&lt;QualifierReferredTo&gt;<br/>
-Description: The pair of elements &lt;QualifierUI&gt; and &lt;QualifierName&gt; each of which uniquely refers to a &lt;QualifierRecord&gt;, and is used to represent the &lt;QualifierRecord&gt; in other elements. 
+Description: The pair of elements &lt;QualifierUI&gt; and &lt;QualifierName&gt; each of which uniquely refers to a &lt;QualifierRecord&gt;, and is used to represent the &lt;QualifierRecord&gt; in other elements.
 &lt;QualifierReferredTo&gt;<br/>
     &lt;QualifierUIQ000096&lt;/QualifierUI&gt;<br/>
     &lt;QualifierName&gt;<br/>
@@ -849,7 +849,7 @@ Repeating element: no<br/>
 Required element: yes</td><td>Not included</td></tr>
 
 <tr><td>57</td><td>&lt;QualifierUI&gt;<br/>
-Description: Qualifier Unique Identifier. Seven-character alpha-numeric string uniquely identifying a &lt;QualifierRecord&gt; and, along with the &lt;QualifierName&gt;, used to represent the Qualifier record in other elements. Example: 
+Description: Qualifier Unique Identifier. Seven-character alpha-numeric string uniquely identifying a &lt;QualifierRecord&gt; and, along with the &lt;QualifierName&gt;, used to represent the Qualifier record in other elements. Example:
 &lt;QualifierUI&gt;Q000002&lt;/QualifierUI&gt;<br/>
 Subelement of: &lt;QualifierRecord&gt;; &lt;QualifierReferredTo&gt;.<br/>
 Record Type: D, Q, SCR<br/>
@@ -873,7 +873,7 @@ Repeating element: no<br/>
 Required element: yes</td><td>Not included</td></tr>
 
 <tr><td>60</td><td>&lt;RecordOriginator&gt;<br/>
-Description: Three-character user name of the NLM editor who created the original record in the MeSH maintenance system. When a record is created by a batch process the value may be "NLM." This value is also used for older records which had no value in earlier versions of the data. Example:<br/> 
+Description: Three-character user name of the NLM editor who created the original record in the MeSH maintenance system. When a record is created by a batch process the value may be "NLM." This value is also used for older records which had no value in earlier versions of the data. Example:<br/>
 &lt;RecordOriginator&gt;ags&lt;/RecordOriginator&gt;<br/>
 Subelement of: &lt;RecordOriginatorsList&gt;<br/>
 Record Type: D, Q, SCR<br/>
@@ -907,11 +907,11 @@ Repeating attribute: no<br/>
 Required attribute: yes	</td><td>Used to compute TTY assignments.  See Term Type section  for details.</td></tr>
 
 <tr><td>63</td><td>&lt;RegistryNumber&gt;<br/>
-Description: Originally a Registry Number from CAS (Chemical Abstracts Service) for the same chemical. Compare to, and the source of, the MEDLINE element of the same name. Currently it may be any one of the following: 
-Enzyme number from the Enzyme Commission. Example: EC 2.4.2.17, partial enzyme number: EC 1.4.3.-. 
-Registry number from Chemical Abstracts Service (CAS). Example: 7004-12-8. 
-Sequence numbers from the NCBI Reference Sequence project (RefSeq). Example: NM_123456. 
-Value of 0 if no match is available in the above categories. 
+Description: Originally a Registry Number from CAS (Chemical Abstracts Service) for the same chemical. Compare to, and the source of, the MEDLINE element of the same name. Currently it may be any one of the following:
+Enzyme number from the Enzyme Commission. Example: EC 2.4.2.17, partial enzyme number: EC 1.4.3.-.
+Registry number from Chemical Abstracts Service (CAS). Example: 7004-12-8.
+Sequence numbers from the NCBI Reference Sequence project (RefSeq). Example: NM_123456.
+Value of 0 if no match is available in the above categories.
 Example: <br/>
 &lt;RegistryNumber&gt;7004-12-8&lt;/RegistryNumber&gt;<br/>
 These values are not presently maintained.<br/>
@@ -922,7 +922,7 @@ Required element: In Descriptors having a D category &lt;TreeNumber&gt;.</td><td
 MRSAT.ATN = RN</td></tr>
 
 <tr><td>64</td><td>&lt;RelatedRegistryNumber&gt;<br/>
-Description: The same type of value as the &lt;RegistryNumber&gt; but for concepts which do not have their own Descriptor or Supplemental record. For example, these might be salts and/or stereoisomers of the parent compound. Most values correspond to a &lt;RegistryNumber&gt; value in a sub-concept in the record. A CAS number may be followed by note in parentheses which specifies the chemical relation between the &lt;RelatedRegistryNumber&gt; entry and the concept compound. Example: 
+Description: The same type of value as the &lt;RegistryNumber&gt; but for concepts which do not have their own Descriptor or Supplemental record. For example, these might be salts and/or stereoisomers of the parent compound. Most values correspond to a &lt;RegistryNumber&gt; value in a sub-concept in the record. A CAS number may be followed by note in parentheses which specifies the chemical relation between the &lt;RelatedRegistryNumber&gt; entry and the concept compound. Example:
 &lt;RelatedRegistryNumber&gt;157810-81-6 (sulfate (1:1) (salt))&lt;/RelatedRegistryNumber&gt;
 These values are not presently maintained.
 Subelement of: &lt;RelatedRegistryNumberList&gt;
@@ -1042,7 +1042,7 @@ Repeating element: yes<br/>
 Required element: no</td><td>Semantic types are  used to initialize defaults which are then reviewed by editors in the context of the Metathesaurus.  Although there is considerable overlap between MeSH &lt;SemanticType&gt; values and STY values in MRSTY.RRF, there are significant differences.</td></tr>
 
 <tr><td>76</td><td>&lt;SemanticTypeUI&gt;<br/>
-Description: Unique four-character alphanumeric identifier for each of the approximately 140 categories in the UMLS Semantic Network. Used, along with the &lt;SemanticTypeName&gt;, to refer to the Semantic Type. Example: 
+Description: Unique four-character alphanumeric identifier for each of the approximately 140 categories in the UMLS Semantic Network. Used, along with the &lt;SemanticTypeName&gt;, to refer to the Semantic Type. Example:
 &lt;SemanticTypeUI&gt;T109&lt;SemanticTypeUI&gt;<br/>
 Subelement of: &lt;SemanticType&gt;<br/>
 Record Type: D, Q, SCR<br/>
@@ -1078,7 +1078,7 @@ Repeating element: no<br/>
 Required element: no</td><td>Not directly processed</td></tr>
 
 <tr><td>80</td><td>&lt;String&gt;<br/>
-Description: The string itself that constitutes a &lt;Term&gt; as well as object names, such as the &lt;DescriptorName&gt;. There is exactly one &lt;String&gt; for every &lt;Term&gt;. One difference between the &lt;String&gt; and &lt;Term&gt; is that the &lt;Term&gt; is the bearer of a term's attributes, such as Lexical Tag. Example: 
+Description: The string itself that constitutes a &lt;Term&gt; as well as object names, such as the &lt;DescriptorName&gt;. There is exactly one &lt;String&gt; for every &lt;Term&gt;. One difference between the &lt;String&gt; and &lt;Term&gt; is that the &lt;Term&gt; is the bearer of a term's attributes, such as Lexical Tag. Example:
 &lt;Term ConceptPreferredTermYN="Y"<br/>
       IsPermutedTermYN="N"<br/>
       LexicalTag="NON"<br/>
