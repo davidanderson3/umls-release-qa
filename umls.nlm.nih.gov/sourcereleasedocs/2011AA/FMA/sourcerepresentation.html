@@ -1,0 +1,961 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+  <title></title>
+</head>
+<body>
+<div class="section-4">
+<ul id="menu">
+  <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
+  <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
+  <li id="nav-3"> <a href="sourcemetastats.html">Statistics and sample
+data</a>
+    <ul id="subnav-3">
+      <li> <a href="termtypes.html">Terms and term types</a> </li>
+      <li> <a href="attributes.html">Attributes</a> </li>
+      <li> <a href="relationships.html">Relationships</a> </li>
+      <li> <a href="semtypes.html">Semantic Types</a> </li>
+      <li> <a href="overlap.html">Source Overlap</a> </li>
+    </ul>
+  </li>
+  <li id="nav-4"> <a href="representation.html">Representation</a>
+    <ul id="subnav-4">
+      <li> <a href="sourcerepresentation.html" id="sourcerep">Source
+Representation</a> </li>
+      <li> <a href="metarepresentation.html">Metathesaurus
+Representation</a> </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<!-- end tabbed navigation area -->
+<br/>
+<br/>
+<br/>
+<a name="top"></a>
+<span class="nav">Skip to: <a href="#general">Notes</a>, <a
+ href="#change_summary">Summary of Changes</a>, <a href="#file_summary">Summary
+of
+Source-Provided
+Files</a>
+<a href="#file_details">Source-Provided
+File Details</a></span>
+<a name="general"></a>
+<div id="rep_general" class="rep_block_level_one">
+<h3>Notes</h3>
+</div>
+<div id="rep_change_summary" class="rep_block_level_one">
+<h3>Summary of Changes:</h3>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
+<p>FMA3_1 inlcudes the following new data types:<br/>
+</p>
+Term Types:<br/>
+<div style="margin-left: 40px;">IS (suppressible = "O")<br/>
+OP (suppressible = "O")<br/>
+</div>
+<br/>
+RELAs:<br/>
+<div style="margin-left: 40px;">articulates_with<br/>
+adheres_to/has_adherent<br/>
+has_part/part_of<br/>
+<br/>
+</div>
+Hierarchical RELA (previously null):<br/>
+<div style="margin-left: 40px;">isa<br/>
+</div>
+<div style="margin-left: 40px;"><br/>
+</div>
+Attributes:<br/>
+<div style="margin-left: 40px;">AAL_TERM<br/>
+ANATOMICAL_COORDINATE (replaces COORDINATE)<br/>
+FREESURFER_TERM<br/>
+NEUROLEX_ID<br/>
+RADLEX_ID<br/>
+TALAIRACH<br/>
+TALAIRACH_ID<br/>
+</div>
+<div style="margin-left: 40px;"><br/>
+</div>
+The following data types were deleted in FMA3_1:<br/>
+<br/>
+RELAs:<br/>
+<div style="margin-left: 40px;">has_homonym/homonym_for<br/>
+<br/>
+</div>
+Attributes:<br/>
+<div style="margin-left: 40px;">COORDINATE<br/>
+<br/>
+</div>
+The following RELAs were updated due to a spelling error.&nbsp; This
+correction resulted in new RUI assignments for existing relationships:<br/>
+<div style="margin-left: 40px;">eipthelial_cell_shape_of --&gt;
+epithelial_cell_shape_of<br/>
+has_eipthelial_cell_shape --&gt; has_epithelial_cell_shape</div>
+<div style="margin-left: 40px;"><br/>
+</div>
+</div>
+<div id="rep_file_summary" class="rep_block_level_one">
+<a name="file_summary"></a>
+<h3>Source-Provided Files: Summary</h3>
+&nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
+<p>The FMA distribution includes the following. These files,
+along with additional information can be accessed at <a
+ href="http://sig.biostr.washington.edu/projects/fm">http://sig.biostr.washington.edu/projects/fm</a></p>
+<div class="rep_block_level_two">
+<!-- Make a table of each file that comes from the source   -->
+<h4>Data files:<br/>
+</h4>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>File Name</th>
+    </tr>
+    <tr>
+      <td class="file_field_name">fma_3.1_frames_db.sql<br/>
+      </td>
+    </tr>
+    <tr>
+      <td class="file_field_name">fma_3.1_frames_db.pprj<br/>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br/>
+To process FMA, fma_3.1_frames_db.sql was loaded into a MySQL database
+for Proteg&egrave;.&nbsp; Proteg&egrave;'s export function was then
+used to write "classes.fma.pont" and "instances.fma.pins."&nbsp; The
+.pins and .pont files were processed for the Metathesaurus.<br/>
+<b><br/>
+Not included</b>:&nbsp;
+</div>
+</div>
+<div id="rep_file_details" class="rep_block_level_one"><br/>
+All information in the file FMA, fma_3.1_frames_db.sql is processed for
+the Metathesaurus.
+<h3>Source-Provided Files: Details</h3>
+&nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
+<p>The following is a list of elements (slots) available for FMA:</p>
+Note that plus signs ("+") in FMA values are represented as spaces ("
+") in the Metathesaurus<br/>
+<div class="rep_block_level_two"><a name="file1"></a><br/>
+<br/>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>Slot</th>
+      <th>Representation</th>
+    </tr>
+    <tr>
+      <td>AAL<br/>
+      </td>
+      <td>MRSAT.ATN="AAL_TERM"<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>Freesurfer<br/>
+      </td>
+      <td>MRSAT.ATN=FREESURFER_TERM"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>Neurolex<br/>
+      </td>
+      <td>MRSAT.ATN="NEUROLEX_ID"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>Non-English+equivalent<br/>
+      </td>
+      <td>MRCONSO.TTY="SY" [names with Language=Latin only]<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>Preferred+name<br/>
+      </td>
+      <td>MRCONSO.TTY="PT"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>RadLex+ID<br/>
+      </td>
+      <td>MRSAT.ATN="RADLEX_ID"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>Synonym<br/>
+      </td>
+      <td>MRCONSO.TTY="SY"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>Talairach+ID<br/>
+      </td>
+      <td>MRSAT.ATN="TALAIRACH_ID"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>Talairach<br/>
+      </td>
+      <td>MRSAT.ATN="TALAIRACH"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>adheres+to<br/>
+      </td>
+      <td>MRREL.RELA="adheres_to"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>adjacent<br/>
+      </td>
+      <td>MRSAT.ATN="ADJACENT"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>afferent+to<br/>
+      </td>
+      <td>MRREL.RELA="afferent_to"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>anatomical%2Farbitrary<br/>
+      </td>
+      <td>MRSAT.ATN="ANATOMICAL_OR_ARBITRARY"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>anatomical+coordinate<br/>
+      </td>
+      <td>MRSAT.ATN="ANATOMICAL_COORDINATE"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>arterial+supply+of<br/>
+      </td>
+      <td>MRREL.RELA="arterial_supply_of"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>arterial+supply<br/>
+      </td>
+      <td>MRREL.RELA="has_arterial_supply"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>articulates+with<br/>
+      </td>
+      <td>MRREL.RELA="articulates_with"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>attaches+to<br/>
+      </td>
+      <td>MRREL.RELA="attaches_to"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>attributed+constitutional+part<br/>
+      </td>
+      <td>MRREL.RELA="has_attributed_constitutional_part"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>attributed+continuous+with<br/>
+      </td>
+      <td>MRREL.RELA="attributed_continuous_with"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>attributed+part<br/>
+      </td>
+      <td>MRREL.RELA="has_attributed_part"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>attributed+regional+part<br/>
+      </td>
+      <td>MRREL.RELA="has_attributed_regional_part"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>bounded+by<br/>
+      </td>
+      <td>MRREL.RELA="bounded_by"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>bounds<br/>
+      </td>
+      <td>MRREL.RELA="bounds"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>branch+%28continuity%29<br/>
+      </td>
+      <td>MRREL.RELA="has_continuation_branch"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>branch+of<br/>
+      </td>
+      <td>MRREL.RELA="branch_of"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>branch<br/>
+      </td>
+      <td>MRREL.RELA="has_branch"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>cell+appendage+type<br/>
+      </td>
+      <td>MRSAT.ATN="CELL_APPENDAGE_TYPE"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>cell+connectivity<br/>
+      </td>
+      <td>MRREL.RELA="has_cell_connecting_part"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>cell+layer<br/>
+      </td>
+      <td>MRSAT.ATN="CELL_LAYER"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>cell+shape<br/>
+      </td>
+      <td>MRREL.RELA="has_cell_shape"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>cell+surface+specialization<br/>
+      </td>
+      <td>MRREL.RELA="has_cell_surface_specialization"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>chromosome+pair+number<br/>
+      </td>
+      <td>MRSAT.ATN="CHROMOSOME_PAIRS_PER_NUCLEUS"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>connected+to<br/>
+      </td>
+      <td>MRSAT.ATN="CONNECTED_TO"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>connection+type<br/>
+      </td>
+      <td>MRSAT.ATN="CONNECTION_TYPE"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>constitutional+part+of<br/>
+      </td>
+      <td>MRREL.RELA="constitutional_part_of"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>constitutional+part<br/>
+      </td>
+      <td>MRREL.RELA="has_constitutional_part"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>contact+type<br/>
+      </td>
+      <td>MRSAT.ATN="CONTACT_TYPE"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>contained+in<br/>
+      </td>
+      <td>MRREL.RELA="contained_in"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>contains<br/>
+      </td>
+      <td>MRREL.RELA="contains"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>continuous+with+distally<br/>
+      </td>
+      <td>MRREL.RELA="continuous_with_distally"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>continuous+with+proximally<br/>
+      </td>
+      <td>MRREL.RELA="continuous_with_proximally"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>continuous+with<br/>
+      </td>
+      <td>MRREL.RELA="continuous_with"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>definition<br/>
+      </td>
+      <td>MRDEF.DEF<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>develops+from<br/>
+      </td>
+      <td>MRREL.RELA="develops_from"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>dimension<br/>
+      </td>
+      <td>MRSAT.ATN="DIMENSION"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>efferent+to<br/>
+      </td>
+      <td>MRREL.RELA="efferent_to"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>epithelial+morphology<br/>
+      </td>
+      <td>MRREL.RELA="has_epithelial_cell_shape"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>fascicular+architecture<br/>
+      </td>
+      <td>MRREL.RELA="has_fascicular_architecture"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>germ+origin<br/>
+      </td>
+      <td>MRREL.RELA="has_germ_origin"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>gives+rise+to<br/>
+      </td>
+      <td>MRREL.RELA="gives_rise_to"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>has+boundary<br/>
+      </td>
+      <td>MRSAT.ATN="HAS_BOUNDARY"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>has+mass<br/>
+      </td>
+      <td>MRSAT.ATN="HAS_MASS"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>has+shape+type<br/>
+      </td>
+      <td>MRSAT.ATN="SHAPE_TYPE"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>has+shape<br/>
+      </td>
+      <td>MRREL.RELA="has_shape"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>inherent+3-D+shape<br/>
+      </td>
+      <td>MRREL.RELA="has_inherent_3d_shape"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>input+from[used only once]<br/>
+      </td>
+      <td>MRREL.RELA="receives_input_from"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>laterality<br/>
+      </td>
+      <td>MRSAT.ATN="LATERALITY"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>location<br/>
+      </td>
+      <td>MRREL.RELA="has_location"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>lymphatic+drainage+of<br/>
+      </td>
+      <td>MRREL.RELA="lymphatic_drainage_of"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>lymphatic+drainage<br/>
+      </td>
+      <td>MRREL.RELA="has_lymphatic_drainage"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>member+of<br/>
+      </td>
+      <td>MRREL.RELA="member_of_cluster"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>member<br/>
+      </td>
+      <td>MRREL.RELA="has_member"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>muscle+attachment<br/>
+      </td>
+      <td>MRREL.RELA="has_muscle_attachment"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>muscle+insertion<br/>
+      </td>
+      <td>MRREL.RELA="has_muscle_insertion"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>muscle+insertion<br/>
+      </td>
+      <td>MRSAT.ATN="MUSCLE_INSERTION"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>muscle+origin<br/>
+      </td>
+      <td>MRREL.RELA="has_muscle_origin"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>muscle+origin<br/>
+      </td>
+      <td>MRSAT.ATN="MUSCLE_ORIGIN"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>nerve+supply+of<br/>
+      </td>
+      <td>MRREL.RELA="nerve_supply_of"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>nerve+supply<br/>
+      </td>
+      <td>MRREL.RELA="has_nerve_supply"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>orientation<br/>
+      </td>
+      <td>MRREL.RELA="has_orientation"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>origin+of<br/>
+      </td>
+      <td>MRREL.RELA="origin_of"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>part+of<br/>
+      </td>
+      <td>MRREL.RELA="part_of"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>part<br/>
+      </td>
+      <td>MRREL.RELA="has_part"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>partition<br/>
+      </td>
+      <td>MRSAT.ATN="PARTITION"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>physical+state<br/>
+      </td>
+      <td>MRREL.RELA="has_physical_state"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>polarity<br/>
+      </td>
+      <td>MRSAT.ATN="POLARITY"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>primary+segmental+supply+of<br/>
+      </td>
+      <td>MRREL.RELA="primary_segmental_supply_of"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>primary+segmental+supply<br/>
+      </td>
+      <td>MRREL.RELA="has_primary_segmental_supply"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>receives+attachment<br/>
+      </td>
+      <td>MRREL.RELA="receives_attachment"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>receives+input+from<br/>
+      </td>
+      <td>MRREL.RELA="receives_input_from"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>regional+part+of<br/>
+      </td>
+      <td>MRREL.RELA="regional_part_of"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>regional+part<br/>
+      </td>
+      <td>MRREL.RELA="has_regional_part"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>secondary+segmental+supply+of<br/>
+      </td>
+      <td>MRREL.RELA="secondary_segmental_supply_of"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>secondary+segmental+supply<br/>
+      </td>
+      <td>MRREL.RELA="has_secondary_segmental_supply"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>segmental+composition+of<br/>
+      </td>
+      <td>MRREL.RELA="segmental_composition_of"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>segmental+composition<br/>
+      </td>
+      <td>MRREL.RELA="has_segmental_composition"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>segmental+supply+of<br/>
+      </td>
+      <td>MRREL.RELA="segmental_supply_of"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>segmental+supply<br/>
+      </td>
+      <td>MRREL.RELA="has_segmental_supply"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>sends+output+to<br/>
+      </td>
+      <td>MRREL.RELA="sends_output_to"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>shared%2Funshared<br/>
+      </td>
+      <td>MRSAT.ATN="SHARED_OR_UNSHARED"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>state+of+determination<br/>
+      </td>
+      <td>MRSAT.ATN="STATE_OF_DETERMINATION"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>surrounded+by<br/>
+      </td>
+      <td>MRREL.RELA="surrounded_by"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>surrounds<br/>
+      </td>
+      <td>MRREL.RELA="surrounds"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>systemic+part+of<br/>
+      </td>
+      <td>MRREL.RELA="systemic_part_of"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>systemic+part<br/>
+      </td>
+      <td>MRREL.RELA="has_systemic_part"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>tributary+of<br/>
+      </td>
+      <td>MRREL.RELA="tributary_of"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>tributary<br/>
+      </td>
+      <td>MRREL.RELA="has_tributary"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>venous+drainage+of<br/>
+      </td>
+      <td>MRREL.RELA="venous_drainage_of"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>venous+drainage<br/>
+      </td>
+      <td>MRREL.RELA="has_venous_drainage"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>view<br/>
+      </td>
+      <td>MRSAT.ATN="VIEW"<br/>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

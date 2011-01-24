@@ -1,0 +1,826 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+</head>
+<body>
+<div class="section-4">
+<ul id="menu">
+  <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
+  <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
+  <li id="nav-3"> <a href="sourcemetastats.html">Statistics and sample
+data</a>
+    <ul id="subnav-3">
+      <li> <a href="termtypes.html">Terms and term types</a> </li>
+      <li> <a href="attributes.html">Attributes</a> </li>
+      <li> <a href="relationships.html">Relationships</a> </li>
+      <li> <a href="semtypes.html">Semantic Types</a> </li>
+      <li> <a href="overlap.html">Source Overlap</a> </li>
+    </ul>
+  </li>
+  <li id="nav-4"> <a href="representation.html">Representation</a>
+    <ul id="subnav-4">
+      <li> <a href="sourcerepresentation.html">Source Representation</a>
+      </li>
+      <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
+Representation</a> </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<br/>
+<br/>
+<br/>
+<a name="top"></a>
+<span class="nav">Skip to: <a href="#atoms">Atoms</a>, <a
+ href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
+<a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+<div id="general" class="rep_block_level_one">
+<p><b>VSAB:</b> FMA3_1<br/>
+</p>
+<div id="rep_identifiers" class="rep_block_level_one">
+<h3>Summary of Changes</h3>
+<p>FMA3_1 inlcudes the following new data types:<br/>
+</p>
+Term Types:<br/>
+<div style="margin-left: 40px;">IS (suppressible = "O")<br/>
+OP (suppressible = "O")<br/>
+</div>
+<br/>
+RELAs:<br/>
+<div style="margin-left: 40px;">articulates_with<br/>
+adheres_to/has_adherent<br/>
+has_part/part_of<br/>
+<br/>
+</div>
+Hierarchical RELA (previously null):<br/>
+<div style="margin-left: 40px;">isa<br/>
+</div>
+<div style="margin-left: 40px;"><br/>
+</div>
+Attributes:<br/>
+<div style="margin-left: 40px;">AAL_TERM<br/>
+ANATOMICAL_COORDINATE (replaces COORDINATE)<br/>
+FREESURFER_TERM<br/>
+NEUROLEX_ID<br/>
+RADLEX_ID<br/>
+TALAIRACH<br/>
+TALAIRACH_ID<br/>
+</div>
+<div style="margin-left: 40px;"><br/>
+</div>
+The following data types were deleted in FMA3_1:<br/>
+<br/>
+RELAs:<br/>
+<div style="margin-left: 40px;">has_homonym/homonym_for<br/>
+<br/>
+</div>
+Attributes:<br/>
+<div style="margin-left: 40px;">COORDINATE<br/>
+<br/>
+</div>
+The following RELAs were updated due to a spelling error.&nbsp; This
+correction resulted in new RUI assignments for existing relationships:<br/>
+<div style="margin-left: 40px;">eipthelial_cell_shape_of --&gt;
+epithelial_cell_shape_of<br/>
+has_eipthelial_cell_shape --&gt; has_epithelial_cell_shape<br/>
+</div>
+<br/>
+<p></p>
+</div>
+<div id="rep_change_summary" class="rep_block_level_one">
+<h3>Source Provided Files:</h3>
+To process FMA, fma_3.1_frames_db.sql was loaded into a MySQL database
+for Proteg&egrave;.&nbsp; Proteg&egrave;'s export function was then
+used to write "classes.fma.pont" and "instances.fma.pins."&nbsp; The
+.pins and .pont files were processed for the Metathesaurus.<br/>
+</div>
+<div id="rep_identifers" class="rep_block_level_one">
+<h3>Identifiers:</h3>
+Identifiers are assigned as follows:<br/>
+<ul>
+  <li>CODE: FMAID<br/>
+  </li>
+  <li>SAUI:&nbsp; Not applicable<br/>
+  </li>
+  <li>SCUI: FMAID<br/>
+  </li>
+  <li>SDUI: Not applicable<br/>
+  </li>
+</ul>
+<p></p>
+<div id="rep_termtypes" class="rep_block_level_two">
+<a name="atoms"></a>
+<h3>Atoms (MRCONSO):</h3>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>Term Type</th>
+      <th>Origin (Slot)<br/>
+      </th>
+    </tr>
+    <tr>
+      <td>IS<br/>
+      </td>
+      <td>Synonym (children of the concept "Deprecated term" are
+assigned obsolete term types)<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>OP<br/>
+      </td>
+      <td>Preferred+name (children of the concept "Deprecated term" are
+assigned obsolete term types)<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>PT<br/>
+      </td>
+      <td>Preferred+name<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>SY<br/>
+      </td>
+      <td>Synonym;&nbsp; Non-English+equivalent [names with
+Language=Latin only]<br/>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div id="rep_attributes" class="rep_block_level_two">
+<a name="attributes"></a><br/>
+<h3>Attributes (MRSAT):</h3>
+<br/>
+&nbsp; <span class="nav">(<a href="#top">return to top</a></span>)<br/>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>Attribute Name</th>
+      <th>Origin (Slot)<br/>
+      </th>
+    </tr>
+    <tr>
+      <td>AAL_TERM<br/>
+      </td>
+      <td>AAL<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">ADJACENT<br/>
+      </td>
+      <td style="vertical-align: top;">adjacent<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">ANATOMICAL_COORDINATE<br/>
+      </td>
+      <td style="vertical-align: top;">anatomical+coordinate<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">ANATOMICAL_OR_ARBITRARY<br/>
+      </td>
+      <td style="vertical-align: top;">anatomical%2Farbitrary<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">CELL_APPENDAGE_TYPE<br/>
+      </td>
+      <td style="vertical-align: top;">cell+appendage+type<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">CELL_LAYER<br/>
+      </td>
+      <td style="vertical-align: top;">cell+layer<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">CHROMOSOME_PAIRS_PER_NUCLEUS<br/>
+      </td>
+      <td style="vertical-align: top;">chromosome+pair+number<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">CONNECTED_TO<br/>
+      </td>
+      <td style="vertical-align: top;">connected+to<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">CONNECTION_TYPE<br/>
+      </td>
+      <td style="vertical-align: top;">connection+type<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">CONTACT_TYPE<br/>
+      </td>
+      <td style="vertical-align: top;">contact+type<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">DIMENSION<br/>
+      </td>
+      <td style="vertical-align: top;">dimension<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">FREESURFER_TERM<br/>
+      </td>
+      <td style="vertical-align: top;">Freesurfer<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">HAS_BOUNDARY<br/>
+      </td>
+      <td style="vertical-align: top;">has+boundary<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">HAS_MASS<br/>
+      </td>
+      <td style="vertical-align: top;">has+mass<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">LANGUAGE<br/>
+      </td>
+      <td style="vertical-align: top;">Non-English+equivalent [names
+with&nbsp; Language=Latin only]<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">LATERALITY<br/>
+      </td>
+      <td style="vertical-align: top;">laterality<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">MUSCLE_INSERTION<br/>
+      </td>
+      <td style="vertical-align: top;">muscle+insertion<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">MUSCLE_ORIGIN<br/>
+      </td>
+      <td style="vertical-align: top;">muscle+origin<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">NEUROLEX_ID<br/>
+      </td>
+      <td style="vertical-align: top;">Neurolex<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">PARTITION<br/>
+      </td>
+      <td style="vertical-align: top;">partition<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">POLARITY<br/>
+      </td>
+      <td style="vertical-align: top;">polarity<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RADLEX_ID<br/>
+      </td>
+      <td style="vertical-align: top;">RadLex+ID<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">SHAPE_TYPE<br/>
+      </td>
+      <td style="vertical-align: top;">has+shape+type<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">SHARED_OR_UNSHARED<br/>
+      </td>
+      <td style="vertical-align: top;">shared%2Funshared </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">STATE_OF_DETERMINATION<br/>
+      </td>
+      <td style="vertical-align: top;">state+of+determination<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">TALAIRACH<br/>
+      </td>
+      <td style="vertical-align: top;">Talairach<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">TALAIRACH_ID<br/>
+      </td>
+      <td style="vertical-align: top;">Talairach+ID<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">VIEW<br/>
+      </td>
+      <td style="vertical-align: top;">view<br/>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div id="rep_definitions" class="rep_block_level_two">
+<a name="definitions"></a><br/>
+<h3>Definitions (MRDEF):</h3>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+<p>Definitions are created from data in the "definition" slot.<br/>
+</p>
+</div>
+<div id="rep_relationships" class="rep_block_level_two">
+<a name="relationships"></a><br/>
+<h3>Relationships (MRREL):</h3>
+&nbsp; <span class="nav">(<a href="#top">return to top</a></span>)<br/>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>REL</th>
+      <th>RELA<br/>
+Inverse RELA</th>
+      <th>Origin (Slot)<br/>
+      </th>
+    </tr>
+    <tr>
+      <td>RT<br/>
+      </td>
+      <td>adheres_to<br/>
+has_adherent<br/>
+      </td>
+      <td>adheres+to<br/>
+&lt;inverse slot not present in data&gt;<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>RT<br/>
+      </td>
+      <td>adjacent_to<br/>
+      </td>
+      <td>adjacent+to<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>RT<br/>
+      </td>
+      <td>afferent_to<br/>
+efferent_to<br/>
+      </td>
+      <td>afferent+to<br/>
+efferent+to<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">arterial_supply_of<br/>
+has_arterial_supply<br/>
+      </td>
+      <td style="vertical-align: top;">arterial+supply+of<br/>
+arterial+supply<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">articulates_with<br/>
+      </td>
+      <td style="vertical-align: top;">articulates+with<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">attaches_to<br/>
+receives_attachment<br/>
+      </td>
+      <td style="vertical-align: top;">attaches+to<br/>
+receives+attachment<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">attributed_constitutional_part_of<br/>
+has_attributed_constitutional_part<br/>
+      </td>
+      <td style="vertical-align: top;">&lt;inverse slot not present in
+data&gt;<br/>
+attributed+constitutional+part<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">attributed_continuous_with<br/>
+      </td>
+      <td style="vertical-align: top;">attributed+continuous+with<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">attributed_part_of<br/>
+has_attributed_part<br/>
+      </td>
+      <td style="vertical-align: top;">&lt;inverse slot not present in
+data&gt;<br/>
+attributed+part<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">attributed_regional_part_of<br/>
+has_attributed_regional_part<br/>
+      </td>
+      <td style="vertical-align: top;">&lt;inverse slot not present in
+data&gt;<br/>
+attributed+regional+part<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">bounded_by<br/>
+bounds<br/>
+      </td>
+      <td style="vertical-align: top;">bounded+by<br/>
+bounds<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">branch_of<br/>
+has_branch<br/>
+      </td>
+      <td style="vertical-align: top;">branch+of<br/>
+branch<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">cell_connecting_part_of<br/>
+has_cell_connecting_part<br/>
+      </td>
+      <td style="vertical-align: top;">&lt;inverse slot not present in
+data&gt;<br/>
+cell+connectivity<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">cell_shape_of<br/>
+has_cell_shape<br/>
+      </td>
+      <td style="vertical-align: top;">&lt;inverse slot not present in
+data&gt;<br/>
+cell+shape<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">cell_surface_specialization_of<br/>
+has_cell_surface_specialization<br/>
+      </td>
+      <td style="vertical-align: top;">&lt;inverse slot not present in
+data&gt;<br/>
+cell+surface+specialization<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">constitutional_part_of<br/>
+has_constitutional_part<br/>
+      </td>
+      <td style="vertical-align: top;">constitutional+part+of<br/>
+constitutional+part<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>RT<br/>
+      </td>
+      <td>contained_in<br/>
+contains<br/>
+      </td>
+      <td>contained+in<br/>
+contains<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">continuation_branch_of<br/>
+has_continuation_branch<br/>
+      </td>
+      <td style="vertical-align: top;">&lt;inverse slot not present in
+data&gt;<br/>
+branch+%28continuity%29<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">continuous_with<br/>
+      </td>
+      <td style="vertical-align: top;">continuous+with<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">continuous_with_distally<br/>
+continuous_with_proximally<br/>
+      </td>
+      <td style="vertical-align: top;">continuous+with+distally<br/>
+continuous+with+proximally<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">develops_from<br/>
+gives_rise_to<br/>
+      </td>
+      <td style="vertical-align: top;">develops+from<br/>
+gives+rise+to<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">epithelial_cell_shape_of<br/>
+has_epithelial_cell_shape<br/>
+      </td>
+      <td style="vertical-align: top;">&lt;inverse slot not present in
+data&gt;<br/>
+epithelial+morphology<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">fascicular_architecture_of<br/>
+has_fascicular_architecture<br/>
+      </td>
+      <td style="vertical-align: top;">&lt;inverse slot not present in
+data&gt;<br/>
+fascicular+architecture<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">germ_origin_of<br/>
+has_germ_origin </td>
+      <td style="vertical-align: top;">&lt;inverse slot not present in
+data&gt;<br/>
+germ+origin<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">has_inherent_3d_shape<br/>
+inherent_3d_shape_of </td>
+      <td style="vertical-align: top;">&lt;inverse slot not present in
+data&gt;<br/>
+inherent+3-D+shape<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">has_location<br/>
+location_of </td>
+      <td style="vertical-align: top;">location<br/>
+&lt;inverse slot not present in data&gt;<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">has_lymphatic_drainage<br/>
+lymphatic_drainage_of </td>
+      <td style="vertical-align: top;">lymphatic+drainage<br/>
+lymphatic+drainage+of<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">has_member<br/>
+member_of_cluster </td>
+      <td style="vertical-align: top;">member<br/>
+member+of<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">has_muscle_attachment<br/>
+muscle_attachment_of </td>
+      <td style="vertical-align: top;">muscle+attachment<br/>
+&lt;inverse slot not present in data&gt;<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">has_muscle_insertion<br/>
+muscle_insertion_of </td>
+      <td style="vertical-align: top;">muscle+inesrtoin<br/>
+&lt;inverse slot not present in data&gt;<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">has_muscle_origin<br/>
+muscle_origin_of </td>
+      <td style="vertical-align: top;">muscle+origin<br/>
+&lt;inverse slot not present in data&gt;<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">has_nerve_supply<br/>
+nerve_supply_of</td>
+      <td style="vertical-align: top;">nerve+supply<br/>
+nerve+supply+of<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">has_orientation<br/>
+orientation_of</td>
+      <td style="vertical-align: top;">orientation<br/>
+&lt;inverse slot not present in data&gt;<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">has_origin<br/>
+origin_of<br/>
+      </td>
+      <td style="vertical-align: top;">&lt;inverse slot not present in
+data&gt;<br/>
+origin+of<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">has_part<br/>
+part_of<br/>
+      </td>
+      <td style="vertical-align: top;">part<br/>
+part+of<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">has_physical_state<br/>
+physical_state_of</td>
+      <td style="vertical-align: top;">physical+state<br/>
+&lt;inverse slot not present in data&gt;<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">has_primary_segmental_supply<br/>
+primary_segmental_supply_of</td>
+      <td style="vertical-align: top;">primary+segmental+supply<br/>
+primary+segmental+supply+of<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">has_regional_part<br/>
+regional_part_of</td>
+      <td style="vertical-align: top;">regional+part<br/>
+regional+part+of<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">has_secondary_segmental_supply<br/>
+secondary_segmental_supply_of</td>
+      <td style="vertical-align: top;">secondary+segmental+supply<br/>
+secondary+segmental+supply+of<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">has_segmental_composition<br/>
+segmental_composition_of</td>
+      <td style="vertical-align: top;">segmental+composition<br/>
+segmental+composition+of<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">has_segmental_supply<br/>
+segmental_supply_of</td>
+      <td style="vertical-align: top;">segmental+supply<br/>
+segmental+supply+of<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">has_shape<br/>
+shape_of</td>
+      <td style="vertical-align: top;">has+shape<br/>
+&lt;inverse slot not present in data&gt;<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">has_systemic_part<br/>
+systemic_part_of</td>
+      <td style="vertical-align: top;">systemic+part<br/>
+systemic+part+of<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">has_tributary<br/>
+tributary_of</td>
+      <td style="vertical-align: top;">tributary<br/>
+tributary+of<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">has_venous_drainage<br/>
+venous_drainage_of</td>
+      <td style="vertical-align: top;">venous+drainage<br/>
+venous+drainage+of<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">receives_input_from<br/>
+sends_output_to<br/>
+      </td>
+      <td style="vertical-align: top;">receives+input+from, input+from<br/>
+sends+output+to<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RT<br/>
+      </td>
+      <td style="vertical-align: top;">surrounded_by<br/>
+surrounds<br/>
+      </td>
+      <td style="vertical-align: top;">surrounded+by<br/>
+surrounds<br/>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div id="mappings" class="rep_block_level_two">
+<a name="mappings"></a><br/>
+<br/>
+<br/>
+<h3>Mappings (MRMAP):</h3>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+<p>No mappings to external sources are provided for FMA.<br/>
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>
