@@ -116,9 +116,13 @@ CHV terms with disparaged = "yes" are not included in the Metathesarus
 at this time<br/>
 <h3>Source-Provided Files: Details</h3>
 &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
-<p>The following is a list of elements available for &lt;source&gt;
-data in XML format</p>
-Note:&nbsp; During Metathesaurus source processing, CHV term values
+<p>The following is a list of elements available for CHV in the
+tab-separated data file.<br/>
+</p>
+Notes:&nbsp; <br/>
+<div style="margin-left: 40px;">
+<ul>
+  <li>During Metathesaurus source processing, CHV term values
 with
 potential spelling errors were identified by comparing words in the CHV
 term to words in the Specialist Lexicon and to a subset of words in the
@@ -126,7 +130,14 @@ Metathesaurus (MRXW.ENG).&nbsp; Term values which had potential
 spelling
 errors have MRCONSO.SUPPRESS="E".&nbsp; It is anticipated that any
 errors
-will be corrected in a future update of CHV.<br/>
+will be corrected in a future update of CHV.</li>
+</ul>
+<ul>
+  <li>All score attributes have a range 0 to 1 (a higher score implies
+the term is easier). A value of -1 indicates the score could not be
+estimated.</li>
+</ul>
+</div>
 <br/>
 <div class="rep_block_level_two"><a name="file1"></a>
 <table class="elements" border="0" cellspacing="0">
@@ -193,7 +204,8 @@ the term, if available. (string)<br/>
       <td>CHV_preferred <br/>
       </td>
       <td style="vertical-align: top;">A boolean variable (yes/no)
-indicating whether this is the preferred CHV name for the concept.&nbsp;
+indicating whether this is the preferred CHV name for the
+concept.&nbsp;
 (string)<br/>
       </td>
       <td>Used to determine TTY.&nbsp; CHV Terms with preferred flag =
@@ -206,7 +218,8 @@ are assigned TTY = "SY".<br/>
       <td>UMLS_preferred<br/>
       </td>
       <td style="vertical-align: top;">A boolean variable (yes/no)
-indicating whether this is the preferred CHV name for the concept.&nbsp;
+indicating whether this is the preferred CHV name for the
+concept.&nbsp;
 (string)<br/>
       </td>
       <td>Not processed<br/>
