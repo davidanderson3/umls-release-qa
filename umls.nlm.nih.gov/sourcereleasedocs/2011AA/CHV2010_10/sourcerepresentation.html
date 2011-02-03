@@ -1,0 +1,307 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+</head>
+<body>
+<div class="section-4">
+<ul id="menu">
+  <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
+  <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
+  <li id="nav-3"> <a href="sourcemetastats.html">Statistics and sample
+data</a>
+    <ul id="subnav-3">
+      <li> <a href="termtypes.html">Terms and term types</a> </li>
+      <li> <a href="attributes.html">Attributes</a> </li>
+      <li> <a href="relationships.html">Relationships</a> </li>
+      <li> <a href="semtypes.html">Semantic Types</a> </li>
+      <li> <a href="overlap.html">Source Overlap</a> </li>
+    </ul>
+  </li>
+  <li id="nav-4"> <a href="representation.html">Representation</a>
+    <ul id="subnav-4">
+      <li> <a href="sourcerepresentation.html" id="sourcerep">Source
+Representation</a> </li>
+      <li> <a href="metarepresentation.html">Metathesaurus
+Representation</a> </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<!-- end tabbed navigation area -->
+<br/>
+<br/>
+<br/>
+<a name="top"></a>
+<span class="nav">Skip to: <a href="#general">Notes</a>, <a
+ href="#change_summary">Summary of Changes</a>, <a href="#file_summary">Summary
+of
+Source-Provided
+Files</a>
+<a href="#file_details">Source-Provided
+File Details</a></span>
+<a name="general"></a>
+<div id="rep_general" class="rep_block_level_one">
+<h3>Notes</h3>
+</div>
+<div id="rep_change_summary" class="rep_block_level_one">
+<h3>Summary of Changes:</h3>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
+<p>Not applicable (CHV is a new source for 2011AA)<br/>
+</p>
+</div>
+<div id="rep_file_summary" class="rep_block_level_one">
+<a name="file_summary"></a>
+<h3>Source-Provided Files: Summary</h3>
+&nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
+<p>The CHV distribution includes the following. These files,
+along with additional information can be accessed at
+http://www.consumerhealthvocab.org<br/>
+</p>
+<div class="rep_block_level_two">
+<!-- Make a table of each file that comes from the source   --><span
+ style="font-weight: bold;">Documentation:</span><br/>
+<br/>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">File</span><br/>
+      </td>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">Description</span><br/>
+      </td>
+    </tr>
+    <tr>
+      <th style="font-weight: normal;">http://www.consumerhealthvocab.org/</th>
+      <th><span style="font-weight: normal;">source website</span><br/>
+      </th>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">ReadMe.pdf<br/>
+      </td>
+      <td style="vertical-align: top;">README file<br/>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br/>
+<span style="font-weight: bold;">Data:</span><br/>
+<br/>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">File</span><br/>
+      </td>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">Description</span><br/>
+      </td>
+    </tr>
+    <tr>
+      <th style="font-weight: normal;">CHV_concepts_terms_flatfile_20101013.tsv</th>
+      <th><span style="font-weight: normal;">Tab-separated data file</span><br/>
+      </th>
+    </tr>
+  </tbody>
+</table>
+<a name="data_files"></a><b><br/>
+<br/>
+Not included</b>:&nbsp;
+</div>
+</div>
+<div id="rep_file_details" class="rep_block_level_one">The CUI and UMLS
+Preferred Name are not explicitly represented in the Metathesaurus,
+however they are processed to help discover synonymy between CHV
+terminology and other UMLS sources.<br/>
+The UMLS preferred flag column is not processed<br/>
+CHV terms with disparaged = "yes" are not included in the Metathesarus
+at this time<br/>
+<h3>Source-Provided Files: Details</h3>
+&nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
+<p>The following is a list of elements available for &lt;source&gt;
+data in XML format</p>
+Note:&nbsp; During Metathesaurus source processing, CHV term values
+with
+potential spelling errors were identified by comparing words in the CHV
+term to words in the Specialist Lexicon and to a subset of words in the
+Metathesaurus (MRXW.ENG).&nbsp; Term values which had potential
+spelling
+errors have MRCONSO.SUPPRESS="E".&nbsp; It is anticipated that any
+errors
+will be corrected in a future update of CHV.<br/>
+<br/>
+<div class="rep_block_level_two"><a name="file1"></a>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>#</th>
+      <th>Field</th>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">Description</span><br/>
+      </td>
+      <th>Representation</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>CUI<br/>
+      </td>
+      <td style="vertical-align: top;">UMLS CUI for this term.&nbsp;
+(string)<br/>
+      </td>
+      <td>Used to discover synonymy between CHV terms and terms from
+other UMLS sources<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>CHV_term<br/>
+      </td>
+      <td style="vertical-align: top;">Term as found in text.&nbsp;
+(string)<br/>
+      </td>
+      <td>MRCONSO.STR<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>UMLS_preferred_name<br/>
+      </td>
+      <td style="vertical-align: top;">Preferred name for UMLS
+CUI.&nbsp; (string)<br/>
+      </td>
+      <td>Used to discover synonymy between CHV terms and terms from
+other UMLS sources </td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>CHV_preferred_name </td>
+      <td style="vertical-align: top;">Preferred name as defined in
+Consumer Health Vocabulary. (string)<br/>
+      </td>
+      <td>Not directly processed<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Explanation<br/>
+      </td>
+      <td style="vertical-align: top;">Explanation or definition for
+the term, if available. (string)<br/>
+      </td>
+      <td>MRDEF.DEF<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>CHV_preferred <br/>
+      </td>
+      <td style="vertical-align: top;">A boolean variable (yes/no)
+indicating whether this is the preferred CHV name for the concept.&nbsp;
+(string)<br/>
+      </td>
+      <td>Used to determine TTY.&nbsp; CHV Terms with preferred flag =
+"yes" are assigned TTY="PT".&nbsp; CHV Terms with preferred flag = "no"
+are assigned TTY = "SY".<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>UMLS_preferred<br/>
+      </td>
+      <td style="vertical-align: top;">A boolean variable (yes/no)
+indicating whether this is the preferred CHV name for the concept.&nbsp;
+(string)<br/>
+      </td>
+      <td>Not processed<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Disparaged<br/>
+      </td>
+      <td style="vertical-align: top;">A value of "yes" in the CHV data
+indicates a misspelling or other
+abnormality.&nbsp; For this version, disparaged terms were not
+processed, so
+all cases of ATN="DISPARAGED" have ATV="no".&nbsp; (string)<br/>
+      </td>
+      <td>CHV Terms with Disparaged = "yes" are not included in the
+Metathesaurus at this time<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Frequency_score<br/>
+      </td>
+      <td style="vertical-align: top;">Estimate of thedifficulty of a
+term, i.e. how likely it is that an average reader will be familiar
+with or understand a given term.&nbsp; Based on the frequency in
+several large text corpora.&nbsp; A higher score indicates that a term
+is more familiar (less difficult).&nbsp;&nbsp; (real number)</td>
+      <td>MRSAT.ATN = "FREQUENCY"<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Context_score<br/>
+      </td>
+      <td style="vertical-align: top;">Context based estimate of the
+difficulty of the term.&nbsp; (real number)</td>
+      <td>MRSAT.ATN = "CONTEXT_SCORE"<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>CUI_score<br/>
+      </td>
+      <td style="vertical-align: top;">Estimate of the difficulty of
+the concept (CUI) derived from determining how closely related the
+concept is to known examples of easy and difficult concepts. (real
+number)</td>
+      <td>MRSAT.ATN = "CUI_SCORE"<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Combo_score<br/>
+      </td>
+      <td style="vertical-align: top;">Combination of frequency,
+context and CUI scores.&nbsp; Also uses whether or not the term is a
+top word.&nbsp; (real number)</td>
+      <td>MRSAT.ATN = "COMBO_SCORE"<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Combo_score_no_top_words<br/>
+      </td>
+      <td style="vertical-align: top;">A slight modification to
+Combo_score that ignores top word criterion.&nbsp; The top word list is
+a
+list of easy words from the Dale-Chall list. (real number)</td>
+      <td>MRSAT.ATN = "COMBO_SCORE_NO_TOP_WORDS"<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>CHV_string_id<br/>
+      </td>
+      <td style="vertical-align: top;">Unique identifier for each entry
+in the CHV.&nbsp; (string)<br/>
+      </td>
+      <td>MRCONSO.SAUI<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>CHV_concept_id<br/>
+      </td>
+      <td style="vertical-align: top;">Unique identifier for every
+concept in the CHV.&nbsp; (string)<br/>
+      </td>
+      <td>MRCONSO.CODE, MRCONSO.SCUI<br/>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</body>
+</html>
