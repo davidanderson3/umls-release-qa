@@ -29,9 +29,9 @@ Representation</a> </li>
   </li>
 </ul>
 </div>
-<br>
-<br>
-<br>
+<br/>
+<br/>
+<br/>
 <a name="top"></a>
 <span class="nav">Skip to: <a href="#atoms">Atoms</a>, <a
  href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
@@ -52,60 +52,60 @@ value.&nbsp; </li>
   <li>MEDCIN to SNOMEDCT relationships:&nbsp; The following new linkage
 concepts are used: </li>
 </ul>
-<br>
+<br/>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
-      <td style="vertical-align: top;"><span style="font-weight: bold;">SNOMEDCT/FN</span><br>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">SNOMEDCT/FN</span><br/>
       </td>
-      <td style="vertical-align: top;"><span style="font-weight: bold;">RELA</span><br>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">RELA</span><br/>
       </td>
       <td style="vertical-align: top;"><span style="font-weight: bold;">RELA
-inverse</span><br>
+inverse</span><br/>
       </td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Specimen source topography
-(attribute)<br>
+(attribute)<br/>
       </td>
-      <td style="vertical-align: top;">has_specimen_source_topography<br>
+      <td style="vertical-align: top;">has_specimen_source_topography<br/>
       </td>
-      <td style="vertical-align: top;">specimen_source_topography_of<br>
+      <td style="vertical-align: top;">specimen_source_topography_of<br/>
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">Procedure morphology (attribute)<br>
+      <td style="vertical-align: top;">Procedure morphology (attribute)<br/>
       </td>
-      <td style="vertical-align: top;">has_procedure_morphology<br>
+      <td style="vertical-align: top;">has_procedure_morphology<br/>
       </td>
-      <td style="vertical-align: top;">procedure_morphology_of<br>
+      <td style="vertical-align: top;">procedure_morphology_of<br/>
       </td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Subject relationship context
-(attribute)<br>
+(attribute)<br/>
       </td>
-      <td style="vertical-align: top;">has_subject_relationship_context<br>
+      <td style="vertical-align: top;">has_subject_relationship_context<br/>
       </td>
-      <td style="vertical-align: top;">subject_relationship_context_of<br>
+      <td style="vertical-align: top;">subject_relationship_context_of<br/>
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">Using substance (attribute)<br>
+      <td style="vertical-align: top;">Using substance (attribute)<br/>
       </td>
-      <td style="vertical-align: top;">uses_substance<br>
+      <td style="vertical-align: top;">uses_substance<br/>
       </td>
-      <td style="vertical-align: top;">substance_used_by<br>
+      <td style="vertical-align: top;">substance_used_by<br/>
       </td>
     </tr>
   </tbody>
 </table>
-<p><br>
+<p><br/>
 </p>
 </div>
 <div id="rep_change_summary" class="rep_block_level_one">
 <h3>Source Provided Files:</h3>
-<br>
+<br/>
 The Metathesaurus uses the following four pipe-delimited MEDCIN files:
 <ul>
   <li>UMLS_MEDCIN_CONCEPTS2010-07-12.TXT</li>
@@ -116,8 +116,8 @@ The Metathesaurus uses the following four pipe-delimited MEDCIN files:
 </div>
 <div id="rep_identifers" class="rep_block_level_one">
 <h3>Identifiers:</h3>
-<br>
-Identifiers are assigned as follows:<br>
+<br/>
+Identifiers are assigned as follows:<br/>
 <ul>
   <li>CODE: MEDCINID</li>
   <li>SAUI: Not Applicable</li>
@@ -127,7 +127,7 @@ Identifiers are assigned as follows:<br>
 <div id="rep_termtypes" class="rep_block_level_two">
 <a name="atoms"></a>
 <h3>Atoms (MRCONSO):</h3>
-&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
@@ -138,8 +138,8 @@ Identifiers are assigned as follows:<br>
       <td>FN</td>
       <td>An "FN" atom is created for each line of
 UMLS_MEDCIN_CONCEPTSyyyy-mm-dd.TXT, as follows:
-      <div style="margin: 4pt;">CODE = MEDCINID<br>
-STR = CONCEPT_DESCRIPTION<br>
+      <div style="margin: 4pt;">CODE = MEDCINID<br/>
+STR = CONCEPT_DESCRIPTION<br/>
 SCUI = MEDCINID</div>
       </td>
     </tr>
@@ -148,8 +148,8 @@ SCUI = MEDCINID</div>
       <td>A "PT" atom is created for each line of
 UMLS_MEDCIN_DESCRIPTIONSyyyy-mm-dd.TXT having PREF_FLAG_ID=1, as
 follows:
-      <div style="margin: 4pt;">CODE = MEDCINID<br>
-STR = DESCRIPTION<br>
+      <div style="margin: 4pt;">CODE = MEDCINID<br/>
+STR = DESCRIPTION<br/>
 SCUI = MEDCINID</div>
       </td>
     </tr>
@@ -158,16 +158,16 @@ SCUI = MEDCINID</div>
       <td>An "SY" atom is created for each line of
 UMLS_MEDCIN_DESCRIPTIONSyyyy-mm-dd.TXT having PREF_FLAG_ID=0, as
 follows:
-      <div style="margin: 4pt;">CODE = MEDCINID<br>
-STR = DESCRIPTION<br>
+      <div style="margin: 4pt;">CODE = MEDCINID<br/>
+STR = DESCRIPTION<br/>
 SCUI = MEDCINID</div>
       </td>
     </tr>
     <tr>
       <td>XM</td>
       <td>One"XM"(cross mapping set) atom is generated, as follows:
-      <div style="margin: 4pt;">CODE = "MTHU000001"<br>
-STR = "Medcin to SNOMEDCT Mappings"<br>
+      <div style="margin: 4pt;">CODE = "MTHU000001"<br/>
+STR = "Medcin to SNOMEDCT Mappings"<br/>
 SCUI = "" (blank)</div>
 This data is added during Metathesaurus source processing.</td>
     </tr>
@@ -175,9 +175,9 @@ This data is added during Metathesaurus source processing.</td>
 </table>
 </div>
 <div id="rep_attributes" class="rep_block_level_two">
-<a name="attributes"></a><br>
+<a name="attributes"></a><br/>
 <h3>Attributes (MRSAT):</h3>
-&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
@@ -193,42 +193,42 @@ This data is added during Metathesaurus source processing.</td>
     <tr>
       <td>PREF_FLAG_ID</td>
       <td>RUI</td>
-      <td>PREF_FLAG_ID from UMLS_MEDCIN_SNOMEDyyyy-mm-dd.TXT<br>
+      <td>PREF_FLAG_ID from UMLS_MEDCIN_SNOMEDyyyy-mm-dd.TXT<br/>
       </td>
     </tr>
   </tbody>
 </table>
 </div>
 <div id="rep_definitions" class="rep_block_level_two">
-<br>
+<br/>
 In addition, the following map set attributes are added during
-Metathesaurus source processing:<br>
-<div style="margin-left: 40px;">FROMRSAB<br>
-FROMVSAB<br>
-MAPSETRSAB<br>
-MAPSETTYPE<br>
-MAPSETVERSION<br>
-MAPSETVSAB<br>
-MTH_MAPFROMCOMPLEXITY<br>
-MTH_MAPFROMEXHAUSTIVE<br>
-MTH_MAPSETCOMPLEXITY<br>
-MTH_MAPTOCOMPLEXITY<br>
-MTH_MAPTOEXHAUSTIVE<br>
-TORSAB<br>
-TOVSAB<br>
+Metathesaurus source processing:<br/>
+<div style="margin-left: 40px;">FROMRSAB<br/>
+FROMVSAB<br/>
+MAPSETRSAB<br/>
+MAPSETTYPE<br/>
+MAPSETVERSION<br/>
+MAPSETVSAB<br/>
+MTH_MAPFROMCOMPLEXITY<br/>
+MTH_MAPFROMEXHAUSTIVE<br/>
+MTH_MAPSETCOMPLEXITY<br/>
+MTH_MAPTOCOMPLEXITY<br/>
+MTH_MAPTOEXHAUSTIVE<br/>
+TORSAB<br/>
+TOVSAB<br/>
 </div>
-<br>
-<br>
-<a name="definitions"></a><br>
+<br/>
+<br/>
+<a name="definitions"></a><br/>
 <h3>Definitions (MRDEF):</h3>
-&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
 <p>No definitions are provided for MEDCIN.
 </p>
 </div>
 <div id="rep_relationships" class="rep_block_level_two">
-<a name="relationships"></a><br>
+<a name="relationships"></a><br/>
 <h3>Relationships (MRREL):</h3>
-&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
@@ -237,7 +237,7 @@ TOVSAB<br>
       <th>ORIGIN</th>
     </tr>
     <tr>
-      <td>CHD<br>
+      <td>CHD<br/>
 PAR</td>
       <td>(blank)</td>
       <td>Hierarchical relationships derived from the "NODEKEY" values
@@ -247,9 +247,9 @@ the concept's parent. These two concepts are then linked by a pair of
 "PAR/CHD" relationships.</td>
     </tr>
     <tr>
-      <td>RB<br>
-RN<br>
-RO<br>
+      <td>RB<br/>
+RN<br/>
+RO<br/>
 SY</td>
       <td>&nbsp;(many RELA values)</td>
       <td>Relationships are created for the MEDCIN-to-SNOMEDCT mappings
@@ -260,13 +260,13 @@ corresponding to the "RELATIONSHIPTYPE" field.</td>
 </table>
 </div>
 <div id="mappings" class="rep_block_level_two">
-<a name="mappings"></a><br>
+<a name="mappings"></a><br/>
 <h3>Mappings (MRMAP):</h3>
-&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
 <p>One map set ("XM" atom, along with associated attributes and
 mappings) is included for MEDCIN.&nbsp; Mappings are extracted from the
 file "UMLS_MEDCIN_SNOMEDyy-mm-dd.TXT.&nbsp; Mappings are created for
-entries where the RELATIONSHIPTYPE = "168666000" (same_as).<br>
+entries where the RELATIONSHIPTYPE = "168666000" (same_as).<br/>
 </p>
 <p></p>
 </div>
