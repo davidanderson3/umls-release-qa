@@ -40,9 +40,8 @@ Representation</a> </li>
  href="#file_details">Source-Provided File Details</a></span>
 <a name="general"></a>
 <div id="rep_general" class="rep_block_level_one">
-<h3>Notes</h3>
-<p>This documentation applies to source version:&nbsp;
-RXNORM_10AB_110207F</p>
+<div id="rep_identifiers" class="rep_block_level_one">
+<h3>Notes:</h3>
 <p>RxNorm, a standardized nomenclature for clinical drugs, is produced
 by the National Library of Medicine. Data files are released monthly
 and <a
@@ -51,7 +50,8 @@ by
 download</a>. Within each Metathesaurus cycle, RxNorm is updated
 multiple times. This document reflects the latest cumulative update.
 The scope of RxNorm is determined by the combined scope of its source
-vocabularies which include the following:</p>
+vocabularies which include the following:<br/>
+</p>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
@@ -59,20 +59,20 @@ vocabularies which include the following:</p>
       <th>Description</th>
     </tr>
     <tr>
-      <td class="file_field_name">GS_2011_01_02</td>
+      <td class="file_field_name">GS_2011_02_08</td>
       <td>Gold Standard Alchemy</td>
     </tr>
     <tr>
-      <td class="file_field_name">MDDB_2011_01_05</td>
+      <td class="file_field_name">MDDB_2011_02_02</td>
       <td>Master Drug Data Base. Medi-Span, a division of Wolters
 Kluwer Health</td>
     </tr>
     <tr>
-      <td class="file_field_name">MMSL_2011_01_01</td>
+      <td class="file_field_name">MMSL_2011_02_01</td>
       <td>Multum MediSource Lexicon</td>
     </tr>
     <tr>
-      <td class="file_field_name">MMX_2011_01_03</td>
+      <td class="file_field_name">MMX_2011_02_07</td>
       <td>Micromedex DRUGDEX</td>
     </tr>
     <tr>
@@ -80,44 +80,45 @@ Kluwer Health</td>
       <td>Medical Subject Headings</td>
     </tr>
     <tr>
-      <td class="file_field_name">MTHFDA_2011_01_03</td>
+      <td class="file_field_name">MTHFDA_2011_02_01</td>
       <td>FDA National Drug Code Directory</td>
     </tr>
     <tr>
-      <td class="file_field_name">MTHSPL_2011_01_28</td>
+      <td class="file_field_name">MTHSPL_2011_02_25</td>
       <td>FDA Structured Product Labels</td>
     </tr>
     <tr>
-      <td class="file_field_name">NDDF_2011_01_05</td>
+      <td class="file_field_name">NDDF_2011_02_16</td>
       <td>First DataBank NDDF Plus Source Vocabulary</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">NDFRT_2011_02_07<br/>
+      <td style="vertical-align: top;">NDFRT_2011_03_07<br/>
       </td>
       <td style="vertical-align: top;">National Drug File<br/>
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">RXNORM_10AB_110207F<br/>
+      <td style="vertical-align: top;">RXNORM_10AB_110307F<br/>
       </td>
       <td style="vertical-align: top;">RxNorm Vocabulary<br/>
       </td>
     </tr>
     <tr>
-      <td class="file_field_name">SNOMEDCT_2010_07_31</td>
+      <td class="file_field_name">SNOMEDCT_2011_01_31</td>
       <td>SNOMED Clinical Terms (drug information)</td>
     </tr>
     <tr>
-      <td class="file_field_name">VANDF_2010_12_28</td>
+      <td class="file_field_name">VANDF_2011_02_03</td>
       <td>Veterans Health Administration National Drug File</td>
     </tr>
   </tbody>
 </table>
-<p>Note: Selected portions of MSH and SNOMEDCT are included in the
+<br/>
+Note: Selected portions of MSH and SNOMEDCT are included in the
 RxNorm release files, however, they are not processed as part of RxNorm
 for the Metathesaurus except in assigning RXCUI and RXAUI attributes.
 All MSH or SNOMEDCT data in the Metathesaurus comes directly from
-that source's data files.</p>
+that source's data files.
 This document describes how the
 RxNorm release files (RXN*RRF) are processed for representation in the
 UMLS
@@ -129,21 +130,22 @@ source processing for 2011AA.&nbsp; Data changes include the following:<br/>
 </p>
 Suppressible flags:<br/>
 &nbsp;&nbsp;&nbsp; MRCONSO.RRF:&nbsp; Previously, only atoms with
-SAB="RXNORM" could have SUPPRESS="O."&nbsp; Now, the following TTY
-values may also have SUPPRESS="O":<br/>
-<div style="margin-left: 40px;">MMSL_2011_01_01/BD<br/>
-MMSL_2011_01_01/BN<br/>
-MMSL_2011_01_01/CD<br/>
-MMSL_2011_01_01/GN<br/>
-MMSL_2011_01_01/MS<br/>
-MTHSPL_2011_01_28/DP<br/>
-NDDF_2011_01_05/CDA<br/>
-NDDF_2011_01_05/CDC<br/>
-NDDF_2011_01_05/CDD<br/>
-NDDF_2011_01_05/IN<br/>
-VANDF_2010_12_28/AB<br/>
-VANDF_2010_12_28/CD<br/>
-VANDF_2010_12_28/MTH_RXN_CD<br/>
+SAB="RXNORM" could have
+SUPPRESS="O."&nbsp; Now, the following TTY values may also have
+SUPPRESS="O":<br/>
+<div style="margin-left: 40px;">MMSL/BD<br/>
+MMSL/BN<br/>
+MMSL/CD<br/>
+MMSL/GN<br/>
+MMSL/MS<br/>
+MTHSPL/DP<br/>
+NDDF/CDA<br/>
+NDDF/CDC<br/>
+NDDF/CDD<br/>
+NDDF/IN<br/>
+VANDF/AB<br/>
+VANDF/CD<br/>
+VANDF/MTH_RXN_CD<br/>
 </div>
 <br/>
 &nbsp;&nbsp;&nbsp; MRSAT.RRF:<br/>
@@ -197,9 +199,83 @@ Product Label OTC monograph not final<br/>
       <td style="vertical-align: top;">New attribute for SAB="NDDF"<br/>
       </td>
     </tr>
+    <tr>
+      <td style="vertical-align: top;">New<br/>
+      </td>
+      <td style="vertical-align: top;">PREMARKET_NOTIFICATION<br/>
+      </td>
+      <td style="vertical-align: top;">MTHSPL<br/>
+      </td>
+      <td style="vertical-align: top;">FDA Structured Product Label
+premarket notification<br/>
+      </td>
+    </tr>
   </tbody>
 </table>
 <br/>
+</div>
+Source Provided Files:
+<p>RXNORM&nbsp; data files are
+released monthly and <a
+ href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">available
+by
+download</a>.</p>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>File Name</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td class="file_field_name">RXNCONSO.RRF</td>
+      <td>Concept and source information.</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">RXNDOC.RRF</td>
+      <td>Abbreviated values.</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">RXNREL.RRF</td>
+      <td>Relationship and merge information.</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">RXNSAB.RRF</td>
+      <td>Source information.</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">RXNSAT.RRF</td>
+      <td>Attribute information.</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">RXNSTY.RRF</td>
+      <td>Semantic type information.</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">RXNATOMARCHIVE.RRF</td>
+      <td>Archive data. Not used.</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">RXNCUICHANGES.RRF</td>
+      <td>CUI changes. Not used.</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">RXNCUI.RRF</td>
+      <td>Retired CUIs.</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">RXNCONSOOCD.RRF</td>
+      <td>OCD concept and source information.</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">RXNASATOCD.RRF</td>
+      <td>OCD simple concept and atom attribute information.</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">RXNSTYOCD.RRF</td>
+      <td>OCD semantic type.</td>
+    </tr>
+  </tbody>
+</table>
 <br/>
 </div>
 <div id="rep_file_summary" class="rep_block_level_one"><a
