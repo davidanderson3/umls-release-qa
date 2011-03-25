@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>UMLS® Terminology Services</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+   <!--<script type = "text/javascript" src = "/jquery/jquery-1.4.4.min.js"></script>-->
+   <script type = "text/javascript" src = "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js" languge = "javascript"></script>
+   <script type = "text/javascript" src = "http://www.ncbi.nlm.nih.gov/core/jig/1.5.2/js/jig.nojquery.js"></script>
+   <script type="text/javascript" src="js/jquery-ui-1.8.10.custom.min.js"></script> <!--mm added-->
+<!-- <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script> --> <!--mm added, but conflicts with ajax call-->
+   <script type= "text/javascript">
+   var $ = jQuery.noConflict();
+   $(document).ready(function(){
+   $('a.ajaxlink').click(function() {
+       var target = $(this).attr('href');
+       
+        $.ajax({
+             type: "GET",
+             url: "sources_all.xml",
+             dataType: "xml",
+             context:target,
+             success: function(xml) {
+             $(xml).find("son").each(function() {
+               $(target).append($(this).text() + "<br/>");
+               
+             });
+             
+
+             }
+         }); //close $.ajax(
+      
+      
+      
+      
+      
+   });
+   });
+   </script>
+	<link rel="stylesheet" type="text/css" href="css/start/jquery-ui-1.8.10.custom.css"/> <!--mm added-->
+  <link rel="stylesheet" type="text/css" href="http://www.ncbi.nlm.nih.gov/portal/portal3rc.fcgi/1197446/css/72892/63266/66675/3316/31862/33955/30039/3251/1235402/12930/67324/3499/14534.css" /> <!--mm added for ncbi styles--> 
+</head>
+
+
+
+<body>
+   <div class = "jig-tabs">
+    <ul>
+      <li><a class = "ajaxlink" href = "#tabs-1" title = "alphabet">Browse Alphabetically</a></li>
+      <li><a class = "ajaxlink" href = "#tabs-2" title = "category">Browse by Category</a></li>
+      <li><a class = "ajaxlink" href = "#tabs-3" title = "release">Browse by UMLS Release</a></li>
+    </ul>
+      
+
+   
+   <div id = "tabs-1">
