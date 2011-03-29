@@ -3,6 +3,7 @@
 <head>
   <meta http-equiv="content-type"
  content="text/html; charset=ISO-8859-1">
+  <title></title>
 </head>
 <body>
 <div class="section-4">
@@ -64,10 +65,9 @@ included.&nbsp; This results in the following change:<br/>
     </tr>
   </tbody>
 </table>
-<ul>
-</ul>
 </div>
 <div id="rep_files" class="rep_block_level_one">
+<br/>
 The following change was made for consistency in ATN naming conventions:<br/>
 <br/>
 <table class="elements" border="0" cellspacing="0">
@@ -87,7 +87,8 @@ The following change was made for consistency in ATN naming conventions:<br/>
   </tbody>
 </table>
 <br/>
-&nbsp;<br/>
+&nbsp;
+DEFINITIONs are now created from the FullSummary tag<br/>
 <h3>Source Provided Files:</h3>
 The UMLS uses MedlinePlus xml files downloaded from <a
  href="http://www.nlm.nih.gov/mesh/filelist.html">http://www.nlm.nih.gov/medlineplus/xml.html</a><br/>
@@ -96,8 +97,6 @@ For 2011AA, the files used were:<br/>
 <ul>
   <li>mplus_groups_2011-01-08.xml</li>
   <li>mplus_vocab_2011-01-08.xml</li>
-</ul>
-<ul>
 </ul>
 </div>
 <div id="rep_identifers" class="rep_block_level_one">
@@ -272,7 +271,8 @@ SDUI = &lt;MedicalTopic ID&gt;<br/>
 <div id="rep_definitions" class="rep_block_level_two">
 <a name="definitions"></a><br/>
 <h3>Definitions (MRDEF):</h3>
-No definitions are provided for MedlinePlus.<br/>
+DEFINITIONs created from the value of the FullSummary tag in the
+MedlinePlus data.<br/>
 <br/>
 &nbsp; <span class="nav">(return to <a href="#top">top</a></span>)<br/>
 <br/>
@@ -321,8 +321,7 @@ mplus_vocab_YYYY-MM-DD.xml<br/>
 Descriptor and Qualifier (if present). Note: Because the combination of
 the Descriptor and Qualifier taken together represent the expressed
 relationship, the pair of rels are given a relationship group code to
-link them together.
-      </td>
+link them together. </td>
     </tr>
     <tr>
       <td>SY</td>
