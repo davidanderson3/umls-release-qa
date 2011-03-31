@@ -7,24 +7,25 @@
 
    <script type = "text/javascript" src = "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js" languge = "javascript"></script>
    <script type = "text/javascript" src = "http://www.ncbi.nlm.nih.gov/core/jig/1.5.2/js/jig.nojquery.js"></script>
-   <!--<script type="text/javascript" src="js/jquery-ui-1.8.10.custom.min.js"></script>-->
-   <script type= "text/javascript">
+   <script type = "text/javascript">
    var $ = jQuery.noConflict();
    </script>
-	 
-<script type="text/javascript" src="PIE.js"></script>
-<script type="text/javascript">
-	 				$(function() {
-    				  $('.rounded').each(function() {
-        	    		PIE.attach(el);
-    					});
-					 }); 
-	 </script>
+<!--[if IE]>
+   <script type="text/javascript" src="PIE.js"></script>
+<![endif]--> 
+   <link rel="stylesheet" type="text/css" href="http://www.ncbi.nlm.nih.gov/portal/portal3rc.fcgi/1197446/css/72892/63266/66675/3316/31862/33955/30039/3251/1235402/12930/67324/3499/14534.css" /> <!--mm added for ncbi styles--> 
 
-    <!--<link rel="stylesheet" type="text/css" href="css/start/jquery-ui-1.8.11.custom.css"/> -->   <!--mm added-->
+   <!--<script type="text/javascript" src="js/jquery-ui-1.8.10.custom.min.js"></script>-->
 
-<link rel="stylesheet" type="text/css" href="http://www.ncbi.nlm.nih.gov/portal/portal3rc.fcgi/1197446/css/72892/63266/66675/3316/31862/33955/30039/3251/1235402/12930/67324/3499/14534.css" /> <!--mm added for ncbi styles--> 
-
+<script type = "text/javascript">
+$(function() {
+  if($.browser.msie) {
+    $('.jig-tabs li').tabs().each(function() {
+     PIE.attach(this);
+    });
+  }
+});
+</script>
 <style type="text/css">
 
 .jig-tabs{
@@ -46,6 +47,14 @@ background: -moz-linear-gradient(bottom, #78a22f, #e7eeeb)!important;
 
 }
 
+.ui-tabs-nav li {
+    
+    
+
+
+    
+}
+
 .limbox{
 
 border:none;
@@ -55,6 +64,13 @@ left:-2%;
 
 }
 
+
+
+.red{
+    
+background:red;    
+    
+}
 
 </style>
 
