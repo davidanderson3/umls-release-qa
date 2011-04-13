@@ -3,7 +3,7 @@
 <head>
 <title>UMLS® Terminology Services</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
+    <meta name="tabs" content="selected: -1, cache: true"/>
 
    <script type = "text/javascript" src = "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js" languge = "javascript"></script>
    <script type = "text/javascript" src = "http://www.ncbi.nlm.nih.gov/core/jig/1.5.2/js/jig.nojquery.js"></script>
@@ -16,11 +16,16 @@
    <link rel="stylesheet" type="text/css" href="http://www.ncbi.nlm.nih.gov/portal/portal3rc.fcgi/1197446/css/72892/63266/66675/3316/31862/33955/30039/3251/1235402/12930/67324/3499/14534.css" /> <!--mm added for ncbi styles--> 
 
    <!--<script type="text/javascript" src="js/jquery-ui-1.8.10.custom.min.js"></script>-->
+<script>
+	$(function() {
+		$( ".jig-tabs" ).tabs();
+	});
+</script>
 
 <script type = "text/javascript">
 $(function() {
   if($.browser.msie) {
-    $('.jig-tabs li, .ui-tabs-selected').tabs().each(function() {
+    $('.jig-tabs li, .ui-tabs-selected, .ui-tabs-nav li').tabs().each(function() {
      PIE.attach(this);
     });
   }
@@ -38,6 +43,9 @@ background:none;
 border-top:none;
 border-left:none;
 border-right:none;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px !important;
 
     
 }
@@ -45,18 +53,23 @@ border-right:none;
 
 background: #78a22f; /* for non-css3 browsers */    
 
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#78a22f', endColorstr='#e7eeeb'); /* for IE */
-background: -moz-linear-gradient(bottom, #78a22f, #e7eeeb)!important; 
-background: -webkit-gradient(linear, left top, left bottom, from(#78a22f), to(#e7eeeb)); /* for webkit browsers */
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#78a22f', endColorstr='#e7eeeb'); /* for IE 5.5 - 7*/
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#78a22f', endColorstr='#e7eeeb')" !important; /* for IE 8*/
+background: -moz-linear-gradient(bottom, #78a22f, #e7eeeb)!important; /* For Mozilla/Gecko (Firefox etc) */
+background: -webkit-gradient(linear, left top, left bottom, from(#78a22f), to(#e7eeeb)); /* For WebKit (Safari, Google Chrome etc) */
+
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px !important;
 
 
 }
 
 .ui-tabs-nav li {
-    
-    
 
-
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px !important;
     
 }
 
@@ -99,7 +112,7 @@ background:red;
 </div>
  
 	 
-   <div class = "jig-tabs">
+   <div class = "jig-tabs" data-jigdata-jigconfig="selected: -1, cache: true">
     <ul>
       <li><a class = "ajaxlink" href = "#tabs-1" title = "alphabet">Alphabetical List</a></li>
       <li><a class = "ajaxlink" href = "#tabs-2" title = "category">Source Restriction Categories</a></li>
