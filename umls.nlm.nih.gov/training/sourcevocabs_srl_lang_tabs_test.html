@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="text/javascript" src="/scripts/jquery-min.js"></script> 
 <script type="text/javascript" src="http://www.ncbi.nlm.nih.gov/core/jig/1.5.2/js/jig.min.js"></script> 
-
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js" type="text/javascript"></script>
 <!--[if IE]>
    <script type="text/javascript" src="/scripts/PIE.js"></script>
 <![endif]--> 
@@ -23,6 +23,21 @@ $(function() {
   }
 });
 </script>
+<script type = "text/javascript">
+$(document).ready(function() {
+
+$('a.jig-ncbitoggler').click(function(event) {
+  //$(this).parent().next().css('background-color','red');
+  var sourcecontainer = $(this).parent().next();
+  $(sourcecontainer).animate({'background-color' : '#ff7373'}, 'fast');
+  $(sourcecontainer).animate({'background-color' : '#ffffff'}, 'slow');
+  
+  //alert("you clicked me!");
+  
+});
+});
+</script>
+
 
 <link rel="stylesheet" type="text/css" href="http://www.ncbi.nlm.nih.gov/portal/portal3rc.fcgi/1197446/css/72892/63266/66675/3316/31862/33955/30039/3251/1235402/12930/67324/3499/14534.css" />
 
