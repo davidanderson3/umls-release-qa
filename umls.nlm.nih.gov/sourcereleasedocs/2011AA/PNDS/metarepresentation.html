@@ -64,7 +64,8 @@ still
 assigned
 TTY
 =
-"HT," as are placeholder atoms for "Assessment,"
+"HT,"
+as are placeholder atoms for "Assessment,"
 "Evaluation," "Implementation," and 'Outcome," which were created for
 the purpose of representing a navigational hierarchy.&nbsp; All other
 PNDS atoms are assigned TTY = "PT."&nbsp; <br/>
@@ -72,9 +73,37 @@ PNDS atoms are assigned TTY = "PT."&nbsp; <br/>
 <p>The&nbsp;domains&nbsp;are&nbsp;the&nbsp;same&nbsp;and&nbsp;have&nbsp;the&nbsp;same&nbsp;codes&nbsp;as&nbsp;the&nbsp;previous&nbsp;version,&nbsp;but&nbsp;the&nbsp;code&nbsp;assignment&nbsp;for&nbsp;everything&nbsp;else&nbsp;has&nbsp;changed,&nbsp;and&nbsp;the&nbsp;strings&nbsp;have&nbsp;often&nbsp;changed&nbsp;also.
 <br/>
 </p>
-The SRL has been changed from 0 to 3 for PNDS.
-<p></p>
-</div>
+<p>Differences between PNDS2002 and PNDS2011 in RRF format are:<br/>
+</p>
+1)&nbsp; The SRL has been changed from 0 to 3 for PNDS.<br/>
+<br/>
+<a>2)&nbsp; New term type (TTY) | Suppressible value:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PT|N<br/>
+<br/>
+3) Dropped term type (TTY):<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DX<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IV<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PS<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PX<br/>
+<br/>
+3) Dropped relationship | relationship attribute(RELA): <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RQ|has_outcome<br/>
+<br/>
+</a><a>This data is not available in machine-processable form</a><a><br/>
+<br/>
+4) New attribute name (ATN):<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; INTERPRETIVE_STATEMENT<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RETIRED_CODE<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SOS<br/>
+<br/>
+5) Dropped attribute name (ATN):<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; INTERVENTION_DESCRIPTION<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; INTERVENTION_SEQUENCE<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; INTERVENTION_TEXT<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OUTCOME_EXAMPLES<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OUTCOME_INDICATORS<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OUTCOME_STATEMENT<br/>
+</a></div>
 <div id="rep_change_summary" class="rep_block_level_one">
 <h3>Source Provided Files:</h3>
 The PNDS distribution includes the following:<br/>
