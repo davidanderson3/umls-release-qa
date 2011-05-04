@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+ <title></title>
+</head>
+<body>
+<div class="section-4">
+<ul id="menu">
+  <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
+  <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
+  <li id="nav-3"> <a href="sourcemetastats.html">Statistics and sample
+data</a>
+    <ul id="subnav-3">
+      <li> <a href="termtypes.html">Terms and term types</a> </li>
+      <li> <a href="attributes.html">Attributes</a> </li>
+      <li> <a href="relationships.html">Relationships</a> </li>
+      <li> <a href="semtypes.html">Semantic Types</a> </li>
+      <li> <a href="overlap.html">Source Overlap</a> </li>
+    </ul>
+  </li>
+  <li id="nav-4"> <a href="representation.html">Representation</a>
+    <ul id="subnav-4">
+      <li> <a href="sourcerepresentation.html" id="sourcerep">Source
+Representation</a> </li>
+      <li> <a href="metarepresentation.html">Metathesaurus
+Representation</a> </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<!-- end tabbed navigation area -->
+<br/>
+<br/>
+<br/>
+<a name="top"></a>
+<span class="nav">Skip to: <a href="#general">Notes</a>, <a
+ href="#change_summary">Summary of Changes</a>, <a href="#file_summary">Summary
+of
+Source-Provided
+Files</a>
+<a href="#file_details">Source-Provided
+File Details</a></span>
+<a name="general"></a>
+<div id="rep_general" class="rep_block_level_one">
+<h3>Notes</h3>
+</div>
+<div id="rep_change_summary" class="rep_block_level_one">
+<p>The original TKMT files do not explicitly
+represent a
+hierarchy.&nbsp; However a hierarchy was constructed during
+Metathesaurus
+source processing, using strings containing the pattern "* acupuncture
+points" as parent nodes.<br/>
+<br/>
+The parent nodes are:<br/>
+</p>
+<div style="margin-left: 40px;">Lung acupuncture points<br/>
+Large intestine acupuncture points<br/>
+Stomach acupuncture points<br/>
+Spleen acupuncture points<br/>
+Heart acupuncture points<br/>
+Small intestine acupuncture points<br/>
+Bladder acupuncture points<br/>
+Kidney acupuncture points<br/>
+Pericardium acupuncture points<br/>
+Triple energizer acupuncture points<br/>
+Gallbladder acupuncture points<br/>
+Liver acupuncture points<br/>
+Governing vessel acupuncture points<br/>
+Conception vessel acupuncture points</div>
+<h3>Summary of Changes:</h3>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
+<p>TKMT is a new source for 2010AB<br/>
+</p>
+</div>
+<div id="rep_file_summary" class="rep_block_level_one">
+<a name="file_summary"></a>
+<h3>Source-Provided Files: Summary</h3>
+&nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
+<p>The TKMT distribution<span style="font-weight: bold;"> </span>consists
+of a "|"-delimited data file:<br/>
+</p>
+<p>KIOM-AP.RRF<br/>
+<span style="font-weight: bold;"></span></p>
+<div class="rep_block_level_two"><a name="data_files"></a><b><br/>
+<br/>
+Not included</b>:&nbsp;
+</div>
+</div>
+<div id="rep_file_details" class="rep_block_level_one">Some data in
+this file is redundant and may not be directly processed or explicitly
+represented in the Metathesaurus release files.<br/>
+<br/>
+<h3>Source-Provided Files: Details</h3>
+&nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
+<br/>
+<br/>
+The format of KIOM-AP.RRF is:<br/>
+<br/>
+UMLS_CUI|Language|ENGLISH_STRING|SEMANTIC_TYPE|&lt;EMPTY&gt;|KOREAN_STRING<br/>
+<br/>
+<div class="rep_block_level_two"><a name="file1"></a>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>#</th>
+      <th>Field</th>
+      <th>Representation</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>UMLS_CUI<br/>
+      </td>
+      <td>Used to assist in determining which Metathesaurus concept a
+Korean string belongs in<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Language<br/>
+      </td>
+      <td>Not represented (always "ENG")<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>ENGLISH_STRING<br/>
+      </td>
+      <td>Not directly processed;&nbsp; used to assist in determining
+which Metathesaurus concept a Korean string belongs in </td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>SEMANTIC_TYPE<br/>
+      </td>
+      <td>Not directly processed </td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>&lt;EMPTY&gt;<br/>
+      </td>
+      <td>Not applicable<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>KOREAN_STRING<br/>
+      </td>
+      <td>MRCONSO.STR<br/>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</body>
+</html>
