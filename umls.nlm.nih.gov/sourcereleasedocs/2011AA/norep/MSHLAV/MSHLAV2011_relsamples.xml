@@ -1265,52 +1265,6 @@
                 <field type="cui2">C1140618</field>
             </row>
         </sample>
-        <sample id="MSHLAV2011_BT__ROOT_SOURCE_CUI_ROOT_SOURCE_CUI" samplename="RB" attribute="*" definition="has a broader relationship&#10;" count="40">
-            <row type="standard">
-                <field type="CUI1">C0005712</field>
-                <field type="AUI1">A17438730</field>
-                <field type="STYPE1">SCUI</field>
-                <field type="STR">Blastomēri</field>
-                <field type="REL">RB</field>
-                <field type="STR">Blastocīti</field>
-                <field type="STYPE2">SCUI</field>
-                <field type="AUI2">A17439242</field>
-                <field type="CUI2">C1281486</field>
-            </row>
-            <row type="inverse">
-                <field type="cui1">C1281486</field>
-                <field type="aui1">A17439242</field>
-                <field type="stype1">SCUI</field>
-                <field type="str">Blastocīti</field>
-                <field type="rel">RN</field>
-                <field type="str">Blastomēri</field>
-                <field type="stype2">SCUI</field>
-                <field type="aui2">A17438730</field>
-                <field type="cui2">C0005712</field>
-            </row>
-            <row type="standard">
-                <field type="CUI1">C0019149</field>
-                <field type="AUI1">A17439119</field>
-                <field type="STYPE1">SCUI</field>
-                <field type="STR">Aknu vads, kopējais</field>
-                <field type="REL">RB</field>
-                <field type="STR">Aknu vads</field>
-                <field type="STYPE2">SCUI</field>
-                <field type="AUI2">A17439292</field>
-                <field type="CUI2">C0917710</field>
-            </row>
-            <row type="inverse">
-                <field type="cui1">C0917710</field>
-                <field type="aui1">A17439292</field>
-                <field type="stype1">SCUI</field>
-                <field type="str">Aknu vads</field>
-                <field type="rel">RN</field>
-                <field type="str">Aknu vads, kopējais</field>
-                <field type="stype2">SCUI</field>
-                <field type="aui2">A17439119</field>
-                <field type="cui2">C0019149</field>
-            </row>
-        </sample>
         <sample id="MSHLAV2011_NT__ROOT_SOURCE_CUI_ROOT_SOURCE_CUI" samplename="RN" attribute="*" definition="has a narrower relationship&#10;" count="40">
             <row type="standard">
                 <field type="CUI1">C0024094</field>
