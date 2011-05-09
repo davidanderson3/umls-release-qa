@@ -1,0 +1,1447 @@
+<document vsab="MTHCH2011" samples="Relationships">
+    <samples>
+        <labels>
+            <label type="metalabel">Relationship</label>
+            <label type="metalabel">Relationship Attribute</label>
+            <label type="count">Count (MRREL.RRF)</label>
+        </labels>
+        <sample id="MTHCH2011_RT__ROOT_SOURCE_CUI_ROOT_SOURCE_CUI" samplename="RO" attribute="*" definition="has relationship other than synonymous, narrower, or broader&#10;" count="35128">
+            <row type="standard">
+                <field type="CUI1">C0519803</field>
+                <field type="AUI1">A8575915</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Laparoscopy, surgical; jejunostomy (eg, for decompression or feeding)</field>
+                <field type="REL">RO</field>
+                <field type="STR">Laparoscopy, surgical; cholecystectomy with cholangiography</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A0729887</field>
+                <field type="CUI2">C0372532</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0372532</field>
+                <field type="aui1">A0729887</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Laparoscopy, surgical; cholecystectomy with cholangiography</field>
+                <field type="rel">RO</field>
+                <field type="str">Laparoscopy, surgical; jejunostomy (eg, for decompression or feeding)</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A8575915</field>
+                <field type="cui2">C0519803</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0812511</field>
+                <field type="AUI1">A7159777</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Laparoscopy, surgical; donor nephrectomy (including cold preservation), from living donor</field>
+                <field type="REL">RO</field>
+                <field type="STR">Laparoscopy, surgical; with fulguration or excision of lesions of the ovary, pelvic viscera, or peritoneal surface by any method</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A0729895</field>
+                <field type="CUI2">C0372518</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0372518</field>
+                <field type="aui1">A0729895</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Laparoscopy, surgical; with fulguration or excision of lesions of the ovary, pelvic viscera, or peritoneal surface by any method</field>
+                <field type="rel">RO</field>
+                <field type="str">Laparoscopy, surgical; donor nephrectomy (including cold preservation), from living donor</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A7159777</field>
+                <field type="cui2">C0812511</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0519800</field>
+                <field type="AUI1">A0983152</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Laparoscopy, surgical; orchiectomy</field>
+                <field type="REL">RO</field>
+                <field type="STR">Laparoscopy, surgical; with fulguration of oviducts (with or without transection)</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A1750967</field>
+                <field type="CUI2">C0812522</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0812522</field>
+                <field type="aui1">A1750967</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Laparoscopy, surgical; with fulguration of oviducts (with or without transection)</field>
+                <field type="rel">RO</field>
+                <field type="str">Laparoscopy, surgical; orchiectomy</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A0983152</field>
+                <field type="cui2">C0519800</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0373895</field>
+                <field type="AUI1">A1747717</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Antibody; encephalitis, California (La Crosse)</field>
+                <field type="REL">RO</field>
+                <field type="STR">Antibody; Toxoplasma, IgM</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A0646185</field>
+                <field type="CUI2">C0373942</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0373942</field>
+                <field type="aui1">A0646185</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Antibody; Toxoplasma, IgM</field>
+                <field type="rel">RO</field>
+                <field type="str">Antibody; encephalitis, California (La Crosse)</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A1747717</field>
+                <field type="cui2">C0373895</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0373902</field>
+                <field type="AUI1">A1747707</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Antibody; Epstein-Barr (EB) virus, viral capsid (VCA)</field>
+                <field type="REL">RO</field>
+                <field type="STR">Antibody; Leishmania</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A0646175</field>
+                <field type="CUI2">C0523293</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0523293</field>
+                <field type="aui1">A0646175</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Antibody; Leishmania</field>
+                <field type="rel">RO</field>
+                <field type="str">Antibody; Epstein-Barr (EB) virus, viral capsid (VCA)</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A1747707</field>
+                <field type="cui2">C0373902</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0519867</field>
+                <field type="AUI1">A0968595</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Infectious agent detection by nucleic acid (DNA or RNA); Bartonella henselae and Bartonella quintana, direct probe technique</field>
+                <field type="REL">RO</field>
+                <field type="STR">Infectious agent detection by nucleic acid (DNA or RNA); influenza virus, reverse transcription and amplified probe technique, each type or subtype</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A18511909</field>
+                <field type="CUI2">C2939285</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C2939285</field>
+                <field type="aui1">A18511909</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Infectious agent detection by nucleic acid (DNA or RNA); influenza virus, reverse transcription and amplified probe technique, each type or subtype</field>
+                <field type="rel">RO</field>
+                <field type="str">Infectious agent detection by nucleic acid (DNA or RNA); Bartonella henselae and Bartonella quintana, direct probe technique</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A0968595</field>
+                <field type="cui2">C0519867</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C2939285</field>
+                <field type="AUI1">A18511909</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Infectious agent detection by nucleic acid (DNA or RNA); influenza virus, reverse transcription and amplified probe technique, each type or subtype</field>
+                <field type="REL">RO</field>
+                <field type="STR">Infectious agent detection by nucleic acid (DNA or RNA); Legionella pneumophila, quantification</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A0968626</field>
+                <field type="CUI2">C0519911</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0519911</field>
+                <field type="aui1">A0968626</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Infectious agent detection by nucleic acid (DNA or RNA); Legionella pneumophila, quantification</field>
+                <field type="rel">RO</field>
+                <field type="str">Infectious agent detection by nucleic acid (DNA or RNA); influenza virus, reverse transcription and amplified probe technique, each type or subtype</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A18511909</field>
+                <field type="cui2">C2939285</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0918189</field>
+                <field type="AUI1">A1945931</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Antibody; Bartonella</field>
+                <field type="REL">RO</field>
+                <field type="STR">Antibody; Coxiella burnetii (Q fever)</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A3860043</field>
+                <field type="CUI2">C0373890</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0373890</field>
+                <field type="aui1">A3860043</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Antibody; Coxiella burnetii (Q fever)</field>
+                <field type="rel">RO</field>
+                <field type="str">Antibody; Bartonella</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A1945931</field>
+                <field type="cui2">C0918189</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0523284</field>
+                <field type="AUI1">A0646182</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Antibody; Salmonella</field>
+                <field type="REL">RO</field>
+                <field type="STR">Antibody; virus, not elsewhere specified</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A0646212</field>
+                <field type="CUI2">C0373946</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0373946</field>
+                <field type="aui1">A0646212</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Antibody; virus, not elsewhere specified</field>
+                <field type="rel">RO</field>
+                <field type="str">Antibody; Salmonella</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A0646182</field>
+                <field type="cui2">C0523284</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0371466</field>
+                <field type="AUI1">A0806781</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Thoracoscopy, surgical; with removal of intrapleural foreign body or fibrin deposit</field>
+                <field type="REL">RO</field>
+                <field type="STR">Thoracoscopy, surgical; with creation of pericardial window or partial resection of pericardial sac for drainage</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A0806773</field>
+                <field type="CUI2">C0371472</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0371472</field>
+                <field type="aui1">A0806773</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Thoracoscopy, surgical; with creation of pericardial window or partial resection of pericardial sac for drainage</field>
+                <field type="rel">RO</field>
+                <field type="str">Thoracoscopy, surgical; with removal of intrapleural foreign body or fibrin deposit</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A0806781</field>
+                <field type="cui2">C0371466</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0374037</field>
+                <field type="AUI1">A8575928</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Smear, primary source with interpretation; special stain for inclusion bodies or parasites (eg, malaria, coccidia, microsporidia, trypanosomes, herpes viruses)</field>
+                <field type="REL">RO</field>
+                <field type="STR">Smear, primary source with interpretation; wet mount for infectious agents (eg, saline, India ink, KOH preps)</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A1946773</field>
+                <field type="CUI2">C0374039</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0374039</field>
+                <field type="aui1">A1946773</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Smear, primary source with interpretation; wet mount for infectious agents (eg, saline, India ink, KOH preps)</field>
+                <field type="rel">RO</field>
+                <field type="str">Smear, primary source with interpretation; special stain for inclusion bodies or parasites (eg, malaria, coccidia, microsporidia, trypanosomes, herpes viruses)</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A8575928</field>
+                <field type="cui2">C0374037</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0195944</field>
+                <field type="AUI1">A0680795</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Craniotomy with elevation of bone flap; for excision of epileptogenic focus without electrocorticography during surgery</field>
+                <field type="REL">RO</field>
+                <field type="STR">Craniotomy with elevation of bone flap; for lobectomy, temporal lobe, without electrocorticography during surgery</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A3860303</field>
+                <field type="CUI2">C1314067</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C1314067</field>
+                <field type="aui1">A3860303</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Craniotomy with elevation of bone flap; for lobectomy, temporal lobe, without electrocorticography during surgery</field>
+                <field type="rel">RO</field>
+                <field type="str">Craniotomy with elevation of bone flap; for excision of epileptogenic focus without electrocorticography during surgery</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A0680795</field>
+                <field type="cui2">C0195944</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0189118</field>
+                <field type="AUI1">A1746410</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Sinusotomy frontal; obliterative, without osteoplastic flap, coronal incision (includes ablation)</field>
+                <field type="REL">RO</field>
+                <field type="STR">Sinusotomy frontal; nonobliterative, with osteoplastic flap, coronal incision</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A0796062</field>
+                <field type="CUI2">C0189122</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0189122</field>
+                <field type="aui1">A0796062</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Sinusotomy frontal; nonobliterative, with osteoplastic flap, coronal incision</field>
+                <field type="rel">RO</field>
+                <field type="str">Sinusotomy frontal; obliterative, without osteoplastic flap, coronal incision (includes ablation)</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A1746410</field>
+                <field type="cui2">C0189118</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0372694</field>
+                <field type="AUI1">A0661899</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Burr hole(s) or trephine; with biopsy of brain or intracranial lesion</field>
+                <field type="REL">RO</field>
+                <field type="STR">Burr hole(s) or trephine; with subsequent tapping (aspiration) of intracranial abscess or cyst</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A0661901</field>
+                <field type="CUI2">C0372696</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0372696</field>
+                <field type="aui1">A0661901</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Burr hole(s) or trephine; with subsequent tapping (aspiration) of intracranial abscess or cyst</field>
+                <field type="rel">RO</field>
+                <field type="str">Burr hole(s) or trephine; with biopsy of brain or intracranial lesion</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A0661899</field>
+                <field type="cui2">C0372694</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0190772</field>
+                <field type="AUI1">A0662157</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Bypass graft, with vein; axillary-axillary</field>
+                <field type="REL">RO</field>
+                <field type="STR">Bypass graft, with vein; brachial-brachial</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A3860172</field>
+                <field type="CUI2">C1314026</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C1314026</field>
+                <field type="aui1">A3860172</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Bypass graft, with vein; brachial-brachial</field>
+                <field type="rel">RO</field>
+                <field type="str">Bypass graft, with vein; axillary-axillary</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A0662157</field>
+                <field type="cui2">C0190772</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0372880</field>
+                <field type="AUI1">A0729672</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Laminectomy for biopsy/excision of intraspinal neoplasm; intradural, sacral</field>
+                <field type="REL">RO</field>
+                <field type="STR">Laminectomy for biopsy/excision of intraspinal neoplasm; intradural, intramedullary, cervical</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A0729669</field>
+                <field type="CUI2">C0372881</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0372881</field>
+                <field type="aui1">A0729669</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Laminectomy for biopsy/excision of intraspinal neoplasm; intradural, intramedullary, cervical</field>
+                <field type="rel">RO</field>
+                <field type="str">Laminectomy for biopsy/excision of intraspinal neoplasm; intradural, sacral</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A0729672</field>
+                <field type="cui2">C0372880</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0185502</field>
+                <field type="AUI1">A2059543</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Application, cast; figure-of-eight</field>
+                <field type="REL">RO</field>
+                <field type="STR">Application, cast; shoulder to hand (long arm)</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A2059548</field>
+                <field type="CUI2">C0371328</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0371328</field>
+                <field type="aui1">A2059548</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Application, cast; shoulder to hand (long arm)</field>
+                <field type="rel">RO</field>
+                <field type="str">Application, cast; figure-of-eight</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A2059543</field>
+                <field type="cui2">C0185502</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0373041</field>
+                <field type="AUI1">A15885234</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Destruction of localized lesion of retina (eg, macular edema, tumors), 1 or more sessions; cryotherapy, diathermy</field>
+                <field type="REL">RO</field>
+                <field type="STR">Destruction of localized lesion of retina (eg, macular edema, tumors), 1 or more sessions; radiation by implantation of source (includes removal of source)</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A15886125</field>
+                <field type="CUI2">C0197928</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0197928</field>
+                <field type="aui1">A15886125</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Destruction of localized lesion of retina (eg, macular edema, tumors), 1 or more sessions; radiation by implantation of source (includes removal of source)</field>
+                <field type="rel">RO</field>
+                <field type="str">Destruction of localized lesion of retina (eg, macular edema, tumors), 1 or more sessions; cryotherapy, diathermy</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A15885234</field>
+                <field type="cui2">C0373041</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0200411</field>
+                <field type="AUI1">A1749760</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Clotting; factor XII (Hageman)</field>
+                <field type="REL">RO</field>
+                <field type="STR">Clotting; factor XIII (fibrin stabilizing), screen solubility</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A0675653</field>
+                <field type="CUI2">C0373778</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0373778</field>
+                <field type="aui1">A0675653</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Clotting; factor XIII (fibrin stabilizing), screen solubility</field>
+                <field type="rel">RO</field>
+                <field type="str">Clotting; factor XII (Hageman)</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A1749760</field>
+                <field type="cui2">C0200411</field>
+            </row>
+        </sample>
+        <sample id="MTHCH2011_PAR__ROOT_SOURCE_CUI_ROOT_SOURCE_CUI" samplename="PAR" attribute="*" definition="has parent relationship in a Metathesaurus source vocabulary &#10;" count="10482">
+            <row type="standard">
+                <field type="CUI1">C0519487</field>
+                <field type="AUI1">A15885320</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Repair of the Biliary Tract</field>
+                <field type="REL">PAR</field>
+                <field type="STR">Surgical Procedures on the Biliary Tract</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A13077675</field>
+                <field type="CUI2">C0005427</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0005427</field>
+                <field type="aui1">A13077675</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Surgical Procedures on the Biliary Tract</field>
+                <field type="rel">CHD</field>
+                <field type="str">Repair of the Biliary Tract</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A15885320</field>
+                <field type="cui2">C0519487</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C1964108</field>
+                <field type="AUI1">A15887066</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Dilated fundus evaluation performed within 12 months prior to cataract surgery (EC)</field>
+                <field type="REL">PAR</field>
+                <field type="STR">Physical Examination Codes for Performance Measurement</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A18511886</field>
+                <field type="CUI2">C1609025</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C1609025</field>
+                <field type="aui1">A18511886</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Physical Examination Codes for Performance Measurement</field>
+                <field type="rel">CHD</field>
+                <field type="str">Dilated fundus evaluation performed within 12 months prior to cataract surgery (EC)</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A15887066</field>
+                <field type="cui2">C1964108</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0371127</field>
+                <field type="AUI1">A15887002</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Open treatment of posterior pelvic bone fracture and/or dislocation, for fracture patterns that disrupt the pelvic ring, unilateral, includes internal fixation, when performed (includes ipsilateral ilium, sacroiliac joint and/or sacrum)</field>
+                <field type="REL">PAR</field>
+                <field type="STR">Treatment of Fracture and/or Dislocation of the Musculoskeletal System of the Pelvis and Hip Joint</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A18514790</field>
+                <field type="CUI2">C0519321</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0519321</field>
+                <field type="aui1">A18514790</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Treatment of Fracture and/or Dislocation of the Musculoskeletal System of the Pelvis and Hip Joint</field>
+                <field type="rel">CHD</field>
+                <field type="str">Open treatment of posterior pelvic bone fracture and/or dislocation, for fracture patterns that disrupt the pelvic ring, unilateral, includes internal fixation, when performed (includes ipsilateral ilium, sacroiliac joint and/or sacrum)</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A15887002</field>
+                <field type="cui2">C0371127</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0371505</field>
+                <field type="AUI1">A17111180</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Repair of 2 transvenous electrodes for a dual chamber permanent pacemaker or dual chamber pacing cardioverter-defibrillator</field>
+                <field type="REL">PAR</field>
+                <field type="STR">Surgical Procedures Involving a Pacemaker or Pacing Cardioverter-Defibrillator</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A18514383</field>
+                <field type="CUI2">C1314164</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C1314164</field>
+                <field type="aui1">A18514383</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Surgical Procedures Involving a Pacemaker or Pacing Cardioverter-Defibrillator</field>
+                <field type="rel">CHD</field>
+                <field type="str">Repair of 2 transvenous electrodes for a dual chamber permanent pacemaker or dual chamber pacing cardioverter-defibrillator</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A17111180</field>
+                <field type="cui2">C0371505</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0374105</field>
+                <field type="AUI1">A0798204</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Sperm evaluation; cervical mucus penetration test, with or without spinnbarkeit test</field>
+                <field type="REL">PAR</field>
+                <field type="STR">Reproductive Medicine Procedures</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A18511884</field>
+                <field type="CUI2">C0841184</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0841184</field>
+                <field type="aui1">A18511884</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Reproductive Medicine Procedures</field>
+                <field type="rel">CHD</field>
+                <field type="str">Sperm evaluation; cervical mucus penetration test, with or without spinnbarkeit test</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A0798204</field>
+                <field type="cui2">C0374105</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C2939279</field>
+                <field type="AUI1">A18513134</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Vascular Injection Procedures</field>
+                <field type="REL">PAR</field>
+                <field type="STR">Surgical Procedures on the Arteries and Veins</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A13076895</field>
+                <field type="CUI2">C0042381</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0042381</field>
+                <field type="aui1">A13076895</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Surgical Procedures on the Arteries and Veins</field>
+                <field type="rel">CHD</field>
+                <field type="str">Vascular Injection Procedures</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A18513134</field>
+                <field type="cui2">C2939279</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0195233</field>
+                <field type="AUI1">A0676851</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Combined anteroposterior colporrhaphy; with enterocele repair</field>
+                <field type="REL">PAR</field>
+                <field type="STR">Repair of the Vagina</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A13076926</field>
+                <field type="CUI2">C0558340</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0558340</field>
+                <field type="aui1">A13076926</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Repair of the Vagina</field>
+                <field type="rel">CHD</field>
+                <field type="str">Combined anteroposterior colporrhaphy; with enterocele repair</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A0676851</field>
+                <field type="cui2">C0195233</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0191769</field>
+                <field type="AUI1">A0698270</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Excision, trochanteric pressure ulcer, with skin flap closure</field>
+                <field type="REL">PAR</field>
+                <field type="STR">Surgical Procedures on Pressure Ulcers (Decubitus Ulcers)</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A13076474</field>
+                <field type="CUI2">C0519242</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0519242</field>
+                <field type="aui1">A13076474</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Surgical Procedures on Pressure Ulcers (Decubitus Ulcers)</field>
+                <field type="rel">CHD</field>
+                <field type="str">Excision, trochanteric pressure ulcer, with skin flap closure</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A0698270</field>
+                <field type="cui2">C0191769</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0695069</field>
+                <field type="AUI1">A1414421</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Mass spectrometry and tandem mass spectrometry (MS, MS/MS), analyte not elsewhere specified; qualitative, each specimen</field>
+                <field type="REL">PAR</field>
+                <field type="STR">Chemistry Pathology and Laboratory Tests</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A13078491</field>
+                <field type="CUI2">C0519668</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0519668</field>
+                <field type="aui1">A13078491</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Chemistry Pathology and Laboratory Tests</field>
+                <field type="rel">CHD</field>
+                <field type="str">Mass spectrometry and tandem mass spectrometry (MS, MS/MS), analyte not elsewhere specified; qualitative, each specimen</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A1414421</field>
+                <field type="cui2">C0695069</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0371207</field>
+                <field type="AUI1">A0813739</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Unlisted procedure, femur or knee</field>
+                <field type="REL">PAR</field>
+                <field type="STR">Other Surgical Procedures on the Musculoskeletal System of the Femur (Thigh Region) and Knee Joint</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A13076489</field>
+                <field type="CUI2">C0519334</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0519334</field>
+                <field type="aui1">A13076489</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Other Surgical Procedures on the Musculoskeletal System of the Femur (Thigh Region) and Knee Joint</field>
+                <field type="rel">CHD</field>
+                <field type="str">Unlisted procedure, femur or knee</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A0813739</field>
+                <field type="cui2">C0371207</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0192854</field>
+                <field type="AUI1">A1749722</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Colectomy, partial; with end colostomy and closure of distal segment (Hartmann type procedure)</field>
+                <field type="REL">PAR</field>
+                <field type="STR">Excision of the Intestines (except Rectum)</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A13077666</field>
+                <field type="CUI2">C0519470</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0519470</field>
+                <field type="aui1">A13077666</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Excision of the Intestines (except Rectum)</field>
+                <field type="rel">CHD</field>
+                <field type="str">Colectomy, partial; with end colostomy and closure of distal segment (Hartmann type procedure)</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A1749722</field>
+                <field type="cui2">C0192854</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0190120</field>
+                <field type="AUI1">A0784020</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Replacement, tricuspid valve, with cardiopulmonary bypass</field>
+                <field type="REL">PAR</field>
+                <field type="STR">Surgical Procedures on the Tricuspid Valve</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A13077231</field>
+                <field type="CUI2">C0519383</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0519383</field>
+                <field type="aui1">A13077231</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Surgical Procedures on the Tricuspid Valve</field>
+                <field type="rel">CHD</field>
+                <field type="str">Replacement, tricuspid valve, with cardiopulmonary bypass</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A0784020</field>
+                <field type="cui2">C0190120</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C1314080</field>
+                <field type="AUI1">A3860335</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Destruction by neurolytic agent, with or without radiologic monitoring; superior hypogastric plexus</field>
+                <field type="REL">PAR</field>
+                <field type="STR">Destruction of Sympathetic Nerves by Neurolytic Agent</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A13079193</field>
+                <field type="CUI2">C0519584</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0519584</field>
+                <field type="aui1">A13079193</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Destruction of Sympathetic Nerves by Neurolytic Agent</field>
+                <field type="rel">CHD</field>
+                <field type="str">Destruction by neurolytic agent, with or without radiologic monitoring; superior hypogastric plexus</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A3860335</field>
+                <field type="cui2">C1314080</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0370768</field>
+                <field type="AUI1">A0757703</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Open treatment of mandibular fracture with external fixation</field>
+                <field type="REL">PAR</field>
+                <field type="STR">Treatment of Fracture and/or Dislocation of the Musculoskeletal System of the Head</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A13077204</field>
+                <field type="CUI2">C0519261</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0519261</field>
+                <field type="aui1">A13077204</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Treatment of Fracture and/or Dislocation of the Musculoskeletal System of the Head</field>
+                <field type="rel">CHD</field>
+                <field type="str">Open treatment of mandibular fracture with external fixation</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A0757703</field>
+                <field type="cui2">C0370768</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0370814</field>
+                <field type="AUI1">A17110312</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Open treatment and/or reduction of vertebral fracture(s) and/or dislocation(s), posterior approach, 1 fractured vertebra or dislocated segment; cervical</field>
+                <field type="REL">PAR</field>
+                <field type="STR">Treatment of Fracture and/or Dislocation of the Musculoskeletal System of the Spine (Vertebral Column)</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A13078033</field>
+                <field type="CUI2">C0519272</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0519272</field>
+                <field type="aui1">A13078033</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Treatment of Fracture and/or Dislocation of the Musculoskeletal System of the Spine (Vertebral Column)</field>
+                <field type="rel">CHD</field>
+                <field type="str">Open treatment and/or reduction of vertebral fracture(s) and/or dislocation(s), posterior approach, 1 fractured vertebra or dislocated segment; cervical</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A17110312</field>
+                <field type="cui2">C0370814</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0188079</field>
+                <field type="AUI1">A13079069</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Open treatment of distal femoral epiphyseal separation, includes internal fixation, when performed</field>
+                <field type="REL">PAR</field>
+                <field type="STR">Treatment of Fracture and/or Dislocation of the Musculoskeletal System of the Femur (Thigh Region) and Knee Joint</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A13077635</field>
+                <field type="CUI2">C0519330</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0519330</field>
+                <field type="aui1">A13077635</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Treatment of Fracture and/or Dislocation of the Musculoskeletal System of the Femur (Thigh Region) and Knee Joint</field>
+                <field type="rel">CHD</field>
+                <field type="str">Open treatment of distal femoral epiphyseal separation, includes internal fixation, when performed</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A13079069</field>
+                <field type="cui2">C0188079</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0374586</field>
+                <field type="AUI1">A13078369</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Emergency department visit for the evaluation and management of a patient, which requires these 3 key components within the constraints imposed by the urgency of the patient's clinical condition and/or mental status: A comprehensive history; A comprehensive examination; and Medical decision making of high complexity. Counseling and/or coordination of care with other providers or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are of high severity and pose an immediate significant threat to life or physiologic function.</field>
+                <field type="REL">PAR</field>
+                <field type="STR">Emergency Department Services for a New or Established Patient</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A13078857</field>
+                <field type="CUI2">C0519724</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0519724</field>
+                <field type="aui1">A13078857</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Emergency Department Services for a New or Established Patient</field>
+                <field type="rel">CHD</field>
+                <field type="str">Emergency department visit for the evaluation and management of a patient, which requires these 3 key components within the constraints imposed by the urgency of the patient's clinical condition and/or mental status: A comprehensive history; A comprehensive examination; and Medical decision making of high complexity. Counseling and/or coordination of care with other providers or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are of high severity and pose an immediate significant threat to life or physiologic function.</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A13078369</field>
+                <field type="cui2">C0374586</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0519200</field>
+                <field type="AUI1">A15886594</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Chiropractic manipulative treatment (CMT); spinal, 5 regions</field>
+                <field type="REL">PAR</field>
+                <field type="STR">Chiropractic Manipulative Treatment Procedures</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A13076578</field>
+                <field type="CUI2">C0519705</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0519705</field>
+                <field type="aui1">A13076578</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Chiropractic Manipulative Treatment Procedures</field>
+                <field type="rel">CHD</field>
+                <field type="str">Chiropractic manipulative treatment (CMT); spinal, 5 regions</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A15886594</field>
+                <field type="cui2">C0519200</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0373524</field>
+                <field type="AUI1">A0814791</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Urine pregnancy test, by visual color comparison methods</field>
+                <field type="REL">PAR</field>
+                <field type="STR">Urinalysis Procedures</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A13079213</field>
+                <field type="CUI2">C0042014</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0042014</field>
+                <field type="aui1">A13079213</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Urinalysis Procedures</field>
+                <field type="rel">CHD</field>
+                <field type="str">Urine pregnancy test, by visual color comparison methods</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A0814791</field>
+                <field type="cui2">C0373524</field>
+            </row>
+        </sample>
+        <sample id="MTHCH2011_NT__ROOT_SOURCE_CUI_ROOT_SOURCE_CUI" samplename="RN" attribute="*" definition="has a narrower relationship&#10;" count="124">
+            <row type="standard">
+                <field type="CUI1">C0370296</field>
+                <field type="AUI1">A0644834</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Anesthesia for intraperitoneal procedures in lower abdomen including laparoscopy; not otherwise specified</field>
+                <field type="REL">RN</field>
+                <field type="STR">Anesthesia for intraperitoneal procedures in lower abdomen including laparoscopy; abdominoperineal resection</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A0644832</field>
+                <field type="CUI2">C0370298</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0370298</field>
+                <field type="aui1">A0644832</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Anesthesia for intraperitoneal procedures in lower abdomen including laparoscopy; abdominoperineal resection</field>
+                <field type="rel">RB</field>
+                <field type="str">Anesthesia for intraperitoneal procedures in lower abdomen including laparoscopy; not otherwise specified</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A0644834</field>
+                <field type="cui2">C0370296</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0199047</field>
+                <field type="AUI1">A1945920</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Anesthesia for procedures on male genitalia (including open urethral procedures); not otherwise specified</field>
+                <field type="REL">RN</field>
+                <field type="STR">Anesthesia for procedures on male genitalia (including open urethral procedures); seminal vesicles</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A1945926</field>
+                <field type="CUI2">C0199037</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0199037</field>
+                <field type="aui1">A1945926</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Anesthesia for procedures on male genitalia (including open urethral procedures); seminal vesicles</field>
+                <field type="rel">RB</field>
+                <field type="str">Anesthesia for procedures on male genitalia (including open urethral procedures); not otherwise specified</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A1945920</field>
+                <field type="cui2">C0199047</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0198918</field>
+                <field type="AUI1">A2406575</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Anesthesia for open or surgical arthroscopic procedures on humeral head and neck, sternoclavicular joint, acromioclavicular joint, and shoulder joint; not otherwise specified</field>
+                <field type="REL">RN</field>
+                <field type="STR">Anesthesia for open or surgical arthroscopic procedures on humeral head and neck, sternoclavicular joint, acromioclavicular joint, and shoulder joint; shoulder disarticulation</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A2406577</field>
+                <field type="CUI2">C0370346</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0370346</field>
+                <field type="aui1">A2406577</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Anesthesia for open or surgical arthroscopic procedures on humeral head and neck, sternoclavicular joint, acromioclavicular joint, and shoulder joint; shoulder disarticulation</field>
+                <field type="rel">RB</field>
+                <field type="str">Anesthesia for open or surgical arthroscopic procedures on humeral head and neck, sternoclavicular joint, acromioclavicular joint, and shoulder joint; not otherwise specified</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A2406575</field>
+                <field type="cui2">C0198918</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0198907</field>
+                <field type="AUI1">A0644853</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Anesthesia for partial rib resection; not otherwise specified</field>
+                <field type="REL">RN</field>
+                <field type="STR">Anesthesia for partial rib resection; thoracoplasty (any type)</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A1747388</field>
+                <field type="CUI2">C0370268</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0370268</field>
+                <field type="aui1">A1747388</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Anesthesia for partial rib resection; thoracoplasty (any type)</field>
+                <field type="rel">RB</field>
+                <field type="str">Anesthesia for partial rib resection; not otherwise specified</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A0644853</field>
+                <field type="cui2">C0198907</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0199091</field>
+                <field type="AUI1">A0644845</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Anesthesia for open procedures involving hip joint; not otherwise specified</field>
+                <field type="REL">RN</field>
+                <field type="STR">Anesthesia for open procedures involving hip joint; hip disarticulation</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A0644844</field>
+                <field type="CUI2">C0199083</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0199083</field>
+                <field type="aui1">A0644844</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Anesthesia for open procedures involving hip joint; hip disarticulation</field>
+                <field type="rel">RB</field>
+                <field type="str">Anesthesia for open procedures involving hip joint; not otherwise specified</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A0644845</field>
+                <field type="cui2">C0199091</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0198918</field>
+                <field type="AUI1">A2406575</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Anesthesia for open or surgical arthroscopic procedures on humeral head and neck, sternoclavicular joint, acromioclavicular joint, and shoulder joint; not otherwise specified</field>
+                <field type="REL">RN</field>
+                <field type="STR">Anesthesia for open or surgical arthroscopic procedures on humeral head and neck, sternoclavicular joint, acromioclavicular joint, and shoulder joint; interthoracoscapular (forequarter) amputation</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A2406574</field>
+                <field type="CUI2">C0370347</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0370347</field>
+                <field type="aui1">A2406574</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Anesthesia for open or surgical arthroscopic procedures on humeral head and neck, sternoclavicular joint, acromioclavicular joint, and shoulder joint; interthoracoscapular (forequarter) amputation</field>
+                <field type="rel">RB</field>
+                <field type="str">Anesthesia for open or surgical arthroscopic procedures on humeral head and neck, sternoclavicular joint, acromioclavicular joint, and shoulder joint; not otherwise specified</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A2406575</field>
+                <field type="cui2">C0198918</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0199164</field>
+                <field type="AUI1">A2406582</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Anesthesia for open or surgical arthroscopic/endoscopic procedures on distal radius, distal ulna, wrist, or hand joints; not otherwise specified</field>
+                <field type="REL">RN</field>
+                <field type="STR">Anesthesia for open or surgical arthroscopic/endoscopic procedures on distal radius, distal ulna, wrist, or hand joints; total wrist replacement</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A2406583</field>
+                <field type="CUI2">C0370360</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0370360</field>
+                <field type="aui1">A2406583</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Anesthesia for open or surgical arthroscopic/endoscopic procedures on distal radius, distal ulna, wrist, or hand joints; total wrist replacement</field>
+                <field type="rel">RB</field>
+                <field type="str">Anesthesia for open or surgical arthroscopic/endoscopic procedures on distal radius, distal ulna, wrist, or hand joints; not otherwise specified</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A2406582</field>
+                <field type="cui2">C0199164</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0199161</field>
+                <field type="AUI1">A0644861</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Anesthesia for procedures on arteries of forearm, wrist, and hand; not otherwise specified</field>
+                <field type="REL">RN</field>
+                <field type="STR">Anesthesia for procedures on arteries of forearm, wrist, and hand; embolectomy</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A0644860</field>
+                <field type="CUI2">C0199162</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0199162</field>
+                <field type="aui1">A0644860</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Anesthesia for procedures on arteries of forearm, wrist, and hand; embolectomy</field>
+                <field type="rel">RB</field>
+                <field type="str">Anesthesia for procedures on arteries of forearm, wrist, and hand; not otherwise specified</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A0644861</field>
+                <field type="cui2">C0199161</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0973239</field>
+                <field type="AUI1">A13076781</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Anesthesia for therapeutic interventional radiological procedures involving the venous/lymphatic system (not to include access to the central circulation); not otherwise specified</field>
+                <field type="REL">RN</field>
+                <field type="STR">Anesthesia for therapeutic interventional radiological procedures involving the venous/lymphatic system (not to include access to the central circulation); intrathoracic or jugular</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A13079057</field>
+                <field type="CUI2">C0973240</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0973240</field>
+                <field type="aui1">A13079057</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Anesthesia for therapeutic interventional radiological procedures involving the venous/lymphatic system (not to include access to the central circulation); intrathoracic or jugular</field>
+                <field type="rel">RB</field>
+                <field type="str">Anesthesia for therapeutic interventional radiological procedures involving the venous/lymphatic system (not to include access to the central circulation); not otherwise specified</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A13076781</field>
+                <field type="cui2">C0973239</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0199005</field>
+                <field type="AUI1">A0644816</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Anesthesia for hernia repairs in lower abdomen; not otherwise specified</field>
+                <field type="REL">RN</field>
+                <field type="STR">Anesthesia for hernia repairs in lower abdomen; ventral and incisional hernias</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A0644817</field>
+                <field type="CUI2">C0199006</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0199006</field>
+                <field type="aui1">A0644817</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Anesthesia for hernia repairs in lower abdomen; ventral and incisional hernias</field>
+                <field type="rel">RB</field>
+                <field type="str">Anesthesia for hernia repairs in lower abdomen; not otherwise specified</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A0644816</field>
+                <field type="cui2">C0199005</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0370303</field>
+                <field type="AUI1">A0644811</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Anesthesia for extraperitoneal procedures in lower abdomen, including urinary tract; not otherwise specified</field>
+                <field type="REL">RN</field>
+                <field type="STR">Anesthesia for extraperitoneal procedures in lower abdomen, including urinary tract; total cystectomy</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A0644813</field>
+                <field type="CUI2">C0370305</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0370305</field>
+                <field type="aui1">A0644813</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Anesthesia for extraperitoneal procedures in lower abdomen, including urinary tract; total cystectomy</field>
+                <field type="rel">RB</field>
+                <field type="str">Anesthesia for extraperitoneal procedures in lower abdomen, including urinary tract; not otherwise specified</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A0644811</field>
+                <field type="cui2">C0370303</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0199139</field>
+                <field type="AUI1">A0644913</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Anesthesia for procedures on veins of upper arm and elbow; not otherwise specified</field>
+                <field type="REL">RN</field>
+                <field type="STR">Anesthesia for procedures on veins of upper arm and elbow; phleborrhaphy</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A0644914</field>
+                <field type="CUI2">C0199140</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0199140</field>
+                <field type="aui1">A0644914</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Anesthesia for procedures on veins of upper arm and elbow; phleborrhaphy</field>
+                <field type="rel">RB</field>
+                <field type="str">Anesthesia for procedures on veins of upper arm and elbow; not otherwise specified</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A0644913</field>
+                <field type="cui2">C0199139</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0370260</field>
+                <field type="AUI1">A1747385</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Anesthesia for procedures on the integumentary system on the extremities, anterior trunk and perineum; not otherwise specified</field>
+                <field type="REL">RN</field>
+                <field type="STR">Anesthesia for procedures on the integumentary system on the extremities, anterior trunk and perineum; radical or modified radical procedures on breast with internal mammary node dissection</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A1747383</field>
+                <field type="CUI2">C0370263</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0370263</field>
+                <field type="aui1">A1747383</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Anesthesia for procedures on the integumentary system on the extremities, anterior trunk and perineum; radical or modified radical procedures on breast with internal mammary node dissection</field>
+                <field type="rel">RB</field>
+                <field type="str">Anesthesia for procedures on the integumentary system on the extremities, anterior trunk and perineum; not otherwise specified</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A1747385</field>
+                <field type="cui2">C0370260</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0198869</field>
+                <field type="AUI1">A0644900</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Anesthesia for procedures on nose and accessory sinuses; not otherwise specified</field>
+                <field type="REL">RN</field>
+                <field type="STR">Anesthesia for procedures on nose and accessory sinuses; radical surgery</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A0644901</field>
+                <field type="CUI2">C0198871</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0198871</field>
+                <field type="aui1">A0644901</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Anesthesia for procedures on nose and accessory sinuses; radical surgery</field>
+                <field type="rel">RB</field>
+                <field type="str">Anesthesia for procedures on nose and accessory sinuses; not otherwise specified</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A0644900</field>
+                <field type="cui2">C0198869</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0199098</field>
+                <field type="AUI1">A0644910</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Anesthesia for procedures on veins of knee and popliteal area; not otherwise specified</field>
+                <field type="REL">RN</field>
+                <field type="STR">Anesthesia for procedures on veins of knee and popliteal area; arteriovenous fistula</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A0644909</field>
+                <field type="CUI2">C0199101</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0199101</field>
+                <field type="aui1">A0644909</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Anesthesia for procedures on veins of knee and popliteal area; arteriovenous fistula</field>
+                <field type="rel">RB</field>
+                <field type="str">Anesthesia for procedures on veins of knee and popliteal area; not otherwise specified</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A0644910</field>
+                <field type="cui2">C0199098</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0199145</field>
+                <field type="AUI1">A2406569</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Anesthesia for open or surgical arthroscopic procedures of the elbow; not otherwise specified</field>
+                <field type="REL">RN</field>
+                <field type="STR">Anesthesia for open or surgical arthroscopic procedures of the elbow; excision of cyst or tumor of humerus</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A2406568</field>
+                <field type="CUI2">C0370358</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0370358</field>
+                <field type="aui1">A2406568</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Anesthesia for open or surgical arthroscopic procedures of the elbow; excision of cyst or tumor of humerus</field>
+                <field type="rel">RB</field>
+                <field type="str">Anesthesia for open or surgical arthroscopic procedures of the elbow; not otherwise specified</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A2406569</field>
+                <field type="cui2">C0199145</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0199091</field>
+                <field type="AUI1">A0644845</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Anesthesia for open procedures involving hip joint; not otherwise specified</field>
+                <field type="REL">RN</field>
+                <field type="STR">Anesthesia for open procedures involving hip joint; total hip arthroplasty</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A2059521</field>
+                <field type="CUI2">C0370331</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0370331</field>
+                <field type="aui1">A2059521</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Anesthesia for open procedures involving hip joint; total hip arthroplasty</field>
+                <field type="rel">RB</field>
+                <field type="str">Anesthesia for open procedures involving hip joint; not otherwise specified</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A0644845</field>
+                <field type="cui2">C0199091</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0199023</field>
+                <field type="AUI1">A0644890</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Anesthesia for procedures on major lower abdominal vessels; not otherwise specified</field>
+                <field type="REL">RN</field>
+                <field type="STR">Anesthesia for procedures on major lower abdominal vessels; inferior vena cava ligation</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A0644889</field>
+                <field type="CUI2">C0370310</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0370310</field>
+                <field type="aui1">A0644889</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Anesthesia for procedures on major lower abdominal vessels; inferior vena cava ligation</field>
+                <field type="rel">RB</field>
+                <field type="str">Anesthesia for procedures on major lower abdominal vessels; not otherwise specified</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A0644890</field>
+                <field type="cui2">C0199023</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0199091</field>
+                <field type="AUI1">A0644845</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Anesthesia for open procedures involving hip joint; not otherwise specified</field>
+                <field type="REL">RN</field>
+                <field type="STR">Anesthesia for open procedures involving hip joint; revision of total hip arthroplasty</field>
+                <field type="STYPE2">SCUI</field>
+                <field type="AUI2">A1945910</field>
+                <field type="CUI2">C0918052</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C0918052</field>
+                <field type="aui1">A1945910</field>
+                <field type="stype1">SCUI</field>
+                <field type="str">Anesthesia for open procedures involving hip joint; revision of total hip arthroplasty</field>
+                <field type="rel">RB</field>
+                <field type="str">Anesthesia for open procedures involving hip joint; not otherwise specified</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A0644845</field>
+                <field type="cui2">C0199091</field>
+            </row>
+        </sample>
+        <sample id="MTHCH2011_PAR__ROOT_SOURCE_CUI_AUI" samplename="PAR" attribute="*" definition="has parent relationship in a Metathesaurus source vocabulary &#10;" count="8">
+            <row type="standard">
+                <field type="CUI1">C1314192</field>
+                <field type="AUI1">A15885326</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Tracking Codes for Performance Measurement (Category II)</field>
+                <field type="REL">PAR</field>
+                <field type="STR">Metathesaurus CPT Hierarchical Terms</field>
+                <field type="STYPE2">AUI</field>
+                <field type="AUI2">A13475664</field>
+                <field type="CUI2">C1140180</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C1140180</field>
+                <field type="aui1">A13475664</field>
+                <field type="stype1">AUI</field>
+                <field type="str">Metathesaurus CPT Hierarchical Terms</field>
+                <field type="rel">CHD</field>
+                <field type="str">Tracking Codes for Performance Measurement (Category II)</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A15885326</field>
+                <field type="cui2">C1314192</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0973443</field>
+                <field type="AUI1">A18511885</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Emerging Technology, Services &amp; Procedure Codes (Category III, Temporary)</field>
+                <field type="REL">PAR</field>
+                <field type="STR">Metathesaurus CPT Hierarchical Terms</field>
+                <field type="STYPE2">AUI</field>
+                <field type="AUI2">A13475664</field>
+                <field type="CUI2">C1140180</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C1140180</field>
+                <field type="aui1">A13475664</field>
+                <field type="stype1">AUI</field>
+                <field type="str">Metathesaurus CPT Hierarchical Terms</field>
+                <field type="rel">CHD</field>
+                <field type="str">Emerging Technology, Services &amp; Procedure Codes (Category III, Temporary)</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A18511885</field>
+                <field type="cui2">C0973443</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0519666</field>
+                <field type="AUI1">A18512321</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Pathology and Laboratory Tests</field>
+                <field type="REL">PAR</field>
+                <field type="STR">Metathesaurus CPT Hierarchical Terms</field>
+                <field type="STYPE2">AUI</field>
+                <field type="AUI2">A13475664</field>
+                <field type="CUI2">C1140180</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C1140180</field>
+                <field type="aui1">A13475664</field>
+                <field type="stype1">AUI</field>
+                <field type="str">Metathesaurus CPT Hierarchical Terms</field>
+                <field type="rel">CHD</field>
+                <field type="str">Pathology and Laboratory Tests</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A18512321</field>
+                <field type="cui2">C0519666</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C1964239</field>
+                <field type="AUI1">A13078839</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Medicine Services and Procedures</field>
+                <field type="REL">PAR</field>
+                <field type="STR">Metathesaurus CPT Hierarchical Terms</field>
+                <field type="STYPE2">AUI</field>
+                <field type="AUI2">A13475664</field>
+                <field type="CUI2">C1140180</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C1140180</field>
+                <field type="aui1">A13475664</field>
+                <field type="stype1">AUI</field>
+                <field type="str">Metathesaurus CPT Hierarchical Terms</field>
+                <field type="rel">CHD</field>
+                <field type="str">Medicine Services and Procedures</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A13078839</field>
+                <field type="cui2">C1964239</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0543467</field>
+                <field type="AUI1">A13076470</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Surgical Procedures</field>
+                <field type="REL">PAR</field>
+                <field type="STR">Metathesaurus CPT Hierarchical Terms</field>
+                <field type="STYPE2">AUI</field>
+                <field type="AUI2">A13475664</field>
+                <field type="CUI2">C1140180</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C1140180</field>
+                <field type="aui1">A13475664</field>
+                <field type="stype1">AUI</field>
+                <field type="str">Metathesaurus CPT Hierarchical Terms</field>
+                <field type="rel">CHD</field>
+                <field type="str">Surgical Procedures</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A13076470</field>
+                <field type="cui2">C0543467</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0002903</field>
+                <field type="AUI1">A13076466</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Anesthesia Procedures</field>
+                <field type="REL">PAR</field>
+                <field type="STR">Metathesaurus CPT Hierarchical Terms</field>
+                <field type="STYPE2">AUI</field>
+                <field type="AUI2">A13475664</field>
+                <field type="CUI2">C1140180</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C1140180</field>
+                <field type="aui1">A13475664</field>
+                <field type="stype1">AUI</field>
+                <field type="str">Metathesaurus CPT Hierarchical Terms</field>
+                <field type="rel">CHD</field>
+                <field type="str">Anesthesia Procedures</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A13076466</field>
+                <field type="cui2">C0002903</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0807679</field>
+                <field type="AUI1">A13078129</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Radiology Procedures</field>
+                <field type="REL">PAR</field>
+                <field type="STR">Metathesaurus CPT Hierarchical Terms</field>
+                <field type="STYPE2">AUI</field>
+                <field type="AUI2">A13475664</field>
+                <field type="CUI2">C1140180</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C1140180</field>
+                <field type="aui1">A13475664</field>
+                <field type="stype1">AUI</field>
+                <field type="str">Metathesaurus CPT Hierarchical Terms</field>
+                <field type="rel">CHD</field>
+                <field type="str">Radiology Procedures</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A13078129</field>
+                <field type="cui2">C0807679</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C0519710</field>
+                <field type="AUI1">A13078160</field>
+                <field type="STYPE1">SCUI</field>
+                <field type="STR">Evaluation and Management Procedures</field>
+                <field type="REL">PAR</field>
+                <field type="STR">Metathesaurus CPT Hierarchical Terms</field>
+                <field type="STYPE2">AUI</field>
+                <field type="AUI2">A13475664</field>
+                <field type="CUI2">C1140180</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C1140180</field>
+                <field type="aui1">A13475664</field>
+                <field type="stype1">AUI</field>
+                <field type="str">Metathesaurus CPT Hierarchical Terms</field>
+                <field type="rel">CHD</field>
+                <field type="str">Evaluation and Management Procedures</field>
+                <field type="stype2">SCUI</field>
+                <field type="aui2">A13078160</field>
+                <field type="cui2">C0519710</field>
+            </row>
+        </sample>
+    </samples>
+</document>

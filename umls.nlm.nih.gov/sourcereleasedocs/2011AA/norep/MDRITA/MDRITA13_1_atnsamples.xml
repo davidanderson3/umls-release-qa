@@ -1,0 +1,2832 @@
+<document vsab="MDRITA13_1" samples="Attributes">
+    <samples>
+        <labels>
+            <label type="metalabel">Attribute Name</label>
+            <label type="definition">Description</label>
+            <label type="count">Count (MRSAT.RRF)</label>
+        </labels>
+        <sample id="MDRITA13_1_SMQ_TERM_ADDVERSION_RUI" samplename="SMQ_TERM_ADDVERSION" definition="Standardised MedDRA Query (SMQ) Addition Version. Version of MedDRA in which term was added to the SMQ." count="113150">
+            <row type="standard">
+                <field type="CUI">C1869006</field>
+                <field type="METAUI">R92813589</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">7.1</field>
+                <field type="STR">Torsione di punta/prolungamento del QT (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0876986</field>
+                <field type="METAUI">R92802511</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">10.0</field>
+                <field type="STR">Insufficienza cardiaca congestizia aggravata</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0151763</field>
+                <field type="METAUI">R92776458</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">8.0</field>
+                <field type="STR">Danno al fegato</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0860267</field>
+                <field type="METAUI">R92783966</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">8.0</field>
+                <field type="STR">Tossicosi ereditaria da rame</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0241390</field>
+                <field type="METAUI">R92804152</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">8.0</field>
+                <field type="STR">Tempo di trombina prolungato</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869024</field>
+                <field type="METAUI">R92816116</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">8.0</field>
+                <field type="STR">Gravi reazioni cutanee indesiderate (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0859055</field>
+                <field type="METAUI">R92806971</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">8.1</field>
+                <field type="STR">Edema vascolare</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0860511</field>
+                <field type="METAUI">R92769613</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">8.1</field>
+                <field type="STR">Resistenze aeree aumentate</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0853084</field>
+                <field type="METAUI">R92782032</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">8.1</field>
+                <field type="STR">Lipoproteine a densità elevata, aumentate</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869037</field>
+                <field type="METAUI">R92819037</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">8.1</field>
+                <field type="STR">Neuropatia periferica (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869037</field>
+                <field type="METAUI">R92819131</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">8.1</field>
+                <field type="STR">Neuropatia periferica (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0919666</field>
+                <field type="METAUI">R92805887</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">9.0</field>
+                <field type="STR">Emorragia in sede di puntura venosa</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0855302</field>
+                <field type="METAUI">R92780608</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">9.1</field>
+                <field type="STR">Fruttosamina aumentata</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0234962</field>
+                <field type="METAUI">R92801701</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">9.0</field>
+                <field type="STR">Vasculite del polmone</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0857252</field>
+                <field type="METAUI">R92783779</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">9.0</field>
+                <field type="STR">Ipertensione arteriosa fuori controllo</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0263678</field>
+                <field type="METAUI">R92812393</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">9.1</field>
+                <field type="STR">Artrite acuta</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0262525</field>
+                <field type="METAUI">R92804343</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">9.1</field>
+                <field type="STR">Blocco di branca destro incompleto</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1557158</field>
+                <field type="METAUI">R92811962</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">9.1</field>
+                <field type="STR">Fibrosi linfedema-correlata</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0036980</field>
+                <field type="METAUI">R92797317</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">9.1</field>
+                <field type="STR">Shock cardiogeno</field>
+            </row>
+        </sample>
+        <sample id="MDRITA13_1_SMQ_TERM_CAT_RUI" samplename="SMQ_TERM_CAT" definition="Standardised MedDRA Query (SMQ) Term Category. A single alphabetical letter indicating the category of the term for application of the SMQ algorithm. If the SMQ does not use algorithms, then all Term_category values are assigned &quot;A.&quot; For a child SMQ, this field is assigned &quot;S.&quot;" count="113150">
+            <row type="standard">
+                <field type="CUI">C1869006</field>
+                <field type="METAUI">R92813495</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">Torsione di punta/prolungamento del QT (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0857358</field>
+                <field type="METAUI">R92770865</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">Atrofia epatocitaria</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869023</field>
+                <field type="METAUI">R92815678</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">Patologie emolitiche (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869026</field>
+                <field type="METAUI">R92817272</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">Agranulocitosi (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869032</field>
+                <field type="METAUI">R92818597</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">Eritropenia (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0853697</field>
+                <field type="METAUI">R92789758</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">Neutrofili ridotti</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0151854</field>
+                <field type="METAUI">R92793910</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">Anomalie piastriniche</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869102</field>
+                <field type="METAUI">R92819893</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">Termini di emorragia (esclusi i termini di laboratorio) (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869102</field>
+                <field type="METAUI">R92820107</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">Termini di emorragia (esclusi i termini di laboratorio) (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869102</field>
+                <field type="METAUI">R92820719</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">Termini di emorragia (esclusi i termini di laboratorio) (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0079027</field>
+                <field type="METAUI">R92806296</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">Emorragia operatoria</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0855414</field>
+                <field type="METAUI">R92810145</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">Livello del fattore X della coagulazione, anormale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869043</field>
+                <field type="METAUI">R92822313</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">Iperglicemia/nuova insorgenza di diabete mellito (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0155899</field>
+                <field type="METAUI">R92794005</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">Polmonite da solidi e liquidi</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869045</field>
+                <field type="METAUI">R92822542</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">Cardiopatia ischemica (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0015967</field>
+                <field type="METAUI">R92795548</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">B</field>
+                <field type="STR">Febbrile</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0014550</field>
+                <field type="METAUI">R92805932</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">G</field>
+                <field type="STR">Epilessia mioclonica</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1510410</field>
+                <field type="METAUI">R92769767</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">Sensibilità olfattiva anormale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0011168</field>
+                <field type="METAUI">R92776684</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">D</field>
+                <field type="STR">Disturbo della deglutizione</field>
+            </row>
+        </sample>
+        <sample id="MDRITA13_1_SMQ_TERM_LMVERSION_RUI" samplename="SMQ_TERM_LMVERSION" definition="Standardised MedDRA Query (SMQ) Last Modified Version. Version of MedDRA in which term was last modified in the SMQ." count="113150">
+            <row type="standard">
+                <field type="CUI">C0574002</field>
+                <field type="METAUI">R92780229</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">10.0</field>
+                <field type="STR">Edema del piede</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869018</field>
+                <field type="METAUI">R92815323</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">8.0</field>
+                <field type="STR">Patologie congenite, familiari, neonatali e genetiche del fegato (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0522071</field>
+                <field type="METAUI">R92809052</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">8.1</field>
+                <field type="STR">Dolore pancreatico</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0027947</field>
+                <field type="METAUI">R92789748</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">8.1</field>
+                <field type="STR">Neutropenia</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0858019</field>
+                <field type="METAUI">R92797209</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">8.1</field>
+                <field type="STR">Neutrofili sierici anormali</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869034</field>
+                <field type="METAUI">R92818787</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">8.1</field>
+                <field type="STR">Trombocitopenia (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0858590</field>
+                <field type="METAUI">R92768607</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">8.1</field>
+                <field type="STR">Riflesso tendineo achilleo ridotto</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0030554</field>
+                <field type="METAUI">R92792707</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">8.1</field>
+                <field type="STR">Parestesia</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0853754</field>
+                <field type="METAUI">R92772078</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">9.0</field>
+                <field type="STR">Osmolarità ematica aumentata</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869043</field>
+                <field type="METAUI">R92822175</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">9.0</field>
+                <field type="STR">Iperglicemia/nuova insorgenza di diabete mellito (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1142358</field>
+                <field type="METAUI">R92808495</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">9.0</field>
+                <field type="STR">Sindrome da acidosi lattica</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0541992</field>
+                <field type="METAUI">R92781584</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">9.1</field>
+                <field type="STR">Stordito</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869050</field>
+                <field type="METAUI">R92824247</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">9.1</field>
+                <field type="STR">Sindrome anticolinergica (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0520966</field>
+                <field type="METAUI">R92783758</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">9.1</field>
+                <field type="STR">Incoordinazione</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0161589</field>
+                <field type="METAUI">R92794038</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">9.1</field>
+                <field type="STR">Avvelenamento da analettici</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869060</field>
+                <field type="METAUI">R92825589</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">9.1</field>
+                <field type="STR">Condizioni cerebrovascolari ischemiche (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0035078</field>
+                <field type="METAUI">R92796145</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">9.1</field>
+                <field type="STR">Insufficienza renale, non specificata</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1737242</field>
+                <field type="METAUI">R92812245</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">10.0</field>
+                <field type="STR">Disorientamento temporospaziale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0157201</field>
+                <field type="METAUI">R92790171</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">10.0</field>
+                <field type="STR">Ostacolo causato da posizione anomala del feto all'inizio del travaglio, con parto</field>
+            </row>
+        </sample>
+        <sample id="MDRITA13_1_SMQ_TERM_SCOPE_RUI" samplename="SMQ_TERM_SCOPE" definition="Standardised MedDRA Query (SMQ) Term Scope. Defines the MedDRA term as a member of the broad scope (1), narrow scope (2) of the SMQ search, or a child SMQ (0) (zero)." count="113150">
+            <row type="standard">
+                <field type="CUI">C0877721</field>
+                <field type="METAUI">R92789906</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">1</field>
+                <field type="STR">Lesioni non allopatiche, non classificate altrove, regione cefalica</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869023</field>
+                <field type="METAUI">R92815646</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">2</field>
+                <field type="STR">Patologie emolitiche (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0014518</field>
+                <field type="METAUI">R92786312</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">2</field>
+                <field type="STR">Sindrome di Lyell</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1167709</field>
+                <field type="METAUI">R92808880</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">2</field>
+                <field type="STR">Necrosi epidermica</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1142195</field>
+                <field type="METAUI">R92808035</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">2</field>
+                <field type="STR">Reazione anafilattoide ritardata</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869028</field>
+                <field type="METAUI">R92818017</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">2</field>
+                <field type="STR">Asma/Broncospasmo (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869032</field>
+                <field type="METAUI">R92818600</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">1</field>
+                <field type="STR">Eritropenia (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0853644</field>
+                <field type="METAUI">R92809822</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">1</field>
+                <field type="STR">Conta eosinofila anormale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869037</field>
+                <field type="METAUI">R92819249</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">1</field>
+                <field type="STR">Neuropatia periferica (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869039</field>
+                <field type="METAUI">R92819523</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">1</field>
+                <field type="STR">Depressione e suicidio/autolesionismo (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869043</field>
+                <field type="METAUI">R92822133</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">1</field>
+                <field type="STR">Iperglicemia/nuova insorgenza di diabete mellito (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0750426</field>
+                <field type="METAUI">R92804316</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">1</field>
+                <field type="STR">Conta dei leucociti elevata</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0028283</field>
+                <field type="METAUI">R92789875</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">1</field>
+                <field type="STR">Anemia emolitica non autoimmune</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869047</field>
+                <field type="METAUI">R92823763</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">2</field>
+                <field type="STR">Lupus eritematoso sistemico (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0161517</field>
+                <field type="METAUI">R92794256</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">1</field>
+                <field type="STR">Avvelenamento da altri e non specificati ormoni e sostituti sintetici</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869100</field>
+                <field type="METAUI">R92825025</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">1</field>
+                <field type="STR">Tachiaritmie (incluse le tachiaritmie ventricolari e sopraventricolari) (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0265090</field>
+                <field type="METAUI">R92794768</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">2</field>
+                <field type="STR">Occlusione di arteria precerebrale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0853553</field>
+                <field type="METAUI">R92796529</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">1</field>
+                <field type="STR">Pielogramma retrogrado anormale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869062</field>
+                <field type="METAUI">R92826205</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">1</field>
+                <field type="STR">Fibrosi retroperitoneale (SMQ)</field>
+            </row>
+        </sample>
+        <sample id="MDRITA13_1_SMQ_TERM_STATUS_RUI" samplename="SMQ_TERM_STATUS" definition="Standardised MedDRA Query (SMQ) Term Status. Identifies a term as active (&quot;A&quot;) or inactive (&quot;I&quot;) within this SMQ." count="113150">
+            <row type="standard">
+                <field type="CUI">C1869007</field>
+                <field type="METAUI">R92813776</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Rabdomiolisi/miopatia (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869008</field>
+                <field type="METAUI">R92814034</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Insufficienza renale acuta (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0008352</field>
+                <field type="METAUI">R92802632</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Colemia</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0860218</field>
+                <field type="METAUI">R92768465</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Incompatibilità ABO</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869024</field>
+                <field type="METAUI">R92816115</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Gravi reazioni cutanee indesiderate (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869038</field>
+                <field type="METAUI">R92816286</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Reazione anafilattica (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869031</field>
+                <field type="METAUI">R92818439</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Citopenia e patologie ematopoietiche che interessano più di un tipo di cellula ematica (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869031</field>
+                <field type="METAUI">R92818466</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Citopenia e patologie ematopoietiche che interessano più di un tipo di cellula ematica (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0948022</field>
+                <field type="METAUI">R92804117</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Conta dei linfociti T diminuita</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0154757</field>
+                <field type="METAUI">R92792192</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Altra specificata neuropatia periferica idiopatica</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869037</field>
+                <field type="METAUI">R92819215</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Neuropatia periferica (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869102</field>
+                <field type="METAUI">R92820888</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Termini di emorragia (esclusi i termini di laboratorio) (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869102</field>
+                <field type="METAUI">R92820918</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Termini di emorragia (esclusi i termini di laboratorio) (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0473237</field>
+                <field type="METAUI">R92809129</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Ematuria macroscopica</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869102</field>
+                <field type="METAUI">R92821394</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Termini di emorragia (esclusi i termini di laboratorio) (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0020557</field>
+                <field type="METAUI">R92795678</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Trigliceridi aumentati</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0745153</field>
+                <field type="METAUI">R92803247</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Episodio ipoglicemico</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869044</field>
+                <field type="METAUI">R92822462</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Malattia polmonare interstiziale (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0162830</field>
+                <field type="METAUI">R92793734</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Reazione di fotosensibilità NAS</field>
+            </row>
+        </sample>
+        <sample id="MDRITA13_1_SMQ_TERM_WEIGHT_RUI" samplename="SMQ_TERM_WEIGHT" definition="Standardised MedDRA Query (SMQ) Term Weight. Used for some SMQ algorithms; &quot;0&quot; is used as default." count="113150">
+            <row type="standard">
+                <field type="CUI">C0919804</field>
+                <field type="METAUI">R92803920</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">Carcinoma del fegato, lacerato</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0239340</field>
+                <field type="METAUI">R92790322</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">Edema di un arto inferiore</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869029</field>
+                <field type="METAUI">R92818246</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">Dislipidemia (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869032</field>
+                <field type="METAUI">R92818629</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">Eritropenia (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0235828</field>
+                <field type="METAUI">R92778407</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">Mancanza di efficacia</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0699739</field>
+                <field type="METAUI">R92797103</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">Neuropatia sensoriale ereditaria</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0277843</field>
+                <field type="METAUI">R92804695</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">Segno di Tinel</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869102</field>
+                <field type="METAUI">R92820253</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">Termini di emorragia (esclusi i termini di laboratorio) (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869102</field>
+                <field type="METAUI">R92821486</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">Termini di emorragia (esclusi i termini di laboratorio) (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869043</field>
+                <field type="METAUI">R92822148</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">Iperglicemia/nuova insorgenza di diabete mellito (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869045</field>
+                <field type="METAUI">R92822624</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">Cardiopatia ischemica (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869046</field>
+                <field type="METAUI">R92822752</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">Sindrome neurolettica maligna (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0522055</field>
+                <field type="METAUI">R92768379</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">Elettrocardiogramma anormale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C2230138</field>
+                <field type="METAUI">R92797666</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">Polso lento</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0232208</field>
+                <field type="METAUI">R92803385</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">Ritmo giunzionale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0003813</field>
+                <field type="METAUI">R92803826</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">Aritmia sinusale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0920046</field>
+                <field type="METAUI">R92803768</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">Modificazioni dell'onda P</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1740838</field>
+                <field type="METAUI">R92812504</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">Tachicardia ventricolare ricorrente persistente</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0160276</field>
+                <field type="METAUI">R92791222</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">Altra e non spec emorr intracr da traumat, senza menz ferita intracr esposta, senza perd cosc</field>
+            </row>
+        </sample>
+        <sample id="MDRITA13_1_MXR_AUI" samplename="MXR" definition="MedDRA cross reference to COSTART, HARTS, ICD9, ICD-9-CM, J-ART or WHOART" count="41657">
+            <row type="standard">
+                <field type="CUI">C0232487</field>
+                <field type="METAUI">A10240111</field>
+                <field type="LUI">L5994723</field>
+                <field type="SUI">S6877152</field>
+                <field type="STYPE">AUI</field>
+                <field type="CODE">10000059</field>
+                <field type="ATN">MXR</field>
+                <field type="ATV">J-ART: 081223</field>
+                <field type="STR">Fastidio addominale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0008297</field>
+                <field type="METAUI">A10204044</field>
+                <field type="LUI">L1234700</field>
+                <field type="SUI">S1476646</field>
+                <field type="STYPE">AUI</field>
+                <field type="CODE">10008587</field>
+                <field type="ATN">MXR</field>
+                <field type="ATV">ICD9CM: 748.0</field>
+                <field type="STR">Atresia delle coane</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0008513</field>
+                <field type="METAUI">A10208179</field>
+                <field type="LUI">L1781857</field>
+                <field type="SUI">S2078998</field>
+                <field type="STYPE">AUI</field>
+                <field type="CODE">10008769</field>
+                <field type="ATN">MXR</field>
+                <field type="ATV">COSTART: CHORIORETINITIS</field>
+                <field type="STR">Corioretinite</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0854450</field>
+                <field type="METAUI">A10285320</field>
+                <field type="LUI">L6026699</field>
+                <field type="SUI">S6909129</field>
+                <field type="STYPE">AUI</field>
+                <field type="CODE">10012692</field>
+                <field type="ATN">MXR</field>
+                <field type="ATV">J-ART: 082001</field>
+                <field type="STR">Uveite diabetica</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0018524</field>
+                <field type="METAUI">A10211074</field>
+                <field type="LUI">L5974502</field>
+                <field type="SUI">S6856945</field>
+                <field type="STYPE">AUI</field>
+                <field type="CODE">10019063</field>
+                <field type="ATN">MXR</field>
+                <field type="ATV">J-ART: 0224</field>
+                <field type="STR">Allucinazione</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0332890</field>
+                <field type="METAUI">A10235604</field>
+                <field type="LUI">L5991858</field>
+                <field type="SUI">S6874288</field>
+                <field type="STYPE">AUI</field>
+                <field type="CODE">10019463</field>
+                <field type="ATN">MXR</field>
+                <field type="ATV">COSTART: HYPERTROPHY</field>
+                <field type="STR">Emiipertrofia</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0019212</field>
+                <field type="METAUI">A10207046</field>
+                <field type="LUI">L1298073</field>
+                <field type="SUI">S1540019</field>
+                <field type="STYPE">AUI</field>
+                <field type="CODE">10019846</field>
+                <field type="ATN">MXR</field>
+                <field type="ATV">ICD9: 572.4</field>
+                <field type="STR">Sindrome epatorenale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0085633</field>
+                <field type="METAUI">A10284773</field>
+                <field type="LUI">L6026283</field>
+                <field type="SUI">S6908713</field>
+                <field type="STYPE">AUI</field>
+                <field type="CODE">10027940</field>
+                <field type="ATN">MXR</field>
+                <field type="ATV">COSTART: EMOTION LABIL</field>
+                <field type="STR">Umore alterato</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0085637</field>
+                <field type="METAUI">A13344035</field>
+                <field type="LUI">L5986835</field>
+                <field type="SUI">S6869264</field>
+                <field type="STYPE">AUI</field>
+                <field type="CODE">10030071</field>
+                <field type="ATN">MXR</field>
+                <field type="ATV">WHOART: 0132001</field>
+                <field type="STR">Crisi oculogira</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0033687</field>
+                <field type="METAUI">A10206615</field>
+                <field type="LUI">L1289582</field>
+                <field type="SUI">S1531528</field>
+                <field type="STYPE">AUI</field>
+                <field type="CODE">10037032</field>
+                <field type="ATN">MXR</field>
+                <field type="ATV">HARTS: 160</field>
+                <field type="STR">Proteinuria</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0039236</field>
+                <field type="METAUI">A10207151</field>
+                <field type="LUI">L1303881</field>
+                <field type="SUI">S1545827</field>
+                <field type="STYPE">AUI</field>
+                <field type="CODE">10043079</field>
+                <field type="ATN">MXR</field>
+                <field type="ATV">WHOART: 0224005</field>
+                <field type="STR">Tachicardia parossistica</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0002879</field>
+                <field type="METAUI">A11205883</field>
+                <field type="LUI">L5977012</field>
+                <field type="SUI">S6859442</field>
+                <field type="STYPE">AUI</field>
+                <field type="CODE">10000554</field>
+                <field type="ATN">MXR</field>
+                <field type="ATV">ICD9CM: 283</field>
+                <field type="STR">Anemia emolitica acquisita</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0155973</field>
+                <field type="METAUI">A11176172</field>
+                <field type="LUI">L6026041</field>
+                <field type="SUI">S6908472</field>
+                <field type="STYPE">AUI</field>
+                <field type="CODE">10000757</field>
+                <field type="ATN">MXR</field>
+                <field type="ATV">ICD9CM: 531.2</field>
+                <field type="STR">Ulcera gastrica acuta con emorragia e perforazione</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0155649</field>
+                <field type="METAUI">A11188133</field>
+                <field type="LUI">L5998752</field>
+                <field type="SUI">S6881181</field>
+                <field type="STYPE">AUI</field>
+                <field type="CODE">10000914</field>
+                <field type="ATN">MXR</field>
+                <field type="ATV">ICD9CM: 410.51</field>
+                <field type="STR">Infarto miocardico acuto di altra parte della parete laterale, episodio di cura iniziale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0155833</field>
+                <field type="METAUI">A11194070</field>
+                <field type="LUI">L6026969</field>
+                <field type="SUI">S6909399</field>
+                <field type="STYPE">AUI</field>
+                <field type="CODE">10001228</field>
+                <field type="ATN">MXR</field>
+                <field type="ATV">ICD9: 474.2</field>
+                <field type="STR">Vegetazioni adenoidee</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0001800</field>
+                <field type="METAUI">A10203753</field>
+                <field type="LUI">L1230162</field>
+                <field type="SUI">S1472108</field>
+                <field type="STYPE">AUI</field>
+                <field type="CODE">10001480</field>
+                <field type="ATN">MXR</field>
+                <field type="ATV">J-ART: 085404</field>
+                <field type="STR">Ageusia</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0263504</field>
+                <field type="METAUI">A10211150</field>
+                <field type="LUI">L5974561</field>
+                <field type="SUI">S6856991</field>
+                <field type="STYPE">AUI</field>
+                <field type="CODE">10001766</field>
+                <field type="ATN">MXR</field>
+                <field type="ATV">WHOART: 0002010</field>
+                <field type="STR">Alopecia totale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0600359</field>
+                <field type="METAUI">A11164331</field>
+                <field type="LUI">L5987503</field>
+                <field type="SUI">S6869937</field>
+                <field type="STYPE">AUI</field>
+                <field type="CODE">10003217</field>
+                <field type="ATN">MXR</field>
+                <field type="ATV">ICD9CM: 290.4</field>
+                <field type="STR">Demenza arteriosclerotica</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0157767</field>
+                <field type="METAUI">A11176426</field>
+                <field type="LUI">L5978823</field>
+                <field type="SUI">S6861252</field>
+                <field type="STYPE">AUI</field>
+                <field type="CODE">10003322</field>
+                <field type="ATN">MXR</field>
+                <field type="ATV">ICD9CM: 711.17</field>
+                <field type="STR">Artropatia con interess di caviglia e piede associata a malattia di Reiter e uretrite aspecifica</field>
+            </row>
+        </sample>
+        <sample id="MDRITA13_1_SMQ_TERM_LEVEL_CODE_ROOT_SOURCE" samplename="SMQ_TERM_LEVEL" definition="Standardised MedDRA Query (SMQ) Term Level. The MedDRA hierarchy level of a term (4=PT, 5=LLT) or 0 (zero) for a child SMQ." count="37830">
+            <row type="standard">
+                <field type="CUI">C0158510</field>
+                <field type="METAUI">A12106852</field>
+                <field type="LUI">L6534692</field>
+                <field type="SUI">S7617714</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10031460</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">5</field>
+                <field type="STR">Altre deformazioni acquisite dell'apparato muscoloscheletrico</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0858862</field>
+                <field type="METAUI">A11191625</field>
+                <field type="LUI">L6026430</field>
+                <field type="SUI">S6908860</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10038197</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">5</field>
+                <field type="STR">Urine rosse</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0856067</field>
+                <field type="METAUI">A11174643</field>
+                <field type="LUI">L6007021</field>
+                <field type="SUI">S6889450</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10048317</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">5</field>
+                <field type="STR">Mialgia aggravata</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0549324</field>
+                <field type="METAUI">A12105414</field>
+                <field type="LUI">L5979456</field>
+                <field type="SUI">S6861886</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10048465</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">5</field>
+                <field type="STR">Astenia alle gambe</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0034063</field>
+                <field type="METAUI">A10204691</field>
+                <field type="LUI">L1249286</field>
+                <field type="SUI">S1491232</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10037423</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">4</field>
+                <field type="STR">Edema polmonare</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1963962</field>
+                <field type="METAUI">A13344490</field>
+                <field type="LUI">L6917692</field>
+                <field type="SUI">S8052209</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10067735</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">5</field>
+                <field type="STR">Bilirubina diretta anormale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0348751</field>
+                <field type="METAUI">A11197042</field>
+                <field type="LUI">L5976167</field>
+                <field type="SUI">S6858597</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10032677</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">5</field>
+                <field type="STR">Altri disturbi epatici specificati</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0023052</field>
+                <field type="METAUI">A11208596</field>
+                <field type="LUI">L5991037</field>
+                <field type="SUI">S6873467</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10030116</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">5</field>
+                <field type="STR">Edema della laringe</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0029745</field>
+                <field type="METAUI">A11185084</field>
+                <field type="LUI">L5975280</field>
+                <field type="SUI">S6857710</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10032511</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">5</field>
+                <field type="STR">Altre anemie aplastiche specificate</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0005592</field>
+                <field type="METAUI">A11170596</field>
+                <field type="LUI">L6012400</field>
+                <field type="SUI">S6894829</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10004941</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">5</field>
+                <field type="STR">Polmone da avicoltore</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0020445</field>
+                <field type="METAUI">A11165633</field>
+                <field type="LUI">L6004538</field>
+                <field type="SUI">S6886969</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10017341</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">5</field>
+                <field type="STR">Lipidemia di Fredrickson Tipo II</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1504539</field>
+                <field type="METAUI">A11181608</field>
+                <field type="LUI">L5991271</field>
+                <field type="SUI">S6873701</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10063660</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">5</field>
+                <field type="STR">Effetto decrescente</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0476337</field>
+                <field type="METAUI">A11164519</field>
+                <field type="LUI">L5997150</field>
+                <field type="SUI">S6879578</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10005542</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">5</field>
+                <field type="STR">Gas ematici NAS anormali</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0543392</field>
+                <field type="METAUI">A11183512</field>
+                <field type="LUI">L5994977</field>
+                <field type="SUI">S6877406</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10016304</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">5</field>
+                <field type="STR">Feci verniciate di sangue</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0155268</field>
+                <field type="METAUI">A11208702</field>
+                <field type="LUI">L5992271</field>
+                <field type="SUI">S6874701</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10031045</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">5</field>
+                <field type="STR">Emorragia orbitale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0160285</field>
+                <field type="METAUI">A11184902</field>
+                <field type="LUI">L5974884</field>
+                <field type="SUI">S6857314</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10031340</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">5</field>
+                <field type="STR">Altra e non spec emorr intracr da traumat, con ferita intracr esposta, senza perd cosc</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0474983</field>
+                <field type="METAUI">A10235177</field>
+                <field type="LUI">L5991582</field>
+                <field type="SUI">S6874012</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10043959</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">4</field>
+                <field type="STR">Ematoma della lingua</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0265031</field>
+                <field type="METAUI">A10236184</field>
+                <field type="LUI">L5992131</field>
+                <field type="SUI">S6874561</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10054787</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">4</field>
+                <field type="STR">Emorragia delle emorroidi</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0473124</field>
+                <field type="METAUI">A11181074</field>
+                <field type="LUI">L5991621</field>
+                <field type="SUI">S6874051</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10055380</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">5</field>
+                <field type="STR">Ematoma perirenale</field>
+            </row>
+        </sample>
+        <sample id="MDRITA13_1_MPS_ROOT_SOURCE_DUI" samplename="MPS" definition="MedDRA primary SOC (PTs may have multiple treepositions, but each has a primary soc)" count="18919">
+            <row type="standard">
+                <field type="CUI">C0855580</field>
+                <field type="METAUI">A10210847</field>
+                <field type="LUI">L5974360</field>
+                <field type="SUI">S6856793</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10001792</field>
+                <field type="ATN">MPS</field>
+                <field type="ATV">10022891</field>
+                <field type="STR">Alfa-2 globulina</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0549493</field>
+                <field type="METAUI">A10213253</field>
+                <field type="LUI">L5976499</field>
+                <field type="SUI">S6858941</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10001889</field>
+                <field type="ATN">MPS</field>
+                <field type="ATV">10038738</field>
+                <field type="STR">Alveolite</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0234022</field>
+                <field type="METAUI">A10215196</field>
+                <field type="LUI">L5977825</field>
+                <field type="SUI">S6860255</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10002652</field>
+                <field type="ATN">MPS</field>
+                <field type="ATV">10037175</field>
+                <field type="STR">Anorgasmia</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0852943</field>
+                <field type="METAUI">A10262572</field>
+                <field type="LUI">L6010650</field>
+                <field type="SUI">S6893079</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10002912</field>
+                <field type="ATN">MPS</field>
+                <field type="ATV">10007541</field>
+                <field type="STR">Patologia mista della valvola aortica</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0079731</field>
+                <field type="METAUI">A10205829</field>
+                <field type="LUI">L1271442</field>
+                <field type="SUI">S1513388</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10003899</field>
+                <field type="ATN">MPS</field>
+                <field type="ATV">10029104</field>
+                <field type="STR">Linfoma a cellule B</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0853350</field>
+                <field type="METAUI">A10225287</field>
+                <field type="LUI">L5984617</field>
+                <field type="SUI">S6867052</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10004111</field>
+                <field type="ATN">MPS</field>
+                <field type="ATV">10022891</field>
+                <field type="STR">Clisma a doppio contrasto</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0154007</field>
+                <field type="METAUI">A10281624</field>
+                <field type="LUI">L6023933</field>
+                <field type="SUI">S6906362</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10004410</field>
+                <field type="ATN">MPS</field>
+                <field type="ATV">10029104</field>
+                <field type="STR">Tumore benigno del testicolo</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0195314</field>
+                <field type="METAUI">A10219413</field>
+                <field type="LUI">L5980646</field>
+                <field type="SUI">S6863078</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10004753</field>
+                <field type="ATN">MPS</field>
+                <field type="ATV">10022891</field>
+                <field type="STR">Biopsia della cervice</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0855868</field>
+                <field type="METAUI">A10218868</field>
+                <field type="LUI">L5980355</field>
+                <field type="SUI">S6862784</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10005355</field>
+                <field type="ATN">MPS</field>
+                <field type="ATV">10022891</field>
+                <field type="STR">Berillio ematico aumentato</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0558963</field>
+                <field type="METAUI">A10267045</field>
+                <field type="LUI">L6013845</field>
+                <field type="SUI">S6896273</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10006826</field>
+                <field type="ATN">MPS</field>
+                <field type="ATV">10022891</field>
+                <field type="STR">Proteina C-reattiva normale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0008489</field>
+                <field type="METAUI">A10204371</field>
+                <field type="LUI">L1243526</field>
+                <field type="SUI">S1485472</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10008748</field>
+                <field type="ATN">MPS</field>
+                <field type="ATV">10029205</field>
+                <field type="STR">Corea</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0853259</field>
+                <field type="METAUI">A10213587</field>
+                <field type="LUI">L5976739</field>
+                <field type="SUI">S6859169</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10008811</field>
+                <field type="ATN">MPS</field>
+                <field type="ATV">10022891</field>
+                <field type="STR">Analisi cromosomiche</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0860514</field>
+                <field type="METAUI">A10276085</field>
+                <field type="LUI">L6020130</field>
+                <field type="SUI">S6902560</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10013634</field>
+                <field type="ATN">MPS</field>
+                <field type="ATV">10029205</field>
+                <field type="STR">Stato onirico</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0854453</field>
+                <field type="METAUI">A10273173</field>
+                <field type="LUI">L6018124</field>
+                <field type="SUI">S6900553</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10015296</field>
+                <field type="ATN">MPS</field>
+                <field type="ATV">10021881</field>
+                <field type="STR">Sepsi da Escherichia</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0853367</field>
+                <field type="METAUI">A10268243</field>
+                <field type="LUI">L6014657</field>
+                <field type="SUI">S6897088</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10016018</field>
+                <field type="ATN">MPS</field>
+                <field type="ATV">10022891</field>
+                <field type="STR">Radiografia della faccia e della bocca</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0016412</field>
+                <field type="METAUI">A10223514</field>
+                <field type="LUI">L5983432</field>
+                <field type="SUI">S6865861</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10016880</field>
+                <field type="ATN">MPS</field>
+                <field type="ATV">10027433</field>
+                <field type="STR">Carenza di folato</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0011630</field>
+                <field type="METAUI">A10257403</field>
+                <field type="LUI">L6007050</field>
+                <field type="SUI">S6889480</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10017543</field>
+                <field type="ATN">MPS</field>
+                <field type="ATV">10021881</field>
+                <field type="STR">Micosi cutanea</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0156216</field>
+                <field type="METAUI">A10241202</field>
+                <field type="LUI">L5995492</field>
+                <field type="SUI">S6877922</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10017631</field>
+                <field type="ATN">MPS</field>
+                <field type="ATV">10019805</field>
+                <field type="STR">Fistola della colecisti</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0017105</field>
+                <field type="METAUI">A10205187</field>
+                <field type="LUI">L1255728</field>
+                <field type="SUI">S1497674</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10017737</field>
+                <field type="ATN">MPS</field>
+                <field type="ATV">10021881</field>
+                <field type="STR">Gangrena gassosa</field>
+            </row>
+        </sample>
+        <sample id="MDRITA13_1_SMQ_ALGO_ROOT_SOURCE_DUI" samplename="SMQ_ALGO" definition="Standardised MedDRA Query (SMQ) Algorithm. Boolean expression of algorithm for the SMQ. &quot;N&quot; if the SMQ does not utilize an algorithm." count="180">
+            <row type="standard">
+                <field type="CUI">C1869006</field>
+                <field type="METAUI">A12105494</field>
+                <field type="LUI">L6535509</field>
+                <field type="SUI">S7618850</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000001</field>
+                <field type="ATN">SMQ_ALGO</field>
+                <field type="ATV">N</field>
+                <field type="STR">Torsione di punta/prolungamento del QT (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869007</field>
+                <field type="METAUI">A12105205</field>
+                <field type="LUI">L6535677</field>
+                <field type="SUI">S7618630</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000002</field>
+                <field type="ATN">SMQ_ALGO</field>
+                <field type="ATV">N</field>
+                <field type="STR">Rabdomiolisi/miopatia (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869008</field>
+                <field type="METAUI">A12106100</field>
+                <field type="LUI">L6535431</field>
+                <field type="SUI">S7618301</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000003</field>
+                <field type="ATN">SMQ_ALGO</field>
+                <field type="ATV">N</field>
+                <field type="STR">Insufficienza renale acuta (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869091</field>
+                <field type="METAUI">A12106985</field>
+                <field type="LUI">L6535624</field>
+                <field type="SUI">S7618298</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000004</field>
+                <field type="ATN">SMQ_ALGO</field>
+                <field type="ATV">N</field>
+                <field type="STR">Insufficienza cardiaca (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869015</field>
+                <field type="METAUI">A12106683</field>
+                <field type="LUI">L6536115</field>
+                <field type="SUI">S7619012</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000011</field>
+                <field type="ATN">SMQ_ALGO</field>
+                <field type="ATV">N</field>
+                <field type="STR">Tumori del fegato maligni e non specificati (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869018</field>
+                <field type="METAUI">A12105207</field>
+                <field type="LUI">L6534970</field>
+                <field type="SUI">S7618530</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000014</field>
+                <field type="ATN">SMQ_ALGO</field>
+                <field type="ATV">N</field>
+                <field type="STR">Patologie congenite, familiari, neonatali e genetiche del fegato (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869020</field>
+                <field type="METAUI">A12106386</field>
+                <field type="LUI">L6534940</field>
+                <field type="SUI">S7618284</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000016</field>
+                <field type="ATN">SMQ_ALGO</field>
+                <field type="ATV">N</field>
+                <field type="STR">Infezioni epatiche (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869021</field>
+                <field type="METAUI">A12105496</field>
+                <field type="LUI">L6534743</field>
+                <field type="SUI">S7618151</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000017</field>
+                <field type="ATN">SMQ_ALGO</field>
+                <field type="ATV">N</field>
+                <field type="STR">Eventi specificatamente riportati come correlati ad abuso di alcool (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869022</field>
+                <field type="METAUI">A12105208</field>
+                <field type="LUI">L6534790</field>
+                <field type="SUI">S7618537</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000018</field>
+                <field type="ATN">SMQ_ALGO</field>
+                <field type="ATV">N</field>
+                <field type="STR">Patologie epatiche correlate a gravidanza (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869023</field>
+                <field type="METAUI">A12106685</field>
+                <field type="LUI">L6535853</field>
+                <field type="SUI">S7618535</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000019</field>
+                <field type="ATN">SMQ_ALGO</field>
+                <field type="ATV">N</field>
+                <field type="STR">Patologie emolitiche (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869024</field>
+                <field type="METAUI">A12105804</field>
+                <field type="LUI">L6536016</field>
+                <field type="SUI">S7618246</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000020</field>
+                <field type="ATN">SMQ_ALGO</field>
+                <field type="ATV">N</field>
+                <field type="STR">Gravi reazioni cutanee indesiderate (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869038</field>
+                <field type="METAUI">A12106104</field>
+                <field type="LUI">L6536067</field>
+                <field type="SUI">S7618633</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000021</field>
+                <field type="ATN">SMQ_ALGO</field>
+                <field type="ATV">A or (B and C) or (D and (B or C))</field>
+                <field type="STR">Reazione anafilattica (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869025</field>
+                <field type="METAUI">A12106387</field>
+                <field type="LUI">L6534965</field>
+                <field type="SUI">S7618503</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000022</field>
+                <field type="ATN">SMQ_ALGO</field>
+                <field type="ATV">A or (B and C)</field>
+                <field type="STR">Pancreatite acuta (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869029</field>
+                <field type="METAUI">A12105497</field>
+                <field type="LUI">L6535590</field>
+                <field type="SUI">S7617998</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000026</field>
+                <field type="ATN">SMQ_ALGO</field>
+                <field type="ATV">N</field>
+                <field type="STR">Dislipidemia (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869030</field>
+                <field type="METAUI">A12105519</field>
+                <field type="LUI">L6535226</field>
+                <field type="SUI">S7617894</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000027</field>
+                <field type="ATN">SMQ_ALGO</field>
+                <field type="ATV">N</field>
+                <field type="STR">Citopenie ematopoietiche (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869031</field>
+                <field type="METAUI">A12106687</field>
+                <field type="LUI">L6534890</field>
+                <field type="SUI">S7617893</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000028</field>
+                <field type="ATN">SMQ_ALGO</field>
+                <field type="ATV">N</field>
+                <field type="STR">Citopenia e patologie ematopoietiche che interessano più di un tipo di cellula ematica (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869032</field>
+                <field type="METAUI">A12106390</field>
+                <field type="LUI">L6535785</field>
+                <field type="SUI">S7618121</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000029</field>
+                <field type="ATN">SMQ_ALGO</field>
+                <field type="ATV">N</field>
+                <field type="STR">Eritropenia (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869033</field>
+                <field type="METAUI">A12104893</field>
+                <field type="LUI">L6534947</field>
+                <field type="SUI">S7618361</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000030</field>
+                <field type="ATN">SMQ_ALGO</field>
+                <field type="ATV">N</field>
+                <field type="STR">Leucopenia (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869037</field>
+                <field type="METAUI">A12106978</field>
+                <field type="LUI">L6534784</field>
+                <field type="SUI">S7618484</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000034</field>
+                <field type="ATN">SMQ_ALGO</field>
+                <field type="ATV">N</field>
+                <field type="STR">Neuropatia periferica (SMQ)</field>
+            </row>
+        </sample>
+        <sample id="MDRITA13_1_SMQ_LEVEL_ROOT_SOURCE_DUI" samplename="SMQ_LEVEL" definition="Standardised MedDRA Query (SMQ) Level. Value between 1 and 5 identifying the level of the SMQ within the hierarchy of SMQs; 1 is the most general, 5 is the most narrow." count="180">
+            <row type="standard">
+                <field type="CUI">C1869006</field>
+                <field type="METAUI">A12105494</field>
+                <field type="LUI">L6535509</field>
+                <field type="SUI">S7618850</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000001</field>
+                <field type="ATN">SMQ_LEVEL</field>
+                <field type="ATV">1</field>
+                <field type="STR">Torsione di punta/prolungamento del QT (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869007</field>
+                <field type="METAUI">A12105205</field>
+                <field type="LUI">L6535677</field>
+                <field type="SUI">S7618630</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000002</field>
+                <field type="ATN">SMQ_LEVEL</field>
+                <field type="ATV">1</field>
+                <field type="STR">Rabdomiolisi/miopatia (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869008</field>
+                <field type="METAUI">A12106100</field>
+                <field type="LUI">L6535431</field>
+                <field type="SUI">S7618301</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000003</field>
+                <field type="ATN">SMQ_LEVEL</field>
+                <field type="ATV">1</field>
+                <field type="STR">Insufficienza renale acuta (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869091</field>
+                <field type="METAUI">A12106985</field>
+                <field type="LUI">L6535624</field>
+                <field type="SUI">S7618298</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000004</field>
+                <field type="ATN">SMQ_LEVEL</field>
+                <field type="ATV">1</field>
+                <field type="STR">Insufficienza cardiaca (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869009</field>
+                <field type="METAUI">A12106681</field>
+                <field type="LUI">L6535303</field>
+                <field type="SUI">S7618536</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000005</field>
+                <field type="ATN">SMQ_LEVEL</field>
+                <field type="ATV">1</field>
+                <field type="STR">Patologie epatiche (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869012</field>
+                <field type="METAUI">A12104891</field>
+                <field type="LUI">L6534919</field>
+                <field type="SUI">S7618133</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000008</field>
+                <field type="ATN">SMQ_LEVEL</field>
+                <field type="ATV">3</field>
+                <field type="STR">Esami, segni e sintomi relativi al fegato (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869017</field>
+                <field type="METAUI">A12104892</field>
+                <field type="LUI">L6535822</field>
+                <field type="SUI">S7618300</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000013</field>
+                <field type="ATN">SMQ_LEVEL</field>
+                <field type="ATV">4</field>
+                <field type="STR">Insufficienza epatica, fibrosi, cirrosi e altre condizioni correlate a danni del fegato (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869018</field>
+                <field type="METAUI">A12105207</field>
+                <field type="LUI">L6534970</field>
+                <field type="SUI">S7618530</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000014</field>
+                <field type="ATN">SMQ_LEVEL</field>
+                <field type="ATV">2</field>
+                <field type="STR">Patologie congenite, familiari, neonatali e genetiche del fegato (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869020</field>
+                <field type="METAUI">A12106386</field>
+                <field type="LUI">L6534940</field>
+                <field type="SUI">S7618284</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000016</field>
+                <field type="ATN">SMQ_LEVEL</field>
+                <field type="ATV">2</field>
+                <field type="STR">Infezioni epatiche (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869021</field>
+                <field type="METAUI">A12105496</field>
+                <field type="LUI">L6534743</field>
+                <field type="SUI">S7618151</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000017</field>
+                <field type="ATN">SMQ_LEVEL</field>
+                <field type="ATV">2</field>
+                <field type="STR">Eventi specificatamente riportati come correlati ad abuso di alcool (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869022</field>
+                <field type="METAUI">A12105208</field>
+                <field type="LUI">L6534790</field>
+                <field type="SUI">S7618537</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000018</field>
+                <field type="ATN">SMQ_LEVEL</field>
+                <field type="ATV">2</field>
+                <field type="STR">Patologie epatiche correlate a gravidanza (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869024</field>
+                <field type="METAUI">A12105804</field>
+                <field type="LUI">L6536016</field>
+                <field type="SUI">S7618246</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000020</field>
+                <field type="ATN">SMQ_LEVEL</field>
+                <field type="ATV">1</field>
+                <field type="STR">Gravi reazioni cutanee indesiderate (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869029</field>
+                <field type="METAUI">A12105497</field>
+                <field type="LUI">L6535590</field>
+                <field type="SUI">S7617998</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000026</field>
+                <field type="ATN">SMQ_LEVEL</field>
+                <field type="ATV">1</field>
+                <field type="STR">Dislipidemia (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869030</field>
+                <field type="METAUI">A12105519</field>
+                <field type="LUI">L6535226</field>
+                <field type="SUI">S7617894</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000027</field>
+                <field type="ATN">SMQ_LEVEL</field>
+                <field type="ATV">1</field>
+                <field type="STR">Citopenie ematopoietiche (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869031</field>
+                <field type="METAUI">A12106687</field>
+                <field type="LUI">L6534890</field>
+                <field type="SUI">S7617893</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000028</field>
+                <field type="ATN">SMQ_LEVEL</field>
+                <field type="ATV">2</field>
+                <field type="STR">Citopenia e patologie ematopoietiche che interessano più di un tipo di cellula ematica (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869033</field>
+                <field type="METAUI">A12104893</field>
+                <field type="LUI">L6534947</field>
+                <field type="SUI">S7618361</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000030</field>
+                <field type="ATN">SMQ_LEVEL</field>
+                <field type="ATV">2</field>
+                <field type="STR">Leucopenia (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869034</field>
+                <field type="METAUI">A12105498</field>
+                <field type="LUI">L6535710</field>
+                <field type="SUI">S7618898</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000031</field>
+                <field type="ATN">SMQ_LEVEL</field>
+                <field type="ATV">2</field>
+                <field type="STR">Trombocitopenia (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869035</field>
+                <field type="METAUI">A12106102</field>
+                <field type="LUI">L6536040</field>
+                <field type="SUI">S7618444</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000032</field>
+                <field type="ATN">SMQ_LEVEL</field>
+                <field type="ATV">1</field>
+                <field type="STR">Mancanza di efficacia/effetto (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869036</field>
+                <field type="METAUI">A12106103</field>
+                <field type="LUI">L6535544</field>
+                <field type="SUI">S7617673</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000033</field>
+                <field type="ATN">SMQ_LEVEL</field>
+                <field type="ATV">1</field>
+                <field type="STR">Acidosi lattica (SMQ)</field>
+            </row>
+        </sample>
+        <sample id="MDRITA13_1_SMQ_STATUS_ROOT_SOURCE_DUI" samplename="SMQ_STATUS" definition="Standardised MedDRA Query (SMQ) Status. &quot;A&quot; = active; &quot;I&quot; = inactive." count="180">
+            <row type="standard">
+                <field type="CUI">C1869006</field>
+                <field type="METAUI">A12105494</field>
+                <field type="LUI">L6535509</field>
+                <field type="SUI">S7618850</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000001</field>
+                <field type="ATN">SMQ_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Torsione di punta/prolungamento del QT (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869007</field>
+                <field type="METAUI">A12105205</field>
+                <field type="LUI">L6535677</field>
+                <field type="SUI">S7618630</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000002</field>
+                <field type="ATN">SMQ_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Rabdomiolisi/miopatia (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869008</field>
+                <field type="METAUI">A12106100</field>
+                <field type="LUI">L6535431</field>
+                <field type="SUI">S7618301</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000003</field>
+                <field type="ATN">SMQ_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Insufficienza renale acuta (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869091</field>
+                <field type="METAUI">A12106985</field>
+                <field type="LUI">L6535624</field>
+                <field type="SUI">S7618298</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000004</field>
+                <field type="ATN">SMQ_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Insufficienza cardiaca (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869012</field>
+                <field type="METAUI">A12104891</field>
+                <field type="LUI">L6534919</field>
+                <field type="SUI">S7618133</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000008</field>
+                <field type="ATN">SMQ_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Esami, segni e sintomi relativi al fegato (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869014</field>
+                <field type="METAUI">A12105206</field>
+                <field type="LUI">L6534738</field>
+                <field type="SUI">S7618116</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000010</field>
+                <field type="ATN">SMQ_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Epatite non infettiva (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869015</field>
+                <field type="METAUI">A12106683</field>
+                <field type="LUI">L6536115</field>
+                <field type="SUI">S7619012</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000011</field>
+                <field type="ATN">SMQ_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Tumori del fegato maligni e non specificati (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869020</field>
+                <field type="METAUI">A12106386</field>
+                <field type="LUI">L6534940</field>
+                <field type="SUI">S7618284</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000016</field>
+                <field type="ATN">SMQ_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Infezioni epatiche (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869022</field>
+                <field type="METAUI">A12105208</field>
+                <field type="LUI">L6534790</field>
+                <field type="SUI">S7618537</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000018</field>
+                <field type="ATN">SMQ_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Patologie epatiche correlate a gravidanza (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869038</field>
+                <field type="METAUI">A12106104</field>
+                <field type="LUI">L6536067</field>
+                <field type="SUI">S7618633</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000021</field>
+                <field type="ATN">SMQ_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Reazione anafilattica (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869030</field>
+                <field type="METAUI">A12105519</field>
+                <field type="LUI">L6535226</field>
+                <field type="SUI">S7617894</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000027</field>
+                <field type="ATN">SMQ_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Citopenie ematopoietiche (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869032</field>
+                <field type="METAUI">A12106390</field>
+                <field type="LUI">L6535785</field>
+                <field type="SUI">S7618121</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000029</field>
+                <field type="ATN">SMQ_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Eritropenia (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869034</field>
+                <field type="METAUI">A12105498</field>
+                <field type="LUI">L6535710</field>
+                <field type="SUI">S7618898</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000031</field>
+                <field type="ATN">SMQ_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Trombocitopenia (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869035</field>
+                <field type="METAUI">A12106102</field>
+                <field type="LUI">L6536040</field>
+                <field type="SUI">S7618444</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000032</field>
+                <field type="ATN">SMQ_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Mancanza di efficacia/effetto (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869037</field>
+                <field type="METAUI">A12106978</field>
+                <field type="LUI">L6534784</field>
+                <field type="SUI">S7618484</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000034</field>
+                <field type="ATN">SMQ_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Neuropatia periferica (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869039</field>
+                <field type="METAUI">A12106688</field>
+                <field type="LUI">L6535397</field>
+                <field type="SUI">S7617984</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000035</field>
+                <field type="ATN">SMQ_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Depressione e suicidio/autolesionismo (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869041</field>
+                <field type="METAUI">A12104894</field>
+                <field type="LUI">L6535411</field>
+                <field type="SUI">S7618103</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000038</field>
+                <field type="ATN">SMQ_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Emorragie (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869043</field>
+                <field type="METAUI">A12106105</field>
+                <field type="LUI">L6534944</field>
+                <field type="SUI">S7618323</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000041</field>
+                <field type="ATN">SMQ_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Iperglicemia/nuova insorgenza di diabete mellito (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869050</field>
+                <field type="METAUI">A12105500</field>
+                <field type="LUI">L6535694</field>
+                <field type="SUI">S7618731</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000048</field>
+                <field type="ATN">SMQ_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">Sindrome anticolinergica (SMQ)</field>
+            </row>
+        </sample>
+        <sample id="MDRITA13_1_SMQ_SOURCE_ROOT_SOURCE_DUI" samplename="SMQ_SOURCE" definition="Standardised MedDRA Query (SMQ) Source. Source for the development of the SMQ, e.g. medical references." count="137">
+            <row type="standard">
+                <field type="CUI">C1869006</field>
+                <field type="METAUI">A12105494</field>
+                <field type="LUI">L6535509</field>
+                <field type="SUI">S7618850</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000001</field>
+                <field type="ATN">SMQ_SOURCE</field>
+                <field type="ATV">Zipes DP. Specific arrhythmias: diagnosis and treatment. Heart Disease: A Textbook of Cardiovascular Medicine (5th Ed). Braunwald E (Ed). WB Sauanders: Philadelphia, 1997, pg. 640-704. Marriott HJL and Conover MB. Polymorphic ventricular tachycardia. Advanced Concepts in Arrhythmias (3rd Ed). Mosby: New York, 1998, pg. 293-310. Definitions and basic requirements for the use of terms for reporting adverse drug reactions (XI): cardiovascular system disorders. Pharmacoepidemiology and Drug Safety 1998; 7:351-357. Torsade de pointes. Reporting Adverse Drug Reactions: Definitions of Terms and Criteria for Their Use. Bankowski Z, Bruppacher R, Crusius I et al (Eds). Council for International Organizations of Medical Sciences: Geneva, 1999, pg. 81-82 Josephson ME and Zimetbaum P. The tachyarrhythmias. Harrison's Principles of Internal Medicine (15th Ed). Braunwald E, Fauci AS, Kasper DL et al (Eds). McGraw-Hill: New York, 2001, pg. 1292-1309. Bauman JL and Schoen MD. Arrhythmias. Pharmacotherapy: A Pathophysiologic Approach (5th Ed). DiPiro JT, Talbert RL, Yee GC et al (Eds). McGraw-Hill: New York, 2002, pg. 273-303.</field>
+                <field type="STR">Torsione di punta/prolungamento del QT (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869007</field>
+                <field type="METAUI">A12105205</field>
+                <field type="LUI">L6535677</field>
+                <field type="SUI">S7618630</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000002</field>
+                <field type="ATN">SMQ_SOURCE</field>
+                <field type="ATV">Basic requirements for the use of terms for reporting adverse drug reactions (IV). Pharmacoepidemiology and Drug Safety 1993; 2:149-153. Myopathy. Reporting Adverse Drug Reactions: Definitions of Terms and Criteria for Their Use. Bankowski Z, Bruppacher R, Crusius I et al (Eds). Council for International Organizations of Medical Sciences: Geneva, 1999, pg. 16-17. Poels PJE and Gabreëls FJM. Rhabdomyolysis: a review f the literature. Clin Neurol Neurosurg 1993; 95:175-192. Omar MA, Wilson JP, and Cox, TS. Rhabdomyolysis and HMG-CoA reductase inhibitors. Annals Pharmacother 2001; 35:1096-1107. Prendergast BD and George CF. Drug-induced rhabdomyolysis - mechanisms and management. Postgrad Med J 1993; 69:333-336.</field>
+                <field type="STR">Rabdomiolisi/miopatia (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869008</field>
+                <field type="METAUI">A12106100</field>
+                <field type="LUI">L6535431</field>
+                <field type="SUI">S7618301</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000003</field>
+                <field type="ATN">SMQ_SOURCE</field>
+                <field type="ATV">Manuale Merck, 17esima edizione Cecil Textbook of Medicine, 19esima edizione Harrison's Principles of Internal Medicine, 13esima edizione</field>
+                <field type="STR">Insufficienza renale acuta (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869091</field>
+                <field type="METAUI">A12106985</field>
+                <field type="LUI">L6535624</field>
+                <field type="SUI">S7618298</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000004</field>
+                <field type="ATN">SMQ_SOURCE</field>
+                <field type="ATV">Council for International Organisations of Medical Sciences (CIOMS). Reporting Adverse Drug Reactions. Definition of terms and criteria for their use. 1999: p 64-65</field>
+                <field type="STR">Insufficienza cardiaca (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869038</field>
+                <field type="METAUI">A12106104</field>
+                <field type="LUI">L6536067</field>
+                <field type="SUI">S7618633</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000021</field>
+                <field type="ATN">SMQ_SOURCE</field>
+                <field type="ATV">1 The Merck Manual. 15esima edizione. Merck, Sharp &amp;amp; Dohme Research Laboratories. (1987): 306-7</field>
+                <field type="STR">Reazione anafilattica (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869025</field>
+                <field type="METAUI">A12106387</field>
+                <field type="LUI">L6534965</field>
+                <field type="SUI">S7618503</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000022</field>
+                <field type="ATN">SMQ_SOURCE</field>
+                <field type="ATV">1. Anonimo. Pancreatitis. Reporting Adverse Drug Reactions: Definitions of Terms and Criteria for Their Use. Bankowski Z, Bruppacher R, Crusius I et al (Eds). Council for International Organizations of Medical Sciences: Geneva, 1999, pp 53-54 2. Berardi RR and Montgomery PA. Pancreatitis. Pharmacotherapy: A Pathophysiologic Approach (5th Ed). DiPiro JT, Talbert RL, Yee GC et al (Eds). McGraw-Hill: New York, NY. 1999. pp 701-715 3. Greenberger NJ, Toskes PP, and Isselbacher KJ. Acute and chronic pancreatitis. Harrison's Principles of Internal Medicine (14th Ed). Fauci AS, Braunwald E, Isselbacher KJ et al (Eds). McGraw-Hill: New York, NY. 1998. pp 1741-1752</field>
+                <field type="STR">Pancreatite acuta (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869029</field>
+                <field type="METAUI">A12105497</field>
+                <field type="LUI">L6535590</field>
+                <field type="SUI">S7617998</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000026</field>
+                <field type="ATN">SMQ_SOURCE</field>
+                <field type="ATV">1. Harrison's Principles of Internal Medicine, 16esima edizione 2. Ross R: Atherosclerosis - an in?ammatory disease. N Engl J Med340:115-126,1999. 3. Detection, Evaluation, and Treatment of High Blood Cholesterol in Adults Adult Treatment Panel III)Third Report of the National Cholesterol Education Program (NCEP) NIH - U.S. DEPARTMENT OF HEALTH AND HUMAN SERVICES - NIH Publication No.02-5215 Settembre 2002</field>
+                <field type="STR">Dislipidemia (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869030</field>
+                <field type="METAUI">A12105519</field>
+                <field type="LUI">L6535226</field>
+                <field type="SUI">S7617894</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000027</field>
+                <field type="ATN">SMQ_SOURCE</field>
+                <field type="ATV">Pubblicazione CIOMS, "Reporting Adverse Drug Reactions: Definitions of Terms and Criteria for their Use"</field>
+                <field type="STR">Citopenie ematopoietiche (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869032</field>
+                <field type="METAUI">A12106390</field>
+                <field type="LUI">L6535785</field>
+                <field type="SUI">S7618121</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000029</field>
+                <field type="ATN">SMQ_SOURCE</field>
+                <field type="ATV">Pubblicazione CIOMS, "Reporting Adverse Drug Reactions: Definitions of Terms and Criteria for their Use"</field>
+                <field type="STR">Eritropenia (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869033</field>
+                <field type="METAUI">A12104893</field>
+                <field type="LUI">L6534947</field>
+                <field type="SUI">S7618361</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000030</field>
+                <field type="ATN">SMQ_SOURCE</field>
+                <field type="ATV">Pubblicazione CIOMS, "Reporting Adverse Drug Reactions: Definitions of Terms and Criteria for their Use"</field>
+                <field type="STR">Leucopenia (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869039</field>
+                <field type="METAUI">A12106688</field>
+                <field type="LUI">L6535397</field>
+                <field type="SUI">S7617984</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000035</field>
+                <field type="ATN">SMQ_SOURCE</field>
+                <field type="ATV">1) Definitions and basic requirements for the use of terms for reporting adverse drug reactions (IV). Pharmacoepidemiology and Drug Safety 1993; 2:149-153. 2) Depression. Reporting Adverse Drug Reactions: Definitions of Terms and Criteria for Their Use. Bankowski Z, Bruppacher R, Crusius I et al (Eds). Council for International Organizations of Medical Sciences: Ginevra, 1999, pg. 43. 3) Kando JC, Wells BG, and Hayes PE. Depressive disorders. Pharmacotherapy: A Pathophysiologic Approach (5th Ed). DiPiro JT, Talbert RL, Yee GC et al (Eds). McGraw-Hill: New York, 2002, pg. 1243-1264. 4) Major depressive episode. Diagnostic and Statistical Manual of Mental Disorders (4th Ed). American Psychiatric Association: Washington DC, 1994, pg. 320-327. 5) Major depressive disorder. Diagnostic and Statistical Manual of Mental Disorders (4th Ed). American Psychiatric Association: Washington DC, 1994, pg. 370-375. 6) Substance-induced mood disorder. Diagnostic and Statistical Manual of Mental Disorders (4th Ed). American Psychiatric Association: Washington DC, 1994, pg. 370-375. 7) Dysthymic disorder. Diagnostic and Statistical Manual of Mental Disorders (4th Ed). American Psychiatric Association: Washington DC, 1994, pg. 345-350. 8) Minor depressive disorder. Diagnostic and Statistical Manual of Mental Disorders (4th Ed). American Psychiatric Association: Washington DC, 1994, pg. 719-721.</field>
+                <field type="STR">Depressione e suicidio/autolesionismo (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869041</field>
+                <field type="METAUI">A12104894</field>
+                <field type="LUI">L6535411</field>
+                <field type="SUI">S7618103</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000038</field>
+                <field type="ATN">SMQ_SOURCE</field>
+                <field type="ATV">Dorland's Illustrated Medical Dictionary, Saunders, Filadelfia, 2000</field>
+                <field type="STR">Emorragie (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869043</field>
+                <field type="METAUI">A12106105</field>
+                <field type="LUI">L6534944</field>
+                <field type="SUI">S7618323</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000041</field>
+                <field type="ATN">SMQ_SOURCE</field>
+                <field type="ATV">1. Oki JC and Isley WL. Diabetes mellitus. Pharmacotherapy: A Pathophysiologic Approach (5th Ed). DiPiro JT, Talbert RL, Yee GC et al (Eds). McGraw-Hill: New York, 2002. pg. 1335-1358. 2. Powers AC. Diabetes mellitus. Harrison's Principles of Internal Medicine (15th Ed). Braunwald E, Fauci AS, Kasper DL et al (Eds). McGraw-Hill: New York, 2001. pg. 2109-2137. 3. Vanrenterghem YFC. Which calcerineurin inhibitor is preferred in renal transplantation: tacrolimus or cyclosporine? Curr Opin Nephrol Hypertension 1999; 8(6):669-674. 4. Fraenkel PG, Rutkove SB, Matheson JK et al. Induction of myasthenia gravis, myositis, and insulin-dependent diabetes mellitus by high-dose interleukin-2 in a patient with renal cell cancer. J Immunother 2002; 25(4):373-378. 5. Costa J. Corticotrophins and corticosteroids. Meyler's Side Effects of Drugs (14th Ed). Dukes MNG (Ed). Elsevier:Amsterdam, 2000. pg. 1364-1395. 6. Coates P. Miscellaneous hormones. . Meyler's Side Effects of Drugs (14th Ed). Dukes MNG (Ed). Elsevier:Amsterdam, 2000. pg. 1520-1526. 7. Heck AM, Yanovski LA, and Calis KA. Pituitary gland disorders. Pharmacotherapy: A Pathophysiologic Approach (5th Ed). DiPiro JT, Talbert RL, Yee GC et al (Eds). McGraw-Hill: New York, 2002. pg. 1395-1411. 8. Currier J. Management of metabolic complications of therapy. AIDS 2002; 16(Suppl 4):S171-S176. 9. Fantry LE. Protease inhibitor-associated diabetes mellitus: a potential cause of morbidity and mortality. JAIDS 2003; 32: 243-244. 10. Henderson DC. Atypical antipsychotic-induced diabetes mellitus. CNS Drugs 2002; 16(2):77-89. 11. Citrome LL. The increase in risk of diabetes mellitus from exposure to second-generation antipsychotic agents. Drugs of Today 2004; 40(5):445-464. 12. Melkersson K and Dahl M-L. Adverse metabolic effe</field>
+                <field type="STR">Iperglicemia/nuova insorgenza di diabete mellito (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869044</field>
+                <field type="METAUI">A12105209</field>
+                <field type="LUI">L6535650</field>
+                <field type="SUI">S7618427</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000042</field>
+                <field type="ATN">SMQ_SOURCE</field>
+                <field type="ATV">Non fornita</field>
+                <field type="STR">Malattia polmonare interstiziale (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869045</field>
+                <field type="METAUI">A12105806</field>
+                <field type="LUI">L6535053</field>
+                <field type="SUI">S7617873</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000043</field>
+                <field type="ATN">SMQ_SOURCE</field>
+                <field type="ATV">Harrison's Textbook of Internal Medicine</field>
+                <field type="STR">Cardiopatia ischemica (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869046</field>
+                <field type="METAUI">A12105499</field>
+                <field type="LUI">L6535320</field>
+                <field type="SUI">S7618753</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000044</field>
+                <field type="ATN">SMQ_SOURCE</field>
+                <field type="ATV">1) Levenson JL. Neuroleptic malignant syndrome. Amer J Psychiatry 1985; 142(10):1137-1145. 2) Caroff SN and Mann SC. Neuroleptic malignant syndrome. Medical Clinics of North America 1993; 77(1):185-202. 3) Neuroleptic malignant syndrome. Diagnostic and Statistical Manual of Mental Disorders (4th Ed). American Psychiatric Association: Washington DC, 1994, pg. 739-742. 4) Velamoor VR. Neuroleptic malignant syndrome: recognition, prevention and management. Drug Safety 1998; 19(1):73-82. 5) Neuroleptic malignant syndrome. Reporting Adverse Drug Reactions: Definitions of Terms and Criteria for Their Use. Bankowski Z, Bruppacher R, Crusius I et al (Eds). Council for International Organizations of Medical Sciences: Geneva, 1999, pg. 31-32. 6) Simpson GM, Pi EH, and Sramek JJ. Neuroleptic and antipsychotic drugs. Meyler's Side Effects of Drugs (14th Ed). Dukes MNG and Aronson JK (Eds). Elsevier: New York, 2000, pg. 139-163. 7) Crismon ML and Dorson PG. Schizophrenia. Pharmacotherapy: A Pathophysiologic Approach (5th Ed). DiPiro JT, Talbert RL, Yee GC et al (Eds). McGraw-Hill: New York, 2002, pg. 1219-1242. 8) Hasan S and Buckley P. Novel antipsychotics and the neuroleptic malignant syndrome: a review and critique. Amer J Psychiatry 1998; 155(8):1113-1116. 9) Caroff SN, Mann SC, and Campbell EC. Atypical antipsychotics and neuroleptic malignant syndrome. Psychiatric Annals 2000; 30(5):314-321. 10) Ananth J, Parameswaran S, and Gunatilake S et al. Neuroleptic malignant syndrome and atypical antipsychotic drugs. J Clin Psychiatry 2004; 65(4):464-470.</field>
+                <field type="STR">Sindrome neurolettica maligna (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869047</field>
+                <field type="METAUI">A12106392</field>
+                <field type="LUI">L6535644</field>
+                <field type="SUI">S7618399</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000045</field>
+                <field type="ATN">SMQ_SOURCE</field>
+                <field type="ATV">1. Guidelines for referral and management of systemic lupus erythematosus in adults. American College of Rheumatology Ad Hoc Committee on Systemic Lupus Erythematosus Guidelines. Arthritis Rheum 1999;42:1785-96. 2. Hellman DB, Stone JH. Arthritis and musculoskeletal disorders. In: Tierney, Jr. LM, McPhee SJ, Papadakis MA, editors. Current medical diagnosis and treatment. 43rd ed. New York: McGraw-Hill Companies, Inc.; 2004. Available via intranet at STAT!Ref Online Medical Database. Teton Data Systems, Jackson, Wyo. (Version 3.3.6, 2004). 3. Hahn BH. Disorders of the immune system, connective tissues, and joints. In: Kasper DL, Fauci AS, Longo DL, Braunwald E, Hauser SL, Jameson JL, editors. Harrison's principles of internal medicine. 16th ed. New York: McGraw-Hill Companies; 2005. Available via intranet at STAT!Ref Online Medical Database. Teton Data Systems, Jackson, Wyo. (Version 3.3.6, 2004). 4. Diffuse connective tissue disease. In: Beers MH, Berkow R, editors. The merck manual of diagnosis and therapy. 11th ed. Whitehouse Station: Merck Research Laboratories; 1999. Available via intranet at STAT!Ref Online Medical Database. Teton Data Systems, Jackson, Wyo. (Version 3.3.6, 2004). 5. Trethewey P. Systemic Lupus Erythematosus. Dimens Crit Care Nurs 2004;23:111-5. 6. CIOMS Publication, "Reporting Adverse Drug Reactions: Definitions of Terms and Criteria for their Use", pp 19 - 20, 1999. 7. The Merck Manual, Seventeenth Edition, pp 426 - 430, 1999 8. "Harrison's Principles of Internal Medicine", 14th edition, pp 1874 - 1880, 1998 9. Stratton MA Drug-induced systemic lupus erethemetosis. Clin Pharm 1985: 4:567-63 10. Yung R, Chang S, Hemati N et al. Mechanisms of drug-induced lupus. IV. Comparison of procainamide and hydralazine with analogs in vitro and </field>
+                <field type="STR">Lupus eritematoso sistemico (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869048</field>
+                <field type="METAUI">A12106980</field>
+                <field type="LUI">L6535988</field>
+                <field type="SUI">S7618014</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000046</field>
+                <field type="ATN">SMQ_SOURCE</field>
+                <field type="ATV">1. The Merck Manual, 17th ed., 1999, p 687 2. Harrison's Principles of Internal Medicine, 14th ed., 1998, pp 173 - 175 3. Doty, RL et al. Influences of antihypertensive and antihyperlipidemic drugs on the senses of taste and smell: a review. J Hypertens21: 1805 -1813 4. Stedman's Medical Dictionary, 27th ed., 2000.</field>
+                <field type="STR">Disturbi del gusto e dell'odorato (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869051</field>
+                <field type="METAUI">A12106689</field>
+                <field type="LUI">L6535379</field>
+                <field type="SUI">S7617811</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000049</field>
+                <field type="ATN">SMQ_SOURCE</field>
+                <field type="ATV">1. Bankowski Z, Bruppacher R, Crusius I et al. Reporting adverse drug reactions, definition of terms and criteria for their use. Council for International Organizations of Medical Sciences (CIOMS), 1999. Page 78. 2. Harrison's Principles of Internal Medicine 16th ed, Mc Graw Hill, 2005, pp 1333-58.</field>
+                <field type="STR">Aritmie cardiache (SMQ)</field>
+            </row>
+        </sample>
+        <sample id="MDRITA13_1_SOS_ROOT_SOURCE_DUI" samplename="SOS" definition="Scope Statement" count="92">
+            <row type="standard">
+                <field type="CUI">C1869006</field>
+                <field type="METAUI">A12105494</field>
+                <field type="LUI">L6535509</field>
+                <field type="SUI">S7618850</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000001</field>
+                <field type="ATN">SOS</field>
+                <field type="ATV">1. Include termini relativi a morte cardiaca e improvvisa poiché è un'associazione frequente con la torsione di punta.</field>
+                <field type="STR">Torsione di punta/prolungamento del QT (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869007</field>
+                <field type="METAUI">A12105205</field>
+                <field type="LUI">L6535677</field>
+                <field type="SUI">S7618630</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000002</field>
+                <field type="ATN">SOS</field>
+                <field type="ATV">I termini relativi all'insufficienza/compromissione renale sono inclusi a causa della frequente associazione con la rabdomiolisi.</field>
+                <field type="STR">Rabdomiolisi/miopatia (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869091</field>
+                <field type="METAUI">A12106985</field>
+                <field type="LUI">L6535624</field>
+                <field type="SUI">S7618298</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000004</field>
+                <field type="ATN">SOS</field>
+                <field type="ATV">Il gruppo di lavoro del CIOMS ha discusso dettagliatamente la possibilità di applicare un algoritmo a questo SMQ sulla base della definizione fornita di insufficineza cardiaca. Tale algoritmo non è però stato testato dal gruppo di lavoro del CIOMS, quindi il gruppo di lavoro chiede agli utenti di inviare commenti sulla rilevanza pratica di un approccio algoritmico. Un tale algoritmo potrebbe coinvolgere termini di ricerca ampia come segue: un termine sull'edema, un termine sulla dispnea più un termine clinico/segno/sintomo o esame investigativo risultando in 3 termini in totale</field>
+                <field type="STR">Insufficienza cardiaca (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869038</field>
+                <field type="METAUI">A12106104</field>
+                <field type="LUI">L6536067</field>
+                <field type="SUI">S7618633</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000021</field>
+                <field type="ATN">SOS</field>
+                <field type="ATV">Si usa il seguente algoritmo: tutti i termini di ricerca ristretta così come: se sono presenti un termine della categoria B e uno della categoria C, oppure un termine della categoria B o C e un termine della categoria D.</field>
+                <field type="STR">Reazione anafilattica (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869025</field>
+                <field type="METAUI">A12106387</field>
+                <field type="LUI">L6534965</field>
+                <field type="SUI">S7618503</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000022</field>
+                <field type="ATN">SOS</field>
+                <field type="ATV">Per applicare l'algoritmo - Un rapporto clinico è considerato caso rilevante per ulteriore esame se: 1) include un termine della categoria A (termini ristretti) OPPURE 2) include almeno un termine della categoria B (elenco dei valori di laboratorio) e almeno un termine della categoria C (elenco dei segni e dei sintomi)</field>
+                <field type="STR">Pancreatite acuta (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869026</field>
+                <field type="METAUI">A12106686</field>
+                <field type="LUI">L6535938</field>
+                <field type="SUI">S7617685</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000023</field>
+                <field type="ATN">SOS</field>
+                <field type="ATV">Se possibile, occorre riportare, cercare nel follow-up e codificare gli esami ematologici completi e gli esami ripetuti della conta dei leucociti. Rispetto alle richieste fatte al database con termini di ricerca ampia, i dati codificati ulteriormente sui valori ematologici aiutano a reperire i casi rilevanti piu facilmente. Nel caso in cui i valori di laboratorio non fossero codificati nel database, è necessario un esame individuale per decidere la rilevanza nel contesto dell'agranulocitosi.</field>
+                <field type="STR">Agranulocitosi (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869030</field>
+                <field type="METAUI">A12105519</field>
+                <field type="LUI">L6535226</field>
+                <field type="SUI">S7617894</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000027</field>
+                <field type="ATN">SOS</field>
+                <field type="ATV">I casi con nessun legame alla categoria "Citopenia e patologie ematopoietiche che interessano più di un tipo di cellule ematiche" devono essere esaminati per osservare combinazioni di eventi avversi/reazioni avverse a farmaci assegnati ad almeno due degli altri tre SMQ per trovare tutti i casi rilevanti. Tutti i tipi di combinazioni potenziali sembrano possibili e devono essere considerati.</field>
+                <field type="STR">Citopenie ematopoietiche (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869031</field>
+                <field type="METAUI">A12106687</field>
+                <field type="LUI">L6534890</field>
+                <field type="SUI">S7617893</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000028</field>
+                <field type="ATN">SOS</field>
+                <field type="ATV">I casi con nessun legame alla categoria "Citopenia e patologie ematopoietiche che interessano più di un tipo di cellule ematiche" devono essere esaminati per osservare combinazioni di eventi avversi/reazioni avverse a farmaci assegnati ad almeno due degli altri tre SMQ per trovare tutti i casi rilevanti. Tutti i tipi di combinazioni potenziali sembrano possibili e devono essere considerati.</field>
+                <field type="STR">Citopenia e patologie ematopoietiche che interessano più di un tipo di cellula ematica (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869032</field>
+                <field type="METAUI">A12106390</field>
+                <field type="LUI">L6535785</field>
+                <field type="SUI">S7618121</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000029</field>
+                <field type="ATN">SOS</field>
+                <field type="ATV">I casi con nessun legame alla categoria "Citopenia e patologie ematopoietiche che interessano più di un tipo di cellule ematiche" devono essere esaminati per osservare combinazioni di eventi avversi/reazioni avverse a farmaci assegnati ad almeno due degli altri tre SMQ per trovare tutti i casi rilevanti. Tutti i tipi di combinazioni potenziali sembrano possibili e devono essere considerati.</field>
+                <field type="STR">Eritropenia (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869033</field>
+                <field type="METAUI">A12104893</field>
+                <field type="LUI">L6534947</field>
+                <field type="SUI">S7618361</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000030</field>
+                <field type="ATN">SOS</field>
+                <field type="ATV">I casi con nessun legame alla categoria "Citopenia e patologie ematopoietiche che interessano più di un tipo di cellule ematiche" devono essere esaminati per osservare combinazioni di eventi avversi/reazioni avverse a farmaci assegnati ad almeno due degli altri tre SMQ per trovare tutti i casi rilevanti. Tutti i tipi di combinazioni potenziali sembrano possibili e devono essere considerati.</field>
+                <field type="STR">Leucopenia (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869034</field>
+                <field type="METAUI">A12105498</field>
+                <field type="LUI">L6535710</field>
+                <field type="SUI">S7618898</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000031</field>
+                <field type="ATN">SOS</field>
+                <field type="ATV">I casi con nessun legame alla categoria "Citopenia e patologie ematopoietiche che interessano più di un tipo di cellule ematiche" devono essere esaminati per osservare combinazioni di eventi avversi/reazioni avverse a farmaci assegnati ad almeno due degli altri tre SMQ per trovare tutti i casi rilevanti. Tutti i tipi di combinazioni potenziali sembrano possibili e devono essere considerati.</field>
+                <field type="STR">Trombocitopenia (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869035</field>
+                <field type="METAUI">A12106102</field>
+                <field type="LUI">L6536040</field>
+                <field type="SUI">S7618444</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000032</field>
+                <field type="ATN">SOS</field>
+                <field type="ATV">Al momento, questo SMQ è appropriato per quanto riguarda farmaci, componenti ematici/emoderivati e prodotti per terapie cellulari, tissutali e genetiche. È meno appropriato per i prodotti riguardanti vaccini che sembrano più adeguati per ricerche specifiche descritte in questo documento. Per ulteriori dettagli, consultare la Guida introduttiva per gli SMQ.</field>
+                <field type="STR">Mancanza di efficacia/effetto (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869036</field>
+                <field type="METAUI">A12106103</field>
+                <field type="LUI">L6535544</field>
+                <field type="SUI">S7617673</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000033</field>
+                <field type="ATN">SOS</field>
+                <field type="ATV">Il testing eseguito in due database regolamentatori ha confermato che la lista dei termini è adeguata. In uno di questi due database, il termine "acidosi" ha identificato dei casi , ma potrebbe essere un fenomeno dovuto alle caratteristiche del database (codificazione di resoconti a termini appartenenti ad una terminologia più vecchia o ad altre convenzioni di codificazione).</field>
+                <field type="STR">Acidosi lattica (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869039</field>
+                <field type="METAUI">A12106688</field>
+                <field type="LUI">L6535397</field>
+                <field type="SUI">S7617984</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000035</field>
+                <field type="ATN">SOS</field>
+                <field type="ATV">I PT Overdose intenzionale e Avvelenamento deliberato sono stati inclusi nella ricerca per Depressione e per Suicidio/autolesionismo in quanto includono LLT che suggeriscono il suicidio e l'autolesionismo. Tuttavia, l'inclusione di questi PT, in particolare del PT Overdose intenzionale, ha aumentato in modo sostanziale il numero di casi identificati da entrambe le ricerche per depressione e suicidio/autolesionismo nel collaudo di Fase I. Era pratica della compagnia di collaudo di includere qualsiasi caso in cui al paziente era stata prescritta una dose che eccedeva la dose giornaliera massima raccomandata nel foglietto illustrativo come overdose intenzionale, indipendentemente dal fatto se era stato riportato o meno un caso di overdose. Quindi, molti di questi casi non coinvolgono vere "overdose". Per i database in cui questa è la pratica comune, non sarebbe irragionevole condurre una ricerca iniziale escludendo questi due PT. Per i database in cui questa non è la pratica comune, questi due PT devono essere inclusi di routine in entrambe le ricerche.</field>
+                <field type="STR">Depressione e suicidio/autolesionismo (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869041</field>
+                <field type="METAUI">A12104894</field>
+                <field type="LUI">L6535411</field>
+                <field type="SUI">S7618103</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000038</field>
+                <field type="ATN">SOS</field>
+                <field type="ATV">Il PT Sangue nelle urine è stato incluso sebbene possa essere interpretato come test di laboratorio soltanto senza dichiarare esplicitamente che era presente sangue nelle urine. Tuttavia questo termine viene solitamente usato per descrivere la scoperta di sangue nelle urine. Nota: i codificatori avrebbero dovuto scegliere PT Sangue nelle urine presente se l'intento era di codificare il sangue presente nelle urine (microscopicamente anche senza test).</field>
+                <field type="STR">Emorragie (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869043</field>
+                <field type="METAUI">A12106105</field>
+                <field type="LUI">L6534944</field>
+                <field type="SUI">S7618323</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000041</field>
+                <field type="ATN">SOS</field>
+                <field type="ATV">Nel collaudo di Fase I (database di azienda), alcuni PT di ricerca ampia (Colesterolemia aumentata, Trigliceridemia aumentata, Peso aumentato e Peso diminuito) hanno recuperato notevoli "interferenze" ma questo potrebbe essere dipeso dai farmaci selezionati per il collaudo. Il gruppo di lavoro del CIOMS ha concluso che questi PT devono essere inclusi per completezza, e se la ricerca ristretta identifica un numero sufficiente di casi per una valutazione, allora i casi concernenti solo questi PT potrebbero non essere valutati ulteriormente. Nel caso in cui la ricerca ristretta trovi un numero di casi insufficiente da valutare, allora i casi che includono questi PT dovrebbero essere esaminati per valutare se il paziente in questi casi sia ad alto rischio per lo sviluppo di diabete mellito o di iperglicemia. Il collaudo del database regolamentatorio ha recuperato in modo simile dell "Interferenze" per il PT peso aumentato. Il gruppo di lavoro del CIOMS ha concordato che questo termine è rilevante per l'ambito di applicazione di questo SMQ e quindi dovrebbe restare per ora nella ricerca. Gli utenti del MedDRA sono invitati a concentrarsi in modo specifico su questo termine durante il collaudo di Fase II e fornire opinioni sull'effettiva utilità del termine per questo SMQ.</field>
+                <field type="STR">Iperglicemia/nuova insorgenza di diabete mellito (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869045</field>
+                <field type="METAUI">A12105806</field>
+                <field type="LUI">L6535053</field>
+                <field type="SUI">S7617873</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000043</field>
+                <field type="ATN">SOS</field>
+                <field type="ATV">Sulla base del collaudo regolamentatorio e di azienda, l'SMQ Cardiopatia ischemica recupera casi rilevanti. La versione originale delle ricerche ampie includeva il PT Aspartato aminotransferasi anormale e PT Aspartato aminotransferasi aumentato. Questi termini sono stati tolti sulla base dei risultati dei test (hanno recuperato un alto numero di casi irrilevanti).Se si esaminano dati più vecchi (cioè prima del 2000), si potrebbe prendere in considerazione l'inclusione di questi termini nella ricerca. • Consiste in un SMQ principale Cardiopatia ischemica e un solo SMQ si sotto-ricerca Infarto miocardico, ognuno con ricerche ampie e ristrette (NOTA: tutti i termini che fanno parte di Infarto miocardico (SMQ) si trovano anche nel più grande Cardiopatia ischemica (SMQ).</field>
+                <field type="STR">Cardiopatia ischemica (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869046</field>
+                <field type="METAUI">A12105499</field>
+                <field type="LUI">L6535320</field>
+                <field type="SUI">S7618753</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000044</field>
+                <field type="ATN">SOS</field>
+                <field type="ATV">Algoritmo: Categoria A: rapporti specifici di sindrome neurolettica maligna o di condizioni simili come come sindrome della serotonina o ipertermia maligna; Categoria B (PT correlati alla febbre); Categoria C (PT correlati alla rigidità o lesioni muscolari); Categoria D (altri PT rilevanti correlati alla sindrome neurolettica maligna).I casi da selezionare per un esame più approfondito dovrebbero includere tutti i casi che riportano almeno uno dei PT elencati nella categoria A o i casi che riportano una combinazione di almeno un PT da ognuno dei tre gruppi di PT elencati nelle categorie B, C e D.</field>
+                <field type="STR">Sindrome neurolettica maligna (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869047</field>
+                <field type="METAUI">A12106392</field>
+                <field type="LUI">L6535644</field>
+                <field type="SUI">S7618399</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">20000045</field>
+                <field type="ATN">SOS</field>
+                <field type="ATV">Uso dell'algoritmo pesato in questo SMQ: 1) I PT menzionati nel rapporto dei casi sono raggruppati secondo categorie predeterminate. La frequenza multipla di diversi PT all'interno della stessa categoria è stata contata una volta sola. 2) La categoria alla quale viene attribuito un termine, è quindi moltiplicata per il suo "peso" empirico predeterminato (ad esempio - tre per le categorie Disturbo ematologico, Sierosite e Disturbo immunologico) e sommata per tutte le categorie. 3) Se questa somma è maggiore di sei, viene proposto che il rapporto del caso si qualifichi come caso sospetto di lupus eritematoso sistemico. Ad esempio, un rapporto che abbia PT nelle categorie Disturbo ematologico (3), Disturbo immunologico (3) e Nefropatia (1) sarà classificato come rapporto di caso di lupus eritematoso sistemico di ricerca ampia (3 + 3 + 1 = 7).</field>
+                <field type="STR">Lupus eritematoso sistemico (SMQ)</field>
+            </row>
+        </sample>
+        <sample id="MDRITA13_1_MISO_ROOT_SOURCE_DUI" samplename="MISO" definition="MedDRA Serial Code International SOC Sort Order Digit (01-26)" count="26">
+            <row type="standard">
+                <field type="CUI">C0851353</field>
+                <field type="METAUI">A10262820</field>
+                <field type="LUI">L6010855</field>
+                <field type="SUI">S6893284</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10005329</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">03</field>
+                <field type="STR">Patologie del sistema emolinfopoietico</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0018799</field>
+                <field type="METAUI">A10262733</field>
+                <field type="LUI">L6010766</field>
+                <field type="SUI">S6893197</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10007541</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">11</field>
+                <field type="STR">Patologie cardiache</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851352</field>
+                <field type="METAUI">A10262771</field>
+                <field type="LUI">L6010806</field>
+                <field type="SUI">S6893235</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10010331</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">21</field>
+                <field type="STR">Patologie congenite, familiari e genetiche</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851354</field>
+                <field type="METAUI">A10262841</field>
+                <field type="LUI">L6010876</field>
+                <field type="SUI">S6893305</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10013993</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">10</field>
+                <field type="STR">Patologie dell'orecchio e del labirinto</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0014130</field>
+                <field type="METAUI">A10262920</field>
+                <field type="LUI">L6010946</field>
+                <field type="SUI">S6893384</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10014698</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">05</field>
+                <field type="STR">Patologie endocrine</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0015397</field>
+                <field type="METAUI">A10262840</field>
+                <field type="LUI">L6010874</field>
+                <field type="SUI">S6893304</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10015919</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">09</field>
+                <field type="STR">Patologie dell'occhio</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0017178</field>
+                <field type="METAUI">A10262930</field>
+                <field type="LUI">L6010962</field>
+                <field type="SUI">S6893393</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10017947</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">14</field>
+                <field type="STR">Patologie gastrointestinali</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851362</field>
+                <field type="METAUI">A10262988</field>
+                <field type="LUI">L6011021</field>
+                <field type="SUI">S6893450</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10018065</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">22</field>
+                <field type="STR">Patologie sistemiche e condizioni relative alla sede di somministrazione</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0267792</field>
+                <field type="METAUI">A10262924</field>
+                <field type="LUI">L6010957</field>
+                <field type="SUI">S6893388</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10019805</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">15</field>
+                <field type="STR">Patologie epatobiliari</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0021053</field>
+                <field type="METAUI">A10231701</field>
+                <field type="LUI">L5989269</field>
+                <field type="SUI">S6871699</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10021428</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">04</field>
+                <field type="STR">Disturbi del sistema immunitario</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0009450</field>
+                <field type="METAUI">A10247365</field>
+                <field type="LUI">L6000075</field>
+                <field type="SUI">S6882507</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10021881</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">01</field>
+                <field type="STR">Infezioni ed infestazioni</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0947733</field>
+                <field type="METAUI">A10280297</field>
+                <field type="LUI">L6022960</field>
+                <field type="SUI">S6905388</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10022117</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">24</field>
+                <field type="STR">Traumatismo, avvelenamento e complicazioni da procedura</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1261322</field>
+                <field type="METAUI">A10238884</field>
+                <field type="LUI">L5993916</field>
+                <field type="SUI">S6876349</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10022891</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">23</field>
+                <field type="STR">Esami diagnostici</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851358</field>
+                <field type="METAUI">A10231673</field>
+                <field type="LUI">L5989242</field>
+                <field type="SUI">S6871672</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10027433</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">06</field>
+                <field type="STR">Disturbi del metabolismo e della nutrizione</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0263660</field>
+                <field type="METAUI">A10262823</field>
+                <field type="LUI">L6010857</field>
+                <field type="SUI">S6893287</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10028395</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">17</field>
+                <field type="STR">Patologie del sistema muscoloscheletrico e del tessuto connettivo</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0027651</field>
+                <field type="METAUI">A10283966</field>
+                <field type="LUI">L6025720</field>
+                <field type="SUI">S6908150</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10029104</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">02</field>
+                <field type="STR">Tumori benigni, maligni e non specificati (cisti e polipi compresi)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0027765</field>
+                <field type="METAUI">A10262827</field>
+                <field type="LUI">L6010859</field>
+                <field type="SUI">S6893291</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10029205</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">08</field>
+                <field type="STR">Patologie del sistema nervoso</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851363</field>
+                <field type="METAUI">A10226634</field>
+                <field type="LUI">L5985572</field>
+                <field type="SUI">S6868002</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10036585</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">19</field>
+                <field type="STR">Condizioni di gravidanza, puerperio e perinatali</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0004936</field>
+                <field type="METAUI">A10231923</field>
+                <field type="LUI">L5989482</field>
+                <field type="SUI">S6871915</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10037175</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">07</field>
+                <field type="STR">Disturbi psichiatrici</field>
+            </row>
+        </sample>
+    </samples>
+</document>

@@ -1,0 +1,1633 @@
+<div class="section-3" id="maincontent">
+   <ul id="menu">
+      <li id="nav-1">
+         <a href="index.html">Synopsis</a>
+      </li>
+      <li id="nav-2">
+         <a href="mrsab.html">MRSAB.RRF</a>
+      </li>
+      <li id="nav-3">
+         <a href="sourcemetastats.html">Statistics and Sample Data</a>
+         <ul id="subnav-3">
+            <li>
+               <a href="termtypes.html">Terms and term types</a>
+            </li>
+            <li>
+               <a href="attributes.html">Attributes</a>
+            </li>
+            <li>
+               <a href="relationships.html" id="rels">Relationships</a>
+            </li>
+            <li>
+               <a href="semtypes.html">Semantic Types</a>
+            </li>
+            <li>
+               <a href="overlap.html">Source Overlap</a>
+            </li>
+         </ul>
+      </li>
+   </ul>
+   <div id="counts">
+      <h2>Counts</h2>
+      <p class="jumptags">&nbsp;(skip to:&nbsp;<a href="#explain">notes</a>&nbsp;&nbsp;<a href="#samples">samples</a>)</p>
+      <div id="placeholder" style="display:none;">placeholder</div>
+      <table summary="Metadata Stats: This is a by-source tabulation of various data types in the UMLS Metathesaurus">
+         <tr>
+            <th class="metalabel" scope="col">Relationship</th>
+            <th class="metalabel" scope="col">Relationship Attribute</th>
+            <th class="count" scope="col">Count (MRREL.RRF)</th>
+         </tr>
+         <tr>
+            <td class="metalabel" valign="top" scope="row">
+               <a href="#MTHCH2011_RT__ROOT_SOURCE_CUI_ROOT_SOURCE_CUI"
+                  title="Samples of RO relationships. If you are using the tab key for navigation, press Enter or Return to go to sample data"
+                  onkeyup="checkKeyType('MTHCH2011_RT__ROOT_SOURCE_CUI_ROOT_SOURCE_CUI',event);"
+                  onclick="document.getElementById('placeholder').innerHTML = '';document.getElementById('placeholder').style.display = 'none';new Effect.Appear('placeholder');drawContentBox('MTHCH2011_RT__ROOT_SOURCE_CUI_ROOT_SOURCE_CUI',event,this.innerHTML);return false;">RO</a>
+               <noscript>
+                  <a href="#MTHCH2011_RT__ROOT_SOURCE_CUI_ROOT_SOURCE_CUI"/>
+               </noscript>
+            </td>
+            <td class="attribute" valign="top">*</td>
+            <td class="count" valign="top">35128</td>
+         </tr>
+         <tr>
+            <td class="metalabel" valign="top" scope="row">
+               <a href="#MTHCH2011_PAR__ROOT_SOURCE_CUI_ROOT_SOURCE_CUI"
+                  title="Samples of PAR relationships. If you are using the tab key for navigation, press Enter or Return to go to sample data"
+                  onkeyup="checkKeyType('MTHCH2011_PAR__ROOT_SOURCE_CUI_ROOT_SOURCE_CUI',event);"
+                  onclick="document.getElementById('placeholder').innerHTML = '';document.getElementById('placeholder').style.display = 'none';new Effect.Appear('placeholder');drawContentBox('MTHCH2011_PAR__ROOT_SOURCE_CUI_ROOT_SOURCE_CUI',event,this.innerHTML);return false;">PAR</a>
+               <noscript>
+                  <a href="#MTHCH2011_PAR__ROOT_SOURCE_CUI_ROOT_SOURCE_CUI"/>
+               </noscript>
+            </td>
+            <td class="attribute" valign="top">*</td>
+            <td class="count" valign="top">10482</td>
+         </tr>
+         <tr>
+            <td class="metalabel" valign="top" scope="row">
+               <a href="#MTHCH2011_NT__ROOT_SOURCE_CUI_ROOT_SOURCE_CUI"
+                  title="Samples of RN relationships. If you are using the tab key for navigation, press Enter or Return to go to sample data"
+                  onkeyup="checkKeyType('MTHCH2011_NT__ROOT_SOURCE_CUI_ROOT_SOURCE_CUI',event);"
+                  onclick="document.getElementById('placeholder').innerHTML = '';document.getElementById('placeholder').style.display = 'none';new Effect.Appear('placeholder');drawContentBox('MTHCH2011_NT__ROOT_SOURCE_CUI_ROOT_SOURCE_CUI',event,this.innerHTML);return false;">RN</a>
+               <noscript>
+                  <a href="#MTHCH2011_NT__ROOT_SOURCE_CUI_ROOT_SOURCE_CUI"/>
+               </noscript>
+            </td>
+            <td class="attribute" valign="top">*</td>
+            <td class="count" valign="top">124</td>
+         </tr>
+         <tr>
+            <td class="metalabel" valign="top" scope="row">
+               <a href="#MTHCH2011_PAR__ROOT_SOURCE_CUI_AUI"
+                  title="Samples of PAR relationships. If you are using the tab key for navigation, press Enter or Return to go to sample data"
+                  onkeyup="checkKeyType('MTHCH2011_PAR__ROOT_SOURCE_CUI_AUI',event);"
+                  onclick="document.getElementById('placeholder').innerHTML = '';document.getElementById('placeholder').style.display = 'none';new Effect.Appear('placeholder');drawContentBox('MTHCH2011_PAR__ROOT_SOURCE_CUI_AUI',event,this.innerHTML);return false;">PAR</a>
+               <noscript>
+                  <a href="#MTHCH2011_PAR__ROOT_SOURCE_CUI_AUI"/>
+               </noscript>
+            </td>
+            <td class="attribute" valign="top">*</td>
+            <td class="count" valign="top">8</td>
+         </tr>
+      </table>
+   </div>
+   <div id="explain">
+      <h2>Notes</h2>
+      <p>Sample data are taken from MRREL.RRF.  Associated strings(str) from MRCONSO.RRF are also included</p>
+      <ul>
+         <li>See relationships definitions below.</li>
+         <li>Every relationship has a separate row in MRREL.RRF.</li>
+         <li>Relationships are assigned based on source documentation or NLM understanding of the source.</li>
+         <li>Metathesaurus relationships in MRREL.RRF are read from <b>right to left</b>.</li>
+         <li>All relationships in MRREL.RRF are expressed in both directions, for example: 'has_ingredient/ingredient_of'. Inverse relationships in each pair are indicated on this page.</li>
+         <li>An asterisk (*) in the relationship attribute column indicates that no relationship attribute (RELA) was assigned.</li>
+         <li>Every even row (indicated by orange colored rel/rela pairs) indicates that the current row is an inverse relationship of the row above it.</li>
+         <li>See Section <a href="http://www.ncbi.nlm.nih.gov/books/NBK9684/#ch02.I24_Relationships_and_Relationship"
+               target="_blank">2.4 of the UMLS Reference Manual</a> for more information on Relationships in the UMLS Metathesaurus.</li>
+      </ul>
+      <h2>Relationship Definitions</h2>
+      <ul>
+         <li>
+            <b>AQ</b>: allowed qualifier</li>
+         <li>
+            <b>CHD</b>: has child (narrower hierarchical term)</li>
+         <li>
+            <b>DEL</b>: deleted concept</li>
+         <li>
+            <b>PAR</b>: has parent (broader hierarchical term)</li>
+         <li>
+            <b>QB</b>: can be qualifier by</li>
+         <li>
+            <b>RB</b>: has a broader relationship</li>
+         <li>
+            <b>RL</b>: has similar or like relationship </li>
+         <li>
+            <b>RN</b>: has narrower relationship </li>
+         <li>
+            <b>RO</b>: has relationship other than synonymous, narrower or broader</li>
+         <li>
+            <b>RQ</b>: related and possibly synonymous</li>
+         <li>
+            <b>SIB</b>: has sibling</li>
+         <li>
+            <b>SY</b>: source-asserted synonymy</li>
+      </ul>
+   </div>
+   <div id="samples">
+      <h3>Sample Data</h3>
+      <div class="sample" id="MTHCH2011_RT__ROOT_SOURCE_CUI_ROOT_SOURCE_CUI">
+         <h4>RO</h4>&nbsp;&nbsp;<a href="#counts">(return to top)</a>
+         <table summary="This table provides sample rows for MTHCH2011_RT__ROOT_SOURCE_CUI_ROOT_SOURCE_CUI data elements in the UMLS Metathesaurus">
+            <tr>
+               <th scope="col">CUI1</th>
+               <th scope="col">AUI1</th>
+               <th scope="col">STYPE1</th>
+               <th scope="col">STR</th>
+               <th scope="col">REL</th>
+               <th scope="col">STR</th>
+               <th scope="col">STYPE2</th>
+               <th scope="col">AUI2</th>
+               <th scope="col">CUI2</th>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0519803</td>
+               <td class="aui1" valign="top">A8575915</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Laparoscopy, surgical; jejunostomy (eg, for decompression or feeding)</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Laparoscopy, surgical; cholecystectomy with cholangiography</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0729887</td>
+               <td class="cui2" valign="top">C0372532</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0372532</td>
+               <td class="aui1" valign="top">A0729887</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Laparoscopy, surgical; cholecystectomy with cholangiography</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Laparoscopy, surgical; jejunostomy (eg, for decompression or feeding)</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A8575915</td>
+               <td class="cui2" valign="top">C0519803</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0812511</td>
+               <td class="aui1" valign="top">A7159777</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Laparoscopy, surgical; donor nephrectomy (including cold preservation), from living donor</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Laparoscopy, surgical; with fulguration or excision of lesions of the ovary, pelvic viscera, or peritoneal surface by any method</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0729895</td>
+               <td class="cui2" valign="top">C0372518</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0372518</td>
+               <td class="aui1" valign="top">A0729895</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Laparoscopy, surgical; with fulguration or excision of lesions of the ovary, pelvic viscera, or peritoneal surface by any method</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Laparoscopy, surgical; donor nephrectomy (including cold preservation), from living donor</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A7159777</td>
+               <td class="cui2" valign="top">C0812511</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0519800</td>
+               <td class="aui1" valign="top">A0983152</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Laparoscopy, surgical; orchiectomy</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Laparoscopy, surgical; with fulguration of oviducts (with or without transection)</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A1750967</td>
+               <td class="cui2" valign="top">C0812522</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0812522</td>
+               <td class="aui1" valign="top">A1750967</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Laparoscopy, surgical; with fulguration of oviducts (with or without transection)</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Laparoscopy, surgical; orchiectomy</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0983152</td>
+               <td class="cui2" valign="top">C0519800</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0373895</td>
+               <td class="aui1" valign="top">A1747717</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Antibody; encephalitis, California (La Crosse)</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Antibody; Toxoplasma, IgM</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0646185</td>
+               <td class="cui2" valign="top">C0373942</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0373942</td>
+               <td class="aui1" valign="top">A0646185</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Antibody; Toxoplasma, IgM</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Antibody; encephalitis, California (La Crosse)</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A1747717</td>
+               <td class="cui2" valign="top">C0373895</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0373902</td>
+               <td class="aui1" valign="top">A1747707</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Antibody; Epstein-Barr (EB) virus, viral capsid (VCA)</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Antibody; Leishmania</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0646175</td>
+               <td class="cui2" valign="top">C0523293</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0523293</td>
+               <td class="aui1" valign="top">A0646175</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Antibody; Leishmania</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Antibody; Epstein-Barr (EB) virus, viral capsid (VCA)</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A1747707</td>
+               <td class="cui2" valign="top">C0373902</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0519867</td>
+               <td class="aui1" valign="top">A0968595</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Infectious agent detection by nucleic acid (DNA or RNA); Bartonella henselae and Bartonella quintana, direct probe technique</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Infectious agent detection by nucleic acid (DNA or RNA); influenza virus, reverse transcription and amplified probe technique, each type or subtype</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A18511909</td>
+               <td class="cui2" valign="top">C2939285</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C2939285</td>
+               <td class="aui1" valign="top">A18511909</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Infectious agent detection by nucleic acid (DNA or RNA); influenza virus, reverse transcription and amplified probe technique, each type or subtype</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Infectious agent detection by nucleic acid (DNA or RNA); Bartonella henselae and Bartonella quintana, direct probe technique</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0968595</td>
+               <td class="cui2" valign="top">C0519867</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C2939285</td>
+               <td class="aui1" valign="top">A18511909</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Infectious agent detection by nucleic acid (DNA or RNA); influenza virus, reverse transcription and amplified probe technique, each type or subtype</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Infectious agent detection by nucleic acid (DNA or RNA); Legionella pneumophila, quantification</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0968626</td>
+               <td class="cui2" valign="top">C0519911</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0519911</td>
+               <td class="aui1" valign="top">A0968626</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Infectious agent detection by nucleic acid (DNA or RNA); Legionella pneumophila, quantification</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Infectious agent detection by nucleic acid (DNA or RNA); influenza virus, reverse transcription and amplified probe technique, each type or subtype</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A18511909</td>
+               <td class="cui2" valign="top">C2939285</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0918189</td>
+               <td class="aui1" valign="top">A1945931</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Antibody; Bartonella</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Antibody; Coxiella burnetii (Q fever)</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A3860043</td>
+               <td class="cui2" valign="top">C0373890</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0373890</td>
+               <td class="aui1" valign="top">A3860043</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Antibody; Coxiella burnetii (Q fever)</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Antibody; Bartonella</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A1945931</td>
+               <td class="cui2" valign="top">C0918189</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0523284</td>
+               <td class="aui1" valign="top">A0646182</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Antibody; Salmonella</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Antibody; virus, not elsewhere specified</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0646212</td>
+               <td class="cui2" valign="top">C0373946</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0373946</td>
+               <td class="aui1" valign="top">A0646212</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Antibody; virus, not elsewhere specified</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Antibody; Salmonella</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0646182</td>
+               <td class="cui2" valign="top">C0523284</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0371466</td>
+               <td class="aui1" valign="top">A0806781</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Thoracoscopy, surgical; with removal of intrapleural foreign body or fibrin deposit</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Thoracoscopy, surgical; with creation of pericardial window or partial resection of pericardial sac for drainage</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0806773</td>
+               <td class="cui2" valign="top">C0371472</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0371472</td>
+               <td class="aui1" valign="top">A0806773</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Thoracoscopy, surgical; with creation of pericardial window or partial resection of pericardial sac for drainage</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Thoracoscopy, surgical; with removal of intrapleural foreign body or fibrin deposit</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0806781</td>
+               <td class="cui2" valign="top">C0371466</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0374037</td>
+               <td class="aui1" valign="top">A8575928</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Smear, primary source with interpretation; special stain for inclusion bodies or parasites (eg, malaria, coccidia, microsporidia, trypanosomes, herpes viruses)</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Smear, primary source with interpretation; wet mount for infectious agents (eg, saline, India ink, KOH preps)</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A1946773</td>
+               <td class="cui2" valign="top">C0374039</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0374039</td>
+               <td class="aui1" valign="top">A1946773</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Smear, primary source with interpretation; wet mount for infectious agents (eg, saline, India ink, KOH preps)</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Smear, primary source with interpretation; special stain for inclusion bodies or parasites (eg, malaria, coccidia, microsporidia, trypanosomes, herpes viruses)</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A8575928</td>
+               <td class="cui2" valign="top">C0374037</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0195944</td>
+               <td class="aui1" valign="top">A0680795</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Craniotomy with elevation of bone flap; for excision of epileptogenic focus without electrocorticography during surgery</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Craniotomy with elevation of bone flap; for lobectomy, temporal lobe, without electrocorticography during surgery</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A3860303</td>
+               <td class="cui2" valign="top">C1314067</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1314067</td>
+               <td class="aui1" valign="top">A3860303</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Craniotomy with elevation of bone flap; for lobectomy, temporal lobe, without electrocorticography during surgery</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Craniotomy with elevation of bone flap; for excision of epileptogenic focus without electrocorticography during surgery</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0680795</td>
+               <td class="cui2" valign="top">C0195944</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0189118</td>
+               <td class="aui1" valign="top">A1746410</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Sinusotomy frontal; obliterative, without osteoplastic flap, coronal incision (includes ablation)</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Sinusotomy frontal; nonobliterative, with osteoplastic flap, coronal incision</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0796062</td>
+               <td class="cui2" valign="top">C0189122</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0189122</td>
+               <td class="aui1" valign="top">A0796062</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Sinusotomy frontal; nonobliterative, with osteoplastic flap, coronal incision</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Sinusotomy frontal; obliterative, without osteoplastic flap, coronal incision (includes ablation)</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A1746410</td>
+               <td class="cui2" valign="top">C0189118</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0372694</td>
+               <td class="aui1" valign="top">A0661899</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Burr hole(s) or trephine; with biopsy of brain or intracranial lesion</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Burr hole(s) or trephine; with subsequent tapping (aspiration) of intracranial abscess or cyst</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0661901</td>
+               <td class="cui2" valign="top">C0372696</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0372696</td>
+               <td class="aui1" valign="top">A0661901</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Burr hole(s) or trephine; with subsequent tapping (aspiration) of intracranial abscess or cyst</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Burr hole(s) or trephine; with biopsy of brain or intracranial lesion</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0661899</td>
+               <td class="cui2" valign="top">C0372694</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0190772</td>
+               <td class="aui1" valign="top">A0662157</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Bypass graft, with vein; axillary-axillary</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Bypass graft, with vein; brachial-brachial</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A3860172</td>
+               <td class="cui2" valign="top">C1314026</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1314026</td>
+               <td class="aui1" valign="top">A3860172</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Bypass graft, with vein; brachial-brachial</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Bypass graft, with vein; axillary-axillary</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0662157</td>
+               <td class="cui2" valign="top">C0190772</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0372880</td>
+               <td class="aui1" valign="top">A0729672</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Laminectomy for biopsy/excision of intraspinal neoplasm; intradural, sacral</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Laminectomy for biopsy/excision of intraspinal neoplasm; intradural, intramedullary, cervical</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0729669</td>
+               <td class="cui2" valign="top">C0372881</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0372881</td>
+               <td class="aui1" valign="top">A0729669</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Laminectomy for biopsy/excision of intraspinal neoplasm; intradural, intramedullary, cervical</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Laminectomy for biopsy/excision of intraspinal neoplasm; intradural, sacral</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0729672</td>
+               <td class="cui2" valign="top">C0372880</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0185502</td>
+               <td class="aui1" valign="top">A2059543</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Application, cast; figure-of-eight</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Application, cast; shoulder to hand (long arm)</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A2059548</td>
+               <td class="cui2" valign="top">C0371328</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0371328</td>
+               <td class="aui1" valign="top">A2059548</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Application, cast; shoulder to hand (long arm)</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Application, cast; figure-of-eight</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A2059543</td>
+               <td class="cui2" valign="top">C0185502</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0373041</td>
+               <td class="aui1" valign="top">A15885234</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Destruction of localized lesion of retina (eg, macular edema, tumors), 1 or more sessions; cryotherapy, diathermy</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Destruction of localized lesion of retina (eg, macular edema, tumors), 1 or more sessions; radiation by implantation of source (includes removal of source)</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A15886125</td>
+               <td class="cui2" valign="top">C0197928</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0197928</td>
+               <td class="aui1" valign="top">A15886125</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Destruction of localized lesion of retina (eg, macular edema, tumors), 1 or more sessions; radiation by implantation of source (includes removal of source)</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Destruction of localized lesion of retina (eg, macular edema, tumors), 1 or more sessions; cryotherapy, diathermy</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A15885234</td>
+               <td class="cui2" valign="top">C0373041</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0200411</td>
+               <td class="aui1" valign="top">A1749760</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Clotting; factor XII (Hageman)</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Clotting; factor XIII (fibrin stabilizing), screen solubility</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0675653</td>
+               <td class="cui2" valign="top">C0373778</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0373778</td>
+               <td class="aui1" valign="top">A0675653</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Clotting; factor XIII (fibrin stabilizing), screen solubility</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="str" valign="top">Clotting; factor XII (Hageman)</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A1749760</td>
+               <td class="cui2" valign="top">C0200411</td>
+            </tr>
+         </table>
+      </div>
+      <div class="sample" id="MTHCH2011_PAR__ROOT_SOURCE_CUI_ROOT_SOURCE_CUI">
+         <h4>PAR</h4>&nbsp;&nbsp;<a href="#counts">(return to top)</a>
+         <table summary="This table provides sample rows for MTHCH2011_PAR__ROOT_SOURCE_CUI_ROOT_SOURCE_CUI data elements in the UMLS Metathesaurus">
+            <tr>
+               <th scope="col">CUI1</th>
+               <th scope="col">AUI1</th>
+               <th scope="col">STYPE1</th>
+               <th scope="col">STR</th>
+               <th scope="col">REL</th>
+               <th scope="col">STR</th>
+               <th scope="col">STYPE2</th>
+               <th scope="col">AUI2</th>
+               <th scope="col">CUI2</th>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0519487</td>
+               <td class="aui1" valign="top">A15885320</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Repair of the Biliary Tract</td>
+               <td class="rel" valign="top">PAR</td>
+               <td class="str" valign="top">Surgical Procedures on the Biliary Tract</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A13077675</td>
+               <td class="cui2" valign="top">C0005427</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0005427</td>
+               <td class="aui1" valign="top">A13077675</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Surgical Procedures on the Biliary Tract</td>
+               <td class="rel" valign="top">CHD</td>
+               <td class="str" valign="top">Repair of the Biliary Tract</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A15885320</td>
+               <td class="cui2" valign="top">C0519487</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1964108</td>
+               <td class="aui1" valign="top">A15887066</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Dilated fundus evaluation performed within 12 months prior to cataract surgery (EC)</td>
+               <td class="rel" valign="top">PAR</td>
+               <td class="str" valign="top">Physical Examination Codes for Performance Measurement</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A18511886</td>
+               <td class="cui2" valign="top">C1609025</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1609025</td>
+               <td class="aui1" valign="top">A18511886</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Physical Examination Codes for Performance Measurement</td>
+               <td class="rel" valign="top">CHD</td>
+               <td class="str" valign="top">Dilated fundus evaluation performed within 12 months prior to cataract surgery (EC)</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A15887066</td>
+               <td class="cui2" valign="top">C1964108</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0371127</td>
+               <td class="aui1" valign="top">A15887002</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Open treatment of posterior pelvic bone fracture and/or dislocation, for fracture patterns that disrupt the pelvic ring, unilateral, includes internal fixation, when performed (includes ipsilateral ilium, sacroiliac joint and/or sacrum)</td>
+               <td class="rel" valign="top">PAR</td>
+               <td class="str" valign="top">Treatment of Fracture and/or Dislocation of the Musculoskeletal System of the Pelvis and Hip Joint</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A18514790</td>
+               <td class="cui2" valign="top">C0519321</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0519321</td>
+               <td class="aui1" valign="top">A18514790</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Treatment of Fracture and/or Dislocation of the Musculoskeletal System of the Pelvis and Hip Joint</td>
+               <td class="rel" valign="top">CHD</td>
+               <td class="str" valign="top">Open treatment of posterior pelvic bone fracture and/or dislocation, for fracture patterns that disrupt the pelvic ring, unilateral, includes internal fixation, when performed (includes ipsilateral ilium, sacroiliac joint and/or sacrum)</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A15887002</td>
+               <td class="cui2" valign="top">C0371127</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0371505</td>
+               <td class="aui1" valign="top">A17111180</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Repair of 2 transvenous electrodes for a dual chamber permanent pacemaker or dual chamber pacing cardioverter-defibrillator</td>
+               <td class="rel" valign="top">PAR</td>
+               <td class="str" valign="top">Surgical Procedures Involving a Pacemaker or Pacing Cardioverter-Defibrillator</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A18514383</td>
+               <td class="cui2" valign="top">C1314164</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1314164</td>
+               <td class="aui1" valign="top">A18514383</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Surgical Procedures Involving a Pacemaker or Pacing Cardioverter-Defibrillator</td>
+               <td class="rel" valign="top">CHD</td>
+               <td class="str" valign="top">Repair of 2 transvenous electrodes for a dual chamber permanent pacemaker or dual chamber pacing cardioverter-defibrillator</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A17111180</td>
+               <td class="cui2" valign="top">C0371505</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0374105</td>
+               <td class="aui1" valign="top">A0798204</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Sperm evaluation; cervical mucus penetration test, with or without spinnbarkeit test</td>
+               <td class="rel" valign="top">PAR</td>
+               <td class="str" valign="top">Reproductive Medicine Procedures</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A18511884</td>
+               <td class="cui2" valign="top">C0841184</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0841184</td>
+               <td class="aui1" valign="top">A18511884</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Reproductive Medicine Procedures</td>
+               <td class="rel" valign="top">CHD</td>
+               <td class="str" valign="top">Sperm evaluation; cervical mucus penetration test, with or without spinnbarkeit test</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0798204</td>
+               <td class="cui2" valign="top">C0374105</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C2939279</td>
+               <td class="aui1" valign="top">A18513134</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Vascular Injection Procedures</td>
+               <td class="rel" valign="top">PAR</td>
+               <td class="str" valign="top">Surgical Procedures on the Arteries and Veins</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A13076895</td>
+               <td class="cui2" valign="top">C0042381</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0042381</td>
+               <td class="aui1" valign="top">A13076895</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Surgical Procedures on the Arteries and Veins</td>
+               <td class="rel" valign="top">CHD</td>
+               <td class="str" valign="top">Vascular Injection Procedures</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A18513134</td>
+               <td class="cui2" valign="top">C2939279</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0195233</td>
+               <td class="aui1" valign="top">A0676851</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Combined anteroposterior colporrhaphy; with enterocele repair</td>
+               <td class="rel" valign="top">PAR</td>
+               <td class="str" valign="top">Repair of the Vagina</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A13076926</td>
+               <td class="cui2" valign="top">C0558340</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0558340</td>
+               <td class="aui1" valign="top">A13076926</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Repair of the Vagina</td>
+               <td class="rel" valign="top">CHD</td>
+               <td class="str" valign="top">Combined anteroposterior colporrhaphy; with enterocele repair</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0676851</td>
+               <td class="cui2" valign="top">C0195233</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0191769</td>
+               <td class="aui1" valign="top">A0698270</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Excision, trochanteric pressure ulcer, with skin flap closure</td>
+               <td class="rel" valign="top">PAR</td>
+               <td class="str" valign="top">Surgical Procedures on Pressure Ulcers (Decubitus Ulcers)</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A13076474</td>
+               <td class="cui2" valign="top">C0519242</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0519242</td>
+               <td class="aui1" valign="top">A13076474</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Surgical Procedures on Pressure Ulcers (Decubitus Ulcers)</td>
+               <td class="rel" valign="top">CHD</td>
+               <td class="str" valign="top">Excision, trochanteric pressure ulcer, with skin flap closure</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0698270</td>
+               <td class="cui2" valign="top">C0191769</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0695069</td>
+               <td class="aui1" valign="top">A1414421</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Mass spectrometry and tandem mass spectrometry (MS, MS/MS), analyte not elsewhere specified; qualitative, each specimen</td>
+               <td class="rel" valign="top">PAR</td>
+               <td class="str" valign="top">Chemistry Pathology and Laboratory Tests</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A13078491</td>
+               <td class="cui2" valign="top">C0519668</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0519668</td>
+               <td class="aui1" valign="top">A13078491</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Chemistry Pathology and Laboratory Tests</td>
+               <td class="rel" valign="top">CHD</td>
+               <td class="str" valign="top">Mass spectrometry and tandem mass spectrometry (MS, MS/MS), analyte not elsewhere specified; qualitative, each specimen</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A1414421</td>
+               <td class="cui2" valign="top">C0695069</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0371207</td>
+               <td class="aui1" valign="top">A0813739</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Unlisted procedure, femur or knee</td>
+               <td class="rel" valign="top">PAR</td>
+               <td class="str" valign="top">Other Surgical Procedures on the Musculoskeletal System of the Femur (Thigh Region) and Knee Joint</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A13076489</td>
+               <td class="cui2" valign="top">C0519334</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0519334</td>
+               <td class="aui1" valign="top">A13076489</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Other Surgical Procedures on the Musculoskeletal System of the Femur (Thigh Region) and Knee Joint</td>
+               <td class="rel" valign="top">CHD</td>
+               <td class="str" valign="top">Unlisted procedure, femur or knee</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0813739</td>
+               <td class="cui2" valign="top">C0371207</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0192854</td>
+               <td class="aui1" valign="top">A1749722</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Colectomy, partial; with end colostomy and closure of distal segment (Hartmann type procedure)</td>
+               <td class="rel" valign="top">PAR</td>
+               <td class="str" valign="top">Excision of the Intestines (except Rectum)</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A13077666</td>
+               <td class="cui2" valign="top">C0519470</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0519470</td>
+               <td class="aui1" valign="top">A13077666</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Excision of the Intestines (except Rectum)</td>
+               <td class="rel" valign="top">CHD</td>
+               <td class="str" valign="top">Colectomy, partial; with end colostomy and closure of distal segment (Hartmann type procedure)</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A1749722</td>
+               <td class="cui2" valign="top">C0192854</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0190120</td>
+               <td class="aui1" valign="top">A0784020</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Replacement, tricuspid valve, with cardiopulmonary bypass</td>
+               <td class="rel" valign="top">PAR</td>
+               <td class="str" valign="top">Surgical Procedures on the Tricuspid Valve</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A13077231</td>
+               <td class="cui2" valign="top">C0519383</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0519383</td>
+               <td class="aui1" valign="top">A13077231</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Surgical Procedures on the Tricuspid Valve</td>
+               <td class="rel" valign="top">CHD</td>
+               <td class="str" valign="top">Replacement, tricuspid valve, with cardiopulmonary bypass</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0784020</td>
+               <td class="cui2" valign="top">C0190120</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1314080</td>
+               <td class="aui1" valign="top">A3860335</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Destruction by neurolytic agent, with or without radiologic monitoring; superior hypogastric plexus</td>
+               <td class="rel" valign="top">PAR</td>
+               <td class="str" valign="top">Destruction of Sympathetic Nerves by Neurolytic Agent</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A13079193</td>
+               <td class="cui2" valign="top">C0519584</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0519584</td>
+               <td class="aui1" valign="top">A13079193</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Destruction of Sympathetic Nerves by Neurolytic Agent</td>
+               <td class="rel" valign="top">CHD</td>
+               <td class="str" valign="top">Destruction by neurolytic agent, with or without radiologic monitoring; superior hypogastric plexus</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A3860335</td>
+               <td class="cui2" valign="top">C1314080</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0370768</td>
+               <td class="aui1" valign="top">A0757703</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Open treatment of mandibular fracture with external fixation</td>
+               <td class="rel" valign="top">PAR</td>
+               <td class="str" valign="top">Treatment of Fracture and/or Dislocation of the Musculoskeletal System of the Head</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A13077204</td>
+               <td class="cui2" valign="top">C0519261</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0519261</td>
+               <td class="aui1" valign="top">A13077204</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Treatment of Fracture and/or Dislocation of the Musculoskeletal System of the Head</td>
+               <td class="rel" valign="top">CHD</td>
+               <td class="str" valign="top">Open treatment of mandibular fracture with external fixation</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0757703</td>
+               <td class="cui2" valign="top">C0370768</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0370814</td>
+               <td class="aui1" valign="top">A17110312</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Open treatment and/or reduction of vertebral fracture(s) and/or dislocation(s), posterior approach, 1 fractured vertebra or dislocated segment; cervical</td>
+               <td class="rel" valign="top">PAR</td>
+               <td class="str" valign="top">Treatment of Fracture and/or Dislocation of the Musculoskeletal System of the Spine (Vertebral Column)</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A13078033</td>
+               <td class="cui2" valign="top">C0519272</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0519272</td>
+               <td class="aui1" valign="top">A13078033</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Treatment of Fracture and/or Dislocation of the Musculoskeletal System of the Spine (Vertebral Column)</td>
+               <td class="rel" valign="top">CHD</td>
+               <td class="str" valign="top">Open treatment and/or reduction of vertebral fracture(s) and/or dislocation(s), posterior approach, 1 fractured vertebra or dislocated segment; cervical</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A17110312</td>
+               <td class="cui2" valign="top">C0370814</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0188079</td>
+               <td class="aui1" valign="top">A13079069</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Open treatment of distal femoral epiphyseal separation, includes internal fixation, when performed</td>
+               <td class="rel" valign="top">PAR</td>
+               <td class="str" valign="top">Treatment of Fracture and/or Dislocation of the Musculoskeletal System of the Femur (Thigh Region) and Knee Joint</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A13077635</td>
+               <td class="cui2" valign="top">C0519330</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0519330</td>
+               <td class="aui1" valign="top">A13077635</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Treatment of Fracture and/or Dislocation of the Musculoskeletal System of the Femur (Thigh Region) and Knee Joint</td>
+               <td class="rel" valign="top">CHD</td>
+               <td class="str" valign="top">Open treatment of distal femoral epiphyseal separation, includes internal fixation, when performed</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A13079069</td>
+               <td class="cui2" valign="top">C0188079</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0374586</td>
+               <td class="aui1" valign="top">A13078369</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Emergency department visit for the evaluation and management of a patient, which requires these 3 key components within the constraints imposed by the urgency of the patient's clinical condition and/or mental status: A comprehensive history; A comprehensive examination; and Medical decision making of high complexity. Counseling and/or coordination of care with other providers or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are of high severity and pose an immediate significant threat to life or physiologic function.</td>
+               <td class="rel" valign="top">PAR</td>
+               <td class="str" valign="top">Emergency Department Services for a New or Established Patient</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A13078857</td>
+               <td class="cui2" valign="top">C0519724</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0519724</td>
+               <td class="aui1" valign="top">A13078857</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Emergency Department Services for a New or Established Patient</td>
+               <td class="rel" valign="top">CHD</td>
+               <td class="str" valign="top">Emergency department visit for the evaluation and management of a patient, which requires these 3 key components within the constraints imposed by the urgency of the patient's clinical condition and/or mental status: A comprehensive history; A comprehensive examination; and Medical decision making of high complexity. Counseling and/or coordination of care with other providers or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are of high severity and pose an immediate significant threat to life or physiologic function.</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A13078369</td>
+               <td class="cui2" valign="top">C0374586</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0519200</td>
+               <td class="aui1" valign="top">A15886594</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Chiropractic manipulative treatment (CMT); spinal, 5 regions</td>
+               <td class="rel" valign="top">PAR</td>
+               <td class="str" valign="top">Chiropractic Manipulative Treatment Procedures</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A13076578</td>
+               <td class="cui2" valign="top">C0519705</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0519705</td>
+               <td class="aui1" valign="top">A13076578</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Chiropractic Manipulative Treatment Procedures</td>
+               <td class="rel" valign="top">CHD</td>
+               <td class="str" valign="top">Chiropractic manipulative treatment (CMT); spinal, 5 regions</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A15886594</td>
+               <td class="cui2" valign="top">C0519200</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0373524</td>
+               <td class="aui1" valign="top">A0814791</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Urine pregnancy test, by visual color comparison methods</td>
+               <td class="rel" valign="top">PAR</td>
+               <td class="str" valign="top">Urinalysis Procedures</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A13079213</td>
+               <td class="cui2" valign="top">C0042014</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0042014</td>
+               <td class="aui1" valign="top">A13079213</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Urinalysis Procedures</td>
+               <td class="rel" valign="top">CHD</td>
+               <td class="str" valign="top">Urine pregnancy test, by visual color comparison methods</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0814791</td>
+               <td class="cui2" valign="top">C0373524</td>
+            </tr>
+         </table>
+      </div>
+      <div class="sample" id="MTHCH2011_NT__ROOT_SOURCE_CUI_ROOT_SOURCE_CUI">
+         <h4>RN</h4>&nbsp;&nbsp;<a href="#counts">(return to top)</a>
+         <table summary="This table provides sample rows for MTHCH2011_NT__ROOT_SOURCE_CUI_ROOT_SOURCE_CUI data elements in the UMLS Metathesaurus">
+            <tr>
+               <th scope="col">CUI1</th>
+               <th scope="col">AUI1</th>
+               <th scope="col">STYPE1</th>
+               <th scope="col">STR</th>
+               <th scope="col">REL</th>
+               <th scope="col">STR</th>
+               <th scope="col">STYPE2</th>
+               <th scope="col">AUI2</th>
+               <th scope="col">CUI2</th>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0370296</td>
+               <td class="aui1" valign="top">A0644834</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for intraperitoneal procedures in lower abdomen including laparoscopy; not otherwise specified</td>
+               <td class="rel" valign="top">RN</td>
+               <td class="str" valign="top">Anesthesia for intraperitoneal procedures in lower abdomen including laparoscopy; abdominoperineal resection</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0644832</td>
+               <td class="cui2" valign="top">C0370298</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0370298</td>
+               <td class="aui1" valign="top">A0644832</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for intraperitoneal procedures in lower abdomen including laparoscopy; abdominoperineal resection</td>
+               <td class="rel" valign="top">RB</td>
+               <td class="str" valign="top">Anesthesia for intraperitoneal procedures in lower abdomen including laparoscopy; not otherwise specified</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0644834</td>
+               <td class="cui2" valign="top">C0370296</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0199047</td>
+               <td class="aui1" valign="top">A1945920</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for procedures on male genitalia (including open urethral procedures); not otherwise specified</td>
+               <td class="rel" valign="top">RN</td>
+               <td class="str" valign="top">Anesthesia for procedures on male genitalia (including open urethral procedures); seminal vesicles</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A1945926</td>
+               <td class="cui2" valign="top">C0199037</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0199037</td>
+               <td class="aui1" valign="top">A1945926</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for procedures on male genitalia (including open urethral procedures); seminal vesicles</td>
+               <td class="rel" valign="top">RB</td>
+               <td class="str" valign="top">Anesthesia for procedures on male genitalia (including open urethral procedures); not otherwise specified</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A1945920</td>
+               <td class="cui2" valign="top">C0199047</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0198918</td>
+               <td class="aui1" valign="top">A2406575</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for open or surgical arthroscopic procedures on humeral head and neck, sternoclavicular joint, acromioclavicular joint, and shoulder joint; not otherwise specified</td>
+               <td class="rel" valign="top">RN</td>
+               <td class="str" valign="top">Anesthesia for open or surgical arthroscopic procedures on humeral head and neck, sternoclavicular joint, acromioclavicular joint, and shoulder joint; shoulder disarticulation</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A2406577</td>
+               <td class="cui2" valign="top">C0370346</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0370346</td>
+               <td class="aui1" valign="top">A2406577</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for open or surgical arthroscopic procedures on humeral head and neck, sternoclavicular joint, acromioclavicular joint, and shoulder joint; shoulder disarticulation</td>
+               <td class="rel" valign="top">RB</td>
+               <td class="str" valign="top">Anesthesia for open or surgical arthroscopic procedures on humeral head and neck, sternoclavicular joint, acromioclavicular joint, and shoulder joint; not otherwise specified</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A2406575</td>
+               <td class="cui2" valign="top">C0198918</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0198907</td>
+               <td class="aui1" valign="top">A0644853</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for partial rib resection; not otherwise specified</td>
+               <td class="rel" valign="top">RN</td>
+               <td class="str" valign="top">Anesthesia for partial rib resection; thoracoplasty (any type)</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A1747388</td>
+               <td class="cui2" valign="top">C0370268</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0370268</td>
+               <td class="aui1" valign="top">A1747388</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for partial rib resection; thoracoplasty (any type)</td>
+               <td class="rel" valign="top">RB</td>
+               <td class="str" valign="top">Anesthesia for partial rib resection; not otherwise specified</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0644853</td>
+               <td class="cui2" valign="top">C0198907</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0199091</td>
+               <td class="aui1" valign="top">A0644845</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for open procedures involving hip joint; not otherwise specified</td>
+               <td class="rel" valign="top">RN</td>
+               <td class="str" valign="top">Anesthesia for open procedures involving hip joint; hip disarticulation</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0644844</td>
+               <td class="cui2" valign="top">C0199083</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0199083</td>
+               <td class="aui1" valign="top">A0644844</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for open procedures involving hip joint; hip disarticulation</td>
+               <td class="rel" valign="top">RB</td>
+               <td class="str" valign="top">Anesthesia for open procedures involving hip joint; not otherwise specified</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0644845</td>
+               <td class="cui2" valign="top">C0199091</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0198918</td>
+               <td class="aui1" valign="top">A2406575</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for open or surgical arthroscopic procedures on humeral head and neck, sternoclavicular joint, acromioclavicular joint, and shoulder joint; not otherwise specified</td>
+               <td class="rel" valign="top">RN</td>
+               <td class="str" valign="top">Anesthesia for open or surgical arthroscopic procedures on humeral head and neck, sternoclavicular joint, acromioclavicular joint, and shoulder joint; interthoracoscapular (forequarter) amputation</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A2406574</td>
+               <td class="cui2" valign="top">C0370347</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0370347</td>
+               <td class="aui1" valign="top">A2406574</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for open or surgical arthroscopic procedures on humeral head and neck, sternoclavicular joint, acromioclavicular joint, and shoulder joint; interthoracoscapular (forequarter) amputation</td>
+               <td class="rel" valign="top">RB</td>
+               <td class="str" valign="top">Anesthesia for open or surgical arthroscopic procedures on humeral head and neck, sternoclavicular joint, acromioclavicular joint, and shoulder joint; not otherwise specified</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A2406575</td>
+               <td class="cui2" valign="top">C0198918</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0199164</td>
+               <td class="aui1" valign="top">A2406582</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for open or surgical arthroscopic/endoscopic procedures on distal radius, distal ulna, wrist, or hand joints; not otherwise specified</td>
+               <td class="rel" valign="top">RN</td>
+               <td class="str" valign="top">Anesthesia for open or surgical arthroscopic/endoscopic procedures on distal radius, distal ulna, wrist, or hand joints; total wrist replacement</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A2406583</td>
+               <td class="cui2" valign="top">C0370360</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0370360</td>
+               <td class="aui1" valign="top">A2406583</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for open or surgical arthroscopic/endoscopic procedures on distal radius, distal ulna, wrist, or hand joints; total wrist replacement</td>
+               <td class="rel" valign="top">RB</td>
+               <td class="str" valign="top">Anesthesia for open or surgical arthroscopic/endoscopic procedures on distal radius, distal ulna, wrist, or hand joints; not otherwise specified</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A2406582</td>
+               <td class="cui2" valign="top">C0199164</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0199161</td>
+               <td class="aui1" valign="top">A0644861</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for procedures on arteries of forearm, wrist, and hand; not otherwise specified</td>
+               <td class="rel" valign="top">RN</td>
+               <td class="str" valign="top">Anesthesia for procedures on arteries of forearm, wrist, and hand; embolectomy</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0644860</td>
+               <td class="cui2" valign="top">C0199162</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0199162</td>
+               <td class="aui1" valign="top">A0644860</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for procedures on arteries of forearm, wrist, and hand; embolectomy</td>
+               <td class="rel" valign="top">RB</td>
+               <td class="str" valign="top">Anesthesia for procedures on arteries of forearm, wrist, and hand; not otherwise specified</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0644861</td>
+               <td class="cui2" valign="top">C0199161</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0973239</td>
+               <td class="aui1" valign="top">A13076781</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for therapeutic interventional radiological procedures involving the venous/lymphatic system (not to include access to the central circulation); not otherwise specified</td>
+               <td class="rel" valign="top">RN</td>
+               <td class="str" valign="top">Anesthesia for therapeutic interventional radiological procedures involving the venous/lymphatic system (not to include access to the central circulation); intrathoracic or jugular</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A13079057</td>
+               <td class="cui2" valign="top">C0973240</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0973240</td>
+               <td class="aui1" valign="top">A13079057</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for therapeutic interventional radiological procedures involving the venous/lymphatic system (not to include access to the central circulation); intrathoracic or jugular</td>
+               <td class="rel" valign="top">RB</td>
+               <td class="str" valign="top">Anesthesia for therapeutic interventional radiological procedures involving the venous/lymphatic system (not to include access to the central circulation); not otherwise specified</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A13076781</td>
+               <td class="cui2" valign="top">C0973239</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0199005</td>
+               <td class="aui1" valign="top">A0644816</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for hernia repairs in lower abdomen; not otherwise specified</td>
+               <td class="rel" valign="top">RN</td>
+               <td class="str" valign="top">Anesthesia for hernia repairs in lower abdomen; ventral and incisional hernias</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0644817</td>
+               <td class="cui2" valign="top">C0199006</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0199006</td>
+               <td class="aui1" valign="top">A0644817</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for hernia repairs in lower abdomen; ventral and incisional hernias</td>
+               <td class="rel" valign="top">RB</td>
+               <td class="str" valign="top">Anesthesia for hernia repairs in lower abdomen; not otherwise specified</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0644816</td>
+               <td class="cui2" valign="top">C0199005</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0370303</td>
+               <td class="aui1" valign="top">A0644811</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for extraperitoneal procedures in lower abdomen, including urinary tract; not otherwise specified</td>
+               <td class="rel" valign="top">RN</td>
+               <td class="str" valign="top">Anesthesia for extraperitoneal procedures in lower abdomen, including urinary tract; total cystectomy</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0644813</td>
+               <td class="cui2" valign="top">C0370305</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0370305</td>
+               <td class="aui1" valign="top">A0644813</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for extraperitoneal procedures in lower abdomen, including urinary tract; total cystectomy</td>
+               <td class="rel" valign="top">RB</td>
+               <td class="str" valign="top">Anesthesia for extraperitoneal procedures in lower abdomen, including urinary tract; not otherwise specified</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0644811</td>
+               <td class="cui2" valign="top">C0370303</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0199139</td>
+               <td class="aui1" valign="top">A0644913</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for procedures on veins of upper arm and elbow; not otherwise specified</td>
+               <td class="rel" valign="top">RN</td>
+               <td class="str" valign="top">Anesthesia for procedures on veins of upper arm and elbow; phleborrhaphy</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0644914</td>
+               <td class="cui2" valign="top">C0199140</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0199140</td>
+               <td class="aui1" valign="top">A0644914</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for procedures on veins of upper arm and elbow; phleborrhaphy</td>
+               <td class="rel" valign="top">RB</td>
+               <td class="str" valign="top">Anesthesia for procedures on veins of upper arm and elbow; not otherwise specified</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0644913</td>
+               <td class="cui2" valign="top">C0199139</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0370260</td>
+               <td class="aui1" valign="top">A1747385</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for procedures on the integumentary system on the extremities, anterior trunk and perineum; not otherwise specified</td>
+               <td class="rel" valign="top">RN</td>
+               <td class="str" valign="top">Anesthesia for procedures on the integumentary system on the extremities, anterior trunk and perineum; radical or modified radical procedures on breast with internal mammary node dissection</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A1747383</td>
+               <td class="cui2" valign="top">C0370263</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0370263</td>
+               <td class="aui1" valign="top">A1747383</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for procedures on the integumentary system on the extremities, anterior trunk and perineum; radical or modified radical procedures on breast with internal mammary node dissection</td>
+               <td class="rel" valign="top">RB</td>
+               <td class="str" valign="top">Anesthesia for procedures on the integumentary system on the extremities, anterior trunk and perineum; not otherwise specified</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A1747385</td>
+               <td class="cui2" valign="top">C0370260</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0198869</td>
+               <td class="aui1" valign="top">A0644900</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for procedures on nose and accessory sinuses; not otherwise specified</td>
+               <td class="rel" valign="top">RN</td>
+               <td class="str" valign="top">Anesthesia for procedures on nose and accessory sinuses; radical surgery</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0644901</td>
+               <td class="cui2" valign="top">C0198871</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0198871</td>
+               <td class="aui1" valign="top">A0644901</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for procedures on nose and accessory sinuses; radical surgery</td>
+               <td class="rel" valign="top">RB</td>
+               <td class="str" valign="top">Anesthesia for procedures on nose and accessory sinuses; not otherwise specified</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0644900</td>
+               <td class="cui2" valign="top">C0198869</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0199098</td>
+               <td class="aui1" valign="top">A0644910</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for procedures on veins of knee and popliteal area; not otherwise specified</td>
+               <td class="rel" valign="top">RN</td>
+               <td class="str" valign="top">Anesthesia for procedures on veins of knee and popliteal area; arteriovenous fistula</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0644909</td>
+               <td class="cui2" valign="top">C0199101</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0199101</td>
+               <td class="aui1" valign="top">A0644909</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for procedures on veins of knee and popliteal area; arteriovenous fistula</td>
+               <td class="rel" valign="top">RB</td>
+               <td class="str" valign="top">Anesthesia for procedures on veins of knee and popliteal area; not otherwise specified</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0644910</td>
+               <td class="cui2" valign="top">C0199098</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0199145</td>
+               <td class="aui1" valign="top">A2406569</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for open or surgical arthroscopic procedures of the elbow; not otherwise specified</td>
+               <td class="rel" valign="top">RN</td>
+               <td class="str" valign="top">Anesthesia for open or surgical arthroscopic procedures of the elbow; excision of cyst or tumor of humerus</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A2406568</td>
+               <td class="cui2" valign="top">C0370358</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0370358</td>
+               <td class="aui1" valign="top">A2406568</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for open or surgical arthroscopic procedures of the elbow; excision of cyst or tumor of humerus</td>
+               <td class="rel" valign="top">RB</td>
+               <td class="str" valign="top">Anesthesia for open or surgical arthroscopic procedures of the elbow; not otherwise specified</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A2406569</td>
+               <td class="cui2" valign="top">C0199145</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0199091</td>
+               <td class="aui1" valign="top">A0644845</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for open procedures involving hip joint; not otherwise specified</td>
+               <td class="rel" valign="top">RN</td>
+               <td class="str" valign="top">Anesthesia for open procedures involving hip joint; total hip arthroplasty</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A2059521</td>
+               <td class="cui2" valign="top">C0370331</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0370331</td>
+               <td class="aui1" valign="top">A2059521</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for open procedures involving hip joint; total hip arthroplasty</td>
+               <td class="rel" valign="top">RB</td>
+               <td class="str" valign="top">Anesthesia for open procedures involving hip joint; not otherwise specified</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0644845</td>
+               <td class="cui2" valign="top">C0199091</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0199023</td>
+               <td class="aui1" valign="top">A0644890</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for procedures on major lower abdominal vessels; not otherwise specified</td>
+               <td class="rel" valign="top">RN</td>
+               <td class="str" valign="top">Anesthesia for procedures on major lower abdominal vessels; inferior vena cava ligation</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0644889</td>
+               <td class="cui2" valign="top">C0370310</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0370310</td>
+               <td class="aui1" valign="top">A0644889</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for procedures on major lower abdominal vessels; inferior vena cava ligation</td>
+               <td class="rel" valign="top">RB</td>
+               <td class="str" valign="top">Anesthesia for procedures on major lower abdominal vessels; not otherwise specified</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0644890</td>
+               <td class="cui2" valign="top">C0199023</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0199091</td>
+               <td class="aui1" valign="top">A0644845</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for open procedures involving hip joint; not otherwise specified</td>
+               <td class="rel" valign="top">RN</td>
+               <td class="str" valign="top">Anesthesia for open procedures involving hip joint; revision of total hip arthroplasty</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A1945910</td>
+               <td class="cui2" valign="top">C0918052</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0918052</td>
+               <td class="aui1" valign="top">A1945910</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia for open procedures involving hip joint; revision of total hip arthroplasty</td>
+               <td class="rel" valign="top">RB</td>
+               <td class="str" valign="top">Anesthesia for open procedures involving hip joint; not otherwise specified</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A0644845</td>
+               <td class="cui2" valign="top">C0199091</td>
+            </tr>
+         </table>
+      </div>
+      <div class="sample" id="MTHCH2011_PAR__ROOT_SOURCE_CUI_AUI">
+         <h4>PAR</h4>&nbsp;&nbsp;<a href="#counts">(return to top)</a>
+         <table summary="This table provides sample rows for MTHCH2011_PAR__ROOT_SOURCE_CUI_AUI data elements in the UMLS Metathesaurus">
+            <tr>
+               <th scope="col">CUI1</th>
+               <th scope="col">AUI1</th>
+               <th scope="col">STYPE1</th>
+               <th scope="col">STR</th>
+               <th scope="col">REL</th>
+               <th scope="col">STR</th>
+               <th scope="col">STYPE2</th>
+               <th scope="col">AUI2</th>
+               <th scope="col">CUI2</th>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1314192</td>
+               <td class="aui1" valign="top">A15885326</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Tracking Codes for Performance Measurement (Category II)</td>
+               <td class="rel" valign="top">PAR</td>
+               <td class="str" valign="top">Metathesaurus CPT Hierarchical Terms</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A13475664</td>
+               <td class="cui2" valign="top">C1140180</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1140180</td>
+               <td class="aui1" valign="top">A13475664</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Metathesaurus CPT Hierarchical Terms</td>
+               <td class="rel" valign="top">CHD</td>
+               <td class="str" valign="top">Tracking Codes for Performance Measurement (Category II)</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A15885326</td>
+               <td class="cui2" valign="top">C1314192</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0973443</td>
+               <td class="aui1" valign="top">A18511885</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Emerging Technology, Services & Procedure Codes (Category III, Temporary)</td>
+               <td class="rel" valign="top">PAR</td>
+               <td class="str" valign="top">Metathesaurus CPT Hierarchical Terms</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A13475664</td>
+               <td class="cui2" valign="top">C1140180</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1140180</td>
+               <td class="aui1" valign="top">A13475664</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Metathesaurus CPT Hierarchical Terms</td>
+               <td class="rel" valign="top">CHD</td>
+               <td class="str" valign="top">Emerging Technology, Services & Procedure Codes (Category III, Temporary)</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A18511885</td>
+               <td class="cui2" valign="top">C0973443</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0519666</td>
+               <td class="aui1" valign="top">A18512321</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Pathology and Laboratory Tests</td>
+               <td class="rel" valign="top">PAR</td>
+               <td class="str" valign="top">Metathesaurus CPT Hierarchical Terms</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A13475664</td>
+               <td class="cui2" valign="top">C1140180</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1140180</td>
+               <td class="aui1" valign="top">A13475664</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Metathesaurus CPT Hierarchical Terms</td>
+               <td class="rel" valign="top">CHD</td>
+               <td class="str" valign="top">Pathology and Laboratory Tests</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A18512321</td>
+               <td class="cui2" valign="top">C0519666</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1964239</td>
+               <td class="aui1" valign="top">A13078839</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Medicine Services and Procedures</td>
+               <td class="rel" valign="top">PAR</td>
+               <td class="str" valign="top">Metathesaurus CPT Hierarchical Terms</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A13475664</td>
+               <td class="cui2" valign="top">C1140180</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1140180</td>
+               <td class="aui1" valign="top">A13475664</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Metathesaurus CPT Hierarchical Terms</td>
+               <td class="rel" valign="top">CHD</td>
+               <td class="str" valign="top">Medicine Services and Procedures</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A13078839</td>
+               <td class="cui2" valign="top">C1964239</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0543467</td>
+               <td class="aui1" valign="top">A13076470</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Surgical Procedures</td>
+               <td class="rel" valign="top">PAR</td>
+               <td class="str" valign="top">Metathesaurus CPT Hierarchical Terms</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A13475664</td>
+               <td class="cui2" valign="top">C1140180</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1140180</td>
+               <td class="aui1" valign="top">A13475664</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Metathesaurus CPT Hierarchical Terms</td>
+               <td class="rel" valign="top">CHD</td>
+               <td class="str" valign="top">Surgical Procedures</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A13076470</td>
+               <td class="cui2" valign="top">C0543467</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0002903</td>
+               <td class="aui1" valign="top">A13076466</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Anesthesia Procedures</td>
+               <td class="rel" valign="top">PAR</td>
+               <td class="str" valign="top">Metathesaurus CPT Hierarchical Terms</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A13475664</td>
+               <td class="cui2" valign="top">C1140180</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1140180</td>
+               <td class="aui1" valign="top">A13475664</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Metathesaurus CPT Hierarchical Terms</td>
+               <td class="rel" valign="top">CHD</td>
+               <td class="str" valign="top">Anesthesia Procedures</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A13076466</td>
+               <td class="cui2" valign="top">C0002903</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0807679</td>
+               <td class="aui1" valign="top">A13078129</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Radiology Procedures</td>
+               <td class="rel" valign="top">PAR</td>
+               <td class="str" valign="top">Metathesaurus CPT Hierarchical Terms</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A13475664</td>
+               <td class="cui2" valign="top">C1140180</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1140180</td>
+               <td class="aui1" valign="top">A13475664</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Metathesaurus CPT Hierarchical Terms</td>
+               <td class="rel" valign="top">CHD</td>
+               <td class="str" valign="top">Radiology Procedures</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A13078129</td>
+               <td class="cui2" valign="top">C0807679</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C0519710</td>
+               <td class="aui1" valign="top">A13078160</td>
+               <td class="stype1" valign="top">SCUI</td>
+               <td class="str" valign="top">Evaluation and Management Procedures</td>
+               <td class="rel" valign="top">PAR</td>
+               <td class="str" valign="top">Metathesaurus CPT Hierarchical Terms</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A13475664</td>
+               <td class="cui2" valign="top">C1140180</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1140180</td>
+               <td class="aui1" valign="top">A13475664</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Metathesaurus CPT Hierarchical Terms</td>
+               <td class="rel" valign="top">CHD</td>
+               <td class="str" valign="top">Evaluation and Management Procedures</td>
+               <td class="stype2" valign="top">SCUI</td>
+               <td class="aui2" valign="top">A13078160</td>
+               <td class="cui2" valign="top">C0519710</td>
+            </tr>
+         </table>
+      </div>
+   </div>
+</div>

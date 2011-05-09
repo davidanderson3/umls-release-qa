@@ -1,0 +1,193 @@
+<document vsab="MSHRUS2011" samples="Term Types">
+    <samples>
+        <labels>
+            <label type="metalabel">Term Type</label>
+            <label type="definition">Description</label>
+            <label type="count">Count (MRCONSO.RRF)</label>
+        </labels>
+        <sample id="SY" samplename="SY" definition="Designated synonym" count="80718">
+            <row type="standard">
+                <field type="CUI">C0002122</field>
+                <field type="AUI">A8036964</field>
+                <field type="LUI">L3362384</field>
+                <field type="SUI">S3889851</field>
+                <field type="SCUI">M0000733</field>
+                <field type="SDUI">D000488</field>
+                <field type="CODE">D000488</field>
+                <field type="STR">ПАРАМЕДИЦИНСКИЙ ПЕРСОНАЛ</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0002431</field>
+                <field type="AUI">A13488594</field>
+                <field type="LUI">L1508270</field>
+                <field type="SUI">S1804179</field>
+                <field type="SCUI">M0000874</field>
+                <field type="SDUI">D000559</field>
+                <field type="CODE">D000559</field>
+                <field type="STR">AMBLISTOMOVYE</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0002871</field>
+                <field type="AUI">A13482353</field>
+                <field type="LUI">L0889985</field>
+                <field type="SUI">S1093802</field>
+                <field type="SCUI">M0001119</field>
+                <field type="SDUI">D000740</field>
+                <field type="CODE">D000740</field>
+                <field type="STR">ANEMIIA</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0005458</field>
+                <field type="AUI">A13495162</field>
+                <field type="LUI">L1526819</field>
+                <field type="SUI">S1822728</field>
+                <field type="SCUI">M0002504</field>
+                <field type="SDUI">D001667</field>
+                <field type="CODE">D001667</field>
+                <field type="STR">KONKURENTNOE SVIAZYVANIE</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0005482</field>
+                <field type="AUI">A13507943</field>
+                <field type="LUI">L6965490</field>
+                <field type="SUI">S8105442</field>
+                <field type="SCUI">M0002510</field>
+                <field type="SDUI">D001673</field>
+                <field type="CODE">D001673</field>
+                <field type="STR">BIODEGRADATSIIA OKRUZHAIUSHCHEI SREDY</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0005678</field>
+                <field type="AUI">A13482595</field>
+                <field type="LUI">L0896239</field>
+                <field type="SUI">S1100056</field>
+                <field type="SCUI">M0002624</field>
+                <field type="SDUI">D001740</field>
+                <field type="CODE">D001740</field>
+                <field type="STR">KARAKURT</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0005833</field>
+                <field type="AUI">A13501652</field>
+                <field type="LUI">L1534678</field>
+                <field type="SUI">S1830587</field>
+                <field type="SCUI">M0002714</field>
+                <field type="SDUI">D001799</field>
+                <field type="CODE">D001799</field>
+                <field type="STR">OSEDANIE ERITROTSITOV</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0007117</field>
+                <field type="AUI">A8026046</field>
+                <field type="LUI">L3351431</field>
+                <field type="SUI">S3878915</field>
+                <field type="SCUI">M0003431</field>
+                <field type="SDUI">D002280</field>
+                <field type="CODE">D002280</field>
+                <field type="STR">КАНКРОИД КОЖИ</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0007787</field>
+                <field type="AUI">A8050619</field>
+                <field type="LUI">L3376055</field>
+                <field type="SUI">S3903548</field>
+                <field type="SCUI">M0003887</field>
+                <field type="SDUI">D002546</field>
+                <field type="CODE">D002546</field>
+                <field type="STR">ЦЕРЕБРАЛЬНАЯ ИШЕМИЯ ТРАНЗИТОРНАЯ</field>
+            </row>
+        </sample>
+        <sample id="MH" samplename="MH" definition="Main heading" count="26142">
+            <row type="standard">
+                <field type="CUI">C0001443</field>
+                <field type="AUI">A8011683</field>
+                <field type="LUI">L3337054</field>
+                <field type="SUI">S3864537</field>
+                <field type="SCUI">M0000377</field>
+                <field type="SDUI">D000241</field>
+                <field type="CODE">D000241</field>
+                <field type="STR">АДЕНОЗИН</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0001899</field>
+                <field type="AUI">A8012157</field>
+                <field type="LUI">L3337528</field>
+                <field type="SUI">S3865011</field>
+                <field type="SCUI">M0000620</field>
+                <field type="SDUI">D000410</field>
+                <field type="CODE">D000410</field>
+                <field type="STR">АЛАНИН-ТРАНСАМИНАЗА</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0002641</field>
+                <field type="AUI">A8012831</field>
+                <field type="LUI">L3338204</field>
+                <field type="SUI">S3865685</field>
+                <field type="SCUI">M0001005</field>
+                <field type="SDUI">D000655</field>
+                <field type="CODE">D000655</field>
+                <field type="STR">АМОДИАХИН</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0003154</field>
+                <field type="AUI">A8037439</field>
+                <field type="LUI">L3362849</field>
+                <field type="SUI">S3890332</field>
+                <field type="SCUI">M0001300</field>
+                <field type="SDUI">D000870</field>
+                <field type="CODE">D000870</field>
+                <field type="STR">ПЕРЕДНЕГО РОГА КЛЕТКИ</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0003158</field>
+                <field type="AUI">A8040288</field>
+                <field type="LUI">L3365703</field>
+                <field type="SUI">S3893187</field>
+                <field type="SCUI">M0001301</field>
+                <field type="SDUI">D000871</field>
+                <field type="CODE">D000871</field>
+                <field type="STR">ПРОТИВОГЕЛЬМИНТНЫЕ СРЕДСТВА</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0003250</field>
+                <field type="AUI">A8013671</field>
+                <field type="LUI">L3339061</field>
+                <field type="SUI">S3866529</field>
+                <field type="SCUI">M0001357</field>
+                <field type="SDUI">D000911</field>
+                <field type="CODE">D000911</field>
+                <field type="STR">АНТИТЕЛА МОНОКЛОНАЛЬНЫЕ</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0003620</field>
+                <field type="AUI">A8013284</field>
+                <field type="LUI">L3338657</field>
+                <field type="SUI">S3866138</field>
+                <field type="SCUI">M0001614</field>
+                <field type="SDUI">D001067</field>
+                <field type="CODE">D001067</field>
+                <field type="STR">АНОРЕКСИГЕННЫЕ СРЕДСТВА</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0004715</field>
+                <field type="AUI">A8039715</field>
+                <field type="LUI">L3365129</field>
+                <field type="SUI">S3892613</field>
+                <field type="SCUI">M0002164</field>
+                <field type="SDUI">D001454</field>
+                <field type="CODE">D001454</field>
+                <field type="STR">ПРИБАЛТИКА</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0004952</field>
+                <field type="AUI">A8015091</field>
+                <field type="LUI">L3340468</field>
+                <field type="SUI">S3867949</field>
+                <field type="SCUI">M0002298</field>
+                <field type="SDUI">D001531</field>
+                <field type="CODE">D001531</field>
+                <field type="STR">БЕЛИЗ</field>
+            </row>
+        </sample>
+    </samples>
+</document>

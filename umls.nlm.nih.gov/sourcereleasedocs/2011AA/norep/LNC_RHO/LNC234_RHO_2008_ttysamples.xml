@@ -1,0 +1,177 @@
+<document vsab="LNC234_RHO_2008" samples="Term Types">
+    <samples>
+        <labels>
+            <label type="metalabel">Term Type</label>
+            <label type="definition">Description</label>
+            <label type="count">Count (MRCONSO.RRF)</label>
+        </labels>
+        <sample id="LC" samplename="LC" definition="Long common name" count="6">
+            <row type="standard">
+                <field type="CUI">C2708996</field>
+                <field type="AUI">A18161703</field>
+                <field type="LUI">L8872177</field>
+                <field type="SUI">S11052367</field>
+                <field type="SCUI">55744-7</field>
+                <field type="CODE">55744-7</field>
+                <field type="STR">howRU</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C2708997</field>
+                <field type="AUI">A18354851</field>
+                <field type="LUI">L9084027</field>
+                <field type="SUI">S11340188</field>
+                <field type="SCUI">55745-4</field>
+                <field type="CODE">55745-4</field>
+                <field type="STR">Pain or discomfort howRU</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C2708720</field>
+                <field type="AUI">A18277411</field>
+                <field type="LUI">L8877114</field>
+                <field type="SUI">S11029215</field>
+                <field type="SCUI">55746-2</field>
+                <field type="CODE">55746-2</field>
+                <field type="STR">Feeling low or worried howRU</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C2708722</field>
+                <field type="AUI">A18277412</field>
+                <field type="LUI">L9089306</field>
+                <field type="SUI">S11337301</field>
+                <field type="SCUI">55747-0</field>
+                <field type="CODE">55747-0</field>
+                <field type="STR">Limited in what I can do howRU</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C2708724</field>
+                <field type="AUI">A18393532</field>
+                <field type="LUI">L9088462</field>
+                <field type="SUI">S11330276</field>
+                <field type="SCUI">55748-8</field>
+                <field type="CODE">55748-8</field>
+                <field type="STR">Dependent on others howRU</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C2708726</field>
+                <field type="AUI">A18161705</field>
+                <field type="LUI">L8894948</field>
+                <field type="SUI">S11052361</field>
+                <field type="SCUI">55749-6</field>
+                <field type="CODE">55749-6</field>
+                <field type="STR">howRU summary score howRU</field>
+            </row>
+        </sample>
+        <sample id="LN" samplename="LN" definition="LOINC official fully specified name" count="6">
+            <row type="standard">
+                <field type="CUI">C2708996</field>
+                <field type="AUI">A18123030</field>
+                <field type="LUI">L8872176</field>
+                <field type="SUI">S11052366</field>
+                <field type="SCUI">55744-7</field>
+                <field type="CODE">55744-7</field>
+                <field type="STR">howRU:-:Pt:^Patient:-:Reported.howRU</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C2708997</field>
+                <field type="AUI">A18123031</field>
+                <field type="LUI">L9095088</field>
+                <field type="SUI">S11340189</field>
+                <field type="SCUI">55745-4</field>
+                <field type="CODE">55745-4</field>
+                <field type="STR">Pain or discomfort:Find:Pt:^Patient:Ord:howRU</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C2708720</field>
+                <field type="AUI">A18238690</field>
+                <field type="LUI">L8877115</field>
+                <field type="SUI">S11029216</field>
+                <field type="SCUI">55746-2</field>
+                <field type="CODE">55746-2</field>
+                <field type="STR">Feeling low or worried:Find:Pt:^Patient:Ord:howRU</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C2708722</field>
+                <field type="AUI">A18393531</field>
+                <field type="LUI">L9075462</field>
+                <field type="SUI">S11337302</field>
+                <field type="SCUI">55747-0</field>
+                <field type="CODE">55747-0</field>
+                <field type="STR">Limited in what I can do:Find:Pt:^Patient:Ord:howRU</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C2708724</field>
+                <field type="AUI">A18277413</field>
+                <field type="LUI">L9080159</field>
+                <field type="SUI">S11330277</field>
+                <field type="SCUI">55748-8</field>
+                <field type="CODE">55748-8</field>
+                <field type="STR">Dependent on others:Find:Pt:^Patient:Ord:howRU</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C2708726</field>
+                <field type="AUI">A18316088</field>
+                <field type="LUI">L8894949</field>
+                <field type="SUI">S11052362</field>
+                <field type="SCUI">55749-6</field>
+                <field type="CODE">55749-6</field>
+                <field type="STR">howRU summary score:Num:Pt:^Patient:Qn:howRU</field>
+            </row>
+        </sample>
+        <sample id="MTH_LN" samplename="MTH_LN" definition="MTH Official fully specified name with expanded abbreviations" count="6">
+            <row type="standard">
+                <field type="CUI">C2708996</field>
+                <field type="AUI">A18837470</field>
+                <field type="LUI">L8872175</field>
+                <field type="SUI">S11052365</field>
+                <field type="SCUI">55744-7</field>
+                <field type="CODE">55744-7</field>
+                <field type="STR">howRU:-:Point in time:^Patient:-:Reported.howRU</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C2708997</field>
+                <field type="AUI">A18815087</field>
+                <field type="LUI">L9084028</field>
+                <field type="SUI">S11340190</field>
+                <field type="SCUI">55745-4</field>
+                <field type="CODE">55745-4</field>
+                <field type="STR">Pain or discomfort:Finding:Point in time:^Patient:Ordinal:howRU</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C2708720</field>
+                <field type="AUI">A18815088</field>
+                <field type="LUI">L8896126</field>
+                <field type="SUI">S11029217</field>
+                <field type="SCUI">55746-2</field>
+                <field type="CODE">55746-2</field>
+                <field type="STR">Feeling low or worried:Finding:Point in time:^Patient:Ordinal:howRU</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C2708722</field>
+                <field type="AUI">A18815089</field>
+                <field type="LUI">L9092039</field>
+                <field type="SUI">S11337303</field>
+                <field type="SCUI">55747-0</field>
+                <field type="CODE">55747-0</field>
+                <field type="STR">Limited in what I can do:Finding:Point in time:^Patient:Ordinal:howRU</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C2708724</field>
+                <field type="AUI">A18870710</field>
+                <field type="LUI">L9088463</field>
+                <field type="SUI">S11330278</field>
+                <field type="SCUI">55748-8</field>
+                <field type="CODE">55748-8</field>
+                <field type="STR">Dependent on others:Finding:Point in time:^Patient:Ordinal:howRU</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C2708726</field>
+                <field type="AUI">A18815091</field>
+                <field type="LUI">L8883434</field>
+                <field type="SUI">S11052363</field>
+                <field type="SCUI">55749-6</field>
+                <field type="CODE">55749-6</field>
+                <field type="STR">howRU summary score:Number:Point in time:^Patient:Quantitative:howRU</field>
+            </row>
+        </sample>
+    </samples>
+</document>

@@ -1,0 +1,1355 @@
+<document vsab="MDRJPN13_1" samples="Attributes">
+    <samples>
+        <labels>
+            <label type="metalabel">Attribute Name</label>
+            <label type="definition">Description</label>
+            <label type="count">Count (MRSAT.RRF)</label>
+        </labels>
+        <sample id="MDRJPN13_1_SMQ_TERM_ADDVERSION_RUI" samplename="SMQ_TERM_ADDVERSION" definition="Standardised MedDRA Query (SMQ) Addition Version. Version of MedDRA in which term was added to the SMQ." count="100770">
+            <row type="standard">
+                <field type="CUI">C0861876</field>
+                <field type="METAUI">R97478341</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">8.0</field>
+                <field type="STR">再発肝細胞癌</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0476273</field>
+                <field type="METAUI">R97489356</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">8.1</field>
+                <field type="STR">呼吸窮迫</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0030446</field>
+                <field type="METAUI">R97479226</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">8.1</field>
+                <field type="STR">麻痺性イレウス</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1142579</field>
+                <field type="METAUI">R97500999</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">8.1</field>
+                <field type="STR">粘液嘔吐</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1736173</field>
+                <field type="METAUI">R97504675</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">9.1</field>
+                <field type="STR">急性アシドーシス</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0749095</field>
+                <field type="METAUI">R97471077</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">9.0</field>
+                <field type="STR">慢性硬膜下血腫</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0151702</field>
+                <field type="METAUI">R97478040</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">9.0</field>
+                <field type="STR">筋肉内出血</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0155653</field>
+                <field type="METAUI">R97466279</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">9.0</field>
+                <field type="STR">後壁急性心筋梗塞、初発</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0580324</field>
+                <field type="METAUI">R97474459</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">9.1</field>
+                <field type="STR">外来心電図異常</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0748318</field>
+                <field type="METAUI">R97488114</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">10.0</field>
+                <field type="STR">進行性腎不全</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0011269</field>
+                <field type="METAUI">R97473027</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">10.0</field>
+                <field type="STR">血管性認知症</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0236959</field>
+                <field type="METAUI">R97487809</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">10.0</field>
+                <field type="STR">外傷後認知症</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1701474</field>
+                <field type="METAUI">R97503996</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">10.0</field>
+                <field type="STR">論争好き</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0269806</field>
+                <field type="METAUI">R97475498</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">10.0</field>
+                <field type="STR">分娩誘発不成功</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0237987</field>
+                <field type="METAUI">R97477945</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">10.0</field>
+                <field type="STR">グルコース−６−リン酸脱水素酵素欠乏性溶血性貧血</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0009398</field>
+                <field type="METAUI">R97498810</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">10.0</field>
+                <field type="STR">色覚異常</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1619723</field>
+                <field type="METAUI">R97503782</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">10.0</field>
+                <field type="STR">空胞化白血球存在</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0854791</field>
+                <field type="METAUI">R97468448</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">10.0</field>
+                <field type="STR">再発胆管癌</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0153713</field>
+                <field type="METAUI">R97469553</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_ADDVERSION</field>
+                <field type="ATV">10.0</field>
+                <field type="STR">バーキット腫瘍あるいはリンパ腫、胸腔内リンパ節浸潤あり</field>
+            </row>
+        </sample>
+        <sample id="MDRJPN13_1_SMQ_TERM_CAT_RUI" samplename="SMQ_TERM_CAT" definition="Standardised MedDRA Query (SMQ) Term Category. A single alphabetical letter indicating the category of the term for application of the SMQ algorithm. If the SMQ does not use algorithms, then all Term_category values are assigned &quot;A.&quot; For a child SMQ, this field is assigned &quot;S.&quot;" count="100770">
+            <row type="standard">
+                <field type="CUI">C0747962</field>
+                <field type="METAUI">R97501409</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">脛骨前部浮腫</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0031144</field>
+                <field type="METAUI">R97486889</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">腹膜滲出液（慢性）</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0036686</field>
+                <field type="METAUI">R97497231</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">グラム陽性菌性敗血症</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0032797</field>
+                <field type="METAUI">R97478076</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">分娩後出血</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0232503</field>
+                <field type="METAUI">R97498660</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">臍出血</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0234974</field>
+                <field type="METAUI">R97490413</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">G</field>
+                <field type="STR">単純部分発作</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0541992</field>
+                <field type="METAUI">R97477321</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">B</field>
+                <field type="STR">ふらふら状態</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0161562</field>
+                <field type="METAUI">R97487531</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">D</field>
+                <field type="STR">メタカロン化合物中毒</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0039231</field>
+                <field type="METAUI">R97488554</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">脈拍増加</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0948755</field>
+                <field type="METAUI">R97496706</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">肺不全</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0270276</field>
+                <field type="METAUI">R97477289</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">新生児灰白症候群</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0858950</field>
+                <field type="METAUI">R97483305</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">精神変調</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0035404</field>
+                <field type="METAUI">R97489590</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">Ｒｈ同種免疫</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0032708</field>
+                <field type="METAUI">R97487730</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">ポルフィリン症ＮＯＳ</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0266599</field>
+                <field type="METAUI">R97502034</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">先天性中耳異常</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1260885</field>
+                <field type="METAUI">R97474604</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">閉塞性動脈内膜炎</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0862979</field>
+                <field type="METAUI">R97468440</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">切除可能な胆管未分化癌</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0206638</field>
+                <field type="METAUI">R97469158</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">骨巨細胞腫瘍</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0153458</field>
+                <field type="METAUI">R97469798</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_CAT</field>
+                <field type="ATV">A</field>
+                <field type="STR">膵頭部癌</field>
+            </row>
+        </sample>
+        <sample id="MDRJPN13_1_SMQ_TERM_LMVERSION_RUI" samplename="SMQ_TERM_LMVERSION" definition="Standardised MedDRA Query (SMQ) Last Modified Version. Version of MedDRA in which term was last modified in the SMQ." count="100770">
+            <row type="standard">
+                <field type="CUI">C0015230</field>
+                <field type="METAUI">R97475148</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">8.1</field>
+                <field type="STR">発疹</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0860511</field>
+                <field type="METAUI">R97466809</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">8.1</field>
+                <field type="STR">気道抵抗上昇</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0542035</field>
+                <field type="METAUI">R97479026</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">8.1</field>
+                <field type="STR">赤血球低形成</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0154759</field>
+                <field type="METAUI">R97487678</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">8.1</field>
+                <field type="STR">膠原病における多発ニューロパチー</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0497247</field>
+                <field type="METAUI">R97488736</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">9.0</field>
+                <field type="STR">血圧上昇</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0877017</field>
+                <field type="METAUI">R97494857</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">9.0</field>
+                <field type="STR">二次性全般化を伴う部分発作</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0860672</field>
+                <field type="METAUI">R97492131</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">9.0</field>
+                <field type="STR">タリウムスキャン異常</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0233767</field>
+                <field type="METAUI">R97477719</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">9.1</field>
+                <field type="STR">幻触</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0233632</field>
+                <field type="METAUI">R97483369</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">10.0</field>
+                <field type="STR">精神機能低下</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0521305</field>
+                <field type="METAUI">R97467790</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">10.0</field>
+                <field type="STR">補助受精</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0235860</field>
+                <field type="METAUI">R97480566</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">10.0</field>
+                <field type="STR">産褥期乳汁分泌減少</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0158647</field>
+                <field type="METAUI">R97471168</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">10.0</field>
+                <field type="STR">口蓋裂、一側性、完全裂</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0015523</field>
+                <field type="METAUI">R97477478</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">10.0</field>
+                <field type="STR">血友病Ｃ（第ＸＩ因子）</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0375381</field>
+                <field type="METAUI">R97493727</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">10.0</field>
+                <field type="STR">内尿道括約筋不全</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0158662</field>
+                <field type="METAUI">R97502089</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">10.0</field>
+                <field type="STR">先天性舌異常</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1619700</field>
+                <field type="METAUI">R97503793</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">10.0</field>
+                <field type="STR">腎無形成</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0877536</field>
+                <field type="METAUI">R97497821</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">10.0</field>
+                <field type="STR">胎児心拍障害</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0476320</field>
+                <field type="METAUI">R97488965</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">10.0</field>
+                <field type="STR">赤血球形態ＮＯＳ異常</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0861248</field>
+                <field type="METAUI">R97473411</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_LMVERSION</field>
+                <field type="ATV">10.0</field>
+                <field type="STR">びまん性混合細胞型リンパ腫（腸管Ｔ細胞性リンパ腫）第３期</field>
+            </row>
+        </sample>
+        <sample id="MDRJPN13_1_SMQ_TERM_SCOPE_RUI" samplename="SMQ_TERM_SCOPE" definition="Standardised MedDRA Query (SMQ) Term Scope. Defines the MedDRA term as a member of the broad scope (1), narrow scope (2) of the SMQ search, or a child SMQ (0) (zero)." count="100770">
+            <row type="standard">
+                <field type="CUI">C0263235</field>
+                <field type="METAUI">R97502729</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">2</field>
+                <field type="STR">慢性全身性剥脱性皮膚炎</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0151205</field>
+                <field type="METAUI">R97485192</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">1</field>
+                <field type="STR">眼窩周囲浮腫</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0239517</field>
+                <field type="METAUI">R97502978</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">1</field>
+                <field type="STR">顔面の錯感覚</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0858254</field>
+                <field type="METAUI">R97471714</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">1</field>
+                <field type="STR">複雑部分発作増加</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0151814</field>
+                <field type="METAUI">R97485070</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">2</field>
+                <field type="STR">冠血管閉塞</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0795687</field>
+                <field type="METAUI">R97470402</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">2</field>
+                <field type="STR">大脳動脈性血栓症</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0156716</field>
+                <field type="METAUI">R97499461</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">1</field>
+                <field type="STR">その他の分娩開始切迫、治療経過詳細不明</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0302468</field>
+                <field type="METAUI">R97472042</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">1</field>
+                <field type="STR">先天性腎血管奇形ＮＯＳ</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0029454</field>
+                <field type="METAUI">R97485764</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">1</field>
+                <field type="STR">大理石骨病</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0023817</field>
+                <field type="METAUI">R97503770</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">1</field>
+                <field type="STR">１型高リポ蛋白血症</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0877516</field>
+                <field type="METAUI">R97495419</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">2</field>
+                <field type="STR">アダムキーウィク動脈塞栓症</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0151815</field>
+                <field type="METAUI">R97485074</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">1</field>
+                <field type="STR">腸間膜閉塞</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0006079</field>
+                <field type="METAUI">R97469207</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">1</field>
+                <field type="STR">ボーエン病</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0334082</field>
+                <field type="METAUI">R97502962</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">1</field>
+                <field type="STR">表皮母斑</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0862946</field>
+                <field type="METAUI">R97468381</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">2</field>
+                <field type="STR">切除不能な胆管燕麦細胞癌</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0278576</field>
+                <field type="METAUI">R97470134</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">2</field>
+                <field type="STR">子宮頚部癌第２期</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0023467</field>
+                <field type="METAUI">R97484791</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">2</field>
+                <field type="STR">急性非リンパ芽球性白血病</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0278535</field>
+                <field type="METAUI">R97488890</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">2</field>
+                <field type="STR">直腸癌第１期</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0861752</field>
+                <field type="METAUI">R97488901</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_SCOPE</field>
+                <field type="ATV">2</field>
+                <field type="STR">直腸癌、病期不明</field>
+            </row>
+        </sample>
+        <sample id="MDRJPN13_1_SMQ_TERM_STATUS_RUI" samplename="SMQ_TERM_STATUS" definition="Standardised MedDRA Query (SMQ) Term Status. Identifies a term as active (&quot;A&quot;) or inactive (&quot;I&quot;) within this SMQ." count="100770">
+            <row type="standard">
+                <field type="CUI">C0858669</field>
+                <field type="METAUI">R97485332</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">一過性乏尿</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0085649</field>
+                <field type="METAUI">R97474350</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">四肢浮腫</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0151662</field>
+                <field type="METAUI">R97477022</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">ＧＧＴＰ増加</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1167718</field>
+                <field type="METAUI">R97501192</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">肝癌第２期</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0085293</field>
+                <field type="METAUI">R97474693</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">経腸感染した非Ａ非Ｂ肝炎</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0023885</field>
+                <field type="METAUI">R97481183</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">肝膿瘍</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0002879</field>
+                <field type="METAUI">R97465911</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">詳細不明の後天性溶血性貧血</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0235218</field>
+                <field type="METAUI">R97490476</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">皮膚充血</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0151603</field>
+                <field type="METAUI">R97467173</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">全身浮腫</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0392386</field>
+                <field type="METAUI">R97492252</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">血小板数減少</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0520878</field>
+                <field type="METAUI">R97487875</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">ＰＲ短縮</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0085298</field>
+                <field type="METAUI">R97495400</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">心突然死</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0009241</field>
+                <field type="METAUI">R97494817</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">認知障害</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0024032</field>
+                <field type="METAUI">R97494406</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">出生体重正常以下</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0860497</field>
+                <field type="METAUI">R97471849</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">後眼房の先天異常ＮＯＳ</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0042063</field>
+                <field type="METAUI">R97493816</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">泌尿生殖器奇形</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0919755</field>
+                <field type="METAUI">R97496170</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">先天性肺高血圧症</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0220708</field>
+                <field type="METAUI">R97497516</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">ベイター症候群</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0043459</field>
+                <field type="METAUI">R97497531</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_STATUS</field>
+                <field type="ATV">A</field>
+                <field type="STR">ツェルウェーガー症候群</field>
+            </row>
+        </sample>
+        <sample id="MDRJPN13_1_SMQ_TERM_WEIGHT_RUI" samplename="SMQ_TERM_WEIGHT" definition="Standardised MedDRA Query (SMQ) Term Weight. Used for some SMQ algorithms; &quot;0&quot; is used as default." count="100770">
+            <row type="standard">
+                <field type="CUI">C0268733</field>
+                <field type="METAUI">R97466291</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">急性腎炎症候群</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0375010</field>
+                <field type="METAUI">R97466324</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">急性あるいは詳細不明のＣ型肝炎、肝性昏睡の記載のないもの</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0270202</field>
+                <field type="METAUI">R97477959</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">胎児・新生児のＡＢＯ同種免疫による溶血性疾患</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0014518</field>
+                <field type="METAUI">R97484331</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">中毒性表皮壊死融解症（ライエル型）</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0375703</field>
+                <field type="METAUI">R97467145</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">詳細不明の食物によるアナフィラキシーショック</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0857227</field>
+                <field type="METAUI">R97491629</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">口腔の腫脹・疼痛</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0854376</field>
+                <field type="METAUI">R97486111</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">膵酵素障害ＮＯＳ</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0562343</field>
+                <field type="METAUI">R97468324</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">両側電撃療法</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0860506</field>
+                <field type="METAUI">R97479962</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">動脈瘤破裂による頭蓋内出血</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0948628</field>
+                <field type="METAUI">R97496393</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">摩擦による痔出血</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0858589</field>
+                <field type="METAUI">R97472390</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">協調運動障害</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0232197</field>
+                <field type="METAUI">R97470185</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">心細動ＮＯＳ</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0221165</field>
+                <field type="METAUI">R97473491</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">両麻痺</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0233569</field>
+                <field type="METAUI">R97494346</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">歩き回り</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0855521</field>
+                <field type="METAUI">R97489971</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">精液量減少</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0040517</field>
+                <field type="METAUI">R97469399</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">ブリソー病</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0221036</field>
+                <field type="METAUI">R97474721</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">腸性肢端皮膚炎</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0015523</field>
+                <field type="METAUI">R97475476</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">第ＸＩ因子欠乏症</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0917816</field>
+                <field type="METAUI">R97483325</field>
+                <field type="STYPE">RUI</field>
+                <field type="ATN">SMQ_TERM_WEIGHT</field>
+                <field type="ATV">0</field>
+                <field type="STR">精神遅滞</field>
+            </row>
+        </sample>
+        <sample id="MDRJPN13_1_SMQ_TERM_LEVEL_CODE_ROOT_SOURCE" samplename="SMQ_TERM_LEVEL" definition="Standardised MedDRA Query (SMQ) Term Level. The MedDRA hierarchy level of a term (4=PT, 5=LLT) or 0 (zero) for a child SMQ." count="33465">
+            <row type="standard">
+                <field type="CUI">C0039070</field>
+                <field type="METAUI">A11511172</field>
+                <field type="LUI">L6274346</field>
+                <field type="SUI">S7156484</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10042771</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">5</field>
+                <field type="STR">失神発作</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0859062</field>
+                <field type="METAUI">A11550499</field>
+                <field type="LUI">L6242615</field>
+                <field type="SUI">S7176877</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10040159</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">5</field>
+                <field type="STR">血清ビリルビン増加</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1536051</field>
+                <field type="METAUI">A11462845</field>
+                <field type="LUI">L6298741</field>
+                <field type="SUI">S7168380</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10064486</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">4</field>
+                <field type="STR">粘膜剥脱</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0149526</field>
+                <field type="METAUI">A11403829</field>
+                <field type="LUI">L6238361</field>
+                <field type="SUI">S7143031</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10001734</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">5</field>
+                <field type="STR">アレルギー性蕁麻疹</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0858322</field>
+                <field type="METAUI">A11460849</field>
+                <field type="LUI">L6254773</field>
+                <field type="SUI">S7183197</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10045263</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">4</field>
+                <field type="STR">２ｂ型高脂血症</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0549294</field>
+                <field type="METAUI">A11409625</field>
+                <field type="LUI">L6262952</field>
+                <field type="SUI">S7156659</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10029356</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">5</field>
+                <field type="STR">好中球減少症増悪</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0442874</field>
+                <field type="METAUI">A15088602</field>
+                <field type="LUI">L7759637</field>
+                <field type="SUI">S8990509</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10029329</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">5</field>
+                <field type="STR">ニューロパチー（ＮＯＳ）</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0341750</field>
+                <field type="METAUI">A11503579</field>
+                <field type="LUI">L6276533</field>
+                <field type="SUI">S7174379</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10005044</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">5</field>
+                <field type="STR">膀胱出血</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0017565</field>
+                <field type="METAUI">A11499190</field>
+                <field type="LUI">L3474910</field>
+                <field type="SUI">S4002404</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10018276</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">4</field>
+                <field type="STR">歯肉出血</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0156621</field>
+                <field type="METAUI">A11517368</field>
+                <field type="LUI">L6262415</field>
+                <field type="SUI">S7152510</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10018974</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">5</field>
+                <field type="STR">前置胎盤による出血</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0877172</field>
+                <field type="METAUI">A11520534</field>
+                <field type="LUI">L6276336</field>
+                <field type="SUI">S7172687</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10049236</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">4</field>
+                <field type="STR">脊髄硬膜外出血</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0156078</field>
+                <field type="METAUI">A11474698</field>
+                <field type="LUI">L6285195</field>
+                <field type="SUI">S7151929</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10055254</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">5</field>
+                <field type="STR">出血性アルコール胃炎</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0040797</field>
+                <field type="METAUI">A11553924</field>
+                <field type="LUI">L6297161</field>
+                <field type="SUI">S7155623</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10055349</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">5</field>
+                <field type="STR">外傷性出血</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0241379</field>
+                <field type="METAUI">A11427743</field>
+                <field type="LUI">L6274051</field>
+                <field type="SUI">S7154047</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10021689</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">5</field>
+                <field type="STR">口渇感増強</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0043096</field>
+                <field type="METAUI">A11507821</field>
+                <field type="LUI">L3463448</field>
+                <field type="SUI">S3990942</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10024883</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">5</field>
+                <field type="STR">体重減少</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0877450</field>
+                <field type="METAUI">A11512568</field>
+                <field type="LUI">L6297997</field>
+                <field type="SUI">S7162360</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10049219</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">5</field>
+                <field type="STR">昏蒙</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0853940</field>
+                <field type="METAUI">A11485746</field>
+                <field type="LUI">L6238564</field>
+                <field type="SUI">S7144545</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10013918</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">5</field>
+                <field type="STR">ジスキネジー増悪</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0856777</field>
+                <field type="METAUI">A11505819</field>
+                <field type="LUI">L6262816</field>
+                <field type="SUI">S7155675</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10015676</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">5</field>
+                <field type="STR">外因性光線過敏性皮疹</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0858727</field>
+                <field type="METAUI">A11418165</field>
+                <field type="LUI">L6286834</field>
+                <field type="SUI">S7165003</field>
+                <field type="STYPE">CODE</field>
+                <field type="CODE">10023233</field>
+                <field type="ATN">SMQ_TERM_LEVEL</field>
+                <field type="ATV">5</field>
+                <field type="STR">炎症性関節腫脹</field>
+            </row>
+        </sample>
+        <sample id="MDRJPN13_1_MISO_ROOT_SOURCE_DUI" samplename="MISO" definition="MedDRA Serial Code International SOC Sort Order Digit (01-26)" count="26">
+            <row type="standard">
+                <field type="CUI">C0851353</field>
+                <field type="METAUI">A11438085</field>
+                <field type="LUI">L6242579</field>
+                <field type="SUI">S7176650</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10005329</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">03</field>
+                <field type="STR">血液およびリンパ系障害</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0018799</field>
+                <field type="METAUI">A11497749</field>
+                <field type="LUI">L5452933</field>
+                <field type="SUI">S6237989</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10007541</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">11</field>
+                <field type="STR">心臓障害</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851352</field>
+                <field type="METAUI">A11517647</field>
+                <field type="LUI">L6250793</field>
+                <field type="SUI">S7150157</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10010331</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">21</field>
+                <field type="STR">先天性、家族性および遺伝性障害</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851354</field>
+                <field type="METAUI">A11438087</field>
+                <field type="LUI">L6276041</field>
+                <field type="SUI">S7170193</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10013993</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">10</field>
+                <field type="STR">耳および迷路障害</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0014130</field>
+                <field type="METAUI">A11398603</field>
+                <field type="LUI">L6285093</field>
+                <field type="SUI">S7151078</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10014698</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">05</field>
+                <field type="STR">内分泌障害</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0015397</field>
+                <field type="METAUI">A11418381</field>
+                <field type="LUI">L5457747</field>
+                <field type="SUI">S6242803</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10015919</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">09</field>
+                <field type="STR">眼障害</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0017178</field>
+                <field type="METAUI">A11478148</field>
+                <field type="LUI">L5460016</field>
+                <field type="SUI">S6245072</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10017947</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">14</field>
+                <field type="STR">胃腸障害</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0267792</field>
+                <field type="METAUI">A11438088</field>
+                <field type="LUI">L6287565</field>
+                <field type="SUI">S7170878</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10019805</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">15</field>
+                <field type="STR">肝胆道系障害</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0021053</field>
+                <field type="METAUI">A11537497</field>
+                <field type="LUI">L6227794</field>
+                <field type="SUI">S7150846</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10021428</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">04</field>
+                <field type="STR">免疫系障害</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0009450</field>
+                <field type="METAUI">A11438059</field>
+                <field type="LUI">L6286285</field>
+                <field type="SUI">S7160705</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10021881</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">01</field>
+                <field type="STR">感染症および寄生虫症</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0947733</field>
+                <field type="METAUI">A11537498</field>
+                <field type="LUI">L6284983</field>
+                <field type="SUI">S7150122</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10022117</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">24</field>
+                <field type="STR">傷害、中毒および処置合併症</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1261322</field>
+                <field type="METAUI">A11418382</field>
+                <field type="LUI">L3484960</field>
+                <field type="SUI">S4012454</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10022891</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">23</field>
+                <field type="STR">臨床検査</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851358</field>
+                <field type="METAUI">A11478152</field>
+                <field type="LUI">L6296410</field>
+                <field type="SUI">S7149540</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10027433</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">06</field>
+                <field type="STR">代謝および栄養障害</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0263660</field>
+                <field type="METAUI">A11497753</field>
+                <field type="LUI">L6310263</field>
+                <field type="SUI">S7168294</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10028395</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">17</field>
+                <field type="STR">筋骨格系および結合組織障害</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0027651</field>
+                <field type="METAUI">A11398604</field>
+                <field type="LUI">L6288127</field>
+                <field type="SUI">S7175174</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10029104</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">02</field>
+                <field type="STR">良性、悪性および詳細不明の新生物（嚢胞およびポリープを含む）</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0027765</field>
+                <field type="METAUI">A11458328</field>
+                <field type="LUI">L6310208</field>
+                <field type="SUI">S7167767</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10029205</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">08</field>
+                <field type="STR">神経系障害</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851363</field>
+                <field type="METAUI">A11438089</field>
+                <field type="LUI">L6228515</field>
+                <field type="SUI">S7156768</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10036585</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">19</field>
+                <field type="STR">妊娠、産褥および周産期の状態</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0004936</field>
+                <field type="METAUI">A11398605</field>
+                <field type="LUI">L3480662</field>
+                <field type="SUI">S4008158</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10037175</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">07</field>
+                <field type="STR">精神障害</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0042075</field>
+                <field type="METAUI">A11497755</field>
+                <field type="LUI">L6253550</field>
+                <field type="SUI">S7173199</field>
+                <field type="STYPE">SDUI</field>
+                <field type="CODE">10038359</field>
+                <field type="ATN">MISO</field>
+                <field type="ATV">18</field>
+                <field type="STR">腎および尿路障害</field>
+            </row>
+        </sample>
+    </samples>
+</document>

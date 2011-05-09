@@ -1,0 +1,540 @@
+<document vsab="HCPT2011" samples="Term Types">
+    <samples>
+        <labels>
+            <label type="metalabel">Term Type</label>
+            <label type="definition">Description</label>
+            <label type="count">Count (MRCONSO.RRF)</label>
+        </labels>
+        <sample id="AB" samplename="AB" definition="Abbreviation in any source vocabulary" count="9456">
+            <row type="standard">
+                <field type="CUI">C0370455</field>
+                <field type="AUI">A4853549</field>
+                <field type="LUI">L1010953</field>
+                <field type="SUI">S1215341</field>
+                <field type="SCUI">11976</field>
+                <field type="CODE">11976</field>
+                <field type="STR">Removal of contraceptive cap</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0370490</field>
+                <field type="AUI">A4862193</field>
+                <field type="LUI">L1023255</field>
+                <field type="SUI">S1233202</field>
+                <field type="SCUI">13101</field>
+                <field type="CODE">13101</field>
+                <field type="STR">Repair of wound or lesion</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0185720</field>
+                <field type="AUI">A4853795</field>
+                <field type="LUI">L1011397</field>
+                <field type="SUI">S1215990</field>
+                <field type="SCUI">20912</field>
+                <field type="CODE">20912</field>
+                <field type="STR">Remove cartilage for graft</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0370798</field>
+                <field type="AUI">A4858676</field>
+                <field type="LUI">L1018702</field>
+                <field type="SUI">S1226360</field>
+                <field type="SCUI">22103</field>
+                <field type="CODE">22103</field>
+                <field type="STR">Remove extra spine segment</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0186432</field>
+                <field type="AUI">A4848619</field>
+                <field type="LUI">L1004507</field>
+                <field type="SUI">S1205704</field>
+                <field type="SCUI">23921</field>
+                <field type="CODE">23921</field>
+                <field type="STR">Amputation follow-up surgery</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0370907</field>
+                <field type="AUI">A4849896</field>
+                <field type="LUI">L1006555</field>
+                <field type="SUI">S1208636</field>
+                <field type="SCUI">24305</field>
+                <field type="CODE">24305</field>
+                <field type="STR">Arm tendon lengthening</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0370959</field>
+                <field type="AUI">A4859622</field>
+                <field type="LUI">L1019634</field>
+                <field type="SUI">S1227861</field>
+                <field type="SCUI">25120</field>
+                <field type="CODE">25120</field>
+                <field type="STR">Removal of forearm lesion</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0519770</field>
+                <field type="AUI">A4861779</field>
+                <field type="LUI">L1022824</field>
+                <field type="SUI">S1232522</field>
+                <field type="SCUI">25332</field>
+                <field type="CODE">25332</field>
+                <field type="STR">Revise wrist joint</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C2093432</field>
+                <field type="AUI">A4730538</field>
+                <field type="LUI">L0225109</field>
+                <field type="SUI">S0300216</field>
+                <field type="SCUI">25915</field>
+                <field type="CODE">25915</field>
+                <field type="STR">Amputation of forearm</field>
+            </row>
+        </sample>
+        <sample id="PT" samplename="PT" definition="Designated preferred name" count="9456">
+            <row type="standard">
+                <field type="CUI">C0918051</field>
+                <field type="AUI">A1946929</field>
+                <field type="LUI">L1774608</field>
+                <field type="SUI">S2071515</field>
+                <field type="SCUI">01112</field>
+                <field type="CODE">01112</field>
+                <field type="STR">ANESTHESIA FOR BONE MARROW ASPIRATION AND/OR BIOPSY, ANTERIOR OR POSTERIOR ILIAC CREST</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0370376</field>
+                <field type="AUI">A3862462</field>
+                <field type="LUI">L3154689</field>
+                <field type="SUI">S3678409</field>
+                <field type="SCUI">11100</field>
+                <field type="CODE">11100</field>
+                <field type="STR">BIOPSY OF SKIN, SUBCUTANEOUS TISSUE AND/OR MUCOUS MEMBRANE (INCLUDING SIMPLE CLOSURE), UNLESS OTHERWISE LISTED; SINGLE LESION</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0191617</field>
+                <field type="AUI">A0848163</field>
+                <field type="LUI">L0457493</field>
+                <field type="SUI">S0788451</field>
+                <field type="SCUI">14060</field>
+                <field type="CODE">14060</field>
+                <field type="STR">ADJACENT TISSUE TRANSFER OR REARRANGEMENT, EYELIDS, NOSE, EARS AND/OR LIPS; DEFECT 10 SQ CM OR LESS</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0191624</field>
+                <field type="AUI">A0949050</field>
+                <field type="LUI">L0834183</field>
+                <field type="SUI">S0890654</field>
+                <field type="SCUI">15840</field>
+                <field type="CODE">15840</field>
+                <field type="STR">GRAFT FOR FACIAL NERVE PARALYSIS; FREE FASCIA GRAFT (INCLUDING OBTAINING FASCIA)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0191395</field>
+                <field type="AUI">A2232238</field>
+                <field type="LUI">L1885927</field>
+                <field type="SUI">S2384485</field>
+                <field type="SCUI">15860</field>
+                <field type="CODE">15860</field>
+                <field type="STR">INTRAVENOUS INJECTION OF AGENT (EG, FLUORESCEIN) TO TEST VASCULAR FLOW IN FLAP OR GRAFT</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0370627</field>
+                <field type="AUI">A0925348</field>
+                <field type="LUI">L0542057</field>
+                <field type="SUI">S0867133</field>
+                <field type="SCUI">20101</field>
+                <field type="CODE">20101</field>
+                <field type="STR">EXPLORATION OF PENETRATING WOUND (SEPARATE PROCEDURE); CHEST</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0370643</field>
+                <field type="AUI">A0850121</field>
+                <field type="LUI">L0511929</field>
+                <field type="SUI">S0790781</field>
+                <field type="SCUI">20661</field>
+                <field type="CODE">20661</field>
+                <field type="STR">APPLICATION OF HALO, INCLUDING REMOVAL; CRANIAL</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0370688</field>
+                <field type="AUI">A0948484</field>
+                <field type="LUI">L0578501</field>
+                <field type="SUI">S0889982</field>
+                <field type="SCUI">21121</field>
+                <field type="CODE">21121</field>
+                <field type="STR">GENIOPLASTY; SLIDING OSTEOTOMY, SINGLE PIECE</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0370885</field>
+                <field type="AUI">A1016780</field>
+                <field type="LUI">L0492698</field>
+                <field type="SUI">S0960251</field>
+                <field type="SCUI">23660</field>
+                <field type="CODE">23660</field>
+                <field type="STR">OPEN TREATMENT OF ACUTE SHOULDER DISLOCATION</field>
+            </row>
+        </sample>
+        <sample id="OA" samplename="OA" definition="Obsolete abbreviation" count="330">
+            <row type="standard">
+                <field type="CUI">C0370911</field>
+                <field type="AUI">A13297685</field>
+                <field type="LUI">L1017637</field>
+                <field type="SUI">S1224776</field>
+                <field type="SCUI">24350</field>
+                <field type="CODE">24350</field>
+                <field type="STR">Repair of tennis elbow</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0371435</field>
+                <field type="AUI">A13299096</field>
+                <field type="LUI">L1013175</field>
+                <field type="SUI">S1218527</field>
+                <field type="SCUI">32002</field>
+                <field type="CODE">32002</field>
+                <field type="STR">Treatment of collapsed lung</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0189559</field>
+                <field type="AUI">A13299097</field>
+                <field type="LUI">L1012097</field>
+                <field type="SUI">S1217114</field>
+                <field type="SCUI">32005</field>
+                <field type="CODE">32005</field>
+                <field type="STR">Treat lung lining chemically</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0371436</field>
+                <field type="AUI">A13297965</field>
+                <field type="LUI">L1011944</field>
+                <field type="SUI">S1216901</field>
+                <field type="SCUI">32020</field>
+                <field type="CODE">32020</field>
+                <field type="STR">Insertion of chest tube</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0192460</field>
+                <field type="AUI">A13295560</field>
+                <field type="LUI">L1020396</field>
+                <field type="SUI">S1228942</field>
+                <field type="SCUI">43750</field>
+                <field type="CODE">43750</field>
+                <field type="STR">Place gastrostomy tube</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0372253</field>
+                <field type="AUI">A13296361</field>
+                <field type="LUI">L1001483</field>
+                <field type="SUI">S1201755</field>
+                <field type="SCUI">49200</field>
+                <field type="CODE">49200</field>
+                <field type="STR">Removal of abdominal lesion</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0372664</field>
+                <field type="AUI">A13300537</field>
+                <field type="LUI">L1007059</field>
+                <field type="SUI">S1209421</field>
+                <field type="SCUI">60001</field>
+                <field type="CODE">60001</field>
+                <field type="STR">Aspirate/inject thyriod cyst</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0373234</field>
+                <field type="AUI">A13299854</field>
+                <field type="LUI">L1775171</field>
+                <field type="SUI">S2072618</field>
+                <field type="SCUI">75552</field>
+                <field type="CODE">75552</field>
+                <field type="STR">Heart mri for morph w/o dye</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0373235</field>
+                <field type="AUI">A13300548</field>
+                <field type="LUI">L1775172</field>
+                <field type="SUI">S2074311</field>
+                <field type="SCUI">75553</field>
+                <field type="CODE">75553</field>
+                <field type="STR">Heart mri for morph w/dye</field>
+            </row>
+        </sample>
+        <sample id="OP" samplename="OP" definition="Obsolete preferred term" count="330">
+            <row type="standard">
+                <field type="CUI">C0370915</field>
+                <field type="AUI">A13297019</field>
+                <field type="LUI">L0567200</field>
+                <field type="SUI">S1801648</field>
+                <field type="SCUI">24356</field>
+                <field type="CODE">24356</field>
+                <field type="STR">FASCIOTOMY, LATERAL OR MEDIAL (EG, TENNIS ELBOW OR EPICONDYLITIS); WITH PARTIAL OSTECTOMY</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0189559</field>
+                <field type="AUI">A13300487</field>
+                <field type="LUI">L0780992</field>
+                <field type="SUI">S0827563</field>
+                <field type="SCUI">32005</field>
+                <field type="CODE">32005</field>
+                <field type="STR">CHEMICAL PLEURODESIS (EG, FOR RECURRENT OR PERSISTENT PNEUMOTHORAX)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0193569</field>
+                <field type="AUI">A13296359</field>
+                <field type="LUI">L0234081</field>
+                <field type="SUI">S0789698</field>
+                <field type="SCUI">47719</field>
+                <field type="CODE">47719</field>
+                <field type="STR">ANASTOMOSIS, CHOLEDOCHAL CYST, WITHOUT EXCISION</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0372358</field>
+                <field type="AUI">A13300530</field>
+                <field type="LUI">L0516297</field>
+                <field type="SUI">S0792055</field>
+                <field type="SCUI">51005</field>
+                <field type="CODE">51005</field>
+                <field type="STR">ASPIRATION OF BLADDER; BY TROCAR OR INTRACATHETER</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0372415</field>
+                <field type="AUI">A13296374</field>
+                <field type="LUI">L0213102</field>
+                <field type="SUI">S2385399</field>
+                <field type="SCUI">52510</field>
+                <field type="CODE">52510</field>
+                <field type="STR">TRANSURETHRAL BALLOON DILATION OF THE PROSTATIC URETHRA</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0372664</field>
+                <field type="AUI">A13300536</field>
+                <field type="LUI">L0516319</field>
+                <field type="SUI">S0792053</field>
+                <field type="SCUI">60001</field>
+                <field type="CODE">60001</field>
+                <field type="STR">ASPIRATION AND/OR INJECTION, THYROID CYST</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0373235</field>
+                <field type="AUI">A13297748</field>
+                <field type="LUI">L0537197</field>
+                <field type="SUI">S0825813</field>
+                <field type="SCUI">75553</field>
+                <field type="CODE">75553</field>
+                <field type="STR">CARDIAC MAGNETIC RESONANCE IMAGING FOR MORPHOLOGY; WITH CONTRAST MATERIAL</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0373236</field>
+                <field type="AUI">A13296398</field>
+                <field type="LUI">L0537186</field>
+                <field type="SUI">S0825811</field>
+                <field type="SCUI">75554</field>
+                <field type="CODE">75554</field>
+                <field type="STR">CARDIAC MAGNETIC RESONANCE IMAGING FOR FUNCTION, WITH OR WITHOUT MORPHOLOGY; COMPLETE STUDY</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0373440</field>
+                <field type="AUI">A13300562</field>
+                <field type="LUI">L1886440</field>
+                <field type="SUI">S2210833</field>
+                <field type="SCUI">78615</field>
+                <field type="CODE">78615</field>
+                <field type="STR">CEREBRAL VASCULAR FLOW</field>
+            </row>
+        </sample>
+        <sample id="AM" samplename="AM" definition="Short form of modifier" count="34">
+            <row type="standard">
+                <field type="CUI">C0520243</field>
+                <field type="AUI">A4863856</field>
+                <field type="LUI">L0881300</field>
+                <field type="SUI">S1238611</field>
+                <field type="SCUI">22</field>
+                <field type="CODE">22</field>
+                <field type="STR">Unusual procedural services</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0520244</field>
+                <field type="AUI">A4849190</field>
+                <field type="LUI">L0699698</field>
+                <field type="SUI">S1206553</field>
+                <field type="SCUI">23</field>
+                <field type="CODE">23</field>
+                <field type="STR">Unusual anesthesia</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0520245</field>
+                <field type="AUI">A4857237</field>
+                <field type="LUI">L1017358</field>
+                <field type="SUI">S1224326</field>
+                <field type="SCUI">24</field>
+                <field type="CODE">24</field>
+                <field type="STR">Unrelated E&amp;amp;M same MD postop</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0520246</field>
+                <field type="AUI">A4855788</field>
+                <field type="LUI">L1015049</field>
+                <field type="SUI">S1221110</field>
+                <field type="SCUI">25</field>
+                <field type="CODE">25</field>
+                <field type="STR">Sig sep iden E&amp;amp;M same MD/day</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0520247</field>
+                <field type="AUI">A4854922</field>
+                <field type="LUI">L0793115</field>
+                <field type="SUI">S1218850</field>
+                <field type="SCUI">26</field>
+                <field type="CODE">26</field>
+                <field type="STR">Professional component</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0918261</field>
+                <field type="AUI">A13300443</field>
+                <field type="LUI">L5671576</field>
+                <field type="SUI">S6502600</field>
+                <field type="SCUI">27</field>
+                <field type="CODE">27</field>
+                <field type="STR">Mult outpat e/m enc samedate</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0520248</field>
+                <field type="AUI">A4862576</field>
+                <field type="LUI">L0868971</field>
+                <field type="SUI">S1233936</field>
+                <field type="SCUI">32</field>
+                <field type="CODE">32</field>
+                <field type="STR">Mandated services</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0520249</field>
+                <field type="AUI">A4849189</field>
+                <field type="LUI">L0699697</field>
+                <field type="SUI">S1206551</field>
+                <field type="SCUI">47</field>
+                <field type="CODE">47</field>
+                <field type="STR">Anesthesia by surgeon</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0520250</field>
+                <field type="AUI">A4851327</field>
+                <field type="LUI">L0745426</field>
+                <field type="SUI">S1211807</field>
+                <field type="SCUI">50</field>
+                <field type="CODE">50</field>
+                <field type="STR">Bilateral procedure</field>
+            </row>
+        </sample>
+        <sample id="MP" samplename="MP" definition="Preferred names of modifiers" count="34">
+            <row type="standard">
+                <field type="CUI">C0520243</field>
+                <field type="AUI">A1109846</field>
+                <field type="LUI">L0881300</field>
+                <field type="SUI">S1052097</field>
+                <field type="SCUI">22</field>
+                <field type="CODE">22</field>
+                <field type="STR">UNUSUAL PROCEDURAL SERVICES</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0520244</field>
+                <field type="AUI">A1109845</field>
+                <field type="LUI">L0699698</field>
+                <field type="SUI">S1052096</field>
+                <field type="SCUI">23</field>
+                <field type="CODE">23</field>
+                <field type="STR">UNUSUAL ANESTHESIA</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0520245</field>
+                <field type="AUI">A1109815</field>
+                <field type="LUI">L0654253</field>
+                <field type="SUI">S1052079</field>
+                <field type="SCUI">24</field>
+                <field type="CODE">24</field>
+                <field type="STR">UNRELATED EVALUATION AND MANAGEMENT SERVICE BY THE SAME PHYSICIAN DURING A POSTOPERATIVE PERIOD</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0520246</field>
+                <field type="AUI">A1075873</field>
+                <field type="LUI">L0805727</field>
+                <field type="SUI">S1018419</field>
+                <field type="SCUI">25</field>
+                <field type="CODE">25</field>
+                <field type="STR">SIGNIFICANT, SEPARATELY IDENTIFIABLE EVALUATION AND MANAGEMENT SERVICE BY THE SAME PHYSICIAN ON THE SAME DAY OF THE PROCEDURE OR OTHER SERVICE</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0520247</field>
+                <field type="AUI">A1039505</field>
+                <field type="LUI">L0793115</field>
+                <field type="SUI">S0981696</field>
+                <field type="SCUI">26</field>
+                <field type="CODE">26</field>
+                <field type="STR">PROFESSIONAL COMPONENT</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0520248</field>
+                <field type="AUI">A0991451</field>
+                <field type="LUI">L0868971</field>
+                <field type="SUI">S0935036</field>
+                <field type="SCUI">32</field>
+                <field type="CODE">32</field>
+                <field type="STR">MANDATED SERVICES</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0520249</field>
+                <field type="AUI">A0849215</field>
+                <field type="LUI">L0699697</field>
+                <field type="SUI">S0789762</field>
+                <field type="SCUI">47</field>
+                <field type="CODE">47</field>
+                <field type="STR">ANESTHESIA BY SURGEON</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0520250</field>
+                <field type="AUI">A0873771</field>
+                <field type="LUI">L0745426</field>
+                <field type="SUI">S0814035</field>
+                <field type="SCUI">50</field>
+                <field type="CODE">50</field>
+                <field type="STR">BILATERAL PROCEDURE</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0520251</field>
+                <field type="AUI">A0993179</field>
+                <field type="LUI">L0872612</field>
+                <field type="SUI">S0937352</field>
+                <field type="SCUI">51</field>
+                <field type="CODE">51</field>
+                <field type="STR">MULTIPLE PROCEDURES</field>
+            </row>
+        </sample>
+        <sample id="MTH_PT" samplename="MTH_PT" definition="Metathesaurus preferred term" count="1">
+            <row type="standard">
+                <field type="CUI">C1741421</field>
+                <field type="AUI">A18776151</field>
+                <field type="LUI">L9556147</field>
+                <field type="SUI">S12006128</field>
+                <field type="SCUI">1040F</field>
+                <field type="CODE">1040F</field>
+                <field type="STR">DSM-IV![TRADE MARK SIGN]! CRITERIA FOR MAJOR DEPRESSIVE DISORDER DOCUMENTED AT THE INITIAL EVALUATION (MDD, MDD ADOL)1</field>
+            </row>
+        </sample>
+        <sample id="OAM" samplename="OAM" definition="Obsolete Modifier Abbreviation" count="1">
+            <row type="standard">
+                <field type="CUI">C0520242</field>
+                <field type="AUI">A17275130</field>
+                <field type="LUI">L1017361</field>
+                <field type="SUI">S1224330</field>
+                <field type="SCUI">21</field>
+                <field type="CODE">21</field>
+                <field type="STR">Prolonged E&amp;amp;M services</field>
+            </row>
+        </sample>
+        <sample id="OM" samplename="OM" definition="Obsolete modifiers in HCPCS" count="1">
+            <row type="standard">
+                <field type="CUI">C0520242</field>
+                <field type="AUI">A17274472</field>
+                <field type="LUI">L0829008</field>
+                <field type="SUI">S0981742</field>
+                <field type="SCUI">21</field>
+                <field type="CODE">21</field>
+                <field type="STR">PROLONGED EVALUATION AND MANAGEMENT SERVICES</field>
+            </row>
+        </sample>
+    </samples>
+</document>

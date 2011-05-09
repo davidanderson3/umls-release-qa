@@ -1,0 +1,385 @@
+<div class="section-3" id="maincontent">
+   <ul id="menu">
+      <li id="nav-1">
+         <a href="index.html">Synopsis</a>
+      </li>
+      <li id="nav-2">
+         <a href="mrsab.html">MRSAB.RRF</a>
+      </li>
+      <li id="nav-3">
+         <a href="sourcemetastats.html">Statistics and Sample Data</a>
+         <ul id="subnav-3">
+            <li>
+               <a href="termtypes.html" id="ttys">Terms and term types</a>
+            </li>
+            <li>
+               <a href="attributes.html">Attributes</a>
+            </li>
+            <li>
+               <a href="relationships.html">Relationships</a>
+            </li>
+            <li>
+               <a href="semtypes.html">Semantic Types</a>
+            </li>
+            <li>
+               <a href="overlap.html">Source Overlap</a>
+            </li>
+         </ul>
+      </li>
+   </ul>
+   <div id="counts">
+      <h2>Counts</h2>
+      <p class="jumptags">&nbsp;(skip to:&nbsp;<a href="#explain">notes</a>&nbsp;&nbsp;<a href="#samples">samples</a>)</p>
+      <div id="placeholder" style="display:none;">placeholder</div>
+      <table summary="Metadata Stats: This is a by-source tabulation of various data types in the UMLS Metathesaurus">
+         <tr>
+            <th class="metalabel" scope="col">Term Type</th>
+            <th class="definition" scope="col">Description</th>
+            <th class="count" scope="col">Count (MRCONSO.RRF)</th>
+         </tr>
+         <tr>
+            <td class="metalabel" valign="top" scope="row">
+               <a href="#LC"
+                  title="Samples of LC term types. If you are using the tab key for navigation, press Enter or Return to go to sample data"
+                  onkeyup="checkKeyType('LC',event);"
+                  onclick="document.getElementById('placeholder').innerHTML = '';document.getElementById('placeholder').style.display = 'none';new Effect.Appear('placeholder');drawContentBox('LC',event,this.innerHTML);return false;">LC</a>
+               <noscript>
+                  <a href="#LC"/>
+               </noscript>
+            </td>
+            <td class="definition" valign="top">Long common name</td>
+            <td class="count" valign="top">10</td>
+         </tr>
+         <tr>
+            <td class="metalabel" valign="top" scope="row">
+               <a href="#LN"
+                  title="Samples of LN term types. If you are using the tab key for navigation, press Enter or Return to go to sample data"
+                  onkeyup="checkKeyType('LN',event);"
+                  onclick="document.getElementById('placeholder').innerHTML = '';document.getElementById('placeholder').style.display = 'none';new Effect.Appear('placeholder');drawContentBox('LN',event,this.innerHTML);return false;">LN</a>
+               <noscript>
+                  <a href="#LN"/>
+               </noscript>
+            </td>
+            <td class="definition" valign="top">LOINC official fully specified name</td>
+            <td class="count" valign="top">10</td>
+         </tr>
+         <tr>
+            <td class="metalabel" valign="top" scope="row">
+               <a href="#MTH_LN"
+                  title="Samples of MTH_LN term types. If you are using the tab key for navigation, press Enter or Return to go to sample data"
+                  onkeyup="checkKeyType('MTH_LN',event);"
+                  onclick="document.getElementById('placeholder').innerHTML = '';document.getElementById('placeholder').style.display = 'none';new Effect.Appear('placeholder');drawContentBox('MTH_LN',event,this.innerHTML);return false;">MTH_LN</a>
+               <noscript>
+                  <a href="#MTH_LN"/>
+               </noscript>
+            </td>
+            <td class="definition" valign="top">MTH Official fully specified name with expanded abbreviations</td>
+            <td class="count" valign="top">10</td>
+         </tr>
+      </table>
+   </div>
+   <div id="explain">
+      <h2>Notes</h2>
+      <ul>
+         <li>A term type indicates the role an atom plays in its source</li>
+         <li>An atom is the smallest unit of naming in a source; that is, a specific string with specific code values and identifiers from a specific source.</li>
+         <li>Every atom has a separate row in MRCONSO.RRF. Every atom is assigned a term type.</li>
+         <li>Term types are assigned based on source documentation or NLM understanding of the source.</li>
+         <li>Sample data are provided for every term type in the source (see below).</li>
+         <li>See <a href="http://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/abbreviations.html#mrdoc_TTY"
+               target="_blank">Metathesaurus Documentation</a> for a list of all term type abbreviations and their full names.</li>
+         <li>See <a href="http://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/precedence_suppressibility.html"
+               target="_blank">Metathesaurus Documentation</a> for a list of sources and their associated term types, listed in default order of precedence.</li>
+         <li>See <a href="http://www.ncbi.nlm.nih.gov/books/NBK9684/#ch02.I23_Concepts_Concept_Names_and_Thei"
+               target="_blank">Section 2.3 of the UMLS Reference Manual</a> for more information on terms and term types in the UMLS Metathesaurus.</li>
+      </ul>
+   </div>
+   <div id="samples">
+      <h3>Sample Data</h3>
+      <div class="sample" id="LC">
+         <h4>LC</h4>&nbsp;&nbsp;<a href="#counts">(return to top)</a>
+         <table summary="This table provides sample rows for LC data elements in the UMLS Metathesaurus">
+            <tr>
+               <th scope="col">CUI</th>
+               <th scope="col">AUI</th>
+               <th scope="col">LUI</th>
+               <th scope="col">SUI</th>
+               <th scope="col">SCUI</th>
+               <th scope="col">CODE</th>
+               <th scope="col">STR</th>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2738739</td>
+               <td class="aui" valign="top">A18236821</td>
+               <td class="lui" valign="top">L9086326</td>
+               <td class="sui" valign="top">S11335560</td>
+               <td class="scui" valign="top">52738-2</td>
+               <td class="code" valign="top">52738-2</td>
+               <td class="str" valign="top">Inattention during 2 days assessment period</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2738740</td>
+               <td class="aui" valign="top">A18159855</td>
+               <td class="lui" valign="top">L9074647</td>
+               <td class="sui" valign="top">S11330672</td>
+               <td class="scui" valign="top">52739-0</td>
+               <td class="code" valign="top">52739-0</td>
+               <td class="str" valign="top">Disorganized thinking during 2 days assessment period</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2738741</td>
+               <td class="aui" valign="top">A18353049</td>
+               <td class="lui" valign="top">L9079532</td>
+               <td class="sui" valign="top">S11324848</td>
+               <td class="scui" valign="top">52740-8</td>
+               <td class="code" valign="top">52740-8</td>
+               <td class="str" valign="top">Altered level of consciousness/alertness during 2 days assessment period</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2738742</td>
+               <td class="aui" valign="top">A18121167</td>
+               <td class="lui" valign="top">L9081496</td>
+               <td class="sui" valign="top">S11342059</td>
+               <td class="scui" valign="top">52741-6</td>
+               <td class="code" valign="top">52741-6</td>
+               <td class="str" valign="top">Psychomotor retardation during 2 days assessment period</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2738429</td>
+               <td class="aui" valign="top">A18237019</td>
+               <td class="lui" valign="top">L7981867</td>
+               <td class="sui" valign="top">S10028238</td>
+               <td class="scui" valign="top">52495-9</td>
+               <td class="code" valign="top">52495-9</td>
+               <td class="str" valign="top">Confusion Assessment Method (CAM)</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2738977</td>
+               <td class="aui" valign="top">A18122473</td>
+               <td class="lui" valign="top">L9087234</td>
+               <td class="sui" valign="top">S11343305</td>
+               <td class="scui" valign="top">54627-5</td>
+               <td class="code" valign="top">54627-5</td>
+               <td class="str" valign="top">Signs and symptoms of delirium (from CAM©) CAM.MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2738978</td>
+               <td class="aui" valign="top">A18276844</td>
+               <td class="lui" valign="top">L9075239</td>
+               <td class="sui" valign="top">S11335563</td>
+               <td class="scui" valign="top">54628-3</td>
+               <td class="code" valign="top">54628-3</td>
+               <td class="str" valign="top">Inattention in last 7 days CAM.MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2738979</td>
+               <td class="aui" valign="top">A18315525</td>
+               <td class="lui" valign="top">L9077470</td>
+               <td class="sui" valign="top">S11330675</td>
+               <td class="scui" valign="top">54629-1</td>
+               <td class="code" valign="top">54629-1</td>
+               <td class="str" valign="top">Disorganized thinking in last 7 days CAM.MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2738980</td>
+               <td class="aui" valign="top">A18315526</td>
+               <td class="lui" valign="top">L9079529</td>
+               <td class="sui" valign="top">S11324845</td>
+               <td class="scui" valign="top">54630-9</td>
+               <td class="code" valign="top">54630-9</td>
+               <td class="str" valign="top">Altered level of consciousness in last 7 days CAM.MDSv3</td>
+            </tr>
+         </table>
+      </div>
+      <div class="sample" id="LN">
+         <h4>LN</h4>&nbsp;&nbsp;<a href="#counts">(return to top)</a>
+         <table summary="This table provides sample rows for LN data elements in the UMLS Metathesaurus">
+            <tr>
+               <th scope="col">CUI</th>
+               <th scope="col">AUI</th>
+               <th scope="col">LUI</th>
+               <th scope="col">SUI</th>
+               <th scope="col">SCUI</th>
+               <th scope="col">CODE</th>
+               <th scope="col">STR</th>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2738739</td>
+               <td class="aui" valign="top">A18275593</td>
+               <td class="lui" valign="top">L9080762</td>
+               <td class="sui" valign="top">S11335561</td>
+               <td class="scui" valign="top">52738-2</td>
+               <td class="code" valign="top">52738-2</td>
+               <td class="str" valign="top">Inattention during 2D assessment period:Find:Pt:^Patient:Ord:Observed.CAM.CARE</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2738740</td>
+               <td class="aui" valign="top">A18121165</td>
+               <td class="lui" valign="top">L9085719</td>
+               <td class="sui" valign="top">S11330673</td>
+               <td class="scui" valign="top">52739-0</td>
+               <td class="code" valign="top">52739-0</td>
+               <td class="str" valign="top">Disorganized thinking during 2D assessment period:Find:Pt:^Patient:Ord:Observed.CAM.CARE</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2738741</td>
+               <td class="aui" valign="top">A18159856</td>
+               <td class="lui" valign="top">L9076735</td>
+               <td class="sui" valign="top">S11324843</td>
+               <td class="scui" valign="top">52740-8</td>
+               <td class="code" valign="top">52740-8</td>
+               <td class="str" valign="top">Altered level of consciousness &amp;or alertness during 2D assessment period:Find:Pt:^Patient:Ord:Observed.CAM.CARE</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2738742</td>
+               <td class="aui" valign="top">A18121166</td>
+               <td class="lui" valign="top">L9089836</td>
+               <td class="sui" valign="top">S11342060</td>
+               <td class="scui" valign="top">52741-6</td>
+               <td class="code" valign="top">52741-6</td>
+               <td class="str" valign="top">Psychomotor retardation during 2D assessment period:Find:Pt:^Patient:Ord:Observed.CAM.CARE</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2738429</td>
+               <td class="aui" valign="top">A18391807</td>
+               <td class="lui" valign="top">L9074413</td>
+               <td class="sui" valign="top">S11328899</td>
+               <td class="scui" valign="top">52495-9</td>
+               <td class="code" valign="top">52495-9</td>
+               <td class="str" valign="top">Confusion Assessment Method (CAM):-:Pt:^Patient:-:Observed.CAM.CARE</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2738977</td>
+               <td class="aui" valign="top">A18392943</td>
+               <td class="lui" valign="top">L9095436</td>
+               <td class="sui" valign="top">S11343307</td>
+               <td class="scui" valign="top">54627-5</td>
+               <td class="code" valign="top">54627-5</td>
+               <td class="str" valign="top">Signs and symptoms of delirium (from CAM©):-:Pt:^Patient:-:Observed.CAM.MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2738978</td>
+               <td class="aui" valign="top">A18392944</td>
+               <td class="lui" valign="top">L9075240</td>
+               <td class="sui" valign="top">S11335564</td>
+               <td class="scui" valign="top">54628-3</td>
+               <td class="code" valign="top">54628-3</td>
+               <td class="str" valign="top">Inattention in last 7D:Find:Pt:^Patient:Ord:Observed.CAM.MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2738979</td>
+               <td class="aui" valign="top">A18238162</td>
+               <td class="lui" valign="top">L9088505</td>
+               <td class="sui" valign="top">S11330676</td>
+               <td class="scui" valign="top">54629-1</td>
+               <td class="code" valign="top">54629-1</td>
+               <td class="str" valign="top">Disorganized thinking in last 7D:Find:Pt:^Patient:Ord:Observed.CAM.MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2738980</td>
+               <td class="aui" valign="top">A18161133</td>
+               <td class="lui" valign="top">L9079530</td>
+               <td class="sui" valign="top">S11324846</td>
+               <td class="scui" valign="top">54630-9</td>
+               <td class="code" valign="top">54630-9</td>
+               <td class="str" valign="top">Altered level of consciousness in last 7D:Find:Pt:^Patient:Ord:Observed.CAM.MDSv3</td>
+            </tr>
+         </table>
+      </div>
+      <div class="sample" id="MTH_LN">
+         <h4>MTH_LN</h4>&nbsp;&nbsp;<a href="#counts">(return to top)</a>
+         <table summary="This table provides sample rows for MTH_LN data elements in the UMLS Metathesaurus">
+            <tr>
+               <th scope="col">CUI</th>
+               <th scope="col">AUI</th>
+               <th scope="col">LUI</th>
+               <th scope="col">SUI</th>
+               <th scope="col">SCUI</th>
+               <th scope="col">CODE</th>
+               <th scope="col">STR</th>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2738739</td>
+               <td class="aui" valign="top">A18836890</td>
+               <td class="lui" valign="top">L9078080</td>
+               <td class="sui" valign="top">S11335562</td>
+               <td class="scui" valign="top">52738-2</td>
+               <td class="code" valign="top">52738-2</td>
+               <td class="str" valign="top">Inattention during 2D assessment period:Finding:Point in time:^Patient:Ordinal:Observed.CAM.CARE</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2738740</td>
+               <td class="aui" valign="top">A18870175</td>
+               <td class="lui" valign="top">L9091249</td>
+               <td class="sui" valign="top">S11330674</td>
+               <td class="scui" valign="top">52739-0</td>
+               <td class="code" valign="top">52739-0</td>
+               <td class="str" valign="top">Disorganized thinking during 2D assessment period:Finding:Point in time:^Patient:Ordinal:Observed.CAM.CARE</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2738741</td>
+               <td class="aui" valign="top">A18836891</td>
+               <td class="lui" valign="top">L9082251</td>
+               <td class="sui" valign="top">S11324844</td>
+               <td class="scui" valign="top">52740-8</td>
+               <td class="code" valign="top">52740-8</td>
+               <td class="str" valign="top">Altered level of consciousness &amp;or alertness during 2D assessment period:Finding:Point in time:^Patient:Ordinal:Observed.CAM.CARE</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2738742</td>
+               <td class="aui" valign="top">A18881189</td>
+               <td class="lui" valign="top">L9087080</td>
+               <td class="sui" valign="top">S11342061</td>
+               <td class="scui" valign="top">52741-6</td>
+               <td class="code" valign="top">52741-6</td>
+               <td class="str" valign="top">Psychomotor retardation during 2D assessment period:Finding:Point in time:^Patient:Ordinal:Observed.CAM.CARE</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2738429</td>
+               <td class="aui" valign="top">A18847994</td>
+               <td class="lui" valign="top">L9077251</td>
+               <td class="sui" valign="top">S11328898</td>
+               <td class="scui" valign="top">52495-9</td>
+               <td class="code" valign="top">52495-9</td>
+               <td class="str" valign="top">Confusion Assessment Method (CAM):-:Point in time:^Patient:-:Observed.CAM.CARE</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2738977</td>
+               <td class="aui" valign="top">A18848359</td>
+               <td class="lui" valign="top">L9078986</td>
+               <td class="sui" valign="top">S11343306</td>
+               <td class="scui" valign="top">54627-5</td>
+               <td class="code" valign="top">54627-5</td>
+               <td class="str" valign="top">Signs and symptoms of delirium (from CAM©):-:Point in time:^Patient:-:Observed.CAM.MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2738978</td>
+               <td class="aui" valign="top">A18881597</td>
+               <td class="lui" valign="top">L9078081</td>
+               <td class="sui" valign="top">S11335565</td>
+               <td class="scui" valign="top">54628-3</td>
+               <td class="code" valign="top">54628-3</td>
+               <td class="str" valign="top">Inattention in last 7D:Finding:Point in time:^Patient:Ordinal:Observed.CAM.MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2738979</td>
+               <td class="aui" valign="top">A18814952</td>
+               <td class="lui" valign="top">L9082939</td>
+               <td class="sui" valign="top">S11330677</td>
+               <td class="scui" valign="top">54629-1</td>
+               <td class="code" valign="top">54629-1</td>
+               <td class="str" valign="top">Disorganized thinking in last 7D:Finding:Point in time:^Patient:Ordinal:Observed.CAM.MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2738980</td>
+               <td class="aui" valign="top">A18881598</td>
+               <td class="lui" valign="top">L9079531</td>
+               <td class="sui" valign="top">S11324847</td>
+               <td class="scui" valign="top">54630-9</td>
+               <td class="code" valign="top">54630-9</td>
+               <td class="str" valign="top">Altered level of consciousness in last 7D:Finding:Point in time:^Patient:Ordinal:Observed.CAM.MDSv3</td>
+            </tr>
+         </table>
+      </div>
+   </div>
+</div>

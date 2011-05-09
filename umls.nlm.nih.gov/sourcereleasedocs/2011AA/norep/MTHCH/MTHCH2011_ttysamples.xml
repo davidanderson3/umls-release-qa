@@ -1,0 +1,92 @@
+<document vsab="MTHCH2011" samples="Term Types">
+    <samples>
+        <labels>
+            <label type="metalabel">Term Type</label>
+            <label type="definition">Description</label>
+            <label type="count">Count (MRCONSO.RRF)</label>
+        </labels>
+        <sample id="HT" samplename="HT" definition="Hierarchical term" count="1037">
+            <row type="standard">
+                <field type="CUI">C0002903</field>
+                <field type="AUI">A13076466</field>
+                <field type="LUI">L0241049</field>
+                <field type="SUI">S0355415</field>
+                <field type="SCUI">Level 1: 00100-01999</field>
+                <field type="CODE">Level 1: 00100-01999</field>
+                <field type="STR">Anesthesia Procedures</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0519211</field>
+                <field type="AUI">A13077610</field>
+                <field type="LUI">L0659220</field>
+                <field type="SUI">S0804099</field>
+                <field type="SCUI">Level 2: 00800-00882</field>
+                <field type="CODE">Level 2: 00800-00882</field>
+                <field type="STR">Anesthesia for Surgical Procedures on the Lower Abdomen</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1314158</field>
+                <field type="AUI">A13079135</field>
+                <field type="LUI">L3154581</field>
+                <field type="SUI">S6446213</field>
+                <field type="SCUI">Level 2: 01460-01522</field>
+                <field type="CODE">Level 2: 01460-01522</field>
+                <field type="STR">Anesthesia for Surgical Procedures on the Lower Leg (Below Knee, includes Ankle and Foot)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1314159</field>
+                <field type="AUI">A13077198</field>
+                <field type="LUI">L3154928</field>
+                <field type="SUI">S3677394</field>
+                <field type="SCUI">Level 2: 10000-10022</field>
+                <field type="CODE">Level 2: 10000-10022</field>
+                <field type="STR">General Surgical Procedures</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0519235</field>
+                <field type="AUI">A13076473</field>
+                <field type="LUI">L0859432</field>
+                <field type="SUI">S1011123</field>
+                <field type="SCUI">Level 4: 12031-12057</field>
+                <field type="CODE">Level 4: 12031-12057</field>
+                <field type="STR">Repair--Intermediate of the Integumentary System</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1608462</field>
+                <field type="AUI">A13077617</field>
+                <field type="LUI">L5627040</field>
+                <field type="SUI">S6446671</field>
+                <field type="SCUI">Level 3: 15000-15431</field>
+                <field type="CODE">Level 3: 15000-15431</field>
+                <field type="STR">Skin Replacement Surgery and Skin Substitutes</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1611776</field>
+                <field type="AUI">A13077199</field>
+                <field type="LUI">L5626963</field>
+                <field type="SUI">S6446685</field>
+                <field type="SCUI">Level 4: 15000-15005</field>
+                <field type="CODE">Level 4: 15000-15005</field>
+                <field type="STR">Surgical Preparation for Skin Replacement Surgery and Skin Substitutes</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1964226</field>
+                <field type="AUI">A13078764</field>
+                <field type="LUI">L6776199</field>
+                <field type="SUI">S7897109</field>
+                <field type="SCUI">Level 4: 21073-21073</field>
+                <field type="CODE">Level 4: 21073-21073</field>
+                <field type="STR">Manipulation of the Musculoskeletal System of the Head</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0519264</field>
+                <field type="AUI">A13076480</field>
+                <field type="LUI">L0856439</field>
+                <field type="SUI">S0910961</field>
+                <field type="SCUI">Level 4: 21501-21510</field>
+                <field type="CODE">Level 4: 21501-21510</field>
+                <field type="STR">Incision of the Musculoskeletal System of the Neck (Soft Tissues) and Thorax</field>
+            </row>
+        </sample>
+    </samples>
+</document>

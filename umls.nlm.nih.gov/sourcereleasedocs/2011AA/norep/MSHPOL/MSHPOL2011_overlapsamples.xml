@@ -1,0 +1,79 @@
+<document vsab="MSHPOL2011" samples="Overlap">
+    <samples>
+        <labels>
+            <label type="metalabel">Source</label>
+            <label type="count">Number of shared concepts&lt;br/&gt; out of 25674 from MSHPOL2011</label>
+            <label type="count">Percentage Overlap</label>
+        </labels>
+        <sample id="MSH2011_2011_02_14" samplename="MSH2011_2011_02_14" count="25672" percentage="100"></sample>
+        <sample id="MSHFRE2011" samplename="MSHFRE2011" count="25672" percentage="100"></sample>
+        <sample id="MSHPOR2011" samplename="MSHPOR2011" count="25672" percentage="100"></sample>
+        <sample id="MSHRUS2011" samplename="MSHRUS2011" count="25672" percentage="100"></sample>
+        <sample id="MSHSPA2011" samplename="MSHSPA2011" count="25672" percentage="100"></sample>
+        <sample id="MSHGER2011" samplename="MSHGER2011" count="25671" percentage="100"></sample>
+        <sample id="MSHITA2011" samplename="MSHITA2011" count="25670" percentage="100"></sample>
+        <sample id="MSHCZE2011" samplename="MSHCZE2011" count="25663" percentage="100"></sample>
+        <sample id="MSHSWE2010" samplename="MSHSWE2010" count="25561" percentage="99.6"></sample>
+        <sample id="MSHFIN2008" samplename="MSHFIN2008" count="24674" percentage="96.1"></sample>
+        <sample id="MSHJPN2008" samplename="MSHJPN2008" count="23327" percentage="90.9"></sample>
+        <sample id="SNOMEDCT_2011_01_31" samplename="SNOMEDCT_2011_01_31" count="14079" percentage="54.8"></sample>
+        <sample id="SCTSPA_2010_10_31" samplename="SCTSPA_2010_10_31" count="14000" percentage="54.5"></sample>
+        <sample id="CHV2010_10" samplename="CHV2010_10" count="13987" percentage="54.5"></sample>
+        <sample id="NDFRT_2011_03_07" samplename="NDFRT_2011_03_07" count="12963" percentage="50.5"></sample>
+        <sample id="SNMI98" samplename="SNMI98" count="10931" percentage="42.6"></sample>
+        <sample id="NCI2010_02D" samplename="NCI2010_02D" count="9180" percentage="35.8"></sample>
+        <sample id="RCD99" samplename="RCD99" count="8773" percentage="34.2"></sample>
+        <sample id="CSP2006" samplename="CSP2006" count="8527" percentage="33.2"></sample>
+        <sample id="MSHSCR2011" samplename="MSHSCR2011" count="7947" percentage="31"></sample>
+        <sample id="SNM2" samplename="SNM2" count="6837" percentage="26.6"></sample>
+        <sample id="AOD2000" samplename="AOD2000" count="5942" percentage="23.1"></sample>
+        <sample id="LCH90" samplename="LCH90" count="5247" percentage="20.4"></sample>
+        <sample id="MEDCIN3_2010_12_14" samplename="MEDCIN3_2010_12_14" count="4082" percentage="15.9"></sample>
+        <sample id="MDRGER13_1" samplename="MDRGER13_1" count="4038" percentage="15.7"></sample>
+        <sample id="MDR13_1" samplename="MDR13_1" count="4038" percentage="15.7"></sample>
+        <sample id="MDRCZE13_1" samplename="MDRCZE13_1" count="4038" percentage="15.7"></sample>
+        <sample id="MDRDUT13_1" samplename="MDRDUT13_1" count="4038" percentage="15.7"></sample>
+        <sample id="MDRFRE13_1" samplename="MDRFRE13_1" count="4038" percentage="15.7"></sample>
+        <sample id="MDRPOR13_1" samplename="MDRPOR13_1" count="4038" percentage="15.7"></sample>
+        <sample id="MDRSPA13_1" samplename="MDRSPA13_1" count="4038" percentage="15.7"></sample>
+        <sample id="MDRITA13_1" samplename="MDRITA13_1" count="4038" percentage="15.7"></sample>
+        <sample id="MDRJPN13_1" samplename="MDRJPN13_1" count="4031" percentage="15.7"></sample>
+        <sample id="NCBI2010_04_29" samplename="NCBI2010_04_29" count="3174" percentage="12.4"></sample>
+        <sample id="LNC234" samplename="LNC234" count="3152" percentage="12.3"></sample>
+        <sample id="ICPC2ICD10ENG_200412" samplename="ICPC2ICD10ENG_200412" count="2786" percentage="10.9"></sample>
+        <sample id="PSY2004" samplename="PSY2004" count="2483" percentage="9.7"></sample>
+        <sample id="CCPSS99" samplename="CCPSS99" count="2121" percentage="8.3"></sample>
+        <sample id="ICD10CM_2011_01" samplename="ICD10CM_2011_01" count="2103" percentage="8.2"></sample>
+        <sample id="ICPC2ICD10DUT_200412" samplename="ICPC2ICD10DUT_200412" count="2081" percentage="8.1"></sample>
+        <sample id="NDDF_2011_02_16" samplename="NDDF_2011_02_16" count="1816" percentage="7.1"></sample>
+        <sample id="ICD10AM_2000" samplename="ICD10AM_2000" count="1791" percentage="7"></sample>
+        <sample id="DXP94" samplename="DXP94" count="1789" percentage="7"></sample>
+        <sample id="OMIM2010_04_08" samplename="OMIM2010_04_08" count="1590" percentage="6.2"></sample>
+        <sample id="RXNORM_10AB_110307F" samplename="RXNORM_10AB_110307F" count="1585" percentage="6.2"></sample>
+        <sample id="COSTAR_89-95" samplename="COSTAR_89-95" count="1522" percentage="5.9"></sample>
+        <sample id="ICPC2P_2005" samplename="ICPC2P_2005" count="1516" percentage="5.9"></sample>
+        <sample id="MTHICD9_2011" samplename="MTHICD9_2011" count="1501" percentage="5.8"></sample>
+        <sample id="ICD9CM_2011" samplename="ICD9CM_2011" count="1478" percentage="5.8"></sample>
+        <sample id="FMA3_1" samplename="FMA3_1" count="1375" percentage="5.4"></sample>
+        <sample id="VANDF_2011_02_03" samplename="VANDF_2011_02_03" count="1374" percentage="5.4"></sample>
+        <sample id="ICD10_1998" samplename="ICD10_1998" count="1327" percentage="5.2"></sample>
+        <sample id="KCD5_2008" samplename="KCD5_2008" count="1319" percentage="5.1"></sample>
+        <sample id="CST95" samplename="CST95" count="1181" percentage="4.6"></sample>
+        <sample id="MEDLINEPLUS_20110108" samplename="MEDLINEPLUS_20110108" count="1177" percentage="4.6"></sample>
+        <sample id="MMSL_2011_02_01" samplename="MMSL_2011_02_01" count="1169" percentage="4.6"></sample>
+        <sample id="WHO97" samplename="WHO97" count="1116" percentage="4.3"></sample>
+        <sample id="MSHLAV2011" samplename="MSHLAV2011" count="1066" percentage="4.2"></sample>
+        <sample id="UWDA173" samplename="UWDA173" count="1011" percentage="3.9"></sample>
+        <sample id="PDQ2007_02" samplename="PDQ2007_02" count="879" percentage="3.4"></sample>
+        <sample id="RCDAE_1999" samplename="RCDAE_1999" count="745" percentage="2.9"></sample>
+        <sample id="USPMG_2004" samplename="USPMG_2004" count="707" percentage="2.8"></sample>
+        <sample id="MTHSPL_2011_02_25" samplename="MTHSPL_2011_02_25" count="648" percentage="2.5"></sample>
+        <sample id="ICNP2_0" samplename="ICNP2_0" count="527" percentage="2.1"></sample>
+        <sample id="BI98" samplename="BI98" count="507" percentage="2"></sample>
+        <sample id="RCDSY_1999" samplename="RCDSY_1999" count="490" percentage="1.9"></sample>
+        <sample id="GO2010_04_01" samplename="GO2010_04_01" count="406" percentage="1.6"></sample>
+        <sample id="CPM2003" samplename="CPM2003" count="397" percentage="1.5"></sample>
+        <sample id="QMR96" samplename="QMR96" count="341" percentage="1.3"></sample>
+        <sample id="HL7V2.5_2003_08_30" samplename="HL7V2.5_2003_08_30" count="311" percentage="1.2"></sample>
+    </samples>
+</document>

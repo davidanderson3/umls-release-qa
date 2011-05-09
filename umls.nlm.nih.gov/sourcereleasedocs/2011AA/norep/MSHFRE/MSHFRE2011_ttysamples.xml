@@ -1,0 +1,469 @@
+<document vsab="MSHFRE2011" samples="Term Types">
+    <samples>
+        <labels>
+            <label type="metalabel">Term Type</label>
+            <label type="definition">Description</label>
+            <label type="count">Count (MRCONSO.RRF)</label>
+        </labels>
+        <sample id="EP" samplename="EP" definition="Print entry term" count="49271">
+            <row type="standard">
+                <field type="CUI">C0003466</field>
+                <field type="AUI">A7471456</field>
+                <field type="LUI">L5014913</field>
+                <field type="SUI">S5702418</field>
+                <field type="SCUI">M0001530</field>
+                <field type="SDUI">D001006</field>
+                <field type="CODE">D001006</field>
+                <field type="STR">Atrésie anale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0700345</field>
+                <field type="AUI">A7476748</field>
+                <field type="LUI">L5345681</field>
+                <field type="SUI">S6107686</field>
+                <field type="SCUI">M0003262</field>
+                <field type="SDUI">D002181</field>
+                <field type="CODE">D002181</field>
+                <field type="STR">Moniliase vulvo-vaginale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0011052</field>
+                <field type="AUI">A7471832</field>
+                <field type="LUI">L5026795</field>
+                <field type="SUI">S5714300</field>
+                <field type="SCUI">M0005692</field>
+                <field type="SDUI">D003638</field>
+                <field type="CODE">D003638</field>
+                <field type="STR">Surdi-mutité</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0042636</field>
+                <field type="AUI">A7475394</field>
+                <field type="LUI">L5344327</field>
+                <field type="SUI">S6106332</field>
+                <field type="SCUI">M0022654</field>
+                <field type="SDUI">D014735</field>
+                <field type="CODE">D014735</field>
+                <field type="STR">Infections à vibrions</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0009439</field>
+                <field type="AUI">A7475578</field>
+                <field type="LUI">L5344511</field>
+                <field type="SUI">S6106516</field>
+                <field type="SCUI">M0023893</field>
+                <field type="SDUI">D015529</field>
+                <field type="CODE">D015529</field>
+                <field type="STR">Kyste du canal biliaire principal</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0155339</field>
+                <field type="AUI">A7479310</field>
+                <field type="LUI">L5348243</field>
+                <field type="SUI">S6110248</field>
+                <field type="SCUI">M0335795</field>
+                <field type="SDUI">D015835</field>
+                <field type="CODE">D015835</field>
+                <field type="STR">Syndrome de la gaine du muscle grand oblique</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0751371</field>
+                <field type="AUI">A7477335</field>
+                <field type="LUI">L5346268</field>
+                <field type="SUI">S6108273</field>
+                <field type="SCUI">M0336276</field>
+                <field type="SDUI">D009437</field>
+                <field type="CODE">D009437</field>
+                <field type="STR">Névralgie du nerf petit abdomino-génital</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0022744</field>
+                <field type="AUI">A7479664</field>
+                <field type="LUI">L5348598</field>
+                <field type="SUI">S6110602</field>
+                <field type="SCUI">M0012067</field>
+                <field type="SDUI">D007718</field>
+                <field type="CODE">D007718</field>
+                <field type="STR">Traumatismes des genoux</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0030185</field>
+                <field type="AUI">A7476379</field>
+                <field type="LUI">L5345312</field>
+                <field type="SUI">S6107317</field>
+                <field type="SCUI">M0015740</field>
+                <field type="SDUI">D010144</field>
+                <field type="CODE">D010144</field>
+                <field type="STR">Maladie de Paget mammaire</field>
+            </row>
+        </sample>
+        <sample id="MH" samplename="MH" definition="Main heading" count="26142">
+            <row type="standard">
+                <field type="CUI">C0003707</field>
+                <field type="AUI">A7442620</field>
+                <field type="LUI">L3248474</field>
+                <field type="SUI">S3775845</field>
+                <field type="SCUI">M0001655</field>
+                <field type="SDUI">D001099</field>
+                <field type="CODE">D001099</field>
+                <field type="STR">Arachnoïde</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0004286</field>
+                <field type="AUI">A7443334</field>
+                <field type="LUI">L3249056</field>
+                <field type="SUI">S3776592</field>
+                <field type="SCUI">M0001957</field>
+                <field type="SDUI">D001299</field>
+                <field type="CODE">D001299</field>
+                <field type="STR">Audiométrie</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0005034</field>
+                <field type="AUI">A7443788</field>
+                <field type="LUI">L3249513</field>
+                <field type="SUI">S3777062</field>
+                <field type="SCUI">M0002330</field>
+                <field type="SDUI">D001552</field>
+                <field type="CODE">D001552</field>
+                <field type="STR">Benzazépines</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0005107</field>
+                <field type="AUI">A7443836</field>
+                <field type="LUI">L3249559</field>
+                <field type="SUI">S3777111</field>
+                <field type="SCUI">M0002394</field>
+                <field type="SDUI">D001597</field>
+                <field type="CODE">D001597</field>
+                <field type="STR">Benzylidène, composés</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0007625</field>
+                <field type="AUI">A7467801</field>
+                <field type="LUI">L3274218</field>
+                <field type="SUI">S3802721</field>
+                <field type="SCUI">M0003774</field>
+                <field type="SDUI">D002474</field>
+                <field type="CODE">D002474</field>
+                <field type="STR">Système acellulaire</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0009780</field>
+                <field type="AUI">A7468849</field>
+                <field type="LUI">L3275319</field>
+                <field type="SUI">S3803818</field>
+                <field type="SCUI">M0005025</field>
+                <field type="SDUI">D003238</field>
+                <field type="CODE">D003238</field>
+                <field type="STR">Tissu conjonctif</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0014165</field>
+                <field type="AUI">A7449924</field>
+                <field type="LUI">L3255748</field>
+                <field type="SUI">S3783555</field>
+                <field type="SCUI">M0007407</field>
+                <field type="SDUI">D004709</field>
+                <field type="CODE">D004709</field>
+                <field type="STR">Endolimax</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0014383</field>
+                <field type="AUI">A7450108</field>
+                <field type="LUI">L3255938</field>
+                <field type="SUI">S3783749</field>
+                <field type="SCUI">M0007489</field>
+                <field type="SDUI">D004770</field>
+                <field type="CODE">D004770</field>
+                <field type="STR">Entérovirus</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0242290</field>
+                <field type="AUI">A7459900</field>
+                <field type="LUI">L3266036</field>
+                <field type="SUI">S3794383</field>
+                <field type="SCUI">M0008395</field>
+                <field type="SDUI">D038081</field>
+                <field type="CODE">D038081</field>
+                <field type="STR">Organogenèse</field>
+            </row>
+        </sample>
+        <sample id="PEP" samplename="PEP" definition="Preferred entry term" count="13513">
+            <row type="standard">
+                <field type="CUI">C1448400</field>
+                <field type="AUI">A13442729</field>
+                <field type="LUI">L5708759</field>
+                <field type="SUI">S6541796</field>
+                <field type="SCUI">M0432609</field>
+                <field type="SDUI">D000610</field>
+                <field type="CODE">D000610</field>
+                <field type="STR">Fibroderm</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1257695</field>
+                <field type="AUI">A13432241</field>
+                <field type="LUI">L5707315</field>
+                <field type="SUI">S6540352</field>
+                <field type="SCUI">M0432709</field>
+                <field type="SDUI">D000628</field>
+                <field type="CODE">D000628</field>
+                <field type="STR">Duraphyllin</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0431349</field>
+                <field type="AUI">A13447995</field>
+                <field type="LUI">L5704548</field>
+                <field type="SUI">S6537585</field>
+                <field type="SCUI">M0336990</field>
+                <field type="SDUI">D000757</field>
+                <field type="CODE">D000757</field>
+                <field type="STR">Aprosencéphalie</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1281486</field>
+                <field type="AUI">A13445453</field>
+                <field type="LUI">L6224997</field>
+                <field type="SUI">S7128887</field>
+                <field type="SCUI">M0498356</field>
+                <field type="SDUI">D001757</field>
+                <field type="CODE">D001757</field>
+                <field type="STR">Blastocytes</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0025955</field>
+                <field type="AUI">A13448107</field>
+                <field type="LUI">L6222406</field>
+                <field type="SUI">S7134476</field>
+                <field type="SCUI">M0003317</field>
+                <field type="SDUI">D002214</field>
+                <field type="CODE">D002214</field>
+                <field type="STR">Microcapsules</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0524524</field>
+                <field type="AUI">A13440185</field>
+                <field type="LUI">L5705827</field>
+                <field type="SUI">S6538864</field>
+                <field type="SCUI">M0003630</field>
+                <field type="SDUI">D002386</field>
+                <field type="CODE">D002386</field>
+                <field type="STR">Cataracte membraneuse</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1527335</field>
+                <field type="AUI">A13450782</field>
+                <field type="LUI">L6218205</field>
+                <field type="SUI">S7127335</field>
+                <field type="SCUI">M0335467</field>
+                <field type="SDUI">D002546</field>
+                <field type="CODE">D002546</field>
+                <field type="STR">Accident ischémique transitoire du territoire de l'artère cérébrale antérieure</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0034636</field>
+                <field type="AUI">A13437611</field>
+                <field type="LUI">L6214412</field>
+                <field type="SUI">S7137241</field>
+                <field type="SCUI">M0003954</field>
+                <field type="SDUI">D002589</field>
+                <field type="CODE">D002589</field>
+                <field type="STR">Raillietina</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0242242</field>
+                <field type="AUI">A13442966</field>
+                <field type="LUI">L6216585</field>
+                <field type="SUI">S7127935</field>
+                <field type="SCUI">M0005821</field>
+                <field type="SDUI">D003710</field>
+                <field type="CODE">D003710</field>
+                <field type="STR">Analyse périodique</field>
+            </row>
+        </sample>
+        <sample id="EN" samplename="EN" definition="Non-print entry term" count="11947">
+            <row type="standard">
+                <field type="CUI">C0001429</field>
+                <field type="AUI">A7479974</field>
+                <field type="LUI">L5348907</field>
+                <field type="SUI">S6110912</field>
+                <field type="SCUI">M0000366</field>
+                <field type="SDUI">D000235</field>
+                <field type="CODE">D000235</field>
+                <field type="STR">Tumeur de Warthin</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0002219</field>
+                <field type="AUI">A7465704</field>
+                <field type="LUI">L3271090</field>
+                <field type="SUI">S3800461</field>
+                <field type="SCUI">M0000776</field>
+                <field type="SDUI">D000513</field>
+                <field type="CODE">D000513</field>
+                <field type="STR">Rythme berger</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0005105</field>
+                <field type="AUI">A7443834</field>
+                <field type="LUI">L3249557</field>
+                <field type="SUI">S3777109</field>
+                <field type="SCUI">M0002389</field>
+                <field type="SDUI">D001595</field>
+                <field type="CODE">D001595</field>
+                <field type="STR">Benzylamine oxydase</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0008073</field>
+                <field type="AUI">A7479849</field>
+                <field type="LUI">L5348783</field>
+                <field type="SUI">S6110787</field>
+                <field type="SCUI">M0004059</field>
+                <field type="SDUI">D002658</field>
+                <field type="CODE">D002658</field>
+                <field type="STR">Troubles du développement de l'enfant</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0009373</field>
+                <field type="AUI">A7446603</field>
+                <field type="LUI">L3252395</field>
+                <field type="SUI">S3780048</field>
+                <field type="SCUI">M0004814</field>
+                <field type="SDUI">D003108</field>
+                <field type="CODE">D003108</field>
+                <field type="STR">Colopathies</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0009376</field>
+                <field type="AUI">A7462084</field>
+                <field type="LUI">L3268238</field>
+                <field type="SUI">S3796695</field>
+                <field type="SCUI">M0004818</field>
+                <field type="SDUI">D003111</field>
+                <field type="CODE">D003111</field>
+                <field type="STR">Polype colique</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0012314</field>
+                <field type="AUI">A7448815</field>
+                <field type="LUI">L3254442</field>
+                <field type="SUI">S3782391</field>
+                <field type="SCUI">M0006413</field>
+                <field type="SDUI">D004094</field>
+                <field type="CODE">D004094</field>
+                <field type="STR">Dihydropteroate pyrophosphorylase</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0015058</field>
+                <field type="AUI">A7450653</field>
+                <field type="LUI">L3279025</field>
+                <field type="SUI">S3784319</field>
+                <field type="SCUI">M0007893</field>
+                <field type="SDUI">D005018</field>
+                <field type="CODE">D005018</field>
+                <field type="STR">Éthyle, chlorure</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0376175</field>
+                <field type="AUI">A7460427</field>
+                <field type="LUI">L3266615</field>
+                <field type="SUI">S3794948</field>
+                <field type="SCUI">M0008127</field>
+                <field type="SDUI">D020330</field>
+                <field type="CODE">D020330</field>
+                <field type="STR">Paralysie faciale a frigore</field>
+            </row>
+        </sample>
+        <sample id="PEN" samplename="PEN" definition="Preferred non-print entry term" count="498">
+            <row type="standard">
+                <field type="CUI">C1742814</field>
+                <field type="AUI">A13450602</field>
+                <field type="LUI">L5013373</field>
+                <field type="SUI">S5700878</field>
+                <field type="SCUI">F0000592</field>
+                <field type="SDUI">D000169</field>
+                <field type="CODE">D000169</field>
+                <field type="STR">Acrodermatite chronique atrophiante</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1739969</field>
+                <field type="AUI">A13440033</field>
+                <field type="LUI">L5013713</field>
+                <field type="SUI">S5701218</field>
+                <field type="SCUI">F0000497</field>
+                <field type="SDUI">D000361</field>
+                <field type="CODE">D000361</field>
+                <field type="STR">Agammaglobulinémie de Bruton</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0018252</field>
+                <field type="AUI">A13442715</field>
+                <field type="LUI">L3277509</field>
+                <field type="SUI">S3806040</field>
+                <field type="SCUI">M0009645</field>
+                <field type="SDUI">D000406</field>
+                <field type="CODE">D000406</field>
+                <field type="STR">Virus Gross</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1135899</field>
+                <field type="AUI">A13450694</field>
+                <field type="LUI">L6942984</field>
+                <field type="SUI">S8082595</field>
+                <field type="SCUI">M0399901</field>
+                <field type="SDUI">D001482</field>
+                <field type="CODE">D001482</field>
+                <field type="STR">Composition en guanine et cytosine</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0268312</field>
+                <field type="AUI">A13445544</field>
+                <field type="LUI">L5710971</field>
+                <field type="SUI">S6544008</field>
+                <field type="SCUI">F0000421</field>
+                <field type="SDUI">D002780</field>
+                <field type="CODE">D002780</field>
+                <field type="STR">Maladie de Byler</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0008928</field>
+                <field type="AUI">A13440231</field>
+                <field type="LUI">L5716764</field>
+                <field type="SUI">S6549801</field>
+                <field type="SCUI">F0000511</field>
+                <field type="SDUI">D002973</field>
+                <field type="CODE">D002973</field>
+                <field type="STR">Syndrome de Scheuthauer</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C2003971</field>
+                <field type="AUI">A13435043</field>
+                <field type="LUI">L3272347</field>
+                <field type="SUI">S3800705</field>
+                <field type="SCUI">F0000449</field>
+                <field type="SDUI">D003398</field>
+                <field type="CODE">D003398</field>
+                <field type="STR">Scaphocéphalie</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C2003972</field>
+                <field type="AUI">A13440274</field>
+                <field type="LUI">L3275946</field>
+                <field type="SUI">S3804463</field>
+                <field type="SCUI">F0000450</field>
+                <field type="SDUI">D003398</field>
+                <field type="CODE">D003398</field>
+                <field type="STR">Trigonocéphalie</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1744111</field>
+                <field type="AUI">A13435116</field>
+                <field type="LUI">L6223596</field>
+                <field type="SUI">S7130652</field>
+                <field type="SCUI">F0000562</field>
+                <field type="SDUI">D004312</field>
+                <field type="CODE">D004312</field>
+                <field type="STR">Cul-de-sac recto-vésical</field>
+            </row>
+        </sample>
+    </samples>
+</document>

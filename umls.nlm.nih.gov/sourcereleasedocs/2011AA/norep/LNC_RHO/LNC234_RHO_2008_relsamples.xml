@@ -1,0 +1,447 @@
+<document vsab="LNC234_RHO_2008" samples="Relationships">
+    <samples>
+        <labels>
+            <label type="metalabel">Relationship</label>
+            <label type="metalabel">Relationship Attribute</label>
+            <label type="count">Count (MRREL.RRF)</label>
+        </labels>
+        <sample id="LNC234_RHO_2008_RT_has_evaluation_AUI_AUI" samplename="RO" attribute="has_evaluation" definition="has relationship other than synonymous, narrower, or broader&#10;" count="6">
+            <row type="standard">
+                <field type="CUI1">C2708996</field>
+                <field type="AUI1">A18123030</field>
+                <field type="STYPE1">AUI</field>
+                <field type="STR">howRU:-:Pt:^Patient:-:Reported.howRU</field>
+                <field type="REL">RO</field>
+                <field type="RELA">has_evaluation</field>
+                <field type="STR">howRU</field>
+                <field type="STYPE2">AUI</field>
+                <field type="AUI2">A16910050</field>
+                <field type="CUI2">C2706629</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C2706629</field>
+                <field type="aui1">A16910050</field>
+                <field type="stype1">AUI</field>
+                <field type="str">howRU</field>
+                <field type="rel">RO</field>
+                <field type="rela">evaluation_of</field>
+                <field type="str">howRU:-:Pt:^Patient:-:Reported.howRU</field>
+                <field type="stype2">AUI</field>
+                <field type="aui2">A18123030</field>
+                <field type="cui2">C2708996</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C2708997</field>
+                <field type="AUI1">A18123031</field>
+                <field type="STYPE1">AUI</field>
+                <field type="STR">Pain or discomfort:Find:Pt:^Patient:Ord:howRU</field>
+                <field type="REL">RO</field>
+                <field type="RELA">has_evaluation</field>
+                <field type="STR">Pain or discomfort</field>
+                <field type="STYPE2">AUI</field>
+                <field type="AUI2">A17380565</field>
+                <field type="CUI2">C2737161</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C2737161</field>
+                <field type="aui1">A17380565</field>
+                <field type="stype1">AUI</field>
+                <field type="str">Pain or discomfort</field>
+                <field type="rel">RO</field>
+                <field type="rela">evaluation_of</field>
+                <field type="str">Pain or discomfort:Find:Pt:^Patient:Ord:howRU</field>
+                <field type="stype2">AUI</field>
+                <field type="aui2">A18123031</field>
+                <field type="cui2">C2708997</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C2708720</field>
+                <field type="AUI1">A18238690</field>
+                <field type="STYPE1">AUI</field>
+                <field type="STR">Feeling low or worried:Find:Pt:^Patient:Ord:howRU</field>
+                <field type="REL">RO</field>
+                <field type="RELA">has_evaluation</field>
+                <field type="STR">Feeling low or worried</field>
+                <field type="STYPE2">AUI</field>
+                <field type="AUI2">A16905366</field>
+                <field type="CUI2">C2708721</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C2708721</field>
+                <field type="aui1">A16905366</field>
+                <field type="stype1">AUI</field>
+                <field type="str">Feeling low or worried</field>
+                <field type="rel">RO</field>
+                <field type="rela">evaluation_of</field>
+                <field type="str">Feeling low or worried:Find:Pt:^Patient:Ord:howRU</field>
+                <field type="stype2">AUI</field>
+                <field type="aui2">A18238690</field>
+                <field type="cui2">C2708720</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C2708724</field>
+                <field type="AUI1">A18277413</field>
+                <field type="STYPE1">AUI</field>
+                <field type="STR">Dependent on others:Find:Pt:^Patient:Ord:howRU</field>
+                <field type="REL">RO</field>
+                <field type="RELA">has_evaluation</field>
+                <field type="STR">Dependent on others</field>
+                <field type="STYPE2">AUI</field>
+                <field type="AUI2">A17361514</field>
+                <field type="CUI2">C2736986</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C2736986</field>
+                <field type="aui1">A17361514</field>
+                <field type="stype1">AUI</field>
+                <field type="str">Dependent on others</field>
+                <field type="rel">RO</field>
+                <field type="rela">evaluation_of</field>
+                <field type="str">Dependent on others:Find:Pt:^Patient:Ord:howRU</field>
+                <field type="stype2">AUI</field>
+                <field type="aui2">A18277413</field>
+                <field type="cui2">C2708724</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C2708726</field>
+                <field type="AUI1">A18316088</field>
+                <field type="STYPE1">AUI</field>
+                <field type="STR">howRU summary score:Num:Pt:^Patient:Qn:howRU</field>
+                <field type="REL">RO</field>
+                <field type="RELA">has_evaluation</field>
+                <field type="STR">howRU summary score</field>
+                <field type="STYPE2">AUI</field>
+                <field type="AUI2">A16909932</field>
+                <field type="CUI2">C2708727</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C2708727</field>
+                <field type="aui1">A16909932</field>
+                <field type="stype1">AUI</field>
+                <field type="str">howRU summary score</field>
+                <field type="rel">RO</field>
+                <field type="rela">evaluation_of</field>
+                <field type="str">howRU summary score:Num:Pt:^Patient:Qn:howRU</field>
+                <field type="stype2">AUI</field>
+                <field type="aui2">A18316088</field>
+                <field type="cui2">C2708726</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C2708722</field>
+                <field type="AUI1">A18393531</field>
+                <field type="STYPE1">AUI</field>
+                <field type="STR">Limited in what I can do:Find:Pt:^Patient:Ord:howRU</field>
+                <field type="REL">RO</field>
+                <field type="RELA">has_evaluation</field>
+                <field type="STR">Limited in what I can do</field>
+                <field type="STYPE2">AUI</field>
+                <field type="AUI2">A17376760</field>
+                <field type="CUI2">C2737121</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C2737121</field>
+                <field type="aui1">A17376760</field>
+                <field type="stype1">AUI</field>
+                <field type="str">Limited in what I can do</field>
+                <field type="rel">RO</field>
+                <field type="rela">evaluation_of</field>
+                <field type="str">Limited in what I can do:Find:Pt:^Patient:Ord:howRU</field>
+                <field type="stype2">AUI</field>
+                <field type="aui2">A18393531</field>
+                <field type="cui2">C2708722</field>
+            </row>
+        </sample>
+        <sample id="LNC234_RHO_2008_SFO_LFO_common_name_of_AUI_AUI" samplename="SY" attribute="common_name_of" definition="source asserted synonymy.&#10;" count="6">
+            <row type="standard">
+                <field type="CUI1">C2708996</field>
+                <field type="AUI1">A18123030</field>
+                <field type="STYPE1">AUI</field>
+                <field type="STR">howRU:-:Pt:^Patient:-:Reported.howRU</field>
+                <field type="REL">SY</field>
+                <field type="RELA">common_name_of</field>
+                <field type="STR">howRU</field>
+                <field type="STYPE2">AUI</field>
+                <field type="AUI2">A18161703</field>
+                <field type="CUI2">C2708996</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C2708996</field>
+                <field type="aui1">A18161703</field>
+                <field type="stype1">AUI</field>
+                <field type="str">howRU</field>
+                <field type="rel">SY</field>
+                <field type="rela">has_common_name</field>
+                <field type="str">howRU:-:Pt:^Patient:-:Reported.howRU</field>
+                <field type="stype2">AUI</field>
+                <field type="aui2">A18123030</field>
+                <field type="cui2">C2708996</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C2708997</field>
+                <field type="AUI1">A18123031</field>
+                <field type="STYPE1">AUI</field>
+                <field type="STR">Pain or discomfort:Find:Pt:^Patient:Ord:howRU</field>
+                <field type="REL">SY</field>
+                <field type="RELA">common_name_of</field>
+                <field type="STR">Pain or discomfort howRU</field>
+                <field type="STYPE2">AUI</field>
+                <field type="AUI2">A18354851</field>
+                <field type="CUI2">C2708997</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C2708997</field>
+                <field type="aui1">A18354851</field>
+                <field type="stype1">AUI</field>
+                <field type="str">Pain or discomfort howRU</field>
+                <field type="rel">SY</field>
+                <field type="rela">has_common_name</field>
+                <field type="str">Pain or discomfort:Find:Pt:^Patient:Ord:howRU</field>
+                <field type="stype2">AUI</field>
+                <field type="aui2">A18123031</field>
+                <field type="cui2">C2708997</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C2708720</field>
+                <field type="AUI1">A18238690</field>
+                <field type="STYPE1">AUI</field>
+                <field type="STR">Feeling low or worried:Find:Pt:^Patient:Ord:howRU</field>
+                <field type="REL">SY</field>
+                <field type="RELA">common_name_of</field>
+                <field type="STR">Feeling low or worried howRU</field>
+                <field type="STYPE2">AUI</field>
+                <field type="AUI2">A18277411</field>
+                <field type="CUI2">C2708720</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C2708720</field>
+                <field type="aui1">A18277411</field>
+                <field type="stype1">AUI</field>
+                <field type="str">Feeling low or worried howRU</field>
+                <field type="rel">SY</field>
+                <field type="rela">has_common_name</field>
+                <field type="str">Feeling low or worried:Find:Pt:^Patient:Ord:howRU</field>
+                <field type="stype2">AUI</field>
+                <field type="aui2">A18238690</field>
+                <field type="cui2">C2708720</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C2708724</field>
+                <field type="AUI1">A18277413</field>
+                <field type="STYPE1">AUI</field>
+                <field type="STR">Dependent on others:Find:Pt:^Patient:Ord:howRU</field>
+                <field type="REL">SY</field>
+                <field type="RELA">common_name_of</field>
+                <field type="STR">Dependent on others howRU</field>
+                <field type="STYPE2">AUI</field>
+                <field type="AUI2">A18393532</field>
+                <field type="CUI2">C2708724</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C2708724</field>
+                <field type="aui1">A18393532</field>
+                <field type="stype1">AUI</field>
+                <field type="str">Dependent on others howRU</field>
+                <field type="rel">SY</field>
+                <field type="rela">has_common_name</field>
+                <field type="str">Dependent on others:Find:Pt:^Patient:Ord:howRU</field>
+                <field type="stype2">AUI</field>
+                <field type="aui2">A18277413</field>
+                <field type="cui2">C2708724</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C2708726</field>
+                <field type="AUI1">A18316088</field>
+                <field type="STYPE1">AUI</field>
+                <field type="STR">howRU summary score:Num:Pt:^Patient:Qn:howRU</field>
+                <field type="REL">SY</field>
+                <field type="RELA">common_name_of</field>
+                <field type="STR">howRU summary score howRU</field>
+                <field type="STYPE2">AUI</field>
+                <field type="AUI2">A18161705</field>
+                <field type="CUI2">C2708726</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C2708726</field>
+                <field type="aui1">A18161705</field>
+                <field type="stype1">AUI</field>
+                <field type="str">howRU summary score howRU</field>
+                <field type="rel">SY</field>
+                <field type="rela">has_common_name</field>
+                <field type="str">howRU summary score:Num:Pt:^Patient:Qn:howRU</field>
+                <field type="stype2">AUI</field>
+                <field type="aui2">A18316088</field>
+                <field type="cui2">C2708726</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C2708722</field>
+                <field type="AUI1">A18393531</field>
+                <field type="STYPE1">AUI</field>
+                <field type="STR">Limited in what I can do:Find:Pt:^Patient:Ord:howRU</field>
+                <field type="REL">SY</field>
+                <field type="RELA">common_name_of</field>
+                <field type="STR">Limited in what I can do howRU</field>
+                <field type="STYPE2">AUI</field>
+                <field type="AUI2">A18277412</field>
+                <field type="CUI2">C2708722</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C2708722</field>
+                <field type="aui1">A18277412</field>
+                <field type="stype1">AUI</field>
+                <field type="str">Limited in what I can do howRU</field>
+                <field type="rel">SY</field>
+                <field type="rela">has_common_name</field>
+                <field type="str">Limited in what I can do:Find:Pt:^Patient:Ord:howRU</field>
+                <field type="stype2">AUI</field>
+                <field type="aui2">A18393531</field>
+                <field type="cui2">C2708722</field>
+            </row>
+        </sample>
+        <sample id="LNC234_RHO_2008_SFO_LFO_mth_expanded_form_of_AUI_AUI" samplename="SY" attribute="mth_expanded_form_of" definition="source asserted synonymy.&#10;" count="6">
+            <row type="standard">
+                <field type="CUI1">C2708996</field>
+                <field type="AUI1">A18123030</field>
+                <field type="STYPE1">AUI</field>
+                <field type="STR">howRU:-:Pt:^Patient:-:Reported.howRU</field>
+                <field type="REL">SY</field>
+                <field type="RELA">mth_expanded_form_of</field>
+                <field type="STR">howRU:-:Point in time:^Patient:-:Reported.howRU</field>
+                <field type="STYPE2">AUI</field>
+                <field type="AUI2">A18837470</field>
+                <field type="CUI2">C2708996</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C2708996</field>
+                <field type="aui1">A18837470</field>
+                <field type="stype1">AUI</field>
+                <field type="str">howRU:-:Point in time:^Patient:-:Reported.howRU</field>
+                <field type="rel">SY</field>
+                <field type="rela">mth_has_expanded_form</field>
+                <field type="str">howRU:-:Pt:^Patient:-:Reported.howRU</field>
+                <field type="stype2">AUI</field>
+                <field type="aui2">A18123030</field>
+                <field type="cui2">C2708996</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C2708997</field>
+                <field type="AUI1">A18123031</field>
+                <field type="STYPE1">AUI</field>
+                <field type="STR">Pain or discomfort:Find:Pt:^Patient:Ord:howRU</field>
+                <field type="REL">SY</field>
+                <field type="RELA">mth_expanded_form_of</field>
+                <field type="STR">Pain or discomfort:Finding:Point in time:^Patient:Ordinal:howRU</field>
+                <field type="STYPE2">AUI</field>
+                <field type="AUI2">A18815087</field>
+                <field type="CUI2">C2708997</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C2708997</field>
+                <field type="aui1">A18815087</field>
+                <field type="stype1">AUI</field>
+                <field type="str">Pain or discomfort:Finding:Point in time:^Patient:Ordinal:howRU</field>
+                <field type="rel">SY</field>
+                <field type="rela">mth_has_expanded_form</field>
+                <field type="str">Pain or discomfort:Find:Pt:^Patient:Ord:howRU</field>
+                <field type="stype2">AUI</field>
+                <field type="aui2">A18123031</field>
+                <field type="cui2">C2708997</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C2708720</field>
+                <field type="AUI1">A18238690</field>
+                <field type="STYPE1">AUI</field>
+                <field type="STR">Feeling low or worried:Find:Pt:^Patient:Ord:howRU</field>
+                <field type="REL">SY</field>
+                <field type="RELA">mth_expanded_form_of</field>
+                <field type="STR">Feeling low or worried:Finding:Point in time:^Patient:Ordinal:howRU</field>
+                <field type="STYPE2">AUI</field>
+                <field type="AUI2">A18815088</field>
+                <field type="CUI2">C2708720</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C2708720</field>
+                <field type="aui1">A18815088</field>
+                <field type="stype1">AUI</field>
+                <field type="str">Feeling low or worried:Finding:Point in time:^Patient:Ordinal:howRU</field>
+                <field type="rel">SY</field>
+                <field type="rela">mth_has_expanded_form</field>
+                <field type="str">Feeling low or worried:Find:Pt:^Patient:Ord:howRU</field>
+                <field type="stype2">AUI</field>
+                <field type="aui2">A18238690</field>
+                <field type="cui2">C2708720</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C2708724</field>
+                <field type="AUI1">A18277413</field>
+                <field type="STYPE1">AUI</field>
+                <field type="STR">Dependent on others:Find:Pt:^Patient:Ord:howRU</field>
+                <field type="REL">SY</field>
+                <field type="RELA">mth_expanded_form_of</field>
+                <field type="STR">Dependent on others:Finding:Point in time:^Patient:Ordinal:howRU</field>
+                <field type="STYPE2">AUI</field>
+                <field type="AUI2">A18870710</field>
+                <field type="CUI2">C2708724</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C2708724</field>
+                <field type="aui1">A18870710</field>
+                <field type="stype1">AUI</field>
+                <field type="str">Dependent on others:Finding:Point in time:^Patient:Ordinal:howRU</field>
+                <field type="rel">SY</field>
+                <field type="rela">mth_has_expanded_form</field>
+                <field type="str">Dependent on others:Find:Pt:^Patient:Ord:howRU</field>
+                <field type="stype2">AUI</field>
+                <field type="aui2">A18277413</field>
+                <field type="cui2">C2708724</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C2708726</field>
+                <field type="AUI1">A18316088</field>
+                <field type="STYPE1">AUI</field>
+                <field type="STR">howRU summary score:Num:Pt:^Patient:Qn:howRU</field>
+                <field type="REL">SY</field>
+                <field type="RELA">mth_expanded_form_of</field>
+                <field type="STR">howRU summary score:Number:Point in time:^Patient:Quantitative:howRU</field>
+                <field type="STYPE2">AUI</field>
+                <field type="AUI2">A18815091</field>
+                <field type="CUI2">C2708726</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C2708726</field>
+                <field type="aui1">A18815091</field>
+                <field type="stype1">AUI</field>
+                <field type="str">howRU summary score:Number:Point in time:^Patient:Quantitative:howRU</field>
+                <field type="rel">SY</field>
+                <field type="rela">mth_has_expanded_form</field>
+                <field type="str">howRU summary score:Num:Pt:^Patient:Qn:howRU</field>
+                <field type="stype2">AUI</field>
+                <field type="aui2">A18316088</field>
+                <field type="cui2">C2708726</field>
+            </row>
+            <row type="standard">
+                <field type="CUI1">C2708722</field>
+                <field type="AUI1">A18393531</field>
+                <field type="STYPE1">AUI</field>
+                <field type="STR">Limited in what I can do:Find:Pt:^Patient:Ord:howRU</field>
+                <field type="REL">SY</field>
+                <field type="RELA">mth_expanded_form_of</field>
+                <field type="STR">Limited in what I can do:Finding:Point in time:^Patient:Ordinal:howRU</field>
+                <field type="STYPE2">AUI</field>
+                <field type="AUI2">A18815089</field>
+                <field type="CUI2">C2708722</field>
+            </row>
+            <row type="inverse">
+                <field type="cui1">C2708722</field>
+                <field type="aui1">A18815089</field>
+                <field type="stype1">AUI</field>
+                <field type="str">Limited in what I can do:Finding:Point in time:^Patient:Ordinal:howRU</field>
+                <field type="rel">SY</field>
+                <field type="rela">mth_has_expanded_form</field>
+                <field type="str">Limited in what I can do:Find:Pt:^Patient:Ord:howRU</field>
+                <field type="stype2">AUI</field>
+                <field type="aui2">A18393531</field>
+                <field type="cui2">C2708722</field>
+            </row>
+        </sample>
+    </samples>
+</document>

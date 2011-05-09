@@ -1,0 +1,1791 @@
+<div class="section-3" id="maincontent">
+   <ul id="menu">
+      <li id="nav-1">
+         <a href="index.html">Synopsis</a>
+      </li>
+      <li id="nav-2">
+         <a href="mrsab.html">MRSAB.RRF</a>
+      </li>
+      <li id="nav-3">
+         <a href="sourcemetastats.html">Statistics and Sample Data</a>
+         <ul id="subnav-3">
+            <li>
+               <a href="termtypes.html">Terms and term types</a>
+            </li>
+            <li>
+               <a href="attributes.html">Attributes</a>
+            </li>
+            <li>
+               <a href="relationships.html" id="rels">Relationships</a>
+            </li>
+            <li>
+               <a href="semtypes.html">Semantic Types</a>
+            </li>
+            <li>
+               <a href="overlap.html">Source Overlap</a>
+            </li>
+         </ul>
+      </li>
+   </ul>
+   <div id="counts">
+      <h2>Counts</h2>
+      <p class="jumptags">&nbsp;(skip to:&nbsp;<a href="#explain">notes</a>&nbsp;&nbsp;<a href="#samples">samples</a>)</p>
+      <div id="placeholder" style="display:none;">placeholder</div>
+      <table summary="Metadata Stats: This is a by-source tabulation of various data types in the UMLS Metathesaurus">
+         <tr>
+            <th class="metalabel" scope="col">Relationship</th>
+            <th class="metalabel" scope="col">Relationship Attribute</th>
+            <th class="count" scope="col">Count (MRREL.RRF)</th>
+         </tr>
+         <tr>
+            <td class="metalabel" valign="top" scope="row">
+               <a href="#LNC234_OASIS_2002_RT_has_evaluation_AUI_AUI"
+                  title="Samples of RO relationships. If you are using the tab key for navigation, press Enter or Return to go to sample data"
+                  onkeyup="checkKeyType('LNC234_OASIS_2002_RT_has_evaluation_AUI_AUI',event);"
+                  onclick="document.getElementById('placeholder').innerHTML = '';document.getElementById('placeholder').style.display = 'none';new Effect.Appear('placeholder');drawContentBox('LNC234_OASIS_2002_RT_has_evaluation_AUI_AUI',event,this.innerHTML);return false;">RO</a>
+               <noscript>
+                  <a href="#LNC234_OASIS_2002_RT_has_evaluation_AUI_AUI"/>
+               </noscript>
+            </td>
+            <td class="attribute" valign="top">has_evaluation</td>
+            <td class="count" valign="top">294</td>
+         </tr>
+         <tr>
+            <td class="metalabel" valign="top" scope="row">
+               <a href="#LNC234_OASIS_2002_SFO_LFO_common_name_of_AUI_AUI"
+                  title="Samples of SY relationships. If you are using the tab key for navigation, press Enter or Return to go to sample data"
+                  onkeyup="checkKeyType('LNC234_OASIS_2002_SFO_LFO_common_name_of_AUI_AUI',event);"
+                  onclick="document.getElementById('placeholder').innerHTML = '';document.getElementById('placeholder').style.display = 'none';new Effect.Appear('placeholder');drawContentBox('LNC234_OASIS_2002_SFO_LFO_common_name_of_AUI_AUI',event,this.innerHTML);return false;">SY</a>
+               <noscript>
+                  <a href="#LNC234_OASIS_2002_SFO_LFO_common_name_of_AUI_AUI"/>
+               </noscript>
+            </td>
+            <td class="attribute" valign="top">common_name_of</td>
+            <td class="count" valign="top">294</td>
+         </tr>
+         <tr>
+            <td class="metalabel" valign="top" scope="row">
+               <a href="#LNC234_OASIS_2002_SFO_LFO_mth_expanded_form_of_AUI_AUI"
+                  title="Samples of SY relationships. If you are using the tab key for navigation, press Enter or Return to go to sample data"
+                  onkeyup="checkKeyType('LNC234_OASIS_2002_SFO_LFO_mth_expanded_form_of_AUI_AUI',event);"
+                  onclick="document.getElementById('placeholder').innerHTML = '';document.getElementById('placeholder').style.display = 'none';new Effect.Appear('placeholder');drawContentBox('LNC234_OASIS_2002_SFO_LFO_mth_expanded_form_of_AUI_AUI',event,this.innerHTML);return false;">SY</a>
+               <noscript>
+                  <a href="#LNC234_OASIS_2002_SFO_LFO_mth_expanded_form_of_AUI_AUI"/>
+               </noscript>
+            </td>
+            <td class="attribute" valign="top">mth_expanded_form_of</td>
+            <td class="count" valign="top">294</td>
+         </tr>
+         <tr>
+            <td class="metalabel" valign="top" scope="row">
+               <a href="#LNC234_OASIS_2002_RT_analyzed_by_AUI_AUI"
+                  title="Samples of RO relationships. If you are using the tab key for navigation, press Enter or Return to go to sample data"
+                  onkeyup="checkKeyType('LNC234_OASIS_2002_RT_analyzed_by_AUI_AUI',event);"
+                  onclick="document.getElementById('placeholder').innerHTML = '';document.getElementById('placeholder').style.display = 'none';new Effect.Appear('placeholder');drawContentBox('LNC234_OASIS_2002_RT_analyzed_by_AUI_AUI',event,this.innerHTML);return false;">RO</a>
+               <noscript>
+                  <a href="#LNC234_OASIS_2002_RT_analyzed_by_AUI_AUI"/>
+               </noscript>
+            </td>
+            <td class="attribute" valign="top">analyzed_by</td>
+            <td class="count" valign="top">9</td>
+         </tr>
+      </table>
+   </div>
+   <div id="explain">
+      <h2>Notes</h2>
+      <p>Sample data are taken from MRREL.RRF.  Associated strings(str) from MRCONSO.RRF are also included</p>
+      <ul>
+         <li>See relationships definitions below.</li>
+         <li>Every relationship has a separate row in MRREL.RRF.</li>
+         <li>Relationships are assigned based on source documentation or NLM understanding of the source.</li>
+         <li>Metathesaurus relationships in MRREL.RRF are read from <b>right to left</b>.</li>
+         <li>All relationships in MRREL.RRF are expressed in both directions, for example: 'has_ingredient/ingredient_of'. Inverse relationships in each pair are indicated on this page.</li>
+         <li>An asterisk (*) in the relationship attribute column indicates that no relationship attribute (RELA) was assigned.</li>
+         <li>Every even row (indicated by orange colored rel/rela pairs) indicates that the current row is an inverse relationship of the row above it.</li>
+         <li>See Section <a href="http://www.ncbi.nlm.nih.gov/books/NBK9684/#ch02.I24_Relationships_and_Relationship"
+               target="_blank">2.4 of the UMLS Reference Manual</a> for more information on Relationships in the UMLS Metathesaurus.</li>
+      </ul>
+      <h2>Relationship Definitions</h2>
+      <ul>
+         <li>
+            <b>AQ</b>: allowed qualifier</li>
+         <li>
+            <b>CHD</b>: has child (narrower hierarchical term)</li>
+         <li>
+            <b>DEL</b>: deleted concept</li>
+         <li>
+            <b>PAR</b>: has parent (broader hierarchical term)</li>
+         <li>
+            <b>QB</b>: can be qualifier by</li>
+         <li>
+            <b>RB</b>: has a broader relationship</li>
+         <li>
+            <b>RL</b>: has similar or like relationship </li>
+         <li>
+            <b>RN</b>: has narrower relationship </li>
+         <li>
+            <b>RO</b>: has relationship other than synonymous, narrower or broader</li>
+         <li>
+            <b>RQ</b>: related and possibly synonymous</li>
+         <li>
+            <b>SIB</b>: has sibling</li>
+         <li>
+            <b>SY</b>: source-asserted synonymy</li>
+      </ul>
+   </div>
+   <div id="samples">
+      <h3>Sample Data</h3>
+      <div class="sample" id="LNC234_OASIS_2002_RT_has_evaluation_AUI_AUI">
+         <h4>RO</h4>&nbsp;&nbsp;<a href="#counts">(return to top)</a>
+         <table summary="This table provides sample rows for LNC234_OASIS_2002_RT_has_evaluation_AUI_AUI data elements in the UMLS Metathesaurus">
+            <tr>
+               <th scope="col">CUI1</th>
+               <th scope="col">AUI1</th>
+               <th scope="col">STYPE1</th>
+               <th scope="col">STR</th>
+               <th scope="col">REL</th>
+               <th scope="col">RELA</th>
+               <th scope="col">STR</th>
+               <th scope="col">STYPE2</th>
+               <th scope="col">AUI2</th>
+               <th scope="col">CUI2</th>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C2734674</td>
+               <td class="aui1" valign="top">A18123855</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Influenza vaccine:Find:Pt:^Patient:Ord:OASIS-C</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">has_evaluation</td>
+               <td class="str" valign="top">Influenza vaccine</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A11890722</td>
+               <td class="cui2" valign="top">C0021403</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0021403</td>
+               <td class="aui1" valign="top">A11890722</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Influenza vaccine</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">evaluation_of</td>
+               <td class="str" valign="top">Influenza vaccine:Find:Pt:^Patient:Ord:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18123855</td>
+               <td class="cui2" valign="top">C2734674</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C2735703</td>
+               <td class="aui1" valign="top">A18123880</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Emergent care:Find:Pt:^Patient:Nom:OASIS-C</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">has_evaluation</td>
+               <td class="str" valign="top">Emergent care</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A11908314</td>
+               <td class="cui2" valign="top">C1830365</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830365</td>
+               <td class="aui1" valign="top">A11908314</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Emergent care</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">evaluation_of</td>
+               <td class="str" valign="top">Emergent care:Find:Pt:^Patient:Nom:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18123880</td>
+               <td class="cui2" valign="top">C2735703</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C2735649</td>
+               <td class="aui1" valign="top">A18162598</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">When urinary incontinence occurs:Find:Pt:^Patient:Ord:OASIS-C</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">has_evaluation</td>
+               <td class="str" valign="top">When urinary incontinence occurs</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A11803940</td>
+               <td class="cui2" valign="top">C1830599</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830599</td>
+               <td class="aui1" valign="top">A11803940</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">When urinary incontinence occurs</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">evaluation_of</td>
+               <td class="str" valign="top">When urinary incontinence occurs:Find:Pt:^Patient:Ord:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18162598</td>
+               <td class="cui2" valign="top">C2735649</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C2735704</td>
+               <td class="aui1" valign="top">A18162614</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Reason for emergent care:Find:Pt:^Patient:Nom:OASIS-C</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">has_evaluation</td>
+               <td class="str" valign="top">Reason for emergent care</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A17366274</td>
+               <td class="cui2" valign="top">C1830391</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830391</td>
+               <td class="aui1" valign="top">A17366274</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Reason for emergent care</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">evaluation_of</td>
+               <td class="str" valign="top">Reason for emergent care:Find:Pt:^Patient:Nom:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18162614</td>
+               <td class="cui2" valign="top">C2735704</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830546</td>
+               <td class="aui1" valign="top">A18195020</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Current ability: prepare light meals:Find:Pt:^Patient:Ord:OASIS</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">has_evaluation</td>
+               <td class="str" valign="top">Current ability: prepare light meals</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A17372260</td>
+               <td class="cui2" valign="top">C2736974</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C2736974</td>
+               <td class="aui1" valign="top">A17372260</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Current ability: prepare light meals</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">evaluation_of</td>
+               <td class="str" valign="top">Current ability: prepare light meals:Find:Pt:^Patient:Ord:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18195020</td>
+               <td class="cui2" valign="top">C1830546</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C2735313</td>
+               <td class="aui1" valign="top">A18201162</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Data items collected at inpatient facility admission or agency discharge only:-:Pt:^Patient:-</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">has_evaluation</td>
+               <td class="str" valign="top">Data items collected at inpatient facility admission or agency discharge only</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A17362305</td>
+               <td class="cui2" valign="top">C2735314</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C2735314</td>
+               <td class="aui1" valign="top">A17362305</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Data items collected at inpatient facility admission or agency discharge only</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">evaluation_of</td>
+               <td class="str" valign="top">Data items collected at inpatient facility admission or agency discharge only:-:Pt:^Patient:-</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18201162</td>
+               <td class="cui2" valign="top">C2735313</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C2735654</td>
+               <td class="aui1" valign="top">A18201248</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Current ability: toileting hygiene:Find:Pt:^Patient:Ord:OASIS-C</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">has_evaluation</td>
+               <td class="str" valign="top">Current ability: toileting hygiene</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A17369969</td>
+               <td class="cui2" valign="top">C2735655</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C2735655</td>
+               <td class="aui1" valign="top">A17369969</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Current ability: toileting hygiene</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">evaluation_of</td>
+               <td class="str" valign="top">Current ability: toileting hygiene:Find:Pt:^Patient:Ord:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18201248</td>
+               <td class="cui2" valign="top">C2735654</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C2735617</td>
+               <td class="aui1" valign="top">A18239603</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Inpatient discharge facility:Type:Pt:^Patient:Nom:OASIS-C</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">has_evaluation</td>
+               <td class="str" valign="top">Inpatient discharge facility</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A11908311</td>
+               <td class="cui2" valign="top">C1830357</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830357</td>
+               <td class="aui1" valign="top">A11908311</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Inpatient discharge facility</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">evaluation_of</td>
+               <td class="str" valign="top">Inpatient discharge facility:Type:Pt:^Patient:Nom:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18239603</td>
+               <td class="cui2" valign="top">C2735617</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830619</td>
+               <td class="aui1" valign="top">A18272481</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Current ability: dress upper body:Find:Pt:^Patient:Ord:OASIS</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">has_evaluation</td>
+               <td class="str" valign="top">Current ability: dress upper body</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A17376044</td>
+               <td class="cui2" valign="top">C2736966</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C2736966</td>
+               <td class="aui1" valign="top">A17376044</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Current ability: dress upper body</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">evaluation_of</td>
+               <td class="str" valign="top">Current ability: dress upper body:Find:Pt:^Patient:Ord:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18272481</td>
+               <td class="cui2" valign="top">C1830619</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C2735661</td>
+               <td class="aui1" valign="top">A18278315</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Self-care:Find:Pt:^Patient:Ord:OASIS-C</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">has_evaluation</td>
+               <td class="str" valign="top">Self-care</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A17362423</td>
+               <td class="cui2" valign="top">C0036592</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0036592</td>
+               <td class="aui1" valign="top">A17362423</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Self-care</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">evaluation_of</td>
+               <td class="str" valign="top">Self-care:Find:Pt:^Patient:Ord:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18278315</td>
+               <td class="cui2" valign="top">C2735661</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830362</td>
+               <td class="aui1" valign="top">A18310188</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Number of pressure ulcers at each stage:-:Pt:^Patient:-</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">has_evaluation</td>
+               <td class="str" valign="top">Number of pressure ulcers at each stage</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A11855888</td>
+               <td class="cui2" valign="top">C1830363</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830363</td>
+               <td class="aui1" valign="top">A11855888</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Number of pressure ulcers at each stage</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">evaluation_of</td>
+               <td class="str" valign="top">Number of pressure ulcers at each stage:-:Pt:^Patient:-</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18310188</td>
+               <td class="cui2" valign="top">C1830362</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830625</td>
+               <td class="aui1" valign="top">A18311293</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Prior: bathing:Find:Pt:^Patient:Ord:OASIS</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">has_evaluation</td>
+               <td class="str" valign="top">Prior: bathing</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A11890915</td>
+               <td class="cui2" valign="top">C1830626</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830626</td>
+               <td class="aui1" valign="top">A11890915</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Prior: bathing</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">evaluation_of</td>
+               <td class="str" valign="top">Prior: bathing:Find:Pt:^Patient:Ord:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18311293</td>
+               <td class="cui2" valign="top">C1830625</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830528</td>
+               <td class="aui1" valign="top">A18349899</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Status of most problematic surgical wound:Find:Pt:^Patient:Ord:OASIS</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">has_evaluation</td>
+               <td class="str" valign="top">Status of most problematic surgical wound</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A11821348</td>
+               <td class="cui2" valign="top">C1830529</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830529</td>
+               <td class="aui1" valign="top">A11821348</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Status of most problematic surgical wound</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">evaluation_of</td>
+               <td class="str" valign="top">Status of most problematic surgical wound:Find:Pt:^Patient:Ord:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18349899</td>
+               <td class="cui2" valign="top">C1830528</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C2735488</td>
+               <td class="aui1" valign="top">A18356208</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Number of pressure ulcers present upon admission &or reentry - unstageable due to coverage of wound bed by slough &or eschar:Num:Pt:^Patient:Qn:OASIS-C</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">has_evaluation</td>
+               <td class="str" valign="top">Number of pressure ulcers present upon admission &or reentry - unstageable due to coverage of wound bed by slough &or eschar</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A16905133</td>
+               <td class="cui2" valign="top">C2708025</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C2708025</td>
+               <td class="aui1" valign="top">A16905133</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Number of pressure ulcers present upon admission &or reentry - unstageable due to coverage of wound bed by slough &or eschar</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">evaluation_of</td>
+               <td class="str" valign="top">Number of pressure ulcers present upon admission &or reentry - unstageable due to coverage of wound bed by slough &or eschar:Num:Pt:^Patient:Qn:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18356208</td>
+               <td class="cui2" valign="top">C2735488</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830562</td>
+               <td class="aui1" valign="top">A18388140</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Current ability: shopping:Find:Pt:^Patient:Ord:OASIS</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">has_evaluation</td>
+               <td class="str" valign="top">Current ability: shopping</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A17364672</td>
+               <td class="cui2" valign="top">C2736975</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C2736975</td>
+               <td class="aui1" valign="top">A17364672</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Current ability: shopping</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">evaluation_of</td>
+               <td class="str" valign="top">Current ability: shopping:Find:Pt:^Patient:Ord:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18388140</td>
+               <td class="cui2" valign="top">C1830562</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830443</td>
+               <td class="aui1" valign="top">A18388464</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Inpatient stay within last 14 days: ICD code^^^2:Prid:Pt:^Patient:Nom:OASIS</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">has_evaluation</td>
+               <td class="str" valign="top">Inpatient stay within last 14 days: ICD code</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A11803907</td>
+               <td class="cui2" valign="top">C1830442</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830442</td>
+               <td class="aui1" valign="top">A11803907</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Inpatient stay within last 14 days: ICD code</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">evaluation_of</td>
+               <td class="str" valign="top">Inpatient stay within last 14 days: ICD code^^^2:Prid:Pt:^Patient:Nom:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18388464</td>
+               <td class="cui2" valign="top">C1830443</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830592</td>
+               <td class="aui1" valign="top">A18388486</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Therapy need:Find:Pt:^Patient:Ord:OASIS</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">has_evaluation</td>
+               <td class="str" valign="top">Therapy need</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A11890907</td>
+               <td class="cui2" valign="top">C1830593</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830593</td>
+               <td class="aui1" valign="top">A11890907</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Therapy need</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">evaluation_of</td>
+               <td class="str" valign="top">Therapy need:Find:Pt:^Patient:Ord:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18388486</td>
+               <td class="cui2" valign="top">C1830592</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C2735619</td>
+               <td class="aui1" valign="top">A18394408</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Frequency of pain interfering with activity or movement:Find:Pt:^Patient:Ord:OASIS-C</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">has_evaluation</td>
+               <td class="str" valign="top">Frequency of pain interfering with activity or movement</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A17369960</td>
+               <td class="cui2" valign="top">C2735620</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C2735620</td>
+               <td class="aui1" valign="top">A17369960</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Frequency of pain interfering with activity or movement</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">evaluation_of</td>
+               <td class="str" valign="top">Frequency of pain interfering with activity or movement:Find:Pt:^Patient:Ord:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18394408</td>
+               <td class="cui2" valign="top">C2735619</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C2736615</td>
+               <td class="aui1" valign="top">A18394857</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Prior Functioning ADL &or IADL:-:Pt:^Patient:-</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">has_evaluation</td>
+               <td class="str" valign="top">Prior Functioning ADL &or IADL</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A17362825</td>
+               <td class="cui2" valign="top">C2736616</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C2736616</td>
+               <td class="aui1" valign="top">A17362825</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Prior Functioning ADL &or IADL</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">evaluation_of</td>
+               <td class="str" valign="top">Prior Functioning ADL &or IADL:-:Pt:^Patient:-</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18394857</td>
+               <td class="cui2" valign="top">C2736615</td>
+            </tr>
+         </table>
+      </div>
+      <div class="sample" id="LNC234_OASIS_2002_SFO_LFO_common_name_of_AUI_AUI">
+         <h4>SY</h4>&nbsp;&nbsp;<a href="#counts">(return to top)</a>
+         <table summary="This table provides sample rows for LNC234_OASIS_2002_SFO_LFO_common_name_of_AUI_AUI data elements in the UMLS Metathesaurus">
+            <tr>
+               <th scope="col">CUI1</th>
+               <th scope="col">AUI1</th>
+               <th scope="col">STYPE1</th>
+               <th scope="col">STR</th>
+               <th scope="col">REL</th>
+               <th scope="col">RELA</th>
+               <th scope="col">STR</th>
+               <th scope="col">STYPE2</th>
+               <th scope="col">AUI2</th>
+               <th scope="col">CUI2</th>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830542</td>
+               <td class="aui1" valign="top">A18117677</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Current ability: feeding:Find:Pt:^Patient:Ord:OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">common_name_of</td>
+               <td class="str" valign="top">Current ability: feeding OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18156398</td>
+               <td class="cui2" valign="top">C1830542</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830542</td>
+               <td class="aui1" valign="top">A18156398</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Current ability: feeding OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">has_common_name</td>
+               <td class="str" valign="top">Current ability: feeding:Find:Pt:^Patient:Ord:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18117677</td>
+               <td class="cui2" valign="top">C1830542</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C2735701</td>
+               <td class="aui1" valign="top">A18123878</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Pressure ulcer treatment - moist healing:Find:Pt:^Patient:Ord:OASIS-C</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">common_name_of</td>
+               <td class="str" valign="top">Pressure ulcer treatment - moist healing OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18123879</td>
+               <td class="cui2" valign="top">C2735701</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C2735701</td>
+               <td class="aui1" valign="top">A18123879</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Pressure ulcer treatment - moist healing OASIS-C</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">has_common_name</td>
+               <td class="str" valign="top">Pressure ulcer treatment - moist healing:Find:Pt:^Patient:Ord:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18123878</td>
+               <td class="cui2" valign="top">C2735701</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830356</td>
+               <td class="aui1" valign="top">A18156669</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Inpatient discharge facility:Type:Pt:^Patient:Nom:OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">common_name_of</td>
+               <td class="str" valign="top">Inpatient discharge facility OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18156670</td>
+               <td class="cui2" valign="top">C1830356</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830356</td>
+               <td class="aui1" valign="top">A18156670</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Inpatient discharge facility OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">has_common_name</td>
+               <td class="str" valign="top">Inpatient discharge facility:Type:Pt:^Patient:Nom:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18156669</td>
+               <td class="cui2" valign="top">C1830356</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830434</td>
+               <td class="aui1" valign="top">A18156706</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Discipline of person completing assessment:Type:Pt:Provider:Nom:OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">common_name_of</td>
+               <td class="str" valign="top">Discipline of person completing assessment Provider OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18117959</td>
+               <td class="cui2" valign="top">C1830434</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830434</td>
+               <td class="aui1" valign="top">A18117959</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Discipline of person completing assessment Provider OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">has_common_name</td>
+               <td class="str" valign="top">Discipline of person completing assessment:Type:Pt:Provider:Nom:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18156706</td>
+               <td class="cui2" valign="top">C1830434</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830470</td>
+               <td class="aui1" valign="top">A18156715</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Other diagnosis 4: severity rating:Find:Pt:^Patient:Ord:OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">common_name_of</td>
+               <td class="str" valign="top">Other diagnosis 4: severity rating OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18388472</td>
+               <td class="cui2" valign="top">C1830470</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830470</td>
+               <td class="aui1" valign="top">A18388472</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Other diagnosis 4: severity rating OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">has_common_name</td>
+               <td class="str" valign="top">Other diagnosis 4: severity rating:Find:Pt:^Patient:Ord:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18156715</td>
+               <td class="cui2" valign="top">C1830470</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830478</td>
+               <td class="aui1" valign="top">A18156719</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Rehabilitative prognosis:Find:Pt:^Patient:Ord:OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">common_name_of</td>
+               <td class="str" valign="top">Rehabilitative prognosis OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18233656</td>
+               <td class="cui2" valign="top">C1830478</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830478</td>
+               <td class="aui1" valign="top">A18233656</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Rehabilitative prognosis OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">has_common_name</td>
+               <td class="str" valign="top">Rehabilitative prognosis:Find:Pt:^Patient:Ord:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18156719</td>
+               <td class="cui2" valign="top">C1830478</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C2734688</td>
+               <td class="aui1" valign="top">A18162591</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Understanding of verbal content:Find:Pt:^Patient:Ord:OASIS-C</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">common_name_of</td>
+               <td class="str" valign="top">Understanding of verbal content OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18316939</td>
+               <td class="cui2" valign="top">C2734688</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C2734688</td>
+               <td class="aui1" valign="top">A18316939</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Understanding of verbal content OASIS-C</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">has_common_name</td>
+               <td class="str" valign="top">Understanding of verbal content:Find:Pt:^Patient:Ord:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18162591</td>
+               <td class="cui2" valign="top">C2734688</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830454</td>
+               <td class="aui1" valign="top">A18195323</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Primary diagnosis severity rating:Find:Pt:^Patient:Ord:OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">common_name_of</td>
+               <td class="str" valign="top">Primary diagnosis severity rating OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18195324</td>
+               <td class="cui2" valign="top">C1830454</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830454</td>
+               <td class="aui1" valign="top">A18195324</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Primary diagnosis severity rating OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">has_common_name</td>
+               <td class="str" valign="top">Primary diagnosis severity rating:Find:Pt:^Patient:Ord:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18195323</td>
+               <td class="cui2" valign="top">C1830454</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830413</td>
+               <td class="aui1" valign="top">A18233641</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Housekeeping:-:Pt:^Patient:-</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">common_name_of</td>
+               <td class="str" valign="top">Housekeeping</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18195316</td>
+               <td class="cui2" valign="top">C1830413</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830413</td>
+               <td class="aui1" valign="top">A18195316</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Housekeeping</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">has_common_name</td>
+               <td class="str" valign="top">Housekeeping:-:Pt:^Patient:-</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18233641</td>
+               <td class="cui2" valign="top">C1830413</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C2735613</td>
+               <td class="aui1" valign="top">A18239602</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Date of Referral:TmStp:Pt:^Patient:Qn:OASIS-C</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">common_name_of</td>
+               <td class="str" valign="top">Date of Referral OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18162585</td>
+               <td class="cui2" valign="top">C2735613</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C2735613</td>
+               <td class="aui1" valign="top">A18162585</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Date of Referral OASIS-C</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">has_common_name</td>
+               <td class="str" valign="top">Date of Referral:TmStp:Pt:^Patient:Qn:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18239602</td>
+               <td class="cui2" valign="top">C2735613</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C2735643</td>
+               <td class="aui1" valign="top">A18239623</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Status of most problematic surgical wound:Find:Pt:^Patient:Ord:OASIS-C</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">common_name_of</td>
+               <td class="str" valign="top">Status of most problematic surgical wound OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18123864</td>
+               <td class="cui2" valign="top">C2735643</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C2735643</td>
+               <td class="aui1" valign="top">A18123864</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Status of most problematic surgical wound OASIS-C</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">has_common_name</td>
+               <td class="str" valign="top">Status of most problematic surgical wound:Find:Pt:^Patient:Ord:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18239623</td>
+               <td class="cui2" valign="top">C2735643</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C2735675</td>
+               <td class="aui1" valign="top">A18239633</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">ADL assistance:Find:Pt:^Patient:Ord:OASIS-C</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">common_name_of</td>
+               <td class="str" valign="top">ADL assistance OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18316965</td>
+               <td class="cui2" valign="top">C2735675</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C2735675</td>
+               <td class="aui1" valign="top">A18316965</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">ADL assistance OASIS-C</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">has_common_name</td>
+               <td class="str" valign="top">ADL assistance:Find:Pt:^Patient:Ord:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18239633</td>
+               <td class="cui2" valign="top">C2735675</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C2735661</td>
+               <td class="aui1" valign="top">A18278315</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Self-care:Find:Pt:^Patient:Ord:OASIS-C</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">common_name_of</td>
+               <td class="str" valign="top">Self-care OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18278316</td>
+               <td class="cui2" valign="top">C2735661</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C2735661</td>
+               <td class="aui1" valign="top">A18278316</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Self-care OASIS-C</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">has_common_name</td>
+               <td class="str" valign="top">Self-care:Find:Pt:^Patient:Ord:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18278315</td>
+               <td class="cui2" valign="top">C2735661</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830466</td>
+               <td class="aui1" valign="top">A18311216</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Other diagnosis 3: severity rating:Find:Pt:^Patient:Ord:OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">common_name_of</td>
+               <td class="str" valign="top">Other diagnosis 3: severity rating OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18311217</td>
+               <td class="cui2" valign="top">C1830466</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830466</td>
+               <td class="aui1" valign="top">A18311217</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Other diagnosis 3: severity rating OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">has_common_name</td>
+               <td class="str" valign="top">Other diagnosis 3: severity rating:Find:Pt:^Patient:Ord:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18311216</td>
+               <td class="cui2" valign="top">C1830466</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830598</td>
+               <td class="aui1" valign="top">A18311235</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">When urinary incontinence occurs:Find:Pt:^Patient:Ord:OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">common_name_of</td>
+               <td class="str" valign="top">When urinary incontinence occurs OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18349901</td>
+               <td class="cui2" valign="top">C1830598</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830598</td>
+               <td class="aui1" valign="top">A18349901</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">When urinary incontinence occurs OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">has_common_name</td>
+               <td class="str" valign="top">When urinary incontinence occurs:Find:Pt:^Patient:Ord:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18311235</td>
+               <td class="cui2" valign="top">C1830598</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830370</td>
+               <td class="aui1" valign="top">A18348848</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Current payment sources for home care:Find:Pt:^Patient:Nom:OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">common_name_of</td>
+               <td class="str" valign="top">Current payment sources for home care OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18387438</td>
+               <td class="cui2" valign="top">C1830370</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830370</td>
+               <td class="aui1" valign="top">A18387438</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Current payment sources for home care OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">has_common_name</td>
+               <td class="str" valign="top">Current payment sources for home care:Find:Pt:^Patient:Nom:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18348848</td>
+               <td class="cui2" valign="top">C1830370</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830432</td>
+               <td class="aui1" valign="top">A18349881</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">State of residence:Loc:Pt:^Patient:Nom:OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">common_name_of</td>
+               <td class="str" valign="top">State of residence OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18311208</td>
+               <td class="cui2" valign="top">C1830432</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830432</td>
+               <td class="aui1" valign="top">A18311208</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">State of residence OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">has_common_name</td>
+               <td class="str" valign="top">State of residence:Loc:Pt:^Patient:Nom:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18349881</td>
+               <td class="cui2" valign="top">C1830432</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830378</td>
+               <td class="aui1" valign="top">A18388429</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Current living arrangement:Find:Pt:^Patient:Nom:OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">common_name_of</td>
+               <td class="str" valign="top">Current living arrangement OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18195284</td>
+               <td class="cui2" valign="top">C1830378</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830378</td>
+               <td class="aui1" valign="top">A18195284</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Current living arrangement OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">has_common_name</td>
+               <td class="str" valign="top">Current living arrangement:Find:Pt:^Patient:Nom:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18388429</td>
+               <td class="cui2" valign="top">C1830378</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830414</td>
+               <td class="aui1" valign="top">A18388458</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Shopping:-:Pt:^Patient:-</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">common_name_of</td>
+               <td class="str" valign="top">Shopping</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18156701</td>
+               <td class="cui2" valign="top">C1830414</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830414</td>
+               <td class="aui1" valign="top">A18156701</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Shopping</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">has_common_name</td>
+               <td class="str" valign="top">Shopping:-:Pt:^Patient:-</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18388458</td>
+               <td class="cui2" valign="top">C1830414</td>
+            </tr>
+         </table>
+      </div>
+      <div class="sample" id="LNC234_OASIS_2002_SFO_LFO_mth_expanded_form_of_AUI_AUI">
+         <h4>SY</h4>&nbsp;&nbsp;<a href="#counts">(return to top)</a>
+         <table summary="This table provides sample rows for LNC234_OASIS_2002_SFO_LFO_mth_expanded_form_of_AUI_AUI data elements in the UMLS Metathesaurus">
+            <tr>
+               <th scope="col">CUI1</th>
+               <th scope="col">AUI1</th>
+               <th scope="col">STYPE1</th>
+               <th scope="col">STR</th>
+               <th scope="col">REL</th>
+               <th scope="col">RELA</th>
+               <th scope="col">STR</th>
+               <th scope="col">STYPE2</th>
+               <th scope="col">AUI2</th>
+               <th scope="col">CUI2</th>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830489</td>
+               <td class="aui1" valign="top">A18117974</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Sensory status: hearing and ability to understand spoken language:Find:Pt:^Patient:Ord:OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_expanded_form_of</td>
+               <td class="str" valign="top">Sensory status: hearing and ability to understand spoken language:Finding:Point in time:^Patient:Ordinal:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18824691</td>
+               <td class="cui2" valign="top">C1830489</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830489</td>
+               <td class="aui1" valign="top">A18824691</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Sensory status: hearing and ability to understand spoken language:Finding:Point in time:^Patient:Ordinal:OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_has_expanded_form</td>
+               <td class="str" valign="top">Sensory status: hearing and ability to understand spoken language:Find:Pt:^Patient:Ord:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18117974</td>
+               <td class="cui2" valign="top">C1830489</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C2734677</td>
+               <td class="aui1" valign="top">A18123856</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Pneumococcal vaccine:Find:Pt:^Patient:Ord:OASIS-C</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_expanded_form_of</td>
+               <td class="str" valign="top">Pneumococcal vaccine:Finding:Point in time:^Patient:Ordinal:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18837756</td>
+               <td class="cui2" valign="top">C2734677</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C2734677</td>
+               <td class="aui1" valign="top">A18837756</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Pneumococcal vaccine:Finding:Point in time:^Patient:Ordinal:OASIS-C</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_has_expanded_form</td>
+               <td class="str" valign="top">Pneumococcal vaccine:Find:Pt:^Patient:Ord:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18123856</td>
+               <td class="cui2" valign="top">C2734677</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830434</td>
+               <td class="aui1" valign="top">A18156706</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Discipline of person completing assessment:Type:Pt:Provider:Nom:OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_expanded_form_of</td>
+               <td class="str" valign="top">Discipline of person completing assessment:Type:Point in time:Provider:Nominal:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18835892</td>
+               <td class="cui2" valign="top">C1830434</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830434</td>
+               <td class="aui1" valign="top">A18835892</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Discipline of person completing assessment:Type:Point in time:Provider:Nominal:OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_has_expanded_form</td>
+               <td class="str" valign="top">Discipline of person completing assessment:Type:Pt:Provider:Nom:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18156706</td>
+               <td class="cui2" valign="top">C1830434</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830428</td>
+               <td class="aui1" valign="top">A18195320</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Start of care date:TmStp:Pt:^Patient:Qn:OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_expanded_form_of</td>
+               <td class="str" valign="top">Start of care date:Time Stamp -- Date and Time:Point in time:^Patient:Quantitative:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18869243</td>
+               <td class="cui2" valign="top">C1830428</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830428</td>
+               <td class="aui1" valign="top">A18869243</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Start of care date:Time Stamp -- Date and Time:Point in time:^Patient:Quantitative:OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_has_expanded_form</td>
+               <td class="str" valign="top">Start of care date:TmStp:Pt:^Patient:Qn:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18195320</td>
+               <td class="cui2" valign="top">C1830428</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C2735587</td>
+               <td class="aui1" valign="top">A18200610</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Stage 3 or 4 pressure ulcer with largest surface dimensions:-:Pt:^Patient:-</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_expanded_form_of</td>
+               <td class="str" valign="top">Stage 3 or 4 pressure ulcer with largest surface dimensions:-:Point in time:^Patient:-</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18859834</td>
+               <td class="cui2" valign="top">C2735587</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C2735587</td>
+               <td class="aui1" valign="top">A18859834</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Stage 3 or 4 pressure ulcer with largest surface dimensions:-:Point in time:^Patient:-</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_has_expanded_form</td>
+               <td class="str" valign="top">Stage 3 or 4 pressure ulcer with largest surface dimensions:-:Pt:^Patient:-</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18200610</td>
+               <td class="cui2" valign="top">C2735587</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830413</td>
+               <td class="aui1" valign="top">A18233641</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Housekeeping:-:Pt:^Patient:-</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_expanded_form_of</td>
+               <td class="str" valign="top">Housekeeping:-:Point in time:^Patient:-</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18835890</td>
+               <td class="cui2" valign="top">C1830413</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830413</td>
+               <td class="aui1" valign="top">A18835890</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Housekeeping:-:Point in time:^Patient:-</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_has_expanded_form</td>
+               <td class="str" valign="top">Housekeeping:-:Pt:^Patient:-</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18233641</td>
+               <td class="cui2" valign="top">C1830413</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830416</td>
+               <td class="aui1" valign="top">A18233643</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Management of oral medications:-:Pt:^Patient:-</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_expanded_form_of</td>
+               <td class="str" valign="top">Management of oral medications:-:Point in time:^Patient:-</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18880170</td>
+               <td class="cui2" valign="top">C1830416</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830416</td>
+               <td class="aui1" valign="top">A18880170</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Management of oral medications:-:Point in time:^Patient:-</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_has_expanded_form</td>
+               <td class="str" valign="top">Management of oral medications:-:Pt:^Patient:-</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18233643</td>
+               <td class="cui2" valign="top">C1830416</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830396</td>
+               <td class="aui1" valign="top">A18271415</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Reason for nursing home admission:Find:Pt:^Patient:Nom:OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_expanded_form_of</td>
+               <td class="str" valign="top">Reason for nursing home admission:Finding:Point in time:^Patient:Nominal:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18846929</td>
+               <td class="cui2" valign="top">C1830396</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830396</td>
+               <td class="aui1" valign="top">A18846929</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Reason for nursing home admission:Finding:Point in time:^Patient:Nominal:OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_has_expanded_form</td>
+               <td class="str" valign="top">Reason for nursing home admission:Find:Pt:^Patient:Nom:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18271415</td>
+               <td class="cui2" valign="top">C1830396</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C2735689</td>
+               <td class="aui1" valign="top">A18278325</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Therapy need:Num:Pt:^Patient:Qn:OASIS-C</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_expanded_form_of</td>
+               <td class="str" valign="top">Therapy need:Number:Point in time:^Patient:Quantitative:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18859960</td>
+               <td class="cui2" valign="top">C2735689</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C2735689</td>
+               <td class="aui1" valign="top">A18859960</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Therapy need:Number:Point in time:^Patient:Quantitative:OASIS-C</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_has_expanded_form</td>
+               <td class="str" valign="top">Therapy need:Num:Pt:^Patient:Qn:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18278325</td>
+               <td class="cui2" valign="top">C2735689</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830468</td>
+               <td class="aui1" valign="top">A18311218</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Other diagnosis 4: ICD code:Prid:Pt:^Patient:Nom:OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_expanded_form_of</td>
+               <td class="str" valign="top">Other diagnosis 4: ICD code:Presence or Identity:Point in time:^Patient:Nominal:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18869245</td>
+               <td class="cui2" valign="top">C1830468</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830468</td>
+               <td class="aui1" valign="top">A18869245</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Other diagnosis 4: ICD code:Presence or Identity:Point in time:^Patient:Nominal:OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_has_expanded_form</td>
+               <td class="str" valign="top">Other diagnosis 4: ICD code:Prid:Pt:^Patient:Nom:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18311218</td>
+               <td class="cui2" valign="top">C1830468</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830474</td>
+               <td class="aui1" valign="top">A18311219</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Other diagnosis 5: severity rating:Find:Pt:^Patient:Ord:OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_expanded_form_of</td>
+               <td class="str" valign="top">Other diagnosis 5: severity rating:Finding:Point in time:^Patient:Ordinal:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18813596</td>
+               <td class="cui2" valign="top">C1830474</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830474</td>
+               <td class="aui1" valign="top">A18813596</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Other diagnosis 5: severity rating:Finding:Point in time:^Patient:Ordinal:OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_has_expanded_form</td>
+               <td class="str" valign="top">Other diagnosis 5: severity rating:Find:Pt:^Patient:Ord:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18311219</td>
+               <td class="cui2" valign="top">C1830474</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830590</td>
+               <td class="aui1" valign="top">A18311232</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Discharge, transfer, death date:TmStp:Pt:^Patient:Qn:OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_expanded_form_of</td>
+               <td class="str" valign="top">Discharge, transfer, death date:Time Stamp -- Date and Time:Point in time:^Patient:Quantitative:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18891572</td>
+               <td class="cui2" valign="top">C1830590</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830590</td>
+               <td class="aui1" valign="top">A18891572</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Discharge, transfer, death date:Time Stamp -- Date and Time:Point in time:^Patient:Quantitative:OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_has_expanded_form</td>
+               <td class="str" valign="top">Discharge, transfer, death date:TmStp:Pt:^Patient:Qn:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18311232</td>
+               <td class="cui2" valign="top">C1830590</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C2734912</td>
+               <td class="aui1" valign="top">A18316941</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Formal pain assessment using standardized tool:Find:Pt:^Patient:Ord:OASIS-C</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_expanded_form_of</td>
+               <td class="str" valign="top">Formal pain assessment using standardized tool:Finding:Point in time:^Patient:Ordinal:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18893400</td>
+               <td class="cui2" valign="top">C2734912</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C2734912</td>
+               <td class="aui1" valign="top">A18893400</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Formal pain assessment using standardized tool:Finding:Point in time:^Patient:Ordinal:OASIS-C</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_has_expanded_form</td>
+               <td class="str" valign="top">Formal pain assessment using standardized tool:Find:Pt:^Patient:Ord:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18316941</td>
+               <td class="cui2" valign="top">C2734912</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C2735631</td>
+               <td class="aui1" valign="top">A18316945</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Diameter.long:Len:Pt:Ulcer.largest stage 3 or 4:Qn:OASIS-C</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_expanded_form_of</td>
+               <td class="str" valign="top">Diameter.long:Length:Point in time:Ulcer.largest stage 3 or 4:Quantitative:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18826507</td>
+               <td class="cui2" valign="top">C2735631</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C2735631</td>
+               <td class="aui1" valign="top">A18826507</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Diameter.long:Length:Point in time:Ulcer.largest stage 3 or 4:Quantitative:OASIS-C</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_has_expanded_form</td>
+               <td class="str" valign="top">Diameter.long:Len:Pt:Ulcer.largest stage 3 or 4:Qn:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18316945</td>
+               <td class="cui2" valign="top">C2735631</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C2735692</td>
+               <td class="aui1" valign="top">A18316968</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Diabetic foot care:Find:Pt:^Patient:Ord:OASIS-C</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_expanded_form_of</td>
+               <td class="str" valign="top">Diabetic foot care:Finding:Point in time:^Patient:Ordinal:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18815377</td>
+               <td class="cui2" valign="top">C2735692</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C2735692</td>
+               <td class="aui1" valign="top">A18815377</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Diabetic foot care:Finding:Point in time:^Patient:Ordinal:OASIS-C</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_has_expanded_form</td>
+               <td class="str" valign="top">Diabetic foot care:Find:Pt:^Patient:Ord:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18316968</td>
+               <td class="cui2" valign="top">C2735692</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C2735489</td>
+               <td class="aui1" valign="top">A18317459</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Number of pressure ulcers present upon admission &or reentry - unstageable with suspected deep tissue injury in evolution:Num:Pt:^Patient:Qn:OASIS-C</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_expanded_form_of</td>
+               <td class="str" valign="top">Number of pressure ulcers present upon admission &or reentry - unstageable with suspected deep tissue injury in evolution:Number:Point in time:^Patient:Quantitative:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18815439</td>
+               <td class="cui2" valign="top">C2735489</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C2735489</td>
+               <td class="aui1" valign="top">A18815439</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Number of pressure ulcers present upon admission &or reentry - unstageable with suspected deep tissue injury in evolution:Number:Point in time:^Patient:Quantitative:OASIS-C</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_has_expanded_form</td>
+               <td class="str" valign="top">Number of pressure ulcers present upon admission &or reentry - unstageable with suspected deep tissue injury in evolution:Num:Pt:^Patient:Qn:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18317459</td>
+               <td class="cui2" valign="top">C2735489</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830358</td>
+               <td class="aui1" valign="top">A18387435</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Inpatient facililty diagnoses:-:Pt:^Patient:-</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_expanded_form_of</td>
+               <td class="str" valign="top">Inpatient facililty diagnoses:-:Point in time:^Patient:-</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18846924</td>
+               <td class="cui2" valign="top">C1830358</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830358</td>
+               <td class="aui1" valign="top">A18846924</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Inpatient facililty diagnoses:-:Point in time:^Patient:-</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_has_expanded_form</td>
+               <td class="str" valign="top">Inpatient facililty diagnoses:-:Pt:^Patient:-</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18387435</td>
+               <td class="cui2" valign="top">C1830358</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830592</td>
+               <td class="aui1" valign="top">A18388486</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Therapy need:Find:Pt:^Patient:Ord:OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_expanded_form_of</td>
+               <td class="str" valign="top">Therapy need:Finding:Point in time:^Patient:Ordinal:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18846943</td>
+               <td class="cui2" valign="top">C1830592</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1830592</td>
+               <td class="aui1" valign="top">A18846943</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Therapy need:Finding:Point in time:^Patient:Ordinal:OASIS</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_has_expanded_form</td>
+               <td class="str" valign="top">Therapy need:Find:Pt:^Patient:Ord:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18388486</td>
+               <td class="cui2" valign="top">C1830592</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C2735690</td>
+               <td class="aui1" valign="top">A18394426</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Patient-specific parameters for notifying physician of changes:Find:Pt:^Patient:Ord:OASIS-C</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_expanded_form_of</td>
+               <td class="str" valign="top">Patient-specific parameters for notifying physician of changes:Finding:Point in time:^Patient:Ordinal:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18870994</td>
+               <td class="cui2" valign="top">C2735690</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C2735690</td>
+               <td class="aui1" valign="top">A18870994</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Patient-specific parameters for notifying physician of changes:Finding:Point in time:^Patient:Ordinal:OASIS-C</td>
+               <td class="rel" valign="top">SY</td>
+               <td class="rela" valign="top">mth_has_expanded_form</td>
+               <td class="str" valign="top">Patient-specific parameters for notifying physician of changes:Find:Pt:^Patient:Ord:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18394426</td>
+               <td class="cui2" valign="top">C2735690</td>
+            </tr>
+         </table>
+      </div>
+      <div class="sample" id="LNC234_OASIS_2002_RT_analyzed_by_AUI_AUI">
+         <h4>RO</h4>&nbsp;&nbsp;<a href="#counts">(return to top)</a>
+         <table summary="This table provides sample rows for LNC234_OASIS_2002_RT_analyzed_by_AUI_AUI data elements in the UMLS Metathesaurus">
+            <tr>
+               <th scope="col">CUI1</th>
+               <th scope="col">AUI1</th>
+               <th scope="col">STYPE1</th>
+               <th scope="col">STR</th>
+               <th scope="col">REL</th>
+               <th scope="col">RELA</th>
+               <th scope="col">STR</th>
+               <th scope="col">STYPE2</th>
+               <th scope="col">AUI2</th>
+               <th scope="col">CUI2</th>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830639</td>
+               <td class="aui1" valign="top">A18117546</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Primary referring physician ID:ID:Pt:Provider:Nom</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">analyzed_by</td>
+               <td class="str" valign="top">Provider</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A11774101</td>
+               <td class="cui2" valign="top">C1138603</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1138603</td>
+               <td class="aui1" valign="top">A11774101</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Provider</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">analyzes</td>
+               <td class="str" valign="top">Primary referring physician ID:ID:Pt:Provider:Nom</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18117546</td>
+               <td class="cui2" valign="top">C1830639</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830420</td>
+               <td class="aui1" valign="top">A18117956</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Medicaid provider number:ID:Pt:Agency:Nom:OASIS</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">analyzed_by</td>
+               <td class="str" valign="top">Agency</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A11908333</td>
+               <td class="cui2" valign="top">C0237463</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0237463</td>
+               <td class="aui1" valign="top">A11908333</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Agency</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">analyzes</td>
+               <td class="str" valign="top">Medicaid provider number:ID:Pt:Agency:Nom:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18117956</td>
+               <td class="cui2" valign="top">C1830420</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C2736483</td>
+               <td class="aui1" valign="top">A18124239</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Date pressure ulcer first identified:TmStp:Pt:Ulcer.oldest non-epithelialized stage 2:Qn:OASIS-C</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">analyzed_by</td>
+               <td class="str" valign="top">Ulcer.oldest non-epithelialized stage 2</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A17378046</td>
+               <td class="cui2" valign="top">C2736484</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C2736484</td>
+               <td class="aui1" valign="top">A17378046</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Ulcer.oldest non-epithelialized stage 2</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">analyzes</td>
+               <td class="str" valign="top">Date pressure ulcer first identified:TmStp:Pt:Ulcer.oldest non-epithelialized stage 2:Qn:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18124239</td>
+               <td class="cui2" valign="top">C2736483</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830434</td>
+               <td class="aui1" valign="top">A18156706</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Discipline of person completing assessment:Type:Pt:Provider:Nom:OASIS</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">analyzed_by</td>
+               <td class="str" valign="top">Provider</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A11774101</td>
+               <td class="cui2" valign="top">C1138603</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C1138603</td>
+               <td class="aui1" valign="top">A11774101</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Provider</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">analyzes</td>
+               <td class="str" valign="top">Discipline of person completing assessment:Type:Pt:Provider:Nom:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18156706</td>
+               <td class="cui2" valign="top">C1830434</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830422</td>
+               <td class="aui1" valign="top">A18195318</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">State location of agency branch:Loc:Pt:Agency:Ord:OASIS</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">analyzed_by</td>
+               <td class="str" valign="top">Agency</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A11908333</td>
+               <td class="cui2" valign="top">C0237463</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0237463</td>
+               <td class="aui1" valign="top">A11908333</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Agency</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">analyzes</td>
+               <td class="str" valign="top">State location of agency branch:Loc:Pt:Agency:Ord:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18195318</td>
+               <td class="cui2" valign="top">C1830422</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830354</td>
+               <td class="aui1" valign="top">A18233613</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">CMS certification number:ID:Pt:Agency:Nom:OASIS</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">analyzed_by</td>
+               <td class="str" valign="top">Agency</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A11908333</td>
+               <td class="cui2" valign="top">C0237463</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0237463</td>
+               <td class="aui1" valign="top">A11908333</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Agency</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">analyzes</td>
+               <td class="str" valign="top">CMS certification number:ID:Pt:Agency:Nom:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18233613</td>
+               <td class="cui2" valign="top">C1830354</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C2735634</td>
+               <td class="aui1" valign="top">A18239614</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Depth:Len:Pt:Ulcer.largest stage 3 or 4:Qn:OASIS-C</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">analyzed_by</td>
+               <td class="str" valign="top">Ulcer.largest stage 3 or 4</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A16412983</td>
+               <td class="cui2" valign="top">C2359767</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C2359767</td>
+               <td class="aui1" valign="top">A16412983</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Ulcer.largest stage 3 or 4</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">analyzes</td>
+               <td class="str" valign="top">Depth:Len:Pt:Ulcer.largest stage 3 or 4:Qn:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18239614</td>
+               <td class="cui2" valign="top">C2735634</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C1830424</td>
+               <td class="aui1" valign="top">A18272404</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Branch number:ID:Pt:Agency:Ord:OASIS</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">analyzed_by</td>
+               <td class="str" valign="top">Agency</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A11908333</td>
+               <td class="cui2" valign="top">C0237463</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C0237463</td>
+               <td class="aui1" valign="top">A11908333</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Agency</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">analyzes</td>
+               <td class="str" valign="top">Branch number:ID:Pt:Agency:Ord:OASIS</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18272404</td>
+               <td class="cui2" valign="top">C1830424</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui1" valign="top">C2735631</td>
+               <td class="aui1" valign="top">A18316945</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Diameter.long:Len:Pt:Ulcer.largest stage 3 or 4:Qn:OASIS-C</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">analyzed_by</td>
+               <td class="str" valign="top">Ulcer.largest stage 3 or 4</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A16412983</td>
+               <td class="cui2" valign="top">C2359767</td>
+            </tr>
+            <tr class="inversesamplerow">
+               <td class="cui1" valign="top">C2359767</td>
+               <td class="aui1" valign="top">A16412983</td>
+               <td class="stype1" valign="top">AUI</td>
+               <td class="str" valign="top">Ulcer.largest stage 3 or 4</td>
+               <td class="rel" valign="top">RO</td>
+               <td class="rela" valign="top">analyzes</td>
+               <td class="str" valign="top">Diameter.long:Len:Pt:Ulcer.largest stage 3 or 4:Qn:OASIS-C</td>
+               <td class="stype2" valign="top">AUI</td>
+               <td class="aui2" valign="top">A18316945</td>
+               <td class="cui2" valign="top">C2735631</td>
+            </tr>
+         </table>
+      </div>
+   </div>
+</div>

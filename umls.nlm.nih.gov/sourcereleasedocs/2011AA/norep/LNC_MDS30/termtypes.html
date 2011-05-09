@@ -1,0 +1,709 @@
+<div class="section-3" id="maincontent">
+   <ul id="menu">
+      <li id="nav-1">
+         <a href="index.html">Synopsis</a>
+      </li>
+      <li id="nav-2">
+         <a href="mrsab.html">MRSAB.RRF</a>
+      </li>
+      <li id="nav-3">
+         <a href="sourcemetastats.html">Statistics and Sample Data</a>
+         <ul id="subnav-3">
+            <li>
+               <a href="termtypes.html" id="ttys">Terms and term types</a>
+            </li>
+            <li>
+               <a href="attributes.html">Attributes</a>
+            </li>
+            <li>
+               <a href="relationships.html">Relationships</a>
+            </li>
+            <li>
+               <a href="semtypes.html">Semantic Types</a>
+            </li>
+            <li>
+               <a href="overlap.html">Source Overlap</a>
+            </li>
+         </ul>
+      </li>
+   </ul>
+   <div id="counts">
+      <h2>Counts</h2>
+      <p class="jumptags">&nbsp;(skip to:&nbsp;<a href="#explain">notes</a>&nbsp;&nbsp;<a href="#samples">samples</a>)</p>
+      <div id="placeholder" style="display:none;">placeholder</div>
+      <table summary="Metadata Stats: This is a by-source tabulation of various data types in the UMLS Metathesaurus">
+         <tr>
+            <th class="metalabel" scope="col">Term Type</th>
+            <th class="definition" scope="col">Description</th>
+            <th class="count" scope="col">Count (MRCONSO.RRF)</th>
+         </tr>
+         <tr>
+            <td class="metalabel" valign="top" scope="row">
+               <a href="#LC"
+                  title="Samples of LC term types. If you are using the tab key for navigation, press Enter or Return to go to sample data"
+                  onkeyup="checkKeyType('LC',event);"
+                  onclick="document.getElementById('placeholder').innerHTML = '';document.getElementById('placeholder').style.display = 'none';new Effect.Appear('placeholder');drawContentBox('LC',event,this.innerHTML);return false;">LC</a>
+               <noscript>
+                  <a href="#LC"/>
+               </noscript>
+            </td>
+            <td class="definition" valign="top">Long common name</td>
+            <td class="count" valign="top">464</td>
+         </tr>
+         <tr>
+            <td class="metalabel" valign="top" scope="row">
+               <a href="#LN"
+                  title="Samples of LN term types. If you are using the tab key for navigation, press Enter or Return to go to sample data"
+                  onkeyup="checkKeyType('LN',event);"
+                  onclick="document.getElementById('placeholder').innerHTML = '';document.getElementById('placeholder').style.display = 'none';new Effect.Appear('placeholder');drawContentBox('LN',event,this.innerHTML);return false;">LN</a>
+               <noscript>
+                  <a href="#LN"/>
+               </noscript>
+            </td>
+            <td class="definition" valign="top">LOINC official fully specified name</td>
+            <td class="count" valign="top">464</td>
+         </tr>
+         <tr>
+            <td class="metalabel" valign="top" scope="row">
+               <a href="#MTH_LN"
+                  title="Samples of MTH_LN term types. If you are using the tab key for navigation, press Enter or Return to go to sample data"
+                  onkeyup="checkKeyType('MTH_LN',event);"
+                  onclick="document.getElementById('placeholder').innerHTML = '';document.getElementById('placeholder').style.display = 'none';new Effect.Appear('placeholder');drawContentBox('MTH_LN',event,this.innerHTML);return false;">MTH_LN</a>
+               <noscript>
+                  <a href="#MTH_LN"/>
+               </noscript>
+            </td>
+            <td class="definition" valign="top">MTH Official fully specified name with expanded abbreviations</td>
+            <td class="count" valign="top">464</td>
+         </tr>
+         <tr>
+            <td class="metalabel" valign="top" scope="row">
+               <a href="#LO"
+                  title="Samples of LO term types. If you are using the tab key for navigation, press Enter or Return to go to sample data"
+                  onkeyup="checkKeyType('LO',event);"
+                  onclick="document.getElementById('placeholder').innerHTML = '';document.getElementById('placeholder').style.display = 'none';new Effect.Appear('placeholder');drawContentBox('LO',event,this.innerHTML);return false;">LO</a>
+               <noscript>
+                  <a href="#LO"/>
+               </noscript>
+            </td>
+            <td class="definition" valign="top">Obsolete official fully specified name</td>
+            <td class="count" valign="top">40</td>
+         </tr>
+         <tr>
+            <td class="metalabel" valign="top" scope="row">
+               <a href="#MTH_LO"
+                  title="Samples of MTH_LO term types. If you are using the tab key for navigation, press Enter or Return to go to sample data"
+                  onkeyup="checkKeyType('MTH_LO',event);"
+                  onclick="document.getElementById('placeholder').innerHTML = '';document.getElementById('placeholder').style.display = 'none';new Effect.Appear('placeholder');drawContentBox('MTH_LO',event,this.innerHTML);return false;">MTH_LO</a>
+               <noscript>
+                  <a href="#MTH_LO"/>
+               </noscript>
+            </td>
+            <td class="definition" valign="top">MTH Expanded LOINC obsolete fully specified name</td>
+            <td class="count" valign="top">40</td>
+         </tr>
+         <tr>
+            <td class="metalabel" valign="top" scope="row">
+               <a href="#OLC"
+                  title="Samples of OLC term types. If you are using the tab key for navigation, press Enter or Return to go to sample data"
+                  onkeyup="checkKeyType('OLC',event);"
+                  onclick="document.getElementById('placeholder').innerHTML = '';document.getElementById('placeholder').style.display = 'none';new Effect.Appear('placeholder');drawContentBox('OLC',event,this.innerHTML);return false;">OLC</a>
+               <noscript>
+                  <a href="#OLC"/>
+               </noscript>
+            </td>
+            <td class="definition" valign="top">Obsolete Long common name</td>
+            <td class="count" valign="top">40</td>
+         </tr>
+      </table>
+   </div>
+   <div id="explain">
+      <h2>Notes</h2>
+      <ul>
+         <li>A term type indicates the role an atom plays in its source</li>
+         <li>An atom is the smallest unit of naming in a source; that is, a specific string with specific code values and identifiers from a specific source.</li>
+         <li>Every atom has a separate row in MRCONSO.RRF. Every atom is assigned a term type.</li>
+         <li>Term types are assigned based on source documentation or NLM understanding of the source.</li>
+         <li>Sample data are provided for every term type in the source (see below).</li>
+         <li>See <a href="http://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/abbreviations.html#mrdoc_TTY"
+               target="_blank">Metathesaurus Documentation</a> for a list of all term type abbreviations and their full names.</li>
+         <li>See <a href="http://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/precedence_suppressibility.html"
+               target="_blank">Metathesaurus Documentation</a> for a list of sources and their associated term types, listed in default order of precedence.</li>
+         <li>See <a href="http://www.ncbi.nlm.nih.gov/books/NBK9684/#ch02.I23_Concepts_Concept_Names_and_Thei"
+               target="_blank">Section 2.3 of the UMLS Reference Manual</a> for more information on terms and term types in the UMLS Metathesaurus.</li>
+      </ul>
+   </div>
+   <div id="samples">
+      <h3>Sample Data</h3>
+      <div class="sample" id="LC">
+         <h4>LC</h4>&nbsp;&nbsp;<a href="#counts">(return to top)</a>
+         <table summary="This table provides sample rows for LC data elements in the UMLS Metathesaurus">
+            <tr>
+               <th scope="col">CUI</th>
+               <th scope="col">AUI</th>
+               <th scope="col">LUI</th>
+               <th scope="col">SUI</th>
+               <th scope="col">SCUI</th>
+               <th scope="col">CODE</th>
+               <th scope="col">STR</th>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707057</td>
+               <td class="aui" valign="top">A18238210</td>
+               <td class="lui" valign="top">L8870205</td>
+               <td class="sui" valign="top">S11034102</td>
+               <td class="scui" valign="top">54708-3</td>
+               <td class="code" valign="top">54708-3</td>
+               <td class="str" valign="top">How important it is to be around animals such as pets while in this facility MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2739365</td>
+               <td class="aui" valign="top">A18161211</td>
+               <td class="lui" valign="top">L9081880</td>
+               <td class="sui" valign="top">S11345446</td>
+               <td class="scui" valign="top">54794-3</td>
+               <td class="code" valign="top">54794-3</td>
+               <td class="str" valign="top">Viral hepatitis in last 7 days MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2739372</td>
+               <td class="aui" valign="top">A18315604</td>
+               <td class="lui" valign="top">L9086803</td>
+               <td class="sui" valign="top">S11339571</td>
+               <td class="scui" valign="top">54801-6</td>
+               <td class="code" valign="top">54801-6</td>
+               <td class="str" valign="top">Osteoporosis in last 7 days MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2739373</td>
+               <td class="aui" valign="top">A18122554</td>
+               <td class="lui" valign="top">L9080649</td>
+               <td class="sui" valign="top">S11334770</td>
+               <td class="scui" valign="top">54802-4</td>
+               <td class="code" valign="top">54802-4</td>
+               <td class="str" valign="top">Hip fracture in last 7 days MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2739386</td>
+               <td class="aui" valign="top">A18315610</td>
+               <td class="lui" valign="top">L9084581</td>
+               <td class="sui" valign="top">S11344640</td>
+               <td class="scui" valign="top">54815-6</td>
+               <td class="code" valign="top">54815-6</td>
+               <td class="str" valign="top">Traumatic brain injury in last 7 days MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2739394</td>
+               <td class="aui" valign="top">A18315612</td>
+               <td class="lui" valign="top">L9074282</td>
+               <td class="sui" valign="top">S11327762</td>
+               <td class="scui" valign="top">54823-0</td>
+               <td class="code" valign="top">54823-0</td>
+               <td class="str" valign="top">Cataracts/glaucoma or macular degeneration in last 7 days MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2739402</td>
+               <td class="aui" valign="top">A18238244</td>
+               <td class="lui" valign="top">L9094940</td>
+               <td class="sui" valign="top">S11338945</td>
+               <td class="scui" valign="top">54835-4</td>
+               <td class="code" valign="top">54835-4</td>
+               <td class="str" valign="top">Non-verbal sounds of pain in last 5 days MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707926</td>
+               <td class="aui" valign="top">A18122074</td>
+               <td class="lui" valign="top">L8878200</td>
+               <td class="sui" valign="top">S11038815</td>
+               <td class="scui" valign="top">54844-6</td>
+               <td class="code" valign="top">54844-6</td>
+               <td class="str" valign="top">None of the above shortness of breath symptoms in last 7 days MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707928</td>
+               <td class="aui" valign="top">A18353922</td>
+               <td class="lui" valign="top">L8872840</td>
+               <td class="sui" valign="top">S11025088</td>
+               <td class="scui" valign="top">54845-3</td>
+               <td class="code" valign="top">54845-3</td>
+               <td class="str" valign="top">Current tobacco use in last 7 days MDSv3</td>
+            </tr>
+         </table>
+      </div>
+      <div class="sample" id="LN">
+         <h4>LN</h4>&nbsp;&nbsp;<a href="#counts">(return to top)</a>
+         <table summary="This table provides sample rows for LN data elements in the UMLS Metathesaurus">
+            <tr>
+               <th scope="col">CUI</th>
+               <th scope="col">AUI</th>
+               <th scope="col">LUI</th>
+               <th scope="col">SUI</th>
+               <th scope="col">SCUI</th>
+               <th scope="col">CODE</th>
+               <th scope="col">STR</th>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707481</td>
+               <td class="aui" valign="top">A18122492</td>
+               <td class="lui" valign="top">L8897926</td>
+               <td class="sui" valign="top">S11045060</td>
+               <td class="scui" valign="top">54655-6</td>
+               <td class="code" valign="top">54655-6</td>
+               <td class="str" valign="top">Responsible staff or provider was informed of potential for resident self harm:Find:Pt:^Patient:Ord:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2739366</td>
+               <td class="aui" valign="top">A18161212</td>
+               <td class="lui" valign="top">L9077444</td>
+               <td class="sui" valign="top">S11330465</td>
+               <td class="scui" valign="top">54795-0</td>
+               <td class="code" valign="top">54795-0</td>
+               <td class="str" valign="top">Diabetes mellitus in last 7D:Find:Pt:^Patient:Ord:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2739367</td>
+               <td class="aui" valign="top">A18199922</td>
+               <td class="lui" valign="top">L9083471</td>
+               <td class="sui" valign="top">S11335318</td>
+               <td class="scui" valign="top">54796-8</td>
+               <td class="code" valign="top">54796-8</td>
+               <td class="str" valign="top">Hyponatremia in last 7D:Find:Pt:^Patient:Ord:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2739376</td>
+               <td class="aui" valign="top">A18354366</td>
+               <td class="lui" valign="top">L9087899</td>
+               <td class="sui" valign="top">S11325296</td>
+               <td class="scui" valign="top">54805-7</td>
+               <td class="code" valign="top">54805-7</td>
+               <td class="str" valign="top">Aphasia in last 7D:Find:Pt:^Patient:Ord:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2739379</td>
+               <td class="aui" valign="top">A18161214</td>
+               <td class="lui" valign="top">L9091201</td>
+               <td class="sui" valign="top">S11330240</td>
+               <td class="scui" valign="top">54808-1</td>
+               <td class="code" valign="top">54808-1</td>
+               <td class="str" valign="top">Dementia in last 7D:Find:Pt:^Patient:Ord:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2739380</td>
+               <td class="aui" valign="top">A18276921</td>
+               <td class="lui" valign="top">L9075127</td>
+               <td class="sui" valign="top">S11334481</td>
+               <td class="scui" valign="top">54809-9</td>
+               <td class="code" valign="top">54809-9</td>
+               <td class="str" valign="top">Hemiplegia &amp;or hemiparesis in last 7D:Find:Pt:^Patient:Ord:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2739385</td>
+               <td class="aui" valign="top">A18393020</td>
+               <td class="lui" valign="top">L9092727</td>
+               <td class="sui" valign="top">S11343170</td>
+               <td class="scui" valign="top">54814-9</td>
+               <td class="code" valign="top">54814-9</td>
+               <td class="str" valign="top">Seizure disorder in last 7D:Find:Pt:^Patient:Ord:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2739386</td>
+               <td class="aui" valign="top">A18238237</td>
+               <td class="lui" valign="top">L9095599</td>
+               <td class="sui" valign="top">S11344641</td>
+               <td class="scui" valign="top">54815-6</td>
+               <td class="code" valign="top">54815-6</td>
+               <td class="str" valign="top">Traumatic brain injury in last 7D:Find:Pt:^Patient:Ord:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2739394</td>
+               <td class="aui" valign="top">A18122561</td>
+               <td class="lui" valign="top">L9074280</td>
+               <td class="sui" valign="top">S11327757</td>
+               <td class="scui" valign="top">54823-0</td>
+               <td class="code" valign="top">54823-0</td>
+               <td class="str" valign="top">Cataracts &amp;or glaucoma or macular degeneration in last 7D:Find:Pt:^Patient:Ord:MDSv3</td>
+            </tr>
+         </table>
+      </div>
+      <div class="sample" id="MTH_LN">
+         <h4>MTH_LN</h4>&nbsp;&nbsp;<a href="#counts">(return to top)</a>
+         <table summary="This table provides sample rows for MTH_LN data elements in the UMLS Metathesaurus">
+            <tr>
+               <th scope="col">CUI</th>
+               <th scope="col">AUI</th>
+               <th scope="col">LUI</th>
+               <th scope="col">SUI</th>
+               <th scope="col">SCUI</th>
+               <th scope="col">CODE</th>
+               <th scope="col">STR</th>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707061</td>
+               <td class="aui" valign="top">A18881413</td>
+               <td class="lui" valign="top">L8896718</td>
+               <td class="sui" valign="top">S11034128</td>
+               <td class="scui" valign="top">54710-9</td>
+               <td class="code" valign="top">54710-9</td>
+               <td class="str" valign="top">How important it is to do things with groups of people while in this facility:Finding:Point in time:^Patient:Ordinal:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2739380</td>
+               <td class="aui" valign="top">A18848210</td>
+               <td class="lui" valign="top">L9080627</td>
+               <td class="sui" valign="top">S11334482</td>
+               <td class="scui" valign="top">54809-9</td>
+               <td class="code" valign="top">54809-9</td>
+               <td class="str" valign="top">Hemiplegia &amp;or hemiparesis in last 7D:Finding:Point in time:^Patient:Ordinal:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2739382</td>
+               <td class="aui" valign="top">A18881448</td>
+               <td class="lui" valign="top">L9078867</td>
+               <td class="sui" valign="top">S11342251</td>
+               <td class="scui" valign="top">54811-5</td>
+               <td class="code" valign="top">54811-5</td>
+               <td class="str" valign="top">Quadriplegia in last 7D:Finding:Point in time:^Patient:Ordinal:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2739386</td>
+               <td class="aui" valign="top">A18892769</td>
+               <td class="lui" valign="top">L9079124</td>
+               <td class="sui" valign="top">S11344642</td>
+               <td class="scui" valign="top">54815-6</td>
+               <td class="code" valign="top">54815-6</td>
+               <td class="str" valign="top">Traumatic brain injury in last 7D:Finding:Point in time:^Patient:Ordinal:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707888</td>
+               <td class="aui" valign="top">A18848294</td>
+               <td class="lui" valign="top">L8870814</td>
+               <td class="sui" valign="top">S11039597</td>
+               <td class="scui" valign="top">54825-5</td>
+               <td class="code" valign="top">54825-5</td>
+               <td class="str" valign="top">On scheduled pain medication regimen in last 7D:Finding:Point in time:^Patient:Ordinal:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707894</td>
+               <td class="aui" valign="top">A18892879</td>
+               <td class="lui" valign="top">L8897473</td>
+               <td class="sui" valign="top">S11040817</td>
+               <td class="scui" valign="top">54828-9</td>
+               <td class="code" valign="top">54828-9</td>
+               <td class="str" valign="top">Pain assessment interview should be conducted:Finding:Point in time:^Patient:Ordinal:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2739400</td>
+               <td class="aui" valign="top">A18881528</td>
+               <td class="lui" valign="top">L9078627</td>
+               <td class="sui" valign="top">S11340216</td>
+               <td class="scui" valign="top">54833-9</td>
+               <td class="code" valign="top">54833-9</td>
+               <td class="str" valign="top">Pain severity in last 5D:Finding:Point in time:^Patient:Ordinal:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2739402</td>
+               <td class="aui" valign="top">A18826015</td>
+               <td class="lui" valign="top">L9092250</td>
+               <td class="sui" valign="top">S11338947</td>
+               <td class="scui" valign="top">54835-4</td>
+               <td class="code" valign="top">54835-4</td>
+               <td class="str" valign="top">Non-verbal sounds of pain in last 5D:Finding:Point in time:^Patient:Ordinal:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707928</td>
+               <td class="aui" valign="top">A18848297</td>
+               <td class="lui" valign="top">L8884146</td>
+               <td class="sui" valign="top">S11025090</td>
+               <td class="scui" valign="top">54845-3</td>
+               <td class="code" valign="top">54845-3</td>
+               <td class="str" valign="top">Current tobacco use in last 7D:Finding:Point in time:^Patient:Ordinal:MDSv3</td>
+            </tr>
+         </table>
+      </div>
+      <div class="sample" id="LO">
+         <h4>LO</h4>&nbsp;&nbsp;<a href="#counts">(return to top)</a>
+         <table summary="This table provides sample rows for LO data elements in the UMLS Metathesaurus">
+            <tr>
+               <th scope="col">CUI</th>
+               <th scope="col">AUI</th>
+               <th scope="col">LUI</th>
+               <th scope="col">SUI</th>
+               <th scope="col">SCUI</th>
+               <th scope="col">CODE</th>
+               <th scope="col">STR</th>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707483</td>
+               <td class="aui" valign="top">A18238174</td>
+               <td class="lui" valign="top">L8882929</td>
+               <td class="sui" valign="top">S11047668</td>
+               <td class="scui" valign="top">54656-4</td>
+               <td class="code" valign="top">54656-4</td>
+               <td class="str" valign="top">Staff assessment of mood should be conducted:Find:Pt:^Patient:Ord:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2739364</td>
+               <td class="aui" valign="top">A18161210</td>
+               <td class="lui" valign="top">L9090184</td>
+               <td class="sui" valign="top">S11345160</td>
+               <td class="scui" valign="top">54793-5</td>
+               <td class="code" valign="top">54793-5</td>
+               <td class="str" valign="top">Urinary tract infection in last 7D:Find:Pt:^Patient:Ord:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707815</td>
+               <td class="aui" valign="top">A18122547</td>
+               <td class="lui" valign="top">L8873732</td>
+               <td class="sui" valign="top">S11032661</td>
+               <td class="scui" valign="top">54788-5</td>
+               <td class="code" valign="top">54788-5</td>
+               <td class="str" valign="top">HIV infection in last 30D:Find:Pt:^Patient:Ord:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707817</td>
+               <td class="aui" valign="top">A18199918</td>
+               <td class="lui" valign="top">L8871671</td>
+               <td class="sui" valign="top">S11047707</td>
+               <td class="scui" valign="top">54789-3</td>
+               <td class="code" valign="top">54789-3</td>
+               <td class="str" valign="top">Staphylococcus aureus.methicillin resistant or Enterococcus species.vancomycin resistant or Clostridium difficile infections &amp;or colonization in last 30D:Find:Pt:^Patient:Ord:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707918</td>
+               <td class="aui" valign="top">A18393028</td>
+               <td class="lui" valign="top">L8876070</td>
+               <td class="sui" valign="top">S11019987</td>
+               <td class="scui" valign="top">54840-4</td>
+               <td class="code" valign="top">54840-4</td>
+               <td class="str" valign="top">Adequacy of current therapeutic regimen to control pain in last 7D:Find:Pt:^Patient:Ord:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707337</td>
+               <td class="aui" valign="top">A18276831</td>
+               <td class="lui" valign="top">L8886753</td>
+               <td class="sui" valign="top">S11047789</td>
+               <td class="scui" valign="top">54586-3</td>
+               <td class="code" valign="top">54586-3</td>
+               <td class="str" valign="top">State required assessment:Find:Pt:^Patient:Ord:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707376</td>
+               <td class="aui" valign="top">A18161115</td>
+               <td class="lui" valign="top">L8886862</td>
+               <td class="sui" valign="top">S11048776</td>
+               <td class="scui" valign="top">54607-7</td>
+               <td class="code" valign="top">54607-7</td>
+               <td class="str" valign="top">Temporal orientation - current year:Find:Pt:^Patient:Ord:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707377</td>
+               <td class="aui" valign="top">A18161116</td>
+               <td class="lui" valign="top">L8894523</td>
+               <td class="sui" valign="top">S11048771</td>
+               <td class="scui" valign="top">54608-5</td>
+               <td class="code" valign="top">54608-5</td>
+               <td class="str" valign="top">Temporal orientation - current month:Find:Pt:^Patient:Ord:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707415</td>
+               <td class="aui" valign="top">A18161120</td>
+               <td class="lui" valign="top">L8897834</td>
+               <td class="sui" valign="top">S11044363</td>
+               <td class="scui" valign="top">54611-9</td>
+               <td class="code" valign="top">54611-9</td>
+               <td class="str" valign="top">Recall - sock:Find:Pt:^Patient:Ord:MDSv3</td>
+            </tr>
+         </table>
+      </div>
+      <div class="sample" id="MTH_LO">
+         <h4>MTH_LO</h4>&nbsp;&nbsp;<a href="#counts">(return to top)</a>
+         <table summary="This table provides sample rows for MTH_LO data elements in the UMLS Metathesaurus">
+            <tr>
+               <th scope="col">CUI</th>
+               <th scope="col">AUI</th>
+               <th scope="col">LUI</th>
+               <th scope="col">SUI</th>
+               <th scope="col">SCUI</th>
+               <th scope="col">CODE</th>
+               <th scope="col">STR</th>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707483</td>
+               <td class="aui" valign="top">A18825769</td>
+               <td class="lui" valign="top">L8890518</td>
+               <td class="sui" valign="top">S11047669</td>
+               <td class="scui" valign="top">54656-4</td>
+               <td class="code" valign="top">54656-4</td>
+               <td class="str" valign="top">Staff assessment of mood should be conducted:Finding:Point in time:^Patient:Ordinal:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2739364</td>
+               <td class="aui" valign="top">A18892764</td>
+               <td class="lui" valign="top">L9076396</td>
+               <td class="sui" valign="top">S11345161</td>
+               <td class="scui" valign="top">54793-5</td>
+               <td class="code" valign="top">54793-5</td>
+               <td class="str" valign="top">Urinary tract infection in last 7D:Finding:Point in time:^Patient:Ordinal:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707815</td>
+               <td class="aui" valign="top">A18859452</td>
+               <td class="lui" valign="top">L8872178</td>
+               <td class="sui" valign="top">S11052370</td>
+               <td class="scui" valign="top">54788-5</td>
+               <td class="code" valign="top">54788-5</td>
+               <td class="str" valign="top">human immunodeficiency virus infection in last 30D:Finding:Point in time:^Patient:Ordinal:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707817</td>
+               <td class="aui" valign="top">A18859453</td>
+               <td class="lui" valign="top">L8886739</td>
+               <td class="sui" valign="top">S11047708</td>
+               <td class="scui" valign="top">54789-3</td>
+               <td class="code" valign="top">54789-3</td>
+               <td class="str" valign="top">Staphylococcus aureus.methicillin resistant or Enterococcus species.vancomycin resistant or Clostridium difficile infections &amp;or colonization in last 30D:Finding:Point in time:^Patient:Ordinal:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707918</td>
+               <td class="aui" valign="top">A18837296</td>
+               <td class="lui" valign="top">L8891158</td>
+               <td class="sui" valign="top">S11019988</td>
+               <td class="scui" valign="top">54840-4</td>
+               <td class="code" valign="top">54840-4</td>
+               <td class="str" valign="top">Adequacy of current therapeutic regimen to control pain in last 7D:Finding:Point in time:^Patient:Ordinal:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707337</td>
+               <td class="aui" valign="top">A18881590</td>
+               <td class="lui" valign="top">L8886754</td>
+               <td class="sui" valign="top">S11047790</td>
+               <td class="scui" valign="top">54586-3</td>
+               <td class="code" valign="top">54586-3</td>
+               <td class="str" valign="top">State required assessment:Finding:Point in time:^Patient:Ordinal:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707376</td>
+               <td class="aui" valign="top">A18892950</td>
+               <td class="lui" valign="top">L8890653</td>
+               <td class="sui" valign="top">S11048778</td>
+               <td class="scui" valign="top">54607-7</td>
+               <td class="code" valign="top">54607-7</td>
+               <td class="str" valign="top">Temporal orientation - current year:Finding:Point in time:^Patient:Ordinal:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707377</td>
+               <td class="aui" valign="top">A18826063</td>
+               <td class="lui" valign="top">L8894524</td>
+               <td class="sui" valign="top">S11048773</td>
+               <td class="scui" valign="top">54608-5</td>
+               <td class="code" valign="top">54608-5</td>
+               <td class="str" valign="top">Temporal orientation - current month:Finding:Point in time:^Patient:Ordinal:MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707415</td>
+               <td class="aui" valign="top">A18870538</td>
+               <td class="lui" valign="top">L8875047</td>
+               <td class="sui" valign="top">S11044365</td>
+               <td class="scui" valign="top">54611-9</td>
+               <td class="code" valign="top">54611-9</td>
+               <td class="str" valign="top">Recall - sock:Finding:Point in time:^Patient:Ordinal:MDSv3</td>
+            </tr>
+         </table>
+      </div>
+      <div class="sample" id="OLC">
+         <h4>OLC</h4>&nbsp;&nbsp;<a href="#counts">(return to top)</a>
+         <table summary="This table provides sample rows for OLC data elements in the UMLS Metathesaurus">
+            <tr>
+               <th scope="col">CUI</th>
+               <th scope="col">AUI</th>
+               <th scope="col">LUI</th>
+               <th scope="col">SUI</th>
+               <th scope="col">SCUI</th>
+               <th scope="col">CODE</th>
+               <th scope="col">STR</th>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707483</td>
+               <td class="aui" valign="top">A18392957</td>
+               <td class="lui" valign="top">L9077430</td>
+               <td class="sui" valign="top">S11330375</td>
+               <td class="scui" valign="top">54656-4</td>
+               <td class="code" valign="top">54656-4</td>
+               <td class="str" valign="top">Deprecated Staff assessment of mood should be conductedr MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2739364</td>
+               <td class="aui" valign="top">A18315601</td>
+               <td class="lui" valign="top">L9074598</td>
+               <td class="sui" valign="top">S11330393</td>
+               <td class="scui" valign="top">54793-5</td>
+               <td class="code" valign="top">54793-5</td>
+               <td class="str" valign="top">Deprecated Urinary tract infection in last 7D MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707815</td>
+               <td class="aui" valign="top">A18315595</td>
+               <td class="lui" valign="top">L9082902</td>
+               <td class="sui" valign="top">S11330310</td>
+               <td class="scui" valign="top">54788-5</td>
+               <td class="code" valign="top">54788-5</td>
+               <td class="str" valign="top">Deprecated HIV infection in last 30D MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707817</td>
+               <td class="aui" valign="top">A18122548</td>
+               <td class="lui" valign="top">L9074595</td>
+               <td class="sui" valign="top">S11330376</td>
+               <td class="scui" valign="top">54789-3</td>
+               <td class="code" valign="top">54789-3</td>
+               <td class="str" valign="top">Deprecated Staphylococcus aureus.methicillin resistant or Enterococcus species.vancomycin resistant or Clostridium difficile infections &amp;or colonization in last 30D MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707918</td>
+               <td class="aui" valign="top">A18238245</td>
+               <td class="lui" valign="top">L9074584</td>
+               <td class="sui" valign="top">S11330281</td>
+               <td class="scui" valign="top">54840-4</td>
+               <td class="code" valign="top">54840-4</td>
+               <td class="str" valign="top">Deprecated Adequacy of current therapeutic regimen to control pain in last 7D MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707337</td>
+               <td class="aui" valign="top">A18315508</td>
+               <td class="lui" valign="top">L9077431</td>
+               <td class="sui" valign="top">S11330379</td>
+               <td class="scui" valign="top">54586-3</td>
+               <td class="code" valign="top">54586-3</td>
+               <td class="str" valign="top">Deprecated State required assessment MDSv3</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707376</td>
+               <td class="aui" valign="top">A18392933</td>
+               <td class="lui" valign="top">L8876890</td>
+               <td class="sui" valign="top">S11026953</td>
+               <td class="scui" valign="top">54607-7</td>
+               <td class="code" valign="top">54607-7</td>
+               <td class="str" valign="top">Deprecated Temporal orientation - current year</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707377</td>
+               <td class="aui" valign="top">A18161117</td>
+               <td class="lui" valign="top">L8884406</td>
+               <td class="sui" valign="top">S11026952</td>
+               <td class="scui" valign="top">54608-5</td>
+               <td class="code" valign="top">54608-5</td>
+               <td class="str" valign="top">Deprecated Temporal orientation - current month</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2707415</td>
+               <td class="aui" valign="top">A18161121</td>
+               <td class="lui" valign="top">L8891961</td>
+               <td class="sui" valign="top">S11026816</td>
+               <td class="scui" valign="top">54611-9</td>
+               <td class="code" valign="top">54611-9</td>
+               <td class="str" valign="top">Deprecated Recall - sock</td>
+            </tr>
+         </table>
+      </div>
+   </div>
+</div>
