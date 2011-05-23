@@ -1,3 +1,11 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+</head>
+<body>
 <div class="section-4">
 <ul id="menu">
   <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
@@ -61,7 +69,7 @@ retained, depending on their hierarchical level.<br/>
 (environmental samples) and their descendents.<br/>
 <br/>
 4.&nbsp; Exclude concepts and terms based on certain patterns, e.g.
-remove concepts with rank = "species" the following words in the
+remove concepts with rank = "species" and the following words in the
 scientific name "uncultured," "clone," "unidentified," "uncultivated."<br/>
 <br/>
 Source Provided Files:
@@ -81,7 +89,7 @@ For 2010AB, the taxdmp.zip file was acquired on April 29,
     <tr>
       <td>citations.dmp<br/>
       </td>
-      <td style="vertical-align: top;">Citations<br/>
+      <td style="vertical-align: top;">Citations (not directly processed)<br/>
       </td>
     </tr>
     <tr>
@@ -152,7 +160,6 @@ Identifiers are assigned as follows:<br/>
   <li>SDUI: not applicable<br/>
   </li>
 </ul>
-<p></p>
 <div id="rep_termtypes" class="rep_block_level_two">
 <a name="atoms"></a>
 <h3>Atoms (MRCONSO):</h3>
@@ -184,7 +191,7 @@ SCUI = names.dmp.tax_id<br/>
       <td>CODE = names.dmp.tax_id<br/>
 STRING = names.dmp.name_txt<br/>
 SCUI = names.dmp.tax_id<br/>
-&nbsp;TTY = "AUN" is assigned where "name class" = "common name"<br/>
+&nbsp;TTY = "CMN" is assigned where "name class" = "common name"<br/>
       </td>
     </tr>
     <tr>
@@ -195,7 +202,7 @@ SCUI = names.dmp.tax_id<br/>
       <td>CODE = names.dmp.tax_id<br/>
 STRING = names.dmp.name_txt<br/>
 SCUI = names.dmp.tax_id<br/>
-&nbsp;TTY = "AUN" is assigned where "name class" = "equivalent name"<br/>
+&nbsp;TTY = "EQ" is assigned where "name class" = "equivalent name"<br/>
       </td>
     </tr>
     <tr>
@@ -206,7 +213,7 @@ SCUI = names.dmp.tax_id<br/>
       <td>CODE = names.dmp.tax_id<br/>
 STRING = names.dmp.name_txt<br/>
 SCUI = names.dmp.tax_id<br/>
-&nbsp;TTY = "AUN" is assigned where "name class" = "scientific name"<br/>
+&nbsp;TTY = "SCN" is assigned where "name class" = "scientific name"<br/>
       </td>
     </tr>
     <tr>
@@ -217,7 +224,7 @@ SCUI = names.dmp.tax_id<br/>
       <td style="vertical-align: top;">CODE = names.dmp.tax_id<br/>
 STRING = names.dmp.name_txt<br/>
 SCUI = names.dmp.tax_id<br/>
-&nbsp;TTY = "AUN" is assigned where "name class" = "synonym"<br/>
+&nbsp;TTY = "SY" is assigned where "name class" = "synonym"<br/>
       </td>
     </tr>
     <tr>
@@ -228,7 +235,7 @@ SCUI = names.dmp.tax_id<br/>
       <td>CODE = names.dmp.tax_id<br/>
 STRING = names.dmp.unique_name<br/>
 SCUI = names.dmp.tax_id<br/>
-&nbsp;TTY = "AUN" is assigned where "name class" = "authority"<br/>
+&nbsp;TTY = "UAUN" is assigned where "name class" = "authority"<br/>
       </td>
     </tr>
     <tr>
@@ -239,7 +246,7 @@ SCUI = names.dmp.tax_id<br/>
       <td>CODE = names.dmp.tax_id<br/>
 STRING = names.dmp.unique_name<br/>
 SCUI = names.dmp.tax_id<br/>
-&nbsp;TTY = "AUN" is assigned where "name class" = "common name"<br/>
+&nbsp;TTY = "UCN" is assigned where "name class" = "common name"<br/>
       </td>
     </tr>
     <tr>
@@ -250,7 +257,7 @@ SCUI = names.dmp.tax_id<br/>
       <td style="vertical-align: top;">CODE = names.dmp.tax_id<br/>
 STRING = names.dmp.unique_name<br/>
 SCUI = names.dmp.tax_id<br/>
-&nbsp;TTY = "AUN" is assigned where "name class" = "equivalent name"<br/>
+&nbsp;TTY = "UE" is assigned where "name class" = "equivalent name"<br/>
       </td>
     </tr>
     <tr>
@@ -261,7 +268,7 @@ SCUI = names.dmp.tax_id<br/>
       <td>CODE = names.dmp.tax_id<br/>
 STRING = names.dmp.unique_name<br/>
 SCUI = names.dmp.tax_id<br/>
-&nbsp;TTY = "AUN" is assigned where "name class" = "scientific name"<br/>
+&nbsp;TTY = "USN" is assigned where "name class" = "scientific name"<br/>
       </td>
     </tr>
     <tr>
@@ -272,7 +279,7 @@ SCUI = names.dmp.tax_id<br/>
       <td style="vertical-align: top;">CODE = names.dmp.tax_id<br/>
 STRING = names.dmp.unique_name<br/>
 SCUI = names.dmp.tax_id<br/>
-&nbsp;TTY = "AUN" is assigned where "name class" = "synonym"<br/>
+&nbsp;TTY = "USY" is assigned where "name class" = "synonym"<br/>
       </td>
     </tr>
   </tbody>
@@ -280,7 +287,7 @@ SCUI = names.dmp.tax_id<br/>
 </div>
 <div id="rep_attributes" class="rep_block_level_two">
 <a name="attributes"></a><br/>
-Note on suppresibility:&nbsp; For term types "AUN" and "UAUN,"
+Note on suppressibility:&nbsp; For term types "AUN" and "UAUN,"
 MRCONSO.SUPPRESS is set to "Y"&nbsp; <br/>
 <br/>
 Atoms with other term types may systematically be
@@ -341,7 +348,7 @@ class" = "unpublished name"<br/>
 <a name="definitions"></a><br/>
 <h3>Definitions (MRDEF):</h3>
 &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-<p>No deifnitions are included in the NCBI data.<br/>
+<p>No definitions are included in the NCBI data.<br/>
 </p>
 </div>
 <div id="rep_relationships" class="rep_block_level_two">
@@ -378,7 +385,6 @@ has_expanded_form<br/>
 </table>
 </div>
 <div id="mappings" class="rep_block_level_two">
-<a name="mappings"></a><br/>
 <h3>Mappings (MRMAP):</h3>
 &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
 <p>No mappings are included in the NCBI data.<br/>
