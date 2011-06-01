@@ -27,7 +27,26 @@ $muCategories{"Problems"} = ["ICD9CM","ICD10CM","SNOMEDCT","MEDCIN"];
 $muCategories{"Procedures"} = ["CPT","HCPT","HCDT","HCPCS","ICD9CM","ICD10PCS"];
 
 
-##todo: create hash of array for content categories
+###hash of arrays for content Categories
+$contentCategories{"Adverse Drug Reaction Reporting Systems"} = ["MDR"];
+$contentCategories{"Anatomy"} = ["FMA" , "MSH"];
+$contentCategories{"Consumer Health Information"} = ["CHV" , "MEDLINEPLUS" , "MSH"];
+$contentCategories{"Dentistry"} = ["HCDT" , "MSH"];
+$contentCategories{"Diagnosis"} = ["ICD9CM" , "ICD10CM" , "MEDCIN" , "MSH" , "SNOMEDCT"];
+$contentCategories{"Disabled Persons"} = ["ICF" , "ICF-CY" , "MSH"];
+$contentCategories{"Disease"} = ["MEDLINEPLUS" , "MSH" , "OMIM" , "NCI" , "SNOMEDCT"];
+$contentCategories{"Drugs [Pharmaceutical Preparations]"} = ["GS" , "MDDB" , "MMSL" , "MMX" , "MSH" , "MTHFDA" , "MTHSPL" , "NDDF" , "NDFRT" , "RXNORM" , "SNOMEDCT" , "VANDF"];
+$contentCategories{"Insurance Claim Reporting"} = ["CPT" , "HCDT" , "HCPCS" , "HCPT" , "ICD10PCS"];
+$contentCategories{"Genetics"} = ["GO" , "HUGO" , "MSH" , "OMIM"];
+$contentCategories{"Laboratory Techniques and Procedures"} = ["LNC" , "MSH"];
+$contentCategories{"Medical Devices"} = ["HCPT" , "MSH" , "UMD"];
+$contentCategories{"Nursing"} = ["ICNP" , "MSH"];
+$contentCategories{"Phylogeny"} = ["MSH" , "NCBI"];
+$contentCategories{"Problem-Oriented Medical Records"} = ["ICD9CM" , "ICD10CM" , "MEDCIN" , "MSH" , "SNOMEDCT"];
+$contentCategories{"Procedures"} = ["CPT" , "HCDT" , "HCPCS" , "HCPT" , "ICD10PCS" , "MEDCIN" , "MSH" , "SNOMEDCT"];
+$contentCategories{"Complementary Therapies"} = ["MSH" , "TKMT"];
+
+
 
 while(<FH>) {
     
