@@ -50,7 +50,7 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
 <h3>Content Categories</h3>
 </div>
 <div id = "tabs-4" class = "content">
-  <h3>Meaningful Use Categories</h3>
+  <h3>Meaningful Use Categories*</h3>
 <xsl:apply-templates select = "muCategories"/>
 <p><em>*as of 7/28/2010 (subject to change)</em></p>
 </div>-->
