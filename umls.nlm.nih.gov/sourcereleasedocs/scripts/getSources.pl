@@ -6,7 +6,7 @@ use warnings;
 ##arguments are -i, must be a MRSAB.RRF file
 
 getopts("i:");
-$input = $opt_i || die "Please enter a list of sources to be processeed $!\n";
+$input = $opt_i || die "Please enter a list of sources to be processed $!\n";
 open FH, "<$input" || die "could not open input file because of $!\n";
 my $output = new IO::File(">sources_dev2.xml") || die "could not open output file due to $!\n";
 $writer = new XML::Writer(OUTPUT => $output,DATA_MODE => 'true',DATA_INDENT => 4);
