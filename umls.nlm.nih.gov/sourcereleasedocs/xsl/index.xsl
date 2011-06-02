@@ -117,6 +117,7 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
         <th scope = "col">Source</th><th>Last Updated In</th>
             <xsl:apply-templates select = "sources"/>
     </table>
+    <div class = "content-footnote"><p><em>*Source vocabularies in Category 4 are free for use in the United States. Category 3 rules apply for all other uses</em></p></div>
   </div>
   </xsl:otherwise>
   </xsl:choose>
