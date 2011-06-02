@@ -45,6 +45,7 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
 <div id = "tabs-2" class = "content">
   <h3>Restriction Categories</h3>
 <xsl:apply-templates select = "restrictions"/>
+<div class = "content-footnote"><p><em>*Source vocabularies in Category 4 are free for use in the United States. Category 3 rules apply for all other uses</em></p></div>
 </div>
 <div id = "tabs-3" class = "content">
 <h3>Content Categories</h3>
@@ -117,7 +118,6 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
         <th scope = "col">Source</th><th>Last Updated In</th>
             <xsl:apply-templates select = "sources"/>
     </table>
-    <div class = "content-footnote"><p><em>*Source vocabularies in Category 4 are free for use in the United States. Category 3 rules apply for all other uses</em></p></div>
   </div>
   </xsl:otherwise>
   </xsl:choose>
