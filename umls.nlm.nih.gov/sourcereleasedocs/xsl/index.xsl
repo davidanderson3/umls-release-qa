@@ -7,6 +7,8 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
 <xsl:output-character character="&#177;" string="&amp;plusmn;"/>
 </xsl:character-map>
 
+
+<!-- provides functionality for writing 'source' vs. 'sources' during counting -->
 <xsl:function name="sourcereleasedocs:countSources">
  <xsl:param name = "sourceCount"/>
   <xsl:choose>
@@ -26,15 +28,13 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
 <h2>Choose a source by browsing one of the presentation tabs below</h2>
 </div>
 
-
-    
 <div class="jig-tabs"> 
 <ul> 
 <li><a class="ajaxlink" title="alphabet" href="#tabs-1">Alphabetical List</a></li> 
 <li><a class="ajaxlink" title="category" href="#tabs-2">Restriction Categories</a><a href="https://uts.nlm.nih.gov/help/license/licensecategoryhelp.html" target="_blank"><img style="width: 14px; height: 14px;" src="https://uts.nlm.nih.gov//images/help.png" alt="Restriction Category Help" /></a></li>
-<li><a class="ajaxlink" title="language" href="#tabs-3">Subject Categories</a><a href="/research/umls/sourcereleasedocs/meaningful_use_help.html" target="_blank"><img style="width: 14px; height: 14px;" src="https://uts.nlm.nih.gov//images/help.png" alt="Meaningful Use Category Help" /></a></li>
-<li><a class="ajaxlink" title="language" href="#tabs-4">Meaningful Use Categories*</a></li>
-<li><a class="ajaxlink" title="language" href="#tabs-5">Language</a></li>
+<li><a class="ajaxlink" title="language" href="#tabs-3">Meaningful Use Categories*</a></li>
+<li><a class="ajaxlink" title="language" href="#tabs-4">Subject Categories</a><a href="/research/umls/sourcereleasedocs/meaningful_use_help.html" target="_blank"><img style="width: 14px; height: 14px;" src="https://uts.nlm.nih.gov//images/help.png" alt="Meaningful Use Category Help" /></a></li>
+<li><a class="ajaxlink" title="language" href="#tabs-5">Languages</a></li>
 
 </ul>   
 <!--begin iterating through xml document -->
@@ -48,13 +48,14 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
 <div class = "content-footnote"><p><em>*Source vocabularies in Category 4 are free for use in the United States. Category 3 rules apply for all other uses</em></p></div>
 </div>
 <div id = "tabs-3" class = "content">
-<h3>Content Categories</h3>
-<xsl:apply-templates select = "contentCategories"/>
-</div>
-<div id = "tabs-4" class = "content">
   <h3>Meaningful Use Categories</h3>
 <xsl:apply-templates select = "muCategories"/>
 <div class = "content-footnote"><p><em>*as of 7/28/2010 (subject to change)</em></p></div>
+</div>
+<div id = "tabs-4" class = "content">
+<h3>Content Categories</h3>
+<xsl:apply-templates select = "contentCategories"/>
+<div class = "content-footnote"><p>Only the most frequently updated sources in the Metathesaurus are categorized.</p></div>
 </div>
 <div id = "tabs-5" class = "content">
   <h3>Languages</h3>
