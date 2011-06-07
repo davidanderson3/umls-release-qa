@@ -86,7 +86,7 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
   <h5><a class="jig-ncbitoggler" href="#"><xsl:value-of select = "@group"/>&#160;&#160;<span class = "count"><xsl:value-of select = "count(sources/source)"/>&#160;<xsl:value-of select = "sourcereleasedocs:countSources(count(sources/source))"/></span></a></h5>
   <div class = "sourcecontainer">
   <table border = "0" summary = "Table of sources from {@group}">
-        <th scope = "col">Source</th><th>Last Updated In</th>
+        <th scope = "col">Source</th><th>Last Updated</th>
             <xsl:apply-templates select = "sources"/>
   </table>
   </div>
@@ -116,7 +116,7 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
   <h5><a class="jig-ncbitoggler" href="#"><xsl:value-of select = "@level"/>&#160;&#160;<span class = "count"><xsl:value-of select = "count(sources/source)"/> sources</span></a></h5>
   <div class = "sourcecontainer">
     <table border = "0" summary = "Table of restriction {@level} sources">
-        <th scope = "col">Source</th><th>Last Updated In</th>
+        <th scope = "col">Source</th><th>Last Updated</th>
             <xsl:apply-templates select = "sources"/>
     </table>
   </div>
@@ -154,7 +154,7 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
   <h5><a class="jig-ncbitoggler" href="#"><xsl:value-of select = "@type"/>&#160;&#160;<span class = "count"><xsl:value-of select = "count(sources/source)"/>&#160;<xsl:value-of select = "sourcereleasedocs:countSources(count(sources/source))"/></span></a></h5>
   <div class = "sourcecontainer">
     <table border = "0" summary = "Table of {@type} language sources">
-        <th scope = "col">Source</th><th>Last Updated In</th>
+        <th scope = "col">Source</th><th>Last Updated</th>
             <xsl:apply-templates select = "sources"/>
     </table>
   </div>
@@ -185,7 +185,7 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
         <h5><a class="jig-ncbitoggler" href="#"><xsl:value-of select = "@name"/>&#160;&#160;<span class = "count"><xsl:value-of select = "count(sources/source)"/>&#160;<xsl:value-of select = "sourcereleasedocs:countSources(count(sources/source))"/></span></a></h5>
         <div class = "sourcecontainer">
         <table summary = "Table of source in the @name category">
-        <th scope = "col">Source</th><th>Last Updated In</th>
+        <th scope = "col">Source</th><th>Last Updated</th>
             <xsl:apply-templates select = "sources"/>
         </table>
         </div>  
