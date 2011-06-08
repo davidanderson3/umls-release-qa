@@ -8,7 +8,7 @@ use warnings;
 getopts("i:");
 $input = $opt_i || die "Please enter a list of sources to be processed $!\n";
 open FH, "<$input" || die "could not open input file because of $!\n";
-my $output = new IO::File(">sources_dev2.xml") || die "could not open output file due to $!\n";
+my $output = new IO::File(">sources.xml") || die "could not open output file due to $!\n";
 $writer = new XML::Writer(OUTPUT => $output,DATA_MODE => 'true',DATA_INDENT => 4);
 
 $writer->xmlDecl("utf-8");
@@ -29,22 +29,23 @@ $muCategories{"Procedures"} = ["CPT","HCPT","HCDT","HCPCS","ICD9CM","ICD10PCS"];
 
 ###hash of arrays for content Categories
 $contentCategories{"Adverse Drug Reaction Reporting Systems"} = ["MDR"];
-$contentCategories{"Anatomy"} = ["FMA" , "MSH"];
-$contentCategories{"Consumer Health Information"} = ["CHV" , "MEDLINEPLUS" , "MSH"];
-$contentCategories{"Dentistry"} = ["HCDT" , "MSH"];
-$contentCategories{"Diagnosis"} = ["ICD9CM" , "ICD10CM" , "MEDCIN" , "MSH" , "SNOMEDCT"];
-$contentCategories{"Disabled Persons"} = ["ICF" , "ICF-CY" , "MSH"];
-$contentCategories{"Disease"} = ["MEDLINEPLUS" , "MSH" , "OMIM" , "NCI" , "SNOMEDCT"];
+$contentCategories{"Anatomy"} = ["FMA"];
+$contentCategories{"Consumer Health Information"} = ["CHV" , "MEDLINEPLUS"];
+$contentCategories{"Dentistry"} = ["HCDT"];
+$contentCategories{"Diagnosis"} = ["ICD9CM" , "ICD10CM" , "MEDCIN", "SNOMEDCT", "CPT"];
+$contentCategories{"Disabled Persons"} = ["ICF" , "ICF-CY" ];
+$contentCategories{"Disease"} = ["ICD9CM","ICD10CM","MEDLINEPLUS" , "MSH" , "OMIM" , "NCI" , "SNOMEDCT", "MDR"];
 $contentCategories{"Drugs [Pharmaceutical Preparations]"} = ["GS" , "MDDB" , "MMSL" , "MMX" , "MSH" , "MTHFDA" , "MTHSPL" , "NDDF" , "NDFRT" , "RXNORM" , "SNOMEDCT" , "VANDF"];
-$contentCategories{"Insurance Claim Reporting"} = ["CPT" , "HCDT" , "HCPCS" , "HCPT" , "ICD10PCS"];
-$contentCategories{"Genetics"} = ["GO" , "HUGO" , "MSH" , "OMIM"];
-$contentCategories{"Laboratory Techniques and Procedures"} = ["LNC" , "MSH"];
-$contentCategories{"Medical Devices"} = ["HCPT" , "MSH" , "UMD"];
-$contentCategories{"Nursing"} = ["ICNP" , "MSH"];
-$contentCategories{"Phylogeny"} = ["MSH" , "NCBI"];
-$contentCategories{"Problem-Oriented Medical Records"} = ["ICD9CM" , "ICD10CM" , "MEDCIN" , "MSH" , "SNOMEDCT"];
-$contentCategories{"Procedures"} = ["CPT" , "HCDT" , "HCPCS" , "HCPT" , "ICD10PCS" , "MEDCIN" , "MSH" , "SNOMEDCT"];
-$contentCategories{"Complementary Therapies"} = ["MSH" , "TKMT"];
+$contentCategories{"Insurance Claim Reporting"} = ["CPT" , "HCDT" , "HCPCS" , "ICD10PCS", "ICD9CM", "ICD10CM"];
+$contentCategories{"Genetics"} = ["GO","HUGO","OMIM", "NCI"];
+$contentCategories{"Laboratory Techniques and Procedures"} = ["LNC","CPT","SNOMEDCT"];
+$contentCategories{"Medical Devices"} = ["HCPCS","UMD"];
+$contentCategories{"Nursing"} = ["ICNP", "PNDS"];
+$contentCategories{"Phylogeny"} = ["NCBI"];
+#$contentCategories{"Problem-Oriented Medical Records"} = ["ICD9CM" , "ICD10CM" , "MEDCIN", "SNOMEDCT"];
+$contentCategories{"Procedures"} = ["CPT" , "HCDT" , "HCPCS", "ICD10PCS" , "MEDCIN", "SNOMEDCT", "ICD9CM", "NCI"];
+$contentCategories{"Complementary Therapies"} = ["TKMT"];
+#$contentCategories{"Subject Headings"} = ["MSH"];
 
 
 
@@ -78,7 +79,7 @@ while(<FH>) {
         push @levelThreeSources,{"rsab"=>$rsab,"srl"=>$srl,"lat"=>$lat,"ssn"=>$ssn,"imeta"=>$imeta,"firstletter"=>$firstletter}; 
     }
     $i++;
-## establish MU categories...in a very messy way unfortunately
+
 
     
 }
@@ -88,7 +89,7 @@ while(<FH>) {
 &processRestrictions;
 &processLanguages;
 &processCategories(%muCategories);
-#&processCategories(%contentCategories);
+&processCategories(%contentCategories);
 
 $writer->endTag();
 
@@ -215,9 +216,16 @@ $writer->endTag();
 sub processCategories{
     
     my %categories = @_;
-    if (@_ = "muCategories") {
-        ##print qq{yes!};
-        $writer->startTag("muCategories");
+
+    if (exists $categories{"Adverse Drug Reaction Reporting Systems"}) {
+        
+        $writer->startTag("contentCategories");       
+        
+    }
+    
+    else {
+    $writer->startTag("muCategories");
+        
     }
     
     

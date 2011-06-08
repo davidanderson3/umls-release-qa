@@ -25,18 +25,19 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
     
 <div id="source-doc-wrapper">
 <div id="source-doc-intro">
-<h2>Choose a source by browsing one of the presentation tabs below</h2>
+<p>Choose a source by browsing one of the presentation tabs below</p>
 </div>
 
-<div class="jig-tabs"> 
+<div class="jig-tabs">
+
 <ul> 
 <li><a class="ajaxlink" title="alphabet" href="#tabs-1">Alphabetical List</a></li> 
 <li><a class="ajaxlink" title="category" href="#tabs-2">Restriction Categories*</a><a href="https://uts.nlm.nih.gov/help/license/licensecategoryhelp.html" target="_blank"><img style="width: 14px; height: 14px;" src="https://uts.nlm.nih.gov//images/help.png" alt="Restriction Category Help" /></a></li>
-<li><a class="ajaxlink" title="language" href="#tabs-3">Meaningful Use Categories*</a></li>
-<li><a class="ajaxlink" title="language" href="#tabs-4">Subject Categories</a><a href="/research/umls/sourcereleasedocs/meaningful_use_help.html" target="_blank"><img style="width: 14px; height: 14px;" src="https://uts.nlm.nih.gov//images/help.png" alt="Meaningful Use Category Help" /></a></li>
+<li><a class="ajaxlink" title="language" href="#tabs-3">Meaningful Use Categories*</a><a href="/research/umls/sourcereleasedocs/meaningful_use_help.html" target="_blank"><img style="width: 14px; height: 14px;" src="https://uts.nlm.nih.gov//images/help.png" alt="Meaningful Use Category Help" /></a></li>
+<li><a class="ajaxlink" title="language" href="#tabs-4">Content Categories*</a></li>
 <li><a class="ajaxlink" title="language" href="#tabs-5">Languages</a></li>
+</ul>
 
-</ul>   
 <!--begin iterating through xml document -->
 <div id = "tabs-1" class = "content">
   <h3>Alphabetical List</h3>
@@ -45,7 +46,7 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
 <div id = "tabs-2" class = "content">
   <h3>Restriction Categories</h3>
 <xsl:apply-templates select = "restrictions"/>
-<div class = "content-footnote"><p><em>*Source vocabularies in Category 4 are free for use in the United States. Category 3 rules apply for all other uses</em></p></div>
+<div class = "content-footnote"><p><em>*as of 2011AA UMLS.  <br/>Source vocabularies in Category 4 are free for use in the United States. Category 3 rules apply for all other uses</em></p></div>
 </div>
 <div id = "tabs-3" class = "content">
   <h3>Meaningful Use Categories</h3>
@@ -55,7 +56,7 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
 <div id = "tabs-4" class = "content">
 <h3>Content Categories</h3>
 <xsl:apply-templates select = "contentCategories"/>
-<div class = "content-footnote"><p>Only the most frequently updated sources in the Metathesaurus are categorized.</p></div>
+<div class = "content-footnote"><p><em>*Content Categories come from either MeSH Headings or MeSH Entry Terms.  Only the most frequently updated sources in the Metathesaurus are categorized, <br/>and some sources may belong to more than one category.  Foreign translations have not been categorized.</em></p></div>
 </div>
 <div id = "tabs-5" class = "content">
   <h3>Languages</h3>
@@ -74,6 +75,7 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
 <!-- letters area of document -->
 <xsl:template match = "letters">
   <div class="limbox smalllimbox leftlimbox">
+  <a href = "#" class = "expand">Expand All</a>&#160;&#160;<a href = "#" class = "collapse">Collapse All</a>
   <div class="limboxcontent">
     <xsl:apply-templates select = "letter"/>
   </div>
@@ -98,6 +100,7 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
 <!--restriction area of document -->
 <xsl:template match = "restrictions">
   <div class="limbox smalllimbox leftlimbox">
+  <a href = "#" class = "expand">Expand All</a>&#160;&#160;<a href = "#" class = "collapse">Collapse All</a>
   <div class="limboxcontent">
     <xsl:apply-templates select = "restriction"/>
   </div>
@@ -131,6 +134,7 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
 <xsl:template match = "languages">
   
 <div class="limbox smalllimbox leftlimbox">
+  <a href = "#" class = "expand">Expand All</a>&#160;&#160;<a href = "#" class = "collapse">Collapse All</a>
   <div class="limboxcontent">
     <xsl:apply-templates>
       <xsl:sort select = "count(child::sources)"/>
@@ -165,14 +169,18 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
 
 <xsl:template match = "muCategories">
   <div class="limbox smalllimbox leftlimbox">
+  <a href = "#" class = "expand">Expand All</a>&#160;&#160;<a href = "#" class = "collapse">Collapse All</a>
   <div class="limboxcontent">
+    <!--<xsl:apply-templates select = "categories"/>-->
     <xsl:apply-templates select = "categories"/>
+
   </div>
   </div>
 </xsl:template>
 
 <xsl:template match = "contentCategories">
   <div class="limbox smalllimbox leftlimbox">
+  <a href = "#" class = "expand">Expand All</a>&#160;&#160;<a href = "#" class = "collapse">Collapse All</a>
   <div class="limboxcontent">
     <xsl:apply-templates select = "categories"/>
   </div>
@@ -182,6 +190,8 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
 
 <xsl:template match = "categories">
     <xsl:for-each select = "category">
+        <xsl:sort select = "count(sources/source)" order = "descending"/>
+        <xsl:sort select = "@name"/>
         <h5><a class="jig-ncbitoggler" href="#"><xsl:value-of select = "@name"/>&#160;&#160;<span class = "count"><xsl:value-of select = "count(sources/source)"/>&#160;<xsl:value-of select = "sourcereleasedocs:countSources(count(sources/source))"/></span></a></h5>
         <div class = "sourcecontainer">
         <table summary = "Table of source in the @name category">
