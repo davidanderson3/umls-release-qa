@@ -39,7 +39,7 @@
             <a href = "sourcerepresentation.html" id  = "sourcerep">Source Representation</a>
           </li>
           <li>
-            <a href = "metarepresentation.html">Metathesaurus Representation</a>
+            <a href = "umlsrepresentation.html">UMLS Representation</a>
           </li>
          </ul>
        </li>
@@ -68,16 +68,8 @@ collaboration in the field of human genetics.</p>
 <h3>Summary of Changes</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)
 <table class = "elements" border = "0" cellspacing = "0">
 </table>
-<p>(1)  New attributes added:</p>
-
-<table><tr><td>LOCUS_GROUP</tr></td>
-<tr><td>MAPPED_MGD_ID (Mouse Genome Databse ID (mapped data))</td></tr>
-<tr><td>PRIMARY_ID</td></tr>     
-</table> 
- 
-<p>(2)  Deprecated relationship:</p>
-<table><tr><td>ACR|SFO/LFO|expanded_form_of|PT  (read right to left)</td></tr>
-</table>
+<p>(1) Source renamed the 'Aliases' and 'Name Aliases' fields to 'Synonyms' and 'Name Synonyms', respectively.</p>
+<p>(2) Values in the 'Enzyme IDs' field no longer have the 'EC' prefix.</p>
 </div>
 
 <div id = "rep_file_summary" class = "rep_block_level_one">
@@ -89,14 +81,13 @@ collaboration in the field of human genetics.</p>
 <h4>Documentation and Reference</h4>
 <table><tr><td>www.genenames.org</td></tr>
 <tr><td>www.hugo-international.org</td></tr>
-<tr><td>www.gene.ucl.ac.uk/nomenclature</td></tr>
 </table>
 <br/>
 
 
 <table class = "elements" border = "0" cellspacing = "0">
 <tr><th>File Name</th><th>Description</th></tr>
-<tr><td  class = "file_file_name">HUGO_2010_AllData_pl.txt</td><td>Complete source data in a text file with tab delimited fields.</td></tr>
+<tr><td  class = "file_file_name">HUGO_2011_AllData_pl.txt</td><td>Complete source data in a text file with tab delimited fields.</td></tr>
 </table>
 <br/>
 
@@ -119,8 +110,8 @@ collaboration in the field of human genetics.</p>
 <tr><td  class = "file_field_name">6</td><td>Locus Group</td><td>Locus Group</td><td>MRSAT.ATN=LOCUS_GROUP</td></tr>
 <tr><td  class = "file_field_name">7</td><td>Previous Symbols</td><td>Symbols previously approved</td><td>MRSAT.ATN=PREV_SYMBOL</td></tr>
 <tr><td  class = "file_field_name">8</td><td>Previous Names</td><td>Gene names previously approved</td><td>MRSAT.ATN=PREV_NAME</td></tr>
-<tr><td  class = "file_field_name">9</td><td>Aliases</td><td>Other symbols used to refer to the gene</td><td>MRCONSO.STR</td></tr>
-<tr><td  class = "file_field_name">10</td><td>Name Aliases</td><td>Other names used to refer to the gene</td><td>MRCONSO.STR</td></tr>
+<tr><td  class = "file_field_name">9</td><td>Synonyms</td><td>Other symbols used to refer to the gene</td><td>MRCONSO.STR</td></tr>
+<tr><td  class = "file_field_name">10</td><td>Name Synonyms</td><td>Other names used to refer to the gene</td><td>MRCONSO.STR</td></tr>
 <tr><td  class = "file_field_name">11</td><td>Chromosome</td><td>Indicates the location of the gene on the chromosome</td><td>MRSAT.ATN=CHROMOSOME</td></tr>
 <tr><td  class = "file_field_name">12</td><td>Date Approved</td><td>Date gene symbol and name were approved</td><td>MRSAT.ATN=DATE_CREATED</td></tr>
 <tr><td  class = "file_field_name">13</td><td>Date Modified</td><td>Date entry was modified</td><td>MRSAT.ATN=DATE_LAST_MODIFIED</td></tr>
@@ -154,16 +145,17 @@ collaboration in the field of human genetics.</p>
 </table>
 
 <p>(1) The following fields can contain multiple values in a comma delimited list: </p>
-Aliases<br/>
 Accession Numbers<br/>
 Enzyme ID<br/>
 Gene Family Name<br/>
-Name Aliases<br/>
+Name Synonyms<br/>
 Previous Names<br/>
 Previous Symbols<br/>
 Pubmed ID<br/>
+RefSeq IDs</br>
 Specialist Database ID<br/>
 Specialist Database Links</br>
+Synonyms<br/>
 <p>(2) HUGO’s mapped data is derived from external sources and is not subject to their checking and curation procedures.</p>
 
 
