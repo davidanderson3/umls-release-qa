@@ -1,0 +1,220 @@
+<!-- begin tabbed navigation area -->
+<div class="section-4"> 
+ <ul id="menu"> 
+       <li id="nav-1"> 
+          <a href="index.html">Synopsis</a> 
+       </li> 
+       <li id="nav-2"> 
+          <a href="mrsab.html">MRSAB.RRF</a> 
+       </li> 
+ 
+       <li id="nav-3"> 
+          <a href="sourcemetastats.html">Statistics and sample data</a> 
+          <ul id="subnav-3"> 
+             <li> 
+                <a href="termtypes.html">Terms and term types</a> 
+             </li> 
+             <li> 
+ 
+                <a href="attributes.html">Attributes</a> 
+ 
+             </li> 
+             <li> 
+                <a href="relationships.html">Relationships</a> 
+             </li> 
+             <li> 
+                <a href="semtypes.html">Semantic Types</a> 
+ 
+             </li> 
+             <li> 
+ 
+                <a href="overlap.html">Source Overlap</a> 
+             </li> 
+          </ul> 
+       </li>
+       <li id = "nav-4">
+       <a href = "representation.html">Representation</a>
+         <ul id = "subnav-4">
+          <li>
+            <a href = "sourcerepresentation.html">Source Representation</a>
+          </li>
+          <li>
+            <a href = "metarepresentation.html" id = "umlsrep">Metathesaurus Representation</a>
+          </li>
+         </ul>
+       </li>
+ </ul>
+ </div>
+<br/><br/><br/>
+<a name = "top"/></a>
+<span class = "nav">Skip to: <a href = "#atoms">Atoms</a>, <a href = "#attributes">Attributes</a>, <a href = "#definitions">Definitions</a>, <a href = "#relationships">Relationships</a>, <a href = "#mappings">Mappings</a></span>
+
+<div id = "general" class = "rep_block_level_one">
+<p><b>VSAB: </b>HUGO2010_05</p>
+
+<div id = "rep_identifiers" class = "rep_block_level_one">
+<h3>Summary of Changes</h3>
+<p>(1)  In the previous release (HUGO2009_04), the value in the 'Approved_Symbol' field had the word 'gene' or 'gene cluster' appended and was assigned the TTY=ACR.  The original value of the field was mapped to the ATN=GENESYMBOL. It was not made into an atom.</p>
+<p>For this release, the original value of the 'Approved_Symbol' was made into an atom and assigned the TTY=ACR while the expanded version was assigned the TTY=MTH_ACR.  An 'SFO/LFO|has_expanded_form' relationship and an SY mergefact was created between the two TTYs.  The mapping of the original value to the ATN=GENESYMBOL was kept and linked to the PT.  PNs were created from the TTY=MTH_ACR.</p>
+</div>
+<div id = "rep_change_summary" class = "rep_block_level_one">
+<h3>Original Files:</h3></p>
+
+<table class = "elements" border = "0" cellspacing = "0">
+<tr><th>File Name</th><th>Description</th></tr>
+<tr><td  class = "file_field_name"><a href = "#file1">HUGO_2010_AllData_pl.txt</a></td><td>Complete source data in a text file with tab delimited fields.</td></tr>
+</table>
+<br/>
+</div>
+
+<div id = "rep_identifers" class = "rep_block_level_one">
+<h3>Identifiers</h3>
+
+<ul>
+<li>CODE:  HGNC ID</li>
+<li>SAUI:  Not applicable</li>
+<li>SCUI:  HGNC ID</li>
+<li>SDUI:  Not applicable</li>
+</ul>
+</p>
+<div id = "rep_termtypes" class = "rep_block_level_two">
+<a name = "termtypes"/></a>
+<h3>Atoms (MRCONSO)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)<br/>
+<table class = "elements" border = "0" cellspacing = "0">
+<tr><th>Term Type</th><th>Description</th><th>Origin</th></tr>
+<tr>
+    <td>ACR</td>
+    <td>Acronym</td>
+    <td>Approved Symbol field</td>
+</tr>
+<tr>
+    <td>MTH_ACR</td>
+    <td>Metathesaurus created acronym.  The word 'gene' or 'gene cluster' was appended to the atom.</td>
+    <td>Approved Symbol field</td>
+</tr>
+<tr>
+    <td>NA</td>
+    <td>Name aliases</td>
+    <td>Name Aliases field</td>
+</tr>
+<tr>
+    <td>PT</td>
+    <td>Preferred name</td>
+    <td>Approved Name field</td>
+</tr>
+<tr>
+    <td>SYN</td>
+    <td>Synonym</td>
+    <td>Aliases field</td>
+</tr>
+</table>
+</div>
+
+<h3>Suppressibility</h3>
+<p>For all term types, suppressibility value 'N' (default value)</p> 
+</div>
+
+<div id = "rep_attributes" class = "rep_block_level_two">
+<a name = "attributes"/></a><br/>
+<h3>Attributes (MRSAT)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)<br/>
+<table class = "elements" border = "0" cellspacing = "0">
+<tr><th>Attribute Name</th><th>Origin</th></tr>
+<tr><td>ACCESSION_NO</td>
+<td>Accession Numbers field</td></tr>
+<tr><td>GENESYMBOL</td>
+<td>Approved Symbol field</td></tr>
+<tr><td>CCDS_ID</td>
+<td>CCDS ID field</td></tr>
+<tr><td>CHROMOSOME</td>
+<td>Chromosome field</td></tr>
+<tr><td>DATE_CREATED</td>
+<td>Date Approved field</td></tr>
+<tr><td>DATE_LAST_MODIFIED</td>
+<td>Date Modified field</td></tr>
+<tr><td>DATE_NAME_CHANGED</td>
+<td>Date Name Changed field</td></tr>
+<tr><td>DATE_SYMBOL_CHANGED</td>
+<td>Date Symbol Changed field</td></tr>
+<tr><td>ENSEMBLGEN_ID</td>
+<td>Ensembl Gene ID field</td></tr>
+<tr><td>MAPPED_ENSEMBL_ID</td>
+<td>Ensembl Gene ID (mapped data supplied by Ensembl) field</td></tr>
+<tr><td>ENTREZGENE_ID</td>
+<td>Entrez Gene ID field</td></tr>
+<tr><td>MAPPED_ENTREZGENE_ID</td>
+<td>Entrez Gene ID (mapped data supplied by NCBI) field</td></tr>
+<tr><td>EZ</td>
+<td>Enzyme ID field</td></tr>
+<tr><td>MAPPED_GDB_ID</td>
+<td>GDB ID (mapped data) field</td></tr>
+<tr><td>GENE_FAM</td>
+<td>Gene Family Name field</td></tr>
+<tr><td>LOCUS_GROUP</td>
+<td>Locus Group field</td></tr>
+<tr><td>LOCUS_SPECIFIC_DB_XR</td>
+<td>Locus Specific Databases field</td></tr>
+<tr><td>LOCUS_TYPE</td>
+<td>Locus Type field</td></tr>
+<tr><td>MGD_ID</td>
+<td>Mouse Genome Database ID field</td></tr>
+<tr><td>MAPPED_MGD_ID</td>
+<td>Mouse Genome Database ID (mapped data supplied by MGI) field</td></tr>
+<tr><td>OMIM_NUMBER</td>
+<td>OMIM ID (mapped data supplied by NCBI) field</td></tr>
+<tr><td>PREV_NAME</td>
+<td>Previous Names field</td></tr>
+<tr><td>PREV_SYMBOL</td>
+<td>Previous Symbols field</td></tr>
+<tr><td>PRIMARY_ID</td>
+<td>Primary ID field</td></tr>
+<tr><td>PMID</td>
+<td>Pubmed ID field</td></tr>
+<tr><td>MAPPED_RGD_ID</td>
+<td>Rat Genome Database ID (mapped data supplied by RGD) field </td></tr>
+<tr><td>RECORD_TYPE</td>
+<td>Record Type field</td></tr>
+<tr><td>REFSEQ_ID</td>
+<td>RefSeq ID field</td></tr>
+<tr><td>MAPPED_REFSEQ_ID</td>
+<td>RefSeq ID (mapped data supplied by NCBI) field</td></tr>
+<tr><td>SECONDARY_ID</td>
+<td>Secondary ID field</td></tr>
+<tr><td>DB_XR_ID</td>
+<td>Specialist Database ID field</td></tr>
+<tr><td>DB_XR</td>
+<td>Specialist Database Links field</td></tr>
+<tr><td>UCSC_ID</td>
+<td>UCSC ID (mapped data supplied by UCSC) field</td></tr>
+<tr><td>SWP</td>
+<td>UniProt ID (mapped data supplied by UniProt) field</td></tr>
+<tr><td>VEGA_ID</td>
+<td>VEGA ID field</td></tr>
+</table>
+</div>
+
+<div id = "rep_relationships" class = "rep_block_level_two">
+<a name = "relationships"/></a><br/>
+<h3>Relationships (MRREL)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)<br/>
+<table class = "elements" border = "10" cellspacing = "0">
+<tr><th>Source</th><th>Relationship</th><th>Relationship Label/Inverse Relationship Label</th><th>Description</th></tr>
+<tr><td>HUGO</td><td>CHD<br/>PAR<br/>SIB</td>
+<td>(no rela)</td><td valign="top">There are no CONTEXTS.</td></tr>
+<tr><td>HUGO</td><td>SFO/LFO</td>
+<td>has_expanded_form/expanded_form_of</td><td valign="top">Connects the Approved Symbol (TTY=ACR) with its expanded form (TTY=MTH_ACR).</td></tr>
+</tr>
+<tr><td>HUGO</td><td>SFO/LFO</td>
+<td>has_alias/alias_of</td><td valign="top">Connects the Approved Name (TTY=PT) with its Alias (TTY=SYN).</td></tr>
+</tr>
+</table>
+</div>
+<div id = "mappings" class = "rep_block_level_two">
+<a name = "mappings"/></a><br/>
+<h3>Definitions (MRDEF)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)<br/>
+<p>There are no definitions.</p> 
+</div>
+<div id = "mappings" class = "rep_block_level_two">
+<a name = "mappings"/></a><br/>
+<h3>Mappings (MRMAP)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)<br/>
+<p>There are no mappings present.</p> 
+</div>
+</div>
