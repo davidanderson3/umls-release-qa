@@ -1,0 +1,111 @@
+.content-footnote{
+ 
+float:left;
+width:100%;
+}
+ 
+ 
+h4{
+color:black !important;
+ 
+}
+ 
+.jig-tabs{
+   
+   
+border:none;    
+ 
+}
+ 
+.jig tabs img {
+float:left;
+ 
+}
+ 
+.jig-tabs li a {
+ 
+text-decoration:none !important;
+outline:none;
+}
+ 
+.jig-tabs ul {
+    
+background:none;
+border-top:none;
+border-left:none;
+border-right:none;
+height:2.5em;
+width:100%;
+    
+}
+ 
+ 
+.ui-tabs-selected{
+ 
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#78a22f', endColorstr='#e7eeeb'); /* for IE 5.5 - 7*/
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#78a22f', endColorstr='#e7eeeb')" !important; /* for IE 8*/
+background: -moz-linear-gradient(bottom, #78a22f, #e7eeeb)!important; /* For Mozilla/Gecko (Firefox) */
+background: -webkit-gradient(linear, left top, left bottom, from(#78a22f), to(#e7eeeb)) !important; /* For WebKit (Safari, Google Chrome) */    
+ 
+ 
+}
+ 
+.limbox{
+ 
+border:none;
+position:relative;
+left:-2%;
+ 
+ 
+}
+ 
+.limboxcontent h5{
+ 
+position:relative;
+ 
+}
+ 
+.count{
+ 
+font-size:.8em;
+color:#7a7a7a;
+font-weight:bold;
+position:absolute;
+right:1%;
+ 
+}
+ 
+ 
+ 
+ 
+h5 a {
+text-decoration:none !important;
+outline:none;
+ 
+}
+ 
+ 
+.sourcecontainer table{
+ 
+width:100%;
+border:none!important;
+ 
+}
+ 
+.sourcecontainer table th{
+ 
+text-align:left;
+border:none!important;
+width:100%;
+ 
+}
+ 
+.sourcecontainer table td{
+border:none!important;
+ 
+}
+ 
+.expand, .collapse{
+font-size: 80%;
+ 
+}
