@@ -4,17 +4,22 @@
  
  
 <!--RE-ARRANGE STYLE AND SCRIPTS TO AVOID FLASH OF UNSTYLED CONTENT IN IE;
-All styles need to preceed the scripts, and the NCBI-JIG SCRIPT NEEDS TO BE THE FIRST LISTED SCRIPT.
-The <h5><a></a> element needs to have class="JIG-NCBITOGGLER UI-NCBITOGGLER" rather than the current class="jig-ncbitoggler"
-The <div> element (following each <h5><a></a> element) needs to have class="UI-NCBI-TOGGLER-SLAVE"; currently the slave <div>s have no ncbitoggler class.-->
- 
+All styles need to preceed the scripts (DONE), and the NCBI-JIG SCRIPT NEEDS TO BE THE FIRST LISTED SCRIPT (DONE).
+The <h5><a></a> element needs to have class="jig-ncbitoggler ui-ncbitoggler" (DONE) rather than the current class="jig-ncbitoggler";
+The <div> element (following each <h5><a></a> element) needs to have class="ui-ncbi-toggler-slave" (DONE);
+The slave <div>s had no ncbitoggler class.
+The .xsl file may need modifications as well-->
+
+
+
 <link href="/styles/reset.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/styles/master.css" rel="stylesheet" type="text/css" media="screen" />
 <!--here is re-arranged style section-->
 <link href="http://www.ncbi.nlm.nih.gov/portal/portal3rc.fcgi/1197446/css/72892/63266/66675/3316/31862/33955/30039/3251/1235402/12930/67324/3499/14534.css" rel="stylesheet" type="text/css" />
- 
+<link href="../umls_sourcerelease_index.css" rel="stylesheet" type="text/css" /> <!-- new external css file created from this file's internal css -->
+
 <style type="text/css"> 
-<!-- consider creating separate .css file for the internal styles included below -->
+<!-- consider creating separate .css file for the internal styles included below (mmm)-->
  
 .content-footnote{
  
@@ -354,125 +359,45 @@ $(document).ready(function() {
  
  
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
  <!-- Begin Div Header Template -->
       <!--Start Branding Bar-->
  
 <div id="barbranding"><h3><span>Unified Medical Language System<small><sup>&reg;</sup></small> (UMLS<small><sup>&reg;</sup></small>)</span></h3><div class="breadcrumb-brand umls-div"><p><span>
- 
- 
-   
+     
 <a href="/research/umls/quickstart.html" title="UMLS Quick Start Guide"><strong>UMLS Quick Start Guide</strong></a> 
- 
-   
-   
+     
  | <a href="/research/umls/faq_main.html" title="Unified Medical Language System FAQs"><strong>FAQs</strong></a> 
- 
-   
    
  | <a href="/research/umls/support.html" title="Unified Medical Language System Support"><strong>Customer Support</strong></a> 
- 
-   
    
  | <a href="/research/umls/sitemap.html" title="Unified Medical Language System Site Map"><strong>UMLS Site Map</strong></a> 
- 
-   
-   
+  
 </span>
- 
- 
  </p>
  </div>
  </div>
+ 
  <!--Start BreadCrumb-->
  <div id="breadcrumb-div">
  <p>
  <a href="/index.html" title="National Library of Medicine home page">Home</a>
- 
- 
- 
-   
+    
  &gt; <a href="/biomedical.html" title="Biomedical Research &amp; Informatics"><strong>Biomedical Research &amp; Informatics</strong></a>
- 
- 
-   
+    
  &gt; <a href="/research/umls/" title="Unified Medical Language System Home"><strong>UMLS</strong></a>
- 
- 
- 
- &gt; <a href="index.html" title=""><strong>UMLS Source Release Documentation</strong></a> 
   
- 
+ &gt; <a href="index.html" title=""><strong>UMLS Source Release Documentation</strong></a>  
  </p>
  </div>
-  <!--End BreadCrumb-->
-  
-  
- 
- 
+  <!--End BreadCrumb--> 
 <!-- End Div Header Template -->
  
  
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
 <a name="skip" id="skipnav"></a>
-<div id="body">
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+<div id="body"> 
  
 <h1>UMLS Source Release Documentation</h1>
- 
- 
- 
- 
- 
- 
- 
-     
- 
- 
- 
  
 <!--
 <div id="source-doc-archive-wrapper">
@@ -541,10 +466,10 @@ Source Documentation Archives:</b></p>
             <a href="#" class="expand">Expand All</a>&nbsp;&nbsp;<a href="#" class="collapse">Collapse All</a>
             <div class="limboxcontent">
                <h5>
-                  <a class="jig-ncbitoggler" href="#">A&nbsp;&nbsp;<span class="count">4&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">A&nbsp;&nbsp;<span class="count">4&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of sources from A">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -579,10 +504,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">B&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">B&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of sources from B">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -596,10 +521,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">C&nbsp;&nbsp;<span class="count">9&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">C&nbsp;&nbsp;<span class="count">9&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of sources from C">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -669,10 +594,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">D&nbsp;&nbsp;<span class="count">6&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">D&nbsp;&nbsp;<span class="count">6&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of sources from D">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -721,10 +646,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">F&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">F&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of sources from F">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -738,10 +663,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">G&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">G&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of sources from G">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -762,10 +687,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">H&nbsp;&nbsp;<span class="count">8&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">H&nbsp;&nbsp;<span class="count">8&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of sources from H">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -828,10 +753,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">I&nbsp;&nbsp;<span class="count">30&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">I&nbsp;&nbsp;<span class="count">30&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of sources from I">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -1048,10 +973,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">J&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">J&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of sources from J">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -1065,10 +990,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">K&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">K&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of sources from K">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -1082,10 +1007,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">L&nbsp;&nbsp;<span class="count">11&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">L&nbsp;&nbsp;<span class="count">11&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of sources from L">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -1169,10 +1094,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">M&nbsp;&nbsp;<span class="count">45&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">M&nbsp;&nbsp;<span class="count">45&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of sources from M">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -1494,10 +1419,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">N&nbsp;&nbsp;<span class="count">10&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">N&nbsp;&nbsp;<span class="count">10&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of sources from N">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -1574,10 +1499,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">O&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">O&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of sources from O">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -1598,10 +1523,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">P&nbsp;&nbsp;<span class="count">5&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">P&nbsp;&nbsp;<span class="count">5&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of sources from P">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -1643,10 +1568,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Q&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Q&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of sources from Q">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -1660,10 +1585,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">R&nbsp;&nbsp;<span class="count">6&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">R&nbsp;&nbsp;<span class="count">6&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of sources from R">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -1712,10 +1637,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">S&nbsp;&nbsp;<span class="count">6&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">S&nbsp;&nbsp;<span class="count">6&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of sources from S">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -1764,10 +1689,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">T&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">T&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of sources from T">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -1781,10 +1706,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">U&nbsp;&nbsp;<span class="count">4&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">U&nbsp;&nbsp;<span class="count">4&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of sources from U">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -1819,10 +1744,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">V&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">V&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of sources from V">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -1836,10 +1761,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">W&nbsp;&nbsp;<span class="count">5&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">W&nbsp;&nbsp;<span class="count">5&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of sources from W">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -1889,15 +1814,15 @@ Source Documentation Archives:</b></p>
             <a href="#" class="expand">Expand All</a>&nbsp;&nbsp;<a href="#" class="collapse">Collapse All</a>
             <div class="limboxcontent">
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Category 0&nbsp;&nbsp;<span class="count">64 sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Category 0&nbsp;&nbsp;<span class="count">64 sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">A&nbsp;&nbsp;<span class="count">3&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">A&nbsp;&nbsp;<span class="count">3&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from A">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -1925,10 +1850,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">C&nbsp;&nbsp;<span class="count">5&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">C&nbsp;&nbsp;<span class="count">5&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from C">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -1970,10 +1895,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">D&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">D&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from D">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -1987,10 +1912,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">F&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">F&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from F">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -2004,10 +1929,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">G&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">G&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from G">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -2021,10 +1946,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">H&nbsp;&nbsp;<span class="count">4&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">H&nbsp;&nbsp;<span class="count">4&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from H">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -2059,10 +1984,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">I&nbsp;&nbsp;<span class="count">16&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">I&nbsp;&nbsp;<span class="count">16&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from I">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -2181,10 +2106,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">L&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">L&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from L">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -2205,10 +2130,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">M&nbsp;&nbsp;<span class="count">15&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">M&nbsp;&nbsp;<span class="count">15&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from M">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -2320,10 +2245,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">N&nbsp;&nbsp;<span class="count">5&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">N&nbsp;&nbsp;<span class="count">5&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from N">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -2365,10 +2290,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">O&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">O&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from O">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -2382,10 +2307,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">P&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">P&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from P">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -2399,10 +2324,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">Q&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Q&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from Q">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -2416,10 +2341,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">R&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">R&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from R">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -2440,10 +2365,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">S&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">S&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from S">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -2464,10 +2389,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">T&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">T&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from T">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -2481,10 +2406,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">U&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">U&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from U">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -2505,10 +2430,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">V&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">V&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from V">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -2523,10 +2448,10 @@ Source Documentation Archives:</b></p>
                   </div>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Category 1&nbsp;&nbsp;<span class="count">8 sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Category 1&nbsp;&nbsp;<span class="count">8 sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of restriction Category 1 sources">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -2589,10 +2514,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Category 2&nbsp;&nbsp;<span class="count">7 sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Category 2&nbsp;&nbsp;<span class="count">7 sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of restriction Category 2 sources">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -2648,15 +2573,15 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Category 3&nbsp;&nbsp;<span class="count">72 sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Category 3&nbsp;&nbsp;<span class="count">72 sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">A&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">A&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from A">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -2670,10 +2595,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">C&nbsp;&nbsp;<span class="count">3&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">C&nbsp;&nbsp;<span class="count">3&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from C">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -2701,10 +2626,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">D&nbsp;&nbsp;<span class="count">3&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">D&nbsp;&nbsp;<span class="count">3&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from D">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -2732,10 +2657,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">G&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">G&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from G">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -2749,10 +2674,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">H&nbsp;&nbsp;<span class="count">3&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">H&nbsp;&nbsp;<span class="count">3&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from H">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -2780,10 +2705,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">I&nbsp;&nbsp;<span class="count">11&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">I&nbsp;&nbsp;<span class="count">11&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from I">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -2867,10 +2792,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">K&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">K&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from K">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -2884,10 +2809,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">L&nbsp;&nbsp;<span class="count">6&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">L&nbsp;&nbsp;<span class="count">6&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from L">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -2936,10 +2861,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">M&nbsp;&nbsp;<span class="count">29&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">M&nbsp;&nbsp;<span class="count">29&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from M">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -3149,10 +3074,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">N&nbsp;&nbsp;<span class="count">5&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">N&nbsp;&nbsp;<span class="count">5&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from N">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -3194,10 +3119,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">P&nbsp;&nbsp;<span class="count">4&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">P&nbsp;&nbsp;<span class="count">4&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from P">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -3232,10 +3157,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">R&nbsp;&nbsp;<span class="count">4&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">R&nbsp;&nbsp;<span class="count">4&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from R">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -3270,10 +3195,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">U&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">U&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from U">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -3288,10 +3213,10 @@ Source Documentation Archives:</b></p>
                   </div>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Category 4&nbsp;&nbsp;<span class="count">5 sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Category 4&nbsp;&nbsp;<span class="count">5 sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of restriction Category 4 sources">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -3333,10 +3258,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Category 9&nbsp;&nbsp;<span class="count">4 sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Category 9&nbsp;&nbsp;<span class="count">4 sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of restriction Category 9 sources">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -3384,10 +3309,10 @@ Source Documentation Archives:</b></p>
             <a href="#" class="expand">Expand All</a>&nbsp;&nbsp;<a href="#" class="collapse">Collapse All</a>
             <div class="limboxcontent">
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Medications&nbsp;&nbsp;<span class="count">12&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Medications&nbsp;&nbsp;<span class="count">12&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table summary="Table of source in the @name category">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -3478,10 +3403,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Procedures&nbsp;&nbsp;<span class="count">6&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Procedures&nbsp;&nbsp;<span class="count">6&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table summary="Table of source in the @name category">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -3530,10 +3455,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Problems&nbsp;&nbsp;<span class="count">4&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Problems&nbsp;&nbsp;<span class="count">4&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table summary="Table of source in the @name category">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -3568,10 +3493,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Laboratory Tests and Procedures&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Laboratory Tests and Procedures&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table summary="Table of source in the @name category">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -3598,10 +3523,10 @@ Source Documentation Archives:</b></p>
             <a href="#" class="expand">Expand All</a>&nbsp;&nbsp;<a href="#" class="collapse">Collapse All</a>
             <div class="limboxcontent">
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Drugs [Pharmaceutical Preparations]&nbsp;&nbsp;<span class="count">12&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Drugs [Pharmaceutical Preparations]&nbsp;&nbsp;<span class="count">12&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table summary="Table of source in the @name category">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -3692,10 +3617,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Disease&nbsp;&nbsp;<span class="count">8&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Disease&nbsp;&nbsp;<span class="count">8&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table summary="Table of source in the @name category">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -3758,10 +3683,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Procedures&nbsp;&nbsp;<span class="count">8&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Procedures&nbsp;&nbsp;<span class="count">8&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table summary="Table of source in the @name category">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -3824,10 +3749,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Insurance Claim Reporting&nbsp;&nbsp;<span class="count">6&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Insurance Claim Reporting&nbsp;&nbsp;<span class="count">6&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table summary="Table of source in the @name category">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -3876,10 +3801,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Diagnosis&nbsp;&nbsp;<span class="count">5&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Diagnosis&nbsp;&nbsp;<span class="count">5&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table summary="Table of source in the @name category">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -3921,10 +3846,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Genetics&nbsp;&nbsp;<span class="count">4&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Genetics&nbsp;&nbsp;<span class="count">4&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table summary="Table of source in the @name category">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -3959,10 +3884,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Laboratory Techniques and Procedures&nbsp;&nbsp;<span class="count">3&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Laboratory Techniques and Procedures&nbsp;&nbsp;<span class="count">3&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table summary="Table of source in the @name category">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -3990,10 +3915,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Consumer Health Information&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Consumer Health Information&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table summary="Table of source in the @name category">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -4014,10 +3939,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Disabled Persons&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Disabled Persons&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table summary="Table of source in the @name category">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -4038,10 +3963,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Medical Devices&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Medical Devices&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table summary="Table of source in the @name category">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -4062,10 +3987,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Nursing&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Nursing&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table summary="Table of source in the @name category">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -4086,10 +4011,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Adverse Drug Reaction Reporting Systems&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Adverse Drug Reaction Reporting Systems&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table summary="Table of source in the @name category">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -4103,10 +4028,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Anatomy&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Anatomy&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table summary="Table of source in the @name category">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -4120,10 +4045,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Complementary Therapies&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Complementary Therapies&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table summary="Table of source in the @name category">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -4137,10 +4062,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Dentistry&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Dentistry&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table summary="Table of source in the @name category">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -4154,10 +4079,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Phylogeny&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Phylogeny&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table summary="Table of source in the @name category">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -4203,15 +4128,15 @@ Source Documentation Archives:</b></p>
         
         
                <h5>
-                  <a class="jig-ncbitoggler" href="#">English&nbsp;&nbsp;<span class="count">105&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">English&nbsp;&nbsp;<span class="count">105&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">A&nbsp;&nbsp;<span class="count">4&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">A&nbsp;&nbsp;<span class="count">4&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from A">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -4246,10 +4171,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">B&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">B&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from B">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -4263,10 +4188,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">C&nbsp;&nbsp;<span class="count">8&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">C&nbsp;&nbsp;<span class="count">8&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from C">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -4329,10 +4254,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">D&nbsp;&nbsp;<span class="count">4&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">D&nbsp;&nbsp;<span class="count">4&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from D">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -4367,10 +4292,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">F&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">F&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from F">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -4384,10 +4309,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">G&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">G&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from G">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -4408,10 +4333,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">H&nbsp;&nbsp;<span class="count">7&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">H&nbsp;&nbsp;<span class="count">7&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from H">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -4467,10 +4392,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">I&nbsp;&nbsp;<span class="count">14&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">I&nbsp;&nbsp;<span class="count">14&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from I">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -4575,10 +4500,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">J&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">J&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from J">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -4592,10 +4517,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">L&nbsp;&nbsp;<span class="count">11&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">L&nbsp;&nbsp;<span class="count">11&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from L">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -4679,10 +4604,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">M&nbsp;&nbsp;<span class="count">19&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">M&nbsp;&nbsp;<span class="count">19&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from M">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -4822,10 +4747,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">N&nbsp;&nbsp;<span class="count">8&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">N&nbsp;&nbsp;<span class="count">8&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from N">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -4888,10 +4813,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">O&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">O&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from O">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -4912,10 +4837,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">P&nbsp;&nbsp;<span class="count">5&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">P&nbsp;&nbsp;<span class="count">5&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from P">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -4957,10 +4882,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">Q&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Q&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from Q">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -4974,10 +4899,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">R&nbsp;&nbsp;<span class="count">6&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">R&nbsp;&nbsp;<span class="count">6&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from R">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -5026,10 +4951,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">S&nbsp;&nbsp;<span class="count">5&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">S&nbsp;&nbsp;<span class="count">5&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from S">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -5071,10 +4996,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">U&nbsp;&nbsp;<span class="count">4&nbsp;sources</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">U&nbsp;&nbsp;<span class="count">4&nbsp;sources</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from U">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -5109,10 +5034,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">V&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">V&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from V">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -5126,10 +5051,10 @@ Source Documentation Archives:</b></p>
                      </table>
                   </div>
                   <h5>
-                     <a class="jig-ncbitoggler" href="#">W&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                     <a class="jig-ncbitoggler ui-ncbitoggler" href="#">W&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                      </a>
                   </h5>
-                  <div class="sourcecontainer">
+                  <div class="sourcecontainer ui-ncbi-toggler-slave">
                      <table border="0" summary="Table of sources from W">
                         <th scope="col">Source</th>
                         <th>Last Updated</th>
@@ -5144,10 +5069,10 @@ Source Documentation Archives:</b></p>
                   </div>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Basque&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Basque&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of Basque language sources">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -5161,10 +5086,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Czech&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Czech&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of Czech language sources">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -5185,10 +5110,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Danish&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Danish&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of Danish language sources">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -5202,10 +5127,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">French&nbsp;&nbsp;<span class="count">5&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">French&nbsp;&nbsp;<span class="count">5&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of French language sources">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -5247,10 +5172,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">German&nbsp;&nbsp;<span class="count">6&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">German&nbsp;&nbsp;<span class="count">6&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of German language sources">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -5299,10 +5224,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Hebrew&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Hebrew&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of Hebrew language sources">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -5316,10 +5241,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Hungarian&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Hungarian&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of Hungarian language sources">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -5333,10 +5258,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Italian&nbsp;&nbsp;<span class="count">4&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Italian&nbsp;&nbsp;<span class="count">4&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of Italian language sources">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -5371,10 +5296,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Japanese&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Japanese&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of Japanese language sources">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -5395,10 +5320,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Korean&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Korean&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of Korean language sources">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -5419,10 +5344,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Latvian&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Latvian&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of Latvian language sources">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -5436,10 +5361,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Norwegian&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Norwegian&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of Norwegian language sources">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -5453,10 +5378,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Polish&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Polish&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of Polish language sources">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -5470,10 +5395,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Portuguese&nbsp;&nbsp;<span class="count">4&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Portuguese&nbsp;&nbsp;<span class="count">4&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of Portuguese language sources">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -5508,10 +5433,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Russian&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Russian&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of Russian language sources">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -5525,10 +5450,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Serbo-Croatian&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Serbo-Croatian&nbsp;&nbsp;<span class="count">1&nbsp;source</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of Serbo-Croatian language sources">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -5542,10 +5467,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Spanish&nbsp;&nbsp;<span class="count">6&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Spanish&nbsp;&nbsp;<span class="count">6&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of Spanish language sources">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
@@ -5594,10 +5519,10 @@ Source Documentation Archives:</b></p>
                   </table>
                </div>
                <h5>
-                  <a class="jig-ncbitoggler" href="#">Swedish&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
+                  <a class="jig-ncbitoggler ui-ncbitoggler" href="#">Swedish&nbsp;&nbsp;<span class="count">2&nbsp;sources</span>
                   </a>
                </h5>
-               <div class="sourcecontainer">
+               <div class="sourcecontainer ui-ncbi-toggler-slave">
                   <table border="0" summary="Table of Swedish language sources">
                      <th scope="col">Source</th>
                      <th>Last Updated</th>
