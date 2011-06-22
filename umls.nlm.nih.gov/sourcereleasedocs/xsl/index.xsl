@@ -85,10 +85,10 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
 
 <xsl:template match = "letter">
   <xsl:if test = "count(sources/source) gt 0">
-  <h5><a class="jig-ncbitoggler ui-ncbitoggler" href="#"><xsl:value-of select = "@group"/>&#160;&#160;<span class = "count"><xsl:value-of select = "count(sources/source)"/>&#160;<xsl:value-of select = "sourcereleasedocs:countSources(count(sources/source))"/></span></a></h5>
-  <div class = "sourcecontainer ui-ncbi-toggler-slave">
+  <h5><a class="jig-ncbitoggler" href="#"><xsl:value-of select = "@group"/>&#160;&#160;<span class = "count"><xsl:value-of select = "count(sources/source)"/>&#160;<xsl:value-of select = "sourcereleasedocs:countSources(count(sources/source))"/></span></a></h5>
+  <div class = "sourcecontainer">
   <table border = "0" summary = "Table of sources from {@group}">
-        <th scope = "col">Source</th><th>Last Updated</th>
+        <tr><th scope = "col">Source</th><th>Last Updated</th></tr>
             <xsl:apply-templates select = "sources"/>
   </table>
   </div>
@@ -110,16 +110,16 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
 <xsl:template match = "restriction">
     <xsl:choose>
     <xsl:when test = "child::letters">
-    <h5><a class="jig-ncbitoggler ui-ncbitoggler" href="#"><xsl:value-of select = "@level"/>&#160;&#160;<span class = "count"><xsl:value-of select = "count(letters/letter/sources/source)"/> sources</span></a></h5>
-    <div class = "sourcecontainer ui-ncbi-toggler-slave">
+    <h5><a class="jig-ncbitoggler" href="#"><xsl:value-of select = "@level"/>&#160;&#160;<span class = "count"><xsl:value-of select = "count(letters/letter/sources/source)"/> sources</span></a></h5>
+    <div class = "sourcecontainer">
     <xsl:apply-templates select = "letters/letter"/>
     </div>
   </xsl:when>
   <xsl:otherwise>
-  <h5><a class="jig-ncbitoggler ui-ncbitoggler" href="#"><xsl:value-of select = "@level"/>&#160;&#160;<span class = "count"><xsl:value-of select = "count(sources/source)"/> sources</span></a></h5>
-  <div class = "sourcecontainer ui-ncbi-toggler-slave">
+  <h5><a class="jig-ncbitoggler" href="#"><xsl:value-of select = "@level"/>&#160;&#160;<span class = "count"><xsl:value-of select = "count(sources/source)"/> sources</span></a></h5>
+  <div class = "sourcecontainer">
     <table border = "0" summary = "Table of restriction {@level} sources">
-        <th scope = "col">Source</th><th>Last Updated</th>
+        <tr><th scope = "col">Source</th><th>Last Updated</th></tr>
             <xsl:apply-templates select = "sources"/>
     </table>
   </div>
@@ -149,16 +149,16 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
     
 <xsl:choose>
    <xsl:when test = "child::letters">
-    <h5><a class="jig-ncbitoggler ui-ncbitoggler" href="#"><xsl:value-of select = "@type"/>&#160;&#160;<span class = "count"><xsl:value-of select = "count(letters/letter/sources/source)"/>&#160;<xsl:value-of select = "sourcereleasedocs:countSources(count(letters/letter/sources/source))"/></span></a></h5>
-    <div class = "sourcecontainer ui-ncbi-toggler-slave">
+    <h5><a class="jig-ncbitoggler" href="#"><xsl:value-of select = "@type"/>&#160;&#160;<span class = "count"><xsl:value-of select = "count(letters/letter/sources/source)"/>&#160;<xsl:value-of select = "sourcereleasedocs:countSources(count(letters/letter/sources/source))"/></span></a></h5>
+    <div class = "sourcecontainer">
     <xsl:apply-templates select = "letters/letter"/>
     </div>
   </xsl:when>
   <xsl:otherwise>
-  <h5><a class="jig-ncbitoggler ui-ncbitoggler" href="#"><xsl:value-of select = "@type"/>&#160;&#160;<span class = "count"><xsl:value-of select = "count(sources/source)"/>&#160;<xsl:value-of select = "sourcereleasedocs:countSources(count(sources/source))"/></span></a></h5>
-  <div class = "sourcecontainer ui-ncbi-toggler-slave">
+  <h5><a class="jig-ncbitoggler" href="#"><xsl:value-of select = "@type"/>&#160;&#160;<span class = "count"><xsl:value-of select = "count(sources/source)"/>&#160;<xsl:value-of select = "sourcereleasedocs:countSources(count(sources/source))"/></span></a></h5>
+  <div class = "sourcecontainer">
     <table border = "0" summary = "Table of {@type} language sources">
-        <th scope = "col">Source</th><th>Last Updated</th>
+        <tr><th scope = "col">Source</th><th>Last Updated</th></tr>
             <xsl:apply-templates select = "sources"/>
     </table>
   </div>
@@ -192,10 +192,10 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
     <xsl:for-each select = "category">
         <xsl:sort select = "count(sources/source)" order = "descending"/>
         <xsl:sort select = "@name"/>
-        <h5><a class="jig-ncbitoggler ui-ncbitoggler" href="#"><xsl:value-of select = "@name"/>&#160;&#160;<span class = "count"><xsl:value-of select = "count(sources/source)"/>&#160;<xsl:value-of select = "sourcereleasedocs:countSources(count(sources/source))"/></span></a></h5>
-        <div class = "sourcecontainer ui-ncbi-toggler-slave">
+        <h5><a class="jig-ncbitoggler" href="#"><xsl:value-of select = "@name"/>&#160;&#160;<span class = "count"><xsl:value-of select = "count(sources/source)"/>&#160;<xsl:value-of select = "sourcereleasedocs:countSources(count(sources/source))"/></span></a></h5>
+        <div class = "sourcecontainer">
         <table summary = "Table of source in the @name category">
-        <th scope = "col">Source</th><th>Last Updated</th>
+        <tr><th scope = "col">Source</th><th>Last Updated</th></tr>
             <xsl:apply-templates select = "sources"/>
         </table>
         </div>  
