@@ -28,7 +28,7 @@ $dbh = DBI->connect("dbi:Oracle:$db", "$user", "$password") or die "Can't connec
 
 #instantiate xml
 chdir $rsab;
-my $output = new IO::File(">".$vsab."_overlapsamples.xml");
+my $output = new IO::File("overlap.xml");
 my $writer = new XML::Writer(OUTPUT => $output,DATA_MODE => 'true',DATA_INDENT => 4);
 #$writer->xmlDecl($enc);
 

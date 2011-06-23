@@ -23,7 +23,7 @@ chop($password);
 # open connection
 $dbh = DBI->connect("dbi:Oracle:$db", "$user", "$password") or die "Can't connect to Oracle database: $DBI::errstr\n";
 chdir $rsab;
-my $output = new IO::File(">".$vsab."_mrsab.xml");
+my $output = new IO::File("mrsab.xml");
 $writer = new XML::Writer(OUTPUT => $output,DATA_MODE => 'true',DATA_INDENT => 4);
 $writer->xmlDecl("utf-8");
 $writer->startTag("document","vsab"=>$vsab);

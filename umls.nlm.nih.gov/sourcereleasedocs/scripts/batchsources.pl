@@ -1,12 +1,22 @@
 #!/site/bin/perl5
 use IO::File;
 use Getopt::Std;
+use Cwd;
 
 getopts("i:r:");
 $input = $opt_i || die "Please enter a list of sources to be processeed\n";
 $release = $opt_r || die "Please enter Meta release\n";
 @vsabs;
+$homeDir = $ENV{'HOME'};
+$currentDir = getcwd;
 
+print qq{$homeDir};
+print qq{$currentDir};
+
+if ($currentDir != $homeDir) {
+	
+	die "please run this script from your home directory";
+}
 
 %scripts = (
 	"getTermTypes.pl"=>{

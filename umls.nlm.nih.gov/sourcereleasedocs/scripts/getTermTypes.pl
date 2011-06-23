@@ -29,7 +29,7 @@ $dbh = DBI->connect("dbi:Oracle:$db", "$user", "$password") or die "Can't connec
 
 #instantiate xml
 chdir $rsab;
-my $output = new IO::File(">".$vsab."_ttysamples.xml");
+my $output = new IO::File("termtypes.xml");
 my $writer = new XML::Writer(OUTPUT => $output,DATA_MODE => 'true',DATA_INDENT => 4,ENCODING=>$enc);
 #$writer->xmlDecl($enc);
 

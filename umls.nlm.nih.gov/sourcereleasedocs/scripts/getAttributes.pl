@@ -28,7 +28,7 @@ $indexes = 4;
 
 #instantiate xml
 chdir $rsab;
-my $output = new IO::File(">".$vsab."_atnsamples.xml");
+my $output = new IO::File("attributes.xml");
 my $writer = new XML::Writer(OUTPUT => $output,DATA_MODE => 'true',DATA_INDENT => 4,ENCODING=>$enc);
 #$writer->xmlDecl($enc);
 
