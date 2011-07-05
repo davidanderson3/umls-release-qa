@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/share_nfs/perl/5.8.6/bin/perl
 use XML::Writer;
 use Getopt::Std;
 use IO::File;
