@@ -1,0 +1,673 @@
+<document vsab="MDRITA13_1" samples="Term Types">
+    <samples>
+        <labels>
+            <label type="metalabel">Term Type</label>
+            <label type="definition">Description</label>
+            <label type="count">Count (MRCONSO.RRF)</label>
+        </labels>
+        <sample id="LT" samplename="LT" definition="Lower Level Term" count="59589">
+            <row type="standard">
+                <field type="CUI">C0266587</field>
+                <field type="AUI">A10214815</field>
+                <field type="LUI">L5977516</field>
+                <field type="SUI">S6859945</field>
+                <field type="SDUI">10002633</field>
+                <field type="CODE">10002633</field>
+                <field type="STR">Anomalia congenita dell'orbita</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0854561</field>
+                <field type="AUI">A10220029</field>
+                <field type="LUI">L5981025</field>
+                <field type="SUI">S6863455</field>
+                <field type="SDUI">10006087</field>
+                <field type="CODE">10006087</field>
+                <field type="STR">Brachiterapia pancreatica</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0423226</field>
+                <field type="AUI">A10264231</field>
+                <field type="LUI">L6011892</field>
+                <field type="SUI">S6894321</field>
+                <field type="SDUI">10011040</field>
+                <field type="CODE">10011040</field>
+                <field type="STR">Pigmentazione corneale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0854541</field>
+                <field type="AUI">A10268517</field>
+                <field type="LUI">L6014844</field>
+                <field type="SUI">S6897273</field>
+                <field type="SDUI">10014437</field>
+                <field type="CODE">10014437</field>
+                <field type="STR">Radioterapia della mammella con elettroni</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0854542</field>
+                <field type="AUI">A10268405</field>
+                <field type="LUI">L6014772</field>
+                <field type="SUI">S6897201</field>
+                <field type="SDUI">10017677</field>
+                <field type="CODE">10017677</field>
+                <field type="STR">Radioterapia con raggi gamma della mammella</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0400968</field>
+                <field type="AUI">A10270291</field>
+                <field type="LUI">L6016094</field>
+                <field type="SUI">S6898524</field>
+                <field type="SDUI">10024715</field>
+                <field type="CODE">10024715</field>
+                <field type="STR">Rigetto di fegato trapiantato</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0553794</field>
+                <field type="AUI">A10207943</field>
+                <field type="LUI">L1539435</field>
+                <field type="SUI">S1835344</field>
+                <field type="SDUI">10024999</field>
+                <field type="CODE">10024999</field>
+                <field type="STR">Puntura lombare</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0205721</field>
+                <field type="AUI">A10247000</field>
+                <field type="LUI">L5999764</field>
+                <field type="SUI">S6882194</field>
+                <field type="SDUI">10029803</field>
+                <field type="CODE">10029803</field>
+                <field type="STR">Infezione nosocomiale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0854660</field>
+                <field type="AUI">A10268383</field>
+                <field type="LUI">L6014761</field>
+                <field type="SUI">S6897190</field>
+                <field type="SDUI">10034951</field>
+                <field type="CODE">10034951</field>
+                <field type="STR">Radioterapia con fotoni di orecchio, naso o gola</field>
+            </row>
+        </sample>
+        <sample id="PT" samplename="PT" definition="Designated preferred name" count="18919">
+            <row type="standard">
+                <field type="CUI">C0853632</field>
+                <field type="AUI">A10277216</field>
+                <field type="LUI">L6020880</field>
+                <field type="SUI">S6903309</field>
+                <field type="SDUI">10000635</field>
+                <field type="CODE">10000635</field>
+                <field type="STR">Tempo di tromboplastina parziale attivata normale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0002957</field>
+                <field type="AUI">A10207557</field>
+                <field type="LUI">L1514442</field>
+                <field type="SUI">S1810351</field>
+                <field type="SDUI">10002368</field>
+                <field type="CODE">10002368</field>
+                <field type="STR">Collera</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0741160</field>
+                <field type="AUI">A10271313</field>
+                <field type="LUI">L6016775</field>
+                <field type="SUI">S6899204</field>
+                <field type="SDUI">10002886</field>
+                <field type="CODE">10002886</field>
+                <field type="STR">Rottura di aneurisma dell'aorta</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0004601</field>
+                <field type="AUI">A10279728</field>
+                <field type="LUI">L6022514</field>
+                <field type="SUI">S6904943</field>
+                <field type="SDUI">10003986</field>
+                <field type="CODE">10003986</field>
+                <field type="STR">Traumatismo al dorso</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0855575</field>
+                <field type="AUI">A10218904</field>
+                <field type="LUI">L5980376</field>
+                <field type="SUI">S6862805</field>
+                <field type="SDUI">10004503</field>
+                <field type="CODE">10004503</field>
+                <field type="STR">Beta 2 microglobulina urinaria normale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0853738</field>
+                <field type="AUI">A10220106</field>
+                <field type="LUI">L5981072</field>
+                <field type="SUI">S6863500</field>
+                <field type="SDUI">10005377</field>
+                <field type="CODE">10005377</field>
+                <field type="STR">Bromuro ematico normale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0853763</field>
+                <field type="AUI">A10209625</field>
+                <field type="LUI">L5973504</field>
+                <field type="SUI">S6855932</field>
+                <field type="SDUI">10005788</field>
+                <field type="CODE">10005788</field>
+                <field type="STR">Acido piruvico ematico normale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0185240</field>
+                <field type="AUI">A10217462</field>
+                <field type="LUI">L5979359</field>
+                <field type="SUI">S6861789</field>
+                <field type="SDUI">10005978</field>
+                <field type="CODE">10005978</field>
+                <field type="STR">Asportazione di lesione ossea</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0553686</field>
+                <field type="AUI">A10238155</field>
+                <field type="LUI">L5993398</field>
+                <field type="SUI">S6875828</field>
+                <field type="SDUI">10006126</field>
+                <field type="CODE">10006126</field>
+                <field type="STR">Ernia cerebrale</field>
+            </row>
+        </sample>
+        <sample id="OL" samplename="OL" definition="Non-current Lower Level Term" count="9072">
+            <row type="standard">
+                <field type="CUI">C0000770</field>
+                <field type="AUI">A11170184</field>
+                <field type="LUI">L5977774</field>
+                <field type="SUI">S6860204</field>
+                <field type="SDUI">10044046</field>
+                <field type="CODE">10000194</field>
+                <field type="STR">Anomalie della misura e della forma dei denti</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0157733</field>
+                <field type="AUI">A11205847</field>
+                <field type="LUI">L5977755</field>
+                <field type="SUI">S6860185</field>
+                <field type="SDUI">10019037</field>
+                <field type="CODE">10000195</field>
+                <field type="STR">Anomalie del pelo</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0155808</field>
+                <field type="AUI">A11194047</field>
+                <field type="LUI">L5976046</field>
+                <field type="SUI">S6858476</field>
+                <field type="SDUI">10001076</field>
+                <field type="CODE">10001079</field>
+                <field type="STR">Altre sinusiti acute</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C2945761</field>
+                <field type="AUI">A11182240</field>
+                <field type="LUI">L5974414</field>
+                <field type="SUI">S6856843</field>
+                <field type="SDUI">10002855</field>
+                <field type="CODE">10001554</field>
+                <field type="STR">Allarme (non reazione di allarme)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0154999</field>
+                <field type="AUI">A11176350</field>
+                <field type="LUI">L5977445</field>
+                <field type="SUI">S6859875</field>
+                <field type="SDUI">10002537</field>
+                <field type="CODE">10002538</field>
+                <field type="STR">Anisometropia e anisoiconia</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0156630</field>
+                <field type="AUI">A11188297</field>
+                <field type="LUI">L6011385</field>
+                <field type="SUI">S6893812</field>
+                <field type="SDUI">10002667</field>
+                <field type="CODE">10002673</field>
+                <field type="STR">Perdita ematica antepartum con difetti della coagulazione, parto</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0855238</field>
+                <field type="AUI">A11170414</field>
+                <field type="LUI">L5989862</field>
+                <field type="SUI">S6872291</field>
+                <field type="SDUI">10002822</field>
+                <field type="CODE">10002823</field>
+                <field type="STR">Disturbo di personalità antisociale, NCA</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0157801</field>
+                <field type="AUI">A11200233</field>
+                <field type="LUI">L5978805</field>
+                <field type="SUI">S6861244</field>
+                <field type="SDUI">10003274</field>
+                <field type="CODE">10003301</field>
+                <field type="STR">Artropatia associata ad altre malattie virali</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0157839</field>
+                <field type="AUI">A11200238</field>
+                <field type="LUI">L5978798</field>
+                <field type="SUI">S6861226</field>
+                <field type="SDUI">10060968</field>
+                <field type="CODE">10003339</field>
+                <field type="STR">Artropatia associata ad altre malattie infettive e parassitarie, arto inferiore</field>
+            </row>
+        </sample>
+        <sample id="HT" samplename="HT" definition="Hierarchical term" count="1709">
+            <row type="standard">
+                <field type="CUI">C0947787</field>
+                <field type="AUI">A10262796</field>
+                <field type="LUI">L6010831</field>
+                <field type="SUI">S6893260</field>
+                <field type="SDUI">10022635</field>
+                <field type="CODE">10022635</field>
+                <field type="STR">Patologie del disco intervertebrale NCA</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0001622</field>
+                <field type="AUI">A10249266</field>
+                <field type="LUI">L6001343</field>
+                <field type="SUI">S6883772</field>
+                <field type="SDUI">10001341</field>
+                <field type="CODE">10001341</field>
+                <field type="STR">Iperfunzioni corticosurrenali</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0947800</field>
+                <field type="AUI">A10266529</field>
+                <field type="LUI">L6013487</field>
+                <field type="SUI">S6895916</field>
+                <field type="SDUI">10041590</field>
+                <field type="CODE">10041590</field>
+                <field type="STR">Procedure terapeutiche sulla colonna vertebrale e sul midollo spinale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0035369</field>
+                <field type="AUI">A10247406</field>
+                <field type="LUI">L6000118</field>
+                <field type="SUI">S6882548</field>
+                <field type="SDUI">10038997</field>
+                <field type="CODE">10038997</field>
+                <field type="STR">Infezioni retrovirali</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0000786</field>
+                <field type="AUI">A10209086</field>
+                <field type="LUI">L5973075</field>
+                <field type="SUI">S6855505</field>
+                <field type="SDUI">10000235</field>
+                <field type="CODE">10000235</field>
+                <field type="STR">Aborti spontanei</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0231528</field>
+                <field type="AUI">A10233498</field>
+                <field type="LUI">L5990585</field>
+                <field type="SUI">S6873016</field>
+                <field type="SDUI">10028323</field>
+                <field type="CODE">10028323</field>
+                <field type="STR">Dolori muscolari</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0033817</field>
+                <field type="AUI">A10205381</field>
+                <field type="LUI">L1264153</field>
+                <field type="SUI">S1506099</field>
+                <field type="SDUI">10037132</field>
+                <field type="CODE">10037132</field>
+                <field type="STR">Infezioni da Pseudomonas</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0947807</field>
+                <field type="AUI">A10266524</field>
+                <field type="LUI">L6013482</field>
+                <field type="SUI">S6895911</field>
+                <field type="SDUI">10046407</field>
+                <field type="CODE">10046407</field>
+                <field type="STR">Procedure terapeutiche sull'uretere</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0947808</field>
+                <field type="AUI">A10266481</field>
+                <field type="LUI">L6013439</field>
+                <field type="SUI">S6895868</field>
+                <field type="SDUI">10003838</field>
+                <field type="CODE">10003838</field>
+                <field type="STR">Procedure terapeutiche su nervo autonomo</field>
+            </row>
+        </sample>
+        <sample id="HG" samplename="HG" definition="High Level Group Term" count="335">
+            <row type="standard">
+                <field type="CUI">C0947734</field>
+                <field type="AUI">A10266563</field>
+                <field type="LUI">L6013520</field>
+                <field type="SUI">S6895950</field>
+                <field type="SDUI">10003184</field>
+                <field type="CODE">10003184</field>
+                <field type="STR">Procedure terapeutiche vascolari</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0947735</field>
+                <field type="AUI">A10266514</field>
+                <field type="LUI">L6013471</field>
+                <field type="SUI">S6895901</field>
+                <field type="SDUI">10025506</field>
+                <field type="CODE">10025506</field>
+                <field type="STR">Procedure terapeutiche sull'apparato genitale maschile</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851377</field>
+                <field type="AUI">A10226649</field>
+                <field type="LUI">L5985587</field>
+                <field type="SUI">S6868017</field>
+                <field type="SDUI">10017969</field>
+                <field type="CODE">10017969</field>
+                <field type="STR">Condizioni infiammatorie gastrointestinali</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851382</field>
+                <field type="AUI">A10226617</field>
+                <field type="LUI">L5985555</field>
+                <field type="SUI">S6867985</field>
+                <field type="SDUI">10031013</field>
+                <field type="CODE">10031013</field>
+                <field type="STR">Condizioni dei tessuti molli orali</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851385</field>
+                <field type="AUI">A10231592</field>
+                <field type="LUI">L5989161</field>
+                <field type="SUI">S6871592</field>
+                <field type="SDUI">10018018</field>
+                <field type="CODE">10018018</field>
+                <field type="STR">Disturbi congeniti del tratto gastrointestinale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0005395</field>
+                <field type="AUI">A10262786</field>
+                <field type="LUI">L6010821</field>
+                <field type="SUI">S6893250</field>
+                <field type="SDUI">10004606</field>
+                <field type="CODE">10004606</field>
+                <field type="STR">Patologie dei dotti biliari</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0947739</field>
+                <field type="AUI">A10266478</field>
+                <field type="LUI">L6013435</field>
+                <field type="SUI">S6895865</field>
+                <field type="SDUI">10014705</field>
+                <field type="CODE">10014705</field>
+                <field type="STR">Procedure terapeutiche su ghiandole endocrine</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0016977</field>
+                <field type="AUI">A10262856</field>
+                <field type="LUI">L6010890</field>
+                <field type="SUI">S6893320</field>
+                <field type="SDUI">10017628</field>
+                <field type="CODE">10017628</field>
+                <field type="STR">Patologie della colecisti</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0152021</field>
+                <field type="AUI">A10262732</field>
+                <field type="LUI">L6010768</field>
+                <field type="SUI">S6893196</field>
+                <field type="SDUI">10010394</field>
+                <field type="CODE">10010394</field>
+                <field type="STR">Patologie cardiache congenite</field>
+            </row>
+        </sample>
+        <sample id="SMQ" samplename="SMQ" definition="Standardised MedDRA Query" count="180">
+            <row type="standard">
+                <field type="CUI">C1869007</field>
+                <field type="AUI">A12105205</field>
+                <field type="LUI">L6535677</field>
+                <field type="SUI">S7618630</field>
+                <field type="SDUI">20000002</field>
+                <field type="CODE">20000002</field>
+                <field type="STR">Rabdomiolisi/miopatia (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869008</field>
+                <field type="AUI">A12106100</field>
+                <field type="LUI">L6535431</field>
+                <field type="SUI">S7618301</field>
+                <field type="SDUI">20000003</field>
+                <field type="CODE">20000003</field>
+                <field type="STR">Insufficienza renale acuta (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869013</field>
+                <field type="AUI">A12106101</field>
+                <field type="LUI">L6535054</field>
+                <field type="SUI">S7617896</field>
+                <field type="SDUI">20000009</field>
+                <field type="CODE">20000009</field>
+                <field type="STR">Colestasi e ittero di origine epatica (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869014</field>
+                <field type="AUI">A12105206</field>
+                <field type="LUI">L6534738</field>
+                <field type="SUI">S7618116</field>
+                <field type="SDUI">20000010</field>
+                <field type="CODE">20000010</field>
+                <field type="STR">Epatite non infettiva (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869015</field>
+                <field type="AUI">A12106683</field>
+                <field type="LUI">L6536115</field>
+                <field type="SUI">S7619012</field>
+                <field type="SDUI">20000011</field>
+                <field type="CODE">20000011</field>
+                <field type="STR">Tumori del fegato maligni e non specificati (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869018</field>
+                <field type="AUI">A12105207</field>
+                <field type="LUI">L6534970</field>
+                <field type="SUI">S7618530</field>
+                <field type="SDUI">20000014</field>
+                <field type="CODE">20000014</field>
+                <field type="STR">Patologie congenite, familiari, neonatali e genetiche del fegato (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869022</field>
+                <field type="AUI">A12105208</field>
+                <field type="LUI">L6534790</field>
+                <field type="SUI">S7618537</field>
+                <field type="SDUI">20000018</field>
+                <field type="CODE">20000018</field>
+                <field type="STR">Patologie epatiche correlate a gravidanza (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869024</field>
+                <field type="AUI">A12105804</field>
+                <field type="LUI">L6536016</field>
+                <field type="SUI">S7618246</field>
+                <field type="SDUI">20000020</field>
+                <field type="CODE">20000020</field>
+                <field type="STR">Gravi reazioni cutanee indesiderate (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869025</field>
+                <field type="AUI">A12106387</field>
+                <field type="LUI">L6534965</field>
+                <field type="SUI">S7618503</field>
+                <field type="SDUI">20000022</field>
+                <field type="CODE">20000022</field>
+                <field type="STR">Pancreatite acuta (SMQ)</field>
+            </row>
+        </sample>
+        <sample id="AB" samplename="AB" definition="Abbreviation in any source vocabulary" count="26">
+            <row type="standard">
+                <field type="CUI">C0851353</field>
+                <field type="AUI">A14228356</field>
+                <field type="LUI">L7593283</field>
+                <field type="SUI">S8790846</field>
+                <field type="SDUI">10005329</field>
+                <field type="CODE">10005329</field>
+                <field type="STR">Blood</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0018799</field>
+                <field type="AUI">A14228808</field>
+                <field type="LUI">L7593428</field>
+                <field type="SUI">S8790847</field>
+                <field type="SDUI">10007541</field>
+                <field type="CODE">10007541</field>
+                <field type="STR">Card</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851352</field>
+                <field type="AUI">A14228508</field>
+                <field type="LUI">L7593712</field>
+                <field type="SUI">S8790849</field>
+                <field type="SDUI">10010331</field>
+                <field type="CODE">10010331</field>
+                <field type="STR">Cong</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851354</field>
+                <field type="AUI">A14228357</field>
+                <field type="LUI">L7593713</field>
+                <field type="SUI">S8790850</field>
+                <field type="SDUI">10013993</field>
+                <field type="CODE">10013993</field>
+                <field type="STR">Ear</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0014130</field>
+                <field type="AUI">A14228663</field>
+                <field type="LUI">L7593284</field>
+                <field type="SUI">S8790852</field>
+                <field type="SDUI">10014698</field>
+                <field type="CODE">10014698</field>
+                <field type="STR">Endo</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0015397</field>
+                <field type="AUI">A14229113</field>
+                <field type="LUI">L7593566</field>
+                <field type="SUI">S8790853</field>
+                <field type="SDUI">10015919</field>
+                <field type="CODE">10015919</field>
+                <field type="STR">Eye</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0017178</field>
+                <field type="AUI">A14229114</field>
+                <field type="LUI">L7593507</field>
+                <field type="SUI">S8790854</field>
+                <field type="SDUI">10017947</field>
+                <field type="CODE">10017947</field>
+                <field type="STR">Gastr</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851362</field>
+                <field type="AUI">A14228664</field>
+                <field type="LUI">L7593429</field>
+                <field type="SUI">S8790855</field>
+                <field type="SDUI">10018065</field>
+                <field type="CODE">10018065</field>
+                <field type="STR">Genrl</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0267792</field>
+                <field type="AUI">A14228809</field>
+                <field type="LUI">L7593567</field>
+                <field type="SUI">S8790857</field>
+                <field type="SDUI">10019805</field>
+                <field type="CODE">10019805</field>
+                <field type="STR">Hepat</field>
+            </row>
+        </sample>
+        <sample id="OS" samplename="OS" definition="System-organ class" count="26">
+            <row type="standard">
+                <field type="CUI">C1261322</field>
+                <field type="AUI">A10238884</field>
+                <field type="LUI">L5993916</field>
+                <field type="SUI">S6876349</field>
+                <field type="SDUI">10022891</field>
+                <field type="CODE">10022891</field>
+                <field type="STR">Esami diagnostici</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0018799</field>
+                <field type="AUI">A10262733</field>
+                <field type="LUI">L6010766</field>
+                <field type="SUI">S6893197</field>
+                <field type="SDUI">10007541</field>
+                <field type="CODE">10007541</field>
+                <field type="STR">Patologie cardiache</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851352</field>
+                <field type="AUI">A10262771</field>
+                <field type="LUI">L6010806</field>
+                <field type="SUI">S6893235</field>
+                <field type="SDUI">10010331</field>
+                <field type="CODE">10010331</field>
+                <field type="STR">Patologie congenite, familiari e genetiche</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851353</field>
+                <field type="AUI">A10262820</field>
+                <field type="LUI">L6010855</field>
+                <field type="SUI">S6893284</field>
+                <field type="SDUI">10005329</field>
+                <field type="CODE">10005329</field>
+                <field type="STR">Patologie del sistema emolinfopoietico</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0027765</field>
+                <field type="AUI">A10262827</field>
+                <field type="LUI">L6010859</field>
+                <field type="SUI">S6893291</field>
+                <field type="SDUI">10029205</field>
+                <field type="CODE">10029205</field>
+                <field type="STR">Patologie del sistema nervoso</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0015397</field>
+                <field type="AUI">A10262840</field>
+                <field type="LUI">L6010874</field>
+                <field type="SUI">S6893304</field>
+                <field type="SDUI">10015919</field>
+                <field type="CODE">10015919</field>
+                <field type="STR">Patologie dell'occhio</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851354</field>
+                <field type="AUI">A10262841</field>
+                <field type="LUI">L6010876</field>
+                <field type="SUI">S6893305</field>
+                <field type="SDUI">10013993</field>
+                <field type="CODE">10013993</field>
+                <field type="STR">Patologie dell'orecchio e del labirinto</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851355</field>
+                <field type="AUI">A10262983</field>
+                <field type="LUI">L6011016</field>
+                <field type="SUI">S6893445</field>
+                <field type="SDUI">10038738</field>
+                <field type="CODE">10038738</field>
+                <field type="STR">Patologie respiratorie, toraciche e mediastiniche</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0017178</field>
+                <field type="AUI">A10262930</field>
+                <field type="LUI">L6010962</field>
+                <field type="SUI">S6893393</field>
+                <field type="SDUI">10017947</field>
+                <field type="CODE">10017947</field>
+                <field type="STR">Patologie gastrointestinali</field>
+            </row>
+        </sample>
+    </samples>
+</document>

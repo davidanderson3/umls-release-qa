@@ -1,0 +1,736 @@
+<document vsab="MSHPOR2011" samples="Term Types">
+    <samples>
+        <labels>
+            <label type="metalabel">Term Type</label>
+            <label type="definition">Description</label>
+            <label type="count">Count (MRCONSO.RRF)</label>
+        </labels>
+        <sample id="MH" samplename="MH" definition="Main heading" count="26142">
+            <row type="standard">
+                <field type="CUI">C0001753</field>
+                <field type="AUI">A9137532</field>
+                <field type="LUI">L3333191</field>
+                <field type="SUI">S3861390</field>
+                <field type="SCUI">M0000546</field>
+                <field type="SDUI">D000358</field>
+                <field type="CODE">D000358</field>
+                <field type="STR">Vírus da Febre Suína Africana</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0002072</field>
+                <field type="AUI">A9097829</field>
+                <field type="LUI">L3292031</field>
+                <field type="SUI">S3820017</field>
+                <field type="SCUI">M0000720</field>
+                <field type="SDUI">D000476</field>
+                <field type="CODE">D000476</field>
+                <field type="STR">Alcanossulfonatos</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0006863</field>
+                <field type="AUI">A9102291</field>
+                <field type="LUI">L3296514</field>
+                <field type="SUI">S3824679</field>
+                <field type="SCUI">M0003266</field>
+                <field type="SDUI">D002185</field>
+                <field type="CODE">D002185</field>
+                <field type="STR">Canabidiol</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0007137</field>
+                <field type="AUI">A9102830</field>
+                <field type="LUI">L3296933</field>
+                <field type="SUI">S3825239</field>
+                <field type="SCUI">M0003444</field>
+                <field type="SDUI">D002294</field>
+                <field type="CODE">D002294</field>
+                <field type="STR">Carcinoma de Células Escamosas</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0007361</field>
+                <field type="AUI">A9108456</field>
+                <field type="LUI">L3302935</field>
+                <field type="SUI">S3831060</field>
+                <field type="SCUI">M0003611</field>
+                <field type="SDUI">D002372</field>
+                <field type="CODE">D002372</field>
+                <field type="STR">Doença da Arranhadura de Gato</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0007377</field>
+                <field type="AUI">A9103080</field>
+                <field type="LUI">L3297212</field>
+                <field type="SUI">S3825498</field>
+                <field type="SCUI">M0003621</field>
+                <field type="SDUI">D002379</field>
+                <field type="CODE">D002379</field>
+                <field type="STR">Catálogos Comerciais</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0008415</field>
+                <field type="AUI">A9104843</field>
+                <field type="LUI">L3298682</field>
+                <field type="SUI">S3827319</field>
+                <field type="SCUI">M0004291</field>
+                <field type="SDUI">D002797</field>
+                <field type="CODE">D002797</field>
+                <field type="STR">Colina Quinase</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0010449</field>
+                <field type="AUI">A9102929</field>
+                <field type="LUI">L3297113</field>
+                <field type="SUI">S3825341</field>
+                <field type="SCUI">M0005411</field>
+                <field type="SDUI">D003467</field>
+                <field type="CODE">D003467</field>
+                <field type="STR">Carência Cultural</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0011428</field>
+                <field type="AUI">A9104183</field>
+                <field type="LUI">L3298035</field>
+                <field type="SUI">S3826637</field>
+                <field type="SCUI">M0005950</field>
+                <field type="SDUI">D003803</field>
+                <field type="CODE">D003803</field>
+                <field type="STR">Cisto Dentígero</field>
+            </row>
+        </sample>
+        <sample id="SY" samplename="SY" definition="Designated synonym" count="14902">
+            <row type="standard">
+                <field type="CUI">C0001622</field>
+                <field type="AUI">A11365696</field>
+                <field type="LUI">L6199849</field>
+                <field type="SUI">S7114863</field>
+                <field type="SCUI">M0000483</field>
+                <field type="SDUI">D000308</field>
+                <field type="CODE">D000308</field>
+                <field type="STR">Hiperfunção do Córtex das Supra-Renais</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0005426</field>
+                <field type="AUI">A11398260</field>
+                <field type="LUI">L6201672</field>
+                <field type="SUI">S7115327</field>
+                <field type="SCUI">M0002492</field>
+                <field type="SDUI">D001661</field>
+                <field type="CODE">D001661</field>
+                <field type="STR">Neoplasias do Trato Biliar</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0006042</field>
+                <field type="AUI">A9098008</field>
+                <field type="LUI">L3292199</field>
+                <field type="SUI">S3820231</field>
+                <field type="SCUI">M0002841</field>
+                <field type="SDUI">D001903</field>
+                <field type="CODE">D001903</field>
+                <field type="STR">Alimentação com Mamadeira</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0008466</field>
+                <field type="AUI">A9138435</field>
+                <field type="LUI">L5335762</field>
+                <field type="SUI">S6097766</field>
+                <field type="SCUI">M0004318</field>
+                <field type="SDUI">D002809</field>
+                <field type="CODE">D002809</field>
+                <field type="STR">Condroitim 4-Sulfato</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0011156</field>
+                <field type="AUI">A9140650</field>
+                <field type="LUI">L5693566</field>
+                <field type="SUI">S6526603</field>
+                <field type="SCUI">M0005753</field>
+                <field type="SDUI">D003677</field>
+                <field type="CODE">D003677</field>
+                <field type="STR">Carências Nutricionais</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0012252</field>
+                <field type="AUI">A11366729</field>
+                <field type="LUI">L6201936</field>
+                <field type="SUI">S7114544</field>
+                <field type="SCUI">M0006378</field>
+                <field type="SDUI">D004070</field>
+                <field type="CODE">D004070</field>
+                <field type="STR">Enchopre</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0016068</field>
+                <field type="AUI">A9125515</field>
+                <field type="LUI">L3320457</field>
+                <field type="SUI">S3848853</field>
+                <field type="SCUI">M0008459</field>
+                <field type="SDUI">D005360</field>
+                <field type="CODE">D005360</field>
+                <field type="STR">Perônio</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0016125</field>
+                <field type="AUI">A11360340</field>
+                <field type="LUI">L6200453</field>
+                <field type="SUI">S7113914</field>
+                <field type="SCUI">M0008501</field>
+                <field type="SDUI">D005384</field>
+                <field type="CODE">D005384</field>
+                <field type="STR">Articulações Interfalangianas da Mão</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0023637</field>
+                <field type="AUI">A9119275</field>
+                <field type="LUI">L3314026</field>
+                <field type="SUI">S3842352</field>
+                <field type="SCUI">M0012474</field>
+                <field type="SDUI">D008004</field>
+                <field type="CODE">D008004</field>
+                <field type="STR">Licenciamento</field>
+            </row>
+        </sample>
+        <sample id="EP" samplename="EP" definition="Print entry term" count="14648">
+            <row type="standard">
+                <field type="CUI">C0001479</field>
+                <field type="AUI">A9101679</field>
+                <field type="LUI">L3295872</field>
+                <field type="SUI">S3824035</field>
+                <field type="SCUI">M0000394</field>
+                <field type="SDUI">D000254</field>
+                <field type="CODE">D000254</field>
+                <field type="STR">Bomba de Sódio-Potássio</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1706105</field>
+                <field type="AUI">A11360121</field>
+                <field type="LUI">L3314915</field>
+                <field type="SUI">S3843212</field>
+                <field type="SCUI">M0497620</field>
+                <field type="SDUI">D000520</field>
+                <field type="CODE">D000520</field>
+                <field type="STR">Maltase Ácida</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0003593</field>
+                <field type="AUI">A9091280</field>
+                <field type="LUI">L0426026</field>
+                <field type="SUI">S0550308</field>
+                <field type="SCUI">M0001596</field>
+                <field type="SDUI">D001055</field>
+                <field type="CODE">D001055</field>
+                <field type="STR">APO-B</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0003741</field>
+                <field type="AUI">A9123566</field>
+                <field type="LUI">L3318535</field>
+                <field type="SUI">S3846797</field>
+                <field type="SCUI">M0001670</field>
+                <field type="SDUI">D001111</field>
+                <field type="CODE">D001111</field>
+                <field type="STR">Núcleo Infundibular</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0004025</field>
+                <field type="AUI">A9100212</field>
+                <field type="LUI">L3294421</field>
+                <field type="SUI">S3822507</field>
+                <field type="SCUI">M0001849</field>
+                <field type="SDUI">D001227</field>
+                <field type="CODE">D001227</field>
+                <field type="STR">Aspartilglicosamina Amidoidrolase</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0006041</field>
+                <field type="AUI">A9101199</field>
+                <field type="LUI">L3295448</field>
+                <field type="SUI">S3823544</field>
+                <field type="SCUI">M0002839</field>
+                <field type="SDUI">D001902</field>
+                <field type="CODE">D001902</field>
+                <field type="STR">Bechuanalândia</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0006506</field>
+                <field type="AUI">A9101960</field>
+                <field type="LUI">L3296152</field>
+                <field type="SUI">S3824326</field>
+                <field type="SCUI">M0003104</field>
+                <field type="SDUI">D002083</field>
+                <field type="CODE">D002083</field>
+                <field type="STR">Butilidroxianisol</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0006971</field>
+                <field type="AUI">A9102768</field>
+                <field type="LUI">L3296837</field>
+                <field type="SUI">S3825175</field>
+                <field type="SCUI">M0003336</field>
+                <field type="SDUI">D002225</field>
+                <field type="CODE">D002225</field>
+                <field type="STR">Carboquinona</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0007121</field>
+                <field type="AUI">A9102817</field>
+                <field type="LUI">L3296886</field>
+                <field type="SUI">S3825225</field>
+                <field type="SCUI">M0003434</field>
+                <field type="SDUI">D002283</field>
+                <field type="CODE">D002283</field>
+                <field type="STR">Carcinoma Brônquico</field>
+            </row>
+        </sample>
+        <sample id="PEP" samplename="PEP" definition="Preferred entry term" count="6774">
+            <row type="standard">
+                <field type="CUI">C0079581</field>
+                <field type="AUI">A13097271</field>
+                <field type="LUI">L3310977</field>
+                <field type="SUI">S3839252</field>
+                <field type="SCUI">M0000201</field>
+                <field type="SDUI">D000126</field>
+                <field type="CODE">D000126</field>
+                <field type="STR">Hipocloridria</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0026150</field>
+                <field type="AUI">A13096115</field>
+                <field type="LUI">L5694663</field>
+                <field type="SUI">S6527700</field>
+                <field type="SCUI">M0000229</field>
+                <field type="SDUI">D000150</field>
+                <field type="CODE">D000150</field>
+                <field type="STR">Mima</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0002883</field>
+                <field type="AUI">A13100832</field>
+                <field type="LUI">L3292717</field>
+                <field type="SUI">S3820829</field>
+                <field type="SCUI">M0001128</field>
+                <field type="SDUI">D000744</field>
+                <field type="CODE">D000744</field>
+                <field type="STR">Anemia Hemolítica Idiopática Adquirida</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0242192</field>
+                <field type="AUI">A13098463</field>
+                <field type="LUI">L0435649</field>
+                <field type="SUI">S0559931</field>
+                <field type="SCUI">M0001825</field>
+                <field type="SDUI">D001219</field>
+                <field type="CODE">D001219</field>
+                <field type="STR">SGOT</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0524493</field>
+                <field type="AUI">A13105248</field>
+                <field type="LUI">L3291937</field>
+                <field type="SUI">S3819917</field>
+                <field type="SCUI">M0002251</field>
+                <field type="SDUI">D001503</field>
+                <field type="CODE">D001503</field>
+                <field type="STR">Ailuropoda</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0325025</field>
+                <field type="AUI">A13104283</field>
+                <field type="LUI">L3331930</field>
+                <field type="SUI">S3860421</field>
+                <field type="SCUI">M0002248</field>
+                <field type="SDUI">D001503</field>
+                <field type="CODE">D001503</field>
+                <field type="STR">Urso-de-Óculos</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0021864</field>
+                <field type="AUI">A13104083</field>
+                <field type="LUI">L3324235</field>
+                <field type="SUI">S3852548</field>
+                <field type="SCUI">M0002858</field>
+                <field type="SDUI">D001918</field>
+                <field type="CODE">D001918</field>
+                <field type="STR">Radioterapia Intracavitária</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0750979</field>
+                <field type="AUI">A13097318</field>
+                <field type="LUI">L6200401</field>
+                <field type="SUI">S7116389</field>
+                <field type="SCUI">M0334226</field>
+                <field type="SDUI">D001932</field>
+                <field type="CODE">D001932</field>
+                <field type="STR">Tumores Encefálicos Primários Malignos</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0041370</field>
+                <field type="AUI">A13100884</field>
+                <field type="LUI">L3322154</field>
+                <field type="SUI">S3850678</field>
+                <field type="SCUI">M0003418</field>
+                <field type="SDUI">D002273</field>
+                <field type="CODE">D002273</field>
+                <field type="STR">Promotores de Tumor</field>
+            </row>
+        </sample>
+        <sample id="PXQ" samplename="PXQ" definition="Preferred qualifier term" count="166">
+            <row type="standard">
+                <field type="CUI">C0243066</field>
+                <field type="AUI">A18970761</field>
+                <field type="LUI">L9625826</field>
+                <field type="SUI">S12090931</field>
+                <field type="SCUI">M0030210</field>
+                <field type="SDUI">Q000002</field>
+                <field type="CODE">Q000002</field>
+                <field type="STR">atresia</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0543481</field>
+                <field type="AUI">A18971184</field>
+                <field type="LUI">L9625069</field>
+                <field type="SUI">S12091040</field>
+                <field type="SCUI">M0030211</field>
+                <field type="SDUI">Q000002</field>
+                <field type="CODE">Q000002</field>
+                <field type="STR">hipoplasia</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0243072</field>
+                <field type="AUI">A18968454</field>
+                <field type="LUI">L9625059</field>
+                <field type="SUI">S12090973</field>
+                <field type="SCUI">M0030235</field>
+                <field type="SDUI">Q000031</field>
+                <field type="CODE">Q000031</field>
+                <field type="STR">derivados</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0600686</field>
+                <field type="AUI">A18970310</field>
+                <field type="LUI">L9627702</field>
+                <field type="SUI">S12090951</field>
+                <field type="SCUI">M0030236</field>
+                <field type="SDUI">Q000031</field>
+                <field type="CODE">Q000031</field>
+                <field type="STR">compostos relacionados</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0205462</field>
+                <field type="AUI">A18968456</field>
+                <field type="LUI">L9626199</field>
+                <field type="SUI">S12091041</field>
+                <field type="SCUI">M0030242</field>
+                <field type="SDUI">Q000033</field>
+                <field type="CODE">Q000033</field>
+                <field type="STR">histologia</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0243076</field>
+                <field type="AUI">A18968896</field>
+                <field type="LUI">L9627693</field>
+                <field type="SUI">S12090903</field>
+                <field type="SCUI">M0030248</field>
+                <field type="SDUI">Q000037</field>
+                <field type="CODE">Q000037</field>
+                <field type="STR">antagonistas</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0243077</field>
+                <field type="AUI">A18971188</field>
+                <field type="LUI">L9625467</field>
+                <field type="SUI">S12091049</field>
+                <field type="SCUI">M0030249</field>
+                <field type="SDUI">Q000037</field>
+                <field type="CODE">Q000037</field>
+                <field type="STR">inibidores</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0243079</field>
+                <field type="AUI">A18970313</field>
+                <field type="LUI">L9626565</field>
+                <field type="SUI">S12091072</field>
+                <field type="SCUI">M0030290</field>
+                <field type="SDUI">Q000098</field>
+                <field type="CODE">Q000098</field>
+                <field type="STR">microvasculatura</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0699032</field>
+                <field type="AUI">A18968897</field>
+                <field type="LUI">L9626198</field>
+                <field type="SUI">S12091038</field>
+                <field type="SCUI">M0030331</field>
+                <field type="SDUI">Q000145</field>
+                <field type="CODE">Q000145</field>
+                <field type="STR">hierarquias</field>
+            </row>
+        </sample>
+        <sample id="TQ" samplename="TQ" definition="Topical qualifier" count="83">
+            <row type="standard">
+                <field type="CUI">C0000769</field>
+                <field type="AUI">A18969515</field>
+                <field type="LUI">L0889164</field>
+                <field type="SUI">S1092981</field>
+                <field type="SCUI">M0030203</field>
+                <field type="SDUI">Q000002</field>
+                <field type="CODE">Q000002</field>
+                <field type="STR">anormalidades</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0001555</field>
+                <field type="AUI">A18969985</field>
+                <field type="LUI">L9626545</field>
+                <field type="SUI">S12090890</field>
+                <field type="SCUI">M0030212</field>
+                <field type="SDUI">Q000008</field>
+                <field type="CODE">Q000008</field>
+                <field type="STR">administração &amp;amp; dosagem</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0001688</field>
+                <field type="AUI">A18970443</field>
+                <field type="LUI">L0889180</field>
+                <field type="SUI">S1092997</field>
+                <field type="SCUI">M0030213</field>
+                <field type="SDUI">Q000009</field>
+                <field type="CODE">Q000009</field>
+                <field type="STR">efeitos adversos</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0002776</field>
+                <field type="AUI">A18970444</field>
+                <field type="LUI">L9626918</field>
+                <field type="SUI">S12090907</field>
+                <field type="SCUI">M0030233</field>
+                <field type="SDUI">Q000031</field>
+                <field type="CODE">Q000031</field>
+                <field type="STR">análogos &amp;amp; derivados</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1524024</field>
+                <field type="AUI">A18968170</field>
+                <field type="LUI">L9625449</field>
+                <field type="SUI">S12090906</field>
+                <field type="SCUI">M0030237</field>
+                <field type="SDUI">Q000032</field>
+                <field type="CODE">Q000032</field>
+                <field type="STR">análise</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0002809</field>
+                <field type="AUI">A18969516</field>
+                <field type="LUI">L0889163</field>
+                <field type="SUI">S1092980</field>
+                <field type="SCUI">M0030241</field>
+                <field type="SDUI">Q000033</field>
+                <field type="CODE">Q000033</field>
+                <field type="STR">anatomia &amp;amp; histologia</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0003139</field>
+                <field type="AUI">A18968596</field>
+                <field type="LUI">L9625446</field>
+                <field type="SUI">S12090902</field>
+                <field type="SCUI">M0030247</field>
+                <field type="SDUI">Q000037</field>
+                <field type="CODE">Q000037</field>
+                <field type="STR">antagonistas &amp;amp; Inibidores</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0005572</field>
+                <field type="AUI">A18967735</field>
+                <field type="LUI">L9626922</field>
+                <field type="SUI">S12090937</field>
+                <field type="SCUI">M0030287</field>
+                <field type="SDUI">Q000096</field>
+                <field type="CODE">Q000096</field>
+                <field type="STR">biossíntese</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0005768</field>
+                <field type="AUI">A18968597</field>
+                <field type="LUI">L0889224</field>
+                <field type="SUI">S1093041</field>
+                <field type="SCUI">M0030288</field>
+                <field type="SDUI">Q000097</field>
+                <field type="CODE">Q000097</field>
+                <field type="STR">sangue</field>
+            </row>
+        </sample>
+        <sample id="XQ" samplename="XQ" definition="Alternate name for a qualifier" count="64">
+            <row type="standard">
+                <field type="CUI">C0000769</field>
+                <field type="AUI">A18970760</field>
+                <field type="LUI">L9626181</field>
+                <field type="SUI">S12090901</field>
+                <field type="SCUI">M0030203</field>
+                <field type="SDUI">Q000002</field>
+                <field type="CODE">Q000002</field>
+                <field type="STR">anomalias</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0220810</field>
+                <field type="AUI">A18968026</field>
+                <field type="LUI">L9626554</field>
+                <field type="SUI">S12090967</field>
+                <field type="SCUI">M0030205</field>
+                <field type="SDUI">Q000002</field>
+                <field type="CODE">Q000002</field>
+                <field type="STR">defeitos de nascença</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0000769</field>
+                <field type="AUI">A18968453</field>
+                <field type="LUI">L9625477</field>
+                <field type="SUI">S12091146</field>
+                <field type="SCUI">M0030203</field>
+                <field type="SDUI">Q000002</field>
+                <field type="CODE">Q000002</field>
+                <field type="STR">teratologia</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0001688</field>
+                <field type="AUI">A18968027</field>
+                <field type="LUI">L9627705</field>
+                <field type="SUI">S12091000</field>
+                <field type="SCUI">M0030213</field>
+                <field type="SDUI">Q000009</field>
+                <field type="CODE">Q000009</field>
+                <field type="STR">efeitos nocivos</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0001688</field>
+                <field type="AUI">A18971185</field>
+                <field type="LUI">L9626560</field>
+                <field type="SUI">S12090996</field>
+                <field type="SCUI">M0030213</field>
+                <field type="SDUI">Q000009</field>
+                <field type="CODE">Q000009</field>
+                <field type="STR">efeitos colaterais</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0001688</field>
+                <field type="AUI">A18969369</field>
+                <field type="LUI">L9626194</field>
+                <field type="SUI">S12090999</field>
+                <field type="SCUI">M0030213</field>
+                <field type="SDUI">Q000009</field>
+                <field type="CODE">Q000009</field>
+                <field type="STR">efeitos indesejáveis</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0005572</field>
+                <field type="AUI">A18970311</field>
+                <field type="LUI">L9626180</field>
+                <field type="SUI">S12090898</field>
+                <field type="SCUI">M0030287</field>
+                <field type="SDUI">Q000096</field>
+                <field type="CODE">Q000096</field>
+                <field type="STR">anabolismo</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0005572</field>
+                <field type="AUI">A18970312</field>
+                <field type="LUI">L9626187</field>
+                <field type="SUI">S12090936</field>
+                <field type="SCUI">M0030287</field>
+                <field type="SDUI">Q000096</field>
+                <field type="CODE">Q000096</field>
+                <field type="STR">bioformação</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0005839</field>
+                <field type="AUI">A18969842</field>
+                <field type="LUI">L9625856</field>
+                <field type="SUI">S12091165</field>
+                <field type="SCUI">M0030289</field>
+                <field type="SDUI">Q000098</field>
+                <field type="CODE">Q000098</field>
+                <field type="STR">vasculatura</field>
+            </row>
+        </sample>
+        <sample id="HT" samplename="HT" definition="Hierarchical term" count="16">
+            <row type="standard">
+                <field type="CUI">C0002807</field>
+                <field type="AUI">A18970786</field>
+                <field type="LUI">L9626247</field>
+                <field type="SUI">S12088334</field>
+                <field type="SDUI">U000002</field>
+                <field type="CODE">U000002</field>
+                <field type="STR">Anatomia [A]</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1256748</field>
+                <field type="AUI">A18968042</field>
+                <field type="LUI">L9625684</field>
+                <field type="SUI">S12089911</field>
+                <field type="SDUI">U000012</field>
+                <field type="CODE">U000012</field>
+                <field type="STR">Organismos [B]</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0012674</field>
+                <field type="AUI">A18969390</field>
+                <field type="LUI">L9625593</field>
+                <field type="SUI">S12089087</field>
+                <field type="SDUI">U000006</field>
+                <field type="CODE">U000006</field>
+                <field type="STR">Doenças [C]</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0007995</field>
+                <field type="AUI">A18968487</field>
+                <field type="LUI">L9627414</field>
+                <field type="SUI">S12088809</field>
+                <field type="SDUI">U000005</field>
+                <field type="CODE">U000005</field>
+                <field type="STR">Compostos Químicos e Drogas [D]</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0002784</field>
+                <field type="AUI">A18971217</field>
+                <field type="LUI">L9626901</field>
+                <field type="SUI">S12090770</field>
+                <field type="SDUI">U000001</field>
+                <field type="CODE">U000001</field>
+                <field type="STR">Técnicas e Equipmentos Analíticos, Diagnósticos e Terapêuticos [E]</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1256749</field>
+                <field type="AUI">A18968043</field>
+                <field type="LUI">L9627582</field>
+                <field type="SUI">S12090230</field>
+                <field type="SDUI">U000014</field>
+                <field type="CODE">U000014</field>
+                <field type="STR">Psiquiatria e Psicologia [F]</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C2930671</field>
+                <field type="AUI">A18969870</field>
+                <field type="LUI">L9624842</field>
+                <field type="SUI">S12089295</field>
+                <field type="SDUI">U000004</field>
+                <field type="CODE">U000004</field>
+                <field type="STR">Fenômenos e Processos [G]</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C2930672</field>
+                <field type="AUI">A18968930</field>
+                <field type="LUI">L9624803</field>
+                <field type="SUI">S12089044</field>
+                <field type="SDUI">U000013</field>
+                <field type="CODE">U000013</field>
+                <field type="STR">Disciplinas e Ocupações [H]</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0003186</field>
+                <field type="AUI">A18969871</field>
+                <field type="LUI">L9625894</field>
+                <field type="SUI">S12088415</field>
+                <field type="SDUI">U000003</field>
+                <field type="CODE">U000003</field>
+                <field type="STR">Antropologia, Educação, Sociologia e Fenômenos Sociais [I]</field>
+            </row>
+        </sample>
+    </samples>
+</document>

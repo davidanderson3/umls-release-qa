@@ -1,0 +1,204 @@
+<document vsab="LNC234_FLACC_1997" samples="Term Types">
+    <samples>
+        <labels>
+            <label type="metalabel">Term Type</label>
+            <label type="definition">Description</label>
+            <label type="count">Count (MRCONSO.RRF)</label>
+        </labels>
+        <sample id="LC" samplename="LC" definition="Long common name" count="7">
+            <row type="standard">
+                <field type="CUI">C1508028</field>
+                <field type="AUI">A18383867</field>
+                <field type="LUI">L5312847</field>
+                <field type="SUI">S7431291</field>
+                <field type="SCUI">38213-5</field>
+                <field type="CODE">38213-5</field>
+                <field type="STR">FLACC pain assessment panel</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1508030</field>
+                <field type="AUI">A18113450</field>
+                <field type="LUI">L5521626</field>
+                <field type="SUI">S11340218</field>
+                <field type="SCUI">38215-0</field>
+                <field type="CODE">38215-0</field>
+                <field type="STR">Pain severity total FLACC</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1508031</field>
+                <field type="AUI">A18383871</field>
+                <field type="LUI">L5521381</field>
+                <field type="SUI">S11040884</field>
+                <field type="SCUI">38216-8</field>
+                <field type="CODE">38216-8</field>
+                <field type="STR">Pain severity Face FLACC</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1508032</field>
+                <field type="AUI">A18267897</field>
+                <field type="LUI">L5521625</field>
+                <field type="SUI">S11040887</field>
+                <field type="SCUI">38217-6</field>
+                <field type="CODE">38217-6</field>
+                <field type="STR">Pain severity Legs FLACC</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1508033</field>
+                <field type="AUI">A18152062</field>
+                <field type="LUI">L5517424</field>
+                <field type="SUI">S11040875</field>
+                <field type="SCUI">38218-4</field>
+                <field type="CODE">38218-4</field>
+                <field type="STR">Pain severity Activity FLACC</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1508034</field>
+                <field type="AUI">A18229158</field>
+                <field type="LUI">L5520868</field>
+                <field type="SUI">S11040881</field>
+                <field type="SCUI">38219-2</field>
+                <field type="CODE">38219-2</field>
+                <field type="STR">Pain severity Cry FLACC</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1508035</field>
+                <field type="AUI">A18229160</field>
+                <field type="LUI">L5520516</field>
+                <field type="SUI">S11040878</field>
+                <field type="SCUI">38220-0</field>
+                <field type="CODE">38220-0</field>
+                <field type="STR">Pain severity Consolability FLACC</field>
+            </row>
+        </sample>
+        <sample id="LN" samplename="LN" definition="LOINC official fully specified name" count="7">
+            <row type="standard">
+                <field type="CUI">C1508028</field>
+                <field type="AUI">A18267893</field>
+                <field type="LUI">L5312849</field>
+                <field type="SUI">S7431290</field>
+                <field type="SCUI">38213-5</field>
+                <field type="CODE">38213-5</field>
+                <field type="STR">FLACC pain assessment panel:-:Pt:^Patient:-</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1508030</field>
+                <field type="AUI">A18267896</field>
+                <field type="LUI">L5315015</field>
+                <field type="SUI">S7353577</field>
+                <field type="SCUI">38215-0</field>
+                <field type="CODE">38215-0</field>
+                <field type="STR">Pain severity.total:Find:Pt:^Patient:Qn:Observed.FLACC</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1508031</field>
+                <field type="AUI">A18306737</field>
+                <field type="LUI">L5314970</field>
+                <field type="SUI">S7353571</field>
+                <field type="SCUI">38216-8</field>
+                <field type="CODE">38216-8</field>
+                <field type="STR">Pain severity.face:Find:Pt:^Patient:Ord:Observed.FLACC</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1508032</field>
+                <field type="AUI">A18152061</field>
+                <field type="LUI">L5315012</field>
+                <field type="SUI">S7353574</field>
+                <field type="SCUI">38217-6</field>
+                <field type="CODE">38217-6</field>
+                <field type="STR">Pain severity.legs:Find:Pt:^Patient:Ord:Observed.FLACC</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1508033</field>
+                <field type="AUI">A18345340</field>
+                <field type="LUI">L5311303</field>
+                <field type="SUI">S7353561</field>
+                <field type="SCUI">38218-4</field>
+                <field type="CODE">38218-4</field>
+                <field type="STR">Pain severity.activity:Find:Pt:^Patient:Ord:Observed.FLACC</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1508034</field>
+                <field type="AUI">A18229157</field>
+                <field type="LUI">L5314599</field>
+                <field type="SUI">S7353567</field>
+                <field type="SCUI">38219-2</field>
+                <field type="CODE">38219-2</field>
+                <field type="STR">Pain severity.cry:Find:Pt:^Patient:Ord:Observed.FLACC</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1508035</field>
+                <field type="AUI">A18383874</field>
+                <field type="LUI">L5314264</field>
+                <field type="SUI">S7353564</field>
+                <field type="SCUI">38220-0</field>
+                <field type="CODE">38220-0</field>
+                <field type="STR">Pain severity.consolability:Find:Pt:^Patient:Ord:Observed.FLACC</field>
+            </row>
+        </sample>
+        <sample id="MTH_LN" samplename="MTH_LN" definition="MTH Official fully specified name with expanded abbreviations" count="7">
+            <row type="standard">
+                <field type="CUI">C1508028</field>
+                <field type="AUI">A18834463</field>
+                <field type="LUI">L5312848</field>
+                <field type="SUI">S7431289</field>
+                <field type="SCUI">38213-5</field>
+                <field type="CODE">38213-5</field>
+                <field type="STR">FLACC pain assessment panel:-:Point in time:^Patient:-</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1508030</field>
+                <field type="AUI">A18823317</field>
+                <field type="LUI">L5315014</field>
+                <field type="SUI">S7353578</field>
+                <field type="SCUI">38215-0</field>
+                <field type="CODE">38215-0</field>
+                <field type="STR">Pain severity.total:Finding:Point in time:^Patient:Quantitative:Observed.FLACC</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1508031</field>
+                <field type="AUI">A18845572</field>
+                <field type="LUI">L5314971</field>
+                <field type="SUI">S7353572</field>
+                <field type="SCUI">38216-8</field>
+                <field type="CODE">38216-8</field>
+                <field type="STR">Pain severity.face:Finding:Point in time:^Patient:Ordinal:Observed.FLACC</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1508032</field>
+                <field type="AUI">A18856795</field>
+                <field type="LUI">L5315013</field>
+                <field type="SUI">S7353575</field>
+                <field type="SCUI">38217-6</field>
+                <field type="CODE">38217-6</field>
+                <field type="STR">Pain severity.legs:Finding:Point in time:^Patient:Ordinal:Observed.FLACC</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1508033</field>
+                <field type="AUI">A18856796</field>
+                <field type="LUI">L5311304</field>
+                <field type="SUI">S7353562</field>
+                <field type="SCUI">38218-4</field>
+                <field type="CODE">38218-4</field>
+                <field type="STR">Pain severity.activity:Finding:Point in time:^Patient:Ordinal:Observed.FLACC</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1508034</field>
+                <field type="AUI">A18845573</field>
+                <field type="LUI">L5314600</field>
+                <field type="SUI">S7353569</field>
+                <field type="SCUI">38219-2</field>
+                <field type="CODE">38219-2</field>
+                <field type="STR">Pain severity.cry:Finding:Point in time:^Patient:Ordinal:Observed.FLACC</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1508035</field>
+                <field type="AUI">A18856797</field>
+                <field type="LUI">L5314265</field>
+                <field type="SUI">S7353565</field>
+                <field type="SCUI">38220-0</field>
+                <field type="CODE">38220-0</field>
+                <field type="STR">Pain severity.consolability:Finding:Point in time:^Patient:Ordinal:Observed.FLACC</field>
+            </row>
+        </sample>
+    </samples>
+</document>

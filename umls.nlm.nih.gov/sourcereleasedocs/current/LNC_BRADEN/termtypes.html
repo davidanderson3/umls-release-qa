@@ -1,0 +1,358 @@
+<div class="section-3" id="maincontent">
+   <ul id="menu">
+      <li id="nav-1">
+         <a href="index.html">Synopsis</a>
+      </li>
+      <li id="nav-2">
+         <a href="mrsab.html">MRSAB.RRF</a>
+      </li>
+      <li id="nav-3">
+         <a href="sourcemetastats.html">Statistics and Sample Data</a>
+         <ul id="subnav-3">
+            <li>
+               <a href="termtypes.html" id="ttys">Terms and term types</a>
+            </li>
+            <li>
+               <a href="attributes.html">Attributes</a>
+            </li>
+            <li>
+               <a href="relationships.html">Relationships</a>
+            </li>
+            <li>
+               <a href="semtypes.html">Semantic Types</a>
+            </li>
+            <li>
+               <a href="overlap.html">Source Overlap</a>
+            </li>
+         </ul>
+      </li>
+   </ul>
+   <div id="counts">
+      <h2>Counts</h2>
+      <p class="jumptags">&nbsp;(skip to:&nbsp;<a href="#explain">notes</a>&nbsp;&nbsp;<a href="#samples">samples</a>)</p>
+      <div id="placeholder" style="display:none;">placeholder</div>
+      <table summary="Metadata Stats: This is a by-source tabulation of various data types in the UMLS Metathesaurus">
+         <tr>
+            <th class="metalabel" scope="col">Term Type</th>
+            <th class="definition" scope="col">Description</th>
+            <th class="count" scope="col">Count (MRCONSO.RRF)</th>
+         </tr>
+         <tr>
+            <td class="metalabel" valign="top" scope="row">
+               <a href="#LC"
+                  title="Samples of LC term types. If you are using the tab key for navigation, press Enter or Return to go to sample data"
+                  onkeyup="checkKeyType('LC',event);"
+                  onclick="document.getElementById('placeholder').innerHTML = '';document.getElementById('placeholder').style.display = 'none';new Effect.Appear('placeholder');drawContentBox('LC',event,this.innerHTML);return false;">LC</a>
+               <noscript>
+                  <a href="#LC"/>
+               </noscript>
+            </td>
+            <td class="definition" valign="top">Long common name</td>
+            <td class="count" valign="top">8</td>
+         </tr>
+         <tr>
+            <td class="metalabel" valign="top" scope="row">
+               <a href="#LN"
+                  title="Samples of LN term types. If you are using the tab key for navigation, press Enter or Return to go to sample data"
+                  onkeyup="checkKeyType('LN',event);"
+                  onclick="document.getElementById('placeholder').innerHTML = '';document.getElementById('placeholder').style.display = 'none';new Effect.Appear('placeholder');drawContentBox('LN',event,this.innerHTML);return false;">LN</a>
+               <noscript>
+                  <a href="#LN"/>
+               </noscript>
+            </td>
+            <td class="definition" valign="top">LOINC official fully specified name</td>
+            <td class="count" valign="top">8</td>
+         </tr>
+         <tr>
+            <td class="metalabel" valign="top" scope="row">
+               <a href="#MTH_LN"
+                  title="Samples of MTH_LN term types. If you are using the tab key for navigation, press Enter or Return to go to sample data"
+                  onkeyup="checkKeyType('MTH_LN',event);"
+                  onclick="document.getElementById('placeholder').innerHTML = '';document.getElementById('placeholder').style.display = 'none';new Effect.Appear('placeholder');drawContentBox('MTH_LN',event,this.innerHTML);return false;">MTH_LN</a>
+               <noscript>
+                  <a href="#MTH_LN"/>
+               </noscript>
+            </td>
+            <td class="definition" valign="top">MTH Official fully specified name with expanded abbreviations</td>
+            <td class="count" valign="top">8</td>
+         </tr>
+      </table>
+   </div>
+   <div id="explain">
+      <h2>Notes</h2>
+      <ul>
+         <li>A term type indicates the role an atom plays in its source</li>
+         <li>An atom is the smallest unit of naming in a source; that is, a specific string with specific code values and identifiers from a specific source.</li>
+         <li>Every atom has a separate row in MRCONSO.RRF. Every atom is assigned a term type.</li>
+         <li>Term types are assigned based on source documentation or NLM understanding of the source.</li>
+         <li>Sample data are provided for every term type in the source (see below).</li>
+         <li>See <a href="http://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/abbreviations.html#mrdoc_TTY"
+               target="_blank">Metathesaurus Documentation</a> for a list of all term type abbreviations and their full names.</li>
+         <li>See <a href="http://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/precedence_suppressibility.html"
+               target="_blank">Metathesaurus Documentation</a> for a list of sources and their associated term types, listed in default order of precedence.</li>
+         <li>See <a href="http://www.ncbi.nlm.nih.gov/books/NBK9684/#ch02.I23_Concepts_Concept_Names_and_Thei"
+               target="_blank">Section 2.3 of the UMLS Reference Manual</a> for more information on terms and term types in the UMLS Metathesaurus.</li>
+      </ul>
+   </div>
+   <div id="samples">
+      <h3>Sample Data</h3>
+      <div class="sample" id="LC">
+         <h4>LC</h4>&nbsp;&nbsp;<a href="#counts">(return to top)</a>
+         <table summary="This table provides sample rows for LC data elements in the UMLS Metathesaurus">
+            <tr>
+               <th scope="col">CUI</th>
+               <th scope="col">AUI</th>
+               <th scope="col">LUI</th>
+               <th scope="col">SUI</th>
+               <th scope="col">SCUI</th>
+               <th scope="col">CODE</th>
+               <th scope="col">STR</th>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C1508133</td>
+               <td class="aui" valign="top">A18229163</td>
+               <td class="lui" valign="top">L5519795</td>
+               <td class="sui" valign="top">S11046154</td>
+               <td class="scui" valign="top">38222-6</td>
+               <td class="code" valign="top">38222-6</td>
+               <td class="str" valign="top">Sensory perception Braden scale</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C1508134</td>
+               <td class="aui" valign="top">A18345344</td>
+               <td class="lui" valign="top">L5517421</td>
+               <td class="sui" valign="top">S11041782</td>
+               <td class="scui" valign="top">38223-4</td>
+               <td class="code" valign="top">38223-4</td>
+               <td class="str" valign="top">Physical activity Braden scale</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C1508135</td>
+               <td class="aui" valign="top">A18229169</td>
+               <td class="lui" valign="top">L5519794</td>
+               <td class="sui" valign="top">S11041960</td>
+               <td class="scui" valign="top">38224-2</td>
+               <td class="code" valign="top">38224-2</td>
+               <td class="str" valign="top">Physical mobility Braden scale</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C1507669</td>
+               <td class="aui" valign="top">A18267902</td>
+               <td class="lui" valign="top">L8870771</td>
+               <td class="sui" valign="top">S11039271</td>
+               <td class="scui" valign="top">38225-9</td>
+               <td class="code" valign="top">38225-9</td>
+               <td class="str" valign="top">Nutrition intake pattern Braden scale</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C1507670</td>
+               <td class="aui" valign="top">A18152065</td>
+               <td class="lui" valign="top">L5519792</td>
+               <td class="sui" valign="top">S11031036</td>
+               <td class="scui" valign="top">38226-7</td>
+               <td class="code" valign="top">38226-7</td>
+               <td class="str" valign="top">Friction &amp; sheer Braden scale</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C1507671</td>
+               <td class="aui" valign="top">A18190729</td>
+               <td class="lui" valign="top">L5313484</td>
+               <td class="sui" valign="top">S11022331</td>
+               <td class="scui" valign="top">38227-5</td>
+               <td class="code" valign="top">38227-5</td>
+               <td class="str" valign="top">Braden scale total score</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C1507672</td>
+               <td class="aui" valign="top">A18113457</td>
+               <td class="lui" valign="top">L5312839</td>
+               <td class="sui" valign="top">S7401844</td>
+               <td class="scui" valign="top">38228-3</td>
+               <td class="code" valign="top">38228-3</td>
+               <td class="str" valign="top">Braden scale skin assessment panel</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C1507673</td>
+               <td class="aui" valign="top">A18306743</td>
+               <td class="lui" valign="top">L5519791</td>
+               <td class="sui" valign="top">S11038244</td>
+               <td class="scui" valign="top">38229-1</td>
+               <td class="code" valign="top">38229-1</td>
+               <td class="str" valign="top">Moisture exposure Braden scale</td>
+            </tr>
+         </table>
+      </div>
+      <div class="sample" id="LN">
+         <h4>LN</h4>&nbsp;&nbsp;<a href="#counts">(return to top)</a>
+         <table summary="This table provides sample rows for LN data elements in the UMLS Metathesaurus">
+            <tr>
+               <th scope="col">CUI</th>
+               <th scope="col">AUI</th>
+               <th scope="col">LUI</th>
+               <th scope="col">SUI</th>
+               <th scope="col">SCUI</th>
+               <th scope="col">CODE</th>
+               <th scope="col">STR</th>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C1508133</td>
+               <td class="aui" valign="top">A18113452</td>
+               <td class="lui" valign="top">L6700467</td>
+               <td class="sui" valign="top">S7796235</td>
+               <td class="scui" valign="top">38222-6</td>
+               <td class="code" valign="top">38222-6</td>
+               <td class="str" valign="top">Sensory perception:Find:Pt:Skin:Ord:Observed.Braden scale</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C1508134</td>
+               <td class="aui" valign="top">A18267901</td>
+               <td class="lui" valign="top">L5311301</td>
+               <td class="sui" valign="top">S7357401</td>
+               <td class="scui" valign="top">38223-4</td>
+               <td class="code" valign="top">38223-4</td>
+               <td class="str" valign="top">Physical activity:Find:Pt:^Patient:Ord:Observed.Braden scale</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C1508135</td>
+               <td class="aui" valign="top">A18229168</td>
+               <td class="lui" valign="top">L5313479</td>
+               <td class="sui" valign="top">S7357845</td>
+               <td class="scui" valign="top">38224-2</td>
+               <td class="code" valign="top">38224-2</td>
+               <td class="str" valign="top">Physical mobility:Find:Pt:^Patient:Ord:Observed.Braden scale</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C1507669</td>
+               <td class="aui" valign="top">A18383876</td>
+               <td class="lui" valign="top">L5313477</td>
+               <td class="sui" valign="top">S7350241</td>
+               <td class="scui" valign="top">38225-9</td>
+               <td class="code" valign="top">38225-9</td>
+               <td class="str" valign="top">Nutrition intake pattern:Find:Pt:^Patient:Ord:Observed.Braden scale</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C1507670</td>
+               <td class="aui" valign="top">A18229170</td>
+               <td class="lui" valign="top">L6702310</td>
+               <td class="sui" valign="top">S7804471</td>
+               <td class="scui" valign="top">38226-7</td>
+               <td class="code" valign="top">38226-7</td>
+               <td class="str" valign="top">Friction &amp; sheer:Find:Pt:Skin:Ord:Observed.Braden scale</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C1507671</td>
+               <td class="aui" valign="top">A18113456</td>
+               <td class="lui" valign="top">L5313471</td>
+               <td class="sui" valign="top">S7401838</td>
+               <td class="scui" valign="top">38227-5</td>
+               <td class="code" valign="top">38227-5</td>
+               <td class="str" valign="top">Braden scale score.total:Find:Pt:^Patient:Ord:Observed.Braden scale</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C1507672</td>
+               <td class="aui" valign="top">A18267904</td>
+               <td class="lui" valign="top">L5312838</td>
+               <td class="sui" valign="top">S7401843</td>
+               <td class="scui" valign="top">38228-3</td>
+               <td class="code" valign="top">38228-3</td>
+               <td class="str" valign="top">Braden scale skin assessment panel:-:Pt:^Patient:-</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C1507673</td>
+               <td class="aui" valign="top">A18383879</td>
+               <td class="lui" valign="top">L6700193</td>
+               <td class="sui" valign="top">S7793088</td>
+               <td class="scui" valign="top">38229-1</td>
+               <td class="code" valign="top">38229-1</td>
+               <td class="str" valign="top">Moisture exposure:Find:Pt:Skin:Ord:Observed.Braden scale</td>
+            </tr>
+         </table>
+      </div>
+      <div class="sample" id="MTH_LN">
+         <h4>MTH_LN</h4>&nbsp;&nbsp;<a href="#counts">(return to top)</a>
+         <table summary="This table provides sample rows for MTH_LN data elements in the UMLS Metathesaurus">
+            <tr>
+               <th scope="col">CUI</th>
+               <th scope="col">AUI</th>
+               <th scope="col">LUI</th>
+               <th scope="col">SUI</th>
+               <th scope="col">SCUI</th>
+               <th scope="col">CODE</th>
+               <th scope="col">STR</th>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C1508133</td>
+               <td class="aui" valign="top">A18812231</td>
+               <td class="lui" valign="top">L5313482</td>
+               <td class="sui" valign="top">S7369874</td>
+               <td class="scui" valign="top">38222-6</td>
+               <td class="code" valign="top">38222-6</td>
+               <td class="str" valign="top">Sensory perception:Finding:Point in time:Skin:Ordinal:Observed.Braden scale</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C1508134</td>
+               <td class="aui" valign="top">A18867907</td>
+               <td class="lui" valign="top">L5311302</td>
+               <td class="sui" valign="top">S7357402</td>
+               <td class="scui" valign="top">38223-4</td>
+               <td class="code" valign="top">38223-4</td>
+               <td class="str" valign="top">Physical activity:Finding:Point in time:^Patient:Ordinal:Observed.Braden scale</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C1508135</td>
+               <td class="aui" valign="top">A18867908</td>
+               <td class="lui" valign="top">L5313480</td>
+               <td class="sui" valign="top">S7357846</td>
+               <td class="scui" valign="top">38224-2</td>
+               <td class="code" valign="top">38224-2</td>
+               <td class="str" valign="top">Physical mobility:Finding:Point in time:^Patient:Ordinal:Observed.Braden scale</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C1507669</td>
+               <td class="aui" valign="top">A18856799</td>
+               <td class="lui" valign="top">L5313478</td>
+               <td class="sui" valign="top">S7350242</td>
+               <td class="scui" valign="top">38225-9</td>
+               <td class="code" valign="top">38225-9</td>
+               <td class="str" valign="top">Nutrition intake pattern:Finding:Point in time:^Patient:Ordinal:Observed.Braden scale</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C1507670</td>
+               <td class="aui" valign="top">A18834464</td>
+               <td class="lui" valign="top">L5313476</td>
+               <td class="sui" valign="top">S7434300</td>
+               <td class="scui" valign="top">38226-7</td>
+               <td class="code" valign="top">38226-7</td>
+               <td class="str" valign="top">Friction &amp; sheer:Finding:Point in time:Skin:Ordinal:Observed.Braden scale</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C1507671</td>
+               <td class="aui" valign="top">A18812232</td>
+               <td class="lui" valign="top">L5313472</td>
+               <td class="sui" valign="top">S7401840</td>
+               <td class="scui" valign="top">38227-5</td>
+               <td class="code" valign="top">38227-5</td>
+               <td class="str" valign="top">Braden scale score.total:Finding:Point in time:^Patient:Ordinal:Observed.Braden scale</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C1507672</td>
+               <td class="aui" valign="top">A18856800</td>
+               <td class="lui" valign="top">L5312837</td>
+               <td class="sui" valign="top">S7401842</td>
+               <td class="scui" valign="top">38228-3</td>
+               <td class="code" valign="top">38228-3</td>
+               <td class="str" valign="top">Braden scale skin assessment panel:-:Point in time:^Patient:-</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C1507673</td>
+               <td class="aui" valign="top">A18890159</td>
+               <td class="lui" valign="top">L5313474</td>
+               <td class="sui" valign="top">S7462720</td>
+               <td class="scui" valign="top">38229-1</td>
+               <td class="code" valign="top">38229-1</td>
+               <td class="str" valign="top">Moisture exposure:Finding:Point in time:Skin:Ordinal:Observed.Braden scale</td>
+            </tr>
+         </table>
+      </div>
+   </div>
+</div>

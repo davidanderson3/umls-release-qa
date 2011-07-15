@@ -1,0 +1,581 @@
+<div class="section-3" id="maincontent">
+   <ul id="menu">
+      <li id="nav-1">
+         <a href="index.html">Synopsis</a>
+      </li>
+      <li id="nav-2">
+         <a href="mrsab.html">MRSAB.RRF</a>
+      </li>
+      <li id="nav-3">
+         <a href="sourcemetastats.html">Statistics and Sample Data</a>
+         <ul id="subnav-3">
+            <li>
+               <a href="termtypes.html" id="ttys">Terms and term types</a>
+            </li>
+            <li>
+               <a href="attributes.html">Attributes</a>
+            </li>
+            <li>
+               <a href="relationships.html">Relationships</a>
+            </li>
+            <li>
+               <a href="semtypes.html">Semantic Types</a>
+            </li>
+            <li>
+               <a href="overlap.html">Source Overlap</a>
+            </li>
+         </ul>
+      </li>
+   </ul>
+   <div id="counts">
+      <h2>Counts</h2>
+      <p class="jumptags">&nbsp;(skip to:&nbsp;<a href="#explain">notes</a>&nbsp;&nbsp;<a href="#samples">samples</a>)</p>
+      <div id="placeholder" style="display:none;">placeholder</div>
+      <table summary="Metadata Stats: This is a by-source tabulation of various data types in the UMLS Metathesaurus">
+         <tr>
+            <th class="metalabel" scope="col">Term Type</th>
+            <th class="definition" scope="col">Description</th>
+            <th class="count" scope="col">Count (MRCONSO.RRF)</th>
+         </tr>
+         <tr>
+            <td class="metalabel" valign="top" scope="row">
+               <a href="#MH"
+                  title="Samples of MH term types. If you are using the tab key for navigation, press Enter or Return to go to sample data"
+                  onkeyup="checkKeyType('MH',event);"
+                  onclick="document.getElementById('placeholder').innerHTML = '';document.getElementById('placeholder').style.display = 'none';new Effect.Appear('placeholder');drawContentBox('MH',event,this.innerHTML);return false;">MH</a>
+               <noscript>
+                  <a href="#MH"/>
+               </noscript>
+            </td>
+            <td class="definition" valign="top">Main heading</td>
+            <td class="count" valign="top">26098</td>
+         </tr>
+         <tr>
+            <td class="metalabel" valign="top" scope="row">
+               <a href="#EP"
+                  title="Samples of EP term types. If you are using the tab key for navigation, press Enter or Return to go to sample data"
+                  onkeyup="checkKeyType('EP',event);"
+                  onclick="document.getElementById('placeholder').innerHTML = '';document.getElementById('placeholder').style.display = 'none';new Effect.Appear('placeholder');drawContentBox('EP',event,this.innerHTML);return false;">EP</a>
+               <noscript>
+                  <a href="#EP"/>
+               </noscript>
+            </td>
+            <td class="definition" valign="top">Print entry term</td>
+            <td class="count" valign="top">15232</td>
+         </tr>
+         <tr>
+            <td class="metalabel" valign="top" scope="row">
+               <a href="#PEP"
+                  title="Samples of PEP term types. If you are using the tab key for navigation, press Enter or Return to go to sample data"
+                  onkeyup="checkKeyType('PEP',event);"
+                  onclick="document.getElementById('placeholder').innerHTML = '';document.getElementById('placeholder').style.display = 'none';new Effect.Appear('placeholder');drawContentBox('PEP',event,this.innerHTML);return false;">PEP</a>
+               <noscript>
+                  <a href="#PEP"/>
+               </noscript>
+            </td>
+            <td class="definition" valign="top">Preferred entry term</td>
+            <td class="count" valign="top">2384</td>
+         </tr>
+         <tr>
+            <td class="metalabel" valign="top" scope="row">
+               <a href="#PEN"
+                  title="Samples of PEN term types. If you are using the tab key for navigation, press Enter or Return to go to sample data"
+                  onkeyup="checkKeyType('PEN',event);"
+                  onclick="document.getElementById('placeholder').innerHTML = '';document.getElementById('placeholder').style.display = 'none';new Effect.Appear('placeholder');drawContentBox('PEN',event,this.innerHTML);return false;">PEN</a>
+               <noscript>
+                  <a href="#PEN"/>
+               </noscript>
+            </td>
+            <td class="definition" valign="top">Preferred non-print entry term</td>
+            <td class="count" valign="top">8</td>
+         </tr>
+         <tr>
+            <td class="metalabel" valign="top" scope="row">
+               <a href="#EN"
+                  title="Samples of EN term types. If you are using the tab key for navigation, press Enter or Return to go to sample data"
+                  onkeyup="checkKeyType('EN',event);"
+                  onclick="document.getElementById('placeholder').innerHTML = '';document.getElementById('placeholder').style.display = 'none';new Effect.Appear('placeholder');drawContentBox('EN',event,this.innerHTML);return false;">EN</a>
+               <noscript>
+                  <a href="#EN"/>
+               </noscript>
+            </td>
+            <td class="definition" valign="top">Non-print entry term</td>
+            <td class="count" valign="top">3</td>
+         </tr>
+      </table>
+   </div>
+   <div id="explain">
+      <h2>Notes</h2>
+      <ul>
+         <li>A term type indicates the role an atom plays in its source</li>
+         <li>An atom is the smallest unit of naming in a source; that is, a specific string with specific code values and identifiers from a specific source.</li>
+         <li>Every atom has a separate row in MRCONSO.RRF. Every atom is assigned a term type.</li>
+         <li>Term types are assigned based on source documentation or NLM understanding of the source.</li>
+         <li>Sample data are provided for every term type in the source (see below).</li>
+         <li>See <a href="http://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/abbreviations.html#mrdoc_TTY"
+               target="_blank">Metathesaurus Documentation</a> for a list of all term type abbreviations and their full names.</li>
+         <li>See <a href="http://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/precedence_suppressibility.html"
+               target="_blank">Metathesaurus Documentation</a> for a list of sources and their associated term types, listed in default order of precedence.</li>
+         <li>See <a href="http://www.ncbi.nlm.nih.gov/books/NBK9684/#ch02.I23_Concepts_Concept_Names_and_Thei"
+               target="_blank">Section 2.3 of the UMLS Reference Manual</a> for more information on terms and term types in the UMLS Metathesaurus.</li>
+      </ul>
+   </div>
+   <div id="samples">
+      <h3>Sample Data</h3>
+      <div class="sample" id="MH">
+         <h4>MH</h4>&nbsp;&nbsp;<a href="#counts">(return to top)</a>
+         <table summary="This table provides sample rows for MH data elements in the UMLS Metathesaurus">
+            <tr>
+               <th scope="col">CUI</th>
+               <th scope="col">AUI</th>
+               <th scope="col">LUI</th>
+               <th scope="col">SUI</th>
+               <th scope="col">SCUI</th>
+               <th scope="col">SDUI</th>
+               <th scope="col">CODE</th>
+               <th scope="col">STR</th>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0002759</td>
+               <td class="aui" valign="top">A7539460</td>
+               <td class="lui" valign="top">L1295675</td>
+               <td class="sui" valign="top">S1537621</td>
+               <td class="scui" valign="top">M0001062</td>
+               <td class="sdui" valign="top">D000695</td>
+               <td class="code" valign="top">D000695</td>
+               <td class="str" valign="top">Sacche anali</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0002902</td>
+               <td class="aui" valign="top">A7535751</td>
+               <td class="lui" valign="top">L1232153</td>
+               <td class="sui" valign="top">S1474099</td>
+               <td class="scui" valign="top">M0001142</td>
+               <td class="sdui" valign="top">D000757</td>
+               <td class="code" valign="top">D000757</td>
+               <td class="str" valign="top">Anencefalia</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0003967</td>
+               <td class="aui" valign="top">A7549098</td>
+               <td class="lui" valign="top">L2137620</td>
+               <td class="sui" valign="top">S2475842</td>
+               <td class="scui" valign="top">M0001796</td>
+               <td class="sdui" valign="top">D001204</td>
+               <td class="code" valign="top">D001204</td>
+               <td class="str" valign="top">Ascorbato ossidasi</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0003988</td>
+               <td class="aui" valign="top">A7545674</td>
+               <td class="lui" valign="top">L1779567</td>
+               <td class="sui" valign="top">S2076708</td>
+               <td class="scui" valign="top">M0001811</td>
+               <td class="sdui" valign="top">D001213</td>
+               <td class="code" valign="top">D001213</td>
+               <td class="str" valign="top">Americani di origine asiatica</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0003993</td>
+               <td class="aui" valign="top">A7549103</td>
+               <td class="lui" valign="top">L2137625</td>
+               <td class="sui" valign="top">S2475847</td>
+               <td class="scui" valign="top">M0001815</td>
+               <td class="sdui" valign="top">D001215</td>
+               <td class="code" valign="top">D001215</td>
+               <td class="str" valign="top">Asparaginasi</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0004293</td>
+               <td class="aui" valign="top">A7540760</td>
+               <td class="lui" valign="top">L1510826</td>
+               <td class="sui" valign="top">S1806735</td>
+               <td class="scui" valign="top">M0001962</td>
+               <td class="sdui" valign="top">D001302</td>
+               <td class="code" valign="top">D001302</td>
+               <td class="str" valign="top">Audiometria del discorso</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0004521</td>
+               <td class="aui" valign="top">A7549177</td>
+               <td class="lui" valign="top">L2137702</td>
+               <td class="sui" valign="top">S2475924</td>
+               <td class="scui" valign="top">M0002090</td>
+               <td class="sdui" valign="top">D001398</td>
+               <td class="code" valign="top">D001398</td>
+               <td class="str" valign="top">Aztreonam</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0005523</td>
+               <td class="aui" valign="top">A7543953</td>
+               <td class="lui" valign="top">L1539368</td>
+               <td class="sui" valign="top">S1835277</td>
+               <td class="scui" valign="top">M0002534</td>
+               <td class="sdui" valign="top">D001689</td>
+               <td class="code" valign="top">D001689</td>
+               <td class="str" valign="top">Psichiatria biologica</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0005552</td>
+               <td class="aui" valign="top">A7540865</td>
+               <td class="lui" valign="top">L1512328</td>
+               <td class="sui" valign="top">S1808237</td>
+               <td class="scui" valign="top">M0002551</td>
+               <td class="sdui" valign="top">D001702</td>
+               <td class="code" valign="top">D001702</td>
+               <td class="str" valign="top">Biofarmaceutica</td>
+            </tr>
+         </table>
+      </div>
+      <div class="sample" id="EP">
+         <h4>EP</h4>&nbsp;&nbsp;<a href="#counts">(return to top)</a>
+         <table summary="This table provides sample rows for EP data elements in the UMLS Metathesaurus">
+            <tr>
+               <th scope="col">CUI</th>
+               <th scope="col">AUI</th>
+               <th scope="col">LUI</th>
+               <th scope="col">SUI</th>
+               <th scope="col">SCUI</th>
+               <th scope="col">SDUI</th>
+               <th scope="col">CODE</th>
+               <th scope="col">STR</th>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0021028</td>
+               <td class="aui" valign="top">A9150312</td>
+               <td class="lui" valign="top">L2391531</td>
+               <td class="sui" valign="top">S2827527</td>
+               <td class="scui" valign="top">M0011123</td>
+               <td class="sdui" valign="top">D007137</td>
+               <td class="code" valign="top">D007137</td>
+               <td class="str" valign="top">Immunoglobuline a catena alfa</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C1563715</td>
+               <td class="aui" valign="top">A9151474</td>
+               <td class="lui" valign="top">L5703326</td>
+               <td class="sui" valign="top">S6536363</td>
+               <td class="scui" valign="top">M0472066</td>
+               <td class="sdui" valign="top">D050030</td>
+               <td class="code" valign="top">D050030</td>
+               <td class="str" valign="top">Sindrome del QT lungo di tipo 7</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0002890</td>
+               <td class="aui" valign="top">A13470715</td>
+               <td class="lui" valign="top">L5977062</td>
+               <td class="sui" valign="top">S6859492</td>
+               <td class="scui" valign="top">M0001135</td>
+               <td class="sdui" valign="top">D000750</td>
+               <td class="code" valign="top">D000750</td>
+               <td class="str" valign="top">Anemia leucoeritroblastica</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0003113</td>
+               <td class="aui" valign="top">A13471682</td>
+               <td class="lui" valign="top">L6961159</td>
+               <td class="sui" valign="top">S8100030</td>
+               <td class="scui" valign="top">M0001263</td>
+               <td class="sdui" valign="top">D000849</td>
+               <td class="code" valign="top">D000849</td>
+               <td class="str" valign="top">Disfasia anomica</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0021084</td>
+               <td class="aui" valign="top">A13468725</td>
+               <td class="lui" valign="top">L6963158</td>
+               <td class="sui" valign="top">S8101299</td>
+               <td class="scui" valign="top">M0001373</td>
+               <td class="sdui" valign="top">D000922</td>
+               <td class="code" valign="top">D000922</td>
+               <td class="str" valign="top">Immunotossina</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0004953</td>
+               <td class="aui" valign="top">A13474734</td>
+               <td class="lui" valign="top">L1512278</td>
+               <td class="sui" valign="top">S1808187</td>
+               <td class="scui" valign="top">M0002299</td>
+               <td class="sdui" valign="top">D001532</td>
+               <td class="code" valign="top">D001532</td>
+               <td class="str" valign="top">Belladonna</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0007099</td>
+               <td class="aui" valign="top">A13471771</td>
+               <td class="lui" valign="top">L6963746</td>
+               <td class="sui" valign="top">S8099104</td>
+               <td class="scui" valign="top">M0003429</td>
+               <td class="sdui" valign="top">D002278</td>
+               <td class="code" valign="top">D002278</td>
+               <td class="str" valign="top">Carcinoma preinvasivo</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0007098</td>
+               <td class="aui" valign="top">A13467801</td>
+               <td class="lui" valign="top">L6961034</td>
+               <td class="sui" valign="top">S8099108</td>
+               <td class="scui" valign="top">M0003430</td>
+               <td class="sdui" valign="top">D002279</td>
+               <td class="code" valign="top">D002279</td>
+               <td class="str" valign="top">Carcinosarcoma Walker 256</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0011892</td>
+               <td class="aui" valign="top">A13468864</td>
+               <td class="lui" valign="top">L6960281</td>
+               <td class="sui" valign="top">S8099962</td>
+               <td class="scui" valign="top">M0006166</td>
+               <td class="sdui" valign="top">D003932</td>
+               <td class="code" valign="top">D003932</td>
+               <td class="str" valign="top">Diamorfina</td>
+            </tr>
+         </table>
+      </div>
+      <div class="sample" id="PEP">
+         <h4>PEP</h4>&nbsp;&nbsp;<a href="#counts">(return to top)</a>
+         <table summary="This table provides sample rows for PEP data elements in the UMLS Metathesaurus">
+            <tr>
+               <th scope="col">CUI</th>
+               <th scope="col">AUI</th>
+               <th scope="col">LUI</th>
+               <th scope="col">SUI</th>
+               <th scope="col">SCUI</th>
+               <th scope="col">SDUI</th>
+               <th scope="col">CODE</th>
+               <th scope="col">STR</th>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0010147</td>
+               <td class="aui" valign="top">A13469679</td>
+               <td class="lui" valign="top">L6960258</td>
+               <td class="sui" valign="top">S8099777</td>
+               <td class="scui" valign="top">M0000286</td>
+               <td class="sdui" valign="top">D000192</td>
+               <td class="code" valign="top">D000192</td>
+               <td class="str" valign="top">Corynebacteriaceae</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0001589</td>
+               <td class="aui" valign="top">A13469687</td>
+               <td class="lui" valign="top">L6963237</td>
+               <td class="sui" valign="top">S8101964</td>
+               <td class="scui" valign="top">M0000464</td>
+               <td class="sdui" valign="top">D000293</td>
+               <td class="code" valign="top">D000293</td>
+               <td class="str" valign="top">Maschi adolescenti</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0563625</td>
+               <td class="aui" valign="top">A13473631</td>
+               <td class="lui" valign="top">L6961813</td>
+               <td class="sui" valign="top">S8097872</td>
+               <td class="scui" valign="top">M0337184</td>
+               <td class="sdui" valign="top">D000377</td>
+               <td class="code" valign="top">D000377</td>
+               <td class="str" valign="top">Agnosia per il dolore</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0234474</td>
+               <td class="aui" valign="top">A13469734</td>
+               <td class="lui" valign="top">L6959083</td>
+               <td class="sui" valign="top">S8097805</td>
+               <td class="scui" valign="top">M0336956</td>
+               <td class="sdui" valign="top">D001037</td>
+               <td class="code" valign="top">D001037</td>
+               <td class="str" valign="top">Afasia grafomotoria</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0973461</td>
+               <td class="aui" valign="top">A13469736</td>
+               <td class="lui" valign="top">L5988515</td>
+               <td class="sui" valign="top">S6870947</td>
+               <td class="scui" valign="top">M0001573</td>
+               <td class="sdui" valign="top">D001037</td>
+               <td class="code" valign="top">D001037</td>
+               <td class="str" valign="top">Disfasia</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0600167</td>
+               <td class="aui" valign="top">A13473699</td>
+               <td class="lui" valign="top">L1779632</td>
+               <td class="sui" valign="top">S2076773</td>
+               <td class="scui" valign="top">M0002278</td>
+               <td class="sdui" valign="top">D001516</td>
+               <td class="code" valign="top">D001516</td>
+               <td class="str" valign="top">Apidae</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0006331</td>
+               <td class="aui" valign="top">A13468767</td>
+               <td class="lui" valign="top">L6960971</td>
+               <td class="sui" valign="top">S8098644</td>
+               <td class="scui" valign="top">M0002324</td>
+               <td class="sdui" valign="top">D001548</td>
+               <td class="code" valign="top">D001548</td>
+               <td class="str" valign="top">BTC-2125</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0017089</td>
+               <td class="aui" valign="top">A13472739</td>
+               <td class="lui" valign="top">L6961298</td>
+               <td class="sui" valign="top">S8101000</td>
+               <td class="scui" valign="top">M0003271</td>
+               <td class="sdui" valign="top">D002188</td>
+               <td class="code" valign="top">D002188</td>
+               <td class="str" valign="top">Ganja</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0242209</td>
+               <td class="aui" valign="top">A13474778</td>
+               <td class="lui" valign="top">L6964434</td>
+               <td class="sui" valign="top">S8104573</td>
+               <td class="scui" valign="top">M0003361</td>
+               <td class="sdui" valign="top">D002241</td>
+               <td class="code" valign="top">D002241</td>
+               <td class="str" valign="top">Zuccheri</td>
+            </tr>
+         </table>
+      </div>
+      <div class="sample" id="PEN">
+         <h4>PEN</h4>&nbsp;&nbsp;<a href="#counts">(return to top)</a>
+         <table summary="This table provides sample rows for PEN data elements in the UMLS Metathesaurus">
+            <tr>
+               <th scope="col">CUI</th>
+               <th scope="col">AUI</th>
+               <th scope="col">LUI</th>
+               <th scope="col">SUI</th>
+               <th scope="col">SCUI</th>
+               <th scope="col">SDUI</th>
+               <th scope="col">CODE</th>
+               <th scope="col">STR</th>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C1510457</td>
+               <td class="aui" valign="top">A13470867</td>
+               <td class="lui" valign="top">L2138947</td>
+               <td class="sui" valign="top">S2477169</td>
+               <td class="scui" valign="top">M0006248</td>
+               <td class="sdui" valign="top">D003983</td>
+               <td class="code" valign="top">D003983</td>
+               <td class="str" valign="top">Dibenamina</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0020166</td>
+               <td class="aui" valign="top">A13472934</td>
+               <td class="lui" valign="top">L2136743</td>
+               <td class="sui" valign="top">S2474965</td>
+               <td class="scui" valign="top">M0010655</td>
+               <td class="sdui" valign="top">D006812</td>
+               <td class="code" valign="top">D006812</td>
+               <td class="str" valign="top">Acidi umici</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0029210</td>
+               <td class="aui" valign="top">A13471076</td>
+               <td class="lui" valign="top">L1792545</td>
+               <td class="sui" valign="top">S2089686</td>
+               <td class="scui" valign="top">M0015393</td>
+               <td class="sdui" valign="top">D009927</td>
+               <td class="code" valign="top">D009927</td>
+               <td class="str" valign="top">Procedure per l'acquisizione di organi</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0040711</td>
+               <td class="aui" valign="top">A13475183</td>
+               <td class="lui" valign="top">L1547351</td>
+               <td class="sui" valign="top">S1843260</td>
+               <td class="scui" valign="top">M0021827</td>
+               <td class="sdui" valign="top">D014176</td>
+               <td class="code" valign="top">D014176</td>
+               <td class="str" valign="top">Traduzione genetica</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C1384608</td>
+               <td class="aui" valign="top">A13468229</td>
+               <td class="lui" valign="top">L5352679</td>
+               <td class="sui" valign="top">S6114684</td>
+               <td class="scui" valign="top">M0452625</td>
+               <td class="sdui" valign="top">D014856</td>
+               <td class="code" valign="top">D014856</td>
+               <td class="str" valign="top">Odobenus rosmarus</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0242949</td>
+               <td class="aui" valign="top">A13474289</td>
+               <td class="lui" valign="top">L1795614</td>
+               <td class="sui" valign="top">S2092755</td>
+               <td class="scui" valign="top">M0456343</td>
+               <td class="sdui" valign="top">D018724</td>
+               <td class="code" valign="top">D018724</td>
+               <td class="str" valign="top">Spinaci</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0185110</td>
+               <td class="aui" valign="top">A13473359</td>
+               <td class="lui" valign="top">L1793744</td>
+               <td class="sui" valign="top">S2090885</td>
+               <td class="scui" valign="top">M0454398</td>
+               <td class="sdui" valign="top">D020858</td>
+               <td class="code" valign="top">D020858</td>
+               <td class="str" valign="top">Raccolta di tessuti</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C1449560</td>
+               <td class="aui" valign="top">A18957560</td>
+               <td class="lui" valign="top">L9617449</td>
+               <td class="sui" valign="top">S12081008</td>
+               <td class="scui" valign="top">M0452902</td>
+               <td class="sdui" valign="top">D046148</td>
+               <td class="code" valign="top">D046148</td>
+               <td class="str" valign="top">Selezione di organi e tessuti</td>
+            </tr>
+         </table>
+      </div>
+      <div class="sample" id="EN">
+         <h4>EN</h4>&nbsp;&nbsp;<a href="#counts">(return to top)</a>
+         <table summary="This table provides sample rows for EN data elements in the UMLS Metathesaurus">
+            <tr>
+               <th scope="col">CUI</th>
+               <th scope="col">AUI</th>
+               <th scope="col">LUI</th>
+               <th scope="col">SUI</th>
+               <th scope="col">SCUI</th>
+               <th scope="col">SDUI</th>
+               <th scope="col">CODE</th>
+               <th scope="col">STR</th>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0271097</td>
+               <td class="aui" valign="top">A15915191</td>
+               <td class="lui" valign="top">L8133091</td>
+               <td class="sui" valign="top">S10187664</td>
+               <td class="scui" valign="top">M0483844</td>
+               <td class="sdui" valign="top">D052245</td>
+               <td class="code" valign="top">D052245</td>
+               <td class="str" valign="top">Malattia di Usher</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C2718087</td>
+               <td class="aui" valign="top">A17418739</td>
+               <td class="lui" valign="top">L9121819</td>
+               <td class="sui" valign="top">S11375441</td>
+               <td class="scui" valign="top">M0010158</td>
+               <td class="sdui" valign="top">D006475</td>
+               <td class="code" valign="top">D006475</td>
+               <td class="str" valign="top">Malattia emorragica da carenza di vitamina K</td>
+            </tr>
+            <tr class="samplerow">
+               <td class="cui" valign="top">C0022541</td>
+               <td class="aui" valign="top">A17420528</td>
+               <td class="lui" valign="top">L9122126</td>
+               <td class="sui" valign="top">S11376208</td>
+               <td class="scui" valign="top">M0011934</td>
+               <td class="sdui" valign="top">D007625</td>
+               <td class="code" valign="top">D007625</td>
+               <td class="str" valign="top">Sindrome di Kearns Sayre</td>
+            </tr>
+         </table>
+      </div>
+   </div>
+</div>

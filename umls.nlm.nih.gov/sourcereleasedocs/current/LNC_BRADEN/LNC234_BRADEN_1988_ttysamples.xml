@@ -1,0 +1,231 @@
+<document vsab="LNC234_BRADEN_1988" samples="Term Types">
+    <samples>
+        <labels>
+            <label type="metalabel">Term Type</label>
+            <label type="definition">Description</label>
+            <label type="count">Count (MRCONSO.RRF)</label>
+        </labels>
+        <sample id="LC" samplename="LC" definition="Long common name" count="8">
+            <row type="standard">
+                <field type="CUI">C1508133</field>
+                <field type="AUI">A18229163</field>
+                <field type="LUI">L5519795</field>
+                <field type="SUI">S11046154</field>
+                <field type="SCUI">38222-6</field>
+                <field type="CODE">38222-6</field>
+                <field type="STR">Sensory perception Braden scale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1508134</field>
+                <field type="AUI">A18345344</field>
+                <field type="LUI">L5517421</field>
+                <field type="SUI">S11041782</field>
+                <field type="SCUI">38223-4</field>
+                <field type="CODE">38223-4</field>
+                <field type="STR">Physical activity Braden scale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1508135</field>
+                <field type="AUI">A18229169</field>
+                <field type="LUI">L5519794</field>
+                <field type="SUI">S11041960</field>
+                <field type="SCUI">38224-2</field>
+                <field type="CODE">38224-2</field>
+                <field type="STR">Physical mobility Braden scale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1507669</field>
+                <field type="AUI">A18267902</field>
+                <field type="LUI">L8870771</field>
+                <field type="SUI">S11039271</field>
+                <field type="SCUI">38225-9</field>
+                <field type="CODE">38225-9</field>
+                <field type="STR">Nutrition intake pattern Braden scale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1507670</field>
+                <field type="AUI">A18152065</field>
+                <field type="LUI">L5519792</field>
+                <field type="SUI">S11031036</field>
+                <field type="SCUI">38226-7</field>
+                <field type="CODE">38226-7</field>
+                <field type="STR">Friction &amp;amp; sheer Braden scale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1507671</field>
+                <field type="AUI">A18190729</field>
+                <field type="LUI">L5313484</field>
+                <field type="SUI">S11022331</field>
+                <field type="SCUI">38227-5</field>
+                <field type="CODE">38227-5</field>
+                <field type="STR">Braden scale total score</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1507672</field>
+                <field type="AUI">A18113457</field>
+                <field type="LUI">L5312839</field>
+                <field type="SUI">S7401844</field>
+                <field type="SCUI">38228-3</field>
+                <field type="CODE">38228-3</field>
+                <field type="STR">Braden scale skin assessment panel</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1507673</field>
+                <field type="AUI">A18306743</field>
+                <field type="LUI">L5519791</field>
+                <field type="SUI">S11038244</field>
+                <field type="SCUI">38229-1</field>
+                <field type="CODE">38229-1</field>
+                <field type="STR">Moisture exposure Braden scale</field>
+            </row>
+        </sample>
+        <sample id="LN" samplename="LN" definition="LOINC official fully specified name" count="8">
+            <row type="standard">
+                <field type="CUI">C1508133</field>
+                <field type="AUI">A18113452</field>
+                <field type="LUI">L6700467</field>
+                <field type="SUI">S7796235</field>
+                <field type="SCUI">38222-6</field>
+                <field type="CODE">38222-6</field>
+                <field type="STR">Sensory perception:Find:Pt:Skin:Ord:Observed.Braden scale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1508134</field>
+                <field type="AUI">A18267901</field>
+                <field type="LUI">L5311301</field>
+                <field type="SUI">S7357401</field>
+                <field type="SCUI">38223-4</field>
+                <field type="CODE">38223-4</field>
+                <field type="STR">Physical activity:Find:Pt:^Patient:Ord:Observed.Braden scale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1508135</field>
+                <field type="AUI">A18229168</field>
+                <field type="LUI">L5313479</field>
+                <field type="SUI">S7357845</field>
+                <field type="SCUI">38224-2</field>
+                <field type="CODE">38224-2</field>
+                <field type="STR">Physical mobility:Find:Pt:^Patient:Ord:Observed.Braden scale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1507669</field>
+                <field type="AUI">A18383876</field>
+                <field type="LUI">L5313477</field>
+                <field type="SUI">S7350241</field>
+                <field type="SCUI">38225-9</field>
+                <field type="CODE">38225-9</field>
+                <field type="STR">Nutrition intake pattern:Find:Pt:^Patient:Ord:Observed.Braden scale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1507670</field>
+                <field type="AUI">A18229170</field>
+                <field type="LUI">L6702310</field>
+                <field type="SUI">S7804471</field>
+                <field type="SCUI">38226-7</field>
+                <field type="CODE">38226-7</field>
+                <field type="STR">Friction &amp;amp; sheer:Find:Pt:Skin:Ord:Observed.Braden scale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1507671</field>
+                <field type="AUI">A18113456</field>
+                <field type="LUI">L5313471</field>
+                <field type="SUI">S7401838</field>
+                <field type="SCUI">38227-5</field>
+                <field type="CODE">38227-5</field>
+                <field type="STR">Braden scale score.total:Find:Pt:^Patient:Ord:Observed.Braden scale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1507672</field>
+                <field type="AUI">A18267904</field>
+                <field type="LUI">L5312838</field>
+                <field type="SUI">S7401843</field>
+                <field type="SCUI">38228-3</field>
+                <field type="CODE">38228-3</field>
+                <field type="STR">Braden scale skin assessment panel:-:Pt:^Patient:-</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1507673</field>
+                <field type="AUI">A18383879</field>
+                <field type="LUI">L6700193</field>
+                <field type="SUI">S7793088</field>
+                <field type="SCUI">38229-1</field>
+                <field type="CODE">38229-1</field>
+                <field type="STR">Moisture exposure:Find:Pt:Skin:Ord:Observed.Braden scale</field>
+            </row>
+        </sample>
+        <sample id="MTH_LN" samplename="MTH_LN" definition="MTH Official fully specified name with expanded abbreviations" count="8">
+            <row type="standard">
+                <field type="CUI">C1508133</field>
+                <field type="AUI">A18812231</field>
+                <field type="LUI">L5313482</field>
+                <field type="SUI">S7369874</field>
+                <field type="SCUI">38222-6</field>
+                <field type="CODE">38222-6</field>
+                <field type="STR">Sensory perception:Finding:Point in time:Skin:Ordinal:Observed.Braden scale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1508134</field>
+                <field type="AUI">A18867907</field>
+                <field type="LUI">L5311302</field>
+                <field type="SUI">S7357402</field>
+                <field type="SCUI">38223-4</field>
+                <field type="CODE">38223-4</field>
+                <field type="STR">Physical activity:Finding:Point in time:^Patient:Ordinal:Observed.Braden scale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1508135</field>
+                <field type="AUI">A18867908</field>
+                <field type="LUI">L5313480</field>
+                <field type="SUI">S7357846</field>
+                <field type="SCUI">38224-2</field>
+                <field type="CODE">38224-2</field>
+                <field type="STR">Physical mobility:Finding:Point in time:^Patient:Ordinal:Observed.Braden scale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1507669</field>
+                <field type="AUI">A18856799</field>
+                <field type="LUI">L5313478</field>
+                <field type="SUI">S7350242</field>
+                <field type="SCUI">38225-9</field>
+                <field type="CODE">38225-9</field>
+                <field type="STR">Nutrition intake pattern:Finding:Point in time:^Patient:Ordinal:Observed.Braden scale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1507670</field>
+                <field type="AUI">A18834464</field>
+                <field type="LUI">L5313476</field>
+                <field type="SUI">S7434300</field>
+                <field type="SCUI">38226-7</field>
+                <field type="CODE">38226-7</field>
+                <field type="STR">Friction &amp;amp; sheer:Finding:Point in time:Skin:Ordinal:Observed.Braden scale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1507671</field>
+                <field type="AUI">A18812232</field>
+                <field type="LUI">L5313472</field>
+                <field type="SUI">S7401840</field>
+                <field type="SCUI">38227-5</field>
+                <field type="CODE">38227-5</field>
+                <field type="STR">Braden scale score.total:Finding:Point in time:^Patient:Ordinal:Observed.Braden scale</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1507672</field>
+                <field type="AUI">A18856800</field>
+                <field type="LUI">L5312837</field>
+                <field type="SUI">S7401842</field>
+                <field type="SCUI">38228-3</field>
+                <field type="CODE">38228-3</field>
+                <field type="STR">Braden scale skin assessment panel:-:Point in time:^Patient:-</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1507673</field>
+                <field type="AUI">A18890159</field>
+                <field type="LUI">L5313474</field>
+                <field type="SUI">S7462720</field>
+                <field type="SCUI">38229-1</field>
+                <field type="CODE">38229-1</field>
+                <field type="STR">Moisture exposure:Finding:Point in time:Skin:Ordinal:Observed.Braden scale</field>
+            </row>
+        </sample>
+    </samples>
+</document>

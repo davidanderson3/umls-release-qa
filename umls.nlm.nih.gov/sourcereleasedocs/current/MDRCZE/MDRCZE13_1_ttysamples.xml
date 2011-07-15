@@ -1,0 +1,673 @@
+<document vsab="MDRCZE13_1" samples="Term Types">
+    <samples>
+        <labels>
+            <label type="metalabel">Term Type</label>
+            <label type="definition">Description</label>
+            <label type="count">Count (MRCONSO.RRF)</label>
+        </labels>
+        <sample id="LT" samplename="LT" definition="Lower Level Term" count="59589">
+            <row type="standard">
+                <field type="CUI">C0392535</field>
+                <field type="AUI">A15793579</field>
+                <field type="LUI">L8075917</field>
+                <field type="SUI">S10088588</field>
+                <field type="SDUI">10000220</field>
+                <field type="CODE">10000220</field>
+                <field type="STR">Indukovaný potrat</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0679484</field>
+                <field type="AUI">A15793717</field>
+                <field type="LUI">L8036315</field>
+                <field type="SUI">S10071770</field>
+                <field type="SDUI">10034721</field>
+                <field type="CODE">10001492</field>
+                <field type="STR">Agresivní osobnost</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0232940</field>
+                <field type="AUI">A15750489</field>
+                <field type="LUI">L8028916</field>
+                <field type="SUI">S10073000</field>
+                <field type="SDUI">10001928</field>
+                <field type="CODE">10001932</field>
+                <field type="STR">Amenorea sekundární</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0854130</field>
+                <field type="AUI">A15826122</field>
+                <field type="LUI">L8023435</field>
+                <field type="SUI">S10089306</field>
+                <field type="SDUI">10061640</field>
+                <field type="CODE">10002579</field>
+                <field type="STR">Infekce řiti a konečníku NOS</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1533637</field>
+                <field type="AUI">A15750617</field>
+                <field type="LUI">L8051405</field>
+                <field type="SUI">S10074384</field>
+                <field type="SDUI">10003124</field>
+                <field type="CODE">10003124</field>
+                <field type="STR">Arytmie u novorozence</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0853091</field>
+                <field type="AUI">A15761503</field>
+                <field type="LUI">L8066764</field>
+                <field type="SUI">S10075738</field>
+                <field type="SDUI">10004750</field>
+                <field type="CODE">10004750</field>
+                <field type="STR">Biopsie chrupavky</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0886414</field>
+                <field type="AUI">A15826559</field>
+                <field type="LUI">L8027732</field>
+                <field type="SUI">S10123462</field>
+                <field type="SDUI">10005906</field>
+                <field type="CODE">10005906</field>
+                <field type="STR">Tělesná teplota</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0856471</field>
+                <field type="AUI">A15804827</field>
+                <field type="LUI">L8063920</field>
+                <field type="SUI">S10112747</field>
+                <field type="SDUI">10016316</field>
+                <field type="CODE">10006040</field>
+                <field type="STR">Problémy s krmením z láhve (kojenci)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0238033</field>
+                <field type="AUI">A15804843</field>
+                <field type="LUI">L8054531</field>
+                <field type="SUI">S10098697</field>
+                <field type="SDUI">10061020</field>
+                <field type="CODE">10006191</field>
+                <field type="STR">Maligní nádorové onemocnění prsu u mužů NOS</field>
+            </row>
+        </sample>
+        <sample id="PT" samplename="PT" definition="Designated preferred name" count="18919">
+            <row type="standard">
+                <field type="CUI">C0263437</field>
+                <field type="AUI">A15823592</field>
+                <field type="LUI">L8073799</field>
+                <field type="SUI">S10071811</field>
+                <field type="SDUI">10000507</field>
+                <field type="CODE">10000507</field>
+                <field type="STR">Akné dětí</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0001175</field>
+                <field type="AUI">A15758648</field>
+                <field type="LUI">L8034949</field>
+                <field type="SUI">S10120876</field>
+                <field type="SDUI">10000565</field>
+                <field type="CODE">10000565</field>
+                <field type="STR">Syndrom získané imunodeficience</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0152167</field>
+                <field type="AUI">A15823623</field>
+                <field type="LUI">L8066514</field>
+                <field type="SUI">S10073864</field>
+                <field type="SDUI">10002173</field>
+                <field type="CODE">10002173</field>
+                <field type="STR">Anální spasmus</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0003571</field>
+                <field type="AUI">A15748097</field>
+                <field type="LUI">L8056702</field>
+                <field type="SUI">S10116131</field>
+                <field type="SDUI">10002960</field>
+                <field type="CODE">10002960</field>
+                <field type="STR">Resekce kořenového hrotu</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1704202</field>
+                <field type="AUI">A15758735</field>
+                <field type="LUI">L8074147</field>
+                <field type="SUI">S10074445</field>
+                <field type="SDUI">10003495</field>
+                <field type="CODE">10003495</field>
+                <field type="STR">Aspermie</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0153953</field>
+                <field type="AUI">A15791349</field>
+                <field type="LUI">L8074260</field>
+                <field type="SUI">S10075463</field>
+                <field type="SDUI">10004466</field>
+                <field type="CODE">10004466</field>
+                <field type="STR">Benigní novotvar trachey</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0194564</field>
+                <field type="AUI">A15780612</field>
+                <field type="LUI">L8021757</field>
+                <field type="SUI">S10075812</field>
+                <field type="SDUI">10004897</field>
+                <field type="CODE">10004897</field>
+                <field type="STR">Biopsie močové trubice</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0854035</field>
+                <field type="AUI">A15769655</field>
+                <field type="LUI">L8069197</field>
+                <field type="SUI">S10095199</field>
+                <field type="SDUI">10005634</field>
+                <field type="CODE">10005634</field>
+                <field type="STR">Kyselina mléčná v krvi snížená</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0853760</field>
+                <field type="AUI">A15780664</field>
+                <field type="LUI">L8059880</field>
+                <field type="SUI">S10081151</field>
+                <field type="SDUI">10005725</field>
+                <field type="CODE">10005725</field>
+                <field type="STR">Draslík v krvi zvýšený</field>
+            </row>
+        </sample>
+        <sample id="OL" samplename="OL" definition="Non-current Lower Level Term" count="9072">
+            <row type="standard">
+                <field type="CUI">C1328247</field>
+                <field type="AUI">A15825862</field>
+                <field type="LUI">L8073729</field>
+                <field type="SUI">S10071212</field>
+                <field type="SDUI">10066169</field>
+                <field type="CODE">10000341</field>
+                <field type="STR">Abúzus</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0161030</field>
+                <field type="AUI">A15826022</field>
+                <field type="LUI">L8025927</field>
+                <field type="SUI">S10109423</field>
+                <field type="SDUI">10008422</field>
+                <field type="CODE">10001672</field>
+                <field type="STR">Poleptání rohovky a spojivkového vaku zásadou</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0375184</field>
+                <field type="AUI">A15815299</field>
+                <field type="LUI">L8073715</field>
+                <field type="SUI">S10071152</field>
+                <field type="SDUI">10013654</field>
+                <field type="CODE">10002004</field>
+                <field type="STR">Abúzus amfetaminu nebo obdobně působících sympatomimetik, blíže neurčené užívání</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0157841</field>
+                <field type="AUI">A15750649</field>
+                <field type="LUI">L8021575</field>
+                <field type="SUI">S10074272</field>
+                <field type="SDUI">10060968</field>
+                <field type="CODE">10003352</field>
+                <field type="STR">Artropatie jiných určených částí těla, přidružená k jiným infekčním a parazitárním onemocněním</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0859786</field>
+                <field type="AUI">A15826356</field>
+                <field type="LUI">L8036763</field>
+                <field type="SUI">S10075353</field>
+                <field type="SDUI">10060994</field>
+                <field type="CODE">10004363</field>
+                <field type="STR">Benigní novotvar jiných endokrinních žláz a okolních tkání</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0154428</field>
+                <field type="AUI">A15794109</field>
+                <field type="LUI">L8066797</field>
+                <field type="SUI">S10075968</field>
+                <field type="SDUI">10004939</field>
+                <field type="CODE">10004913</field>
+                <field type="STR">Bipolární afektivní porucha, depresivní epizoda, v částečné nebo blíže neurčené remisi</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0236773</field>
+                <field type="AUI">A15772350</field>
+                <field type="LUI">L8066796</field>
+                <field type="SUI">S10075962</field>
+                <field type="SDUI">10004939</field>
+                <field type="CODE">10004918</field>
+                <field type="STR">Bipolární afektivní porucha, depresivní epizoda, blíže neurčená závažnost</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0476337</field>
+                <field type="AUI">A15815710</field>
+                <field type="LUI">L8024109</field>
+                <field type="SUI">S10094546</field>
+                <field type="SDUI">10005539</field>
+                <field type="CODE">10005538</field>
+                <field type="STR">Krevní plyny abnormální</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0161338</field>
+                <field type="AUI">A15826631</field>
+                <field type="LUI">L8070970</field>
+                <field type="SUI">S10109890</field>
+                <field type="SDUI">10006803</field>
+                <field type="CODE">10006644</field>
+                <field type="STR">Popálenina (jakéhokoliv stupně) zasahující 30-39% povrchu těla s 10-19% popálenin třetího stupně</field>
+            </row>
+        </sample>
+        <sample id="HT" samplename="HT" definition="Hierarchical term" count="1709">
+            <row type="standard">
+                <field type="CUI">C0851583</field>
+                <field type="AUI">A15791039</field>
+                <field type="LUI">L8037867</field>
+                <field type="SUI">S10084433</field>
+                <field type="SDUI">10007566</field>
+                <field type="CODE">10007566</field>
+                <field type="STR">Funkční diagnostická vyšetření srdce</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0029944</field>
+                <field type="AUI">A15823384</field>
+                <field type="LUI">L8047265</field>
+                <field type="SUI">S10100930</field>
+                <field type="SDUI">10033296</field>
+                <field type="CODE">10033296</field>
+                <field type="STR">Nadměrné dávky</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0262988</field>
+                <field type="AUI">A15823386</field>
+                <field type="LUI">L8031589</field>
+                <field type="SUI">S10094380</field>
+                <field type="SDUI">10040948</field>
+                <field type="CODE">10040948</field>
+                <field type="STR">Kožní vaskulitidy</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851616</field>
+                <field type="AUI">A15812637</field>
+                <field type="LUI">L8042920</field>
+                <field type="SUI">S10125629</field>
+                <field type="SDUI">10010595</field>
+                <field type="CODE">10010595</field>
+                <field type="STR">Vrozené poruchy zadního segmentu oka (včetně zrakového nervu)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0154660</field>
+                <field type="AUI">A15801655</field>
+                <field type="LUI">L8073703</field>
+                <field type="SUI">S10071112</field>
+                <field type="SDUI">10000319</field>
+                <field type="CODE">10000319</field>
+                <field type="STR">Abscesy centrálního nervového systému</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851630</field>
+                <field type="AUI">A15769276</field>
+                <field type="LUI">L8040399</field>
+                <field type="SUI">S10105001</field>
+                <field type="SDUI">10030315</field>
+                <field type="CODE">10030315</field>
+                <field type="STR">Onkologické komplikace a náhlé příhody</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0267853</field>
+                <field type="AUI">A15812646</field>
+                <field type="LUI">L8051946</field>
+                <field type="SUI">S10078321</field>
+                <field type="SDUI">10008616</field>
+                <field type="CODE">10008616</field>
+                <field type="STR">Cholecystitida a cholecystolitiáza</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851665</field>
+                <field type="AUI">A15747820</field>
+                <field type="LUI">L8033148</field>
+                <field type="SUI">S10106961</field>
+                <field type="SDUI">10030952</field>
+                <field type="CODE">10030952</field>
+                <field type="STR">Oční příznaky NEC</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851671</field>
+                <field type="AUI">A15812655</field>
+                <field type="LUI">L8039411</field>
+                <field type="SUI">S10097067</field>
+                <field type="SDUI">10010988</field>
+                <field type="CODE">10010988</field>
+                <field type="STR">Léčebné postupy při onemocnění rohovky a skléry</field>
+            </row>
+        </sample>
+        <sample id="HG" samplename="HG" definition="High Level Group Term" count="335">
+            <row type="standard">
+                <field type="CUI">C0851381</field>
+                <field type="AUI">A15780228</field>
+                <field type="LUI">L8067008</field>
+                <field type="SUI">S10077588</field>
+                <field type="SDUI">10000073</field>
+                <field type="CODE">10000073</field>
+                <field type="STR">Břišní kýly a jiné stavy břišní stěny</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0015414</field>
+                <field type="AUI">A15812577</field>
+                <field type="LUI">L8048033</field>
+                <field type="SUI">S10106946</field>
+                <field type="SDUI">10030054</field>
+                <field type="CODE">10030054</field>
+                <field type="STR">Oční novotvary</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851385</field>
+                <field type="AUI">A15758395</field>
+                <field type="LUI">L8035506</field>
+                <field type="SUI">S10125582</field>
+                <field type="SDUI">10018018</field>
+                <field type="CODE">10018018</field>
+                <field type="STR">Vrozené poruchy gastrointestinálního traktu</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0005395</field>
+                <field type="AUI">A15823331</field>
+                <field type="LUI">L8048604</field>
+                <field type="SUI">S10111673</field>
+                <field type="SDUI">10004606</field>
+                <field type="CODE">10004606</field>
+                <field type="STR">Poruchy žlučových cest</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851387</field>
+                <field type="AUI">A15791007</field>
+                <field type="LUI">L8024393</field>
+                <field type="SUI">S10097011</field>
+                <field type="SDUI">10038737</field>
+                <field type="CODE">10038737</field>
+                <field type="STR">Léčebné postupy při onemocnění dýchacího ústrojí</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0947739</field>
+                <field type="AUI">A15823332</field>
+                <field type="LUI">L8061867</field>
+                <field type="SUI">S10097095</field>
+                <field type="SDUI">10014705</field>
+                <field type="CODE">10014705</field>
+                <field type="STR">Léčebné postupy při onemocnění žláz s vnitřní sekrecí</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0003811</field>
+                <field type="AUI">A15769227</field>
+                <field type="LUI">L8042126</field>
+                <field type="SUI">S10119209</field>
+                <field type="SDUI">10007521</field>
+                <field type="CODE">10007521</field>
+                <field type="STR">Srdeční arytmie</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0152021</field>
+                <field type="AUI">A15801606</field>
+                <field type="LUI">L8050372</field>
+                <field type="SUI">S10125638</field>
+                <field type="SDUI">10010394</field>
+                <field type="CODE">10010394</field>
+                <field type="STR">Vrozené srdeční poruchy</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851389</field>
+                <field type="AUI">A15758396</field>
+                <field type="LUI">L8026602</field>
+                <field type="SUI">S10114747</field>
+                <field type="SDUI">10007539</field>
+                <field type="CODE">10007539</field>
+                <field type="STR">Příznaky srdečních poruch</field>
+            </row>
+        </sample>
+        <sample id="SMQ" samplename="SMQ" definition="Standardised MedDRA Query" count="180">
+            <row type="standard">
+                <field type="CUI">C1869006</field>
+                <field type="AUI">A15790979</field>
+                <field type="LUI">L8035077</field>
+                <field type="SUI">S10121922</field>
+                <field type="SDUI">20000001</field>
+                <field type="CODE">20000001</field>
+                <field type="STR">Torsade de pointes/prodloužení QT (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869007</field>
+                <field type="AUI">A15758371</field>
+                <field type="LUI">L8048981</field>
+                <field type="SUI">S10114847</field>
+                <field type="SDUI">20000002</field>
+                <field type="CODE">20000002</field>
+                <field type="STR">Rabdomyolýza/myopatie (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869008</field>
+                <field type="AUI">A15801570</field>
+                <field type="LUI">L8066319</field>
+                <field type="SUI">S10072410</field>
+                <field type="SDUI">20000003</field>
+                <field type="CODE">20000003</field>
+                <field type="STR">Akutní selhání ledvin (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869091</field>
+                <field type="AUI">A15780192</field>
+                <field type="LUI">L8079799</field>
+                <field type="SUI">S10119295</field>
+                <field type="SDUI">20000004</field>
+                <field type="CODE">20000004</field>
+                <field type="STR">Srdeční selhání (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869009</field>
+                <field type="AUI">A15769196</field>
+                <field type="LUI">L8061050</field>
+                <field type="SUI">S10090153</field>
+                <field type="SDUI">20000005</field>
+                <field type="CODE">20000005</field>
+                <field type="STR">Jaterní poruchy (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869015</field>
+                <field type="AUI">A15812554</field>
+                <field type="LUI">L8032513</field>
+                <field type="SUI">S10101740</field>
+                <field type="SDUI">20000011</field>
+                <field type="CODE">20000011</field>
+                <field type="STR">Neoplazmy jater, maligní a nespecifikované (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869023</field>
+                <field type="AUI">A15801576</field>
+                <field type="LUI">L8052905</field>
+                <field type="SUI">S10086037</field>
+                <field type="SDUI">20000019</field>
+                <field type="CODE">20000019</field>
+                <field type="STR">Hemolytické poruchy (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869026</field>
+                <field type="AUI">A15790983</field>
+                <field type="LUI">L8066241</field>
+                <field type="SUI">S10071745</field>
+                <field type="SDUI">20000023</field>
+                <field type="CODE">20000023</field>
+                <field type="STR">Agranulocytóza (SMQ)</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C1869027</field>
+                <field type="AUI">A15780194</field>
+                <field type="LUI">L8043869</field>
+                <field type="SUI">S10073375</field>
+                <field type="SDUI">20000024</field>
+                <field type="CODE">20000024</field>
+                <field type="STR">Angioedém (SMQ)</field>
+            </row>
+        </sample>
+        <sample id="AB" samplename="AB" definition="Abbreviation in any source vocabulary" count="26">
+            <row type="standard">
+                <field type="CUI">C1261322</field>
+                <field type="AUI">A15758389</field>
+                <field type="LUI">L8038516</field>
+                <field type="SUI">S10089895</field>
+                <field type="SDUI">10022891</field>
+                <field type="CODE">10022891</field>
+                <field type="STR">Inv</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0018799</field>
+                <field type="AUI">A15801597</field>
+                <field type="LUI">L8051877</field>
+                <field type="SUI">S10077774</field>
+                <field type="SDUI">10007541</field>
+                <field type="CODE">10007541</field>
+                <field type="STR">Card</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851352</field>
+                <field type="AUI">A15823322</field>
+                <field type="LUI">L8029673</field>
+                <field type="SUI">S10079223</field>
+                <field type="SDUI">10010331</field>
+                <field type="CODE">10010331</field>
+                <field type="STR">Cong</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851353</field>
+                <field type="AUI">A15780215</field>
+                <field type="LUI">L8021782</field>
+                <field type="SUI">S10076072</field>
+                <field type="SDUI">10005329</field>
+                <field type="CODE">10005329</field>
+                <field type="STR">Blood</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0027765</field>
+                <field type="AUI">A15769213</field>
+                <field type="LUI">L8062469</field>
+                <field type="SUI">S10101891</field>
+                <field type="SDUI">10029205</field>
+                <field type="CODE">10029205</field>
+                <field type="STR">Nerv</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0015397</field>
+                <field type="AUI">A15769214</field>
+                <field type="LUI">L8067712</field>
+                <field type="SUI">S10083579</field>
+                <field type="SDUI">10015919</field>
+                <field type="CODE">10015919</field>
+                <field type="STR">Eye</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851354</field>
+                <field type="AUI">A15758390</field>
+                <field type="LUI">L8059982</field>
+                <field type="SUI">S10081782</field>
+                <field type="SDUI">10013993</field>
+                <field type="CODE">10013993</field>
+                <field type="STR">Ear</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851355</field>
+                <field type="AUI">A15769215</field>
+                <field type="LUI">L8026765</field>
+                <field type="SUI">S10116199</field>
+                <field type="SDUI">10038738</field>
+                <field type="CODE">10038738</field>
+                <field type="STR">Resp</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0017178</field>
+                <field type="AUI">A15780218</field>
+                <field type="LUI">L8060392</field>
+                <field type="SUI">S10084910</field>
+                <field type="SDUI">10017947</field>
+                <field type="CODE">10017947</field>
+                <field type="STR">Gastr</field>
+            </row>
+        </sample>
+        <sample id="OS" samplename="OS" definition="System-organ class" count="26">
+            <row type="standard">
+                <field type="CUI">C0018799</field>
+                <field type="AUI">A15812571</field>
+                <field type="LUI">L8027176</field>
+                <field type="SUI">S10119287</field>
+                <field type="SDUI">10007541</field>
+                <field type="CODE">10007541</field>
+                <field type="STR">Srdeční poruchy</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851353</field>
+                <field type="AUI">A15790998</field>
+                <field type="LUI">L8041184</field>
+                <field type="SUI">S10111412</field>
+                <field type="SDUI">10005329</field>
+                <field type="CODE">10005329</field>
+                <field type="STR">Poruchy krve a lymfatického systému</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0027765</field>
+                <field type="AUI">A15780216</field>
+                <field type="LUI">L8041192</field>
+                <field type="SUI">S10111479</field>
+                <field type="SDUI">10029205</field>
+                <field type="CODE">10029205</field>
+                <field type="STR">Poruchy nervového systému</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0015397</field>
+                <field type="AUI">A15801598</field>
+                <field type="LUI">L8041195</field>
+                <field type="SUI">S10111498</field>
+                <field type="SDUI">10015919</field>
+                <field type="CODE">10015919</field>
+                <field type="STR">Poruchy oka</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851354</field>
+                <field type="AUI">A15780217</field>
+                <field type="LUI">L8071188</field>
+                <field type="SUI">S10111621</field>
+                <field type="SDUI">10013993</field>
+                <field type="CODE">10013993</field>
+                <field type="STR">Poruchy ucha a labyrintu</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0851355</field>
+                <field type="AUI">A15801599</field>
+                <field type="LUI">L8064336</field>
+                <field type="SUI">S10116197</field>
+                <field type="SDUI">10038738</field>
+                <field type="CODE">10038738</field>
+                <field type="STR">Respirační, hrudní a mediastinální poruchy</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0017178</field>
+                <field type="AUI">A15769216</field>
+                <field type="LUI">L8052766</field>
+                <field type="SUI">S10084855</field>
+                <field type="SDUI">10017947</field>
+                <field type="CODE">10017947</field>
+                <field type="STR">Gastrointestinální poruchy</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0042075</field>
+                <field type="AUI">A15790999</field>
+                <field type="LUI">L8048568</field>
+                <field type="SUI">S10111420</field>
+                <field type="SDUI">10038359</field>
+                <field type="CODE">10038359</field>
+                <field type="STR">Poruchy ledvin a močových cest</field>
+            </row>
+            <row type="standard">
+                <field type="CUI">C0178298</field>
+                <field type="AUI">A15769217</field>
+                <field type="LUI">L8026201</field>
+                <field type="SUI">S10111416</field>
+                <field type="SDUI">10040785</field>
+                <field type="CODE">10040785</field>
+                <field type="STR">Poruchy kůže a podkožní tkáně</field>
+            </row>
+        </sample>
+    </samples>
+</document>
