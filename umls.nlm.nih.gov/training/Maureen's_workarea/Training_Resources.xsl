@@ -9,26 +9,26 @@
 <html>
 <head>
       <meta name="ncbigrid" content="isSortable: true, columnTypes: ['str', 'str','str','date','num', 'str','str','str'],sortColumn: 1"/>    
-	  <script type="text/javascript" src="http://www.ncbi.nlm.nih.gov/core/jig/1.5.2/js/jig.min.js" language="javascript"></script>   
+	     <script type="text/javascript" src="http://www.ncbi.nlm.nih.gov/core/jig/1.5.2/js/jig.min.js" language="javascript"></script>   
       <style type="text/css">
             div.ui-ncbigrid-scroll {
-                width: 500px;
+                width: 100px;
                 font-size: 85%; /* override default font-size of grid, do not override default font-family. That is an NCBI standard */
             }
-        </style>
+      </style>
 
-       </head>
+</head>
   <body>
-   <h2></h2>
+  <h2></h2>
   <div class="jig-ncbigrid-scroll ui-ncbigrid-scroll ui-grid ui-widget ui-widget-content ui-corner-all">
 
    
-   <div class="ui-ncbigrid-inner-div">
+  <div class="ui-ncbigrid-inner-div">
    
-     <table border="1">
+   <table style="border: 1; color: #9acd32;">
      <caption>UMLS Training</caption>       
      <thead>
-    <tr bgcolor="#9acd32">
+     <tr>
       <th>Resource</th>
       <th>Category</th>
       <th>Subcategory</th>
@@ -37,7 +37,7 @@
       <th>Runtime</th>
       <th>Format</th>
       <th>Requires</th>
-      </tr>
+     </tr>
       </thead>
       
       <tbody>
