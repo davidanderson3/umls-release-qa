@@ -9,27 +9,27 @@
 <html>
 <head>
       <meta name="ncbigrid" content="isSortable: true, columnTypes: ['str', 'str','str','date','num', 'str','str','str'],sortColumn: 1"/>    
-	     <script type="text/javascript" src="http://www.ncbi.nlm.nih.gov/core/jig/1.5.2/js/jig.min.js" language="javascript"></script>   
+      <meta name="ncbitoggler" content="remember: true, animation: 'none'"/>     
+      <script type="text/javascript" src="http://www.ncbi.nlm.nih.gov/core/jig/1.5.2/js/jig.min.js" language="javascript"></script>   
       <style type="text/css">
-            div.ui-ncbigrid-scroll {
+       
+            
+           div.ui-ncbigrid {
                 width: 100px;
                 font-size: 85%; /* override default font-size of grid, do not override default font-family. That is an NCBI standard */
             }
       </style>
 
 </head>
-  <body>
-  <h2></h2>
-  <div class="jig-ncbigrid-scroll ui-ncbigrid-scroll ui-grid ui-widget ui-widget-content ui-corner-all">
-
+<body>
+      <div class="jig-ncbigrid ui-ncbigrid ui-grid ui-widget ui-widget-content ui-corner-all">   
+      <div class="ui-ncbigrid-inner-div">
    
-  <div class="ui-ncbigrid-inner-div">
-   
-   <table style="border: 1; color: #9acd32;">
+<table class="ui-grid-content ui-widget-content" style="border: 1; bgcolor: #9acd32;">
      <caption>UMLS Training</caption>       
      <thead>
      <tr>
-      <th>Resource</th>
+<!--      <th>Resource</th>-->
       <th>Category</th>
       <th>Subcategory</th>
       <th>Title</th>
@@ -38,32 +38,26 @@
       <th>Format</th>
       <th>Requires</th>
      </tr>
-      </thead>
+     </thead>
       
-      <tbody>
-  <xsl:for-each select="root/Resources/Resource">
-  <xsl:sort select="Title"/>
+<tbody>
+<xsl:for-each select="root/Resources/Resource">
+<xsl:sort select="Title"/>
   
   <tr>
-  <td><xsl:value-of select="@Project" /></td>
-  
- <!-- <xsl:attribute name="Project">
-  <xsl:value-of select="@Project" />
-  </xsl:attribute>
-  <xsl:attribute name="UMLS">
-  <xsl:value-of select="UMLS" />
-  </xsl:attribute>-->
-  
-  
-  
-  
-   <td><xsl:value-of select="Category" /></td>
-   <td><xsl:value-of select="Subcategory" /></td>
-   <td><xsl:value-of select="Title" /></td>
-   <td><xsl:value-of select="Date" /></td>
-   <td><xsl:value-of select="Runtime" /></td>
-   <td><xsl:value-of select="Format" /></td>
-   <td><xsl:value-of select="Requires" /></td>
+<!--   <td class="ui-widget-content"><xsl:value-of select="@Project" /></td>-->
+   <h3><a class="jig-ncbitoggler ui-ncbitoggler">
+    <span class="ui-ncbitoggler-master-text"><td class="ui-widget-content"><xsl:value-of select="Category" /></td></span>
+<!--    <span class="ui-icon ui-icon-triangle-1-e"></span>-->
+   </a></h3>
+   <div class="ui-ncbi-toggler-slave">
+   <td class="ui-widget-content"><xsl:value-of select="Subcategory" /></td>
+   <td class="ui-widget-content"><xsl:value-of select="Title" /></td>
+   <td class="ui-widget-content"><xsl:value-of select="Date" /></td>
+   <td class="ui-widget-content"><xsl:value-of select="Runtime" /></td>
+   <td class="ui-widget-content"><xsl:value-of select="Format" /></td>
+   <td class="ui-widget-content"><xsl:value-of select="Requires" /></td>
+   </div>
   </tr>
   
 </xsl:for-each>

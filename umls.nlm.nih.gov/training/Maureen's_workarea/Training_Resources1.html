@@ -3,21 +3,22 @@
 <html>
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-      <meta name="ncbigrid" content="isSortable: true, columnTypes: ['str', 'str','none','date','num', 'str','str','str'],sortColumn: 1"><script type="text/javascript" src="http://www.ncbi.nlm.nih.gov/core/jig/1.5.2/js/jig.min.js" language="javascript"></script><style type="text/css">
-            div.ui-ncbigrid-scroll {
-                width: 500px;
+      <meta name="ncbigrid" content="isSortable: true, columnTypes: ['str', 'str','str','date','num', 'str','str','str'],sortColumn: 1">
+      <meta name="ncbitoggler" content="remember: true, animation: 'none'"><script type="text/javascript" src="http://www.ncbi.nlm.nih.gov/core/jig/1.5.2/js/jig.min.js" language="javascript"></script><style type="text/css">
+       
+            
+           div.ui-ncbigrid {
+                width: 100px;
                 font-size: 85%; /* override default font-size of grid, do not override default font-family. That is an NCBI standard */
             }
-        </style></head>
+      </style></head>
    <body>
-      <h2></h2>
-      <div class="jig-ncbigrid-scroll ui-ncbigrid-scroll ui-grid ui-widget ui-widget-content ui-corner-all">
+      <div class="jig-ncbigrid ui-ncbigrid ui-grid ui-widget ui-widget-content ui-corner-all">
          <div class="ui-ncbigrid-inner-div">
-            <table border="1">
+            <table class="ui-grid-content ui-widget-content" style="border: 1; bgcolor: #9acd32;">
                <caption>UMLS Training</caption>
                <thead>
-                  <tr bgcolor="#9acd32">
-                     <th>Resource</th>
+                  <tr>
                      <th>Category</th>
                      <th>Subcategory</th>
                      <th>Title</th>
@@ -29,344 +30,412 @@
                </thead>
                <tbody>
                   <tr>
-                     <td>UMLS</td>
-                     <td>MetamorphoSys</td>
-                     <td>RRF Browser</td>
-                     <td>"Refine Search By" Feature</td>
-                     <td>02/11/2011</td>
-                     <td>2</td>
-                     <td>Quick Tour</td>
-                     <td>Adobe Flash™ Player</td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content">MetamorphoSys</td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content">RRF Browser</td>
+                        <td class="ui-widget-content">"Refine Search By" Feature</td>
+                        <td class="ui-widget-content">02/11/2011</td>
+                        <td class="ui-widget-content">2 minutes</td>
+                        <td class="ui-widget-content">Quick Tour</td>
+                        <td class="ui-widget-content">Adobe Flash™ Player</td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td>License</td>
-                     <td></td>
-                     <td>Applying for a UMLS License on the UTS</td>
-                     <td>11/01/2010</td>
-                     <td>6</td>
-                     <td>Webcast</td>
-                     <td>Adobe Flash™ Player</td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content">License</td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">Applying for a UMLS License on the UTS</td>
+                        <td class="ui-widget-content">11/01/2010</td>
+                        <td class="ui-widget-content">6 minutes</td>
+                        <td class="ui-widget-content">Webcast</td>
+                        <td class="ui-widget-content">Adobe Flash™ Player</td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td>MetamorphoSys</td>
-                     <td>RRF Browser</td>
-                     <td>Cluster Views</td>
-                     <td>02/11/2011</td>
-                     <td>2</td>
-                     <td>Quick Tour</td>
-                     <td>Adobe Flash™ Player</td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content">MetamorphoSys</td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content">RRF Browser</td>
+                        <td class="ui-widget-content">Cluster Views</td>
+                        <td class="ui-widget-content">02/11/2011</td>
+                        <td class="ui-widget-content">2 minutes</td>
+                        <td class="ui-widget-content">Quick Tour</td>
+                        <td class="ui-widget-content">Adobe Flash™ Player</td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td>Databases</td>
-                     <td></td>
-                     <td>Create a Database Load Script</td>
-                     <td>02/01/2011</td>
-                     <td>3</td>
-                     <td>Quick Tour</td>
-                     <td>Adobe Flash™ Player</td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content">Databases</td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">Create a Database Load Script</td>
+                        <td class="ui-widget-content">02/01/2011</td>
+                        <td class="ui-widget-content">3 minutes</td>
+                        <td class="ui-widget-content">Quick Tour</td>
+                        <td class="ui-widget-content">Adobe Flash™ Player</td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td>MetamorphoSys</td>
-                     <td>Creating Subsets</td>
-                     <td>Create a Default Subset</td>
-                     <td>02/11/2011</td>
-                     <td>3</td>
-                     <td>Quick Tour</td>
-                     <td>Adobe Flash™ Player</td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content">MetamorphoSys</td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content">Creating Subsets</td>
+                        <td class="ui-widget-content">Create a Default Subset</td>
+                        <td class="ui-widget-content">02/11/2011</td>
+                        <td class="ui-widget-content">3 minutes</td>
+                        <td class="ui-widget-content">Quick Tour</td>
+                        <td class="ui-widget-content">Adobe Flash™ Player</td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td>MetamorphoSys</td>
-                     <td>Creating Subsets</td>
-                     <td>Create a SNOMED CT Only Subset</td>
-                     <td>02/11/2011</td>
-                     <td>4</td>
-                     <td>Quick Tour</td>
-                     <td>Adobe Flash™ Player</td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content">MetamorphoSys</td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content">Creating Subsets</td>
+                        <td class="ui-widget-content">Create a SNOMED CT Only Subset</td>
+                        <td class="ui-widget-content">02/11/2011</td>
+                        <td class="ui-widget-content">4 minutes</td>
+                        <td class="ui-widget-content">Quick Tour</td>
+                        <td class="ui-widget-content">Adobe Flash™ Player</td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td>MetamorphoSys</td>
-                     <td>Creating Subsets</td>
-                     <td>Create an English Only Subset</td>
-                     <td>02/11/2011</td>
-                     <td>4</td>
-                     <td>Quick Tour</td>
-                     <td>Adobe Flash™ Player</td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content">MetamorphoSys</td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content">Creating Subsets</td>
+                        <td class="ui-widget-content">Create an English Only Subset</td>
+                        <td class="ui-widget-content">02/11/2011</td>
+                        <td class="ui-widget-content">4 minutes</td>
+                        <td class="ui-widget-content">Quick Tour</td>
+                        <td class="ui-widget-content">Adobe Flash™ Player</td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td>MetamorphoSys</td>
-                     <td>RRF Browser</td>
-                     <td>Find a Code From a CUI</td>
-                     <td>02/11/2011</td>
-                     <td>2</td>
-                     <td>Quick Tour</td>
-                     <td>Adobe Flash™ Player</td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content">MetamorphoSys</td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content">RRF Browser</td>
+                        <td class="ui-widget-content">Find a Code From a CUI</td>
+                        <td class="ui-widget-content">02/11/2011</td>
+                        <td class="ui-widget-content">2 minutes</td>
+                        <td class="ui-widget-content">Quick Tour</td>
+                        <td class="ui-widget-content">Adobe Flash™ Player</td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td>Source Vocabularies</td>
-                     <td></td>
-                     <td>From Source to Metathesaurus Format: New Source Release Documentation</td>
-                     <td>06/09/2010</td>
-                     <td>35</td>
-                     <td>Webcast</td>
-                     <td>Adobe Flash™ Player</td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content">Source Vocabularies</td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">From Source to Metathesaurus Format: New Source Release Documentation</td>
+                        <td class="ui-widget-content">06/09/2010</td>
+                        <td class="ui-widget-content">35 minutes</td>
+                        <td class="ui-widget-content">Webcast</td>
+                        <td class="ui-widget-content">Adobe Flash™ Player</td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td></td>
-                     <td></td>
-                     <td>Getting started with the 2007AC UMLS DVD</td>
-                     <td>12/01/2007</td>
-                     <td></td>
-                     <td></td>
-                     <td>Adobe Flash™ Player</td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content"></td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">Getting started with the 2007AC UMLS DVD</td>
+                        <td class="ui-widget-content">12/01/2007</td>
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">Adobe Flash™ Player</td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td>MetamorphoSys</td>
-                     <td>RRF Browser</td>
-                     <td>Highlight Search Results</td>
-                     <td>02/11/2011</td>
-                     <td>2</td>
-                     <td>Quick Tour</td>
-                     <td>Adobe Flash™ Player</td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content">MetamorphoSys</td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content">RRF Browser</td>
+                        <td class="ui-widget-content">Highlight Search Results</td>
+                        <td class="ui-widget-content">02/11/2011</td>
+                        <td class="ui-widget-content">2 minutes</td>
+                        <td class="ui-widget-content">Quick Tour</td>
+                        <td class="ui-widget-content">Adobe Flash™ Player</td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td>Terminology Mapping</td>
-                     <td></td>
-                     <td>Inter-terminology mapping and the UMLS </td>
-                     <td>11/01/2007</td>
-                     <td>54</td>
-                     <td>Webcast</td>
-                     <td>Adobe Flash™ Player</td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content">Terminology Mapping</td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">Inter-terminology mapping and the UMLS </td>
+                        <td class="ui-widget-content">11/01/2007</td>
+                        <td class="ui-widget-content">54 minutes</td>
+                        <td class="ui-widget-content">Webcast</td>
+                        <td class="ui-widget-content">Adobe Flash™ Player</td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td>MetamorphoSys</td>
-                     <td>RRF Browser</td>
-                     <td>Limit a Search by Source</td>
-                     <td>02/11/2011</td>
-                     <td>3</td>
-                     <td>Quick Tour</td>
-                     <td>Adobe Flash™ Player</td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content">MetamorphoSys</td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content">RRF Browser</td>
+                        <td class="ui-widget-content">Limit a Search by Source</td>
+                        <td class="ui-widget-content">02/11/2011</td>
+                        <td class="ui-widget-content">3 minutes</td>
+                        <td class="ui-widget-content">Quick Tour</td>
+                        <td class="ui-widget-content">Adobe Flash™ Player</td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td>UTS</td>
-                     <td></td>
-                     <td>Metathesaurus Browser</td>
-                     <td></td>
-                     <td></td>
-                     <td>Quick Tour</td>
-                     <td></td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content">UTS</td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">Metathesaurus Browser</td>
+                        <td class="ui-widget-content">TBD</td>
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">Quick Tour</td>
+                        <td class="ui-widget-content"></td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td>Source Vocabularies</td>
-                     <td></td>
-                     <td>Processing source vocabularies for representation in the UMLS Metathesaurus </td>
-                     <td>06/25/2009</td>
-                     <td>44</td>
-                     <td>Webcast</td>
-                     <td>Adobe Flash™ Player</td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content">Source Vocabularies</td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">Processing source vocabularies for representation in the UMLS Metathesaurus </td>
+                        <td class="ui-widget-content">06/25/2009</td>
+                        <td class="ui-widget-content">44 minutes</td>
+                        <td class="ui-widget-content">Webcast</td>
+                        <td class="ui-widget-content">Adobe Flash™ Player</td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td>MetamorphoSys</td>
-                     <td>RRF Browser</td>
-                     <td>Restrict Searches and Views Option</td>
-                     <td>02/11/2011</td>
-                     <td>7</td>
-                     <td>Quick Tour</td>
-                     <td>Adobe Flash™ Player</td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content">MetamorphoSys</td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content">RRF Browser</td>
+                        <td class="ui-widget-content">Restrict Searches and Views Option</td>
+                        <td class="ui-widget-content">02/11/2011</td>
+                        <td class="ui-widget-content">7 minutes</td>
+                        <td class="ui-widget-content">Quick Tour</td>
+                        <td class="ui-widget-content">Adobe Flash™ Player</td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td>RxNorm</td>
-                     <td></td>
-                     <td>RxNav, RxAccess and RxNorm API</td>
-                     <td></td>
-                     <td></td>
-                     <td></td>
-                     <td></td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content">RxNorm</td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">RxNav, RxAccess and RxNorm API</td>
+                        <td class="ui-widget-content">TBD</td>
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content"></td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td>RxNorm</td>
-                     <td></td>
-                     <td>RxNorm</td>
-                     <td>02/01/2008</td>
-                     <td>36</td>
-                     <td>Webcast</td>
-                     <td>Adobe Flash™ Player</td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content">RxNorm</td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">RxNorm</td>
+                        <td class="ui-widget-content">02/01/2008</td>
+                        <td class="ui-widget-content">36 minutes</td>
+                        <td class="ui-widget-content">Webcast</td>
+                        <td class="ui-widget-content">Adobe Flash™ Player</td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td>RxNorm</td>
-                     <td></td>
-                     <td>RxNorm Update, MyMedicationList, and DailyMed</td>
-                     <td>01/01/2009</td>
-                     <td>54</td>
-                     <td>Webcast</td>
-                     <td>Adobe Flash™ Player</td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content">RxNorm</td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">RxNorm Update, MyMedicationList, and DailyMed</td>
+                        <td class="ui-widget-content">01/01/2009</td>
+                        <td class="ui-widget-content">54 minutes</td>
+                        <td class="ui-widget-content">Webcast</td>
+                        <td class="ui-widget-content">Adobe Flash™ Player</td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td>RxNorm</td>
-                     <td></td>
-                     <td>RxNorm Update, ePrescribing Subset</td>
-                     <td></td>
-                     <td></td>
-                     <td></td>
-                     <td></td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content">RxNorm</td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">RxNorm Update, ePrescribing Subset</td>
+                        <td class="ui-widget-content">TBD</td>
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content"></td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td>MetamorphoSys</td>
-                     <td>RRF Browser</td>
-                     <td>Search by Code</td>
-                     <td>02/11/2011</td>
-                     <td>2</td>
-                     <td>Quick Tour</td>
-                     <td>Adobe Flash™ Player</td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content">MetamorphoSys</td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content">RRF Browser</td>
+                        <td class="ui-widget-content">Search by Code</td>
+                        <td class="ui-widget-content">02/11/2011</td>
+                        <td class="ui-widget-content">2 minutes</td>
+                        <td class="ui-widget-content">Quick Tour</td>
+                        <td class="ui-widget-content">Adobe Flash™ Player</td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td>UTS</td>
-                     <td></td>
-                     <td>Semantic Network Browser</td>
-                     <td></td>
-                     <td></td>
-                     <td>Quick Tour</td>
-                     <td></td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content">UTS</td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">Semantic Network Browser</td>
+                        <td class="ui-widget-content">TBD</td>
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">Quick Tour</td>
+                        <td class="ui-widget-content"></td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td></td>
-                     <td></td>
-                     <td>The New Webservices Interface to the UMLSKS</td>
-                     <td>01/01/2008</td>
-                     <td></td>
-                     <td></td>
-                     <td>Adobe Flash™ Player</td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content"></td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">The New Webservices Interface to the UMLSKS</td>
+                        <td class="ui-widget-content">01/01/2008</td>
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">Adobe Flash™ Player</td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td>Semantic Network</td>
-                     <td></td>
-                     <td>The Semantic Network</td>
-                     <td>02/01/2008</td>
-                     <td>59</td>
-                     <td></td>
-                     <td>Adobe Flash™ Player</td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content">Semantic Network</td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">The Semantic Network</td>
+                        <td class="ui-widget-content">02/01/2008</td>
+                        <td class="ui-widget-content">59 minutes</td>
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">Adobe Flash™ Player</td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td>MetaMap</td>
-                     <td></td>
-                     <td>The current state of MetaMap and MMTx</td>
-                     <td>09/01/2009</td>
-                     <td>18</td>
-                     <td>Webcast</td>
-                     <td>Adobe Flash™ Player</td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content">MetaMap</td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">The current state of MetaMap and MMTx</td>
+                        <td class="ui-widget-content">09/01/2009</td>
+                        <td class="ui-widget-content">18 minutes</td>
+                        <td class="ui-widget-content">Webcast</td>
+                        <td class="ui-widget-content">Adobe Flash™ Player</td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td>Overview</td>
-                     <td></td>
-                     <td>UMLS Basics Tutorial</td>
-                     <td>10/20/2008</td>
-                     <td></td>
-                     <td>Web site</td>
-                     <td></td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content">Overview</td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">UMLS Basics Tutorial</td>
+                        <td class="ui-widget-content">10/20/2008</td>
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">Web site</td>
+                        <td class="ui-widget-content"></td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td>Installation</td>
-                     <td></td>
-                     <td>UMLS MetamorphoSys Changes</td>
-                     <td>12/01/2009</td>
-                     <td>45</td>
-                     <td>Webcast</td>
-                     <td>Adobe Flash™ Player</td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content">Installation</td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">UMLS MetamorphoSys Changes</td>
+                        <td class="ui-widget-content">12/01/2009</td>
+                        <td class="ui-widget-content">45 minutes</td>
+                        <td class="ui-widget-content">Webcast</td>
+                        <td class="ui-widget-content">Adobe Flash™ Player</td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td>Overview</td>
-                     <td></td>
-                     <td>UMLS Quick Start Guide</td>
-                     <td>04/15/2011</td>
-                     <td></td>
-                     <td>Web page</td>
-                     <td></td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content">Overview</td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">UMLS Quick Start Guide</td>
+                        <td class="ui-widget-content">04/15/2011</td>
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">Web page</td>
+                        <td class="ui-widget-content"></td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td>Overview</td>
-                     <td></td>
-                     <td>UMLS Reference Manual</td>
-                     <td>09/01/2009</td>
-                     <td></td>
-                     <td>Web site</td>
-                     <td></td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content">Overview</td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">UMLS Reference Manual</td>
+                        <td class="ui-widget-content">09/01/2009</td>
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">Web site</td>
+                        <td class="ui-widget-content"></td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td></td>
-                     <td></td>
-                     <td>UMLS Web site changes </td>
-                     <td>09/01/2009</td>
-                     <td></td>
-                     <td></td>
-                     <td>Adobe Flash™ Player</td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content"></td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">UMLS Web site changes </td>
+                        <td class="ui-widget-content">09/01/2009</td>
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">Adobe Flash™ Player</td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td>License</td>
-                     <td></td>
-                     <td>Understanding the UMLS License</td>
-                     <td></td>
-                     <td></td>
-                     <td>Quick Tour</td>
-                     <td></td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content">License</td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">Understanding the UMLS License</td>
+                        <td class="ui-widget-content">TBD</td>
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">Quick Tour</td>
+                        <td class="ui-widget-content"></td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td>Databases</td>
-                     <td></td>
-                     <td>Using the Metathesaurus in a Database </td>
-                     <td>10/01/2007</td>
-                     <td>83</td>
-                     <td>Webcast</td>
-                     <td>Adobe Flash™ Player</td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content">Databases</td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">Using the Metathesaurus in a Database </td>
+                        <td class="ui-widget-content">10/01/2007</td>
+                        <td class="ui-widget-content">83 minutes</td>
+                        <td class="ui-widget-content">Webcast</td>
+                        <td class="ui-widget-content">Adobe Flash™ Player</td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td>Databases</td>
-                     <td></td>
-                     <td>Using the UMLS Sample Data in MS Access</td>
-                     <td>04/01/2009</td>
-                     <td>33</td>
-                     <td>Webcast</td>
-                     <td>Adobe Flash™ Player</td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content">Databases</td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">Using the UMLS Sample Data in MS Access</td>
+                        <td class="ui-widget-content">04/01/2009</td>
+                        <td class="ui-widget-content">33 minutes</td>
+                        <td class="ui-widget-content">Webcast</td>
+                        <td class="ui-widget-content">Adobe Flash™ Player</td>
+                     </div>
                   </tr>
                   <tr>
-                     <td>UMLS</td>
-                     <td>License</td>
-                     <td></td>
-                     <td>Validating UMLS Licensees for Third-Party Application Developers</td>
-                     <td></td>
-                     <td></td>
-                     <td>Quick Tour</td>
-                     <td></td>
+                     <h3><a class="jig-ncbitoggler ui-ncbitoggler"><span class="ui-ncbitoggler-master-text">
+                              <td class="ui-widget-content">License</td></span></a></h3>
+                     <div class="ui-ncbi-toggler-slave">
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">Validating UMLS Licensees for Third-Party Application Developers</td>
+                        <td class="ui-widget-content">TBD</td>
+                        <td class="ui-widget-content"></td>
+                        <td class="ui-widget-content">Quick Tour</td>
+                        <td class="ui-widget-content"></td>
+                     </div>
                   </tr>
                </tbody>
             </table>
