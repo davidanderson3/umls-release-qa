@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/styles/reset.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/styles/master.css" rel="stylesheet" type="text/css" media="screen" />
+<!--Call jQuery-->
+<script type="text/javascript" src="/scripts/jquery-min.js"></script>
+ 
+<!--[if lte IE 8]>
+<script type="text/javascript" src="/scripts/PIE.js"></script>
+<![endif]-->
+ 
+<script type="text/javascript" src="/scripts/master.js"></script>
+ 
+<!--[if lte IE 8]>
+<link href="/styles/ie.css" rel="stylesheet" media="screen">
+<![endif]-->
+
+<script type = "text/javascript" src = "/scripts/jquery-min.js" language = "javascript"></script>
+<script type = "text/javascript" src = "http://www.ncbi.nlm.nih.gov/core/jig/1.5.2/js/jig.min.js" language = "javascript"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js" language = "javascript" ></script>
+
+<!--[if IE]>
+   <script type="text/javascript" src="/scripts/PIE.js"></script>
+<![endif]--> 
+<script type= "text/javascript">   
+var $ = jQuery.noConflict();
+</script>
+ 
+<script type = "text/javascript"> 
+$(document).ready(function() {
+ 
+$('a.jig-ncbitoggler').click(function(event) {
+  //$(this).parent().next().css('background-color','red');
+  var sourcecontainer = $(this).parent().next();
+  $(sourcecontainer).animate({'background-color' : '#ff7373'}, 'fast');
+  $(sourcecontainer).animate({'background-color' : '#ffffff'}, 'slow');
+  
+  //alert("you clicked me!");
+  
+});
+});
+</script>
+<script type = "text/javascript"> 
+$(document).ready(function() {
+ 
+  $('a.ajaxlink').click(function(event) {
+    var myLink = $(this).attr("href");
+    //alert(myLink.substr(1));
+   $('div.content').each(function() {
+      
+      if ($(this).attr('id') == myLink.substr(1)) {
+	$(this).attr('style','display:block');
+	//alert($(this).attr('id'));
+      }
+       
+       else {
+	$(this).attr('style','display:none');
+	
+       }
+       
+   });  
+     
+  });
+});
+</script>
+ 
+<script type = "text/javascript"> 
+$(document).ready(function() {
+ $('a.expand').click(function(event) {
+ 
+  //alert ($(this).parent(".content").attr("id"));
+  var myDiv = $(this).parents(".content").attr("id");
+     
+ 
+  $('#'+myDiv).find('.jig-ncbitoggler').each(function() {
+     
+   $(this).ncbitoggler('open');
+ 
+     });
+  
+ 
+});
+});
+ 
+</script>
+ 
+<script type = "text/javascript"> 
+$(document).ready(function() {
+ $('a.collapse').click(function(event) {
+ 
+  //alert ($(this).parent(".content").attr("id"));
+  var myDiv = $(this).parents(".content").attr("id");
+     
+ 
+  $('#'+myDiv).find('.jig-ncbitoggler').each(function() {
+     
+   $(this).ncbitoggler('close');
+ 
+     });
+  
+ 
+});
+});
+ 
+</script>
+
+
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+<title>UMLS Training Resources</title>
+</head>
+<body>
+<div id="source-doc-wrapper">
+<h1>UMLS Training Resources</h1>
+   <div id="source-doc-intro">
+      <p>Click on a category to view available resources.</p>
+   </div>
+<a href="#" class="expand">Expand All</a>&nbsp;&nbsp;<a href="#" class="collapse">Collapse All</a>
+
+         <div class="limbox smalllimbox leftlimbox">
+            <div class="limboxcontent">
+               <h3>
+                  <a class="jig-ncbitoggler" href="#">UMLS Overviews</a>
+               </h3>
+               <div class="sourcecontainer">
+                  <table border="0" summary="table of resources from category 1">
+                     <tr>
+                        <th scope="col">Title</th>
+                        <th>Date</th>
+												<th>Format</th>
+												<th></th>
+                     </tr>
+                     <tr>
+                        <td valign="top"><a href="http://www.nlm.nih.gov/research/umls/quickstart.html" target="_blank">UMLS Quick Start Guide</a></td>
+                        <td valign="top">04/15/11</td>
+												<td valign="top">Web Page</td>
+												<td valign="top"></td>
+                     </tr>
+                     <tr>
+                        <td valign="top"><a href="http://www.nlm.nih.gov/research/umls/new_users/online_learning/index.htm" target="_blank">UMLS Basics Tutorial</a></td>
+                        <td valign="top">10/20/08</td>
+												<td valign="top">Web Site</td>
+												<td valign="top"></td>
+                     </tr>
+                     <tr>
+                        <td valign="top"><a href="http://www.ncbi.nlm.nih.gov/books/NBK9676/" target="_blank">UMLS Reference Manual</a></td>
+                        <td valign="top">04/15/11</td>
+												<td valign="top">Web Site</td>
+												<td valign="top"></td>
+                     </tr>
+									</table>
+							</div> <!--end of sourcecontainer-->
+				</div> <!--end of limbox smalllimbox leftlimbox -->
+				</div> <!--end of limboxcontent -->
+
+
+
+
+<ul>
+  <li>UMLS Overviews</li>
+  <li>UMLS License</li>
+  <li>Source Vocabularies</li>
+  <li>UMLS Terminology Services (UTS)</li>
+  <li>Local Installation of UMLS</li>
+  <li>Managing Your Local UMLS Databases</li>
+  <li>MetamorphoSys</li>
+    <ul>
+    <li>Creating Vocabulary Subsets</li>
+    <li>Using the RRF Browser</li>
+    </ul>
+<li>MetaMap</li>
+<li>Terminology Mapping</li>
+<li>RxNorm</li>
+<li>Semantic Network</li>
+</ul>
+</div> <!-- source-doc-wrapper end -->
+</body>
+</html>
