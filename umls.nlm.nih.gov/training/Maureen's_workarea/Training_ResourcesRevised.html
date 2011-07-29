@@ -1,0 +1,287 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link href="/styles/reset.css" rel="stylesheet" type="text/css" media="all"/>
+      <link href="/styles/master.css" rel="stylesheet" type="text/css" media="screen"/>
+      <script type="text/javascript" src="/scripts/jquery-min.js"/>
+      <script type="text/javascript" src="/scripts/master.js"/>
+      <script type="text/javascript" src="/scripts/jquery-min.js" language="javascript"/>
+      <script type="text/javascript"
+              src="http://www.ncbi.nlm.nih.gov/core/jig/1.5.2/js/jig.min.js"
+              language="javascript"/>
+      <script type="text/javascript"
+              src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"
+              language="javascript"/>
+      <script type="text/javascript">   
+var $ = jQuery.noConflict();
+</script>
+      <script type="text/javascript"> 
+$(document).ready(function() {
+ 
+$('a.jig-ncbitoggler').click(function(event) {
+  //$(this).parent().next().css('background-color','red');
+  var sourcecontainer = $(this).parent().next();
+  $(sourcecontainer).animate({'background-color' : '#ff7373'}, 'fast');
+  $(sourcecontainer).animate({'background-color' : '#ffffff'}, 'slow');
+  
+  //alert("you clicked me!");
+  
+});
+});
+</script>
+      <script type="text/javascript"> 
+$(document).ready(function() {
+ 
+  $('a.ajaxlink').click(function(event) {
+    var myLink = $(this).attr("href");
+    //alert(myLink.substr(1));
+   $('div.content').each(function() {
+      
+      if ($(this).attr('id') == myLink.substr(1)) {
+	$(this).attr('style','display:block');
+	//alert($(this).attr('id'));
+      }
+       
+       else {
+	$(this).attr('style','display:none');
+	
+       }
+       
+   });  
+     
+  });
+});
+</script>
+      <script type="text/javascript"> 
+$(document).ready(function() {
+ $('a.expand').click(function(event) {
+ 
+  //alert ($(this).parent(".content").attr("id"));
+  var myDiv = $(this).parents(".content").attr("id");
+     
+ 
+  $('#'+myDiv).find('.jig-ncbitoggler').each(function() {
+     
+   $(this).ncbitoggler('open');
+ 
+     });
+  
+ 
+});
+});
+ 
+</script>
+      <script type="text/javascript"> 
+$(document).ready(function() {
+ $('a.collapse').click(function(event) {
+ 
+  //alert ($(this).parent(".content").attr("id"));
+  var myDiv = $(this).parents(".content").attr("id");
+     
+ 
+  $('#'+myDiv).find('.jig-ncbitoggler').each(function() {
+     
+   $(this).ncbitoggler('close');
+ 
+     });
+  
+ 
+});
+});
+ 
+</script>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <title>UMLS Training Resources</title>
+   </head>
+   <body>
+      <div id="source-doc-wrapper">
+         <h1>UMLS Training Resources</h1>
+         <div id="source-doc-intro">
+            <p>Click on a category to view available resources.</p>
+         </div>
+         <a href="#" class="expand">Expand All</a>&amp;nbsp;&amp;nbsp;<a href="#" class="collapse">Collapse All</a>
+         <table border="1" summary="ncbitoggler table of UMLS resources">
+            <caption>UMLS Training Resources</caption>
+            <thead>
+               <tr>
+                  <th scope="col">Category</th>
+                  <th>Subcategory</th>
+                  <th>Title</th>
+                  <th>Date</th>
+                  <th>Runtime</th>
+                  <th>Format</th>
+                  <th>Requires</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <h3>
+                     <a class="jig-ncbitoggler ui-ncbitoggler">
+                        <span class="ui-ncbitoggler-master-text">
+                           <td class="ui-widget-content"/>
+                        </span>
+                     </a>
+                  </h3>
+                  <div class="ui-ncbi-toggler-slave">
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                  </div>
+               </tr>
+               <tr>
+                  <h3>
+                     <a class="jig-ncbitoggler ui-ncbitoggler">
+                        <span class="ui-ncbitoggler-master-text">
+                           <td class="ui-widget-content"/>
+                        </span>
+                     </a>
+                  </h3>
+                  <div class="ui-ncbi-toggler-slave">
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                  </div>
+               </tr>
+               <tr>
+                  <h3>
+                     <a class="jig-ncbitoggler ui-ncbitoggler">
+                        <span class="ui-ncbitoggler-master-text">
+                           <td class="ui-widget-content"/>
+                        </span>
+                     </a>
+                  </h3>
+                  <div class="ui-ncbi-toggler-slave">
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                  </div>
+               </tr>
+               <tr>
+                  <h3>
+                     <a class="jig-ncbitoggler ui-ncbitoggler">
+                        <span class="ui-ncbitoggler-master-text">
+                           <td class="ui-widget-content"/>
+                        </span>
+                     </a>
+                  </h3>
+                  <div class="ui-ncbi-toggler-slave">
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                  </div>
+               </tr>
+               <tr>
+                  <h3>
+                     <a class="jig-ncbitoggler ui-ncbitoggler">
+                        <span class="ui-ncbitoggler-master-text">
+                           <td class="ui-widget-content"/>
+                        </span>
+                     </a>
+                  </h3>
+                  <div class="ui-ncbi-toggler-slave">
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                  </div>
+               </tr>
+               <tr>
+                  <h3>
+                     <a class="jig-ncbitoggler ui-ncbitoggler">
+                        <span class="ui-ncbitoggler-master-text">
+                           <td class="ui-widget-content"/>
+                        </span>
+                     </a>
+                  </h3>
+                  <div class="ui-ncbi-toggler-slave">
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                  </div>
+               </tr>
+               <tr>
+                  <h3>
+                     <a class="jig-ncbitoggler ui-ncbitoggler">
+                        <span class="ui-ncbitoggler-master-text">
+                           <td class="ui-widget-content"/>
+                        </span>
+                     </a>
+                  </h3>
+                  <div class="ui-ncbi-toggler-slave">
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                  </div>
+               </tr>
+               <tr>
+                  <h3>
+                     <a class="jig-ncbitoggler ui-ncbitoggler">
+                        <span class="ui-ncbitoggler-master-text">
+                           <td class="ui-widget-content"/>
+                        </span>
+                     </a>
+                  </h3>
+                  <div class="ui-ncbi-toggler-slave">
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                  </div>
+               </tr>
+               <tr>
+                  <h3>
+                     <a class="jig-ncbitoggler ui-ncbitoggler">
+                        <span class="ui-ncbitoggler-master-text">
+                           <td class="ui-widget-content"/>
+                        </span>
+                     </a>
+                  </h3>
+                  <div class="ui-ncbi-toggler-slave">
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                  </div>
+               </tr>
+               <tr>
+                  <h3>
+                     <a class="jig-ncbitoggler ui-ncbitoggler">
+                        <span class="ui-ncbitoggler-master-text">
+                           <td class="ui-widget-content"/>
+                        </span>
+                     </a>
+                  </h3>
+                  <div class="ui-ncbi-toggler-slave">
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                  </div>
+               </tr>
+               <tr>
+                  <h3>
+                     <a class="jig-ncbitoggler ui-ncbitoggler">
+                        <span class="ui-ncbitoggler-master-text">
+                           <td class="ui-widget-content"/>
+                        </span>
+                     </a>
+                  </h3>
+                  <div class="ui-ncbi-toggler-slave">
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                     <td class="ui-widget-content"/>
+                  </div>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </body>
+</html>
