@@ -8,7 +8,7 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
 </xsl:character-map>
 
 
-<xsl:apply-templates select = "categories"/>
+
 
 
 <div id="source-doc-wrapper">
@@ -17,8 +17,9 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
       <p>Click on a category to view available resources.</p>
     </div>
     <a href="#" class="expand">Expand All</a>&amp;nbsp;&amp;nbsp;<a href="#" class="collapse">Collapse All</a>
+		
 
-  <table border="1" summary="ncbitoggler table of UMLS resources">
+  <table border="1" summary="Table of UMLS resources">
       <caption>UMLS Training Resources</caption>       
       <thead>
         <tr>
@@ -36,7 +37,11 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
       <tbody>
         <xsl:for-each select="category">
           <xsl:sort select="@rank"/>
-
+        </xsl:for-each>
+      </tbody>
+    </table>	
+		
+</xsl:stylesheet>
 					
           <tr>
             <!--   <td class="ui-widget-content"><xsl:value-of select="category/resources/resource/Project" /></td>-->
@@ -58,13 +63,11 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
       </tbody>
     </table>				
 					
-					
-
-
-
 </div><!-- end source-doc-wrapper-->
+</xsl:template>
+<!--end document element-->
 
-  <h5><a class="jig-ncbitoggler" href="#">
+ <!-- <h5><a class="jig-ncbitoggler" href="#">
 				 <xsl:value-of select = "@type"/>&#160;&#160;<span class = "count">
 				 <xsl:value-of select = "count(resources/resource)"/>&#160;<xsl:value-of select = "sourcereleasedocs:countSources(count(resources/resource))"/>
 				 </span></a></h5>
@@ -73,13 +76,9 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
     <tr><th scope = "col">Source</th><th>Last Updated</th></tr>
     <xsl:apply-templates select = "resources"/>
     </table>
-  </div>
+  </div>-->
 
 
-<xsl:template match = "categories">
-<xsl:template match = "categories">
-<xsl:template match = "categories">
-<xsl:template match = "categories">
 
 <xsl:template match = "resources">
     <xsl:for-each select = "resource">
@@ -100,7 +99,7 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
   </div>
 </xsl:template>
 
-<xsl:template match = "categories">
+<!--<xsl:template match = "categories">
     <xsl:for-each select = "category">
         <xsl:sort select = "count(resources/resource)" order = "descending"/>
         <xsl:sort select = "@name"/>
@@ -112,7 +111,7 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
         </table>
         </div>  
     </xsl:for-each>   
-</xsl:template>
+</xsl:template>-->
 
 
 </xsl:stylesheet>
