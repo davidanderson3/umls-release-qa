@@ -9,7 +9,7 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
 
   <xsl:template match = "categories">
 
-  <table border="1" summary="Table of UMLS resources" color="blue" bgcolor="black">
+  <table border="1" summary="Table of UMLS resources" color="black" bgcolor="white">
       <caption color="green">UMLS Training Resources</caption>       
       <thead color="green">
         <tr>
@@ -36,7 +36,7 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
         <td><xsl:value-of select="../../@name" /></td>
         <td><xsl:value-of select="Title" /></td>
         <td><xsl:value-of select="Date" /></td>
-        <td><xsl:value-of select="Minutes" />&#160;minutes</td>
+        <td><xsl:value-of select="Minutes" /></td>
         <td><xsl:value-of select="Format" /></td>            
       </tr>     
     </xsl:for-each>
