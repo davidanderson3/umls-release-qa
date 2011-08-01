@@ -35,7 +35,7 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
     <xsl:for-each select="resource">
     
       <tr>
-        <td><a href = "{url}"><xsl:value-of select="Title" /></a></td>
+        <td><a href = "{URL}"><xsl:value-of select="Title" /></a></td>
         <td><xsl:value-of select="Date" /></td>
         <td><xsl:value-of select="Minutes" /></td>
         <td><xsl:value-of select="Format" /></td>            
