@@ -15,7 +15,7 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
 
         <xsl:for-each select="category">
           <xsl:sort select="@rank"/>
-          <h5><a class="jig-ncbitoggler" href="#"><xsl:value-of select = "@name"/></a></h5>
+          <h5><a class="jig-ncbitoggler" href="#"><xsl:value-of select = "@name"/></a>&#160;&#160;<span class = "count"><xsl:value-of select = "count(resources/resource)"/></span></h5>
           
           <xsl:apply-templates select="resources"/>
         </xsl:for-each>
@@ -27,16 +27,15 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
   <xsl:template match = "resources">
     <table>
       <tr>
-        <th scope="col">Category</th>
         <th>Title</th>
         <th>Date</th>
         <th>Runtime</th>
         <th>Format</th>
       </tr>
     <xsl:for-each select="resource">
+    
       <tr>
-        <td><xsl:value-of select="../../@name" /></td>
-        <td><xsl:value-of select="Title" /></td>
+        <td><a href = "{url}"><xsl:value-of select="Title" /></a></td>
         <td><xsl:value-of select="Date" /></td>
         <td><xsl:value-of select="Minutes" /></td>
         <td><xsl:value-of select="Format" /></td>            
