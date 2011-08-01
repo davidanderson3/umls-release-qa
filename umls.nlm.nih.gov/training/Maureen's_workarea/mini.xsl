@@ -8,29 +8,31 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
 </xsl:character-map>
 
   <xsl:template match = "categories">
+    <div id="source-doc-wrapper">
+      <div id="source-doc-intro">
+        <h3>Click on a category to browse available UMLS training resources.</h3>
+      </div>
 
-  <table border="1" summary="Table of UMLS resources" color="black" bgcolor="white">
-      <caption color="green">UMLS Training Resources</caption>       
-      <thead color="green">
-        <tr>
-          <th scope="col">Category</th>
-          <th>Title</th>
-          <th>Date</th>
-          <th>Runtime</th>
-          <th>Format</th>
-        </tr>
-      </thead>
-      
-      <tbody>
         <xsl:for-each select="category">
           <xsl:sort select="@rank"/>
+          <h5><a class="jig-ncbitoggler" href="#"><xsl:value-of select = "@name"/></a></h5>
+          
           <xsl:apply-templates select="resources"/>
         </xsl:for-each>
-      </tbody>
-    </table>	
-  </xsl:template>
+    </div><!-- end source-doc-wrapper-->
+    
+    
+</xsl:template><!--end document element-->
   
   <xsl:template match = "resources">
+    <table>
+      <tr>
+        <th scope="col">Category</th>
+        <th>Title</th>
+        <th>Date</th>
+        <th>Runtime</th>
+        <th>Format</th>
+      </tr>
     <xsl:for-each select="resource">
       <tr>
         <td><xsl:value-of select="../../@name" /></td>
@@ -40,5 +42,9 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
         <td><xsl:value-of select="Format" /></td>            
       </tr>     
     </xsl:for-each>
+    </table>
   </xsl:template>
+  
+
+
 </xsl:stylesheet>
