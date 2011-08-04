@@ -51,67 +51,6 @@ File Details</a></span>
 <h3>Summary of Changes</h3>
 &nbsp;&nbsp;<span class="nav"><a href="#top">return to top</a></span>
 <p>No changes have been made to the original data file format. </p>
-<p>The following changes have been made to Metathesaurus processing:</p>
-<ul>
-  <li>Hierarchy:&nbsp; The NODEKEY value is now used to populate
-MRHIER.HCD.&nbsp; Note that the NODEKEY value is a series of
-two-character tokens, some of which include a space character. &nbsp;
-Leading space characters have not been removed from the HCD
-value.&nbsp; <br/>
-  </li>
-  <li>MEDCIN to SNOMEDCT relationships:&nbsp; The following new linkage
-concepts are used: </li>
-</ul>
-<br/>
-<table class="elements" border="0" cellspacing="0">
-  <tbody>
-    <tr>
-      <td style="vertical-align: top;"><span style="font-weight: bold;">SNOMEDCT/FN</span><br/>
-      </td>
-      <td style="vertical-align: top;"><span style="font-weight: bold;">RELA</span><br/>
-      </td>
-      <td style="vertical-align: top;"><span style="font-weight: bold;">RELA
-inverse</span><br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">Specimen source topography
-(attribute)<br/>
-      </td>
-      <td style="vertical-align: top;">has_specimen_source_topography<br/>
-      </td>
-      <td style="vertical-align: top;">specimen_source_topography_of<br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">Procedure morphology (attribute)<br/>
-      </td>
-      <td style="vertical-align: top;">has_procedure_morphology<br/>
-      </td>
-      <td style="vertical-align: top;">procedure_morphology_of<br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">Subject relationship context
-(attribute)<br/>
-      </td>
-      <td style="vertical-align: top;">has_subject_relationship_context<br/>
-      </td>
-      <td style="vertical-align: top;">subject_relationship_context_of<br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">Using substance (attribute)<br/>
-      </td>
-      <td style="vertical-align: top;">uses_substance<br/>
-      </td>
-      <td style="vertical-align: top;">substance_used_by<br/>
-      </td>
-    </tr>
-  </tbody>
-</table>
-<p><br/>
-</p>
 </div>
 <div id="rep_file_summary" class="rep_block_level_one">
 <a name="file_summary"></a>
@@ -129,19 +68,19 @@ inverse</span><br/>
       <th>Description</th>
     </tr>
     <tr>
-      <td class="file_field_name"><a href="#file1">UMLS_MEDCIN_CONCEPTS2010-12-14.TXT</a></td>
+      <td class="file_field_name"><a href="#file1">UMLS_MEDCIN_CONCEPTS2011_07_11.TXT</a></td>
       <td>Concepts - Pipe-Delimited Format</td>
     </tr>
     <tr>
-      <td class="file_field_name"><a href="#file2">UMLS_MEDCIN_DESCRIPTIONS2010-12-14.TXT</a></td>
+      <td class="file_field_name"><a href="#file2">UMLS_MEDCIN_DESCRIPTIONS2011_07_11.TXT</a></td>
       <td>Descriptions - Pipe-Delimited Format</td>
     </tr>
     <tr>
-      <td class="file_field_name"><a href="#file3">UMLS_MEDCIN_HIERARCHY2010-12-14.TXT</a></td>
+      <td class="file_field_name"><a href="#file3">UMLS_MEDCIN_HIERARCHY2011_07_11.TXT</a></td>
       <td>Hierarchy - Pipe-Delimited Format</td>
     </tr>
     <tr>
-      <td class="file_field_name"><a href="#file4">UMLS_MEDCIN_SNOMED2010-12-14.TXT</a></td>
+      <td class="file_field_name"><a href="#file4">UMLS_MEDCIN_SNOMED2011_07_11.TXT</a></td>
       <td>MEDCIN to SNOMEDCT mappings - Pipe-Delimited Format</td>
     </tr>
   </tbody>
@@ -160,11 +99,11 @@ Consult the MEDCIN documentation for additional details.</p>
 <h4 class="file_field_name">file:UMLS_MEDCIN_CONCEPTSyyyy-mm-dd.TXT</h4>
 &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
 Files</a></span>
-<p>Concepts</p>
+<br><br/>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
-      <th>#</th>
+      <th>Field #</th>
       <th>Field Name</th>
       <th>Description</th>
       <th>Representation</th>
@@ -175,7 +114,7 @@ Files</a></span>
       <td>MEDCIN concept ID</td>
       <td>MRCONSO.CODE<br/>
 MRCONSO.SCUI<br/>
-(TTY = "FN")</td>
+MRCONSO.TTY = FN</td>
     </tr>
     <tr>
       <td>2</td>
@@ -191,11 +130,11 @@ parentheses</td>
 <h4 class="file_field_name">file:UMLS_MEDCIN_DESCRIPTIONSyyyy-mm-dd.TXT</h4>
 &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
 Files</a></span>
-<p>Descriptions</p>
+<br><br/>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
-      <th>#</th>
+      <th>Field #</th>
       <th>Field Name</th>
       <th>Description</th>
       <th>Representation</th>
@@ -219,7 +158,7 @@ MRCONSO.SCUI</td>
       <td>1 = preferred, 0 = non-preferred</td>
       <td>0 =&gt; MRCONSO.TTY = "SY",<br/>
 1 =&gt; MRCONSO.TTY = "PT"<br/>
-MRSAT.ATN = "PREF_FLAG_ID" (STYPE = "AUI"<br/>
+MRSAT.ATN = "PREF_FLAG_ID" (STYPE = "AUI")<br/>
       </td>
     </tr>
   </tbody>
@@ -229,11 +168,11 @@ MRSAT.ATN = "PREF_FLAG_ID" (STYPE = "AUI"<br/>
 <h4 class="file_field_name">file:UMLS_MEDCIN_HIERARCHYyyyy-mm-dd.TXT</h4>
 &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
 Files</a></span>
-<p>Hierarchy</p>
+<br><br/>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
-      <th>#</th>
+      <th>Field #</th>
       <th>Field Name</th>
       <th>Description</th>
       <th>Representation</th>
@@ -252,7 +191,7 @@ to MEDCINID.</td>
       <td>Used to construct the hierarchical tree position, MRHIER.PTR,
 for this concept. The "NODEKEY" value is a series of two-character
 tokens (some of which include a space character), e.g., " CDA D P"
-breaks down as " C", "DA", " D", and "P", and removing the last token
+breaks down as "&lt;space&gt;C", "DA", "&lt;space&gt;D", and "&lt;space&gt;P", and removing the last token
 (yielding " CDA D", in this example) produces the "NODEKEY" value of
 this concept's hierarchical parent.<br/>
 Also used to populate MRHIER.HCD.&nbsp; Note that leading space
@@ -266,11 +205,11 @@ characters have not been removed from the HCD value.<br/>
 <h4 class="file_field_name">file:UMLS_MEDCIN_SNOMEDyyyy-mm-dd.TXT</h4>
 &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
 Files</a></span>
-<p>MEDCIN-SNOMEDCT mappings.</p>
+<br><br/>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
-      <th>#</th>
+      <th>Field #</th>
       <th>Field Name</th>
       <th>Description</th>
       <th>Representation</th>
