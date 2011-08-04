@@ -38,91 +38,32 @@ Representation</a> </li>
  href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
 <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
 <div id="general" class="rep_block_level_one">
-<p><b>VSAB:</b> MEDCIN3_2010_12_14</p>
+<p><b>VSAB:</b> MEDCIN3_2011_07_11</p>
 </div>
 <div id="rep_identifiers" class="rep_block_level_one">
-<h3>Summary of Changes</h3>
-<p>No changes have been made to the original data file format. </p>
-<p>The following changes have been made to Metathesaurus processing:</p>
-<ul>
-  <li>Hierarchy:&nbsp; The NODEKEY value is now used to populate
-MRHIER.HCD.&nbsp; Note that the NODEKEY value is a series of
-two-character tokens, some of which include a space character. &nbsp;
-Leading space characters have not been removed from the HCD
-value.&nbsp; </li>
-  <li>MEDCIN to SNOMEDCT relationships:&nbsp; The following new linkage
-concepts are used: </li>
-</ul>
-<br/>
-<table class="elements" border="0" cellspacing="0">
-  <tbody>
-    <tr>
-      <td style="vertical-align: top;"><span style="font-weight: bold;">SNOMEDCT/FN</span><br/>
-      </td>
-      <td style="vertical-align: top;"><span style="font-weight: bold;">RELA</span><br/>
-      </td>
-      <td style="vertical-align: top;"><span style="font-weight: bold;">RELA
-inverse</span><br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">Specimen source topography
-(attribute)<br/>
-      </td>
-      <td style="vertical-align: top;">has_specimen_source_topography<br/>
-      </td>
-      <td style="vertical-align: top;">specimen_source_topography_of<br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">Procedure morphology (attribute)<br/>
-      </td>
-      <td style="vertical-align: top;">has_procedure_morphology<br/>
-      </td>
-      <td style="vertical-align: top;">procedure_morphology_of<br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">Subject relationship context
-(attribute)<br/>
-      </td>
-      <td style="vertical-align: top;">has_subject_relationship_context<br/>
-      </td>
-      <td style="vertical-align: top;">subject_relationship_context_of<br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">Using substance (attribute)<br/>
-      </td>
-      <td style="vertical-align: top;">uses_substance<br/>
-      </td>
-      <td style="vertical-align: top;">substance_used_by<br/>
-      </td>
-    </tr>
-  </tbody>
-</table>
-<p><br/>
-</p>
 </div>
+<h3>Summary of Changes</h3>
+<p>No changes have been made to the original data file format or to the data representation. </p>
+
 <div id="rep_change_summary" class="rep_block_level_one">
 <h3>Source Provided Files:</h3>
-<br/>
+
 The Metathesaurus uses the following four pipe-delimited MEDCIN files:
 <ul>
-  <li>UMLS_MEDCIN_CONCEPTS2010-12-14.TXT</li>
-  <li>UMLS_MEDCIN_DESCRIPTIONS2010-12-14.TXT</li>
-  <li>UMLS_MEDCIN_HIERARCHY2010-12-14.TXT</li>
-  <li>UMLS_MEDCIN_SNOMED2010-12-14.TXT</li>
+  <li>UMLS_MEDCIN_CONCEPTS2011_07_11.TXT</li>
+  <li>UMLS_MEDCIN_DESCRIPTIONS2011_07_11.TXT</li>
+  <li>UMLS_MEDCIN_HIERARCHY2011_07_11.TXT</li>
+  <li>UMLS_MEDCIN_SNOMED2011_07_11.TXT</li>
 </ul>
 </div>
 <div id="rep_identifers" class="rep_block_level_one">
 <h3>Identifiers:</h3>
-<br/>
+
 Identifiers are assigned as follows:<br/>
 <ul>
   <li>CODE: MEDCINID</li>
   <li>SAUI: Not Applicable</li>
-  <li>SCUI: Same as CODE</li>
+  <li>SCUI: MEDCINID</li>
   <li>SDUI: Not Applicable</li>
 </ul>
 <div id="rep_termtypes" class="rep_block_level_two">
@@ -217,14 +158,14 @@ MTH_MAPTOCOMPLEXITY<br/>
 MTH_MAPTOEXHAUSTIVE<br/>
 TORSAB<br/>
 TOVSAB<br/>
+XMAP<br/>
+XMAPFROM<br/>
+XMAPTO<br/>
 </div>
-<br/>
-<br/>
 <a name="definitions"></a><br/>
 <h3>Definitions (MRDEF):</h3>
 &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-<p>No definitions are provided for MEDCIN.
-</p>
+<p>No definitions are provided for MEDCIN.</p>
 </div>
 <div id="rep_relationships" class="rep_block_level_two">
 <a name="relationships"></a><br/>
@@ -261,15 +202,12 @@ corresponding to the "RELATIONSHIPTYPE" field.</td>
 </table>
 </div>
 <div id="mappings" class="rep_block_level_two">
-<a name="mappings"></a><br/>
 <h3>Mappings (MRMAP):</h3>
 &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
 <p>One map set ("XM" atom, along with associated attributes and
 mappings) is included for MEDCIN.&nbsp; Mappings are extracted from the
 file "UMLS_MEDCIN_SNOMEDyy-mm-dd.TXT.&nbsp; Mappings are created for
 entries where the RELATIONSHIPTYPE = "168666000" (same_as).<br/>
-</p>
-<p></p>
 </div>
 </div>
 </body>
