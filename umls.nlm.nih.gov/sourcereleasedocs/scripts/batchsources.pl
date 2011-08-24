@@ -1,41 +1,37 @@
 #!/site/bin/perl5
 use IO::File;
 use Getopt::Std;
-use Cwd;
 
 getopts("i:r:");
 $input = $opt_i || die "Please enter a list of sources to be processeed\n";
 $release = $opt_r || die "Please enter Meta release\n";
 @vsabs;
-$homeDir = $ENV{'HOME'};
-$currentDir = getcwd;
+$home = $ENV{'HOME'};
+$workingdir = $home."/sourcereleasedocs/current";
 
-print qq{$homeDir};
-print qq{$currentDir};
-
-if ($currentDir != $homeDir) {
-	
-	die "please run this script from your home directory";
+unless (-d $workingdir) {
+mkdir $workingdir;
 }
 
 %scripts = (
 	"getTermTypes.pl"=>{
-		"d"=>"cheek_midp",
+		"d"=>"chin_mrdp",
 		"r"=>$release,
 	        "e"=>"utf-8",
 		
 				
 	},
 	"getAttributes.pl"=>{
-		"d"=>"cheek_midp",
+		"d"=>"chin_mrdp",
 		"r"=>$release,
 		"e"=>"utf-8"
 				
 	},
 	"getRelationships.pl"=>{
-		"d"=>"cheek_midp",
+		"d"=>"chin_mrdp",
 		"r"=>$release,
 		"e"=>"utf-8"
+
 		
 	},
 	
@@ -51,7 +47,7 @@ if ($currentDir != $homeDir) {
 	
 	},
        "getmrsab.pl"=>{
-	  "d"=>"cheek_midp",
+	  "d"=>"chin_mrdp",
 	   
 	  
 	},
@@ -63,14 +59,18 @@ if ($currentDir != $homeDir) {
 #create array of sources for this release
 
 open (FH, $input) || die "could not locate input file\n";
-
+#chdir $workingdir;
 
 while (<FH>) {
 chomp($_);
 
 my ($vsab,$rsab) = split(/\|/);
 next if $vsab =~ /^#/;
-mkdir $rsab;
+
+unless (-d $workingdir."/".$rsab) {
+mkdir $workingdir."/".$rsab;
+
+}
 
 &produceReports($vsab,$rsab);
 
