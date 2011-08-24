@@ -33,7 +33,7 @@ $dbh = DBI->connect("dbi:Oracle:$db", "$user", "$password") or die "Can't connec
 
 #check to make sure we are starting in the right place
 $home = $ENV{'HOME'};
-$workingdir = $home."/sourcereleasedocs";
+$workingdir = $home."/sourcereleasedocs/current";
 
 if (-d $workingdir) {
 

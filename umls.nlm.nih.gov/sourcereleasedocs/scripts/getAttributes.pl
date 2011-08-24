@@ -27,7 +27,7 @@ $indexes = 4;
 
 #check to make sure we are starting in the right place
 $home = $ENV{'HOME'};
-$workingdir = $home."/sourcereleasedocs";
+$workingdir = $home."/sourcereleasedocs/current";
 
 if (-d $workingdir) {
 
