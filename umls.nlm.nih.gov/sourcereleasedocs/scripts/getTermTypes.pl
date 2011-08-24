@@ -12,6 +12,7 @@ require DBD::Oracle;
 my %options;
 getopts("d:v:r:e:z:");
 
+
 $db = $opt_d || die "Need option -d to specify database, i.e. femur_midtest";
 $vsab = $opt_v || die "Need option -v specify the vsab, i.e. HUGO2008_03";
 $release = $opt_r || die "Need option -r for the Metathesaurus release version, i.e. 2008AA";
@@ -25,11 +26,23 @@ chop($password);
 # open connection
 $dbh = DBI->connect("dbi:Oracle:$db", "$user", "$password") or die "Can't connect to Oracle database: $DBI::errstr\n";
 
+#check to make sure we are starting in the right place
+$home = $ENV{'HOME'};
+$workingdir = $home."/sourcereleasedocs";
 
+if (-d $workingdir) {
+
+print qq{ Working directory sourcereleasedocs exists};
+chdir $workingdir;
+else {
+
+die "Need to create sourcereleasedocs directory in under $home to run this script\n";
+
+}
 
 #instantiate xml
-chdir $rsab;
-my $output = new IO::File("termtypes.xml");
+#chdir $rsab;
+my $output = new IO::File(>"termtypes.xml");
 my $writer = new XML::Writer(OUTPUT => $output,DATA_MODE => 'true',DATA_INDENT => 4,ENCODING=>$enc);
 #$writer->xmlDecl($enc);
 
