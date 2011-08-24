@@ -24,11 +24,25 @@ chop($password);
 # open connection
 $dbh = DBI->connect("dbi:Oracle:$db", "$user", "$password") or die "Can't connect to Oracle database: $DBI::errstr\n";
 
+#check to make sure we are starting in the right place
+$home = $ENV{'HOME'};
+$workingdir = $home."/sourcereleasedocs";
+
+if (-d $workingdir) {
+
+print qq{ Working directory sourcereleasedocs exists};
+chdir $workingdir."/".$rsab;
+
+}
+else {
+
+die "Need to create sourcereleasedocs directory in under $home to run this script\n";
+
+}
 
 
 #instantiate xml
-chdir $rsab;
-my $output = new IO::File("semtypes.xml");
+my $output = new IO::File(">semtypes.xml");
 my $writer = new XML::Writer(OUTPUT => $output,DATA_MODE => 'true',DATA_INDENT => 4);
 #$writer->xmlDecl($enc);
 

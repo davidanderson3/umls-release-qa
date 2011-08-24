@@ -33,7 +33,9 @@ $workingdir = $home."/sourcereleasedocs";
 if (-d $workingdir) {
 
 print qq{ Working directory sourcereleasedocs exists};
-chdir $workingdir;
+chdir $workingdir."/".$rsab;
+
+}
 else {
 
 die "Need to create sourcereleasedocs directory in under $home to run this script\n";
@@ -41,8 +43,8 @@ die "Need to create sourcereleasedocs directory in under $home to run this scrip
 }
 
 #instantiate xml
-#chdir $rsab;
-my $output = new IO::File(>"termtypes.xml");
+
+my $output = new IO::File(">termtypes.xml");
 my $writer = new XML::Writer(OUTPUT => $output,DATA_MODE => 'true',DATA_INDENT => 4,ENCODING=>$enc);
 #$writer->xmlDecl($enc);
 

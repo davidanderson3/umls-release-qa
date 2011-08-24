@@ -22,8 +22,24 @@ chop($password);
 
 # open connection
 $dbh = DBI->connect("dbi:Oracle:$db", "$user", "$password") or die "Can't connect to Oracle database: $DBI::errstr\n";
-chdir $rsab;
-my $output = new IO::File("mrsab.xml");
+
+#check to make sure we are starting in the right place
+$home = $ENV{'HOME'};
+$workingdir = $home."/sourcereleasedocs";
+
+if (-d $workingdir) {
+
+print qq{ Working directory sourcereleasedocs exists};
+chdir $workingdir."/".$rsab;
+
+}
+else {
+
+die "Need to create sourcereleasedocs directory in under $home to run this script\n";
+
+}
+
+my $output = new IO::File(">mrsab.xml");
 $writer = new XML::Writer(OUTPUT => $output,DATA_MODE => 'true',DATA_INDENT => 4);
 $writer->xmlDecl("utf-8");
 $writer->startTag("document","vsab"=>$vsab);
