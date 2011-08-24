@@ -1,16 +1,18 @@
 #!/site/bin/perl5
 use IO::File;
 use Getopt::Std;
-
+use File::Path;
 getopts("i:r:");
 $input = $opt_i || die "Please enter a list of sources to be processeed\n";
 $release = $opt_r || die "Please enter Meta release\n";
 @vsabs;
 $home = $ENV{'HOME'};
+print qq{home directory is $home\n};
 $workingdir = $home."/sourcereleasedocs/current";
+print qq{working directory will be $workingdir\n};
 
-unless (-d $workingdir) {
-mkdir $workingdir;
+if (! -d $workingdir) {
+mkpath ($workingdir) || die "Could not make sourcereleasedocs directory\n";
 }
 
 %scripts = (
