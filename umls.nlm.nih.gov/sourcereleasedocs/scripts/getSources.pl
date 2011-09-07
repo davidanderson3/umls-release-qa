@@ -32,20 +32,20 @@ $contentCategories{"Adverse Drug Reaction Reporting Systems"} = ["MDR","WHO"];
 $contentCategories{"Anatomy"} = ["FMA","UWDA"];
 $contentCategories{"Consumer Health Information"} = ["CHV" , "MEDLINEPLUS"];
 $contentCategories{"Dentistry"} = ["HCDT"];
-$contentCategories{"Diagnosis"} = ["ICD9CM" , "ICD10CM" , "MEDCIN", "SNOMEDCT", "CPT"];
+$contentCategories{"Diagnosis"} = ["ICD9CM" , "ICD10CM" , "MEDCIN", "SNOMEDCT", "CPT", "ICPC2EENG"];
 $contentCategories{"Disabled Persons"} = ["ICF" , "ICF-CY" ];
-$contentCategories{"Disease"} = ["ICD9CM","ICD10CM","MEDLINEPLUS" , "MSH" , "OMIM" , "NCI" , "SNOMEDCT", "MDR"];
-$contentCategories{"Drugs [Pharmaceutical Preparations]"} = ["GS" , "MDDB" , "MMSL" , "MMX" , "MSH" , "MTHFDA" , "MTHSPL" , "NDDF" , "NDFRT" , "RXNORM" , "SNOMEDCT" , "VANDF", "USPMG"];
-$contentCategories{"Insurance Claim Reporting"} = ["HCPT","CPT" , "HCDT" , "HCPCS" , "ICD10PCS", "ICD9CM", "ICD10CM"];
-$contentCategories{"Genetics"} = ["GO","HUGO","OMIM", "NCI"];
+$contentCategories{"Disease"} = ["ICD9CM","ICD10CM", "MEDLINEPLUS" , "MSH" , "OMIM" , "NCI" , "SNOMEDCT", "MDR", "ICPC2EENG"];
+$contentCategories{"Drugs"} = ["GS" , "MDDB" , "MMSL" , "MMX" , "MSH" , "MTHFDA" , "MTHSPL" , "NDDF" , "NDFRT" , "RXNORM" , "SNOMEDCT" , "VANDF", "USPMG"];
+$contentCategories{"Insurance Claim Reporting"} = ["HCPT", "CPT" , "HCDT" , "HCPCS" , "ICD10PCS", "ICD9CM", "ICD10CM"];
+$contentCategories{"Genetics"} = ["GO", "HUGO", "OMIM", "NCI"];
 $contentCategories{"Laboratory Techniques and Procedures"} = ["LNC","CPT","SNOMEDCT"];
-$contentCategories{"Medical Devices"} = ["HCPCS","UMD","SPN"];
-$contentCategories{"Nursing"} = ["ICNP", "PNDS", "NIC","NOC"];
+$contentCategories{"Medical Devices"} = ["HCPCS", "UMD", "SPN"];
+$contentCategories{"Nursing"} = ["ICNP", "PNDS", "NIC", "NOC"];
 $contentCategories{"Phylogeny"} = ["NCBI"];
 #$contentCategories{"Problem-Oriented Medical Records"} = ["ICD9CM" , "ICD10CM" , "MEDCIN", "SNOMEDCT"];
 $contentCategories{"Procedures"} = ["PDQ" , "CPT" , "HCDT" , "HCPCS", "ICD10PCS" , "MEDCIN", "SNOMEDCT", "ICD9CM", "NCI","HCPT"];
-$contentCategories{"Complementary Therapies"} = ["TKMT","ALT"];
-$contentCategories{"Subject Headings"} = ["MSH","LCH"];
+$contentCategories{"Complementary Therapies"} = ["TKMT", "ALT"];
+$contentCategories{"Subject Headings"} = ["MSH", "LCH"];
 
  
 
