@@ -54,12 +54,13 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
 <xsl:apply-templates select = "muCategories"/>
 <div class = "content-footnote"><p><em>*as of 28 July 2010 (subject to change)</em></p></div>
 </div>
+-->
 <div id = "tabs-4" class = "content">
 <h3>Content Categories</h3>
 <xsl:apply-templates select = "contentCategories"/>
 <div class = "content-footnote"><p><em>*Content Categories come from either MeSH Headings or MeSH Entry Terms.  Only the most frequently updated sources in the Metathesaurus are categorized, <br/>and some sources may belong to more than one category.  Foreign translations have not been categorized.</em></p></div>
 </div>
--->
+
 <div id = "tabs-5" class = "content">
   <h3>Languages</h3>
 <xsl:apply-templates select = "languages"/>
