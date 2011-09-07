@@ -33,8 +33,8 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
 <ul> 
 <li><a class="ajaxlink" title="alphabet" href="#tabs-1">Alphabetical List</a></li> 
 <li><a class="ajaxlink" title="category" href="#tabs-2">Restriction Categories*</a><a href="https://uts.nlm.nih.gov/help/license/licensecategoryhelp.html" target="_blank"><img style="width: 14px; height: 14px;" src="https://uts.nlm.nih.gov//images/help.png" alt="Restriction Category Help" /></a></li>
-<!--<li><a class="ajaxlink" title="language" href="#tabs-3">Meaningful Use Categories*</a><a href="/research/umls/sourcereleasedocs/meaningful_use_help.html" target="_blank"><img style="width: 14px; height: 14px;" src="https://uts.nlm.nih.gov//images/help.png" alt="Meaningful Use Category Help" /></a></li>
-<li><a class="ajaxlink" title="language" href="#tabs-4">Content Categories*</a></li>-->
+<!--<li><a class="ajaxlink" title="language" href="#tabs-3">Meaningful Use Categories*</a><a href="/research/umls/sourcereleasedocs/meaningful_use_help.html" target="_blank"><img style="width: 14px; height: 14px;" src="https://uts.nlm.nih.gov//images/help.png" alt="Meaningful Use Category Help" /></a></li>-->
+<li><a class="ajaxlink" title="language" href="#tabs-4">Content Categories*</a></li>
 <li><a class="ajaxlink" title="language" href="#tabs-5">Languages</a></li>
 </ul>
 
