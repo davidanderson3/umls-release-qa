@@ -47,7 +47,7 @@ $contentCategories{"Procedures"} = ["PDQ" , "CPT" , "HCDT" , "HCPCS", "ICD10PCS"
 $contentCategories{"Complementary Therapies"} = ["TKMT","ALT"];
 $contentCategories{"Subject Headings"} = ["MSH","LCH"];
 
-
+ 
 
 while(<FH>) {
     
