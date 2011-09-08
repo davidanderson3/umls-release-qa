@@ -25,16 +25,16 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
     
 <div id="source-doc-wrapper">
 <div id="source-doc-intro">
-<p>Choose a source by browsing one of the presentation tabs below</p>
+<p>Choose a source by browsing one of the presentation tabs below.</p>
 </div>
 
 <div class="jig-tabs">
 
 <ul> 
 <li><a class="ajaxlink" title="alphabet" href="#tabs-1">Alphabetical List</a></li> 
-<li><a class="ajaxlink" title="category" href="#tabs-2">Restriction Categories*</a><a href="https://uts.nlm.nih.gov/help/license/licensecategoryhelp.html" target="_blank"><img style="width: 14px; height: 14px;" src="https://uts.nlm.nih.gov//images/help.png" alt="Restriction Category Help" /></a></li>
+<li><a class="ajaxlink" title="category" href="#tabs-2">Restriction Categories</a><a href="https://uts.nlm.nih.gov/help/license/licensecategoryhelp.html" target="_blank"><img style="width: 14px; height: 14px;" src="https://uts.nlm.nih.gov//images/help.png" alt="Restriction Category Help" /></a></li>
 <!--<li><a class="ajaxlink" title="language" href="#tabs-3">Meaningful Use Categories*</a><a href="/research/umls/sourcereleasedocs/meaningful_use_help.html" target="_blank"><img style="width: 14px; height: 14px;" src="https://uts.nlm.nih.gov//images/help.png" alt="Meaningful Use Category Help" /></a></li>-->
-<li><a class="ajaxlink" title="language" href="#tabs-4">Content Categories*</a></li>
+<li><a class="ajaxlink" title="language" href="#tabs-4">Content Categories</a></li>
 <li><a class="ajaxlink" title="language" href="#tabs-5">Languages</a></li>
 </ul>
 
@@ -44,7 +44,7 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
 <xsl:apply-templates select = "letters"/>
 </div>
 <div id = "tabs-2" class = "content">
-  <h3>Restriction Categories</h3>
+  <h3>Restriction Categories*</h3>
 <xsl:apply-templates select = "restrictions"/>
 <div class = "content-footnote"><p><em>*as of 2011AA UMLS.  <br/>Source vocabularies in Category 4 are free for use in the United States. Category 3 rules apply for all other uses</em></p></div>
 </div>
@@ -56,7 +56,7 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
 </div>
 -->
 <div id = "tabs-4" class = "content">
-<h3>Content Categories</h3>
+<h3>Content Categories*</h3>
 <xsl:apply-templates select = "contentCategories"/>
 <div class = "content-footnote"><p><em>*Content Categories come from either MeSH Headings or MeSH Entry Terms.  Not all UMLS sources have been categorized especially those which have not been updated in several years. <br/>Some sources may belong to more than one category.  Foreign translations have not been categorized.</em></p></div>
 </div>
