@@ -1,407 +1,505 @@
-<div class="section-4">
-<ul id="menu">
-  <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
-  <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
-  <li id="nav-3"> <a href="sourcemetastats.html">Statistics and sample
-data</a>
-    <ul id="subnav-3">
-      <li> <a href="termtypes.html">Terms and term types</a> </li>
-      <li> <a href="attributes.html">Attributes</a> </li>
-      <li> <a href="relationships.html">Relationships</a> </li>
-      <li> <a href="semtypes.html">Semantic Types</a> </li>
-      <li> <a href="overlap.html">Source Overlap</a> </li>
-    </ul>
-  </li>
-  <li id="nav-4"> <a href="representation.html">Representation</a>
-    <ul id="subnav-4">
-      <li> <a href="sourcerepresentation.html">Source Representation</a>
-      </li>
-      <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
-Representation</a> </li>
-    </ul>
-  </li>
-</ul>
-</div>
-<br/>
-<br/>
-<br/>
-<a name="top"></a>
-<span class="nav">Skip to: <a href="#atoms">Atoms</a>, <a
- href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
-<a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
-<div id="general" class="rep_block_level_one">
-<p><b>VSAB:</b> GO2010_04_01</p>
-<div id="rep_identifiers" class="rep_block_level_one">
-<h3>Summary of Changes</h3>
-<p>No changes have been made to the format of original data files or to
-UMLS source processing.<br/>
-</p>
-</div>
-<div id="rep_change_summary" class="rep_block_level_one">
-<h3>Source Provided Files:</h3>
-<br/>
-The UMLS uses an OBO-format file downloaded from the GO website
-(http://www.geneontology.org).&nbsp;
-GO is updated daily, however only the version from the first day of the
-month is archived (http://www.geneontology.org/ontology-archive/), and
-for tracking and consistency purposes, the UMLS uses an officially
-archived version. <br/>
-<br/>
-The file
-used for 2010AB is:<br/>
-<ul>
-</ul>
-<p>gene_ontology_edit.obo.2010-04-01<br/>
-</p>
-In OBO, content is structured as tag-value pairs, with optional
-trailing modifiers.&nbsp; Tag-value pairs consist of a tag name, an
-unescaped colon, the tag value, and a newline.
-</div>
-<div id="rep_identifers" class="rep_block_level_one">
-<h3>Identifiers:</h3>
-Identifiers are assigned as follows:<br/>
-<ul>
-  <li>CODE: tag = "id"</li>
-  <li>SAUI: Not applicable</li>
-  <li>SCUI: Not applicable<br/>
-  </li>
-  <li>SDUI: tag = "id"<br/>
-  </li>
-</ul>
-<p></p>
-<div id="rep_termtypes" class="rep_block_level_two">
-<a name="atoms"></a>
-<h3>Atoms (MRCONSO):</h3>
-&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-<table class="elements" border="0" cellspacing="0">
-  <tbody>
-    <tr>
-      <th>Term Type</th>
-      <th>Origin</th>
-    </tr>
-    <tr>
-      <td>ET<br/>
-      </td>
-      <td>CODE:&nbsp; tag = "id"<br/>
-STR:&nbsp; tag = "synonym"<br/>
-SDUI:&nbsp; tag = "id"<br/>
-TTY = "ET" is assigned to the value of tag = "synonym" where the scope
-identifier is "BROAD," "NARROW," or "RELATED" in records where there is
-no "is_obsolete" tag. </td>
-    </tr>
-    <tr>
-      <td>IS<br/>
-      </td>
-      <td>CODE:&nbsp; tag = "id"<br/>
-STR:&nbsp; tag = "synonym"<br/>
-SDUI: tag = "id"<br/>
-TTY = "IS" is assigned to the value of tag = "synonym" where the scope
-identifier = "EXACT" and tag="is_obsolete" has a value of "true."<br/>
-      </td>
-    </tr>
-    <tr>
-      <td>MTH_ET</td>
-      <td>CODE: tag = "id"<br/>
-STR:&nbsp; tag = "synonym," with the word "location" included for
-clarification of selected strings from the Cellular Component Ontology.<br/>
-SDUI:&nbsp; tag = "id"<br/>
-TTY = "ET" is assigned to the value of tag = "synonym" where the scope
-identifier is "BROAD," "NARROW," or "RELATED" in records where there is
-no "is_obsolete" tag.&nbsp; For the GO Cellular Component Ontology,
-additional atoms are created for selected strings by including the word
-"location" in the STR, and prepending the TTY with "MTH_."&nbsp; This
-data is added during Metathesaurus source processing<br/>
-      </td>
-    </tr>
-    <tr>
-      <td>MTH_IS<br/>
-      </td>
-      <td>CODE:&nbsp; tag = "id"<br/>
-STR:&nbsp; tag = "synonym" with the word "location" included for
-clarification of selected strings from the Cellular Component Ontology.<br/>
-SDUI:&nbsp; tag = "id"<br/>
-TTY = "IS" is assigned to the value of tag = "synonym" where the scope
-identifier = "EXACT" and tag="is_obsolete" has a value of "true."&nbsp;
-For the GO Cellular Component Ontology, additional atoms are created
-for selected strings by including the word "location" in the STR, and
-prepending the TTY with "MTH_."&nbsp; This data is added during
-Metathesaurus source processing</td>
-    </tr>
-    <tr>
-      <td>MTH_OP</td>
-      <td>CODE:&nbsp; tag = "id"<br/>
-STR:&nbsp; tag = "name" with the word "location" included for
-clarification of selected strings from the Cellular Component Ontology.<br/>
-SDUI: tag = "id"<br/>
-TTY = "OP" is assigned to the value of tag = "name" where tag =
-"is_obsolete" has a value of "true."&nbsp; For the GO Cellular
-Component Ontology, additional atoms are created
-for selected strings by including the word "location" in the STR, and
-prepending the TTY with "MTH_." This data is added during Metathesaurus
-source processing </td>
-    </tr>
-    <tr>
-      <td>MTH_PT<br/>
-      </td>
-      <td>CODE:&nbsp; tag = "id"<br/>
-STR:&nbsp; tag = "name" with the word "location" included for
-clarification of selected strings from the Cellular Component Ontology.<br/>
-SDUI:&nbsp; tag = "id"<br/>
-TTY = "PT" is assigned to the value of tag = "name" in records where
-there is no "is_obsolete" tag.&nbsp; For the GO Cellular Component
-Ontology, additional atoms are created
-for selected strings by including the word "location" in the STR, and
-prepending the TTY with "MTH_."&nbsp; This data is added during
-Metathesaurus source processing </td>
-    </tr>
-    <tr>
-      <td>MTH_SY<br/>
-      </td>
-      <td>CODE:&nbsp; tag = "id"<br/>
-STR:&nbsp; tag = "synonym" with the word "location" included for
-clarification of selected strings from the Cellular Component Ontology.<br/>
-SDUI:&nbsp; tag = "id"<br/>
-TTY = "SY" is assigned to the value of tag = synonym where the scope
-identifier is "EXACT" in records where ethere is no "is_obsolete"
-tag.&nbsp; For the GO Cellular Component Ontology, additional atoms are
-created
-for selected strings by including the word "location" in the STR, and
-prepending the TTY with "MTH_."&nbsp; This data is added during
-Metathesaurus source processing </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">OET<br/>
-      </td>
-      <td style="vertical-align: top;">CODE:&nbsp; tag = "id"<br/>
-STR:&nbsp; tag = "synonym" <br/>
-SDUI: tag = "id"<br/>
-TTY = "OET" is assigned to the value of tag = "synonym" where the scope
-identifier is "BROAD," "NARROW," or "RELATED" in records where
-is_obsolete has a value of "true." &nbsp; </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">OP<br/>
-      </td>
-      <td style="vertical-align: top;">CODE:&nbsp; tag = "id"<br/>
-STR:&nbsp; tag = "synonym"<br/>
-SDUI:&nbsp; tag = "id"<br/>
-TTY = "OP" is assigned to the value of tag = "name" in records where
-is_obsolete has a value of "true."<br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">PT<br/>
-      </td>
-      <td style="vertical-align: top;">CODE:&nbsp; tag = "id"<br/>
-STR:&nbsp; tag = "synonym"<br/>
-SDUI:&nbsp; tag = "id"<br/>
-TTY = "PT" is assigned to the value of tag = "name" in reocrds with no
-"is_obsolete" tag.<br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">SY<br/>
-      </td>
-      <td style="vertical-align: top;">CODE:&nbsp; tag = "id"<br/>
-STR: tag = "synonym"<br/>
-SDUI:&nbsp; tag = "id"<br/>
-TTY = "SY" is assigned to hte value of tag = synonyn where the scope
-identifier is "EXACT" in records where there is no "is_obsolete" tag.<br/>
-      </td>
-    </tr>
-  </tbody>
-</table>
-</div>
-<div id="rep_attributes" class="rep_block_level_two">
-<a name="attributes"></a><br/>
-<h3>Attributes (MRSAT):</h3>
-&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-<table class="elements" border="0" cellspacing="0">
-  <tbody>
-    <tr>
-      <th>Attribute Name</th>
-      <th>Origin</th>
-    </tr>
-    <tr>
-      <td>GO_COMMENT</td>
-      <td>tag = "comment"<br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">GO_NAMESPACE<br/>
-      </td>
-      <td style="vertical-align: top;">tag = "namespace"<br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">GO_SUBSET<br/>
-      </td>
-      <td style="vertical-align: top;">tag = "subset"<br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">GXR<br/>
-      </td>
-      <td style="vertical-align: top;">tag = "xref""<br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">REF<br/>
-      </td>
-      <td style="vertical-align: top;">tag = "synonym," dbxref list
-(information extracted from square brackets at the end of the field)<br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">SID<br/>
-      </td>
-      <td style="vertical-align: top;">tag = "alt_id"<br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">SYN_QUALIFIER<br/>
-      </td>
-      <td style="vertical-align: top;">tag = "synonym," qualifier
-(information following the scope identifier;&nbsp; currently the only
-value is "systematic synonym")<br/>
-      </td>
-    </tr>
-  </tbody>
-</table>
-</div>
-<div id="rep_definitions" class="rep_block_level_two">
-<a name="definitions"></a><br/>
-<h3>Definitions (MRDEF):</h3>
-&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-<p>Definitions are created from data with the "def" tag in the OBO
-format.<br/>
-</p>
-</div>
-<div id="rep_relationships" class="rep_block_level_two">
-<a name="relationships"></a><br/>
-<h3>Relationships (MRREL):</h3>
-&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-<table class="elements" border="0" cellspacing="0">
-  <tbody>
-    <tr>
-      <th>REL</th>
-      <th>RELA<br/>
-Inverse RELA</th>
-      <th>ORIGIN</th>
-    </tr>
-    <tr>
-      <td>CHD<br/>
-PAR<br/>
-SIB<br/>
-      </td>
-      <td>isa<br/>
-inverse_isa<br/>
-      </td>
-      <td>hierarchy created from tag = "is_a"<br/>
-      </td>
-    </tr>
-    <tr>
-      <td>RN<br/>
-RB</td>
-      <td>&nbsp;(no rela)<br/>
-      </td>
-      <td>Connects an atom created from tag = "synonym" with a scope
-identifier of "BROAD" or "NARROW" with the preferred atom of the GO
-[term] record.<br/>
-      </td>
-    </tr>
-    <tr>
-      <td>RN<br/>
-RB<br/>
-      </td>
-      <td>part_of <br/>
-has_part<br/>
-      </td>
-      <td>tag = "relationship"; value = "part_of" <br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">RO<br/>
-      </td>
-      <td style="vertical-align: top;">(no rela)<br/>
-      </td>
-      <td style="vertical-align: top;">Connects an atom created from
-tag = "synonym" with a scope identifier of "RELATED" with the preferred
-atom of the GO [term] record. </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">RO<br/>
-      </td>
-      <td style="vertical-align: top;">negatively_regulates<br/>
-negatively_regulated_by<br/>
-      </td>
-      <td style="vertical-align: top;">tag = "relationship"; value =
-"negatively_regulates" </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">RO<br/>
-      </td>
-      <td style="vertical-align: top;">positively_regulates<br/>
-positively_regulated_by<br/>
-      </td>
-      <td style="vertical-align: top;">tag = "relationship"; value =
-"positively_regulates" </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">RO<br/>
-      </td>
-      <td style="vertical-align: top;">regulates<br/>
-regulated_by<br/>
-      </td>
-      <td style="vertical-align: top;">tag = "relationship"; value =
-"regulates" </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">RQ<br/>
-      </td>
-      <td style="vertical-align: top;">consider<br/>
-consider_from<br/>
-      </td>
-      <td style="vertical-align: top;">created from tag = "consider"<br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">RQ<br/>
-      </td>
-      <td style="vertical-align: top;">replaced_by<br/>
-replaces<br/>
-      </td>
-      <td style="vertical-align: top;">created from tag = "replaced_by"<br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">SY<br/>
-      </td>
-      <td style="vertical-align: top;">(no rela)<br/>
-      </td>
-      <td style="vertical-align: top;">Connects an atom created from
-tag = "synonym" with a scope identifier of "EXACT" with the preferred
-atom of the GO [term] record.<br/>
-      </td>
-    </tr>
-    <tr>
-      <td>SY</td>
-      <td>expanded_form_of<br/>
-has_expanded_form</td>
-      <td>Connects atoms with TTY = "MTH_*" with their original form<br/>
-      </td>
-    </tr>
-  </tbody>
-</table>
-</div>
-<div id="mappings" class="rep_block_level_two">
-<a name="mappings"></a><br/>
-<h3>Mappings (MRMAP):</h3>
-&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-<p>No mappings are represented for GO.&nbsp; Cross Reference to
-external databases (e.g. MetaCyc:TRNA-CHARGING-PWY) are represented in
-MRSAT.RRF (ATN = "GXR").<br/>
-</p>
-</div>
-</div>
-</div>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;
+      charset=ISO-8859-1">
+    <title></title>
+  </head>
+  <body>
+    <div class="section-4">
+      <ul id="menu">
+        <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
+        <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
+        <li id="nav-3"> <a href="sourcemetastats.html">Statistics and
+            sample data</a>
+          <ul id="subnav-3">
+            <li> <a href="termtypes.html">Terms and term types</a> </li>
+            <li> <a href="attributes.html">Attributes</a> </li>
+            <li> <a href="relationships.html">Relationships</a> </li>
+            <li> <a href="semtypes.html">Semantic Types</a> </li>
+            <li> <a href="overlap.html">Source Overlap</a> </li>
+          </ul>
+        </li>
+        <li id="nav-4"> <a href="representation.html">Representation</a>
+          <ul id="subnav-4">
+            <li> <a href="sourcerepresentation.html">Source
+                Representation</a> </li>
+            <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
+
+
+                Representation</a> </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <a name="top"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>,
+      <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
+      <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+    <div id="general" class="rep_block_level_one">
+      <p><b>VSAB:</b> GO2011_06_01</p>
+      <div id="rep_identifiers" class="rep_block_level_one">
+        <h3>Summary of Changes</h3>
+        <p>New tags: <br/>
+        </p>
+        <p>1)&nbsp; disjoint_from:&nbsp; This tag was present in
+          previous versions of GO.&nbsp; Represented as an attribute,
+          ATN = "DISJOINT_FROM"<br/>
+          <br/>
+          2)&nbsp; intersection_of:&nbsp;&nbsp;&nbsp; This tag indicates
+          that this term is equivalent to the intersection of several
+          other terms. The value is either a term id, or a relationship
+          type id, a space, and a term id.&nbsp; <br/>
+          <br/>
+        </p>
+        <div style="margin-left: 40px;">For example: <br/>
+          [Term]&nbsp; <br/>
+          id: GO:0045495 name: pole plasm&nbsp; <br/>
+          intersection_of: GO:0005737 ! cytoplasm&nbsp; <br/>
+          intersection_of: part_of CL:0000023 ! oocyte&nbsp; <br/>
+          <br/>
+          These definitions can be read as sentences, such as a pole
+          plasm is a cytoplasm that is part_of an oocyte&nbsp; <br/>
+        </div>
+        <p><br/>
+          Represented using relationship groups to link pairs (or
+          groups) of intersecting relationships <br/>
+        </p>
+        <p>The intersection_of tag introduces a new relationship,
+          occurs_in, which is represented with REL = "RO", RELA =
+          "ocurrs_in/has_occurrence"</p>
+        <p>3)&nbsp; creation_date:&nbsp; time stamp <br/>
+          Represented as an attribute, ATN = "DATE_CREATED" <br/>
+          <br/>
+        </p>
+      </div>
+      <div id="rep_change_summary" class="rep_block_level_one">
+        <h3>Source Provided Files:</h3>
+        <br/>
+        The UMLS uses an OBO-format file downloaded from the GO website
+        (http://www.geneontology.org).&nbsp; GO is updated daily,
+        however only the version from the first day of the month is
+        archived (http://www.geneontology.org/ontology-archive/), and
+        for tracking and consistency purposes, the UMLS uses an
+        officially archived version. <br/>
+        <br/>
+        The file used for 2011AB is:<br/>
+        <ul>
+        </ul>
+        <p>gene_ontology_edit.obo (2011_06_01)<br/>
+        </p>
+        In OBO, content is structured as tag-value pairs, with optional
+        trailing modifiers.&nbsp; Tag-value pairs consist of a tag name,
+        an unescaped colon, the tag value, and a newline. </div>
+      <div id="rep_identifers" class="rep_block_level_one">
+        <h3>Identifiers:</h3>
+        Identifiers are assigned as follows:<br/>
+        <ul>
+          <li>CODE: tag = "id"</li>
+          <li>SAUI: Not applicable</li>
+          <li>SCUI: Not applicable<br/>
+          </li>
+          <li>SDUI: tag = "id"<br/>
+          </li>
+        </ul>
+        <p></p>
+        <div id="rep_termtypes" class="rep_block_level_two"> <a
+            name="atoms"></a>
+          <h3>Atoms (MRCONSO):</h3>
+          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <table class="elements" border="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <th>Term Type</th>
+                <th>Origin</th>
+              </tr>
+              <tr>
+                <td>ET<br/>
+                </td>
+                <td>CODE:&nbsp; tag = "id"<br/>
+                  STR:&nbsp; tag = "synonym"<br/>
+                  SDUI:&nbsp; tag = "id"<br/>
+                  TTY = "ET" is assigned to the value of tag = "synonym"
+                  where the scope identifier is "BROAD," "NARROW," or
+                  "RELATED" in records where there is no "is_obsolete"
+                  tag. </td>
+              </tr>
+              <tr>
+                <td>IS<br/>
+                </td>
+                <td>CODE:&nbsp; tag = "id"<br/>
+                  STR:&nbsp; tag = "synonym"<br/>
+                  SDUI: tag = "id"<br/>
+                  TTY = "IS" is assigned to the value of tag = "synonym"
+                  where the scope identifier = "EXACT" and
+                  tag="is_obsolete" has a value of "true."<br/>
+                </td>
+              </tr>
+              <tr>
+                <td>MTH_ET</td>
+                <td>CODE: tag = "id"<br/>
+                  STR:&nbsp; tag = "synonym," with the word "location"
+                  included for clarification of selected strings from
+                  the Cellular Component Ontology.<br/>
+                  SDUI:&nbsp; tag = "id"<br/>
+                  TTY = "ET" is assigned to the value of tag = "synonym"
+                  where the scope identifier is "BROAD," "NARROW," or
+                  "RELATED" in records where there is no "is_obsolete"
+                  tag.&nbsp; For the GO Cellular Component Ontology,
+                  additional atoms are created for selected strings by
+                  including the word "location" in the STR, and
+                  prepending the TTY with "MTH_."&nbsp; This data is
+                  added during Metathesaurus source processing<br/>
+                </td>
+              </tr>
+              <tr>
+                <td>MTH_IS<br/>
+                </td>
+                <td>CODE:&nbsp; tag = "id"<br/>
+                  STR:&nbsp; tag = "synonym" with the word "location"
+                  included for clarification of selected strings from
+                  the Cellular Component Ontology.<br/>
+                  SDUI:&nbsp; tag = "id"<br/>
+                  TTY = "IS" is assigned to the value of tag = "synonym"
+                  where the scope identifier = "EXACT" and
+                  tag="is_obsolete" has a value of "true."&nbsp; For the
+                  GO Cellular Component Ontology, additional atoms are
+                  created for selected strings by including the word
+                  "location" in the STR, and prepending the TTY with
+                  "MTH_."&nbsp; This data is added during Metathesaurus
+                  source processing</td>
+              </tr>
+              <tr>
+                <td>MTH_OP</td>
+                <td>CODE:&nbsp; tag = "id"<br/>
+                  STR:&nbsp; tag = "name" with the word "location"
+                  included for clarification of selected strings from
+                  the Cellular Component Ontology.<br/>
+                  SDUI: tag = "id"<br/>
+                  TTY = "OP" is assigned to the value of tag = "name"
+                  where tag = "is_obsolete" has a value of "true."&nbsp;
+                  For the GO Cellular Component Ontology, additional
+                  atoms are created for selected strings by including
+                  the word "location" in the STR, and prepending the TTY
+                  with "MTH_." This data is added during Metathesaurus
+                  source processing </td>
+              </tr>
+              <tr>
+                <td>MTH_PT<br/>
+                </td>
+                <td>CODE:&nbsp; tag = "id"<br/>
+                  STR:&nbsp; tag = "name" with the word "location"
+                  included for clarification of selected strings from
+                  the Cellular Component Ontology.<br/>
+                  SDUI:&nbsp; tag = "id"<br/>
+                  TTY = "PT" is assigned to the value of tag = "name" in
+                  records where there is no "is_obsolete" tag.&nbsp; For
+                  the GO Cellular Component Ontology, additional atoms
+                  are created for selected strings by including the word
+                  "location" in the STR, and prepending the TTY with
+                  "MTH_."&nbsp; This data is added during Metathesaurus
+                  source processing </td>
+              </tr>
+              <tr>
+                <td>MTH_SY<br/>
+                </td>
+                <td>CODE:&nbsp; tag = "id"<br/>
+                  STR:&nbsp; tag = "synonym" with the word "location"
+                  included for clarification of selected strings from
+                  the Cellular Component Ontology.<br/>
+                  SDUI:&nbsp; tag = "id"<br/>
+                  TTY = "SY" is assigned to the value of tag = synonym
+                  where the scope identifier is "EXACT" in records where
+                  ethere is no "is_obsolete" tag.&nbsp; For the GO
+                  Cellular Component Ontology, additional atoms are
+                  created for selected strings by including the word
+                  "location" in the STR, and prepending the TTY with
+                  "MTH_."&nbsp; This data is added during Metathesaurus
+                  source processing </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">OET<br/>
+                </td>
+                <td style="vertical-align: top;">CODE:&nbsp; tag = "id"<br/>
+                  STR:&nbsp; tag = "synonym" <br/>
+                  SDUI: tag = "id"<br/>
+                  TTY = "OET" is assigned to the value of tag =
+                  "synonym" where the scope identifier is "BROAD,"
+                  "NARROW," or "RELATED" in records where is_obsolete
+                  has a value of "true." &nbsp; </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">OP<br/>
+                </td>
+                <td style="vertical-align: top;">CODE:&nbsp; tag = "id"<br/>
+                  STR:&nbsp; tag = "synonym"<br/>
+                  SDUI:&nbsp; tag = "id"<br/>
+                  TTY = "OP" is assigned to the value of tag = "name" in
+                  records where is_obsolete has a value of "true."<br/>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">PT<br/>
+                </td>
+                <td style="vertical-align: top;">CODE:&nbsp; tag = "id"<br/>
+                  STR:&nbsp; tag = "synonym"<br/>
+                  SDUI:&nbsp; tag = "id"<br/>
+                  TTY = "PT" is assigned to the value of tag = "name" in
+                  reocrds with no "is_obsolete" tag.<br/>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">SY<br/>
+                </td>
+                <td style="vertical-align: top;">CODE:&nbsp; tag = "id"<br/>
+                  STR: tag = "synonym"<br/>
+                  SDUI:&nbsp; tag = "id"<br/>
+                  TTY = "SY" is assigned to hte value of tag = synonyn
+                  where the scope identifier is "EXACT" in records where
+                  there is no "is_obsolete" tag.<br/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="rep_attributes" class="rep_block_level_two"> <a
+            name="attributes"></a><br/>
+          <h3>Attributes (MRSAT):</h3>
+          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <table class="elements" border="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <th>Attribute Name</th>
+                <th>Origin</th>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">DATE_CREATED<br/>
+                </td>
+                <td style="vertical-align: top;">tag = "creation_date"<br/>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">DISJOINT_FROM<br/>
+                </td>
+                <td style="vertical-align: top;">tag = "disjoint_from"<br/>
+                </td>
+              </tr>
+              <tr>
+                <td>GO_COMMENT</td>
+                <td>tag = "comment"<br/>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">GO_NAMESPACE<br/>
+                </td>
+                <td style="vertical-align: top;">tag = "namespace"<br/>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">GO_SUBSET<br/>
+                </td>
+                <td style="vertical-align: top;">tag = "subset"<br/>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">GXR<br/>
+                </td>
+                <td style="vertical-align: top;">tag = "xref""<br/>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">REF<br/>
+                </td>
+                <td style="vertical-align: top;">tag = "synonym," dbxref
+                  list (information extracted from square brackets at
+                  the end of the field)<br/>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">SID<br/>
+                </td>
+                <td style="vertical-align: top;">tag = "alt_id"<br/>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">SYN_QUALIFIER<br/>
+                </td>
+                <td style="vertical-align: top;">tag = "synonym,"
+                  qualifier (information following the scope
+                  identifier;&nbsp; currently the only value is
+                  "systematic synonym")<br/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="rep_definitions" class="rep_block_level_two"> <a
+            name="definitions"></a><br/>
+          <h3>Definitions (MRDEF):</h3>
+          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <p>Definitions are created from data with the "def" tag in the
+            OBO format.<br/>
+          </p>
+        </div>
+        <div id="rep_relationships" class="rep_block_level_two"> <a
+            name="relationships"></a><br/>
+          <h3>Relationships (MRREL):</h3>
+          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <table class="elements" border="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <th>REL</th>
+                <th>RELA<br/>
+                  Inverse RELA</th>
+                <th>ORIGIN</th>
+              </tr>
+              <tr>
+                <td>CHD<br/>
+                  PAR<br/>
+                  SIB<br/>
+                </td>
+                <td>isa<br/>
+                  inverse_isa<br/>
+                </td>
+                <td>hierarchy created from tag = "is_a"<br/>
+                </td>
+              </tr>
+              <tr>
+                <td>RN<br/>
+                  RB</td>
+                <td>&nbsp;(no rela)<br/>
+                </td>
+                <td>Connects an atom created from tag = "synonym" with a
+                  scope identifier of "BROAD" or "NARROW" with the
+                  preferred atom of the GO [term] record.<br/>
+                </td>
+              </tr>
+              <tr>
+                <td>RN<br/>
+                  RB<br/>
+                </td>
+                <td>part_of <br/>
+                  has_part<br/>
+                </td>
+                <td>tag = "relationship"; value = "part_of" <br/>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">RN<br/>
+                  RB<br/>
+                </td>
+                <td style="vertical-align: top;">isa<br/>
+                  inverse_isa<br/>
+                </td>
+                <td style="vertical-align: top;">used to reprsent the
+                  intersection_of tags where the value is a GO
+                  term_id.&nbsp; A relationship group is used to link
+                  pairs (or groups) of intersecting relationships.<br/>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">RO<br/>
+                </td>
+                <td style="vertical-align: top;">(no rela)<br/>
+                </td>
+                <td style="vertical-align: top;">Connects an atom
+                  created from tag = "synonym" with a scope identifier
+                  of "RELATED" with the preferred atom of the GO [term]
+                  record. </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">RO<br/>
+                </td>
+                <td style="vertical-align: top;">negatively_regulates<br/>
+                  negatively_regulated_by<br/>
+                </td>
+                <td style="vertical-align: top;">tag = "relationship";
+                  value = "negatively_regulates" </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">RO<br/>
+                </td>
+                <td style="vertical-align: top;">occurs_in<br/>
+                  has_occurrence<br/>
+                </td>
+                <td style="vertical-align: top;">tag =
+                  "intersection_of"; relationship_type =
+                  "occurs_in".&nbsp; A relationships group is used to
+                  link pairs (or groups) of intersecting relationships.<br/>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">RO<br/>
+                </td>
+                <td style="vertical-align: top;">positively_regulates<br/>
+                  positively_regulated_by<br/>
+                </td>
+                <td style="vertical-align: top;">tag = "relationship";
+                  value = "positively_regulates" </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">RO<br/>
+                </td>
+                <td style="vertical-align: top;">regulates<br/>
+                  regulated_by<br/>
+                </td>
+                <td style="vertical-align: top;">tag = "relationship";
+                  value = "regulates" </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">RQ<br/>
+                </td>
+                <td style="vertical-align: top;">consider<br/>
+                  consider_from<br/>
+                </td>
+                <td style="vertical-align: top;">created from tag =
+                  "consider"<br/>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">RQ<br/>
+                </td>
+                <td style="vertical-align: top;">replaced_by<br/>
+                  replaces<br/>
+                </td>
+                <td style="vertical-align: top;">created from tag =
+                  "replaced_by"<br/>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">SY<br/>
+                </td>
+                <td style="vertical-align: top;">(no rela)<br/>
+                </td>
+                <td style="vertical-align: top;">Connects an atom
+                  created from tag = "synonym" with a scope identifier
+                  of "EXACT" with the preferred atom of the GO [term]
+                  record.<br/>
+                </td>
+              </tr>
+              <tr>
+                <td>SY</td>
+                <td>expanded_form_of<br/>
+                  has_expanded_form</td>
+                <td>Connects atoms with TTY = "MTH_*" with their
+                  original form<br/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="mappings" class="rep_block_level_two"> <a
+            name="mappings"></a><br/>
+          <h3>Mappings (MRMAP):</h3>
+          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <p>No mappings are represented for GO.&nbsp; Cross Reference
+            to external databases (e.g. MetaCyc:TRNA-CHARGING-PWY) are
+            represented in MRSAT.RRF (ATN = "GXR").<br/>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
