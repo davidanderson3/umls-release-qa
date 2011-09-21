@@ -53,8 +53,8 @@
 				</tr>
         <xsl:for-each select="resource">
 				    <tr>
-				    <td width = "50%"><a href = "{URL}"><xsl:value-of select="Title" /></a>&#160;<span class="resourceruntime"><xsl:value-of select="Minutes[. !='']" /></span></td>
-        		<td><span class="resourceformat"><xsl:value-of select="Format" /></span></td>            
+				    <td width="90%"><a href = "{URL}"><xsl:value-of select="Title" /></a><span class="resourceruntime"><xsl:value-of select="Minutes[. !='']" /></span></td>
+        		<td width ="10%"><span class="resourceformat"><xsl:value-of select="UserFormat" /></span></td>            
       			</tr>     
     		</xsl:for-each>
     </table>
