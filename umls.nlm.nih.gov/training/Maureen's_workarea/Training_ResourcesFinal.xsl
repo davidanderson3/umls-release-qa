@@ -48,8 +48,8 @@
 <div class = "sourcecontainer">
     <table summary = "Table UMLS Training Resources">
         <tr>
-						<th summary= "Title"></th>
-						<th summary= "Format"></th>
+						<th>Title</th>
+						<th>Format</th>
 				</tr>
         <xsl:for-each select="resource">
 				    <tr>
