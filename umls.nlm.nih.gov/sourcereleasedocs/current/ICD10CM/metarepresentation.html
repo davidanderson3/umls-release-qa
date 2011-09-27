@@ -1,459 +1,823 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-<head>
+  <head>
+    <meta http-equiv="content-type" content="text/html;
+      charset=ISO-8859-1">
+    <title></title>
+  </head>
+  <body>
+    <div class="section-4">
+      <ul id="menu">
+        <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
+        <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
+        <li id="nav-3"> <a href="sourcemetastats.html">Statistics and
+            sample
+            data</a>
+          <ul id="subnav-3">
+            <li> <a href="termtypes.html">Terms and term types</a> </li>
+            <li> <a href="attributes.html">Attributes</a> </li>
+            <li> <a href="relationships.html">Relationships</a> </li>
+            <li> <a href="semtypes.html">Semantic Types</a> </li>
+            <li> <a href="overlap.html">Source Overlap</a> </li>
+          </ul>
+        </li>
+        <li id="nav-4"> <a href="representation.html">Representation</a>
+          <ul id="subnav-4">
+            <li> <a href="sourcerepresentation.html">Source
+                Representation</a> </li>
+            <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
+                Representation</a> </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <a name="top"></a>
+    <span class="nav">Skip to: <a href="#atoms">Atoms</a>, <a
+        href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
+      <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+    <div id="general" class="rep_block_level_one">
+      <p><b>VSAB:</b> ICD10CM_2010</p>
+      <div id="rep_identifiers" class="rep_block_level_one">
+        <h3>Summary of Changes</h3>
+        <p>New TTY:<br/>
+          &nbsp;&nbsp; DET:&nbsp; Deactivated Entry Term<br/>
+        </p>
+        <p>Attribute changes:<br/>
+        </p>
+        <table class="elements" border="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <th>Previous ATN<br/>
+              </th>
+              <th>New ATN<br/>
+              </th>
+            </tr>
+            <tr>
+              <td>NOTE2<br/>
+              </td>
+              <td>CHAPTER_NOTE<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>USE_ADDITIONAL_CODE<br/>
+              </td>
+              <td>USE_ADDITIONAL</td>
+            </tr>
+          </tbody>
+        </table>
+        <p></p>
+      </div>
+      <div id="rep_change_summary" class="rep_block_level_one">
+        There are no longer DEFINITIONS associated with ICD10CM.<span
+          style="font-weight: bold;"><br/>
+          <br/>
+        </span>
+        <h3>Source Provided Files:</h3>
+        <br/>
+        The Metathesaurus uses files submitted in TREF (Terminology
+        Representation and Exchange Format).&nbsp; These files are
+        produced by
+        the National Center for Health Statistics (NCHS) for
+        Metathesaurus
+        processing, and are not currently available publically.&nbsp;
+        TREF was
+        developed by the NLM and is a subset of the Rich Release Format
+        (RRF) &#8211;
+        the format in which the UMLS Metathesaurus is released.&nbsp;
+        The
+        following files are submitted for ICD10CM:<br/>
+        &nbsp;&nbsp;&nbsp; <br/>
+        MRCONSO.TREF<br/>
+        MRDOC.TREF<br/>
+        MRREL.TREF<br/>
+        MRSAB.TREF<br/>
+        MRSAT.TREF<br/>
+        <br/>
+        The TREF files align with the publically-available .pdf release
+        of ICD10CM.&nbsp; When relevant, the origin of data from the
+        NCHS .pdf file is noted in the tables below.&nbsp; <br/>
+        <p>In addition, the following mapping files were downloaded from
+          <a
+            href="http://www.cms.gov/ICD10/11b1_2011_ICD10CM_and_GEMs.asp#TopOfPage">http://www.cms.gov/ICD10/11b1_2011_ICD10CM_and_GEMs.asp#TopOfPage</a>:<br/>
+          10cm to 9cm gem.txt<br/>
+          9cm to 10cm gem.txt<br/>
+          Diagnosis Reimbursement mapping .txt<br/>
+          <br/>
+        </p>
+      </div>
+      <div id="rep_identifers" class="rep_block_level_one">
+        <h3>Identifiers:</h3>
+        <br/>
+        Identifiers are assigned as follows:<br/>
+        <ul>
+          <li>CODE: MRCONSO.TREF.DUI</li>
+          <li>SAUI: Not Applicable</li>
+          <li>SCUI: Not Applicable<br/>
+          </li>
+          <li>SDUI: MRCONSO.TREF.DUI</li>
+        </ul>
+        <div id="rep_termtypes" class="rep_block_level_two">
+          <a name="atoms"></a>
+          <h3>Atoms (MRCONSO):</h3>
+          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <table class="elements" border="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <th>Term Type</th>
+                <td style="vertical-align: top;"><span
+                    style="font-weight: bold;">Description</span><br/>
+                </td>
+                <th>Origin</th>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">DET<br/>
+                </td>
+                <td style="vertical-align: top;">Deactivated Entry Term<br/>
+                </td>
+                <td style="vertical-align: top;">CODE = MRCONSO.TREF.TTY
+                  (field 5)<br/>
+                  STR = MRCONSO.TREF.STR (field 2)<br/>
+                  SDUI = MRCONSO.TREF.DUI (field 4)<br/>
+                  SUPPRESS = "O"<br/>
+                </td>
+              </tr>
+              <tr>
+                <td>ET</td>
+                <td style="vertical-align: top;">Entry Term<br/>
+                </td>
+                <td>CODE = MRCONSO.TREF.TTY (field 5)<br/>
+                  STR = MRCONSO.TREF.STR (field 2)<br/>
+                  SDUI = MRCONSO.TREF.DUI (field 4)<br/>
+                  <br/>
+                  Note:&nbsp; In the NCHS tabluar .pdf file, ETs are
+                  listed directly below the preferred name of a code,
+                  with no tag.<br/>
+                </td>
+              </tr>
+              <tr>
+                <td>HT<br/>
+                </td>
+                <td style="vertical-align: top;">Hierarchical Term<br/>
+                </td>
+                <td>CODE = MRCONSO.TREF.TTY (field 5)<br/>
+                  STR = MRCONSO.TREF.STR (field 2)<br/>
+                  SDUI = MRCONSO.TREF.DUI (field 4) </td>
+              </tr>
+              <tr>
+                <td>PT<br/>
+                </td>
+                <td style="vertical-align: top;">Preferred Term<br/>
+                </td>
+                <td>CODE = MRCONSO.TREF.TTY (field 5)<br/>
+                  STR = MRCONSO.TREF.STR (field 2)<br/>
+                  SDUI = MRCONSO.TREF.DUI (field 4) </td>
+              </tr>
+              <tr>
+                <td>XM<br/>
+                </td>
+                <td style="vertical-align: top;">Cross Mapping Set<br/>
+                </td>
+                <td>This data is added during Metathesaurus source
+                  processing.<br/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="rep_attributes" class="rep_block_level_two">
+          <a name="attributes"></a><br/>
+          <h3>Attributes (MRSAT):</h3>
+          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <p>Most attribute names are extracted from MRSAT.TREF.ATN
+            (field
+            5);&nbsp;
+            Attribute values are extracted from MRSAT.TREF.ATV (field 5).&nbsp;
+            ATNs used in MRSAT align with the tags found in the NCHS
+            tabular .pdf file.<br/>
+          </p>
+          Mapping attributes are added during Metathesaurus source
+          processing.<br/>
+          <br/>
+          <!--
 
-<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
-<title></title>
-</head>
-<body>
-<div class="section-4">
-<ul id="menu">
-  <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
-  <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
-  <li id="nav-3"> <a href="sourcemetastats.html">Statistics and sample
-data</a>
-    <ul id="subnav-3">
-      <li> <a href="termtypes.html">Terms and term types</a> </li>
-      <li> <a href="attributes.html">Attributes</a> </li>
-      <li> <a href="relationships.html">Relationships</a> </li>
-      <li> <a href="semtypes.html">Semantic Types</a> </li>
-      <li> <a href="overlap.html">Source Overlap</a> </li>
-    </ul>
-  </li>
-  <li id="nav-4"> <a href="representation.html">Representation</a>
-    <ul id="subnav-4">
-      <li> <a href="sourcerepresentation.html">Source Representation</a>
-      </li>
-      <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
-Representation</a> </li>
-    </ul>
-  </li>
-</ul>
-</div>
-<br/>
-<br/>
-<br/>
-<a name="top"></a>
-<span class="nav">Skip to: <a href="#atoms">Atoms</a>, <a
- href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
-<a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
-<div id="general" class="rep_block_level_one">
-<p><b>VSAB:</b> ICD10CM_2010</p>
-<div id="rep_identifiers" class="rep_block_level_one">
-<h3>Summary of Changes</h3>
-<p>New TTY:<br/>
-&nbsp;&nbsp; DET:&nbsp; Deactivated Entry Term<br/>
-</p>
-<p>Attribute changes:<br/>
-</p>
+
 <table class="elements" border="0" cellspacing="0">
+
+
   <tbody>
+
+
     <tr>
-      <th>Previous ATN<br/>
-      </th>
-      <th>New ATN<br/>
-      </th>
-    </tr>
-    <tr>
-      <td>NOTE2<br/>
-      </td>
-      <td>CHAPTER_NOTE<br/>
-      </td>
-    </tr>
-    <tr>
-      <td>USE_ADDITIONAL_CODE<br/>
-      </td>
-      <td>USE_ADDITIONAL</td>
-    </tr>
-  </tbody>
-</table>
-<p></p>
-</div>
-<div id="rep_change_summary" class="rep_block_level_one">
-There are no longer DEFINITIONS associated with ICD10CM.<span
- style="font-weight: bold;"><br/>
-<br/>
-</span>
-<h3>Source Provided Files:</h3>
-<br/>
-The Metathesaurus uses files submitted in TREF (Terminology
-Representation and Exchange Format).&nbsp; These files are produced by
-the National Center for Health Statistics (NCHS) for Metathesaurus
-processing, and are not currently available publically.&nbsp; TREF was
-developed by the NLM and is a subset of the Rich Release Format (RRF) &#8211;
-the format in which the UMLS Metathesaurus is released.&nbsp; The
-following files are submitted for ICD10CM:<br/>
-&nbsp;&nbsp;&nbsp; <br/>
-MRCONSO.TREF<br/>
-MRDOC.TREF<br/>
-MRREL.TREF<br/>
-MRSAB.TREF<br/>
-MRSAT.TREF<br/>
-<p>In addition, the following mapping files were downloaded from <a
- href="http://www.cms.gov/ICD10/11b1_2011_ICD10CM_and_GEMs.asp#TopOfPage">http://www.cms.gov/ICD10/11b1_2011_ICD10CM_and_GEMs.asp#TopOfPage</a>:<br/>
-10cm to 9cm gem.txt<br/>
-9cm to 10cm gem.txt<br/>
-Diagnosis Reimbursement mapping .txt<br/>
-<br/>
-</p>
-</div>
-<div id="rep_identifers" class="rep_block_level_one">
-<h3>Identifiers:</h3>
-<br/>
-Identifiers are assigned as follows:<br/>
-<ul>
-  <li>CODE: MRCONSO.TREF.DUI</li>
-  <li>SAUI: Not Applicable</li>
-  <li>SCUI: Not Applicable<br/>
-  </li>
-  <li>SDUI: MRCONSO.TREF.DUI</li>
-</ul>
-<div id="rep_termtypes" class="rep_block_level_two">
-<a name="atoms"></a>
-<h3>Atoms (MRCONSO):</h3>
-&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-<table class="elements" border="0" cellspacing="0">
-  <tbody>
-    <tr>
-      <th>Term Type</th>
-      <td style="vertical-align: top;"><span style="font-weight: bold;">Description</span><br/>
-      </td>
+
+
+      <th>Attribute Name</th>
+
+
       <th>Origin</th>
+
+
     </tr>
+
+
     <tr>
-      <td style="vertical-align: top;">DET<br/>
+
+
+      <td>ALT_SORT_CODE<br/>
+
+
       </td>
-      <td style="vertical-align: top;">Deactivated Entry Term<br/>
+
+
+      <td><br/>
+
+
       </td>
-      <td style="vertical-align: top;">CODE = MRCONSO.TREF.TTY (field 5)<br/>
-STR = MRCONSO.TREF.STR (field 2)<br/>
-SDUI = MRCONSO.TREF.DUI (field 4)<br/>
-SUPPRESS = "O"<br/>
-      </td>
+
+
     </tr>
+
+
     <tr>
-      <td>ET</td>
-      <td style="vertical-align: top;">Entry Term<br/>
+
+
+      <td>CODE_ALSO<br/>
+
+
       </td>
-      <td>CODE = MRCONSO.TREF.TTY (field 5)<br/>
-STR = MRCONSO.TREF.STR (field 2)<br/>
-SDUI = MRCONSO.TREF.DUI (field 4)<br/>
+
+
+      <td><br/>
+
+
       </td>
+
+
     </tr>
+
+
     <tr>
-      <td>HT<br/>
+
+
+      <td>CODE_FIRST<br/>
+
+
       </td>
-      <td style="vertical-align: top;">Hierarchical Term<br/>
+
+
+      <td><br/>
+
+
       </td>
-      <td>CODE = MRCONSO.TREF.TTY (field 5)<br/>
-STR = MRCONSO.TREF.STR (field 2)<br/>
-SDUI = MRCONSO.TREF.DUI (field 4) </td>
+
+
     </tr>
+
+
     <tr>
-      <td>PT<br/>
+
+
+      <td>EXCLUDES1<br/>
+
+
       </td>
-      <td style="vertical-align: top;">Preferred Term<br/>
+
+
+      <td><br/>
+
+
       </td>
-      <td>CODE = MRCONSO.TREF.TTY (field 5)<br/>
-STR = MRCONSO.TREF.STR (field 2)<br/>
-SDUI = MRCONSO.TREF.DUI (field 4) </td>
+
+
     </tr>
+
+
     <tr>
-      <td>XM<br/>
+
+
+      <td>EXCLUDES2<br/>
+
+
       </td>
-      <td style="vertical-align: top;">Cross Mapping Set<br/>
+
+
+      <td><br/>
+
+
       </td>
-      <td>This data is added during Metathesaurus source processing.<br/>
-      </td>
+
+
     </tr>
+
+
+    <tr>
+
+
+      <td>FROMRSAB<br/>
+
+
+      </td>
+
+
+      <td><br/>
+
+
+      </td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>FROMVSAB<br/>
+
+
+      </td>
+
+
+      <td><br/>
+
+
+      </td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>MAPSETRSAB<br/>
+
+
+      </td>
+
+
+      <td><br/>
+
+
+      </td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>MAPSETTYPE<br/>
+
+
+      </td>
+
+
+      <td><br/>
+
+
+      </td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>MAPSETVERSION<br/>
+
+
+      </td>
+
+
+      <td><br/>
+
+
+      </td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>MAPSETVSAB<br/>
+
+
+      </td>
+
+
+      <td><br/>
+
+
+      </td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>MAPSETXRTARGETID<br/>
+
+
+      </td>
+
+
+      <td><br/>
+
+
+      </td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>MTH_MAPFROMCOMPLEXITY<br/>
+
+
+      </td>
+
+
+      <td><br/>
+
+
+      </td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>MTH_MAPFROMEXHAUSTIVE<br/>
+
+
+      </td>
+
+
+      <td><br/>
+
+
+      </td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>MTH_MAPSETCOMPLEXITY<br/>
+
+
+      </td>
+
+
+      <td><br/>
+
+
+      </td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>MTH_MAPTOCOMPLEXITY<br/>
+
+
+      </td>
+
+
+      <td><br/>
+
+
+      </td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>MTH_MAPTOEXHAUSTIVE<br/>
+
+
+      </td>
+
+
+      <td><br/>
+
+
+      </td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>NOTE<br/>
+
+
+      </td>
+
+
+      <td><br/>
+
+
+      </td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td style="vertical-align: top;">NOTE2<br/>
+
+
+      </td>
+
+
+      <td style="vertical-align: top;"><br/>
+
+
+      </td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td style="vertical-align: top;">SOS<br/>
+
+
+      </td>
+
+
+      <td style="vertical-align: top;"><br/>
+
+
+      </td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td style="vertical-align: top;">TORSAB<br/>
+
+
+      </td>
+
+
+      <td style="vertical-align: top;"><br/>
+
+
+      </td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td style="vertical-align: top;">TOVSAB<br/>
+
+
+      </td>
+
+
+      <td style="vertical-align: top;"><br/>
+
+
+      </td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td style="vertical-align: top;">USE_ADDITIONAL_CODE<br/>
+
+
+      </td>
+
+
+      <td style="vertical-align: top;"><br/>
+
+
+      </td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td style="vertical-align: top;">XMAP<br/>
+
+
+      </td>
+
+
+      <td style="vertical-align: top;"><br/>
+
+
+      </td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td style="vertical-align: top;">XMAPFROM<br/>
+
+
+      </td>
+
+
+      <td style="vertical-align: top;"><br/>
+
+
+      </td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td style="vertical-align: top;">XMAPTO<br/>
+
+
+      </td>
+
+
+      <td style="vertical-align: top;"><br/>
+
+
+      </td>
+
+
+    </tr>
+
+
   </tbody>
+
+
 </table>
-</div>
-<div id="rep_attributes" class="rep_block_level_two">
-<a name="attributes"></a><br/>
-<h3>Attributes (MRSAT):</h3>
-&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-<p>Most attribute names are extracted from MRSAT.TREF.ATN (field
-5);&nbsp;
-Attribute values are extracted from MRSAT.TREF.ATV (field 5)<br/>
-</p>
-Mapping attributes are added during Metathesaurus source processing.<br/>
-<br/>
-<!--
-<table class="elements" border="0" cellspacing="0">
-  <tbody>
-    <tr>
-      <th>Attribute Name</th>
-      <th>Origin</th>
-    </tr>
-    <tr>
-      <td>ALT_SORT_CODE<br/>
-      </td>
-      <td><br/>
-      </td>
-    </tr>
-    <tr>
-      <td>CODE_ALSO<br/>
-      </td>
-      <td><br/>
-      </td>
-    </tr>
-    <tr>
-      <td>CODE_FIRST<br/>
-      </td>
-      <td><br/>
-      </td>
-    </tr>
-    <tr>
-      <td>EXCLUDES1<br/>
-      </td>
-      <td><br/>
-      </td>
-    </tr>
-    <tr>
-      <td>EXCLUDES2<br/>
-      </td>
-      <td><br/>
-      </td>
-    </tr>
-    <tr>
-      <td>FROMRSAB<br/>
-      </td>
-      <td><br/>
-      </td>
-    </tr>
-    <tr>
-      <td>FROMVSAB<br/>
-      </td>
-      <td><br/>
-      </td>
-    </tr>
-    <tr>
-      <td>MAPSETRSAB<br/>
-      </td>
-      <td><br/>
-      </td>
-    </tr>
-    <tr>
-      <td>MAPSETTYPE<br/>
-      </td>
-      <td><br/>
-      </td>
-    </tr>
-    <tr>
-      <td>MAPSETVERSION<br/>
-      </td>
-      <td><br/>
-      </td>
-    </tr>
-    <tr>
-      <td>MAPSETVSAB<br/>
-      </td>
-      <td><br/>
-      </td>
-    </tr>
-    <tr>
-      <td>MAPSETXRTARGETID<br/>
-      </td>
-      <td><br/>
-      </td>
-    </tr>
-    <tr>
-      <td>MTH_MAPFROMCOMPLEXITY<br/>
-      </td>
-      <td><br/>
-      </td>
-    </tr>
-    <tr>
-      <td>MTH_MAPFROMEXHAUSTIVE<br/>
-      </td>
-      <td><br/>
-      </td>
-    </tr>
-    <tr>
-      <td>MTH_MAPSETCOMPLEXITY<br/>
-      </td>
-      <td><br/>
-      </td>
-    </tr>
-    <tr>
-      <td>MTH_MAPTOCOMPLEXITY<br/>
-      </td>
-      <td><br/>
-      </td>
-    </tr>
-    <tr>
-      <td>MTH_MAPTOEXHAUSTIVE<br/>
-      </td>
-      <td><br/>
-      </td>
-    </tr>
-    <tr>
-      <td>NOTE<br/>
-      </td>
-      <td><br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">NOTE2<br/>
-      </td>
-      <td style="vertical-align: top;"><br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">SOS<br/>
-      </td>
-      <td style="vertical-align: top;"><br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">TORSAB<br/>
-      </td>
-      <td style="vertical-align: top;"><br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">TOVSAB<br/>
-      </td>
-      <td style="vertical-align: top;"><br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">USE_ADDITIONAL_CODE<br/>
-      </td>
-      <td style="vertical-align: top;"><br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">XMAP<br/>
-      </td>
-      <td style="vertical-align: top;"><br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">XMAPFROM<br/>
-      </td>
-      <td style="vertical-align: top;"><br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">XMAPTO<br/>
-      </td>
-      <td style="vertical-align: top;"><br/>
-      </td>
-    </tr>
-  </tbody>
-</table>
--->
-</div>
-<div id="rep_definitions" class="rep_block_level_two">
-<a name="definitions"></a><br/>
-<h3>Definitions (MRDEF):</h3>
-&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-<p>There are no DEFINITIONs for ICD10CM.<br/>
-</p>
-</div>
-<div id="rep_relationships" class="rep_block_level_two">
-<a name="relationships"></a><br/>
-<h3>Relationships (MRREL):</h3>
-&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-<table class="elements" border="0" cellspacing="0">
-  <tbody>
-    <tr>
-      <th>REL</th>
-      <th>RELA<br/>
-Inverse RELA</th>
-      <th>ORIGIN</th>
-    </tr>
-    <tr>
-      <td>CHD<br/>
-PAR<br/>
-      </td>
-      <td>(no rela)</td>
-      <td>Hierarchy created from MRREL.TREF.REL (field 4) = "PAR"<br/>
-SIB relationships are computed during Metathesaurus production<br/>
-      </td>
-    </tr>
-    <tr>
-      <td>RQ</td>
-      <td>(no rela) <br/>
-      </td>
-      <td>Connect Entry Terms (TTY = "ET") to their preferred form (TTY
-= "PT" or TTY = "HT")<br/>
-      </td>
-    </tr>
-  </tbody>
-</table>
-</div>
-<div id="mappings" class="rep_block_level_two">
-<a name="mappings"></a><br/>
-<h3>Mappings (MRMAP):</h3>
-&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-<p>Three Mapsets ("XM" atoms, along with associated attributes and
-mappings), are included for ICD-10-CM. These are extracted from the
-General Equivalence Mappings (GEMs) and reimbursement mappings.<br/>
-</p>
-<p>Note:&nbsp; The original mapping files do not include decimal points
-for the ICD-9-CM and ICD-10-CM codes.&nbsp; For clarity, decimals are
-added appropriately to the MRMAP.RRF representation, e.g. "A021" is
-converted to "A02.1" for use as a FROMID or TOID.<br/>
-</p>
-<br/>
-<table class="elements" border="0" cellspacing="0">
-  <tbody>
-    <tr>
-      <th>Field</th>
-      <th>Origin (GEMs)<br/>
-      </th>
-      <td style="vertical-align: top;"><span style="font-weight: bold;">Origin
-(Reiumbursement
-mappings)</span><br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">MAPSUBSETID<br/>
-      </td>
-      <td style="vertical-align: top;">Compound value of
-"Scenario:Choice"<br/>
-Note: Anything with the same FROMEXPR and MAPSUBSETID values should be
-"OR'd" together.<span
- style="font-size: 22pt; font-family: Calibri; color: black;"></span> </td>
-      <td style="vertical-align: top;">Not populated<br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">REL<br/>
-      </td>
-      <td style="vertical-align: top;">RO where approximate flag = "1"<br/>
-SY where approxmiate flag = "0"<br/>
-XR where target value = "NoDx"<br/>
-      </td>
-      <td style="vertical-align: top;">RQ<br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">RELA<br/>
-      </td>
-      <td style="vertical-align: top;">approximately_mapped_to where
-approximate flag = "1"<br/>
-mapped_to where approxmiate flag = "0"<br/>
-null (empty) where target value = "NoDX"<br/>
-      </td>
-      <td style="vertical-align: top;">mapped_to<br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">TOTYPE<br/>
-      </td>
-      <td style="vertical-align: top;">SDUI<br/>
-      </td>
-      <td style="vertical-align: top;">SDUI<br/>
-      </td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-</div>
-</body>
+
+
+--></div>
+        <div id="rep_definitions" class="rep_block_level_two">
+          <a name="definitions"></a><br/>
+          <h3>Definitions (MRDEF):</h3>
+          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <p>There are no DEFINITIONs for ICD10CM.<br/>
+          </p>
+        </div>
+        <div id="rep_relationships" class="rep_block_level_two">
+          <a name="relationships"></a><br/>
+          <h3>Relationships (MRREL):</h3>
+          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <table class="elements" border="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <th>REL</th>
+                <th>RELA<br/>
+                  Inverse RELA</th>
+                <th>ORIGIN</th>
+              </tr>
+              <tr>
+                <td>CHD<br/>
+                  PAR<br/>
+                </td>
+                <td>(no rela)</td>
+                <td>Hierarchy created from MRREL.TREF.REL (field 4) =
+                  "PAR"<br/>
+                  SIB relationships are computed during Metathesaurus
+                  production<br/>
+                </td>
+              </tr>
+              <tr>
+                <td>RQ</td>
+                <td>(no rela) <br/>
+                </td>
+                <td>Connect Entry Terms (TTY = "ET") to their preferred
+                  form (TTY
+                  = "PT" or TTY = "HT")<br/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="mappings" class="rep_block_level_two">
+          <a name="mappings"></a><br/>
+          <h3>Mappings (MRMAP):</h3>
+          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <p>Three Mapsets ("XM" atoms, along with associated attributes
+            and
+            mappings), are included for ICD-10-CM. These are extracted
+            from the
+            General Equivalence Mappings (GEMs) and reimbursement
+            mappings.<br/>
+          </p>
+          <p>Note:&nbsp; The original mapping files do not include
+            decimal points
+            for the ICD-9-CM and ICD-10-CM codes.&nbsp; For clarity,
+            decimals are
+            added appropriately to the MRMAP.RRF representation, e.g.
+            "A021" is
+            converted to "A02.1" for use as a FROMID or TOID.<br/>
+          </p>
+          <br/>
+          <table class="elements" border="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <th>Field</th>
+                <th>Origin (GEMs)<br/>
+                </th>
+                <td style="vertical-align: top;"><span
+                    style="font-weight: bold;">Origin
+                    (Reiumbursement
+                    mappings)</span><br/>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">MAPSUBSETID<br/>
+                </td>
+                <td style="vertical-align: top;">Compound value of
+                  "Scenario:Choice"<br/>
+                  Note: Anything with the same FROMEXPR and MAPSUBSETID
+                  values should be
+                  "OR'd" together.<span style="font-size: 22pt;
+                    font-family: Calibri; color: black;"></span> </td>
+                <td style="vertical-align: top;">Not populated<br/>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">REL<br/>
+                </td>
+                <td style="vertical-align: top;">RO where approximate
+                  flag = "1"<br/>
+                  SY where approxmiate flag = "0"<br/>
+                  XR where target value = "NoDx"<br/>
+                </td>
+                <td style="vertical-align: top;">RQ<br/>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">RELA<br/>
+                </td>
+                <td style="vertical-align: top;">approximately_mapped_to
+                  where
+                  approximate flag = "1"<br/>
+                  mapped_to where approxmiate flag = "0"<br/>
+                  null (empty) where target value = "NoDX"<br/>
+                </td>
+                <td style="vertical-align: top;">mapped_to<br/>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">TOTYPE<br/>
+                </td>
+                <td style="vertical-align: top;">SDUI<br/>
+                </td>
+                <td style="vertical-align: top;">SDUI<br/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
