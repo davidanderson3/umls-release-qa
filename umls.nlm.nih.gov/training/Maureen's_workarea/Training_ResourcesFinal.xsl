@@ -49,12 +49,14 @@
     <table summary = "Table UMLS Training Resources">
         <tr>
 						<th>Title</th>
+          <th>Runtime</th>
 						<th>Format</th>
 				</tr>
         <xsl:for-each select="resource">
 				    <tr>
-				    <td width="90%"><a href = "{URL}"><xsl:value-of select="Title" /></a><span class="resourceruntime"><xsl:value-of select="Minutes[. !='']" /></span></td>
-        		<td width ="10%"><span class="resourceformat"><xsl:value-of select="UserFormat" /></span></td>            
+				    <td width="75%"><a href = "{URL}"><xsl:value-of select="Title" /></a><span class="resourceruntime"><xsl:value-of select="Minutes[. !='']" /></span></td>
+				    <td width="10%"><span class="resourceruntime"><xsl:value-of select="Runtime[. !='']" /></span></td>
+				    <td width ="15%"><span class="resourceformat"><xsl:value-of select="UserFormat" /></span></td>            
       			</tr>     
     		</xsl:for-each>
     </table>
