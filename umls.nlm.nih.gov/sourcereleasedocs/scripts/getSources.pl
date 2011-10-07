@@ -5,8 +5,9 @@ use IO::File;
 use warnings;
 ##arguments are -i, must be a MRSAB.RRF file
 
-getopts("i:");
+getopts("i:r:");
 $input = $opt_i || die "Please enter a list of sources to be processed $!\n";
+$release = $opt_r;
 open FH, "<$input" || die "could not open input file because of $!\n";
 my $output = new IO::File(">sources.xml") || die "could not open output file due to $!\n";
 $writer = new XML::Writer(OUTPUT => $output,DATA_MODE => 'true',DATA_INDENT => 4);
@@ -60,8 +61,20 @@ while(<FH>) {
     my $imeta = $fields[9];
     my $curver = $fields[21];
     my $firstletter = substr($rsab,0,1);
-    next if $curver eq "N";
-    ##Create an array of hashes we can re-use later
+   
+
+   if (defined $release) {
+    print qq{the release is $release};
+    
+    next if $imeta ne $release;
+    }
+    
+    else {   
+    next if $curver eq "N"; 
+    } 
+
+
+##Create an array of hashes we can re-use later
     push @allsources, {"rsab"=>$rsab,"srl"=>$srl,"lat"=>$lat,"ssn"=>$ssn,"imeta"=>$imeta,"firstletter"=>$firstletter};
     if ($lat eq "ENG") {    
        push @englishSources,{"rsab"=>$rsab,"srl"=>$srl,"lat"=>$lat,"ssn"=>$ssn,"imeta"=>$imeta,"firstletter"=>$firstletter};  
