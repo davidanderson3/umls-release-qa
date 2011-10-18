@@ -118,6 +118,11 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
     <xsl:apply-templates select = "letters/letter"/>
     </div>
   </xsl:when>
+   <xsl:when test = "count(sources/source) eq 0">
+    <h5><a class="jig-ncbitoggler gray" href="#"><xsl:value-of select = "@level"/>&#160;&#160;<span class = "count">0 sources</span></a></h5>
+    <div class = "sourcecontainer"><p>No sources of this type were updated for this release</p>
+    </div>
+  </xsl:when>
   <xsl:otherwise>
   <h5><a class="jig-ncbitoggler" href="#"><xsl:value-of select = "@level"/>&#160;&#160;<span class = "count"><xsl:value-of select = "count(sources/source)"/> sources</span></a></h5>
   <div class = "sourcecontainer">
