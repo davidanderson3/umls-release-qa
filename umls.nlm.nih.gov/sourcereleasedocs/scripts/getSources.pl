@@ -1,4 +1,8 @@
 #!/share_nfs/perl/5.8.6/bin/perl
+
+##changes
+#10/16/2011 - Added ability to remove languages that were not present for a given release
+
 use XML::Writer;
 use Getopt::Std;
 use IO::File;
@@ -29,26 +33,26 @@ $muCategories{"Procedures"} = ["CPT","HCPT","HCDT","HCPCS","ICD9CM","ICD10PCS"];
 
 
 ###hash of arrays for content Categories
-$contentCategories{"Adverse Drug Reaction Reporting Systems"} = ["MDR","WHO"];
-$contentCategories{"Anatomy"} = ["FMA","UWDA"];
+$contentCategories{"Adverse Drug Reaction Reporting Systems"} = ["MDR"];
+$contentCategories{"Anatomy"} = ["FMA", "MSH"];
 $contentCategories{"Consumer Health Information"} = ["CHV" , "MEDLINEPLUS"];
 $contentCategories{"Dentistry"} = ["HCDT"];
-$contentCategories{"Diagnosis"} = ["ICD9CM" , "ICD10CM" , "MEDCIN", "SNOMEDCT", "CPT", "ICPC2EENG"];
+$contentCategories{"Diagnosis"} = ["ICD9CM" , "ICD10CM" , "MEDCIN", "SNOMEDCT", "CPT"];
 $contentCategories{"Disabled Persons"} = ["ICF" , "ICF-CY" ];
-$contentCategories{"Disease"} = ["ICD9CM","ICD10CM", "MEDLINEPLUS" , "MSH" , "OMIM" , "NCI" , "SNOMEDCT", "MDR", "ICPC2EENG"];
-$contentCategories{"Drugs"} = ["GS" , "MDDB" , "MMSL" , "MMX" , "MSH" , "MTHFDA" , "MTHSPL" , "NDDF" , "NDFRT" , "RXNORM" , "SNOMEDCT" , "VANDF", "USPMG"];
-$contentCategories{"Insurance Claim Reporting"} = ["HCPT", "CPT" , "HCDT" , "HCPCS" , "ICD10PCS", "ICD9CM", "ICD10CM"];
-$contentCategories{"Genetics"} = ["GO", "HUGO", "OMIM", "NCI"];
+$contentCategories{"Disease"} = ["ICD9CM","ICD10CM","MEDLINEPLUS" , "MSH" , "OMIM" , "NCI" , "SNOMEDCT", "MDR"];
+$contentCategories{"Drugs [Pharmaceutical Preparations]"} = ["GS" , "MDDB" , "MMSL" , "MMX" , "MSH" , "MTHFDA" , "MTHSPL" , "NDDF" , "NDFRT" , "RXNORM" , "SNOMEDCT" , "VANDF"];
+$contentCategories{"Insurance Claim Reporting"} = ["CPT" , "HCDT" , "HCPCS" , "ICD10PCS", "ICD9CM", "ICD10CM"];
+$contentCategories{"Genetics"} = ["GO","HUGO","OMIM", "NCI"];
 $contentCategories{"Laboratory Techniques and Procedures"} = ["LNC","CPT","SNOMEDCT"];
-$contentCategories{"Medical Devices"} = ["HCPCS", "UMD", "SPN"];
-$contentCategories{"Nursing"} = ["ICNP", "PNDS", "NIC", "NOC"];
-$contentCategories{"Phylogeny"} = ["NCBI"];
+$contentCategories{"Medical Devices"} = ["HCPCS","UMD"];
+$contentCategories{"Nursing"} = ["ICNP", "PNDS"];
+$contentCategories{"Phylogeny"} = ["NCBI", "MSH"];
 #$contentCategories{"Problem-Oriented Medical Records"} = ["ICD9CM" , "ICD10CM" , "MEDCIN", "SNOMEDCT"];
-$contentCategories{"Procedures"} = ["PDQ" , "CPT" , "HCDT" , "HCPCS", "ICD10PCS" , "MEDCIN", "SNOMEDCT", "ICD9CM", "NCI","HCPT"];
-$contentCategories{"Complementary Therapies"} = ["TKMT", "ALT"];
-$contentCategories{"Subject Headings"} = ["MSH", "LCH"];
+$contentCategories{"Procedures"} = ["CPT" , "HCDT" , "HCPCS", "ICD10PCS" , "MEDCIN", "SNOMEDCT", "ICD9CM", "NCI"];
+$contentCategories{"Complementary Therapies"} = ["TKMT"];
+#$contentCategories{"Subject Headings"} = ["MSH"];
 
- 
+
 
 while(<FH>) {
     
@@ -61,20 +65,28 @@ while(<FH>) {
     my $imeta = $fields[9];
     my $curver = $fields[21];
     my $firstletter = substr($rsab,0,1);
-   
-
-   if (defined $release) {
-    print qq{the release is $release};
     
-    next if $imeta ne $release;
+    #next if $curver eq "N";  
+    push (@includedLanguages, $lat);
+    
+   
+    if (defined $release) {
+    #print qq{the release is $release};
+    
+    next if $imeta ne $release; 
+    
     }
     
     else {   
     next if $curver eq "N"; 
-    } 
-
-
-##Create an array of hashes we can re-use later
+    }
+    
+    
+    
+    
+    ##Create an array of hashes we can re-use later
+    
+    
     push @allsources, {"rsab"=>$rsab,"srl"=>$srl,"lat"=>$lat,"ssn"=>$ssn,"imeta"=>$imeta,"firstletter"=>$firstletter};
     if ($lat eq "ENG") {    
        push @englishSources,{"rsab"=>$rsab,"srl"=>$srl,"lat"=>$lat,"ssn"=>$ssn,"imeta"=>$imeta,"firstletter"=>$firstletter};  
@@ -97,6 +109,21 @@ while(<FH>) {
     
 }
 
+
+## remove languages that are not part of a given release
+
+while (($lats, $langugeNames) = each (%languages)){
+    
+    my @results = grep (/$lats/,@includedLanguages);
+    if (scalar(@results) == 0 ) {
+        
+        delete $languages{$lats};
+        #print qq{deleted $lats\n};
+        
+    }
+   
+    
+}
 
 &processLetters(@allsources);
 &processRestrictions;
@@ -191,6 +218,7 @@ $writer->startTag("languages");
        foreach my $lats  (keys %languages){
             
           if ($lats eq "ENG") {
+            
             $writer->startTag("language","type"=>"English");
             &processLetters(@englishSources);
             $writer->endTag();

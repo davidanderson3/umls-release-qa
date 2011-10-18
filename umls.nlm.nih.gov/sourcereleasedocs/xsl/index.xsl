@@ -25,16 +25,16 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
     
 <div id="source-doc-wrapper">
 <div id="source-doc-intro">
-<p>Choose a source by browsing one of the presentation tabs below.</p>
+<p>Choose a source by browsing one of the presentation tabs below</p>
 </div>
 
 <div class="jig-tabs">
 
 <ul> 
 <li><a class="ajaxlink" title="alphabet" href="#tabs-1">Alphabetical List</a></li> 
-<li><a class="ajaxlink" title="category" href="#tabs-2">Restriction Categories</a><a href="https://uts.nlm.nih.gov/help/license/licensecategoryhelp.html" target="_blank"><img style="width: 14px; height: 14px;" src="https://uts.nlm.nih.gov//images/help.png" alt="Restriction Category Help" /></a></li>
+<li><a class="ajaxlink" title="category" href="#tabs-2">Restriction Categories*</a><a href="https://uts.nlm.nih.gov/help/license/licensecategoryhelp.html" target="_blank"><img style="width: 14px; height: 14px;" src="https://uts.nlm.nih.gov//images/help.png" alt="Restriction Category Help" /></a></li>
 <!--<li><a class="ajaxlink" title="language" href="#tabs-3">Meaningful Use Categories*</a><a href="/research/umls/sourcereleasedocs/meaningful_use_help.html" target="_blank"><img style="width: 14px; height: 14px;" src="https://uts.nlm.nih.gov//images/help.png" alt="Meaningful Use Category Help" /></a></li>-->
-<li><a class="ajaxlink" title="language" href="#tabs-4">Content Categories</a></li>
+<li><a class="ajaxlink" title="language" href="#tabs-4">Content Categories*</a></li>
 <li><a class="ajaxlink" title="language" href="#tabs-5">Languages</a></li>
 </ul>
 
@@ -44,7 +44,7 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
 <xsl:apply-templates select = "letters"/>
 </div>
 <div id = "tabs-2" class = "content">
-  <h3>Restriction Categories*</h3>
+  <h3>Restriction Categories</h3>
 <xsl:apply-templates select = "restrictions"/>
 <div class = "content-footnote"><p><em>*as of 2011AA UMLS.  <br/>Source vocabularies in Category 4 are free for use in the United States. Category 3 rules apply for all other uses</em></p></div>
 </div>
@@ -55,12 +55,12 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
 <div class = "content-footnote"><p><em>*as of 28 July 2010 (subject to change)</em></p></div>
 </div>
 -->
-<div id = "tabs-4" class = "content">
-<h3>Content Categories*</h3>
-<xsl:apply-templates select = "contentCategories"/>
-<div class = "content-footnote"><p><em>*Content Categories come from either MeSH Headings or MeSH Entry Terms.  Not all UMLS sources have been categorized especially those which have not been updated in several years. <br/>Some sources may belong to more than one category.  Foreign translations have not been categorized.</em></p></div>
-</div>
 
+<div id = "tabs-4" class = "content">
+<h3>Content Categories</h3>
+<xsl:apply-templates select = "contentCategories"/>
+<div class = "content-footnote"><p><em>*Content Categories come from either MeSH Headings or MeSH Entry Terms.  Only the most frequently updated sources in the Metathesaurus are categorized, <br/>and some sources may belong to more than one category.  Foreign translations have not been categorized.</em></p></div>
+</div>
 <div id = "tabs-5" class = "content">
   <h3>Languages</h3>
 <xsl:apply-templates select = "languages"/>
@@ -157,6 +157,11 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
     <xsl:apply-templates select = "letters/letter"/>
     </div>
   </xsl:when>
+  <xsl:when test = "count(sources/source) eq 0">
+    <h5><a class="jig-ncbitoggler gray" href="#"><xsl:value-of select = "@type"/>&#160;&#160;<span class = "count">0 sources</span></a></h5>
+    <div class = "sourcecontainer"><p>No sources of this type were updated for this release</p>
+    </div>
+  </xsl:when>
   <xsl:otherwise>
   <h5><a class="jig-ncbitoggler" href="#"><xsl:value-of select = "@type"/>&#160;&#160;<span class = "count"><xsl:value-of select = "count(sources/source)"/>&#160;<xsl:value-of select = "sourcereleasedocs:countSources(count(sources/source))"/></span></a></h5>
   <div class = "sourcecontainer">
@@ -195,13 +200,22 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
     <xsl:for-each select = "category">
         <xsl:sort select = "count(sources/source)" order = "descending"/>
         <xsl:sort select = "@name"/>
+        <xsl:choose>
+        <xsl:when test = "count(sources/source) eq 0">
+        <h5><a class="jig-ncbitoggler gray" href="#"><xsl:value-of select = "@name"/>&#160;&#160;<span class = "count">0 sources</span></a></h5>
+        <div class = "sourcecontainer"><p>No sources of this type were updated for this release</p>
+        </div>
+        </xsl:when>
+        <xsl:otherwise>
         <h5><a class="jig-ncbitoggler" href="#"><xsl:value-of select = "@name"/>&#160;&#160;<span class = "count"><xsl:value-of select = "count(sources/source)"/>&#160;<xsl:value-of select = "sourcereleasedocs:countSources(count(sources/source))"/></span></a></h5>
         <div class = "sourcecontainer">
         <table summary = "Table of source in the @name category">
         <tr><th scope = "col">Source</th><th>Last Updated</th></tr>
             <xsl:apply-templates select = "sources"/>
         </table>
-        </div>  
+        </div>
+        </xsl:otherwise>
+        </xsl:choose>
     </xsl:for-each>   
 </xsl:template>
 
@@ -209,10 +223,8 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
 <xsl:template match = "sources">
     <xsl:for-each select = "source">
     <xsl:sort select = "." order = "ascending"/>
-    <xsl:variable name = "anchortext" select = "replace(.,'.','blah')"/>
     <tr>
-     <!--added fn:translate() function to get rid of periods in source names in anchor tags.  Display text will still include period (ie HL7V2.5) -->
-        <td valign = "top"><a href = "http://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/{translate(.,'.','')}" target = "_blank"><xsl:value-of select = "."/> (<xsl:value-of select = "@ssn"/>)</a></td>
+        <td valign = "top"><a href = "http://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/{.}" target = "_blank"><xsl:value-of select = "."/> (<xsl:value-of select = "@ssn"/>)</a></td>
         <td valign = "top"><xsl:value-of select = "@imeta"/></td>
     </tr>
     </xsl:for-each>   
