@@ -2,6 +2,10 @@
 
 ##changes
 #10/16/2011 - Added ability to remove languages that were not present for a given release
+#10/20/2011 - Commented out above code
+#10/20/2011 - Added Dutch to language hash!
+#10/20/2011 - must explicitly say 'current' or provide a specific Meta release as an argument
+
 
 use XML::Writer;
 use Getopt::Std;
@@ -11,17 +15,19 @@ use warnings;
 
 getopts("i:r:");
 $input = $opt_i || die "Please enter a list of sources to be processed $!\n";
-$release = $opt_r;
+$release = $opt_r || die "Please specify a release, either current or 2010AB, for example\n";
+
+
 open FH, "<$input" || die "could not open input file because of $!\n";
 my $output = new IO::File(">sources.xml") || die "could not open output file due to $!\n";
 $writer = new XML::Writer(OUTPUT => $output,DATA_MODE => 'true',DATA_INDENT => 4);
 
 $writer->xmlDecl("utf-8");
-$writer->startTag("document");
+$writer->startTag("document","release"=>$release);
 
 $i = 0;
 @letters = (A .. Z);
-%languages = ("BAQ"=>"Basque","CZE"=>"Czech","DAN"=>"Danish","ENG"=>"English","FRE"=>"French","GER"=>"German","HEB"=>"Hebrew","HUN"=>"Hungarian","ITA"=>"Italian","JPN"=>"Japanese",
+%languages = ("BAQ"=>"Basque","CZE"=>"Czech","DAN"=>"Danish","DUT"=>"Dutch","ENG"=>"English","FRE"=>"French","GER"=>"German","HEB"=>"Hebrew","HUN"=>"Hungarian","ITA"=>"Italian","JPN"=>"Japanese",
               "KOR"=>"Korean","LAV"=>"Latvian","NOR"=>"Norwegian","POL"=>"Polish","POR"=>"Portuguese","RUS"=>"Russian","SCR"=>"Serbo-Croatian","SPA"=>"Spanish","SWE"=>"Swedish");
 @restrictions = ("0","1","2","3","4","9");
 
@@ -67,18 +73,20 @@ while(<FH>) {
     my $firstletter = substr($rsab,0,1);
     
     #next if $curver eq "N";  
-    push (@includedLanguages, $lat);
+    #push (@includedLanguages, $lat);
     
    
-    if (defined $release) {
+    if ($release eq "current") {
     #print qq{the release is $release};
     
-    next if $imeta ne $release; 
+    next if $curver eq "N"; 
     
     }
     
     else {   
-    next if $curver eq "N"; 
+    
+    next if $imeta ne $release; 
+    
     }
     
     
@@ -112,18 +120,18 @@ while(<FH>) {
 
 ## remove languages that are not part of a given release
 
-while (($lats, $langugeNames) = each (%languages)){
-    
-    my @results = grep (/$lats/,@includedLanguages);
-    if (scalar(@results) == 0 ) {
+#while (($lats, $langugeNames) = each (%languages)){
+#    
+#    my @results = grep (/$lats/,@includedLanguages);
+#    if (scalar(@results) == 0 ) {
         
-        delete $languages{$lats};
+#        delete $languages{$lats};
         #print qq{deleted $lats\n};
         
-    }
+#    }
    
     
-}
+#}
 
 &processLetters(@allsources);
 &processRestrictions;
@@ -304,5 +312,6 @@ sub processCategories{
     
     
 }
+
 
 
