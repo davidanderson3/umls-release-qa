@@ -47,7 +47,7 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
 <div id = "tabs-2" class = "content">
   <h3>Restriction Categories <span style = "font-size:80%;color:black;">(includes only sources updated in this release. The <a href = "index.html"> current version of UMLS source documentation</a> is updated with each release.)</span></h3>
 <xsl:apply-templates select = "restrictions"/>
-<div class = "content-footnote"><p><em>*as of 2011AA UMLS.  <br/>Source vocabularies in Category 4 are free for use in the United States. Category 3 rules apply for all other uses</em></p></div>
+<div class = "content-footnote"><p><em><br/>Source vocabularies in Category 4 are free for use in the United States. Category 3 rules apply for all other uses</em></p></div>
 </div>
 <!--
 <div id = "tabs-3" class = "content">
