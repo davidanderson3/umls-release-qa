@@ -23,6 +23,9 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
 
 
 <xsl:template match = "document">
+
+<xsl:variable name = "release" select = "@release"/>
+
     
 <div id="source-doc-wrapper">
 <div id="source-doc-intro">
@@ -41,29 +44,29 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
 
 <!--begin iterating through xml document -->
 <div id = "tabs-1" class = "content">
-  <h3>Alphabetical List <span style = "font-size:80%;color:black;">(includes only sources updated in this release. The <a href = "index.html"> current version of UMLS source documentation</a> is updated with each release.)</span></h3> 
+  <h3>Alphabetical List <xsl:if test = "$release ne 'current'"><span style = "font-size:80%;color:black;">(includes only sources updated in this release. The <a href = "index.html"> current version of UMLS source documentation</a> is updated with each release.)</span></xsl:if></h3> 
 <xsl:apply-templates select = "letters"/>
 </div>
 <div id = "tabs-2" class = "content">
-  <h3>Restriction Categories <span style = "font-size:80%;color:black;">(includes only sources updated in this release. The <a href = "index.html"> current version of UMLS source documentation</a> is updated with each release.)</span></h3>
+  <h3>Restriction Categories <xsl:if test = "$release ne 'current'"><span style = "font-size:80%;color:black;">(includes only sources updated in this release. The <a href = "index.html"> current version of UMLS source documentation</a> is updated with each release.)</span></xsl:if></h3>
 <xsl:apply-templates select = "restrictions"/>
-<div class = "content-footnote"><p><em><br/>Source vocabularies in Category 4 are free for use in the United States. Category 3 rules apply for all other uses</em></p></div>
+<div class = "content-footnote"><p><em>*as of 2011AA UMLS.  <br/>Source vocabularies in Category 4 are free for use in the United States. Category 3 rules apply for all other uses</em></p></div>
 </div>
 <!--
 <div id = "tabs-3" class = "content">
-  <h3>Meaningful Use Categories <span style = "font-size:80%;color:black;">(includes only sources updated in this release. The <a href = "index.html"> current version of UMLS source documentation</a> is updated with each release.)</span></h3>
+  <h3>Meaningful Use Categories <xsl:if test = "$release ne 'current'"> <span style = "font-size:80%;color:black;">(includes only sources updated in this release. The <a href = "index.html"> current version of UMLS source documentation</a> is updated with each release.)</span></xsl:if></h3>
 <xsl:apply-templates select = "muCategories"/>
 <div class = "content-footnote"><p><em>*as of 28 July 2010 (subject to change)</em></p></div>
 </div>
 -->
 
 <div id = "tabs-4" class = "content">
-<h3>Content Categories <span style = "font-size:80%;color:black;">(includes only sources updated in this release. The <a href = "index.html"> current version of UMLS source documentation</a> is updated with each release.)</span></h3>
+<h3>Content Categories <xsl:if test = "$release ne 'current'"> <span style = "font-size:80%;color:black;">(includes only sources updated in this release. The <a href = "index.html"> current version of UMLS source documentation</a> is updated with each release.)</span></xsl:if></h3>
 <xsl:apply-templates select = "contentCategories"/>
 <div class = "content-footnote"><p><em>*Content Categories come from either MeSH Headings or MeSH Entry Terms.  Only the most frequently updated sources in the Metathesaurus are categorized, <br/>and some sources may belong to more than one category.  Foreign translations have not been categorized.</em></p></div>
 </div>
 <div id = "tabs-5" class = "content">
-  <h3>Languages <span style = "font-size:80%;color:black;">(includes only sources updated in this release. The <a href = "index.html"> current version of UMLS source documentation</a> is updated with each release.)</span></h3>
+  <h3>Languages <xsl:if test = "$release ne 'current'"> <span style = "font-size:80%;color:black;">(includes only sources updated in this release. The <a href = "index.html"> current version of UMLS source documentation</a> is updated with each release.)</span></xsl:if></h3>
 <xsl:apply-templates select = "languages"/>
 </div>
 
@@ -299,3 +302,4 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
 
 
 </xsl:stylesheet>
+
