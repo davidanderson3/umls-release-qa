@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;
+      charset=ISO-8859-1">
+    <title></title>
+  </head>
+  <body>
+    <div class="section-4">
+      <ul id="menu">
+        <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
+        <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
+        <li id="nav-3"> <a href="sourcemetastats.html">Statistics and
+            sample data</a>
+          <ul id="subnav-3">
+            <li> <a href="termtypes.html">Terms and term types</a> </li>
+            <li> <a href="attributes.html">Attributes</a> </li>
+            <li> <a href="relationships.html">Relationships</a> </li>
+            <li> <a href="semtypes.html">Semantic Types</a> </li>
+            <li> <a href="overlap.html">Source Overlap</a> </li>
+          </ul>
+        </li>
+        <li id="nav-4"> <a href="representation.html">Representation</a>
+          <ul id="subnav-4">
+            <li> <a href="sourcerepresentation.html" id="sourcerep">Source
+
+
+
+                Representation</a> </li>
+            <li> <a href="metarepresentation.html">Metathesaurus
+                Representation</a> </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- end tabbed navigation area --> <br/>
+    <br/>
+    <br/>
+    <a name="top"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
+      <a href="#change_summary">Summary of Changes</a>, <a
+        href="#file_summary">Summary of Source-Provided Files</a> <a
+        href="#file_details">Source-Provided File Details</a></span> <a
+      name="general"></a>
+    <div id="rep_general" class="rep_block_level_one">
+      <h3>Notes</h3>
+    </div>
+    <div id="rep_change_summary" class="rep_block_level_one">
+      <h3>Summary of Changes:</h3>
+      &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
+      <p>There have been significant changes since ICNP2_0 was processed
+        for 2009AB:<br/>
+      </p>
+      <p>a)&nbsp; Instead of the entire data file, ICNP submitted only
+        the DC and IC axes to the Metathesaurus (comprising
+        Interventions, Diagnosis and Outcomes).&nbsp; <br/>
+        b)&nbsp; In the 2.0 version, there were many duplicate strings
+        with different CODE values.&nbsp; It was difficult to
+        distinguish the meaning of each string.&nbsp; ICNP_2011 does not
+        contain duplicate strings<br/>
+        c)&nbsp; The OWL ("KnowledgeName" is no longer included<br/>
+        d)&nbsp; The VSAB now indicates the year of release (2011)
+        instead of a version number (2_0)</p>
+      e)&nbsp; SNOMED CT Mappings have been included.&nbsp;&nbsp;
+      Mapping relationships are represented in MRSAMAP.RRF and
+      MRMAP.RRF, as well as in MRREL.RRF, with rel =&nbsp; "RQ" (related
+      and possibly synonymous), rela = "mapped_to/mapped_from."&nbsp;
+      <p> </p>
+    </div>
+    <div id="rep_file_summary" class="rep_block_level_one"> <a
+        name="file_summary"></a>
+      <h3>Source-Provided Files: Summary</h3>
+      &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
+      <p>The file ICNP2011-NLM_Submission_29_June.xlsx includes the
+        following tabs:<br/>
+        &nbsp;&nbsp;&nbsp; <br/>
+      </p>
+      <div style="margin-left: 40px;"> DC Asserted&nbsp;&nbsp;&nbsp; <br/>
+        IC Asserted<br/>
+        DC Inferred<br/>
+        IC Inferred<br/>
+        ICNP-SCT Mapping<br/>
+      </div>
+      <br/>
+      In addition, .pdf files showing the hierarchy were provided for
+      reference:<br/>
+      ICNP 2011-DC_29_June.pdf <br/>
+      ICNP 2011-IC_29_June.pdf </div>
+    <div id="rep_file_details" class="rep_block_level_one"><br/>
+      <h3>Source-Provided Files: Details</h3>
+      &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
+      <p>The following is a list of fields available for ICNP_2011 data:<br/>
+      </p>
+      <br/>
+      <div class="rep_block_level_two"><a name="file1"></a><br/>
+        <br/>
+        File:&nbsp; ICNP2011-NLM_Submission_29_June.xlsx<br/>
+        tabs:&nbsp; DC Asserted, IC Asserted<br/>
+        <br/>
+        <table class="elements" border="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <th>Field</th>
+              <th>Representation</th>
+            </tr>
+            <tr>
+              <td>Code<br/>
+              </td>
+              <td>MRCONSO.CODE<br/>
+                MRCONSO.SCUI<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>Preferred Term<br/>
+              </td>
+              <td>MRCONSO.STR<br/>
+                TTY = PT<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>Axis (inferred from tab label)<br/>
+              </td>
+              <td>MRSAT.ATN = "ICNP_TYPE"<br/>
+                value is DC or IC, based on tab label<br/>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+        <br/>
+        File:&nbsp; ICNP2011-NLM_Submission_29_June.xlsx<br/>
+        tabs:&nbsp; DC Inferred, IC Inferred<br/>
+        <br/>
+        <table class="elements" border="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <th>Field</th>
+              <th>Representation</th>
+            </tr>
+            <tr>
+              <td>Parent Code<br/>
+              </td>
+              <td>Used to build hierarchy<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>Preferred Term (Parent)<br/>
+              </td>
+              <td>Not directly processed<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>Child Code<br/>
+              </td>
+              <td>Used to build hierarchy<br/>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">Preferred Term (Child)<br/>
+              </td>
+              <td style="vertical-align: top;">Not directly processed<br/>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

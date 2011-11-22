@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;
+      charset=ISO-8859-1">
+      <title></title>
+  </head>
+  <body>
+    <div class="section-4">
+      <ul id="menu">
+        <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
+        <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
+        <li id="nav-3"> <a href="sourcemetastats.html">Statistics and
+            sample data</a>
+          <ul id="subnav-3">
+            <li> <a href="termtypes.html">Terms and term types</a> </li>
+            <li> <a href="attributes.html">Attributes</a> </li>
+            <li> <a href="relationships.html">Relationships</a> </li>
+            <li> <a href="semtypes.html">Semantic Types</a> </li>
+            <li> <a href="overlap.html">Source Overlap</a> </li>
+          </ul>
+        </li>
+        <li id="nav-4"> <a href="representation.html">Representation</a>
+          <ul id="subnav-4">
+            <li> <a href="sourcerepresentation.html">Source
+                Representation</a> </li>
+            <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
+
+                Representation</a> </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <a name="top"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>,
+      <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
+      <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+    <div id="general" class="rep_block_level_one">
+      <p><b>VSAB:</b> <br/>
+      </p>
+      <div id="rep_identifiers" class="rep_block_level_one">
+        <h3>Summary of Changes</h3>
+        <p>There have been significant changes since ICNP2_0 was
+          processed for 2009AB:<br/>
+        </p>
+        <p>a)&nbsp; Instead of the entire data file, ICNP submitted only
+          the DC and IC axes to the Metathesaurus (comprising
+          Interventions, Diagnosis and Outcomes).&nbsp; <br/>
+          b)&nbsp; In the 2.0 version, there were many duplicate strings
+          with different CODE values.&nbsp; It was difficult to
+          distinguish the meaning of each string.&nbsp; ICNP_2011 does
+          not contain duplicate strings<br/>
+          c)&nbsp; The OWL ("KnowledgeName" is no longer included<br/>
+          d)&nbsp; The VSAB now indicates the year of release (2011)
+          instead of a version number (2_0)</p>
+        <p>e)&nbsp; SNOMED CT Mappings have been included.&nbsp;&nbsp;
+          Mapping relationships are represented in MRSAMAP.RRF and
+          MRMAP.RRF, as well as in MRREL.RRF, with rel =&nbsp; "RQ"
+          (related and possibly synonymous), rela =
+          "mapped_to/mapped_from."&nbsp; <br/>
+        </p>
+      </div>
+      <div id="rep_change_summary" class="rep_block_level_one">
+        <h3>Source Provided Files:</h3>
+        The file ICNP2011-NLM_Submission_29_June.xlsx includes the
+        following tabs:<br/>
+        &nbsp;&nbsp;&nbsp; <br/>
+        <div style="margin-left: 40px;"> DC Asserted&nbsp;&nbsp;&nbsp; <br/>
+          IC Asserted<br/>
+          DC Inferred<br/>
+          IC Inferred<br/>
+          ICNP-SCT Mapping<br/>
+        </div>
+        <br/>
+        In addition, .pdf files showing the hierarchy were provided for
+        reference:<br/>
+        <div style="margin-left: 40px;"> ICNP 2011-DC_29_June.pdf <br/>
+          ICNP 2011-IC_29_June.pdf<br/>
+        </div>
+        <br/>
+      </div>
+      <div id="rep_identifers" class="rep_block_level_one">
+        <h3>Identifiers:</h3>
+        Identifiers are assigned as follows:<br/>
+        <ul>
+          <li>CODE: concept code<br/>
+          </li>
+          <li>SAUI:&nbsp; N/A<br/>
+          </li>
+          <li>SCUI:&nbsp; concept code<br/>
+          </li>
+          <li>SDUI:&nbsp;&nbsp; N/A<br/>
+          </li>
+        </ul>
+        <p></p>
+        <div id="rep_termtypes" class="rep_block_level_two"> <a
+            name="atoms"></a>
+          <h3>Atoms (MRCONSO):</h3>
+          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <table class="elements" border="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <th>Term Type</th>
+                <th>Origin</th>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">MTH_PT<br/>
+                </td>
+                <td style="vertical-align: top;">American English form
+                  of British PT.&nbsp; This data is added during
+                  Metathesaurus construction.<br/>
+                </td>
+              </tr>
+              <tr>
+                <td>PT<br/>
+                </td>
+                <td>Extracted from the "Preferred Term" value on the
+                  asserted tabs of the .xlsx file.<br/>
+                </td>
+              </tr>
+              <tr>
+                <td>XM<br/>
+                </td>
+                <td>Cross mapping atom to represent ICNP-SNOMEDCT map
+                  set.&nbsp; This data is added during Metathesaurus
+                  construction.<br/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="rep_attributes" class="rep_block_level_two"> <a
+            name="attributes"></a><br/>
+          <h3>Attributes (MRSAT):</h3>
+          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <table class="elements" border="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <th>Attribute Name</th>
+                <th>Origin</th>
+              </tr>
+              <tr>
+                <td>ICNP_TYPE<br/>
+                </td>
+                <td>Inferred from the .xlsx file, based on which tab the
+                  concept appears on<br/>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">FROMRSAB<br/>
+                </td>
+                <td style="vertical-align: top;">This data is added
+                  during Metathesaurus construction. </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">FROMVSAB<br/>
+                </td>
+                <td style="vertical-align: top;">This data is added
+                  during Metathesaurus construction. </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">MAPSETRSAB<br/>
+                </td>
+                <td style="vertical-align: top;">This data is added
+                  during Metathesaurus construction. </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">MAPSETTYPE<br/>
+                </td>
+                <td style="vertical-align: top;">This data is added
+                  during Metathesaurus construction. </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">MAPSETVERSION<br/>
+                </td>
+                <td style="vertical-align: top;">This data is added
+                  during Metathesaurus construction. </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">MAPSETVSAB<br/>
+                </td>
+                <td style="vertical-align: top;">This data is added
+                  during Metathesaurus construction. </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">MTH_MAPFROMCOMPLEXITY<br/>
+                </td>
+                <td style="vertical-align: top;">This data is added
+                  during Metathesaurus construction. </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">MTH_MAPFROMEXHAUSTIVE<br/>
+                </td>
+                <td style="vertical-align: top;">This data is added
+                  during Metathesaurus construction. </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">MTH_MAPSETCOMPLEXITY<br/>
+                </td>
+                <td style="vertical-align: top;">This data is added
+                  during Metathesaurus construction. </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">MTH_MAPTOCOMPLEXITY<br/>
+                </td>
+                <td style="vertical-align: top;">This data is added
+                  during Metathesaurus construction. </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">MTH_MAPTOEXHAUSTIVE<br/>
+                </td>
+                <td style="vertical-align: top;">This data is added
+                  during Metathesaurus construction. </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">TORSAB<br/>
+                </td>
+                <td style="vertical-align: top;">This data is added
+                  during Metathesaurus construction. </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">TOVSAB<br/>
+                </td>
+                <td style="vertical-align: top;">This data is added
+                  during Metathesaurus construction. </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="rep_definitions" class="rep_block_level_two"> <a
+            name="definitions"></a><br/>
+          <h3>Definitions (MRDEF):</h3>
+          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <p>No definitions are present for ICNP.<br/>
+          </p>
+        </div>
+        <div id="rep_relationships" class="rep_block_level_two"> <a
+            name="relationships"></a><br/>
+          <h3>Relationships (MRREL):</h3>
+          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <table class="elements" border="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <th>REL</th>
+                <th>RELA<br/>
+                  Inverse RELA</th>
+                <th>ORIGIN</th>
+              </tr>
+              <tr>
+                <td>PAR<br/>
+                  CHD<br/>
+                  SIB<br/>
+                </td>
+                <td>&lt;no RELA&gt;<br/>
+                </td>
+                <td>Represent the hierarchy.&nbsp; Extracted from
+                  "Parent Code" and "Child Code" data on the "inferred"
+                  tabs of the .xlsx file&nbsp; <br/>
+                </td>
+              </tr>
+              <tr>
+                <td>RQ<br/>
+                </td>
+                <td>mapped_to<br/>
+                  mapped_from<br/>
+                </td>
+                <td>Represent one-to-one relationships with SNOMED CT<br/>
+                </td>
+              </tr>
+              <tr>
+                <td>SY<br/>
+                </td>
+                <td>mth_british_form_of<br/>
+                  mth_has_british_form<br/>
+                </td>
+                <td>Connect MTH_PT to PT.<br/>
+                  This data is added during Metathesaurus construction<br/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="mappings" class="rep_block_level_two"> <a
+            name="mappings"></a><br/>
+          <h3>Mappings (MRMAP, MRSMAP):</h3>
+          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <p>SNOMED CT mappings are extracted from the ICNP-SCT Mapping
+            tab on the .xlsx file.&nbsp; Mappings are also represented
+            in MRREL.RRF, with REL = "RQ" and RELA = "mapped_to".&nbsp;
+            Mappings are provided for all ICNP codes.<br/>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
