@@ -1,0 +1,697 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;
+      charset=ISO-8859-1">
+    <title></title>
+  </head>
+  <body>
+    <div class="section-4">
+      <ul id="menu">
+        <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
+        <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
+        <li id="nav-3"> <a href="sourcemetastats.html">Statistics and
+            sample data</a>
+          <ul id="subnav-3">
+            <li> <a href="termtypes.html">Terms and term types</a> </li>
+            <li> <a href="attributes.html">Attributes</a> </li>
+            <li> <a href="relationships.html">Relationships</a> </li>
+            <li> <a href="semtypes.html">Semantic Types</a> </li>
+            <li> <a href="overlap.html">Source Overlap</a> </li>
+          </ul>
+        </li>
+        <li id="nav-4"> <a href="representation.html">Representation</a>
+          <ul id="subnav-4">
+            <li> <a href="sourcerepresentation.html">Source
+                Representation</a> </li>
+            <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
+
+                Representation</a> </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <a name="top"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>,
+      <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
+      <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+    <div id="general" class="rep_block_level_one">
+      <p><b>VSAB:</b> SNOMEDCT_2011_07_31</p>
+    </div>
+    <div id="rep_identifiers" class="rep_block_level_one">
+      <h3>Summary of Changes</h3>
+      <p>There have been no changes to the SNOMEDCT format.&nbsp;&nbsp;
+        In Metathesaurus processing, the follwing changes have occurred
+        for 2011AB:<br/>
+      </p>
+      <p style="margin-left: 40px;">Atoms:&nbsp; The first caret (^)
+        character in certain atom_names was erroneously being
+        removed.&nbsp; This problem has been fixed. </p>
+      <span style=""><span style="color: rgb(13, 13, 13);"></span></span>
+      <p>In the future, the new SNOMEDCT RF2 format will be processed,
+        and this document will be updated to reflect the changes.</p>
+    </div>
+    <div id="rep_change_summary" class="rep_block_level_one">
+      <h3>Original Files:</h3>
+      <br/>
+      The Metathesaurus SNOMEDCT data is taken from the following
+      tab-delimited SNOMEDCT files, found in the specified folders:
+      <ul>
+        <li>SnomedCT_INT_20110731/Terminology/Content:
+          <ul>
+            <li>sct1_Concepts_Core_INT_20110731.txt</li>
+            <li>sct1_Descriptions_en_INT_20110731.txt</li>
+            <li>sct1_Relationships_Core_INT_20110731.txt</li>
+          </ul>
+        </li>
+        <li>SnomedCT_INT_20110731/Terminology/History:
+          <ul>
+            <li>sct1_ComponentHistory_Core_INT_20110731.txt</li>
+            <li>sct1_References_Core_INT_20110731.txt</li>
+          </ul>
+        </li>
+        <li>SnomedCT_INT_20110731/CrossMaps/ICD9:
+          <ul>
+            <li>der1_CrossMaps_ICD9_INT_20110731.txt</li>
+            <li>der1_CrossMapSets_ICD9_INT_20110731.txt</li>
+            <li>der1_CrossMapTargets_ICD9_INT_20110731.txt</li>
+          </ul>
+        </li>
+        <li>SnomedCT_INT_20110731/OtherResources/TextDefinitions:
+          <ul>
+            <li>sct1_TextDefinitions_en-US_INT_20110731.txt</li>
+          </ul>
+        </li>
+        <li>SnomedCT_INT_20110731/Subsets/Language-en-US:
+          <ul>
+            <li>der1_Subsets_en-US_INT_20110731.txt</li>
+            <li>der1_SubsetMembers_en-US_INT_20110731.txt</li>
+          </ul>
+        </li>
+        <li>SnomedCT_INT_20110731/Subsets/Language-en-GB:
+          <ul>
+            <li>der1_Subsets_en-GB_INT_20110731.txt</li>
+            <li>der1_SubsetMembers_en-GB_INT_20110731.txt</li>
+          </ul>
+        </li>
+      </ul>
+      Note:&nbsp; An update to the ICD9 CrossMaps was issued on
+      10-01-2011, however it has not yet been processed for the
+      Metathesaurus.<br/>
+      <br/>
+    </div>
+    <div id="rep_identifers" class="rep_block_level_one">
+      <h3>Identifiers</h3>
+      <br/>
+      Identifiers are assigned as follows:
+      <ul>
+        <li>CODE: CONCEPTID</li>
+        <li>SAUI: DESCRIPTIONID</li>
+        <li>SCUI: Same as CODE</li>
+        <li>SDUI: Not Applicable</li>
+      </ul>
+      <div id="rep_termtypes" class="rep_block_level_two"> <a
+          name="atoms"></a>
+        <h3>Atoms (MRCONSO)</h3>
+        &nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
+        <table class="elements" border="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <th>Term Type</th>
+              <th>Origin</th>
+            </tr>
+            <tr>
+              <td>FN</td>
+              <td>An FN (Fully Specified Name) atom is created for each
+                line of sct1_Descriptions_en_INT_yyyymmdd.txt having
+                DESCRIPTIONTYPE=3, DESCRIPTIONSTATUS=0, and a
+                LANGUAGECODE of "en" as follows:
+                <div style="margin: 4pt;">CODE, SCUI = CONCEPTID<br/>
+                  SAUI = DESCRIPTIONID<br/>
+                  STR = TERM<br/>
+                  SUPPRESSIBLE=N</div>
+              </td>
+            </tr>
+            <tr>
+              <td>OF</td>
+              <td>An OF (Obsolete Fully specified name) atom is created
+                for each line of sct1_Descriptions_en_INT_yyyymmdd.txt
+                having DESCRIPTIONTYPE=3, a DESCRIPTIONSTATUS other than
+                0, and a LANGUAGECODE of "en" as follows:
+                <div style="margin: 4pt;">CODE, SCUI = CONCEPTID<br/>
+                  SAUI = DESCRIPTIONID<br/>
+                  STR = TERM<br/>
+                  SUPPRESSIBLE=O</div>
+              </td>
+            </tr>
+            <tr>
+              <td>PT</td>
+              <td>A PT (Preferred Term) atom is created for each line of
+                sct1_Descriptions_en_INT_yyyymmdd.txt having
+                DESCRIPTIONTYPE=1, DESCRIPTIONSTATUS=0, and a
+                LANGUAGECODE of "en" or "en-US", as follows:
+                <div style="margin: 4pt;">CODE, SCUI = CONCEPTID<br/>
+                  SAUI = DESCRIPTIONID<br/>
+                  STR = TERM<br/>
+                  SUPPRESSIBLE=N</div>
+                PT atoms are also created for lines of
+                sct1_Descriptions_en_INT_yyyymmdd.txt having
+                DESCRIPTIONTYPE=0 and DESCRIPTIONSTATUS=0 if, when you
+                look up that line's DESCRIPTIONID in the MEMBERID field
+                of the der1_Subsets_en-US_INT_yyyymmdd.txt file, the
+                value of MEMBERSTATUS is 1. (Note that these atoms are
+                actually preferred only in the US English subset and are
+                synonyms in the GB English subset.)</td>
+            </tr>
+            <tr>
+              <td>PTGB</td>
+              <td>A PTGB (Preferred Term in the GB English dialect) atom
+                is created for each line of
+                sct1_Descriptions_en_INT_yyyymmdd.txt having
+                DESCRIPTIONTYPE=1, DESCRIPTIONSTATUS=0, and a
+                LANGUAGECODE of "en-GB", as follows:
+                <div style="margin: 4pt;">CODE, SCUI = CONCEPTID<br/>
+                  SAUI = DESCRIPTIONID<br/>
+                  STR = TERM<br/>
+                  SUPPRESSIBLE=N</div>
+              </td>
+            </tr>
+            <tr>
+              <td>OP</td>
+              <td>An OP (Obsolete Preferred term) atom is created for
+                each line of sct1_Descriptions_en_INT_yyyymmdd.txt
+                having DESCRIPTIONTYPE=1 and a DESCRIPTIONSTATUS other
+                than 0, as follows:
+                <div style="margin: 4pt;">CODE, SCUI = CONCEPTID<br/>
+                  SAUI = DESCRIPTIONID<br/>
+                  STR = TERM<br/>
+                  SUPPRESSIBLE=O</div>
+              </td>
+            </tr>
+            <tr>
+              <td>SY</td>
+              <td>An SY (Synonym) atom is created for each line of
+                sct1_Descriptions_en_INT_yyyymmdd.txt having
+                DESCRIPTIONTYPE=2, DESCRIPTIONSTATUS=0, and a
+                LANGUAGECODE of "en" or "en-US", as follows:
+                <div style="margin: 4pt;">CODE, SCUI = CONCEPTID<br/>
+                  SAUI = DESCRIPTIONID<br/>
+                  STR = TERM<br/>
+                  SUPPRESSIBLE=N</div>
+                SY atoms are also created for lines of
+                sct1_Descriptions_en_INT_yyyymmdd.txt having
+                DESCRIPTIONTYPE=0 and DESCRIPTIONSTATUS=0 if, when you
+                look up that line's DESCRIPTIONID in the MEMBERID field
+                of the der1_Subsets_en-US_INT_yyyymmdd.txt file, the
+                value of MEMBERSTATUS is 2. (Note that these atoms are
+                actually synonyms only in the US English subset and are
+                preferred in the GB English subset.)</td>
+            </tr>
+            <tr>
+              <td>SYGB</td>
+              <td>An SYGB (Synonym in the GB English dialect) atom is
+                created for each line of
+                sct1_Descriptions_en_INT_yyyymmdd.txt having
+                DESCRIPTIONTYPE=2, DESCRIPTIONSTATUS=0, and a
+                LANGUAGECODE of "en-GB", as follows:
+                <div style="margin: 4pt;">CODE, SCUI = CONCEPTID<br/>
+                  SAUI = DESCRIPTIONID<br/>
+                  STR = TERM<br/>
+                  SUPPRESSIBLE=N</div>
+              </td>
+            </tr>
+            <tr>
+              <td>IS</td>
+              <td>An IS (obsolete Synonym) atom is created for each line
+                of sct1_Descriptions_en_INT_yyyymmdd.txt having
+                DESCRIPTIONTYPE=2 and a DESCRIPTIONSTATUS other than 0,
+                as follows:
+                <div style="margin: 4pt;">CODE, SCUI = CONCEPTID<br/>
+                  SAUI = DESCRIPTIONID<br/>
+                  STR = TERM<br/>
+                  SUPPRESSIBLE=O</div>
+              </td>
+            </tr>
+            <tr>
+              <td>MTH_FN<br/>
+                MTH_OF<br/>
+                MTH_PT<br/>
+                MTH_PTGB<br/>
+                MTH_OP<br/>
+                MTH_SY<br/>
+                MTH_SYGB<br/>
+                MTH_IS</td>
+              <td>Special MTH_* forms are algorithmically generated for
+                atoms with the termtypes listed above, in two
+                situations:
+                <div style="margin: 4pt;">(1) If the STR contains one or
+                  more non-ASCII UTF-8 characters, an MTH_* form is
+                  generated in which these characters are converted to
+                  pure ASCII using the -f:q5 flow of the UMLS lvg
+                  (lexical variant generation) tool<br/>
+                  <br/>
+                  (2) If the STR contains the markup syntax SNOMEDCT
+                  uses to indicate superscripts ("^sup^") and/or
+                  subscripts ("&gt;sub&lt;"), two MTH_* forms are
+                  generated:
+                  <div style="margin-top: 8pt; margin-right: 8pt;
+                    margin-bottom: 8pt;">1. One in which the markup
+                    syntax is removed, e.g., "CO&gt;2&lt;" becomes "CO2"<br/>
+                    2. One in which the markup syntax is converted to an
+                    xml-style syntax using "&lt;sup&gt; for superscripts
+                    and "&lt;sub&gt;" for subscripts, e.g.,
+                    "CO&gt;2&lt;" becomes "CO&lt;sub&gt;2&lt;/sub&gt;".<br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    This data is added during Metathesaurus source
+                    processing<br/>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>OB</td>
+              <td>An OB (obsolete) atom is created for each line of
+                sct1_Descriptions_en_INT_yyyymmdd.txt having
+                DESCRIPTIONTYPE=0 and a DESCRIPTIONSTATUS other than 0,
+                as follows:
+                <div style="margin: 4pt;">CODE, SCUI = CONCEPTID<br/>
+                  SAUI = DESCRIPTIONID<br/>
+                  STR = TERM<br/>
+                  SUPPRESSIBLE=O</div>
+              </td>
+            </tr>
+            <tr>
+              <td>SB</td>
+              <td>One SB (Subset) atom is generated for each line of
+                der1_Subsets_en-GB_INT_yyyymmdd.txt and
+                der1_Subsets_en-US_INT_yyyymmdd.txt, as follows:
+                <div style="margin: 4pt;">CODE, SCUI = SUBSETID<br/>
+                  STR = SUBSETNAME</div>
+              </td>
+            </tr>
+            <tr>
+              <td>XM</td>
+              <td>One XM (cross Mapping set) atom is generated for each
+                line of der1_CrossMapSets_ICD9_INT_yyyymmdd.txt, as
+                follows:
+                <div style="margin: 4pt;">CODE, SCUI = MAPSETID<br/>
+                  STR = "SNOMEDCT_yyyy_mm_dd to ICD9CM_vvvv Mappings"
+                  (where vvvv is the value of MAPSETSCHEMEVERSION)</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="rep_attributes" class="rep_block_level_two"> <a
+          name="attributes"></a><br/>
+        <h3>Attributes (MRSAT)</h3>
+        &nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
+        <table class="elements" border="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <th>Attribute Name</th>
+              <th>STYPE</th>
+              <th>Origin</th>
+            </tr>
+            <tr>
+              <td>AQ</td>
+              <td>SCUI</td>
+              <td>Used for "allowed qualifier" relationships from
+                sct1_Relationships_Core_INT_yyyymmdd.txt, where
+                CHARACTERISTICTYPE=1 (qualifier) and REFINABILITY=2
+                (mandatory)</td>
+            </tr>
+            <tr>
+              <td>CHARACTERISTICTYPE</td>
+              <td>RUI</td>
+              <td>CHARACTERISTICTYPE from
+                sct1_Relationships_Core_INT_yyyymmdd.txt</td>
+            </tr>
+            <tr>
+              <td>CONCEPTSTATUS</td>
+              <td>SCUI</td>
+              <td>CONCEPTSTATUS from sct1_Concepts_Core_INT_yyyymmdd.txt</td>
+            </tr>
+            <tr>
+              <td>CTV3ID</td>
+              <td>SCUI</td>
+              <td>CTV3ID from sct1_Concepts_Core_INT_yyyymmdd.txt</td>
+            </tr>
+            <tr>
+              <td>DESCRIPTIONSTATUS</td>
+              <td>AUI</td>
+              <td>DESCRIPTIONSTATUS from
+                sct1_Descriptions_en_INT_yyyymmdd.txt</td>
+            </tr>
+            <tr>
+              <td>DESCRIPTIONTYPE</td>
+              <td>AUI</td>
+              <td>DESCRIPTIONTYPE from
+                sct1_Descriptions_en_INT_yyyymmdd.txt</td>
+            </tr>
+            <tr>
+              <td>FROMRSAB</td>
+              <td>CODE</td>
+              <td>"SNOMEDCT", attached to the XM atom for the Cross Map
+                Set</td>
+            </tr>
+            <tr>
+              <td>FROMVSAB</td>
+              <td>CODE</td>
+              <td>"SNOMEDCT_yyyy_mm_dd", attached to the XM atom for the
+                Cross Map Set</td>
+            </tr>
+            <tr>
+              <td>INITIALCAPITALSTATUS</td>
+              <td>AUI</td>
+              <td>INITIALCAPITALSTATUS from
+                sct1_Descriptions_en_INT_yyyymmdd.txt</td>
+            </tr>
+            <tr>
+              <td>ISPRIMITIVE</td>
+              <td>SCUI</td>
+              <td>ISPRIMITIVE from sct1_Concepts_Core_INT_yyyymmdd.txt</td>
+            </tr>
+            <tr>
+              <td>LANGUAGECODE</td>
+              <td>AUI</td>
+              <td>LANGUAGECODE from
+                sct1_Descriptions_en_INT_yyyymmdd.txt</td>
+            </tr>
+            <tr>
+              <td>MAPSETNAME</td>
+              <td>CODE</td>
+              <td>MAPSETNAME from
+                der1_CrossMapSets_ICD9_INT_yyyymmdd.txt, attached to the
+                XM atom for the Cross Map Set</td>
+            </tr>
+            <tr>
+              <td>MAPSETREALMID</td>
+              <td>CODE</td>
+              <td>MAPSETREALMID from
+                der1_CrossMapSets_ICD9_INT_yyyymmdd.txt, attached to the
+                XM atom for the Cross Map Set</td>
+            </tr>
+            <tr>
+              <td>MAPSETRSAB</td>
+              <td>CODE</td>
+              <td>"SNOMEDCT", attached to the XM atom for the Cross Map
+                Set</td>
+            </tr>
+            <tr>
+              <td>MAPSETRULETYPE</td>
+              <td>CODE</td>
+              <td>MAPSETRULETYPE from
+                der1_CrossMapSets_ICD9_INT_yyyymmdd.txt, attached to the
+                XM atom for the Cross Map Set</td>
+            </tr>
+            <tr>
+              <td>MAPSETSCHEMEID</td>
+              <td>CODE</td>
+              <td>MAPSETSCHEMEID from
+                der1_CrossMapSets_ICD9_INT_yyyymmdd.txt, attached to the
+                XM atom for the Cross Map Set</td>
+            </tr>
+            <tr>
+              <td>MAPSETSCHEMENAME</td>
+              <td>CODE</td>
+              <td>MAPSETSCHEMENAME from
+                der1_CrossMapSets_ICD9_INT_yyyymmdd.txt, attached to the
+                XM atom for the Cross Map Set</td>
+            </tr>
+            <tr>
+              <td>MAPSETSCHEMEVERSION</td>
+              <td>CODE</td>
+              <td>MAPSETSCHEMEVERSION from
+                der1_CrossMapSets_ICD9_INT_yyyymmdd.txt, attached to the
+                XM atom for the Cross Map Set</td>
+            </tr>
+            <tr>
+              <td>MAPSETSEPARATORCODE</td>
+              <td>CODE</td>
+              <td>XML character entity for MAPSETSEPARATOR from
+                der1_CrossMapSets_ICD9_INT_yyyymmdd.txt, attached to the
+                XM atom for the Cross Map Set</td>
+            </tr>
+            <tr>
+              <td>MAPSETSID</td>
+              <td>CODE</td>
+              <td>MAPSETSID from
+                der1_CrossMapSets_ICD9_INT_yyyymmdd.txt, attached to the
+                XM atom for the Cross Map Set</td>
+            </tr>
+            <tr>
+              <td>MAPSETTYPE</td>
+              <td>CODE</td>
+              <td>MAPSETTYPE from
+                der1_CrossMapSets_ICD9_INT_yyyymmdd.txt, attached to the
+                XM atom for the Cross Map Set</td>
+            </tr>
+            <tr>
+              <td>MAPSETVERSION</td>
+              <td>CODE</td>
+              <td>MAPSETVERSION from
+                der1_CrossMapSets_ICD9_INT_yyyymmdd.txt, attached to the
+                XM atom for the Cross Map Set</td>
+            </tr>
+            <tr>
+              <td>MAPSETVSAB</td>
+              <td>CODE</td>
+              <td>"SNOMEDCT_yyyy_mm_dd", attached to the XM atom for the
+                Cross Map Set</td>
+            </tr>
+            <tr>
+              <td>MAPSETXRTARGETID</td>
+              <td>CODE</td>
+              <td>TARGETID from
+                der1_CrossMapTargets_ICD9_INT_yyyymmdd.txt where
+                TARGETCODES is blank, attached to the XM atom for the
+                Cross Map Set</td>
+            </tr>
+            <tr>
+              <td>MTH_MAPFROMCOMPLEXITY</td>
+              <td>CODE</td>
+              <td>"SINGLE_SCUI", attached to the XM atom for the Cross
+                Map Set;&nbsp; this data is added during Metathesaurus
+                Source processing.<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>MTH_MAPFROMEXHAUSTIVE</td>
+              <td>CODE</td>
+              <td>"N", attached to the XM atom for the Cross Map
+                Set;&nbsp; this data is added during Metathesaurus
+                Source processing</td>
+            </tr>
+            <tr>
+              <td>MTH_MAPSETCOMPLEXITY</td>
+              <td>CODE</td>
+              <td>"N TO ONE", attached to the XM atom for the Cross Map
+                Set;&nbsp; this data is added during Metathesaurus
+                Source processing</td>
+            </tr>
+            <tr>
+              <td>MTH_MAPTOCOMPLEXITY</td>
+              <td>CODE</td>
+              <td>"SINGLE CODE, MULTIPLE CODE", attached to the XM atom
+                for the Cross Map Set;&nbsp; this data is added during
+                Metathesaurus Source processing</td>
+            </tr>
+            <tr>
+              <td>MTH_MAPTOEXHAUSTIVE</td>
+              <td>CODE</td>
+              <td>"N", attached to the XM atom for the Cross Map
+                Set;&nbsp; this data is added during Metathesaurus
+                Source processing</td>
+            </tr>
+            <tr>
+              <td>MTH_UMLSMAPSETSEPARATOR</td>
+              <td>CODE</td>
+              <td>"AND", attached to the XM atom for the Cross Map
+                Set;&nbsp; this data is added during Metathesaurus
+                Source processing</td>
+            </tr>
+            <tr>
+              <td>REFINABILITY</td>
+              <td>RUI</td>
+              <td>REFINABILITY from
+                sct1_Relationships_Core_INT_yyyymmdd.txt</td>
+            </tr>
+            <tr>
+              <td>SNOMEDID</td>
+              <td>SCUI</td>
+              <td>SNOMEDID from sct1_Concepts_Core_INT_yyyymmdd.txt</td>
+            </tr>
+            <tr>
+              <td>SOS</td>
+              <td>CODE</td>
+              <td>"This set maps SNOMEDCT concept identifiers to
+                ICD-9-Cm codes; a single SNOMEDCT conce pt id may be
+                mapped to one or more ICD-9-CM codes", attached to the
+                XM atom for the Cross Map Set</td>
+            </tr>
+            <tr>
+              <td>SUBSETCONTEXTID</td>
+              <td>AUI</td>
+              <td>CONTEXTID from der1_Subsets_en-GB_INT_yyyymmdd.txt and
+                der1_Subsets_en-US_INT_yyyymmdd.txt</td>
+            </tr>
+            <tr>
+              <td>SUBSETLANGUAGECODE</td>
+              <td>AUI</td>
+              <td>LANGUAGECODE from der1_Subsets_en-GB_INT_yyyymmdd.txt
+                and der1_Subsets_en-US_INT_yyyymmdd.txt</td>
+            </tr>
+            <tr>
+              <td>SUBSETMEMBER</td>
+              <td>AUI</td>
+              <td>Has 3 components, separated by "~" characters:
+                SUBSETID, MEMBERSTATUS, and LINKEDID, from
+                der1_SubsetMembers_en-GB_INT_yyyymmdd.txt and
+                der1_SubsetMembers_en-US_INT_yyyymmdd.txt</td>
+            </tr>
+            <tr>
+              <td>SUBSETORIGINALID</td>
+              <td>AUI</td>
+              <td>SUBSETORIGINALID from
+                der1_Subsets_en-GB_INT_yyyymmdd.txt and
+                der1_Subsets_en-US_INT_yyyymmdd.txt</td>
+            </tr>
+            <tr>
+              <td>SUBSETREALMID</td>
+              <td>AUI</td>
+              <td>REALMID from der1_Subsets_en-GB_INT_yyyymmdd.txt and
+                der1_Subsets_en-US_INT_yyyymmdd.txt</td>
+            </tr>
+            <tr>
+              <td>SUBSETTYPE</td>
+              <td>AUI</td>
+              <td>SUBSETTYPE from der1_Subsets_en-GB_INT_yyyymmdd.txt
+                and der1_Subsets_en-US_INT_yyyymmdd.txt</td>
+            </tr>
+            <tr>
+              <td>SUBSETVERSION</td>
+              <td>AUI</td>
+              <td>SUBSETVERSION from der1_Subsets_en-GB_INT_yyyymmdd.txt
+                and der1_Subsets_en-US_INT_yyyymmdd.txt</td>
+            </tr>
+            <tr>
+              <td>TARGETSCHEMEID</td>
+              <td>CODE</td>
+              <td>TARGETSCHEMEID from
+                der1_CrossMapTargets_ICD9_INT_yyyymmdd.txt (which is the
+                same for all cross map targets), attached to the XM atom
+                for the Cross Map Set</td>
+            </tr>
+            <tr>
+              <td>TORSAB</td>
+              <td>CODE</td>
+              <td>The RSAB ("ICD9CM") corresponding to the
+                MAPSETSCHEMENAME from
+                der1_CrossMapSets_ICD9_INT_yyyymmdd.txt</td>
+            </tr>
+            <tr>
+              <td>TOVSAB</td>
+              <td>CODE</td>
+              <td>The VSAB ("ICD9CM_yyyy") corresponding to the
+                MAPSETSCHEMENAME and MAPSETSCHEMEVERSION from
+                der1_CrossMapSets_ICD9_INT_yyyymmdd.txt</td>
+            </tr>
+            <tr>
+              <td>UMLSREL</td>
+              <td>SCUI</td>
+              <td>The relationship type for MRREL.RRF, attached to the
+                atoms for each RELATIONSHIPTYPE value used in
+                sct1_Relationships_Core_INT_yyyymmdd.txt. Note that this
+                will normally be the same as the REL value used in
+                MRREL.RRF for this relationship, except that when the
+                UMLSREL value is given as "RT" or "NT", the REL value in
+                MRREL.RRF will be "RO" or "RN", respectively. <br/>
+              </td>
+            </tr>
+            <tr>
+              <td>UMLSRELA</td>
+              <td>SCUI</td>
+              <td>The RELA value used in MRREL.RRF, attached to the
+                atoms for each RELATIONSHIPTYPE value used in
+                sct1_Relationships_Core_INT_yyyymmdd.txt.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="rep_definitions" class="rep_block_level_two"> <a
+          name="definitions"></a><br/>
+        <h3>Definitions (MRDEF)</h3>
+        &nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
+        <table class="elements" border="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <th>ORIGIN</th>
+            </tr>
+            <tr>
+              <td>Taken from the
+                sct1_TextDefinitions_en-US_INT_yyyymmdd.txt file</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="rep_relationships" class="rep_block_level_two"> <a
+          name="relationships"></a><br/>
+        <h3>Relationships (MRREL)</h3>
+        &nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
+        <table class="elements" border="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <th>REL</th>
+              <th>RELA/Inverse RELA</th>
+              <th>ORIGIN</th>
+            </tr>
+            <tr>
+              <td>CHD<br/>
+                PAR</td>
+              <td>(blank)</td>
+              <td>Hierarchical relationships are derived from rows of
+                sct1_Relationships_Core_INT_yyyymmdd.txt where
+                RELATIONSHIPTYPE is 116680003 ("Is a"). </td>
+            </tr>
+            <tr>
+              <td>RB<br/>
+                RN<br/>
+                RO<br/>
+                SY</td>
+              <td>&nbsp;(many RELA values)</td>
+              <td>These are derived from rows of
+                sct1_Relationships_Core_INT_yyyymmdd.txt where
+                RELATIONSHIPTYPE is not 116680003 ("Is a"). The REL and
+                RELA values used for each RELATIONSHIPTYPE are specified
+                by UMLSREL and UMLSRELA attributes, respectively (see
+                above).</td>
+            </tr>
+            <tr>
+              <td>RQ</td>
+              <td>mapped_from, mapped_to</td>
+              <td>These are a representation of the simple cross maps in
+                der1_CrossMaps_ICD9_INT_yyyymmdd.txt where there is only
+                one ICD9CM code in the TARGETCODES field.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="mappings" class="rep_block_level_two"> <a
+          name="mappings"></a><br/>
+        <h3>Mappings (MRMAP)</h3>
+        &nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
+        <p>The Metathesaurus includes SNOMEDCT's mappings (an XM atom,
+          along with associated attributes and mappings) to ICD9CM.
+          These are taken from the
+          der1_CrossMapSets_ICD9_INT_yyyymmdd.txt,
+          der1_CrossMapTargets_ICD9_INT_yyyymmdd.txt, and
+          der1_CrossMaps_ICD9_INT_yyyymmdd.txt files.</p>
+      </div>
+    </div>
+  </body>
+</html>
