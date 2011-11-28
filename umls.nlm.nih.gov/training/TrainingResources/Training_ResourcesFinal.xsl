@@ -34,7 +34,7 @@
   <div class="limboxcontent">
         <xsl:for-each select="category">
           <xsl:sort select="@rank"/>
-          <h5><a id="remember-option-master" class="jig-ncbitoggler" data-jigconfig="remember: true"><xsl:value-of select = "@name"/>&#160;&#160;
+          <h5><a class="jig-ncbitoggler"><xsl:value-of select = "@name"/>&#160;&#160;
               <span class = "count"><xsl:value-of select = "count(resources/resource)"/>&#160;
                 <xsl:value-of select = "trainingresources:countResources(count(resources/resource))"/></span>
               </a>
