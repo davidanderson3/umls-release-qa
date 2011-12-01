@@ -34,13 +34,26 @@
                 <div class="limboxcontent">
                     <xsl:for-each select="category">
                         <xsl:sort select="@rank"/>
-                        <xsl:if test = "subcategory">
+                        <xsl:choose>
+                        <xsl:when test = "subcategory">
+                            <xsl:for-each select="subcategory">
                             <h5><a class="jig-ncbitoggler"><xsl:value-of select = "@name"/>&#160;&#160;
                                 <span class = "count"><xsl:value-of select = "count(resources/resource)"/>&#160;
                                     <xsl:value-of select = "trainingresources:countResources(count(resources/resource))"/></span>
-                            </a>
-                            </h5>          
+                            </a></h5>          
                             <xsl:apply-templates select="resources"/>
+                            </xsl:for-each>
+                        </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:for-each select="resource">
+                                    <h5><a class="jig-ncbitoggler"><xsl:value-of select = "@name"/>&#160;&#160;
+                                        <span class = "count"><xsl:value-of select = "count(resources/resource)"/>&#160;
+                                            <xsl:value-of select = "trainingresources:countResources(count(resources/resource))"/></span>
+                                    </a></h5>          
+                                    <xsl:apply-templates select="resources"/>
+                                </xsl:for-each>    
+                            </xsl:otherwise>
+                        </xsl:choose>
                     </xsl:for-each>
                 </div> <!--end of limboxcontent -->
             </div> <!--limbox smalllimbox leftlimbox -->
