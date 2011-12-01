@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <categories>
     <category name = "UMLS License" rank = "01">
-        <Subcategory>
         <resources>
             <resource current = "Y">
                <Project>UMLS</Project>               
@@ -24,10 +23,8 @@
               <UserFormat>Video Tutorial</UserFormat>
            </resource>
         </resources>
-        </Subcategory>
     </category>
     <category name = "Source Vocabularies" rank = "02">
-        <Subcategory>
         <resources>
             <resource current = "Y">
                 <Project>UMLS</Project>
@@ -59,11 +56,10 @@
                <Format>Webcast</Format>
                <UserFormat>Webinar</UserFormat>
            </resource> 
-        </resources>
-        </Subcategory>
+        </resources>        
     </category>
     <category name = "UMLS Terminology Services (UTS)" rank = "03">
-        <Subcategory>
+
             <resources>
                 <resource current = "Y">
                     <Project>UMLS</Project>
@@ -77,7 +73,7 @@
                 </resource>
                 <resource current = "Y">
                     <Project>UMLS</Project>
-                    <Subcategory></Subcategory>
+                    <subcategory></subcategory>
                     <Title>Understanding Search Results in the UTS Metathesaurus Browser</Title>
                     <URL>http://www.nlm.nih.gov/research/umls/user_education/quick_tours/metaBrowserResults.html</URL>
                     <Date>09/23/2011</Date>
@@ -86,11 +82,10 @@
                     <Format>Quick Tour</Format>
                     <UserFormat>Video Tutorial</UserFormat>
                 </resource>
-            </resources>
-        </Subcategory>
+            </resources>       
     </category>
     <category name = "Local Installation of UMLS (MetamorphoSys)" rank = "04">
-        <Subcategory name= "Vocabulary Subset Creation">
+        <subcategory name= "Vocabulary Subset Creation">
         <resources>
             <resource current = "Y">
                 <Project>UMLS</Project>
@@ -123,8 +118,8 @@
                 <UserFormat>Video Tutorial</UserFormat>
             </resource>
         </resources>
-        </Subcategory>
-        <Subcategory name = "Searching and Browsing Your Subset">
+        </subcategory>
+        <subcategory name = "Searching and Browsing Your Subset">
         <resources>
             <resource current = "Y">
                 <Project>UMLS</Project>
@@ -207,8 +202,8 @@
                 <UserFormat>Video Tutorial</UserFormat>
             </resource>
         </resources>
-        </Subcategory>
-        <Subcategory name = "Local Database Creation and Management">
+        </subcategory>
+        <subcategory name = "Local Database Creation and Management">
             <resources>
                 <resource current = "Y">
                     <Project>UMLS</Project>
@@ -241,10 +236,9 @@
                     <UserFormat>Webinar</UserFormat>
                 </resource>
             </resources>
-        </Subcategory>
+        </subcategory>
         </category>
     <category name = "MetaMap" rank = "05">
-        <Subcategory>
         <resources>
             <resource current = "Y">
                 <Project>UMLS</Project>
@@ -256,11 +250,9 @@
                 <Format>Webcast</Format>
                 <UserFormat>Webinar</UserFormat>
             </resource>
-        </resources>
-        </Subcategory>
+        </resources>        
     </category>
     <category name = "Terminology Mapping" rank = "06">
-        <Subcategory>
         <resources>
             <resource current = "N">
                 <Project>UMLS</Project>
@@ -273,10 +265,8 @@
                 <UserFormat>Webinar</UserFormat>
             </resource>
         </resources>
-        </Subcategory>
     </category>
     <category name = "RxNorm" rank = "07">
-        <Subcategory>
             <resources>
                 <resource current = "Y">
                     <Project>UMLS</Project>
@@ -308,11 +298,9 @@
                     <Format>Webcast</Format>
                     <UserFormat>Webinar</UserFormat>
                 </resource>
-            </resources>
-        </Subcategory>
+            </resources>       
     </category>
     <category name = "Semantic Network" rank = "08">
-        <Subcategory>
             <resources>
                 <resource current = "Y">
                     <Project>UMLS</Project>
@@ -324,11 +312,9 @@
                     <Format>Webcast</Format>
                     <UserFormat>Webinar</UserFormat>
                 </resource>
-            </resources>
-        </Subcategory>
+            </resources>       
     </category>
     <category name = "Applications Using the UMLS" rank = "09">
-        <Subcategory>
         <resources>
             <resource current = "Y">
             <Project>UMLS</Project>
@@ -340,11 +326,9 @@
             <Format>Webcast</Format>
             <UserFormat>Webinar</UserFormat>
             </resource>
-        </resources>
-        </Subcategory>
+        </resources>       
     </category>
     <category name = "SNOMED CT&#174;" rank = "10">
-        <Subcategory>
         <resources>
             <resource current = "Y">
                 <Project>SNOMEDCT</Project>
@@ -366,11 +350,9 @@
                 <Format>Webcast</Format>
                 <UserFormat>Webinar</UserFormat>
             </resource>
-        </resources>
-        </Subcategory>
+        </resources>       
     </category>
 <!--    <category name = "UMLS Overviews" rank = "00">
-        <Subcategory>
         <resources>
             <resource current = "Y">
                 <Project>UMLS</Project>
@@ -403,7 +385,6 @@
                 <UserFormat>Web page</UserFormat>
            </resource>
          </resources>
-         </Subcategory>
     </category> -->
 
 </categories>
