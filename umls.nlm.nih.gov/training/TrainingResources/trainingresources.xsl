@@ -35,19 +35,25 @@
                     <xsl:for-each select="category">
                         <xsl:sort select="@rank"/>
                             <h5><a class="jig-ncbitoggler"><xsl:value-of select = "@name"/>&#160;&#160;
-                                <span class = "count"><xsl:value-of select = "count(resources/resource)"/>&#160;
-                                    <xsl:value-of select = "trainingresources:countResources(count(resources/resource))"/></span>
-                            </a></h5>          
-                            <xsl:apply-templates select="resources"/>
-                    <xsl:if test = "subcategory">
-                        <xsl:for-each select="subcategory">
-                            <h5><a class="jig-ncbitoggler"><xsl:value-of select = "@name"/>&#160;&#160;
-                                <span class = "count"><xsl:value-of select = "count(resources/resource)"/>&#160;
-                                    <xsl:value-of select = "trainingresources:countResources(count(resources/resource))"/></span>
-                            </a></h5>
-                            <xsl:apply-templates select="resources"/>
-                        </xsl:for-each>
-                   </xsl:if></xsl:for-each>
+                                <span class = "count">
+                                    <xsl:choose>
+                                    <xsl:when test = "child::subcategories">
+                                    <xsl:value-of select = "count(subcategories/subcategory/resources/resource)"/>&#160;<xsl:value-of select = "trainingresources:countResources(count(subcategories/subcategory/resources/resource))"/>&#160;
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                    <xsl:value-of select = "count(resources/resource)"/>&#160;<xsl:value-of select = "trainingresources:countResources(count(resources/resource))"/>&#160;
+                                    </xsl:otherwise>
+                                    </xsl:choose>
+                                </span>
+                            </a>
+                            </h5>
+                            <xsl:if test = "child::subcategories">
+                                <div class = "sourcecontainer">
+                                 <xsl:apply-templates select = "subcategories"/>
+                                </div>
+                            </xsl:if>
+                            <xsl:apply-templates select = "resources"/>
+                    </xsl:for-each>
                 </div> <!--end of limboxcontent -->
             </div> <!--limbox smalllimbox leftlimbox -->
         </div>
@@ -56,6 +62,14 @@
     
     
     <!--resources area of document -->
+    <xsl:template match = "subcategories">
+      <xsl:for-each select = "subcategory">
+            
+            <h5><a class="jig-ncbitoggler"><xsl:value-of select = "@name"/>&#160;&#160;<span class = "count"><xsl:value-of select = "count(resources/resource)"/>&#160;<xsl:value-of select = "trainingresources:countResources(count(resources/resource))"/></span></a></h5>
+            <xsl:apply-templates select = "resources"/>
+      </xsl:for-each>
+    </xsl:template>
+            
     <xsl:template match = "resources">
         <div class = "sourcecontainer">
             <table summary = "Table UMLS Training Resources">

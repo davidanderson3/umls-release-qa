@@ -85,6 +85,7 @@
             </resources>       
     </category>
     <category name = "Local Installation of UMLS (MetamorphoSys)" rank = "04">
+      <subcategories>
         <subcategory name= "Vocabulary Subset Creation">
         <resources>
             <resource current = "Y">
@@ -236,8 +237,9 @@
                     <UserFormat>Webinar</UserFormat>
                 </resource>
             </resources>
-        </subcategory>
-        </category>
+        </subcategory>  
+      </subcategories>
+    </category>
     <category name = "MetaMap" rank = "05">
         <resources>
             <resource current = "Y">
