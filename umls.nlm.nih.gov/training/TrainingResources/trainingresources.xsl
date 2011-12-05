@@ -80,14 +80,13 @@
                 </tr>
                 <xsl:for-each select="resource">
                     <tr>
-                        <td width="60%"><a target="_blank" href = "{URL}"><xsl:value-of select="Title" />
+                        <td width="60%"><a target="_blank" href = "{URL}"><xsl:value-of select="Title" /></a>
                             <xsl:choose>
-                                    <xsl:when test="UserFormat[.='Webinar']">
-                                        (<xsl:value-of select="UserDate" />)   
-                                    </xsl:when>
+                                <xsl:when test="UserFormat[.='Webinar']">
+                                    (<xsl:value-of select="UserDate" />)   
+                                </xsl:when>
                             </xsl:choose>
-                        
-                            </a><span class="resourceruntime"><xsl:value-of select="Minutes[. !='']" /></span></td>
+                            <span class="resourceruntime"><xsl:value-of select="Minutes[. !='']" /></span></td>
                         <td width="20%"><span class="resourceruntime"><xsl:value-of select="Runtime[. !='']" /></span></td>
                         <td width="20%"><span class="resourceformat"><xsl:value-of select="UserFormat" /></span></td>            
                     </tr>     
