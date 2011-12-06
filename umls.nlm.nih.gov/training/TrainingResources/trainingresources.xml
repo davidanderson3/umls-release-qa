@@ -45,6 +45,7 @@
                <Runtime>35 min.</Runtime>
                <Format>Webcast</Format>
                <UserFormat>Webinar</UserFormat>
+               <Presenter>Stephanie Lipow</Presenter>
            </resource>
            <resource current = "Y">
                <Project>UMLS</Project>
@@ -55,6 +56,7 @@
                <Runtime>44 min.</Runtime>
                <Format>Webcast</Format>
                <UserFormat>Webinar</UserFormat>
+               <Presenter>Stephanie Lipow</Presenter>
            </resource> 
         </resources>        
     </category>
@@ -131,6 +133,7 @@
                 <Runtime>45 min.</Runtime>
                 <Format>Webcast</Format>
                 <UserFormat>Webinar</UserFormat>
+                <Presenter>Brian Carlsen</Presenter>
             </resource>
             <resource current = "Y">
                 <Project>UMLS</Project>
@@ -225,6 +228,7 @@
                     <Runtime>33 min.</Runtime>
                     <Format>Webcast</Format>
                     <UserFormat>Webinar</UserFormat>
+                    <Presenter>Brian Carlsen</Presenter>
                 </resource>
                 <resource current = "Y">
                     <Project>UMLS</Project>
@@ -235,6 +239,7 @@
                     <Runtime>83 min.</Runtime>
                     <Format>Webcast</Format>
                     <UserFormat>Webinar</UserFormat>
+                    <Presenter>Brian Carlsen and Suresh Srinivasan</Presenter>
                 </resource>
             </resources>
         </subcategory>  
@@ -251,6 +256,7 @@
                 <Runtime>18 min.</Runtime>
                 <Format>Webcast</Format>
                 <UserFormat>Webinar</UserFormat>
+                <Presenter>Dr. Alan Aronson</Presenter>
             </resource>
         </resources>        
     </category>
@@ -265,6 +271,7 @@
                 <Runtime>54 min.</Runtime>
                 <Format>Webcast</Format>
                 <UserFormat>Webinar</UserFormat>
+                <Presenter>Dr. Kin Wah Fung and Vivian Auld</Presenter>
             </resource>
         </resources>
     </category>
@@ -279,6 +286,7 @@
                     <Runtime>55 min.</Runtime>
                     <Format>Webcast</Format>
                     <UserFormat>Webinar</UserFormat>
+                    <Presenter>Dr. Stuart Nelson</Presenter>
                 </resource>
                 <resource current = "N">
                     <Project>UMLS</Project>
@@ -289,6 +297,7 @@
                     <Runtime>54 min.</Runtime>
                     <Format>Webcast</Format>
                     <UserFormat>Webinar</UserFormat>
+                    <Presenter>Dr. Stuart Nelson</Presenter>
                 </resource>
                 <resource current = "Y">
                     <Project>UMLS</Project>
@@ -299,6 +308,7 @@
                     <Runtime>36 min.</Runtime>
                     <Format>Webcast</Format>
                     <UserFormat>Webinar</UserFormat>
+                    <Presenter>Dr. Stuart Nelson</Presenter>
                 </resource>
             </resources>       
     </category>
@@ -313,6 +323,7 @@
                     <Runtime>59 min.</Runtime>
                     <Format>Webcast</Format>
                     <UserFormat>Webinar</UserFormat>
+                    <Presenter>Dr. Olivier Bodenreider</Presenter>
                 </resource>
             </resources>       
     </category>
@@ -327,6 +338,7 @@
             <Runtime>33 min.</Runtime>
             <Format>Webcast</Format>
             <UserFormat>Webinar</UserFormat>
+            <Presenter>Stephanie Dennis</Presenter>
             </resource>
         </resources>       
     </category>
@@ -341,6 +353,7 @@
                 <Runtime>59 min.</Runtime>
                 <Format>Webcast</Format>
                 <UserFormat>Webinar</UserFormat>
+                <Presenter>Brian Carlsen</Presenter>
             </resource>
             <resource current = "Y">
                 <Project>SNOMEDCT</Project>
@@ -351,10 +364,13 @@
                 <Runtime>59 min.</Runtime>
                 <Format>Webcast</Format>
                 <UserFormat>Webinar</UserFormat>
+                <Presenter>Brian Carlsen</Presenter>
             </resource>
         </resources>       
     </category>
-<!--    <category name = "UMLS Overviews" rank = "00">
+<!-- The following titles are current, but not in scope yet for the video training resources page. 
+    We may decide to incorporate these at a later date.   
+    <category name = "UMLS Overviews" rank = "00">
         <resources>
             <resource current = "Y">
                 <Project>UMLS</Project>
@@ -387,7 +403,61 @@
                 <UserFormat>Web page</UserFormat>
            </resource>
          </resources>
-    </category> -->
+    </category> 
+
+    The following titles are outdated, but we will keep them commented-out here for archival purposes
+    <category name = "UMLS Overviews" rank = "00">
+        <resources>
+            <resource current = "N">
+                <Project>UMLS</Project>
+                <Title>UMLS Web Site Changes</Title>
+                <URL>https://webmeeting.nih.gov/p65696976/</URL>
+                <Date>09/24/2009</Date>
+                <UserDate>09/2009</UserDate>
+                <Runtime></Runtime>
+                <Format>Webinar</Format>
+                <UserFormat>Webinar</UserFormat>
+                <Presenter>Rachel Kleinsorge</Presenter>
+            </resource>
+            <resource current = "N">
+                <Project>UMLS</Project>
+                <Title>UMLS Source Release Documentation</Title>
+                <URL>https://webmeeting.nih.gov/p79132408/</URL>
+                <Date>02/26/2009</Date>
+                <UserDate>02/2009</UserDate>
+                <Runtime></Runtime>
+                <Format>Webinar</Format>
+                <UserFormat>Webinar</UserFormat>
+                <Presenter>Rachel Kleinsorge</Presenter>
+            </resource>
+            <resource current = "N">
+                <Project>UMLS</Project>
+                <Title>The New Webservices Interface to the UMLSKS</Title>
+                <URL>https://webmeeting.nih.gov/p22639924/</URL>
+                <Date>01/11/2009</Date>
+                <UserDate>01/2008</UserDate>
+                <Runtime></Runtime>
+                <Format>Webinar</Format>
+                <UserFormat>Webinar</UserFormat>
+                <Presenter>Anantha Bangalore and Karen Thorn</Presenter>
+            </resource>
+            <resource current = "N">
+                <Project>UMLS</Project>
+                <Title>Getting started with the 2007AC UMLS DVD</Title>
+                <URL>https://webmeeting.nih.gov/p30025464/</URL>
+                <Date>12/14/2007</Date>
+                <UserDate>12/2007</UserDate>
+                <Runtime></Runtime>
+                <Format>Webinar</Format>
+                <UserFormat>Webinar</UserFormat>
+                <Presenter>Rachel Kleinsorge</Presenter>
+            </resource>
+       </resources>
+    </category>
+    
+
+
+-->
 
 </categories>
 
