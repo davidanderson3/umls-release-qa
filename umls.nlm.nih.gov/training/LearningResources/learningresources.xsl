@@ -82,7 +82,7 @@
                     <tr>
                         <td width="60%"><a target="_blank" href = "{URL}"><xsl:value-of select="Title" /></a>
                             <xsl:choose>
-                                <xsl:when test="UserFormat[.='Webinar']">
+                                <xsl:when test="UserFormat[.='Webcast']">
                                     (<xsl:value-of select="Date" />)   
                                 </xsl:when>
                             </xsl:choose>
