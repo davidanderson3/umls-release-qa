@@ -83,7 +83,7 @@
                         <td width="60%"><a target="_blank" href = "{URL}"><xsl:value-of select="Title" /></a>
                             <xsl:choose>
                                 <xsl:when test="UserFormat[.='Webinar']">
-                                    (<xsl:value-of select="UserDate" />)   
+                                    (<xsl:value-of select="Date" />)   
                                 </xsl:when>
                             </xsl:choose>
                             <span class="resourceruntime"><xsl:value-of select="Minutes[. !='']" /></span></td>
