@@ -88,7 +88,7 @@
                             </xsl:choose>
                             <span class="resourceruntime"><xsl:value-of select="Minutes[. !='']" /></span></td>
                         <td width="20%"><span class="resourceruntime"><xsl:value-of select="Runtime[. !='']" /></span></td>
-                        <td width="20%"><span class="resourceformat"><xsl:value-of select="UserFormat" /></span></td>            
+                        <td width="20%"><span class="resourceformat"><xsl:value-of select="Format" /></span></td>            
                     </tr>     
                 </xsl:for-each>
             </table>
