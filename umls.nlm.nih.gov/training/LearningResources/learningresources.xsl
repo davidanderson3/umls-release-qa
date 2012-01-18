@@ -1,5 +1,5 @@
 <xsl:stylesheet xmlns:xsl = "http://www.w3.org/1999/XSL/Transform" version = "2.0"
-    xmlns:trainingresources="http://www.nlm.nih.gov/research/umls/">
+    xmlns:learningresources="http://www.nlm.nih.gov/research/umls/user_education/">
     <xsl:output method = "xml" omit-xml-declaration = "yes" indent = "yes" use-character-maps="cm1" doctype-public = "-//W3C//DTD XHTML 1.0 Transitional//EN"  encoding="utf-8" />
     <xsl:character-map name="cm1">
         <xsl:output-character character="&#160;" string="&amp;nbsp;"/>
@@ -9,7 +9,7 @@
     </xsl:character-map>
     
     <!-- provides functionality for writing 'resource' vs. 'resources' during counting -->
-    <xsl:function name="trainingresources:countResources">
+    <xsl:function name="learningresources:countResources">
         <xsl:param name = "resourceCount"/>
         <xsl:choose>
             <xsl:when test = "$resourceCount gt 1">
@@ -26,7 +26,7 @@
     <xsl:template match = "categories">
         <div id="source-doc-wrapper">
             <div id="source-doc-intro">
-                <p>Click on a category to browse available UMLS video training resources.</p>
+                <p>Click on a category to browse available UMLS video learning resources.</p>
             </div> <!--end of source-doc-intro -->
             
             <div id= "expandcollapse" class="limbox smalllimbox leftlimbox">
@@ -38,10 +38,10 @@
                                 <span class = "count">
                                     <xsl:choose>
                                     <xsl:when test = "child::subcategories">
-                                    <xsl:value-of select = "count(subcategories/subcategory/resources/resource)"/>&#160;<xsl:value-of select = "trainingresources:countResources(count(subcategories/subcategory/resources/resource))"/>&#160;
+                                        <xsl:value-of select = "count(subcategories/subcategory/resources/resource)"/>&#160;<xsl:value-of select = "learningresources:countResources(count(subcategories/subcategory/resources/resource))"/>&#160;
                                     </xsl:when>
                                     <xsl:otherwise>
-                                    <xsl:value-of select = "count(resources/resource)"/>&#160;<xsl:value-of select = "trainingresources:countResources(count(resources/resource))"/>&#160;
+                                        <xsl:value-of select = "count(resources/resource)"/>&#160;<xsl:value-of select = "learningresources:countResources(count(resources/resource))"/>&#160;
                                     </xsl:otherwise>
                                     </xsl:choose>
                                 </span>
@@ -65,14 +65,18 @@
     <xsl:template match = "subcategories">
       <xsl:for-each select = "subcategory">
             
-            <h5><a class="jig-ncbitoggler"><xsl:value-of select = "@name"/>&#160;&#160;<span class = "count"><xsl:value-of select = "count(resources/resource)"/>&#160;<xsl:value-of select = "trainingresources:countResources(count(resources/resource))"/></span></a></h5>
+          <h5><a class="jig-ncbitoggler"><xsl:value-of select = "@name"/>&#160;&#160;<span class = "count">
+              <xsl:value-of select = "count(resources/resource)"/>&#160;
+              <xsl:value-of select = "learningresources:countResources(count(resources/resource))"/>
+          </span></a>
+          </h5>
             <xsl:apply-templates select = "resources"/>
       </xsl:for-each>
     </xsl:template>
             
     <xsl:template match = "resources">
         <div class = "sourcecontainer">
-            <table summary = "Table UMLS Training Resources">
+            <table summary = "Table UMLS Video Learning Resources">
                 <tr>
                     <th>Title</th>
                     <th>Runtime</th>
@@ -84,7 +88,7 @@
                             <xsl:choose>
                              <xsl:when test="Organization/externalcontentprovider[.='Y']">
                                  <xsl:value-of select="Title" />
-                                 <img src="/exit_arrow.png" alt="External Content"/>
+                                 <learningresources:img src="../images/exit_arrow.png" alt="External Content"/>
                              </xsl:when>
                              <xsl:otherwise>
                                  <xsl:value-of select="Title" />
