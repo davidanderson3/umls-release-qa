@@ -80,11 +80,18 @@
                 </tr>
                 <xsl:for-each select="resource">
                     <tr>
-                        <td width="60%"><a target="_blank" href = "{URL}"><xsl:value-of select="Title" /></a>
+                        <td width="60%"><a target="_blank" href = "{URL}">
                             <xsl:choose>
-                                <xsl:when test="Format[.='Webcast']">
-                                    (<xsl:value-of select="Date" />)   
-                                </xsl:when>
+                             <xsl:when test="Organization/externalcontentprovider[.='Y']">
+                                 <xsl:value-of select="Title" />
+                                 <img src="exit_arrow.png" alt="External Content"/>
+                             </xsl:when>
+                             <xsl:otherwise>
+                                 <xsl:value-of select="Title" />
+                             </xsl:otherwise>
+                            </xsl:choose></a>
+                            <xsl:choose>
+                                <xsl:when test="Format[.='Webcast']">(<xsl:value-of select="Date" />)</xsl:when>
                             </xsl:choose>
                             <span class="resourceruntime"><xsl:value-of select="Minutes[. !='']" /></span></td>
                         <td width="20%"><span class="resourceruntime"><xsl:value-of select="Runtime[. !='']" /></span></td>
