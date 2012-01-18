@@ -84,7 +84,7 @@
                             <xsl:choose>
                              <xsl:when test="Organization/externalcontentprovider[.='Y']">
                                  <xsl:value-of select="Title" />
-                                 <img src="exit_arrow.png" alt="External Content"/>
+                                 <img src="/exit_arrow.png" alt="External Content"/>
                              </xsl:when>
                              <xsl:otherwise>
                                  <xsl:value-of select="Title" />
