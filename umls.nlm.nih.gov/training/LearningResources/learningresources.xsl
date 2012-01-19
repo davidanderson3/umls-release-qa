@@ -88,7 +88,9 @@
                     <th>Format</th>
                 </tr>
                 <xsl:for-each select="resource">
-                    <xsl:sort select="Date" order="descending"/>
+                    <xsl:sort select="substring(Date,7,4)" order="descending"/> <!-- year sort -->
+                    <xsl:sort select="substring(Date,1,2)" order="descending"/> <!-- day sort -->
+                    <xsl:sort select="substring(Date,4,2)" order="descending"/> <!-- month sort -->
                     <tr>
                         <td width="60%">
                             <xsl:choose>
