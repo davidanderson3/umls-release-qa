@@ -27,7 +27,10 @@
     <xsl:template match = "categories">
         <div id="source-doc-wrapper">
             <div id="source-doc-intro">
-                <p>Click on a category to browse available UMLS video learning resources.</p>
+                <p>Click on a category to browse available UMLS video learning resources.<br/>
+                <img src="../images/exit_arrow.png" height="12" alt="external content icon" />
+                This icon indicates content from an external source.</p>
+                
             </div> <!--end of source-doc-intro -->
             
             <div id= "expandcollapse" class="limbox smalllimbox leftlimbox">
@@ -56,9 +59,6 @@
                             <xsl:apply-templates select = "resources"/>
                     </xsl:for-each>
                 </div> <!--end of limboxcontent -->
-                <div>
-                    <p><img src="../images/exit_arrow.png" alt="External Content" />This icon indicates content from an external source.</p>
-                </div>
             </div> <!--limbox smalllimbox leftlimbox -->
 
         </div>
@@ -89,16 +89,15 @@
                 </tr>
                 <xsl:for-each select="resource">
                     <tr>
-                        <td width="60%"><a target="_blank" href = "{URL}">
+                        <td width="60%">
                             <xsl:choose>
-                             <xsl:when test="Organization[@externalcontentprovider='Y']">
-                                 <img src="../images/exit_arrow.png" alt="External Content"/>
-                                 <xsl:value-of select="Title" />
+                             <xsl:when test="Organization[@externalcontentprovider='Y']">                                 
+                                 <a target="_blank" href = "{URL}"><xsl:value-of select="Title" /></a><img src="../images/exit_arrow.png" height="12" alt="external content icon"/>
                              </xsl:when>
                              <xsl:otherwise>
-                                 <xsl:value-of select="Title" />
+                                 <a target="_blank" href = "{URL}"><xsl:value-of select="Title" /></a>
                              </xsl:otherwise>
-                            </xsl:choose></a>
+                            </xsl:choose>
                             <xsl:choose>
                                 <xsl:when test="Format[.='Webcast']">&#160;(<xsl:value-of select="Date" />)</xsl:when>
                             </xsl:choose>
