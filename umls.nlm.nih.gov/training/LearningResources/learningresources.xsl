@@ -6,6 +6,7 @@
         <xsl:output-character character="&#233;" string="&amp;eacute;"/>
         <xsl:output-character character="&#177;" string="&amp;plusmn;"/>
         <xsl:output-character character="&#174;" string="&amp;reg;"/>
+        <xsl:output-character character="&#8730;" string="&amp;lowast;"/>
     </xsl:character-map>
     
     <!-- provides functionality for writing 'resource' vs. 'resources' during counting -->
@@ -55,7 +56,11 @@
                             <xsl:apply-templates select = "resources"/>
                     </xsl:for-each>
                 </div> <!--end of limboxcontent -->
+                <div>
+                    <p><img src="../images/exit_arrow.png" alt="External Content" />This icon indicates content from an external source.</p>
+                </div>
             </div> <!--limbox smalllimbox leftlimbox -->
+
         </div>
     </xsl:template><!--end categories area of document -->
     
@@ -86,16 +91,16 @@
                     <tr>
                         <td width="60%"><a target="_blank" href = "{URL}">
                             <xsl:choose>
-                             <xsl:when test="Organization/externalcontentprovider[.='Y']">
+                             <xsl:when test="Organization[@externalcontentprovider='Y']">
+                                 <img src="../images/exit_arrow.png" alt="External Content"/>
                                  <xsl:value-of select="Title" />
-                                 <learningresources:img src="../images/exit_arrow.png" alt="External Content"/>
                              </xsl:when>
                              <xsl:otherwise>
                                  <xsl:value-of select="Title" />
                              </xsl:otherwise>
                             </xsl:choose></a>
                             <xsl:choose>
-                                <xsl:when test="Format[.='Webcast']">(<xsl:value-of select="Date" />)</xsl:when>
+                                <xsl:when test="Format[.='Webcast']">&#160;(<xsl:value-of select="Date" />)</xsl:when>
                             </xsl:choose>
                             <span class="resourceruntime"><xsl:value-of select="Minutes[. !='']" /></span></td>
                         <td width="20%"><span class="resourceruntime"><xsl:value-of select="Runtime[. !='']" /></span></td>
@@ -103,9 +108,11 @@
                     </tr>     
                 </xsl:for-each>
             </table>
+            
         </div><!--end sourcecontainer -->
+
         
     </xsl:template> <!-- end resources area of document -->
     
-    
+ 
 </xsl:stylesheet>
