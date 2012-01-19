@@ -37,7 +37,7 @@
                 <a href = "#" class = "expand">Expand All</a>&#160;&#160;<a href = "#" class = "collapse">Collapse All</a>
                 <div class="limboxcontent">
                     <xsl:for-each select="category">
-                        <xsl:sort select="@rank"/>
+                        <xsl:sort select="@rank" order="ascending"/>
                             <h5><a class="jig-ncbitoggler"><xsl:value-of select = "@name"/>&#160;&#160;
                                 <span class = "count">
                                     <xsl:choose>
@@ -88,6 +88,7 @@
                     <th>Format</th>
                 </tr>
                 <xsl:for-each select="resource">
+                    <xsl:sort select="Date" order="descending"/>
                     <tr>
                         <td width="60%">
                             <xsl:choose>
