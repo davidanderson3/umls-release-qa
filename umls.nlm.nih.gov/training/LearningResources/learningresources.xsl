@@ -28,6 +28,7 @@
         <div id="source-doc-wrapper">
             <div id="source-doc-intro">
                 <p>Click on a category to browse available UMLS video learning resources.<br/>
+                    Please send suggestions for new UMLS tutorials or webinars to: <a target="_blank" href = "http://apps2.nlm.nih.gov/mainweb/siebel/nlm/index.cfm">UMLS Support (subject line: UMLS Tutorials)</a><br/>
                 <img src="../images/exit_arrow.png" height="12" alt="external content icon" />
                 This icon indicates content from an external source.</p>
                 
