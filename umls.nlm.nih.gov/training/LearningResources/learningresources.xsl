@@ -103,7 +103,7 @@
                              </xsl:otherwise>
                             </xsl:choose>
                             <xsl:choose>
-                                <xsl:when test="Format[.='Webcast']">&#160;(<xsl:value-of select="Date" />)</xsl:when>
+                                <xsl:when test="Format[.='Webinar']">&#160;(<xsl:value-of select="Date" />)</xsl:when>
                             </xsl:choose>
                             <span class="resourceruntime"><xsl:value-of select="Minutes[. !='']" /></span></td>
                         <td width="20%"><span class="resourceruntime"><xsl:value-of select="Runtime[. !='']" /></span></td>
