@@ -38,7 +38,7 @@ Representation</a> </li>
  href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
 <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
 <div id="general" class="rep_block_level_one">
-<p><b>VSAB:</b> MEDCIN3_2011_07_11</p>
+<p><b>VSAB:</b> MEDCIN3_2011_12_15</p>
 </div>
 <div id="rep_identifiers" class="rep_block_level_one">
 </div>
@@ -50,10 +50,10 @@ Representation</a> </li>
 
 The Metathesaurus uses the following four pipe-delimited MEDCIN files:
 <ul>
-  <li>UMLS_MEDCIN_CONCEPTS2011_07_11.TXT</li>
-  <li>UMLS_MEDCIN_DESCRIPTIONS2011_07_11.TXT</li>
-  <li>UMLS_MEDCIN_HIERARCHY2011_07_11.TXT</li>
-  <li>UMLS_MEDCIN_SNOMED2011_07_11.TXT</li>
+  <li>UMLS_MEDCIN_CONCEPTS2011-12-15.TXT</li>
+  <li>UMLS_MEDCIN_DESCRIPTIONS2011-12-15.TXT</li>
+  <li>UMLS_MEDCIN_HIERARCHY2011-12-15.TXT</li>
+  <li>UMLS_MEDCIN_SNOMED2011-12-15.TXT</li>
 </ul>
 </div>
 <div id="rep_identifers" class="rep_block_level_one">
@@ -79,12 +79,20 @@ Identifiers are assigned as follows:<br/>
     <tr>
       <td>FN</td>
       <td>An "FN" atom is created for each line of
-UMLS_MEDCIN_CONCEPTSyyyy-mm-dd.TXT, as follows:
+UMLS_MEDCIN_CONCEPTSyyyy-mm-dd.TXT, as follows. 
       <div style="margin: 4pt;">CODE = MEDCINID<br/>
 STR = CONCEPT_DESCRIPTION<br/>
 SCUI = MEDCINID</div>
       </td>
     </tr>
+     <tr>
+      <td>MTH_FN</td>
+      <td>An "MTH_FN" atom is created when the LVG algorithm is applied to the STR field. This data is added during Metathesaurus processing.
+      <div style="margin: 4pt;">CODE = MEDCINID<br/>
+STR = CONCEPT_DESCRIPTION<br/>
+SCUI = MEDCINID</div>
+      </td>
+    </tr> 
     <tr>
       <td>PT</td>
       <td>A "PT" atom is created for each line of
@@ -95,6 +103,14 @@ STR = DESCRIPTION<br/>
 SCUI = MEDCINID</div>
       </td>
     </tr>
+     <tr>
+      <td>MTH_PT</td>
+      <td>An "MTH_PT" atom is created when the LVG algorithm is applied to the STR field. This data is added during Metathesaurus processing.
+      <div style="margin: 4pt;">CODE = MEDCINID<br/>
+STR = DESCRIPTION<br/>
+SCUI = MEDCINID</div>
+      </td>
+    </tr> 
     <tr>
       <td>SY</td>
       <td>An "SY" atom is created for each line of
@@ -105,7 +121,14 @@ STR = DESCRIPTION<br/>
 SCUI = MEDCINID</div>
       </td>
     </tr>
-    <tr>
+     <tr>
+      <td>MTH_SY</td>
+      <td>An "MTH_SY" atom is created when the LVG algorithm is applied to the STR field. This data is added during Metathesaurus processing.
+      <div style="margin: 4pt;">CODE = MEDCINID<br/>
+STR = DESCRIPTION<br/>
+SCUI = MEDCINID</div>
+      </td>
+    </tr>     <tr>
       <td>XM</td>
       <td>One"XM"(cross mapping set) atom is generated, as follows:
       <div style="margin: 4pt;">CODE = "MTHU000001"<br/>
@@ -148,7 +171,6 @@ Metathesaurus source processing:<br/>
 <div style="margin-left: 40px;">FROMRSAB<br/>
 FROMVSAB<br/>
 MAPSETRSAB<br/>
-MAPSETTYPE<br/>
 MAPSETVERSION<br/>
 MAPSETVSAB<br/>
 MTH_MAPFROMCOMPLEXITY<br/>
@@ -192,12 +214,18 @@ the concept's parent. These two concepts are then linked by a pair of
       <td>RB<br/>
 RN<br/>
 RO<br/>
-SY</td>
+SY<br/>
       <td>&nbsp;(many RELA values)</td>
       <td>Relationships are created for the MEDCIN-to-SNOMEDCT mappings
 in UMLS_MEDCIN_SNOMEDyyyy-mm-dd.TXT. The "REL" and "RELA" are set
 corresponding to the "RELATIONSHIPTYPE" field.</td>
     </tr>
+    <tr>
+<td>SFO/LFO<br/>
+      <td>&nbsp; mth_plain_text_form_of/mth_has_plain_text_form</td>
+      <td>Connects the Metathesaurus created atom (MTH_*) with its original atom.</td>
+    </tr>
+    <tr>
   </tbody>
 </table>
 </div>
