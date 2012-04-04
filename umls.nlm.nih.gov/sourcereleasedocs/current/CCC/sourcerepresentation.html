@@ -25,6 +25,9 @@
             <li> <a href="sourcerepresentation.html" id="sourcerep">Source
 
 
+
+
+
                 Representation</a> </li>
             <li> <a href="metarepresentation.html">Metathesaurus
                 Representation</a> </li>
@@ -32,11 +35,9 @@
         </li>
       </ul>
     </div>
-    <!-- end tabbed navigation area --> <br>
-    <br>
-    <br>
-    <a name="top"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
-      <a href="#change_summary">Summary of Changes</a>, <a
+    <!-- end tabbed navigation area --> <a name="top"></a> <span
+      class="nav">Skip to: <a href="#general">Notes</a>, <a
+        href="#change_summary">Summary of Changes</a>, <a
         href="#file_summary">Summary of Source-Provided Files</a> <a
         href="#file_details">Source-Provided File Details</a></span> <a
       name="general"></a>
@@ -50,18 +51,14 @@
       <h3>Summary of Changes:</h3>
       &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
       <p>Changes from HHC2003 to CCC2_5: </p>
-      <li> Assigned "structural" termtypes (HT, PT) instead of
-        "semantic" termtypes (CO, DX, IV):
-        <ul>
-          Deleted TTYs: CO, DX, IV
-        </ul>
-        <ul>
-          New TTYs: PT, HT, MTH_HT
-        </ul>
-        <br>
-      </li>
-      <li>Separated diagnoses and interventions in hierarchy (required
-        new TTY, MTH_HT for "placeholder" atoms)</li>
+      Assigned "structural" termtypes (HT, PT) instead of "semantic"
+      termtypes (CO, DX, IV):
+      <ul>
+        <li> Deleted TTYs: CO, DX, IV </li>
+        <li> New TTYs: PT, HT, MTH_HT </li>
+      </ul>
+      Separated diagnoses and interventions in hierarchy (required new
+      TTY, MTH_HT for "placeholder" atoms)
     </div>
     <div id="rep_file_summary" class="rep_block_level_one"> <a
         name="file_summary"></a>
@@ -69,32 +66,32 @@
       &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
       <p>The CCC distribution includes the following files. This data,
         along with additional information can be accessed at
-        http://www.sabacare.com/<br>
+        http://www.sabacare.com/<br/>
       </p>
       <div class="rep_block_level_two">
         <!-- Make a table of each file that comes from the source   -->
-        CCC_Diagnoses_HL7_V2.5_21SEPT11.xlsx <br>
-        CCC_Interventions_HL7_V2.5_Version-A_21Sept11.xlsx <br>
-        CCC_Outcomes_HL7_V2.5_ 21Sept11.xlsx<br>
-        <br>
-        <br>
+        CCC_Diagnoses_HL7_V2.5_21SEPT11.xlsx <br/>
+        CCC_Interventions_HL7_V2.5_Version-A_21Sept11.xlsx <br/>
+        CCC_Outcomes_HL7_V2.5_ 21Sept11.xlsx<br/>
+        <br/>
+        <br/>
         These files were converted to text.&nbsp; Metathesaurus source
-        processing included some data and format clean up.<br>
-        <br>
+        processing included some data and format clean up.<br/>
+        <br/>
         Additional files of components and modifiers were created for
-        inclusion in the Metathesaurus.&nbsp; <br>
-        <b><br>
+        inclusion in the Metathesaurus.&nbsp; <br/>
+        <b><br/>
           Not included</b>:&nbsp; </div>
-      <br>
+      <br/>
       The "outcomes" file was not directly processed.&nbsp; The
       relationship between modifiers and diagnoses are used to indicate
-      an actual or expected outcome.<br>
+      an actual or expected outcome.<br/>
       <h3>Source-Provided Files: Details</h3>
       &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
-      <p>The following is a list of elements available for CCC:<br>
+      <p>The following is a list of elements available for CCC:<br/>
       </p>
-      Diagnoses:<br>
-      <br>
+      Diagnoses:<br/>
+      <br/>
       <div class="rep_block_level_two">
         <table class="elements" border="0" cellspacing="0">
           <tbody>
@@ -103,36 +100,35 @@
               <th>Representation</th>
             </tr>
             <tr>
-              <td>Component Letter<br>
+              <td>Component Letter<br/>
               </td>
               <td>Combined with "Diagnosis Code" to create MRCONSO.CODE
-                and MRCONSO.SCUI<br>
+                and MRCONSO.SCUI<br/>
               </td>
             </tr>
             <tr>
-              <td>Diagnosis Code<br>
+              <td>Diagnosis Code<br/>
               </td>
               <td>Combined with "Component Letter" to create
-                MRCONSO.CODE and MRCONSO.SCUI<br>
+                MRCONSO.CODE and MRCONSO.SCUI<br/>
               </td>
             </tr>
             <tr>
-              <td>Diagnosis Name<br>
+              <td>Diagnosis Name<br/>
               </td>
-              <td>MRCONSO.STR;&nbsp; TTY = PT<br>
+              <td>MRCONSO.STR;&nbsp; TTY = PT<br/>
               </td>
             </tr>
             <tr>
               <td>Diagnosis Definition/Description</td>
-              <td>MRDEF.DEF<br>
+              <td>MRDEF.DEF<br/>
               </td>
             </tr>
           </tbody>
         </table>
         <p> </p>
-        <p>
-          <br>
-          Interventions:<br>
+        <p> <br/>
+          Interventions:<br/>
         </p>
         <div class="rep_block_level_two">
           <table class="elements" border="0" cellspacing="0">
@@ -142,34 +138,34 @@
                 <th>Representation</th>
               </tr>
               <tr>
-                <td>Component Letter<br>
+                <td>Component Letter<br/>
                 </td>
                 <td>Combined with "Intervention Code" to create
-                  MRCONSO.CODE and MRCONSO.SCUI <br>
+                  MRCONSO.CODE and MRCONSO.SCUI <br/>
                 </td>
               </tr>
               <tr>
-                <td>Intervention Code<br>
+                <td>Intervention Code<br/>
                 </td>
                 <td>Combined with "Component Letter" to create
                   MRCONSO.CODE and MRCONSO.SCUI </td>
               </tr>
               <tr>
-                <td>Intervention Name<br>
+                <td>Intervention Name<br/>
                 </td>
-                <td>MRCONSO.STR;&nbsp; TTY = PT<br>
+                <td>MRCONSO.STR;&nbsp; TTY = PT<br/>
                 </td>
               </tr>
               <tr>
                 <td>Intervention Definition/Description</td>
-                <td>MRDEF.DEF<br>
+                <td>MRDEF.DEF<br/>
                 </td>
               </tr>
             </tbody>
           </table>
           <p> </p>
-          <p><br>
-            Components:&nbsp; <br>
+          <p><br/>
+            Components:&nbsp; <br/>
           </p>
           <div class="rep_block_level_two">
             <table class="elements" border="0" cellspacing="0">
@@ -179,28 +175,27 @@
                   <th>Representation</th>
                 </tr>
                 <tr>
-                  <td>Component Letter<br>
+                  <td>Component Letter<br/>
                   </td>
-                  <td>MRCONSO.CODE, MRCONSO.SCUI<br>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Component Name<br>
-                  </td>
-                  <td>MRCONSO.STR;&nbsp; TTY = HT<br>
+                  <td>MRCONSO.CODE, MRCONSO.SCUI<br/>
                   </td>
                 </tr>
                 <tr>
-                  <td>Component Definition/Description<br>
+                  <td>Component Name<br/>
+                  </td>
+                  <td>MRCONSO.STR;&nbsp; TTY = HT<br/>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Component Definition/Description<br/>
                   </td>
                   <td>MRDEF.DEF</td>
                 </tr>
               </tbody>
             </table>
             <p> </p>
-            <br>
-            <p>
-              Modifiers:<br>
+            <br/>
+            <p> Modifiers:<br/>
             </p>
             <div class="rep_block_level_two">
               <table class="elements" border="0" cellspacing="0">
@@ -210,15 +205,15 @@
                     <th>Representation</th>
                   </tr>
                   <tr>
-                    <td>Modifier Number<br>
+                    <td>Modifier Number or Letter<br/>
                     </td>
-                    <td>MRCONSO.CODE, MRCONSO.SCUI<br>
+                    <td>MRCONSO.CODE, MRCONSO.SCUI<br/>
                     </td>
                   </tr>
                   <tr>
-                    <td>Modifier Name<br>
+                    <td>Modifier Name<br/>
                     </td>
-                    <td>MRCONSO.STR;&nbsp; TTY = MP<br>
+                    <td>MRCONSO.STR;&nbsp; TTY = MP<br/>
                     </td>
                   </tr>
                   <tr>
@@ -228,39 +223,39 @@
                 </tbody>
               </table>
               <p> </p>
-              <p><br>
+              <p><br/>
               </p>
-              <p>Additional notes:<br>
+              <p>Additional notes:<br/>
               </p>
               <p>Two additional "placeholder" concepts are created
                 during Metathesaurus source processing to build the
                 hierarchy:</p>
-              <p>&nbsp;&nbsp;&nbsp; TTY = MTH_HT<br>
-                &nbsp;&nbsp;&nbsp; MRCONSO.STR:&nbsp; Interventions<br>
+              <p>&nbsp;&nbsp;&nbsp; TTY = MTH_HT<br/>
+                &nbsp;&nbsp;&nbsp; MRCONSO.STR:&nbsp; Interventions<br/>
                 &nbsp;&nbsp;&nbsp; MRCONSO.STR:&nbsp; Diagnoses
-                &nbsp;&nbsp; <br>
+                &nbsp;&nbsp; <br/>
               </p>
-              <p>Relationships are created between:<br>
+              <p>Relationships are created between:<br/>
                 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Diagnoses and
-                appropriate modifiers:&nbsp; <br>
+                appropriate modifiers:&nbsp; <br/>
                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp; REL=AQ;&nbsp;
                 RELA=actual_outcome_of/has_actual_outcome</p>
               <p>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; REL = AQ;&nbsp;
-                RELA = expected_outcome_of/has_expected_outcome<br>
+                RELA = expected_outcome_of/has_expected_outcome<br/>
               </p>
               <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Interventions and
-                appropriate modifiers:<br>
+                appropriate modifiers:<br/>
                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-                REL = AQ;&nbsp; RELA = modifies/modified_by<br>
+                REL = AQ;&nbsp; RELA = modifies/modified_by<br/>
               </p>
-              <p><br>
+              <p><br/>
               </p>
             </div>
           </div>
         </div>
-        <p><br>
+        <p><br/>
         </p>
       </div>
     </div>
