@@ -27,6 +27,7 @@
             <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
 
 
+
                 Representation</a> </li>
           </ul>
         </li>
@@ -69,10 +70,11 @@
       <h3>Summary of Changes:</h3>
       <p><b>Changes since LNC236<br/>
         </b></p>
-      <p>A.&nbsp; Changes to the LOINC data format:<br/>
-      </p>
       <p>Significant changes have been made to the LOINC data format,
-        including new subsources, new fields and deleted fields.&nbsp; <br/>
+        including new subsources, new fields and deleted fields.&nbsp;
+        In addition, changes have been made in Metathesaurus source
+        processing to make LOINC more consistent with the way that other
+        sources are processed.<br/>
       </p>
       <p>New subsources:<br/>
       </p>
@@ -122,7 +124,7 @@
       <br/>
       <ul>
         <li>One new TTY is created during Metathesaurus source
-          processing to create 7-bit forms of atoms:</li>
+          processing to create plain text forms of atoms:</li>
       </ul>
       &nbsp;<br/>
       <table class="elements">
@@ -188,7 +190,8 @@ href="file:///C:%5CDOCUME%7E1%5Clipows%5CLOCALS%7E1%5CTemp%5Cmsohtmlclip1%5C01%5
       New REL/RELA:<br/>
       <ul>
         <li>One new REL/RELA is created during Metathesaurus source
-          processing to connect original LOINC atoms to 7-bit forms:<br/>
+          processing to connect original LOINC atoms to plain text
+          forms:<br/>
         </li>
       </ul>
       <br/>
@@ -253,7 +256,7 @@ href="file:///C:%5CDOCUME%7E1%5Clipows%5CLOCALS%7E1%5CTemp%5Cmsohtmlclip1%5C01%5
       <br/>
       <ul>
         <li>Seven new attributes are created during Metathesaurus source
-          processing to create 7-bit forms:</li>
+          processing to create plain text forms:</li>
       </ul>
       <br/>
       <table class="elements">
@@ -827,8 +830,6 @@ table.MsoTableGrid
       "CHANGE_REASON_PUBLIC"<br/>
     </div>
     <br/>
-    Atoms:&nbsp; The first caret (^) character in LPN atom_names was
-    erroneously being removed.&nbsp; This problem has been fixed.<br/>
     <h4>Original Files:</h4>
     <p>The UMLS uses files publically available at <a
         href="http://www.loinc.org" target="_blank">www.loinc.org</a>,
