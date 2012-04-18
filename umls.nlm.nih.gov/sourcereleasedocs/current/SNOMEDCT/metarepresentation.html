@@ -27,6 +27,7 @@
             <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
 
 
+
                 Representation</a> </li>
           </ul>
         </li>
@@ -47,12 +48,16 @@
         combination of DESCRIPTIONTYPE=0 and DESCRIPTIONSTATUS other
         than 0 is not longer present in the data.&nbsp; This results in:<br/>
       </p>
-      <p>DROPPED TTY:&nbsp; OB<br/>
+      <p style="margin-left: 40px;">DROPPED TTY:&nbsp; OB<br/>
       </p>
       <p>In addition, a small number of issues in the
         sct1_ComponentHistory_Core_INT_20120131.txt resulted in a few
         entries missing from MRHIST.RRF.<br/>
       </p>
+      <p>Note:&nbsp; Although there have been no changes to
+        Metathesaurus source processing, this document has been updated
+        to correctly reflect the representation of ComponentHistory_Core
+        data in MRHIST.RRF. </p>
       <span style=""><span style="color: rgb(13, 13, 13);"></span></span>
       <p>In the future, the new SNOMEDCT RF2 format will be processed,
         and this document will be updated to reflect the changes.</p>
@@ -63,45 +68,49 @@
       The Metathesaurus SNOMEDCT data is taken from the following
       tab-delimited SNOMEDCT files, found in the specified folders:
       <ul>
-        <li>SnomedCT_INT_20120131/Terminology/Content:
+        <li>SnomedCT_Release_INT_20120131/RF1Release/Terminology/Content:
+
           <ul>
             <li>sct1_Concepts_Core_INT_20120131.txt</li>
             <li>sct1_Descriptions_en_INT_20120131.txt</li>
             <li>sct1_Relationships_Core_INT_20120131.txt</li>
           </ul>
         </li>
-        <li>SnomedCT_INT_20120131/Terminology/History:
+        <li>SnomedCT_Release_INT_20120131/RF1Release/Terminology/History:
+
           <ul>
             <li>sct1_ComponentHistory_Core_INT_20120131.txt</li>
             <li>sct1_References_Core_INT_20120131.txt</li>
           </ul>
         </li>
-        <li>SnomedCT_INT_20120131/CrossMaps/ICD9:
+        <li>SnomedCT_Release_INT_20120131/RF1Release/CrossMaps/ICD9:
           <ul>
             <li>der1_CrossMaps_ICD9_INT_20120131.txt</li>
             <li>der1_CrossMapSets_ICD9_INT_20120131.txt</li>
             <li>der1_CrossMapTargets_ICD9_INT_20120131.txt</li>
           </ul>
         </li>
-        <li>SnomedCT_INT_20120131/OtherResources/TextDefinitions:
+        <li>SnomedCT_Release_INT_20120131/RF1Release/OtherResources/TextDefinitions:
+
           <ul>
             <li>sct1_TextDefinitions_en-US_INT_20120131.txt</li>
           </ul>
         </li>
-        <li>SnomedCT_INT_20120131/Subsets/Language-en-US:
+        <li>SnomedCT_Release_INT_20120131/RF1Release/Subsets/Language-en-US:
+
           <ul>
             <li>der1_Subsets_en-US_INT_20120131.txt</li>
             <li>der1_SubsetMembers_en-US_INT_20120131.txt</li>
           </ul>
         </li>
-        <li>SnomedCT_INT_20120131/Subsets/Language-en-GB:
+        <li>SnomedCT_Release_INT_20120131/RF1Release/Subsets/Language-en-GB:
+
           <ul>
             <li>der1_Subsets_en-GB_INT_20120131.txt</li>
             <li>der1_SubsetMembers_en-GB_INT_20120131.txt</li>
           </ul>
         </li>
       </ul>
-
       <br/>
     </div>
     <div id="rep_identifers" class="rep_block_level_one">
@@ -699,6 +708,58 @@
         <h3>Mappings (MRHIST)</h3>
         &nbsp;&nbsp;<span class="nav">(return to <a
             href="metarepresentation.html#top">top</a></span>)<br/>
+        <br/>
+        All SNOMEDCT data is extracted from
+        sct1_ComponentHistory_Core_INT_yyyymmdd.txt:<br/>
+        <br/>
+        <table class="elements" border="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <td style="vertical-align: top;"><span style="font-weight:
+                  bold;">COLUMN</span><br/>
+              </td>
+              <td style="vertical-align: top;"><span style="font-weight:
+                  bold;">ORIGIN</span><br/>
+              </td>
+            </tr>
+            <tr>
+              <th style="font-weight: normal; text-align: left;">SOURCEUI</th>
+              <th style="text-align: left;"><span style="font-weight:
+                  normal;">COMPONENTID</span><br/>
+              </th>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">SVER<br/>
+              </td>
+              <td style="vertical-align: top;"><span style="font-weight:
+                  normal;">RELEASEVERSION</span></td>
+            </tr>
+            <tr>
+              <td>CHANGETYPE<br/>
+              </td>
+              <td><span style="font-weight: normal;">CHANGETYPE</span></td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">CHANGEKEY<br/>
+              </td>
+              <td style="vertical-align: top;">DESCRIPTIONSTATUS if
+                COMPONENTID is a DESCRIPTIONID<br/>
+                CONCEPTSTATUS if COMPONENTID is a CONCEPTID </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">CHANGEVAL<br/>
+              </td>
+              <td style="vertical-align: top;">STATUS<br/>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">REASON<br/>
+              </td>
+              <td style="vertical-align: top;">REASON<br/>
+              </td>
+            </tr>
+          </tbody>
+        </table>
         <br/>
         The Metathesaurus includes SNOMEDCT's history information,
         extracted from: <br/>
