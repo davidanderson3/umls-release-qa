@@ -26,6 +26,7 @@
                 Representation</a> </li>
             <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
 
+
                 Representation</a> </li>
           </ul>
         </li>
@@ -38,17 +39,20 @@
       <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
       <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
     <div id="general" class="rep_block_level_one">
-      <p><b>VSAB:</b> SNOMEDCT_2011_07_31</p>
+      <p><b>VSAB:</b> SNOMEDCT_2012_01_31</p>
     </div>
     <div id="rep_identifiers" class="rep_block_level_one">
       <h3>Summary of Changes</h3>
-      <p>There have been no changes to the SNOMEDCT format.&nbsp;&nbsp;
-        In Metathesaurus processing, the follwing changes have occurred
-        for 2011AB:<br/>
+      <p>There have been no changes to the SNOMEDCT format, however the
+        combination of DESCRIPTIONTYPE=0 and DESCRIPTIONSTATUS other
+        than 0 is not longer present in the data.&nbsp; This results in:<br/>
       </p>
-      <p style="margin-left: 40px;">Atoms:&nbsp; The first caret (^)
-        character in certain atom_names was erroneously being
-        removed.&nbsp; This problem has been fixed. </p>
+      <p>DROPPED TTY:&nbsp; OB<br/>
+      </p>
+      <p>In addition, a small number of issues in the
+        sct1_ComponentHistory_Core_INT_20120131.txt resulted in a few
+        entries missing from MRHIST.RRF.<br/>
+      </p>
       <span style=""><span style="color: rgb(13, 13, 13);"></span></span>
       <p>In the future, the new SNOMEDCT RF2 format will be processed,
         and this document will be updated to reflect the changes.</p>
@@ -690,7 +694,21 @@
           These are taken from the
           der1_CrossMapSets_ICD9_INT_yyyymmdd.txt,
           der1_CrossMapTargets_ICD9_INT_yyyymmdd.txt, and
-          der1_CrossMaps_ICD9_INT_yyyymmdd.txt files.</p>
+          der1_CrossMaps_ICD9_INT_yyyymmdd.txt files.<br/>
+        </p>
+        <p><big><span style="font-weight: bold;"><br/>
+            </span></big></p>
+        <h3>Mappings (MRHIST)</h3>
+        &nbsp;&nbsp;<span class="nav">(return to <a
+            href="metarepresentation.html#top">top</a></span>)<br/>
+        <br/>
+        The Metathesaurus includes SNOMEDCT's history information,
+        extracted from: <br/>
+        <p>sct1_ComponentHistory_Core_INT_yyyymmdd.txt<br/>
+          <br/>
+        </p>
+        <p><big><span style="font-weight: bold;"><br/>
+            </span></big></p>
       </div>
     </div>
   </body>
