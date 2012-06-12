@@ -1,0 +1,389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;
+      charset=ISO-8859-1">
+    <title></title>
+  </head>
+  <body>
+    <div class="section-4">
+      <ul id="menu">
+        <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
+        <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
+        <li id="nav-3"> <a href="sourcemetastats.html">Statistics and
+            sample
+            data</a>
+          <ul id="subnav-3">
+            <li> <a href="termtypes.html">Terms and term types</a> </li>
+            <li> <a href="attributes.html">Attributes</a> </li>
+            <li> <a href="relationships.html">Relationships</a> </li>
+            <li> <a href="semtypes.html">Semantic Types</a> </li>
+            <li> <a href="overlap.html">Source Overlap</a> </li>
+          </ul>
+        </li>
+        <li id="nav-4"> <a href="representation.html">Representation</a>
+          <ul id="subnav-4">
+            <li> <a href="sourcerepresentation.html">Source
+                Representation</a> </li>
+            <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
+                Representation</a> </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <a name="top"></a>
+    <span class="nav">Skip to: <a href="#atoms">Atoms</a>, <a
+        href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
+      <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+    <div id="general" class="rep_block_level_one">
+      <p><b>VSAB:</b> MEDLINEPLUS_20111228</p>
+      <div id="rep_identifiers" class="rep_block_level_one">
+        <h3>Summary of Changes:</h3>
+        MRCONSO.RRF:<br/>
+        <br/>
+        Removed atom "MedlinePlus Health Topics" (TTY = HT) .&nbsp; This
+        atom, which was created during Metathesaurus processing, was not
+        necessary since Local Topics are no longer released.<br
+          class="atl-forced-newline">
+        <br class="atl-forced-newline">
+        Changed TTY for&nbsp;"Groups" from PT to HT <br
+          class="atl-forced-newline">
+        <br class="atl-forced-newline">
+        Assigned SDUI to Groups (HTs)&nbsp; <br
+          class="atl-forced-newline">
+        <br/>
+      </div>
+      <div id="rep_files" class="rep_block_level_one">MRREL.RRF:&nbsp;&nbsp;
+        <br/>
+        <br/>
+        Relationships between MSH qualifiers and MEDLINEPLUS atoms were
+        incorrectly being labeled as RQ/mapped_from<br
+          class="atl-forced-newline">
+        <br class="atl-forced-newline">
+        New REL/RELA:<br class="atl-forced-newline">
+        <div style="margin-left: 40px;">RT/mapping_qualifier_of between
+          TQ and MEDLINEPLUS atom <br/>
+        </div>
+        <br/>
+        Dropped REL/RELA:&nbsp; <br/>
+        <div style="margin-left: 40px;">RQ/mapped_from between TQ and
+          MEDLINEPLUS atom <br class="atl-forced-newline">
+        </div>
+        <br/>
+        Corrected STYPE values:<br/>
+        <div style="margin-left: 40px;">STYPE1 and STYPE2 are now set to
+          SDUI for hierarchical (PAR/CHD/SIB) and other
+          relationships.&nbsp; Previously these were AUI &lt;--&gt; AUI
+          or AUI &lt;--&gt; CODE.<br/>
+          <br/>
+        </div>
+        Corrected relationship group assignments:&nbsp; <br/>
+        <div style="margin-left: 40px;">Many rels were being assigned
+          RG=1, but it should have been null.&nbsp; This resulted in
+          many rels being grouped together incorrectly.&nbsp; The RG
+          value has been changed to null as appropriate.<br/>
+        </div>
+        <br/>
+        <br/>
+        MRSAT.RRF<br/>
+        <br/>
+        Dropped ATN:<br/>
+        &nbsp;&nbsp;&nbsp; DateCreated:&nbsp; This ATN was replaced by
+        "DATE_CREATED" in META2011AA<br/>
+        <br/>
+        Change in MRSAT.STYPE:<br/>
+        <br/>
+        Attributes which previously had STYPE="CODE" now have
+        STYPE="SDUI":<br/>
+        &nbsp;&nbsp;&nbsp; DATE_CREATED<br/>
+        &nbsp;&nbsp;&nbsp; GROUP_URL<br/>
+        &nbsp;&nbsp;&nbsp; URL<br/>
+        <h3>Source Provided Files:</h3>
+        The UMLS uses MedlinePlus xml files downloaded from <a
+          href="http://www.nlm.nih.gov/mesh/filelist.html">http://www.nlm.nih.gov/medlineplus/xml.html</a><br/>
+        <br/>
+        For 2012AA, the files used were:<br/>
+        <ul>
+          <li>mplus_vocab_2011-12-28.xml</li>
+          <li>mplus_vocab_2011-01-08.xml</li>
+        </ul>
+      </div>
+      <div id="rep_identifers" class="rep_block_level_one">
+        <h3>Identifiers:</h3>
+        <br/>
+        <table class="elements" border="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <th> <br/>
+              </th>
+              <th>MedicalTopics</th>
+              <th>MedicalTopicGroups</th>
+            </tr>
+            <tr>
+              <td>CODE<br/>
+              </td>
+              <td>Value of &lt;MedicalTopic ID&gt; in
+                mplus_vocab_YYYY-MM-DD.xml<br/>
+              </td>
+              <td>Value of &lt;GroupID&gt; in
+                mplus_groups_YYYY-MM-DD.xml<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>SAUI<br/>
+              </td>
+              <td>Not applicable<br/>
+              </td>
+              <td>Not applicable<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>SCUI<br/>
+              </td>
+              <td>Not applicable<br/>
+              </td>
+              <td>Not applicable<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>SDUI<br/>
+              </td>
+              <td>Value of &lt;MedicalTopic ID&gt; in
+                mplus_vocab_YYYY-MM-DD.xml </td>
+              <td>Value of &lt;GroupID&gt; in
+                mplus_groups_YYYY-MM-DD.xml </td>
+            </tr>
+          </tbody>
+        </table>
+        <a name="atoms"></a>
+        <br/>
+        <div id="rep_termtypes" class="rep_block_level_two">
+          <h3>Atoms (MRCONSO):</h3>
+          &nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
+          <br/>
+          Notes:&nbsp;&nbsp; <br/>
+          <ul>
+            <li>Only English language records (langcode="English") are
+              processed
+              for the Metathesaurus.&nbsp; Spanish language records
+              (langcode="Spanish") are not included.</li>
+            <li>&nbsp;Even when duplicated, both ETs and SYs are
+              included for
+              complete representation of the source.<br/>
+            </li>
+          </ul>
+          <br/>
+          <table class="elements" border="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <th>Term Type</th>
+                <th>Description</th>
+                <th>Origin:&nbsp; XML tag<br/>
+                </th>
+                <td style="vertical-align: top;"><span
+                    style="font-weight: bold;">File(s)</span><br/>
+                </td>
+              </tr>
+              <tr>
+                <td>ET<br/>
+                </td>
+                <td>Entry term<br/>
+                </td>
+                <td>CODE = &lt;MedicalTopic ID&gt;<br/>
+                  STR = &lt;SeeRefName&gt;<br/>
+                  SDUI = &lt;MedicalTopic ID&gt; </td>
+                <td style="vertical-align: top;">mplus_vocab_YYYY-MM-DD.xml<br/>
+                </td>
+              </tr>
+              <tr>
+                <td>HT<br/>
+                </td>
+                <td>Hierarchical term<br/>
+                </td>
+                <td>CODE = &lt;GroupID&gt;<br/>
+                  STR = &lt;GroupName&gt;<br/>
+                  SDUI = &lt;GroupID&gt;&nbsp; <br/>
+                </td>
+                <td style="vertical-align: top;">mplus_groups_YYYY-MM-DD.xml
+                </td>
+              </tr>
+              <tr>
+                <td>PT<br/>
+                </td>
+                <td>Preferred term<br/>
+                </td>
+                <td colspan="1" rowspan="1">CODE = &lt;MedicalTopic
+                  ID&gt; <br/>
+                  STR = &lt;MedicalTopicName&gt;<br/>
+                  SDUI = &lt;MedicalTopic ID&gt;<br/>
+                </td>
+                <td style="vertical-align: top;">mplus_vocab_YYYY-MM-DD.xml<br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                </td>
+              </tr>
+              <tr>
+                <td>SY<br/>
+                </td>
+                <td>Synonym<br/>
+                </td>
+                <td>CODE = &lt;MedicalTopic ID&gt;<br/>
+                  STR = &lt;Synonym&gt;<br/>
+                  SDUI = &lt;MedicalTopic ID&gt;<br/>
+                </td>
+                <td style="vertical-align: top;">mplus_vocab_YYYY-MM-DD.xml<br/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="rep_attributes" class="rep_block_level_two">
+          <a name="attributes"></a><br/>
+          <h3>Attributes (MRSAT):</h3>
+          &nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
+          <br/>
+          <br/>
+          <table class="elements" border="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <th>Attribute Name</th>
+                <th>Origin: XML tag</th>
+                <th>File(s)</th>
+              </tr>
+              <tr>
+                <td>DATE_CREATED<br/>
+                </td>
+                <td>&lt;DateCreated&gt;<br/>
+                </td>
+                <td>mplus_vocab_YYYY-MM-DD.xml </td>
+              </tr>
+              <tr>
+                <td>GROUPURL<br/>
+                </td>
+                <td>&lt;GroupURL&gt;<br/>
+                </td>
+                <td>mplus_groups_YYYY-MM-DD.xml<br/>
+                </td>
+              </tr>
+              <tr>
+                <td>URL<br/>
+                </td>
+                <td>&lt;URL&gt;<br/>
+                </td>
+                <td>mplus_vocab_YYYY-MM-DD.xml </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="rep_definitions" class="rep_block_level_two">
+          <a name="definitions"></a><br/>
+          <h3>Definitions (MRDEF):</h3>
+          DEFINITIONs are created from the value of the
+          &lt;FullSummary&gt; tag in the
+          MedlinePlus data.<br/>
+          <br/>
+          &nbsp; <span class="nav">(return to <a href="#top">top</a></span>)<br/>
+          <br/>
+        </div>
+        <div id="rep_relationships" class="rep_block_level_two">Relationships
+          (MRREL):
+          &nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
+          <table class="elements" border="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <th>REL</th>
+                <th>RELA<br/>
+                  Inverse RELA</th>
+                <th>Origin</th>
+              </tr>
+              <tr>
+                <td>CHD<br/>
+                  PAR<br/>
+                  SIB</td>
+                <td>(no rela)</td>
+                <td valign="top">Hierarchy created from the
+                  &lt;GroupID&gt; tag
+                  values in
+                  mplus_vocab_YYYY-MM-DD.xml<br/>
+                </td>
+              </tr>
+              <tr>
+                <td>RO<br/>
+                </td>
+                <td>related_to<br/>
+                </td>
+                <td>Connect MedicalTopic SDUI to related SDUI<br/>
+                </td>
+              </tr>
+              <tr>
+                <td>RQ<br/>
+                </td>
+                <td>(no rela)<br/>
+                </td>
+                <td>Connect ET atoms to PT atoms </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">RQ<br/>
+                </td>
+                <td style="vertical-align: top;">mapped_from<br/>
+                  mapped_to<br/>
+                </td>
+                <td style="vertical-align: top;">Connect PT atoms to
+                  MeSH
+                  Descriptor (if present). Note: Because the combination
+                  of
+                  the Descriptor and Qualifier taken together represent
+                  the expressed
+                  relationship, the pair of rels are given a
+                  relationship group to
+                  link them together. </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">RO<br/>
+                </td>
+                <td style="vertical-align: top;">mapping_qualifier_of<br/>
+                  has_mapping_qualifier<br/>
+                </td>
+                <td style="vertical-align: top;">Connect PT atoms to
+                  MeSH
+                  Qualifier (if present). Note: Because the combination
+                  of
+                  the Descriptor and Qualifier taken together represent
+                  the expressed
+                  relationship, the pair of rels are given a
+                  relationship group to
+                  link them together. </td>
+              </tr>
+              <tr>
+                <td>SY</td>
+                <td>(no rela)<br/>
+                </td>
+                <td>Connect SY atoms to PT atoms<br/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="mappings" class="rep_block_level_two">
+          <a name="mappings"></a><br/>
+          <h3>Hierarchy (MRHIER):</h3>
+          &nbsp;&nbsp;<span class="nav">(return to <a
+              href="metarepresentation.html#top">top</a></span>)<a
+            name="mappings"></a><br/>
+          <br/>
+          The hierarchy is created by connecting a Medical Topic with
+          its Medical Topic Group using &lt;GroupID&gt; tag values in
+          mplus_vocab_YYYY-MM-DD.xml.&nbsp; <br/>
+          <br/>
+          <h3>Mappings (MRMAP):</h3>
+          &nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
+          <p>No mappings are represented for MedlinePlus.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
