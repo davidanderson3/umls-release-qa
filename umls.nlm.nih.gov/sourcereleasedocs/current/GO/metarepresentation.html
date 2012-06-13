@@ -27,6 +27,8 @@
             <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
 
 
+
+
                 Representation</a> </li>
           </ul>
         </li>
@@ -39,40 +41,25 @@
       <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
       <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
     <div id="general" class="rep_block_level_one">
-      <p><b>VSAB:</b> GO2011_06_01</p>
+      <p><b>VSAB:</b> GO2012_04_03</p>
       <div id="rep_identifiers" class="rep_block_level_one">
         <h3>Summary of Changes</h3>
-        <p>New tags: <br/>
+        <p>New RELAs:<br/>
+          results_in/result_of_regulation<br/>
         </p>
-        <p>1)&nbsp; disjoint_from:&nbsp; This tag was present in
-          previous versions of GO.&nbsp; Represented as an attribute,
-          ATN = "DISJOINT_FROM"<br/>
-          <br/>
-          2)&nbsp; intersection_of:&nbsp;&nbsp;&nbsp; This tag indicates
-          that this term is equivalent to the intersection of several
-          other terms. The value is either a term id, or a relationship
-          type id, a space, and a term id.&nbsp; <br/>
-          <br/>
+        <p> Some of these relationships are included in the obo file
+          with tag = "relationship";&nbsp; others have tag =
+          "intersection_of".&nbsp; All "intersection_of" relationships
+          from GO are represented using relationship groups in
+          MRREL.RRF.<br/>
         </p>
-        <div style="margin-left: 40px;">For example: <br/>
-          [Term]&nbsp; <br/>
-          id: GO:0045495 name: pole plasm&nbsp; <br/>
-          intersection_of: GO:0005737 ! cytoplasm&nbsp; <br/>
-          intersection_of: part_of CL:0000023 ! oocyte&nbsp; <br/>
-          <br/>
-          These definitions can be read as sentences, such as a pole
-          plasm is a cytoplasm that is part_of an oocyte&nbsp; <br/>
-        </div>
-        <p><br/>
-          Represented using relationship groups to link pairs (or
-          groups) of intersecting relationships <br/>
-        </p>
-        <p>The intersection_of tag introduces a new relationship,
-          occurs_in, which is represented with REL = "RO", RELA =
-          "ocurrs_in/has_occurrence"</p>
-        <p>3)&nbsp; creation_date:&nbsp; time stamp <br/>
-          Represented as an attribute, ATN = "DATE_CREATED" <br/>
-          <br/>
+        <p>In addition, the "occurs_in" relationship is now present with
+          tag = "relationship" in the obo file.&nbsp; Previously, it was
+          only present with tag = "intersection_of".&nbsp; Therefore, in
+          previous versions all relationships with RELA =
+          occurs_in/has_occurence had a relationship group value;&nbsp;
+          now, these relationships may or may not have a relationship
+          group value.<br/>
         </p>
       </div>
       <div id="rep_change_summary" class="rep_block_level_one">
@@ -85,9 +72,8 @@
         for tracking and consistency purposes, the UMLS uses an
         officially archived version. <br/>
         <br/>
-        The file used for 2011AB is:<br/>
-
-        <p>gene_ontology_edit.obo (2011_06_01)<br/>
+        The file used for 2012AB is:<br/>
+        <p>gene_ontology_edit.obo (2012_04_03)<br/>
         </p>
         In OBO, content is structured as tag-value pairs, with optional
         trailing modifiers.&nbsp; Tag-value pairs consist of a tag name,
@@ -423,8 +409,9 @@
                 <td style="vertical-align: top;">occurs_in<br/>
                   has_occurrence<br/>
                 </td>
-                <td style="vertical-align: top;">tag =
-                  "intersection_of"; relationship_type =
+                <td style="vertical-align: top;">tag = "relationship";
+                  value = "occurs_in"<br/>
+                  tag = "intersection_of"; relationship_type =
                   "occurs_in".&nbsp; A relationships group is used to
                   link pairs (or groups) of intersecting relationships.<br/>
                 </td>
@@ -466,6 +453,18 @@
                 <td style="vertical-align: top;">created from tag =
                   "replaced_by"<br/>
                 </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">RO<br/>
+                </td>
+                <td style="vertical-align: top;">results_in<br/>
+                  result_of_regulation<br/>
+                </td>
+                <td style="vertical-align: top;">tag = "relationship";
+                  value = "results_in"<br/>
+                  tag = "intersection_of"; relationship_type =
+                  "results_in".&nbsp; A relationships group is used to
+                  link pairs (or groups) of intersecting relationships.</td>
               </tr>
               <tr>
                 <td style="vertical-align: top;">SY<br/>

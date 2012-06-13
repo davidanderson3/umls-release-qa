@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="content-type" content="text/html;
       charset=ISO-8859-1">
-      <title></title>
+    <title></title>
   </head>
   <body>
     <div class="section-4">
@@ -11,8 +11,7 @@
         <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
         <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
         <li id="nav-3"> <a href="sourcemetastats.html">Statistics and
-            sample
-            data</a>
+            sample data</a>
           <ul id="subnav-3">
             <li> <a href="termtypes.html">Terms and term types</a> </li>
             <li> <a href="attributes.html">Attributes</a> </li>
@@ -24,6 +23,8 @@
         <li id="nav-4"> <a href="representation.html">Representation</a>
           <ul id="subnav-4">
             <li> <a href="sourcerepresentation.html" id="sourcerep">Source
+
+
                 Representation</a> </li>
             <li> <a href="metarepresentation.html">Metathesaurus
                 Representation</a> </li>
@@ -31,81 +32,56 @@
         </li>
       </ul>
     </div>
-    <!-- end tabbed navigation area -->
+    <!-- end tabbed navigation area --> <br/>
     <br/>
     <br/>
-    <br/>
-    <a name="top"></a>
-    <span class="nav">Skip to: <a href="#general">Notes</a>, <a
-        href="#change_summary">Summary of Changes</a>, <a
-        href="#file_summary">Summary
-        of
-        Source-Provided
-        Files</a> <a href="#file_details">Source-Provided
-        File Details</a></span>
-    <a name="general"></a>
+    <a name="top"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
+      <a href="#change_summary">Summary of Changes</a>, <a
+        href="#file_summary">Summary of Source-Provided Files</a> <a
+        href="#file_details">Source-Provided File Details</a></span> <a
+      name="general"></a>
     <div id="rep_general" class="rep_block_level_one">
       <h3>Notes</h3>
       GO is updated daily, however only the version from the first day
-      of the
-      month is archived (<a
+      of the month is archived (<a
         href="http://www.geneontology.org/ontology-archive/">http://www.geneontology.org/ontology-archive/</a>).&nbsp;
 For
 tracking
 and
 consistency
 purposes,
-      the UMLS uses an officially
-      archived version.<br/>
+
+
+      the UMLS uses an officially archived version.<br/>
       <br/>
       GO "terms" are analagous to the Metathesaurus idea of
-      "descriptors,"
-      i.e. a collection of closely related but not necessarily
-      synonymous
-      names.&nbsp; In the documentation below, the word "Term" is used
-      in the
-      the GO sense of the word in order to describe the original GO data
-      in
-      the language used by the source itself.<br/>
+      "descriptors," i.e. a collection of closely related but not
+      necessarily synonymous names.&nbsp; In the documentation below,
+      the word "Term" is used in the the GO sense of the word in order
+      to describe the original GO data in the language used by the
+      source itself.<br/>
     </div>
     <div id="rep_change_summary" class="rep_block_level_one">
       <h3>Summary of Changes:</h3>
       &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
-      <p>New tags: <br/>
+      <p>New RELAs:<br/>
+        results_in/result_of_regulation<br/>
       </p>
-      <p>1)&nbsp; disjoint_from:&nbsp; This tag was present in previous
-        versions of GO.&nbsp; Represented as an attribute, ATN =
-        "DISJOINT_FROM"<br/>
-        <br/>
-        2)&nbsp; intersection_of:&nbsp;&nbsp;&nbsp; This tag indicates
-        that this term is equivalent to the intersection of several
-        other terms. The value is either a term id, or a relationship
-        type id, a space, and a term id.&nbsp; <br/>
-        <br/>
+      <p> Some of these relationships are included in the obo file with
+        tag = "relationship";&nbsp; others have tag =
+        "intersection_of".&nbsp; All "intersection_of" relationships
+        from GO are represented using relationship groups in MRREL.RRF.<br/>
       </p>
-      <div style="margin-left: 40px;">For example: <br/>
-        [Term]&nbsp; <br/>
-        id: GO:0045495 name: pole plasm&nbsp; <br/>
-        intersection_of: GO:0005737 ! cytoplasm&nbsp; <br/>
-        intersection_of: part_of CL:0000023 ! oocyte&nbsp; <br/>
-        <br/>
-        These definitions can be read as sentences, such as a pole plasm
-        is a cytoplasm that is part_of an oocyte&nbsp; <br/>
-      </div>
-      <p><br/>
-        Represented using relationship groups to link pairs (or groups)
-        of intersecting relationships <br/>
-      </p>
-      <p>The intersection_of tag introduces a new relationship,
-        occurs_in, which is represented with REL = "RO", RELA =
-        "ocurrs_in/has_occurrence"</p>
-      <p>3)&nbsp; creation_date:&nbsp; time stamp <br/>
-        Represented as an attribute, ATN = "DATE_CREATED" </p>
-      <p>
-      </p>
+      In addition, the "occurs_in" relationship is now present with tag
+      = "relationship" in the obo file.&nbsp; Previously, it was only
+      present with tag = "intersection_of".&nbsp; Therefore, in previous
+      versions all relationships with RELA = occurs_in/has_occurence had
+      a relationship group value;&nbsp; now, these relationships may or
+      may not have a relationship group value.
+      <p> </p>
     </div>
-    <div id="rep_file_summary" class="rep_block_level_one">
-      <a name="file_summary"></a>
+    <div id="rep_file_summary" class="rep_block_level_one"> <a
+        name="file_summary"></a>
       <h3>Source-Provided Files: Summary</h3>
       &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
       <p>Data files in various formats and extensive documentation is
@@ -120,8 +96,8 @@ purposes,
               <th>Description</th>
             </tr>
             <tr>
-              <td class="file_field_name">http://www.geneontology.org/GO.format.obo-1_2.shtml<br/>
-              </td>
+              <td class="file_field_name">ene_ontology_edit.obo
+                (2012_04_03) </td>
               <td>OBO format documentation<br/>
               </td>
             </tr>
@@ -148,34 +124,27 @@ purposes,
         <br/>
         <p>Not included: <br/>
           * Certain fields and data elements may not be directly
-          processed
-          because they
-          contain redundant data.
-        </p>
+          processed because they contain redundant data. </p>
       </div>
     </div>
-    <div id="rep_file_details" class="rep_block_level_one">
-      <a name="file_details"></a>
+    <div id="rep_file_details" class="rep_block_level_one"> <a
+        name="file_details"></a>
       <h3>Source-Provided Files: Details</h3>
       &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
       <p>Details on format of input files and representation of source
-        data.
-        In OBO, content is structured as tag-value pairs, with optional
-        trailing modifiers.&nbsp; Tag-value pairs consist of a tag name,
-        an
-        unescaped colon, the tag value, and a newline.</p>
+        data. In OBO, content is structured as tag-value pairs, with
+        optional trailing modifiers.&nbsp; Tag-value pairs consist of a
+        tag name, an unescaped colon, the tag value, and a newline.</p>
       <p>Consult the GO OBO format documentation for additional details.</p>
-      <div class="rep_block_level_two">
-        <a name="file1"></a>
+      <div class="rep_block_level_two"> <a name="file1"></a>
         <h4 class="file_field_name">file:gene_ontology_edit.obo.&lt;YYYY-DD-MM&gt;</h4>
         &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
+
+
             Files</a></span>
         <h4 id="S.2.2.2"><span style="font-weight: normal;">For
-            inclusion in
-            the Metathesaurus, all tags in a [Term] Stanza, are
-            processed, as
-            described in the OBO
-            format documentation.</span></h4>
+            inclusion in the Metathesaurus, all tags in a [Term] Stanza,
+            are processed, as described in the OBO format documentation.</span></h4>
         Required tags:<br/>
         <br/>
         <table class="elements" border="0" cellspacing="0">
@@ -208,8 +177,7 @@ purposes,
               <td style="vertical-align: top;">namespace<br/>
               </td>
               <td style="vertical-align: top;">Ontology (domain)
-                name.&nbsp;
-                Valid values are:&nbsp; <br/>
+                name.&nbsp; Valid values are:&nbsp; <br/>
                 <div style="margin-left: 40px;">biological_process<br/>
                 </div>
                 <div style="margin-left: 40px;">cellular_component<br/>
@@ -227,14 +195,11 @@ purposes,
         </table>
         <br/>
         Optional tags:&nbsp; the following table lists only tags
-        actually
-        present in the data processed for inclusion in this version of
-        the
-        Metathesaurus. Tags are presented in the order in which they
-        appear in
-        a [Term] Stanza.&nbsp; For information on all optional OBO tags,
-        including deprecated tags, please consult the OBO format
-        documentation.<br/>
+        actually present in the data processed for inclusion in this
+        version of the Metathesaurus. Tags are presented in the order in
+        which they appear in a [Term] Stanza.&nbsp; For information on
+        all optional OBO tags, including deprecated tags, please consult
+        the OBO format documentation.<br/>
         <br/>
         <table class="elements" border="0" cellspacing="0">
           <tbody>
@@ -291,8 +256,8 @@ purposes,
               </td>
               <td style="vertical-align: top;">MRCONSO.STR<br/>
                 TTYs are assigned based on the value of the scope
-                identifier and the
-                presence or absence of the "is_obsolete" tag.<br/>
+                identifier and the presence or absence of the
+                "is_obsolete" tag.<br/>
                 <br/>
                 MRREL.REL<br/>
                 REL values are assigned based on the value of the scope
@@ -395,13 +360,11 @@ purposes,
                 </table>
                 <br/>
                 Optional dbxref lists included in synonym tags are
-                represented in
-                MRSAT.ATN = "REF" <br/>
+                represented in MRSAT.ATN = "REF" <br/>
                 <br/>
                 When present on "EXACT" synonyms, the modifier
-                "systematic_synonym" is
-                represented in MRSAT.ATN ="SYN_QUALIFIER,"&nbsp;
-                MRSAT.ATV="<span class="SpellE">systematic_synonym</span>"<br/>
+                "systematic_synonym" is represented in MRSAT.ATN
+                ="SYN_QUALIFIER,"&nbsp; MRSAT.ATV="<span class="SpellE">systematic_synonym</span>"<br/>
               </td>
             </tr>
             <tr>
@@ -420,22 +383,22 @@ purposes,
                 relationship between one term and another<br/>
               </td>
               <td style="vertical-align: top;">Used to create a
-                hierarchy,
-                represented in MRHIER.RRF and MRREL.RRF (REL = "PAR,"
-                "CHD," "SIB";
-                RELA = "isa")<br/>
+                hierarchy, represented in MRHIER.RRF and MRREL.RRF (REL
+                = "PAR," "CHD," "SIB"; RELA = "isa")<br/>
               </td>
             </tr>
             <tr>
               <td class="file_field_name">relationship<br/>
               </td>
               <td>Describes a relationship between one term and
-                another.&nbsp;
-                Valid values are:<br/>
-                <div style="margin-left: 40px;">negatively_regulates<br/>
+                another.&nbsp; Valid values are:<br/>
+                <div style="margin-left: 40px;">has_part<br/>
+                  negatively_regulates<br/>
+                  occurs_in<br/>
                   part_of<br/>
                   positively_regulates<br/>
                   regulates<br/>
+                  results_in<br/>
                 </div>
               </td>
               <td>MRREL.RELA<br/>
@@ -458,8 +421,7 @@ purposes,
               <td style="vertical-align: top;">replaced_by<br/>
               </td>
               <td style="vertical-align: top;">Gives a term which
-                replaces an
-                obsolete term<br/>
+                replaces an obsolete term<br/>
               </td>
               <td style="vertical-align: top;">MRREL.REL = "RO"<br/>
                 MRREL.RELA = "replaced_by/replaces"<br/>
@@ -469,9 +431,8 @@ purposes,
               <td style="vertical-align: top;">consider<br/>
               </td>
               <td style="vertical-align: top;">Gives a term which may be
-                an
-                appropriate substitute or an obsolete term, but requires
-                human review<br/>
+                an appropriate substitute or an obsolete term, but
+                requires human review<br/>
               </td>
               <td style="vertical-align: top;">MRREL.REL = "RO"<br/>
                 MRREL.RELA = "consider/consider_from"<br/>
