@@ -39,7 +39,7 @@ Representation</a> </li>
  href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
 <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
 <div id="general" class="rep_block_level_one">
-<p><b>VSAB:</b> NCBI2011_05_11<br/>
+<p><b>VSAB:</b> NCBI2012_04_16<br/>
 </p>
 <div id="rep_identifiers" class="rep_block_level_one">
 <h3>Summary of Changes</h3>
@@ -73,12 +73,8 @@ retained, depending on their hierarchical level.<br/>
 remove concepts with rank = "species" and the following words in the
 scientific name "uncultured," "clone," "unidentified," "uncultivated."<br/>
 <br/>
-Source Provided Files:
-The NCBI Taxonomy is acquired directly from the download site:&nbsp; <a
- href="ftp://ftp.ncbi.nih.gov/pub/taxonomy">ftp://ftp.ncbi.nih.gov/pub/taxonomy/</a><br/>
-<br/>
-For 2011AB, the taxdmp.zip file was acquired on May 11,
-2011.&nbsp;&nbsp; Files included in taxdmp.zip are:<br/>
+Source file: taxdmp.zip.<br/>
+Files included in taxdmp.zip are:<br/>
 <br/>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
@@ -252,17 +248,6 @@ SCUI = names.dmp.tax_id<br/>
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">UE<br/>
-      </td>
-      <td style="vertical-align: top;">Unique equivalent name<br/>
-      </td>
-      <td style="vertical-align: top;">CODE = names.dmp.tax_id<br/>
-STRING = names.dmp.unique_name<br/>
-SCUI = names.dmp.tax_id<br/>
-&nbsp;TTY = "UE" is assigned where "name class" = "equivalent name"<br/>
-      </td>
-    </tr>
-    <tr>
       <td>USN<br/>
       </td>
       <td style="vertical-align: top;">Unique scientific name<br/>
@@ -323,24 +308,6 @@ The ATV is the textual value of the "division id" from division.dmp<br/>
 species, etc.) <br/>
       </td>
       <td style="vertical-align: top;">nodes.dmp.rank<br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">UNIQ_UNPUBL_NAME<br/>
-      </td>
-      <td style="vertical-align: top;">Unique unpublished name<br/>
-      </td>
-      <td style="vertical-align: top;">names.dmp.unique_name where
-"name class" = "unpublished name" <br/>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">UNPUBL_NAME<br/>
-      </td>
-      <td style="vertical-align: top;">Unpublished name<br/>
-      </td>
-      <td style="vertical-align: top;">names.dmp.name_txt where "name
-class" = "unpublished name"<br/>
       </td>
     </tr>
   </tbody>

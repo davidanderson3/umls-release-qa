@@ -62,9 +62,7 @@
 <a name = "general"/>
 <div id = "rep_general" class = "rep_block_level_one">
 <h3>General Notes/Comments:</h3>
-<p>The Human Genome Organisation (HUGO), established in 1989, is an international organization whose primary ethos is to promote and sustain
-collaboration in the field of human genetics.</p>
-
+<p>The HUGO Gene Nomenclature Committee (HGNC) is an international organization whose primary ethos is to promote and sustain collaboration in the field of human genetics.</p>
 <p>Data is supplied in a single, tab-delimited, text file.
 </div>
 <div id = "rep_change_summary" class = "rep_block_level_one">
@@ -72,8 +70,11 @@ collaboration in the field of human genetics.</p>
 <h3>Summary of Changes</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)
 <table class = "elements" border = "0" cellspacing = "0">
 </table>
-<p>(1) The 'Aliases' and 'Name Aliases' fields were renamed 'Synonyms' and 'Name Synonyms', respectively.</p>
-<p>(2) Values in the 'Enzyme IDs' field no longer have the 'EC' prefix.</p>
+<p>1. The SAB has changed from HUGO to HGNC (HUGO Gene Nomenclature Committee).</p>
+<p>2. Prefix 'HGNC:' is now kept as part of the id (e.g., HGNC:20866).  Previously, it was stripped off.</p>
+<p>3. New data field = Gene Famliy Description. Mapped as ATN = GENE_FAM_DESC.</p>
+<p>4. New specialist database ids added:  HomeoDB, IncRNAdb, and Mamit-tRNAdb.</p>
+<p>5. Data field renamed:  Gene Family Name --> Gene Family Tag.</p>
 </div>
 
 <div id = "rep_file_summary" class = "rep_block_level_one">
@@ -91,7 +92,7 @@ collaboration in the field of human genetics.</p>
 
 <table class = "elements" border = "0" cellspacing = "0">
 <tr><th>File Name</th><th>Description</th></tr>
-<tr><td  class = "file_file_name">HUGO_2011_AllData_pl.txt</td><td>Complete source data in a text file with tab delimited fields.</td></tr>
+<tr><td  class = "file_file_name">hgnc_2012.txt</td><td>Complete source data in a text file with tab delimited fields.</td></tr>
 </table>
 <br/>
 
@@ -130,28 +131,30 @@ collaboration in the field of human genetics.</p>
 <tr><td  class = "file_field_name">22</td><td>Specialist Database IDs</td><td>Contains the ID within each specialist database</td><td>MRSAT.ATN=DB_XR_ID</td></tr>
 <tr><td  class = "file_field_name">23</td><td>Pubmed IDs</td><td>Identifier that links to published articles</td><td>MRSAT.ATN=PMID</td></tr>
 <tr><td  class = "file_field_name">24</td><td>RefSeqIDs</td><td>RefSeqIDs</td><td>MRSAT.ATN=REFSEQ_ID</td></tr>
-<tr><td  class = "file_field_name">25</td><td>Gene Family Name</td><td>Name of the family the gene has been assigned to</td><td>MRSAT.ATN=GENE_FAM</td></tr>
-<tr><td  class = "file_field_name">26</td><td>Record Type</td><td>valid values: Parent, Standard</td><td>MRSAT.ATN=RECORD_TYPE</td></tr>
-<tr><td  class = "file_field_name">27</td><td>Primary IDs</td><td>valid values: blank, hypen</td><td>MRSAT.ATN=PRIMARY_ID</td></tr>
-<tr><td  class = "file_field_name">28</td><td>Secondary IDs</td><td>numeric value</td><td>MRSAT.ATN=SECONDARY_ID</td></tr>
-<tr><td  class = "file_field_name">29</td><td>CCDS IDs</td><td>Consensus CDS (CCDS) project ID</td><td>MRSAT.ATN=CCDS_ID</td></tr>
-<tr><td  class = "file_field_name">30</td><td>VEGA IDs</td><td>VEGA ID</td><td>MRSAT.ATN=VEGA_ID</td></tr>
-<tr><td  class = "file_field_name">31</td><td>Locus Specific Databases</td><td>Contains links to databases pertinent to the gene</td><td>MRSAT.ATN=LOCUS_SPECIFIC_DB_XR</td></tr>
-<tr><td  class = "file_field_name">32</td><td>GDB ID (mapped data)</td><td>GDB ID (mapped data)</td><td>MRSAT.ATN=MAPPED_GDB_ID</td></tr>
-<tr><td  class = "file_field_name">33</td><td>Entrez Gene ID (mapped data)</td><td>Entrez Gene ID (mapped data supplied by NCBI)</td><td>MRSAT.ATN=MAPPED_ENTREZGENE_ID</td></tr>
-<tr><td  class = "file_field_name">34</td><td>OMIM ID (mapped data)</td><td>OMIM ID (mapped data supplied by NCBI)</td><td>MRSAT.ATN=OMIM_NUMBER</td></tr>
-<tr><td  class = "file_field_name">35</td><td>RefSeq (mapped data)</td><td>RefSeq (mapped data supplied by NCBI)</td><td>MRSAT.ATN=MAPPED_REFSEQ_ID</td></tr>
-<tr><td  class = "file_field_name">36</td><td>UniProt ID (mapped data)</td><td>UniProt ID (mapped data supplied by UniProt)</td><td>MRSAT.ATN=SWP</td></tr>
-<tr><td  class = "file_field_name">37</td><td>Ensembl Gene ID (mapped data)</td><td>Ensembl Gene ID (mapped data supplied by Ensembl)</td><td>MRSAT.ATN=MAPPED_ENSEMBLGENE_ID</td></tr>
-<tr><td  class = "file_field_name">38</td><td>UCSC (mapped data)</td><td>UCSC (mapped data supplied by UCSC)</td><td>MRSAT.ATN=UCSC_ID</td></tr>
-<tr><td  class = "file_field_name">39</td><td>Mouse Genome Database ID (mapped data)</td><td>Mouse Genome Database ID (mapped data supplied by MGI)</td><td>MRSAT.ATN=MAPPED_MGD_ID</td></tr>
-<tr><td  class = "file_field_name">40</td><td>Rat Genome Database ID (mapped data)</td><td>Rat Genome Database ID (mapped data supplied by RGD)</td><td>MRSAT.ATN=MAPPED_RGD_ID</td></tr>
+<tr><td  class = "file_field_name">25</td><td>Gene Family Tag</td><td>Name of the family the gene has been assigned to</td><td>MRSAT.ATN=GENE_FAM</td></tr>
+<tr><td  class = "file_field_name">26</td><td>Gene Family Description</td><td>Name given to a particular gene family.</td><td>MRSAT.ATN=GENE_FAM_DESC</td></tr>
+<tr><td  class = "file_field_name">27</td><td>Record Type</td><td>valid values: Parent, Standard</td><td>MRSAT.ATN=RECORD_TYPE</td></tr>
+<tr><td  class = "file_field_name">28</td><td>Primary IDs</td><td>valid values: blank, hypen</td><td>MRSAT.ATN=PRIMARY_ID</td></tr>
+<tr><td  class = "file_field_name">29</td><td>Secondary IDs</td><td>numeric value</td><td>MRSAT.ATN=SECONDARY_ID</td></tr>
+<tr><td  class = "file_field_name">30</td><td>CCDS IDs</td><td>Consensus CDS (CCDS) project ID</td><td>MRSAT.ATN=CCDS_ID</td></tr>
+<tr><td  class = "file_field_name">31</td><td>VEGA IDs</td><td>VEGA ID</td><td>MRSAT.ATN=VEGA_ID</td></tr>
+<tr><td  class = "file_field_name">32</td><td>Locus Specific Databases</td><td>Contains links to databases pertinent to the gene</td><td>MRSAT.ATN=LOCUS_SPECIFIC_DB_XR</td></tr>
+<tr><td  class = "file_field_name">33</td><td>GDB ID (mapped data)</td><td>GDB ID (mapped data)</td><td>MRSAT.ATN=MAPPED_GDB_ID</td></tr>
+<tr><td  class = "file_field_name">34</td><td>Entrez Gene ID (mapped data)</td><td>Entrez Gene ID (mapped data supplied by NCBI)</td><td>MRSAT.ATN=MAPPED_ENTREZGENE_ID</td></tr>
+<tr><td  class = "file_field_name">35</td><td>OMIM ID (mapped data)</td><td>OMIM ID (mapped data supplied by NCBI)</td><td>MRSAT.ATN=OMIM_NUMBER</td></tr>
+<tr><td  class = "file_field_name">36</td><td>RefSeq (mapped data)</td><td>RefSeq (mapped data supplied by NCBI)</td><td>MRSAT.ATN=MAPPED_REFSEQ_ID</td></tr>
+<tr><td  class = "file_field_name">37</td><td>UniProt ID (mapped data)</td><td>UniProt ID (mapped data supplied by UniProt)</td><td>MRSAT.ATN=SWP</td></tr>
+<tr><td  class = "file_field_name">38</td><td>Ensembl Gene ID (mapped data)</td><td>Ensembl Gene ID (mapped data supplied by Ensembl)</td><td>MRSAT.ATN=MAPPED_ENSEMBLGENE_ID</td></tr>
+<tr><td  class = "file_field_name">39</td><td>UCSC (mapped data)</td><td>UCSC (mapped data supplied by UCSC)</td><td>MRSAT.ATN=UCSC_ID</td></tr>
+<tr><td  class = "file_field_name">40</td><td>Mouse Genome Database ID (mapped data)</td><td>Mouse Genome Database ID (mapped data supplied by MGI)</td><td>MRSAT.ATN=MAPPED_MGD_ID</td></tr>
+<tr><td  class = "file_field_name">41</td><td>Rat Genome Database ID (mapped data)</td><td>Rat Genome Database ID (mapped data supplied by RGD)</td><td>MRSAT.ATN=MAPPED_RGD_ID</td></tr>
 </table>
 
 <p>(1) The following fields can contain multiple values in a comma delimited list: </p>
 Accession Numbers<br/>
 Enzyme ID<br/>
-Gene Family Name<br/>
+Gene Family Tag<br/>
+Gene Family Description<br/>
 Name Synonyms<br/>
 Previous Names<br/>
 Previous Symbols<br/>
@@ -160,5 +163,5 @@ RefSeq IDs<br/>
 Specialist Database ID<br/>
 Specialist Database Links<br/>
 Synonyms<br/>
-<p>(2) HUGO's mapped data is derived from external sources and is not subject to their checking and curation procedures.</p>
+<p>(2) HGNC's mapped data is derived from external sources and is not subject to their checking and curation procedures.</p>
 </div>
