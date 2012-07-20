@@ -1,0 +1,153 @@
+
+body{
+    
+font-family: Helvetica, verdana, sans-serif;    
+    
+}
+
+h2{
+    
+text-align:center; 
+}
+
+h4{
+ 
+color:#aa0000;   
+    
+}
+
+.rounded-content-block{
+-moz-border-radius: 5px 5px 0px 0px;
+-webkit-border-radius: 5px 5px 0px 0px;
+padding:2px 2px 2px 5px;
+margin-top:5px;
+
+
+}
+
+.description {
+
+max-width:70%;
+border-right:solid 1px blue;
+
+
+}
+
+.small {
+    font-size:small;
+}
+
+.medium {
+    
+    font-size:.8em;
+}
+
+
+
+.top {
+
+   
+border:solid 1px black;
+float:left; 
+}
+
+.intro{
+    
+max-width:60%;    
+float:left;
+}
+
+.featured {
+    
+max-width:30%;
+float:left;
+margin-left:15px;
+}
+
+.context {
+
+width:85%;
+float:left;
+margin-left:5px;
+border-bottom: solid 2px #acacac;
+border-right:solid 1px red;
+
+}
+
+.context-image{
+
+
+margin-right:5px;
+margin-top:15px;
+max-width:120px;
+min-width:120px;
+padding: 0 0 0 0px;
+float:left;
+
+}
+
+.caption {
+
+color:#254062;
+font-weight:bold;
+width:100%;
+
+
+}
+
+.terminology {
+
+width:95%;
+
+
+}
+
+.extensions, .mappings, .subsets, .apis, .valuesets {
+
+
+width:90%;
+margin-top:20px;
+
+}
+
+.extension, .mapping, .subset, .api, .valueset{
+
+
+width:90%;
+font-size:inherit !important;
+font-family:inherit !important;
+background-color:#e7eeeb;
+border:solid 1px #000;
+
+}
+
+
+.jig-ncbitoggler{
+    
+width:50%;
+font-size:.8em !important;
+font-family:inherit !important;
+}
+
+.jig-ncbitoggler a {
+    
+   outline:0;
+    
+}
+
+.logo {
+    
+float:left;
+margin-right:1%;
+
+}
+
+.footer {
+    
+font-size:85%;
+width:100%;
+float:left;
+margin-top:20px;
+
+}
+

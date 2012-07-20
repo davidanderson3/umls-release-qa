@@ -1,0 +1,230 @@
+<document>
+	<contexts>
+		<context name = "Patient-Specific Education Materials" id = "clinicalsummaries">
+			<image name = "doctor_and_patient_low_res.jpg" class = "context-image" alt = "image of doctor with patients in the background"/>
+			<resources>
+				<resource name = "MedlinePlus Connect" id = "medlineplusconnect" type = "application" logo = "medline_plus_logo_sm.jpg">
+					<description>
+						MedlinePlus Connect is a free service that allows health organizations and IT providers to link patient portals and electronic health record systems to &lt;a href = &quot;http://medlineplus.gov&quot; target = &quot;blank&quot;&gt;http://medlineplus.gov&lt;/a&gt;, the National Library of Medicine’s consumer health web site.
+						MedlinePlus Connect accepts requests for information on diagnoses (problems), medications, and lab tests, and returns related MedlinePlus information.
+						It is available as a Web application or a Web service.
+					</description>
+					<properties>
+						<property name = "Publisher" url = "http://www.nlm.nih.gov"  external = "n">National Library of Medicine</property>
+						<property name = "Access">Free for use</property>
+						<property name = "Web Resource" url = "http://medlineplus.gov/connect" external="n">MedlinePlus Connect Overview</property>
+						<property name = "Web Resource" url = "http://www.nlm.nih.gov/medlineplus/connect/technical.html" external="n">MedlinePlus Connect Technical Documentation</property>	
+					</properties>
+				</resource>
+			</resources>
+		</context>
+		<context name = "E-prescribing" id = "drugs">
+			<image name = "pills_low_res.jpg" class = "context-image" alt = "image of prescription drugs"/>
+			<resources>
+				<resource name = "RxNorm" id = "rxnorm" type = "terminology" logo = "nlm_logo_sm.jpg" >
+					<description>Proposed 2014 EHR certification criteria designate RxNorm as the vocabulary for medications. RxNorm, a standardized nomenclature for clinical drugs and drug delivery devices,
+						is produced by the National Library of Medicine (NLM). RxNorm provides normalized names for clinical drugs and links its names to many of the drug vocabularies commonly used in pharmacy management and drug interaction software, including those of First Databank, Micromedex, MediSpan, Gold Standard, and Multum.
+						By providing links between these vocabularies, RxNorm can mediate messages between systems not using the same software and vocabulary.
+					</description>
+					<properties>
+						<property name = "Publisher" url = "http://www.nlm.nih.gov/" external = "n">National Library of Medicine</property>
+						<property name = "Access">Free for use*</property>
+						<property name = "Web Resource" url = "http://www.nlm.nih.gov/research/umls/rxnorm/index.html" external = "n">RxNorm Files and Documentation</property>
+						<property name = "Web Resource" url = "http://www.nlm.nih.gov/research/umls/rxnorm/overview.html" external = "n">RxNorm Overview</property>
+						<property name = "Research" external = "n" url = "http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=meaningful use rxnorm AND (electronic health record*[tw] OR electronic health records[mh] OR electronic patient record* OR electronic medical record* OR electronic healthcare record* OR electronic health care record* OR personal health record* OR ehr[tw] OR ehrs[tw] OR phr[tw] OR phrs[tw] OR emr[tw] OR emrs[tw])">PubMed Citations related to RxNorm and Meaningful Use</property>
+					</properties>
+					<products>
+						<subsets>
+							<subset name = "RxNorm Current Prescribable Content" featured = "n">
+								<description>
+									The Current Prescribable Content (CPC) subset of RxNorm provides content from RxNorm for satisfying this requirement.
+									Each monthly release of the CPC subset contains the names and codes for those drugs that the NLM believes to be currently available on the US market.
+									This includes both National Drug Codes (NDCs) and RxNorm Concept Unique Identifiers (RxCUIs).
+									The CPC is limited to content produced or derived by the NLM, eliminating intellectual property considerations associated with using the full monthly RxNorm dataset.
+									&lt;br/&gt;
+									For information on discontinued/obsolete drugs, or to map RxNorm codes to and from codes from other drug information sources, a user will need to consult the full RxNorm dataset.
+								</description>
+								<properties>
+									<property name = "Publisher" url = "http://www.nlm.nih.gov/" external = "n">National Library of Medicine</property>
+									<property name = "Access">Free for use</property>
+									<property name = "Web Resource" url = "http://www.nlm.nih.gov/research/umls/rxnorm/docs/prescribe.html" external = "n">RxNorm CPC Files and Documentation</property>
+								</properties>
+							</subset>
+						</subsets>
+						<apis>
+							<api name = "RxNorm API" featured = "n">
+								<description>
+									There are two RxNorm APIs, SOAP/WSDL and RESTful, available to provide developers with functions for retrieving RxNorm data from the most current RxNorm data set.
+									Useful for mapping names and codes from RxNorm source vocabularies (First Databank, Multum, etc.), names from local formularies and NDC codes to RxNorm identifiers.
+									Can also help find the current status of RxNorm identifiers (active, retired, remapped).
+								</description>
+								<properties>
+									<property name = "Publisher" url = "http://www.nlm.nih.gov/research/umls/" external = "n">National Library of Medicine</property>
+									<property name = "Access">Free for use</property>
+									<property name = "Web Resource" url = "http://rxnav.nlm.nih.gov/RxNormAPI.html" external = "n"> RxNorm API (SOAP/WSDL) Documentation</property>
+									<property name = "Web Resource" url = "http://rxnav.nlm.nih.gov/RxNormRestAPI.html" external = "n">RxNorm API (RESTful) Documentation</property>
+								</properties>
+							</api>
+						</apis>
+					</products>
+				</resource>
+			</resources>
+		</context>
+		<context name = "Problems" id = "problemlists">
+			<image name = "doc_low_res.jpg" class = "context-image" alt = "image of doctor looking at a chest x-ray"/>
+			<resources>
+				<resource name = "SNOMED CT&#174; - Systematized Nomenclature of Medicine - Clinical Terminology &#174;" id = "snomedct" type = "terminology" logo = "ihtsdo_logo_sm.jpg">
+					<description>Proposed 2014 EHR certification criteria designate SNOMED CT for problems.  SNOMED CT is a comprehensive clinical terminology that is
+						freely available to US users through NLM.
+					</description>
+					<properties>
+						<property name = "Publisher" url = "http://www.ihtsdo.org"  external = "y">International Health Terminology Standards Development Organisation (IHTSDO)</property>
+						<property name = "Access">Free for use in IHTSDO member countries*</property>
+						<property name = "Web Resource" url = "http://www.nlm.nih.gov/research/umls/licensedcontent/snomedctfiles.html" external="n">SNOMED CT International Release Files</property>
+						<property name = "Web Resource" url = "https://uscrs.nlm.nih.gov/">US SNOMED CT Content Request System</property>
+						<property name = "Research" external = "n" url = "http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=meaningful use AND snomed AND (electronic health record*[tw] OR electronic health records[mh] OR electronic patient record* OR electronic medical record* OR electronic healthcare record* OR electronic health care record* OR personal health record* OR ehr[tw] OR ehrs[tw] OR phr[tw] OR phrs[tw] OR emr[tw] OR emrs[tw])">See PubMed Citations related to SNOMED CT and Meaningful Use</property>
+					</properties>
+					<products>
+						<extensions>
+							<extension name = "US Extension to SNOMED CT" id = "roa" published = "y" featured = "n">
+								<description>The US Extension to SNOMED CT provides a list of medical concepts that are relevant to US clinical use cases.
+									Content that is requested via the US SNOMED CT Content Request System may initially be placed in the US Extension, and eventually make it
+									into the SNOMED CT International Release, at which point it would be marked as 'inactive' in the US Extension.
+									The US Extension is updated twice per year, approximately one month after each update of the SNOMED CT International Release. </description>
+								<properties>
+									<property name = "Publisher" url = "http://www.nlm.nih.gov/" external = "n">National Library of Medicine</property>
+									<property name = "Access">Free for use*</property>
+									<property name = "Web Resource" url = "http://www.nlm.nih.gov/research/umls/Snomed/us_extension.html" external = "n">US Extension Files and Documentation</property>
+									<property name = "Web Resource" url = "https://uscrs.nlm.nih.gov/">US SNOMED CT Content Request System</property>
+								</properties>
+							</extension>
+						</extensions>
+						<subsets>   
+							<subset name = "CORE Problem List of SNOMED CT" id = "core" published = "y" featured = "n">
+								<description>The CORE (Clinical Observations Recording and Encoding) Problem List Subset identifies important clinical concepts in SNOMED CT that occur frequently in the problem list. It facilitates the use of SNOMED CT for clinical documentation at the summary level.</description>
+								<properties>
+									<property name = "Publisher" url = "http://www.nlm.nih.gov/" external = "n">National Library of Medicine</property>
+									<property name = "Access">Free for use*</property>
+									<property name = "Web Resource" url = "http://www.nlm.nih.gov/research/umls/Snomed/core_subset.html" external = "n">CORE Subset Files and Documentation</property>
+								</properties> 
+							</subset>
+							<subset name = "Convergent Medical Terminology Subsets" id = "core" published = "y" featured = "n">
+								<description>In September 2010, Kaiser Permanente donated their CMT content and tooling to the ITHSDO.  The CMT subset
+								is a set of over 75,000 clinician and patient-friendly medical concepts that are linked to US and international interoperability standards.
+								</description>
+								<properties>
+									<property name = "Publisher" url = "http://www.kp.org" external = "y">Kaiser Permanente</property>
+									<property name = "Access">Free for use*</property>
+									<property name = "Web Resource" url = "http://www.nlm.nih.gov/research/umls/Snomed/cmt.html" external = "n">CMT Files and Documentation</property>
+								</properties> 
+							</subset>
+							<subset name = "Nursing Problem List Subset of SNOMED CT" id = "core" published = "y" featured = "n">
+								<description>The main purpose of the Nursing Problem List Subset of SNOMED CT is to facilitate the use of SNOMED CT as the primary coding terminology for nursing problems used in care planning,
+									problem lists or other summary level clinical documentation.</description>
+								<properties>
+									<property name = "Publisher" url = "http://www.nlm.nih.gov" external = "n">National Library of Medicine</property>
+									<property name = "Access">Free for use*</property>
+									<property name = "Web Resource" url = "http://www.nlm.nih.gov/research/umls/Snomed/nursing_problemlist_subset.html" external = "n">Nursing Problem List Files and Documentation</property>
+								</properties> 
+							</subset>
+							<subset name = "SNOMED CT Route of Administration Subset" id = "core" published = "y" featured = "n">
+								<description>The Route of Administration subset of SNOMED CT is a listing of the current set of terms related to the location of administration for clinical therapeutics.
+								</description>
+								<properties>
+									<property name = "Publisher" url = "http://www.nlm.nih.gov" external = "n">National Library of Medicine</property>
+									<property name = "Access">Free for use*</property>
+									<property name = "Web Resource" url = "http://www.nlm.nih.gov/research/umls/Snomed/roa_subset.html" external = "n">Route of Administration Files and Documentation</property>
+								</properties> 
+							</subset>
+						</subsets>
+						<mappings>
+							<mapping name = "ICD-9-CM to SNOMED CT Map" id = "icd9cmsnomedct_map" published = "y" featured = "y">
+								<description>Mapping files (one-to-one and one-to-many) that provides a way to get clincial information encoded in ICD-9-CM migrated to SNOMED CT.</description>
+								<properties>
+									<property name = "Publisher" url  = "http://www.nlm.nih.gov/" external = "n">National Library of Medicine</property>
+									<property name = "Access">Free for use*</property>
+									<property name = "Web Resource" url = "http://www.nlm.nih.gov/research/umls/mapping_projects/icd9cm_to_snomedct.html" external = "n">SNOMED CT -> ICD-10-CM Mapping Files and Documentation</property>
+								</properties>
+							</mapping>
+							<mapping name = "SNOMED CT to ICD10-CM Map" id = "snomedticd10cm_map" published = "y" featured = "n">
+								<description>A rule-based map to support semi-automatic generation of ICD-10-CM codes from clinical data encoded in SNOMED CT.</description>
+								<properties>
+									<property name = "Publisher" url  = "http://www.nlm.nih.gov/" external = "n">National Library of Medicine</property>
+									<property name = "Access">Free for use*</property>
+									<property name = "Web Resource" url = "http://www.nlm.nih.gov/research/umls/mapping_projects/snomedct_to_icd10cm.html" external = "n">SNOMED CT -> ICD-10-CM Mapping Files and Documentation</property>
+								</properties>
+							</mapping>
+							<mapping name = "SNOMED CT to ICD9-CM Reimbursement Map" id = "snomedticd9cm_map" published = "y" featured = "n">
+								<description>This draft map consists of the 5,000 most commonly used SNOMED CT concepts from Kaiser Permanente and the University of Nebraska.
+								A more recent version of the map is also available out of the UMLS Metathesaurus (MAPSETCUI C3165219 in MRMAP/MRSMAP).</description>
+								<properties>
+									<property name = "Publisher" url = "http://www.nlm.nih.gov/" external = "n">National Library of Medicine</property>
+									<property name = "Access">Free for use*</property>
+									<property name = "Web Resource" url = "http://www.nlm.nih.gov/research/umls/mapping_projects/snomedct_to_icd9cm_reimburse.html" external = "n">SNOMED CT -> ICD-9-CM Mapping Files and Documentation</property>
+								</properties>
+							</mapping>
+						</mappings>
+					</products>
+				</resource>
+			</resources>
+		</context>
+		<context name = "Test Results" id = "labtestresultsreporting">
+			<image name = "petri_dish_low_res.jpg" class = "context-image" alt = "image of a hand holding a petri dish"/>
+			<resources>
+				<resource name = "LOINC&#174; - Logical Observation Identifiers Names and Codes" id = "loinc" type = "terminology" logo = "loinc_logo_sm.jpg">
+					<description>Proposed 2014 EHR certification criteria designate LOINC as the vocabulary for reporting lab test results. LOINC provides a universal set of codes in the domain of laboratory and other clinical observations.
+						LOINC can simplify integrating lab test results into an EHR system as structured data.</description>
+					<properties>
+						<property name = "Publisher" url = "http://loinc.org" external = "y">Regenstrief Institute</property>
+						<property name = "Access">Free for use.</property>
+						<property name = "Research" external = "n" url = "http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=meaningful use AND loinc AND (electronic health record*[tw] OR electronic health records[mh] OR electronic patient record* OR electronic medical record* OR electronic healthcare record* OR electronic health care record* OR personal health record* OR ehr[tw] OR ehrs[tw] OR phr[tw] OR phrs[tw] OR emr[tw] OR emrs[tw])">PubMed Citations related to LOINC and Meaningful Use</property>
+					</properties>
+					<products>
+						<subsets>
+							<subset name = "LOINC Top 300+ Lab Orders" featured = "n">
+								<description>This is a collection of the top 300+ most common universal laboratory order codes
+									for use by developers of order entry systems that deliver them in HL7 messages to laboratories, where they could be understood and fulfilled.
+									This value set is designed to cover greater than 95% of the test ordering volume in the US, and was developed with both empirical and consensus-driven approaches.
+									This list is referenced by the HITSP C80 Clinical Document and Messaging Terminology Construct in Table 2-96 "Laboratory Order Value Set" where it states that it "should be considered a minimum “starter” set" and "does not attempt to include all possible LOINC codes" or all possible lab orders.
+								</description>
+								<properties>
+									<property name = "Publisher" url = "http://www.loinc.org" external = "y">Regenstrief Institute</property>
+									<property name = "Access">Free for use</property>
+									<property name = "Web Resource" url = "http://loinc.org/downloads/usage/orders" external = "y">Top 300 Lab Orders (PDF, XLSX, XLS)</property>
+								</properties>
+							</subset>
+							<subset name = "LOINC Top 2000+ Lab Observations and Mapper's Guide" featured = "y">
+								<description>This is an empirically-based list of the most common LOINC result codes for laboratories, practices, researchers, and others who wish to map their laboratory test codes to universal LOINC codes.
+									Knowing that relatively few codes account for much of the result volume, we think that the Top 2000+ list will be an excellent starter set.
+									This list contains 2017 most commonly reported LOINC codes that represent about 98% of the test volume carried by three large organizations that mapped all of their laboratory tests to LOINC codes.
+									To jump start your mapping effort, check out the Mapper's Guide to the Top 2000+ Lab Tests. It contains a wealth of advice and guidance about which codes to choose for a given purpose. 
+								</description>
+								<properties>
+									<property name = "Publisher" url = "http://www.loinc.org" external = "y">Regenstrief Institute</property>
+									<property name = "Access">Free for use &#8224;</property>
+									<property name = "Web Resource" url = "http://loinc.org/downloads/usage/obs" external = "y">Top 2000+ Lab Observations (PDF, XLSX, CSV)</property>
+								</properties>
+							</subset>
+							<subset name = "LOINC Panels and Forms file" featured = "n">
+								<description>
+									This file is an export of a key subset of the Panels and Forms represented in LOINC.
+									The entire package of this key subset is currently available at &lt;a href = &quot;http://loinc.org/downloads/accessory-files&quot; target = &quot;_blank&quot;&gt;http://loinc.org/downloads/accessory-files&lt;/a&gt;,
+									in addition to separate packages for Laboratory panels, Clinical panels, Consumer Health panels, HEDIS panels, the HL7 Clinical Genetics panels, Newborn Screening panels, PhenX panels,
+									US Government panels (including the CMS survey instruments MDSv2, MDSv3, OASIS, and CARE), and Other Survey Instruments.
+									The hierarchical structure is represented in the file by the PARENT_ID, ID and SEQUENCE fields.
+									The root, or top level, records in the file are those records where the PARENT_ID = ID. The records are in a Microsoft Excel spreadsheet (compressed as a zip file) with separate worksheets (tabs) for the form structure, LOINC code details, and answer lists.
+								</description>
+								<properties>
+									<property name = "Publisher" url = "http://www.loinc.org" external = "y">Regenstrief Institute</property>
+									<property name = "Access">Free for use &#8224;</property>
+									<property name = "Web Resource" url = "http://loinc.org/downloads/accessory-files" external = "y">Panels and Forms Files/Documentation</property>
+								</properties>
+							</subset>
+						</subsets>
+					</products>
+				</resource>
+			</resources>
+		</context>
+	</contexts>
+
+</document>
