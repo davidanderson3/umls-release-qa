@@ -1,0 +1,1599 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;
+      charset=ISO-8859-1">
+    <title></title>
+  </head>
+  <body>
+    <div class="section-4">
+      <ul id="menu">
+        <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
+        <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
+        <li id="nav-3"> <a href="sourcemetastats.html">Statistics and
+            sample data</a>
+          <ul id="subnav-3">
+            <li> <a href="termtypes.html">Terms and term types</a> </li>
+            <li> <a href="attributes.html">Attributes</a> </li>
+            <li> <a href="relationships.html">Relationships</a> </li>
+            <li> <a href="semtypes.html">Semantic Types</a> </li>
+            <li> <a href="overlap.html">Source Overlap</a> </li>
+          </ul>
+        </li>
+        <li id="nav-4"> <a href="representation.html">Representation</a>
+          <ul id="subnav-4">
+            <li> <a href="sourcerepresentation.html">Source
+                Representation</a> </li>
+            <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
+
+
+
+
+
+
+                Representation</a> </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <a name="top"></a> <span class="nav">Skip to: <a href="#termtypes">Atoms</a>,
+      <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
+      <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+    <p><b>VSABs:</b></p>
+    <ul>
+      <li>LNC238</li>
+      <li>LNC238_BRADEN_1988</li>
+      <li>LNC238_CAM_2003</li>
+      <li>LNC238_FLACC_1997</li>
+      <li>LNC238_MDS20</li>
+      <li>LNC238_MDS30</li>
+      <li>LNC238_NEUROQOL_2001 (NOTE:&nbsp; This VSAB should be
+        LNC238_NEUROQOL_2010)<br/>
+      </li>
+      <li>LNC238_OASIS_2002</li>
+      <li>LNC238_OPTIMAL_2005<br class="atl-forced-newline">
+      </li>
+      <li>LNC238_PHQ_9_1999</li>
+      <li>LNC238_RHO_2008</li>
+      <li>LNC238_WHO_2006</li>
+    </ul>
+    <p><b>Notes:</b><br/>
+      In addition to the LNC SAB, LOINC includes nine subsources, which
+      are assigned by an algorithm using field 34
+      (EXTERNAL_COPYRIGHT_NOTICE), field 9 (CLASS) and field 7
+      (METHOD_TYP). The representation described below apply to elements
+      from all subsources. Due to licensing restrictions, concepts from
+      subsources TIMP (Test of Infant Motor Performance) and PROMIS
+      (Patient Reported Outcomes Measurement System survey) are not
+      included in Metathesaurus source processing.</p>
+    <div id="rep_change_summary" class="rep_block_level_one">
+      <h3>Summary of Changes:</h3>
+      <p><b>Changes since LNC236<br/>
+        </b></p>
+      <p>Significant changes have been made to the LOINC data format,
+        including new subsources, new fields and deleted fields.&nbsp;
+        In addition, changes have been made in Metathesaurus source
+        processing to make LOINC more consistent with the way that other
+        sources are processed.<br/>
+      </p>
+      <p>New subsources:<br/>
+      </p>
+      <ul>
+        <li>Two new subsources are included in LNC238:&nbsp;&nbsp;</li>
+      </ul>
+      <br/>
+      <table class="elements">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;"><span style="font-weight:
+                bold;">RSAB</span><br/>
+            </td>
+            <th>VSAB</th>
+            <td style="vertical-align: top;"><span style="font-weight:
+                bold;">Description</span><br/>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">LNC_NEUROQOL<br/>
+            </td>
+            <td>
+              <p style="font-family: Times New Roman,Times,serif;"
+                class="MsoNormal">LNC238_NEUROQOL_2001</p>
+              <p class="MsoNormal"><span style="FONT-FAMILY:
+                  'Calibri','sans-serif'"><span style="mso-spacerun:
+                    yes"></span></span></p>
+            </td>
+            <td style="vertical-align: top;">Quality of Life Outcomes in
+              Neurological Disorders (NeuroQol)<br/>
+              Note:&nbsp; The VSAB for this source should be
+              LNC238_NEUROQOL_2010;&nbsp; MRSAB.SVER should be 238_2010<br/>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">LNC_OPTIMAL<br/>
+            </td>
+            <td style="vertical-align: top;">LNC238_OPTIMAL_2005</td>
+            <td style="vertical-align: top;">Outpatient Physical Therapy
+              Improvement in Movement and Assessment Log (OPTIMAL)<br/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br/>
+      New TTY:<br/>
+      <br/>
+      <ul>
+        <li>One new TTY is created during Metathesaurus source
+          processing to create plain text forms of atoms:</li>
+      </ul>
+      &nbsp;<br/>
+      <table class="elements">
+        <tbody>
+          <tr>
+            <th style="font-weight: normal;"><span style="font-weight:
+                bold;">MRCONSO.TTY</span><br/>
+            </th>
+          </tr>
+          <tr>
+            <td class="file_field_name">MTH_LPN<br/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br/>
+      Deleted TTY:<br/>
+      <ul>
+        <li>Two TTYs are no longer created due to changes in the LOINC
+          format:&nbsp;&nbsp;&nbsp; </li>
+      </ul>
+      <br/>
+      <table class="elements">
+        <tbody>
+          <tr>
+            <th style="font-weight: normal;"><span style="font-weight:
+                bold;">Missing TTY</span><br/>
+            </th>
+            <td style="vertical-align: top;"><span style="font-weight:
+                bold;">Explanation</span><br/>
+            </td>
+          </tr>
+          <tr>
+            <td class="file_field_name">MTH_SN<br/>
+            </td>
+            <td style="vertical-align: top;">&nbsp;Field is no longer
+              included in the LOINC release
+              <table class="elements">
+                <tbody>
+                  <tr>
+                    <td style="vertical-align: top;">
+                      <link rel="File-List"
+href="file:///C:%5CDOCUME%7E1%5Clipows%5CLOCALS%7E1%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_filelist.xml">
+                      <link rel="themeData"
+href="file:///C:%5CDOCUME%7E1%5Clipows%5CLOCALS%7E1%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_themedata.thmx">
+                      <link rel="colorSchemeMapping"
+href="file:///C:%5CDOCUME%7E1%5Clipows%5CLOCALS%7E1%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_colorschememapping.xml">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">SN<br/>
+            </td>
+            <td style="vertical-align: top;">&nbsp;Field is no longer
+              included in the LOINC release</td>
+          </tr>
+        </tbody>
+      </table>
+      <br/>
+      New REL/RELA:<br/>
+      <ul>
+        <li>One new REL/RELA is created during Metathesaurus source
+          processing to connect original LOINC atoms to plain text
+          forms:<br/>
+        </li>
+      </ul>
+      <br/>
+      <table class="elements">
+        <tbody>
+          <tr>
+            <th style="font-weight: bold;">REL</th>
+            <td style="vertical-align: top;"><span style="font-weight:
+                bold;">RELA</span><br style="font-weight: bold;">
+              <span style="font-weight: bold;">Inverse RELA</span><br/>
+            </td>
+            <td style="vertical-align: top;"><span style="font-weight:
+                bold;">Description</span><br/>
+            </td>
+          </tr>
+          <tr>
+            <td class="file_field_name">SY</td>
+            <td style="vertical-align: top;">mth_has_plain_text_form<br/>
+              mth_plain_text_form_of<br/>
+            </td>
+            <td style="vertical-align: top;">Connects LPN with MTH_LPN<br/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br/>
+      New attributes:<br/>
+      <ul>
+        <li>One new field is included in LOINC 2.38</li>
+      </ul>
+      <table class="elements">
+        <tbody>
+          <tr>
+            <th style="font-weight: normal;">#</th>
+            <td style="vertical-align: top;"><span style="font-weight:
+                bold;">Field</span><br/>
+            </td>
+            <th>Description</th>
+            <td style="vertical-align: top;"><span style="font-weight:
+                bold;">Representation</span><br/>
+            </td>
+          </tr>
+          <tr>
+            <td class="file_field_name">57<br/>
+            </td>
+            <td style="vertical-align: top;">COMMON_ORDER_RANK<br/>
+            </td>
+            <td>
+              <p style="font-family: Times New Roman,Times,serif;"
+                class="MsoNormal">Ranking of approximately 300 common
+                orders performed by laboratories in USA</p>
+              <p class="MsoNormal"><span style="FONT-FAMILY:
+                  'Calibri','sans-serif'"><span style="mso-spacerun:
+                    yes"></span></span></p>
+            </td>
+            <td style="vertical-align: top;">MRSAT.ATN =
+              "COMMON_ORDER_RANK"<br/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br/>
+      <ul>
+        <li>Seven new attributes are created during Metathesaurus source
+          processing to create plain text forms:</li>
+      </ul>
+      <br/>
+      <table class="elements">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;"><span style="font-weight:
+                bold;">MRSAT.ATN</span><br/>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">MTH_COPYRIGHT<br/>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">MTH_LEA<br/>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">MTH_LFO<br/>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">MTH_LQT<br/>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">MTH_LRN2<br/>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">MTH_LSU<br/>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">MTH_SOS<br/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br/>
+      Deleted ATNs<br/>
+      <ul>
+        <li>Four ATNs are no longer created due to changes in the LOINC
+          format:</li>
+      </ul>
+      <table class="elements">
+        <tbody>
+          <tr>
+            <th style="font-weight: normal;"><span style="font-weight:
+                bold;">Missing ATN</span><br/>
+            </th>
+            <td style="vertical-align: top;"><span style="font-weight:
+                bold;">Explanation</span><br/>
+            </td>
+          </tr>
+          <tr>
+            <td class="file_field_name">DEFINITION_DESCRIPTION_HELP</td>
+            <td style="vertical-align: top;">Field is no longer included
+              in the LOINC release<br/>
+              <table class="elements">
+                <tbody>
+                  <tr>
+                    <td style="vertical-align: top;">
+                      <link rel="File-List"
+href="file:///C:%5CDOCUME%7E1%5Clipows%5CLOCALS%7E1%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_filelist.xml">
+                      <link rel="themeData"
+href="file:///C:%5CDOCUME%7E1%5Clipows%5CLOCALS%7E1%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_themedata.thmx">
+                      <link rel="colorSchemeMapping"
+href="file:///C:%5CDOCUME%7E1%5Clipows%5CLOCALS%7E1%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_colorschememapping.xml">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">INPC_PERCENTAGE<br/>
+            </td>
+            <td style="vertical-align: top;">Field is no longer included
+              in the LOINC release</td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">LRF<br/>
+            </td>
+            <td style="vertical-align: top;">&nbsp;Field is no longer
+              included in the LOINC release</td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">LSR<br/>
+            </td>
+            <td style="vertical-align: top;">&nbsp;Field is no longer
+              included in the LOINC release</td>
+          </tr>
+        </tbody>
+      </table>
+      <br/>
+      New Classes<br/>
+      <ul>
+        <li>Six new classes were added in LOINC 2.38<br/>
+        </li>
+      </ul>
+      <table class="elements">
+        <tbody>
+          <tr>
+            <th>Class</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td class="file_field_name">HRTRATE.PSTN.MOLEC<br/>
+            </td>
+            <td>Heart Rate Positional Molecular<br/>
+            </td>
+          </tr>
+          <tr>
+            <td class="file_field_name">NEMSIS</td>
+            <td>National EMS Information System<br/>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">PANEL.NEMSIS<br/>
+            </td>
+            <td style="vertical-align: top;">National EMS Information
+              System Panel </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">PANEL.SPEC<br/>
+            </td>
+            <td style="vertical-align: top;">Specimen set<br/>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">PANEL.SURVEY.CDC<br/>
+            </td>
+            <td style="vertical-align: top;">Centers for Disease Control
+              (CDC) set<br/>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">PANEL.SURVEY.NEUROQ<br/>
+            </td>
+            <td style="vertical-align: top;">Quality of Life Outcomes in
+              Neurological Disorders (NeuroQol) set<br/>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">PANEL.SURVEY.OPTIMAL<br/>
+            </td>
+            <td style="vertical-align: top;">Outpatient Physical Therapy
+              Improvement in Movement and Assessment Log (OPTIMAL) set<br/>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">PANEL.SURVEY.PHQ<br/>
+            </td>
+            <td style="vertical-align: top;">Patient Health
+              Questionnaire (PHQ) set<br/>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">PANEL.SURVEY.SAMHSA<br/>
+            </td>
+            <td style="vertical-align: top;">Substance Abuse and Mental
+              Health Services Administration (SAMHSA) set<br/>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">SURVEY.CDC<br/>
+            </td>
+            <td style="vertical-align: top;">Centers for Disease Control
+              (CDC) survey<br/>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">SURVEY.CERNER<br/>
+            </td>
+            <td style="vertical-align: top;">Cerner survey<br/>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">SURVEY.NEUROQ<br/>
+            </td>
+            <td style="vertical-align: top;">Quality of Life Outcomes in
+              Neurological Disorders (NeuroQol) survey<br/>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">SURVEY.OPTIMAL<br/>
+            </td>
+            <td style="vertical-align: top;">Outpatient Physical Therapy
+              Improvement in Movement and Assessment Log (OPTIMAL)
+              survey<br/>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">SURVEY.SAMHSA<br/>
+            </td>
+            <td style="vertical-align: top;">ubstance Abuse and Mental
+              Health Services Administration (SAMHSA) survey<br/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <span style="font-weight: bold;"><br/>
+    </span>
+    <meta http-equiv="Content-Type" content="text/html;
+      charset=ISO-8859-1">
+    <!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:TrackMoves/>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin-top:0in;
+	mso-para-margin-right:0in;
+	mso-para-margin-bottom:10.0pt;
+	mso-para-margin-left:0in;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;}
+table.MsoTableGrid
+	{mso-style-name:"Table Grid";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-priority:59;
+	mso-style-unhide:no;
+	border:solid windowtext 1.0pt;
+	mso-border-alt:solid windowtext .5pt;
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-border-insideh:.5pt solid windowtext;
+	mso-border-insidev:.5pt solid windowtext;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;}
+</style>
+<![endif]--><span style="font-weight: bold;"><br/>
+      Note:&nbsp; </span>Due to licensing restrictions, concepts from
+    subsources TIMP (Test of Infant Motor Performance) and PROMIS
+    (Patient Reported Outcomes Measurement System survey) are not
+    included in Metathesaurus source processing.<br/>
+    <br/>
+    <span style="font-weight: bold;"></span>
+    <h4>Original Files:</h4>
+    <p>The UMLS uses files publically available at <a
+        href="http://www.loinc.org" target="_blank">www.loinc.org</a>,
+      including: "LOINCDB.TXT" (compressed in "LOINC238.zip") and
+      "LOINC_V238_MULTI-AXIAL_HIERARCHY.CSV" (compressed in
+      "LOINC_V238_MULTI-AXIAL_HIERARCHY.ZIP"). In addition, the UMLS
+      receives two files to facilitate building the hierarchy. For 2.38,
+      these files were: "LOINC_PART_LINKS_V2-38_2011-12-20.txt" and
+      "LOINC_PARTS_V2-38_2011-12-20.txt" Additional information, such as
+      expansions of abbreviations, is extracted from LOINCManual.pdf. </p>
+    <div id="rep_identifiers" class="rep_block_level_one">
+      <h3>Overview</h3>
+      <h4>Identifiers</h4>
+      <p>LOINC Identifiers in the UMLS are generally based on field 1 of
+        LOINCDB.TXT (LOINC_NUM), or field 1 of LOINC_PARTS (L_PART_ID).
+        For some termtypes, the atom may be associated with multiple
+        LOINC entities. For example, a component may be a part of
+        multiple fully-specified names. In these cases, the atom (e.g. a
+        CN, or Official Component Name), is assigned an MTHU# during
+        Metathesaurus source processing. </p>
+      <ul>
+        <li>CODE:
+          <ul>
+            <li>For term types LC, LN, LO, MTH_LN, MTH_LO, OLC, OOSN,
+              OSN: the LOINC _NUM (field 1) from LOINCDB.TXT</li>
+            <li>For term types LPDN, LPN: the L_PART_ID (field 1) from
+              LOINC_PARTS_*.txt</li>
+            <li>For term types CN, MTH_CN, HC, HS, LS: an MTHU#,
+              assigned during Metathesaurus source processing.</li>
+          </ul>
+        </li>
+        <li>SAUI: Not Applicable</li>
+        <li>SCUI: Same as CODE for term types LC, LN, LO, LPDN, LPN,
+          MTH_LN, MTH_LO, OLC, OOSN, OSN<br/>
+        </li>
+        <li>SDUI: Not Applicable</li>
+      </ul>
+      <h4>Expansions</h4>
+      <p>Expanded forms of certain atoms are created during
+        Metathesaurus source processing by applying abbreviation
+        expansions extracted from the LOINC Manual. In these cases, the
+        expanded form is generally assigned the same identifier as its
+        original form. Expansions may also include converting patterns
+        such as "little e" or &#8220;super little b" to &#8220;e" or "^b"
+        respectively. </p>
+      <div id="rep_termtypes" class="rep_block_level_two"> <a
+          name="termtypes"></a><br/>
+        <h4>Atoms</h4>
+        &nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
+        <table class="elements" border="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <th>TTY</th>
+              <th>ORIGIN</th>
+            </tr>
+            <tr>
+              <td class="file_field_name">CN</td>
+              <td>Official component name:<br/>
+                CODE = MTHU#, assigned during Metathesaurus source
+                processing; same as CODE for respective MTH_CN as
+                applicable.<br/>
+                STR = LOINCDB.TXT field 2, subfield 1 (COMPONENT).</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">HC</td>
+              <td>Hierarchical class:<br/>
+                CODE = MTHU#, assigned during Metathesaurus source
+                processing (same as CODE for respective HS).<br/>
+                STR = expanded form of LOINCDB.TXT field 8 for CLASS or
+                expanded form of LOINCDB.TXT field 17 for CLASSTYPE.<br/>
+                An additional HC atom, &#8220;LOINCCLASSTYPES,&#8221; is added
+                during Metathesaurus source processing as a hierarchical
+                placeholder.<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">HS</td>
+              <td>Short or alternate version of hierarchical term:<br/>
+                CODE = MTHU#, assigned during Metathesaurus source
+                processing (same as CODE for respective HC).<br/>
+                STR = value of LOINCDB.TXT field 8 for CLASS, or value
+                of LOINCDB.TXT field 17 for CLASSTYPE.</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LC</td>
+              <td>Long common name:<br/>
+                CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br/>
+                STR = LOINCDB.TXT field 36 (LONG_COMMON_NAME)<br/>
+                TTY = LC is assigned if field 13 is not = "DEPRECATED"<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LN</td>
+              <td>Official fully-specified name:<br/>
+                CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br/>
+                STR = LOINCDB.TXT fields 2-7, concatenated with colons,
+                i.e. F2:F3:F4:F5:F6:F7<br/>
+                TTY = LN is assigned if field 13 is not = "DEPRECATED"<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LO</td>
+              <td>Obsolete official fully specified name:<br/>
+                CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br/>
+                STR = LOINCDB.TXT fields 2-7, concatenated with colons,
+                i.e. F2:F3:F4:F5:F6:F7<br/>
+                TTY = LO is assigned if field 13 = "DEPRECATED"<br/>
+                SUPPRESS = "O"<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LPDN</td>
+              <td>Parts display name:<br/>
+                CODE = LOINC_PARTS_*.txt field 1 (L_PART_ID)<br/>
+                STR = LOINC_PARTS_*.txt field 4 (DISPLAY_NAME)<br/>
+                LPDN atoms are only created for strings containing the
+                pattern &#8220;Allergen Mix.&#8221;</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LPN</td>
+              <td>Parts name:<br/>
+                CODE = LOINC_PARTS_*.txt field 1 (L_PART_ID)<br/>
+                STR = LOINC_PARTS_*.txt field 3 (NAME_CASE_INSENSITIVE)<br/>
+                An additional LPN, &#8220;LOINCPARTS,&#8221; is added during
+                Metathesaurus source processing as a hierarchical
+                placeholder.</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LS</td>
+              <td>Expanded system/sample type:<br/>
+                CODE = MTHU#, assigned during Metathesaurus source
+                processing<br/>
+                STR = Expanded form of LOINCDB.TXT field 5, subfield 1
+                (SYSTEM).</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MTH_CN</td>
+              <td>Component, with abbreviations expanded:<br/>
+                CODE = MTHU#, assigned during Metathesaurus source
+                processing; same as CODE for respective CN as
+                applicable.<br/>
+                STR = Expanded form of LOINCDB.TXT field 2, subfield 1
+                (COMPONENT).</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MTH_LN</td>
+              <td>Expanded obsolete fully specified name:<br/>
+                CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br/>
+                STR = Expanded form of LOINCDB.TXT fields 2-7,
+                concatenated with colons, i.e. F2:F3:F4:F5:F6:F7<br/>
+                TTY = MTH_LN is assigned if field 13 is not =
+                &#8220;DEPRECATED&#8221;</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MTH_LO</td>
+              <td>Expanded obsolete fully specified name:<br/>
+                CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br/>
+                STR = Expanded form of LOINCDB.TXT fields 2-7,
+                concatenated with colons, i.e. F2:F3:F4:F5:F6:F7<br/>
+                TTY = MTH_LO is assigned if field 13 = "DEPRECATED"<br/>
+                SUPPRESS = O<br/>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">MTH_LPN<br/>
+              </td>
+              <td style="vertical-align: top;">Parts name:<br/>
+                CODE = LOINC_PARTS_*.txt field 1 (L_PART_ID)<br/>
+                STR = Plain text form of LOINC_PARTS_*.txt field 3
+                (NAME_CASE_INSENSITIVE)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">OLC</td>
+              <td>Obsolete long common name:<br/>
+                CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br/>
+                STR = LOINCDB.TXT field 36 (LONG_COMMON_NAME)<br/>
+                TTY = OLC is assigned if field 13 = "DEPRECATED"<span
+                  style="font-size: 11pt; font-family:
+                  &quot;Calibri&quot;,&quot;sans-serif&quot;;"></span><br/>
+                SUPPRESS = O<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">OOSN</td>
+              <td>Obsolete official short name:<br/>
+                CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br/>
+                STR = LOINCDB.TXT field 30 (SHORTNAME)<br/>
+                TTY = OOSN is assigned if field 13 = "DEPRECATED"<br/>
+                SUPPRESS = "O"<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">OSN</td>
+              <td>Official short name:<br/>
+                CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br/>
+                STR = LOINCDB.TXT field 30 (SHORTNAME)<br/>
+                TTY OSN is assigned if field 13 is not = &#8220;DEPRECATED&#8221;</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">XM</td>
+              <td>Cross-mapping set:<br/>
+                This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="rep_attributes" class="rep_block_level_two"> <a
+          name="attributes"></a><br/>
+        <h4>Attributes</h4>
+        &nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
+        <table class="elements" border="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <th>ATN [Description]</th>
+              <th>Origin</th>
+            </tr>
+            <tr>
+              <td class="file_field_name">COPYRIGHT</td>
+              <td>LOINCDB.TXT field 34 (EXTERNAL_COPYRIGHT_NOTICE)</td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">CHANGE_REASON_PUBLIC<br/>
+              </td>
+              <td style="vertical-align: top;">LOINCDB.TXT field 45<br/>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">COMMON_TEST_RANK<br/>
+              </td>
+              <td style="vertical-align: top;">LOINCDB.TXT field 46<br/>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">COMMON_ORDER_RANK<br/>
+              </td>
+              <td style="vertical-align: top;">LOINCDB.TXT field 47<br/>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">CONSUMER_NAME<br/>
+              </td>
+              <td style="vertical-align: top;">LOINCDB.TXT field 15<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">CURATED_RANGE_AND_UNITS</td>
+              <td>LOINCDB.TXT field 39 (CURATED_RANGE_AND_UNITS)</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">DOCUMENT_SECTION</td>
+              <td>LOINCDB.TXT field 50</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">EXAMPLE_UCUM_UNITS</td>
+              <td>LOINCDB.TXT field 41<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">EXAMPLE_UNITS</td>
+              <td>LOINCDB.TXT field 34<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">FROMRSAB</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">FROMVSAB</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">HL7_FIELD_SUBFIELD_ID</td>
+              <td>LOINCDB.TXT field 33<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">HL7_V2_DATATYPE</td>
+              <td>LOINCDB.TXT field 37<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">HL7_V3_DATATYPE</td>
+              <td>LOINCDB.TXT field 38<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LCA [ACSSYM]</td>
+              <td>LOINCDB.TXT field 21 (ACSSYM)</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LCB [Chemical base name]</td>
+              <td>LOINCDB.TXT field 22 (BASE_NAME)</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LCD [CDISC common tests]</td>
+              <td>LOINCDB.TXT field 32 (CDISC_COMMON_TESTS)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LCL [Class]</td>
+              <td>LOINCDB.TXT field 8 (CLASS)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LCN [Classtype]</td>
+              <td>LOINCDB.TXT field 17 (CLASSTYPE)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LCS [Status]</td>
+              <td>LOINCDB.TXT field 13 (STATUS)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LCT [Change type]</td>
+              <td>LOINCDB.TXT field 11 (CHNG_TYPE)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LEA [Example answers]</td>
+              <td>LOINCDB.TXT field 20 (EXMPL_ANSWERS)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LFO [Formula]</td>
+              <td>LOINCDB.TXT field 18 (FORMULA)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LLR [Date last revised]</td>
+              <td>LOINCDB.TXT field 10 (DATE_LAST_CHANGED)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LMM [Molecular weights]</td>
+              <td>LOINCDB.TXT field 16 (MOLAR_MASS)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LMP [Map to code]</td>
+              <td>LOINCDB.TXT field 14 (MAP_TO)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LNC [NAACCR ID]</td>
+              <td>LOINCDB.TXT field 23 (NAACCR_ID)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LNE [Code table]</td>
+              <td>LOINCDB.TXT field 24 (CODE_TABLE)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LOINC_COMPONENT</td>
+              <td>LOINCDB.TXT field 2 (all subfields)</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LOINC_METHOD_TYP</td>
+              <td>LOINCDB.TXT field 7</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LOINC_PROPERTY</td>
+              <td>LOINCDB.TXT field 3</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LOINC_SCALE_TYP</td>
+              <td>LOINCDB.TXT field 6</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LOINC_SYSTEM</td>
+              <td>LOINCDB.TXT field 5</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LOINC_TIME_ASPECT</td>
+              <td>LOINCDB.TXT field 4</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LOR [Order/observation]</td>
+              <td>LOINCDB.TXT field 31 (ORDER_OBS)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LQS [Survey question source]</td>
+              <td>LOINCDB.TXT field 26 (SURVEY_QUEST_SRC)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LQT [Survey question text]</td>
+              <td>LOINCDB.TXT field 25 (SURVEY_QUEST_TXT)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LRN2 [Related names 2]</td>
+              <td>LOINCDB.TXT field 29 (RELATEDNAMES2)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LSP [Species]</td>
+              <td>LOINCDB.TXT field 19 (SPECIES)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LSU [Submitted units]</td>
+              <td>LOINCDB.TXT field 28 (SUBMITTED_UNITS)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LUR [Units required]</td>
+              <td>LOINCDB.TXT field 27 (UNITS_REQUIRED)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MAPSETRSAB</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MAPSETTYPE</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MAPSETVERSION</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MAPSETVSAB</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">MTH_COPYRIGHT<br/>
+              </td>
+              <td style="vertical-align: top;">Plain text version of
+                LOINCDB.TXT field 34 (EXTERNAL_COPYRIGHT_NOTICE)<br/>
+                This data is added during Metathesaurus source
+                processing<br/>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">MTH_LEA<br/>
+              </td>
+              <td style="vertical-align: top;">Plain text version of
+                LOINCDB.TXT field 20 (EXMPL_ANSWERS)<br/>
+                This data is added during Metathesaurus source
+                processing<br/>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">MTH_LFO<br/>
+              </td>
+              <td style="vertical-align: top;">Plain text version of
+                LOINCDB.TXT field 18 (FORMULA)<br/>
+                This data is added during Metathesaurus source
+                processing<br/>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">MTH_LQT<br/>
+              </td>
+              <td style="vertical-align: top;">Plain text version of
+                LOINCDB.TXT field 25 (SURVEY_QUEST_TXT)<br/>
+                This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">MTH_LRN2<br/>
+              </td>
+              <td style="vertical-align: top;">Plain text version of
+                LOINCDB.TXT field 29 (RELATEDNAMES2)<br/>
+                This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">MTH_LSU<br/>
+              </td>
+              <td style="vertical-align: top;">Plain text version of
+                LOINCDB.TXT field 28 (SUBMITTED_UNITS)<br/>
+                This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">MTH_SOS<br/>
+              </td>
+              <td style="vertical-align: top;">Plain text version of
+                LOINCDB.TXT field 12 (COMMENTS), LOINC_PARTS field 4
+                (DISPLAY_NAME)<br/>
+                This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MTH_MAPFROMCOMPLEXITY</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MTH_MAPFROMEXHAUSTIVE</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MTH_MAPSETCOMPLEXITY</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MTH_MAPTOCOMPLEXITY</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MTH_MAPTOEXHAUSTIVE</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">SOS</td>
+              <td>LOINCDB.TXT field 12 (COMMENTS)<br/>
+                LOINC_PARTS field 4 (DISPLAY_NAME)</td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">STATUS_REASON<br/>
+              </td>
+              <td style="vertical-align: top;">LOINCDB.TXT field 43<br/>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">STATUS_TEXT<br/>
+              </td>
+              <td style="vertical-align: top;">LOINCDB.TXT field 44<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">TORSAB</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">TOVSAB</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">XMAP</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">XMAPFROM</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">XMAPTO</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="rep_definitions" class="rep_block_level_two"> <a
+          name="definitions"></a><br/>
+        <h4>Definitions</h4>
+        &nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
+        <p>There are no text definitions for LOINC or LOINC subsources</p>
+      </div>
+      <div id="rep_relationships" class="rep_block_level_two"> <a
+          name="relationships"></a><br/>
+        <h4>Relationships</h4>
+        &nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
+        <table class="elements" border="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <th>REL</th>
+              <th>RELA<br/>
+                inverse_RELA</th>
+              <th>Origin</th>
+            </tr>
+            <tr>
+              <td>CHD<br/>
+                PAR<br/>
+                SIB</td>
+              <td><br/>
+              </td>
+              <td>The hierarchy is extracted from:
+                <ul>
+                  <li>LOINCDB.txt, field 8 (CLASS) and field 23
+                    (CLASSTYPE)</li>
+                  <li>LOINC_V236_MULTI-AXIAL_HIERARCHY.CSV</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>analyzed_by<br/>
+                analyzes</td>
+              <td>Connects LS to LN or LO</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>associated_with</td>
+              <td>Connects CN to LO or MTH_LN with CLASSTYPE of 3
+                (Claims Attachment).</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_adjustment<br/>
+                adjustment_of</td>
+              <td>Connects LPN where PART_TYPE = "ADJUSTMENT" with LN or
+                LO, as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_challenge<br/>
+                challenge_of</td>
+              <td>Connects LPN where PART_TYPE = "CHALLENGE" with LN or
+                LO, as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_class<br/>
+                class_of</td>
+              <td>Connects LPN where PART_TYPE = "CLASS" with LN or LO,
+                as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_component<br/>
+                component_of</td>
+              <td>Connects LPN where PART_TYPE = "COMPONENT" with LN or
+                LO, as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_divisor<br/>
+                divisor_of</td>
+              <td>Connects LPN where PART_TYPE = "DIVISORS" with LN or
+                LO, as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_evaluation<br/>
+                evaluation_of</td>
+              <td>Connects CN to LO or MTH_LN with CLASSTYPE of 4
+                (Surveys).</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_fragments_for_synonyms<br/>
+                fragments_for_synonyms_of</td>
+              <td>Connects LPN where PART_TYPE = "FRAGMENTS FOR
+                SYNONYMS" with LN or LO, as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_method<br/>
+                method_of</td>
+              <td>Connects LPN with PART_TYPE = "METHOD" with LOINC CODE
+                indicated in LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_property<br/>
+                property_of</td>
+              <td>Connects LPN where PART_TYPE = "PROPERTY" with LN or
+                LO, as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_scale<br/>
+                scale_of</td>
+              <td>Connects LPN where PART_TYPE = "SCALE" with LN or LO,
+                as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_suffix<br/>
+                suffix_of</td>
+              <td>Connects LPN where PART_TYPE = "SUFFIX" with LN or LO,
+                as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_supersystem<br/>
+                supersystem_of</td>
+              <td>Connects LPN where PART_TYPE = "SUPER SYSTEM" with LN
+                or LO, as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_system<br/>
+                system_of</td>
+              <td>Connects LPN where PART_TYPE = "SYSTEM" with LN or LO,
+                as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_time_aspect<br/>
+                has_time_aspect</td>
+              <td>Connects LPN where PART_TYPE = "TIME" with LN, as per
+                LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_time_modifier<br/>
+                time_modifier_of</td>
+              <td>Connects LPN where PART_TYPE = "TIME MODIFIER" with
+                LN, as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>measured_by<br/>
+                measures</td>
+              <td>Connects CN to LO or MTH_LN with CLASSTYPE of 1
+                (Laboratory) or 2 (Clinical).</td>
+            </tr>
+            <tr>
+              <td>RQ</td>
+              <td>mapped_from<br/>
+                mapped_to</td>
+              <td>Connects an LO with an LN, indicating possible
+                synonymy between a current code and a retired code, as
+                per LOINCDB.TXT field 12</td>
+            </tr>
+            <tr>
+              <td>SY</td>
+              <td>common_name_of<br/>
+                has_common_name</td>
+              <td>Connects an LN or LO with its LC or OLC respectively</td>
+            </tr>
+            <tr>
+              <td>SY</td>
+              <td>expanded_form_of<br/>
+                has_expanded_form</td>
+              <td>Connects original and expanded forms of atoms,
+                including: HS &lt;--&gt; HC; OSN &lt;--&gt; LN; OOSN
+                &lt;--&gt; LO</td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">SY<br/>
+              </td>
+              <td style="vertical-align: top;">mth_expanded_form_of<br/>
+                mth_has_expanded_form<br/>
+              </td>
+              <td style="vertical-align: top;">Connects original and
+                expanded forms of atoms, including: CN &lt;--&gt;
+                MTH_CN; LN &lt;--&gt; MTH_LN; LO &lt;--&gt; MTH_LO</td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">SY<br/>
+              </td>
+              <td style="vertical-align: top;">mth_plain_text_form_of<br/>
+                mth_has_plain_text_form<br/>
+              </td>
+              <td style="vertical-align: top;">Connects original and
+                plain text forms of LPN atoms to MTH_LPN atoms<br/>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div id="rep_mappings" class="rep_block_level_one"> <a
+        name="mappings"></a>
+      <h4>Mappings</h4>
+      &nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
+      <p>The Metathesaurus includes mappings between <a
+href="http://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/mapping_projects/loinc.html"
+          target="_blank">LOINC 2.15 and CPT2005.</a></p>
+    </div>
+  </body>
+</html>
