@@ -70,28 +70,25 @@
 <div id = "rep_change_summary" class = "rep_block_level_one">
 <a name = "change_summary"/>
 <h3>Summary of Changes</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)
-<p>(1) New attribute name (ATN):</p>
-<p>PID_ID</p>
-
-<p>(2) New term types (TTY):</p>
-<p>BRIDGPT</p>
-<p>BioCSY</p>
-<p>KEGGAB</p>
-<p>KEGGSY</p>
-<p>NCI-GLOSSOP</p>
-<p>NCPDPPT</p>
-<p>NICHDPT</p>
-<p>NICHDSY</p>
-<p>PIDPT</p>
-
-<p>(3) New relationship attribute (RELA):</p>
-<p>has_nichd_parent/parent_is_nichd</p>
-
-<p>(4) The Definition property includes a new 'attribution' tag which is now processed.  The attribution is enclosed in parentheses and appended to the definition.</p>
-
-<p>(5) Acquistion and license contact information was changed from Frank Hartel to Sherri de Coronado.</p>
+<p>New term type (TTY): NICHDAB</p>
+<p>New attribute name (ATN): CHEBI_ID</p>
+<p>Deprecated attribute names (ATN):
+<ul>
+ <li>MITELMAN_CODE</li>
+ <li>RELATED_LASH_CONCEPT</li>
+ <li>RELATED_MEDDRA_CODE</li>
+</ul>
+<p>New relationship attributes (RELA):
+<ul>
+<li>cytogenetic_abnormality_involves_chromosome</li>
+<li>disease_mapped_to_chromosome</li>
+<li>disease_mapped_to_gene</li>
+<li>gene_involved_in_pathogenesis_of_disease</li>
+<li>gene_mutant_encodes_gene_product_sequence_variation</li>
+<li>gene_product_sequence_variation_encoded_by_gene_mutant</li>
+<li>molecular_abnormality_involves_gene</li>
+</ul>
 </div>
-
 <div id = "rep_file_summary" class = "rep_block_level_one"></div>
 <a name = "file_summary"/>
 <h3>Summary of Source-Provided Files</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)
@@ -101,7 +98,7 @@
 <h4>Documentation and Reference</h4>
 <table class = "elements" border = "10" cellspacing = "0">
 <tr><th>File Name</th><th>Description</th></tr>
-<tr><td  class = "file_field_name">NCI2011_11_02d.cfg</td><td>Configuration file</td></tr>
+<tr><td  class = "file_field_name">NCI2012_02D.cfg</td><td>Configuration file</td></tr>
 <tr><td  class = "file_field_name">ThesaurusInferred.owl</td><td>Complete source data in an OWL formatted file</td></tr>
 </table>
 <br/>
@@ -151,13 +148,10 @@ MRDEF.DEF = definition if source=NCI, an NCI subsource, or an NCI local source.<
 <tr><td  class = "file_field_name">&lt;P107 rdf:datatype="http://www... &lt;/P107&gt;</td><td>Display_Name</td><td>Not processed</tr>
 <tr><td  class = "file_field_name">&lt;P108 rdf:datatype="http://www... &lt;/P108&gt;</td><td>Preferred_Name</td><td>MRCONSO.STR</tr>
 <tr><td  class = "file_field_name">&lt;P160 rdf:datatype="http://www... &lt;/P160&gt;</td><td>Maps_To_LASH</td><td>Not processed</tr>
-<tr><td  class = "file_field_name">&lt;P170 rdf:datatype="http://www... &lt;/P170&gt;</td><td>Mitelman_Code</td><td>MRSAT.ATN=MITELMAN_CODE</tr>
 <tr><td  class = "file_field_name">&lt;P171 rdf:datatype="http://www... &lt;/P171&gt;</td><td>PubMedID_Primary_Reference</td><td>MRSAT.ATN=PUBMEDID_PRIMARY_REFERENCE</tr>
 <tr><td  class = "file_field_name">&lt;P175 rdf:datatype="http://www... &lt;/P175&gt;</td><td>NSC_Code</td><td>MRSAT.ATN=NSC_CODE</tr>
-<tr><td  class = "file_field_name">&lt;P181 rdf:datatype="http://www... &lt;/P181&gt;</td><td>Related_MedDRA_Code</td><td>MRSAT.ATN=RELATED_MEDDRA_CODE</tr>
 <tr><td  class = "file_field_name">&lt;P207 rdf:datatype="http://www... &lt;/P207&gt;</td><td>UMLS_CUI</td><td>Not processed</tr>
 <tr><td  class = "file_field_name">&lt;P208 rdf:datatype="http://www... &lt;/P208&gt;</td><td>NCI_META_CUI</td><td>Not processed</tr>
-<tr><td  class = "file_field_name">&lt;P209 rdf:datatype="http://www... &lt;/P209&gt;</td><td>Related_Lash_Concept</td><td>MRSAT.ATN=RELATED_LASH_CONCEPT</tr>
 <tr><td  class = "file_field_name">&lt;P210 rdf:datatype="http://www... &lt;/P210&gt;</td><td>CAS_Registry</td><td>MRSAT.ATN=CAS_REGISTRY</tr>
 <tr><td  class = "file_field_name">&lt;P211 rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"&gt;&lt;ncicp:ComplexGOAnnotation xmlns:ncicp="http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#"&gt;&lt;ncicp:go-term&gt; &hellip; &lt;/ncicp:go-term&gt;&lt;ncicp:go-id&gt; &hellip; &lt;/ncicp:go-id&gt;&lt;ncicp:go-evi&gt;TAS&lt;/ncicp:go-evi&gt;&lt;ncicp:source-date&gt;29-SEP-2003&lt;/ncicp:source-date&gt;&lt;ncicp:go-source&gt;CGAP&lt;/ncicp:go-source&gt;&lt;/ncicp:ComplexGOAnnotation&gt;&lt;/P211&gt;</td><td>GO_Annotation.
 Includes GO term, id, source, evidence, and source date.</td><td>MRSAT.ATN=GO_ANNOTATION</tr>
@@ -199,6 +193,7 @@ Includes definition and source of definition.</td><td>MRDEF.SAB = source; MRDEF.
 <tr><td  class = "file_field_name">&lt;P363 rdf:datatype="http://www... &lt;/P363&gt;</td><td>Neoplastic_Status</td><td>MRSAT.ATN=NEOPLASTIC_STATUS</tr>
 <tr><td  class = "file_field_name">&lt;P366 rdf:datatype="http://www... &lt;/P366&gt;</td><td>Legacy_Concept_Name</td><td>Not processed</tr>
 <tr><td  class = "file_field_name">&lt;P367 rdf:datatype="http://www... &lt;/P367&gt;</td><td>PID_ID</td><td>MRSAT.ATN=PID_ID</tr>
+<tr><td  class = "file_field_name">&lt;P368 rdf:datatype="http://www... &lt;/P368&gt;</td><td>CHEBI_ID</td><td>MRSAT.ATN=CHEBI_ID</tr>
 <tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R23"&gt;</td><td>EO_Disease_Has_Associated_Cell_Type</td><td>MRREL.RELA = 
 eo_disease_has_associated_cell_type</tr>
 <tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R24"&gt;</td><td>EO_Disease_Maps_To_Human_Disease</td><td>MRREL.RELA = 
@@ -379,6 +374,13 @@ procedure_may_have_completely_excised_anatomy</tr>
 procedure_has_completely_excised_anatomy</tr>
 <tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R172"&gt;</td><td>Regimen_Has_Accepted_Use_For_Disease</td><td>MRREL.RELA = 
 regimen_has_accepted_use_for_disease</tr>
+<tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R173"&gt;</td><td>Cytogenetic_Abnormality_Involves_Chromosome</td><td>MRREL.RELA = cytogenetic_abnormality_involves_chromosome</tr>
+<tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R174"&gt;</td><td>Disease_Mapped_To_Chromosome</td><td>MRREL.RELA = disease_mapped_to_chromosome</tr>
+<tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R175"&gt;</td><td>Gene_Involved_In_Pathogenesis_Of_Disease</td><td>MRREL.RELA = gene_involved_in_pathogenesis_of_disease</tr>
+<tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R176"&gt;</td><td>Disease_Mapped_To_Gene</td><td>MRREL.RELA = disease_mapped_to_gene</tr>
+<tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R177"&gt;</td><td>Molecular_Abnormality_Involves_Gene</td><td>MRREL.RELA = molecular_abnormality_involves_gene</tr>
+<tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R178"&gt;</td><td>Gene_Mutant_Encodes_Gene_Product_Sequence_Variation</td><td>MRREL.RELA = gene_mutant_encodes_gene_product_sequence_variation</tr>
+<tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R179"&gt;</td><td>Gene_Product_Sequence_Variation_Encoded_By_Gene_Mutant</td><td>MRREL.RELA = gene_product_sequence_variation_encoded_by_gene_mutant</tr>
 </table>
 <br/>
 </div>
