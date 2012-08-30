@@ -20,8 +20,8 @@
 				<p>The National Library of Medicine provides free access to vocabulary standards, applications, and related tools that can be used to meet US EHR certification criteria and to achieve Meaningful Use of EHRs.
 				Below are resources either created by or supported by NLM that can be used for providing patient-specific education materials, e-prescribing, and creating, exchanging, and interpreting standardized lists of problems, medications, and test results.
 				</p>
-				</div>
-				</div>
+				</div> <!--end intro div-->
+				</div> <!-- end top rounded-content-block div-->
 				
 				
 				<xsl:apply-templates select = "contexts"/>
@@ -39,14 +39,16 @@
 	<xsl:template match = "contexts">
 		<xsl:for-each select = "context">
 
-			<a name = "{@id}"/>
-			<div class = "context-image">
-				<xsl:apply-templates select = "image"/>
-				<p class = "caption"><xsl:value-of select = "@name"/></p>
-			</div>
+			<p><a name = "{@id}"></a></p>
+			
 			<div class = "context rounded-content-block">
-
+				<div class = "context-image">
+					<xsl:apply-templates select = "image"/>
+					<p class = "caption"><xsl:value-of select = "@name"/></p>
+				</div>
+				<div class = "context-resources">
 				<xsl:apply-templates select = "resources"/>
+				</div>
 			</div>
 			
 		</xsl:for-each>
@@ -55,7 +57,6 @@
 
 	<!--process each resources under each context element - SNOMEDCT, LOINC, RxNorm, etc-->
 	<xsl:template match = "resources">
-		<!--<h2><xsl:value-of select = "@type"/></h2>-->
 		<xsl:for-each select = "resource">
 			<div class = "{@type} rounded-content-block">
 				<xsl:if test = "@logo">
@@ -83,70 +84,11 @@
 		<img src = "images/{@name}" alt = "{@alt}"/>	
 	</xsl:template>
 	<!--/process images-->
-	<!--
-	<xsl:template match = "properties">
-		<div class = "properties rounded-content-block">
-			<table class = "property-table">
-				<xsl:for-each select = "property">
-					<tr>
-						<td valign = "top"><xsl:value-of select = "@name"/></td>
-						<td valign = "top">
-							<xsl:choose>
-								<xsl:when test = "@type eq 'url'">
-									<a href = "{@website}"><xsl:value-of select = "."/></a>
-								</xsl:when>
-								<xsl:otherwise>
-									<xsl:value-of select = "."/>
-								</xsl:otherwise>
-							</xsl:choose>
-						</td>
-					</tr>
-				</xsl:for-each>
-			</table>
-		</div>
-	</xsl:template>
-
-	-->
-	<!--
-	<xsl:template match = "properties">
-		<table class = "property-table">
-			<tr>
-				<xsl:apply-templates select = "property" mode = "build-headers"/>
-			</tr>
-			<tr>
-				<xsl:apply-templates select = "property" mode = "build-rows"/>
-			</tr>
-		</table>
-	</xsl:template>
-
-	<xsl:template match = "property" mode = "build-headers">
-
-		<xsl:for-each select = ".">
-			<th align = "left"><xsl:value-of select = "@name"/></th>
-		</xsl:for-each>
-
-	</xsl:template>
-
-	<xsl:template match = "property" mode = "build-rows">
-		<xsl:for-each select = ".">
-			<td valign = "top"><xsl:value-of select = "."/></td>
-		</xsl:for-each>
-	</xsl:template>
-	-->
-
+	
 	<xsl:template match = "properties">
 		<ul class = "property-list medium">
 			<xsl:for-each select = "property">
-				<!--
-				<xsl:choose>
-					<xsl:when test = "@type eq 'url'">
-						<li><b><xsl:value-of select = "@name"/></b>: <a href = "{@website}"><xsl:value-of select = "."/></a></li>
-					</xsl:when>
-					<xsl:otherwise>
-						<li><b><xsl:value-of select = "@name"/></b>: <xsl:value-of select = "."/></li>
-					</xsl:otherwise>
-				</xsl:choose>
-				-->              <xsl:choose>
+			     <xsl:choose>
 					<xsl:when test = "@url and @name eq 'Web Resource'">
 						<li><b><a href = "{@url}" target = "_blank"><xsl:value-of select = "."/><xsl:if test = "@external = 'y'">&#160;<img src = "images/exit_arrow.png"/></xsl:if></a></b></li>
 					</xsl:when> 

@@ -1,24 +1,17 @@
 
-body{
+h2 {
     
-font-family: Helvetica, verdana, sans-serif;    
-    
+text-indent:20%;
 }
 
-h2{
-    
-text-align:center; 
-}
-
-h4{
+h3{
  
-color:#aa0000;   
+color:#aa0000 !important;
     
 }
 
 .rounded-content-block{
--moz-border-radius: 5px 5px 0px 0px;
--webkit-border-radius: 5px 5px 0px 0px;
+border-radius: 5px 5px 0px 0px;
 padding:2px 2px 2px 5px;
 margin-top:5px;
 
@@ -28,7 +21,7 @@ margin-top:5px;
 .description {
 
 max-width:70%;
-border-right:solid 1px blue;
+
 
 
 }
@@ -42,42 +35,19 @@ border-right:solid 1px blue;
     font-size:.8em;
 }
 
-
-
-.top {
-
-   
-border:solid 1px black;
-float:left; 
-}
-
-.intro{
-    
-max-width:60%;    
-float:left;
-}
-
-.featured {
-    
-max-width:30%;
-float:left;
-margin-left:15px;
-}
-
 .context {
 
-width:85%;
+width:90%;
 float:left;
-margin-left:5px;
+margin-left:15px;
 border-bottom: solid 2px #acacac;
-border-right:solid 1px red;
 
 }
 
 .context-image{
 
 
-margin-right:5px;
+margin-right:15px;
 margin-top:15px;
 max-width:120px;
 min-width:120px;
@@ -85,6 +55,16 @@ padding: 0 0 0 0px;
 float:left;
 
 }
+
+.context-resources{
+    
+    float:left;
+    width:75%;
+    margin-left:15px;
+    
+    
+}
+
 
 .caption {
 
@@ -118,8 +98,21 @@ font-size:inherit !important;
 font-family:inherit !important;
 background-color:#e7eeeb;
 border:solid 1px #000;
+}
+
+.properties {
+
+
 
 }
+
+.property-list{
+    
+    
+}
+
+
+
 
 
 .jig-ncbitoggler{
@@ -150,4 +143,3 @@ float:left;
 margin-top:20px;
 
 }
-
