@@ -275,15 +275,19 @@
               <td>Primary LOINC data files</td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file2">LOINC_PARTS_V2-40_2012-06-28.txt</a></td>
+              <td class="file_field_name"><a href="#file2">LOINC_MAP_TO.TXT</a></td>
+              <td> Mappings between current and retired codes</td>
+            </tr>           
+            <tr>
+              <td class="file_field_name"><a href="#file3">LOINC_PARTS_V2-40_2012-06-28.txt</a></td>
               <td>Parts names and codes</td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file3">LOINC_PART_LINKS_V2-40_2012-06-28.txt</a></td>
+              <td class="file_field_name"><a href="#file4">LOINC_PART_LINKS_V2-40_2012-06-28.txt</a></td>
               <td>Part links, for relationships and hierarchy</td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file4">LOINC_V240_MULTI-AXIAL_HIERARCHY.CSV</a></td>
+              <td class="file_field_name"><a href="#file5">LOINC_V240_MULTI-AXIAL_HIERARCHY.CSV</a></td>
               <td>The records in this file represent nodes of the
                 hierarchy, whether LOINC Parts or full LOINC codes.<br/>
                 The ordered sequence at any level of the hierarchy is
@@ -799,6 +803,35 @@
           </table>
         </div>
         <div class="rep_block_level_two"><a name="file2" id="file2"></a>
+          <h4 class="file_field_name">file:LOINC_MAP_TO</h4>
+          <table class="elements" border="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <th>#</th>
+                <th>Field</th>
+                <th>Representation</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>LOINC</td>
+                <td>Retired LNC code.<br/>
+                Used to create relationships between retired "LO" atoms and current "LN" atoms.<br/>
+                The REL= RQ;<br/>
+                The RELA=mapped_from/mapped_to.</td>
+              </tr>
+              <tr>
+                <td><br/>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>COMMENT</td>
+                <td>Current LNC code.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="rep_block_level_two"><a name="file3" id="file3"></a>
           <h4 class="file_field_name">file:LOINC_PARTS</h4>
           <table class="elements" border="0" cellspacing="0">
             <tbody>
@@ -859,7 +892,7 @@
             </tbody>
           </table>
         </div>
-        <div class="rep_block_level_two"><a name="file3" id="file3"></a>
+        <div class="rep_block_level_two"><a name="file4" id="file4"></a>
           <h4 class="file_field_name">file:LOINC_PART_LINKS</h4>
           <table class="elements" border="0" cellspacing="0">
             <tbody>
@@ -969,7 +1002,7 @@
             </tbody>
           </table>
         </div>
-        <div class="rep_block_level_two"><a name="file4" id="file4"></a>
+        <div class="rep_block_level_two"><a name="file5" id="file5"></a>
           <h4 class="file_field_name">file:LOINC_MUTLI-AXIAL_HIERARCHY</h4>
           <table class="elements" border="0" cellspacing="0">
             <tbody>
