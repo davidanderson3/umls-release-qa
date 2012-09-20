@@ -1,5 +1,6 @@
 <document>
 	<contexts>
+		<!--
 		<context name = "Stage 2 Meaningful Use EHR Certification" id = "mucert">
 			<image name = "network_low_res.jpg" class = "context-image" alt = "image of a central computer connected to several clients in a circle"/>
 			<resources>
@@ -16,6 +17,7 @@
 				</resource>
 			</resources>
 		</context>
+		-->
 		<context name = "Patient-Specific Education Materials" id = "clinicalsummaries">
 			<image name = "doctor_and_patient_low_res.jpg" class = "context-image" alt = "image of doctor with patients in the background"/>
 			<resources>
@@ -159,7 +161,7 @@
 								<properties>
 									<property name = "Publisher" url  = "http://www.nlm.nih.gov/" external = "n">National Library of Medicine</property>
 									<property name = "Access">Free for use*</property>
-									<property name = "Web Resource" url = "http://www.nlm.nih.gov/research/umls/mapping_projects/icd9cm_to_snomedct.html" external = "n">SNOMED CT -> ICD-10-CM Mapping Files and Documentation</property>
+									<property name = "Web Resource" url = "http://www.nlm.nih.gov/research/umls/mapping_projects/icd9cm_to_snomedct.html" external = "n">ICD-9-CM -> SNOMED CT Mapping Files and Documentation</property>
 								</properties>
 							</mapping>
 							<mapping name = "SNOMED CT to ICD10-CM Map" id = "snomedticd10cm_map" published = "y" featured = "n">
