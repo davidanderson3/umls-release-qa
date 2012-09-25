@@ -1,8 +1,25 @@
+<html>
+<head>
+	<link rel = "stylesheet" type = "text/css" href = "http://code.jquery.com/ui/1.8.23/themes/base/jquery-ui.css"/>
+	<link rel = "stylesheet" type = "text/css" href = "http://static.jquery.com/ui/css/demo-docs-theme/ui.theme.css"/>
+	<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+	<script src = "http://code.jquery.com/ui/1.8.23/jquery-ui.min.js"></script>
+     
+   	<script type = "text/javascript">
+	 $(document).ready(function() {
+
+		$( "#accordion" ).accordion();
+	});
+   	</script>
+  
+</head>	
+<body>
 <h1>The NLM Value Set Authority Center (VSAC)</h1>
 <p>The Value Set Authority Center (VSAC) is provided by the National Library of Medicine (NLM), in collaboration with the Office of the National Coordinator for Health Information Technology and the Centers for Medicare &amp; Medicaid Services. The VSAC provides downloadable access to all official versions of vocabulary Value Sets contained in the Clinical Quality Measures (CQMs)  that support Meaningful Use Stage 2.<br/>
 The Value Sets in the VSAC describe the specific populations included and excluded in order to properly calculate each CQM.  Each Value Set consists of the numerical values and human-readable names, drawn from standard vocabularies such as SNOMED CT&reg; and ICD-10-CM, that are used to define one of the clinical concepts used in a quality measure (e.g.,  patients with diabetes, clinical visit). The content of the VSAC will gradually expand to incorporate Value Sets for other use cases, as well as for new measures and updates to existing measures.<br/>
 Access to the Value Set Authority Center for viewing and/or downloading MU proprietary value sets, such as those including CPT&reg; or SNOMED CT&reg; codes, requires a free Unified Medical Language System&reg; Metathesaurus License. Please note it may take 1-5 business days to obtain a license.<br/>
 </p>
+<div id = "accordion">
 <h3><a href="#">What services does the Value Set Authority Center offer?</a></h3>
 <div>
 	<p>The Value Set Authority Center (VSAC) currently serves as the authority and central repository for the official versions of Value Sets that support Meaningful Use Stage 2 clinical quality measures. The VSAC provides search, retrieval and download capabilities through a Web interface and APIs. <br/>
@@ -43,3 +60,6 @@ Access to the Value Set Authority Center for viewing and/or downloading MU propr
 	Please note that to use USHIK to access VSAC resources  or to view and/or download MU proprietary Value Sets , such as those including CPT&reg; codes or SNOMED CT&reg; codes,  will require a free Unified Medical Language System&reg; Metathesaurus License, available from NLM. 
 	</p>
 </div>
+</div>
+</body>
+</html>
