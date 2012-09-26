@@ -27,6 +27,7 @@
 
 
 
+
                 Representation</a> </li>
             <li> <a href="metarepresentation.html">Metathesaurus
                 Representation</a> </li>
@@ -34,9 +35,9 @@
         </li>
       </ul>
     </div>
-    <!-- end tabbed navigation area --> <br>
-    <br>
-    <br>
+    <!-- end tabbed navigation area --> <br/>
+    <br/>
+    <br/>
     <a name="top"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
       <a href="#change_summary">Summary of Changes</a>, <a
         href="#file_summary">Summary of Source-Provided Files</a> <a
@@ -48,63 +49,106 @@
     <div id="rep_change_summary" class="rep_block_level_one">
       <h3>Summary of Changes:</h3>
       &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
-      <p>No changes have been made to the original data files or to
-        representation of ICD9CM in 2011AB.<br>
+      <p>ICD-9-CM officially has minimal content updates for 2013.&nbsp;
+        In an effort to synchronize long descriptions in the
+        Metathesaurus with CMS data, a different set of source-provided
+        files has been used for "codes" (represented as TTY = "PT" in
+        the Metathesaurus), resulting in changes in MRCONSO.STR for
+        cases where the CMS long description is different from the 2012
+        Metathesaurus string.&nbsp;&nbsp; 2012 strings that were
+        identified as lexically different from the CMS 2013 long
+        description have been preserved as entry terms (TTY =
+        "ET").&nbsp; Chapters, categories and subcategories (represented
+        as TTY = "HT") have mot changed.<br/>
       </p>
-      <p><span style="font-weight: bold;">Notes on the data</span></p>
-      Representation decisions may be subject to analysis and
-      interpretation based on content and/or page layout, including;<br>
-      <ul>
-        <li>&nbsp;The fully-specified name of the string:&nbsp; There is
-          no official string (atom_name) associated with a given
-          code.&nbsp; For example, the line "143.0&nbsp; Upper gum"
-          appears in the data, however the PT string "Malignant neoplasm
-          of upper gum" is created based on implied context.</li>
-        <li>&nbsp;Whether to represent data as an atom (MTHICD9/ET) or
-          attribute ("SOS|Includes")</li>
-      </ul>
+      <p>Note: On 08/09/2012, CMS issued corrections to full
+        descriptions for 41 diagnoses codes.&nbsp; These changes were
+        identified too late for incorporation into 2012AB.&nbsp;
+        Affected codes are:
+      </p>
+      <div class="syndicate">
+        <ul>
+          <li>28412, 317, 3180-319, 32341, 32342, 36501, 48811-48819,
+            64670-64673, 79552, 9685, 9950, 99560-99569, 99931, V1649,
+            V1659, V1781, V1789, V184, V2649, and V792.</li>
+        </ul>
+      </div>
       <p> </p>
     </div>
     <div id="rep_file_details" class="rep_block_level_one"> <a
         name="file_summary"></a>
       <h3>Source-Provided Files: Summary</h3>
-      &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
+      &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)<br/>
+      <p>Full and abbreviated code titles:</p>
+      <p>Downloaded from <a
+href="https://www.cms.gov/Medicare/Coding/ICD9ProviderDiagnosticCodes/codes.html">https://www.cms.gov/Medicare/Coding/ICD9ProviderDiagnosticCodes/codes.html</a></p>
+      <p style="margin-left: 40px;"><span style="text-decoration:
+          underline;"><span style="text-decoration: underline;"><span
+              style="text-decoration: underline;"></span></span></span>Diagnoses:<br/>
+        CMS30_DESC_LONG_DX.txt&nbsp;&nbsp; <br/>
+        CMS30_DESC_SHORT_DX.txt&nbsp;&nbsp; <br/>
+      </p>
+      <p style="margin-left: 40px;">Procedures:<br/>
+        CMS30_DESC_LONG_SG.txt<br/>
+        CMS30_DESC_SHORT_SG.txt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+      <p>Entry terms, hierarchy and attributes:<br/>
+      </p>
       <p>ICD9CM in the Metathesaurus was originally processed in 1999
         using a combination of machine-processing and human
-        review.&nbsp; The Metathesaurus is updated annually using the
-        addenda, which are released in .pdf format and downloaded from
-        the following sites:<br>
+        review.&nbsp; Through ICD9CM_2012, the Metathesaurus was updated
+        annually using the addenda, available in pdf format from the
+        following sites:<br/>
         &nbsp;&nbsp;&nbsp; Diseases:&nbsp;
-        http://www.cdc.gov/nchs/icd/icd9cm_addenda_guidelines.htm#addenda<br>
+        http://www.cdc.gov/nchs/icd/icd9cm_addenda_guidelines.htm#addenda<br/>
         &nbsp;&nbsp;&nbsp; Procedures:&nbsp;
-        https://www.cms.gov/ICD9ProviderDiagnosticCodes/04_addendum.asp&nbsp;
-        <br>
-        <br>
-        In addition, short forms (or abbreviations) are downloaded
-        annually from
-        https://www.cms.gov/ICD9ProviderDiagnosticCodes/06_codes.asp#TopOfPage
-        and extracted annually from the following files:<br>
-        &nbsp; CMS&lt;VER&gt;_DESC_SHORT_DX.txt<br>
-        &nbsp; CMS&lt;VER&gt;_DESC_SHORT_SG.txt</p>
-      For 2011AB (ICD9CM_2012), the following files were used:<br>
-      &nbsp;&nbsp;&nbsp;
-      http://www.cdc.gov/nchs/data/icd9/ICD-9-CM%20TABULARADDENDAfy12.pdf<br>
-      &nbsp;&nbsp;&nbsp;
-      https://www.cms.gov/ICD9ProviderDiagnosticCodes/downloads/FY2012_Addenda.pdf&nbsp;&nbsp;&nbsp;
-
-
-
-      <br>
-      &nbsp;&nbsp;&nbsp; CMS29_DESC_SHORT_DX.txt<br>
-      &nbsp;&nbsp;&nbsp; CMS29_DESC_SHORT_SG.txt<br>
+        https://www.cms.gov/ICD9ProviderDiagnosticCodes/04_addendum.asp<br/>
+        Attributes, entry terms (SAB = MTHICD9, TTY = ET), and
+        hierarchical Terms (TTY = HT) were extracted from these files.</p>
       <h3>Source-Provided Files: Details</h3>
       &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
-      <p>The following is a list of tags and/or patterns seen in ICD9CM
-        addenda in .pdf format.&nbsp; Additional updates are made based
-        on interpretation of markup in the "Add" "Revise" or "Delete"
-        tags.&nbsp; <br>
+      <p>Files:<br/>
+        CMS&lt;VER&gt;_DESC_LONG_DX.txt<br/>
+        CMS&lt;VER&gt;_DESC_LONG_SG.txt<br/>
+        CMS&lt;VER&gt;_DESC_SHORT_DX.txt <br/>
+        CMS&lt;VER&gt;_DESC_SHORT_SG.txt<br/>
+        <br/>
       </p>
-      <br>
+      <table class="elements" border="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <th>Field</th>
+            <th>Representation</th>
+          </tr>
+          <tr>
+            <td>1<br/>
+            </td>
+            <td>Code: <br/>
+              MRCONSO.CODE<br/>
+              MRCONSO.SDUI<br/>
+              <br/>
+              Decimal points are added as appropriate, e.g. "00322"
+              becomes "003.22"<br/>
+            </td>
+          </tr>
+          <tr>
+            <td>2<br/>
+            </td>
+            <td>String:<br/>
+              MRCONSO.SAB="ICD9CM"<br/>
+              MRCONSO.TTY = "PT" for long descriptions<br/>
+              MRCONSO.TTY = "AB" for short descriptions<br/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p><br/>
+        Attributes and some entry terms (SAB = MTHICD9, TTY = ET) were
+        created by analyzing tags and/or patterns seen in ICD9CM addenda
+        in .pdf format.&nbsp; Additional updates are made based on
+        interpretation of markup in the "Add" "Revise" or "Delete"
+        tags.&nbsp; <br/>
+      </p>
+      <br/>
       <div class="rep_block_level_two"><a name="file1"></a>
         <table class="elements" border="0" cellspacing="0">
           <tbody>
@@ -113,101 +157,59 @@
               <th>Representation</th>
             </tr>
             <tr>
-              <td>New category<br>
+              <td>&lt;no tag&gt;<br/>
               </td>
-              <td>Code: <br>
-                MRCONSO.CODE<br>
-                MRCONSO.SDUI<br>
-                <br>
-                String:<br>
-                MRCONSO.SAB="ICD9CM"<br>
-                MRCONSO.TTY = "HT"<br>
+              <td>MRCONSO.SAB = "MTHICD9"<br/>
+                MRCONSO.TTY = "ET"<br/>
+                MRSAT.ATN = "ICE"<br/>
               </td>
             </tr>
             <tr>
-              <td>New subcategory<br>
+              <td>Use additional<br/>
               </td>
-              <td>Code: <br>
-                MRCONSO.CODE<br>
-                MRCONSO.SDUI<br>
-                <br>
-                String:<br>
-                MRCONSO.SAB="ICD9CM"<br>
-                MRCONSO.TTY = "HT"<br>
+              <td>MRSAT.ATN = "ICA"<br/>
               </td>
             </tr>
             <tr>
-              <td>New code<br>
+              <td>Code also<br/>
               </td>
-              <td>Code:<br>
-                MRCONSO.CODE<br>
-                MRCONSO.SDUI<br>
-                <br>
-                String: <br>
-                MRCONSO.SAB="ICD9CM"<br>
-                MRCONSO.TTY = "PT"<br>
-                A fully-specified (often expanded) version of the string
-                may be created during Metathesaurus source
-                processing.&nbsp;&nbsp; For example, the line
-                "143.0&nbsp; Upper gum" appears in the data, however the
-                PT string "Malignant neoplasm of upper gum" is created
-                based on implied content<br>
+              <td>MRSAT.ATN = "ICC"<br/>
               </td>
             </tr>
             <tr>
-              <td>&lt;no tag&gt;<br>
+              <td>[Ff]ifth-digit<br/>
               </td>
-              <td>MRCONSO.SAB = "MTHICD9"<br>
-                MRCONSO.TTY = "ET"<br>
-                MRSAT.ATN = "ICE"<br>
-              </td>
-            </tr>
-            <tr>
-              <td>Use additional<br>
-              </td>
-              <td>MRSAT.ATN = "ICA"<br>
+              <td>MRSAT.ATN = "ICF"<br/>
+                <br/>
               </td>
             </tr>
             <tr>
-              <td>Code also<br>
+              <td>Code first<br/>
               </td>
-              <td>MRSAT.ATN = "ICC"<br>
-              </td>
-            </tr>
-            <tr>
-              <td>[Ff]ifth-digit<br>
-              </td>
-              <td>MRSAT.ATN = "ICF"<br>
-                <br>
+              <td>MRSAT.ATN = "ICN"<br/>
               </td>
             </tr>
             <tr>
-              <td>Code first<br>
-              </td>
-              <td>MRSAT.ATN = "ICN"<br>
-              </td>
-            </tr>
-            <tr>
-              <td>Requires<br>
+              <td>Requires<br/>
               </td>
               <td>MRSAT.ATN = "ICN" </td>
             </tr>
             <tr>
-              <td>Code, if applicable<br>
+              <td>Code, if applicable<br/>
               </td>
-              <td>MRSAT.ATN = "ICN"<br>
-              </td>
-            </tr>
-            <tr>
-              <td>Excludes:<br>
-              </td>
-              <td>MRSAT.ATN = "SOS"<br>
+              <td>MRSAT.ATN = "ICN"<br/>
               </td>
             </tr>
             <tr>
-              <td>Includes: <br>
+              <td>Excludes:<br/>
               </td>
-              <td>MRSAT.ATN = "SOS"<br>
+              <td>MRSAT.ATN = "SOS"<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>Includes: <br/>
+              </td>
+              <td>MRSAT.ATN = "SOS"<br/>
               </td>
             </tr>
           </tbody>
@@ -215,39 +217,7 @@
         <p> </p>
         <p> </p>
         <p> </p>
-        <br>
-        Files:<br>
-        CMS&lt;VER&gt;_DESC_SHORT_DX.txt <br>
-        CMS&lt;VER&gt;_DESC_SHORT_SG.txt<br>
-        <br>
-        <table class="elements" border="0" cellspacing="0">
-          <tbody>
-            <tr>
-              <th>Field</th>
-              <th>Representation</th>
-            </tr>
-            <tr>
-              <td>1<br>
-              </td>
-              <td>Code: <br>
-                MRCONSO.CODE<br>
-                MRCONSO.SDUI<br>
-                <br>
-                Decimal points are added as appropriate, e.g. "00322"
-                becomes "003.22"<br>
-              </td>
-            </tr>
-            <tr>
-              <td>2<br>
-              </td>
-              <td>String:<br>
-                MRCONSO.SAB="ICD9CM"<br>
-                MRCONSO.TTY = "PT"<br>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <br>
+        <br/>
       </div>
     </div>
   </body>
