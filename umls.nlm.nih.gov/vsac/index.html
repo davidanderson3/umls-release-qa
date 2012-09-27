@@ -8,18 +8,22 @@
    	<script type = "text/javascript">
 	 $(document).ready(function() {
 
-		$( "#accordion" ).accordion();
+		$( "#welcome-accordion" ).accordion({
+         collapsible: true
+
+
+		});
 	});
    	</script>
   
 </head>	
 <body>
-<h1>The NLM Value Set Authority Center (VSAC)</h1>
-<p>The Value Set Authority Center (VSAC) is provided by the National Library of Medicine (NLM), in collaboration with the Office of the National Coordinator for Health Information Technology and the Centers for Medicare &amp; Medicaid Services. The VSAC provides downloadable access to all official versions of vocabulary Value Sets contained in the Clinical Quality Measures (CQMs)  that support Meaningful Use Stage 2.<br/>
-The Value Sets in the VSAC describe the specific populations included and excluded in order to properly calculate each CQM.  Each Value Set consists of the numerical values and human-readable names, drawn from standard vocabularies such as SNOMED CT&reg; and ICD-10-CM, that are used to define one of the clinical concepts used in a quality measure (e.g.,  patients with diabetes, clinical visit). The content of the VSAC will gradually expand to incorporate Value Sets for other use cases, as well as for new measures and updates to existing measures.<br/>
-Access to the Value Set Authority Center for viewing and/or downloading MU proprietary value sets, such as those including CPT&reg; or SNOMED CT&reg; codes, requires a free Unified Medical Language System&reg; Metathesaurus License. Please note it may take 1-5 business days to obtain a license.<br/>
-</p>
-<div id = "accordion">
+<div id = "welcomeContainer" style = "width:90%;">
+<h2>Welcome to the NLM Value Set Authority Center (VSAC)</h2>
+<p>The Value Set Authority Center (VSAC) is provided by the National Library of Medicine (NLM), in collaboration with the Office of the National Coordinator for Health Information Technology and the Centers for Medicare &amp; Medicaid Services. The VSAC provides downloadable access to all official versions of vocabulary Value Sets contained in the Clinical Quality Measures (CQMs)  that support Meaningful Use Stage 2.<br/><br/>
+The Value Sets in the VSAC describe the specific populations included and excluded in order to properly calculate each CQM.  Each Value Set consists of the numerical values and human-readable names, drawn from standard vocabularies such as SNOMED CT&reg; and ICD-10-CM, that are used to define one of the clinical concepts used in a quality measure (e.g.,  patients with diabetes, clinical visit). The content of the VSAC will gradually expand to incorporate Value Sets for other use cases, as well as for new measures and updates to existing measures.<br/><br/>
+	<b>Viewing and/or downloading MU2 value sets requires a free Unified Medical Language System&reg; Metathesaurus License, due to use restrictions on some of the codes included</b>.</p>
+<div id = "welcome-accordion"> 
 <h3><a href="#">What services does the Value Set Authority Center offer?</a></h3>
 <div>
 	<p>The Value Set Authority Center (VSAC) currently serves as the authority and central repository for the official versions of Value Sets that support Meaningful Use Stage 2 clinical quality measures. The VSAC provides search, retrieval and download capabilities through a Web interface and APIs. <br/>
