@@ -1,0 +1,977 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;
+      charset=ISO-8859-1">
+    <title></title>
+  </head>
+  <body>
+    <div class="section-4">
+      <ul id="menu">
+        <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
+        <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
+        <li id="nav-3"> <a href="sourcemetastats.html">Statistics and sample data</a>
+          <ul id="subnav-3">
+            <li> <a href="termtypes.html">Terms and term types</a> </li>
+            <li> <a href="attributes.html">Attributes</a> </li>
+            <li> <a href="relationships.html">Relationships</a> </li>
+            <li> <a href="semtypes.html">Semantic Types</a> </li>
+            <li> <a href="overlap.html">Source Overlap</a> </li>
+          </ul>
+        </li>
+        <li id="nav-4"> <a href="representation.html">Representation</a>
+          <ul id="subnav-4">
+            <li> <a href="sourcerepresentation.html">Source Representation</a> </li>
+            <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus Representation</a> </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <br/>
+    <a name="top"></a> <span class="nav">Skip to: <a href="#termtypes">Atoms</a>,
+      <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
+      <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+    <p><b>VSABs:</b></p>
+    <ul>
+      <li>LNC240</li>
+      <li>LNC240_AD8_2005</li>
+      <li>LNC240_BRADEN_1988</li>
+      <li>LNC240_CAM_2003</li>
+      <li>LNC240_FACIT</li>
+      <li>LNC240_FLACC_1997</li>
+      <li>LNC240_MDS20</li>
+      <li>LNC240_MDS30</li>
+      <li>LNC240_MLHFQ_1986</li>
+      <li>LNC240_NEUROQOL_2010 (Note: The year of this VSAB corrected from 2001 to 2010)</li>
+      <li>LNC240_OASIS_2002</li>
+      <li>LNC240_OPTIMAL_2005<br class="atl-forced-newline"></li>
+      <li>LNC240_PHQ_9_1999</li>
+      <li>LNC240_RHO_2008</li>
+      <li>LNC240_SPERTUS_2005</li>
+      <li>LNC240_WHO_2006</li>
+    </ul>
+    <p><b>Notes:</b><br/>
+      In addition to the LNC SAB, LOINC includes 15 subsources, which
+      are assigned by an algorithm using field 34
+      (EXTERNAL_COPYRIGHT_NOTICE), field 8 (CLASS) and field 7
+      (METHOD_TYP). The representation described below apply to elements
+      from all subsources. Due to licensing restrictions, concepts from
+      the following subsources are not included in Metathesaurus processing:</p>
+      <ul>
+        <li>Ages &amp; Stages Questionnaire</li>
+        <li>Edinburgh Postnatal Depression Scale</li>
+        <li>TIMP (Test of Infant Motor Performance)</li>
+        <li>PROMIS (Patient Reported Outcomes Measurement System survey)</li>
+        <li>Veterans RAND 12 Item Health Survey</li>
+      </ul>
+      <div id="rep_change_summary" class="rep_block_level_one">
+      <h3>Summary of Changes:</h3>
+      <p>New subsources:<br/></p>
+      <table class="elements">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;"><span style="font-weight: bold;">RSAB</span><br/></td>
+            <th>VSAB</th>
+            <td style="vertical-align: top;"><span style="font-weight: bold;">Description</span><br/></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">LNC_AD8<br/></td>
+            <td>
+              <p style="font-family: Times New Roman,Times,serif;" class="MsoNormal">LNC240_AD8_2005</p>
+              <p class="MsoNormal"></p>
+            </td>
+            <td style="vertical-align: top;">AD8:Eight-item Informant Interview to Differentiate Aging and Dementia (AD8)</td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">LNC_FACIT<br/></td>
+            <td style="vertical-align: top;">LNC240_FACIT</td>
+            <td style="vertical-align: top;">FACIT Measurement System - Functional Assessment of Chronic Illness Therapy (FACIT)</td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">LNC_MLHFQ<br/></td>
+            <td style="vertical-align: top;">LNC240_MLHFQ_1986</td>
+            <td style="vertical-align: top;">Minnesota Living with Heart Failure Questionnaire (MLHFQ)</td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">LNC_SPERTUS<br/></td>
+            <td style="vertical-align: top;">LNC240_SPERTUS_2005</td>
+            <td style="vertical-align: top;">Kansas City Cardiomyopathy Questionnaire</td>
+          </tr>
+        </tbody>
+      </table>
+      <br/>
+      New termgroups:<br/><br/>
+            &nbsp;LNC240_NEUROQOL_2010/LO</br>
+            &nbsp;LNC240_NEUROQOL_2010/OLC</br>
+            &nbsp;LNC240_NEUROQOL_2010/MTH_LO</br><br/>
+      New attributes:<br/>
+      <table class="elements">
+        <tbody>
+          <tr>
+            <th style="font-weight: normal;">#</th>
+            <td style="vertical-align: top;"><span style="font-weight: bold;">Field</span><br/></td>
+            <th>Description</th>
+            <td style="vertical-align: top;"><span style="font-weight: bold;">Representation</span><br/></td>
+          </tr>
+          <tr>
+            <td class="file_field_name">47<br/></td>
+            <td style="vertical-align: top;">COMMON_SI_TEST_RANK<br/></td>
+            <td>
+              <p style="font-family: Times New Roman,Times,serif;" class="MsoNormal">Corresponding SI terms for 2000 common tests performed by laboratories in the USA.</p>
+              <p class="MsoNormal"></p>
+            </td>
+            <td style="vertical-align: top;">MRSAT.ATN = "COMMON_SI_TEST_RANK"<br/></td>
+          </tr>
+        </tbody>
+      </table>
+      <br/>
+      New Classes:<br/>
+      <table class="elements">
+        <tbody>
+          <tr>
+            <th>Class</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td class="file_field_name">MOLPATH.INV<br/></td>
+            <td>Molecular Pathology<br/></td>
+          </tr>
+          <tr>
+            <td class="file_field_name">PANEL.PULM<br/></td>
+            <td>Pulmonary order set<br/></td>
+          </tr>
+          <tr>
+            <td class="file_field_name">PANEL.SURVEY.CMS</td>
+            <td>Centers for Medicare &amp; Medicaid Services set<br/></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">PANEL.SURVEY.EPDS<br/></td>
+            <td style="vertical-align: top;">Edinburgh Postnatal Depression Scale set</td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">PANEL.SURVEY.GNHLTH<br/></td>
+            <td style="vertical-align: top;">General Healthy survey set<br/></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">PANEL.SURVEY.HHS<br/></td>
+            <td style="vertical-align: top;">Depart. Of Health and Human Services set<br/></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">PANEL.SURVEY.MTLHLTH<br/></td>
+            <td style="vertical-align: top;">Mental Health survey set<br/></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">PANEL.SURVEY.NEURO<br/></td>
+            <td style="vertical-align: top;">Neurological survey set<br/></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">SURVEY.AAOS<br/></td>
+            <td style="vertical-align: top;">Amer. Acad. Of Orthopaedic Surgeons survey<br/></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">SURVEY.EPDS<br/></td>
+            <td style="vertical-align: top;">Edinburgh Postnatal Depression Scale<br/></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">SURVEY.GNHLTH<br/></td>
+            <td style="vertical-align: top;">General Healthy survey<br/></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">SURVEY.HHS<br/></td>
+            <td style="vertical-align: top;">Depart. Of Health and Human Services survey<br/></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">SURVEY.MTLHLTH<br/></td>
+            <td style="vertical-align: top;">Mental Health survey<br/></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">SURVEY.NEURO<br/></td>
+            <td style="vertical-align: top;">Neurological survey<br/></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="rep_file_summary" class="rep_block_level_one"><br/></div>
+      <a name="original_files"></a>
+    <h4>Original Files:</h4>
+    <p>The UMLS uses files publically available at <a
+        href="http://www.loinc.org" target="_blank">www.loinc.org</a>,
+      including: "LOINCDB.TXT" (compressed in "LOINC240.zip") and
+      "LOINC_V240_MULTI-AXIAL_HIERARCHY.CSV" (compressed in
+      "LOINC_V240_MULTI-AXIAL_HIERARCHY.ZIP"). In addition, the UMLS
+      receives two files to facilitate building the hierarchy. For 2.40,
+      these files were: "LOINC_PART_LINKS_V2-40_2012-06-28.txt" and
+      "LOINC_PARTS_V2-40_2012-06-28.txt". Additional information, such as
+      expansions of abbreviations, is extracted from LOINCManual.pdf. </p>
+    <div id="rep_identifiers" class="rep_block_level_one">
+      <h3>Overview</h3>
+      <h4>Identifiers</h4>
+      <p>LOINC Identifiers in the UMLS are generally based on field 1 of
+        LOINCDB.TXT (LOINC_NUM), or field 1 of LOINC_PARTS (L_PART_ID).
+        For some termtypes, the atom may be associated with multiple
+        LOINC entities. For example, a component may be a part of
+        multiple fully-specified names. In these cases, the atom (e.g. a
+        CN, or Official Component Name), is assigned an MTHU# during
+        Metathesaurus source processing. </p>
+      <ul>
+        <li>CODE:
+          <ul>
+            <li>For term types LC, LN, LO, MTH_LN, MTH_LO, OLC, OOSN,
+              OSN: the LOINC _NUM (field 1) from LOINCDB.TXT</li>
+            <li>For term types LPDN, LPN: the L_PART_ID (field 1) from
+              LOINC_PARTS_*.txt</li>
+            <li>For term types CN, MTH_CN, HC, HS, LS: an MTHU#,
+              assigned during Metathesaurus source processing.</li>
+          </ul>
+        </li>
+        <li>SAUI: Not Applicable</li>
+        <li>SCUI: Same as CODE for term types LC, LN, LO, LPDN, LPN,
+          MTH_LN, MTH_LO, OLC, OOSN, OSN<br/>
+        </li>
+        <li>SDUI: Not Applicable</li>
+      </ul>
+      <h4>Expansions</h4>
+      <p>Expanded forms of certain atoms are created during
+        Metathesaurus source processing by applying abbreviation
+        expansions extracted from the LOINC Manual. In these cases, the
+        expanded form is generally assigned the same identifier as its
+        original form. Expansions may also include converting patterns
+        such as "little e" or &#8220;super little b" to &#8220;e" or "^b"
+        respectively. </p>
+      <div id="rep_termtypes" class="rep_block_level_two"> <a
+          name="termtypes"></a><br/>
+        <h4>Atoms</h4>
+        &nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
+        <table class="elements" border="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <th>TTY</th>
+              <th>ORIGIN</th>
+            </tr>
+            <tr>
+              <td class="file_field_name">CN</td>
+              <td>Official component name:<br/>
+                CODE = MTHU#, assigned during Metathesaurus source
+                processing; same as CODE for respective MTH_CN as
+                applicable.<br/>
+                STR = LOINCDB.TXT field 2, subfield 1 (COMPONENT).</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">HC</td>
+              <td>Hierarchical class:<br/>
+                CODE = MTHU#, assigned during Metathesaurus source
+                processing (same as CODE for respective HS).<br/>
+                STR = expanded form of LOINCDB.TXT field 8 for CLASS or
+                expanded form of LOINCDB.TXT field 17 for CLASSTYPE.<br/>
+                An additional HC atom, &#8220;LOINCCLASSTYPES,&#8221; is added
+                during Metathesaurus source processing as a hierarchical
+                placeholder.<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">HS</td>
+              <td>Short or alternate version of hierarchical term:<br/>
+                CODE = MTHU#, assigned during Metathesaurus source
+                processing (same as CODE for respective HC).<br/>
+                STR = value of LOINCDB.TXT field 8 for CLASS, or value
+                of LOINCDB.TXT field 17 for CLASSTYPE.</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LC</td>
+              <td>Long common name:<br/>
+                CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br/>
+                STR = LOINCDB.TXT field 36 (LONG_COMMON_NAME)<br/>
+                TTY = LC is assigned if field 13 is not = "DEPRECATED"<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LN</td>
+              <td>Official fully-specified name:<br/>
+                CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br/>
+                STR = LOINCDB.TXT fields 2-7, concatenated with colons,
+                i.e. F2:F3:F4:F5:F6:F7<br/>
+                TTY = LN is assigned if field 13 is not = "DEPRECATED"<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LO</td>
+              <td>Obsolete official fully specified name:<br/>
+                CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br/>
+                STR = LOINCDB.TXT fields 2-7, concatenated with colons,
+                i.e. F2:F3:F4:F5:F6:F7<br/>
+                TTY = LO is assigned if field 13 = "DEPRECATED"<br/>
+                SUPPRESS = "O"<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LPDN</td>
+              <td>Parts display name:<br/>
+                CODE = LOINC_PARTS_*.txt field 1 (L_PART_ID)<br/>
+                STR = LOINC_PARTS_*.txt field 4 (DISPLAY_NAME)<br/>
+                LPDN atoms are only created for strings containing the
+                pattern &#8220;Allergen Mix.&#8221;</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LPN</td>
+              <td>Parts name:<br/>
+                CODE = LOINC_PARTS_*.txt field 1 (L_PART_ID)<br/>
+                STR = LOINC_PARTS_*.txt field 3 (NAME_CASE_INSENSITIVE)<br/>
+                An additional LPN, &#8220;LOINCPARTS,&#8221; is added during
+                Metathesaurus source processing as a hierarchical
+                placeholder.</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LS</td>
+              <td>Expanded system/sample type:<br/>
+                CODE = MTHU#, assigned during Metathesaurus source
+                processing<br/>
+                STR = Expanded form of LOINCDB.TXT field 5, subfield 1
+                (SYSTEM).</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MTH_CN</td>
+              <td>Component, with abbreviations expanded:<br/>
+                CODE = MTHU#, assigned during Metathesaurus source
+                processing; same as CODE for respective CN as
+                applicable.<br/>
+                STR = Expanded form of LOINCDB.TXT field 2, subfield 1
+                (COMPONENT).</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MTH_LN</td>
+              <td>Expanded obsolete fully specified name:<br/>
+                CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br/>
+                STR = Expanded form of LOINCDB.TXT fields 2-7,
+                concatenated with colons, i.e. F2:F3:F4:F5:F6:F7<br/>
+                TTY = MTH_LN is assigned if field 13 is not =
+                &#8220;DEPRECATED&#8221;</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MTH_LO</td>
+              <td>Expanded obsolete fully specified name:<br/>
+                CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br/>
+                STR = Expanded form of LOINCDB.TXT fields 2-7,
+                concatenated with colons, i.e. F2:F3:F4:F5:F6:F7<br/>
+                TTY = MTH_LO is assigned if field 13 = "DEPRECATED"<br/>
+                SUPPRESS = O<br/>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">MTH_LPN<br/>
+              </td>
+              <td style="vertical-align: top;">Parts name:<br/>
+                CODE = LOINC_PARTS_*.txt field 1 (L_PART_ID)<br/>
+                STR = Plain text form of LOINC_PARTS_*.txt field 3
+                (NAME_CASE_INSENSITIVE)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">OLC</td>
+              <td>Obsolete long common name:<br/>
+                CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br/>
+                STR = LOINCDB.TXT field 36 (LONG_COMMON_NAME)<br/>
+                TTY = OLC is assigned if field 13 = "DEPRECATED"<br/>
+                SUPPRESS = O<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">OOSN</td>
+              <td>Obsolete official short name:<br/>
+                CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br/>
+                STR = LOINCDB.TXT field 30 (SHORTNAME)<br/>
+                TTY = OOSN is assigned if field 13 = "DEPRECATED"<br/>
+                SUPPRESS = "O"<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">OSN</td>
+              <td>Official short name:<br/>
+                CODE = LOINCDB.TXT field 1 (LOINC_NUM)<br/>
+                STR = LOINCDB.TXT field 30 (SHORTNAME)<br/>
+                TTY OSN is assigned if field 13 is not = &#8220;DEPRECATED&#8221;</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">XM</td>
+              <td>Cross-mapping set:<br/>
+                This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="rep_attributes" class="rep_block_level_two"> <a
+          name="attributes"></a><br/>
+        <h4>Attributes</h4>
+        &nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
+        <table class="elements" border="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <th>ATN [Description]</th>
+              <th>Origin</th>
+            </tr>
+            <tr>
+              <td class="file_field_name">COPYRIGHT</td>
+              <td>LOINCDB.TXT field 34 (EXTERNAL_COPYRIGHT_NOTICE)</td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">CHANGE_REASON_PUBLIC<br/>
+              </td>
+              <td style="vertical-align: top;">LOINCDB.TXT field 45<br/>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">COMMON_SI_TEST_RANK<br/>
+              </td>
+              <td style="vertical-align: top;">LOINCDB.TXT field 47<br/>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">COMMON_TEST_RANK<br/>
+              </td>
+              <td style="vertical-align: top;">LOINCDB.TXT field 46<br/>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">COMMON_ORDER_RANK<br/>
+              </td>
+              <td style="vertical-align: top;">LOINCDB.TXT field 48<br/>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">CONSUMER_NAME<br/>
+              </td>
+              <td style="vertical-align: top;">LOINCDB.TXT field 15<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">CURATED_RANGE_AND_UNITS</td>
+              <td>LOINCDB.TXT field 39</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">DOCUMENT_SECTION</td>
+              <td>LOINCDB.TXT field 40</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">EXAMPLE_UCUM_UNITS</td>
+              <td>LOINCDB.TXT field 41<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">EXAMPLE_UNITS</td>
+              <td>LOINCDB.TXT field 35<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">FROMRSAB</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">FROMVSAB</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">HL7_FIELD_SUBFIELD_ID</td>
+              <td>LOINCDB.TXT field 33<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">HL7_V2_DATATYPE</td>
+              <td>LOINCDB.TXT field 37<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">HL7_V3_DATATYPE</td>
+              <td>LOINCDB.TXT field 38<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LCA [ACSSYM]</td>
+              <td>LOINCDB.TXT field 21 (ACSSYM)</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LCB [Chemical base name]</td>
+              <td>LOINCDB.TXT field 22 (BASE_NAME)</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LCD [CDISC common tests]</td>
+              <td>LOINCDB.TXT field 32 (CDISC_COMMON_TESTS)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LCL [Class]</td>
+              <td>LOINCDB.TXT field 8 (CLASS)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LCN [Classtype]</td>
+              <td>LOINCDB.TXT field 17 (CLASSTYPE)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LCS [Status]</td>
+              <td>LOINCDB.TXT field 13 (STATUS)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LCT [Change type]</td>
+              <td>LOINCDB.TXT field 11 (CHNG_TYPE)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LEA [Example answers]</td>
+              <td>LOINCDB.TXT field 20 (EXMPL_ANSWERS)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LFO [Formula]</td>
+              <td>LOINCDB.TXT field 18 (FORMULA)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LLR [Date last revised]</td>
+              <td>LOINCDB.TXT field 10 (DATE_LAST_CHANGED)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LMM [Molecular weights]</td>
+              <td>LOINCDB.TXT field 16 (MOLAR_MASS)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LMP [Map to code]</td>
+              <td>LOINCDB.TXT field 14 (MAP_TO)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LNC [NAACCR ID]</td>
+              <td>LOINCDB.TXT field 23 (NAACCR_ID)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LNE [Code table]</td>
+              <td>LOINCDB.TXT field 24 (CODE_TABLE)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LOINC_COMPONENT</td>
+              <td>LOINCDB.TXT field 2 (all subfields)</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LOINC_METHOD_TYP</td>
+              <td>LOINCDB.TXT field 7</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LOINC_PROPERTY</td>
+              <td>LOINCDB.TXT field 3</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LOINC_SCALE_TYP</td>
+              <td>LOINCDB.TXT field 6</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LOINC_SYSTEM</td>
+              <td>LOINCDB.TXT field 5</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LOINC_TIME_ASPECT</td>
+              <td>LOINCDB.TXT field 4</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LOR [Order/observation]</td>
+              <td>LOINCDB.TXT field 31 (ORDER_OBS)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LQS [Survey question source]</td>
+              <td>LOINCDB.TXT field 26 (SURVEY_QUEST_SRC)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LQT [Survey question text]</td>
+              <td>LOINCDB.TXT field 25 (SURVEY_QUEST_TXT)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LRN2 [Related names 2]</td>
+              <td>LOINCDB.TXT field 29 (RELATEDNAMES2)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LSP [Species]</td>
+              <td>LOINCDB.TXT field 19 (SPECIES)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LSU [Submitted units]</td>
+              <td>LOINCDB.TXT field 28 (SUBMITTED_UNITS)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LUR [Units required]</td>
+              <td>LOINCDB.TXT field 27 (UNITS_REQUIRED)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MAPSETRSAB</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MAPSETTYPE</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MAPSETVERSION</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MAPSETVSAB</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">MTH_COPYRIGHT<br/>
+              </td>
+              <td style="vertical-align: top;">Plain text version of
+                LOINCDB.TXT field 34 (EXTERNAL_COPYRIGHT_NOTICE)<br/>
+                This data is added during Metathesaurus source
+                processing<br/>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">MTH_LEA<br/>
+              </td>
+              <td style="vertical-align: top;">Plain text version of
+                LOINCDB.TXT field 20 (EXMPL_ANSWERS)<br/>
+                This data is added during Metathesaurus source
+                processing<br/>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">MTH_LFO<br/>
+              </td>
+              <td style="vertical-align: top;">Plain text version of
+                LOINCDB.TXT field 18 (FORMULA)<br/>
+                This data is added during Metathesaurus source
+                processing<br/>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">MTH_LQT<br/>
+              </td>
+              <td style="vertical-align: top;">Plain text version of
+                LOINCDB.TXT field 25 (SURVEY_QUEST_TXT)<br/>
+                This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">MTH_LRN2<br/>
+              </td>
+              <td style="vertical-align: top;">Plain text version of
+                LOINCDB.TXT field 29 (RELATEDNAMES2)<br/>
+                This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">MTH_LSU<br/>
+              </td>
+              <td style="vertical-align: top;">Plain text version of
+                LOINCDB.TXT field 28 (SUBMITTED_UNITS)<br/>
+                This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">MTH_SOS<br/>
+              </td>
+              <td style="vertical-align: top;">Plain text version of
+                LOINCDB.TXT field 12 (COMMENTS), LOINC_PARTS field 4
+                (DISPLAY_NAME)<br/>
+                This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MTH_MAPFROMCOMPLEXITY</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MTH_MAPFROMEXHAUSTIVE</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MTH_MAPSETCOMPLEXITY</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MTH_MAPTOCOMPLEXITY</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MTH_MAPTOEXHAUSTIVE</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">SOS</td>
+              <td>LOINCDB.TXT field 12 (COMMENTS)<br/>
+                LOINC_PARTS field 4 (DISPLAY_NAME)</td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">STATUS_REASON<br/>
+              </td>
+              <td style="vertical-align: top;">LOINCDB.TXT field 43<br/>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">STATUS_TEXT<br/>
+              </td>
+              <td style="vertical-align: top;">LOINCDB.TXT field 44<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">TORSAB</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">TOVSAB</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">XMAP</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">XMAPFROM</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">XMAPTO</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="rep_definitions" class="rep_block_level_two"> <a
+          name="definitions"></a><br/>
+        <h4>Definitions</h4>
+        &nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
+        <p>There are no text definitions for LOINC or LOINC subsources</p>
+      </div>
+      <div id="rep_relationships" class="rep_block_level_two"> <a
+          name="relationships"></a><br/>
+        <h4>Relationships</h4>
+        &nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
+        <table class="elements" border="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <th>REL</th>
+              <th>RELA<br/>
+                inverse_RELA</th>
+              <th>Origin</th>
+            </tr>
+            <tr>
+              <td>CHD<br/>
+                PAR<br/>
+                SIB</td>
+              <td><br/>
+              </td>
+              <td>The hierarchy is extracted from:
+                <ul>
+                  <li>LOINCDB.txt, field 8 (CLASS) and field 17
+                    (CLASSTYPE)</li>
+                  <li>LOINC_V240_MULTI-AXIAL_HIERARCHY.CSV</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>analyzed_by<br/>
+                analyzes</td>
+              <td>Connects LS to LN or LO</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>associated_with</td>
+              <td>Connects CN to LO or LN with CLASSTYPE of 3
+                (Claims Attachment).</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_adjustment<br/>
+                adjustment_of</td>
+              <td>Connects LPN where PART_TYPE = "ADJUSTMENT" with LN or
+                LO, as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_challenge<br/>
+                challenge_of</td>
+              <td>Connects LPN where PART_TYPE = "CHALLENGE" with LN or
+                LO, as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_class<br/>
+                class_of</td>
+              <td>Connects LPN where PART_TYPE = "CLASS" with LN or LO,
+                as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_component<br/>
+                component_of</td>
+              <td>Connects LPN where PART_TYPE = "COMPONENT" with LN or
+                LO, as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_divisor<br/>
+                divisor_of</td>
+              <td>Connects LPN where PART_TYPE = "DIVISORS" with LN or
+                LO, as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_evaluation<br/>
+                evaluation_of</td>
+              <td>Connects CN to LO or LN with CLASSTYPE of 4
+                (Surveys).</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_fragments_for_synonyms<br/>
+                fragments_for_synonyms_of</td>
+              <td>Connects LPN where PART_TYPE = "FRAGMENTS FOR
+                SYNONYMS" with LN or LO, as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_method<br/>
+                method_of</td>
+              <td>Connects LPN with PART_TYPE = "METHOD" with LOINC CODE
+                indicated in LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_property<br/>
+                property_of</td>
+              <td>Connects LPN where PART_TYPE = "PROPERTY" with LN or
+                LO, as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_scale<br/>
+                scale_of</td>
+              <td>Connects LPN where PART_TYPE = "SCALE" with LN or LO,
+                as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_suffix<br/>
+                suffix_of</td>
+              <td>Connects LPN where PART_TYPE = "SUFFIX" with LN or LO,
+                as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_supersystem<br/>
+                supersystem_of</td>
+              <td>Connects LPN where PART_TYPE = "SUPER SYSTEM" with LN
+                or LO, as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_system<br/>
+                system_of</td>
+              <td>Connects LPN where PART_TYPE = "SYSTEM" with LN or LO,
+                as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_time_aspect<br/>
+                has_time_aspect</td>
+              <td>Connects LPN where PART_TYPE = "TIME" with LN, as per
+                LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_time_modifier<br/>
+                time_modifier_of</td>
+              <td>Connects LPN where PART_TYPE = "TIME MODIFIER" with
+                LN, as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>measured_by<br/>
+                measures</td>
+              <td>Connects CN to LO or MTH_LN with CLASSTYPE of 1
+                (Laboratory) or 2 (Clinical).</td>
+            </tr>
+            <tr>
+              <td>RQ</td>
+              <td>mapped_from<br/>
+                mapped_to</td>
+              <td>Connects an LO with an LN, indicating possible
+                synonymy between a current code and a retired code, as
+                per LOINCDB.TXT field 14 and LOINC_MAP_TO.txt</td>
+            </tr>
+            <tr>
+              <td>SY</td>
+              <td>common_name_of<br/>
+                has_common_name</td>
+              <td>Connects an LN or LO with its LC or OLC respectively</td>
+            </tr>
+            <tr>
+              <td>SY</td>
+              <td>expanded_form_of<br/>
+                has_expanded_form</td>
+              <td>Connects original and expanded forms of atoms,
+                including: HS &lt;--&gt; HC; OSN &lt;--&gt; LN; OOSN
+                &lt;--&gt; LO</td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">SY<br/>
+              </td>
+              <td style="vertical-align: top;">mth_expanded_form_of<br/>
+                mth_has_expanded_form<br/>
+              </td>
+              <td style="vertical-align: top;">Connects original and
+                expanded forms of atoms, including: CN &lt;--&gt;
+                MTH_CN; LN &lt;--&gt; MTH_LN; LO &lt;--&gt; MTH_LO</td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">SY<br/>
+              </td>
+              <td style="vertical-align: top;">mth_plain_text_form_of<br/>
+                mth_has_plain_text_form<br/>
+              </td>
+              <td style="vertical-align: top;">Connects original and
+                plain text forms of LPN atoms to MTH_LPN atoms<br/>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div id="rep_mappings" class="rep_block_level_one"> <a
+        name="mappings"></a>
+      <h4>Mappings</h4>
+      &nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
+      <p>The Metathesaurus includes mappings between <a
+href="http://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/mapping_projects/loinc.html"
+          target="_blank">LOINC 2.15 and CPT2005.</a></p>
+    </div>
+  </body>
+</html>

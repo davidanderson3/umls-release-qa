@@ -1,0 +1,1047 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;
+      charset=ISO-8859-1">
+    <title></title>
+  </head>
+  <body>
+    <div class="section-4">
+      <ul id="menu">
+        <li id="nav-1"><a href="index.html">Synopsis</a></li>
+        <li id="nav-2"><a href="mrsab.html">MRSAB.RRF</a></li>
+        <li id="nav-3"><a href="sourcemetastats.html">Statistics and
+            sample data</a>
+          <ul id="subnav-3">
+            <li><a href="termtypes.html">Terms and term types</a></li>
+            <li><a href="attributes.html">Attributes</a></li>
+            <li><a href="relationships.html">Relationships</a></li>
+            <li><a href="semtypes.html">Semantic Types</a></li>
+            <li><a href="overlap.html">Source Overlap</a></li>
+          </ul>
+        </li>
+        <li id="nav-4"><a href="representation.html">Representation</a>
+          <ul id="subnav-4">
+            <li><a href="sourcerepresentation.html" id="sourcerep"
+                name="sourcerep">Source Representation</a></li>
+            <li><a href="metarepresentation.html">Metathesaurus
+                Representation</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    Skip to: <a href="#general">Notes</a>, <a href="#change_summary">Summary of Changes</a>, <a href="#file_summary">Summary of
+      Source-Provided Files</a>, <a href="#file_details">Source-Provided File Details</a><br/>
+    <div id="rep_general" class="rep_block_level_one"></div>
+      <h3>VSABS:</h3>
+      <ul>
+        <li>LNC240</li>
+        <li>LNC240_AD8_2005</li>
+        <li>LNC240_BRADEN_1988</li>
+        <li>LNC240_CAM_2003</li>
+        <li>LNC240_FACIT</li>
+        <li>LNC240_FLACC_1997</li>
+        <li>LNC240_MDS20</li>
+        <li>LNC240_MDS30</li>
+        <li>LNC240_MLHFQ_1986</li>
+        <li>LNC240_NEUROQOL_2010 (NOTE: The year of this VSAB corrected from 2001 to 2010)</li>
+        <li>LNC240_OASIS_2002</li>
+        <li>LNC240_OPTIMAL_2005<br class="atl-forced-newline"></li>
+        <li>LNC240_PHQ_9_1999</li>
+        <li>LNC240_RHO_2008</li>
+        <li>LNC240_SPERTUS_2005</li>
+        <li>LNC240_WHO_2006</li>
+      </ul>
+      <a name="general" id="general"></a>
+      <h3>Notes</h3>
+      <p>In addition to the LNC SAB, LOINC includes 15 subsources,
+        which are assigned by an algorithm using field 34
+        (EXTERNAL_COPYRIGHT_NOTICE), field 8 (CLASS) and field 7
+        (METHOD_TYP).&nbsp; The representation described below applies
+        to all subsources.&nbsp; Due to licensing restrictions, concepts
+        from the following subsources are not included in Metathesaurus processing:</p>
+      <ul>
+        <li>Ages &amp; Stages Questionnaire</li>
+        <li>Edinburgh Postnatal Depression Scale</li>
+        <li>TIMP (Test of Infant Motor Performance)</li>
+        <li>PROMIS (Patient Reported Outcomes Measurement System survey)</li>
+        <li>Veterans RAND 12 Item Health Survey</li>
+      </ul>     
+      <div id="rep_change_summary" class="rep_block_level_one"><a
+        name="change_summary" id="change_summary"></a>
+      <h3>Summary of Changes in this version</h3>
+      &nbsp; <span class="nav">(<a href="#top">return to top</a></span>)
+      <br/>
+      <p>New subsources:<br/>
+      </p>
+      <table class="elements">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;"><span style="font-weight:
+                bold;">RSAB</span><br/>
+            </td>
+            <th>VSAB</th>
+            <td style="vertical-align: top;"><span style="font-weight:
+                bold;">Description</span><br/>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">LNC_AD8</td>
+            <td>
+              <p style="font-family: Times New Roman,Times,serif;" class="MsoNormal">LNC240_AD8_2005</p>
+              <p class="MsoNormal"></p>
+            </td>
+            <td style="vertical-align: top;">AD8:Eight-item Informant Interview to Differentiate Aging and Dementia (AD8)</td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">LNC_FACIT<br/>
+            </td>
+            <td style="vertical-align: top;">LNC240_FACIT</td>
+            <td style="vertical-align: top;">FACIT Measurement System - Functional Assessment of Chronic Illness Therapy (FACIT)</td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">LNC_MLHFQ<br/>
+            </td>
+            <td style="vertical-align: top;">LNC240_MLHFQ_1986</td>
+            <td style="vertical-align: top;">Minnesota Living with Heart Failure Questionnaire (MLHFQ)</td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">LNC_SPERTUS<br/>
+            </td>
+            <td style="vertical-align: top;">LNC240_SPERTUS_2005</td>
+            <td style="vertical-align: top;">Kansas City Cardiomyopathy Questionnaire</td>
+          </tr>
+        </tbody>
+      </table>
+      <br/>
+      New termgroups:<br/><br/>
+            &nbsp;LNC240_NEUROQOL_2010/LO</br>
+            &nbsp;LNC240_NEUROQOL_2010/OLC</br>
+            &nbsp;LNC240_NEUROQOL_2010/MTH_LO</br></br>
+      New attributes:<br/>
+      <table class="elements">
+        <tbody>
+          <tr>
+            <th style="font-weight: normal;">#</th>
+            <td style="vertical-align: top;"><span style="font-weight:
+                bold;">Field</span><br/>
+            </td>
+            <th>Description</th>
+            <td style="vertical-align: top;"><span style="font-weight:
+                bold;">Representation</span><br/>
+            </td>
+          </tr>
+          <tr>
+            <td class="file_field_name">47<br/>
+            </td>
+            <td style="vertical-align: top;">COMMON_SI_TEST_RANK<br/>
+            </td>
+            <td>
+              <p style="font-family: Times New Roman,Times,serif;" class="MsoNormal">Corresponding SI terms for 2000 common tests performed by laboratories in USA</p>
+              <p class="MsoNormal"></p>
+            </td>
+            <td style="vertical-align: top;">MRSAT.ATN =
+              "COMMON_SI_TEST_RANK"<br/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </br>
+    New Classes<br/>
+      <table class="elements">
+        <tbody>
+          <tr>
+            <th>Class</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td class="file_field_name">MOLPATH.INV<br/>
+            </td>
+            <td>Molecular Pathology<br/>
+            </td>
+          </tr>
+          <tr>
+            <td class="file_field_name">PANEL.PULM<br/>
+            </td>
+            <td>Pulmonary order set<br/>
+            </td>
+          </tr>
+          <tr>
+            <td class="file_field_name">PANEL.SURVEY.CMS</td>
+            <td>Centers for Medicare &amp; Medicaid Services set<br/>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">PANEL.SURVEY.EPDS<br/>
+            </td>
+            <td style="vertical-align: top;">Edinburgh Postnatal Depression Scale set</td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">PANEL.SURVEY.GNHLTH<br/>
+            </td>
+            <td style="vertical-align: top;">General Healthy survey set<br/>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">PANEL.SURVEY.HHS<br/>
+            </td>
+            <td style="vertical-align: top;">Depart. Of Health and Human Services set<br/>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">PANEL.SURVEY.MTLHLTH<br/>
+            </td>
+            <td style="vertical-align: top;">Mental Health survey set<br/>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">PANEL.SURVEY.NEURO<br/>
+            </td>
+            <td style="vertical-align: top;">Neurological survey set<br/>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">SURVEY.AAOS<br/>
+            </td>
+            <td style="vertical-align: top;">Amer. Acad. Of Orthopaedic Surgeons survey<br/>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">SURVEY.EPDS<br/>
+            </td>
+            <td style="vertical-align: top;">Edinburgh Postnatal Depression Scale<br/>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">SURVEY.GNHLTH<br/>
+            </td>
+            <td style="vertical-align: top;">General Healthy survey<br/>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">SURVEY.HHS<br/>
+            </td>
+            <td style="vertical-align: top;">Depart. Of Health and Human Services survey<br/>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">SURVEY.MTLHLTH<br/>
+            </td>
+            <td style="vertical-align: top;">Mental Health survey<br/></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">SURVEY.NEURO<br/></td>
+            <td style="vertical-align: top;">Neurological survey<br/></td>
+          </tr>
+        </tbody>
+      </table>
+      <br/></div>
+    <div id="rep_file_summary" class="rep_block_level_one"><br/>
+      <a name="file_summary"></a>
+      <h3>Source-Provided Files: Summary</h3>
+      &nbsp; <span class="nav">(<a href="#top">return to top</a></span>)
+      <p>The complete LOINC distribution includes the following.</p>
+      <div class="rep_block_level_two"><!-- Make a table of each file that comes from the source   -->
+        <h4>Documentation and Reference</h4>
+        <table class="elements" border="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <th>File Name</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>LOINC_ReleaseNotes.txt</td>
+              <td>Release notes, updated with each LOINC version</td>
+            </tr>
+            <tr>
+              <td>LOINCManual.pdf</td>
+              <td>The complete documentation, including tables used to
+                expand abbreviations</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>Data files</h4>
+        <table class="elements" border="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <th>File Name</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td class="file_field_name"><a href="#file1">LOINCDB.TXT</a></td>
+              <td>Primary LOINC data files</td>
+            </tr>
+            <tr>
+              <td class="file_field_name"><a href="#file2">LOINC_MAP_TO.TXT</a></td>
+              <td> Mappings between current and retired codes</td>
+            </tr>           
+            <tr>
+              <td class="file_field_name"><a href="#file3">LOINC_PARTS_V2-40_2012-06-28.txt</a></td>
+              <td>Parts names and codes</td>
+            </tr>
+            <tr>
+              <td class="file_field_name"><a href="#file4">LOINC_PART_LINKS_V2-40_2012-06-28.txt</a></td>
+              <td>Part links, for relationships and hierarchy</td>
+            </tr>
+            <tr>
+              <td class="file_field_name"><a href="#file5">LOINC_V240_MULTI-AXIAL_HIERARCHY.CSV</a></td>
+              <td>The records in this file represent nodes of the
+                hierarchy, whether LOINC Parts or full LOINC codes.<br/>
+                The ordered sequence at any level of the hierarchy is
+                given by the SEQUENCE field. Top level nodes in the
+                hierarchy are those where PATH_TO_ROOT is null.<br/>
+                This is a "Comma Separated Value" text file.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><b>Not included:</b><br/>
+          <span class="file_field_name">LOINCDB.TXT:</span>Fields that
+          are for internal (LOINC) use are not processed for the
+          Metathesaurus.<br/>
+          Fields that are not used are indicated by "Not used" in the
+          "Representation" columns below.</p>
+      </div>
+      <div id="rep_file_details" class="rep_block_level_one">
+        <h3>Source-Provided Files: Details</h3>
+        <a name="file_details" id="file_details">&nbsp;&nbsp;<span
+            class="nav">(</span></a><a href="#top">return to top</a>)
+        <p>Details on format of input files and representation of source
+          data. Consult the LOINC documentation for additional details.</p>
+        <div class="rep_block_level_two"><a name="file1" id="file1"></a>
+          <h4 class="file_field_name">file:LOINCDB.TXT</h4>
+          <table class="elements" border="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <th>#</th>
+                <th>Field</th>
+                <th>Description</th>
+                <th>Representation</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>LOINC_NUM</td>
+                <td>Unique Code; format is #####-#</td>
+                <td>MRCONSO.CODE</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>COMPONENT</td>
+                <td>Fields 2-7 contain the six parts of the name.<br/>
+                  The fully-specified name for a given LOINC code is
+                  constructed by concatenating the contents of these
+                  fields,<br/>
+                  inserting a colon (":") between each element.</td>
+                <td>
+                  <ul>
+                    <li>First segment of colon-separated fully-specified
+                      name, MRCONSO.STR, TTY = "LN" or "LO"</li>
+                    <li>First segment of colon-separated fully-specified
+                      name, MRCONSO.STR, TTY = "LX" or "OLX" (with
+                      expansions)</li>
+                    <li>Subfield 1 = MRCONSO.STR, TTY = "CN"</li>
+                    <li>MRCONSO.STR, TTY = "CX" (subfield 1, with
+                      expansions)</li>
+                    <li>Entire field: MRSAT.ATN = LOINC_COMPONENT</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>PROPERTY</td>
+                <td><br/>
+                </td>
+                <td>
+                  <ul>
+                    <li>Second segment of colon-separated
+                      fully-specified name, MRCONSO.STR, TTY = "LN" or
+                      "LO"</li>
+                    <li>Second segment of colon-separated
+                      fully-specified name, MRCONSO.STR, TTY = "LX" or
+                      "OLX" (with expansions)</li>
+                    <li>MRSAT.ATN = LOINC_PROPERTY</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>TIME_ASPCT</td>
+                <td><br/>
+                </td>
+                <td>
+                  <ul>
+                    <li>Third segment of colon-separated fully-specifie
+                      name, MRCONSO.STR, TTY = "LN" or "LO"</li>
+                    <li>Third segment of colon-separated fully-specified
+                      name, MRCONSO.STR, TTY = "LX" or "OLX" (with
+                      expansions)</li>
+                    <li>MRSAT.ATN = LOINC_TIME_ASPECT</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>SYSTEM</td>
+                <td><br/>
+                </td>
+                <td>
+                  <ul>
+                    <li>Fourth segment of colon-separated
+                      fully-specified name, MRCONSO.STR, TTY = "LN" or
+                      "LO"</li>
+                    <li>Fourth segment of colon-separated
+                      fully-specified name, MRCONSO.STR, TTY = "LX" or
+                      "OLX" (with expansions)</li>
+                    <li>First subfield: MRCONSO.STR, TTY = "LS" (with
+                      expansions)</li>
+                    <li>MRSAT.ATN = LOINC_SYSTEM</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>SCALE_TYP</td>
+                <td><br/>
+                </td>
+                <td>
+                  <ul>
+                    <li>Fifth segment of colon-separated fully-specified
+                      name, MRCONSO.STR, TTY = "LN" or "LO"</li>
+                    <li>Fifth segment of colon-separated fully-specified
+                      name, MRCONSO.STR, TTY = "LX" or "OLX" (with
+                      expansions)</li>
+                    <li>MRSAT.ATN = LOINC_SCALE_TYP</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>METHOD_TYP</td>
+                <td><br/>
+                </td>
+                <td>
+                  <ul>
+                    <li>Sixth segment of colon-separated fully-specified
+                      name, MRCONSO.STR, TTY = "LN" or "LO"</li>
+                    <li>Sixth segment of colon-separated fully-specified
+                      name, MRCONSO.STR, TTY = "LX" or "OLX" (with
+                      expansions)</li>
+                    <li>MRSAT.ATN = LOINC_METHOD_TYP</li>
+                    <li>Used in the subsource assignment algorithm</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>8<br/>
+                </td>
+                <td>CLASS</td>
+                <td>Arbitrary classification of the terms for grouping
+                  related observations together. See Table 29 in the
+                  LOINC Users&#8217; Guide for values.</td>
+                <td>
+                  <ul>
+                    <li>MRCONSO.STR, TTY = "HS"</li>
+                    <li>MRCONSO.STR, TTY = "HC" (with expansions)</li>
+                    <li>MRSAT.ATN = "LCL"</li>
+                    <li>Used to build hierarchy</li>
+                    <li>Used in the subsource assignment algorithm</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>SOURCE</td>
+                <td>Internal use only</td>
+                <td>Not used</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>DATE_LAST_CHANGED</td>
+                <td>Date last changed; format is YYYYMMDD</td>
+                <td>MRSAT.ATN = "LLR"</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>CHNG_TYPE</td>
+                <td>Change Type Code: "DEL" = delete (deprecate); "ADD"
+                  = add; "NAM" = change to Analyte/Component (field #2);
+                  "MAJ" = change to name field other than #2 (#3 - #7);
+                  "MIN" = change to field other than name; "UND" =
+                  undelete</td>
+                <td>MRSAT.ATN = "LCT"</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>COMMENTS</td>
+                <td>Free-text comments relating to the test result</td>
+                <td>MRSAT.ATN = "SOS"</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>STATUS</td>
+                <td>Status<br/>
+                  Valid values are: <br/>
+                  <div style="margin-left: 40px;">ACTIVE<br/>
+                    DEPRECATED<br/>
+                    DISCOURAGED<br/>
+                    TRIAL<br/>
+                  </div>
+                </td>
+                <td>
+                  <ul>
+                    <li>For records with STATUS = "DEPRECATED", an
+                      obsolete TTY is assigned, and MRCONSO.SUPPRESS =
+                      "O"</li>
+                    <li>MRSAT.ATN = "LCS"</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>MAP_TO</td>
+                <td>For codes with status = "DEPRECATED," or
+                  "DISCOURAGED," may contain the LOINC code of the new
+                  term that should be used</td>
+                <td>
+                  <ul>
+                    <li>Used to create mapped_to relationships between
+                      "LN" and "LO" atoms</li>
+                    <li>MRSAT.ATN = "LMP"</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>CONSUMER_NAME</td>
+                <td>Consumer-friendly name for this term. Content is
+                  experimental (beta).</td>
+                <td>MRSAT.ATN = "CONSUMER_NAME"<br/>
+                </td>
+              </tr>
+              <tr>
+                <td>16</td>
+                <td>MOLAR_MASS</td>
+                <td>Molecular weights, contributed by IUPAC</td>
+                <td>MRSAT.ATN = "LMM"</td>
+              </tr>
+              <tr>
+                <td>17</td>
+                <td>CLASSTYPE</td>
+                <td>1 = Laboratory; 2 = Clinical class; 3 = Claims
+                  attachments; 4=Surveys</td>
+                <td>
+                  <ul>
+                    <li>MRCONSO.STR, TTY = "HC"</li>
+                    <li>MRCONSO.STR, TTY = "HS" (with expansions)</li>
+                    <li>MRSAT.ATN = "LCN"</li>
+                    <li>Used to build hierarchy</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>18</td>
+                <td>FORMULA</td>
+                <td>Regression equation details</td>
+                <td>MRSAT.ATN = "LFO"</td>
+              </tr>
+              <tr>
+                <td>19<br/>
+                </td>
+                <td>SPECIES</td>
+                <td>Indicates which non-human species this code applies
+                  to</td>
+                <td>MRSAT.ATN = "LSP"</td>
+              </tr>
+              <tr>
+                <td>20<br/>
+                </td>
+                <td>EXMPL_ANSWERS</td>
+                <td>Examples of valid answers</td>
+                <td>MRSAT.ATN = "LEA"</td>
+              </tr>
+              <tr>
+                <td>21</td>
+                <td>ACSSYM</td>
+                <td>Chemical name synonyms, alternative names and
+                  chemical formulae, supplied by CAS</td>
+                <td>MRSAT.ATN = "LCA"; an attribute is created for each
+                  comma-separated value in this field</td>
+              </tr>
+              <tr>
+                <td>22<br/>
+                </td>
+                <td>BASE_NAME</td>
+                <td>Chemical base name from CAS</td>
+                <td>MRSAT.ATN =&nbsp; "LCB"</td>
+              </tr>
+              <tr>
+                <td>23</td>
+                <td>NAACCR_ID</td>
+                <td>North American Association of Central Cancer
+                  Registries Identification Number</td>
+                <td>MRSAT.ATN = "LNC"</td>
+              </tr>
+              <tr>
+                <td>24<br/>
+                </td>
+                <td>CODE_TABLE</td>
+                <td>Examples on CR0050 Cancer Registry</td>
+                <td>MRSAT.ATN = "LNE"</td>
+              </tr>
+              <tr>
+                <td>25<br/>
+                </td>
+                <td>SURVEY_QUEST_TXT</td>
+                <td>Question from survey instrument</td>
+                <td>MRSAT.ATN = "LQT"</td>
+              </tr>
+              <tr>
+                <td>26<br/>
+                </td>
+                <td>SURVEY_QUEST_SRC</td>
+                <td>Name of survey instrument and item/question number</td>
+                <td>MRSAT.ATN = "LQS"</td>
+              </tr>
+              <tr>
+                <td>27<br/>
+                </td>
+                <td>UNITSREQUIRED</td>
+                <td>Y/N indicates whether units are required for OBX
+                  segment in a HIPAA attachment</td>
+                <td>MRSAT.ATN = "LUR"</td>
+              </tr>
+              <tr>
+                <td>28<br/>
+                </td>
+                <td>SUBMITTED_UNITS</td>
+                <td>Moved to RELMA</td>
+                <td>MRSAT.ATN = "LSU"</td>
+              </tr>
+              <tr>
+                <td>29<br/>
+                </td>
+                <td>RELATEDNAMES2</td>
+                <td>Synonyms for each part of the fully-specified LOINC
+                  name (component, property, time, system, scale,
+                  method)</td>
+                <td>MRSAT.ATN = "LRN2"</td>
+              </tr>
+              <tr>
+                <td>30<br/>
+                </td>
+                <td>SHORTNAME</td>
+                <td>Concatenation of the fully-specified LOINC name</td>
+                <td>MRCONSO.STR, TTY = "OSN", "OOSN"</td>
+              </tr>
+              <tr>
+                <td>31<br/>
+                </td>
+                <td>ORDER_OBS</td>
+                <td>Defines term as an order only, observation only,
+                  both, or Subset</td>
+                <td>MRSAT.ATN = "LOR"</td>
+              </tr>
+              <tr>
+                <td>32<br/>
+                </td>
+                <td>CDISC_COMMON_TESTS</td>
+                <td>Y indicates member of subset used by CDISC in
+                  clinical trials</td>
+                <td>MRSAT.ATN = "LCD"</td>
+              </tr>
+              <tr>
+                <td>33<br/>
+                </td>
+                <td>HL7_FIELD_SUBFIELD_ID</td>
+                <td>Indicates that the content should be delivered in
+                  the named field/subfield of the HL7 message.</td>
+                <td>MRSAT.ATN = "HL7_FIELD_SUBFIELD_ID"</td>
+              </tr>
+              <tr>
+                <td>34<br/>
+                </td>
+                <td>EXTERNAL_COPYRIGHT_NOTICE</td>
+                <td>External copyright holder information</td>
+                <td>MRSAT.ATN = "COPYRIGHT"<br/>
+                  <br/>
+                  Used in the subsource assignment algorithm</td>
+              </tr>
+              <tr>
+                <td>35<br/>
+                </td>
+                <td>EXAMPLE_UNITS</td>
+                <td>Indicates representative units</td>
+                <td>MRSAT.ATN = "EXAMPLE_UNITS"</td>
+              </tr>
+              <tr>
+                <td>36</td>
+                <td>LONG_COMMON_NAME</td>
+                <td>Readable version of LOINC term</td>
+                <td>MRCONSO.ATN = "LC, OLC"</td>
+              </tr>
+              <tr>
+                <td>37<br/>
+                </td>
+                <td>HL7_V2_DATATYPE</td>
+                <td>HL7 version 2.x datatype</td>
+                <td>MRSAT.ATN = "HL7_V2_DATATYPE"</td>
+              </tr>
+              <tr>
+                <td>38<br/>
+                </td>
+                <td>HL7_V3_DATATYPE</td>
+                <td>HL7 version 3.0 datatype</td>
+                <td>MRSAT.ATN = "HL7_V3_DATATYPE"</td>
+              </tr>
+              <tr>
+                <td>39<br/>
+                </td>
+                <td>CURATED_RANGE_AND_UNITS</td>
+                <td>List of normal ranges and associated units</td>
+                <td>MRSAT.ATN = "CURATED_RANGE_AND_UNITS"</td>
+              </tr>
+              <tr>
+                <td>40<br/>
+                </td>
+                <td>DOCUMENT_SECTION</td>
+                <td>Classification of whether this code can be used as a
+                  full document, section of a document, or both</td>
+                <td>MRSAT.ATN = "DOCUMENT_SECTION"</td>
+              </tr>
+              <tr>
+                <td>41</td>
+                <td>EXAMPLE_UCUM_UNITS</td>
+                <td>Example units of measure expressed as UCUM units</td>
+                <td>MRSAT.ATN = "EXAMPLE_UCUM_UNITS"</td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">42<br/>
+                </td>
+                <td style="vertical-align: top;">EXAMPLE_SI_UCUM_UNITS</td>
+                <td style="vertical-align: top;">Not currently populated<br/>
+                </td>
+                <td style="vertical-align: top;">not applicable<br/>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">43<br/>
+                </td>
+                <td style="vertical-align: top;">STATUS_REASON<br/>
+                </td>
+                <td style="vertical-align: top;">Classification of the
+                  reason for concept status. This field will be Null for
+                  ACTIVE concepts, and optionally populated for terms in
+                  other status where the reason is clear. DEPRECATED or
+                  DISCOURAGED terms may take values of: AMBIGUOUS,
+                  DUPLICATE, or ERRONEOUS</td>
+                <td style="vertical-align: top;">MRSAT.ATN =
+                  "STATUS_REASON"<br/>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">44<br/>
+                </td>
+                <td style="vertical-align: top;">STATUS_TEXT<br/>
+                </td>
+                <td style="vertical-align: top;">Explanation of concept
+                  status in narrative text. This field will be Null for
+                  ACTIVE concepts, and optionally populated for terms in
+                  other status.</td>
+                <td style="vertical-align: top;">MRSAT.ATN =
+                  "STATUS_TEXT"<br/>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">45<br/>
+                </td>
+                <td style="vertical-align: top;">CHANGE_REASON_PUBLIC<br/>
+                </td>
+                <td style="vertical-align: top;">Detailed explanation
+                  about special changes to the term over time.<br/>
+                </td>
+                <td style="vertical-align: top;">MRSAT.ATN =
+                  "CHANGE_REASON_PUBLIC"<br/>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">46<br/>
+                </td>
+                <td style="vertical-align: top;">COMMON_TEST_RANK<br/>
+                </td>
+                <td style="vertical-align: top;">Numeric ranking of
+                  approximately 2,000 common tests performed by
+                  hospitals.</td>
+                <td style="vertical-align: top;">MRSAT.ATN =
+                  "COMMON_TEST_RANK"<br/>
+                </td>
+              <tr>
+                <td style="vertical-align: top;">47<br/>
+                </td>
+                <td style="vertical-align: top;">COMMON_SI_TEST_RANK<br/>
+                </td>
+                <td style="vertical-align: top;">Corresponding SI terms for 2000 common tests performed by laboratories in USA.</td>
+                <td style="vertical-align: top;">MRSAT.ATN =
+                  "COMMON_SI_TEST_RANK"<br/>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">48<br/>
+                </td>
+                <td style="vertical-align: top;">COMMON_ORDER_RANK<br/>
+                </td>
+                <td style="vertical-align: top;">Ranking of
+                  approximately 300 common orders performed by
+                  laboratories in the USA.<br/>
+                </td>
+                <td style="vertical-align: top;">MRSAT.ATN =
+                  "COMMON_ORDER_RANK"<br/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="rep_block_level_two"><a name="file2" id="file2"></a>
+          <h4 class="file_field_name">file:LOINC_MAP_TO</h4>
+          <table class="elements" border="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <th>#</th>
+                <th>Field</th>
+                <th>Representation</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>LOINC</td>
+                <td>Obsolete LNC code.<br/>
+                Used to create relationships between "LO" and "LN" atoms.<br/>
+                The REL= RQ;<br/>
+                The RELA=mapped_from/mapped_to.</td>
+              </tr>
+              <tr>
+                <td><br/>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>COMMENT</td>
+                <td>Current LNC code.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="rep_block_level_two"><a name="file3" id="file3"></a>
+          <h4 class="file_field_name">file:LOINC_PARTS</h4>
+          <table class="elements" border="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <th>#</th>
+                <th>Field</th>
+                <th>Representation</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>L_PART_ID</td>
+                <td>MRCONSO.CODE</td>
+              </tr>
+              <tr>
+                <td><br/>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>PART_TYPE</td>
+                <td>Values are: ADJUSTMENT, CHALLENGE, CLASS,<br/>
+                  COMPONENT, COUNT, DIVISORS, FRAGMENTS FOR SYNONYMS,<br/>
+                  METHOD, MULTI-AXIAL, MULTIPART, PROPERTY, QUOTIENTS,<br/>
+                  SCALE, SUFFIX, SUPER SYSTEM, SUPERCLASS,<br/>
+                  SUPERSYSTEMMULTI-AXIAL, SYSTEM, TIME, TIME MODIFIER.<br/>
+                  Parts with PART_TYPE of MULTIPART, QUOTIENTS, or
+                  SUPERCLASS are not included in Metathesaurus source
+                  processing;<br/>
+                  used to create relationships between LOINC PARTS and
+                  LOINC IDs.</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>NAME_CASE_INSENSITIVE</td>
+                <td>MRCONSO.STR, TTY = "LPN'</td>
+              </tr>
+              <tr>
+                <td><br/>
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>DISPLAY_NAME</td>
+                <td>
+                  <ul>
+                    <li>MRCONSO.STR, TTY = "LPDN" (only "DISPLAY_NAME"
+                      values that contain the pattern "Allergen Mix" are
+                      included as LPDN atoms</li>
+                    <li>MRSAT.ATN = "SOS"</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>SHORT_NAME_MIXED_CASE</td>
+                <td>Not used</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="rep_block_level_two"><a name="file4" id="file4"></a>
+          <h4 class="file_field_name">file:LOINC_PART_LINKS</h4>
+          <table class="elements" border="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <th>#</th>
+                <th>Field</th>
+                <th>Description</th>
+                <th>Representation</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>LOINC_NUM</td>
+                <td>LOINC CODE</td>
+                <td>A relationship (STYPE = "CODE") is created between
+                  the LOINC CODE and the LOINC PART.<br/>
+                  The REL = "RO";<br/>
+                  The RELA is assigned based on the
+                  LOINC_PARTS.PART_TYPE of the L_PART_ID as follows:<br/>
+                  <br/>
+                  <table class="elements_inner" cellpadding="0"
+                    cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <th>PART_TYPE</th>
+                        <th>RELA/inverse_RELA</th>
+                      </tr>
+                      <tr>
+                        <td>ADJUSTMENT</td>
+                        <td>has_adjustment adjustment_of</td>
+                      </tr>
+                      <tr>
+                        <td>CHALLENGE</td>
+                        <td>has_challenge challenge_of</td>
+                      </tr>
+                      <tr>
+                        <td>CLASS</td>
+                        <td>has_class class_of</td>
+                      </tr>
+                      <tr>
+                        <td>COMPONENT</td>
+                        <td>has_component component_of</td>
+                      </tr>
+                      <tr>
+                        <td>DIVISORS</td>
+                        <td>has_divisor divisor_of</td>
+                      </tr>
+                      <tr>
+                        <td>FRAGMENTS FOR SYNONYMS</td>
+                        <td>has_fragments_for_synonyms
+                          fragments_for_synonyms_of</td>
+                      </tr>
+                      <tr>
+                        <td>METHOD</td>
+                        <td>has_method method_of</td>
+                      </tr>
+                      <tr>
+                        <td>PROPERTY</td>
+                        <td>has_property property_of</td>
+                      </tr>
+                      <tr>
+                        <td>SCALE</td>
+                        <td>has_scale scale_of</td>
+                      </tr>
+                      <tr>
+                        <td>SUFFIX</td>
+                        <td>has_suffix suffix_of</td>
+                      </tr>
+                      <tr>
+                        <td>SUPERSYSTEM</td>
+                        <td>has_supersystem supersystem_of</td>
+                      </tr>
+                      <tr>
+                        <td>SYSTEM</td>
+                        <td>has_system system_of</td>
+                      </tr>
+                      <tr>
+                        <td>TIME</td>
+                        <td>has_time_aspect time_aspect_of</td>
+                      </tr>
+                      <tr>
+                        <td>TIME MONITOR</td>
+                        <td>has_time_monitor time_monitor_of</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <br/>
+                  <p>Note: No PARTS with PART TYPEs of "COUNT,"
+                    "MULTI-AXIAL" and "SUPERSYSTEMMULTI-AXIAL"<br/>
+                    appear in the current "LOINC_PART_LINKS" file,
+                    therefore no relationships are created for those
+                    PART TYPE values.</p>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>L_PART_ID</td>
+                <td>LOINC PART CODE</td>
+                <td><br/>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>LINK_TYPE</td>
+                <td>Value is always "1"</td>
+                <td>Not processed</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="rep_block_level_two"><a name="file5" id="file5"></a>
+          <h4 class="file_field_name">file:LOINC_MUTLI-AXIAL_HIERARCHY</h4>
+          <table class="elements" border="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <th>#</th>
+                <th>Field</th>
+                <th>Representation</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>PATH_TO_ROOT</td>
+                <td>Used to create the hierarchy tree under the "
+                  LOINCPARTS" concept</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>SEQUENCE</td>
+                <td>Not used</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>IMMEDIATE_PARENT</td>
+                <td>Not used</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>CODE</td>
+                <td>The identifier of the "child" concept; all end nodes
+                  are LOINC IDs; ancestors are LOINC PARTs</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>CODE_TEXT</td>
+                <td>Not used</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

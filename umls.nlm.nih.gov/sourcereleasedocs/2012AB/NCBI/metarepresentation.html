@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+</head>
+<body>
+
+<div class="section-4">
+<ul id="menu">
+  <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
+  <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
+  <li id="nav-3"> <a href="sourcemetastats.html">Statistics and sample
+data</a>
+    <ul id="subnav-3">
+      <li> <a href="termtypes.html">Terms and term types</a> </li>
+      <li> <a href="attributes.html">Attributes</a> </li>
+      <li> <a href="relationships.html">Relationships</a> </li>
+      <li> <a href="semtypes.html">Semantic Types</a> </li>
+      <li> <a href="overlap.html">Source Overlap</a> </li>
+    </ul>
+  </li>
+  <li id="nav-4"> <a href="representation.html">Representation</a>
+    <ul id="subnav-4">
+      <li> <a href="sourcerepresentation.html">Source Representation</a>
+      </li>
+      <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
+Representation</a> </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<br/>
+<br/>
+<br/>
+<a name="top"></a>
+<span class="nav">Skip to: <a href="#atoms">Atoms</a>, <a
+ href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
+<a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+<div id="general" class="rep_block_level_one">
+<p><b>VSAB:</b> NCBI2012_04_16<br/>
+</p>
+<div id="rep_identifiers" class="rep_block_level_one">
+<h3>Summary of Changes</h3>
+1) Dropped term type (TTY):
+<ul>
+  <li>UE</li>
+</ul>
+2) Dropped attribute name (ATN):
+<ul>  
+  <li>UNIQ_UNPUBL_NAME</li>
+  <li>UNPUBL_NAME</li>
+</ul>
+</div>
+<div id="rep_change_summary" class="rep_block_level_one">
+<h3>Notes:</h3>
+Many concepts and terms from the NCBI Taxonomy are excluded during
+Metathesarus source processing.&nbsp; The criteria for determining
+which concepts and terms are excluded or retained are outlined
+below.&nbsp; See term type descriptions for additional information<br/>
+<br/>
+1.&nbsp; Exclude all names that do not have one of the following name
+classes:<br/>
+&nbsp;&nbsp;&nbsp; scientific name<br/>
+&nbsp;&nbsp;&nbsp; synonym<br/>
+&nbsp;&nbsp;&nbsp; equivalent name<br/>
+&nbsp;&nbsp;&nbsp; common name<br/>
+&nbsp;&nbsp;&nbsp; authority<br/>
+<br/>
+2.&nbsp; Exclude all concepts below the "species" level in the
+hierarchy.&nbsp; Selected concepts with a rank of "no rank" may be
+retained, depending on their hierarchical level.<br/>
+<br/>
+3.&nbsp; Exclude all concepts that have a "division id" value of 11
+(environmental samples) and exclude their descendents.<br/>
+<br/>
+4.&nbsp; Exclude concepts and terms based on certain patterns, e.g.
+remove concepts with rank = "species" and the following words in the
+scientific name "uncultured," "clone," "unidentified," "uncultivated."<br/>
+<br/>
+Source file: taxdmp.zip.<br/>
+Files included in taxdmp.zip are:<br/>
+<br/>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>File</th>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">Description</span><br/>
+      </td>
+    </tr>
+    <tr>
+      <td>citations.dmp<br/>
+      </td>
+      <td style="vertical-align: top;">Citations (not directly processed)<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>delnodes.dmp<br/>
+      </td>
+      <td style="vertical-align: top;">Deleted nodes (not directly
+processed)<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>division.dmp<br/>
+      </td>
+      <td style="vertical-align: top;">Divisions<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>gc.prt<br/>
+      </td>
+      <td style="vertical-align: top;">Genetic code table (not directly
+processed)<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">gencode.dmp<br/>
+      </td>
+      <td style="vertical-align: top;">Genetic codes (not directly
+processed)<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>merged.dmp<br/>
+      </td>
+      <td style="vertical-align: top;">Merged nodes (not directly
+processed)<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>names.dmp<br/>
+      </td>
+      <td style="vertical-align: top;">Taxonomy names<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">nodes.dmp<br/>
+      </td>
+      <td style="vertical-align: top;">Taxonomy nodes (hierarchy)</td>
+    </tr>
+    <tr>
+      <td>readme.txt<br/>
+      </td>
+      <td style="vertical-align: top;">README file<br/>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br/>
+</div>
+<div id="rep_identifers" class="rep_block_level_one">
+<h3>Identifiers:</h3>
+Identifiers are assigned as follows:<br/>
+<ul>
+  <li>CODE: names.dmp.tax_id<br/>
+  </li>
+  <li>SAUI:&nbsp; not applicable<br/>
+  </li>
+  <li>SCUI: names.dmp.tax_id<br/>
+  </li>
+  <li>SDUI: not applicable<br/>
+  </li>
+</ul>
+
+<div id="rep_termtypes" class="rep_block_level_two">
+<a name="atoms"></a>
+<h3>Atoms (MRCONSO):</h3>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>Term Type</th>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">Description</span><br/>
+      </td>
+      <th>Origin</th>
+    </tr>
+    <tr>
+      <td>AUN<br/>
+      </td>
+      <td style="vertical-align: top;">Authority name<br/>
+      </td>
+      <td>CODE = names.dmp.tax_id<br/>
+STRING = names.dmp.name_txt<br/>
+SCUI = names.dmp.tax_id<br/>
+&nbsp;TTY = "AUN" is assigned where "name class" = "authority"<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>CMN<br/>
+      </td>
+      <td style="vertical-align: top;">Common name<br/>
+      </td>
+      <td>CODE = names.dmp.tax_id<br/>
+STRING = names.dmp.name_txt<br/>
+SCUI = names.dmp.tax_id<br/>
+&nbsp;TTY = "CMN" is assigned where "name class" = "common name"<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>EQ<br/>
+      </td>
+      <td style="vertical-align: top;">Equivalent name<br/>
+      </td>
+      <td>CODE = names.dmp.tax_id<br/>
+STRING = names.dmp.name_txt<br/>
+SCUI = names.dmp.tax_id<br/>
+&nbsp;TTY = "EQ" is assigned where "name class" = "equivalent name"<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>SCN<br/>
+      </td>
+      <td style="vertical-align: top;">Scientific name<br/>
+      </td>
+      <td>CODE = names.dmp.tax_id<br/>
+STRING = names.dmp.name_txt<br/>
+SCUI = names.dmp.tax_id<br/>
+&nbsp;TTY = "SCN" is assigned where "name class" = "scientific name"<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">SY<br/>
+      </td>
+      <td style="vertical-align: top;">Designated synonym<br/>
+      </td>
+      <td style="vertical-align: top;">CODE = names.dmp.tax_id<br/>
+STRING = names.dmp.name_txt<br/>
+SCUI = names.dmp.tax_id<br/>
+&nbsp;TTY = "SY" is assigned where "name class" = "synonym"<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>UAUN<br/>
+      </td>
+      <td style="vertical-align: top;">Unique authority name<br/>
+      </td>
+      <td>CODE = names.dmp.tax_id<br/>
+STRING = names.dmp.unique_name<br/>
+SCUI = names.dmp.tax_id<br/>
+&nbsp;TTY = "UAUN" is assigned where "name class" = "authority"<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>UCN<br/>
+      </td>
+      <td style="vertical-align: top;">Unique common name<br/>
+      </td>
+      <td>CODE = names.dmp.tax_id<br/>
+STRING = names.dmp.unique_name<br/>
+SCUI = names.dmp.tax_id<br/>
+&nbsp;TTY = "UCN" is assigned where "name class" = "common name"<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>USN<br/>
+      </td>
+      <td style="vertical-align: top;">Unique scientific name<br/>
+      </td>
+      <td>CODE = names.dmp.tax_id<br/>
+STRING = names.dmp.unique_name<br/>
+SCUI = names.dmp.tax_id<br/>
+&nbsp;TTY = "USN" is assigned where "name class" = "scientific name"<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">USY<br/>
+      </td>
+      <td style="vertical-align: top;">Unique synonym<br/>
+      </td>
+      <td style="vertical-align: top;">CODE = names.dmp.tax_id<br/>
+STRING = names.dmp.unique_name<br/>
+SCUI = names.dmp.tax_id<br/>
+&nbsp;TTY = "USY" is assigned where "name class" = "synonym"<br/>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div id="rep_attributes" class="rep_block_level_two">
+<a name="attributes"></a><br/>
+Note on suppressibility:&nbsp; For term types "AUN" and "UAUN,"
+MRCONSO.SUPPRESS is set to "Y"&nbsp; <br/>
+<br/>
+Atoms with other term types may systematically be
+set to "E" based on certain string patterns which indicate ambiguity or
+are not terminologically useful.&nbsp; In addition, for term types
+other than "SCN," if names.dmp contains a "unique_name," the atom
+created from "name_txt" will have SUPPRESS set to "E."&nbsp; <br/>
+<h3>Attributes (MRSAT):</h3>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>Attribute Name</th>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">Description</span><br/>
+      </td>
+      <th>Origin</th>
+    </tr>
+    <tr>
+      <td>DIV<br/>
+      </td>
+      <td style="vertical-align: top;">Division/phyla<br/>
+      </td>
+      <td>nodes.dmp.division id<br/>
+The ATV is the textual value of the "division id" from division.dmp<br/>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">RANK<br/>
+      </td>
+      <td style="vertical-align: top;">Taxonomic rank (e.g. kingdom,
+species, etc.) <br/>
+      </td>
+      <td style="vertical-align: top;">nodes.dmp.rank<br/>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div id="rep_definitions" class="rep_block_level_two">
+<a name="definitions"></a><br/>
+<h3>Definitions (MRDEF):</h3>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+<p>No definitions are included in the NCBI data.<br/>
+</p>
+</div>
+<div id="rep_relationships" class="rep_block_level_two">
+<a name="relationships"></a><br/>
+<h3>Relationships (MRREL):</h3>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>REL</th>
+      <th>RELA<br/>
+Inverse RELA</th>
+      <th>ORIGIN</th>
+    </tr>
+    <tr>
+      <td>PAR<br/>
+CHD<br/>
+      </td>
+      <td>(no RELA)<br/>
+      </td>
+      <td>nodes.dmp.parent tax_id<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>SY<br/>
+      </td>
+      <td>expanded_form_of<br/>
+has_expanded_form<br/>
+      </td>
+      <td>Connects names.dmp.name_txt to names.dmp.unique_name<br/>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div id="mappings" class="rep_block_level_two">
+
+<h3>Mappings (MRMAP):</h3>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+<p>No mappings are included in the NCBI data.<br/>
+</p>
+</div>
+</div>
+</div>

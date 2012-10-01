@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;
+      charset=ISO-8859-1">
+    <title></title>
+  </head>
+  <body>
+    <div class="section-4">
+      <ul id="menu">
+        <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
+        <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
+        <li id="nav-3"> <a href="sourcemetastats.html">Statistics and
+            sample data</a>
+          <ul id="subnav-3">
+            <li> <a href="termtypes.html">Terms and term types</a> </li>
+            <li> <a href="attributes.html">Attributes</a> </li>
+            <li> <a href="relationships.html">Relationships</a> </li>
+            <li> <a href="semtypes.html">Semantic Types</a> </li>
+            <li> <a href="overlap.html">Source Overlap</a> </li>
+          </ul>
+        </li>
+        <li id="nav-4"> <a href="representation.html">Representation</a>
+          <ul id="subnav-4">
+            <li> <a href="sourcerepresentation.html">Source
+                Representation</a> </li>
+            <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
+
+
+
+
+                Representation</a> </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <a name="top"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>,
+      <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
+      <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+    <div id="general" class="rep_block_level_one">
+      <p><b>VSAB:</b> ICD9CM_2013, MTHICD9_2013<br/>
+      </p>
+      <div id="rep_identifiers" class="rep_block_level_one">
+        <h3>Summary of Changes</h3>
+        <p>ICD-9-CM officially has minimal content updates for
+          2013.&nbsp; In an effort to synchronize long descriptions in
+          the Metathesaurus with CMS data, a different set of
+          source-provided files has been used for "codes" (represented
+          as TTY = "PT" in the Metathesaurus), resulting in changes in
+          MRCONSO.STR for cases where the CMS long description is
+          different from the 2012 Metathesaurus string.&nbsp;&nbsp; 2012
+          strings that were identified as lexically different from the
+          CMS 2013 long description have been preserved as entry terms
+          (TTY = "ET").&nbsp; Chapters, categories and subcategories
+          (represented as TTY = "HT") have mot changed.<br/>
+        </p>
+        <p>Note: On 08/09/2012, CMS issued corrections to full
+          descriptions for 41 diagnoses codes.&nbsp; These changes were
+          identified too late for incorporation into 2012AB.&nbsp;
+          Affected codes are:
+        </p>
+        <div class="syndicate">
+          <ul>
+            <li>28412, 317, 3180-319, 32341, 32342, 36501, 48811-48819,
+              64670-64673, 79552, 9685, 9950, 99560-99569, 99931, V1649,
+              V1659, V1781, V1789, V184, V2649, and V792.</li>
+          </ul>
+          <!--/PAGEWATCH--></div>
+        <p> </p>
+      </div>
+      <div id="rep_change_summary" class="rep_block_level_one">
+        <h3>Source Provided Files:<br/>
+        </h3>
+        <p>Full and abbreviated code titles:</p>
+        <p>Downloaded from <a
+href="https://www.cms.gov/Medicare/Coding/ICD9ProviderDiagnosticCodes/codes.html">https://www.cms.gov/Medicare/Coding/ICD9ProviderDiagnosticCodes/codes.html</a></p>
+        <p style="margin-left: 40px;"><span style="text-decoration:
+            underline;"><span style="text-decoration: underline;"><span
+                style="text-decoration: underline;"></span></span></span>Diagnoses:<br/>
+          CMS30_DESC_LONG_DX.txt&nbsp;&nbsp; <br/>
+          CMS30_DESC_SHORT_DX.txt&nbsp;&nbsp; <br/>
+        </p>
+        <p style="margin-left: 40px;">Procedures:<br/>
+          CMS30_DESC_LONG_SG.txt<br/>
+          CMS30_DESC_SHORT_SG.txt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+        <p>Entry terms, hierarchy and attributes:<br/>
+        </p>
+        <p>ICD9CM in the Metathesaurus was originally processed in 1999
+          using a combination of machine-processing and human
+          review.&nbsp; Through ICD9CM_2012, the Metathesaurus was
+          updated annually using the addenda, available in pdf format
+          from the following sites:<br/>
+          &nbsp;&nbsp;&nbsp; Diseases:&nbsp;
+          http://www.cdc.gov/nchs/icd/icd9cm_addenda_guidelines.htm#addenda<br/>
+          &nbsp;&nbsp;&nbsp; Procedures:&nbsp;
+          https://www.cms.gov/ICD9ProviderDiagnosticCodes/04_addendum.asp<br/>
+          Attributes, entry terms (SAB = MTHICD9, TTY = ET), and
+          hierarchical Terms (TTY = HT) were extracted from these files.</p>
+      </div>
+      <div id="rep_identifers" class="rep_block_level_one">
+        <h3>Identifiers:</h3>
+        Identifiers are assigned as follows:<br/>
+        <ul>
+          <li>CODE: ICD9CM code value<br/>
+          </li>
+          <li>SAUI:&nbsp; Not applicable<br/>
+          </li>
+          <li>SCUI:&nbsp; Not applicable<br/>
+          </li>
+          <li>SDUI: same as CODE</li>
+        </ul>
+        Note:&nbsp; MTHICD9 "ET" atoms are closely related but not
+        necessarily synonymous with their ICD9CM "PT" or "HT."&nbsp;
+        Therefore, they are assigned the same SDUI as the ICD9CM "PT" or
+        "HT" with the same code.<br/>
+        <p></p>
+        <div id="rep_termtypes" class="rep_block_level_two"> <a
+            name="atoms"></a>
+          <h3>Atoms (MRCONSO):</h3>
+          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <table class="elements" border="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <td style="vertical-align: top;"><span
+                    style="font-weight: bold;">SAB</span><br/>
+                </td>
+                <th>Term Type</th>
+                <th>Origin</th>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">ICD9CM<br/>
+                </td>
+                <td style="vertical-align: top;">AB<br/>
+                </td>
+                <td style="vertical-align: top;">CODE:&nbsp;
+                  CMS30_DESC_SHORT_DX.txt,
+                  CMS30_DESC_SHORT_SG.txt.&nbsp; The CODE/SDUI is
+                  extracted from the first field.&nbsp; A decimal point
+                  is inserted as appropriate.<br/>
+                  STRING:&nbsp; CMS30_DESC_SHORT_DX.txt,
+                  CMS30_DESC_SHORT_SG.txt:&nbsp; field 2.<br/>
+                  SDUI:&nbsp; Same as CODE </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">ICD9CM<br/>
+                </td>
+                <td>HT<br/>
+                </td>
+                <td>CODE:&nbsp; All non-leaf nodes are assigned
+                  TTY=HT.&nbsp; In the .pdf addenda, new HTs are
+                  generally tagged as "Chapter," "Category," or "Sub
+                  Category"<br/>
+                  STRING:&nbsp; A fully-specified version of the string<br/>
+                  SDUI:&nbsp; Same as CODE<br/>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">ICD9CM<br/>
+                </td>
+                <td>PT<br/>
+                </td>
+                <td>CODE:&nbsp; CMS30_DESC_LONG_DX.txt,
+                  CMS30_DESC_LONG_SG.txt.&nbsp; The CODE/SDUI is
+                  extracted from the first field.&nbsp; A decimal point
+                  is inserted as appropriate.<br/>
+                  STRING:&nbsp; CMS30_DESC_LONG_DX.txt,
+                  CMS30_DESC_LONG_SG.txt:&nbsp; field 2.<br/>
+                  SDUI:&nbsp; Same as CODE </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">MTHICD9<br/>
+                </td>
+                <td>ET<br/>
+                </td>
+                <td>CODE:&nbsp; The ICD-9-CM code corresponding with
+                  this entry term. <br/>
+                  STRING:&nbsp; Most MTHICD9 ETs were generated by
+                  parsing the 1999 data file, and were then reviewed by
+                  Metathesaurus content editors.&nbsp; In the .pdf
+                  addenda, ETs sometimes appear directly under the
+                  primary string, or they may be tagged as "Inclusion
+                  term".&nbsp; <br/>
+                  SDUI:&nbsp; Same as CODE<br/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="rep_attributes" class="rep_block_level_two"> <a
+            name="attributes"></a><br/>
+          <h3>Attributes (MRSAT):</h3>
+          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <br/>
+          Attributes were extracted from the .html and .pdf files based
+          on the following guidelines:<br/>
+          <br/>
+          <table class="elements" border="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <th>Attribute Name</th>
+                <td style="vertical-align: top;"><span
+                    style="font-weight: bold;">Description</span><br/>
+                </td>
+                <th>Origin</th>
+              </tr>
+              <tr>
+                <td>ICA<br/>
+                </td>
+                <td style="vertical-align: top;">Additional codes note<br/>
+                </td>
+                <td>Information containing the following pattern:&nbsp;
+                  "Use additional"<br/>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">ICC<br/>
+                </td>
+                <td style="vertical-align: top;">Code also note<br/>
+                </td>
+                <td style="vertical-align: top;">Information containing
+                  the following pattern:&nbsp; "Code also"<br/>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">ICE<br/>
+                </td>
+                <td style="vertical-align: top;">Entry term(s)<br/>
+                </td>
+                <td style="vertical-align: top;">Entry terms appearing
+                  directly under the primary string for a given
+                  code.&nbsp;&nbsp; The ICE attribute contains the
+                  original string as it appears in the data file, with
+                  "{" used to indicate indentation.&nbsp; Where
+                  applicable, individual entry terms have been extracted
+                  and are represented as atoms with SAB="MTHICD9" and
+                  TTY="ET"<br/>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">ICF<br/>
+                </td>
+                <td style="vertical-align: top;">Fifth-digit code note<br/>
+                </td>
+                <td style="vertical-align: top;">Information containing
+                  the following pattern:&nbsp; "[Ff]ifth-digit"<br/>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">ICN<br/>
+                </td>
+                <td style="vertical-align: top;">Instruction providing
+                  additional coding information<br/>
+                </td>
+                <td style="vertical-align: top;">Information containing
+                  one of the following patterns:&nbsp; "Code first"
+                  "Code, if applicable" "Note:" "Requires"<br/>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">SOS<br/>
+                </td>
+                <td style="vertical-align: top;">Scope note<br/>
+                </td>
+                <td style="vertical-align: top;">Information containing
+                  one of the following patterns:&nbsp; "Excludes:"
+                  "Includes:"<br/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="rep_definitions" class="rep_block_level_two"> <a
+            name="definitions"></a><br/>
+          <h3>Definitions (MRDEF):</h3>
+          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <p>No definitions are available for ICD9CM.<br/>
+          </p>
+        </div>
+        <div id="rep_relationships" class="rep_block_level_two"> <a
+            name="relationships"></a><br/>
+          <h3>Relationships (MRREL):</h3>
+          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <table class="elements" border="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <th>REL</th>
+                <th>RELA<br/>
+                  Inverse RELA</th>
+                <th>ORIGIN</th>
+              </tr>
+              <tr>
+                <td>PAR/CHD<br/>
+                </td>
+                <td>&lt;no rela&gt;<br/>
+                </td>
+                <td>Hierarchy built from the ICD9CM decimal-based code
+                  format, along with higher-level section headings and
+                  categories.<br/>
+                </td>
+              </tr>
+              <tr>
+                <td>RQ<br/>
+                </td>
+                <td>&lt;no rela&gt;<br/>
+                </td>
+                <td>Connect MTHICD9/ET atoms with PT or HT atoms with
+                  the same code<br/>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top;">SY<br/>
+                </td>
+                <td style="vertical-align: top;">&lt;no rela&gt;<br/>
+                </td>
+                <td style="vertical-align: top;">Connect PT and AB atoms
+                  with the same code<br/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="mappings" class="rep_block_level_two"> <a
+            name="mappings"></a><br/>
+          <h3>Mappings (MRMAP):</h3>
+          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <p>No mappings are supplied by ICD-9-CM.&nbsp; Mapping to
+            ICD9CM are supplied by other sources, such as SNOMEDCT.<br/>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
