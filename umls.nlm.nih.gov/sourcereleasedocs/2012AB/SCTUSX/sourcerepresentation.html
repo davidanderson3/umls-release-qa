@@ -27,6 +27,17 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
                 Representation</a> </li>
             <li> <a href="metarepresentation.html">Metathesaurus
                 Representation</a> </li>
@@ -44,12 +55,27 @@
       name="general"></a>
     <div id="rep_general" class="rep_block_level_one">
       <h3>Notes</h3>
-      <p>Note:&nbsp; The SCTUSX hierarchy is designed as an extension to
-        the SNOMEDCT hierarchy.&nbsp; Due to complications in
-        representing a mixed-source hierarchy, the SCTUSX hierarchy is
-        not represented in MRHIER.RRF, however it is represented in
-        MRREL.RRF as follows:&nbsp; <br/>
-      </p>
+      The RF1 format files were processed for SCTUSX_2012_09_01.&nbsp;
+      Metathesaurus SCTUSX data is extracted from the following
+      tab-delimited files:<br/>
+      <br/>
+SnomedCT_Release_US1000124_20120901/RF1Release/Terminology/Content:<br/>
+      <ul>
+        <li> sct1_Concepts_US1000124_20120901.txt<br/>
+          sct1_Descriptions_en-US_US1000124_20120901.txt<br/>
+          sct1_Relationships_US1000124_20120901.txt</li>
+      </ul>
+SnomedCT_Release_US1000124_20120901/RF1Release/Subsets/Language-en-US/<br/>
+      <ul>
+        <li> der1_SubsetMembers_en-US_US1000124_20120901.txt<br/>
+          der1_Subsets_en-US_US1000124_20120901.txt<br/>
+        </li>
+      </ul>
+      Note:&nbsp; The SCTUSX hierarchy is designed as an extension to
+      the SNOMEDCT hierarchy.&nbsp; Due to complications in representing
+      a mixed-source hierarchy, the SCTUSX hierarchy is not represented
+      in MRHIER.RRF, however it is represented in MRREL.RRF as
+      follows:&nbsp; <br/>
       <ul>
         <li>REL/REL_INVERSE:&nbsp; PAR/CHD</li>
         <li>RELA/RELA_INVERSE:&nbsp; inverse_isa/isa</li>
@@ -59,10 +85,21 @@
         name="change_summary"></a>
       <h3>Summary of Changes</h3>
       &nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)
-      <p>SCTUSX is a new source for 2012AA.<br/>
+      <p>The directory structure and file names for the SCTUSX release
+        have changed, however there are no changes to processing of
+        files in the Terminology subdirectory.<br/>
       </p>
+      <p>The SCTUSX_2012_09_01 release includes a
+        "Subsets/Language-en-US" subdirectory which was not present in
+        the previous release.&nbsp; These files were processed in
+        accordance with the SNOMEDCT RF1 subset file processing. <br/>
+      </p>
+      <p>New ATNs:<br/>
+        &nbsp;&nbsp;&nbsp; REFINABILITY and CHARACTERISTICTYPE are
+        included in SCTUSX_2012_09_01.&nbsp; These attributes were
+        omitted from SCTUSX_2012_09_01</p>
+      <p> </p>
       <br/>
-      <p></p>
     </div>
     <div id="rep_file_summary" class="rep_block_level_one"> <a
         name="file_summary"></a>
@@ -81,16 +118,12 @@
               <th>Description</th>
             </tr>
             <tr>
-              <td class="file_field_name">Readme_en_20120131.txt</td>
+              <td class="file_field_name">Readme_en_20120731.txt</td>
               <td>Lists the files included in the release</td>
             </tr>
             <tr>
-              <td class="file_field_name">doc_TechnicalImplementationGuide_Current-en-US_INT_20120131.pdf</td>
+              <td class="file_field_name">doc_TechnicalImplementationGuide_Current-en-US_INT_20120731.pdf</td>
               <td>Technical Implementation Guide</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">doc1_TechnicalReferenceGuide_Current-en-US_INT_20120131.pdf</td>
-              <td>Technical Reference Guide</td>
             </tr>
             <tr>
               <td style="vertical-align: top; font-family: Times New
@@ -1060,36 +1093,40 @@
 </style>
 
 
-<![endif]-->doc_EditorialGuide_Current-en-US_INT_20120131.pdf </td>
+<![endif]-->doc_EditorialGuide_Current-en-US_INT_20120731.pdf </td>
               <td style="vertical-align: top;">Editorial Guide<br/>
               </td>
             </tr>
             <tr>
-              <td class="file_field_name">doc_FileNamingConvention_Current-en_INT_20120131.pdf</td>
-              <td>File Naming Conventions</td>
+              <td valign="top">doc_IhtsdoGlossary_Current-en-US_INT_20120731.pdf<br/>
+              </td>
+              <td valign="top">Glossary (draft)<br/>
+              </td>
             </tr>
             <tr>
-              <td class="file_field_name">doc_NamespaceIdentifierGuide_Current-en-US_INT_20120131.pdf</td>
-              <td>Namespace Identifier Guide</td>
+              <td valign="top">doc_RF1Guide_Current-en-US_INT_20120731.pdf<br/>
+              </td>
+              <td valign="top">RF1 Guide<br/>
+              </td>
             </tr>
             <tr>
-              <td class="file_field_name">doc_NamespaceIdentifierRegistry_Current-en-US_INT_20120131.pdf</td>
+              <td class="file_field_name">doc_NamespaceIdentifierRegistry_Current-en-US_INT_20120731.pdf</td>
               <td>Namespece Identifier Registry</td>
             </tr>
             <tr>
-              <td class="file_field_name">doc_ScopeMemo_Current-en-US_INT_20120131.pdf</td>
+              <td class="file_field_name">doc_ScopeMemo_Current-en-US_INT_20120731.pdf</td>
               <td>Scope Memo</td>
             </tr>
             <tr>
-              <td class="file_field_name">doc_UserGuide_Current-en-US_INT_20120131.pdf</td>
+              <td class="file_field_name">doc_UserGuide_Current-en-US_INT_20120731.pdf</td>
               <td>User Guide</td>
             </tr>
             <tr>
-              <td class="file_field_name">doc1_CanonicalTableGuide_Current-en-US_INT_20120131.pdf</td>
+              <td class="file_field_name">doc1_CanonicalTableGuide_Current-en-US_INT_20120731.pdf</td>
               <td>Canonical Table Guide</td>
             </tr>
             <tr>
-              <td class="file_field_name">doc_DeveloperToolkitGuide_Current-en-US_INT_20120131.pdf</td>
+              <td class="file_field_name">doc_DeveloperToolkitGuide_Current-en-US_INT_20120731.pdf</td>
               <td>Developer Toolkit Guide</td>
             </tr>
           </tbody>
@@ -1105,25 +1142,37 @@
               <th>Description</th>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file1">sct1_Concepts_National_US_20120301.txt</a></td>
+              <td class="file_field_name"><a href="#file1">sct1_Concepts_US1000124_20120901.txt</a></td>
               <td>Concepts - Tab-Delimited Format</td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file2">sct1_Descriptions_en_INT_20120131.txt</a></td>
+              <td class="file_field_name"><a href="#file2">sct1_Descriptions_en-US_US1000124_20120901.txt</a></td>
               <td>Descriptions - Tab-Delimited Format</td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file3">sct1_Relationships_National_US_20120301.txt</a></td>
+              <td class="file_field_name"><a href="#file3">sct1_Relationships_US1000124_20120901.txt</a></td>
               <td>Relationships - Tab-Delimited Format</td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file4">sct1_ComponentHistory_National_US_20120301.txt</a></td>
+              <td class="file_field_name"><a href="#file4">sct1_ComponentHistory_US1000124_20120901.txt</a></td>
               <td>Component History - Tab-Delimited Format</td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file5">sct1_References_National_US_20120301.txt</a></td>
-              <td>References for inactive compoenents - Tab-Delimited
+              <td class="file_field_name"><a href="#file5">sct1_References_US1000124_20120901.txt</a></td>
+              <td>References for inactive components - Tab-Delimited
                 Format</td>
+            </tr>
+            <tr>
+              <td class="file_field_name"><a href="#file6">der1_Subsets_en-US_US1000124_20120901.txt</a></td>
+              <td valign="top">US English dialect subsets -
+                Tab-Delimited Format<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name"><a href="#file7">der1_SubsetMembers_en-US_US1000124_20120901.txt</a></td>
+              <td valign="top">US English dialect subset members - Tab
+                Delimited Format<br/>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -1140,8 +1189,19 @@
         data. Consult the SNOMED CT documentation for additional
         details.</p>
       <div class="rep_block_level_two"> <a name="file1"></a>
-        <h4 class="file_field_name">file:sct1_Concepts_National_US_yyyymmdd.txt</h4>
+        <h4 class="file_field_name">file:sct1_Concepts_US1000124_yyyymmdd.txt</h4>
         &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1159,7 +1219,7 @@
             <tr>
               <td>1</td>
               <td class="file_field_name">CONCEPTID</td>
-              <td>SNOMEDCT concept ID</td>
+              <td>SCTSUX concept ID</td>
               <td>MRSAT.CUI populated by the Metathesaurus CUI
                 corresponding to CONCEPTID.</td>
             </tr>
@@ -1204,8 +1264,19 @@
         </table>
         <br/>
         <a name="file2"></a>
-        <h4 class="file_field_name">file:sct1_Descriptions_National_US_yyyymmdd.txt</h4>
+        <h4 class="file_field_name">file:sct1_Descriptions_en-US_US1000124_yyyymmdd.txt</h4>
         &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1223,7 +1294,7 @@
             <tr>
               <td>1</td>
               <td class="file_field_name">DESCRIPTIONID</td>
-              <td>SNOMEDCT Description ID</td>
+              <td>SCTUSX_Description ID</td>
               <td>MRCONSO.SAUI</td>
             </tr>
             <tr>
@@ -1293,10 +1364,9 @@
         </table>
         <br/>
         &nbsp;*&nbsp; TTY assignment is based on a combination of fields
-        from sct1_Descriptions_en_INT_yyyymmdd.txt: DESCRIPTIONSTATUS,
-        DESCRIPTIONTYPE, and LANGUAGECODE.&nbsp; In some cases, the
-        MEMBERSTATUS field of der1_Subsets_National_US_yyyymmdd.txt may
-        be a factor.&nbsp; The assignments are as follows:<br/>
+        from sct1_Descriptions_en-US_US1000124_yyyymmdd.txt:
+        DESCRIPTIONSTATUS, DESCRIPTIONTYPE, and LANGUAGECODE.&nbsp; The
+        assignments are as follows:<br/>
         <br/>
         <table class="elements" border="0" cellspacing="0">
           <tbody>
@@ -1309,20 +1379,24 @@
             <tr>
               <td>0</td>
               <td>1</td>
-              <td>en</td>
-              <td>PT</td>
-            </tr>
-            <tr>
-              <td>0</td>
-              <td>1</td>
               <td>en-US</td>
               <td>PT</td>
             </tr>
             <tr>
               <td>0</td>
               <td>2</td>
-              <td>en-US</td>
+              <td>en</td>
               <td>SY</td>
+            </tr>
+            <tr>
+              <td valign="top">0<br/>
+              </td>
+              <td valign="top">2<br/>
+              </td>
+              <td valign="top">en-US<br/>
+              </td>
+              <td valign="top">SY<br/>
+              </td>
             </tr>
             <tr>
               <td>0</td>
@@ -1341,25 +1415,22 @@
               </td>
             </tr>
             <tr>
+              <td>5<br/>
+              </td>
               <td>1</td>
-              <td>1</td>
-              <td>en-GB</td>
+              <td>en</td>
               <td>OP</td>
             </tr>
             <tr>
-              <td>1</td>
+              <td>5<br/>
+              </td>
               <td>2</td>
               <td>en</td>
               <td>IS</td>
             </tr>
             <tr>
-              <td>1</td>
-              <td>2</td>
-              <td>en-GB</td>
-              <td>IS</td>
-            </tr>
-            <tr>
-              <td>1</td>
+              <td>5<br/>
+              </td>
               <td>3</td>
               <td>en</td>
               <td>OF</td>
@@ -1367,96 +1438,46 @@
             <tr>
               <td>8</td>
               <td>1</td>
-              <td>en-US</td>
+              <td>en</td>
               <td>OP</td>
+            </tr>
+            <tr>
+              <td valign="top">8<br/>
+              </td>
+              <td valign="top">1<br/>
+              </td>
+              <td valign="top">en-US<br/>
+              </td>
+              <td valign="top">OP<br/>
+              </td>
             </tr>
             <tr>
               <td>8</td>
               <td>2</td>
-              <td>en-US</td>
+              <td>en</td>
               <td>IS</td>
+            </tr>
+            <tr>
+              <td valign="top">8<br/>
+              </td>
+              <td valign="top">2<br/>
+              </td>
+              <td valign="top">en-US<br/>
+              </td>
+              <td valign="top">IS<br/>
+              </td>
             </tr>
             <tr>
               <td>8</td>
               <td>3</td>
               <td>en-US</td>
               <td>OF</td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">10<br/>
-              </td>
-              <td style="vertical-align: top;">1<br/>
-              </td>
-              <td style="vertical-align: top;">en<br/>
-              </td>
-              <td style="vertical-align: top;">OP<br/>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">10<br/>
-              </td>
-              <td style="vertical-align: top;">1<br/>
-              </td>
-              <td style="vertical-align: top;">en-US<br/>
-              </td>
-              <td style="vertical-align: top;">OP<br/>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">10<br/>
-              </td>
-              <td style="vertical-align: top;">2<br/>
-              </td>
-              <td style="vertical-align: top;">en-US<br/>
-              </td>
-              <td style="vertical-align: top;">IS<br/>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">10<br/>
-              </td>
-              <td style="vertical-align: top;">3<br/>
-              </td>
-              <td style="vertical-align: top;">en-US<br/>
-              </td>
-              <td style="vertical-align: top;">OF<br/>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">11<br/>
-              </td>
-              <td style="vertical-align: top;">1<br/>
-              </td>
-              <td style="vertical-align: top;">en-US<br/>
-              </td>
-              <td style="vertical-align: top;">OP<br/>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">11<br/>
-              </td>
-              <td style="vertical-align: top;">2<br/>
-              </td>
-              <td style="vertical-align: top;">en-US<br/>
-              </td>
-              <td style="vertical-align: top;">IS<br/>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">11<br/>
-              </td>
-              <td style="vertical-align: top;">3<br/>
-              </td>
-              <td style="vertical-align: top;">en-US<br/>
-              </td>
-              <td style="vertical-align: top;">OF<br/>
-              </td>
             </tr>
           </tbody>
         </table>
         <br/>
         <a name="file3"></a>
-        <h4 class="file_field_name">file:sct1_Relationships_National_US_yyyymmdd.txt</h4>
+        <h4 class="file_field_name">file:sct1_Relationships_US1000124_yyyymmdd.txt</h4>
         <br/>
         &nbsp; <span class="nav">return to <a href="#data_files">Data
             Files</a></span>
@@ -1472,13 +1493,14 @@
             <tr>
               <td>1</td>
               <td class="file_field_name">RELATIONSHIPID</td>
-              <td>SNOMEDCT Relationship ID</td>
+              <td>SCTUSX Relationship ID</td>
               <td>MRREL.SRUI</td>
             </tr>
             <tr>
               <td>2</td>
               <td class="file_field_name">CONCEPTID1</td>
-              <td>SNOMEDCT Concept ID of relationship's source concept</td>
+              <td>SNOMEDCT or SCTUSX Concept ID of relationship's source
+                concept</td>
               <td>MRREL.CUI2 populated by the Metathesaurus CUI
                 corresponding to CONCEPTID1</td>
             </tr>
@@ -1492,47 +1514,37 @@
                 <br/>
                 These mappings are expressed as attributes with
                 MRSAT.ATN="UMLSREL" and MRSAT.ATN="UMLSRELA", specifying
-                the REL and RELA values used for eacah
-                RELATIONSHIPTYPE.&nbsp;&nbsp; For historical reasons,
-                however, the UMLSREL attribute values "RT" and "NT" are
-                used for REL values in MRREL.RRF of "RO" and "RN",
-                respectively </td>
+                the REL and RELA values used for eacah RELATIONSHIPTYPE.
+                <br/>
+              </td>
             </tr>
             <tr>
               <td>4</td>
               <td class="file_field_name">CONCEPTID2</td>
-              <td>SNOMEDCT Concept ID of relationship's target concept</td>
+              <td>SNOMEDCT or SCTUSX Concept ID of relationship's target
+                concept</td>
               <td>MRREL.CUI1 populated by the Metathesaurus CUI
                 corresponding to CONCEPTID2</td>
             </tr>
             <tr>
               <td>5</td>
               <td class="file_field_name">CHARACTERISTICTYPE</td>
-              <td>Indicates whether this relationship is a defining (0),
-                qualifying (1), historical (2), or other additional (3)
-                characteristic of the source concept.</td>
+              <td>Indicates whether this relationship is a defining (0)
+                or historical (2)</td>
               <td>MRSAT.ATN="CHARACTERISTICTYPE" where MRSAT.METAUI is
                 the MRREL.RUI assigned where MRREL.SRUI = this
                 relationship's RELATIONSHIPID<br/>
-                <br/>
-                Also used to create MRSAT.ATN="AQ" where
-                CHARACTERISTICTYPE = 1 (qualifier) and REFINABILITY = 2
-                (mandatory)<br/>
               </td>
             </tr>
             <tr>
               <td>6</td>
               <td class="file_field_name">REFINABILITY</td>
-              <td>Indicates whether the target concept must (2), may
-                (1), or may not (0) be refined when using this
-                relationship as a clinical data entry template.</td>
+              <td>Indicates whether the target concept may (1), or may
+                not (0) be refined when using this relationship as a
+                clinical data entry template.</td>
               <td>MRSAT.ATN="REFINABILITY" where MRSAT.METAUI is the
                 MRREL.RUI assigned where MRREL.SRUI = this
                 relationship's RELATIONSHIPID<br/>
-                <br/>
-                Also used to create MRSAT.ATN="AQ" where
-                CHARACTERISTICTYPE = 1 (qualifier) and REFINABILITY = 2
-                (mandatory)<br/>
               </td>
             </tr>
             <tr>
@@ -1549,8 +1561,19 @@
         </table>
         <br/>
         <a name="file4"></a>
-        <h4 class="file_field_name">file:sct1_ComponentHistory_National_US_yyyymmdd.txt</h4>
+        <h4 class="file_field_name">file:sct1_ComponentHistory_US1000124_yyyymmdd.txt</h4>
         &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1568,7 +1591,7 @@
             <tr>
               <td>1</td>
               <td class="file_field_name">COMPONENTID</td>
-              <td>SNOMEDCT ID for the changed component</td>
+              <td>SCTUSX ID for the changed component</td>
               <td>MRHIST.SOURCEUI<br/>
                 MRHIST.CHANGEKEY = DESCRIPTIONSTATUS if COMPONENTID is a
                 DESCRIPTIONID<br/>
@@ -1579,7 +1602,7 @@
             <tr>
               <td>2</td>
               <td class="file_field_name">RELEASEVERSION</td>
-              <td>SNOMEDCT version in which the change was made</td>
+              <td>SCTUSX version in which the change was made</td>
               <td>MRHIST.SVER</td>
             </tr>
             <tr>
@@ -1604,8 +1627,19 @@
         </table>
         <br/>
         <a name="file5"></a>
-        <h4 class="file_field_name">file:sct1_References_National_US_yyyymmdd.txt</h4>
+        <h4 class="file_field_name">file:sct1_References_US1000124_yyyymmdd.txt</h4>
         &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1623,7 +1657,7 @@
             <tr>
               <td>1</td>
               <td class="file_field_name">COMPONENTID</td>
-              <td>SNOMEDCT ID for the inactive component</td>
+              <td>SCTUSX ID for the inactive component</td>
               <td>MRREL.CUI2 populated by the Metathesaurus CUI
                 corresponding to COMPONENTID</td>
             </tr>
@@ -1637,13 +1671,159 @@
             <tr>
               <td>3</td>
               <td class="file_field_name">REFERENCEDID</td>
-              <td>SNOMEDCT ID for the referenced component</td>
+              <td>SCTUSX ID for the referenced component</td>
               <td>MRREL.CUI1 populated by the Metathesaurus CUI
                 corresponding to REFERENCEDID</td>
             </tr>
           </tbody>
         </table>
         <br/>
+        <br/>
+        <a name="file6"></a>
+        <h4 class="file_field_name">file:der1_Subsets_en-US_US1000124_.txt</h4>
+        &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
+
+
+
+
+
+
+            Files</a></span>
+        <p>References for inactive components</p>
+        <table class="elements" border="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <th>#</th>
+              <th>Field Name</th>
+              <th>Description</th>
+              <th>Representation</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td class="file_field_name">SUBSETID</td>
+              <td>SCTUSX ID for this subset<br/>
+              </td>
+              <td>MRCONSO.SCUI and CODE for an atom with SAB = "SCTUSX",
+                TTY = "SB";<br/>
+                for attributes, MRSAT.SCUI populated by the
+                Metathesaurus CUI corresponding to the SB atom for this
+                SUBSETID<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td class="file_field_name">SUBSETORIGINALID</td>
+              <td>The SCTUSX ID of the original subset of which this is
+                an updated version<br/>
+              </td>
+              <td>MRSAT.ATN = "SUBSETORIGINALID"<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td class="file_field_name">SUBSETVERSION</td>
+              <td>The version number of this release of the subset<br/>
+              </td>
+              <td>MRSAT.ATN = "SUBSETVERSION"<br/>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">4<br/>
+              </td>
+              <td valign="top">SUBSETNAME<br/>
+              </td>
+              <td valign="top">The name of this subset<br/>
+              </td>
+              <td valign="top">MRCONSO.STR for the SCTUSX/SB atom with
+                CODE = SUBSETID<br/>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">5<br/>
+              </td>
+              <td valign="top">SUBSETTYPE<br/>
+              </td>
+              <td valign="top">Indicates the type of the subset and what
+                kind of components it includes<br/>
+              </td>
+              <td valign="top">MRSAT.ATN = "SUBSETTYPE"<br/>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">6<br/>
+              </td>
+              <td valign="top">LANGUAGECODE<br/>
+              </td>
+              <td valign="top">The 2-character ISO639-1 code indicating
+                the language of the subset, optionally followed by a
+                hyphen and a subcode string indicating a dialect;&nbsp;
+                if the dialect is general to an entire country, the
+                subcode will be the two-letter ISO 3166 country code<br/>
+              </td>
+              <td valign="top">MRSAT.ATN = "SUBSETLANGUAGECODE"<br/>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <a name="file7"></a>
+        <h4 class="file_field_name">file:der1_SubsetMembers_en-US_US1000124_yyyymmdd.txt</h4>
+        &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
+
+
+
+
+            Files</a></span>
+        <p>References for inactive components</p>
+        <table class="elements" border="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <th>#</th>
+              <th>Field Name</th>
+              <th>Description</th>
+              <th>Representation</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td class="file_field_name">SUBSETID</td>
+              <td>SCTUSX ID of the subset containing this member<br/>
+              </td>
+              <td>First ~ - separated component of MRSAT.ATV where
+                MRSAT.ATN = "SUBSETMEMBER"<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td class="file_field_name">MEMBERID</td>
+              <td>SCTUSX ID of this subset member (may be a description,
+                concept or relationship ID)<br/>
+              </td>
+              <td>MRSAT.METAUI for MRSAT.ATN = "SUBSETMEMBER" populated
+                by the Metathesaurus AUI corresponding to MEMBERID<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td class="file_field_name">MEMBERSTATUS</td>
+              <td>Integer specifying the type, status or order of this
+                member in this subset<br/>
+              </td>
+              <td>Second ~ - separated component of MRSAT.ATV where
+                MRSAT.ATN = "SUBSETMEMBER"<br/>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">4<br/>
+              </td>
+              <td valign="top">LINKEDID<br/>
+              </td>
+              <td valign="top">(valid for Navigation and Duplicate Terms
+                subsets only)<br/>
+              </td>
+              <td valign="top">N/A<br/>
+              </td>
+            </tr>
+          </tbody>
+        </table>
         <br/>
       </div>
     </div>
