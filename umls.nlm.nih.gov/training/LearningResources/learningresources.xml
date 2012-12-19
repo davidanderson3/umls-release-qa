@@ -76,8 +76,17 @@
                     <Format>Video Tutorial</Format>
                     <Organization externalcontentprovider = "N">NLM</Organization>
                 </resource>
-            </resources>       
-    </category>
+                <resource current="Y">
+                  <Project>UMLS</Project>
+                  <Title>Installing the UTS API 2.0</Title>
+                  <URL>http://www.nlm.nih.gov/research/umls/user_education/quick_tours/installing_wsdls.html</URL>
+                  <Date>11/20/2012</Date>
+                  <Runtime>3 min.</Runtime>
+                  <Format>Video Tutorial</Format>
+                  <Organization externalcontentprovider = "N">NLM</Organization>
+              </resource>
+           </resources>  
+   </category>
     <category name = "Local Installation of UMLS (MetamorphoSys)" rank = "04">
       <subcategories>
         <subcategory name= "Vocabulary Subset Creation">
