@@ -1,23 +1,23 @@
 <document>
 	<contexts>
-		<!--
-		<context name = "Stage 2 Meaningful Use EHR Certification" id = "mucert">
+		<context name = "2014 Meaningful Use EHR Certification" id = "mucert">
 			<image name = "network_low_res.jpg" class = "context-image" alt = "image of a central computer connected to several clients in a circle"/>
 			<resources>
-				<resource name = "Coming Soon: Value Set Authority Center (VSAC)" id = "vsac" type = "application" logo = "nlm_logo_sm.jpg">
+				<resource name = "Value Set Authority Center (VSAC)" id = "vsac" type = "application" logo = "nlm_logo_sm.jpg">
 					<description>
-						Per Centers for Medicare and Medicaid Services (CMS), the NLM's VSAC will be the official repository for Value Sets that support Clinical Quality Measures (CQMs) for Stage 2 Meaningful Use and beyond. 
+						Per Centers for Medicare and Medicaid Services (CMS), the NLM's VSAC will be the official repository for Value Sets that support 2014 Meaningful Use Clinical Quality Measures (CQMs). 
 						The VSAC will provide Certified EHR implementers the ability to search for and retrieve these value sets both through a GUI interface as well as APIs that can be 
 						implemented into an automated system.  
 					</description>
 					<properties>
+						<property name = "Publisher" url = "http://www.nlm.nih.gov"  external = "n">National Library of Medicine</property>
 						<property name = "Access">Free for use</property>
-						<property name = "Web Resource" url = "http://www.nlm.nih.gov/healthit/dec/" external="n">Stage 2 EHR Clinical Quality Measures Data Element Catalog</property>	
+						<property name = "Web Resource" url = "http://vsac.nlm.nih.gov" external="n">Value Set Authority Center web application</property>
+						<property name = "Web Resource" url = "http://www.nlm.nih.gov/healthit/dec/" external="n">2014 Clinical Quality Measures Data Element Catalog (DEC)</property>	
 					</properties>
 				</resource>
 			</resources>
 		</context>
-		-->
 		<context name = "Patient-Specific Education Materials" id = "clinicalsummaries">
 			<image name = "doctor_and_patient_low_res.jpg" class = "context-image" alt = "image of doctor with patients in the background"/>
 			<resources>
@@ -156,8 +156,16 @@
 							</subset>
 						</subsets>
 						<mappings>
-							<mapping name = "ICD-9-CM to SNOMED CT Map" id = "icd9cmsnomedct_map" published = "y" featured = "y">
-								<description>Mapping files (one-to-one and one-to-many) that provides a way to get clinical information encoded in ICD-9-CM migrated to SNOMED CT.</description>
+							<mapping name = "ICD-9-CM Procedure Codes to SNOMED CT Map" id = "icd9cmsnomedct_map" published = "y" featured = "y">
+								<description>ICD-9-CM codes used in-patient claims data, as reported by the Centers for Medicare and Medicaid Services (CMS) for the year 2011. Map published January 2013.</description>
+								<properties>
+									<property name = "Publisher" url  = "http://www.nlm.nih.gov/" external = "n">National Library of Medicine</property>
+									<property name = "Access">Free for use*</property>
+									<property name = "Web Resource" url = "http://www.nlm.nih.gov/research/umls/mapping_projects/icd9cmv3_to_snomedct.html" external = "n">ICD-9-CMv3 -> SNOMED CT Mapping Files and Documentation</property>
+								</properties>
+							</mapping>
+							<mapping name = "ICD-9-CM Diagnostic Codes to SNOMED CT Map" id = "icd9cmsnomedct_map" published = "y" featured = "y">
+								<description>ICD-9-CM codes used in short-stay and outpatient hospitals, as reported by the Centers for Medicare and Medicaid Services (CMS) for the year 2009. Map published May 2012.</description>
 								<properties>
 									<property name = "Publisher" url  = "http://www.nlm.nih.gov/" external = "n">National Library of Medicine</property>
 									<property name = "Access">Free for use*</property>
