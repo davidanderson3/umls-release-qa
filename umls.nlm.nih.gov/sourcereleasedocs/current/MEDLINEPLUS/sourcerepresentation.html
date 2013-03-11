@@ -23,8 +23,6 @@
         <li id="nav-4"> <a href="representation.html">Representation</a>
           <ul id="subnav-4">
             <li> <a href="sourcerepresentation.html" id="sourcerep">Source
-
-
                 Representation</a> </li>
             <li> <a href="metarepresentation.html">Metathesaurus
                 Representation</a> </li>
@@ -46,7 +44,11 @@
         name="change_summary"></a>
       <h3>Summary of Changes:</h3>
       &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-      <br/>
+      <br class="atl-forced-newline">
+        Change in the code format.  The preceding 'T' of the health topics code (e.g., T3061) has been deprecated.  The result is that the health code is no
+        longer unique and can have the same code as the group id but have a different meaning. For example, group id=22
+        (Immune System) and health topic code = 22 (Alzheimer's Disease).  With this change, codes are no longer being used in the
+        SDUI field.<br/><br/>
       New Elements and Attributes:
       <ul>
         <li>element: other-language with attribute(s): vernacular name, url</li>
@@ -109,12 +111,12 @@
             </tr>
             <tr>
               <td class="file_field_name">mplus_topics-2012-06-01.dtd </td>
-              <td>dtd for mplus_topics_2012-12-04.xml<br/>
+              <td>dtd for mplus_topics_2013-02-21.xml<br/>
               </td>
             </tr>
             <tr>
               <td class="file_field_name">mplus_groups_2012-06-01.dtd </td>
-              <td>dtd for mplus_topic_groups_2012-12-04.xml<br/>
+              <td>dtd for mmplus_topic_groups_2013-02-21.xml<br/>
               </td>
             </tr>
           </tbody>
@@ -129,7 +131,7 @@
               <th>Description</th>
             </tr>
             <tr>
-              <td class="file_field_name">mplus_topics_2012-12-04.xml </td>
+              <td class="file_field_name">mplus_topics_2013-02-21.xml</td>
               <td>
                 <p>Contains information on all MedlinePlus health topics
                   including:&nbsp; topic name; URL; creation date;
@@ -138,7 +140,7 @@
               </td>
             </tr>
             <tr>
-              <td class="file_field_name">mplus_topic_groups_2012-12-04.xml </td>
+              <td class="file_field_name">mplus_topic_groups_2013-02-21.xml</td>
               <td>Contains information on all health topic groups on
                 MedlinePlus. </td>
             </tr>
@@ -191,7 +193,7 @@
                 language="English"&gt;<br/>
                 <br/>
               </td>
-              <td>health-topic id:&nbsp;MRCONSO.CODE, MRCONSO.SDUI<br/>
+              <td>health-topic id:&nbsp;MRCONSO.CODE<br/>
                   health-topic language:&nbsp;MRCONSO.LAT, MRSAB.LAT (only English terms from MedlinePlus are included in the Metathesaurus).<br/>
                   health-topic title:&nbsp;MRCONSO.STR, TTY = PT</br>
                   health-topic url:&nbsp;MRSAT.ATN = MP_HEALTH_TOPIC_URL<br/>
@@ -334,7 +336,7 @@
                 Example: &lt;group language="English" id="1" url="http://www.nlm.nih.gov/medlineplus/cancers.html"&gt;Cancers&lt;/group&gt;
               </td>
               <td> group language: process only English entries<br/>
-              group id: MRCONSO.CODE, MRCONSO.SDUI<br/>
+              group id: MRCONSO.CODE<br/>
               group name: MRCONSO.STR, TTY= HT<br/>
               group url: MRSAT.ATN = MP_GROUP_URL<br/>
               </td>

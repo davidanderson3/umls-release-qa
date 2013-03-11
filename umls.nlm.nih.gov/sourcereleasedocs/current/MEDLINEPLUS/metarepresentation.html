@@ -39,11 +39,15 @@
         href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
       <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
     <div id="general" class="rep_block_level_one">
-      <p><b>VSAB:</b> MEDLINEPLUS_20121204</p>
+      <p><b>VSAB:</b> MEDLINEPLUS_20130221</p>
       <div id="rep_identifiers" class="rep_block_level_one">
         <h3>Summary of Changes:</h3>
         &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-      <br/>
+      <br class="atl-forced-newline">
+        Change in the code format.  The preceding 'T' of the health topics code (e.g., T3061) has been deprecated.  The result is that the health code is no
+        longer unique and can have the same code as the group id but have a different meaning. For example, group id=22
+        (Immune System) and health topic code = 22 (Alzheimer's Disease).  With this change, codes are no longer being used in the
+        SDUI field.<br/><br/>
       New Elements and Attributes:
       <ul>
         <li>element: other-language with attribute(s): vernacular name, url</li>
@@ -92,8 +96,8 @@
         <br/>
         For 2013AA, the files used were:<br/>
         <ul>
-          <li>mplus_topics_2012-12-04.xml</li>
-          <li>mplus_topic_groups_2012-12-04.xml</li>
+          <li>mplus_topics_2013-02-21.xml</li>
+          <li>mplus_topic_groups_2013-02-21.xml</li>
         </ul>
       </div>
       <div id="rep_identifers" class="rep_block_level_one">
@@ -136,10 +140,10 @@
             <tr>
               <td>SDUI<br/>
               </td>
-              <td>Value of &lt;health-topic id&gt; in
-                mplus_topics_YYYY-MM-DD.xml </td>
-              <td>Value of &lt;group id&gt; in
-                mplus_topic_groups_YYYY-MM-DD.xml </td>
+              <td>Not applicable<br/>
+              </td>
+              <td>Not applicable<br/>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -179,7 +183,7 @@
                 </td>
                 <td>CODE = &lt;health-topic id&gt;<br/>
                   STR = &lt;see-reference&gt;<br/>
-                  SDUI = &lt;health-topic id&gt; </td>
+                </td>
                 <td style="vertical-align: top;">mplus_topics_YYYY-MM-DD.xml<br/>
                 </td>
               </tr>
@@ -190,7 +194,6 @@
                 </td>
                 <td>CODE = &lt;group id&gt;<br/>
                   STR = &lt;group&gt;<br/>
-                  SDUI = &lt;group id&gt;&nbsp; <br/>
                 </td>
                 <td style="vertical-align: top;">mplus_topic_groups_YYYY-MM-DD.xml
                 </td>
@@ -200,14 +203,10 @@
                 </td>
                 <td>Preferred term<br/>
                 </td>
-                <td colspan="1" rowspan="1">CODE = &lt;health-topic id&gt; <br/>
+                <td>CODE = &lt;health-topic id&gt; <br/>
                   STR = &lt;health-topic title&gt;<br/>
-                  SDUI = &lt;health-topic id&gt;<br/>
                 </td>
                 <td style="vertical-align: top;">mplus_topics_YYYY-MM-DD.xml<br/>
-                  <br/>
-                  <br/>
-                  <br/>
                 </td>
               </tr>
               <tr>
@@ -217,7 +216,6 @@
                 </td>
                 <td>CODE = &lt;health-topic id&gt;<br/>
                   STR = &lt;also-called&gt;<br/>
-                  SDUI = &lt;health-topic id&gt;<br/>
                 </td>
                 <td style="vertical-align: top;">mplus_topics_YYYY-MM-DD.xml<br/>
                 </td>
@@ -314,7 +312,7 @@
                 </td>
                 <td>related_to<br/>
                 </td>
-                <td>Connect health-topic SDUI to related SDUI<br/>
+                <td>Connect PT atoms to related topic atoms<br/>
                 </td>
               </tr>
               <tr>
