@@ -31,6 +31,8 @@
 
 
 
+
+
                 Representation</a> </li>
           </ul>
         </li>
@@ -43,27 +45,72 @@
       <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
       <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
     <div id="general" class="rep_block_level_one">
-      <p><b>VSAB:</b> SNOMEDCT_2012_01_31</p>
+      <p><b>VSAB:</b> SNOMEDCT_2012_07_31</p>
     </div>
     <div id="rep_identifiers" class="rep_block_level_one">
       <h3>Summary of Changes</h3>
-      <p>There have been no changes to the SNOMEDCT format, however the
-        combination of DESCRIPTIONTYPE=0 and DESCRIPTIONSTATUS other
-        than 0 is not longer present in the data.&nbsp; This results in:<br/>
+      <p>There have been no changes to the SNOMEDCT format or processing
+        of the data, however atoms with DESCRIPTIONSTATUS&nbsp;= 7
+        (Inappropriate) have been assigned TTYs as follows:<br/>
       </p>
-      <p style="margin-left: 40px;">DROPPED TTY:&nbsp; OB<br/>
-      </p>
-      <p>In addition, a small number of issues in the
-        sct1_ComponentHistory_Core_INT_20120131.txt resulted in a few
-        entries missing from MRHIST.RRF.<br/>
-      </p>
-      <p>Note:&nbsp; Although there have been no changes to
-        Metathesaurus source processing, this document has been updated
-        to correctly reflect the representation of ComponentHistory_Core
-        data in MRHIST.RRF. </p>
-      <span style=""><span style="color: rgb(13, 13, 13);"></span></span>
+      <table class="elements" border="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <th>DESCRIPTIONTYPE</th>
+            <th>DESCRIPTIONSTATUS</th>
+            <td valign="top"><b>LANG</b><br/>
+            </td>
+            <td valign="top"><b>TTY</b><br/>
+            </td>
+            <td valign="top"><b>SUPPRESS</b><br/>
+            </td>
+            <td valign="top"><b>LAT</b><br/>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>7<br/>
+            </td>
+            <td valign="top">en-GB<br/>
+            </td>
+            <td valign="top">IS<br/>
+            </td>
+            <td valign="top">O<br/>
+            </td>
+            <td valign="top">ENG<br/>
+            </td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>7<br/>
+            </td>
+            <td valign="top">en<br/>
+            </td>
+            <td valign="top">OP<br/>
+            </td>
+            <td valign="top">O<br/>
+            </td>
+            <td valign="top">ENG<br/>
+            </td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>7<br/>
+            </td>
+            <td valign="top">en-GB<br/>
+            </td>
+            <td valign="top">OP<br/>
+            </td>
+            <td valign="top">O<br/>
+            </td>
+            <td valign="top">ENG<br/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
       <p>In the future, the new SNOMEDCT RF2 format will be processed,
         and this document will be updated to reflect the changes.</p>
+      <p> </p>
     </div>
     <div id="rep_change_summary" class="rep_block_level_one">
       <h3>Original Files:</h3>
@@ -71,61 +118,71 @@
       The Metathesaurus SNOMEDCT data is taken from the following
       tab-delimited SNOMEDCT files, found in the specified folders:
       <ul>
-        <li>SnomedCT_Release_INT_20120131/RF1Release/Terminology/Content:
+        <li>SnomedCT_Release_INT_20120731/RF1Release/Terminology/Content:
+
+
 
 
 
 
           <ul>
-            <li>sct1_Concepts_Core_INT_20120131.txt</li>
-            <li>sct1_Descriptions_en_INT_20120131.txt</li>
-            <li>sct1_Relationships_Core_INT_20120131.txt</li>
+            <li>sct1_Concepts_Core_INT_20120731.txt</li>
+            <li>sct1_Descriptions_en_INT_20120731.txt</li>
+            <li>sct1_Relationships_Core_INT_20120731.txt</li>
           </ul>
         </li>
-        <li>SnomedCT_Release_INT_20120131/RF1Release/Terminology/History:
+        <li>SnomedCT_Release_INT_201207311/RF1Release/Terminology/History:
+
+
 
 
 
 
           <ul>
-            <li>sct1_ComponentHistory_Core_INT_20120131.txt</li>
-            <li>sct1_References_Core_INT_20120131.txt</li>
+            <li>sct1_ComponentHistory_Core_INT_20120731.txt</li>
+            <li>sct1_References_Core_INT_20120731.txt</li>
           </ul>
         </li>
-        <li>SnomedCT_Release_INT_20120131/RF1Release/CrossMaps/ICD9:
+        <li>SnomedCT_Release_INT_20120731/RF1Release/CrossMaps/ICD9:
           <ul>
-            <li>der1_CrossMaps_ICD9_INT_20120131.txt</li>
-            <li>der1_CrossMapSets_ICD9_INT_20120131.txt</li>
-            <li>der1_CrossMapTargets_ICD9_INT_20120131.txt</li>
+            <li>der1_CrossMaps_ICD9_INT_20120731.txt</li>
+            <li>der1_CrossMapSets_ICD9_INT_20120731.txt</li>
+            <li>der1_CrossMapTargets_ICD9_INT_20120731.txt</li>
           </ul>
         </li>
-        <li>SnomedCT_Release_INT_20120131/RF1Release/OtherResources/TextDefinitions:
+        <li>SnomedCT_Release_INT_20120731/RF1Release/OtherResources/TextDefinitions:
+
+
 
 
 
 
           <ul>
-            <li>sct1_TextDefinitions_en-US_INT_20120131.txt</li>
+            <li>sct1_TextDefinitions_en-US_INT_20120731.txt</li>
           </ul>
         </li>
-        <li>SnomedCT_Release_INT_20120131/RF1Release/Subsets/Language-en-US:
+        <li>SnomedCT_Release_INT_20120731/RF1Release/Subsets/Language-en-US:
+
+
 
 
 
 
           <ul>
-            <li>der1_Subsets_en-US_INT_20120131.txt</li>
-            <li>der1_SubsetMembers_en-US_INT_20120131.txt</li>
+            <li>der1_Subsets_en-US_INT_20120731.txt</li>
+            <li>der1_SubsetMembers_en-US_INT_20120731.txt</li>
           </ul>
         </li>
-        <li>SnomedCT_Release_INT_20120131/RF1Release/Subsets/Language-en-GB:
+        <li>SnomedCT_Release_INT_20120731/RF1Release/Subsets/Language-en-GB:
+
+
 
 
 
 
           <ul>
-            <li>der1_Subsets_en-GB_INT_20120131.txt</li>
-            <li>der1_SubsetMembers_en-GB_INT_20120131.txt</li>
+            <li>der1_Subsets_en-GB_INT_20120731.txt</li>
+            <li>der1_SubsetMembers_en-GB_INT_20120731.txt</li>
           </ul>
         </li>
       </ul>
