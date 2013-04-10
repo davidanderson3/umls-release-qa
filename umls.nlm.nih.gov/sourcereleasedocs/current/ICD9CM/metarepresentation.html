@@ -29,6 +29,7 @@
 
 
 
+
                 Representation</a> </li>
           </ul>
         </li>
@@ -41,34 +42,17 @@
       <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
       <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
     <div id="general" class="rep_block_level_one">
-      <p><b>VSAB:</b> ICD9CM_2013, MTHICD9_2013<br/>
+      <p><b>VSAB:</b> ICD9CM_2013_2012_08_06, MTHICD9_2013_2012_08_06<br/>
       </p>
       <div id="rep_identifiers" class="rep_block_level_one">
         <h3>Summary of Changes</h3>
-        <p>ICD-9-CM officially has minimal content updates for
-          2013.&nbsp; In an effort to synchronize long descriptions in
-          the Metathesaurus with CMS data, a different set of
-          source-provided files has been used for "codes" (represented
-          as TTY = "PT" in the Metathesaurus), resulting in changes in
-          MRCONSO.STR for cases where the CMS long description is
-          different from the 2012 Metathesaurus string.&nbsp;&nbsp; 2012
-          strings that were identified as lexically different from the
-          CMS 2013 long description have been preserved as entry terms
-          (TTY = "ET").&nbsp; Chapters, categories and subcategories
-          (represented as TTY = "HT") have mot changed.<br/>
-        </p>
-        <p>Note: On 08/09/2012, CMS issued corrections to full
-          descriptions for 41 diagnoses codes.&nbsp; These changes were
-          identified too late for incorporation into 2012AB.&nbsp;
-          Affected codes are:
-        </p>
-        <div class="syndicate">
-          <ul>
-            <li>28412, 317, 3180-319, 32341, 32342, 36501, 48811-48819,
-              64670-64673, 79552, 9685, 9950, 99560-99569, 99931, V1649,
-              V1659, V1781, V1789, V184, V2649, and V792.</li>
-          </ul>
-          <!--/PAGEWATCH--></div>
+        On August 8, 2012, CMS issued corrections to full descriptions
+        which affected 41 diagnoses codes.&nbsp; These changes were&nbsp;
+        incorporated into 2013AA.&nbsp; <br/>
+        <br/>
+        In cases where the PT string for a given ICD9CM CODE was the
+        same as an existing MTHICD9 Entry Term (ET) , the ET was removed
+        to avoid duplication.&nbsp; <br/>
         <p> </p>
       </div>
       <div id="rep_change_summary" class="rep_block_level_one">
@@ -80,7 +64,7 @@ href="https://www.cms.gov/Medicare/Coding/ICD9ProviderDiagnosticCodes/codes.html
         <p style="margin-left: 40px;"><span style="text-decoration:
             underline;"><span style="text-decoration: underline;"><span
                 style="text-decoration: underline;"></span></span></span>Diagnoses:<br/>
-          CMS30_DESC_LONG_DX.txt&nbsp;&nbsp; <br/>
+          CMS30_DESC_LONG_DX 080612.txt&nbsp; <br/>
           CMS30_DESC_SHORT_DX.txt&nbsp;&nbsp; <br/>
         </p>
         <p style="margin-left: 40px;">Procedures:<br/>
@@ -162,11 +146,11 @@ href="https://www.cms.gov/Medicare/Coding/ICD9ProviderDiagnosticCodes/codes.html
                 </td>
                 <td>PT<br/>
                 </td>
-                <td>CODE:&nbsp; CMS30_DESC_LONG_DX.txt,
+                <td>CODE:&nbsp; CMS30_DESC_LONG_DX 080612.txt,
                   CMS30_DESC_LONG_SG.txt.&nbsp; The CODE/SDUI is
                   extracted from the first field.&nbsp; A decimal point
                   is inserted as appropriate.<br/>
-                  STRING:&nbsp; CMS30_DESC_LONG_DX.txt,
+                  STRING:&nbsp; CMS30_DESC_LONG_DX 080612.txt,
                   CMS30_DESC_LONG_SG.txt:&nbsp; field 2.<br/>
                   SDUI:&nbsp; Same as CODE </td>
               </tr>
