@@ -26,6 +26,7 @@
             <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
 
 
+
                 Representation</a> </li>
           </ul>
         </li>
@@ -40,70 +41,12 @@
     <div id="general" class="rep_block_level_one">
       <p><b>VSAB:</b> ICD10CM_2012</p>
       <div id="rep_change_summary" class="rep_block_level_one">
-        <h3>Summary of Changes</h3>
-        General:&nbsp; For consistency, plain ASCII text forms of atoms
-        and attributes containing UTF-8 characters were created during
-        Metathesaurus source processing.<br/>
+        <h3>Summary of Change</h3>
         <br/>
         New TTYs:&nbsp;&nbsp; <br/>
         <ul>
-          <li>AB (short description) </li>
-          <li>MTH_ET&nbsp; (plain text version of entry term)<br/>
-          </li>
-          <li>MTH_PT&nbsp; (plain text version of preferred term)<br/>
-          </li>
-          <li>MTH_HT&nbsp; (plain text version of hierarchical term)</li>
+          <li>MTH_AB (plain text version of short description) </li>
         </ul>
-        <p>Deleted TTY: <br/>
-        </p>
-        <ul>
-          <li>DET<br/>
-          </li>
-        </ul>
-        New REL/RELAs:<br/>
-        <ul>
-          <li>AB atoms are connected with SY/mth_expanded_form_of
-            REL/RELA to the PT with the same code </li>
-          <li>MTH_atoms are connected with SY/plain_text_form_of
-            REL/RELA to their non-MTH atom<br/>
-          </li>
-        </ul>
-        New ATNs:<br/>
-        <ul>
-          <li>ORDER_NO (indicates the line order in
-            icd10cm_order_2012.txt)</li>
-          <li>MTH_CODE_FIRST (plain text version of CODE_FIRST
-            attribute)<br/>
-          </li>
-          <li>MTH_EXCLUDES1 (plain text version of EXCLUDES1 attribute)<br/>
-          </li>
-          <li>MTH_EXCLUDES2 (plain text version of EXCLUDES2 attribute)<br/>
-          </li>
-        </ul>
-        Deleted ATNs: <br/>
-        <ul>
-          <li>CHAPTER_NOTE </li>
-          <li>MAPSETTYPE (deprecated mapping attribute)</li>
-        </ul>
-        <p>Note:&nbsp; Due to an error processing the "reimbursement"
-          map set, ICD-10-CM codes with no mapping to ICD-9CM are
-          misrepresented in MRMAP.RRF and MRSMAP.RRF.&nbsp; This affects
-          669 lines in MRMAP.RRF and MRSMAP.RRF.<br/>
-        </p>
-        <p>For example, in MRMAP.RRF, this line:<br
-            class="atl-forced-newline">
-        </p>
-        <pre style="margin-left: 40px;">C2936851|ICD10CM|||AT133799328||Z67.10||Z67.10|SDUI|||RQ|mapped_to|17285||NOD.X|SDUI|||||||||</pre>
-        <p>Should be:<br class="atl-forced-newline">
-        </p>
-        <pre style="margin-left: 40px;">C2936851|ICD10CM|||AT133799328||Z67.10||Z67.10|SDUI|||XR||||||||||||||</pre>
-        <p>In MRSMAP.RRF, this line:<br class="atl-forced-newline">
-        </p>
-        <pre style="margin-left: 40px;">C2936851|ICD10CM|AT133774791||T49.6X6D|SDUI|RQ|mapped_to|NOD.X|SDUI||</pre>
-        <p>Should be:<br class="atl-forced-newline">
-        </p>
-        <pre style="margin-left: 40px;">C2936851|ICD10CM|AT133774791||T49.6X6D|SDUI|XR|||||</pre>
-        <span style="font-weight: bold;"></span>
         <h3>Source Provided Files:</h3>
         <br/>
         The Metathesaurus uses files submitted in TREF (Terminology
@@ -130,10 +73,10 @@
             href="http://www.cms.gov/ICD10/11b1_2011_ICD10CM_and_GEMs.asp#TopOfPage">http://www.cms.gov/Medicare/Coding/ICD10/2012-ICD-10-CM-and-GEMs.html</a>:<br/>
         </p>
         <div style="text-align: left; margin-left: 40px;">
-          icd10cm_order_2012.txt<br/>
-          2012_I10gem.txt<br/>
-          2012_I9gem.txt<br/>
-          reimb_map_dx_2012.txt</div>
+          icd10cm_order_2013.txt<br/>
+          2013_I10gem.txt<br/>
+          2013_I9gem.txt<br/>
+          reimb_map_dx_2013.txt</div>
         <p> <br/>
         </p>
       </div>
@@ -264,7 +207,7 @@
           <h3>Attributes (MRSAT):</h3>
           &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
           <p>Most attribute names are extracted from MRSAT.TREF.ATN
-            (field 5);&nbsp; Attribute values are extracted from
+            (field 5);&nbsp; Most attribute values are extracted from
             MRSAT.TREF.ATV (field 5).&nbsp; ATNs used in MRSAT align
             with the tags found in the NCHS tabular .pdf file.<br/>
           </p>
@@ -275,203 +218,200 @@
               <tr>
                 <th>ATN</th>
                 <th>Description</th>
-                <th>Origin</th>
               </tr>
               <tr>
                 <td>ALT_SORT_CODE<br/>
                 </td>
-                <td><br/>
-                </td>
-                <td><br/>
+                <td>Alternative sort code<br/>
                 </td>
               </tr>
               <tr>
                 <td>CODE_ALSO<br/>
                 </td>
-                <td><br/>
-                </td>
-                <td><br/>
+                <td>Instructs that 2 codes may be required to fully
+                  describe a condition but the sequencing of the two
+                  codes is discretionary, depending on the severity of
+                  the conditions and the reason for the encounter.<br/>
                 </td>
               </tr>
               <tr>
                 <td style="vertical-align: top;">CODE_FIRST<br/>
                 </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
-                <td style="vertical-align: top;"><br/>
+                <td style="vertical-align: top;">Certain conditions have
+                  both an underlying etiology and multiple body system
+                  manifestations due to the underlying etiology.
+                  ICD-10-CM has a coding convention that requires the
+                  underlying condition be sequenced first followed by
+                  the manifestation. Wherever such a combination exists
+                  there is a "code first" note at the manifestation
+                  code. These instructional notes indicate the proper
+                  sequencing order of the codes, etiology followed by
+                  manifestation. In most cases the manifestation codes
+                  will have in the code title, "in diseases classified
+                  elsewhere." Codes with this title are a component of
+                  the etiology/manifestation convention. The code title
+                  indicates that it is a manifestation code.<br/>
                 </td>
               </tr>
               <tr>
                 <td style="vertical-align: top;">MTH_CODE_FIRST</td>
-                <td style="vertical-align: top;"><br/>
-                </td>
-                <td style="vertical-align: top;"><br/>
+                <td style="vertical-align: top;">Plain text version of
+                  "CODE_FIRST" attribute value.<br/>
                 </td>
               </tr>
               <tr>
                 <td style="vertical-align: top;">EXCLUDES1<br/>
                 </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
-                <td style="vertical-align: top;"><br/>
+                <td style="vertical-align: top;">A pure excludes. It
+                  means "NOT CODED HERE!" Indicates that the code
+                  excluded should never be used at the same time as the
+                  code above the Excludes1 note. Used for when two
+                  conditions cannot occur together, such as a congenital
+                  form versus an acquired form of the same condition.<br/>
                 </td>
               </tr>
               <tr>
                 <td style="vertical-align: top;">MTH_EXCLUDES1<br/>
                 </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
-                <td style="vertical-align: top;"><br/>
+                <td style="vertical-align: top;">Plain text version of
+                  "EXCLUDES1" attribute value.<br/>
                 </td>
               </tr>
               <tr>
                 <td style="vertical-align: top;">EXCLUDES2<br/>
                 </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
-                <td style="vertical-align: top;"><br/>
+                <td style="vertical-align: top;">Represents "Not
+                  included here". Indicates that the condition excluded
+                  is not part of the condition it is excluded from but a
+                  patient may have both conditions at the same time.
+                  When an Excludes2 note appears under a code it is
+                  acceptable to use both the code and the excluded code
+                  together.<br/>
                 </td>
               </tr>
               <tr>
                 <td style="vertical-align: top;">MTH_EXCLUDES2<br/>
                 </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
+                <td style="vertical-align: top;">Plain text version of
+                  "EXCLUDES2" attribute value. </td>
               </tr>
               <tr>
                 <td style="vertical-align: top;">NOTE<br/>
                 </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
-                <td style="vertical-align: top;"><br/>
+                <td style="vertical-align: top;">Note<br/>
                 </td>
               </tr>
               <tr>
                 <td style="vertical-align: top;">ORDER_NO<br/>
                 </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
-                <td style="vertical-align: top;"><br/>
+                <td style="vertical-align: top;">Order number (from
+                  icd10cm_order_2013.txt)<br/>
                 </td>
               </tr>
               <tr>
                 <td style="vertical-align: top;">SOS<br/>
                 </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
+                <td style="vertical-align: top;">This data is added
+                  during Metathesaurus source processing </td>
               </tr>
               <tr>
                 <td style="vertical-align: top;">USE_ADDITIONAL<br/>
                 </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
-                <td style="vertical-align: top;"><br/>
+                <td style="vertical-align: top;">Certain conditions have
+                  both an underlying etiology and multiple body system
+                  manifestations due to the underlying etiology.
+                  ICD-10-CM has a coding convention that requires the
+                  underlying condition be sequenced first followed by
+                  the manifestation. Wherever such a combination exists
+                  there is a "use additional code" note at the etiology
+                  code. These instructional notes indicate the proper
+                  sequencing order of the codes, etiology followed by
+                  manifestation. In most cases the manifestation codes
+                  will have in the code title, "in diseases classified
+                  elsewhere." Codes with this title are a component of
+                  the etiology/ manifestation convention. The code title
+                  indicates that it is a manifestation code. "In
+                  diseases classified elsewhere" codes are never
+                  permitted to be used as first listed or principle
+                  diagnosis codes. They must be used in conjunction with
+                  an underlying condition code and they must be listed
+                  following the underlying condition.<br/>
                 </td>
               </tr>
               <tr>
                 <td style=" vertical-align: top;">FROMRSAB<br/>
                 </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
+                <td style="vertical-align: top;">This data is added
+                  during Metathesaurus source processing </td>
               </tr>
               <tr>
                 <td style="vertical-align: top;">FROMVSAB<br/>
                 </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
+                <td style="vertical-align: top;">This data is added
+                  during Metathesaurus source processing </td>
               </tr>
               <tr>
                 <td style="vertical-align: top;">MAPSETRSAB<br/>
                 </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
+                <td style="vertical-align: top;">This data is added
+                  during Metathesaurus source processing </td>
               </tr>
               <tr>
                 <td style="vertical-align: top;">MAPSETVERSION<br/>
                 </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
+                <td style="vertical-align: top;">This data is added
+                  during Metathesaurus source processing </td>
               </tr>
               <tr>
                 <td style="vertical-align: top;">MAPSETVSAB<br/>
                 </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
+                <td style="vertical-align: top;">This data is added
+                  during Metathesaurus source processing </td>
               </tr>
               <tr>
                 <td style="vertical-align: top;">MAPSETXRTARGETID<br/>
                 </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
+                <td style="vertical-align: top;">This data is added
+                  during Metathesaurus source processing </td>
               </tr>
               <tr>
                 <td style="vertical-align: top;">MTH_MAPFROMCOMPLEXITY<br/>
                 </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
+                <td style="vertical-align: top;">This data is added
+                  during Metathesaurus source processing </td>
               </tr>
               <tr>
                 <td style="vertical-align: top;">MTH_MAPFROMEXHAUSTIVE<br/>
                 </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
+                <td style="vertical-align: top;">This data is added
+                  during Metathesaurus source processing </td>
               </tr>
               <tr>
                 <td style="vertical-align: top;">MTH_MAPSETCOMPLEXITY</td>
-                <td style="vertical-align: top;"><br/>
-                </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
+                <td style="vertical-align: top;">This data is added
+                  during Metathesaurus source processing </td>
               </tr>
               <tr>
                 <td style="vertical-align: top;">MTH_MAPTOCOMPLEXITY</td>
-                <td style="vertical-align: top;"><br/>
-                </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
+                <td style="vertical-align: top;">This data is added
+                  during Metathesaurus source processing </td>
               </tr>
               <tr>
                 <td style="vertical-align: top;">MTH_MAPTOEXHAUSTIVE</td>
-                <td style="vertical-align: top;"><br/>
-                </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
+                <td style="vertical-align: top;">This data is added
+                  during Metathesaurus source processing </td>
               </tr>
               <tr>
                 <td style="vertical-align: top;">TORSAB<br/>
                 </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
+                <td style="vertical-align: top;">This data is added
+                  during Metathesaurus source processing </td>
               </tr>
               <tr>
                 <td style="vertical-align: top;">TOVSAB<br/>
                 </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
+                <td style="vertical-align: top;">This data is added
+                  during Metathesaurus source processing </td>
               </tr>
             </tbody>
           </table>
@@ -691,7 +631,8 @@
                 <td style="vertical-align: top;">expanded_form_of<br/>
                   has_expanded_form<br/>
                 </td>
-                <td style="vertical-align: top;"><br/>
+                <td style="vertical-align: top;">Connect short forms
+                  (TTY = "AB") to their preferred form (TTY = PT")<br/>
                 </td>
               </tr>
               <tr>
@@ -700,7 +641,8 @@
                 <td style="vertical-align: top;">mth_plain_text_form_of<br/>
                   mth_has_plain_text_form<br/>
                 </td>
-                <td style="vertical-align: top;"><br/>
+                <td style="vertical-align: top;">Connect Metathesaurus
+                  plain text forms to non-ASCII versions.<br/>
                 </td>
               </tr>
             </tbody>
