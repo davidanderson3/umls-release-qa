@@ -11,8 +11,7 @@
         <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
         <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
         <li id="nav-3"> <a href="sourcemetastats.html">Statistics and
-            sample
-            data</a>
+            sample data</a>
           <ul id="subnav-3">
             <li> <a href="termtypes.html">Terms and term types</a> </li>
             <li> <a href="attributes.html">Attributes</a> </li>
@@ -24,6 +23,7 @@
         <li id="nav-4"> <a href="representation.html">Representation</a>
           <ul id="subnav-4">
             <li> <a href="sourcerepresentation.html" id="sourcerep">Source
+
                 Representation</a> </li>
             <li> <a href="metarepresentation.html">Metathesaurus
                 Representation</a> </li>
@@ -31,114 +31,31 @@
         </li>
       </ul>
     </div>
-    <!-- end tabbed navigation area -->
+    <!-- end tabbed navigation area --> <br/>
     <br/>
     <br/>
-    <br/>
-    <a name="top"></a>
-    <span class="nav">Skip to: <a href="#general">Notes</a>, <a
-        href="#change_summary">Summary of Changes</a>, <a
-        href="#file_summary">Summary
-        of
-        Source-Provided
-        Files</a>
-      <a href="#file_details">Source-Provided
-        File Details</a></span>
-    <a name="general"></a>
+    <a name="top"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
+      <a href="#change_summary">Summary of Changes</a>, <a
+        href="#file_summary">Summary of Source-Provided Files</a> <a
+        href="#file_details">Source-Provided File Details</a></span> <a
+      name="general"></a>
     <div id="rep_general" class="rep_block_level_one">
       <h3>Notes</h3>
     </div>
     <div id="rep_change_summary" class="rep_block_level_one">
       <h3>Summary of Changes:</h3>
-      &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
-      <p>The released file format has changed:<br/>
-      </p>
-      <ul>
-        <li>The&nbsp;"table"&nbsp;file&nbsp;is&nbsp;no&nbsp;longer&nbsp;released.&nbsp;
-          The table information is now released in xml.&nbsp; The xml
-          includes&nbsp;"definitions," which are
-          explanations&nbsp;describing&nbsp;the&nbsp;3rd&nbsp;character&nbsp;of&nbsp;the&nbsp;code.&nbsp;
-          The meaning of the 3rd character is dependent on the value of
-          the 1st character, e.g. the meaning&nbsp;of&nbsp;"J" is
-          different if the&nbsp;first&nbsp;character&nbsp;is&nbsp;"0,"
-          "1" or "G":</li>
-      </ul>
-      <div style="margin-left: 80px;">0WJ|Visually&nbsp;and/or&nbsp;manually&nbsp;exploring&nbsp;a&nbsp;body&nbsp;part&nbsp;
-        <br/>
-        0XJ|Visually&nbsp;and/or&nbsp;manually&nbsp;exploring&nbsp;a&nbsp;body&nbsp;part&nbsp;
-        <br/>
-        0YJ|Visually&nbsp;and/or&nbsp;manually&nbsp;exploring&nbsp;a&nbsp;body&nbsp;part&nbsp;
-        <br/>
-        10J|Visually&nbsp;and/or&nbsp;manually&nbsp;exploring&nbsp;a&nbsp;body&nbsp;part
-        <br/>
-        GZJ|Application&nbsp;of&nbsp;specialized&nbsp;light&nbsp;treatments&nbsp;to&nbsp;improve&nbsp;functioning&nbsp;or&nbsp;well-being
-      </div>
-      <ul>
-        <li>Instead&nbsp;of&nbsp;a&nbsp;"long&nbsp;description"&nbsp;form,
-          there is a file called "icd10pcs_order_2012.txt"
-          which&nbsp;includes&nbsp;the&nbsp;long&nbsp;descriptions,&nbsp;codes,&nbsp;and
-          also&nbsp;a&nbsp;short&nbsp;description,&nbsp;as&nbsp;well&nbsp;as&nbsp;an&nbsp;"order"&nbsp;field.&nbsp;
-          In&nbsp;addition&nbsp;to&nbsp;the&nbsp;7-character&nbsp;codes,&nbsp;this&nbsp;file&nbsp;also&nbsp;contains
-          3-character&nbsp;codes. </li>
-      </ul>
-      <p>The above format changes affect Metathesaurus source processing
-        as follows:<br/>
-      </p>
-      <p>New&nbsp;TTYs: <br/>
-      </p>
-      <ul>
-        <li>AB&nbsp;-&nbsp;Abbreviation&nbsp;(short&nbsp;form) </li>
-        <li>HS&nbsp;-&nbsp;Short&nbsp;form&nbsp;of&nbsp;hierarchical&nbsp;term
-        </li>
-        <li>HX&nbsp;-&nbsp;Expanded&nbsp;form&nbsp;of&nbsp;3-7&nbsp;character&nbsp;codes.&nbsp;&nbsp;These&nbsp;were&nbsp;previously
-          HT </li>
-        <li>MTH_HX&nbsp;-&nbsp;Top&nbsp;two&nbsp;levels&nbsp;(previously&nbsp;MTH_HT)&nbsp;created&nbsp;by&nbsp;appending&nbsp;"procedure"
-        </li>
-      </ul>
-      <p><br/>
-        New&nbsp;ATNs:&nbsp;&nbsp; <br/>
-      </p>
-      <ul>
-        <li>ADDED_MEANING&nbsp;-&nbsp;Additional&nbsp;descriptive&nbsp;information&nbsp;about&nbsp;a&nbsp;header&nbsp;term<br/>
-        </li>
-        <li>ORDER_NO&nbsp;-&nbsp;Order&nbsp;number&nbsp;from&nbsp;the&nbsp;icd10pcs_*_order.txt&nbsp;file
-        </li>
-      </ul>
-      <p><br/>
-        New&nbsp;REL/RELAs: <br/>
-      </p>
-      <ul>
-        <li>SY/expanded_form_of&nbsp; REL/RELAs connect additional
-          TTYs:&nbsp;
-          AB&nbsp;--&gt;&nbsp;PT&nbsp;--&gt;PX,&nbsp;HS&nbsp;--&gt;&nbsp;HT&nbsp;--&gt;&nbsp;HX
-        </li>
-      </ul>
-      <p>Missing TTYs:<br/>
-      </p>
-      <ul>
-        <li>MTH_HT:&nbsp; changed to MTH_HX<br/>
-        </li>
-      </ul>
-      <p>Changed&nbsp;TTYs: <br/>
-      </p>
-      <ul>
-        <li>As&nbsp;noted&nbsp;above,&nbsp;some&nbsp;things&nbsp;that&nbsp;were&nbsp;HT&nbsp;are&nbsp;now&nbsp;HX,
-          and MTH_HT is now MTH_HX to&nbsp;create&nbsp;an TTY
-          structure&nbsp;parallel&nbsp;to&nbsp;the&nbsp;PT/PX&nbsp;assignments.&nbsp;&nbsp;
-          HT&nbsp;is&nbsp;now&nbsp;only&nbsp;used&nbsp;to&nbsp;represent
-          the&nbsp;"long&nbsp;description"&nbsp;of&nbsp;the&nbsp;3-character&nbsp;(header)&nbsp;codes.
-          <br/>
-        </li>
-      </ul>
-      <p>
-      </p>
+      &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+      <br/>
+      There are no changes to the format or processing of
+      ICD10-PCS.&nbsp;
+      <p> </p>
     </div>
-    <div id="rep_file_summary" class="rep_block_level_one">
-      <a name="file_summary"></a>
+    <div id="rep_file_summary" class="rep_block_level_one"> <a
+        name="file_summary"></a>
       <h3>Source-Provided Files: Summary</h3>
       &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
       <p>Numerous documentation and data files are available at:&nbsp;
-        http://www.cms.gov/Medicare/Coding/ICD10/2012-ICD-10-PCS.html,
+        http://www.cms.gov/Medicare/Coding/ICD10/2013-ICD-10-PCS.html,
         including the following:<br/>
       </p>
       <span style="font-weight: bold;">Documentation and Reference</span><br/>
@@ -151,36 +68,32 @@
             </th>
           </tr>
           <tr>
-            <td style="vertical-align: top;">pcs_2012.pdf</td>
+            <td style="vertical-align: top;">pcs_2013.pdf</td>
             <td style="vertical-align: top;">Tables indicating meaning
-              for
-              codes for specific character positions; index to codes<br/>
+              for codes for specific character positions; index to codes<br/>
             </td>
           </tr>
           <tr>
-            <td style="vertical-align: top;">Gems2012UpdateSummary.pdf</td>
+            <td style="vertical-align: top;">Gems2013UpdateSummary.pdf</td>
             <td style="vertical-align: top;">Summary of General
-              Equivalence
-              Mappings (GEMs) updates and
-              public comment<br/>
+              Equivalence Mappings (GEMs) updates and public comment<br/>
             </td>
           </tr>
           <tr>
             <td style="vertical-align: top;">GemsTechDoc.pdf<br/>
             </td>
             <td style="vertical-align: top;">GEMs documentation for
-              technical
-              users<br/>
+              technical users<br/>
             </td>
           </tr>
           <tr>
-            <td style="vertical-align: top;">PCS_2012_guidelines.pdf</td>
+            <td style="vertical-align: top;">PCS_2013_guidelines.pdf</td>
             <td style="vertical-align: top;">PCS coding conventions and
               guidelines<br/>
             </td>
           </tr>
           <tr>
-            <td style="vertical-align: top;">pcs_gemguide_2012.pdf</td>
+            <td style="vertical-align: top;">pcs_gemguide_2013.pdf</td>
             <td style="vertical-align: top;">GEMs documentation and user
               guide<br/>
             </td>
@@ -192,14 +105,13 @@
             </td>
           </tr>
           <tr>
-            <td style="vertical-align: top;">pcs_whats_new_2012.pdf</td>
+            <td style="vertical-align: top;">pcs_whats_new_2013.pdf</td>
             <td style="vertical-align: top;">Summary of updates and
-              changes
-              for 2012<br/>
+              changes for 2013<br/>
             </td>
           </tr>
           <tr>
-            <td style="vertical-align: top;">reimb_map_guide_2012.pdf</td>
+            <td style="vertical-align: top;">reimb_map_guide_2013.pdf</td>
             <td style="vertical-align: top;">Reimbursement mappings
               documentation and user guide<br/>
             </td>
@@ -208,7 +120,7 @@
             <td style="vertical-align: top;">ICD10OrderFiles.pdf<br/>
             </td>
             <td style="vertical-align: top;">Documentation for the
-              icd10pcs_order_2012.txt file<br/>
+              icd10pcs_order_2013.txt file<br/>
             </td>
           </tr>
         </tbody>
@@ -231,8 +143,7 @@
           <tr>
             <td style="vertical-align: top;">gem_i9pcs.txt</td>
             <td style="vertical-align: top;">ICD-9-CM to ICD-10-PCS
-              General
-              Equivalence Mappings (GEMs)<br/>
+              General Equivalence Mappings (GEMs)<br/>
             </td>
           </tr>
           <tr>
@@ -241,18 +152,18 @@
             </td>
           </tr>
           <tr>
-            <td style="vertical-align: top;">icd10pcs_order_2012.txt</td>
+            <td style="vertical-align: top;">icd10pcs_order_2013.txt</td>
             <td style="vertical-align: top;">Long and short descriptions<br/>
             </td>
           </tr>
           <tr>
-            <td style="vertical-align: top;">reimb_map_pr_2012.txt</td>
+            <td style="vertical-align: top;">reimb_map_pr_2013.txt</td>
             <td style="vertical-align: top;">ICD-10-CM to ICD-9-CM
               reimbursement mappings<br/>
             </td>
           </tr>
           <tr>
-            <td style="vertical-align: top;">icd10pcs_index_2012.xml<br/>
+            <td style="vertical-align: top;">icd10pcs_index_2013.xml<br/>
             </td>
             <td style="vertical-align: top;">Table file in xml<br/>
             </td>
@@ -275,7 +186,7 @@
       </p>
       <div class="rep_block_level_two"><a name="file1"></a><br/>
         <span style="font-weight: bold;">File:&nbsp;
-          icd10pcs_order_2012.txt</span><br/>
+          icd10pcs_order_2013.txt</span><br/>
         <br/>
         <table class="elements" border="0" cellspacing="0">
           <tbody>
@@ -393,7 +304,7 @@
       <br/>
       <div class="rep_block_level_two"><a name="file1"></a><br/>
         <span style="font-weight: bold;">File:&nbsp;
-          icd10pcs_index_2012.xml</span><br/>
+          icd10pcs_index_2013.xml</span><br/>
         <br/>
         This file is parsed to extract data for codes at each level of
         the table, as well as information in the "&lt;definition&gt;"
@@ -410,12 +321,11 @@
               <td>&lt;axis&gt;</td>
               <td>Letter or number of each character of code:&nbsp;
                 concatenated to create MRCONSO.CODE, MRCONSO.SCUI for
-                TTY = HX, MTH_HX,
-                PX<br/>
+                TTY = HX, MTH_HX, PX<br/>
                 <br/>
                 Description for the value:&nbsp; concatenated, using "@"
-                as a subfield
-                separator to create MRCONSO.STR for TTY = HX, MTH_HX, PX<br/>
+                as a subfield separator to create MRCONSO.STR for TTY =
+                HX, MTH_HX, PX<br/>
               </td>
             </tr>
             <tr>
@@ -507,8 +417,7 @@
             <td style="vertical-align: top;">15<br/>
             </td>
             <td style="vertical-align: top;">Value of 1 (indicates the
-              entry
-              is not equivalent):<br/>
+              entry is not equivalent):<br/>
               <div style="margin-left: 40px;">MRMAP.RRF.REL=RO<br/>
                 MRMAP.REL.RELA=approximately_mapped_to<br/>
               </div>
@@ -540,10 +449,8 @@
             <td style="vertical-align: top;">17<br/>
             </td>
             <td style="vertical-align: top;">Value of "1" indicates that
-              more
-              than one code is required.&nbsp; This is implied in
-              MRMAP.RRF by
-              non-zero values in MAPSUBSETID.</td>
+              more than one code is required.&nbsp; This is implied in
+              MRMAP.RRF by non-zero values in MAPSUBSETID.</td>
           </tr>
           <tr>
             <td class="file_field_name">Scenario<br/>
@@ -556,8 +463,7 @@
             </td>
             <td>MRMAP.RRF.MAPSUBSETID (first subfield, before the ":")<br/>
               Anything with the same FROMEXPR and MAPSUBSETID values
-              should be "OR'd"
-              together </td>
+              should be "OR'd" together </td>
           </tr>
           <tr>
             <td style="vertical-align: top;">Choice<br/>
@@ -569,11 +475,9 @@
             <td style="vertical-align: top;">19<br/>
             </td>
             <td style="vertical-align: top;">MRMAP.RRF.MAPSUBSETID
-              (second
-              subfield, after the ":")<br/>
+              (second subfield, after the ":")<br/>
               Anything with the same FROMEXPR and MAPSUBSETID values
-              should be "OR'd"
-              together</td>
+              should be "OR'd" together</td>
           </tr>
         </tbody>
       </table>
@@ -655,8 +559,7 @@
               <td style="vertical-align: top;">15<br/>
               </td>
               <td style="vertical-align: top;">Value of 1 (indicates the
-                entry
-                is not equivalent):<br/>
+                entry is not equivalent):<br/>
                 <div style="margin-left: 40px;">MRMAP.RRF.REL=RO<br/>
                   MRMAP.REL.RELA=approximately_mapped_to<br/>
                 </div>
@@ -690,10 +593,8 @@
               <td style="vertical-align: top;">17<br/>
               </td>
               <td style="vertical-align: top;">Value of "1" indicates
-                that more
-                than one code is required.&nbsp; This is implied in
-                MRMAP.RRF by
-                non-zero values in MAPSUBSETID.<br/>
+                that more than one code is required.&nbsp; This is
+                implied in MRMAP.RRF by non-zero values in MAPSUBSETID.<br/>
               </td>
             </tr>
             <tr>
@@ -706,11 +607,9 @@
               <td style="vertical-align: top;">18<br/>
               </td>
               <td style="vertical-align: top;">MRMAP.RRF.MAPSUBSETID
-                (first
-                subfield, before the ":")<br/>
+                (first subfield, before the ":")<br/>
                 Anything with the same FROMEXPR and MAPSUBSETID values
-                should be "OR'd"
-                together<br/>
+                should be "OR'd" together<br/>
                 <span style="font-size: 22pt; font-family: Calibri;
                   color: black;"></span> </td>
             </tr>
@@ -724,11 +623,9 @@
               <td style="vertical-align: top;">19<br/>
               </td>
               <td style="vertical-align: top;">MRMAP.RRF.MAPSUBSETID
-                (second
-                subfield, after the ":")<br/>
+                (second subfield, after the ":")<br/>
                 Anything with the same FROMEXPR and MAPSUBSETID values
-                should be "OR'd"
-                together<br/>
+                should be "OR'd" together<br/>
               </td>
             </tr>
           </tbody>
@@ -738,7 +635,7 @@
       <br/>
       <div class="rep_block_level_two"><a name="file1"></a><br/>
         <span style="font-weight: bold;">File:&nbsp;
-          reimb_map_pr_2012.txt</span><br/>
+          reimb_map_pr_2013.txt</span><br/>
         <br/>
         <br/>
         <table class="elements" border="0" cellspacing="0">
@@ -791,8 +688,7 @@
               <td style="vertical-align: top;">15<br/>
               </td>
               <td style="vertical-align: top;">Used in MRMAP.RRF.TOEXPR;
-                if
-                multiple ICD-9-CM codes are included, they are
+                if multiple ICD-9-CM codes are included, they are
                 concatenated with "AND"<br/>
               </td>
             </tr>
@@ -806,8 +702,7 @@
               <td style="vertical-align: top;">21<br/>
               </td>
               <td style="vertical-align: top;">Used in MRMAP.RRF.TOEXPR;
-                if
-                multiple ICD-9-CM codes are included, they are
+                if multiple ICD-9-CM codes are included, they are
                 concatenated with "AND"</td>
             </tr>
             <tr>
@@ -820,8 +715,7 @@
               <td style="vertical-align: top;">27<br/>
               </td>
               <td style="vertical-align: top;">Used in MRMAP.RRF.TOEXPR;
-                if
-                multiple ICD-9-CM codes are included, they are
+                if multiple ICD-9-CM codes are included, they are
                 concatenated with "AND"</td>
             </tr>
             <tr>
@@ -834,8 +728,7 @@
               <td style="vertical-align: top;">33<br/>
               </td>
               <td style="vertical-align: top;">Used in MRMAP.RRF.TOEXPR;
-                if
-                multiple ICD-9-CM codes are included, they are
+                if multiple ICD-9-CM codes are included, they are
                 concatenated with "AND"</td>
             </tr>
             <tr>
@@ -848,8 +741,7 @@
               <td style="vertical-align: top;">39<br/>
               </td>
               <td style="vertical-align: top;">Used in MRMAP.RRF.TOEXPR;
-                if
-                multiple ICD-9-CM codes are included, they are
+                if multiple ICD-9-CM codes are included, they are
                 concatenated with "AND"</td>
             </tr>
           </tbody>
