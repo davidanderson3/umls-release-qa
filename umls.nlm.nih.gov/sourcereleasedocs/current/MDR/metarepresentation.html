@@ -38,17 +38,17 @@ Representation</a></li>
  href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
 <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
 <div id="general" class="rep_block_level_one">
-<p><b>VSAB:</b> MDR15_0</p>
+<p><b>VSAB:</b> MDR15_1</p>
 <div id="rep_identifiers" class="rep_block_level_one">
 <h3>Summary of Changes:</h3>
-The following atom and attribute names (ATNs) have been deprecated from this version of MDR because the source did not provide any data values for the ICD9CM, CST95, and WHOART fields.
+The following atoms, attribute names (ATNs), and relationships have been deprecated from this version of MDR because the source did not provide any data values for the ICD9CM, CST95, and WHOART fields.
 <ul>
 <li>TTY = XM</li>
-<li>ATN = MAPSETTYPE</li>
 <li>ATN = MXR</li>
 <li>ATN = XMAP</li>
 <li>ATN = XMAPFROM</li>
 <li>ATN = XMAPTO</li>
+<li>REL|RELA = RQ|mapped_to</li>
 </ul>
 </div>
 <div id="rep_change_summary" class="rep_block_level_one">
@@ -63,7 +63,7 @@ directory:<br/>
   <li>intl_ord.asc</li>
   <li>llt.asc</li>
   <li>mdhier.asc</li>
-  <li>meddra_history.asc</li>
+  <li>meddra_history_english.asc</li>
   <li>meddra_release.asc</li>
   <li>pt.asc</li>
   <li>smq_content.asc</li>
@@ -289,10 +289,6 @@ SDUI = smq_code field of SMQ_List.asc<br/>
     </tr>
     <tr>
       <td>MAPSETRSAB</td>
-      <td>This data is added during Metathesaurus source processing</td>
-    </tr>
-    <tr>
-      <td>MAPSETTYPE</td>
       <td>This data is added during Metathesaurus source processing</td>
     </tr>
     <tr>
