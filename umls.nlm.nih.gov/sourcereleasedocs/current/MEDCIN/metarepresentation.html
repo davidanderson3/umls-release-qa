@@ -38,30 +38,24 @@ Representation</a> </li>
  href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
 <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
 <div id="general" class="rep_block_level_one">
-<p><b>VSAB:</b> MEDCIN3_2012_07_16</p>
+<p><b>VSAB:</b> MEDCIN3_2012_12_14</p>
 </div>
 <div id="rep_identifiers" class="rep_block_level_one">
 </div>
 <h3>Summary of Changes</h3>
 <p>1) New relationship | relationship attribute(RELA) | RELA inverse:</p>
 <ul>
-    <li>RT|has_dose_form|dose_form_of</li>
-    <li>RT|has_specimen_procedure|specimen_procedure_of</li>
-    <li>RT|uses_access_device|access_device_used_by</li>
-</ul>
-<p>2) Dropped relationship | relationship attribute(RELA):</p>
-<ul>
-  <li>RT|has_grade</li>
+    <li>RO|has_indirect_morphology|indirect_morphology_of</li>
 </ul>
 <div id="rep_change_summary" class="rep_block_level_one">
 <h3>Source Provided Files:</h3>
 
 The Metathesaurus uses the following four pipe-delimited MEDCIN files:
 <ul>
-  <li>UMLS_MEDCIN_CONCEPTS2012-07-16.TXT</li>
-  <li>UMLS_MEDCIN_DESCRIPTIONS2012-07-16.TXT</li>
-  <li>UMLS_MEDCIN_HIERARCHY2012-07-16.TXT</li>
-  <li>UMLS_MEDCIN_SNOMED2012-07-16.TXT</li>
+  <li>UMLS_MEDCIN_CONCEPTS2012-12-14.TXT</li>
+  <li>UMLS_MEDCIN_DESCRIPTIONS2012-12-14.TXT</li>
+  <li>UMLS_MEDCIN_HIERARCHY2012-12-14.TXT</li>
+  <li>UMLS_MEDCIN_SNOMED2012-12-14.TXT</li>
 </ul>
 </div>
 <div id="rep_identifers" class="rep_block_level_one">
@@ -69,9 +63,9 @@ The Metathesaurus uses the following four pipe-delimited MEDCIN files:
 
 Identifiers are assigned as follows:<br/>
 <ul>
-  <li>CODE: MEDCINID</li>
+  <li>CODE: MEDCIN ID</li>
   <li>SAUI: Not Applicable</li>
-  <li>SCUI: MEDCINID</li>
+  <li>SCUI: MEDCIN ID</li>
   <li>SDUI: Not Applicable</li>
 </ul>
 <div id="rep_termtypes" class="rep_block_level_two">
@@ -90,15 +84,15 @@ Identifiers are assigned as follows:<br/>
 UMLS_MEDCIN_CONCEPTSyyyy-mm-dd.TXT, as follows. 
       <div style="margin: 4pt;">CODE = MEDCINID<br/>
 STR = CONCEPT_DESCRIPTION<br/>
-SCUI = MEDCINID</div>
+SCUI = MEDCIN ID</div>
       </td>
     </tr>
      <tr>
       <td>MTH_FN</td>
       <td>An "MTH_FN" atom is created when the LVG algorithm is applied to the STR field. This data is added during Metathesaurus processing.
-      <div style="margin: 4pt;">CODE = MEDCINID<br/>
+      <div style="margin: 4pt;">CODE = MEDCIN ID<br/>
 STR = CONCEPT_DESCRIPTION<br/>
-SCUI = MEDCINID</div>
+SCUI = MEDCIN ID</div>
       </td>
     </tr> 
     <tr>
@@ -106,17 +100,17 @@ SCUI = MEDCINID</div>
       <td>A "PT" atom is created for each line of
 UMLS_MEDCIN_DESCRIPTIONSyyyy-mm-dd.TXT having PREF_FLAG_ID=1, as
 follows:
-      <div style="margin: 4pt;">CODE = MEDCINID<br/>
+      <div style="margin: 4pt;">CODE = MEDCIN ID<br/>
 STR = DESCRIPTION<br/>
-SCUI = MEDCINID</div>
+SCUI = MEDCIN ID</div>
       </td>
     </tr>
      <tr>
       <td>MTH_PT</td>
       <td>An "MTH_PT" atom is created when the LVG algorithm is applied to the STR field. This data is added during Metathesaurus processing.
-      <div style="margin: 4pt;">CODE = MEDCINID<br/>
+      <div style="margin: 4pt;">CODE = MEDCIN ID<br/>
 STR = DESCRIPTION<br/>
-SCUI = MEDCINID</div>
+SCUI = MEDCIN ID</div>
       </td>
     </tr> 
     <tr>
@@ -124,17 +118,17 @@ SCUI = MEDCINID</div>
       <td>An "SY" atom is created for each line of
 UMLS_MEDCIN_DESCRIPTIONSyyyy-mm-dd.TXT having PREF_FLAG_ID=0, as
 follows:
-      <div style="margin: 4pt;">CODE = MEDCINID<br/>
+      <div style="margin: 4pt;">CODE = MEDCIN ID<br/>
 STR = DESCRIPTION<br/>
-SCUI = MEDCINID</div>
+SCUI = MEDCIN ID</div>
       </td>
     </tr>
      <tr>
       <td>MTH_SY</td>
       <td>An "MTH_SY" atom is created when the LVG algorithm is applied to the STR field. This data is added during Metathesaurus processing.
-      <div style="margin: 4pt;">CODE = MEDCINID<br/>
+      <div style="margin: 4pt;">CODE = MEDCIN ID<br/>
 STR = DESCRIPTION<br/>
-SCUI = MEDCINID</div>
+SCUI = MEDCIN ID</div>
       </td>
     </tr>     <tr>
       <td>XM</td>
