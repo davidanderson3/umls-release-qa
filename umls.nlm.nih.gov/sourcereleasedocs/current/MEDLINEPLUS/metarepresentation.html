@@ -48,46 +48,12 @@
         longer unique and can have the same code as the group id but have a different meaning. For example, group id=22
         (Immune System) and health topic code = 22 (Alzheimer's Disease).  With this change, codes are no longer being used in the
         SDUI field.<br/><br/>
-      New Elements and Attributes:
+      New Attributes:
       <ul>
-        <li>element: other-language with attribute(s): vernacular name, url</li>
-        <li>element: primary-institute with attribute(s): url</li>
-        <li>element: site with attribute(s): url, title, language-mapped-url</li>
-        <li>element: standard-description</li>
-        <li>element: organization</li>
-        <li>element: information-category</li>
-      </ul>
-        <br class="atl-forced-newline">
-        Changed Element Names (old name -- new name)<br
-          class="atl-forced-newline">
-      <ul>
-        <li>MedicalTopics&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;health-topics</li>
-        <li>MedicalTopic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;health-topic</li>
-        <li>FullSummary&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;full-summary</li>
-        <li>SeeRefName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;see-reference</li>
-        <li>MeshHeading&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mesh-heading</li>
-        <li>GroupName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;group</li>
-        <li>Synonym&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;also-called</li>
-        <li>RelatedTopic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;related-topic</li>
-        <li>QualifierName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;qualifier</li>
-        <li>DescriptorName&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;descriptor</li>
-        <li>LanguageMappedTopic&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;language-mapped-topic</li>
-      </ul>
-        <br class="atl-forced-newline">
-        Deprecated Element Names Replaced as Attributes<br
-          class="atl-forced-newline">
-      <ul>
-        <li>ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;health-topic id</li>
-        <li>MedicalTopicName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;health-topic title</li>
-        <li>URL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;health-topic url</li>
-        <li>SeeReferenceList&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deprecated</li>
-        <li>MeshHeadingList&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deprecated</li>
-        <li>DescriptorUI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;descriptor id</li>
-        <li>GroupID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;group id</li>
-        <li>GroupURL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;group url</li>
-        <li>QualifierUI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;qualifier id</li>
-        <li>DateCreated, Year, Month, Day&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;health-topic date-created</li>
-        <li>LanguageMappedTopicID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;language-mapped-topic id</li>
+        <li>ATN = MP_GROUP_URL replaces GROUPURL.</li>
+        <li>ATN = MP_HEALTH_TOPIC_URL replaces URL.</li>
+        <li>ATN = MP_OTHER_LANGUAGE_URL</li>
+        <li>MP_PRIMARY_INSTITUTE_URL</li>
       </ul>
       </div>
       <h3>Source Provided Files:</h3>
