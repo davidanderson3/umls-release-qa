@@ -5,9 +5,10 @@
 			<resources>
 				<resource name = "Value Set Authority Center (VSAC)" id = "vsac" type = "application" logo = "nlm_logo_sm.jpg">
 					<description>
-						Per Centers for Medicare and Medicaid Services (CMS), the NLM's VSAC will be the official repository for Value Sets that support 2014 Meaningful Use Clinical Quality Measures (CQMs). 
-						The VSAC will provide Certified EHR implementers the ability to search for and retrieve these value sets both through a GUI interface as well as APIs that can be 
-						implemented into an automated system.  
+						Per Centers for Medicare and Medicaid Services (CMS), VSAC is the official repository for Value Sets that support 2014 Meaningful Use Clinical Quality Measures (CQMs). 
+						VSAC will also host other value sets such as Routes of Administration and Patient Assessment Intsruments in the near future.
+						The VSAC provides Certified EHR implementers the ability to search for and retrieve these value sets both through a GUI interface as well as APIs that can be 
+						implemented into an automated system.  VSAC will also provide authoring tools for value set authors that will leverage NLM expertise in synonymy (UMLS) as well as provide instant code/descriptor validation.
 					</description>
 					<properties>
 						<property name = "Publisher" url = "http://www.nlm.nih.gov"  external = "n">National Library of Medicine</property>
@@ -40,7 +41,7 @@
 			<image name = "pills_low_res.jpg" class = "context-image" alt = "image of prescription drugs"/>
 			<resources>
 				<resource name = "RxNorm" id = "rxnorm" type = "terminology" logo = "nlm_logo_sm.jpg" >
-					<description>Proposed 2014 EHR certification criteria designate RxNorm as the vocabulary for medications. RxNorm, a standardized nomenclature for clinical drugs and drug delivery devices,
+					<description>2014 EHR certification criteria designate RxNorm as the vocabulary for medications. RxNorm, a standardized nomenclature for clinical drugs and drug delivery devices,
 						is produced by the National Library of Medicine (NLM). RxNorm provides normalized names for clinical drugs and links its names to many of the drug vocabularies commonly used in pharmacy management and drug interaction software, including those of First Databank, Micromedex, MediSpan, Gold Standard, and Multum.
 						By providing links between these vocabularies, RxNorm can mediate messages between systems not using the same software and vocabulary.
 					</description>
@@ -83,6 +84,16 @@
 									<property name = "Web Resource" url = "http://rxnav.nlm.nih.gov/RxNormRestAPI.html" external = "n">RxNorm API (RESTful) Documentation</property>
 								</properties>
 							</api>
+							<api name = "RxMix" featured = "n">
+								<description>
+									RxMix is a programmatic interface to the entire suite of RxNorm products, allowing users to daisy-chain calls together from RxNorm, RxTerms, and NDF-RT APIs.
+								</description>
+								<properties>
+									<property name = "Publisher" url = "http://www.nlm.nih.gov/research/umls/" external = "n">National Library of Medicine</property>
+									<property name = "Access">Free for use</property>
+									<property name = "Web Resource" url = "http://mor.nlm.nih.gov/RxMix/" external = "n">RxMix web site</property>
+								</properties>
+							</api>
 						</apis>
 					</products>
 				</resource>
@@ -92,7 +103,7 @@
 			<image name = "doc_low_res.jpg" class = "context-image" alt = "image of doctor looking at a chest x-ray"/>
 			<resources>
 				<resource name = "SNOMED CT&#174; - Systematized Nomenclature of Medicine - Clinical Terminology &#174;" id = "snomedct" type = "terminology" logo = "ihtsdo_logo_sm.jpg">
-					<description>Proposed 2014 EHR certification criteria designate SNOMED CT for problems.  SNOMED CT is a comprehensive clinical terminology that is
+					<description>2014 EHR certification criteria designate SNOMED CT for problems.  SNOMED CT is a comprehensive clinical terminology that is
 						freely available to US users through NLM.
 					</description>
 					<properties>
@@ -103,20 +114,18 @@
 						<property name = "Research" external = "n" url = "http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=meaningful use AND snomed AND (electronic health record*[tw] OR electronic health records[mh] OR electronic patient record* OR electronic medical record* OR electronic healthcare record* OR electronic health care record* OR personal health record* OR ehr[tw] OR ehrs[tw] OR phr[tw] OR phrs[tw] OR emr[tw] OR emrs[tw])">See PubMed Citations related to SNOMED CT and Meaningful Use</property>
 					</properties>
 					<products>
-						<extensions>
-							<extension name = "US Extension to SNOMED CT" id = "roa" published = "y" featured = "n">
-								<description>The US Extension to SNOMED CT provides a list of medical concepts that are relevant to US clinical use cases.
-									Content that is requested via the US SNOMED CT Content Request System may initially be placed in the US Extension, and eventually make it
-									into the SNOMED CT International Release, at which point it would be marked as 'inactive' in the US Extension.
-									The US Extension is updated twice per year, approximately one month after each update of the SNOMED CT International Release. </description>
+						<publications>
+							<publication name = "US Edition of SNOMED CT" id = "roa" published = "y" featured = "n">
+								<description>The US Edition of SNOMED CT combines the SNOMED CT International Release (from IHTSD0) along with concepts that come from the US Extension. 
+						        </description>
 								<properties>
 									<property name = "Publisher" url = "http://www.nlm.nih.gov/" external = "n">National Library of Medicine</property>
 									<property name = "Access">Free for use*</property>
-									<property name = "Web Resource" url = "http://www.nlm.nih.gov/research/umls/Snomed/us_extension.html" external = "n">US Extension Files and Documentation</property>
+									<property name = "Web Resource" url = "http://www.nlm.nih.gov/research/umls/Snomed/us_edition.html" external = "n">US Edition Files and Documentation</property>
 									<property name = "Web Resource" url = "https://uscrs.nlm.nih.gov/">US SNOMED CT Content Request System</property>
 								</properties>
-							</extension>
-						</extensions>
+							</publication>
+						</publications>
 						<subsets>   
 							<subset name = "CORE Problem List of SNOMED CT" id = "core" published = "y" featured = "n">
 								<description>The CORE (Clinical Observations Recording and Encoding) Problem List Subset identifies important clinical concepts in SNOMED CT that occur frequently in the problem list. It facilitates the use of SNOMED CT for clinical documentation at the summary level.</description>
@@ -198,7 +207,7 @@
 			<image name = "petri_dish_low_res.jpg" class = "context-image" alt = "image of a hand holding a petri dish"/>
 			<resources>
 				<resource name = "LOINC&#174; - Logical Observation Identifiers Names and Codes" id = "loinc" type = "terminology" logo = "loinc_logo_sm.jpg">
-					<description>Proposed 2014 EHR certification criteria designate LOINC as the vocabulary for reporting lab test results. LOINC provides a universal set of codes in the domain of laboratory and other clinical observations.
+					<description>2014 EHR certification criteria designate LOINC as the vocabulary for reporting lab test results. LOINC provides a universal set of codes in the domain of laboratory and other clinical observations.
 						LOINC can simplify integrating lab test results into an EHR system as structured data.</description>
 					<properties>
 						<property name = "Publisher" url = "http://loinc.org" external = "y">Regenstrief Institute</property>

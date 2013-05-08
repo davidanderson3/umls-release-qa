@@ -105,7 +105,7 @@
 	</xsl:template>
 
 	<xsl:template match = "products">
-		<xsl:apply-templates select = "extensions"/>
+		<xsl:apply-templates select = "publications"/>
 		<xsl:apply-templates select = "subsets"/>
 		<xsl:apply-templates select = "valuesets"/>
 		<xsl:apply-templates select = "mappings"/>
@@ -113,10 +113,10 @@
 
 	</xsl:template>
 
-	<xsl:template match = "extensions">
-		<h4><a class = "jig-ncbitoggler small">Helpful Extensions <span class="ui-ncbitoggler-appended-text small">(click to open) </span></a></h4>
+	<xsl:template match = "publications">
+		<h4><a class = "jig-ncbitoggler small">Helpful Publications <span class="ui-ncbitoggler-appended-text small">(click to open) </span></a></h4>
 		<div class = "extensions">
-			<xsl:for-each select = "extension">
+			<xsl:for-each select = "publication">
 				<div class = "extension rounded-content-block">
 					<h5><xsl:value-of select = "@name"/></h5>
 					<xsl:apply-templates select = "description"/>
