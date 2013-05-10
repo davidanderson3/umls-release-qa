@@ -58,20 +58,20 @@
 <span class = "nav">Skip to: <a href = "#atoms">Atoms</a>, <a href = "#attributes">Attributes</a>, <a href = "#definitions">Definitions</a>, <a href = "#relationships">Relationships</a>, <a href = "#mappings">Mappings</a></span>
 
 <div id = "general" class = "rep_block_level_one">
-<p><b>VSAB: </b>HGNC2012_05</p>
+<p><b>VSAB: </b>HGNC2013_04</p>
 
 <div id = "rep_identifiers" class = "rep_block_level_one">
 <h3>Summary of Changes</h3>
-<p>1. The SAB has changed from HUGO to HGNC (HUGO Gene Nomenclature Committee).</p>
-<p>2. Prefix 'HGNC:' is now kept as part of the id (e.g., HGNC:20866).  Previously, it was stripped off.</p>
-<p>3. New ATN = Gene Famly Description.</p>
-<p>4. New specialist database ids added:  HomeoDB, IncRNAdb, and Mamit-tRNAdb.</p>
+<p>1. GDB_ID (mapped data) has been deprecated (previously field 33).</p>
+<p>2. The structure of the 'Locus Specific Databases' (field 32) has
+       changed.  The field now includes 'pipes'( | ) within the data string. Per Tammy P. and the inversion
+       group, replace the pipes with the corresponding (hex) html entity.</p>
 </div>
 <div id = "rep_change_summary" class = "rep_block_level_one">
 <h3>Original Files:</h3>
 <table class = "elements" border = "0" cellspacing = "0">
 <tr><th>File Name</th><th>Description</th></tr>
-<tr><td  class = "file_field_name"><a href = "#file1">hgnc_2012.txt</a></td><td>Complete source data in a text file with tab delimited fields.</td></tr>
+<tr><td  class = "file_field_name"><a href = "#file1">hgnc_2013.txt</a></td><td>Complete source data in a text file with tab delimited fields.</td></tr>
 </table>
 <br/>
 </div>
@@ -154,8 +154,6 @@
 <td>Entrez Gene ID (mapped data supplied by NCBI) field</td></tr>
 <tr><td>EZ</td>
 <td>Enzyme ID field</td></tr>
-<tr><td>MAPPED_GDB_ID</td>
-<td>GDB ID (mapped data) field</td></tr>
 <tr><td>GENE_FAM</td>
 <td>Gene Family Name field</td></tr>
 <tr><td>GENE_FAM_DESC</td>
