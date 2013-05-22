@@ -39,26 +39,21 @@ Representation</a> </li>
  href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
 <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
 <div id="general" class="rep_block_level_one">
-<p><b>VSAB:</b> NCBI2012_04_16<br/>
+<p><b>VSAB:</b> NCBI2013_05_10<br/>
 </p>
 <div id="rep_identifiers" class="rep_block_level_one">
 <h3>Summary of Changes</h3>
-1) Dropped term type (TTY):
-<ul>
-  <li>UE</li>
-</ul>
-2) Dropped attribute name (ATN):
-<ul>  
-  <li>UNIQ_UNPUBL_NAME</li>
-  <li>UNPUBL_NAME</li>
-</ul>
+1) Strings containing 'environmental sample' with a division_id = 11 (environmental sample) are not being processed.<br /><br />
+
+2) New name class = 'type material' is not being processed.<br />
+
 </div>
 <div id="rep_change_summary" class="rep_block_level_one">
 <h3>Notes:</h3>
 Many concepts and terms from the NCBI Taxonomy are excluded during
 Metathesarus source processing.&nbsp; The criteria for determining
 which concepts and terms are excluded or retained are outlined
-below.&nbsp; See term type descriptions for additional information<br/>
+below.&nbsp; See term type descriptions for additional information.<br/>
 <br/>
 1.&nbsp; Exclude all names that do not have one of the following name
 classes:<br/>
@@ -79,6 +74,16 @@ retained, depending on their hierarchical level.<br/>
 remove concepts with rank = "species" and the following words in the
 scientific name "uncultured," "clone," "unidentified," "uncultivated."<br/>
 <br/>
+5. &nbsp; Exclude concepts with ugly names (e.g., "xxxx", "4").<br/>
+<br/>
+6. &nbsp; Exclude concepts and their children if the information is enclosed in single or double quotes<br/>
+<br/>
+7. &nbsp; Exclude concepts starting with "other", "unclassified", "unclassified sequences", "artificial sequences", "insertion sequences", "midivariant sequence", "transposons"
+and all their children.<br/>
+<br/>
+8. &nbsp; Exclude concepts containing "?" and their children<br/>
+<br/>
+
 Source file: taxdmp.zip.<br/>
 Files included in taxdmp.zip are:<br/>
 <br/>

@@ -66,18 +66,26 @@ retained, depending on their hierarchical level.<br/>
 <br/>
 4.&nbsp; Exclude concepts and terms based on certain patterns, e.g.
 remove concepts with rank = "species" and have the following words in the
-scientific name "uncultured," "clone," "unidentified," "uncultivated."
+scientific name "uncultured," "clone," "unidentified," "uncultivated."<br/>
+<br/>
+5. &nbsp; Exclude concepts with ugly names (e.g., "xxxx", "4").<br/>
+<br/>
+6. &nbsp; Exclude concepts and their children if the information is enclosed in single or double quotes<br/>
+<br/>
+7. &nbsp; Exclude concepts starting with "other", "unclassified", "unclassified sequences", "artificial sequences", "insertion sequences", "midivariant sequence", "transposons"
+and all their children.<br/>
+<br/>
+8. &nbsp; Exclude concepts containing "?" and their children<br/>
+<br/>
 </p>
 </div>
 <div id="rep_change_summary" class="rep_block_level_one">
 <a name="change_summary"></a>
 <h3>Summary of Changes:</h3>
 &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
-<p>1) Dropped properties name class = unpublished name and name class = unique unpublished name in the name.dump file resulted in deprecated attribute names (ATNs): </p>
-<ul>
-  <li>UNIQ_UNPUBL_NAME</li>
-  <li>UNPUBL_NAME</li>
-</ul>
+<p>1) Strings containing 'environmental sample' with a division_id = 11 (environmental sample) are not being processed.<br /><br />
+
+2) New name class = 'type material' is not being processed.<br /></p>
 </div>
 <div id="rep_file_summary" class="rep_block_level_one">
 <a name="file_summary"></a>
