@@ -27,6 +27,7 @@
             <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
 
 
+
                 Representation</a> </li>
           </ul>
         </li>
@@ -120,8 +121,18 @@
               <tr>
                 <td valign="top">HT<br/>
                 </td>
-                <td valign="top">The value of the "Nomenclature" field
-                  in the tab-delimited file.<br/>
+                <td valign="top">CODE:&nbsp; <br/>
+                  The value of the Code field from tab-delimited data
+                  file; OR<br/>
+                  if the Code field is &lt;null&gt;:&nbsp; MTHU#
+                  assigned during Metathesaurus source processing<br/>
+                  <br/>
+                  STR:&nbsp; The value of the "Nomenclature" field in
+                  the tab-delimited file.<br/>
+                  <br/>
+                  SCUI:&nbsp; Same as CODE<br/>
+                  <br/>
+                  Suppress = 'N'<br/>
                   <br/>
                   TTY = HT is assigned where:<br/>
                   <ul>
@@ -137,8 +148,15 @@
               <tr>
                 <td valign="top">PT<br/>
                 </td>
-                <td valign="top">The value of the "Nomenclature" field
-                  in the tab-delimited file.&nbsp; <br/>
+                <td valign="top">CODE:&nbsp; The value of the Code field
+                  form tab-delimited data file<br/>
+                  <br/>
+                  STR:&nbsp; The value of the "Nomenclature" field in
+                  the tab-delimited file.&nbsp; <br/>
+                  <br/>
+                  SCUI:&nbsp; Same as CODE<br/>
+                  <br/>
+                  Suppress = 'N'<br/>
                   <br/>
                   TTY = PT is assigned where the Code field consists of
                   the letter "D" followed by four numerals.&nbsp; <br/>
@@ -172,20 +190,17 @@
                   tab-delmited file. <br/>
                 </td>
                 <td valign="top">Identifies the type of change made to
-                  this
-                  version of the Code (i.e., changes from the prior
+                  this version of the Code (i.e., changes from the prior
                   version published in CDT-2011-2012), with the
                   following meanings:<br/>
                   <ul>
                     <li>30 = No change to existing code, nomenclature or
                       descriptor</li>
                     <li>31 = New procedure code and nomenclature, and
-                      descriptor, if
-                      present</li>
+                      descriptor, if present</li>
                     <li>35 = Revision in the nomenclature or descriptor
-                      (or both), or
-                      to indicate a revision to an entire subcategory."
-                    </li>
+                      (or both), or to indicate a revision to an entire
+                      subcategory." </li>
                   </ul>
                 </td>
               </tr>
