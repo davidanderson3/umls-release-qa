@@ -58,34 +58,16 @@
 <span class = "nav">Skip to: <a href = "#atoms">Atoms</a>, <a href = "#attributes">Attributes</a>, <a href = "#definitions">Definitions</a>, <a href = "#relationships">Relationships</a>, <a href = "#mappings">Mappings</a></span>
 
 <div id = "general" class = "rep_block_level_one">
-<p><b>VSAB: </b>NEU2012_08_23</p>
+<p><b>VSAB: </b>NEU2013_06_09</p>
 
 <div id = "rep_identifiers" class = "rep_block_level_one">
 <h3>Summary of Changes</h3>
-<p>1. New permanent numeric identifier called brainInfoID.  IDs used prior to 2009 are mapped to ATN = CNID.</p>
-<p>2. Synonyms are available in several languages. They are assigned specific termtypes (TTY):</p>
-<ul>
-    <li>CHISY (Chinese)</li>
-    <li>FRESY (French)</li>
-    <li>GERSY (German)</li>
-    <li>INDSY (Indonesian)</li>
-    <li>ITASY (Italian)</li>
-    <li>KORSY (Korean)</li>
-    <li>LATSY (Latin)</li>
-    <li>RUSSY (Russian)</li>
-    <li>SPASY (Spanish)</li>
-    <li>TURSY (Turkish)</li>
-</ul>
-<p>3.  Latin atoms were previously assigned TTY=LSY (in NEU99).  It is now LATSY to remain consistent with the 3-letter language format.</p>
-<p>4. Other new TTYs: ACR</p>
-<p>5. New ATNs:</p>
-<ul>
-    <li>CNIDTYPE - identifies whether an item is in the classical hierarchy of brain structures (value = h) or not (value = a for ancillary).</li>
-    <li>CNID - IDs used prior to 2009.</li>
-    <li>URL - URL of the central directory page in BrainInfo.</li>
-</ul>
-<p>6. New species restrictions: guenon, rodent, mouse, primate, rat. Assigned to ATN = NSR (NeuroNames species restriction).</p>
-<p>7. New relationship: SFO/LFO|expanded_form_of between the PT and ACR.</p>
+<p>1. Non-English synonyms (except for Latin) are now mapped to the new ATN = TRANSLATION.  The ATV has the format  "language: string" (e.g., TRANSLATION|Italian: encefalo).
+</p>
+<p>2. Latin synonyms are considered scientific names so they are treated as English strings and assigned the TTY=SY.</p>
+<p>3. New TTY = OP (obsolete preferred term) and new TTY = IS (obsolete synonym). If the preferred term is obsolete it is assumed that all related synonyms are also obsolete.</p>
+<p>4. New ATN: TRANSLATION - name of the neuroanatomical structure in various languages.</p>
+<p>5. Deprecated TTYs:  CHISY, FRESY, GERSY, INDSY, ITASY, KORSY, LATSY, RUSSY, SPASY, TURSY.</p>
 </div>
 <div id = "rep_change_summary" class = "rep_block_level_one">
 <h3>Original Files:</h3>
@@ -117,6 +99,16 @@
     <td>standardAcronym field</td>
 </tr>
 <tr>
+    <td>IS</td>
+    <td>Obsolete Synonym</td>
+    <td>synonym field</td>
+</tr>
+<tr>
+    <td>OP</td>
+    <td>Obsolete Preferred Name</td>
+    <td>standardName field</td>
+</tr>
+<tr>
     <td>PT</td>
     <td>Preferred Name</td>
     <td>standardName field</td>
@@ -126,16 +118,11 @@
     <td>Synonym</td>
     <td>synonym field</td>
 </tr>
-<tr>
-    <td><3-letter language code>SY</3-letter></td>
-    <td>Foreign language synonym</td>
-    <td>synonymLanguage field</td>
-</tr>
 </table>
 </div>
 
 <h3>Suppressibility</h3>
-<p>For all term types, suppressibility value 'N' (default value)</p> 
+<p>All term types, except ACR, have suppressibility value 'N' (default value).  ACR has suppressibility value 'Y'.</p> 
 </div>
 
 <div id = "rep_attributes" class = "rep_block_level_two">
@@ -143,14 +130,16 @@
 <h3>Attributes (MRSAT)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)<br/>
 <table class = "elements" border = "0" cellspacing = "0">
 <tr><th>Attribute Name</th><th>Origin</th></tr>
+<tr><td>BRAININFO_URL</td>
+<td>brainInfoURL field</td></tr>
 <tr><td>CNID</td>
 <td>cNID field</td></tr>
 <tr><td>CNIDTYPE</td>
 <td>cNIDType field</td></tr>
 <tr><td>NSR</td>
 <td>species restriction data stripped from the PT and SY</td></tr>
-<tr><td>URL</td>
-<td>brainInfoURL field</td></tr>
+<tr><td>TRANSLATION</td>
+<td>synonym and synonymLanguage field</td></tr>
 </table>
 </div>
 
