@@ -38,18 +38,10 @@ Representation</a></li>
  href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
 <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
 <div id="general" class="rep_block_level_one">
-<p><b>VSAB:</b> MDR15_1</p>
+<p><b>VSAB:</b> MDR16_0</p>
 <div id="rep_identifiers" class="rep_block_level_one">
 <h3>Summary of Changes:</h3>
-The following atoms, attribute names (ATNs), and relationships have been deprecated from this version of MDR because the source did not provide any data values for the ICD9CM, CST95, and WHOART fields.
-<ul>
-<li>TTY = XM</li>
-<li>ATN = MXR</li>
-<li>ATN = XMAP</li>
-<li>ATN = XMAPFROM</li>
-<li>ATN = XMAPTO</li>
-<li>REL|RELA = RQ|mapped_to</li>
-</ul>
+Relationship attribute (RELA) 'member_of_cluster' has been changed to 'member_of'.  The inverse remains the same, 'has_member'.   
 </div>
 <div id="rep_change_summary" class="rep_block_level_one">
 <h3>Source Provided Files:</h3>
@@ -458,7 +450,7 @@ share the same CUI in addition to the mapping relationship.</td>
     </tr>
     <tr>
       <td>RO</td>
-      <td>has_member/member_of_cluster</td>
+      <td>has_member/member_of</td>
       <td>Connects a Standardised MedDRA Query (SMQ) with subordinate
 terms. Derived from the SMQ_code and Term_code fields of
 SMQ_content.asc.</td>
@@ -488,9 +480,9 @@ This data is added during Metathesaurus source processing.</td>
 <div id="mappings" class="rep_block_level_two">
 <h3>Mappings (MRMAP):</h3>
 &nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
-<p>Two Mapsets ("XM" atoms, along with associated attributes and
+<p>When available, two Mapsets ("XM" atoms, along with associated attributes and
 mappings), are included for MedDRA. These are extracted from the
-ICD9_CM code and COSTART symbol fields in the relevant MedDRA files.<br/>
+ICD9_CM code and COSTART symbol fields in the relevant MedDRA files.
 An &#8220;RQ|mapped_to&#8221; REL/RELA are assigned. When possible, these mappings
 are also present in MRREL.RRF, however due to version issues a small
 portion of this data cannot be represented in MRREL.RRF. </p>
