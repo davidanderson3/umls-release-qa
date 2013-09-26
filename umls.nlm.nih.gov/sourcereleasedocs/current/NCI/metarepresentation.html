@@ -58,27 +58,22 @@
 <span class = "nav">Skip to: <a href = "#atoms">Atoms</a>, <a href = "#attributes">Attributes</a>, <a href = "#definitions">Definitions</a>, <a href = "#relationships">Relationships</a>, <a href = "#mappings">Mappings</a></span>
 
 <div id = "general" class = "rep_block_level_one">
-<p><b>VSAB: </b>NCI2012_02D</p>
+<p><b>VSAB: </b>NCI2013_03D</p>
 
 <div id = "rep_identifiers" class = "rep_block_level_one">
 <h3>Summary of Changes</h3>
-New term type:  NICHDAB<br/><br/>
-New attribute name (ATN):  CHEBI_ID<br/><br/>
-Deprecated attribute names (ATN):
+<p>New term type (TTY):</p>
 <ul>
- <li>MITELMAN_CODE</li>
- <li>RELATED_LASH_CONCEPT</li>
- <li>RELATED_MEDDRA_CODE</li>
+  <li>CTEP-SDCPT</li>
+  <li>CTEP-SDCSY</li>
 </ul>
-New relationship attributes (RELA):
+New attribute name (ATN):  HGNC_ID<br/><br/>
+New relationship attributes (RELA): has_data_element|data_element_of<br/>
+<p>Dropped relationship attribute (RELA):</p>
 <ul>
-<li>cytogenetic_abnormality_involves_chromosome</li>
-<li>disease_mapped_to_chromosome</li>
-<li>disease_mapped_to_gene</li>
-<li>gene_involved_in_pathogenesis_of_disease</li>
-<li>gene_mutant_encodes_gene_product_sequence_variation</li>
-<li>gene_product_sequence_variation_encoded_by_gene_mutant</li>
-<li>molecular_abnormality_involves_gene</li>
+<li>allele_associated_with_disease</li>
+<li>allele_not_associated_with_disease</li>
+<li>gene_product_has_malfunction_type</li>
 </ul>
 </div>
 <div id = "rep_change_summary" class = "rep_block_level_one">
@@ -87,7 +82,7 @@ New relationship attributes (RELA):
 <table class = "elements" border = "0" cellspacing = "0">
 <tr><th>File Name</th><th>Description</th></tr>
 <tr><td  class = "file_field_name"><a href = "#file1">ThesaurusInferred.owl</a></td><td>Complete source data in an OWL By Code formatted file.</td></tr>
-<tr><td  class = "file_field_name"><a href = "#file2">NCI2012_12.02d.txt</a></td><td>Configuration file.</td></tr>
+<tr><td  class = "file_field_name"><a href = "#file2">NCI2013_13.03d.txt</a></td><td>Configuration file.</td></tr>
 </table>
 <br/>
 </div>
@@ -159,6 +154,12 @@ New relationship attributes (RELA):
 </tr>
 <tr>
     <td>CTCAEPT</td><td>Common Terminology Criteria for Adverse Events preferred name</td>
+</tr>
+<tr>
+    <td>CTEP-SDCPT</td><td>Cancer Therapy Evaluation Program - Simple Disease Classification preferred name</td>
+</tr>
+<tr>
+    <td>CTEP-SDCPT</td><td>Cancer Therapy Evaluation Program - Simple Disease Classification synonym</td>
 </tr>
 <tr>
     <td>DCPPT</td><td>NCI Division of Cancer Prevention Program preferred name</td>
@@ -323,6 +324,8 @@ New relationship attributes (RELA):
 <td>&lt;P96 rdf:datatype="http://www.w3.org.../P96&gt;</td></tr>
 <tr><td>GO_ANNOTATION</td>
 <td>&lt;P211 rdf:datatype="http://www.w3.org.../P211&gt;</td></tr>
+<tr><td>HGNC_ID</td>
+<td>&lt;P369 rdf:datatype="http://www.w3.org.../P369&gt;</td></tr>
 <tr><td>HOMOLOGOUS_GENE</td>
 <td>&lt;P101 rdf:datatype="http://www.w3.org.../P101&gt;</td></tr>
 <tr><td>ICD-O-3_CODE</td>
@@ -406,15 +409,11 @@ Alt_Definition: &lt;P325...ncicp:ComplexDefinition xmlns:ncicp.../P325&gt;
 <tr><td>NCI</td><td>RT</td>
 <td>Allele_Absent_From_Wild-type_Chromosomal_Location/Chromosomal_Location_of_Wild-type_Gene</td><td valign="top">R156</td></tr>
 <tr><td>NCI</td><td>RT</td>
-<td>Allele_Associated_With_Disease/Disease_Associated_With_Allele</td><td valign="top">R151</td></tr>
-<tr><td>NCI</td><td>RT</td>
 <td>Allele_Has_Abnormality/Abnormality_Associated_With_Allele</td><td valign="top">R153</td></tr>
 <tr><td>NCI</td><td>RT</td>
 <td>Allele_Has_Activity/Activity_Of_Allele</td><td valign="top">R159</td></tr>
 <tr><td>NCI</td><td>RT</td>
 <td>Allele_In_Chromosomal_Location/Chromosomal_Location_Of_Allele</td><td valign="top">R155</td></tr>
-<tr><td>NCI</td><td>RT</td>
-<td>Allele_Not_Associated_With_Disease/Disease_Not_Associated_With_Allele</td><td valign="top">R152</td></tr>
 <tr><td>NCI</td><td>RT</td>
 <td>Allele_Plays_Altered_Role_In_Process/Process_Altered_By_Allele</td><td valign="top">R158</td></tr>
 <tr><td>NCI</td><td>RT</td>
@@ -554,8 +553,6 @@ Alt_Definition: &lt;P325...ncicp:ComplexDefinition xmlns:ncicp.../P325&gt;
 <tr><td>NCI</td><td>RT</td>
 <td>Gene_Product_Has_Chemical_Classification/Is_Chemical_Classification_Of_Gene_Product</td><td valign="top">R44</td></tr>
 <tr><td>NCI</td><td>RT</td>
-<td>Gene_Product_Has_Malfunction_Type/Is_Malfunction_Type_Of_Gene_Product</td><td valign="top">R43</td></tr>
-<tr><td>NCI</td><td>RT</td>
 <td>Gene_Product_Has_Organism_Source/Is_Organism_Source_Of_Gene_Product</td><td valign="top">R45</td></tr>
 <tr><td>NCI</td><td>RT</td>
 <td>Gene_Product_Has_Structural_Domain_Or_Motif/Is_Structural_Domain_Or_Motif_Of_Gene_Product</td><td valign="top">R50</td></tr>
@@ -575,6 +572,8 @@ Alt_Definition: &lt;P325...ncicp:ComplexDefinition xmlns:ncicp.../P325&gt;
 <td>Gene_Product_Sequence_Variation_Encoded_By_Gene_Mutant/Gene_Mutant_Encodes_Gene_Product_Sequence_Variation</td><td valign="top">R179</td></tr>
 <tr><td>NCI</td><td>RT</td> 
 <td>Has_CDRH_Parent/Parent_Is_CDRH</td><td valign="top">A10</td></tr>
+<tr><td>NCI</td><td>RT</td> 
+<td>Has_Data_Element/Data_Element_Of</td><td valign="top">A12</td></tr>
 <tr><td>NCI</td><td>RT</td>
 <td>Has_NICHD_Parent/Parent_Is_NICHD</td><td valign="top">A11</td></tr>
 <tr><td>NCI</td><td>RT</td>
@@ -611,6 +610,8 @@ Alt_Definition: &lt;P325...ncicp:ComplexDefinition xmlns:ncicp.../P325&gt;
 <td>Role_Has_Parent/Role_Is_Parent_Of</td><td valign="top">A3</td></tr>
 <tr><td>NCI</td><td>RT</td>
 <td>Role_Has_Range/Kind_Is_Range_Of</td><td valign="top">A2</td></tr>
+<tr><td>NCI</td><td>SY</td>
+<td>tradename_of/has_tradename</td><td valign="top">Metathesaurus created relationship</td></tr>
 </table>
 <p>(1) The relationship group is generated from the 'owl:Restriction' and 'owl:intersectionOf' tag in the source data file.</p>
 </div>

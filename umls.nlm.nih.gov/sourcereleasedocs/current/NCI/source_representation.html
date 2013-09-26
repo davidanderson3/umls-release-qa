@@ -70,23 +70,18 @@
 <div id = "rep_change_summary" class = "rep_block_level_one">
 <a name = "change_summary"/>
 <h3>Summary of Changes</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)
-<p>New term type (TTY): NICHDAB</p>
-<p>New attribute name (ATN): CHEBI_ID</p>
-<p>Deprecated attribute names (ATN):
+<p>New term type (TTY):</p>
 <ul>
- <li>MITELMAN_CODE</li>
- <li>RELATED_LASH_CONCEPT</li>
- <li>RELATED_MEDDRA_CODE</li>
+  <li>CTEP-SDCPT</li>
+  <li>CTEP-SDCSY</li>
 </ul>
-<p>New relationship attributes (RELA):
+<p>New attribute name (ATN): HGNC_ID</p>
+<p>New relationship attribute (RELA) and inverse: has_data_element|data_element_of</p>
+<p>Dropped relationship attribute (RELA):</p>
 <ul>
-<li>cytogenetic_abnormality_involves_chromosome</li>
-<li>disease_mapped_to_chromosome</li>
-<li>disease_mapped_to_gene</li>
-<li>gene_involved_in_pathogenesis_of_disease</li>
-<li>gene_mutant_encodes_gene_product_sequence_variation</li>
-<li>gene_product_sequence_variation_encoded_by_gene_mutant</li>
-<li>molecular_abnormality_involves_gene</li>
+<li>allele_associated_with_disease</li>
+<li>allele_not_associated_with_disease</li>
+<li>gene_product_has_malfunction_type</li>
 </ul>
 </div>
 <div id = "rep_file_summary" class = "rep_block_level_one"></div>
@@ -98,7 +93,7 @@
 <h4>Documentation and Reference</h4>
 <table class = "elements" border = "10" cellspacing = "0">
 <tr><th>File Name</th><th>Description</th></tr>
-<tr><td  class = "file_field_name">NCI2012_02D.cfg</td><td>Configuration file</td></tr>
+<tr><td  class = "file_field_name">NCI2013_03D.cfg</td><td>Configuration file</td></tr>
 <tr><td  class = "file_field_name">ThesaurusInferred.owl</td><td>Complete source data in an OWL formatted file</td></tr>
 </table>
 <br/>
@@ -131,6 +126,7 @@
 <tr><td  class = "file_field_name">&lt;A9 rdf:resource="http://...owl#C..."/&gt;</td><td>Is_Related_To_Endogenous_Product</td><td>MRREL.CUI*; MRREL.RELA=is_related_to_endogenous_product</tr>
 <tr><td  class = "file_field_name">&lt;A10 rdf:resource="http://...owl#C..."/&gt;</td><td>Has_CDRH_Parent</td><td>MRREL.CUI*; MRREL.RELA=has_cdrh_parent</tr>
 <tr><td  class = "file_field_name">&lt;A11 rdf:resource="http://...owl#C..."/&gt;</td><td>Has_NICHD_Parent</td><td>MRREL.CUI*; MRREL.RELA=has_nichd_parent</tr>
+<tr><td  class = "file_field_name">&lt;A12 rdf:resource="http://...owl#C..."/&gt;</td><td>Has_Data_Element</td><td>MRREL.CUI*; MRREL.RELA=has_data_element</tr>
 <tr><td  class = "file_field_name">&lt;P90 rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"&gt;&lt;ncicp:ComplexTerm 
 xmlns:ncicp="http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#"&gt;&lt;ncicp:term-name&gt;...&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;...&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;...&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplextTerm&gt;&lt;/P90&gt;
 </td><td>FULL_SYN. Includes term name, term type, term source, and source code.</td><td>MRCONSO.STR = term name; MRCONSO.TTY = term type; MRCONSO.SAB = term source; MRSAT.ATN = ORIG_CODE if source code field is populated and SAB is not NCI. 
@@ -147,9 +143,10 @@ MRDEF.DEF = definition if source=NCI, an NCI subsource, or an NCI local source.<
 <tr><td  class = "file_field_name">&lt;P106 rdf:datatype="http://www... &lt;/P106&gt;</td><td>Semantic_Type</td><td>MRSTY.STY</tr> 
 <tr><td  class = "file_field_name">&lt;P107 rdf:datatype="http://www... &lt;/P107&gt;</td><td>Display_Name</td><td>Not processed</tr>
 <tr><td  class = "file_field_name">&lt;P108 rdf:datatype="http://www... &lt;/P108&gt;</td><td>Preferred_Name</td><td>MRCONSO.STR</tr>
-<tr><td  class = "file_field_name">&lt;P160 rdf:datatype="http://www... &lt;/P160&gt;</td><td>Maps_To_LASH</td><td>Not processed</tr>
 <tr><td  class = "file_field_name">&lt;P171 rdf:datatype="http://www... &lt;/P171&gt;</td><td>PubMedID_Primary_Reference</td><td>MRSAT.ATN=PUBMEDID_PRIMARY_REFERENCE</tr>
 <tr><td  class = "file_field_name">&lt;P175 rdf:datatype="http://www... &lt;/P175&gt;</td><td>NSC_Code</td><td>MRSAT.ATN=NSC_CODE</tr>
+<tr><td  class = "file_field_name">&lt;P201 rdf:datatype="http://www... &lt;/P201&gt;</td><td>OLD_CHILD</td><td>Not processed</tr>
+<tr><td  class = "file_field_name">&lt;P205 rdf:datatype="http://www... &lt;/P205&gt;</td><td>OLD_STATE</td><td>Not processed</tr>
 <tr><td  class = "file_field_name">&lt;P207 rdf:datatype="http://www... &lt;/P207&gt;</td><td>UMLS_CUI</td><td>Not processed</tr>
 <tr><td  class = "file_field_name">&lt;P208 rdf:datatype="http://www... &lt;/P208&gt;</td><td>NCI_META_CUI</td><td>Not processed</tr>
 <tr><td  class = "file_field_name">&lt;P210 rdf:datatype="http://www... &lt;/P210&gt;</td><td>CAS_Registry</td><td>MRSAT.ATN=CAS_REGISTRY</tr>
@@ -157,8 +154,7 @@ MRDEF.DEF = definition if source=NCI, an NCI subsource, or an NCI local source.<
 Includes GO term, id, source, evidence, and source date.</td><td>MRSAT.ATN=GO_ANNOTATION</tr>
 <tr><td  class = "file_field_name">&lt;P215 rdf:datatype="http://www... &lt;/P215&gt;</td><td>KEGG_ID</td><td>MRSAT.ATN=KEGG_ID</tr>
 <tr><td  class = "file_field_name">&lt;P216 rdf:datatype="http://www... &lt;/P216&gt;</td><td>BioCarta_ID</td><td>MRSAT.ATN=BIOCARTA_ID</tr>
-<tr><td  class = "file_field_name">&lt;P300 rdf:datatype="http://www... &lt;/P300&gt;</td><td>NDFRT_Name</td><td>Not processed</tr>
-<tr><td  class = "file_field_name">&lt;P301 rdf:datatype="http://www... &lt;/P310&gt;</td><td>NDFRT_Code</td><td>Not processed</tr>
+<tr><td  class = "file_field_name">&lt;P301 rdf:datatype="http://www... &lt;/P301&gt;</td><td>NDFRT_Code</td><td>Not processed</tr>
 <tr><td  class = "file_field_name">&lt;P302 rdf:datatype="http://www... &lt;/P302&gt;</td><td>Accepted_Therapeutic_Use_For</td><td>MRSAT.ATN=ACCEPTED_THERAPEUTIC_USE_FOR</tr>
 <tr><td  class = "file_field_name">&lt;P303 rdf:datatype="http://www... &lt;/P303&gt;</td><td>In_Clinical_Trial_For</td><td>Not processed</tr>
 <tr><td  class = "file_field_name">&lt;P310 rdf:datatype="http://www... &lt;/P310&gt;</td><td>Concept_Status</td><td>Not processed</tr>
@@ -186,16 +182,15 @@ Includes definition and source of definition.</td><td>MRDEF.SAB = source; MRDEF.
 <tr><td  class = "file_field_name">&lt;P356 rdf:datatype="http://www... &lt;/P356&gt;</td><td>Essential_Amino_Acid</td><td>MRSAT.ATN=ESSENTIAL_AMINO_ACID</tr>
 <tr><td  class = "file_field_name">&lt;P357 rdf:datatype="http://www... &lt;/P357&gt;</td><td>Essential_Fatty_Acid</td><td>MRSAT.ATN=ESSENTIAL_FATTY_ACID</tr>
 <tr><td  class = "file_field_name">&lt;P358 rdf:datatype="http://www... &lt;/P358&gt;</td><td>Nutrient</td><td>MRSAT.ATN=NUTRIENT</tr>
-<tr><td  class = "file_field_name">&lt;P359 rdf:datatype="http://www... &lt;/P359&gt;</td><td>Micronutrient</td><td>MRSAT.ATN=MICRONUTRIENT</tr>
 <tr><td  class = "file_field_name">&lt;P360 rdf:datatype="http://www... &lt;/P360&gt;</td><td>Macronutrient</td><td>MRSAT.ATN=MACRONUTRIENT</tr>
 <tr><td  class = "file_field_name">&lt;P361 rdf:datatype="http://www... &lt;/P361&gt;</td><td>Extensible_List</td><td>MRSAT.ATN=EXTENSIBLE_LIST</tr>
 <tr><td  class = "file_field_name">&lt;P362 rdf:datatype="http://www... &lt;/P362&gt;</td><td>miRBase_ID</td><td>MRSAT.ATN=MIRBASE_ID</tr>
-<tr><td  class = "file_field_name">&lt;P363 rdf:datatype="http://www... &lt;/P363&gt;</td><td>Neoplastic_Status</td><td>MRSAT.ATN=NEOPLASTIC_STATUS</tr>
+<tr><td  class = "file_field_name">&lt;P364 rdf:datatype="http://www... &lt;/P364&gt;</td><td>OLD_ASSOCIATION</td><td>Not processed</tr>
+<tr><td  class = "file_field_name">&lt;P365 rdf:datatype="http://www... &lt;/P365&gt;</td><td>OLD_SOURCE_ASSOCIATION</td><td>Not processed</tr>
 <tr><td  class = "file_field_name">&lt;P366 rdf:datatype="http://www... &lt;/P366&gt;</td><td>Legacy_Concept_Name</td><td>Not processed</tr>
 <tr><td  class = "file_field_name">&lt;P367 rdf:datatype="http://www... &lt;/P367&gt;</td><td>PID_ID</td><td>MRSAT.ATN=PID_ID</tr>
 <tr><td  class = "file_field_name">&lt;P368 rdf:datatype="http://www... &lt;/P368&gt;</td><td>CHEBI_ID</td><td>MRSAT.ATN=CHEBI_ID</tr>
-<tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R23"&gt;</td><td>EO_Disease_Has_Associated_Cell_Type</td><td>MRREL.RELA = 
-eo_disease_has_associated_cell_type</tr>
+<tr><td  class = "file_field_name">&lt;P369 rdf:datatype="http://www... &lt;/P369&gt;</td><td>HGNC_ID</td><td>MRSAT.ATN=HGNC_ID</tr>
 <tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R24"&gt;</td><td>EO_Disease_Maps_To_Human_Disease</td><td>MRREL.RELA = 
 eo_disease_maps_to_human_disease</tr>
 <tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R25"&gt;</td><td>EO_Disease_Has_Associated_EO_Anatomy</td><td>MRREL.RELA = 
@@ -232,8 +227,6 @@ gene_in_chromosomal_location</tr>
 gene_found_in_organism</tr>
 <tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R42"&gt;</td><td>Gene_Product_Is_Biomarker_Type</td><td>MRREL.RELA = 
 gene_product_is_biomarker_type</tr>
-<tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R43"&gt;</td><td>Gene_Product_Has_Malfunction_Type</td><td>MRREL.RELA = 
-gene_product_has_malfunction_type</tr>
 <tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R44"&gt;</td><td>Gene_Product_Has_Chemical_Classification</td><td>MRREL.RELA = 
 gene_product_has_chemical_classification</tr>
 <tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R45"&gt;</td><td>Gene_Product_Has_Organism_Source</td><td>MRREL.RELA = 
@@ -336,25 +329,18 @@ gene_has_physical_location</tr>
 chemical_or_drug_affects_gene_product</tr>
 <tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R150"&gt;</td><td>Chemical_Or_Drug_Affects_Abnormal_Cell</td><td>MRREL.RELA = 
 chemical_or_drug_affects_abnormal_cell</tr>
-<tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R151"&gt;</td><td>Allele_Associated_With_Disease</td><td>MRREL.RELA = 
-allele_associated_with_disease</tr>
-<tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R152"&gt;</td><td>Allele_Not_Associated_With_Disease</td><td>MRREL.RELA = 
-allele_not_associated_with_disease</tr>
 <tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R153"&gt;</td><td>Allele_Has_Abnormality</td><td>MRREL.RELA = 
 allele_has_abnormality</tr>
-<tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R154"&gt;</td><td>Allele_Not_Associated_With_Abnormality</td><td>Currently no relationships with this RELA</tr>
 <tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R155"&gt;</td><td>Allele_In_Chromosomal_Location</td><td>MRREL.RELA = 
 allele_in_chromosomal_location</tr>
 <tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R156"&gt;</td><td>Allele_Absent_From_Wild-type_Chromosomal_Location</td><td>MRREL.RELA = 
 allele_absent_from_wild-type_chromosomal_location</tr>
-<tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R157"&gt;</td><td>Allele_Ceases_Function_In_Pathway</td><td>Currently no relationships with this RELA</tr>
 <tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R158"&gt;</td><td>Allele_Plays_Altered_Role_In_Process</td><td>MRREL.RELA = 
 allele_plays_altered_role_in_process</tr>
 <tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R159"&gt;</td><td>Allele_Has_Activity</td><td>MRREL.RELA = 
 allele_has_activity</tr>
 <tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R160"&gt;</td><td>Allele_Plays_Role_In_Metabolism_Of_Chemical_Or_Drug</td><td>MRREL.RELA = 
 allele_plays_role_in_metabolism_of_chemical_or_drug</tr>
-<tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R162"&gt;</td><td>Procedure_May_Have_Target_Anatomy</td><td>Currently no relationships with this RELA</tr>
 <tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R163"&gt;</td><td>Procedure_Has_Target_Anatomy</td><td>MRREL.RELA = 
 procedure_has_target_anatomy</tr>
 <tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R164"&gt;</td><td>Procedure_May_Have_Imaged_Anatomy</td><td>Currently no relationships with this RELA</tr>
