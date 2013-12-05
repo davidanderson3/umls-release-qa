@@ -1,0 +1,782 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<title></title>
+</head>
+<body>
+<div class="section-4">
+<ul id="menu">
+  <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
+  <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
+  <li id="nav-3"> <a href="sourcemetastats.html">Statistics and sample
+data</a>
+    <ul id="subnav-3">
+      <li> <a href="termtypes.html">Terms and term types</a> </li>
+      <li> <a href="attributes.html">Attributes</a> </li>
+      <li> <a href="relationships.html">Relationships</a> </li>
+      <li> <a href="semtypes.html">Semantic Types</a> </li>
+      <li> <a href="overlap.html">Source Overlap</a> </li>
+    </ul>
+  </li>
+  <li id="nav-4"> <a href="representation.html">Representation</a>
+    <ul id="subnav-4">
+      <li> <a href="sourcerepresentation.html" id="sourcerep">Source
+Representation</a> </li>
+      <li> <a href="metarepresentation.html">Metathesaurus
+Representation</a> </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<!-- end tabbed navigation area -->
+<br/>
+<br/>
+<br/>
+<a name="top"></a>
+<span class="nav">Skip to: <a href="#general">Notes</a>, <a
+ href="#change_summary">Summary of Changes</a>, <a href="#file_summary">Summary
+of
+Source-Provided
+Files</a> <a href="#file_details">Source-Provided
+File Details</a></span>
+<a name="general"></a>
+<div id="rep_general" class="rep_block_level_one">
+<h3>Notes</h3>
+<p>The files found in the ASCII/MDRA_J160 directory of the MedDRA release
+contain the complete current MedDRA Japanese data set.
+Metathesaurus source processing requires only these files. The
+consecutive files, found in the ASC_SEQ/MDRA_J160 directory, define what changes
+have been made in the MedDRA ASCII files since the last release.
+These files are not directly used for Metathesaurus source processing,
+except in limited cases to informally review updates or to confirm file
+integrity (e.g., as an exercise to verify that by applying current .seq
+changes to previous .asc data, the current .asc files can be
+recreated).
+</p>
+<p>The information provided here applies explicitly to the Japanese translation
+of MedDRA. For information about other translations (Czech, Dutch,
+French, German, Hungarian, Italian, Portuguese, and Spanish) see the
+representation pages for each specific source and for MedDRA (English) which
+contains information relevant to the translation sources.
+</p>
+</div>
+<div id="rep_change_summary" class="rep_block_level_one">
+<a name="change_summary"></a>
+<h3>Summary of Changes:</h3>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
+<p>Relationship attribute (RELA) 'member_of_cluster' has been changed to 'member_of'. The inverse remains the same, 'has_member'.</p>
+</div>
+<a name="file_summary"></a>
+<div id="rep_file_summary" class="rep_block_level_one">
+<h3>Source-Provided Files: Summary</h3>
+&nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
+<p>The Japanese language MedDRA distribution includes the
+following:</p>
+<div class="rep_block_level_two">
+<!-- Make a table of each file that comes from the source   -->
+<h4>Documentation and Reference</h4>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>File Name</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td class="file_field_name">ASCII_seq_datafiles_16_0_Japanese.doc</td>
+      <td> ASCII and Consecutive Files Documentation. This is the
+primary documentation for the data files.</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">SMQ_intguide_16_0_Japanese.doc</td>
+      <td> SMQ Introductory Guide</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">SMQ_spreadsheet_16_0_Japanese.xls</td>
+      <td> SMQ Spreadsheet</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">dist_file_format_16_0_Japanese.doc</td>
+      <td>File Format Document</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">intguide_16_0_Japanese.doc</td>
+      <td> Introductory Guide</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">version_report_16_0_Japanese.xls</td>
+      <td> Version Report</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">whatsnew_16_0_Japanese.doc</td>
+      <td> What's New in this version</td>
+    </tr>
+  </tbody>
+</table>
+<br/>
+<h4>Ascii data files</h4>
+<a name="ascii_data_files"></a>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>File Name</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td class="file_field_name"><a href="#file1">ASCII/MDRA_J160/llt_j.asc</a></td>
+      <td>Lower Level Terms</td>
+    </tr>
+    <tr>
+      <td class="file_field_name"><a href="#file2">ASCII/MDRA_J160/pt_j.asc</a></td>
+      <td>Preferred Terms</td>
+    </tr>
+    <tr>
+      <td class="file_field_name"><a href="#file3">ASCII/MDRA_J160/hlt_j.asc</a></td>
+      <td>High Level Terms</td>
+    </tr>
+    <tr>
+      <td class="file_field_name"><a href="#file4">ASCII/MDRA_J160/hlgt_j.asc</a></td>
+      <td>High Level Group Terms</td>
+    </tr>
+    <tr>
+      <td class="file_field_name"><a href="#file5">ASCII/MDRA_J160/soc_j.asc</a></td>
+      <td> System Organ Classes</td>
+    </tr>
+    <tr>
+      <td class="file_field_name"><a href="#file6">ASCII/MDRA_J160/soc_hlgt.asc</a></td>
+      <td>Relationships between SOC and HLGT codes</td>
+    </tr>
+    <tr>
+      <td class="file_field_name"><a href="#file7">ASCII/MDRA_J160/hlgt_hlt.asc</a></td>
+      <td>Relationships between HLGT and HLT codes</td>
+    </tr>
+    <tr>
+      <td class="file_field_name"><a href="#file8">ASCII/MDRA_J160/hlt_pt.asc</a></td>
+      <td>Relationships between HLT and PT codes</td>
+    </tr>
+    <tr>
+      <td class="file_field_name"><a href="#file9">ASCII/MDRA_J160/intl_ord.asc</a></td>
+      <td>International SOC sort order data</td>
+    </tr>
+    <tr>
+      <td class="file_field_name"><a href="#file10">ASCII/MDRA_J160/smq_list_j.asc</a></td>
+      <td>Standardised MedDRA Query (SMQ) Listing</td>
+    </tr>
+    <tr>
+      <td class="file_field_name"><a href="#file11">ASCII/MDRA_J160/smq_content.asc</a></td>
+      <td>Standardised MedDRA Query (SMQ) Listing</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">ASCII/MDRA_J160/mdhier.asc</td>
+      <td>Hierarchy data: data in this file is redundant to data in
+soc_hlgt.asc, hlgt_hlt.asc and hlt_pt.asc</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">ASCII/MDRA_J160/meddra_release.asc<br/>
+      </td>
+      <td style="vertical-align: top;">Release metadata<br/>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>
+All information from the ASCII/MDRA_J160 files is included in
+the UMLS representation. Certain fields and files may not be directly
+processed because they contain redundant data.</p>
+<br/>
+<h4>Consecutive data files</h4>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>File Name</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td class="file_field_name">ASC_SEQ/MDRA_J160/hlt_j.seq </td>
+      <td> High Level Terms</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">ASC_SEQ/MDRA_J160/hlt_pt.seq </td>
+      <td> Relationships between HLT and PT codes</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">ASC_SEQ/MDRA_J160/llt.seq </td>
+      <td> Lower Level Terms (English)</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">ASC_SEQ/MDRA_J160/llt_j.seq </td>
+      <td> Lower Level Terms (Japanese)</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">ASC_SEQ/MDRA_J160/mdhier.seq </td>
+      <td> Hierarchy data: data in this file is redundant to data in
+soc_hlgt.asc, hlgt_hlt.asc and hlt_pt.asc</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">ASC_SEQ/MDRA_J160/pt.seq </td>
+      <td> Preferred Terms (English)</td>
+    </tr>
+    <tr>
+      <td class="file_field_name">ASC_SEQ/MDRA_J160/pt_j.seq </td>
+      <td> Preferred Terms (Japanese)</td>
+    </tr>
+  </tbody>
+</table>
+<br/>
+
+</div>
+</div>
+<a name="file_details"></a>
+<div id="rep_file_details" class="rep_block_level_one">
+<h3>Source-Provided Files: Details</h3>
+<span class="nav">(<a href="#top">return to top</a>)</span>
+<p>Details on format of input files and representation of source data.
+Consult the MedDRA documentation for additional details.</p>
+
+<ul>
+  <li>kanji: Japanese-Chinese characters</li>
+  <li>kana:  Japanese phonetic symbols</li>
+  <li>kana1: alternate kana name</li>
+  <li>kana2: alternate kana name</li>
+</ul>
+<div class="rep_block_level_two">
+<a name="file1"></a>
+<h4 class="file_field_name">file:llt_j.asc</h4>
+&nbsp;&nbsp;<span class="nav">return to <a href="#ascii_data_files">Ascii
+data
+files</a></span>
+<p>Lower Level Terms, represented with TTY= LT* or OL* (for
+non-current LLTs). Every PT has one identical LT for data entry
+purposes. In addition, LTs may be synonyms, lexical variants,
+quasi-synonyms, or
+sub-elements of their PT.Therefore, the pt_code is represented in
+MRCONSO as a Source-asserted
+Descriptor Identifier (SDUI), indicating that the LT and PT are closely
+related but not necessarily synonymous.
+</p>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>#</th>
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Representation</th>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">1<br/>
+      </td>
+      <td class="file_field_name">llt_code </td>
+      <td> 8-digit code to identify Lowest Level Term </td>
+      <td> MRCONSO.CODE </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">2<br/>
+      </td>
+      <td class="file_field_name">llt_kanji </td>
+      <td> Full name of Lowest Level Term </td>
+      <td> MRCONSO.STR (TTY= "LT" or "OL")</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">3<br/>
+      </td>
+      <td class="file_field_name">llt_jcurr</td>
+      <td> Indicates whether the Lowest Level Term is current or non-current </td>
+      <td> Used to assign the termtype: If value = "Y", termtype = LT*; if value = "N", termtype = OL*, SUPPRESS = "Y"</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">4<br/>
+      </td>
+      <td class="file_field_name">llt_kana </td>
+      <td> Kana form of Lowest Level Term </td>
+      <td> MRCONSO.STR (TTY = "LTJKN" or "OLJKN")</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">5<br/>
+      </td>
+      <td class="file_field_name">llt_kana1 </td>
+      <td> Alternate kana form of Lowest Level Term </td>
+      <td> MRCONSO.STR (TTY = "LTJKN1" or "OLJKN1") </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">6<br/>
+      </td>
+      <td class="file_field_name">llt_kana2 </td>
+      <td> Alternate kana form of Lowest Level Term </td>
+      <td> MRCONSO.STR (TTY = "LTJKN2" or "OLJKN2") </td>
+    </tr>
+   </tbody>
+</table>
+<br/>
+<a name="file2"></a>
+<h4 class="file_field_name">file:pt_j.asc</h4>
+&nbsp;&nbsp;<span class="nav">return to <a href="#ascii_data_files">Ascii
+data
+files</a></span>
+<p>Preferred Terms</p>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>#</th>
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Representation</th>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">1<br/>
+      </td>
+      <td class="file_field_name">pt_code </td>
+      <td> 8-digit code to identify Preferred Term </td>
+      <td> MRCONSO.CODE, MRCONSO.SDUI</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">2<br/>
+      </td>
+      <td class="file_field_name">pt_kanji </td>
+      <td> Full name of Preferred Term </td>
+      <td> MRCONSO.STR (TTY = "PT") </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">3<br/>
+      </td>
+      <td class="file_field_name">pt_kana </td>
+      <td> Kana form of Preferred Term </td>
+      <td> MRCONSO.STR (TTY = "PTJKN") </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">4<br/>
+      </td>
+      <td class="file_field_name">pt_kana1 </td>
+      <td> Alternate kana form of Preferred Term </td>
+      <td> MRCONSO.STR (TTY = "PTJKN1") </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">5<br/>
+      </td>
+      <td class="file_field_name">pt_kana2 </td>
+      <td> Alternate kana form of Prefered Term </td>
+      <td> MRCONSO.STR (TTY = "PTJKN2") </td>
+    </tr>
+  </tbody>
+</table>
+<br/>
+<a name="file3"></a>
+<h4 class="file_field_name">file:hlt_j.asc</h4>
+&nbsp;&nbsp;<span class="nav">return to <a href="#ascii_data_files">Ascii
+data
+files</a></span>
+<p>High Level Terms</p>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>#</th>
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Representation</th>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">1<br/>
+      </td>
+      <td class="file_field_name">hlt_code </td>
+      <td> 8-digit code to identify High Level Term </td>
+      <td> MRCONSO.CODE </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">2<br/>
+      </td>
+      <td class="file_field_name">hlt_kanji </td>
+      <td> Full name of High Level Term </td>
+      <td> MRCONSO.STR (TTY = "HT") </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">3<br/>
+      </td>
+      <td class="file_field_name">hlt_kana </td>
+      <td> Kana form of High Level Term </td>
+      <td> MRCONSO.STR (TTY = "HTJKN") </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">4<br/>
+      </td>
+      <td class="file_field_name">hlt_kana1 </td>
+      <td> Alternate kana form of High Level Term </td>
+      <td> MRCONSO.STR (TTY = "HTJKN1") </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">5<br/>
+      </td>
+      <td class="file_field_name">hlt_kana2 </td>
+      <td> Alternate kana form of High Level Term </td>
+      <td> MRCONSO.STR (TTY = "HTJKN2") </td>
+    </tr>
+  </tbody>
+</table>
+<br/>
+<a name="file4"></a>
+<h4 class="file_field_name">file:hlgt_j.asc</h4>
+&nbsp;&nbsp;<span class="nav">return to <a href="#ascii_data_files">Ascii
+data
+files</a></span>
+<p>High Level Group Terms</p>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>#</th>
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Representation</th>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">1<br/>
+      </td>
+      <td class="file_field_name">hlgt_code </td>
+      <td> 8-digit code to identify High Level Group Term </td>
+      <td> MRCONSO.CODE </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">2<br/>
+      </td>
+      <td class="file_field_name">hlgt_kanji </td>
+      <td> Full name of High Level Group Term </td>
+      <td> MRCONSO.STR (TTY = "HG") </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">3<br/>
+      </td>
+      <td class="file_field_name">hlgt_kana </td>
+      <td> Kana form of High Level Group Term </td>
+      <td> MRCONSO.STR (TTY = "HGJKN") </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">4<br/>
+      </td>
+      <td class="file_field_name">hlgt_kana1 </td>
+      <td> Alternate kana form of High Level Group Term </td>
+      <td> MRCONSO.STR (TTY = "HGJKN1") </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">5<br/>
+      </td>
+      <td class="file_field_name">hlgt_kana2 </td>
+      <td> Alternate kana form of High Level Group Term </td>
+      <td> MRCONSO.STR (TTY = "HGJKN2") </td>
+    </tr>
+  </tbody>
+</table>
+<br/>
+<a name="file5"></a>
+<h4 class="file_field_name">file:soc_j.asc</h4>
+&nbsp;&nbsp;<span class="nav">return to <a href="#ascii_data_files">Ascii
+data
+files</a></span>
+<p>System Organ Classes</p>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>#</th>
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Representation</th>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">1<br/>
+      </td>
+      <td class="file_field_name">soc_code </td>
+      <td> 8-digit code to identify System Organ Class </td>
+      <td> MRCONSO.CODE </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">2<br/>
+      </td>
+      <td class="file_field_name">soc_kanji </td>
+      <td> Full name of System Organ Class </td>
+      <td> MRCONSO.STR (TTY = "OS") </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">3<br/>
+      </td>
+      <td class="file_field_name">soc_order </td>
+      <td> System Organ Class Order </td>
+      <td> Not processed </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">4<br/>
+      </td>
+      <td class="file_field_name">soc_kana </td>
+      <td> Kana form of System Organ Class </td>
+      <td> MRCONSO.STR (TTY = "OSJKN") </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">5<br/>
+      </td>
+      <td class="file_field_name">soc_kana1 </td>
+      <td> Alternate kana form of System Organ Class </td>
+      <td> MRCONSO.STR (TTY = "OSJKN1") </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">6<br/>
+      </td>
+      <td class="file_field_name">soc_kana2 </td>
+      <td> Alternate kana form of System Organ Class </td>
+      <td> MRCONSO.STR (TTY = "OSJKN2") </td>
+    </tr>
+  </tbody>
+</table>
+<br/>
+<a name="file6"></a>
+<h4 class="file_field_name">file:soc_hlgt.asc</h4>
+&nbsp;&nbsp;<span class="nav">return to <a href="#ascii_data_files">Ascii
+data
+files</a></span>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>#</th>
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Representation</th>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">1<br/>
+      </td>
+      <td class="file_field_name">soc_code </td>
+      <td> 8-digit code to identify System Organ Class </td>
+      <td> Used to create hierarchy</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">2<br/>
+      </td>
+      <td class="file_field_name">hlgt_code </td>
+      <td> 8-digit code to identify High Level Group Term </td>
+      <td> Used to create hierarchy</td>
+    </tr>
+  </tbody>
+</table>
+<br/>
+<a name="file7"></a>
+<h4 class="file_field_name">file:hlgt_hlt.asc</h4>
+&nbsp;&nbsp;<span class="nav">return to <a href="#ascii_data_files">Ascii
+data
+files</a></span>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>#</th>
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Representation</th>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">1<br/>
+      </td>
+      <td class="file_field_name">hlt_code </td>
+      <td> 8-digit code to identify High Level Term </td>
+      <td> Used to create hierarchy</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">2<br/>
+      </td>
+      <td class="file_field_name">pt_code </td>
+      <td> 8-digit code to identify Preferred Term </td>
+      <td> Used to create hierarchy</td>
+    </tr>
+  </tbody>
+</table>
+<br/>
+<a name="file8"></a>
+<h4 class="file_field_name">file:hlt_pt.asc</h4>
+&nbsp;&nbsp;<span class="nav">return to <a href="#ascii_data_files">Ascii
+data
+files</a></span>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>#</th>
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Representation</th>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">1<br/>
+      </td>
+      <td class="file_field_name">hlt_code</td>
+      <td> 8-digit code to identify High Level Term </td>
+      <td> Used to create hierarchy</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">2<br/>
+      </td>
+      <td class="file_field_name">pt_code</td>
+      <td> 8-digit code to identify Preferred Term </td>
+      <td> Used to create hierarchy</td>
+    </tr>
+  </tbody>
+</table>
+<br/>
+<a name="file9"></a>
+<h4 class="file_field_name">file:intl_ord.asc</h4>
+&nbsp;&nbsp;<span class="nav">return to <a href="#ascii_data_files">Ascii
+data
+files</a></span>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>#</th>
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Representation</th>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">1<br/>
+      </td>
+      <td class="file_field_name">intl_ord_code </td>
+      <td> Serial code for international System Organ Class sort order </td>
+      <td> MRSAT: ATN = "MISO"</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">2<br/>
+      </td>
+      <td class="file_field_name">soc_code </td>
+      <td> 8-digit code to identify System Organ Class </td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<br/>
+<a name="file10"></a>
+<h4 class="file_field_name">file:smq_list_j.asc</h4>
+&nbsp;&nbsp;<span class="nav">return to <a href="#ascii_data_files">Ascii
+data
+files</a></span>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>#</th>
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Representation</th>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">1<br/>
+      </td>
+      <td class="file_field_name">SMQ_code </td>
+      <td> 8-digit code assigned to the Standardised MedDRA Query,
+starts with "2" </td>
+      <td> MRCONSO.CODE</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">2<br/>
+      </td>
+      <td class="file_field_name">SMQ_kanji </td>
+      <td> Name for the SMQ; each SMQ carries "(SMQ)" at the end of the
+name </td>
+      <td> MRCONSO.STR (TTY = "SMQ") </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">3<br/>
+      </td>
+      <td class="file_field_name">SMQ_desc_kanji </td>
+      <td> Descdript of the SMQ including inclusion and exclusion criteria </td>
+      <td> MRDEF.DEF</td>
+    </tr>
+  </tbody>
+</table>
+<br/>
+<a name="file11"></a>
+<h4 class="file_field_name">file:smq_content.asc</h4>
+&nbsp;&nbsp;<span class="nav">return to <a href="#ascii_data_files">Ascii
+data
+files</a></span>
+<table class="elements" border="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>#</th>
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Representation</th>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">1<br/>
+      </td>
+      <td class="file_field_name">SMQ_code </td>
+      <td> 8-digit code assigned to the Standardised MedDRA Query,
+starts with "2" </td>
+      <td> Used to create a "has_member" relationship between the SMQ
+and its members</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">2<br/>
+      </td>
+      <td class="file_field_name">Term_code </td>
+      <td> Subordinate term code; it could be a code for a MedDRA PT,
+LLT or child SMQ </td>
+      <td> Used to create a "has_member" relationship between the SMQ
+and its members</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">3<br/>
+      </td>
+      <td class="file_field_name">Term_level </td>
+      <td> MedDRA hierarchy level of the term (4 = "PT", 5 = "LLT") or
+0 for a
+child SMQ </td>
+      <td> MRSAT: ATN = "SMQ_TERM_LEVEL"</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">4<br/>
+      </td>
+      <td class="file_field_name">Term_scope </td>
+      <td> Defines the MedDRA term as a member of the broad scope (1),
+narrow scope (2) of the SMQ search, or a child SMQ (0) (zero) </td>
+      <td> MRSAT: ATN = "SMQ_TERM_SCOPE" attached to the RUI</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">5<br/>
+      </td>
+      <td class="file_field_name">Term_category </td>
+      <td> The category is assigned a single alphabetical letter
+depending on the algorithm applied. If the SMQ does not use algorithms,
+then all Term_category values are assigned "A." For a child SMQ, this
+field is assigned "S." </td>
+      <td> MRSAT: ATN = "SMQ_TERM_CAT" attached to the RUI</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">6<br/>
+      </td>
+      <td class="file_field_name">Term_weight </td>
+      <td> Term weight is used for some SMQ algorithms. "0" is used as
+default. </td>
+      <td> MRSAT: ATN = "SMQ_TERM_WEIGHT" attached to the RUI</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">7<br/>
+      </td>
+      <td class="file_field_name">Term_status </td>
+      <td> Identifies a term as active within this SMQ or inactive
+within this SMQ. When a term is added to an SMQ, the value is set to
+"A" for Active. The term can be flagged as "I" for inactive if the term
+is no longer used in the SMQ. </td>
+      <td> MRSAT: ATN = "SMQ_TERM_STATUS" attached to the RUI</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">8<br/>
+      </td>
+      <td class="file_field_name">Term_addition_version </td>
+      <td> Identifies the version of MedDRA in which this term was
+added to the SMQ </td>
+      <td> MRSAT: ATN = "SMQ_TERM_ADDVERSION" attached to the RUI</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">9<br/>
+      </td>
+      <td class="file_field_name">Term_last_modified_version </td>
+      <td> Identifies the version of MedDRA in which this term was last
+modified in this SMQ. </td>
+      <td> MRSAT: ATN = "SMQ_TERM_LMVERSION" attached to the RUI</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

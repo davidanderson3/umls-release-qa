@@ -1,0 +1,565 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;
+      charset=ISO-8859-1">
+    <title></title>
+  </head>
+  <body>
+    <div class="section-4">
+      <ul id="menu">
+        <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
+        <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
+        <li id="nav-3"> <a href="sourcemetastats.html">Statistics and
+            sample data</a>
+          <ul id="subnav-3">
+            <li> <a href="termtypes.html">Terms and term types</a> </li>
+            <li> <a href="attributes.html">Attributes</a> </li>
+            <li> <a href="relationships.html">Relationships</a> </li>
+            <li> <a href="semtypes.html">Semantic Types</a> </li>
+            <li> <a href="overlap.html">Source Overlap</a> </li>
+          </ul>
+        </li>
+        <li id="nav-4"> <a href="representation.html">Representation</a>
+          <ul id="subnav-4">
+            <li> <a href="sourcerepresentation.html">Source
+                Representation</a> </li>
+            <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
+
+
+                Representation</a> </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <br>
+    <br>
+    <br>
+    <a name="top"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>,
+      <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
+      <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+    <p><b>VSAB:</b>&nbsp; RXNORM_13AA_130903F<br>
+    </p>
+    <div id="rep_identifiers" class="rep_block_level_one">
+      <h3>Notes:</h3>
+      <p>RxNorm, a standardized nomenclature for clinical drugs, is
+        produced by the National Library of Medicine. Data files are
+        released monthly and <a href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">available
+        by download</a>. Within each Metathesaurus cycle, RxNorm is
+        updated multiple times. This document reflects the latest
+        cumulative update. The scope of RxNorm is determined by the
+        combined scope of its source vocabularies which include the
+        following:<br>
+      </p>
+      <table style="width: 633px; height: 314px;" class="elements"
+        border="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <th>Sources</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td class="file_field_name">ATC_2013</td>
+            <td>Anatomical Therapeutic Chemical Classification System (updated only once a year)</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">GS_2013_08_05</td>
+            <td>Gold Standard Drug Database</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">MDDB_2013_08_07</td>
+            <td>Master Drug Data Base. Medi-Span, a division of Wolters
+              Kluwer Health</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">MMSL_2013_08_01</td>
+            <td>Multum MediSource Lexicon</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">MMX_2013_08_05</td>
+            <td>Micromedex RED BOOK</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">MTHSPL_2013_08_26</td>
+            <td>FDA Structured Product Labels</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">NDDF_2013_08_07</td>
+            <td>FDB MedKnowledge</td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">NDFRT_2013_09_03<br>
+            </td>
+            <td style="vertical-align: top;">National Drug File<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">RXNORM_13AA_130903F<br>
+            </td>
+            <td style="vertical-align: top;">RxNorm Vocabulary<br>
+            </td>
+          </tr>
+          <tr>
+            <td class="file_field_name">VANDF_2013_07_19</td>
+            <td>Veterans Health Administration National Drug File</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      Note: Selected portions of MSH and SNOMEDCT are included in the
+      RxNorm release files, however, they are not processed as part of
+      RxNorm for the Metathesaurus except in assigning RXCUI and RXAUI
+      attributes. All MSH or SNOMEDCT data in the Metathesaurus comes
+      directly from that source's data files. This document describes
+      how the RxNorm release files (RXN*RRF) are processed for
+      representation in the UMLS Metathesaurus.&nbsp; It does not cover
+      processing of individual source vocabularies for inclusion in
+      RxNorm.&nbsp;
+      <h3>Summary of Changes</h3>
+      <p>No changes were made to the RXNORM format itself or to
+        Metathesaurus source processing for 2013AB.&nbsp; Data changes
+        include the following:<br>
+      </p>
+      New TTYs | SABs:
+      <ul>
+        <li>IN | ATC_2013</li>
+        <li>PT | ATC_2013</li>
+        <li>RXN_IN | ATC_2013</LI>
+        <li>RXN_PT | ATC_2013</li>
+      </ul>
+      Attributes:&nbsp; <br>
+      <br>
+      <table class="elements" border="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <th>Status</th>
+            <th>ATN</th>
+            <td style="vertical-align: top;"><span style="font-weight:
+                bold;">SAB</span><br>
+            </td>
+            <td style="vertical-align: top;"><span style="font-weight:
+                bold;">Notes/explanation</span><br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">New<br>
+            </td>
+            <td style="vertical-align: top;">ATC_LEVEL<br>
+            </td>
+            <td style="vertical-align: top;">ATC_2013<br>
+            </td>
+            <td style="vertical-align: top;">Drug classification level. Valid levels: 1-5<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">New<br>
+            </td>
+            <td style="vertical-align: top;">IS_DRUG_CLASS<br>
+            </td>
+            <td style="vertical-align: top;">ATC_2013<br>
+            </td>
+            <td style="vertical-align: top;">Valid value: Y<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">Deprecated<br>
+            </td>
+            <td style="vertical-align: top;">NST<br>
+            </td>
+            <td style="vertical-align: top;">MTHFDA_2011_06_01_13_03_04<br>
+            </td>
+            <td style="vertical-align: top;">Normalized strength and units for drugs with one active ingredient<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">Deprecated<br>
+            </td>
+            <td style="vertical-align: top;">RXO</td>
+            <td style="vertical-align: top;">MTHFDA_2011_06_01_13_03_04<br>
+            </td>
+            <td style="vertical-align: top;">Drug Description from NDF</td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">Deprecated<br>
+            </td>
+            <td style="vertical-align: top;">TRN</td>
+            <td style="vertical-align: top;">MTHFDA_2011_06_01_13_03_04<br>
+            </td>
+            <td style="vertical-align: top;">Trade name of product<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+    </div>
+    <h3>Source Provided Files:</h3>
+    <div id="rep_change_summary" class="rep_block_level_one">
+      <p>RXNORM data files are released monthly and <a
+href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">available
+
+
+          by download</a>.</p>
+      <table class="elements" border="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <th>File Name</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td class="file_field_name">RXNCONSO.RRF</td>
+            <td>Concept and source information.</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">RXNDOC.RRF</td>
+            <td>Abbreviated values.</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">RXNREL.RRF</td>
+            <td>Relationship and merge information.</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">RXNSAB.RRF</td>
+            <td>Source information.</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">RXNSAT.RRF</td>
+            <td>Attribute information.</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">RXNSTY.RRF</td>
+            <td>Semantic type information.</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">RXNATOMARCHIVE.RRF</td>
+            <td>Archive data. Not used.</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">RXNCUICHANGES.RRF</td>
+            <td>CUI changes. Not used.</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">RXNCUI.RRF</td>
+            <td>Retired CUIs.</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">RXNCONSOOCD.RRF</td>
+            <td>OCD concept and source information.</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">RXNASATOCD.RRF</td>
+            <td>OCD simple concept and atom attribute information.</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">RXNSTYOCD.RRF</td>
+            <td>OCD semantic type.</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+    </div>
+    <div id="rep_identifers" class="rep_block_level_one">
+      <h3>Identifiers:</h3>
+      <ul>
+        <li>CODE: RXNCONSO.CODE</li>
+        <li>SAUI: RXNCONSO.RXAUI for RXNORM atoms; RXNCONSO.SAUI for
+          other sources. (Currently SAUI is blank for other sources).</li>
+        <li>SCUI: RXNCONSO.RXCUI for RXNORM atoms; RXNCONSO.SCUI for
+          other sources. (Currently SCUI is blank for other sources
+          except NDFRT).</li>
+        <li>SDUI: RXNCONSO.SDUI (Currently always blank).</li>
+      </ul>
+      <div id="rep_termtypes" class="rep_block_level_two"> <a
+          name="atoms"></a>
+        <h3>Atoms (MRCONSO):</h3>
+        &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
+        <br>
+        <br>
+        <h4>Term Type</h4>
+        <p>Term types are extracted from field 13 of RXNCONSO.RRF and
+          RXNCONSOOCD.RRF.</p>
+        <h4>Suppressibility</h4>
+        <p>For many RxNorm and subsource termtypes, the suppressibility
+          value can be either "O" or "N". For all others, the value is
+          "N". Suppressibility values are extracted from field 17 of
+          RXNCONSO.RRF and RXNCONSOOCD.RRF.<br>
+        </p>
+        <p>In addition, source NDC attributes may have
+          SUPPRESS="O".&nbsp; <br>
+        </p>
+      </div>
+      <div id="rep_attributes" class="rep_block_level_two"> <a
+          name="attributes"></a><br>
+        <h3>Attributes (MRSAT):</h3>
+        &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br>
+        <p>All attribute names and their values are extracted from field
+          9 and 11 of RXNSAT.RRF and RXNSATOCD.RRF except for RXCUI and
+          RXAUI which are created using RXNCONSO.RRF.</p>
+      </div>
+      <div id="rep_definitions" class="rep_block_level_two"> <a
+          name="definitions"></a><br>
+        <h3>Definitions (MRDEF):</h3>
+        &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br>
+        <p>There are no DEFINITIONS with SAB = "RXNORM".&nbsp;&nbsp;
+          NDFRT does contribute a small number of DEFINITIONS to
+          MRDEF.RRF.<br>
+        </p>
+      </div>
+      <div id="rep_relationships" class="rep_block_level_two"> <a
+          name="relationships"></a><br>
+        <h3>Relationships (MRREL):</h3>
+        &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br>
+        <p>All relationships are extracted from field 4 (REL) and field
+          8 (RELA) of RXNREL.RRF.&nbsp; <br>
+        </p>
+        <p>Note:&nbsp; In the table below, where reasonable we have
+          supplied term types involved in the listed
+          relationships.&nbsp; For sources that do not have "semantic
+          term types" (e.g. NDFRT uses "HT" and "PT," which are based on
+          the structure of the source, rather than types like "IN" which
+          is derived from the meaning of the concept), these term types
+          may not apply.<br>
+          <br>
+        </p>
+        <table class="elements" border="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <th>Source</th>
+              <th>Relationship</th>
+              <th>Relationship Label<br>
+                Inverse Relationship Label</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>NDFRT</td>
+              <td>CHD<br>
+                PAR<br>
+              </td>
+              <td>(no rela)</td>
+              <td valign="top">CREATED from the "PAR" relationships in
+                RXNREL.RRF.<br>
+                Currently, NDFRT is the only RXNORM source with a
+                hierarchy.<br>
+              </td>
+            </tr>
+            <tr>
+              <td>RXNORM</td>
+              <td>RB<br>
+                RN<br>
+              </td>
+              <td>contained_in<br>
+                contains</td>
+              <td valign="top">Connects the "SBD", "SCD" with its drug
+                delivery device.</td>
+            </tr>
+            <tr>
+              <td>RXNORM</td>
+              <td>RB<br>
+                RN</td>
+              <td>has_form<br>
+                form_of</td>
+              <td valign="top">Connects the "PIN" with its "IN".</td>
+            </tr>
+            <tr>
+              <td>RXNORM</td>
+              <td>RB<br>
+                RN</td>
+              <td>has_quantified_form<br>
+                quantified_form_of</td>
+              <td valign="top">Creates relationships using the "SBD" or
+                "SCD".</td>
+            </tr>
+            <tr>
+              <td>RXNORM</td>
+              <td>RB<br>
+                RN</td>
+              <td>has_tradename<br>
+                tradename_of</td>
+              <td valign="top">Connects the branded name with the
+                generic or clinical name.</td>
+            </tr>
+            <tr>
+              <td>RXNORM<br>
+                MMSL<br>
+                VANDF<br>
+              </td>
+              <td>RB<br>
+                RN</td>
+              <td>inverse_isa<br>
+                isa</td>
+              <td valign="top">Connects the "PT" with its clinical drug
+                name and connects the "SCD" &amp; "SBD" to its drug
+                form.</td>
+            </tr>
+            <tr>
+              <td>RXNORM</td>
+              <td>RB<br>
+                RN</td>
+              <td>precise_ingredient_of<br>
+                has_precise_ingredient</td>
+              <td valign="top">Connects the "BN" with its "PIN".</td>
+            </tr>
+            <tr>
+              <td>RXNORM</td>
+              <td>RO</td>
+              <td>precise_ingredient_of<br>
+                has_precise_ingredient</td>
+              <td valign="top">Connects the "SCDC" with its "PIN".</td>
+            </tr>
+            <tr>
+              <td>RXNORM</td>
+              <td>RO</td>
+              <td>consists_of<br>
+                constitutes</td>
+              <td valign="top">Connects the "SCD", "SBD" with its drug
+                component.</td>
+            </tr>
+            <tr>
+              <td>MMSL</td>
+              <td>RO</td>
+              <td>contained_in<br>
+                contains</td>
+              <td valign="top">Connects "GN" atoms with other "GN"
+                atoms.</td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">RXNORM<br>
+              </td>
+              <td style="vertical-align: top;">RO<br>
+              </td>
+              <td style="vertical-align: top;">doseformgroup_of<br>
+                has_doseformgroup<br>
+              </td>
+              <td style="vertical-align: top;">Connects the "SCDG" and
+                "SBDG" with the dose form group.<br>
+              </td>
+            </tr>
+            <tr>
+              <td>RXNORM<br>
+                NDDF<br>
+                NDFRT<br>
+              </td>
+              <td>RO</td>
+              <td>dose_form_of<br>
+                has_dose_form</td>
+              <td valign="top">Connects the "SCD", "SCDF", "SBD", and
+                "SBDF" with the dose form.</td>
+            </tr>
+            <tr>
+              <td>RXNORM<br>
+              </td>
+              <td>RO</td>
+              <td>included_in<br>
+                includes</td>
+              <td valign="top">Connects the drug name with its
+                Metathesaurus created name.</td>
+            </tr>
+            <tr>
+              <td>RXNORM<br>
+                MMSL<br>
+                MTHSPL<br>
+                NDDF<br>
+                NDFRT<br>
+                VANDF<br>
+              </td>
+              <td>RO</td>
+              <td>ingredient_of<br>
+                has_ingredient</td>
+              <td valign="top">Connects the "SCDF", "SCDC" to its
+                ingredients; connects the "SBD", "SBDC", "SBDF" to its
+                fully-specified drug brand name.</td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">RXNORM<br>
+              </td>
+              <td style="vertical-align: top;">RO<br>
+              </td>
+              <td style="vertical-align: top;">ingredients_of<br>
+                has_ingredients<br>
+              </td>
+              <td style="vertical-align: top;">Connects "SCD" with "MIN"</td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">NDFRT<br>
+              </td>
+              <td style="vertical-align: top;">RO<br>
+              </td>
+              <td style="vertical-align: top;">may_treat<br>
+                may_be_treated_by<br>
+              </td>
+              <td style="vertical-align: top;">Connects a concept of
+                "DRUG_KIND" with a concept of "DISEASE_KIND"</td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">NDFRT<br>
+              </td>
+              <td style="vertical-align: top;">RO<br>
+              </td>
+              <td style="vertical-align: top;">mechanism_of_action_of<br>
+                has_mechanism_of_action<br>
+              </td>
+              <td style="vertical-align: top;">Connects a concept of
+                "MECHANISM_OF_ACTION_KIND" with a concept of "DRUG_KIND"</td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">NDFRT<br>
+              </td>
+              <td style="vertical-align: top;">RO<br>
+              </td>
+              <td style="vertical-align: top;">metabolic_site_of<br>
+                has_metabolic_site<br>
+              </td>
+              <td style="vertical-align: top;">Connects a concept of
+                "PHARMACOKINETICS_KIND" with a concept of "DRUG_KIND"</td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">RXNORM<br>
+              </td>
+              <td style="vertical-align: top;">RO<br>
+              </td>
+              <td style="vertical-align: top;">part_of<br>
+                has_part<br>
+              </td>
+              <td style="vertical-align: top;">Connects "IN" or "PIN"
+                with "MIN"</td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">RXNORM<br>
+              </td>
+              <td style="vertical-align: top;">RO<br>
+              </td>
+              <td style="vertical-align: top;">precise_ingredient_of<br>
+                has_precise_ingredient<br>
+              </td>
+              <td style="vertical-align: top;">Connects "PIN" with
+                "SCDC"<br>
+              </td>
+            </tr>
+            <tr>
+              <td>RXNORM</td>
+              <td>RO</td>
+              <td>reformulated_to<br>
+                reformulation_of</td>
+              <td valign="top">Creates relationships using "BN".</td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">RXNORM<br>
+              </td>
+              <td style="vertical-align: top;">SY<br>
+              </td>
+              <td style="vertical-align: top;">(no rela)<br>
+              </td>
+              <td style="vertical-align: top;">Connects RXNORM atoms to
+                other sources<br>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="mappings" class="rep_block_level_two">
+        <h3>Mappings (MRMAP):</h3>
+        &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br>
+        <p>There are no mappings present in RxNorm.</p>
+      </div>
+    </div>
+  </body>
+</html>

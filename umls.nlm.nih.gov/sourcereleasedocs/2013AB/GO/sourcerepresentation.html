@@ -1,0 +1,476 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;
+      charset=windows-1252">
+    <title></title>
+  </head>
+  <body>
+    <div class="section-4">
+      <ul id="menu">
+        <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
+        <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
+        <li id="nav-3"> <a href="sourcemetastats.html">Statistics and
+            sample data</a>
+          <ul id="subnav-3">
+            <li> <a href="termtypes.html">Terms and term types</a> </li>
+            <li> <a href="attributes.html">Attributes</a> </li>
+            <li> <a href="relationships.html">Relationships</a> </li>
+            <li> <a href="semtypes.html">Semantic Types</a> </li>
+            <li> <a href="overlap.html">Source Overlap</a> </li>
+          </ul>
+        </li>
+        <li id="nav-4"> <a href="representation.html">Representation</a>
+          <ul id="subnav-4">
+            <li> <a href="sourcerepresentation.html" id="sourcerep">Source
+
+
+
+                Representation</a> </li>
+            <li> <a href="metarepresentation.html">Metathesaurus
+                Representation</a> </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- end tabbed navigation area --> <br>
+    <br>
+    <br>
+    <a name="top"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
+      <a href="#change_summary">Summary of Changes</a>, <a
+        href="#file_summary">Summary of Source-Provided Files</a> <a
+        href="#file_details">Source-Provided File Details</a></span> <a
+      name="general"></a>
+    <div id="rep_general" class="rep_block_level_one">
+      <h3>Notes</h3>
+      GO is updated frequently, however only the version from the first
+      day of the month is archived (<a
+        href="http://www.geneontology.org/ontology-archive/">http://www.geneontology.org/ontology-archive/</a>).&nbsp;
+      <br>
+      <br>
+      GO "terms" are analagous to the Metathesaurus idea of
+      "descriptors," i.e. a collection of closely related but not
+      necessarily synonymous names.&nbsp; In the documentation below,
+      the word "Term" is used in the the GO sense of the word in order
+      to describe the original GO data in the language used by the
+      source itself.<br>
+    </div>
+    <div id="rep_change_summary" class="rep_block_level_one">
+      <h3>Summary of Changes:</h3>
+      &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br>
+      <br>
+      New TTY:&nbsp; MTH_OET (suppressible = "O")<br>
+      <br>
+      TTY = "OET" is assigned to the value of tag = "synonym" where the
+      scope identifier is "BROAD," "NARROW," or "RELATED" in records
+      where is_obsolete has a value of "true." &nbsp; For the GO
+      Cellular Component Ontology, additional atoms are created for
+      selected strings by including the word "location" in the STR, and
+      prepending the TTY with "MTH_."&nbsp; This data is added during
+      Metathesaurus source processing.
+      <p> </p>
+    </div>
+    <div id="rep_file_summary" class="rep_block_level_one"> <a
+        name="file_summary"></a>
+      <h3>Source-Provided Files: Summary</h3>
+      &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
+      <p>Data files in various formats and extensive documentation is
+        available at:&nbsp; <a href="http://www.geneontology.org/">http://www.geneontology.org/</a><br>
+      </p>
+      <div class="rep_block_level_two"><!-- Make a table of each file that comes from the source   -->
+        <h4>Documentation and Reference</h4>
+        <table class="elements" border="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <th>File Name</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td class="file_field_name">ene_ontology_edit.obo
+                (2013_04_06) </td>
+              <td>OBO format documentation<br>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <h4>Data Files</h4>
+        <a name="data_files"></a>
+        <table class="elements" border="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <th>File Name</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td class="file_field_name">http://www.geneontology.org/ontology-archive/gene_ontology_ext.obo<br>
+              </td>
+              <td>OBO data file<br>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <br>
+        <p>Not included: <br>
+          * Certain fields and data elements may not be directly
+          processed because they contain redundant data. </p>
+      </div>
+    </div>
+    <div id="rep_file_details" class="rep_block_level_one"> <a
+        name="file_details"></a>
+      <h3>Source-Provided Files: Details</h3>
+      &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
+      <p>Details on format of input files and representation of source
+        data. In OBO, content is structured as tag-value pairs, with
+        optional trailing modifiers.&nbsp; Tag-value pairs consist of a
+        tag name, an unescaped colon, the tag value, and a newline.</p>
+      <p>Consult the GO OBO format documentation for additional details.</p>
+      <div class="rep_block_level_two"> <a name="file1"></a>
+        <h4 class="file_field_name">file:gene_ontology_edit.obo.&lt;YYYY-DD-MM&gt;</h4>
+        &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
+
+
+
+            Files</a></span>
+        <h4 id="S.2.2.2"><span style="font-weight: normal;">For
+            inclusion in the Metathesaurus, all tags in a [Term] Stanza,
+            are processed, as described in the OBO format documentation.</span></h4>
+        Required tags:<br>
+        <br>
+        <table class="elements" border="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <th>Tag Name</th>
+              <th>Description</th>
+              <th>Representation</th>
+            </tr>
+            <tr>
+              <td class="file_field_name">id<br>
+              </td>
+              <td>Unique identifier<br>
+              </td>
+              <td>MRCONSO.CODE, MRCONSO.SDUI<br>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">name<br>
+              </td>
+              <td>Term name<br>
+              </td>
+              <td>MRCONSO.STR<br>
+                <br>
+                TTY = "PT" if there is no is_obsolete flag<br>
+                TTY = "OP" if is_obsolete = true<br>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">namespace<br>
+              </td>
+              <td style="vertical-align: top;">Ontology (domain)
+                name.&nbsp; Valid values are:&nbsp; <br>
+                <div style="margin-left: 40px;">biological_process<br>
+                </div>
+                <div style="margin-left: 40px;">cellular_component<br>
+                </div>
+                <div style="margin-left: 40px;">molecular_function<br>
+                </div>
+              </td>
+              <td style="vertical-align: top;">MRSAT.ATN =
+                "GO_NAMESPACE"<br>
+                <br>
+                <br>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        Optional tags:&nbsp; the following table lists only tags
+        actually present in the data processed for inclusion in this
+        version of the Metathesaurus. Tags are presented in the order in
+        which they appear in a [Term] Stanza.&nbsp; For information on
+        all optional OBO tags, including deprecated tags, please consult
+        the OBO format documentation.<br>
+        <br>
+        <table class="elements" border="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <th>Tag Name</th>
+              <th>Description</th>
+              <th>Representation</th>
+            </tr>
+            <tr>
+              <td class="file_field_name">alt_id<br>
+              </td>
+              <td>Alternate identifier </td>
+              <td>MRSAT.ATN = "SID"<br>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">def<br>
+              </td>
+              <td style="vertical-align: top;">Definition</td>
+              <td style="vertical-align: top;">MRDEF.DEF<br>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">comment<br>
+              </td>
+              <td style="vertical-align: top;">Comment<br>
+              </td>
+              <td style="vertical-align: top;">MRSAT.ATN = "GO_COMMENT"<br>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">subset<br>
+              </td>
+              <td style="vertical-align: top;">Subset.&nbsp; Valid
+                values are:<br>
+                <div style="margin-left: 40px;">goslim_candida<br>
+                  goslim_generic<br>
+                  goslim_goa<br>
+                  goslim_pir<br>
+                  goslim_plant<br>
+                  goslim_pombe<br>
+                  goslim_yeast<br>
+                  gosubset_prok<br>
+                </div>
+              </td>
+              <td style="vertical-align: top;">MRSAT.ATN = "GO_SUBSET"<br>
+                <br>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">synonym<br>
+              </td>
+              <td style="vertical-align: top;">Synonym<br>
+              </td>
+              <td style="vertical-align: top;">MRCONSO.STR<br>
+                TTYs are assigned based on the value of the scope
+                identifier and the presence or absence of the
+                "is_obsolete" tag.<br>
+                <br>
+                MRREL.REL<br>
+                REL values are assigned based on the value of the scope
+                identifier<br>
+                <br>
+                <table style="text-align: left; width: 100%;" border="1"
+                  cellpadding="2" cellspacing="2">
+                  <tbody>
+                    <tr>
+                      <td style="vertical-align: top;">Scope identifier<br>
+                      </td>
+                      <td style="vertical-align: top;">is_obsolete<br>
+                      </td>
+                      <td style="vertical-align: top;">MRCONSO.TTY<br>
+                      </td>
+                      <td style="vertical-align: top;">MRREL.REL<br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="vertical-align: top;">EXACT<br>
+                      </td>
+                      <td style="vertical-align: top;">(no value)<br>
+                      </td>
+                      <td style="vertical-align: top;">SY<br>
+                      </td>
+                      <td style="vertical-align: top;">SY<br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="vertical-align: top;">EXACT<br>
+                      </td>
+                      <td style="vertical-align: top;">true<br>
+                      </td>
+                      <td style="vertical-align: top;">IS<br>
+                      </td>
+                      <td style="vertical-align: top;">SY<br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="vertical-align: top;">NARROW<br>
+                      </td>
+                      <td style="vertical-align: top;">(no value)<br>
+                      </td>
+                      <td style="vertical-align: top;">ET<br>
+                      </td>
+                      <td style="vertical-align: top;">RN<br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="vertical-align: top;">NARROW<br>
+                      </td>
+                      <td style="vertical-align: top;">true<br>
+                      </td>
+                      <td style="vertical-align: top;">OET<br>
+                      </td>
+                      <td style="vertical-align: top;">RB<br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="vertical-align: top;">BROAD<br>
+                      </td>
+                      <td style="vertical-align: top;">(no value)<br>
+                      </td>
+                      <td style="vertical-align: top;">ET<br>
+                      </td>
+                      <td style="vertical-align: top;">RB<br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="vertical-align: top;">BROAD<br>
+                      </td>
+                      <td style="vertical-align: top;">true<br>
+                      </td>
+                      <td style="vertical-align: top;">OET<br>
+                      </td>
+                      <td style="vertical-align: top;">RN<br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="vertical-align: top;">RELATED<br>
+                      </td>
+                      <td style="vertical-align: top;">(no value)<br>
+                      </td>
+                      <td style="vertical-align: top;">ET<br>
+                      </td>
+                      <td style="vertical-align: top;">RO<br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="vertical-align: top;">RELATED<br>
+                      </td>
+                      <td style="vertical-align: top;">true<br>
+                      </td>
+                      <td style="vertical-align: top;">OET<br>
+                      </td>
+                      <td style="vertical-align: top;">RO<br>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <br>
+                Optional dbxref lists included in synonym tags are
+                represented in MRSAT.ATN = "REF" <br>
+                <br>
+                When present on "EXACT" synonyms, the modifier
+                "systematic_synonym" is represented in MRSAT.ATN
+                ="SYN_QUALIFIER,"&nbsp; MRSAT.ATV="<span class="SpellE">systematic_synonym</span>"<br>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">xref<br>
+              </td>
+              <td style="vertical-align: top;">Cross-reference (dbxref)
+                describing an analagous term in another vocabulary <br>
+              </td>
+              <td style="vertical-align: top;">MRSAT.ATN = "GXR"<br>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">is_a<br>
+              </td>
+              <td style="vertical-align: top;">Indicates a subclassing
+                relationship between one term and another<br>
+              </td>
+              <td style="vertical-align: top;">Used to create a
+                hierarchy, represented in MRHIER.RRF and MRREL.RRF (REL
+                = "PAR," "CHD," "SIB"; RELA = "isa")<br>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">relationship<br>
+              </td>
+              <td>Describes a relationship between one term and
+                another.&nbsp; Valid values are:<br>
+                <div style="margin-left: 40px;">has_part<br>
+                  negatively_regulates<br>
+                  occurs_in<br>
+                  part_of<br>
+                  positively_regulates<br>
+                  regulates<br>
+                  results_in<br>
+                </div>
+              </td>
+              <td>MRREL.RELA<br>
+                <br>
+                For part_of, MRREL.REL = "RN/RB"<br>
+                For all other relationship tag values, MRREL.REL = "RO"<br>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">is_obsolete<br>
+              </td>
+              <td style="vertical-align: top;">Indicates if a term is
+                obsolete<br>
+              </td>
+              <td style="vertical-align: top;">Used to compute termtype
+                assignments<br>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">replaced_by<br>
+              </td>
+              <td style="vertical-align: top;">Gives a term which
+                replaces an obsolete term<br>
+              </td>
+              <td style="vertical-align: top;">MRREL.REL = "RO"<br>
+                MRREL.RELA = "replaced_by/replaces"<br>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">consider<br>
+              </td>
+              <td style="vertical-align: top;">Gives a term which may be
+                an appropriate substitute or an obsolete term, but
+                requires human review<br>
+              </td>
+              <td style="vertical-align: top;">MRREL.REL = "RO"<br>
+                MRREL.RELA = "consider/consider_from"<br>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">disjoint_from<br>
+              </td>
+              <td style="vertical-align: top;">Indicates that a term is
+                disjoint from another, meaning that the two terms have
+                no instances or subclasses in common. The value is the
+                id of the term from which the current term is disjoint.
+              </td>
+              <td style="vertical-align: top;">MRSAT.ATN =
+                "DISJOINT_FROM"<br>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">intersection_of<br>
+              </td>
+              <td style="vertical-align: top;">Indicates that this term
+                is equivalent to the intersection of several other
+                terms. The value is either a term id, or a relationship
+                type id, a space, and a term id. </td>
+              <td style="vertical-align: top;">If the value is a GO term
+                id:&nbsp; MRREL.REL = "RN/RB";&nbsp; MRREL.RELA =
+                "isa/inverse_isa"<br>
+                If the value includes a relationship type:&nbsp;
+                MRREL.REL and MRREL.RELA are populated appropriately
+                based on the value of the relationship type.&nbsp;
+                Relationship groups are used tolink pairs (or groups) of
+                intersecting relationship. </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">creation_date<br>
+              </td>
+              <td style="vertical-align: top;">Indicates the creation
+                time and date of the term </td>
+              <td style="vertical-align: top;">MRSAT.ATN =
+                "DATE_CREATED"<br>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <br>
+      </div>
+    </div>
+  </body>
+</html>
