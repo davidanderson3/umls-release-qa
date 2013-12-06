@@ -45,52 +45,8 @@
       <h3>Summary of Changes:</h3>
       &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
       <br class="atl-forced-newline">
-        Change in the code format.  The preceding 'T' of the health topics code (e.g., T3061) has been deprecated.  The result is that the health code is no
-        longer unique and can have the same code as the group id but have a different meaning. For example, group id=22
-        (Immune System) and health topic code = 22 (Alzheimer's Disease).  With this change, codes are no longer being used in the
-        SDUI field.<br/><br/>
-      New Elements and Attributes:
-      <ul>
-        <li>element: other-language with attribute(s): vernacular name, url</li>
-        <li>element: primary-institute with attribute(s): url</li>
-        <li>element: site with attribute(s): url, title, language-mapped-url</li>
-        <li>element: standard-description</li>
-        <li>element: organization</li>
-        <li>element: information-category</li>
-      </ul>
-        <br class="atl-forced-newline">
-        Changed Element Names (old name -- new name)<br
-          class="atl-forced-newline">
-      <ul>
-        <li>MedicalTopics&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;health-topics</li>
-        <li>MedicalTopic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;health-topic</li>
-        <li>FullSummary&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;full-summary</li>
-        <li>SeeRefName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;see-reference</li>
-        <li>MeshHeading&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mesh-heading</li>
-        <li>GroupName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;group</li>
-        <li>Synonym&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;also-called</li>
-        <li>RelatedTopic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;related-topic</li>
-        <li>QualifierName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;qualifier</li>
-        <li>DescriptorName&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;descriptor</li>
-        <li>LanguageMappedTopic&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;language-mapped-topic</li>
-      </ul>
-        <br class="atl-forced-newline">
-        Deprecated Element Names Replaced as Attributes<br
-          class="atl-forced-newline">
-      <ul>
-        <li>ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;health-topic id</li>
-        <li>MedicalTopicName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;health-topic title</li>
-        <li>URL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;health-topic url</li>
-        <li>SeeReferenceList&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deprecated</li>
-        <li>MeshHeadingList&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deprecated</li>
-        <li>DescriptorUI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;descriptor id</li>
-        <li>GroupID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;group id</li>
-        <li>GroupURL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;group url</li>
-        <li>QualifierUI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;qualifier id</li>
-        <li>DateCreated, Year, Month, Day&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;health-topic date-created</li>
-        <li>LanguageMappedTopicID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;language-mapped-topic id</li>
-      </ul>
-      </div>
+        No changes for this version<br/><br/>
+    </div>
       <div id="rep_file_summary" class="rep_block_level_one"> <a
         name="file_summary"></a><br/>
       <h3>Source-Provided Files: Summary</h3>
@@ -111,12 +67,12 @@
             </tr>
             <tr>
               <td class="file_field_name">mplus_topics-2012-06-01.dtd </td>
-              <td>dtd for mplus_topics_2013-02-21.xml<br/>
+              <td>dtd for mplus_topics_2013-11-16.xml<br/>
               </td>
             </tr>
             <tr>
               <td class="file_field_name">mplus_groups_2012-06-01.dtd </td>
-              <td>dtd for mmplus_topic_groups_2013-02-21.xml<br/>
+              <td>dtd for mmplus_topic_groups_2013-11-16.xml<br/>
               </td>
             </tr>
           </tbody>
@@ -131,7 +87,7 @@
               <th>Description</th>
             </tr>
             <tr>
-              <td class="file_field_name">mplus_topics_2013-02-21.xml</td>
+              <td class="file_field_name">mplus_topics_2013-11-16.xml</td>
               <td>
                 <p>Contains information on all MedlinePlus health topics
                   including:&nbsp; topic name; URL; creation date;
@@ -140,7 +96,7 @@
               </td>
             </tr>
             <tr>
-              <td class="file_field_name">mplus_topic_groups_2013-02-21.xml</td>
+              <td class="file_field_name">mplus_topic_groups_2013-11-16.xml</td>
               <td>Contains information on all health topic groups on
                 MedlinePlus. </td>
             </tr>

@@ -43,15 +43,16 @@
       name="general"></a>
     <div id="rep_change_summary" class="rep_block_level_one">
       <h3>Summary of Changes:</h3>
-      <p>CDT2013 is a new source for 2013AB.&nbsp; CDT in the
-        Metathesaurus is extracted from a file provided by the American
-        Dental Association (ADA).&nbsp; The Metathesaurus also includes
-        the HCPCS version of CDT, which has RSAB =
-        "HCDT."&nbsp;&nbsp;&nbsp; <br/>
+      <p>New Class value = 99 in the source data indicates that the entire CDT Code entry is no longer valid (i.e.,
+    deleted) in this version. Assigned new TTY = OP (obsolete preferred term) for these entries.<br/>
       </p>
       <p><b>Notes:</b><br/>
       </p>
-      The CDT hierarchy is created from the ascii data file provided by
+      CDT in the
+        Metathesaurus is extracted from a file provided by the American
+        Dental Association (ADA).&nbsp; The Metathesaurus also includes
+        the HCPCS version of CDT, which has RSAB =
+        "HCDT. The CDT hierarchy is created from the ascii data file provided by
       the ADA, while the HCDT hierarchy is created during Metathesaurus
       production using analysis of the HCPCS printed manual.&nbsp; <br/>
       <br/>
@@ -76,10 +77,8 @@
               </td>
             </tr>
             <tr>
-              <td class="file_field_name">v 2013 - tab delimited ASCII
-                text file.txt</td>
-              <td style="vertical-align: top;">v 2013 - tab delimited
-                ASCII text file.txt </td>
+              <td class="file_field_name">2013-0424-CDTv2014-tab_delimited_ASCII_text_file.txt</td>
+              <td style="vertical-align: top;">tab delimited ASCII text file.txt </td>
             </tr>
           </tbody>
         </table>
@@ -116,9 +115,7 @@
                 <td valign="top">MRSAT.ATN = CHANGE_CLASS<br/>
                   <br/>
                   Identifies the type of change made to this version of
-                  the Code (i.e., changes from the prior version
-                  published in CDT-2011-2012), with the following
-                  meanings:<br/>
+                  the Code (i.e., changes from the prior version), with the following meanings:<br/>
                   <ul>
                     <li>30 = No change to existing code, nomenclature or
                       descriptor</li>
@@ -127,6 +124,7 @@
                     <li>35 = Revision in the nomenclature or descriptor
                       (or both), or to indicate a revision to an entire
                       subcategory</li>
+                    <li>99 = Entire CDT Code entry is no longer valid (i.e., deleted) in this version.</li>
                   </ul>
                   <br/>
                 </td>

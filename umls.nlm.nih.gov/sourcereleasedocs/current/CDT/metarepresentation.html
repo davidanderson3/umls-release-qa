@@ -40,24 +40,24 @@
       <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
       <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
     <div id="general" class="rep_block_level_one">
-      <p><b>VSAB:</b> CDT2013<br/>
+      <p><b>VSAB:</b> CDT2014<br/>
       </p>
       <div id="rep_identifiers" class="rep_block_level_one">
         <h3>Summary of Changes</h3>
-        <p>CDT2013 is a new source for 2013AB.&nbsp; CDT in the
-          Metathesaurus is extracted from a file provided by the
-          American Dental Association (ADA).&nbsp; The Metathesaurus
-          also includes the HCPCS version of CDT, which has RSAB =
-          "HCDT."&nbsp;&nbsp;&nbsp; <br/>
+        <p>New Class value = 99 in the source data indicates that the entire CDT Code entry is no longer valid (i.e.,
+    deleted) in this version. Assigned new TTY = OP (obsolete preferred term) for these entries.<br/>
         </p>
         <p><b>Notes:</b><br/>
         </p>
-        <p>The CDT hierarchy is created from the ascii data file
+        <p>CDT in the 
+          Metathesaurus is extracted from a file provided by the
+          American Dental Association (ADA).&nbsp; The Metathesaurus
+          also includes the HCPCS version of CDT, which has RSAB =
+          "HCDT."&nbsp;&nbsp;&nbsp; The CDT hierarchy is created from the ascii data file
           provided by the ADA, while the HCDT hierarchy is created
           during Metathesaurus production using analysis of the HCPCS
           printed manual.&nbsp; <br/>
         </p>
-        <p></p>
       </div>
       <div id="rep_change_summary" class="rep_block_level_one">
         <h3>Source Provided Files:</h3>
@@ -73,11 +73,10 @@
               </td>
             </tr>
             <tr>
-              <th style="font-weight: normal;">v 2013 - tab delimited
-                ASCII text file.txt<br/>
+              <th style="font-weight: normal;">2013-0424-CDTv2014-tab_delimited_ASCII_text_file.txt<br/>
               </th>
               <th><span style="font-weight: normal;">Documentation and
-                  data for CDT 2013<br/>
+                  data for CDT 2014<br/>
                 </span></th>
             </tr>
           </tbody>
@@ -88,13 +87,15 @@
         Identifiers are assigned as follows:<br/>
         <ul>
           <li>CODE:&nbsp;&nbsp;</li>
+          <li style="list-style: none; display: inline">
           <ul>
-            <li>For TTY = PT and certain cases of TTY = HT:&nbsp; the
+            <li>For TTY = PT, TTY=OP, and certain cases of TTY = HT:&nbsp; the
               value of the Code field from tab-delimited data file</li>
             <li>For cases where the Code field of the tab-delimited file
               is blank:&nbsp;&nbsp; MTHU#, assigned during Metathesaurus
               source processing</li>
           </ul>
+          </li>
         </ul>
         <ul>
           <li>SAUI:&nbsp; Not applicable<br/>
@@ -104,13 +105,11 @@
           <li>SDUI: Not applicable<br/>
           </li>
         </ul>
-        <p></p>
         <div id="rep_termtypes" class="rep_block_level_two"> <a
             name="atoms"></a>
           <h3>Atoms (MRCONSO):</h3>
           &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-          <table height="60" border="1" cellpadding="2" cellspacing="2"
-            width="451">
+          <table height="60" border="1" cellpadding="2" cellspacing="2" width="451">
             <tbody>
               <tr>
                 <td align="center" valign="top"><b>Term Type</b><br/>
@@ -143,6 +142,23 @@
                       codes, and are parents/ancestors of PTs <br/>
                     </li>
                   </ul>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">OP<br/>
+                </td>
+                <td valign="top">CODE:&nbsp; <br/>
+                  The value of the Code field from tab-delimited data
+                  file.<br/>
+                  <br/>
+                  STR:&nbsp; The value of the "Nomenclature" field in
+                  the tab-delimited file.<br/>
+                  <br/>
+                  SCUI:&nbsp; Same as CODE<br/>
+                  <br/>
+                  Suppress = 'O'<br/>
+                  <br/>
+                  TTY = OP is assigned where the Code field consists of the letter "D" followed by four numerals.<br/>
                 </td>
               </tr>
               <tr>
@@ -191,8 +207,7 @@
                 </td>
                 <td valign="top">Identifies the type of change made to
                   this version of the Code (i.e., changes from the prior
-                  version published in CDT-2011-2012), with the
-                  following meanings:<br/>
+                  version), with the following meanings:<br/>
                   <ul>
                     <li>30 = No change to existing code, nomenclature or
                       descriptor</li>
@@ -201,6 +216,8 @@
                     <li>35 = Revision in the nomenclature or descriptor
                       (or both), or to indicate a revision to an entire
                       subcategory." </li>
+                    <li>99 = Entire CDT Code entry is no longer valid (i.e.,
+                      deleted) in this version.</li>
                   </ul>
                 </td>
               </tr>
