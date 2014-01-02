@@ -14,7 +14,7 @@ public class SourceAtomClusterDTOClient {
 			// Runtime properties
 			String username = "debjaniani";
 			String password = "Cartoon123!";
-			String umlsRelease = "2012AA";
+			String umlsRelease = "2013AB";
 			String serviceName = "http://umlsks.nlm.nih.gov";
 			
                         

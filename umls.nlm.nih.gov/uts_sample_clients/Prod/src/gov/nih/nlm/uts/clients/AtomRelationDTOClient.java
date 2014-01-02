@@ -9,7 +9,7 @@ public class AtomRelationDTOClient {
 
 	private static String username = "";
     private static String password = ""; 
-    static String umlsRelease = "2012AB";
+    static String umlsRelease = "2013AB";
 	static String serviceName = "http://umlsks.nlm.nih.gov";
     
 static UtsWsContentController utsContentService = (new UtsWsContentControllerImplService()).getUtsWsContentControllerImplPort();

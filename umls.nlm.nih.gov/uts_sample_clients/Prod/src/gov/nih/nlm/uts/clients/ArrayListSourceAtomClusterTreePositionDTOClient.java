@@ -20,7 +20,7 @@ import java.util.ArrayList;
 public class ArrayListSourceAtomClusterTreePositionDTOClient {
 	private static String username = "";
     private static String password = ""; 
-    static String umlsRelease = "2011AB";
+    static String umlsRelease = "2010AB";
 	static String serviceName = "http://umlsks.nlm.nih.gov";
     
 static UtsWsContentController utsContentService = (new UtsWsContentControllerImplService()).getUtsWsContentControllerImplPort();
@@ -59,7 +59,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
         	break;
         	case "getRootSourceDescriptorTreePositions": myarrAtomClustTrPosClient = utsContentService.getRootSourceDescriptorTreePositions(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, myPsf);
             break;
-        	case "getSourceConceptTreePositions": myarrAtomClustTrPosClient = utsContentService.getSourceConceptTreePositions(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "C2916", "NCI", myPsf);
+        	case "getSourceConceptTreePositions": myarrAtomClustTrPosClient = utsContentService.getSourceConceptTreePositions(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "4841000124109", "SCTUSX", myPsf);
             break;
         	case "getSourceDescriptorTreePositions": myarrAtomClustTrPosClient = utsContentService.getSourceDescriptorTreePositions(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "10011078", "MDR", myPsf);
             break;

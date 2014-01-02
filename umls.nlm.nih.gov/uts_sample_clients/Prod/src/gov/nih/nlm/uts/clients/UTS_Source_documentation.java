@@ -16,9 +16,11 @@ import gov.nih.nlm.uts.webservice.security.UtsWsSecurityController;
 import gov.nih.nlm.uts.webservice.security.UtsWsSecurityControllerImplService;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.*;
 
@@ -92,9 +94,14 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 	
 	//Method for Concept calls
 	public static void findSrcConcepts(String val1, String val2, String path) throws Exception{
+		 PrintWriter out = null;
+		 BufferedWriter bw = null;
+		 FileWriter fw = null;
 		
-		PrintWriter out = new PrintWriter(new FileOutputStream(new File(path), "UTF-8")); 
-		
+//		PrintWriter out = new PrintWriter(new File(path), "UTF-8"); 
+		fw = new FileWriter(path, true);
+	     bw = new BufferedWriter(fw);
+	     out = new PrintWriter(bw);
 
 	        AtomDTO myAtom = new AtomDTO();
 		    myAtom = utsContentService.getDefaultPreferredAtom(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1);

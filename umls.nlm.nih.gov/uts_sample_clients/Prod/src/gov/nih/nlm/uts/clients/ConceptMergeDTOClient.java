@@ -13,7 +13,7 @@ public class ConceptMergeDTOClient {
 
 	private static String username = "";
     private static String password = ""; 
-    static String umlsRelease = "2012AA";
+    static String umlsRelease = "2013AB";
 	static String serviceName = "http://umlsks.nlm.nih.gov";
     
 static UtsWsHistoryController  utsHistoryService = (new UtsWsHistoryControllerImplService()).getUtsWsHistoryControllerImplPort();

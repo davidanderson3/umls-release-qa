@@ -13,7 +13,7 @@ public class RelationLabelDTOClient {
 
 	private static String username = "";
     private static String password = ""; 
-    static String umlsRelease = "2012AA";
+    static String umlsRelease = "2013AB";
 	static String serviceName = "http://umlsks.nlm.nih.gov";
     
 static UtsWsMetadataController utsMetadataService = (new UtsWsMetadataControllerImplService()).getUtsWsMetadataControllerImplPort();
@@ -30,7 +30,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 	
     	//get the Proxy Grant Ticket - this is good for 8 hours and is needed to generate single use tickets.
         String ticketGrantingTicket = securityService.getProxyGrantTicket(username, password);
-        System.out.println("tgt: "+ticketGrantingTicket);  
+        //System.out.println("tgt: "+ticketGrantingTicket);  
 
         //use the Proxy Grant Ticket to get a Single Use Ticket
        // String singleUseTicket = securityService.getProxyTicket(ticketGrantingTicket, serviceName);

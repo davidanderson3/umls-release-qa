@@ -13,7 +13,7 @@ public class TermTypeDTOClient {
 
 	private static String username = "";
     private static String password = ""; 
-    static String umlsRelease = "2011AB";
+    static String umlsRelease = "2013AA";
 	static String serviceName = "http://umlsks.nlm.nih.gov";
     
 static UtsWsMetadataController utsMetadataService = (new UtsWsMetadataControllerImplService()).getUtsWsMetadataControllerImplPort();

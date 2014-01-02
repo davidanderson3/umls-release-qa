@@ -15,7 +15,7 @@ public class StringMetadataClient {
 
 	private static String username = "";
     private static String password = ""; 
-    static String umlsRelease = "2012AA";
+    static String umlsRelease = "2013AB";
 	static String serviceName = "http://umlsks.nlm.nih.gov";
     
 static UtsWsMetadataController utsMetadataService = (new UtsWsMetadataControllerImplService()).getUtsWsMetadataControllerImplPort();
@@ -32,7 +32,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 	
     	//get the Proxy Grant Ticket - this is good for 8 hours and is needed to generate single use tickets.
         String ticketGrantingTicket = securityService.getProxyGrantTicket(username, password);
-        System.out.println("tgt: "+ticketGrantingTicket);  
+        //System.out.println("tgt: "+ticketGrantingTicket);  
 
         //use the Proxy Grant Ticket to get a Single Use Ticket
        // String singleUseTicket = securityService.getProxyTicket(ticketGrantingTicket, serviceName);
@@ -44,24 +44,35 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 		// TODO Auto-generated method stub
 		try {
 
-			java.util.List<String>  myarrStringMetadata  = new ArrayList<String>();
+			java.util.List<String>  myarrListStringMetadata  = new ArrayList<String>();
+			String  myarrStringMetadata  = new String();
+
 			StringMetadataClient StringarrMetadataClient = new StringMetadataClient(args[0],args[1]);
             
         	String method = args[2];
         	
-            switch (method) {
-            case "getRootSourceSynonymousNames": myarrStringMetadata = utsMetadataService.getRootSourceSynonymousNames(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "CCS");
-            for (int i = 0; i < myarrStringMetadata.size(); i++) {
-
-            String myStringMetadata = myarrStringMetadata.get(i);
-            int hashCode = myStringMetadata.hashCode();
-            System.out.println("Hashcode:"+hashCode);
-            }
+        	switch (method) {
+            case "getAllUMLSVersions": myarrStringMetadata = utsMetadataService.getAllUMLSVersions(securityService.getProxyTicket(ticketGrantingTicket(), serviceName));
+            System.out.println(myarrStringMetadata);
             break;
-            
+            case "getCurrentUMLSVersion": myarrStringMetadata = utsMetadataService.getCurrentUMLSVersion(securityService.getProxyTicket(ticketGrantingTicket(), serviceName));
+            System.out.println(myarrStringMetadata);
+            break;
+            case "getRootSourceSynonymousNames": myarrListStringMetadata = utsMetadataService.getRootSourceSynonymousNames(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "CCS");
+            for (int i = 0; i < myarrListStringMetadata.size(); i++) {
+
+                String myStringMetadata = myarrListStringMetadata.get(i);
+                int hashCode = myStringMetadata.hashCode();
+                System.out.println("Hashcode:"+hashCode);
+                }
+            break;
             default: out.println("Unrecognized input ");
         	break; 
             }
+            
+
+                int hashCode = myarrStringMetadata.hashCode();
+                System.out.println("Hashcode:"+hashCode);
                       
 	
 		} catch (Exception ex) {

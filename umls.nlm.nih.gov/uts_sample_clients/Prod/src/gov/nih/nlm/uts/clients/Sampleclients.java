@@ -12,7 +12,7 @@ public class Sampleclients {
 			// Runtime properties
 			String username = "umlsguest";
 			String password = "umlsguest1!";
-			String umlsRelease = "2011AB";
+			String umlsRelease = "2013AB";
 			String serviceName = "http://umlsks.nlm.nih.gov";
 			
                         

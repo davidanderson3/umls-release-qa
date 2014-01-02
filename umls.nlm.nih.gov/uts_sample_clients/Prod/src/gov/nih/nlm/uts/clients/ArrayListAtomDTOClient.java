@@ -17,7 +17,7 @@ public class ArrayListAtomDTOClient {
 			// Runtime properties
 			String username = "debjaniani";
 			String password = "Cartoon123!";
-			String umlsRelease = "2013AA";
+			String umlsRelease = "2010AB";
 			String serviceName = "http://umlsks.nlm.nih.gov";
 			
                         
@@ -33,10 +33,11 @@ public class ArrayListAtomDTOClient {
             //The PSF object in the code is made after psf is used in getconceptatoms. Do we need to fix that??/????
             //gov.nih.nlm.uts.webservice.content.Psf myPsf = new gov.nih.nlm.uts.webservice.content.Psf();
             gov.nih.nlm.uts.webservice.content.Psf myPsf = new gov.nih.nlm.uts.webservice.content.Psf();
-            myPsf.getIncludedSources().add("NCI");
-//            myPsf.setPageLn(25);
-//            myPsf.setIncludeSuppressible(true);
+//            myPsf.getIncludedSources().add("SNOMEDCT");
+//            myPsf.getIncludedTermTypes().add("FN");            
+//            myPsf.setIncludeSuppressible(false);
 //            myPsf.setIncludeObsolete(true);
+//            myPsf.setPageLn(25);
             
             /*psf_cdef.getIncludedWords().add("Black");
             psf_cdef.setPageLn(25);
@@ -108,9 +109,9 @@ public class ArrayListAtomDTOClient {
            
 
             
-            myAtoms = utsContentService.getConceptAtoms(singleUseTicket, umlsRelease,"C0007097",myPsf);
+            //myAtoms = utsContentService.getConceptAtoms(singleUseTicket, umlsRelease,"C0018787",myPsf);
             //myAtoms = utsContentService.getCodeAtoms(singleUseTicket, umlsRelease,"154895004","SNOMEDCT",myPsf);
-            //myAtoms = utsContentService.getSourceConceptAtoms(singleUseTicket, umlsRelease,"262790002","SNOMEDCT",myPsf);
+            myAtoms = utsContentService.getSourceConceptAtoms(singleUseTicket, umlsRelease,"4841000124109","SCTUSX",myPsf);
             //myAtoms = utsContentService.getSourceDescriptorAtoms(singleUseTicket, umlsRelease,"D000103","MSH",myPsf);
             
             for (int i = 0; i < myAtoms.size(); i++) {
@@ -122,12 +123,12 @@ public class ArrayListAtomDTOClient {
             String source = myAtomDTO.getRootSource();
             String name = myAtomDTO.getTermString().getName();
             String TermType = myAtomDTO.getTermType();
-            String srcUi = myAtomDTO.getSourceConcept().getUi();
+            //String srcUi = myAtomDTO.getSourceConcept().getUi();
             //int cvMemberCount = myAtomDTO.getCvMemberCount();
             boolean obsolete = myAtomDTO.isObsolete();
             boolean suppresible = myAtomDTO.isSuppressible();
             
-            System.out.println(aui+"\n"+source+"\n"+name+"\n"+TermType+"|"+srcUi+"\n"+obsolete+"\n"+suppresible+"\n");
+            System.out.println(aui+"|"+source+"|"+name+"|"+TermType+"|"+obsolete+"|"+suppresible);
             }
 	
 		} catch (Exception ex) {

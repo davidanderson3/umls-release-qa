@@ -17,7 +17,7 @@ public class AtomClusterRelationDTOClient {
 			// Runtime properties
 			String username = "debjaniani";
 			String password = "Cartoon123!";
-			String umlsRelease = "2013AA";
+			String umlsRelease = "2013AB";
 			String serviceName = "http://umlsks.nlm.nih.gov";
 			
                         
