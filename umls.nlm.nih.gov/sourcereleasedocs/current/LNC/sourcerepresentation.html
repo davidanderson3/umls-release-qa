@@ -36,101 +36,23 @@
     Skip to: <a href="#general">Notes</a>, <a href="#change_summary">Summary of Changes</a>, <a href="#file_summary">Summary of
       Source-Provided Files</a>, <a href="#file_details">Source-Provided File Details</a><br/>
     <div id="rep_general" class="rep_block_level_one"></div>
-      <h3>VSABS:</h3>
-      <ul>
-        <li>LNC244</li>
-        <li>LNC244_ASQ_3_2009</li>
-        <li>LNC244_BRADEN_1988</li>
-        <li>LNC244_CAM_2003</li>
-        <li>LNC244_FACIT</li>
-        <li>LNC244_FLACC_1997</li>
-        <li>LNC244_MDS20</li>
-        <li>LNC244_MLHFQ_1986</li>
-        <li>LNC244_NEUROQOL_2010</li>
-        <li>LNC244_NPUAP_2012</li>
-        <li>LNC244_OASIS_2002</li>
-        <li>LNC244_OPTIMAL_2005</li>
-        <li>LNC244_PHQ_9_1999</li>
-        <li>LNC244_RHO_2008</li>
-        <li>LNC244_SPERTUS_2005</li>
-        <li>LNC244_VR_12_2004</li>
-        <li>LNC244_WHO_2006</li>
-      </ul>
-      <a name="general" id="general"></a>
-      <h3>Notes</h3>
-      <p>In addition to the LNC SAB, LOINC includes 16 subsources, which are assigned by an algorithm using field 33
-        (EXTERNAL_COPYRIGHT_NOTICE). The representation described below applies to all subsources.&nbsp; Due to licensing restrictions, concepts
-        from the following subsources are not included in Metathesaurus processing:</p>
-      <ul>
-        <li>BOMC (Blessed Orientation-Memory-Concentration Test)</li>
-        <li>BSL (Borderline Symptom List)</li>
-        <li>Edinburgh Postnatal Depression Scale</li>
-        <li>NSRAS (Neonatal Skin Risk Assessment Scale)</li>
-        <li>TIMP (Test of Infant Motor Performance)</li>
-        <li>Portions (by Barbara Huffines)</li>
-        <li>PROMIS (Patient Reported Outcomes Measurement System survey)</li>
-      </ul>     
+      <h3>VSAB: LNC246</h3>
+      
       <div id="rep_change_summary" class="rep_block_level_one"><a
         name="change_summary" id="change_summary"></a>
       </div>
-      <h3>Summary of Changes in this version</h3>
+      <h3>Summary of Changes</h3>
       &nbsp; <span class="nav">(<a href="#top">return to top</a></span>)
       <br/>
-      1. New termgroups:<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LNC244_FACIT/LO<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LNC244_FACIT/MTH_LO<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LNC244_FACIT/OLC<br/><br/>
+      1. All subsources have been deprecated.  All data are now included under one SAB = LNC.<br/><br/>
             
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LNC244_NEUROQOL_2010/LO<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LNC244_NEUROQOL_2010/MTH_LO<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LNC244_NEUROQOL_2010/OLC<br/><br/>
-            
-      2. New relationship attributes (RELA) and inverses:<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;has_quotient | quotient_of</br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;has_multipart | multipart_of</br></br>
+      2. New 'LOINC_246_SELECTED_FORMS.xlsx' file received.  This file contains information on panels and their members.  New relationship created: <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RT | has_member / member_of</br></br>
                   
-      3. Deprecated termgroups:<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MTH_LPN<br/><br/>
- 
-      4. Deprecated relationship attributes (RELA) and inverses:<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mth_plain_text_form_of | mth_has_plain_text_form<br/><br/>
-            
-      5. Deprecated attributes:<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MTH_COPYRIGHT<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MTH_LEA<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MTH_LFO<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MTH_LQT<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MTH_LRN2<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MTH_LSU<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MAPSETTYPE<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MTH_SOS</br><br/>
- 
-      6. Deprecated subsources:<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AD8_2005<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MDS30</br><br/>
-            
-      7. The process for identifying subsources has changed.  Subsources are created based on the external copyright field (field 33) only.
-      If the copyright field is blank or ambiguous the SAB=LNC.  Due to this new process two subsources have been deprecated, AD8_2005 and MDS30.</br><br/>
-      
-      8. Entries in the LOINC_PARTS file that do not have an entry in the LOINC_PART_LINKS file or the LOINC_*_MULTI-AXIAL_HIERARCHY file are considered
-      orphans and are not processed.</br></br>
-      
-      9. Entries in the LOINC_PARTS file that have a PART_TYPE of 'QUOTIENTS' and 'MULTIPART' are now included as part of the inversion.  In previous
-      inversions these were ignored. New RELAs and corresponding inverses were created.<br/><br/>
-      
-     10. Metathesaurus-created ATNs, RELs, and TTYs (e.g., MTH_*) that were created as a result of plain text versions of UTF-8 strings have been
-      deprecated because MetamorphoSys (MMSY) with its enhanced indexes can now process UTF-8 characters.<br/><br/>
-      
-     11. MAP_TO.txt file replaces the retired MAP_TO field in the LOINCDB.TXT file.  (The MAP_TO field was deprecated in LNC242).  Subsequently, ATN=LMP
-    which was also deprecated has been resurrected. <br/><br/>
-    
-     12. ATN=MAPSETTYPE will no longer be created unless the information is provided by the source.<br><br/>
-    
-     13. TTYs LN/LC/CN rank higher than their corresponding MTH_* termtype.  This applies to LNC and all subsources.<br/><br/>
-    
-     14. Attributes now use the LNC code as the ID rather than the SRC_ATOM_ID. The id_type (CODE_SOURCE) and id_qualifier (LNC244) have been updated to
-    reflect this.<br/><br/>
-    
+      3. The hierarchy has been changed from SAUI-based to SCUI-based.<br/><br/>
+             
+      4. Source file formats have been changed from tab-delimited to csv delimited.<br/><br/>
+          
     <div id="rep_file_summary" class="rep_block_level_one"><br/>
       <a name="file_summary"></a>
       <h3>Source-Provided Files: Summary</h3>
@@ -163,23 +85,23 @@
               <th>Description</th>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file1">LOINCDB.TXT</a></td>
+              <td class="file_field_name"><a href="#file1">loinc.csv</a></td>
               <td>Primary LOINC data files</td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file2">MAP_TO.TXT</a></td>
+              <td class="file_field_name"><a href="#file2">map_to.csv</a></td>
               <td>Mappings between current and retired codes</td>
             </tr>           
             <tr>
-              <td class="file_field_name"><a href="#file3">LOINC_PARTS_V2-44_2013-06-20.txt</a></td>
+              <td class="file_field_name"><a href="#file3">LOINC_PARTS_V2-46_2013-12-26.txt</a></td>
               <td>Parts names and codes</td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file4">LOINC_PART_LINKS_V2-44_2013-06-20.txt</a></td>
+              <td class="file_field_name"><a href="#file4">LOINC_PART_LINKS_V2-46_2013-12-26.txt</a></td>
               <td>Part links, for relationships and hierarchy</td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file5">LOINC_V244_MULTI-AXIAL_HIERARCHY.CSV</a></td>
+              <td class="file_field_name"><a href="#file5">LOINC_246_MULTI-AXIAL_HIERARCHY.CSV</a></td>
               <td>The records in this file represent nodes of the
                 hierarchy, whether LOINC Parts or full LOINC codes.<br/>
                 The ordered sequence at any level of the hierarchy is
@@ -187,14 +109,18 @@
                 hierarchy are those where PATH_TO_ROOT is null.<br/>
                 This is a "Comma Separated Value" text file.</td>
             </tr>
+            <tr>
+              <td class="file_field_name"><a href="#file5">LOINC_246_SELECTED_FORMS.xlsx</a></td>
+              <td>Mappings between LOINC panels and their members.</td>
+            </tr>
            <tr>
-              <td class="file_field_name"><a href="#file6">SOURCE_ORGANIZATION.TXT</a></td>
-              <td>Copyright information of sources included in the LOINC data</td>
+              <td class="file_field_name"><a href="#file6">source_organization.csv</a></td>
+              <td>Copyright information of sources included in the LOINC data. Not used.</td>
             </tr>            
           </tbody>
         </table>
         <p><b>Not included:</b><br/>
-          <span class="file_field_name">LOINCDB.TXT:</span>Fields that
+          <span class="file_field_name">loinc.csv:</span>Fields that
           are for internal (LOINC) use are not processed for the
           Metathesaurus.<br/>
           Fields that are not used are indicated by "Not used" in the
@@ -207,7 +133,7 @@
         <p>Details on format of input files and representation of source
           data. Consult the LOINC documentation for additional details.</p>
         <div class="rep_block_level_two"><a name="file1" id="file1"></a>
-          <h4 class="file_field_name">file:LOINCDB.TXT</h4>
+          <h4 class="file_field_name">file:loinc.csv</h4>
           <table class="elements" border="0" cellspacing="0">
             <tbody>
               <tr>
@@ -692,7 +618,7 @@
           </table>
         </div>
         <div class="rep_block_level_two"><a name="file2" id="file2"></a>
-          <h4 class="file_field_name">file:MAP_TO</h4>
+          <h4 class="file_field_name">file:map_to.csv</h4>
           <table class="elements" border="0" cellspacing="0">
             <tbody>
               <tr>
@@ -940,7 +866,7 @@
           </table>
         </div>
         <div class="rep_block_level_two"><a name="file6" id="file6"></a>
-          <h4 class="file_field_name">file:SOURCE_ORGANIZATION.TXT</h4>
+          <h4 class="file_field_name">file:LOINC_246_SELECTED_FORMS.xlsx</h4>
           <table class="elements" border="0" cellspacing="0">
             <tbody>
               <tr>
@@ -950,27 +876,52 @@
               </tr>
               <tr>
                 <td>1</td>
-                <td>COPYRIGHT_ID</td>
+                <td>ParentId</td>
                 <td>Not used</td>
               </tr>
               <tr>
                 <td>2</td>
-                <td>NAME</td>
-                <td>Used for reference when creating new subsources</td>
+                <td>ParentLoinc</td>
+                <td>Used as id_1 in relationships</td>
               </tr>
               <tr>
                 <td>3</td>
-                <td>COPYRIGHT</td>
-                <td>Used for reference when creating new subsources</td>
+                <td>ParentName</td>
+                <td>Not used</td>
               </tr>
               <tr>
                 <td>4</td>
-                <td>TERMS_OF_USE</td>
-                <td>Used for reference when creating new subsources</td>
+                <td>Id</td>
+                <td>Not used</td>
               </tr>
               <tr>
                 <td>5</td>
-                <td>URL</td>
+                <td>Sequence</td>
+                <td>Not used</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Loinc</td>
+                <td>Used as id_2 in relationships</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>LoincName</td>
+                <td>Not used</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>DisplayNameForForm</td>
+                <td>Not used</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>ObservationRequiredInPanel</td>
+                <td>Not used</td>
+              </tr>
+              <tr>
+                <td>10-27</td>
+                <td>ObservationIdInForm...</td>
                 <td>Not used</td>
               </tr>
             </tbody>
