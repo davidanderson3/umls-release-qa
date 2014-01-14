@@ -37,12 +37,11 @@ Representation</a> </li>
 <a name="top"></a>
 <span class="nav">Skip to: <a href="#general">Notes</a>, <a
  href="#change_summary">Summary of Changes</a>, <a href="#file_summary">Summary
-of
-Source-Provided
-Files</a> <a href="#file_details">Source-Provided
+of Source-Provided Files</a> <a href="#file_details">Source-Provided
 File Details</a></span>
 <a name="general"></a>
 <div id="rep_general" class="rep_block_level_one">
+<p><b>VSAB:</b> MEDCIN3_2013_12_18</p> 
 <h3>Notes</h3>
 <p>MEDCIN data files are submitted by Medicomp Systems.</p>
 </div>
@@ -50,23 +49,9 @@ File Details</a></span>
 <a name="change_summary"></a>
 <h3>Summary of Changes</h3>
 &nbsp;&nbsp;<span class="nav"><a href="#top">return to top</a></span>
-<p>1) Dropped term type (TTY):</p>
-<ul>
-    <li>MTH_FN</li>
-    <li>MTH_PT</li>
-    <li>MTH_SY</li>
-</ul>
-<p>2) New relationship | relationship attribute(RELA) | RELA inverse:</p>
-<ul>
-    <li>RO|has_finding_context|finding_context_of</li>
-    <li>RO|has_procedure_context|procedure_context_of</li>
-    <li>RO|has_specimen_source_topography|specimen_source_topography_of</li>
-</ul>
-<p>3) Deprecated relationship: </p>
-<ul>
-    <li>RO|has_specimen_procedure</li>
-    <li>SY|mth_plain_text_form_of</li>
-</ul>
+<p>Ascii forms of strings generated from non-ascii strings are no longer
+    being created. MTH* atoms along with their associated relationships
+    have been deprecated (e.g., MTH_* atoms, SFO/LFO|mth_plain_text_form_of).</p>
 </div>
 <div id="rep_file_summary" class="rep_block_level_one">
 <a name="file_summary"></a>
@@ -84,19 +69,19 @@ File Details</a></span>
       <th>Description</th>
     </tr>
     <tr>
-      <td class="file_field_name"><a href="#file1">UMLS_MEDCIN_CONCEPTS2013-07-15.TXT</a></td>
+      <td class="file_field_name"><a href="#file1">UMLS_MEDCIN_CONCEPTS2013-12-18.TXT</a></td>
       <td>Concepts - Pipe-Delimited Format</td>
     </tr>
     <tr>
-      <td class="file_field_name"><a href="#file2">UMLS_MEDCIN_DESCRIPTIONS2013-07-15.TXT</a></td>
+      <td class="file_field_name"><a href="#file2">UMLS_MEDCIN_DESCRIPTIONS2013-12-18.TXT</a></td>
       <td>Descriptions - Pipe-Delimited Format</td>
     </tr>
     <tr>
-      <td class="file_field_name"><a href="#file3">UMLS_MEDCIN_HIERARCHY2013-07-15.TXT</a></td>
+      <td class="file_field_name"><a href="#file3">UMLS_MEDCIN_HIERARCHY2013-12-18.TXT</a></td>
       <td>Hierarchy - Pipe-Delimited Format</td>
     </tr>
     <tr>
-      <td class="file_field_name"><a href="#file4">UMLS_MEDCIN_SNOMED2013-07-15.TXT</a></td>
+      <td class="file_field_name"><a href="#file4">UMLS_MEDCIN_SNOMED2013-12-18.TXT</a></td>
       <td>MEDCIN to SNOMEDCT mappings - Pipe-Delimited Format</td>
     </tr>
   </tbody>
