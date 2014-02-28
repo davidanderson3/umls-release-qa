@@ -18,29 +18,35 @@ import gov.nih.nlm.uts.webservice.security.UtsWsSecurityControllerImplService;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
+import java.lang.reflect.Array;
+import java.nio.charset.Charset;
 import java.util.*;
 
 public class UTS_Source_documentation {
 	
-	private static String username = "debjaniani";
-    private static String password = "Cartoon123!"; 
-    static String umlsRelease = "2013AA";
+	private static String username = "";
+    private static String password = ""; 
+    static String umlsRelease = "";
 	static String serviceName = "http://umlsks.nlm.nih.gov";
+	static String path;
+	
 
 static UtsWsContentController utsContentService = (new UtsWsContentControllerImplService()).getUtsWsContentControllerImplPort();
 static UtsWsFinderController  utsFinderService = (new UtsWsFinderControllerImplService()).getUtsWsFinderControllerImplPort();
 static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImplService()).getUtsWsSecurityControllerImplPort();
 
-
-
     
-    public UTS_Source_documentation (String username, String password) {
+    public UTS_Source_documentation (String username, String password, String umlsRelease) {
 	this.username = username;
 	this.password = password;
+	this.umlsRelease = umlsRelease;
 	
     	}
 
@@ -48,71 +54,67 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 	
     	//get the Proxy Grant Ticket - this is good for 8 hours and is needed to generate single use tickets.
         String ticketGrantingTicket = securityService.getProxyGrantTicket(username, password);
-        //System.out.println("tgt: "+ticketGrantingTicket);  
 
         //use the Proxy Grant Ticket to get a Single Use Ticket
-       // String singleUseTicket = securityService.getProxyTicket(ticketGrantingTicket, serviceName);
         return ticketGrantingTicket;
     	
     }
 	
 	
 	
-	public static void findConcepts(String val1, String val2, String path) throws Exception{
-		PrintWriter out = new PrintWriter(new File(path), "UTF-8"); 
-		out.println("Results for "+val2+":");
-		gov.nih.nlm.uts.webservice.finder.Psf myPsf = new gov.nih.nlm.uts.webservice.finder.Psf();
-		myPsf.getIncludedSources().add(val1);
-
-		java.util.List<UiLabel> myFindConcepts = new ArrayList<UiLabel>();
-
-		myFindConcepts = utsFinderService.findConcepts(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "sourceConcept", val2, "exact", myPsf);
-		out.println("*Concepts|Label|Ui");
-		
-        if (myFindConcepts.size() == 0){
-        	
-        	out.println("None");	
-        } 
-        
-        else {
-		
-        for (int i = 0; i < myFindConcepts.size(); i++) {
-
-        	UiLabel myFinCon = myFindConcepts.get(i);
-        	String ui = myFinCon.getUi();
-        	String label = myFinCon.getLabel();
-        	
-    	    out.println(label+"|"+ui);
-        	//System.out.println(label+"|"+ui+"\n");
-        }
-        }
-		 out.println("!");
-			
-	}
-	
 	
 	
 	//Method for Concept calls
 	public static void findSrcConcepts(String val1, String val2, String path) throws Exception{
-		 PrintWriter out = null;
-		 BufferedWriter bw = null;
-		 FileWriter fw = null;
+
+	       
 		
-//		PrintWriter out = new PrintWriter(new File(path), "UTF-8"); 
-		fw = new FileWriter(path, true);
-	     bw = new BufferedWriter(fw);
-	     out = new PrintWriter(bw);
+        PrintWriter bw = new PrintWriter(new File(path), "UTF-8"); 
+        bw.println("Results for "+val2+":");
+        gov.nih.nlm.uts.webservice.finder.Psf myPsf = new gov.nih.nlm.uts.webservice.finder.Psf();
+        myPsf.getIncludedSources().add(val1);
+
+        java.util.List<UiLabel> myFindConcepts = new ArrayList<UiLabel>();
+
+        myFindConcepts = utsFinderService.findConcepts(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "sourceConcept", val2, "exact", myPsf);
+        bw.println("*Concept Information|CUI|Preferred Name");
+        
+		if (myFindConcepts.size() == 0){
+		
+		bw.println("None");      
+		} 
+		
+		else {
+		        
+		for (int i = 0; i < myFindConcepts.size(); i++) {
+		
+		UiLabel myFinCon = myFindConcepts.get(i);
+		String ui = myFinCon.getUi();
+		String label = myFinCon.getLabel();
+		
+		bw.println(ui+"|"+label);
+		//System.out.println(label+"|"+ui+"\n");
+		}
+		}
+		        bw.println("!");
+
+	       
+	       
 
 	        AtomDTO myAtom = new AtomDTO();
 		    myAtom = utsContentService.getDefaultPreferredAtom(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1);
-	        out.println("*Default Preferred Atom|Atom Name|Term Type");
+	        bw.println("*Atom Information|Default Preferred Atom|Atom Name|Term Type");
+	        //bw.newLine();
 
 		    String defPrefUi = myAtom.getUi();
 		    String atomName = myAtom.getTermString().getName();
 		    String termType = myAtom.getTermType();
 
-		    out.println(defPrefUi+"|"+atomName+"|"+termType);
-		    out.println("!");
+		    bw.println(defPrefUi+"|"+atomName+"|"+termType);
+		    //bw.newLine();
+		    bw.println("!");
+		    //bw.newLine();
+
         
         
 		    
@@ -123,11 +125,15 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
         java.util.List<AtomDTO> myAtoms = new ArrayList<AtomDTO>();
         myAtoms = utsContentService.getSourceConceptAtoms(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1, myconPsf);
 
-        out.println("*Source Concept Atoms|Atom ID|SUI|Term|Term Type|Source Atom ID");
+        bw.println("*Source Concept Atoms|Atom ID|SUI|Term|Term Type|Source Atom ID|Source Concept|Source Descriptor");
+	    //bw.newLine();
+
         
         if (myAtoms.size() == 0){
         	
-        	out.println("None");	
+        	bw.println("None");	
+ 	       //bw.newLine();
+
         } 
         
         else {
@@ -156,13 +162,16 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 	     srcDescriptor = myAtomDTO.getSourceDescriptor().getUi();
 	    }
 	    
-	    //out.println(aui+"|"+sui+"|"+name+"|"+TermType+"|"+atomRelCount+"|"+attributeCount+"|"+srcConcept+"|"+srcDescriptor+"\n");
-	    out.println(ui+"|"+sui+"|"+sourceUi+"|"+name+"|"+TermType+"|"+srcConcept+"|"+srcDescriptor);
+	    bw.println(ui+"|"+sui+"|"+sourceUi+"|"+name+"|"+TermType+"|"+srcConcept+"|"+srcDescriptor);
+	    //bw.newLine();
+
 
 	    }
                 }
 
-		 out.println("!");
+		 bw.println("!");
+	     //bw.newLine();
+
 		 
 		 
   
@@ -178,11 +187,13 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 		      
 		      java.util.List<AtomTreePositionPathDTO> myAtomTreePosPathDTOClient = new ArrayList<AtomTreePositionPathDTO>();
 		      myAtomTreePosPathDTOClient = utsContentService.getAtomTreePositionPathsToRoot(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, ui, myAtomTreePsf);
-		      //out.println("*Tree Position "+(i+1)+":");
+		      //bw.println("*Tree Position "+(i+1)+":");
 		      
 			     if (myAtomTreePosPathDTOClient.size() == 0){
 			        	
-			        	out.println("None");	
+			        	bw.println("None");	
+			   	        //bw.newLine();
+
 			        } 
 			        
 			     else {
@@ -192,29 +203,36 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 			      AtomTreePositionPathDTO myAtmTrPosDTO = myAtomTreePosPathDTOClient.get(j);
 			
 			      List<AtomTreePositionDTO> treepos = myAtmTrPosDTO.getTreePositions();
-			      out.println("*Tree Position Paths To Root "+(j+1)+"|Default Preferred Name|Ui");
+			      bw.println("*Tree Position Paths To Root "+(j+1)+"|Default Preferred ID|Default Preferred Name");
+   			     //bw.newLine();
+
 			
 				     for (int k = 0; k < treepos.size(); k++) {
 				       AtomTreePositionDTO getj = treepos.get(k);
 				       String defPrefName = getj.getDefaultPreferredName();
 				       String Ui = getj.getUi();
 				        
-				       out.println(defPrefName+"|"+Ui);
+				       bw.println(Ui+"|"+defPrefName);
+				       //bw.newLine();
+				       
 				       }
 			     		}
 					
 			        }
-					 out.println("!");
+					 bw.println("!");
+					 //bw.newLine();
 	        
 			        
 			        
 			    List<AtomTreePositionDTO> myAtomTreePosChildrenDTO = new ArrayList<AtomTreePositionDTO>();
 			    myAtomTreePosChildrenDTO = utsContentService.getAtomTreePositionChildren(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, ui, myAtomTreePsf);
-			    out.println("*Tree Position Children|Default Preferred Name|Ui");
+			    bw.println("*Tree Position Children|Default Preferred ID|Default Preferred Name");
+			    //bw.newLine();
 			    
 			     if (myAtomTreePosChildrenDTO.size() == 0){
 			        	
-			        	out.println("None");	
+			        	bw.println("None");	
+			        	//bw.newLine();
 			        } 
 			        
 			     else {
@@ -226,21 +244,25 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 				        String defaultPrefName = myAtmTrPosChilDTO.getDefaultPreferredName();
 				        String cUi = myAtmTrPosChilDTO.getUi();
 					        
-					    out.println(defaultPrefName+"|"+cUi);
+					    bw.println(cUi+"|"+defaultPrefName);
+					    //bw.newLine();
 					        }
 			     		}
-					 out.println("!");
+					 bw.println("!");
+					 //bw.newLine();
 				     
 					 
 				     
 				     
 				List<AtomTreePositionDTO> myarrTreePosSiblingDTOClient = new ArrayList<AtomTreePositionDTO>();
 				myarrTreePosSiblingDTOClient = utsContentService.getAtomTreePositionSiblings(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, ui, myAtomTreePsf);
-				out.println("*Tree Position Sibling|Default Preferred Name|Ui");
+				bw.println("*Tree Position Sibling|Default Preferred ID|Default Preferred Name");
+				//bw.newLine();
 
 			     if (myarrTreePosSiblingDTOClient.size() == 0){
 			        	
-			        	out.println("None");	
+			        	bw.println("None");	
+			        	//bw.newLine();
 			        } 
 			        
 			     else {
@@ -251,10 +273,12 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 						 String defaultPrefName = myAtmClustTrPosDTO.getDefaultPreferredName();
 						 String cUi = myAtmClustTrPosDTO.getUi();
 							        
-						 out.println(defaultPrefName+"|"+cUi);
+						 bw.println(cUi+"|"+defaultPrefName);
+						 //bw.newLine();
 						    }
 			     		}       
-					 out.println("!");
+					 bw.println("!");
+					 //bw.newLine();
 		    }
 		
 					 
@@ -269,11 +293,13 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
         List<AtomClusterRelationDTO> myAtomClusterRelations = new ArrayList<AtomClusterRelationDTO>();
 
         myAtomClusterRelations = utsContentService.getSourceConceptSourceConceptRelations(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1, mySrcConPsf);
-        out.println("*Source Concept Source Concept Relations|Relation Label|Additional Relation Label|Related Atom Cluster ID|Related Atom Cluster Default Preferred Name|Suppressibility");
+        bw.println("*Source Concept Source Concept Relations|Relation Label|Additional Relation Label|Related Atom Cluster ID|Related Atom Cluster Default Preferred Name|Suppressibility");
+        //bw.newLine();
         
         if (myAtomClusterRelations.size() == 0){
         	
-        	out.println("None");	
+        	bw.println("None");	
+        	//bw.newLine();
         } 
         
         else {
@@ -287,12 +313,14 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
         String relAtomClusterName = myAtomClusterRelationDTO.getRelatedAtomCluster().getDefaultPreferredName();
         boolean supp = myAtomClusterRelationDTO.isSuppressible();
         
-        out.println(relationLabel+"|"+addRelationLabel+"|"+relAtomClusterUi+"|"+relAtomClusterName+"|"+supp);
+        bw.println(relationLabel+"|"+addRelationLabel+"|"+relAtomClusterUi+"|"+relAtomClusterName+"|"+supp);
+        //bw.newLine();
 	    
         }
         }
         
-		 out.println("!");
+		 bw.println("!");
+		 //bw.newLine();
         
         
         
@@ -309,11 +337,13 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
         
     	java.util.List<SourceAtomClusterTreePositionPathDTO> myarrSrcDescTreePosPathDTOClient = new ArrayList<SourceAtomClusterTreePositionPathDTO>();
     	myarrSrcDescTreePosPathDTOClient = utsContentService.getSourceConceptTreePositionPathsToRoot(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, ui, myTreePsf);
-    	out.println("*Tree Position "+(i+1)+":");
+    	bw.println("*Tree Position "+(i+1)+":");
+    	//bw.newLine();
     	
         if (myarrSrcDescTreePosPathDTOClient.size() == 0){
         	
-        	out.println("None");	
+        	bw.println("None");	
+        	//bw.newLine();
         } 
         
         else {
@@ -323,7 +353,8 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 	        SourceAtomClusterTreePositionPathDTO myAtmClustTrPosDTO = myarrSrcDescTreePosPathDTOClient.get(j);
 
 	        List<SourceAtomClusterTreePositionDTO> treepos = myAtmClustTrPosDTO.getTreePositions();
-		    out.println("*Tree Position Paths To Root"+(j+1)+"|Default Preferred Name|Cluster ID");
+		    bw.println("*Tree Position Paths To Root"+(j+1)+"|Cluster ID|Default Preferred Name");
+		    //bw.newLine();
 
 	
 		        for (int k = 0; k < treepos.size(); k++) {
@@ -331,10 +362,12 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 		        String clusterUi = getj.getCluster().getUi();
 		        String defPrefName = getj.getDefaultPreferredName();
 		        
-		        out.println(defPrefName+"|"+clusterUi);
+		        bw.println(clusterUi+"|"+defPrefName);
+		        //bw.newLine();
 		        }
 	        }
-				 out.println("!");
+				 bw.println("!");
+				 //bw.newLine();
 	
 	        }
 	        
@@ -342,11 +375,13 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 	        
 	    List<SourceAtomClusterTreePositionDTO> myarrSrcDescTreePosChildrenDTOClient = new ArrayList<SourceAtomClusterTreePositionDTO>();
 	    myarrSrcDescTreePosChildrenDTOClient = utsContentService.getSourceConceptTreePositionChildren(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, ui, myTreePsf);
-	    out.println("*Tree Position Children|Default Preferred Name|Cluster ID");
+	    bw.println("*Tree Position Children|Cluster ID|Default Preferred Name");
+	    //bw.newLine();
 	    
         if (myarrSrcDescTreePosChildrenDTOClient.size() == 0){
         	
-        	out.println("None");	
+        	bw.println("None");	
+        	//bw.newLine();
         } 
         
         else {
@@ -357,22 +392,26 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 		        String clusterUi = myAtmClustTrPosDTO.getCluster().getUi();
 		        String defaultPrefName = myAtmClustTrPosDTO.getCluster().getDefaultPreferredName();
 			        
-			    out.println(defaultPrefName+"|"+clusterUi);
+			    bw.println(clusterUi+"|"+defaultPrefName);
+			    //bw.newLine();
 			        }
         		}
 			        
-			 out.println("!");
+			 bw.println("!");
+			 //bw.newLine();
 		     
 			 
 		     
 		     
 		List<SourceAtomClusterTreePositionDTO> myarrSrcDescTreePosSiblingDTOClient = new ArrayList<SourceAtomClusterTreePositionDTO>();
 		myarrSrcDescTreePosSiblingDTOClient = utsContentService.getSourceConceptTreePositionSiblings(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, ui, myTreePsf);
-		out.println("*Tree Position Sibling|Default Preferred Name|Cluster ID");
+		bw.println("*Tree Position Sibling|Cluster ID|Default Preferred Name");
+		//bw.newLine();
 		
         if (myarrSrcDescTreePosSiblingDTOClient.size() == 0){
         	
-        	out.println("None");	
+        	bw.println("None");	
+        	//bw.newLine();
         } 
         
         else {
@@ -383,17 +422,21 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 				 String clusterUi = myAtmClustTrPosDTO.getCluster().getUi();
 				 String defaultPrefName = myAtmClustTrPosDTO.getCluster().getDefaultPreferredName();
 					        
-				 out.println(defaultPrefName+"|"+clusterUi);
+				 bw.println(clusterUi+"|"+defaultPrefName);
+				 //bw.newLine();
 				    }
         	}
 					        
-			 out.println("!");
+			 bw.println("!");
+			 //bw.newLine();
 	     
         }    
-		out.println("!");
-	    out.close();
+		bw.println("!");
+		//bw.newLine();
+		bw.close(); 
 
 	}
+	
 	
 	
 	
@@ -401,18 +444,49 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 	//Method for Descriptor calls
 	public static void findDescriptors(String val1, String val2, String path) throws Exception{
 		
-		 PrintWriter out = new PrintWriter(new File(path), "UTF-8"); 		     
 
+        PrintWriter bw = new PrintWriter(new File(path), "UTF-8"); 
+        bw.println("Results for "+val2+":");
+        gov.nih.nlm.uts.webservice.finder.Psf myPsf = new gov.nih.nlm.uts.webservice.finder.Psf();
+        myPsf.getIncludedSources().add(val1);
+
+        java.util.List<UiLabel> myFindConcepts = new ArrayList<UiLabel>();
+
+        myFindConcepts = utsFinderService.findConcepts(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "sourceDescriptor", val2, "exact", myPsf);
+        bw.println("*Concept Information|CUI|Preferred Name");
+        
+		if (myFindConcepts.size() == 0){
+		
+		bw.println("None");      
+		} 
+		
+		else {
+		        
+		for (int i = 0; i < myFindConcepts.size(); i++) {
+		
+		UiLabel myFinCon = myFindConcepts.get(i);
+		String ui = myFinCon.getUi();
+		String label = myFinCon.getLabel();
+		
+		bw.println(ui+"|"+label);
+		//System.out.println(label+"|"+ui+"\n");
+		}
+		}
+		        bw.println("!");	       
+	       
 	     AtomDTO myAtoms = new AtomDTO();
 		    myAtoms = utsContentService.getDefaultPreferredAtom(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1);
-	        out.println("*Default Preferred Atom|Atom Name|Term Type");
+	        bw.println("*Atom Information|Default Preferred Atom|Atom Name|Term Type");
+	        //bw.newLine();
 
 		    String defPrefUi = myAtoms.getUi();
 		    String atomName = myAtoms.getTermString().getName();
 		    String termType = myAtoms.getTermType();
 
-		    out.println(defPrefUi+"|"+atomName+"|"+termType);
-		    out.println("!");
+		    bw.println(defPrefUi+"|"+atomName+"|"+termType);
+		   // bw.newLine();
+		    bw.println("!");
+		    //bw.newLine();
 		    
 		    
 		 gov.nih.nlm.uts.webservice.content.Psf myconPsf = new gov.nih.nlm.uts.webservice.content.Psf();
@@ -420,10 +494,12 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 		 myconPsf.getIncludedSources().add(val1);
 		 java.util.List<AtomDTO> myAtom = new ArrayList<AtomDTO>();
 		 myAtom = utsContentService.getSourceDescriptorAtoms(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1, myconPsf);
-	     out.println("*Source Descriptor Atoms|Atom ID|Source Atom ID|Term|Term Type|Source Concept|Source Descriptor");
+	     bw.println("*Source Descriptor Atoms|Atom ID|Source Atom ID|Term|Term Type|Source Concept|Source Descriptor");
+	     //bw.newLine();
 	        if (myAtom.size() == 0){
 	        	
-	        	out.println("None");	
+	        	bw.println("None");	
+	        	//bw.newLine();
 	        } 
 	        
 	        else {
@@ -453,12 +529,13 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 			     srcDescriptor = myAtomDTO.getSourceDescriptor().getUi();
 			     }
 			      
-		     out.println(ui+"|"+sui+"|"+name+"|"+TermType+"|"+srcConcept+"|"+srcDescriptor);
+		     bw.println(ui+"|"+sui+"|"+name+"|"+TermType+"|"+srcConcept+"|"+srcDescriptor);
+		     //bw.newLine();
 		      }
 	        }
 	      
-	    out.println("!");
-	    
+	    bw.println("!");
+	    //bw.newLine();
 	    
 
 
@@ -472,15 +549,16 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 
 	      AtomTreePositionDTO myAtmTreePosDTO = myarrAtomTrPos.get(i);
 	      String ui = myAtmTreePosDTO.getUi();
-	      //out.println("*Atom Tree Position: "+ui);
+	      //bw.println("*Atom Tree Position: "+ui);
 	      java.util.List<AtomTreePositionPathDTO> myAtomTreePosPathDTOClient = new ArrayList<AtomTreePositionPathDTO>();
 	      myAtomTreePosPathDTOClient = utsContentService.getAtomTreePositionPathsToRoot(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, ui, myAtomTreePsf);
 	      
-	      //out.println("*Tree Position "+(i+1)+":");
+	      //bw.println("*Tree Position "+(i+1)+":");
 	      
 		     if (myAtomTreePosPathDTOClient.size() == 0){
 		        	
-		        	out.println("None");	
+		        	bw.println("None");	
+		        	//bw.newLine();
 		        } 
 		        
 		     else {
@@ -490,29 +568,34 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 		      AtomTreePositionPathDTO myAtmTrPosDTO = myAtomTreePosPathDTOClient.get(j);
 		
 		      List<AtomTreePositionDTO> treepos = myAtmTrPosDTO.getTreePositions();
-		      out.println("*Tree Position Paths To Root"+(j+1)+"|Default Preferred Name|Ui");
+		      bw.println("*Tree Position Paths To Root"+(j+1)+"|Default Preferred ID|Default Preferred Name");
+		      //bw.newLine();
 		
 			     for (int k = 0; k < treepos.size(); k++) {
 			       AtomTreePositionDTO getj = treepos.get(k);
 			       String defPrefName = getj.getDefaultPreferredName();
 			       String Ui = getj.getUi();
 			        
-			       out.println(defPrefName+"|"+Ui);
+			       bw.println(Ui+"|"+defPrefName);
+			      // bw.newLine();
 			       }
 		     		}
 				
 		        }
-				 out.println("!");
+				 bw.println("!");
+				 //bw.newLine();
         
 		        
 		        
 		    List<AtomTreePositionDTO> myAtomTreePosChildrenDTO = new ArrayList<AtomTreePositionDTO>();
 		    myAtomTreePosChildrenDTO = utsContentService.getAtomTreePositionChildren(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, ui, myAtomTreePsf);
-		    out.println("*Tree Position Children|Default Preferred Name|Ui");
+		    bw.println("*Tree Position Children|Default Preferred ID|Default Preferred Name");
+		    //bw.newLine();
 		    
 		     if (myAtomTreePosChildrenDTO.size() == 0){
 		        	
-		        	out.println("None");	
+		        	bw.println("None");	
+		        	//bw.newLine();
 		        } 
 		        
 		     else {
@@ -524,21 +607,25 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 			        String defaultPrefName = myAtmTrPosChilDTO.getDefaultPreferredName();
 			        String Ui = myAtmTrPosChilDTO.getUi();
 				        
-				    out.println(defaultPrefName+"|"+Ui);
+				    bw.println(Ui+"|"+defaultPrefName);
+				   // bw.newLine();
 				        }
 		     		}
-				 out.println("!");
+				 bw.println("!");
+				 //bw.newLine();
 			     
 				 
 			     
 			     
 			List<AtomTreePositionDTO> myarrTreePosSiblingDTOClient = new ArrayList<AtomTreePositionDTO>();
 			myarrTreePosSiblingDTOClient = utsContentService.getAtomTreePositionSiblings(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, ui, myAtomTreePsf);
-			out.println("*Tree Position Sibling|Default Preferred Name|Ui");
+			bw.println("*Tree Position Sibling|Default Preferred ID|Default Preferred Name");
+			//bw.newLine();
 
 		     if (myarrTreePosSiblingDTOClient.size() == 0){
 		        	
-		        	out.println("None");	
+		        	bw.println("None");	
+		        	//bw.newLine();
 		        } 
 		        
 		     else {
@@ -549,10 +636,12 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 					 String defaultPrefName = myAtmClustTrPosDTO.getDefaultPreferredName();
 					 String Ui = myAtmClustTrPosDTO.getUi();
 						        
-					 out.println(defaultPrefName+"|"+Ui);
+					 bw.println(Ui+"|"+defaultPrefName);
+					 //bw.newLine();
 					    }
 		     		}       
-				 out.println("!");
+				 bw.println("!");
+				// bw.newLine();
 	    	}
 	    
 	    
@@ -569,12 +658,14 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 	     List<AtomClusterRelationDTO> myAtomClusterRelations = new ArrayList<AtomClusterRelationDTO>();
 
 	     myAtomClusterRelations = utsContentService.getSourceDescriptorSourceDescriptorRelations(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1, mySrcConPsf);
-	     out.println("*Source Descriptor Source Descriptor Relations|Relation Label|Additional Relation Label|Related Atom Cluster ID|Related Atom Cluster Default Preferred Name|Suppressibility");
+	     bw.println("*Source Descriptor Source Descriptor Relations|Relation Label|Additional Relation Label|Related Atom Cluster ID|Related Atom Cluster Default Preferred Name|Suppressibility");
+	     //bw.newLine();
 
 	     
 	     if (myAtomClusterRelations.size() == 0){
 	        	
-	        	out.println("None");	
+	        	bw.println("None");	
+	        	//bw.newLine();
 	        } 
 	        
 	     else {
@@ -589,23 +680,27 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
             String relAtomClusterName = myAtomClusterRelationDTO.getRelatedAtomCluster().getDefaultPreferredName();
             boolean supp = myAtomClusterRelationDTO.isSuppressible();
             
-            out.println(relationLabel+"|"+addRelationLabel+"|"+relAtomClusterUi+"|"+relAtomClusterName+"|"+supp);
+            bw.println(relationLabel+"|"+addRelationLabel+"|"+relAtomClusterUi+"|"+relAtomClusterName+"|"+supp);
+            //bw.newLine();
             
             }
 	       }
 	        
-		 out.println("!");
+		 bw.println("!");
+		 //bw.newLine();
 	        
 	        
 	        
-		 gov.nih.nlm.uts.webservice.content.Psf myPsf = new gov.nih.nlm.uts.webservice.content.Psf();
+		 gov.nih.nlm.uts.webservice.content.Psf myPsf1 = new gov.nih.nlm.uts.webservice.content.Psf();
 	     List<AttributeDTO> myAttributes = new ArrayList<AttributeDTO>();
-	     myAttributes = utsContentService.getSourceDescriptorAttributes(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1,myPsf);
-	     out.println("*Source Descriptor Attributes|Attribute Name|Attribute Value");
+	     myAttributes = utsContentService.getSourceDescriptorAttributes(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1,myPsf1);
+	     bw.println("*Source Descriptor Attributes|Attribute Value|Attribute Name");
+	     //bw.newLine();
 	     
 	     if (myAttributes.size() == 0){
 	        	
-	        	out.println("None");	
+	        	bw.println("None");	
+	        	//bw.newLine();
 	        } 
 	        
 	     else {
@@ -616,11 +711,13 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 	      String attributeName = myAttributeDTO.getName();
 	      String attributeValue = myAttributeDTO.getValue();
 
-	      out.println(attributeName+"|"+attributeValue);
+	      bw.println(attributeValue+"|"+attributeName);
+	     // bw.newLine();
 
 	      } 
 	     }
-		 out.println("!");
+		 bw.println("!");
+		 //bw.newLine();
 
 	      
 	      
@@ -635,11 +732,12 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 	      String ui = myAtmClustTreePosDTO.getUi();
 	      java.util.List<SourceAtomClusterTreePositionPathDTO> myarrSrcDescTreePosPathDTOClient = new ArrayList<SourceAtomClusterTreePositionPathDTO>();
 	      myarrSrcDescTreePosPathDTOClient = utsContentService.getSourceDescriptorTreePositionPathsToRoot(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, ui, myTreePsf);
-	      //out.println("*Tree Position "+(i+1)+":");
+	      //bw.println("*Tree Position "+(i+1)+":");
 	      
 		     if (myarrSrcDescTreePosPathDTOClient.size() == 0){
 		        	
-		        	out.println("None");	
+		        	bw.println("None");	
+		        	//bw.newLine();
 		        } 
 		        
 		     else {
@@ -649,29 +747,34 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 		      SourceAtomClusterTreePositionPathDTO myAtmClustTrPosDTO = myarrSrcDescTreePosPathDTOClient.get(j);
 		
 		      List<SourceAtomClusterTreePositionDTO> treepos = myAtmClustTrPosDTO.getTreePositions();
-		      out.println("*Tree Position Paths To Root"+(j+1)+"|Default Preferred Name|Cluster ID");
+		      bw.println("*Tree Position Paths To Root"+(j+1)+"|Cluster ID|Default Preferred Name");
+		      //bw.newLine();
 		
 			     for (int k = 0; k < treepos.size(); k++) {
 			       SourceAtomClusterTreePositionDTO getj = treepos.get(k);
 			       String defPrefName = getj.getDefaultPreferredName();
 			       String clusterUi = getj.getCluster().getUi();
 			        
-			       out.println(defPrefName+"|"+clusterUi);
+			       bw.println(clusterUi+"|"+defPrefName);
+			       //bw.newLine();
 			       }
 		     		}
 				
 		        }
-				 out.println("!");
+				 bw.println("!");
+				 //bw.newLine();
         
 		        
 		        
 		    List<SourceAtomClusterTreePositionDTO> myarrSrcDescTreePosChildrenDTOClient = new ArrayList<SourceAtomClusterTreePositionDTO>();
 		    myarrSrcDescTreePosChildrenDTOClient = utsContentService.getSourceDescriptorTreePositionChildren(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, ui, myTreePsf);
-		    out.println("*Tree Position Children|Default Preferred Name|Cluster ID");
+		    bw.println("*Tree Position Children|Cluster ID|Default Preferred Name");
+		    //bw.newLine();
 		    
 		     if (myarrSrcDescTreePosChildrenDTOClient.size() == 0){
 		        	
-		        	out.println("None");	
+		        	bw.println("None");	
+		        	//bw.newLine();
 		        } 
 		        
 		     else {
@@ -683,21 +786,25 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 			        String defaultPrefName = myAtmClustTrPosDTO.getCluster().getDefaultPreferredName();
 			        String clusterUi = myAtmClustTrPosDTO.getCluster().getUi();
 				        
-				    out.println(defaultPrefName+"|"+clusterUi);
+				    bw.println(clusterUi+"|"+defaultPrefName);
+				    //bw.newLine();
 				        }
 		     		}
-				 out.println("!");
+				 bw.println("!");
+				 //bw.newLine();
 			     
 				 
 			     
 			     
 			List<SourceAtomClusterTreePositionDTO> myarrSrcDescTreePosSiblingDTOClient = new ArrayList<SourceAtomClusterTreePositionDTO>();
 			myarrSrcDescTreePosSiblingDTOClient = utsContentService.getSourceDescriptorTreePositionSiblings(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, ui, myTreePsf);
-			out.println("*Tree Position Sibling|Default Preferred Name|Cluster ID");
+			bw.println("*Tree Position Sibling|Cluster ID|Default Preferred Name");
+			//bw.newLine();
 
 		     if (myarrSrcDescTreePosSiblingDTOClient.size() == 0){
 		        	
-		        	out.println("None");	
+		        	bw.println("None");	
+		        	//bw.newLine();
 		        } 
 		        
 		     else {
@@ -708,15 +815,17 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 					 String defaultPrefName = myAtmClustTrPosDTO.getCluster().getDefaultPreferredName();
 					 String clusterUi = myAtmClustTrPosDTO.getCluster().getUi();
 						        
-					 out.println(defaultPrefName+"|"+clusterUi);
+					 bw.println(clusterUi+"|"+defaultPrefName);
+					 //bw.newLine();
 					    }
 		     		}       
-				 out.println("!");
+				 bw.println("!");
+				 //bw.newLine();
 
 
 	        }
-		out.println("!");
-	     out.close();
+		bw.println("!");
+	    bw.close();
 
 
 		}
@@ -726,19 +835,50 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 	
 	public static void findCodes(String val1, String val2, String val4, String path) throws Exception{
 		
-		 PrintWriter out = new PrintWriter(new File(path), "UTF-8"); 
-		 
 
+        PrintWriter bw = new PrintWriter(new File(path), "UTF-8"); 
+        bw.println("Results for "+val2+":");
+        gov.nih.nlm.uts.webservice.finder.Psf myPsf = new gov.nih.nlm.uts.webservice.finder.Psf();
+        myPsf.getIncludedSources().add(val1);
+
+        java.util.List<UiLabel> myFindConcepts = new ArrayList<UiLabel>();
+
+        myFindConcepts = utsFinderService.findConcepts(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "code", val2, "exact", myPsf);
+        bw.println("*Concept Information|CUI|Preferred Name");
+        
+		if (myFindConcepts.size() == 0){
+		
+		bw.println("None");      
+		} 
+		
+		else {
+		        
+		for (int i = 0; i < myFindConcepts.size(); i++) {
+		
+		UiLabel myFinCon = myFindConcepts.get(i);
+		String ui = myFinCon.getUi();
+		String label = myFinCon.getLabel();
+		
+		bw.println(ui+"|"+label);
+		//System.out.println(label+"|"+ui+"\n");
+		}
+		}
+		        bw.println("!");
+
+	       
 		 AtomDTO myAtoms = new AtomDTO();
 		    myAtoms = utsContentService.getDefaultPreferredAtom(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1);
-	        out.println("*Default Preferred Atom|Atom Name|Term Type");
+	        bw.println("*Atom Information|Default Preferred Atom|Atom Name|Term Type");
+	        //bw.newLine();
 
 		    String defPrefUi = myAtoms.getUi();
 		    String atomName = myAtoms.getTermString().getName();
 		    String termType = myAtoms.getTermType();
 
-		    out.println(defPrefUi+"|"+atomName+"|"+termType);
-		    out.println("!");
+		    bw.println(defPrefUi+"|"+atomName+"|"+termType);
+		    //bw.newLine();
+		    bw.println("!");
+		    //bw.newLine();
 		    
 		 
 		 gov.nih.nlm.uts.webservice.content.Psf myconPsf = new gov.nih.nlm.uts.webservice.content.Psf();
@@ -746,10 +886,12 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 		 myconPsf.getIncludedSources().add(val1);
 		 java.util.List<AtomClusterRelationDTO> myAtom = new ArrayList<AtomClusterRelationDTO>();
 		 myAtom = utsContentService.getCodeCodeRelations(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1, myconPsf);
-	     out.println("*Code Code Relations|Ui|Default Preferred Name|Relation Label|Additional Relation Label");
+	     bw.println("*Code Code Relations|Ui|Default Preferred Name|Relation Label|Additional Relation Label");
+	     //bw.newLine();
 	        if (myAtom.size() == 0){
 	        	
-	        	out.println("None");	
+	        	bw.println("None");	
+	        	//bw.newLine();
 	        } 
 	        
 	        else {
@@ -765,22 +907,26 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 		      String AtomClusterRela = myAtomDTO.getAdditionalRelationLabel();
 
 			      
-		     out.println(AtomClusterUi+"|"+AtomClusterName+"|"+AtomClusterRel+"|"+AtomClusterRela);
+		     bw.println(AtomClusterUi+"|"+AtomClusterName+"|"+AtomClusterRel+"|"+AtomClusterRela);
+		     //bw.newLine();
 		      }
 	        }
 	      
-	    out.println("!");
+	    bw.println("!");
+	    //bw.newLine();
 	    
 		    
 		    
-		    gov.nih.nlm.uts.webservice.content.Psf myPsf = new gov.nih.nlm.uts.webservice.content.Psf();
+		    gov.nih.nlm.uts.webservice.content.Psf myPsf1 = new gov.nih.nlm.uts.webservice.content.Psf();
 		     List<AttributeDTO> myAttributes = new ArrayList<AttributeDTO>();
-		     myAttributes = utsContentService.getAtomAttributes(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val4, myPsf);
-		     out.println("*Atom Attributes|Attribute Name|Attribute Value");
+		     myAttributes = utsContentService.getAtomAttributes(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val4, myPsf1);
+		     bw.println("*Atom Attributes|Attribute Name|Attribute Value");
+		     //bw.newLine();
 		     
 		     if (myAttributes.size() == 0){
 		        	
-		        	out.println("None");	
+		        	bw.println("None");	
+		        	//bw.newLine();
 		        } 
 		        
 		     else {
@@ -791,11 +937,13 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 		      String attributeName = myAttributeDTO.getName();
 		      String attributeValue = myAttributeDTO.getValue();
 
-		      out.println(attributeName+"|"+attributeValue);
+		      bw.println(attributeValue+"|"+attributeName);
+		      //bw.newLine();
 
 		      } 
 		     }
-			 out.println("!");
+			 bw.println("!");
+			 //bw.newLine();
    
 		    
 		    
@@ -811,11 +959,12 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 	      String ui = myAtmTreePosDTO.getUi();
 	      java.util.List<AtomTreePositionPathDTO> myarrAtomTreePosPathDTOClient = new ArrayList<AtomTreePositionPathDTO>();
 	      myarrAtomTreePosPathDTOClient = utsContentService.getAtomTreePositionPathsToRoot(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, ui, myTreePsf);
-	      //out.println("*Tree Position "+(i+1)+":");
+	      //bw.println("*Tree Position "+(i+1)+":");
 	      
 		     if (myarrAtomTreePosPathDTOClient.size() == 0){
 		        	
-		        	out.println("None");	
+		        	bw.println("None");	
+		        	//bw.newLine();
 		        } 
 		        
 		     else {
@@ -825,30 +974,35 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 		      AtomTreePositionPathDTO myAtmTrPosDTO = myarrAtomTreePosPathDTOClient.get(j);
 		
 		      List<AtomTreePositionDTO> treepos = myAtmTrPosDTO.getTreePositions();
-		      out.println("*Tree Position Paths To Root"+(j+1)+"|Default Preferred Name|Atom ID");
+		      bw.println("*Tree Position Paths To Root"+(j+1)+"|Atom ID|Default Preferred Name");
+		      //bw.newLine();
 		
 			     for (int k = 0; k < treepos.size(); k++) {
 			       AtomTreePositionDTO getj = treepos.get(k);
 			       String defPrefName = getj.getDefaultPreferredName();
 			       String atomUi = getj.getAtom().getUi();
 			        
-			       out.println(defPrefName+"|"+atomUi);
+			       bw.println(atomUi+"|"+defPrefName);
+			      // bw.newLine();
 			       }
 		     		}
 				
 		        }
-				 out.println("!");
+				 bw.println("!");
+				 //bw.newLine();
        
 		        
 		        
 				 
 		    List<AtomTreePositionDTO> myarrAtomTreePosChildrenDTOClient = new ArrayList<AtomTreePositionDTO>();
 		    myarrAtomTreePosChildrenDTOClient = utsContentService.getAtomTreePositionChildren(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, ui, myTreePsf);
-		    out.println("*Tree Position Children|Default Preferred Name|Atom ID");
+		    bw.println("*Tree Position Children|Atom ID|Default Preferred Name");
+		    //bw.newLine();
 		    
 		     if (myarrAtomTreePosChildrenDTOClient.size() == 0){
 		        	
-		        	out.println("None");	
+		        	bw.println("None");	
+		        	//bw.newLine();
 		        } 
 		        
 		     else {
@@ -860,21 +1014,24 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 			        String defaultPrefName = myAtmTrPosDTO.getDefaultPreferredName();
 			        String atomUi = myAtmTrPosDTO.getAtom().getUi();
 				        
-				    out.println(defaultPrefName+"|"+atomUi);
+				    bw.println(atomUi+"|"+defaultPrefName);
+				    //bw.newLine();
 				        }
 		     		}
-				 out.println("!");
-			     
+				 bw.println("!");
+				 //bw.newLine();
 				 
 			     
 			     
 			List<AtomTreePositionDTO> myarrAtomTreePosSiblingDTOClient = new ArrayList<AtomTreePositionDTO>();
 			myarrAtomTreePosSiblingDTOClient = utsContentService.getAtomTreePositionSiblings(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, ui, myTreePsf);
-			out.println("*Tree Position Sibling|Default Preferred Name|Atom ID");
+			bw.println("*Tree Position Sibling|Atom ID|Default Preferred Name");
+			//bw.newLine();
 
 		     if (myarrAtomTreePosSiblingDTOClient.size() == 0){
 		        	
-		        	out.println("None");	
+		        	bw.println("None");	
+		        	//bw.newLine();
 		        } 
 		        
 		     else {
@@ -885,15 +1042,17 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 					 String defaultPrefName = myAtmTrPosDTO.getDefaultPreferredName();
 					 String atomUi = myAtmTrPosDTO.getAtom().getUi();
 						        
-					 out.println(defaultPrefName+"|"+atomUi);
+					 bw.println(atomUi+"|"+defaultPrefName);
+					 //bw.newLine();
 					    }
 		     		}       
-				 out.println("!");
+				 bw.println("!");
+				 //bw.newLine();
 
 	        }
 	    
-		out.println("!");
-	      out.close();
+		bw.println("!");
+	    bw.close();
 		
 	}
 	
@@ -905,11 +1064,10 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 		// TODO Auto-generated method stub
 		try {
 
-			//Reading from a sample text file
-			//BufferedReader br = null;
-			//String sCurrentLine;
+			
+			UTS_Source_documentation srcDocClient = new UTS_Source_documentation(args[0],args[1],args[2]);
 			 
-			String dataFileName = "S:/SHARE/MMS/UMLS/UMLS_Source_Documentation_VM_Files/2013AA/source_samples.txt";
+			String dataFileName = "S:/SHARE/MMS/UMLS/UMLS_Source_Documentation_VM_Files/"+umlsRelease+"/source_samples.txt";
  
 			BufferedReader bReader = new BufferedReader(new FileReader(dataFileName));
 			
@@ -938,8 +1096,9 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 	            }
 
 	            	
-	            	String dir = "S:/SHARE/MMS/UMLS/UMLS_Source_Documentation_VM_Files/2013AA/"+value1;
+	            	String dir = "S:/SHARE/MMS/UMLS/UMLS_Source_Documentation_VM_Files/"+umlsRelease+"/"+value1;
 	            			File sourceDir = new File(dir);
+	            			
 	            			//Directory existence check
 	            			if(!sourceDir.exists())
 	            				sourceDir.mkdirs();
@@ -950,9 +1109,9 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 	            				sampleFile.createNewFile();
 	            				  }
 
-	            			String path = sourceDir+"/samples.txt";
+	            			path = sourceDir+"/samples.txt";
 	            			
-	            			findConcepts(value1, value2, path);
+	            			//findConcepts(value1, value2, value3, path);
 	            			
 	            			if (value3.equals("sourceConcept")){
 	            				findSrcConcepts(value1, value2, path);
@@ -968,9 +1127,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 	            			}
 	            			lineIndex++;
 	            			
-
 	            
-	           // System.out.println(value1+","+value2+","+value3);
 	        }
 	        bReader.close();
 			
