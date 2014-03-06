@@ -127,7 +127,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
         java.util.List<AtomDTO> myAtoms = new ArrayList<AtomDTO>();
         myAtoms = utsContentService.getSourceConceptAtoms(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1, myconPsf);
 
-        bw.println("*Source Concept Atoms|Atom ID|SUI|Term|Term Type|Source Atom ID|Source Concept|Source Descriptor");
+        bw.println("*Source Concept Atoms|Atom ID|SUI|Term|Term Type|Source Atom ID|Source Concept");
 	    //bw.newLine();
 
         
