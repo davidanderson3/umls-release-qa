@@ -34,10 +34,8 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
     
 	public static String ticketGrantingTicket() throws Exception{
 	
-    	//get the Proxy Grant Ticket - this is good for 8 hours and is needed to generate single use tickets.
         String ticketGrantingTicket = securityService.getProxyGrantTicket(username, password);
 
-        //use the Proxy Grant Ticket to get a Single Use Ticket
         return ticketGrantingTicket;
     	
     }

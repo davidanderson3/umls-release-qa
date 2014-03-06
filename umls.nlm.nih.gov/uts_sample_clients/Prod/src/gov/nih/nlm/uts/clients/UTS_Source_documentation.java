@@ -73,6 +73,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
         bw.println("Results for "+val2+":");
         gov.nih.nlm.uts.webservice.finder.Psf myPsf = new gov.nih.nlm.uts.webservice.finder.Psf();
         myPsf.getIncludedSources().add(val1);
+        myPsf.setPageLn(500);
 
         java.util.List<UiLabel> myFindConcepts = new ArrayList<UiLabel>();
 
@@ -121,6 +122,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
         gov.nih.nlm.uts.webservice.content.Psf myconPsf = new gov.nih.nlm.uts.webservice.content.Psf();
         myconPsf.setIncludeSuppressible(false);
 		myconPsf.getIncludedSources().add(val1);
+		myconPsf.setPageLn(500);
 		
         java.util.List<AtomDTO> myAtoms = new ArrayList<AtomDTO>();
         myAtoms = utsContentService.getSourceConceptAtoms(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1, myconPsf);
@@ -149,20 +151,15 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
         String TermType = myAtomDTO.getTermType();
         String sourceUi = myAtomDTO.getSourceUi();
         String srcConcept = null;
-        String srcDescriptor = null;
+
 
 		if (myAtomDTO.getSourceConcept() != (null) ){
 
 	     srcConcept = myAtomDTO.getSourceConcept().getUi();
 	     }
-	     
-	    
-	    if (myAtomDTO.getSourceDescriptor() != null){
 
-	     srcDescriptor = myAtomDTO.getSourceDescriptor().getUi();
-	    }
 	    
-	    bw.println(ui+"|"+sui+"|"+sourceUi+"|"+name+"|"+TermType+"|"+srcConcept+"|"+srcDescriptor);
+	    bw.println(ui+"|"+sui+"|"+name+"|"+TermType+"|"+sourceUi+"|"+srcConcept);
 	    //bw.newLine();
 
 
@@ -176,6 +173,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 		 
   
 			gov.nih.nlm.uts.webservice.content.Psf myAtomTreePsf = new gov.nih.nlm.uts.webservice.content.Psf();
+			myAtomTreePsf.setPageLn(500);
 
 		    List<AtomTreePositionDTO> myarrAtomTrPos = new ArrayList<AtomTreePositionDTO>();
 		    myarrAtomTrPos = utsContentService.getAtomTreePositions(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, defPrefUi, myAtomTreePsf);
@@ -289,6 +287,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
         mySrcConPsf.getIncludedRelationLabels().add("RB");
         mySrcConPsf.getIncludedRelationLabels().add("SY");
         mySrcConPsf.getIncludedSources().add(val1);
+        mySrcConPsf.setPageLn(500);
 
         List<AtomClusterRelationDTO> myAtomClusterRelations = new ArrayList<AtomClusterRelationDTO>();
 
@@ -323,8 +322,40 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 		 //bw.newLine();
         
         
+		 
+		 gov.nih.nlm.uts.webservice.content.Psf myPsf1 = new gov.nih.nlm.uts.webservice.content.Psf();
+		 myPsf1.setPageLn(500);
+	     List<AttributeDTO> myAttributes = new ArrayList<AttributeDTO>();
+	     myAttributes = utsContentService.getSourceConceptAttributes(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1,myPsf1);
+	     bw.println("*Source Concept Attributes|Attribute Value|Attribute Name");
+	     //bw.newLine();
+	     
+	     if (myAttributes.size() == 0){
+	        	
+	        	bw.println("None");	
+	        	//bw.newLine();
+	        } 
+	        
+	     else {
+	     
+	      for (int i = 0; i < myAttributes.size(); i++) {
+
+	      AttributeDTO myAttributeDTO = myAttributes.get(i);
+	      String attributeName = myAttributeDTO.getName();
+	      String attributeValue = myAttributeDTO.getValue();
+
+	      bw.println(attributeValue+"|"+attributeName);
+	     // bw.newLine();
+
+	      } 
+	     }
+		 bw.println("!");
+		 
+		 
         
 		gov.nih.nlm.uts.webservice.content.Psf myTreePsf = new gov.nih.nlm.uts.webservice.content.Psf();
+		myTreePsf.setPageLn(500);
+
 
         List<SourceAtomClusterTreePositionDTO> myarrAtomClustTrPosClient = new ArrayList<SourceAtomClusterTreePositionDTO>();
         myarrAtomClustTrPosClient = utsContentService.getSourceConceptTreePositions(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1, myTreePsf);
@@ -449,6 +480,8 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
         bw.println("Results for "+val2+":");
         gov.nih.nlm.uts.webservice.finder.Psf myPsf = new gov.nih.nlm.uts.webservice.finder.Psf();
         myPsf.getIncludedSources().add(val1);
+		myPsf.setPageLn(500);
+
 
         java.util.List<UiLabel> myFindConcepts = new ArrayList<UiLabel>();
 
@@ -492,6 +525,8 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 		 gov.nih.nlm.uts.webservice.content.Psf myconPsf = new gov.nih.nlm.uts.webservice.content.Psf();
 		 myconPsf.setIncludeSuppressible(false);
 		 myconPsf.getIncludedSources().add(val1);
+		 myconPsf.setPageLn(500);
+
 		 java.util.List<AtomDTO> myAtom = new ArrayList<AtomDTO>();
 		 myAtom = utsContentService.getSourceDescriptorAtoms(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1, myconPsf);
 	     bw.println("*Source Descriptor Atoms|Atom ID|Source Atom ID|Term|Term Type|Source Concept|Source Descriptor");
@@ -541,6 +576,8 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 
 	      
 		gov.nih.nlm.uts.webservice.content.Psf myAtomTreePsf = new gov.nih.nlm.uts.webservice.content.Psf();
+		myAtomTreePsf.setPageLn(500);
+
 
 	    List<AtomTreePositionDTO> myarrAtomTrPos = new ArrayList<AtomTreePositionDTO>();
 	    myarrAtomTrPos = utsContentService.getAtomTreePositions(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, defPrefUi, myAtomTreePsf);
@@ -648,11 +685,10 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 	    
 	    
 	     gov.nih.nlm.uts.webservice.content.Psf mySrcConPsf = new gov.nih.nlm.uts.webservice.content.Psf();
-
 	     mySrcConPsf.getIncludedRelationLabels().add("RB");
 	     mySrcConPsf.getIncludedRelationLabels().add("RO");
          mySrcConPsf.getIncludedSources().add(val1);
-	     mySrcConPsf.setPageLn(100);
+	     mySrcConPsf.setPageLn(500);
 
 
 	     List<AtomClusterRelationDTO> myAtomClusterRelations = new ArrayList<AtomClusterRelationDTO>();
@@ -692,6 +728,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 	        
 	        
 		 gov.nih.nlm.uts.webservice.content.Psf myPsf1 = new gov.nih.nlm.uts.webservice.content.Psf();
+		 myPsf1.setPageLn(500);
 	     List<AttributeDTO> myAttributes = new ArrayList<AttributeDTO>();
 	     myAttributes = utsContentService.getSourceDescriptorAttributes(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1,myPsf1);
 	     bw.println("*Source Descriptor Attributes|Attribute Value|Attribute Name");
@@ -722,6 +759,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 	      
 	      
 		gov.nih.nlm.uts.webservice.content.Psf myTreePsf = new gov.nih.nlm.uts.webservice.content.Psf();
+		myTreePsf.setPageLn(500);
 
 	    List<SourceAtomClusterTreePositionDTO> myarrAtomClustTrPosClient = new ArrayList<SourceAtomClusterTreePositionDTO>();
 	    myarrAtomClustTrPosClient = utsContentService.getSourceDescriptorTreePositions(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1, myTreePsf);
@@ -840,6 +878,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
         bw.println("Results for "+val2+":");
         gov.nih.nlm.uts.webservice.finder.Psf myPsf = new gov.nih.nlm.uts.webservice.finder.Psf();
         myPsf.getIncludedSources().add(val1);
+        myPsf.setPageLn(500);
 
         java.util.List<UiLabel> myFindConcepts = new ArrayList<UiLabel>();
 
@@ -884,6 +923,8 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 		 gov.nih.nlm.uts.webservice.content.Psf myconPsf = new gov.nih.nlm.uts.webservice.content.Psf();
 		 myconPsf.setIncludeSuppressible(false);
 		 myconPsf.getIncludedSources().add(val1);
+		 myconPsf.setPageLn(500);
+		 
 		 java.util.List<AtomClusterRelationDTO> myAtom = new ArrayList<AtomClusterRelationDTO>();
 		 myAtom = utsContentService.getCodeCodeRelations(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1, myconPsf);
 	     bw.println("*Code Code Relations|Ui|Default Preferred Name|Relation Label|Additional Relation Label");
@@ -918,6 +959,8 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 		    
 		    
 		    gov.nih.nlm.uts.webservice.content.Psf myPsf1 = new gov.nih.nlm.uts.webservice.content.Psf();
+		    myPsf1.setPageLn(500);
+		    
 		     List<AttributeDTO> myAttributes = new ArrayList<AttributeDTO>();
 		     myAttributes = utsContentService.getAtomAttributes(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val4, myPsf1);
 		     bw.println("*Atom Attributes|Attribute Name|Attribute Value");
@@ -949,6 +992,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 		    
 	      
 		gov.nih.nlm.uts.webservice.content.Psf myTreePsf = new gov.nih.nlm.uts.webservice.content.Psf();
+		myTreePsf.setPageLn(500);
 
 	    List<AtomTreePositionDTO> myAtomTrPosClient = new ArrayList<AtomTreePositionDTO>();
 	    myAtomTrPosClient = utsContentService.getAtomTreePositions(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val4, myTreePsf);
