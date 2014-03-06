@@ -327,7 +327,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 		 myPsf1.setPageLn(500);
 	     List<AttributeDTO> myAttributes = new ArrayList<AttributeDTO>();
 	     myAttributes = utsContentService.getSourceConceptAttributes(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1,myPsf1);
-	     bw.println("*Source Concept Attributes|Attribute Value|Attribute Name");
+	     bw.println("*Source Concept Attributes|Attribute Name|Attribute Value");
 	     //bw.newLine();
 	     
 	     if (myAttributes.size() == 0){
@@ -344,7 +344,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 	      String attributeName = myAttributeDTO.getName();
 	      String attributeValue = myAttributeDTO.getValue();
 
-	      bw.println(attributeValue+"|"+attributeName);
+	      bw.println(attributeName+"|"+attributeValue);
 	     // bw.newLine();
 
 	      } 
@@ -697,7 +697,6 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 	     bw.println("*Source Descriptor Source Descriptor Relations|Relation Label|Additional Relation Label|Related Atom Cluster ID|Related Atom Cluster Default Preferred Name|Suppressibility");
 	     //bw.newLine();
 
-	     
 	     if (myAtomClusterRelations.size() == 0){
 	        	
 	        	bw.println("None");	
@@ -731,7 +730,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 		 myPsf1.setPageLn(500);
 	     List<AttributeDTO> myAttributes = new ArrayList<AttributeDTO>();
 	     myAttributes = utsContentService.getSourceDescriptorAttributes(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1,myPsf1);
-	     bw.println("*Source Descriptor Attributes|Attribute Value|Attribute Name");
+	     bw.println("*Source Descriptor Attributes|Attribute Name|Attribute Value");
 	     //bw.newLine();
 	     
 	     if (myAttributes.size() == 0){
@@ -748,7 +747,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 	      String attributeName = myAttributeDTO.getName();
 	      String attributeValue = myAttributeDTO.getValue();
 
-	      bw.println(attributeValue+"|"+attributeName);
+	      bw.println(attributeName+"|"+attributeValue);
 	     // bw.newLine();
 
 	      } 
@@ -980,7 +979,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 		      String attributeName = myAttributeDTO.getName();
 		      String attributeValue = myAttributeDTO.getValue();
 
-		      bw.println(attributeValue+"|"+attributeName);
+		      bw.println(attributeName+"|"+attributeValue);
 		      //bw.newLine();
 
 		      } 
