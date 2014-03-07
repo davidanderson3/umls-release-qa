@@ -120,14 +120,13 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
         
 		    
         gov.nih.nlm.uts.webservice.content.Psf myconPsf = new gov.nih.nlm.uts.webservice.content.Psf();
-        myconPsf.setIncludeSuppressible(false);
 		myconPsf.getIncludedSources().add(val1);
 		myconPsf.setPageLn(500);
 		
         java.util.List<AtomDTO> myAtoms = new ArrayList<AtomDTO>();
         myAtoms = utsContentService.getSourceConceptAtoms(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1, myconPsf);
 
-        bw.println("*Source Concept Atoms|Atom ID|SUI|Term|Term Type|Source Atom ID|Source Concept");
+        bw.println("*Source Concept Atoms|Atom ID|SUI|Term|Term Type|Source Atom ID|Source Concept|Obsolescence|Suppressibility");
 	    //bw.newLine();
 
         
@@ -157,9 +156,13 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 
 	     srcConcept = myAtomDTO.getSourceConcept().getUi();
 	     }
+		
+		boolean obsolete = myAtomDTO.isObsolete();
+		boolean suppressible = myAtomDTO.isSuppressible();
+
 
 	    
-	    bw.println(ui+"|"+sui+"|"+name+"|"+TermType+"|"+sourceUi+"|"+srcConcept);
+	    bw.println(ui+"|"+sui+"|"+name+"|"+TermType+"|"+sourceUi+"|"+srcConcept+"|"+obsolete+"|"+suppressible);
 	    //bw.newLine();
 
 
@@ -523,13 +526,12 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 		    
 		    
 		 gov.nih.nlm.uts.webservice.content.Psf myconPsf = new gov.nih.nlm.uts.webservice.content.Psf();
-		 myconPsf.setIncludeSuppressible(false);
 		 myconPsf.getIncludedSources().add(val1);
 		 myconPsf.setPageLn(500);
 
 		 java.util.List<AtomDTO> myAtom = new ArrayList<AtomDTO>();
 		 myAtom = utsContentService.getSourceDescriptorAtoms(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1, myconPsf);
-	     bw.println("*Source Descriptor Atoms|Atom ID|Source Atom ID|Term|Term Type|Source Concept|Source Descriptor");
+	     bw.println("*Source Descriptor Atoms|Atom ID|Source Atom ID|Term|Term Type|Source Concept|Source Descriptor|Obsolescence|Suppressibility");
 	     //bw.newLine();
 	        if (myAtom.size() == 0){
 	        	
@@ -563,8 +565,11 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 
 			     srcDescriptor = myAtomDTO.getSourceDescriptor().getUi();
 			     }
+			     
+			   boolean obsolete = myAtomDTO.isObsolete();
+			   boolean suppressible = myAtomDTO.isSuppressible();
 			      
-		     bw.println(ui+"|"+sui+"|"+name+"|"+TermType+"|"+srcConcept+"|"+srcDescriptor);
+		     bw.println(ui+"|"+sui+"|"+name+"|"+TermType+"|"+srcConcept+"|"+srcDescriptor+"|"+obsolete+"|"+suppressible);
 		     //bw.newLine();
 		      }
 	        }
