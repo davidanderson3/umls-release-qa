@@ -60,7 +60,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 //			
 //			for(i=0; i < myarrStringMetadata.length; i++){
 
-	            	String dir = "S:/SHARE/MMS/UMLS/UMLS_Source_Documentation_VM_Files/"+umlsRelease;
+	            	String dir = umlsRelease;
 	            			File verDir = new File(dir);
 	            			
 	            			//Directory existence check
@@ -74,7 +74,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 	            		            SourceDTO myArrSrcDTO = mySrcVersion.get(j);
 	            		            String rtSrcAbbr = myArrSrcDTO.getRootSource().getAbbreviation();
 	            		            
-	            		            String verSrcDir = "S:/SHARE/MMS/UMLS/UMLS_Source_Documentation_VM_Files/"+umlsRelease+"/"+rtSrcAbbr;
+	            		            String verSrcDir = umlsRelease+"/"+rtSrcAbbr;
 	            		            File sourceVerDir = new File(verSrcDir);
 	    	            			
 	    	            			//Directory existence check
