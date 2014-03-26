@@ -2,6 +2,7 @@ package gov.nih.nlm.uts.clients;
 
 import gov.nih.nlm.uts.webservice.content.AtomClusterRelationDTO;
 import gov.nih.nlm.uts.webservice.content.AtomDTO;
+import gov.nih.nlm.uts.webservice.content.AtomRelationDTO;
 import gov.nih.nlm.uts.webservice.content.AtomTreePositionDTO;
 import gov.nih.nlm.uts.webservice.content.AtomTreePositionPathDTO;
 import gov.nih.nlm.uts.webservice.content.AttributeDTO;
@@ -866,6 +867,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 	
 	
 	
+	
 	public static void findCodes(String val1, String val2, String val4, String path) throws Exception{
 		
 
@@ -913,6 +915,42 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 		    //bw.newLine();
 		    bw.println("!");
 		    //bw.newLine();
+		    
+		    
+		    
+			 gov.nih.nlm.uts.webservice.content.Psf myatomPsf = new gov.nih.nlm.uts.webservice.content.Psf();
+			 
+			 List<AtomRelationDTO> myAtomAtom = new ArrayList<AtomRelationDTO>();
+			 myAtomAtom = utsContentService.getAtomAtomRelations(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val4, myatomPsf);
+		     bw.println("*Atom Atom Relations|Ui|Name|Relation Label|Additional Relation Label");
+		     //bw.newLine();
+		        if (myAtomAtom.size() == 0){
+		        	
+		        	bw.println("None");	
+		        	//bw.newLine();
+		        } 
+		        
+		        else {
+		        	
+		
+			      for (int i = 0; i < myAtomAtom.size(); i++) {
+			
+			      AtomRelationDTO myAtomDTO = myAtomAtom.get(i);
+			
+			      String AtomClusterUi = myAtomDTO.getUi();
+			      String AtomClusterName = myAtomDTO.getRelatedAtom().getTermString().getName();
+			      String AtomClusterRel = myAtomDTO.getRelationLabel();
+			      String AtomClusterRela = myAtomDTO.getAdditionalRelationLabel();
+
+				      
+			     bw.println(AtomClusterUi+"|"+AtomClusterName+"|"+AtomClusterRel+"|"+AtomClusterRela);
+			     //bw.newLine();
+			      }
+		        }
+		      
+		    bw.println("!");
+		    //bw.newLine();
+		    
 		    
 		 
 		 gov.nih.nlm.uts.webservice.content.Psf myconPsf = new gov.nih.nlm.uts.webservice.content.Psf();
