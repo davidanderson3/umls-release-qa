@@ -953,6 +953,42 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 		    
 		    
 		 
+	    
+		    
+		    gov.nih.nlm.uts.webservice.content.Psf myPsf1 = new gov.nih.nlm.uts.webservice.content.Psf();
+		    myPsf1.setPageLn(500);
+		    
+		     List<AttributeDTO> myAttributes = new ArrayList<AttributeDTO>();
+		     myAttributes = utsContentService.getAtomAttributes(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val4, myPsf1);
+		     bw.println("*Atom Attributes|Attribute Name|Attribute Value");
+		     //bw.newLine();
+		     
+		     if (myAttributes.size() == 0){
+		        	
+		        	bw.println("None");	
+		        	//bw.newLine();
+		        } 
+		        
+		     else {
+		     
+		      for (int i = 0; i < myAttributes.size(); i++) {
+
+		      AttributeDTO myAttributeDTO = myAttributes.get(i);
+		      String attributeName = myAttributeDTO.getName();
+		      String attributeValue = myAttributeDTO.getValue();
+
+		      bw.println(attributeName+"|"+attributeValue);
+		      //bw.newLine();
+
+		      } 
+		     }
+			 bw.println("!");
+			 //bw.newLine();
+   
+			 
+
+		    
+		 
 		 gov.nih.nlm.uts.webservice.content.Psf myconPsf = new gov.nih.nlm.uts.webservice.content.Psf();
 		 myconPsf.setIncludeSuppressible(false);
 		 myconPsf.getIncludedSources().add(val1);
@@ -990,39 +1026,43 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 	    //bw.newLine();
 	    
 		    
-		    
-		    gov.nih.nlm.uts.webservice.content.Psf myPsf1 = new gov.nih.nlm.uts.webservice.content.Psf();
-		    myPsf1.setPageLn(500);
-		    
-		     List<AttributeDTO> myAttributes = new ArrayList<AttributeDTO>();
-		     myAttributes = utsContentService.getAtomAttributes(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val4, myPsf1);
-		     bw.println("*Atom Attributes|Attribute Name|Attribute Value");
-		     //bw.newLine();
-		     
-		     if (myAttributes.size() == 0){
-		        	
-		        	bw.println("None");	
-		        	//bw.newLine();
-		        } 
-		        
-		     else {
-		     
-		      for (int i = 0; i < myAttributes.size(); i++) {
+	    
+		 
+		 
+	    gov.nih.nlm.uts.webservice.content.Psf myPsf2 = new gov.nih.nlm.uts.webservice.content.Psf();
+	    myPsf2.setPageLn(500);
+	    
+	     List<AttributeDTO> myCodeAttributes = new ArrayList<AttributeDTO>();
+	     myCodeAttributes = utsContentService.getCodeAttributes(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1, myPsf2);
+	     bw.println("*Code Attributes|Attribute Name|Attribute Value");
+	     //bw.newLine();
+	     
+	     if (myCodeAttributes.size() == 0){
+	        	
+	        	bw.println("None");	
+	        	//bw.newLine();
+	        } 
+	        
+	     else {
+	     
+	      for (int i = 0; i < myCodeAttributes.size(); i++) {
 
-		      AttributeDTO myAttributeDTO = myAttributes.get(i);
-		      String attributeName = myAttributeDTO.getName();
-		      String attributeValue = myAttributeDTO.getValue();
+	      AttributeDTO myAttributeDTO = myCodeAttributes.get(i);
+	      String attributeName = myAttributeDTO.getName();
+	      String attributeValue = myAttributeDTO.getValue();
 
-		      bw.println(attributeName+"|"+attributeValue);
-		      //bw.newLine();
+	      bw.println(attributeName+"|"+attributeValue);
+	      //bw.newLine();
 
-		      } 
-		     }
-			 bw.println("!");
-			 //bw.newLine();
-   
-		    
-		    
+	      } 
+	     }
+		 bw.println("!");
+		 //bw.newLine();
+    
+		 
+    
+
+			 
 	      
 		gov.nih.nlm.uts.webservice.content.Psf myTreePsf = new gov.nih.nlm.uts.webservice.content.Psf();
 		myTreePsf.setPageLn(500);
