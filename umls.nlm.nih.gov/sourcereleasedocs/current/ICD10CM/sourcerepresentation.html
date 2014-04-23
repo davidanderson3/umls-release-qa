@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html;
-      charset=ISO-8859-1">
+      charset=windows-1252">
     <title></title>
   </head>
   <body>
@@ -23,6 +23,7 @@
         <li id="nav-4"> <a href="representation.html">Representation</a>
           <ul id="subnav-4">
             <li> <a href="sourcerepresentation.html" id="sourcerep">Source
+
 
 
 
@@ -55,7 +56,7 @@
           produced by the National Center for Health Statistics (NCHS)
           for Metathesaurus processing, and are not currently available
           publically.&nbsp; TREF was developed by the NLM and is a
-          subset of the Rich Release Format (RRF) &#8211; the format in which
+          subset of the Rich Release Format (RRF) – the format in which
           the UMLS Metathesaurus is released.&nbsp; There is now an xml
           file available for ICD-10-PCS, which was processed and
           compared to the TREF data.&nbsp; Discrepancies in the data
@@ -72,12 +73,16 @@
         name="change_summary"></a>
       <h3>Summary of Changes:</h3>
       &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+      Plain text forms of UTF-8 strings are no longer created.&nbsp; <br/>
       <br/>
-      New TTY:&nbsp;&nbsp; <br/>
-      <ul>
-        <li>MTH_AB (plain text version of short description) </li>
-      </ul>
-    </div>
+      Deprecated TTYs:<br/>
+      &nbsp;&nbsp;&nbsp; MTH_AB<br/>
+      &nbsp;&nbsp;&nbsp; MTH_ET<br/>
+      &nbsp;&nbsp;&nbsp; MTH_HT<br/>
+      &nbsp;&nbsp;&nbsp; MTH_PT<br/>
+      <br/>
+      Deprecated REL/RELA<br/>
+      &nbsp;&nbsp;&nbsp; SY|has_plain_text_form/plain_text_form_of</div>
     <div id="rep_file_summary" class="rep_block_level_one"> <a
         name="file_summary"></a>
       <h3>Source-Provided Files: Summary</h3>
@@ -101,20 +106,20 @@
               </td>
             </tr>
             <tr>
-              <td class="file_field_name">Dxgem_guide_2013.pdf</td>
+              <td class="file_field_name">Dxgem_guide_2014.pdf</td>
               <td>Diagnosis Code Set General Equivalence Mappings
                 Documentation and User's Guide<br/>
               </td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">Gems2013UpdateSummary.pdf
+              <td style="vertical-align: top;">Gems2014UpdateSummary.pdf
                 <br/>
               </td>
               <td style="vertical-align: top;">GEMs update summary<br/>
               </td>
             </tr>
             <tr>
-              <td class="file_field_name">reimb_map_guide_2013.pdf</td>
+              <td class="file_field_name">reimb_map_guide_2014.pdf</td>
               <td>ICD-10-CM/PCS to ICD-9-CM Reimbursement Mappings
                 Documentation and User's Guide<br/>
               </td>
@@ -162,24 +167,24 @@
               </td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file6">icd10cm_order_2013.txt</a></td>
+              <td class="file_field_name"><a href="#file6">icd10cm_order_2014.txt</a></td>
               <td>Code descriptions in Tabular Order<br/>
               </td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file7">2013_I10gem.txt</a></td>
+              <td class="file_field_name"><a href="#file7">2014_I10gem.txt</a></td>
               <td>ICD-10-CM to ICD-9-CM General Equivalence Mappings
                 (GEMs)<br/>
               </td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file8">2013_I9gem.txt</a></td>
+              <td class="file_field_name"><a href="#file8">2014_I9gem.txt</a></td>
               <td>ICD-9-CM to ICD-10-CM General Equivalence Mappings
                 (GEMs)<br/>
               </td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file9">reimb_map_dx_2013.txt</a></td>
+              <td class="file_field_name"><a href="#file9">reimb_map_dx_2014.txt</a></td>
               <td>ICD-10-CM to ICD-9-CM reimbursement mappings<br/>
               </td>
             </tr>
@@ -204,6 +209,7 @@
       <div class="rep_block_level_two"> <a name="file1"></a>
         <h4 class="file_field_name">file:MRCONSO.TREF</h4>
         &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
+
 
 
 
@@ -292,12 +298,14 @@
 
 
 
+
             Files</a></span><br/>
         <br/>
         File not directly used<br/>
         <a name="file3"></a>
         <h4 class="file_field_name">file:MRREL.TREF</h4>
         &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
+
 
 
 
@@ -409,12 +417,14 @@
 
 
 
+
             Files</a></span><br/>
         <br/>
         Not directly used<br/>
         <a name="file5"></a><br/>
         <h4 class="file_field_name">file:MRSAT.TREF</h4>
         &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
+
 
 
 
@@ -501,6 +511,7 @@
 
 
 
+
             Files</a></span><br/>
         <br/>
         <table class="elements" border="0" cellspacing="0">
@@ -561,7 +572,7 @@
               <td style="vertical-align: top;">1<br/>
               </td>
               <td style="vertical-align: top;">0 if the code is a
-                &#8220;header&#8221; &#8211; not valid for submission on a UB04.<br/>
+                “header” – not valid for submission on a UB04.<br/>
                 1 if the code is valid for submission on a UB04.<br/>
               </td>
               <td style="vertical-align: top;">Not directly processed
@@ -619,6 +630,7 @@
         <h4 class="file_field_name">file: 2013_I10gem.txt<br/>
         </h4>
         &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
+
 
 
 
@@ -744,10 +756,14 @@
               </td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">Scenario<br/></td>
-              <td style="vertical-align: top;">1<br/></td>
-              <td style="vertical-align: top;">18<br/></td>
-              <td style="vertical-align: top;">18<br/></td>
+              <td style="vertical-align: top;">Scenario<br/>
+              </td>
+              <td style="vertical-align: top;">1<br/>
+              </td>
+              <td style="vertical-align: top;">18<br/>
+              </td>
+              <td style="vertical-align: top;">18<br/>
+              </td>
               <td style="vertical-align: top;">MRMAP.RRF.MAPSUBSETID
                 (first subfield, before the ":")<br/>
                 Anything with the same FROMEXPR and MAPSUBSETID values
@@ -776,6 +792,7 @@
         <h4 class="file_field_name">file: 2013_I9gem.txt<br/>
         </h4>
         &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
+
 
 
 
@@ -928,6 +945,7 @@
         <br/>
         <h4 class="file_field_name">file: reimb_map_dx_2013.txt</h4>
         &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
+
 
 
 

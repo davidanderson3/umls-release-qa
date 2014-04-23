@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html;
-      charset=ISO-8859-1">
-  <title></title>
+      charset=windows-1252">
+    <title></title>
   </head>
   <body>
     <div class="section-4">
@@ -29,6 +29,7 @@
 
 
 
+
                 Representation</a> </li>
           </ul>
         </li>
@@ -41,14 +42,20 @@
       <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
       <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
     <div id="general" class="rep_block_level_one">
-      <p><b>VSAB:</b> ICD10CM_2013</p>
+      <p><b>VSAB:</b> ICD10CM_2014</p>
       <div id="rep_change_summary" class="rep_block_level_one">
         <h3>Summary of Change</h3>
+        Plain text forms of UTF-8 strings are no longer created.&nbsp; <br/>
         <br/>
-        New TTYs:&nbsp;&nbsp; <br/>
-        <ul>
-          <li>MTH_AB (plain text version of short description) </li>
-        </ul>
+        Deprecated TTYs:<br/>
+        &nbsp;&nbsp;&nbsp; MTH_AB<br/>
+        &nbsp;&nbsp;&nbsp; MTH_ET<br/>
+        &nbsp;&nbsp;&nbsp; MTH_HT<br/>
+        &nbsp;&nbsp;&nbsp; MTH_PT<br/>
+        <br/>
+        Deprecated REL/RELA<br/>
+        &nbsp;&nbsp;&nbsp; SY|has_plain_text_form/plain_text_form_of<br/>
+        <br/>
         <h3>Source Provided Files:</h3>
         <br/>
         The Metathesaurus uses files submitted in TREF (Terminology
@@ -56,7 +63,7 @@
         produced by the National Center for Health Statistics (NCHS) for
         Metathesaurus processing, and are not currently available
         publicly.&nbsp; TREF was developed by the NLM and is a subset of
-        the Rich Release Format (RRF) &#8211; the format in which the UMLS
+        the Rich Release Format (RRF) – the format in which the UMLS
         Metathesaurus is released.&nbsp; The following files are
         submitted for ICD10CM:<br/>
         &nbsp;&nbsp;&nbsp; <br/>
@@ -74,10 +81,10 @@
             href="http://www.cms.gov/ICD10/11b1_2011_ICD10CM_and_GEMs.asp#TopOfPage">http://www.cms.gov/Medicare/Coding/ICD10/2013-ICD-10-CM-and-GEMs.html</a>:<br/>
         </p>
         <div style="text-align: left; margin-left: 40px;">
-          icd10cm_order_2013.txt<br/>
-          2013_I10gem.txt<br/>
-          2013_I9gem.txt<br/>
-          reimb_map_dx_2013.txt</div>
+          icd10cm_order_2014.txt<br/>
+          2014_I10gem.txt<br/>
+          2014_I9gem.txt<br/>
+          reimb_map_dx_2014.txt</div>
         <p> <br/>
         </p>
       </div>
@@ -133,14 +140,6 @@
                 </td>
               </tr>
               <tr>
-                <td style="vertical-align: top;">MTH_ET<br/>
-                </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
-              </tr>
-              <tr>
                 <td>HT<br/>
                 </td>
                 <td style="vertical-align: top;">Hierarchical Term<br/>
@@ -160,14 +159,6 @@
                 </td>
               </tr>
               <tr>
-                <td style="vertical-align: top;">MTH_HT<br/>
-                </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
-              </tr>
-              <tr>
                 <td>PT<br/>
                 </td>
                 <td style="vertical-align: top;">Preferred Term<br/>
@@ -181,14 +172,6 @@
                   valid for submission on a UB04;&nbsp; the long
                   description begins at character 78 and continues for
                   up to 300 characters.<br/>
-                </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: top;">MTH_PT<br/>
-                </td>
-                <td style="vertical-align: top;"><br/>
-                </td>
-                <td style="vertical-align: top;"><br/>
                 </td>
               </tr>
               <tr>
@@ -636,16 +619,6 @@
                   (TTY = "AB") to their preferred form (TTY = PT")<br/>
                 </td>
               </tr>
-              <tr>
-                <td style="vertical-align: top;">SY<br/>
-                </td>
-                <td style="vertical-align: top;">mth_plain_text_form_of<br/>
-                  mth_has_plain_text_form<br/>
-                </td>
-                <td style="vertical-align: top;">Connect Metathesaurus
-                  plain text forms to non-ASCII versions.<br/>
-                </td>
-              </tr>
             </tbody>
           </table>
         </div>
@@ -681,9 +654,8 @@
                 <td style="vertical-align: top;">Compound value of
                   "Scenario:Choice"<br/>
                   Note: Anything with the same FROMEXPR and MAPSUBSETID
-                  values should be "OR'd" together.
-                    style="font-size: 22pt; font-family: Calibri; color:
-                    black;"></td>
+                  values should be "OR'd" together. style="font-size:
+                  22pt; font-family: Calibri; color: black;"&gt;</td>
                 <td style="vertical-align: top;">Not populated<br/>
                 </td>
               </tr>
