@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html;
-      charset=ISO-8859-1">
+      charset=windows-1252">
     <title></title>
   </head>
   <body>
@@ -11,8 +11,7 @@
         <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
         <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
         <li id="nav-3"> <a href="sourcemetastats.html">Statistics and
-            sample
-            data</a>
+            sample data</a>
           <ul id="subnav-3">
             <li> <a href="termtypes.html">Terms and term types</a> </li>
             <li> <a href="attributes.html">Attributes</a> </li>
@@ -26,6 +25,7 @@
             <li> <a href="sourcerepresentation.html">Source
                 Representation</a> </li>
             <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
+
                 Representation</a> </li>
           </ul>
         </li>
@@ -34,11 +34,11 @@
     <br/>
     <br/>
     <br/>
-    <a name="top"></a>
-    <span class="nav">Skip to:</span><a href="#termtypes">Atoms</a>, <a
-      href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
-    <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a>
-    <p><b>VSAB</b>:UMD2013</p>
+    <a name="top"></a> <span class="nav">Skip to:</span><a
+      href="#termtypes">Atoms</a>, <a href="#attributes">Attributes</a>,
+    <a href="#definitions">Definitions</a>, <a href="#relationships">Relationships</a>,
+    <a href="#mappings">Mappings</a>
+    <p><b>VSAB</b>:UMD2014</p>
     <div id="general" class="rep_block_level_one">
       <div class="rep_block_level_one">
         <h3>Summary of Changes:</h3>
@@ -49,37 +49,26 @@
       <div class="rep_block_level_one">
         <h3>Source Provided Files:</h3>
         <p>The UMLS uses an xml version of UMDNS which is created with
-          the TDE
-          tool from Apelon, Inc. The file used for 2013AA is
-          "NLM_20121130_v4.xml" (the defined view). (<a
+          the TDE tool from Apelon, Inc. The file used for 2014AA is
+          "NLM_20130903_v3.xml" (the defined view). (<a
             href="http://apelon.com/dtd/tde/ontylog.dtd">http://apelon.com/dtd/tde/ontylog.dtd</a>)</p>
       </div>
       <div class="rep_block_level_one">
         <h3>Identifiers:</h3>
-        <p>UMDNS includes both &#8220;concepts,&#8221; i.e. collections of
-          synonymous
-          atoms, and &#8220;descriptors,&#8221; i.e. collections of concepts that
-          are
-          considered to be closely related (but not necessarily
-          synonymous).
-          Therefore, atoms with TTY = "SY" are assigned the same
-          Source-asserted
-          Concept Identifer (SCUI), and Source-asserted Descriptor
-          Identifier
-          (SDUI) as their PT.
+        <p>UMDNS includes both “concepts,” i.e. collections of
+          synonymous atoms, and “descriptors,” i.e. collections of
+          concepts that are considered to be closely related (but not
+          necessarily synonymous). Therefore, atoms with TTY = "SY" are
+          assigned the same Source-asserted Concept Identifer (SCUI),
+          and Source-asserted Descriptor Identifier (SDUI) as their PT.
           However, atoms with TTY = "ET" are considered to be in a
-          different
-          concept
-          from their "PT" (different SCUI) but members of the same
-          descriptor
-          (same
-          SDUI). Identifiers are assigned as follows:
-        </p>
+          different concept from their "PT" (different SCUI) but members
+          of the same descriptor (same SDUI). Identifiers are assigned
+          as follows: </p>
         <ul>
           <li>CODE: <br/>
             For termtypes "PT", "ET", "RT", "HT": populated by the
-            "CODE_IN_SOURCE"
-            property.<br/>
+            "CODE_IN_SOURCE" property.<br/>
             For termtype "SY": populated by the "CODE_IN_SOURCE" value
             of the "PT" </li>
           <li>SAUI: <br/>
@@ -90,8 +79,7 @@
             For termtypes "PT", "SY", "ET": CODE of "PT"<br/>
             For termtype "HT": CODE of "HT"<br/>
             For termtype "RT": CODE of "RT" (An "RT" may have multiple
-            "PT"s, so we
-            can't use code of "PT") </li>
+            "PT"s, so we can't use code of "PT") </li>
         </ul>
         <br/>
         <a name="termtypes"></a>
@@ -112,9 +100,8 @@
                   SDUI = value of &lt;CODE_IN_SOURCE&gt; property<br/>
                   <br/>
                   Termtypes are assigned based on the value of the
-                  "DEVICE_TYPE"
-                  property. "PT"s are created where the "DEVICE_TYPE" is
-                  one of:<br/>
+                  "DEVICE_TYPE" property. "PT"s are created where the
+                  "DEVICE_TYPE" is one of:<br/>
                   <ul>
                     <li>CATEGORY EXPANDED BELOW entry with SEE ALSO
                       references</li>
@@ -133,9 +120,8 @@
                   SDUI = value of &lt;CODE_IN_SOURCE&gt; property<br/>
                   <br/>
                   Termtypes are assigned based on the value of the
-                  "DEVICE_TYPE"
-                  property. "HT"s are created where the "DEVICE_TYPE"
-                  is:
+                  "DEVICE_TYPE" property. "HT"s are created where the
+                  "DEVICE_TYPE" is:
                   <ul>
                     <li>Hierarchical Term</li>
                   </ul>
@@ -149,9 +135,8 @@
                   SDUI = value of &lt;CODE_IN_SOURCE&gt; property<br/>
                   <br/>
                   Termtypes are assigned based on the value of the
-                  "DEVICE_TYPE"
-                  property. "RT"s are created where the "DEVICE_TYPE"
-                  is:
+                  "DEVICE_TYPE" property. "RT"s are created where the
+                  "DEVICE_TYPE" is:
                   <ul>
                     <li>Device is a USE MORE SPECIFIC TERM entry.</li>
                   </ul>
@@ -160,8 +145,7 @@
               <tr>
                 <td valign="top">SY</td>
                 <td>CODE = value of &lt;CODE_IN_SOURCE&gt; property of
-                  associated
-                  "PT"<br/>
+                  associated "PT"<br/>
                   STR = value of the "SYNONYM" property<br/>
                   SCUI = value of &lt;CODE_IN_SOURCE&gt; property of
                   associated "PT"<br/>
@@ -179,8 +163,8 @@
                   associated "PT"<br/>
                   <br/>
                   Termtypes are assigned based on the value of the
-                  "DEVICE_TYPE"
-                  property. ETs are created where the "DEVICE_TYPE" is:
+                  "DEVICE_TYPE" property. ETs are created where the
+                  "DEVICE_TYPE" is:
                   <ul>
                     <li>Device is a SEE reference.</li>
                   </ul>
@@ -215,22 +199,17 @@
                     <li>NIR entry</li>
                   </ul>
                   Note: In the original data, some synonyms have a
-                  qualifier
-                  of "Synonym_Device_Type," and some are assigned a
-                  blank or incorrect
-                  DEVICE_TYPE.<br/>
+                  qualifier of "Synonym_Device_Type," and some are
+                  assigned a blank or incorrect DEVICE_TYPE.<br/>
                   For consistency, in the Metathesaurus, all SY atoms
-                  are defaulted to
-                  "Device is a SEE reference."
-                  DEVTYPE is attached to AUI for SY atoms; for all other
-                  atoms, it is
-                  attached to CODE. </td>
+                  are defaulted to "Device is a SEE reference." DEVTYPE
+                  is attached to AUI for SY atoms; for all other atoms,
+                  it is attached to CODE. </td>
               </tr>
               <tr>
                 <td valign="top">SYCODE</td>
                 <td>The value of the "Synonym_Code" qualifier, if
-                  present.
-                  Attached to AUI. </td>
+                  present. Attached to AUI. </td>
               </tr>
             </tbody>
           </table>
@@ -247,10 +226,9 @@
               </tr>
               <tr>
                 <td valign="top">The value of the "DEFINITION "
-                  property, where
-                  value of the "Definition _Status" qualifier =
-                  "Releasable." Definitions
-                  with other qualifier values are excluded.</td>
+                  property, where value of the "Definition _Status"
+                  qualifier = "Releasable." Definitions with other
+                  qualifier values are excluded.</td>
               </tr>
             </tbody>
           </table>
@@ -273,8 +251,8 @@
                   SIB</td>
                 <td>isa/inverse_isa</td>
                 <td>Hierarchy extracted from
-                  "&lt;definingConcept&gt;&lt;concept&gt;"
-                  values in original xml data </td>
+                  "&lt;definingConcept&gt;&lt;concept&gt;" values in
+                  original xml data </td>
               </tr>
               <tr>
                 <td valign="top">RB/RN<br/>
@@ -289,10 +267,9 @@
                   </ul>
                   (The Preferred term is narrower than Related term)<br/>
                   It has been acknowledged that this default may result
-                  in a small number
-                  of semantically incorrect relationships but this is
-                  considered the best
-                  default </td>
+                  in a small number of semantically incorrect
+                  relationships but this is considered the best default
+                </td>
               </tr>
             </tbody>
           </table>
@@ -301,8 +278,8 @@
         <a name="mappings"></a>
         <h3>Mappings (MRMAP):</h3>
         &nbsp;<span class="nav">(<a href="#top">return to top</a>)</span>
-          <p>No mapping data is included for UMDNS</p>
-        </div>
+        <p>No mapping data is included for UMDNS</p>
+      </div>
     </div>
   </body>
 </html>
