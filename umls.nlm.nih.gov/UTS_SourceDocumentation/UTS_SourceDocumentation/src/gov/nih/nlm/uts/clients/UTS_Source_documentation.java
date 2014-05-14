@@ -65,6 +65,8 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
         bw.println("Results for "+val2+":");
         gov.nih.nlm.uts.webservice.finder.Psf myPsf = new gov.nih.nlm.uts.webservice.finder.Psf();
         myPsf.getIncludedSources().add(val1);
+        myPsf.setIncludeObsolete(false);
+        myPsf.setIncludeSuppressible(false);
         myPsf.setPageLn(500);
 
         java.util.List<UiLabel> myFindConcepts = new ArrayList<UiLabel>();
@@ -118,7 +120,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
         java.util.List<AtomDTO> myAtoms = new ArrayList<AtomDTO>();
         myAtoms = utsContentService.getSourceConceptAtoms(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1, myconPsf);
 
-        bw.println("*Source Concept Atoms|Atom ID|SUI|Term|Term Type|Source Atom ID|Source Concept|Obsolescence|Suppressibility");
+        bw.println("*Source Concept Atoms|Atom ID|SUI|Term|Term Type|Source Atom ID|Source Concept|Obsolete|Suppressible");
 	    //bw.newLine();
 
         
@@ -148,6 +150,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 
 	     srcConcept = myAtomDTO.getSourceConcept().getUi();
 	     }
+		
 		
 		boolean obsolete = myAtomDTO.isObsolete();
 		boolean suppressible = myAtomDTO.isSuppressible();
@@ -281,6 +284,9 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
         mySrcConPsf.getIncludedRelationLabels().add("RO");
         mySrcConPsf.getIncludedRelationLabels().add("RB");
         mySrcConPsf.getIncludedRelationLabels().add("SY");
+        mySrcConPsf.getIncludedRelationLabels().add("RN");
+        mySrcConPsf.getIncludedRelationLabels().add("RQ");
+        mySrcConPsf.getIncludedRelationLabels().add("QB");
         mySrcConPsf.getIncludedSources().add(val1);
         mySrcConPsf.setPageLn(500);
 
@@ -476,6 +482,8 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
         gov.nih.nlm.uts.webservice.finder.Psf myPsf = new gov.nih.nlm.uts.webservice.finder.Psf();
         myPsf.getIncludedSources().add(val1);
 		myPsf.setPageLn(500);
+		//myPsf.setIncludeObsolete(false);
+        //myPsf.setIncludeSuppressible(false);
 
 
         java.util.List<UiLabel> myFindConcepts = new ArrayList<UiLabel>();
@@ -523,7 +531,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 
 		 java.util.List<AtomDTO> myAtom = new ArrayList<AtomDTO>();
 		 myAtom = utsContentService.getSourceDescriptorAtoms(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1, myconPsf);
-	     bw.println("*Source Descriptor Atoms|Atom ID|Source Atom ID|Term|Term Type|Source Concept|Source Descriptor|Obsolescence|Suppressibility");
+	     bw.println("*Source Descriptor Atoms|Atom ID|Source Atom ID|Term|Term Type|Source Concept|Source Descriptor|Obsolete|Suppressible");
 	     //bw.newLine();
 	        if (myAtom.size() == 0){
 	        	
@@ -558,8 +566,8 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 			     srcDescriptor = myAtomDTO.getSourceDescriptor().getUi();
 			     }
 			     
-			   boolean obsolete = myAtomDTO.isObsolete();
 			   boolean suppressible = myAtomDTO.isSuppressible();
+			   boolean obsolete = myAtomDTO.isObsolete();
 			      
 		     bw.println(ui+"|"+sui+"|"+name+"|"+TermType+"|"+srcConcept+"|"+srcDescriptor+"|"+obsolete+"|"+suppressible);
 		     //bw.newLine();
@@ -684,6 +692,10 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 	     gov.nih.nlm.uts.webservice.content.Psf mySrcConPsf = new gov.nih.nlm.uts.webservice.content.Psf();
 	     mySrcConPsf.getIncludedRelationLabels().add("RB");
 	     mySrcConPsf.getIncludedRelationLabels().add("RO");
+	     mySrcConPsf.getIncludedRelationLabels().add("RN");
+	     mySrcConPsf.getIncludedRelationLabels().add("SY");
+	     mySrcConPsf.getIncludedRelationLabels().add("RQ");
+	     mySrcConPsf.getIncludedRelationLabels().add("QB");
          mySrcConPsf.getIncludedSources().add(val1);
 	     mySrcConPsf.setPageLn(500);
 
@@ -876,6 +888,8 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
         gov.nih.nlm.uts.webservice.finder.Psf myPsf = new gov.nih.nlm.uts.webservice.finder.Psf();
         myPsf.getIncludedSources().add(val1);
         myPsf.setPageLn(500);
+        //myPsf.setIncludeObsolete(false);
+        //myPsf.setIncludeSuppressible(false);
 
         java.util.List<UiLabel> myFindConcepts = new ArrayList<UiLabel>();
 
@@ -902,19 +916,71 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 		        bw.println("!");
 
 	       
-		 AtomDTO myAtoms = new AtomDTO();
-		    myAtoms = utsContentService.getDefaultPreferredAtom(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1);
-	        bw.println("*Atom Information|Default Preferred Atom|Atom Name|Term Type");
+		    AtomDTO myPrefAtom = new AtomDTO();
+		    myPrefAtom = utsContentService.getDefaultPreferredAtom(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1);
+	        bw.println("*Atom Information|Default Preferred Atom|Atom Name|Term Type|Obsolete|Suppressible");
 	        //bw.newLine();
 
-		    String defPrefUi = myAtoms.getUi();
-		    String atomName = myAtoms.getTermString().getName();
-		    String termType = myAtoms.getTermType();
-
+		    String defPrefUi = myPrefAtom.getUi();
+		    String atomName = myPrefAtom.getTermString().getName();
+		    String termType = myPrefAtom.getTermType();
+		   
 		    bw.println(defPrefUi+"|"+atomName+"|"+termType);
 		    //bw.newLine();
 		    bw.println("!");
 		    //bw.newLine();
+		    
+		    gov.nih.nlm.uts.webservice.content.Psf mycodePsf = new gov.nih.nlm.uts.webservice.content.Psf();
+			mycodePsf.getIncludedSources().add(val1);
+			mycodePsf.setPageLn(500);
+			
+	        java.util.List<AtomDTO> myAtoms = new ArrayList<AtomDTO>();
+	        myAtoms = utsContentService.getCodeAtoms(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1, mycodePsf);
+
+	        bw.println("*Code Atoms|Atom ID|SUI|Term|Term Type|Source Atom ID|Source Concept|Obsolete|Suppressible");
+		    //bw.newLine();
+
+	        
+	        if (myAtoms.size() == 0){
+	        	
+	        	bw.println("None");	
+	 	       //bw.newLine();
+
+	        } 
+	        
+	        else {
+
+	        for (int i = 0; i < myAtoms.size(); i++) {
+
+
+	        AtomDTO myAtomDTO = myAtoms.get(i);
+
+	        String ui = myAtomDTO.getUi();
+		    String sui = myAtomDTO.getTermString().getUi();
+	        String name = myAtomDTO.getTermString().getName();        
+	        String TermType = myAtomDTO.getTermType();
+	        String sourceUi = myAtomDTO.getSourceUi();
+	        String srcConcept = null;
+
+
+			if (myAtomDTO.getSourceConcept() != (null) ){
+
+		     srcConcept = myAtomDTO.getSourceConcept().getUi();
+		     }
+			
+			
+			boolean obsolete = myAtomDTO.isObsolete();
+			boolean suppressible = myAtomDTO.isSuppressible();
+
+
+		    
+		    bw.println(ui+"|"+sui+"|"+name+"|"+TermType+"|"+sourceUi+"|"+srcConcept+"|"+obsolete+"|"+suppressible);
+		    //bw.newLine();
+
+
+		    }
+	                }
+		    
 		    
 		    
 		    
@@ -982,6 +1048,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 
 		      } 
 		     }
+		     
 			 bw.println("!");
 			 //bw.newLine();
    
@@ -1129,8 +1196,8 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 			        AtomTreePositionDTO myAtmTrPosDTO = myarrAtomTreePosChildrenDTOClient.get(j);
 			
 			        String defaultPrefName = myAtmTrPosDTO.getDefaultPreferredName();
-			        String atomUi = myAtmTrPosDTO.getAtom().getUi();
-				        
+			        //String atomUi = myAtmTrPosDTO.getAtom().getUi();
+			        String atomUi = myAtmTrPosDTO.getAtom().getCode().getUi();   
 				    bw.println(atomUi+"|"+defaultPrefName);
 				    //bw.newLine();
 				        }
@@ -1157,7 +1224,8 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 					   AtomTreePositionDTO myAtmTrPosDTO = myarrAtomTreePosSiblingDTOClient.get(j);
 					
 					 String defaultPrefName = myAtmTrPosDTO.getDefaultPreferredName();
-					 String atomUi = myAtmTrPosDTO.getAtom().getUi();
+					 //String atomUi = myAtmTrPosDTO.getAtom().getUi();
+				     String atomUi = myAtmTrPosDTO.getAtom().getCode().getUi();
 						        
 					 bw.println(atomUi+"|"+defaultPrefName);
 					 //bw.newLine();
