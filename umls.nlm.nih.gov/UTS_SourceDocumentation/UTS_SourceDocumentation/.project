@@ -1,3 +1,35 @@
+<<<<<<< .mine
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>UTS_SourceDocumentation</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>WSDLs</name>
+			<type>2</type>
+			<location>C:/cygwin/home/emricks/uts_prod</location>
+		</link>
+	</linkedResources>
+	<variableList>
+		<variable>
+			<name>SOURCEDOC_HOME</name>
+			<value>file:/Y:/sourcereleasedocs</value>
+		</variable>
+	</variableList>
+</projectDescription>
+=======
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>UTS_SourceDocumentation</name>
@@ -28,3 +60,4 @@
 		</variable>
 	</variableList>
 </projectDescription>
+>>>>>>> .r14828
