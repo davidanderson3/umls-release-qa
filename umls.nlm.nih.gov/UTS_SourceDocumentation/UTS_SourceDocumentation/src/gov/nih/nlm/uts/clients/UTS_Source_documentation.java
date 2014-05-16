@@ -369,7 +369,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
         
     	java.util.List<SourceAtomClusterTreePositionPathDTO> myarrSrcDescTreePosPathDTOClient = new ArrayList<SourceAtomClusterTreePositionPathDTO>();
     	myarrSrcDescTreePosPathDTOClient = utsContentService.getSourceConceptTreePositionPathsToRoot(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, ui, myTreePsf);
-    	bw.println("*Tree Position "+(i+1)+":");
+    	//bw.println("*Tree Position "+(i+1)+":");
     	//bw.newLine();
     	
         if (myarrSrcDescTreePosPathDTOClient.size() == 0){
@@ -463,7 +463,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 			 //bw.newLine();
 	     
         }    
-		bw.println("!");
+		//bw.println("!");
 		//bw.newLine();
 		bw.close(); 
 
@@ -870,7 +870,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 
 
 	        }
-		bw.println("!");
+		//bw.println("!");
 	    bw.close();
 
 
@@ -979,8 +979,8 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 
 
 		    }
-	                }
-		    
+	        }
+	        bw.println("!");
 		    
 		    
 		    
@@ -1158,13 +1158,13 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 		      AtomTreePositionPathDTO myAtmTrPosDTO = myarrAtomTreePosPathDTOClient.get(j);
 		
 		      List<AtomTreePositionDTO> treepos = myAtmTrPosDTO.getTreePositions();
-		      bw.println("*Tree Position Paths To Root"+(j+1)+"|Atom ID|Default Preferred Name");
+		      bw.println("*Tree Position Paths To Root"+ (i+1)+"|Atom ID|Default Preferred Name");
 		      //bw.newLine();
 		
 			     for (int k = 0; k < treepos.size(); k++) {
 			       AtomTreePositionDTO getj = treepos.get(k);
 			       String defPrefName = getj.getDefaultPreferredName();
-			       String atomUi = getj.getAtom().getUi();
+			       String atomUi = getj.getAtom().getCode().getUi();
 			        
 			       bw.println(atomUi+"|"+defPrefName);
 			      // bw.newLine();
@@ -1236,7 +1236,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 
 	        }
 	    
-		bw.println("!");
+		//bw.println("!");
 	    bw.close();
 		
 	}

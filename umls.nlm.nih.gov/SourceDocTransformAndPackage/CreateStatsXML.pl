@@ -8,14 +8,14 @@ use XML::Writer;
 use IO::File;
 use Env;
 
-my $base = "$ENV{'HOME'}/sourcereleasedocs";
 
+my $base = "$ENV{'USERPROFILE'}/sourcereleasedocs";
 getopts("v:");
 our($opt_v);
 my $version = $opt_v || die "please enter a UMLS version, e.g. 2013AA";
 my $path = join ("/", $base,$version);
 chomp($path);
-chdir ($path) || die "could not change directory $!\n";
+#chdir ($path) || die "could not change directory $!\n";
 
 find(\&open_rsab_dir, $path);
 
@@ -42,8 +42,8 @@ sub parse_file{
 	my $file = shift;
 	#my $rsab = shift;
 	open STATS,$file || die "could not open stats.txt file$!\n";  
-	#my $output = IO::File->new(">stats.xml");
 	my $output = IO::File->new(">samples.xml");
+	#my $output = IO::File->new(">samples.xml");
 	binmode($output);
 	my $writer = XML::Writer->new(OUTPUT => $output, DATA_MODE => 'true', DATA_INDENT => 4, ENCODING => 'utf-8');
 	$writer->xmlDecl('utf-8');
@@ -57,6 +57,7 @@ sub parse_file{
 	while(<STATS>){
 		chomp;
 		my %data;
+		
         if (/^\*+/) {
         
         @headers = split(/\|/,$_);
@@ -84,7 +85,7 @@ sub parse_file{
         } #end elsif
         
         
-        elsif (defined $section) {
+        elsif (defined $section && $_ ne "None") {
         
         my @fields = split(/\|/,$_);
         $writer->startTag('row'); #<row>
