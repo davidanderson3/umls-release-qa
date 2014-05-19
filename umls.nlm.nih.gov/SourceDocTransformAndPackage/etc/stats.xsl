@@ -13,9 +13,19 @@
     <xsl:output-character character="&#34;"  string="&amp;quot;"/>
 </xsl:character-map>
 
+<!--  end process -->
+
+<xsl:template name="main">
+  <xsl:for-each select="collection('file:///C:/Users/emricks/sourcereleasedocs/2013AB/?select=*.xml;recurse=yes')">
+    <xsl:result-document href="out/{tokenize(document-uri(.), '/')}[last()]">
+      <xsl:apply-templates select="document"/>
+    </xsl:result-document>
+  </xsl:for-each>
+</xsl:template>
 
 
 <xsl:template match="document">
+
 <html xmlns="http://www.w3.org/1999/xhtml">
  <head>
  <script type = "text/javascript" src = "http://www.ncbi.nlm.nih.gov/core/jig/1.5.2/js/jig.min.js" language = "javascript"></script>
@@ -66,13 +76,8 @@
 </xsl:when>
 </xsl:choose>
 </xsl:for-each>
-
-
-
 </html> <!-- end HTML document -->
 </xsl:template><!--  end xsl main template -->
-
-
 
 
 
