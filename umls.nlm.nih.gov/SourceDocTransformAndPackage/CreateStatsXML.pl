@@ -9,7 +9,8 @@ use IO::File;
 use Env;
 
 
-my $base = "$ENV{'USERPROFILE'}/sourcereleasedocs";
+#my $base = "$ENV{'USERPROFILE'}/sourcereleasedocs";
+my $base = "$ENV{'HOME'}/sourcereleasedocs";
 getopts("v:");
 our($opt_v);
 my $version = $opt_v || die "please enter a UMLS version, e.g. 2013AA";
