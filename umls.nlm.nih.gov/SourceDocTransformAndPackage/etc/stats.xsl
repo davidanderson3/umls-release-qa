@@ -11,15 +11,22 @@
     <xsl:output-character character="&#252;" string="&amp;uuml;"/>
     <xsl:output-character character="&#227;" string="&amp;atilde;"/>
     <xsl:output-character character="&#34;"  string="&amp;quot;"/>
+    
 </xsl:character-map>
 
 <!--  end process -->
 
 <xsl:template name="main">
-  <xsl:for-each select="collection('file:///C:/Users/emricks/sourcereleasedocs/2013AB/?select=*.xml;recurse=yes')">
-    <xsl:result-document href="out/{tokenize(document-uri(.), '/')}[last()]">
-      <xsl:apply-templates select="document"/>
-    </xsl:result-document>
+<xsl:variable name = "base">/Users/steveemrick/sourcereleasedocs</xsl:variable>
+<xsl:variable name = "release">2014AA</xsl:variable>
+<xsl:variable name = "output">samples.html</xsl:variable>
+
+
+ <xsl:for-each select="collection('/Users/steveemrick/sourcereleasedocs/2014AA?select=samples.xml;recurse=yes')">
+  <xsl:variable name = "sab" select = "tokenize(document-uri(.), '/')[last()-1]"/>
+  <xsl:result-document href="{string-join(($base,$release,$sab,$output),'/')}">
+     <xsl:apply-templates select="."/>   
+     </xsl:result-document>
   </xsl:for-each>
 </xsl:template>
 
@@ -94,7 +101,7 @@
 <xsl:otherwise>
 <tr>
 <xsl:for-each select = "field">
-<td><xsl:value-of select = "."/></td>
+<td><xsl:value-of select = "." disable-output-escaping="yes"/></td>
 </xsl:for-each>
 </tr>
 </xsl:otherwise>

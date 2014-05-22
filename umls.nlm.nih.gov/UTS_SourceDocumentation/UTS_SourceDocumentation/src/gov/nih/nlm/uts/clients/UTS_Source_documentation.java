@@ -804,10 +804,11 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 			       bw.println(clusterUi+"|"+defPrefName);
 			       //bw.newLine();
 			       }
-		     		}
-				
+			     bw.println("!");
+		     	}
+		         
 		        }
-				 bw.println("!");
+				 //bw.println("!");
 				 //bw.newLine();
         
 		        

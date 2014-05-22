@@ -7,6 +7,7 @@ use File::Find;
 use XML::Writer;
 use IO::File;
 use Env;
+use open ":utf8";
 
 
 #my $base = "$ENV{'USERPROFILE'}/sourcereleasedocs";
@@ -58,7 +59,7 @@ sub parse_file{
 	while(<STATS>){
 		chomp;
 		my %data;
-		
+		chomp($_);
         if (/^\*+/) {
         
         @headers = split(/\|/,$_);
