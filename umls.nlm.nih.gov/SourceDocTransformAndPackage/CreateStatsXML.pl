@@ -10,8 +10,8 @@ use Env;
 use open ":utf8";
 
 
-#my $base = "$ENV{'USERPROFILE'}/sourcereleasedocs";
-my $base = "$ENV{'HOME'}/sourcereleasedocs";
+my $base = "$ENV{'USERPROFILE'}/sourcereleasedocs";
+#my $base = "$ENV{'HOME'}/sourcereleasedocs";
 getopts("v:");
 our($opt_v);
 my $version = $opt_v || die "please enter a UMLS version, e.g. 2013AA";
@@ -30,6 +30,7 @@ sub open_rsab_dir{
 
 sub read_stats_file{
 	
+	#if (-f $_ && $_ eq "stats.txt")
 	if (-f $_ && $_ eq "samples.txt") {
 	my $file = $_;
 	&parse_file($file);	
@@ -44,8 +45,8 @@ sub parse_file{
 	my $file = shift;
 	#my $rsab = shift;
 	open STATS,$file || die "could not open stats.txt file$!\n";  
+	#my $output = IO::File->new(">stats.xml");
 	my $output = IO::File->new(">samples.xml");
-	#my $output = IO::File->new(">samples.xml");
 	binmode($output);
 	my $writer = XML::Writer->new(OUTPUT => $output, DATA_MODE => 'true', DATA_INDENT => 4, ENCODING => 'utf-8');
 	$writer->xmlDecl('utf-8');
@@ -64,6 +65,7 @@ sub parse_file{
         
         @headers = split(/\|/,$_);
         $section = shift(@headers);
+        my $name = substr($section,1);
         $writer->startTag('section','name'=>substr($section,1)); #<section>
         $writer->startTag('row','header'=>'y');#<row>
         

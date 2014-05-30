@@ -18,9 +18,9 @@
     
     <xsl:template name="main">
         <xsl:variable name = "base">file:///C:/Users/emricks/sourcereleasedocs</xsl:variable>
-        <xsl:variable name = "release">2013AB</xsl:variable>
+        <xsl:variable name = "release">2014AA</xsl:variable>
         <xsl:variable name = "output">samples.html</xsl:variable>
-        <xsl:for-each select = "collection('file:///C:/Users/emricks/sourcereleasedocs/2013AB?select=samples.xml;recurse=yes')">
+        <xsl:for-each select = "collection('file:///C:/Users/emricks/sourcereleasedocs/2014AA?select=samples.xml;recurse=yes')">
             <xsl:variable name = "sab" select = "tokenize(document-uri(.), '/')[last()-1]"/>
             <xsl:result-document href="{string-join(($base,$release,$sab,$output),'/')}">
                 <xsl:apply-templates select="."/>   

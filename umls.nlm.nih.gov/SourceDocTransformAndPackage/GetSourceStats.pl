@@ -7,13 +7,13 @@ require DBI;
 require DBD::Oracle;
 use Env;
 getopts("v:");
-my $username = 'kss2013AB';
-my $pw = 'kss2013AB582!()';
+my $username = 'kss2014AA';
+my $pw = 'kss2014AA582!()';
 my $db = 'utsrel_prod';
 #my $samples = '../etc/source_samples.txt';
 #my $samples = 'C:/Eclipse UTS Workspace/SourceDocumentationStatistics/etc/source_samples.txt';
-my $base = "$ENV{'HOME'}/sourcereleasedocs";
-#my $base = "$ENV{'USERPROFILE'}/sourcereleasedocs";
+#my $base = "$ENV{'HOME'}/sourcereleasedocs";
+my $base = "$ENV{'USERPROFILE'}/sourcereleasedocs";
 my $dbh = DBI->connect("dbi:Oracle:$db", "$username", "$pw") or die "Can't connect to Oracle database: $DBI::errstr\n";
 our($opt_v);
 my $version = $opt_v || die "Please specify a UTS release against which you can query\n";
@@ -34,11 +34,11 @@ while (defined (my $line=<DATA>)) {
 	open (my $fh, ">", "stats.txt") || die "Could not open stats file $!\n";
 	binmode($fh);
 	&getTermTypes($rsab,$fh);
-	#&getAttributes($rsab,$fh);
-	#&getRelationships($rsab,$fh);
-	#&getSemanticTypes($rsab,$fh);
-	#&getPrefNameSemanticTypes($rsab,$fh);
-	#&getSourceOverlap($rsab,$fh);
+	&getAttributes($rsab,$fh);
+	&getRelationships($rsab,$fh);
+	&getSemanticTypes($rsab,$fh);
+	&getPrefNameSemanticTypes($rsab,$fh);
+	&getSourceOverlap($rsab,$fh);
 	print qq{Done processing $rsab\n};
 
 }
