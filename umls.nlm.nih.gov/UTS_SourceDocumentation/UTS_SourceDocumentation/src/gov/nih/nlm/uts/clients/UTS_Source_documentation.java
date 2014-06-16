@@ -700,6 +700,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 		      AtomTreePositionPathDTO myAtmTrPosDTO = myAtomTreePosPathDTOClient.get(j);
 		
 		      List<AtomTreePositionDTO> treepos = myAtmTrPosDTO.getTreePositions();
+		      //System.out.println("Printing path" + i);
 		      bw.println("*Tree Position Paths To Root "+(j+1)+"|Default Preferred ID|Default Preferred Name");
 		      //bw.newLine();
 		
@@ -879,7 +880,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 		      SourceAtomClusterTreePositionPathDTO myAtmClustTrPosDTO = myarrSrcDescTreePosPathDTOClient.get(j);
 		
 		      List<SourceAtomClusterTreePositionDTO> treepos = myAtmClustTrPosDTO.getTreePositions();
-		      bw.println("*Tree Position Paths To Root "+(j+1)+"|Cluster ID|Default Preferred Name");
+		      bw.println("*Tree Position Paths To Root "+(i+1)+"|Cluster ID|Default Preferred Name");
 		      //bw.newLine();
 		
 			     for (int k = 0; k < treepos.size(); k++) {
