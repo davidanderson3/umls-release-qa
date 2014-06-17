@@ -57,8 +57,16 @@
             
             <!--  only process nodes that have content, not just a header. Also, default expand the concept information node on page load with ncbitoggler-open option -->
             <xsl:for-each select = "section">
+                
                 <xsl:choose>
                     <xsl:when test = "position() eq 1">
+                        <h3>
+                            <xsl:value-of select = "@name"/> for <xsl:value-of select = "row/field/."/> 
+                        </h3>
+                        
+                    </xsl:when>
+                    <!-- Concept Information is expanded by default with jig-ncbitoggler-open-->
+                    <xsl:when test = "position() eq 2">
                         <h4>
                             <a class="jig-ncbitoggler-open"><xsl:value-of select = "@name"/></a>
                         </h4>
@@ -68,8 +76,8 @@
                             </table>
                         </div>
                     </xsl:when>
-                    
-                    <xsl:when test = "position() ne 1 and count(row) &gt; 1">
+                    <!--Don't process samples with 'None' as the only row -->
+                    <xsl:when test = "not(contains(row[2]/field[1]/text(),'None'))">
                         <h4>
                             <a class="jig-ncbitoggler"><xsl:value-of select = "@name"/></a>
                         </h4>
@@ -78,8 +86,7 @@
                                 <xsl:apply-templates select = "row"/>
                             </table>
                         </div>
-                    </xsl:when>
-                    
+                    </xsl:when>                    
                 </xsl:choose>
             </xsl:for-each>
         </html> <!-- end HTML document -->

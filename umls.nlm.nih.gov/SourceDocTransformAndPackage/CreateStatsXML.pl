@@ -45,8 +45,7 @@ sub parse_file{
 	my $file = shift;
 	#my $rsab = shift;
 	open STATS,$file || die "could not open stats.txt file$!\n";  
-	#my $output = IO::File->new(">stats.xml");
-	my $output = IO::File->new(">samples.xml");
+	my $output = IO::File->new(">stats.xml");
 	binmode($output);
 	my $writer = XML::Writer->new(OUTPUT => $output, DATA_MODE => 'true', DATA_INDENT => 4, ENCODING => 'utf-8');
 	$writer->xmlDecl('utf-8');
