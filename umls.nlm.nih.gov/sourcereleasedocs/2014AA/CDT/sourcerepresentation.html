@@ -1,0 +1,136 @@
+
+    <!--begin tabbed navigation area-->
+<div class="section-4">
+<ul id="menu">
+  <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
+  <li id="nav-2"> <a href="metadata.html">Source Metadata</a></li>
+  <li id="nav-3"> <a href="stats.html">Statistics</a></li>
+  <li id="nav-5"> <a href="samples.html">Samples</a></li>
+  <li id="nav-4"> <a href="representation.html">Representation</a>
+    <ul id="subnav-4">
+      <li><a href="sourcerepresentation.html" id = "sourcerep">Source Representation</a></li>
+      <li><a href="metarepresentation.html">Metathesaurus Representation</a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+<!-- end tabbed navigation area --> <br/>
+    <br/>
+    <br/>
+    <a name="top"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
+      <a href="#change_summary">Summary of Changes</a>, <a
+        href="#file_summary">Summary of Source-Provided Files</a> <a
+        href="#file_details">Source-Provided File Details</a></span> <a
+      name="general"></a>
+    <div id="rep_change_summary" class="rep_block_level_one">
+      <h3>Summary of Changes:</h3>
+      <p>CDT2013 is a new source for 2013AB.&nbsp; CDT in the
+        Metathesaurus is extracted from a file provided by the American
+        Dental Association (ADA).&nbsp; The Metathesaurus also includes
+        the HCPCS version of CDT, which has RSAB =
+        "HCDT."&nbsp;&nbsp;&nbsp; <br/>
+      </p>
+      <p><b>Notes:</b><br/>
+      </p>
+      The CDT hierarchy is created from the ascii data file provided by
+      the ADA, while the HCDT hierarchy is created during Metathesaurus
+      production using analysis of the HCPCS printed manual.&nbsp; <br/>
+      <br/>
+      &nbsp; <span class="nav">(<a href="#top">return to top</a></span>)
+      <p><br/>
+      </p>
+      <div style="margin-left: 40px;"><br/>
+      </div>
+    </div>
+    <div id="rep_file_summary" class="rep_block_level_one"> <a
+        name="file_summary"></a>
+      <h3>Source-Provided Files: Summary</h3>
+      &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
+      <div id="rep_file_details" class="rep_block_level_one">
+        <!-- Make a table of each file that comes from the source   --><br/>
+        <br/>
+        <table class="elements" border="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <th>File Name</th>
+              <td style="vertical-align: top; text-align: center;"><b>Description</b><br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">v 2013 - tab delimited ASCII
+                text file.txt</td>
+              <td style="vertical-align: top;">v 2013 - tab delimited
+                ASCII text file.txt </td>
+            </tr>
+          </tbody>
+        </table>
+        <br/>
+        <h3>Source-Provided Files: Details</h3>
+        &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
+        <p>The following is a list of elements in the CDT source file:<br/>
+        </p>
+        <div class="rep_block_level_two"><a name="file1"></a><br/>
+          <table  border="1" cellpadding="2" cellspacing="2"
+            width="829">
+            <tbody>
+              <tr>
+                <td align="center" valign="top"><b>Element</b><br/>
+                </td>
+                <td align="center" valign="top"><b>Representation</b><br/>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">Code<br/>
+                </td>
+                <td valign="top">MRCONSO.CODE<br/>
+                  MRCONSO.SCUI<br/>
+                  <br/>
+                  In cases where Code = &lt;null&gt; an MTHU# is
+                  assigned during Metathesaurus source processing<br/>
+                  <br/>
+                  Code values are used to extract the hierarchy.<br/>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">Class<br/>
+                </td>
+                <td valign="top">MRSAT.ATN = CHANGE_CLASS<br/>
+                  <br/>
+                  Identifies the type of change made to this version of
+                  the Code (i.e., changes from the prior version
+                  published in CDT-2011-2012), with the following
+                  meanings:<br/>
+                  <ul>
+                    <li>30 = No change to existing code, nomenclature or
+                      descriptor</li>
+                    <li>31 = New procedure code and nomenclature, and
+                      descriptor, if present</li>
+                    <li>35 = Revision in the nomenclature or descriptor
+                      (or both), or to indicate a revision to an entire
+                      subcategory</li>
+                  </ul>
+                  <br/>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">Nomenclature<br/>
+                </td>
+                <td valign="top">MRCONSO.STR<br/>
+                  <br/>
+                  <br/>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">Descriptor<br/>
+                </td>
+                <td valign="top">MRDEF.DEF<br/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br/>
+          <br/>
+        </div>
+      </div>
+    </div>
+
