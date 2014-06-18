@@ -18,9 +18,9 @@
     
     <xsl:template name="main">
         <xsl:variable name = "base">file:///C:/Users/emricks/sourcereleasedocs</xsl:variable>
-        <xsl:variable name = "release">2013AB</xsl:variable>
+        <xsl:variable name = "release">2014AA</xsl:variable>
         <xsl:variable name = "output">stats.html</xsl:variable>
-        <xsl:for-each select = "collection('file:///C:/Users/emricks/sourcereleasedocs/2013AB?select=stats.xml;recurse=yes')">
+        <xsl:for-each select = "collection('file:///C:/Users/emricks/sourcereleasedocs/2014AA?select=stats.xml;recurse=yes')">
             <xsl:variable name = "sab" select = "tokenize(document-uri(.), '/')[last()-1]"/>
             <xsl:result-document href="{string-join(($base,$release,$sab,$output),'/')}">
                 <xsl:apply-templates select="."/>   
@@ -63,7 +63,7 @@
                             <a class="jig-ncbitoggler-open"><xsl:value-of select = "@name"/></a>
                         </h4>
                         <div>
-                            <table valign = "top" cellspacing = "2" cellpadding = "2">
+                            <table>
                                 <xsl:apply-templates select = "row"/>
                             </table>
                         </div>
@@ -74,7 +74,7 @@
                             <a class="jig-ncbitoggler"><xsl:value-of select = "@name"/></a>
                         </h4>
                         <div>
-                            <table valign = "top" cellspacing = "2" cellpadding = "2">
+                            <table>
                                 <xsl:apply-templates select = "row"/>
                             </table>
                         </div>

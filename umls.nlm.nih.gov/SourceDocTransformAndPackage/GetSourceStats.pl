@@ -117,7 +117,7 @@ sub getRelationships {
     $sh->execute || die "Cannot execute query\n";
     
     print qq{  Processing Relationships for $rsab\n};
-    print $fh qq{*Relationship Counts|Relation Name/Additional Label(if present)|Expanded Form|Count\n};
+    print $fh qq{*Relationship Counts|Relation Name/Additional Label (if present)|Expanded Form|Count\n};
     while (my (@row)  = $sh->fetchrow_array) {
     	printf $fh "%s\n", join("|",@row);
     	
@@ -156,7 +156,7 @@ sub getSourceOverlap {
     print qq{  Processing Overlap for $rsab\n};
     print $fh qq{*Source Overlap|Source|# Concepts Sharing Atom/# Total Concepts|Percentage Overlap\n};
     while (my (@row)  = $sh->fetchrow_array) {
-    	printf $fh "%s\n", join("|",@row);
+    	if ($row[2] > 1) {printf $fh "%s\n", join("|",@row)};
     	
     }
 	print $fh qq{!\n};
@@ -186,7 +186,8 @@ sub getSemanticTypes {
     print qq{  Processing Semantic Types for $rsab\n};
     print $fh qq{*Semantic Type Distribution|Semantic Type Id|Semantic Type Name|Total Count|Percentage Distribution\n};
     while (my (@row)  = $sh->fetchrow_array) {
-    	printf $fh "%s\n", join("|",@row);
+    	
+    	if ($row[3] > 1) {printf $fh "%s\n", join("|",@row)};
     	
     }
     print $fh qq{!\n};
@@ -219,7 +220,7 @@ sub getPrefNameSemanticTypes {
     print qq{  Processing Preferred Name Semantic Types for $rsab\n};
     print $fh qq{*Preferred Name Semantic Type Distribution|Semantic Type Id|Semantic Type Name|Total Count|Percentage Distribution\n};
     while (my (@row)  = $sh->fetchrow_array) {
-    	printf $fh "%s\n", join("|",@row);
+    	if ($row[3] > 1) {printf $fh "%s\n", join("|",@row)};
     	
     }
     print $fh qq{!\n};

@@ -30,8 +30,7 @@ sub open_rsab_dir{
 
 sub read_stats_file{
 	
-	#if (-f $_ && $_ eq "stats.txt")
-	if (-f $_ && $_ eq "samples.txt") {
+	if (-f $_ && $_ eq "stats.txt") {
 	my $file = $_;
 	&parse_file($file);	
 		

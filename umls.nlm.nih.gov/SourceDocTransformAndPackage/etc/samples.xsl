@@ -39,7 +39,7 @@
             
             
             <!--begin tabbed navigation area-->
-            <div class="section-3">
+            <div class="section-5">
                 <ul id="menu">
                     <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
                     <li id="nav-2"> <a href="metadata.html">Source Metadata</a></li>
@@ -71,7 +71,7 @@
                             <a class="jig-ncbitoggler-open"><xsl:value-of select = "@name"/></a>
                         </h4>
                         <div>
-                            <table valign = "top" cellspacing = "2" cellpadding = "2">
+                            <table>
                                 <xsl:apply-templates select = "row"/>
                             </table>
                         </div>
@@ -82,7 +82,7 @@
                             <a class="jig-ncbitoggler"><xsl:value-of select = "@name"/></a>
                         </h4>
                         <div>
-                            <table valign = "top" cellspacing = "2" cellpadding = "2">
+                            <table>
                                 <xsl:apply-templates select = "row"/>
                             </table>
                         </div>
@@ -95,7 +95,6 @@
     
     
     <xsl:template match = "row">
-        
         <xsl:choose>
             <xsl:when test = "@header">
                 <tr>
@@ -112,7 +111,6 @@
                 </tr>
             </xsl:otherwise>
         </xsl:choose>
-        
     </xsl:template>
     
     

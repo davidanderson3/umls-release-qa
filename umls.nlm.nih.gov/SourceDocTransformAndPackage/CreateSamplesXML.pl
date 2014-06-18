@@ -51,8 +51,7 @@ sub parse_file{
 	my($file,$path) = @_;
 	my @pieces = split('/',$path);
 	my $source = $pieces[0];
-	
-	print qq{$source};
+
 	my $ptrCount = 0;
     my $sibCount = 0;
     my $childCount = 0;
@@ -88,7 +87,7 @@ sub parse_file{
         elsif ($name eq "Siblings") {$sibCount++;$writer->startTag('section','name'=>substr($section." ".$sibCount,1));}
         elsif ($name eq "Children") {$childCount++;$writer->startTag('section','name'=>substr($section." ".$childCount,1));}  
         else {$writer->startTag('section','name'=>substr($section,1));}#<section>
-        
+       
         
         
         
