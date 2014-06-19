@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" exclude-result-prefixes = "xml">
     
     <xsl:variable name="lcletters">abcdefghijklmnopqrstuvwxyz</xsl:variable>
     <xsl:variable name="ucletters">ABCDEFGHIJKLMNOPQRSTUVWXYZ</xsl:variable>
@@ -39,18 +39,14 @@
             
             
             <!--begin tabbed navigation area-->
-            <div class="section-5">
+            <div class="section-4">
                 <ul id="menu">
                     <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
                     <li id="nav-2"> <a href="metadata.html">Source Metadata</a></li>
                     <li id="nav-3"> <a href="stats.html">Statistics</a></li>
-                    <li id="nav-5"> <a href="samples.html" id = "samples">Samples</a></li>
-                    <li id="nav-4"> <a href="representation.html">Representation</a>
-                        <ul id="subnav-4">
-                            <li><a href="sourcerepresentation.html">Source Representation</a></li>
-                            <li><a href="metarepresentation.html">Metathesaurus Representation</a></li>
-                        </ul>
-                    </li>
+                    <li id="nav-4"> <a href="samples.html" id = "samples">Samples</a></li>
+                    <li id="nav-5"> <a href="sourcerepresentation.html">Source Representation</a></li>
+                    <li id="nav-6"><a href="metarepresentation.html">Metathesaurus Representation</a></li>   
                 </ul>
             </div>
             <!-- end tabbed navigation area -->
@@ -60,10 +56,10 @@
                 
                 <xsl:choose>
                     <xsl:when test = "position() eq 1">
-                        <h3>
+                        <h4>
                             <xsl:value-of select = "@name"/> for <xsl:value-of select = "row/field/."/> 
-                        </h3>
-                        
+                        </h4>
+                        <br/>
                     </xsl:when>
                     <!-- Concept Information is expanded by default with jig-ncbitoggler-open-->
                     <xsl:when test = "position() eq 2">
@@ -71,7 +67,7 @@
                             <a class="jig-ncbitoggler-open"><xsl:value-of select = "@name"/></a>
                         </h4>
                         <div>
-                            <table>
+                            <table class = "samples-table">
                                 <xsl:apply-templates select = "row"/>
                             </table>
                         </div>
@@ -82,7 +78,7 @@
                             <a class="jig-ncbitoggler"><xsl:value-of select = "@name"/></a>
                         </h4>
                         <div>
-                            <table>
+                            <table class = "samples-table">
                                 <xsl:apply-templates select = "row"/>
                             </table>
                         </div>

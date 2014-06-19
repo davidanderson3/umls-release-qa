@@ -120,6 +120,7 @@ sub parse_file{
         $writer->startTag('row'); #<row>
         
         foreach my $field(@fields) {
+        #$field =~ tr/^/\<\!\[CDATA\[\<br\/\>/;
         $writer->startTag('field'); #<field>
         $writer->characters($field);
         $writer->endTag();	#</field>

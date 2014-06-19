@@ -18,9 +18,9 @@
     
     <xsl:template name="main">
         <xsl:variable name = "base">file:///C:/Users/emricks/sourcereleasedocs</xsl:variable>
-        <xsl:variable name = "release">2014AA</xsl:variable>
+        <xsl:variable name = "release">2013AB</xsl:variable>
         <xsl:variable name = "output">stats.html</xsl:variable>
-        <xsl:for-each select = "collection('file:///C:/Users/emricks/sourcereleasedocs/2014AA?select=stats.xml;recurse=yes')">
+        <xsl:for-each select = "collection('file:///C:/Users/emricks/sourcereleasedocs/2013AB?select=stats.xml;recurse=yes')">
             <xsl:variable name = "sab" select = "tokenize(document-uri(.), '/')[last()-1]"/>
             <xsl:result-document href="{string-join(($base,$release,$sab,$output),'/')}">
                 <xsl:apply-templates select="."/>   
@@ -31,7 +31,7 @@
     
     <xsl:template match="document">
         
-        <html xmlns="http://www.w3.org/1999/xhtml">
+        <html>
             <head>
                 <script type = "text/javascript" src = "http://www.ncbi.nlm.nih.gov/core/jig/1.5.2/js/jig.min.js" language = "javascript"></script>
                 <meta name="ncbitoggler" content="indicator: 'plus-minus-big'"/>
@@ -44,13 +44,9 @@
                     <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
                     <li id="nav-2"> <a href="metadata.html">Source Metadata</a></li>
                     <li id="nav-3"> <a href="stats.html" id = "stats">Statistics</a></li>
-                    <li id="nav-5"> <a href="samples.html">Samples</a></li>
-                    <li id="nav-4"> <a href="representation.html">Representation</a>
-                        <ul id="subnav-4">
-                            <li><a href="sourcerepresentation.html">Source Representation</a></li>
-                            <li><a href="metarepresentation.html">Metathesaurus Representation</a></li>
-                        </ul>
-                    </li>
+                    <li id="nav-4"> <a href="samples.html">Samples</a></li>
+                    <li id="nav-5"> <a href="sourcerepresentation.html">Source Representation</a></li>
+                    <li id="nav-6"><a href="metarepresentation.html">Metathesaurus Representation</a></li>   
                 </ul>
             </div>
             <!-- end tabbed navigation area -->
@@ -63,7 +59,7 @@
                             <a class="jig-ncbitoggler-open"><xsl:value-of select = "@name"/></a>
                         </h4>
                         <div>
-                            <table>
+                            <table class = "stats-table">
                                 <xsl:apply-templates select = "row"/>
                             </table>
                         </div>
@@ -74,7 +70,7 @@
                             <a class="jig-ncbitoggler"><xsl:value-of select = "@name"/></a>
                         </h4>
                         <div>
-                            <table>
+                            <table class = "stats-table">
                                 <xsl:apply-templates select = "row"/>
                             </table>
                         </div>
