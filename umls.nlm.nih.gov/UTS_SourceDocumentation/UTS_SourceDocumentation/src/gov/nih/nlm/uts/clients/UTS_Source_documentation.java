@@ -146,7 +146,7 @@ static StringUtils StringTool = new StringUtils();
         java.util.List<UiLabel> myFindConcepts = new ArrayList<UiLabel>();
 
         myFindConcepts = utsFinderService.findConcepts(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "sourceConcept", val2, "exact", myPsf);
-        bw.println("*Sample Information|Source Concept "+val2+ " from " +son);
+        bw.println("*Sample Information|Source Concept "+val2+ " from " +son+" in the "+umlsRelease+ " version of UMLS");
         bw.println("!");
         
         
@@ -204,7 +204,7 @@ static StringUtils StringTool = new StringUtils();
 	        AtomDTO myAtom = new AtomDTO();
 		    myAtom = utsContentService.getDefaultPreferredAtom(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1);
 	        
-		    bw.println("*Highest Ranking Atom - Name|Atom Id|Term Type|Atom Name|Lexically Normalized Name");
+		    bw.println("*Highest Ranking Atom of "+val2+"|AUI|Term Type|Atom Name|Lexically Normalized Name");
 	        
 		    String defPrefUi = myAtom.getUi();
 		    String atomName = myAtom.getTermString().getName();
@@ -220,7 +220,7 @@ static StringUtils StringTool = new StringUtils();
 		    List<AttributeDTO> myAtomAttributes = getAttributeDTOs(defPrefUi,val1,"atom");
 		    
 		    if (myAtomAttributes.size() > 0) {
-			    bw.println("*Highest Ranking Atom - Attributes |Attribute Name|Attribute Value");	
+			    bw.println("*Highest Ranking Atom of "+val2+" - Attributes |Attribute Name|Attribute Value");	
 			    for(int i = 0;i < myAtomAttributes.size();i++) {
 			    AttributeDTO myAttributeDTO = myAtomAttributes.get(i);
 			    String atn = myAttributeDTO.getName();
@@ -236,7 +236,7 @@ static StringUtils StringTool = new StringUtils();
 		    List<AtomRelationDTO> myAtomRelations = getAtomAtomRelations(defPrefUi);
 		    
 		    if (myAtomRelations.size() > 0) {
-		    bw.println("*Highest Ranking Atoms - Relations to Other Atoms|Relation Label|Additional Relation Label|Related Atom ID|Related Atom Name|Suppressible");
+		    bw.println("*Highest Ranking Atom of "+val2+" - Atom Relations|Relation Label|Additional Relation Label|Related Atom ID|Related Atom Name|Suppressible");
 		    
 		    for (int i = 0;i < myAtomRelations.size();i++){
 		    	
@@ -437,7 +437,7 @@ static StringUtils StringTool = new StringUtils();
         List<AtomClusterRelationDTO> myAtomClusterRelations = new ArrayList<AtomClusterRelationDTO>();
 
         myAtomClusterRelations = utsContentService.getSourceConceptSourceConceptRelations(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1, mySrcConPsf);
-        bw.println("*Source Concept Source Concept Relations|Relation Label|Additional Relation Label|Related Atom Cluster ID|Related Atom Cluster Default Preferred Name|Suppressibility");
+        bw.println("*Source Concept-Source Concept Relations|Relation Label|Additional Relation Label|Source Concept Id|Name");
         //bw.newLine();
         
         if (myAtomClusterRelations.size() == 0){
@@ -450,14 +450,15 @@ static StringUtils StringTool = new StringUtils();
 
         for (int i = 0; i < myAtomClusterRelations.size(); i++) {
 
-        AtomClusterRelationDTO myAtomClusterRelationDTO = myAtomClusterRelations.get(i);
-        String relationLabel = myAtomClusterRelationDTO.getRelationLabel();
-        String addRelationLabel = myAtomClusterRelationDTO.getAdditionalRelationLabel();
-        String relAtomClusterUi = myAtomClusterRelationDTO.getRelatedAtomCluster().getUi();
-        String relAtomClusterName = myAtomClusterRelationDTO.getRelatedAtomCluster().getDefaultPreferredName();
-        boolean supp = myAtomClusterRelationDTO.isSuppressible();
+        	  AtomClusterRelationDTO myAtomClusterRelationDTO = myAtomClusterRelations.get(i);
+	          String AtomClusterUi = myAtomClusterRelationDTO.getRelatedAtomCluster().getUi();
+		      String AtomClusterName = myAtomClusterRelationDTO.getRelatedAtomCluster().getDefaultPreferredName();
+		      String AtomClusterRel = myAtomClusterRelationDTO.getRelationLabel();
+		      String AtomClusterRela = myAtomClusterRelationDTO.getAdditionalRelationLabel();
+          
+		      bw.println(AtomClusterRel+"|"+AtomClusterRela+"|"+AtomClusterUi+"|"+AtomClusterName);
         
-        bw.println(relationLabel+"|"+addRelationLabel+"|"+relAtomClusterUi+"|"+relAtomClusterName+"|"+supp);
+          
         //bw.newLine();
 	    
         }
@@ -637,7 +638,7 @@ static StringUtils StringTool = new StringUtils();
         java.util.List<UiLabel> myFindConcepts = new ArrayList<UiLabel>();
 
         myFindConcepts = utsFinderService.findConcepts(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "sourceDescriptor", val2, "exact", myPsf);
-        bw.println("*Sample Information|Source Descriptor "+val2+ " from " +son);
+        bw.println("*Sample Information|Source Descriptor "+val2+ " from " +son+" in the "+umlsRelease+ " version of UMLS");
         bw.println("!");
         
 bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semantic Type(s)|Date Added To Metathesaurus|Preferred English Language Synonyms");
@@ -689,7 +690,7 @@ bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semanti
 	       
 	        AtomDTO myAtom = new AtomDTO();
 		    myAtom = utsContentService.getDefaultPreferredAtom(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1);
-	        bw.println("*Highest Ranking Atom - Name|Atom Id|Term Type|Atom Name|Lexically Normalized Name");
+	        bw.println("*Highest Ranking Atom of "+val2+"|Atom Id|Term Type|Atom Name|Lexically Normalized Name");
 	        
 		    String defPrefUi = myAtom.getUi();
 		    String atomName = myAtom.getTermString().getName();
@@ -703,7 +704,7 @@ bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semanti
 		    List<AttributeDTO> myAtomAttributes = getAttributeDTOs(defPrefUi,val1,"atom");
 		    
 		    if (myAtomAttributes.size() > 0) {
-			    bw.println("*Highest Ranking Atom - Attributes|Attribute Name|Attribute Value");	
+			    bw.println("*Highest Ranking Atom of "+val2+" - Atom Attributes|Attribute Name|Attribute Value");	
 			    for(int i = 0;i < myAtomAttributes.size();i++) {
 			    AttributeDTO myAttributeDTO = myAtomAttributes.get(i);
 			    String atn = myAttributeDTO.getName();
@@ -719,7 +720,7 @@ bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semanti
 		    List<AtomRelationDTO> myAtomRelations = getAtomAtomRelations(defPrefUi);
 		    
 		    if (myAtomRelations.size() > 0) {
-		    bw.println("*Highest Ranking Atom - Relation to Other Atoms|Relation Label|Additional Relation Label|Related Atom ID|Related Atom Name|Term Type|Suppressible");
+		    bw.println("*Highest Ranking Atom of "+val2+" - Atom Relations|Relation Label|Additional Relation Label|Related Atom ID|Related Atom Name|Term Type|Suppressible");
 		    
 		    for (int i = 0;i < myAtomRelations.size();i++){
 		    	
@@ -761,8 +762,6 @@ bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semanti
 		      String sui = myAtomDTO.getSourceUi();
 		      String name = myAtomDTO.getTermString().getName();
 		      String TermType = myAtomDTO.getTermType();
-		      //int atomRelCount = myAtomDTO.getAtomRelationCount();
-		      //int attributeCount = myAtomDTO.getAttributeCount();
 		      String srcConcept = null;
 		      String srcDescriptor = null;
 		      
@@ -916,7 +915,7 @@ bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semanti
 	     List<AtomClusterRelationDTO> myAtomClusterRelations = new ArrayList<AtomClusterRelationDTO>();
 
 	     myAtomClusterRelations = utsContentService.getSourceDescriptorSourceDescriptorRelations(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1, mySrcConPsf);
-	     bw.println("*Source Descriptor-Source Descriptor Relations|Relation Label|Additional Relation Label|Related Atom Cluster ID|Related Atom Cluster Default Preferred Name|Suppressibility");
+	     bw.println("*Source Descriptor-Source Descriptor Relations|Relation Label|Additional Relation Label|Source Descriptor Id|Name");
 	     //bw.newLine();
 
 	     if (myAtomClusterRelations.size() == 0){
@@ -930,14 +929,13 @@ bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semanti
 	        
 	     for (int i = 0; i < myAtomClusterRelations.size(); i++) {
 
-	        AtomClusterRelationDTO myAtomClusterRelationDTO = myAtomClusterRelations.get(i);
-	        String relationLabel = myAtomClusterRelationDTO.getRelationLabel();
-	        String addRelationLabel = myAtomClusterRelationDTO.getAdditionalRelationLabel();
-	        String relAtomClusterUi = myAtomClusterRelationDTO.getRelatedAtomCluster().getUi();
-            String relAtomClusterName = myAtomClusterRelationDTO.getRelatedAtomCluster().getDefaultPreferredName();
-            boolean supp = myAtomClusterRelationDTO.isSuppressible();
+	          AtomClusterRelationDTO myAtomClusterRelationDTO = myAtomClusterRelations.get(i);
+	          String AtomClusterUi = myAtomClusterRelationDTO.getRelatedAtomCluster().getUi();
+		      String AtomClusterName = myAtomClusterRelationDTO.getRelatedAtomCluster().getDefaultPreferredName();
+		      String AtomClusterRel = myAtomClusterRelationDTO.getRelationLabel();
+		      String AtomClusterRela = myAtomClusterRelationDTO.getAdditionalRelationLabel();
             
-            bw.println(relationLabel+"|"+addRelationLabel+"|"+relAtomClusterUi+"|"+relAtomClusterName+"|"+supp);
+		      bw.println(AtomClusterRel+"|"+AtomClusterRela+"|"+AtomClusterUi+"|"+AtomClusterName);
             //bw.newLine();
             
             }
@@ -1106,7 +1104,7 @@ bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semanti
         java.util.List<UiLabel> myFindConcepts = new ArrayList<UiLabel>();
 
         myFindConcepts = utsFinderService.findConcepts(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "code", val2, "exact", myPsf);
-        bw.println("*Sample Information|Code "+val2+ " from " +son);
+        bw.println("*Sample Information|Code "+val2+ " from " +son+" in the "+umlsRelease+ " version of UMLS");
         bw.println("!");
         
         
@@ -1160,7 +1158,7 @@ bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semanti
 		    AtomDTO myAtom = new AtomDTO();
 		    myAtom = utsContentService.getDefaultPreferredAtom(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1);
 	        
-		    bw.println("*Highest Ranking Atom - Name|Atom Id|Term Type|Atom Name|Lexically Normalized Name");
+		    bw.println("*Highest Ranking Atom of "+val2+"|Atom Id|Term Type|Atom Name|Lexically Normalized Name");
 	        
 		    String defPrefUi = myAtom.getUi();
 		    String atomName = myAtom.getTermString().getName();
@@ -1175,7 +1173,7 @@ bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semanti
 		    List<AttributeDTO> myAtomAttributes = getAttributeDTOs(defPrefUi,val1,"atom");
 		    
 		    if (myAtomAttributes.size() > 0) {
-		    bw.println("*Highest Ranking Atom - Attributes|Attribute Name|Attribute Value");	
+		    bw.println("*Highest Ranking Atom of "+val2+" - Atom Attributes|Attribute Name|Attribute Value");	
 		    for(int i = 0;i < myAtomAttributes.size();i++) {
 		    AttributeDTO myAttributeDTO = myAtomAttributes.get(i);
 		    String atn = myAttributeDTO.getName();
@@ -1192,7 +1190,7 @@ bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semanti
 		    List<AtomRelationDTO> myAtomRelations = getAtomAtomRelations(defPrefUi);
 		    
 		    if (myAtomRelations.size() > 0) {
-		    bw.println("*Highest Ranking Atom - Relation to Other Atoms|Relation Label|Additional Relation Label|Related Atom ID|Related Atom Name|Term Type|Suppressible");
+		    bw.println("*Highest Ranking Atom of "+val2+" - Atom Relations|Relation Label|Additional Relation Label|Related Atom ID|Related Atom Name|Term Type");
 		    
 		    for (int i = 0;i < myAtomRelations.size();i++){
 		    	
@@ -1202,8 +1200,7 @@ bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semanti
 		    	String aui2id = myAtomRelation.getRelatedAtom().getUi();
 		    	String aui2name = myAtomRelation.getRelatedAtom().getTermString().getName();
 		    	String aui2tty = myAtomRelation.getRelatedAtom().getTermType();
-		    	Boolean aui2suppress = myAtomRelation.isSuppressible();
-		    	bw.println(rel+"|"+rela+"|"+aui2id+"|"+aui2name+"|"+aui2tty+"|"+aui2suppress);
+		    	bw.println(rel+"|"+rela+"|"+aui2id+"|"+aui2name+"|"+aui2tty);
 		    }
 		    bw.println("!");
 		    }
@@ -1268,7 +1265,7 @@ bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semanti
 		 
 		 java.util.List<AtomClusterRelationDTO> myCodeRelations = new ArrayList<AtomClusterRelationDTO>();
 		 myCodeRelations = utsContentService.getCodeCodeRelations(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1, myconPsf);
-	     bw.println("*Code-Code Relations|Code|Default Preferred Name|Relation Label|Additional Relation Label");
+	     bw.println("*Code-Code Relations|Relation Label|Additional Relation Label|Code|Name");
 	     //bw.newLine();
 	        if (myCodeRelations.size() == 0){
 	        	
@@ -1289,7 +1286,7 @@ bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semanti
 		      String AtomClusterRela = myAtomClusterRelationDTO.getAdditionalRelationLabel();
 
 			      
-		     bw.println(AtomClusterUi+"|"+AtomClusterName+"|"+AtomClusterRel+"|"+AtomClusterRela);
+		     bw.println(AtomClusterRel+"|"+AtomClusterRela+"|"+AtomClusterUi+"|"+AtomClusterName);
 		     //bw.newLine();
 		      }
 	        }

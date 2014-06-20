@@ -10,8 +10,8 @@ use Env;
 use open ":utf8";
 
 
-my $base = "$ENV{'USERPROFILE'}/sourcereleasedocs";
-#my $base = "$ENV{'HOME'}/sourcereleasedocs";
+#my $base = "$ENV{'USERPROFILE'}/sourcereleasedocs";
+my $base = "$ENV{'HOME'}/sourcereleasedocs";
 getopts("v:");
 our($opt_v);
 my $version = $opt_v || die "please enter a UMLS version, e.g. 2013AA";
@@ -83,9 +83,9 @@ sub parse_file{
         $section = shift(@headers);
         my $name = substr($section,1);
         
-        if ($name eq "Path to Root") {$ptrCount++;$writer->startTag('section','name'=>substr($section." ".$ptrCount,1));}
-        elsif ($name eq "Siblings") {$sibCount++;$writer->startTag('section','name'=>substr($section." ".$sibCount,1));}
-        elsif ($name eq "Children") {$childCount++;$writer->startTag('section','name'=>substr($section." ".$childCount,1));}  
+        if ($name eq "Path to Root") {$ptrCount++;$writer->startTag('section','name'=>substr($section." (".$ptrCount.")",1));}
+        elsif ($name eq "Siblings") {$sibCount++;$writer->startTag('section','name'=>substr($section." (".$sibCount.")",1));}
+        elsif ($name eq "Children") {$childCount++;$writer->startTag('section','name'=>substr($section." (".$childCount.")",1));}  
         else {$writer->startTag('section','name'=>substr($section,1));}#<section>
        
         

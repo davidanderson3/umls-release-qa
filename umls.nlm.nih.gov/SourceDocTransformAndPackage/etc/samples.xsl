@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" exclude-result-prefixes = "xml">
-    
+
     <xsl:variable name="lcletters">abcdefghijklmnopqrstuvwxyz</xsl:variable>
     <xsl:variable name="ucletters">ABCDEFGHIJKLMNOPQRSTUVWXYZ</xsl:variable>
     
@@ -17,10 +17,10 @@
     <!--  end process -->
     
     <xsl:template name="main">
-        <xsl:variable name = "base">file:///C:/Users/emricks/sourcereleasedocs</xsl:variable>
-        <xsl:variable name = "release">2014AA</xsl:variable>
+        <xsl:variable name = "base">/Users/steveemrick/sourcereleasedocs</xsl:variable>
+        <xsl:variable name = "release">2013AB</xsl:variable>
         <xsl:variable name = "output">samples.html</xsl:variable>
-        <xsl:for-each select = "collection('file:///C:/Users/emricks/sourcereleasedocs/2014AA?select=samples.xml;recurse=yes')">
+        <xsl:for-each select = "collection('file:////Users/steveemrick/sourcereleasedocs/2013AB?select=samples.xml;recurse=yes')">
             <xsl:variable name = "sab" select = "tokenize(document-uri(.), '/')[last()-1]"/>
             <xsl:result-document href="{string-join(($base,$release,$sab,$output),'/')}">
                 <xsl:apply-templates select="."/>   
