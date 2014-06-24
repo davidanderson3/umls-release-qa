@@ -51,6 +51,8 @@
             </div>
             <!-- end tabbed navigation area -->
             
+            <p>Refer to <a href = "http://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/abbreviations.html" target = "_blank"> the UMLS Documentation </a>for a complete listing of data element descriptions.</p>
+            <br/>
             <!--  only process nodes that have content, not just a header. Also, default expand the concept information node on page load with ncbitoggler-open option -->
             <xsl:for-each select = "section">
                 
@@ -94,8 +96,8 @@
         <xsl:choose>
             <xsl:when test = "@header">
                 <tr>
-                    <xsl:for-each select = "field">
-                        <th><xsl:value-of select = "."/></th>
+                    <xsl:for-each select = "field"> 
+                        <th scope = "col"><xsl:value-of select = "."/></th>
                     </xsl:for-each>
                 </tr>
             </xsl:when>

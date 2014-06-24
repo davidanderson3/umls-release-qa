@@ -89,6 +89,9 @@ static StringUtils StringTool = new StringUtils();
 		myPsf.getIncludedTermTypes().add("SCD");
 		myPsf.getIncludedTermTypes().add("IN");
 		myPsf.getIncludedTermTypes().add("LN");
+		myPsf.getIncludedTermTypes().add("RXN_PT");
+		myPsf.getIncludedTermTypes().add("PIN");
+		
 		List<AtomDTO> myAtoms = utsContentService.getConceptAtoms(securityService.getProxyTicket(ticketGrantingTicket(), serviceName),umlsRelease,ui, myPsf);
 
 		return myAtoms;
@@ -264,7 +267,7 @@ static StringUtils StringTool = new StringUtils();
         java.util.List<AtomDTO> myAtoms = new ArrayList<AtomDTO>();
         myAtoms = utsContentService.getSourceConceptAtoms(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1, myconPsf);
 
-        bw.println("*Source Concept Atoms|Atom ID|SUI|Term|Term Type|Source Atom ID|Source Concept|Obsolete|Suppressible");
+        bw.println("*Source Concept Atoms|AUI|SUI|Term|Term Type|Source Atom ID|Source Concept|Obsolete|Suppressible");
 	    //bw.newLine();
 
         
@@ -343,7 +346,7 @@ static StringUtils StringTool = new StringUtils();
 			      AtomTreePositionPathDTO myAtmTrPosDTO = myAtomTreePosPathDTOClient.get(j);
 			
 			      List<AtomTreePositionDTO> treepos = myAtmTrPosDTO.getTreePositions();
-			      bw.println("*Path to Root|Default Preferred ID|Default Preferred Name");
+			      bw.println("*Path to Root|Id|Name");
    			     //bw.newLine();
 
 			
@@ -366,7 +369,7 @@ static StringUtils StringTool = new StringUtils();
 			        
 			    List<AtomTreePositionDTO> myAtomTreePosChildrenDTO = new ArrayList<AtomTreePositionDTO>();
 			    myAtomTreePosChildrenDTO = utsContentService.getAtomTreePositionChildren(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, ui, myAtomTreePsf);
-			    bw.println("*Children|Default Preferred ID|Default Preferred Name");
+			    bw.println("*Children|Id|Name");
 			    //bw.newLine();
 			    
 			     if (myAtomTreePosChildrenDTO.size() == 0){
@@ -396,7 +399,7 @@ static StringUtils StringTool = new StringUtils();
 				     
 				List<AtomTreePositionDTO> myarrTreePosSiblingDTOClient = new ArrayList<AtomTreePositionDTO>();
 				myarrTreePosSiblingDTOClient = utsContentService.getAtomTreePositionSiblings(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, ui, myAtomTreePsf);
-				bw.println("*Siblings|Default Preferred ID|Default Preferred Name");
+				bw.println("*Siblings|Id|Name");
 				//bw.newLine();
 
 			     if (myarrTreePosSiblingDTOClient.size() == 0){
@@ -527,7 +530,7 @@ static StringUtils StringTool = new StringUtils();
 	        SourceAtomClusterTreePositionPathDTO myAtmClustTrPosDTO = myarrSrcDescTreePosPathDTOClient.get(j);
 
 	        List<SourceAtomClusterTreePositionDTO> treepos = myAtmClustTrPosDTO.getTreePositions();
-		    bw.println("*Path to Root|Cluster ID|Default Preferred Name");
+		    bw.println("*Path to Root|Id|Name");
 		   
 		    
                 //reverse the treepos array list so that the rsab root node is on top
@@ -554,7 +557,7 @@ static StringUtils StringTool = new StringUtils();
 	        
 	    List<SourceAtomClusterTreePositionDTO> myarrSrcDescTreePosChildrenDTOClient = new ArrayList<SourceAtomClusterTreePositionDTO>();
 	    myarrSrcDescTreePosChildrenDTOClient = utsContentService.getSourceConceptTreePositionChildren(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, ui, myTreePsf);
-	    bw.println("*Children|Cluster ID|Default Preferred Name");
+	    bw.println("*Children|Id|Name");
 	    //bw.newLine();
 	    
         if (myarrSrcDescTreePosChildrenDTOClient.size() == 0){
@@ -584,7 +587,7 @@ static StringUtils StringTool = new StringUtils();
 		     
 		List<SourceAtomClusterTreePositionDTO> myarrSrcDescTreePosSiblingDTOClient = new ArrayList<SourceAtomClusterTreePositionDTO>();
 		myarrSrcDescTreePosSiblingDTOClient = utsContentService.getSourceConceptTreePositionSiblings(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, ui, myTreePsf);
-		bw.println("*Siblings|Cluster ID|Default Preferred Name");
+		bw.println("*Siblings|Id|Name");
 		//bw.newLine();
 		
         if (myarrSrcDescTreePosSiblingDTOClient.size() == 0){
@@ -690,7 +693,7 @@ bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semanti
 	       
 	        AtomDTO myAtom = new AtomDTO();
 		    myAtom = utsContentService.getDefaultPreferredAtom(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1);
-	        bw.println("*Highest Ranking Atom of "+val2+"|Atom Id|Term Type|Atom Name|Lexically Normalized Name");
+	        bw.println("*Highest Ranking Atom of "+val2+"|AUI|Term Type|Atom Name|Lexically Normalized Name");
 	        
 		    String defPrefUi = myAtom.getUi();
 		    String atomName = myAtom.getTermString().getName();
@@ -743,7 +746,7 @@ bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semanti
 
 		 java.util.List<AtomDTO> myAtoms = new ArrayList<AtomDTO>();
 		 myAtoms = utsContentService.getSourceDescriptorAtoms(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1, myconPsf);
-	     bw.println("*Source Descriptor Atoms|Atom ID|Source Atom ID|Term|Term Type|Source Concept|Source Descriptor|Obsolete|Suppressible");
+	     bw.println("*Source Descriptor Atoms|AUI|Source Atom ID|Term|Term Type|Source Concept|Source Descriptor|Obsolete|Suppressible");
 	     //bw.newLine();
 	        if (myAtoms.size() == 0){
 	        	
@@ -821,7 +824,7 @@ bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semanti
 		
 		      List<AtomTreePositionDTO> treepos = myAtmTrPosDTO.getTreePositions();
 		      //System.out.println("Printing path" + i);
-		      bw.println("*Path to Root|Default Preferred ID|Default Preferred Name");
+		      bw.println("*Path to Root|Id|Name");
 		      
 		      Collections.reverse(treepos);
 		
@@ -843,7 +846,7 @@ bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semanti
 		        
 		    List<AtomTreePositionDTO> myAtomTreePosChildrenDTO = new ArrayList<AtomTreePositionDTO>();
 		    myAtomTreePosChildrenDTO = utsContentService.getAtomTreePositionChildren(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, ui, myAtomTreePsf);
-		    bw.println("*Children|Default Preferred ID|Default Preferred Name");
+		    bw.println("*Children|Id|Name");
 		    //bw.newLine();
 		    
 		     if (myAtomTreePosChildrenDTO.size() == 0){
@@ -873,7 +876,7 @@ bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semanti
 			     
 			List<AtomTreePositionDTO> myarrTreePosSiblingDTOClient = new ArrayList<AtomTreePositionDTO>();
 			myarrTreePosSiblingDTOClient = utsContentService.getAtomTreePositionSiblings(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, ui, myAtomTreePsf);
-			bw.println("*Siblings|Default Preferred ID|Default Preferred Name");
+			bw.println("*Siblings|Id|Name");
 			//bw.newLine();
 
 		     if (myarrTreePosSiblingDTOClient.size() == 0){
@@ -1000,7 +1003,7 @@ bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semanti
 		      SourceAtomClusterTreePositionPathDTO myAtmClustTrPosDTO = myarrSrcDescTreePosPathDTOClient.get(j);
 		
 		      List<SourceAtomClusterTreePositionDTO> treepos = myAtmClustTrPosDTO.getTreePositions();
-		      bw.println("*Path to Root|Cluster ID|Default Preferred Name");
+		      bw.println("*Path to Root|Id|Name");
 		      
 		      Collections.reverse(treepos);
 		         
@@ -1023,7 +1026,7 @@ bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semanti
 		        
 		    List<SourceAtomClusterTreePositionDTO> myarrSrcDescTreePosChildrenDTOClient = new ArrayList<SourceAtomClusterTreePositionDTO>();
 		    myarrSrcDescTreePosChildrenDTOClient = utsContentService.getSourceDescriptorTreePositionChildren(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, ui, myTreePsf);
-		    bw.println("*Children|Cluster ID|Default Preferred Name");
+		    bw.println("*Children|Id|Name");
 		    //bw.newLine();
 		    
 		     if (myarrSrcDescTreePosChildrenDTOClient.size() == 0){
@@ -1053,7 +1056,7 @@ bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semanti
 			     
 			List<SourceAtomClusterTreePositionDTO> myarrSrcDescTreePosSiblingDTOClient = new ArrayList<SourceAtomClusterTreePositionDTO>();
 			myarrSrcDescTreePosSiblingDTOClient = utsContentService.getSourceDescriptorTreePositionSiblings(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, ui, myTreePsf);
-			bw.println("*Siblings|Cluster ID|Default Preferred Name");
+			bw.println("*Siblings|Id|Name");
 			//bw.newLine();
 
 		     if (myarrSrcDescTreePosSiblingDTOClient.size() == 0){
@@ -1158,7 +1161,7 @@ bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semanti
 		    AtomDTO myAtom = new AtomDTO();
 		    myAtom = utsContentService.getDefaultPreferredAtom(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1);
 	        
-		    bw.println("*Highest Ranking Atom of "+val2+"|Atom Id|Term Type|Atom Name|Lexically Normalized Name");
+		    bw.println("*Highest Ranking Atom of "+val2+"|AUI|Term Type|Atom Name|Lexically Normalized Name");
 	        
 		    String defPrefUi = myAtom.getUi();
 		    String atomName = myAtom.getTermString().getName();
@@ -1213,7 +1216,7 @@ bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semanti
 	        java.util.List<AtomDTO> myAtoms = new ArrayList<AtomDTO>();
 	        myAtoms = utsContentService.getCodeAtoms(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1, mycodePsf);
 
-	        bw.println("*Code Atoms|Atom ID|SUI|Term|Term Type|Source Atom ID|Source Concept|Obsolete|Suppressible");
+	        bw.println("*Code Atoms|AUI|SUI|Term|Term Type|Source Atom ID|Source Concept|Obsolete|Suppressible");
 		    //bw.newLine();
 
 	        
@@ -1265,7 +1268,7 @@ bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semanti
 		 
 		 java.util.List<AtomClusterRelationDTO> myCodeRelations = new ArrayList<AtomClusterRelationDTO>();
 		 myCodeRelations = utsContentService.getCodeCodeRelations(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1, myconPsf);
-	     bw.println("*Code-Code Relations|Relation Label|Additional Relation Label|Code|Name");
+	     bw.println("*Code-Code Relations|Relation Label|Additional Relation Label|Id|Name");
 	     //bw.newLine();
 	        if (myCodeRelations.size() == 0){
 	        	
@@ -1345,7 +1348,7 @@ bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semanti
 	      java.util.List<AtomTreePositionPathDTO> myarrAtomTreePosPathDTOClient = new ArrayList<AtomTreePositionPathDTO>();
 	      myarrAtomTreePosPathDTOClient = utsContentService.getAtomTreePositionPathsToRoot(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, ui, myTreePsf);
 	      //bw.println("*Tree Position "+(i+1)+":");
-	      //bw.println("*Paths To Root "+ (i+1)+"|Id|Default Preferred Name");
+	      //bw.println("*Paths To Root "+ (i+1)+"|Id|Name");
 		     if (myarrAtomTreePosPathDTOClient.size() == 0){
 		        	
 		        	bw.println("None");	
@@ -1359,7 +1362,7 @@ bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semanti
 		      AtomTreePositionPathDTO myAtmTrPosDTO = myarrAtomTreePosPathDTOClient.get(j);
 		
 		      List<AtomTreePositionDTO> treepos = myAtmTrPosDTO.getTreePositions();
-		      bw.println("*Path to Root|Atom ID|Default Preferred Name");
+		      bw.println("*Path to Root|Id|Name");
 		      
 		      Collections.reverse(treepos);
 		
@@ -1380,7 +1383,7 @@ bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semanti
 				 
 		    List<AtomTreePositionDTO> myarrAtomTreePosChildrenDTOClient = new ArrayList<AtomTreePositionDTO>();
 		    myarrAtomTreePosChildrenDTOClient = utsContentService.getAtomTreePositionChildren(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, ui, myTreePsf);
-		    bw.println("*Children|Id|Default Preferred Name");
+		    bw.println("*Children|Id|Name");
 		    //bw.newLine();
 		    
 		     if (myarrAtomTreePosChildrenDTOClient.size() == 0){
@@ -1409,7 +1412,7 @@ bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semanti
 			     
 			List<AtomTreePositionDTO> myarrAtomTreePosSiblingDTOClient = new ArrayList<AtomTreePositionDTO>();
 			myarrAtomTreePosSiblingDTOClient = utsContentService.getAtomTreePositionSiblings(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, ui, myTreePsf);
-			bw.println("*Siblings|Id|Default Preferred Name");
+			bw.println("*Siblings|Id|Name");
 			//bw.newLine();
 
 		     if (myarrAtomTreePosSiblingDTOClient.size() == 0){

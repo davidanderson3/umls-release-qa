@@ -69,7 +69,7 @@ sub parse_file{
         
         foreach my $header(@headers){
         	
-        	$writer->startTag('field');#<field>
+        	$writer->startTag('field', 'name'=>$_);#<field>    	
         	$writer->characters($header);
         	$writer->endTag();#</field>
         	
