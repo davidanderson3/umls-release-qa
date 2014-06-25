@@ -17,10 +17,10 @@
     <!--  end process -->
     
     <xsl:template name="main">
-        <xsl:variable name = "base">/Users/steveemrick/sourcereleasedocs</xsl:variable>
+        <xsl:variable name = "base">/Users/emricks/sourcereleasedocs</xsl:variable>
         <xsl:variable name = "release">2013AB</xsl:variable>
         <xsl:variable name = "output">samples.html</xsl:variable>
-        <xsl:for-each select = "collection('file:////Users/steveemrick/sourcereleasedocs/2013AB?select=samples.xml;recurse=yes')">
+        <xsl:for-each select = "collection('file:///C:/Users/emricks/sourcereleasedocs/2013AB?select=samples.xml;recurse=yes')">
             <xsl:variable name = "sab" select = "tokenize(document-uri(.), '/')[last()-1]"/>
             <xsl:result-document href="{string-join(($base,$release,$sab,$output),'/')}">
                 <xsl:apply-templates select="."/>   
@@ -51,7 +51,7 @@
             </div>
             <!-- end tabbed navigation area -->
             
-            <p>Refer to <a href = "http://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/abbreviations.html" target = "_blank"> the UMLS Documentation </a>for a complete listing of data element descriptions.</p>
+            <p>Refer to <a href = "stats.html" target = "_blank">the accompanying statistics page </a>for data element descriptions from this source.</p>
             <br/>
             <!--  only process nodes that have content, not just a header. Also, default expand the concept information node on page load with ncbitoggler-open option -->
             <xsl:for-each select = "section">
