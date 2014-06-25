@@ -9,6 +9,7 @@ import gov.nih.nlm.uts.webservice.content.AtomTreePositionPathDTO;
 import gov.nih.nlm.uts.webservice.content.AttributeDTO;
 import gov.nih.nlm.uts.webservice.content.SourceAtomClusterTreePositionDTO;
 import gov.nih.nlm.uts.webservice.content.SourceAtomClusterTreePositionPathDTO;
+import gov.nih.nlm.uts.webservice.content.DefinitionDTO;
 import gov.nih.nlm.uts.webservice.content.UtsWsContentController;
 import gov.nih.nlm.uts.webservice.content.Psf;
 import gov.nih.nlm.uts.webservice.semnet.*;
@@ -77,6 +78,14 @@ static StringUtils StringTool = new StringUtils();
 		return myConcept;
 		
 			
+	}
+	
+	public static List<DefinitionDTO> getMyConceptDefinitions (String ui) throws Exception {
+		
+		Psf myPsf = new Psf();
+		List<DefinitionDTO> myDefinitions = utsContentService.getConceptDefinitions(securityService.getProxyTicket(ticketGrantingTicket(), serviceName),umlsRelease,ui, myPsf);
+		
+		return myDefinitions;
 	}
 	
 	public static List<AtomDTO> getMyConceptAtoms(String ui) throws Exception {
@@ -153,7 +162,7 @@ static StringUtils StringTool = new StringUtils();
         bw.println("!");
         
         
-        bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semantic Type(s)|Date Added To Metathesaurus|Preferred English Language Synonyms");
+        bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semantic Type(s)|Date Added To Metathesaurus|Preferred English Language Synonyms|Definitions (if available)");
         
 		if (myFindConcepts.size() == 0){
 		
@@ -193,12 +202,28 @@ static StringUtils StringTool = new StringUtils();
 		String label = myFinCon.getLabel();
 		
 		
-		bw.println(ui+"|"+label+"|"+noAtoms+"|"+semanticTypeNames+"|"+dateAdded+"|"+synonyms);
+		List<String> definitionsAndRsabs = new ArrayList<>();
+		List<DefinitionDTO> myDefinitions = getMyConceptDefinitions(ui);
+		for (DefinitionDTO myDefinition: myDefinitions) {
+			
+			String def = myDefinition.getValue();
+			String rsab = myDefinition.getRootSource();
+			String definitionAndRsab = def+" ("+rsab+")";
+			
+			definitionsAndRsabs.add(definitionAndRsab);
+			
+			
+		}
+		
+		String definitions = definitionsAndRsabs.isEmpty()? "None" : StringUtils.join(definitionsAndRsabs,"<br/>");
+		bw.println(ui+"|"+label+"|"+noAtoms+"|"+semanticTypeNames+"|"+dateAdded+"|"+synonyms+"|"+definitions);
 		
 		//System.out.println(label+"|"+ui+"\n");
 		}
 		}
 	    bw.println("!");
+	   
+	    
 	    
       
 	       
@@ -644,7 +669,7 @@ static StringUtils StringTool = new StringUtils();
         bw.println("*Sample Information|Source Descriptor "+val2+ " from " +son+" in the "+umlsRelease+ " version of UMLS");
         bw.println("!");
         
-bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semantic Type(s)|Date Added To Metathesaurus|Preferred English Language Synonyms");
+bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semantic Type(s)|Date Added To Metathesaurus|Preferred English Language Synonyms|Definition (if available)");
         
 		if (myFindConcepts.size() == 0){
 		
@@ -683,8 +708,23 @@ bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semanti
 		}
 		String label = myFinCon.getLabel();
 		
+		List<String> definitionsAndRsabs = new ArrayList<>();
+		List<DefinitionDTO> myDefinitions = getMyConceptDefinitions(ui);
+		for (DefinitionDTO myDefinition: myDefinitions) {
+			
+			String def = myDefinition.getValue();
+			String rsab = myDefinition.getRootSource();
+			String definitionAndRsab = def+" ("+rsab+")";
+			
+			definitionsAndRsabs.add(definitionAndRsab);
+			
+			
+		}
 		
-		bw.println(ui+"|"+label+"|"+noAtoms+"|"+semanticTypeNames+"|"+dateAdded+"|"+synonyms);
+		String definitions = definitionsAndRsabs.isEmpty()? "None" : StringUtils.join(definitionsAndRsabs,"<br/>");
+		
+		bw.println(ui+"|"+label+"|"+noAtoms+"|"+semanticTypeNames+"|"+dateAdded+"|"+synonyms+"|"+definitions);
+		
 		
 		//System.out.println(label+"|"+ui+"\n");
 		}
@@ -1111,7 +1151,7 @@ bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semanti
         bw.println("!");
         
         
-bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semantic Type(s)|Date Added To Metathesaurus|Preferred English Language Synonyms");
+bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semantic Type(s)|Date Added To Metathesaurus|Preferred English Language Synonyms|Definition (if available)");
         
 		if (myFindConcepts.size() == 0){
 		
@@ -1150,9 +1190,23 @@ bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semanti
 		}
 		String label = myFinCon.getLabel();
 		
+		List<String> definitionsAndRsabs = new ArrayList<>();
+		List<DefinitionDTO> myDefinitions = getMyConceptDefinitions(ui);
+		for (DefinitionDTO myDefinition: myDefinitions) {
+			
+			String def = myDefinition.getValue();
+			String rsab = myDefinition.getRootSource();
+			String definitionAndRsab = def+" ("+rsab+")";
+			
+			definitionsAndRsabs.add(definitionAndRsab);
+			
+			
+		}
 		
-		bw.println(ui+"|"+label+"|"+noAtoms+"|"+semanticTypeNames+"|"+dateAdded+"|"+synonyms);
+		String definitions = definitionsAndRsabs.isEmpty()? "None" : StringUtils.join(definitionsAndRsabs,"<br/>");
 		
+		bw.println(ui+"|"+label+"|"+noAtoms+"|"+semanticTypeNames+"|"+dateAdded+"|"+synonyms+"|"+definitions);
+
 		//System.out.println(label+"|"+ui+"\n");
 		}
 		}

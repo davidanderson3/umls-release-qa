@@ -1,14 +1,18 @@
 package gov.nih.nlm.uts.clients;
 
 import java.io.File;
+import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.apache.commons.lang3.StringUtils;
+
 import gov.nih.nlm.uts.webservice.content.UtsWsContentController;
 import gov.nih.nlm.uts.webservice.content.UtsWsContentControllerImplService;
 import gov.nih.nlm.uts.webservice.security.UtsWsSecurityController;
 import gov.nih.nlm.uts.webservice.security.UtsWsSecurityControllerImplService;
-import gov.nih.nlm.uts.webservice.metadata.SourceDTO;
-import gov.nih.nlm.uts.webservice.metadata.UtsWsMetadataController;
-import gov.nih.nlm.uts.webservice.metadata.UtsWsMetadataControllerImplService;
+import gov.nih.nlm.uts.webservice.metadata.*;
 
 public class UTS_Source_documentation_prepClient {
 	
@@ -16,6 +20,7 @@ public class UTS_Source_documentation_prepClient {
     private static String password = ""; 
     static String umlsRelease = "";
 	static String serviceName = "http://umlsks.nlm.nih.gov";
+	static StringUtils StringTool = new StringUtils();
 	//static String path;
 	
 
@@ -39,6 +44,8 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
         return ticketGrantingTicket;
     	
     }
+	
+	
 
 
 	
@@ -50,7 +57,9 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 			UTS_Source_documentation_prepClient srcDocClient = new UTS_Source_documentation_prepClient(args[0],args[1],args[2]);
 			
 			String  myStringMetadata  = new String();
-			java.util.List<SourceDTO> mySrcVersion = new ArrayList<SourceDTO>();
+			List<SourceDTO> mySourceDTOs = new ArrayList<SourceDTO>();
+			//List<SourceCitationDTO> myCitations = utsMetadataService.getAllSourceCitations(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease);
+			
 			
 //			myStringMetadata = utsMetadataService.getAllUMLSVersions(securityService.getProxyTicket(ticketGrantingTicket(), serviceName));
 //            System.out.println(myStringMetadata);
@@ -67,20 +76,56 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 	            			if(!verDir.exists())
 	            				verDir.mkdirs();
 	            			
-	            			 mySrcVersion = utsMetadataService.getUpdatedSourcesByVersion(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease);
+	            			 mySourceDTOs = utsMetadataService.getUpdatedSourcesByVersion(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease);
 	            			 
-	            			 for (int j = 0; j < mySrcVersion.size(); j++) {
+	            			 for (SourceDTO mySource:mySourceDTOs) {
 
-	            		            SourceDTO myArrSrcDTO = mySrcVersion.get(j);
-	            		            String rtSrcAbbr = myArrSrcDTO.getRootSource().getAbbreviation();
+	            		          
+	            		            RootSourceDTO rootSource = mySource.getRootSource();
+	            		            String rsab = mySource.getRootSource().getAbbreviation();
+	            		            String vsab = mySource.getAbbreviation();
+	            		            String son = mySource.getRootSource().getExpandedForm();
+	            		            String ssn = mySource.getRootSource().getShortName();
+	            		            String family = mySource.getRootSource().getFamily();
+	            		            String imeta = mySource.getInsertMetaVersion();
+	            		            //String license =  mySource.getRootSource().getLicenseContact().getValue();
+	            		            String[] license = StringUtils.splitByWholeSeparator(mySource.getRootSource().getLicenseContact().getValue(),";");
+	            		            String[] content = StringUtils.splitByWholeSeparator(mySource.getRootSource().getContentContact().getValue(),";");
+	            		            String[] citation = StringUtils.splitByWholeSeparator(mySource.getCitation().getValue(),";");
 	            		            
-	            		            String verSrcDir = umlsRelease+"/"+rtSrcAbbr;
-	            		            File sourceVerDir = new File(verSrcDir);
+
+	            		            String slc_fields = StringUtils.join(license,"<br/>");
+	            		            String scc_fields = StringUtils.join(content,"<br/>");
+	            		            String citation_fields = StringUtils.join(citation,"<br/>");
+	            		            
+	            		            int srl = mySource.getRootSource().getRestrictionLevel();
+	            		            String cxty = mySource.getRootSource().getContextType();
+	            		            String lat = mySource.getRootSource().getLanguage().getExpandedForm();
+	            		            
+	            		            
+	            		            
+	            		            System.out.println(rsab);
+	            		            String rsabDir = umlsRelease+"/"+rsab;
+	            		            File sourceVerDir = new File(rsabDir);
 	    	            			
+	            		            
+	    	            		
+	            		          
+	            		            
+	            		            
 	    	            			//Directory existence check
 	    	            			if(!sourceVerDir.exists())
 	    	            				sourceVerDir.mkdirs();
-	            		            
+	    	            			    File metadatafile = new File(rsabDir+"/metadata.txt");
+	    	            			    if(!metadatafile.exists()){metadatafile.createNewFile();}
+	    	            			    PrintWriter bw = new PrintWriter(new File(metadatafile.toString()), "UTF-8");
+	    	            			    bw.println("*Source Metadata|Versioned Source Abbreviation|Source Offical Name|Short Name|Family|Insertion Version|License Contact|Content Contact|Source Citation|Restriction Level|Context Type|Language");	    	            			 
+	    	            			    bw.println(vsab+"|"+son+"|"+ssn+"|"+family+"|"+imeta+"|"+slc_fields+"|"+scc_fields+"|"+citation_fields+"|"+srl+"|"+cxty+"|"+lat);
+	    	            			    bw.println("!");
+	    	            			    bw.close();
+	    	            			    
+	    	            			 
+	    	            			    
 	            		            
 	            			 }
 	            			 
