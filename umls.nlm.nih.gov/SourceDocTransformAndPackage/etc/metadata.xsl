@@ -17,10 +17,10 @@
     <!--  end process -->
     
     <xsl:template name="main">
-        <xsl:variable name = "base">file:///C:/Users/emricks/sourcereleasedocs</xsl:variable>
-        <xsl:variable name = "release">2014AA</xsl:variable>
-        <xsl:variable name = "output">mrsab.html</xsl:variable>
-        <xsl:for-each select = "collection('file:///C:/Users/emricks/sourcereleasedocs/2014AA?select=metadata.xml;recurse=yes')">
+        <xsl:variable name = "base">/Users/steveemrick/sourcereleasedocs</xsl:variable>
+        <xsl:variable name = "release">2013AB</xsl:variable>
+        <xsl:variable name = "output">metadata.html</xsl:variable>
+        <xsl:for-each select = "collection('/Users/steveemrick/sourcereleasedocs/2013AB?select=metadata.xml;recurse=yes')">
             <xsl:variable name = "sab" select = "tokenize(document-uri(.), '/')[last()-1]"/>
             <xsl:result-document href="{string-join(($base,$release,$sab,$output),'/')}">
                 <xsl:apply-templates select="."/>   
@@ -39,13 +39,13 @@
             
             
             <!--begin tabbed navigation area-->
-            <div class="section-3">
+            <div class="section-2">
                 <ul id="menu">
-                    <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
-                    <li id="nav-2"> <a href="metadata.html">Source Metadata</a></li>
-                    <li id="nav-3"> <a href="stats.html" id = "stats">Statistics</a></li>
-                    <li id="nav-4"> <a href="samples.html">Samples</a></li>
-                    <li id="nav-5"> <a href="sourcerepresentation.html">Source Representation</a></li>
+                    <li id="nav-1"><a href="index.html">Synopsis</a> </li>
+                    <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+                    <li id="nav-3"><a href="stats.html">Statistics</a></li>
+                    <li id="nav-4"><a href="samples.html">Samples</a></li>
+                    <li id="nav-5"><a href="sourcerepresentation.html">Source Representation</a></li>
                     <li id="nav-6"><a href="metarepresentation.html">Metathesaurus Representation</a></li>   
                 </ul>
             </div>
@@ -85,7 +85,10 @@
             <xsl:otherwise>
                 <tr>
                     <xsl:for-each select = "field">
+                        <tr>
+                        <td><xsl:value-of select = "@name"/></td>
                         <td><xsl:value-of select = "." disable-output-escaping="yes"/></td>
+                        </tr>
                     </xsl:for-each>
                 </tr>
             </xsl:otherwise>

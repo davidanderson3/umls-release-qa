@@ -10,8 +10,8 @@ use Env;
 use open ":utf8";
 
 
-my $base = "$ENV{'USERPROFILE'}/sourcereleasedocs";
-#my $base = "$ENV{'HOME'}/sourcereleasedocs";
+#my $base = "$ENV{'USERPROFILE'}/sourcereleasedocs";
+my $base = "$ENV{'HOME'}/sourcereleasedocs";
 getopts("v:");
 our($opt_v);
 my $version = $opt_v || die "please enter a UMLS version, e.g. 2013AA";
@@ -43,70 +43,46 @@ sub parse_file{
 	
 	my $file = shift;
 	#my $rsab = shift;
-	open STATS,$file || die "could not open stats.txt file$!\n";  
+	open METADATA,$file || die "could not open stats.txt file$!\n";  
 	my $output = IO::File->new(">metadata.xml");
 	binmode($output);
 	my $writer = XML::Writer->new(OUTPUT => $output, DATA_MODE => 'true', DATA_INDENT => 4, ENCODING => 'utf-8');
 	$writer->xmlDecl('utf-8');
 	$writer->startTag('document'); #<document>
-	
+	$writer->startTag('section','name'=>'Source Metadata');
 	
 	my $section;
 	my @headers;
 	
 	
-	while(<STATS>){
-		chomp;
-		my %data;
+	while(<METADATA>){
 		chomp($_);
-        if (/^\*+/) {
-        
-        @headers = split(/\|/,$_);
-        $section = shift(@headers);
-        my $name = substr($section,1);
-        $writer->startTag('section','name'=>substr($section,1)); #<section>
-        $writer->startTag('row','header'=>'y');#<row>
-        
-        foreach my $header(@headers){
-        	
-        	$writer->startTag('field', 'name'=>$header);#<field>    	
-        	$writer->characters($header);
-        	$writer->endTag();#</field>
-        	
-        } #end foreach
-        
-        $writer->endTag();#</row>
-        
-        } #endif
-        
-        elsif (/^\!+/) {
-        undef $section;
-        $writer->endTag();#</section>
-        
-        
-        } #end elsif
-        
-        
-        elsif (defined $section) {
-        
-        my @fields = split(/\|/,$_);
-        $writer->startTag('row'); #<row>
-        
-        foreach my $field(@fields) {
-        
-        $writer->startTag('field'); #<field>
-        $writer->characters($field);
-        $writer->endTag();	#</field>
-        
-        }
-        
-        $writer->endTag();#</row>
-        
-        } #end elsif
-        
-	} #end while
-	
-	$writer->endTag(); #</document>
+		$writer->startTag('row','header'=>'y');
+		$writer->startTag('field');
+		$writer->characters('Field');
+		$writer->endTag();
+		$writer->startTag('field');
+		$writer->characters('Value');
+		$writer->endTag();
+		$writer->endTag();
+		my @fields = split(/\|/,$_);
+		$writer->startTag('row');
+		foreach my $field (@fields){
+			
+			my @NamesValues = split(/\^/,$field);
+			my $name = $NamesValues[0];
+			my $value = $NamesValues[1];
+			$writer->startTag('field','name'=>$name);
+			
+			#if ($value =~ /http\:\/\//)  {$value = "somethingelse";}
+			
+			$writer->characters($value);
+			$writer->endTag();
+		}
+		$writer->endTag();
+		$writer->endTag();
+		
+	}$writer->endTag();
 } #end parse_file
 
 
