@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" exclude-result-prefixes = "xml">
-
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:java="http://www.java.com/"
+    exclude-result-prefixes="java xs">
+    
     <xsl:variable name="lcletters">abcdefghijklmnopqrstuvwxyz</xsl:variable>
     <xsl:variable name="ucletters">ABCDEFGHIJKLMNOPQRSTUVWXYZ</xsl:variable>
     
-    
-    <xsl:output method = "html" omit-xml-declaration = "yes" indent = "yes" encoding = "utf-8" use-character-maps="cm1" doctype-public = "-//W3C//DTD XHTML 1.0 Transitional//EN"/>
-    <xsl:character-map name="cm1">
-        <xsl:output-character character="&#160;" string="&amp;nbsp;"/>
-        <xsl:output-character character="&#252;" string="&amp;uuml;"/>
-        <xsl:output-character character="&#227;" string="&amp;atilde;"/>
-        <xsl:output-character character="&#34;"  string="&amp;quot;"/>
+    <xsl:function name="java:file-exists" xmlns:file="java.io.File" as="xs:boolean">
+        <xsl:param name="file" as="xs:string"/>
+        <xsl:param name="base-uri" as="xs:string"/>
         
-    </xsl:character-map>
+        <xsl:variable name="absolute-uri" select="resolve-uri($file, $base-uri)" as="xs:anyURI"/>
+        <xsl:sequence select="file:exists(file:new($absolute-uri))"/>
+    </xsl:function>  
     
     <!--  end process -->
     
     <xsl:template name="main">
-        <xsl:variable name = "base">/Users/emricks/sourcereleasedocs</xsl:variable>
+        <xsl:variable name = "base">/Users/steveemrick/sourcereleasedocs</xsl:variable>
         <xsl:variable name = "release">2013AB</xsl:variable>
         <xsl:variable name = "output">samples.html</xsl:variable>
-        <xsl:for-each select = "collection('file:///C:/Users/emricks/sourcereleasedocs/2013AB?select=samples.xml;recurse=yes')">
+        <xsl:for-each select = "collection('/Users/steveemrick/sourcereleasedocs/2013AB?select=samples.xml;recurse=yes')">
             <xsl:variable name = "sab" select = "tokenize(document-uri(.), '/')[last()-1]"/>
             <xsl:result-document href="{string-join(($base,$release,$sab,$output),'/')}">
                 <xsl:apply-templates select="."/>   
@@ -39,16 +40,33 @@
             
             
             <!--begin tabbed navigation area-->
-            <div class="section-4">
-                <ul id="menu">
-                    <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
-                    <li id="nav-2"> <a href="metadata.html">Source Metadata</a></li>
-                    <li id="nav-3"> <a href="stats.html">Statistics</a></li>
-                    <li id="nav-4"> <a href="samples.html" id = "samples">Samples</a></li>
-                    <li id="nav-5"> <a href="sourcerepresentation.html">Source Representation</a></li>
-                    <li id="nav-6"><a href="metarepresentation.html">Metathesaurus Representation</a></li>   
-                </ul>
-            </div>
+            <xsl:choose>
+                <xsl:when test="java:file-exists('sourcerepresentation.html', base-uri())">
+                    
+                    <div class="section-4">
+                        <ul id="menu">
+                            <li id="nav-1"><a href="index.html">Synopsis</a> </li>
+                            <li id="nav-2"><a href="metadata.html" >Source Metadata</a></li>
+                            <li id="nav-3"><a href="stats.html">Statistics</a></li>
+                            <li id="nav-4"><a href="samples.html" id = "samples">Samples</a></li>
+                            <li id="nav-5"><a href="sourcerepresentation.html">Source Representation</a></li>
+                            <li id="nav-6"><a href="metarepresentation.html">Metathesaurus Representation</a></li>   
+                        </ul>
+                    </div>
+                </xsl:when>
+                <xsl:otherwise>
+                    <div class="section-4">
+                        <ul id="menu">
+                            <li id="nav-1"><a href="index.html">Synopsis</a> </li>
+                            <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+                            <li id="nav-3"><a href="stats.html">Statistics</a></li>
+                            <li id="nav-4"><a href="samples.html" id = "samples">Samples</a></li>
+                            <!-- <li id="nav-5"><a href="sourcerepresentation.html">Source Representation</a></li>
+                                <li id="nav-6"><a href="metarepresentation.html">Metathesaurus Representation</a></li>-->
+                        </ul>
+                    </div>
+                </xsl:otherwise>
+            </xsl:choose>
             <!-- end tabbed navigation area -->
             
             <p>Refer to <a href = "stats.html" target = "_blank">the accompanying statistics page </a>for data element descriptions from this source.</p>

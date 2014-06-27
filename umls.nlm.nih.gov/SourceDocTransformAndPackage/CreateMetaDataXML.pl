@@ -10,8 +10,10 @@ use Env;
 use open ":utf8";
 
 
-#my $base = "$ENV{'USERPROFILE'}/sourcereleasedocs";
-my $base = "$ENV{'HOME'}/sourcereleasedocs";
+my $base;
+my $windows=($^O=~/Win/)?1:0;  ##check if we are on Windows
+if(! $windows){$base = "$ENV{'HOME'}/sourcereleasedocs";} else{$base = "$ENV{'USERPROFILE'}/sourcereleasedocs";}
+
 getopts("v:");
 our($opt_v);
 my $version = $opt_v || die "please enter a UMLS version, e.g. 2013AA";
