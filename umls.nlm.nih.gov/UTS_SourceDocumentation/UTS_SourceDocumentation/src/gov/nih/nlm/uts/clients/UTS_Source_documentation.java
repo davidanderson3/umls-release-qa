@@ -1,17 +1,6 @@
 package gov.nih.nlm.uts.clients;
 
-import gov.nih.nlm.uts.webservice.content.AtomClusterRelationDTO;
-import gov.nih.nlm.uts.webservice.content.AtomDTO;
-import gov.nih.nlm.uts.webservice.content.ConceptDTO;
-import gov.nih.nlm.uts.webservice.content.AtomRelationDTO;
-import gov.nih.nlm.uts.webservice.content.AtomTreePositionDTO;
-import gov.nih.nlm.uts.webservice.content.AtomTreePositionPathDTO;
-import gov.nih.nlm.uts.webservice.content.AttributeDTO;
-import gov.nih.nlm.uts.webservice.content.SourceAtomClusterTreePositionDTO;
-import gov.nih.nlm.uts.webservice.content.SourceAtomClusterTreePositionPathDTO;
-import gov.nih.nlm.uts.webservice.content.DefinitionDTO;
-import gov.nih.nlm.uts.webservice.content.UtsWsContentController;
-import gov.nih.nlm.uts.webservice.content.Psf;
+import gov.nih.nlm.uts.webservice.content.*;
 import gov.nih.nlm.uts.webservice.semnet.*;
 import gov.nih.nlm.uts.webservice.metadata.*;
 import gov.nih.nlm.uts.webservice.content.UtsWsContentControllerImplService;
@@ -125,7 +114,7 @@ static StringUtils StringTool = new StringUtils();
 		case "sourceConcept": {myAttributes = utsContentService.getSourceConceptAttributes(securityService.getProxyTicket(ticketGrantingTicket(), serviceName),umlsRelease, id, source, myPsf); break;}
 		case "code":{myAttributes = utsContentService.getCodeAttributes(securityService.getProxyTicket(ticketGrantingTicket(), serviceName),umlsRelease, id, source, myPsf); break;}
 		case "atom": {myAttributes = utsContentService.getAtomAttributes(securityService.getProxyTicket(ticketGrantingTicket(), serviceName),umlsRelease, id, myPsf);}
-		
+		case "subsetMember": {myAttributes = utsContentService.getSubsetMemberAttributes(securityService.getProxyTicket(ticketGrantingTicket(), serviceName),umlsRelease, id, myPsf);}
 	
 		
 		}
@@ -138,6 +127,15 @@ static StringUtils StringTool = new StringUtils();
 		List<AtomRelationDTO> atomRelations = utsContentService.getAtomAtomRelations(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, id, myPsf);
 	    return atomRelations;
 	}
+	
+	public static List<SourceConceptSubsetMemberDTO> getRefsetMembers (String id,String source) throws Exception{
+		
+		Psf myPsf =  new Psf();
+		List <SourceConceptSubsetMemberDTO> refsetMembers = utsContentService.getSourceConceptSubsetMemberships(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, id, source, myPsf);
+	    return refsetMembers;
+	}
+	
+	
 	
 	//Method for Concept calls
 	public static void findSrcConcepts(String val1, String val2, String path) throws Exception{
@@ -159,39 +157,39 @@ static StringUtils StringTool = new StringUtils();
 
         myFindConcepts = utsFinderService.findConcepts(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "sourceConcept", val2, "exact", myPsf);
         bw.println("*Sample Information|Source Concept "+val2+ " from " +son+" in the "+umlsRelease+ " version of UMLS");
-        bw.println("!");
-        
-        
-        bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semantic Type(s)|Date Added To Metathesaurus|Preferred English Language Synonyms|Definitions (if available)");
-        
-		if (myFindConcepts.size() == 0){
-		
-		bw.println("None");      
-		} 
-		
-		else {
-		        
-		for (int i = 0; i < myFindConcepts.size(); i++) {
-		
-		UiLabel myFinCon = myFindConcepts.get(i);
-		String ui = myFinCon.getUi();
-		ConceptDTO myConcept = getConceptDTO(ui);
-		List<AtomDTO> mySynonyms = getMyConceptAtoms(ui);
-		
-		String dateAdded = StringUtils.left(myConcept.getDateAdded().toString(), 10);
-		int noAtoms = myConcept.getAtomCount();
-		java.util.List<String> semanticTypes = myConcept.getSemanticTypes();
-		List<String> semanticTypeNames = new ArrayList<>();
-		List<String> namesAndRsabs = new ArrayList<>();
-		
-		for (AtomDTO atom: mySynonyms) {
-			String name = atom.getTermString().getName();
-			String rsab = atom.getRootSource();
-			String nameAndRsab = name+" ("+rsab+")";
-			if (!rsab.equals(val1)) {namesAndRsabs.add(nameAndRsab);}
+	        bw.println("!");
+	        
+	        
+	        bw.println("*UMLS Concept Information|CUI|Preferred Name|Number of Atoms|Semantic Type(s)|Date Added To Metathesaurus|Preferred English Language Synonyms|Definitions (if available)");
+	        
+			if (myFindConcepts.size() == 0){
 			
-		}
-		
+			bw.println("None");      
+			} 
+			
+			else {
+			        
+			for (int i = 0; i < myFindConcepts.size(); i++) {
+			
+			UiLabel myFinCon = myFindConcepts.get(i);
+			String ui = myFinCon.getUi();
+			ConceptDTO myConcept = getConceptDTO(ui);
+			List<AtomDTO> mySynonyms = getMyConceptAtoms(ui);
+			
+			String dateAdded = StringUtils.left(myConcept.getDateAdded().toString(), 10);
+			int noAtoms = myConcept.getAtomCount();
+			java.util.List<String> semanticTypes = myConcept.getSemanticTypes();
+			List<String> semanticTypeNames = new ArrayList<>();
+			List<String> namesAndRsabs = new ArrayList<>();
+			
+			for (AtomDTO atom: mySynonyms) {
+				String name = atom.getTermString().getName();
+				String rsab = atom.getRootSource();
+				String nameAndRsab = name+" ("+rsab+")";
+				if (!rsab.equals(val1)) {namesAndRsabs.add(nameAndRsab);}
+				
+			}
+			
 		String synonyms = namesAndRsabs.isEmpty() ? "None" : StringUtils.join(namesAndRsabs,"<br/>");
 		for (String styId: semanticTypes) {
 			
@@ -222,12 +220,7 @@ static StringUtils StringTool = new StringUtils();
 		}
 		}
 	    bw.println("!");
-	   
-	    
-	    
-      
-	       
-	       
+	     
 
 	        AtomDTO myAtom = new AtomDTO();
 		    myAtom = utsContentService.getDefaultPreferredAtom(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, val2, val1);
@@ -243,7 +236,21 @@ static StringUtils StringTool = new StringUtils();
 		    //bw.newLine();
 		    bw.println("!");
 		    
+		    List<SourceConceptSubsetMemberDTO> myRefsetMembers = getRefsetMembers(val2,val1);
+		    if(myRefsetMembers.size() > 1) {
 		    
+		    bw.println("*Subset Member Information for Source Concept "+val2+"|Attribute Name|Attribute Value");	
+		    	for (SourceConceptSubsetMemberDTO myRefsetMember:myRefsetMembers){
+		    		String id = myRefsetMember.getUi();
+		    		List<AttributeDTO> mySubsetMemberAttributes = getAttributeDTOs(id,val1,"subsetMember");
+		    		for (AttributeDTO mySubsetMemberAttribute:mySubsetMemberAttributes) {
+		    			String atn = mySubsetMemberAttribute.getName();
+		    			String atv = mySubsetMemberAttribute.getValue();
+		    			bw.println(atn+"|"+atv);
+		    		}
+		    		
+		    	}bw.println("!");
+		    }	//end if	    
 		    
 		    List<AttributeDTO> myAtomAttributes = getAttributeDTOs(defPrefUi,val1,"atom");
 		    
