@@ -56,9 +56,10 @@ sub wrap_with_dcr {
   my $ssn = $sources{$rsab};
   #if (-f && $_ =~ /\.html/) {print qq{$rsab -> $name\n};}
   my ($name,$extension) = split(/\./,$file);
-  print qq{processing $rsab\n};
+ 
   if($extension eq "html") {open FH, "<$file" || die "Could not open $file for reading $!";
-  	  print qq{processing $name\n};
+  	  print qq{processing $rsab, $name \n};
+ 
       my @encoded_contents = [];
       
       while(<FH>){
