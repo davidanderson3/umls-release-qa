@@ -1,3 +1,12 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;
+      charset=ISO-8859-1">
+    <title></title>
+  </head>
+  <body>
+
 <!--begin tabbed navigation area-->
    <div class="section-5">
       <ul id="menu">
@@ -10,39 +19,28 @@
       </ul>
    </div>
 <!-- end tabbed navigation area -->
-<br/>
 
- <br/>
     <br/>
     <a name="top"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
-      <a href="#change_summary">Summary of Changes</a>, <a
-        href="#file_summary">Summary of Source-Provided Files</a> <a
-        href="#file_details">Source-Provided File Details</a></span> <a
-      name="general"></a>
+      <a href="#change_summary">Summary of Changes</a>,
+      <a href="#file_summary">Summary of Source-Provided Files</a>
+      <a href="#file_details">Source-Provided File Details</a></span>
+      <a name="general"></a>
     <div id="rep_general" class="rep_block_level_one">
       <h3>Notes</h3>
-      <p>CPT data files are submitted by the American Medical
+      CPT data files are submitted by the American Medical
         Association (AMA). The files processed for the UMLS
-        Metathesaurus are available for licensing at the <a
-href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=prod1510002">AMA
-
-
-
-
-
-
-
-
-
-          Bookstore</a>. </p>
-      <p> The information provided here applies explicitly to the
+        Metathesaurus are available for licensing at the
+        <a href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=prod1510002">AMA Bookstore</a>.
+       <br/>
+      The information provided here applies explicitly to the
         English version of CPT. The Spanish translation of CPT (CPTSP)
         was last updated in 2001, and much of the information on this
         page is not applicable.<br/>
-      </p>
-      <p>The UMLS does not include Guidelines or SNOMEDCT mappings from
+      <br/>
+      The UMLS does not include Guidelines or SNOMEDCT mappings from
         the CPT DTK files due to licensing restrictions.<br/>
-      </p>
+      <br/>
     </div>
     <div id="rep_change_summary" class="rep_block_level_one"> <a
         name="change_summary"></a>
@@ -53,19 +51,19 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
       which is a set of relational-format files that include a
       hierarchy.
       <div>
-        <p>The resulting changes include: </p>
-        <p>Deprecated SAB/TTY: MTHCH/HT </p>
-        <p>New TTY: CPT/HT </p>
-        <p>New REL/RELA:&nbsp; RT/has_panel_element</p>
-        <p>Deprecated REL/RELA:&nbsp; BT/NT and RT with no RELA have
+        The resulting changes include: <br/>
+        Deprecated SAB/TTY: MTHCH/HT <br/>
+        New TTY: CPT/HT <br/>
+        New REL/RELA:&nbsp; RT/has_panel_element<br/>
+        Deprecated REL/RELA:& BT/NT and RT with no RELA have
           been deprecated; previously, these were created during
           Metathesaurus source processing, based on substring matching.<br/>
-        </p>
-        <p>Deprecated ATN:&nbsp; CPT_CLINICIAN_DESC_ID - this data is no
-          longer present in the Clinician files. </p>
-        <p>New ATNs: </p>
+        <br/>
+        Deprecated ATN:&nbsp; CPT_CLINICIAN_DESC_ID - this data is no
+          longer present in the Clinician files. <br/>
+        New ATNs: <br/>
         <blockquote>
-          <p>ADDITIONAL_GUIDELINE<br/>
+          ADDITIONAL_GUIDELINE<br/>
             ADDON_CODE<br/>
             CPT_LEVEL<br/>
             DATE_CREATED<br/>
@@ -74,18 +72,18 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
             EXEMPT_MOD<br/>
             FDA_APPROVAL_PENDING<br/>
             MEASURE_DEVELOPER<br/>
-            MODERATE_CONSCIOUS_SEDATION </p>
+            MODERATE_CONSCIOUS_SEDATION <br/>
         </blockquote>
       </div>
-      <p> </p>
+       <br/>
       <br/>
     </div>
     <div id="rep_file_summary" class="rep_block_level_one"> <a
         name="file_summary"></a>
       <h3>Source-Provided Files: Summary</h3>
       &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
-      <p>The complete English language CPT distribution includes the
-        following:</p>
+      The complete English language CPT distribution includes the
+        following:<br/>
       <div class="rep_block_level_two">
         <!-- Make a table of each file that comes from the source   -->
         <h4>Documentation and Reference</h4>
@@ -131,10 +129,6 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
             </tr>
             <tr>
               <td class="file_field_name">ConsumerDescriptor_DTK_pipe.txt
-
-
-
-
                 <br/>
               </td>
               <td>Consumer-friendly Descriptors<br/>
@@ -143,17 +137,17 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
             <tr>
               <td class="file_field_name">Property_DTK_pipe.txt</td>
               <td>
-               In the <em>Property
-                        File</em>, a concept is represented by a
-                    set of lines that all have the same <em>CONCEPT ID</em>. Some of
-                    the concepts in the <em>Property File</em>
+               In the Property
+                        File, a concept is represented by a
+                    set of lines that all have the same CONCEPT ID. Some of
+                    the concepts in the Property File
                     correspond to reportable CPT codes, some were
-                    constructed by the AMA for the <em>2014 CPT DTK</em>, and some
+                    constructed by the AMA for the 2014 CPT DTK, and some
                       were drawn from SNOMED CT.</td>
             </tr>
             <tr>
               <td class="file_field_name">Relationship_DTK_pipe.txt</td>
-              <td>In the <i>Relationship File</i>, relationships
+              <td>In the Relationship File, relationships
                 between two concepts are represented.<br/>
               </td>
             </tr>
@@ -161,71 +155,52 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
               <td class="file_field_name">Type_DTK_pipe.txt<br/>
               </td>
               <td>
-               The <em>Type File</em>
+               The Type File
                     provides a succinct representation of the types of
-                    information contained in the <i
-                  >Property File</i>
-                    and the <i>Relationship
-
-
-                      File</i>. The
-
-
-                    <i>PROPERTY TYPE
-                      ID</i> column from the <i>Property File</i>
-                    and <i>RELATIONSHIP
-
-
-                      TYPE ID</i> column from the <em>Relationship File</em>
-                    both correspond to the <i>TYPE ID</i>
-                    number from the <em>Type File</em>. Thus, the
-                    <em>Type File</em> enables a user to see at a
-                    glance all of the categories of relationship types
-                    used in the <i>2014 CPT DTK</i>
+                    information contained in the
+                  Property File and the Relationship File. The PROPERTY TYPE
+                      ID column from the Property File
+                    and RELATIONSHIP
+                      TYPE ID column from the Relationship File
+                    both correspond to the TYPE ID
+                    number from the Type File. Thus, the
+                    Type File enables a user to see “at a
+                    glance” all of the categories of relationship types
+                    used in the 2014 CPT DTK
   </td>
             </tr>
           </tbody>
         </table>
         <br/>
-        <p>Notes: The current license agreement for including CPT in the
-          Metathesaurus includes the above files. 
-        </p>
-        <p>The standard CPT data files distributed by the AMA do not
+        Notes: The current license agreement for including CPT in the
+          Metathesaurus includes the above files.
+        <br/>
+        The standard CPT data files distributed by the AMA do not
           include a hierarchy. The NLM uses the printed book and other
           resources to generate a hierarchy during Metathesaurus source
           processing. This hierarchy has not been reviewed by the AMA.
           In addition, the NLM generates relationships between CPT codes
           based on string parsing. The hierarchy and relalationships are
-          attributed to SAB = "MTHCH". </p>
-        <p>Not included: All information from the CPT data files is
+          attributed to SAB = "MTHCH". <br/>
+        Not included: All information from the CPT data files is
           included in the UMLS representation.&nbsp; <br/>
-        </p>
-        <p> * Certain fields and files may not be directly processed
-          because they contain redundant data. </p>
+        <br/>
+         * Certain fields and files may not be directly processed
+          because they contain redundant data. <br/>
       </div>
     </div>
     <div id="rep_file_details" class="rep_block_level_one"> <a
         name="file_details"></a>
       <h3>Source-Provided Files: Details</h3>
       &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
-      <p>Details on format of input files and representation of source
-        data. Consult the CPT documentation for additional details.</p>
+      Details on format of input files and representation of source
+        data. Consult the CPT documentation for additional details.<br/>
       <div class="rep_block_level_two"> <a name="file1"></a>
         <h4 class="file_field_name">file:&nbsp; Type_DTK_pipe.txt<br/>
         </h4>
-        &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
-
-
-
-
-
-
-
-
-
-            Files</a></span>
-        <p><br/>
-        </p>
+        &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data Files</a></span>
+        <br/>
+        <br/>
         <table class="elements" border="0" cellspacing="0">
           <tbody>
             <tr>
@@ -259,19 +234,9 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
         <a name="file2"></a>
         <h4 class="file_field_name">file:&nbsp; Property_DTK_pipe.txt<br/>
         </h4>
-        &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
-
-
-
-
-
-
-
-
-
-            Files</a></span>
-        <p>This file consists of 3 delimited fields:<br/>
-        </p>
+        &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data Files</a></span>
+        This file consists of 3 delimited fields:<br/>
+        <br/>
         <table class="elements" border="0" cellspacing="0">
           <tbody>
             <tr>
@@ -284,9 +249,9 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
             </tr>
           </tbody>
         </table>
-        <p>The "Property Type ID" value determines how each row is
+        The "Property Type ID" value determines how each row is
           represented in the Metathesaurus:<br/>
-        </p>
+        <br/>
         <table class="elements" border="0" cellspacing="0">
           <tbody>
             <tr>
@@ -305,8 +270,8 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
               <td>
               Explanatory text attached
                     to a&nbsp;concept
-                    (code/heading/subheading).  
-  
+                    (code/heading/subheading).
+
  </td>
               <td>
                Not included in the UMLS
@@ -330,8 +295,8 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
               <td valign="top">Addon_Code<br/>
               </td>
               <td valign="top"><font face="Times New Roman, Times,
-                  serif">A value of T in this field indicates that it
-                  is an Add-on code, i.e. it is commonly carried out
+                  serif">A value of “T” in this field indicates that it
+                  is an “Add-on” code, i.e. it is commonly carried out
                   in addition to the primary procedure performed.<span
                     style="mso-spacerun: yes"> </span></font></td>
               <td valign="top">
@@ -360,7 +325,7 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
               <td valign="top">The 5-character CPT Code</td>
               <td valign="top">
                MRCONSO.CODE, MRCONSO.SCUI
-              
+
               </td>
             </tr>
             <tr>
@@ -382,21 +347,21 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
               </td>
               <td valign="top">Full description of the
                     concept (e.g., the CPT
-                    codes long descriptor, as listed in the CPT book). </td>
+                    code’s long descriptor, as listed in the CPT book). </td>
               <td valign="top">
-                <p >MRCONSO.STR</p>
-                <p>TTY=PT (preferred term) or HT
-                  (hierarchical term)</p>
-                <p><br/>
+                <p >MRCONSO.STR<br/>
+                TTY=PT (preferred term) or HT
+                  (hierarchical term)<br/>
+                <br/>
                   For TTY = PT, the CODE and SCUI are the 5-character
                   CPT code (Property Type ID = 104)<br/>
-                </p>
-                 
-                <p>For TTY = HT, the CODE and SCUI are
+                <br/>
+
+                For TTY = HT, the CODE and SCUI are
                   the DTK_CONCEPT_ID<br/>
                   For TTY = MP, the CODE and SCUI are the Modifier Code
                   (Property Type ID = 129)<br/>
-                </p>
+                <br/>
               </td>
             </tr>
             <tr>
@@ -405,7 +370,7 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
               <td valign="top">Exempt_Mod<br/>
               </td>
               <td valign="top">Contains
-                    51or 63
+                    51”or “63”
                     for codes where Modifier 51 or 63 Exempt
               </td>
               <td valign="top">MRSAT.ATN = EXEMPT_MOD<br/>
@@ -430,7 +395,7 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
               </td>
               <td valign="top">For headings, a value
                     ranging from H1 (a
-                    top-level heading such as Surgery) to H6 (a 6<sup>th</sup>-level
+                    top-level heading such as “Surgery”) to H6 (a 6<sup>th</sup>-level
                     subheading)
                     and HS (a heading for a small family of related
                     codes). For CPT codes, either
@@ -476,7 +441,7 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
                   class="MsoNormal">Not included in the UMLS
                   Metathesaurus.&nbsp; SNOMED Codes and strings are
                   already present.<span style="mso-spacerun: yes"><br/>
-                  </span></p>
+                  </span><br/>
               </td>
             </tr>
             <tr>
@@ -513,7 +478,7 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
               <td valign="top">
                Extension of full
                     description of the concept
-                    (e.g., the CPT codes long descriptor, as listed in
+                    (e.g., the CPT code’s long descriptor, as listed in
                     the CPT book). </td>
               <td valign="top">MRSAT.ATN = DESCRIPTOR_EXTENSION<br/>
               </td>
@@ -524,7 +489,7 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
               <td valign="top">Additional_Guideline<br/>
               </td>
               <td valign="top">
-                
+
                 Additional
                     explanatory text that is applicable to a concept
                     (code/heading/subheading).&nbsp;Note: not all of the additional
@@ -539,7 +504,7 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
               <td valign="top">Measure_Developer<br/>
               </td>
               <td valign="top">
-                
+
                 Name of the
                     measure developer
                     associated with the Category II code </td>
@@ -579,19 +544,9 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
         <h4 class="file_field_name">file:&nbsp;
           Relationship_DTK_pipe.txt<br/>
         </h4>
-        &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
-
-
-
-
-
-
-
-
-
-            Files</a></span>
-        <p>This file consists of 5 delimited fields:<br/>
-        </p>
+        &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data Files</a></span>
+        This file consists of 5 delimited fields:<br/>
+        <br/>
         <table class="elements" border="0" cellspacing="0">
           <tbody>
             <tr>
@@ -608,13 +563,13 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
             </tr>
           </tbody>
         </table>
-        <p>The "Relationship Type ID" value determines how each row is
+        The "Relationship Type ID" value determines how each row is
           represented in the Metathesaurus.&nbsp; The majority of
           relationships connect CPT to SNOMED_CT, and are not released
           in the Metathesaurus due to licensing restrictions.<br/>
           <br/>
           The following relationships are released:<br/>
-        </p>
+        <br/>
         <table class="elements" border="0" cellspacing="0">
           <tbody>
             <tr>
@@ -644,8 +599,8 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
             </tr>
           </tbody>
         </table>
-        <p><br/>
-        </p>
+        <br/>
+        <br/>
         <table class="elements" border="0" cellspacing="0">
           <tbody>
             <tr>
@@ -759,19 +714,9 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
           ClinicianDescriptor_DTK_pipe.txt<br/>
         </h4>
         &nbsp;&nbsp;<span class="nav">return to <a
-href="file:///C:/Users/aalipows/Desktop/UMLS/current/CPT/sourcerepresentation.html#data_files">Data
-
-
-
-
-
-
-
-
-
-            Files</a></span>
-        <p><br/>
-        </p>
+href="file:///C:/Users/aalipows/Desktop/UMLS/current/CPT/sourcerepresentation.html#data_files">Data Files</a></span>
+        <br/>
+        <br/>
         <table class="elements" border="0" cellspacing="0">
           <tbody>
             <tr>
@@ -811,17 +756,7 @@ href="file:///C:/Users/aalipows/Desktop/UMLS/current/CPT/sourcerepresentation.ht
           ConsumerDescriptor_DTK_pipe.txt<br/>
         </h4>
         &nbsp;&nbsp;<span class="nav">return to <a
-href="file:///C:/Users/aalipows/Desktop/UMLS/current/CPT/sourcerepresentation.html#data_files">Data
-
-
-
-
-
-
-
-
-
-            Files</a></span><br/>
+href="file:///C:/Users/aalipows/Desktop/UMLS/current/CPT/sourcerepresentation.html#data_files">Data Files</a></span><br/>
         <br/>
         <table class="elements" border="0" cellspacing="0">
           <tbody>
@@ -860,4 +795,5 @@ href="file:///C:/Users/aalipows/Desktop/UMLS/current/CPT/sourcerepresentation.ht
         <br/>
       </div>
     </div>
-
+  </body>
+</html>
