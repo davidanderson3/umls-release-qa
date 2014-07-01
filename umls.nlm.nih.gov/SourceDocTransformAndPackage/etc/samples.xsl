@@ -32,11 +32,11 @@
     
     <xsl:template match="document">
         
-        <html xmlns="http://www.w3.org/1999/xhtml">
+        <!--<html>
             <head>
-                <script type = "text/javascript" src = "http://www.ncbi.nlm.nih.gov/core/jig/1.5.2/js/jig.min.js" language = "javascript"></script>
-                <meta name="ncbitoggler" content="indicator: 'plus-minus-big'"/>
-            </head>
+            <script type = "text/javascript" src = "http://www.ncbi.nlm.nih.gov/core/jig/1.5.2/js/jig.min.js" language = "javascript"></script>
+            <meta name="ncbitoggler" content="indicator: 'plus-minus-big'"/>
+            </head>-->
             
             
             <!--begin tabbed navigation area-->
@@ -105,7 +105,7 @@
                     </xsl:when>                    
                 </xsl:choose>
             </xsl:for-each>
-        </html> <!-- end HTML document -->
+        <!--</html>--> <!-- end HTML document -->
     </xsl:template><!--  end xsl main template -->
     
     

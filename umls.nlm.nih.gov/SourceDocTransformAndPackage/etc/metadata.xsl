@@ -43,11 +43,11 @@
 
         
         
-        <html>
+        <!--<html>
             <head>
                 <script type = "text/javascript" src = "http://www.ncbi.nlm.nih.gov/core/jig/1.5.2/js/jig.min.js" language = "javascript"></script>
                 <meta name="ncbitoggler" content="indicator: 'plus-minus-big'"/>
-            </head>
+            </head>-->
             
             
             <!--begin tabbed navigation area-->
@@ -96,7 +96,7 @@
                  
                    
             </xsl:for-each>
-        </html> <!-- end HTML document -->
+       <!-- </html> end HTML document -->
     </xsl:template><!--  end xsl main template -->
     
     

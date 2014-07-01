@@ -33,7 +33,7 @@ sub read_stats_file{
 	
 	if (-f $_ && $_ eq "stats.txt") {
 	my $file = $_;
-	&parse_file($file);	
+	&parse_file($file,$File::Find::name);	
 		
 	};
 }
@@ -41,15 +41,15 @@ sub read_stats_file{
 sub parse_file{
 	
 	##open the stats.txt file and create xml.
-	
-	my $file = shift;
-	#my $rsab = shift;
+	my($file,$path) = @_;
+	my @pieces = split('/',$path);
+	my $source = $pieces[0];
 	open STATS,$file || die "could not open stats.txt file$!\n";  
 	my $output = IO::File->new(">stats.xml");
 	binmode($output);
 	my $writer = XML::Writer->new(OUTPUT => $output, DATA_MODE => 'true', DATA_INDENT => 4, ENCODING => 'utf-8');
 	$writer->xmlDecl('utf-8');
-	$writer->startTag('document'); #<document>
+	$writer->startTag('document','vocabulary'=>$source); #<document>
 	
 	
 	my $section;

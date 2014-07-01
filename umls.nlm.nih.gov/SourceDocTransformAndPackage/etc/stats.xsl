@@ -18,10 +18,10 @@
     <!--  end process -->
     
     <xsl:template name="main">
-        <xsl:variable name = "base">file:///C:/Users/emricks/sourcereleasedocs</xsl:variable>
+        <xsl:variable name = "base">/Users/steveemrick/sourcereleasedocs</xsl:variable>
         <xsl:variable name = "release">2013AB</xsl:variable>
         <xsl:variable name = "output">stats.html</xsl:variable>
-        <xsl:for-each select = "collection('file:///C:/Users/emricks/sourcereleasedocs/2013AB?select=stats.xml;recurse=yes')">
+        <xsl:for-each select = "collection('/Users/steveemrick/sourcereleasedocs/2013AB?select=stats.xml;recurse=yes')">
             <xsl:variable name = "sab" select = "tokenize(document-uri(.), '/')[last()-1]"/>
             <xsl:result-document href="{string-join(($base,$release,$sab,$output),'/')}">
                 <xsl:apply-templates select="."/>   
@@ -31,12 +31,13 @@
     
     
     <xsl:template match="document">
+    <xsl:variable name="vocabulary" select = "@vocabulary"></xsl:variable>
         
-        <html>
+        <!--<html>
             <head>
-                <script type = "text/javascript" src = "http://www.ncbi.nlm.nih.gov/core/jig/1.5.2/js/jig.min.js" language = "javascript"></script>
-                <meta name="ncbitoggler" content="indicator: 'plus-minus-big'"/>
-            </head>
+            <script type = "text/javascript" src = "http://www.ncbi.nlm.nih.gov/core/jig/1.5.2/js/jig.min.js" language = "javascript"></script>
+            <meta name="ncbitoggler" content="indicator: 'plus-minus-big'"/>
+            </head>-->
             
             
             <!--begin tabbed navigation area-->
@@ -86,7 +87,11 @@
                     <xsl:when test = "position() ne 1 and count(row) &gt; 1">
                         <h4>
                             <a class="jig-ncbitoggler"><xsl:value-of select = "@name"/></a>
+                            
                         </h4>
+                        <xsl:if test = "@name eq 'Preferred Name Semantic Type Distribution'">
+                        <p style = "font-size:small">This table is a breakdown of semantic types for concepts in which <xsl:value-of select = "$vocabulary"/> provides the preferred name for that concept.</p>
+                        </xsl:if>
                         <div>
                             <table class = "stats-table">
                                 <xsl:apply-templates select = "row"/>
@@ -96,7 +101,7 @@
                     
                 </xsl:choose>
             </xsl:for-each>
-        </html> <!-- end HTML document -->
+        <!--</html>--> <!-- end HTML document -->
     </xsl:template><!--  end xsl main template -->
     
     
