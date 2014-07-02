@@ -16,6 +16,7 @@ import java.io.FileReader;
 import java.io.PrintWriter;
 import java.util.*;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.text.*;
 
 public class SourceDocumentationSampleGenerator {
 	
@@ -242,11 +243,17 @@ static StringUtils StringTool = new StringUtils();
 		    bw.println("*Subset Member Information for Source Concept "+val2+"|Attribute Name|Attribute Value");	
 		    	for (SourceConceptSubsetMemberDTO myRefsetMember:myRefsetMembers){
 		    		String id = myRefsetMember.getUi();
+		    		String handle = myRefsetMember.getSubsetHandle();
+		    		SubsetDTO mySubset = utsContentService.getSubset(securityService.getProxyTicket(ticketGrantingTicket(), serviceName),umlsRelease, handle);
+		    		String subsetName = mySubset.getName();
 		    		List<AttributeDTO> mySubsetMemberAttributes = getAttributeDTOs(id,val1,"subsetMember");
 		    		for (AttributeDTO mySubsetMemberAttribute:mySubsetMemberAttributes) {
+		    			
+		    			
 		    			String atn = mySubsetMemberAttribute.getName();
 		    			String atv = mySubsetMemberAttribute.getValue();
-		    			bw.println(atn+"|"+atv);
+		    			
+		    			bw.println(subsetName+"|"+atn+"|"+atv+"|");
 		    		}
 		    		
 		    	}bw.println("!");
