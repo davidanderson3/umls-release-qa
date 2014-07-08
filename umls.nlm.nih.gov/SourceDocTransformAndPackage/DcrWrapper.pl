@@ -104,7 +104,7 @@ sub wrap_with_dcr {
 <item name="header">
 <value>
 <item name="basetag"/>
-<item name="metadata"><value><item name="ncbitoggler" content="indicator: 'plus-minus-big'"></item></value></item>
+<item name="metadata"><value><item name="name"><value><item name="field"><value>ncbitoggler</value></item><item name="content"><value>indicator: 'plus-minus-big'</value></item>indicator: 'plus-minus-big'</value></item>indicator: 'plus-minus-big'</value></item>
 <item name="head"><value><item name="content"><value>
 &lt;link rel="stylesheet" href="../../sourcereleasedocs-v2.css" type="text/css"/&gt;
 &lt;script type="text/javascript" src="http://www.ncbi.nlm.nih.gov/core/jig/1.5.2/js/jig.min.js" language="javascript"&gt;&lt;/script&gt;
