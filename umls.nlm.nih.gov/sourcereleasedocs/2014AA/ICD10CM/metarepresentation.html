@@ -1,382 +1,230 @@
-<!--begin tabbed navigation area-->
+<!-- begin tabbed navigation area -->
 <div class="section-6">
-      <ul id="menu">
-         <li id="nav-1"><a href="index.html">Synopsis</a></li>
-         <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
-         <li id="nav-3"><a href="stats.html">Statistics</a></li>
-         <li id="nav-4"><a href="samples.html">Samples</a></li>
-         <li id="nav-5"><a href="sourcerepresentation.html">Source Representation</a></li>
-         <li id="nav-6"><a href="metarepresentation.html">Metathesaurus Representation</a></li>
-      </ul>
+<ul id="menu">
+<li id="nav-1"><a href="index.html">Synopsis</a></li>
+<li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+<li id="nav-3"><a href="stats.html">Statistics</a></li>
+<li id="nav-4"><a href="samples.html">Samples</a></li>
+<li id="nav-5"><a href="sourcerepresentation.html">Source Representation</a></li>
+<li id="nav-6"><a href="metarepresentation.html">Metathesaurus Representation</a></li>
+</ul>
 </div>
 <!-- end tabbed navigation area -->
-    <br/>
-    <br/>
-    <br/>
-    <a name="top"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>,
-      <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
-      <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
-    <div id="general" class="rep_block_level_one">
-      <p><b>VSAB:</b> ICD10CM_2014</p>
-      <div id="rep_change_summary" class="rep_block_level_one">
-        <h3>Summary of Change</h3>
-        Plain text forms of UTF-8 strings are no longer created.&nbsp; <br/>
-        <br/>
-        Deprecated TTYs:<br/>
-        &nbsp;&nbsp;&nbsp; MTH_AB<br/>
-        &nbsp;&nbsp;&nbsp; MTH_ET<br/>
-        &nbsp;&nbsp;&nbsp; MTH_HT<br/>
-        &nbsp;&nbsp;&nbsp; MTH_PT<br/>
-        <br/>
-        Deprecated REL/RELA<br/>
-        &nbsp;&nbsp;&nbsp; SY|has_plain_text_form/plain_text_form_of<br/>
-        <br/>
-        <h3>Source Provided Files:</h3>
-        <br/>
-        The Metathesaurus uses files submitted in TREF (Terminology
-        Representation and Exchange Format).&nbsp; These files are
-        produced by the National Center for Health Statistics (NCHS) for
-        Metathesaurus processing, and are not currently available
-        publicly.&nbsp; TREF was developed by the NLM and is a subset of
-        the Rich Release Format (RRF)  the format in which the UMLS
-        Metathesaurus is released.&nbsp; The following files are
-        submitted for ICD10CM:<br/>
-        &nbsp;&nbsp;&nbsp; <br/>
-        <div style="margin-left: 40px;"> MRCONSO.TREF<br/>
-          MRDOC.TREF<br/>
-          MRREL.TREF<br/>
-          MRSAB.TREF<br/>
-          MRSAT.TREF<br/>
-        </div>
-        <br/>
-        The TREF files align with the publically-available .pdf release
-        of ICD10CM.&nbsp; When relevant, the origin of data from the
-        NCHS .pdf file is noted in the tables below.&nbsp; <br/>
-        <p>In addition, the following files were downloaded from <a
-            href="http://www.cms.gov/ICD10/11b1_2011_ICD10CM_and_GEMs.asp#TopOfPage">http://www.cms.gov/Medicare/Coding/ICD10/2014-ICD-10-CM-and-GEMs.html</a>:<br/>
-        </p>
-        <div style="text-align: left; margin-left: 40px;">
-          icd10cm_order_2014.txt<br/>
-          2014_I10gem.txt<br/>
-          2014_I9gem.txt<br/>
-          reimb_map_dx_2014.txt</div>
-        <p> <br/>
-        </p>
-      </div>
-      <div id="rep_identifers" class="rep_block_level_one">
-        <h3>Identifiers:</h3>
-        <br/>
-        Identifiers are assigned as follows:<br/>
-        <ul>
-          <li>CODE: MRCONSO.TREF.DUI</li>
-          <li>SAUI: Not Applicable</li>
-          <li>SCUI: Not Applicable<br/>
-          </li>
-          <li>SDUI: MRCONSO.TREF.DUI</li>
-        </ul>
-        <div id="rep_termtypes" class="rep_block_level_two"> <a
-            name="atoms"></a>
-          <h3>Atoms (MRCONSO):</h3>
-          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-          <table class="elements" border="0" cellspacing="0">
-            <tbody>
-              <tr>
-                <th>Term Type</th>
-                <td style="vertical-align: top;"><span
-                    style="font-weight: bold;">Description</span><br/>
-                </td>
-                <th>Origin</th>
-              </tr>
-              <tr>
-                <td style="vertical-align: top;">AB<br/>
-                </td>
-                <td style="vertical-align: top;">Abbreviation (Short
-                  description)<br/>
-                </td>
-                <td style="vertical-align: top;">CODE = MRCONSO.TREF.TTY
-                  (field 5)<br/>
-                  STR = MRCONSO.TREF.STR (field 2)<br/>
-                  SDUI = MRCONSO.TREF.DUI (field 4)<br/>
-                  SUPPRESS = "Y"<br/>
-                  Note:&nbsp; Also found in icd10cm_order_2014.txt
-                  (character positions 17-76) </td>
-              </tr>
-              <tr>
-                <td>ET</td>
-                <td style="vertical-align: top;">Entry Term<br/>
-                </td>
-                <td>CODE = MRCONSO.TREF.TTY (field 5)<br/>
-                  STR = MRCONSO.TREF.STR (field 2)<br/>
-                  SDUI = MRCONSO.TREF.DUI (field 4)<br/>
-                  <br/>
-                  Note:&nbsp; In the NCHS tabluar .pdf file, ETs are
-                  listed directly below the preferred name of a code,
-                  with no tag.<br/>
-                </td>
-              </tr>
-              <tr>
-                <td>HT<br/>
-                </td>
-                <td style="vertical-align: top;">Hierarchical Term<br/>
-                </td>
-                <td>CODE = MRCONSO.TREF.TTY (field 5)<br/>
-                  STR = MRCONSO.TREF.STR (field 2)<br/>
-                  SDUI = MRCONSO.TREF.DUI (field 4)<br/>
-                  <br/>
-                  Note:&nbsp; In icd10cm_order_2014.txt, a value of "0"
-                  in character position 15 indicates that the code is a
-                  header and not valid for submission on a UB04;&nbsp;
-                  the long description begins at character 78 and
-                  continues for up to 300 characters.&nbsp; In the TREF
-                  version of the files, additional concepts have been
-                  added to create a complete representation of the
-                  hierarchy.&nbsp; <br/>
-                </td>
-              </tr>
-              <tr>
-                <td>PT<br/>
-                </td>
-                <td style="vertical-align: top;">Preferred Term<br/>
-                </td>
-                <td>CODE = MRCONSO.TREF.TTY (field 5)<br/>
-                  STR = MRCONSO.TREF.STR (field 2)<br/>
-                  SDUI = MRCONSO.TREF.DUI (field 4)<br/>
-                  <br/>
-                  Note:&nbsp; In icd10cm_order_2014.txt, a value of "1"
-                  in character position 15 indicates that the code is
-                  valid for submission on a UB04;&nbsp; the long
-                  description begins at character 78 and continues for
-                  up to 300 characters.<br/>
-                </td>
-              </tr>
-              <tr>
-                <td>XM<br/>
-                </td>
-                <td style="vertical-align: top;">Cross Mapping Set<br/>
-                </td>
-                <td>This data is added during Metathesaurus source
-                  processing.<br/>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div id="rep_attributes" class="rep_block_level_two"> <a
-            name="attributes"></a><br/>
-          <h3>Attributes (MRSAT):</h3>
-          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-          <p>Most attribute names are extracted from MRSAT.TREF.ATN
-            (field 5);&nbsp; Most attribute values are extracted from
-            MRSAT.TREF.ATV (field 5).&nbsp; ATNs used in MRSAT align
-            with the tags found in the NCHS tabular .pdf file.<br/>
-          </p>
-          Mapping attributes are added during Metathesaurus source
-          processing.<br/>
-          <table class="elements" border="0" cellspacing="0">
-            <tbody>
-              <tr>
-                <th>ATN</th>
-                <th>Description</th>
-              </tr>
-              <tr>
-                <td>ALT_SORT_CODE<br/>
-                </td>
-                <td>Alternative sort code<br/>
-                </td>
-              </tr>
-              <tr>
-                <td>CODE_ALSO<br/>
-                </td>
-                <td>Instructs that 2 codes may be required to fully
-                  describe a condition but the sequencing of the two
-                  codes is discretionary, depending on the severity of
-                  the conditions and the reason for the encounter.<br/>
-                </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: top;">CODE_FIRST<br/>
-                </td>
-                <td style="vertical-align: top;">Certain conditions have
-                  both an underlying etiology and multiple body system
-                  manifestations due to the underlying etiology.
-                  ICD-10-CM has a coding convention that requires the
-                  underlying condition be sequenced first followed by
-                  the manifestation. Wherever such a combination exists
-                  there is a "code first" note at the manifestation
-                  code. These instructional notes indicate the proper
-                  sequencing order of the codes, etiology followed by
-                  manifestation. In most cases the manifestation codes
-                  will have in the code title, "in diseases classified
-                  elsewhere." Codes with this title are a component of
-                  the etiology/manifestation convention. The code title
-                  indicates that it is a manifestation code.<br/>
-                </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: top;">MTH_CODE_FIRST</td>
-                <td style="vertical-align: top;">Plain text version of
-                  "CODE_FIRST" attribute value.<br/>
-                </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: top;">EXCLUDES1<br/>
-                </td>
-                <td style="vertical-align: top;">A pure excludes. It
-                  means "NOT CODED HERE!" Indicates that the code
-                  excluded should never be used at the same time as the
-                  code above the Excludes1 note. Used for when two
-                  conditions cannot occur together, such as a congenital
-                  form versus an acquired form of the same condition.<br/>
-                </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: top;">MTH_EXCLUDES1<br/>
-                </td>
-                <td style="vertical-align: top;">Plain text version of
-                  "EXCLUDES1" attribute value.<br/>
-                </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: top;">EXCLUDES2<br/>
-                </td>
-                <td style="vertical-align: top;">Represents "Not
-                  included here". Indicates that the condition excluded
-                  is not part of the condition it is excluded from but a
-                  patient may have both conditions at the same time.
-                  When an Excludes2 note appears under a code it is
-                  acceptable to use both the code and the excluded code
-                  together.<br/>
-                </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: top;">MTH_EXCLUDES2<br/>
-                </td>
-                <td style="vertical-align: top;">Plain text version of
-                  "EXCLUDES2" attribute value. </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: top;">NOTE<br/>
-                </td>
-                <td style="vertical-align: top;">Note<br/>
-                </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: top;">ORDER_NO<br/>
-                </td>
-                <td style="vertical-align: top;">Order number (from
-                  icd10cm_order_2014.txt)<br/>
-                </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: top;">SOS<br/>
-                </td>
-                <td style="vertical-align: top;">This data is added
-                  during Metathesaurus source processing </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: top;">USE_ADDITIONAL<br/>
-                </td>
-                <td style="vertical-align: top;">Certain conditions have
-                  both an underlying etiology and multiple body system
-                  manifestations due to the underlying etiology.
-                  ICD-10-CM has a coding convention that requires the
-                  underlying condition be sequenced first followed by
-                  the manifestation. Wherever such a combination exists
-                  there is a "use additional code" note at the etiology
-                  code. These instructional notes indicate the proper
-                  sequencing order of the codes, etiology followed by
-                  manifestation. In most cases the manifestation codes
-                  will have in the code title, "in diseases classified
-                  elsewhere." Codes with this title are a component of
-                  the etiology/ manifestation convention. The code title
-                  indicates that it is a manifestation code. "In
-                  diseases classified elsewhere" codes are never
-                  permitted to be used as first listed or principle
-                  diagnosis codes. They must be used in conjunction with
-                  an underlying condition code and they must be listed
-                  following the underlying condition.<br/>
-                </td>
-              </tr>
-              <tr>
-                <td style=" vertical-align: top;">FROMRSAB<br/>
-                </td>
-                <td style="vertical-align: top;">This data is added
-                  during Metathesaurus source processing </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: top;">FROMVSAB<br/>
-                </td>
-                <td style="vertical-align: top;">This data is added
-                  during Metathesaurus source processing </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: top;">MAPSETRSAB<br/>
-                </td>
-                <td style="vertical-align: top;">This data is added
-                  during Metathesaurus source processing </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: top;">MAPSETVERSION<br/>
-                </td>
-                <td style="vertical-align: top;">This data is added
-                  during Metathesaurus source processing </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: top;">MAPSETVSAB<br/>
-                </td>
-                <td style="vertical-align: top;">This data is added
-                  during Metathesaurus source processing </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: top;">MAPSETXRTARGETID<br/>
-                </td>
-                <td style="vertical-align: top;">This data is added
-                  during Metathesaurus source processing </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: top;">MTH_MAPFROMCOMPLEXITY<br/>
-                </td>
-                <td style="vertical-align: top;">This data is added
-                  during Metathesaurus source processing </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: top;">MTH_MAPFROMEXHAUSTIVE<br/>
-                </td>
-                <td style="vertical-align: top;">This data is added
-                  during Metathesaurus source processing </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: top;">MTH_MAPSETCOMPLEXITY</td>
-                <td style="vertical-align: top;">This data is added
-                  during Metathesaurus source processing </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: top;">MTH_MAPTOCOMPLEXITY</td>
-                <td style="vertical-align: top;">This data is added
-                  during Metathesaurus source processing </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: top;">MTH_MAPTOEXHAUSTIVE</td>
-                <td style="vertical-align: top;">This data is added
-                  during Metathesaurus source processing </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: top;">TORSAB<br/>
-                </td>
-                <td style="vertical-align: top;">This data is added
-                  during Metathesaurus source processing </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: top;">TOVSAB<br/>
-                </td>
-                <td style="vertical-align: top;">This data is added
-                  during Metathesaurus source processing </td>
-              </tr>
-            </tbody>
-          </table>
-          <br/>
-          <br/>
-          <!--
+
+<a name="top" id="top"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>, <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>, <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+<div id="general" class="rep_block_level_one">
+<p><strong>VSAB:</strong> ICD10CM_2014</p>
+<div id="rep_change_summary" class="rep_block_level_one">
+<h3>Summary of Change</h3>
+Plain text forms of UTF-8 strings are no longer created. <br>
+<br>
+Deprecated TTYs:<br>
+    MTH_AB<br>
+    MTH_ET<br>
+    MTH_HT<br>
+    MTH_PT<br>
+<br>
+Deprecated REL/RELA<br>
+    SY|has_plain_text_form/plain_text_form_of<br>
+<br>
+<h3>Source Provided Files:</h3>
+<br>
+The Metathesaurus uses files submitted in TREF (Terminology Representation and Exchange Format).  These files are produced by the National Center for Health Statistics (NCHS) for Metathesaurus processing, and are not currently available publicly.  TREF was developed by the NLM and is a subset of the Rich Release Format (RRF)  the format in which the UMLS Metathesaurus is released.  The following files are submitted for ICD10CM:<br>
+   <br>
+<div class="c1">MRCONSO.TREF<br>
+MRDOC.TREF<br>
+MRREL.TREF<br>
+MRSAB.TREF<br>
+MRSAT.TREF<br></div>
+<br>
+The TREF files align with the publically-available .pdf release of ICD10CM.  When relevant, the origin of data from the NCHS .pdf file is noted in the tables below. <br>
+<p>In addition, the following files were downloaded from <a href="http://www.cms.gov/ICD10/11b1_2011_ICD10CM_and_GEMs.asp#TopOfPage">http://www.cms.gov/Medicare/Coding/ICD10/2014-ICD-10-CM-and-GEMs.html</a>:<br></p>
+<div class="c2">icd10cm_order_2014.txt<br>
+2014_I10gem.txt<br>
+2014_I9gem.txt<br>
+reimb_map_dx_2014.txt</div>
+<p><br></p>
+</div>
+<div id="rep_identifers" class="rep_block_level_one">
+<h3>Identifiers:</h3>
+<br>
+Identifiers are assigned as follows:<br>
+<ul>
+<li>CODE: MRCONSO.TREF.DUI</li>
+<li>SAUI: Not Applicable</li>
+<li>SCUI: Not Applicable<br></li>
+<li>SDUI: MRCONSO.TREF.DUI</li>
+</ul>
+<div id="rep_termtypes" class="rep_block_level_two"><a name="atoms" id="atoms"></a>
+<h3>Atoms (MRCONSO):</h3>
+  <span class="nav">(<a href="#top">return to top</a></span>)<br>
+<table class="elements" border="0" cellspacing="0">
+<tbody>
+<tr>
+<th>Term Type</th>
+<td class="c4"><span class="c3">Description</span><br></td>
+<th>Origin</th>
+</tr>
+<tr>
+<td class="c4">AB<br></td>
+<td class="c4">Abbreviation (Short description)<br></td>
+<td class="c4">CODE = MRCONSO.TREF.TTY (field 5)<br>
+STR = MRCONSO.TREF.STR (field 2)<br>
+SDUI = MRCONSO.TREF.DUI (field 4)<br>
+SUPPRESS = "Y"<br>
+Note:  Also found in icd10cm_order_2014.txt (character positions 17-76)</td>
+</tr>
+<tr>
+<td>ET</td>
+<td class="c4">Entry Term<br></td>
+<td>CODE = MRCONSO.TREF.TTY (field 5)<br>
+STR = MRCONSO.TREF.STR (field 2)<br>
+SDUI = MRCONSO.TREF.DUI (field 4)<br>
+<br>
+Note:  In the NCHS tabluar .pdf file, ETs are listed directly below the preferred name of a code, with no tag.<br></td>
+</tr>
+<tr>
+<td>HT<br></td>
+<td class="c4">Hierarchical Term<br></td>
+<td>CODE = MRCONSO.TREF.TTY (field 5)<br>
+STR = MRCONSO.TREF.STR (field 2)<br>
+SDUI = MRCONSO.TREF.DUI (field 4)<br>
+<br>
+Note:  In icd10cm_order_2014.txt, a value of "0" in character position 15 indicates that the code is a header and not valid for submission on a UB04;  the long description begins at character 78 and continues for up to 300 characters.  In the TREF version of the files, additional concepts have been added to create a complete representation of the hierarchy. <br></td>
+</tr>
+<tr>
+<td>PT<br></td>
+<td class="c4">Preferred Term<br></td>
+<td>CODE = MRCONSO.TREF.TTY (field 5)<br>
+STR = MRCONSO.TREF.STR (field 2)<br>
+SDUI = MRCONSO.TREF.DUI (field 4)<br>
+<br>
+Note:  In icd10cm_order_2014.txt, a value of "1" in character position 15 indicates that the code is valid for submission on a UB04;  the long description begins at character 78 and continues for up to 300 characters.<br></td>
+</tr>
+<tr>
+<td>XM<br></td>
+<td class="c4">Cross Mapping Set<br></td>
+<td>This data is added during Metathesaurus source processing.<br></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="rep_attributes" class="rep_block_level_two"><a name="attributes" id="attributes"></a><br>
+<h3>Attributes (MRSAT):</h3>
+  <span class="nav">(<a href="#top">return to top</a></span>)<br>
+<p>Most attribute names are extracted from MRSAT.TREF.ATN (field 5);  Most attribute values are extracted from MRSAT.TREF.ATV (field 5).  ATNs used in MRSAT align with the tags found in the NCHS tabular .pdf file.<br></p>
+Mapping attributes are added during Metathesaurus source processing.<br>
+<table class="elements" border="0" cellspacing="0">
+<tbody>
+<tr>
+<th>ATN</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>ALT_SORT_CODE<br></td>
+<td>Alternative sort code<br></td>
+</tr>
+<tr>
+<td>CODE_ALSO<br></td>
+<td>Instructs that 2 codes may be required to fully describe a condition but the sequencing of the two codes is discretionary, depending on the severity of the conditions and the reason for the encounter.<br></td>
+</tr>
+<tr>
+<td class="c4">CODE_FIRST<br></td>
+<td class="c4">Certain conditions have both an underlying etiology and multiple body system manifestations due to the underlying etiology. ICD-10-CM has a coding convention that requires the underlying condition be sequenced first followed by the manifestation. Wherever such a combination exists there is a "code first" note at the manifestation code. These instructional notes indicate the proper sequencing order of the codes, etiology followed by manifestation. In most cases the manifestation codes will have in the code title, "in diseases classified elsewhere." Codes with this title are a component of the etiology/manifestation convention. The code title indicates that it is a manifestation code.<br></td>
+</tr>
+<tr>
+<td class="c4">MTH_CODE_FIRST</td>
+<td class="c4">Plain text version of "CODE_FIRST" attribute value.<br></td>
+</tr>
+<tr>
+<td class="c4">EXCLUDES1<br></td>
+<td class="c4">A pure excludes. It means "NOT CODED HERE!" Indicates that the code excluded should never be used at the same time as the code above the Excludes1 note. Used for when two conditions cannot occur together, such as a congenital form versus an acquired form of the same condition.<br></td>
+</tr>
+<tr>
+<td class="c4">MTH_EXCLUDES1<br></td>
+<td class="c4">Plain text version of "EXCLUDES1" attribute value.<br></td>
+</tr>
+<tr>
+<td class="c4">EXCLUDES2<br></td>
+<td class="c4">Represents "Not included here". Indicates that the condition excluded is not part of the condition it is excluded from but a patient may have both conditions at the same time. When an Excludes2 note appears under a code it is acceptable to use both the code and the excluded code together.<br></td>
+</tr>
+<tr>
+<td class="c4">MTH_EXCLUDES2<br></td>
+<td class="c4">Plain text version of "EXCLUDES2" attribute value.</td>
+</tr>
+<tr>
+<td class="c4">NOTE<br></td>
+<td class="c4">Note<br></td>
+</tr>
+<tr>
+<td class="c4">ORDER_NO<br></td>
+<td class="c4">Order number (from icd10cm_order_2014.txt)<br></td>
+</tr>
+<tr>
+<td class="c4">SOS<br></td>
+<td class="c4">This data is added during Metathesaurus source processing</td>
+</tr>
+<tr>
+<td class="c4">USE_ADDITIONAL<br></td>
+<td class="c4">Certain conditions have both an underlying etiology and multiple body system manifestations due to the underlying etiology. ICD-10-CM has a coding convention that requires the underlying condition be sequenced first followed by the manifestation. Wherever such a combination exists there is a "use additional code" note at the etiology code. These instructional notes indicate the proper sequencing order of the codes, etiology followed by manifestation. In most cases the manifestation codes will have in the code title, "in diseases classified elsewhere." Codes with this title are a component of the etiology/ manifestation convention. The code title indicates that it is a manifestation code. "In diseases classified elsewhere" codes are never permitted to be used as first listed or principle diagnosis codes. They must be used in conjunction with an underlying condition code and they must be listed following the underlying condition.<br></td>
+</tr>
+<tr>
+<td class="c5">FROMRSAB<br></td>
+<td class="c4">This data is added during Metathesaurus source processing</td>
+</tr>
+<tr>
+<td class="c4">FROMVSAB<br></td>
+<td class="c4">This data is added during Metathesaurus source processing</td>
+</tr>
+<tr>
+<td class="c4">MAPSETRSAB<br></td>
+<td class="c4">This data is added during Metathesaurus source processing</td>
+</tr>
+<tr>
+<td class="c4">MAPSETVERSION<br></td>
+<td class="c4">This data is added during Metathesaurus source processing</td>
+</tr>
+<tr>
+<td class="c4">MAPSETVSAB<br></td>
+<td class="c4">This data is added during Metathesaurus source processing</td>
+</tr>
+<tr>
+<td class="c4">MAPSETXRTARGETID<br></td>
+<td class="c4">This data is added during Metathesaurus source processing</td>
+</tr>
+<tr>
+<td class="c4">MTH_MAPFROMCOMPLEXITY<br></td>
+<td class="c4">This data is added during Metathesaurus source processing</td>
+</tr>
+<tr>
+<td class="c4">MTH_MAPFROMEXHAUSTIVE<br></td>
+<td class="c4">This data is added during Metathesaurus source processing</td>
+</tr>
+<tr>
+<td class="c4">MTH_MAPSETCOMPLEXITY</td>
+<td class="c4">This data is added during Metathesaurus source processing</td>
+</tr>
+<tr>
+<td class="c4">MTH_MAPTOCOMPLEXITY</td>
+<td class="c4">This data is added during Metathesaurus source processing</td>
+</tr>
+<tr>
+<td class="c4">MTH_MAPTOEXHAUSTIVE</td>
+<td class="c4">This data is added during Metathesaurus source processing</td>
+</tr>
+<tr>
+<td class="c4">TORSAB<br></td>
+<td class="c4">This data is added during Metathesaurus source processing</td>
+</tr>
+<tr>
+<td class="c4">TOVSAB<br></td>
+<td class="c4">This data is added during Metathesaurus source processing</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<!--
 
 
 <table class="elements" border="0" cellspacing="0">
@@ -546,126 +394,83 @@
 
 
 --></div>
-        <div id="rep_definitions" class="rep_block_level_two"> <a
-            name="definitions"></a><br/>
-          <h3>Definitions (MRDEF):</h3>
-          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-          <p>There are no DEFINITIONs for ICD10CM.<br/>
-          </p>
-        </div>
-        <div id="rep_relationships" class="rep_block_level_two"> <a
-            name="relationships"></a><br/>
-          <h3>Relationships (MRREL):</h3>
-          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-          <table class="elements" border="0" cellspacing="0">
-            <tbody>
-              <tr>
-                <th>REL</th>
-                <th>RELA<br/>
-                  Inverse RELA</th>
-                <th>Origin</th>
-              </tr>
-              <tr>
-                <td>CHD<br/>
-                  PAR<br/>
-                </td>
-                <td>(no rela)</td>
-                <td>Hierarchy created from MRREL.TREF.REL (field 4) =
-                  "PAR"<br/>
-                  SIB relationships are computed during Metathesaurus
-                  production<br/>
-                </td>
-              </tr>
-              <tr>
-                <td>RQ</td>
-                <td>(no rela) <br/>
-                </td>
-                <td>Connect Entry Terms (TTY = "ET") to their preferred
-                  form (TTY = "PT" or TTY = "HT")<br/>
-                </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: top;">SY<br/>
-                </td>
-                <td style="vertical-align: top;">expanded_form_of<br/>
-                  has_expanded_form<br/>
-                </td>
-                <td style="vertical-align: top;">Connect short forms
-                  (TTY = "AB") to their preferred form (TTY = PT")<br/>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div id="mappings" class="rep_block_level_two"><br/>
-          <h3>Mappings (MRMAP):</h3>
-          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-          <p>Three Mapsets ("XM" atoms, along with associated attributes
-            and mappings), are included for ICD-10-CM. These are
-            extracted from the General Equivalence Mappings (GEMs) and
-            reimbursement mappings.<br/>
-          </p>
-          <p>Note:&nbsp; The original mapping files do not include
-            decimal points for the ICD-9-CM and ICD-10-CM codes.&nbsp;
-            For clarity, decimals are added appropriately to the
-            MRMAP.RRF representation, e.g. "A021" is converted to
-            "A02.1" for use as a FROMID or TOID.<br/>
-          </p>
-          <br/>
-          <table class="elements" border="0" cellspacing="0">
-            <tbody>
-              <tr>
-                <th>Field</th>
-                <th>Origin (GEMs)<br/>
-                </th>
-                <td style="vertical-align: top;"><span
-                    style="font-weight: bold;">Origin (Reiumbursement
-                    mappings)</span><br/>
-                </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: top;">MAPSUBSETID<br/>
-                </td>
-                <td style="vertical-align: top;">Compound value of
-                  "Scenario:Choice"<br/>
-                  Note: Anything with the same FROMEXPR and MAPSUBSETID
-                  values should be "OR'd" together. style="font-size:
-                  22pt; font-family: Calibri; color: black;"&gt;</td>
-                <td style="vertical-align: top;">Not populated<br/>
-                </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: top;">REL<br/>
-                </td>
-                <td style="vertical-align: top;">RO where approximate
-                  flag = "1"<br/>
-                  SY where approxmiate flag = "0"<br/>
-                  XR where target value = "NoDx"<br/>
-                </td>
-                <td style="vertical-align: top;">RQ<br/>
-                </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: top;">RELA<br/>
-                </td>
-                <td style="vertical-align: top;">approximately_mapped_to
-                  where approximate flag = "1"<br/>
-                  mapped_to where approxmiate flag = "0"<br/>
-                  null (empty) where target value = "NoDX" or "NODX"<br/>
-                </td>
-                <td style="vertical-align: top;">mapped_to<br/>
-                </td>
-              </tr>
-              <tr>
-                <td style="vertical-align: top;">TOTYPE<br/>
-                </td>
-                <td style="vertical-align: top;">SDUI<br/>
-                </td>
-                <td style="vertical-align: top;">SDUI<br/>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
+<div id="rep_definitions" class="rep_block_level_two"><a name="definitions" id="definitions"></a><br>
+<h3>Definitions (MRDEF):</h3>
+  <span class="nav">(<a href="#top">return to top</a></span>)<br>
+<p>There are no DEFINITIONs for ICD10CM.<br></p>
+</div>
+<div id="rep_relationships" class="rep_block_level_two"><a name="relationships" id="relationships"></a><br>
+<h3>Relationships (MRREL):</h3>
+  <span class="nav">(<a href="#top">return to top</a></span>)<br>
+<table class="elements" border="0" cellspacing="0">
+<tbody>
+<tr>
+<th>REL</th>
+<th>RELA<br>
+Inverse RELA</th>
+<th>Origin</th>
+</tr>
+<tr>
+<td>CHD<br>
+PAR<br></td>
+<td>(no rela)</td>
+<td>Hierarchy created from MRREL.TREF.REL (field 4) = "PAR"<br>
+SIB relationships are computed during Metathesaurus production<br></td>
+</tr>
+<tr>
+<td>RQ</td>
+<td>(no rela)<br></td>
+<td>Connect Entry Terms (TTY = "ET") to their preferred form (TTY = "PT" or TTY = "HT")<br></td>
+</tr>
+<tr>
+<td class="c4">SY<br></td>
+<td class="c4">expanded_form_of<br>
+has_expanded_form<br></td>
+<td class="c4">Connect short forms (TTY = "AB") to their preferred form (TTY = PT")<br></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="mappings" class="rep_block_level_two"><br>
+<h3>Mappings (MRMAP):</h3>
+  <span class="nav">(<a href="#top">return to top</a></span>)<br>
+<p>Three Mapsets ("XM" atoms, along with associated attributes and mappings), are included for ICD-10-CM. These are extracted from the General Equivalence Mappings (GEMs) and reimbursement mappings.<br></p>
+<p>Note:  The original mapping files do not include decimal points for the ICD-9-CM and ICD-10-CM codes.  For clarity, decimals are added appropriately to the MRMAP.RRF representation, e.g. "A021" is converted to "A02.1" for use as a FROMID or TOID.<br></p>
+<br>
+<table class="elements" border="0" cellspacing="0">
+<tbody>
+<tr>
+<th>Field</th>
+<th>Origin (GEMs)<br></th>
+<td class="c4"><span class="c3">Origin (Reiumbursement mappings)</span><br></td>
+</tr>
+<tr>
+<td class="c4">MAPSUBSETID<br></td>
+<td class="c4">Compound value of "Scenario:Choice"<br>
+Note: Anything with the same FROMEXPR and MAPSUBSETID values should be "OR'd" together. style="font-size: 22pt; font-family: Calibri; color: black;"&gt;</td>
+<td class="c4">Not populated<br></td>
+</tr>
+<tr>
+<td class="c4">REL<br></td>
+<td class="c4">RO where approximate flag = "1"<br>
+SY where approxmiate flag = "0"<br>
+XR where target value = "NoDx"<br></td>
+<td class="c4">RQ<br></td>
+</tr>
+<tr>
+<td class="c4">RELA<br></td>
+<td class="c4">approximately_mapped_to where approximate flag = "1"<br>
+mapped_to where approxmiate flag = "0"<br>
+null (empty) where target value = "NoDX" or "NODX"<br></td>
+<td class="c4">mapped_to<br></td>
+</tr>
+<tr>
+<td class="c4">TOTYPE<br></td>
+<td class="c4">SDUI<br></td>
+<td class="c4">SDUI<br></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
