@@ -4,11 +4,12 @@
     xmlns:java="http://www.java.com/"
     exclude-result-prefixes="java xs">
     <xsl:output method = "text"  encoding = "utf-8"></xsl:output>
-
+    <xsl:key name = "groups" match = "ns0:Group" use = "@displayName"/>
     <xsl:template match = "ns0:RetrieveMultipleValueSetsResponse">
     <xsl:variable name="newline" select="normalize-space()"/>        
         
         <xsl:result-document href = "value-set-code-counts.txt">
+            <!-- show number of codes in each value set  -->
             <xsl:text>OID|ValueSetName|NumberOfCodes&#10;</xsl:text>
             <xsl:for-each select = "ns0:DescribedValueSet">
                 <xsl:variable name = "oid" select = "@ID"/>
@@ -19,9 +20,35 @@
                 <xsl:value-of select = "string-join(($oid,$valueSetName,$codeCount),'|')"/>
                 <xsl:text>&#10;</xsl:text>  
             </xsl:for-each>  
-            
-            
         </xsl:result-document>
+        
+        <xsl:result-document href = "value-set-measure-counts.txt">
+            <!-- how many measures are using a given value set ? -->
+            <xsl:text>OID|ValueSetName|NumberofCMSMeasures&#10;</xsl:text>
+             <xsl:for-each select="ns0:DescribedValueSet">
+                 <xsl:sort select = "count(distinct-values(ns0:Group[@displayName='CMS eMeasure ID']/ns0:Keyword))" order = "descending"/>
+                 <xsl:value-of select = "@ID"/><xsl:text>|</xsl:text>
+                 <xsl:value-of select = "@displayName"/><xsl:text>|</xsl:text>
+                 <xsl:value-of select = "count(distinct-values(ns0:Group[@displayName='CMS eMeasure ID']/ns0:Keyword))"/>
+                 <xsl:text>&#10;</xsl:text> 
+             </xsl:for-each>
+        </xsl:result-document>
+        
+        
+        <xsl:result-document href = "measure-counts.txt">
+            <!-- how many value sets are in a given measure? -->
+            <xsl:text>CMS Measure ID|NumberofOIDs&#10;</xsl:text>
+            <xsl:variable name = "cms" select = "ns0:DescribedValueSet/ns0:Group[@displayName='CMS eMeasure ID']/ns0:Keyword"/>
+                <xsl:for-each select = "$cms">
+                    <xsl:sort select = "current()"/>
+                    <xsl:if test="generate-id() = generate-id($cms[. = current()][1])">
+                        <xsl:value-of select = "."/><xsl:text>|</xsl:text>
+                        <xsl:value-of select = "count($cms[.=current()])"/><xsl:text>&#10;</xsl:text>
+                    </xsl:if>                
+                </xsl:for-each>
+
+        </xsl:result-document>
+        
     
         <xsl:result-document href = "value-set-codes.txt">
             <xsl:text>OID|ValueSetName|Source|Version|Code|Term|CodeSystemName|CodeSystemVersion|CodeSystemOID&#10;</xsl:text>
@@ -76,7 +103,9 @@
                 </xsl:for-each-group>
             </xsl:for-each>
         </xsl:result-document>
-    </xsl:template>  
+        
+        
+</xsl:template>  
 
 <xsl:template match = "ns0:Keyword" mode = "singular">
 <xsl:value-of select = "concat(.,'|')"/>
