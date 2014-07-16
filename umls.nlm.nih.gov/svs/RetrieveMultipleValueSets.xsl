@@ -33,8 +33,7 @@
                  <xsl:text>&#10;</xsl:text> 
              </xsl:for-each>
         </xsl:result-document>
-        
-        
+       
         <xsl:result-document href = "measure-counts.txt">
             <!-- how many value sets are in a given measure? -->
             <xsl:text>CMS Measure ID|NumberofOIDs&#10;</xsl:text>
@@ -46,7 +45,6 @@
                         <xsl:value-of select = "count($cms[.=current()])"/><xsl:text>&#10;</xsl:text>
                     </xsl:if>                
                 </xsl:for-each>
-
         </xsl:result-document>
         
     
