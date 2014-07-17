@@ -1,81 +1,35 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- begin tabbed navigation area -->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title></title>
-</head>
-<body>
-<div class="section-4"> 
- <ul id="menu"> 
-       <li id="nav-1"> 
-          <a href="index.html">Synopsis</a> 
-       </li> 
-       <li id="nav-2"> 
-          <a href="mrsab.html">MRSAB.RRF</a> 
-       </li> 
- 
-       <li id="nav-3"> 
-          <a href="sourcemetastats.html">Statistics and sample data</a> 
-          <ul id="subnav-3"> 
-             <li> 
-                <a href="termtypes.html">Terms and term types</a> 
-             </li> 
-             <li> 
- 
-                <a href="attributes.html">Attributes</a> 
- 
-             </li> 
-             <li> 
-                <a href="relationships.html">Relationships</a> 
-             </li> 
-             <li> 
-                <a href="semtypes.html">Semantic Types</a> 
- 
-             </li> 
-             <li> 
- 
-                <a href="overlap.html">Source Overlap</a> 
-             </li> 
-          </ul> 
-       </li>
-       <li id = "nav-4">
-       <a href = "representation.html">Representation</a>
-         <ul id = "subnav-4">
-          <li>
-            <a href = "sourcerepresentation.html" id  = "sourcerep">Source Representation</a>
-          </li>
-          <li>
-            <a href = "umlsrepresentation.html">UMLS Representation</a>
-          </li>
-         </ul>
-       </li>
- </ul>
-</div>
+<p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p>
+<!--begin tabbed navigation area-->
+   <div class="section-5">
+      <ul id="menu">
+         <li id="nav-1"><a href="index.html">Synopsis</a></li>
+         <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+         <li id="nav-3"><a href="stats.html">Statistics</a></li>
+         <li id="nav-4"><a href="samples.html">Samples</a></li>
+         <li id="nav-5"><a href="sourcerepresentation.html">Source Representation</a></li>
+         <li id="nav-6"><a href="metarepresentation.html">Metathesaurus Representation</a></li>
+      </ul>
+   </div>
 <!-- end tabbed navigation area -->
-
-<br/><br/><br/>
-<a name = "top"/>
+<br/>
+<a name = "top"></a>
 <span class = "nav">Skip to: <a href = "#general">General Notes/Comments</a>, <a href = "#change_summary">Summary of Changes</a>, <a href = "#file_summary">Summary of Source-Provided Files</a> <a href = "#file_details">Source-Provided File Details</a></span>
 
-<a name = "general"/>
+<a name = "general"></a>
 <div id = "rep_general" class = "rep_block_level_one">
 <h3>General Notes/Comments:</h3>
 <p>The HUGO Gene Nomenclature Committee (HGNC) is an international organization whose primary ethos is to promote and sustain collaboration in the field of human genetics.</p>
-<p>Data is supplied in a single, tab-delimited, text file.
+<p>Data is supplied in a single, tab-delimited, text file.</p>
 </div>
 <div id = "rep_change_summary" class = "rep_block_level_one">
-<a name = "change_summary"/>
+<a name = "change_summary"></a>
 <h3>Summary of Changes</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)
-<table class = "elements" border = "0" cellspacing = "0">
-</table>
 <p>1. New Specialist Database ID = BioParadigms.</p>
 <p>2. Deprecated ATN =  MTH_LOCUS_SPECIFIC_DB_XR since MTH* entries are no longer being created for strings containing UTF-8 characters.</p>
 </div>
 
 <div id = "rep_file_summary" class = "rep_block_level_one">
-<a name = "file_summary"/>
+<a name = "file_summary"></a>
 <h3>Summary of Source-Provided Files</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)
 
 <div class = "rep_block_level_two">
@@ -96,12 +50,12 @@
 </div>
 </div>
 
-<a name = "file_details"/>
-<div id = "rep_file_details" class = "rep_block_level_one"></div>
+<div id = "rep_file_details" class = "rep_block_level_one">
+<a name = "file_details"></a>
 <h3>Source-Provided File Details</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)
 
 <div class = "rep_block_level_two">
-<a name = "file1"/>
+<a name = "file1"></a>
 <table class = "elements" border = "0" cellspacing = "0">
 <tr><th>Field Number</th><th>Field Name</th><th>Description</th><th>Representation</th></tr>
 <tr><td  class = "file_field_name">1</td><td>HGNC ID</td><td>A unique ID provided by the HGNC</td><td>MRCONSO.CODE; MRCONSO.SCUI</td></tr>
@@ -144,9 +98,8 @@
 <tr><td  class = "file_field_name">38</td><td>UCSC (mapped data)</td><td>UCSC (mapped data supplied by UCSC)</td><td>MRSAT.ATN=UCSC_ID</td></tr>
 <tr><td  class = "file_field_name">39</td><td>Mouse Genome Database ID (mapped data)</td><td>Mouse Genome Database ID (mapped data supplied by MGI)</td><td>MRSAT.ATN=MAPPED_MGD_ID</td></tr>
 <tr><td  class = "file_field_name">40</td><td>Rat Genome Database ID (mapped data)</td><td>Rat Genome Database ID (mapped data supplied by RGD)</td><td>MRSAT.ATN=MAPPED_RGD_ID</td></tr>
-</table>
-
-<p>(1) The following fields can contain multiple values in a comma delimited list: </p>
+</table><br/>
+<p>(1) The following fields can contain multiple values in a comma delimited list:<br/>
 Accession Numbers<br/>
 Enzyme ID<br/>
 Gene Family Tag<br/>
@@ -158,6 +111,7 @@ Pubmed ID<br/>
 RefSeq IDs<br/>
 Specialist Database ID<br/>
 Specialist Database Links<br/>
-Synonyms<br/>
-<p>(2) HGNC's mapped data is derived from external sources and is not subject to their checking and curation procedures.</p>
-</div>
+Synonyms<br/> <br/>
+
+(2) HGNC's mapped data is derived from external sources and is not subject to their checking and curation procedures.</p>
+</div></div>
