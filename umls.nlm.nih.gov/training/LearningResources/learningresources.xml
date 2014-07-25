@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <categories>
-    <category name = "UMLS License" rank = "01">
+    <category name = "Semantic MEDLINE" rank = "ab">
+        <resources>
+            <resource current = "Y">
+                <Project>Semantic MEDLINE</Project>
+                <Title>Semantic MEDLINE: A Quick Tour</Title>
+                <URL>https://www.youtube.com/watch?v=GWdyk18RTuA</URL>
+                <Date>03/18/2014</Date>
+                <Runtime>7 min.</Runtime>              
+                <Format>Video Tutorial</Format>
+                <Organization externalcontentprovider = "Y">NLM</Organization>
+            </resource>
+        </resources>
+    </category>
+    <category name = "UMLS License" rank = "b">
         <resources>
             <resource current = "Y">
                <Project>UMLS</Project>               
@@ -22,7 +35,7 @@
            </resource>
         </resources>
     </category>
-    <category name = "Source Vocabularies" rank = "02">
+    <category name = "Source Vocabularies" rank = "d">
         <resources>
             <resource current = "Y">
                 <Project>UMLS</Project>
@@ -55,7 +68,7 @@
            </resource> 
         </resources>        
     </category>
-    <category name = "UMLS Terminology Services (UTS)" rank = "03">
+    <category name = "UMLS Terminology Services (UTS)" rank = "e">
             <resources>
                 <resource current = "Y">
                     <Project>UMLS</Project>
@@ -96,7 +109,7 @@
                 </resource>
               </resources>  
    </category>
-    <category name = "Local Installation of UMLS (MetamorphoSys)" rank = "04">
+    <category name = "Local Installation of UMLS (MetamorphoSys)" rank = "f">
       <subcategories>
         <subcategory name= "Vocabulary Subset Creation">
         <resources>
@@ -241,7 +254,7 @@
         </subcategory>  
       </subcategories>
     </category>
-    <category name = "MetaMap" rank = "05">
+    <category name = "MetaMap" rank = "g">
         <resources>
             <resource current = "Y">
                 <Project>UMLS</Project>
@@ -255,7 +268,7 @@
             </resource>
         </resources>        
     </category>
-    <category name = "Terminology Mapping" rank = "06">
+    <category name = "Terminology Mapping" rank = "h">
         <resources>
             <resource current = "N">
                 <Project>UMLS</Project>
@@ -269,7 +282,7 @@
             </resource>
         </resources>
     </category>
-    <category name = "RxNorm" rank = "07">
+    <category name = "RxNorm" rank = "c">
             <resources>
                 <resource current = "Y">
                     <Project>UMLS</Project>
@@ -313,7 +326,7 @@
                 </resource>
             </resources>       
     </category>
-    <category name = "Semantic Network" rank = "08">
+    <category name = "Semantic Network" rank = "i">
             <resources>
                 <resource current = "Y">
                     <Project>UMLS</Project>
@@ -327,7 +340,7 @@
                 </resource>
             </resources>       
     </category>
-    <category name = "The UMLS in Use" rank = "09">
+    <category name = "The UMLS in Use" rank = "j">
         <resources>
             <resource current = "Y">
             <Project>UMLS</Project>
@@ -341,38 +354,66 @@
             </resource>
         </resources>       
     </category>
-    <category name = "SNOMED CT&#174;" rank = "10">
-        <resources>
-<!--            <resource current = "Y">  This may be a duplicate/repeat to the PHI webinar of 8/21/11
-                <Project>SNOMEDCT</Project>
-                <Title>Overview of SNOMED CT International Release, U.S. Extension of SNOMED CT and NLM SNOMED Resources</Title>
-                <URL></URL>
-                <Date>02/16/2012</Date>
-                <Runtime></Runtime>
-                <Format>Webinar</Format>
-                <Organization externalcontentprovider = "Y">RCMT</Organization>
-                <Presenter>Dr. James T. Case</Presenter>
-            </resource> -->
-            <resource current = "Y">
-                <Project>SNOMEDCT</Project>
-                <Title>USCRS: Submitting Batch Requests</Title>
-                <URL>https://webmeeting.nih.gov/p63516595/</URL>
-                <Date>10/07/2011</Date>
-                <Runtime>59 min.</Runtime>
-                <Format>Webinar</Format>
-                <Organization externalcontentprovider = "N">NLM</Organization>
-                <Presenter>Brian Carlsen</Presenter>
-            </resource>
-            <resource current = "Y">
-                <Project>SNOMEDCT</Project>
-                <Title>U.S. SNOMED CT Content Request System (USCRS)</Title>
-                <URL>https://webmeeting.nih.gov/p24726517/</URL>
-                <Date>10/03/2011</Date>
-                <Runtime>59 min.</Runtime>
-                <Format>Webinar</Format>
-                <Organization externalcontentprovider = "N">NLM</Organization>
-                <Presenter>Brian Carlsen</Presenter>
-            </resource>
+    <category name = "SNOMED CT&#174;" rank = "a">
+        <subcategories>
+            <subcategory name = "US SNOMEDCT Content Request System">
+                <resources>
+                    <resource current = "Y">
+                        <Project>USCRS</Project>
+                        <Title>Introduction to USCRS</Title>
+                        <URL>http://www.nlm.nih.gov/research/umls/user_education/quick_tours/USCRS_Intro/intro_uscrs_v3.html</URL>
+                        <Date>06/01/2014</Date>
+                        <Runtime>7 min.</Runtime>
+                        <Format>Video Tutorial</Format>
+                    </resource>
+                    <resource current = "Y">
+                        <Project>USCRS</Project>
+                        <Title>Types of Requests</Title>
+                        <URL>http://www.nlm.nih.gov/research/umls/user_education/quick_tours/USCRS_Intro/Types_of_Requests.html</URL>
+                        <Date>06/01/2014</Date>
+                        <Runtime>5 min.</Runtime>
+                        <Format>Video Tutorial</Format>
+                    </resource>
+                    <resource current = "Y">
+                        <Project>USCRS</Project>
+                        <Title>Searching USCRS</Title>
+                        <URL>http://www.nlm.nih.gov/research/umls/user_education/quick_tours/USCRS_Intro/searching_uscrs.html</URL>
+                        <Date>06/01/2014</Date>
+                        <Runtime>4 min.</Runtime>
+                        <Format>Video Tutorial</Format>
+                    </resource>
+                    <resource current = "Y">
+                        <Project>USCRS</Project>
+                        <Title>Submitting Requests on USCRS</Title>
+                        <URL>http://www.nlm.nih.gov/research/umls/user_education/quick_tours/USCRS_Intro/submit_uscrs.html</URL>
+                        <Date>06/01/2014</Date>
+                        <Runtime>8 min.</Runtime>
+                        <Format>Video Tutorial</Format>
+                    </resource>
+                <resource current = "Y">
+                    <Project>SNOMEDCT</Project>
+                    <Title>USCRS: Submitting Batch Requests</Title>
+                    <URL>https://webmeeting.nih.gov/p63516595/</URL>
+                    <Date>10/07/2011</Date>
+                    <Runtime>59 min.</Runtime>
+                    <Format>Webinar</Format>
+                    <Organization externalcontentprovider = "N">NLM</Organization>
+                    <Presenter>Brian Carlsen</Presenter>
+                </resource>
+                <resource current = "N">
+                    <Project>SNOMEDCT</Project>
+                    <Title>U.S. SNOMED CT Content Request System (USCRS)</Title>
+                    <URL>https://webmeeting.nih.gov/p24726517/</URL>
+                    <Date>10/03/2011</Date>
+                    <Runtime>59 min.</Runtime>
+                    <Format>Webinar</Format>
+                    <Organization externalcontentprovider = "N">NLM</Organization>
+                    <Presenter>Brian Carlsen</Presenter>
+                </resource>
+             </resources>
+            </subcategory>
+            <subcategory name = "About SNOMED CT &#174;">
+            <resources>
             <resource current = "Y">
                 <Project>SNOMEDCT</Project>
                 <Title>Overview of SNOMED CT International Release, U.S. Extension of SNOMED CT and NLM SNOMED Resources</Title>
@@ -383,9 +424,11 @@
                 <Organization externalcontentprovider = "Y">2011 Public Health Informatics Conference</Organization>
                 <Presenter>Dr. James T. Case</Presenter>
             </resource>
-        </resources>       
+            </resources>
+            </subcategory>
+        </subcategories>
     </category>
-    <category name = "Research" rank = "11">
+    <category name = "Research" rank = "k">
         <resources>
             <resource current = "Y">
                 <Project>Research</Project>
