@@ -1,39 +1,16 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html;
-      charset=ISO-8859-1">
-    <title></title>
-  </head>
-  <body>
-    <div class="section-4">
+<p>This page lists UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
+<!--begin tabbed navigation area-->
+<div class="section-6">
       <ul id="menu">
-        <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
-        <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
-        <li id="nav-3"> <a href="sourcemetastats.html">Statistics and
-            sample
-            data</a>
-          <ul id="subnav-3">
-            <li> <a href="termtypes.html">Terms and term types</a> </li>
-            <li> <a href="attributes.html">Attributes</a> </li>
-            <li> <a href="relationships.html">Relationships</a> </li>
-            <li> <a href="semtypes.html">Semantic Types</a> </li>
-            <li> <a href="overlap.html">Source Overlap</a> </li>
-          </ul>
-        </li>
-        <li id="nav-4"> <a href="representation.html">Representation</a>
-          <ul id="subnav-4">
-            <li> <a href="sourcerepresentation.html">Source
-                Representation</a> </li>
-            <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
-                Representation</a> </li>
-          </ul>
-        </li>
+         <li id="nav-1"><a href="index.html">Synopsis</a></li>
+         <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+         <li id="nav-3"><a href="stats.html">Statistics</a></li>
+         <li id="nav-4"><a href="samples.html">Samples</a></li>
+         <li id="nav-5"><a href="sourcerepresentation.html">Source Representation</a></li>
+         <li id="nav-6"><a href="metarepresentation.html">Metathesaurus Representation</a></li>
       </ul>
-    </div>
-    <br/>
-    <br/>
-    <br/>
+</div>
+<!-- end tabbed navigation area -->
     <a name="top"></a>
     <span class="nav">Skip to: <a href="#atoms">Atoms</a>, <a
         href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
@@ -43,7 +20,7 @@
       <div id="rep_identifiers" class="rep_block_level_one">
         <h3>Summary of Changes:</h3>
         &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-      <br class="atl-forced-newline">
+      <br class="atl-forced-newline" />
         Change in the code format.  The preceding 'T' of the health topics code (e.g., T3061) has been deprecated.  The result is that the health code is no
         longer unique and can have the same code as the group id but have a different meaning. For example, group id=22
         (Immune System) and health topic code = 22 (Alzheimer's Disease).  With this change, codes are no longer being used in the
@@ -113,7 +90,7 @@
             </tr>
           </tbody>
         </table>
-        <a name="atoms"></a>
+        <a name="atoms" id="atoms"></a>
         <br/>
         <div id="rep_termtypes" class="rep_block_level_two">
           <h3>Atoms (MRCONSO):</h3>
@@ -121,10 +98,10 @@
           <br/>
           Notes:&nbsp;&nbsp; <br/>
           <ul>
-            <li>Only English language records (language="English") are
+            <li>Only English language records (language=&quot;English&quot;) are
               processed
               for the Metathesaurus.&nbsp; Spanish language records
-              (language="Spanish") are not included.</li>
+              (language=&quot;Spanish&quot;) are not included.</li>
             <li>&nbsp;Even when duplicated, both ETs and SYs are
               included for
               complete representation of the source.<br/>
@@ -138,7 +115,7 @@
                 <th>Description</th>
                 <th>Origin:&nbsp; XML tag<br/>
                 </th>
-                <td style="vertical-align: top;"><span
+                <td><span
                     style="font-weight: bold;">File(s)</span><br/>
                 </td>
               </tr>
@@ -150,7 +127,7 @@
                 <td>CODE = &lt;health-topic id&gt;<br/>
                   STR = &lt;see-reference&gt;<br/>
                 </td>
-                <td style="vertical-align: top;">mplus_topics_YYYY-MM-DD.xml<br/>
+                <td>mplus_topics_YYYY-MM-DD.xml<br/>
                 </td>
               </tr>
               <tr>
@@ -161,7 +138,7 @@
                 <td>CODE = &lt;group id&gt;<br/>
                   STR = &lt;group&gt;<br/>
                 </td>
-                <td style="vertical-align: top;">mplus_topic_groups_YYYY-MM-DD.xml
+                <td>mplus_topic_groups_YYYY-MM-DD.xml
                 </td>
               </tr>
               <tr>
@@ -172,7 +149,7 @@
                 <td>CODE = &lt;health-topic id&gt; <br/>
                   STR = &lt;health-topic title&gt;<br/>
                 </td>
-                <td style="vertical-align: top;">mplus_topics_YYYY-MM-DD.xml<br/>
+                <td>mplus_topics_YYYY-MM-DD.xml<br/>
                 </td>
               </tr>
               <tr>
@@ -183,14 +160,14 @@
                 <td>CODE = &lt;health-topic id&gt;<br/>
                   STR = &lt;also-called&gt;<br/>
                 </td>
-                <td style="vertical-align: top;">mplus_topics_YYYY-MM-DD.xml<br/>
+                <td>mplus_topics_YYYY-MM-DD.xml<br/>
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
         <div id="rep_attributes" class="rep_block_level_two">
-          <a name="attributes"></a><br/>
+          <a name="attributes" id="attributes"></a><br/>
           <h3>Attributes (MRSAT):</h3>
           &nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
           <br/>
@@ -242,7 +219,7 @@
           </table>
         </div>
         <div id="rep_definitions" class="rep_block_level_two">
-          <a name="definitions"></a><br/>
+          <a name="definitions" id="definitions"></a><br/>
           <h3>Definitions (MRDEF):</h3>
           DEFINITIONs are created from the value of the
           &lt;full-summary&gt; tag in the
@@ -289,12 +266,12 @@
                 <td>Connect ET atoms to PT atoms </td>
               </tr>
               <tr>
-                <td style="vertical-align: top;">RQ<br/>
+                <td>RQ<br/>
                 </td>
-                <td style="vertical-align: top;">mapped_from<br/>
+                <td>mapped_from<br/>
                   mapped_to<br/>
                 </td>
-                <td style="vertical-align: top;">Connect PT atoms to
+                <td>Connect PT atoms to
                   MeSH
                   Descriptor (if present). Note: Because the combination
                   of
@@ -305,12 +282,12 @@
                   link them together. </td>
               </tr>
               <tr>
-                <td style="vertical-align: top;">RO<br/>
+                <td>RO<br/>
                 </td>
-                <td style="vertical-align: top;">mapping_qualifier_of<br/>
+                <td>mapping_qualifier_of<br/>
                   has_mapping_qualifier<br/>
                 </td>
-                <td style="vertical-align: top;">Connect PT atoms to
+                <td>Connect PT atoms to
                   MeSH
                   Qualifier (if present). Note: Because the combination
                   of
@@ -344,5 +321,3 @@
           <p>No mappings are represented for MedlinePlus.</p>
         </div>
       </div>
-    </body>
-</html>

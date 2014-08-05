@@ -1,38 +1,16 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-<head>
-
-<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
-<title></title>
-</head>
-<body>
-<div class="section-4">
-<ul id="menu">
-  <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
-  <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
-  <li id="nav-3"> <a href="sourcemetastats.html">Statistics and sample
-data</a>
-    <ul id="subnav-3">
-      <li> <a href="termtypes.html">Terms and term types</a> </li>
-      <li> <a href="attributes.html">Attributes</a> </li>
-      <li> <a href="relationships.html">Relationships</a> </li>
-      <li> <a href="semtypes.html">Semantic Types</a> </li>
-      <li> <a href="overlap.html">Source Overlap</a> </li>
-    </ul>
-  </li>
-  <li id="nav-4"> <a href="representation.html">Representation</a>
-    <ul id="subnav-4">
-      <li> <a href="sourcerepresentation.html">Source Representation</a>
-      </li>
-      <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
-Representation</a></li>
-    </ul>
-  </li>
-</ul>
+<p>This page lists UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
+<!--begin tabbed navigation area-->
+<div class="section-6">
+      <ul id="menu">
+         <li id="nav-1"><a href="index.html">Synopsis</a></li>
+         <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+         <li id="nav-3"><a href="stats.html">Statistics</a></li>
+         <li id="nav-4"><a href="samples.html">Samples</a></li>
+         <li id="nav-5"><a href="sourcerepresentation.html">Source Representation</a></li>
+         <li id="nav-6"><a href="metarepresentation.html">Metathesaurus Representation</a></li>
+      </ul>
 </div>
-<br/>
-<br/>
-<br/>
+<!-- end tabbed navigation area -->
 <a name="top"></a>
 <span class="nav">Skip to: <a href="#atoms">Atoms</a>, <a
  href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
@@ -74,62 +52,62 @@ directory:<br/>
 </div>
 <div id="rep_identifers" class="rep_block_level_one">
 <h3>Identifiers:</h3>
-<p>Overview: Lower Level Terms ("LT"s) in MedDRA have any of the
-following relationships to their "PT":</p>
+<p>Overview: Lower Level Terms (&quot;LT&quot;s) in MedDRA have any of the
+following relationships to their &quot;PT&quot;:</p>
 <ul>
   <li>Synonyms: Different terms for the same concept inherent in the
-"PT"
-(e.g., "PT" Arthritis and its subordinate "LT" Joint inflammation)</li>
+&quot;PT&quot;
+(e.g., &quot;PT&quot; Arthritis and its subordinate &quot;LT&quot; Joint inflammation)</li>
   <li>Lexical variants: Different word forms for the same expression.
 These include full names vs. abbreviations and direct vs. inverted word
-order (e.g., "PT" Acquired immunodeficiency syndrome and its
+order (e.g., &quot;PT&quot; Acquired immunodeficiency syndrome and its
 subordinate
-"LT" AIDS or "PT" Biopsy tongue and its subordinate "LT" Tongue biopsy).</li>
+&quot;LT&quot; AIDS or &quot;PT&quot; Biopsy tongue and its subordinate &quot;LT&quot; Tongue biopsy).</li>
   <li>Quasi-synonyms: Quasi-synonyms are terms that are not precisely
 the same meaning as another term, but are treated as synonymous in a
 given terminology. These include site and laterality descriptions
-(e.g., "PT" Otitis externa and its subordinate "LT" Bilateral otitis
+(e.g., &quot;PT&quot; Otitis externa and its subordinate &quot;LT&quot; Bilateral otitis
 externa).</li>
-  <li>Sub-element: Sub-elements (of the parent "PT") are represented by
-"LT"s with more detailed information such as anatomic specificity
+  <li>Sub-element: Sub-elements (of the parent &quot;PT&quot;) are represented by
+&quot;LT&quot;s with more detailed information such as anatomic specificity
 (e.g.,
-"PT"Contusion with LT Bruising of face or "LT" Bruising of leg).</li>
-  <li>Identical "LT": One "LT" is identical to its "PT" for data entry
-purposes (e.g., "PT" Dementia Alzheimer&#8217;s type and its subordinate "LT"
-Dementia Alzheimer&#8217;s type). In this instance, the "LT" and parent "PT"
+&quot;PT&quot;Contusion with LT Bruising of face or &quot;LT&quot; Bruising of leg).</li>
+  <li>Identical &quot;LT&quot;: One &quot;LT&quot; is identical to its &quot;PT&quot; for data entry
+purposes (e.g., &quot;PT&quot; Dementia Alzheimer&#8217;s type and its subordinate &quot;LT&quot;
+Dementia Alzheimer&#8217;s type). In this instance, the &quot;LT&quot; and parent &quot;PT&quot;
 have
 the same MedDRA code but appear at both levels.</li>
 </ul>
-<p>Since MedDRA does not indicate which "LT"s share the same meaning
+<p>Since MedDRA does not indicate which &quot;LT&quot;s share the same meaning
 with
-their "PT", all "LT"s are assigned the same the same Source-asserted
+their &quot;PT&quot;, all &quot;LT&quot;s are assigned the same the same Source-asserted
 Descriptor Identifer (SDUI).&nbsp; A descriptor is a collection of
 concepts (or atoms if there is no concept level organization) that are
 considered to be closely related (but not necessarily synonymous).</p>
 <p>Identifiers are assigned as follows:<br/>
 </p>
 <ul>
-  <li>CODE: Populated by the "code" fields in original data files, e.g.
-the code for an "LT" or "OL" atom comes from the llt_code field in
+  <li>CODE: Populated by the &quot;code&quot; fields in original data files, e.g.
+the code for an &quot;LT&quot; or &quot;OL&quot; atom comes from the llt_code field in
 llt.asc</li>
   <li>SAUI: Not Applicable</li>
   <li>SCUI: Not Applicable</li>
-  <li>SDUI: Populated by the "code" fields in original data files,
-except for TTY = "LT" and TTY = "OL", where the pt_code field from
+  <li>SDUI: Populated by the &quot;code&quot; fields in original data files,
+except for TTY = &quot;LT&quot; and TTY = &quot;OL&quot;, where the pt_code field from
 llt.asc
 is used.
-This is because every "PT" has one identical "LT" for data entry
+This is because every &quot;PT&quot; has one identical &quot;LT&quot; for data entry
 purposes.
 In addition, LTs may be synonyms, lexical variants, quasi-synonyms, or
-sub-elements of their "PT".
+sub-elements of their &quot;PT&quot;.
 Therefore, the pt_code is represented in MRCONSO as a Source-asserted
-Descriptor Identifier (SDUI), indicating that the "LT" and "PT" are
+Descriptor Identifier (SDUI), indicating that the &quot;LT&quot; and &quot;PT&quot; are
 closely
 related but not necessarily synonymous.
   </li>
 </ul>
 <div id="rep_termtypes" class="rep_block_level_two">
-<a name="termtypes"></a>
+<a name="termtypes" id="termtypes"></a>
 <h3>Atoms (MRCONSO):</h3>
 &nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
 <table class="elements" border="0" cellspacing="0">
@@ -190,7 +168,7 @@ This data is added during Metathesaurus source processing<br/>
 STR = llt_name field of llt.asc, with Americanization or abbreviation
 expansion algorithm applied<br/>
 SDUI = pt_code field of llt.asc.<br/>
-LT atoms are created where llt_currency field of llt.asc = "Y"<br/>
+LT atoms are created where llt_currency field of llt.asc = &quot;Y&quot;<br/>
 This data is added during Metathesaurus source processing<br/>
       </td>
     </tr>
@@ -200,8 +178,8 @@ This data is added during Metathesaurus source processing<br/>
 STR = llt_name field of llt.asc, with Americanization or abbreviation
 expansion algorithm applied<br/>
 SDUI = pt_code field of llt.asc.<br/>
-SUPRESS = "Y"<br/>
-OL atoms are created where llt_currency field of llt.asc = "Y"<br/>
+SUPRESS = &quot;Y&quot;<br/>
+OL atoms are created where llt_currency field of llt.asc = &quot;Y&quot;<br/>
 This data is added during Metathesaurus source processing<br/>
       </td>
     </tr>
@@ -237,8 +215,8 @@ This data is added during Metathesaurus source processing.<br/>
       <td>CODE = llt_code field of llt.asc<br/>
 STR = llt_name field of llt.asc<br/>
 SDUI = pt_code field of llt.asc<br/>
-SUPPRESS = "Y"<br/>
-OL atoms are created where llt_currency field of llt.asc = "N"<br/>
+SUPPRESS = &quot;Y&quot;<br/>
+OL atoms are created where llt_currency field of llt.asc = &quot;N&quot;<br/>
       </td>
     </tr>
     <tr>
@@ -270,7 +248,7 @@ SDUI = smq_code field of SMQ_List.asc<br/>
 </table>
 </div>
 <div id="rep_attributes" class="rep_block_level_two">
-<a name="attributes"></a><br/>
+<a name="attributes" id="attributes"></a><br/>
 <h3>Attributes (MRSAT):</h3>
 &nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
 <table class="elements" border="0" cellspacing="0">
@@ -399,7 +377,7 @@ SMQ_Content.asc</td>
 </table>
 </div>
 <div id="rep_definitions" class="rep_block_level_two">
-<a name="definitions"></a><br/>
+<a name="definitions" id="definitions"></a><br/>
 <h3>Definitions (MRDEF):</h3>
 &nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
 <table class="elements" border="0" cellspacing="0">
@@ -409,14 +387,14 @@ SMQ_Content.asc</td>
     </tr>
     <tr>
       <td>Extracted from the SMQ_description field of smq_list.asc.
-DEFINITIONs are present only for TTY = "SMQ", and include a description<br/>
+DEFINITIONs are present only for TTY = &quot;SMQ&quot;, and include a description<br/>
 of the SMQ including inclusion and exclusion criteria</td>
     </tr>
   </tbody>
 </table>
 </div>
 <div id="rep_relationships" class="rep_block_level_two">
-<a name="relationships"></a><br/>
+<a name="relationships" id="relationships"></a><br/>
 <h3>Relationships (MRREL):</h3>
 &nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
 <table class="elements" border="0" cellspacing="0">
@@ -431,13 +409,13 @@ of the SMQ including inclusion and exclusion criteria</td>
 PAR<br/>
 SIB</td>
       <td>(no rela)</td>
-      <td valign="top">Hierarchy extracted from hlt_pt.asc,
+      <td>Hierarchy extracted from hlt_pt.asc,
 hlgt_hlt.asc, soc_hlgt.asc files (can also be computed from mdhier.asc).</td>
     </tr>
     <tr>
       <td>RQ</td>
       <td>classifies/classified_by</td>
-      <td>Connects a "PT" to its "LT"s or "OL"s. Data is derived from
+      <td>Connects a &quot;PT&quot; to its &quot;LT&quot;s or &quot;OL&quot;s. Data is derived from
 the
 llt_code and pt_code fields of llt.asc.</td>
     </tr>
@@ -446,12 +424,12 @@ llt_code and pt_code fields of llt.asc.</td>
       <td>mapped_to/mapped_from</td>
       <td>Connects a MedDRA atom to a CODE from another source included
 in the Metathesaurus. Data is derived from the icd9cm_code and
-costart_sym fields in original data files, e.g. a "PT" gets a mapping
+costart_sym fields in original data files, e.g. a &quot;PT&quot; gets a mapping
 relationship to the value present in the pt_icd9cm_code field of pt.asc.<br/>
 Due to version differences, some code values provided by MedDRA for
 other sources are not present in the Metathesaurus, so relationships
 cannot be created. Therefore, complete MedDRA-asserted cross-reference
-data is included in the "MXR" attribute.<br/>
+data is included in the &quot;MXR&quot; attribute.<br/>
 Note that in many cases UMLS editors have determined that the MedDRA
 atom has the same meaning as the code in the other source, so they will
 share the same CUI in addition to the mapping relationship.</td>
@@ -466,8 +444,8 @@ SMQ_content.asc.</td>
     <tr>
       <td>SY</td>
       <td>expanded_form_of/has_expanded_form</td>
-      <td>Connects atoms with TTY = "OS" (Organ System) to their short
-forms (TTY = "AB").</td>
+      <td>Connects atoms with TTY = &quot;OS&quot; (Organ System) to their short
+forms (TTY = &quot;AB&quot;).</td>
     </tr>
     <tr>
       <td>SY</td>
@@ -479,7 +457,7 @@ spelling. This data is added during Metathesaurus source processing.</td>
       <td>SY</td>
       <td>mth_has_expanded_form/mth_expanded_form_of</td>
       <td>Connects original MedDRA atoms with atoms with expanded
-abbreviations. For example, "excl" has been expanded to "excluding".
+abbreviations. For example, &quot;excl&quot; has been expanded to &quot;excluding&quot;.
 This data is added during Metathesaurus source processing.</td>
     </tr>
   </tbody>
@@ -488,7 +466,7 @@ This data is added during Metathesaurus source processing.</td>
 <div id="mappings" class="rep_block_level_two">
 <h3>Mappings (MRMAP):</h3>
 &nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
-<p>Two Mapsets ("XM" atoms, along with associated attributes and
+<p>Two Mapsets (&quot;XM&quot; atoms, along with associated attributes and
 mappings), are included for MedDRA. These are extracted from the
 ICD9_CM code and COSTART symbol fields in the relevant MedDRA files.<br/>
 An &#8220;RQ|mapped_to&#8221; REL/RELA are assigned. When possible, these mappings
@@ -497,5 +475,3 @@ portion of this data cannot be represented in MRREL.RRF. </p>
 </div>
 </div>
 </div>
-</body>
-</html>

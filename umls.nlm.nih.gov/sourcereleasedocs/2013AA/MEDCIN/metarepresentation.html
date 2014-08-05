@@ -1,38 +1,16 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-<head>
-  <meta http-equiv="content-type"
- content="text/html; charset=ISO-8859-1">
- <title></title>
-</head>
-<body>
-<div class="section-4">
-<ul id="menu">
-  <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
-  <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
-  <li id="nav-3"> <a href="sourcemetastats.html">Statistics and sample
-data</a>
-    <ul id="subnav-3">
-      <li> <a href="termtypes.html">Terms and term types</a> </li>
-      <li> <a href="attributes.html">Attributes</a> </li>
-      <li> <a href="relationships.html">Relationships</a> </li>
-      <li> <a href="semtypes.html">Semantic Types</a> </li>
-      <li> <a href="overlap.html">Source Overlap</a> </li>
-    </ul>
-  </li>
-  <li id="nav-4"> <a href="representation.html">Representation</a>
-    <ul id="subnav-4">
-      <li> <a href="sourcerepresentation.html">Source Representation</a>
-      </li>
-      <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
-Representation</a> </li>
-    </ul>
-  </li>
-</ul>
+<p>This page lists UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
+<!--begin tabbed navigation area-->
+<div class="section-6">
+      <ul id="menu">
+         <li id="nav-1"><a href="index.html">Synopsis</a></li>
+         <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+         <li id="nav-3"><a href="stats.html">Statistics</a></li>
+         <li id="nav-4"><a href="samples.html">Samples</a></li>
+         <li id="nav-5"><a href="sourcerepresentation.html">Source Representation</a></li>
+         <li id="nav-6"><a href="metarepresentation.html">Metathesaurus Representation</a></li>
+      </ul>
 </div>
-<br/>
-<br/>
-<br/>
+<!-- end tabbed navigation area -->
 <a name="top"></a>
 <span class="nav">Skip to: <a href="#atoms">Atoms</a>, <a
  href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
@@ -69,7 +47,7 @@ Identifiers are assigned as follows:<br/>
   <li>SDUI: Not Applicable</li>
 </ul>
 <div id="rep_termtypes" class="rep_block_level_two">
-<a name="atoms"></a>
+<a name="atoms" id="atoms"></a>
 <h3>Atoms (MRCONSO):</h3>
 &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
 <table class="elements" border="0" cellspacing="0">
@@ -80,7 +58,7 @@ Identifiers are assigned as follows:<br/>
     </tr>
     <tr>
       <td>FN</td>
-      <td>An "FN" atom is created for each line of
+      <td>An &quot;FN&quot; atom is created for each line of
 UMLS_MEDCIN_CONCEPTSyyyy-mm-dd.TXT, as follows. 
       <div style="margin: 4pt;">CODE = MEDCINID<br/>
 STR = CONCEPT_DESCRIPTION<br/>
@@ -89,7 +67,7 @@ SCUI = MEDCIN ID</div>
     </tr>
      <tr>
       <td>MTH_FN</td>
-      <td>An "MTH_FN" atom is created when the LVG algorithm is applied to the STR field. This data is added during Metathesaurus processing.
+      <td>An &quot;MTH_FN&quot; atom is created when the LVG algorithm is applied to the STR field. This data is added during Metathesaurus processing.
       <div style="margin: 4pt;">CODE = MEDCIN ID<br/>
 STR = CONCEPT_DESCRIPTION<br/>
 SCUI = MEDCIN ID</div>
@@ -97,7 +75,7 @@ SCUI = MEDCIN ID</div>
     </tr> 
     <tr>
       <td>PT</td>
-      <td>A "PT" atom is created for each line of
+      <td>A &quot;PT&quot; atom is created for each line of
 UMLS_MEDCIN_DESCRIPTIONSyyyy-mm-dd.TXT having PREF_FLAG_ID=1, as
 follows:
       <div style="margin: 4pt;">CODE = MEDCIN ID<br/>
@@ -107,7 +85,7 @@ SCUI = MEDCIN ID</div>
     </tr>
      <tr>
       <td>MTH_PT</td>
-      <td>An "MTH_PT" atom is created when the LVG algorithm is applied to the STR field. This data is added during Metathesaurus processing.
+      <td>An &quot;MTH_PT&quot; atom is created when the LVG algorithm is applied to the STR field. This data is added during Metathesaurus processing.
       <div style="margin: 4pt;">CODE = MEDCIN ID<br/>
 STR = DESCRIPTION<br/>
 SCUI = MEDCIN ID</div>
@@ -115,7 +93,7 @@ SCUI = MEDCIN ID</div>
     </tr> 
     <tr>
       <td>SY</td>
-      <td>An "SY" atom is created for each line of
+      <td>An &quot;SY&quot; atom is created for each line of
 UMLS_MEDCIN_DESCRIPTIONSyyyy-mm-dd.TXT having PREF_FLAG_ID=0, as
 follows:
       <div style="margin: 4pt;">CODE = MEDCIN ID<br/>
@@ -125,24 +103,24 @@ SCUI = MEDCIN ID</div>
     </tr>
      <tr>
       <td>MTH_SY</td>
-      <td>An "MTH_SY" atom is created when the LVG algorithm is applied to the STR field. This data is added during Metathesaurus processing.
+      <td>An &quot;MTH_SY&quot; atom is created when the LVG algorithm is applied to the STR field. This data is added during Metathesaurus processing.
       <div style="margin: 4pt;">CODE = MEDCIN ID<br/>
 STR = DESCRIPTION<br/>
 SCUI = MEDCIN ID</div>
       </td>
     </tr>     <tr>
       <td>XM</td>
-      <td>One"XM"(cross mapping set) atom is generated, as follows:
-      <div style="margin: 4pt;">CODE = "MTHU000001"<br/>
-STR = "Medcin to SNOMEDCT Mappings"<br/>
-SCUI = "" (blank)</div>
+      <td>One&quot;XM&quot;(cross mapping set) atom is generated, as follows:
+      <div style="margin: 4pt;">CODE = &quot;MTHU000001&quot;<br/>
+STR = &quot;Medcin to SNOMEDCT Mappings&quot;<br/>
+SCUI = &quot;&quot; (blank)</div>
 This data is added during Metathesaurus source processing.</td>
     </tr>
   </tbody>
 </table>
 </div>
 <div id="rep_attributes" class="rep_block_level_two">
-<a name="attributes"></a><br/>
+<a name="attributes" id="attributes"></a><br/>
 <h3>Attributes (MRSAT):</h3>
 &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
 <table class="elements" border="0" cellspacing="0">
@@ -186,13 +164,13 @@ XMAP<br/>
 XMAPFROM<br/>
 XMAPTO<br/>
 </div>
-<a name="definitions"></a><br/>
+<a name="definitions" id="definitions"></a><br/>
 <h3>Definitions (MRDEF):</h3>
 &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
 <p>No definitions are provided for MEDCIN.</p>
 </div>
 <div id="rep_relationships" class="rep_block_level_two">
-<a name="relationships"></a><br/>
+<a name="relationships" id="relationships"></a><br/>
 <h3>Relationships (MRREL):</h3>
 &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
 <table class="elements" border="0" cellspacing="0">
@@ -206,25 +184,25 @@ XMAPTO<br/>
       <td>CHD<br/>
 PAR</td>
       <td>(blank)</td>
-      <td>Hierarchical relationships derived from the "NODEKEY" values
+      <td>Hierarchical relationships derived from the &quot;NODEKEY&quot; values
 in UMLS_MEDCIN_HIERARCHYyyyy-mm-dd.TXT. The final two-character token
-is removed from each concept's "NODEKEY" to produce the "NODEKEY" of
+is removed from each concept's &quot;NODEKEY&quot; to produce the &quot;NODEKEY&quot; of
 the concept's parent. These two concepts are then linked by a pair of
-"PAR/CHD" relationships.</td>
+&quot;PAR/CHD&quot; relationships.</td>
     </tr>
     <tr>
       <td>RB<br/>
 RN<br/>
 RO<br/>
-SY<br/>
+SY<br/>      </td>
       <td>&nbsp;(many RELA values)</td>
       <td>Relationships are created for the MEDCIN-to-SNOMEDCT mappings
-in UMLS_MEDCIN_SNOMEDyyyy-mm-dd.TXT. The "REL" and "RELA" are set
-corresponding to the "RELATIONSHIPTYPE" field.</td>
+in UMLS_MEDCIN_SNOMEDyyyy-mm-dd.TXT. The &quot;REL&quot; and &quot;RELA&quot; are set
+corresponding to the &quot;RELATIONSHIPTYPE&quot; field.</td>
     </tr>
     <tr>
-<td>SFO/LFO<br/>
-      <td>&nbsp; mth_plain_text_form_of/mth_has_plain_text_form</td>
+<td>SFO/LFO<br/>      </td>
+<td>&nbsp; mth_plain_text_form_of/mth_has_plain_text_form</td>
       <td>Connects the Metathesaurus created atom (MTH_*) with its original atom.</td>
     </tr>
   </tbody>
@@ -233,11 +211,10 @@ corresponding to the "RELATIONSHIPTYPE" field.</td>
 <div id="mappings" class="rep_block_level_two">
 <h3>Mappings (MRMAP):</h3>
 &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-<p>One map set ("XM" atom, along with associated attributes and
+<p>One map set (&quot;XM&quot; atom, along with associated attributes and
 mappings) is included for MEDCIN.&nbsp; Mappings are extracted from the
-file "UMLS_MEDCIN_SNOMEDyy-mm-dd.TXT.&nbsp; Mappings are created for
-entries where the RELATIONSHIPTYPE = "168666000" (same_as).<br/>
+file &quot;UMLS_MEDCIN_SNOMEDyy-mm-dd.TXT.&nbsp; Mappings are created for
+entries where the RELATIONSHIPTYPE = &quot;168666000&quot; (same_as).<br/>
+</p>
 </div>
 </div>
-</body>
-</html>

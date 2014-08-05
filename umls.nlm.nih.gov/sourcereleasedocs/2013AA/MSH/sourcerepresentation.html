@@ -1,44 +1,22 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html;
-      charset=ISO-8859-1">
-    <title></title>
-  </head>
-  <body>
-    <div class="section-4">
+<p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p>
+<!--begin tabbed navigation area-->
+   <div class="section-5">
       <ul id="menu">
-        <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
-        <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
-        <li id="nav-3"> <a href="sourcemetastats.html">Statistics and
-            sample data</a>
-          <ul id="subnav-3">
-            <li> <a href="termtypes.html">Terms and term types</a> </li>
-            <li> <a href="attributes.html">Attributes</a> </li>
-            <li> <a href="relationships.html">Relationships</a> </li>
-            <li> <a href="semtypes.html">Semantic Types</a> </li>
-            <li> <a href="overlap.html">Source Overlap</a> </li>
-          </ul>
-        </li>
-        <li id="nav-4"> <a href="representation.html">Representation</a>
-          <ul id="subnav-4">
-            <li> <a href="sourcerepresentation.html" id="sourcerep">Source
-
-                Representation</a> </li>
-            <li> <a href="metarepresentation.html">Metathesaurus
-                Representation</a> </li>
-          </ul>
-        </li>
+         <li id="nav-1"><a href="index.html">Synopsis</a></li>
+         <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+         <li id="nav-3"><a href="stats.html">Statistics</a></li>
+         <li id="nav-4"><a href="samples.html">Samples</a></li>
+         <li id="nav-5"><a href="sourcerepresentation.html">Source Representation</a></li>
+         <li id="nav-6"><a href="metarepresentation.html">Metathesaurus Representation</a></li>
       </ul>
-    </div>
-    <!-- end tabbed navigation area --> <br/>
-    <br/>
+   </div>
+<!-- end tabbed navigation area -->
     <br/>
     <a name="top"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
       <a href="#change_summary">Summary of Changes</a>, <a
         href="#file_summary">Summary of Source-Provided Files</a> <a
         href="#file_details">Source-Provided File Details</a></span> <a
-      name="general"></a>
+      name="general" id="general"></a>
     <div id="rep_general" class="rep_block_level_one">
       <h3>Notes</h3>
       <p>MeSH for the Metathesaurus is processed from the xml files. In
@@ -55,14 +33,14 @@
       </p>
     </div>
     <div id="rep_change_summary" class="rep_block_level_one"> <a
-        name="change_summary"></a>
+        name="change_summary" id="change_summary"></a>
       <h3>Summary of Changes:</h3>
       &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
       <p>No changes have been made to the original data file format or
         to Metathesaurus source processing.</p>
     </div>
     <div id="rep_file_summary" class="rep_block_level_one"> <a
-        name="file_summary"></a>
+        name="file_summary" id="file_summary"></a>
       <h3>Source-Provided Files: Summary</h3>
       &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
       <p>The English language MeSH distribution includes the following.
@@ -94,7 +72,7 @@
         </table>
         <br/>
         <h4>XML Data Files</h4>
-        <a name="data_files"></a>
+        <a name="data_files" id="data_files"></a>
         <table class="elements" border="0" cellspacing="0">
           <tbody>
             <tr>
@@ -126,8 +104,8 @@
         <p><b>Term Type assignment:</b>Term type assignment is based on
           the Term attributes provided in the XML. For example, this
           term is an MH, based on the table below: </p>
-        <p>&lt;Term ConceptPreferredTermYN="Y" IsPermutedTermYN="N"
-          LexicalTag="NON" PrintFlagYN="Y" RecordPreferredTermYN="Y"&gt;</p>
+        <p>&lt;Term ConceptPreferredTermYN=&quot;Y&quot; IsPermutedTermYN=&quot;N&quot;
+          LexicalTag=&quot;NON&quot; PrintFlagYN=&quot;Y&quot; RecordPreferredTermYN=&quot;Y&quot;&gt;</p>
         <h4>Descriptor MeSH (file: desc*.xml):</h4>
         <table class="elements" border="0" cellspacing="0">
           <tbody>
@@ -255,7 +233,7 @@
       </div>
     </div>
     <div id="rep_file_details" class="rep_block_level_one"> <a
-        name="file_details"></a>
+        name="file_details" id="file_details"></a>
       <h3>Source-Provided Files: Details</h3>
       &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
       <p>The source representation documentation below is based on
@@ -282,7 +260,7 @@
         record.<br/>
         <b>Required element:</b> all records in the given Record Types
         have the element. </p>
-      <div class="rep_block_level_two"> <a name="file1"></a>
+      <div class="rep_block_level_two"> <a name="file1" id="file1"></a>
         <table class="elements" border="0" cellspacing="0">
           <tbody>
             <tr>
@@ -405,7 +383,7 @@
                 preferred term for the concept. Referred to uniquely by
                 both a &lt;ConceptUI&gt; and a &lt;ConceptName&gt;.
                 Example: <br/>
-                &lt;Concept PreferredConceptYN="Y"&gt;<br/>
+                &lt;Concept PreferredConceptYN=&quot;Y&quot;&gt;<br/>
                 &lt;ConceptUI&gt;M0000001&lt;/ConceptUI&gt;<br/>
                 &lt;ConceptName&gt;<br/>
                 &lt;String&gt;Calcimycin&lt;/String&gt;<br/>
@@ -481,11 +459,11 @@
                 indicates whether or not the term is the preferred term
                 of its concept. See Introduction to MeSH in XML format.
                 Example: <br/>
-                &lt;Term ConceptPreferredTermYN="Y"<br/>
-                IsPermutedTermYN="N"<br/>
-                LexicalTag="NON"<br/>
-                PrintFlagYN="Y"<br/>
-                RecordPreferredTermYN="Y"&gt;<br/>
+                &lt;Term ConceptPreferredTermYN=&quot;Y&quot;<br/>
+                IsPermutedTermYN=&quot;N&quot;<br/>
+                LexicalTag=&quot;NON&quot;<br/>
+                PrintFlagYN=&quot;Y&quot;<br/>
+                RecordPreferredTermYN=&quot;Y&quot;&gt;<br/>
                 &lt;TermUI&gt;T000002&lt;/TermUI&gt;<br/>
                 &lt;String&gt;Calcimycin&lt;/String&gt;<br/>
                 ...<br/>
@@ -512,7 +490,7 @@
                 NRW (narrower)<br/>
                 REL (related but not broader or narrower)<br/>
                 Example: <br/>
-                &lt;ConceptRelation RelationName="NRW"&gt;<br/>
+                &lt;ConceptRelation RelationName=&quot;NRW&quot;&gt;<br/>
                 &lt;Concept1UI&gt;M0000001&lt;/Concept1UI&gt;<br/>
                 &lt;Concept2UI&gt;M0353609&lt;/Concept2UI&gt;<br/>
                 &lt;/ConceptRelation&gt;<br/>
@@ -584,7 +562,7 @@
                 Record Type: D<br/>
                 Repeating element: no<br/>
                 Required element: no</td>
-              <td>MRSAT.ATN = "CX"</td>
+              <td>MRSAT.ATN = &quot;CX&quot;</td>
             </tr>
             <tr>
               <td>18</td>
@@ -609,7 +587,7 @@
                 Required element: no</td>
               <td>MRSAT.ATN = MDA<br/>
                 Value is &lt;Year&gt;&lt;Month&gt;&lt;Day&gt;<br/>
-                e.g., "19900308"<br/>
+                e.g., &quot;19900308&quot;<br/>
                 Note: MDA attributes are created from data at the
                 Descriptor (SDUI) level. They are not created from data
                 at the Term (AUI) level. </td>
@@ -634,9 +612,9 @@
                 Record Type: D, Q<br/>
                 Repeating element: no<br/>
                 Required element: yes</td>
-              <td>MRSAT.ATN = "DX"<br/>
+              <td>MRSAT.ATN = &quot;DX&quot;<br/>
                 Value is &lt;Year&gt;&lt;Month&gt;&lt;Day&gt;<br/>
-                e.g., "20010101"<br/>
+                e.g., &quot;20010101&quot;<br/>
               </td>
             </tr>
             <tr>
@@ -691,7 +669,7 @@
                 of &lt;Concept&gt; elements in a Descriptor which may
                 also be referred to as the Descriptor Class of that
                 record. Example: <br/>
-                &lt;DescriptorRecord DescriptorClass = "1"&gt;<br/>
+                &lt;DescriptorRecord DescriptorClass = &quot;1&quot;&gt;<br/>
                 Subelement of: not applicable . Attribute of
                 &lt;DescriptorRecord&gt;<br/>
                 Record Type: D<br/>
@@ -732,7 +710,7 @@
                 &lt;MeshHeading&gt; element. For example, the MEDLINE
                 element includes both the Descriptor name and the
                 Qualifier name assigned to a citation.) Example: <br/>
-                &lt;DescriptorRecord DescriptorClass = "1"&gt;<br/>
+                &lt;DescriptorRecord DescriptorClass = &quot;1&quot;&gt;<br/>
                 ...<br/>
                 &lt;/DescriptorRecord&gt;<br/>
                 Subelement of: &lt;DescriptorRecordSet&gt;<br/>
@@ -884,14 +862,14 @@
                 Record Type: D<br/>
                 Repeating element: yes<br/>
                 MeSH Browser: Entry Combination</td>
-              <td>MRSAT.ATN = "EC"<br/>
+              <td>MRSAT.ATN = &quot;EC&quot;<br/>
                 <br/>
                 ATV =
 &lt;ECIN&gt;&lt;QualifierReferredTo&gt;&lt;QualifierName&gt;:&lt;ECOUT&gt;&lt;DescriptorReferredTo&gt;&lt;DescriptorName&gt;/&lt;QualifierReferredTo&gt;&lt;QualifierName&gt;<br/>
                 <br/>
                 e.g., D000005 has an attribute where:<br/>
-                ATN = "EC" <br/>
-                ATV = "radiography:Radiography, Abdominal"<br/>
+                ATN = &quot;EC&quot; <br/>
+                ATV = &quot;radiography:Radiography, Abdominal&quot;<br/>
                 <br/>
                 <br/>
               </td>
@@ -1056,11 +1034,11 @@
                 automatically in the MeSH editing application as a
                 variant of another term in the record. Example: Example:
                 <br/>
-                &lt;Term ConceptPreferredTermYN="N"<br/>
-                IsPermutedTermYN="Y"<br/>
-                LexicalTag="LAB"<br/>
-                PrintFlagYN="N"<br/>
-                RecordPreferredTermYN="N"&gt;<br/>
+                &lt;Term ConceptPreferredTermYN=&quot;N&quot;<br/>
+                IsPermutedTermYN=&quot;Y&quot;<br/>
+                LexicalTag=&quot;LAB&quot;<br/>
+                PrintFlagYN=&quot;N&quot;<br/>
+                RecordPreferredTermYN=&quot;N&quot;&gt;<br/>
                 &lt;TermUI&gt;T000001&lt;/TermUI&gt;<br/>
                 &lt;String&gt;A 23187&lt;/String&gt;<br/>
                 ...<br/>
@@ -1101,10 +1079,10 @@
                 NAM (Proper name)<br/>
                 NON (None)<br/>
                 TRD (Trade name) Example: <br/>
-                &lt;Term ConceptPreferredTermYN="Y"<br/>
-                IsPermutedTermYN="N" LexicalTag="LAB"<br/>
-                PrintFlagYN="N"<br/>
-                RecordPreferredTermYN="N"&gt;<br/>
+                &lt;Term ConceptPreferredTermYN=&quot;Y&quot;<br/>
+                IsPermutedTermYN=&quot;N&quot; LexicalTag=&quot;LAB&quot;<br/>
+                PrintFlagYN=&quot;N&quot;<br/>
+                RecordPreferredTermYN=&quot;N&quot;&gt;<br/>
                 &lt;TermUI&gt;T000001&lt;/TermUI&gt;<br/>
                 &lt;String&gt;A-23187&lt;/String&gt;<br/>
                 ...<br/>
@@ -1116,7 +1094,7 @@
                 Record Type: D, Q, SCR<br/>
                 Repeating attribute: no</td>
               <td>Required attribute: yes MRSAT.ATN = LT<br/>
-                Only LexicalTags with value = "TRD" are included in the
+                Only LexicalTags with value = &quot;TRD&quot; are included in the
                 Metathesaurus</td>
             </tr>
             <tr>
@@ -1139,7 +1117,7 @@
                 Description: Free-text narrative giving information
                 about the substance particularly its biological
                 properties, but may include other information such as
-                about the &lt;RegistryNumber&gt;. "structure" indicates
+                about the &lt;RegistryNumber&gt;. &quot;structure&quot; indicates
                 that the structure of the chemical is given in the first
                 &lt;Source&gt;. Example: <br/>
                 &lt;Note&gt;venous tonic; structure given in first
@@ -1193,7 +1171,7 @@
                 Description: Set of one or more instances of a
                 &lt;PharmacologicalAction &gt; in a Descriptor or SCR.
                 Example (Descriptor): <br/>
-                &lt;DescriptorRecord DescriptorClass = "1"&gt;<br/>
+                &lt;DescriptorRecord DescriptorClass = &quot;1&quot;&gt;<br/>
                 &lt;PharmacologicalActionList&gt;<br/>
                 &lt;PharmacologicalAction&gt;<br/>
                 ...<br/>
@@ -1220,7 +1198,7 @@
                 preferred concept is selected as the primary or most
                 prominent representation among the concepts in the
                 literature to be indexed by the record. Example:
-                &lt;Concept PreferredConceptYN="Y"&gt;<br/>
+                &lt;Concept PreferredConceptYN=&quot;Y&quot;&gt;<br/>
                 Subelement of: not applicable; attribute of
                 &lt;Concept&gt;<br/>
                 Record Type: D, Q, SCR<br/>
@@ -1240,7 +1218,7 @@
                 Descriptor was created. Includes dates of the format
                 (YYYY) for a single year or (YYYY-YYYY) for a range of
                 years. May include descriptive text referring to a group
-                of Descriptors as "specifics". References are not
+                of Descriptors as &quot;specifics&quot;. References are not
                 currently maintained when a &lt;DescriptorName&gt; or
                 &lt;QualifierName&gt; changes. Example:
                 &lt;PreviousIndexing&gt;Hypertension/complications
@@ -1282,11 +1260,11 @@
                 2007). For Qualifiers and SCRs it indicates a subset of
                 terms that NLM recommends printing if a user wants to
                 print Qualifier or SCR terms. Example:<br/>
-                &lt;Term ConceptPreferredTermYN="Y"<br/>
-                IsPermutedTermYN="N"<br/>
-                LexicalTag="NON"<br/>
-                PrintFlagYN="Y"<br/>
-                RecordPreferredTermYN="Y"&gt;<br/>
+                &lt;Term ConceptPreferredTermYN=&quot;Y&quot;<br/>
+                IsPermutedTermYN=&quot;N&quot;<br/>
+                LexicalTag=&quot;NON&quot;<br/>
+                PrintFlagYN=&quot;Y&quot;<br/>
+                RecordPreferredTermYN=&quot;Y&quot;&gt;<br/>
                 &lt;TermUI&gt;T000002&lt;/TermUI&gt;<br/>
                 &lt;String&gt;&lt;/StCalcimycinring&gt;<br/>
                 ...<br/>
@@ -1353,7 +1331,7 @@
                 &lt;QualifierUI&gt; and &lt;QualifierName&gt;. A
                 Qualifier. A Qualifier record. Also known as a
                 Subheading. Example: &lt;QualifierRecord QualifierType =
-                "1"&gt;<br/>
+                &quot;1&quot;&gt;<br/>
                 ...<br/>
                 &lt;/QualifierRecord&gt;<br/>
                 Subelement of: &lt;QualifierRecordSet&gt;<br/>
@@ -1400,9 +1378,9 @@
               <td>QualifierType<br/>
                 Description: Attribute of &lt;QualifierRecord&gt;,
                 formerly used to indicate presence in Index Medicus.
-                Currently all Qualifiers have QualifierType of "1".
+                Currently all Qualifiers have QualifierType of &quot;1&quot;.
                 Example: <br/>
-                &lt;QualifierRecord QualifierType = "1"&gt;<br/>
+                &lt;QualifierRecord QualifierType = &quot;1&quot;&gt;<br/>
                 Subelement of: not applicable . Attribute of
                 &lt;QualifierRecord&gt;<br/>
                 Record Type: Q<br/>
@@ -1458,7 +1436,7 @@
                 Description: Three-character user name of the NLM editor
                 who created the original record in the MeSH maintenance
                 system. When a record is created by a batch process the
-                value may be "NLM." This value is also used for older
+                value may be &quot;NLM.&quot; This value is also used for older
                 records which had no value in earlier versions of the
                 data. Example:<br/>
                 &lt;RecordOriginator&gt;ags&lt;/RecordOriginator&gt;<br/>
@@ -1490,11 +1468,11 @@
                 Similar to &lt;DescriptorName&gt;,
                 &lt;QualifierName&gt;, &lt;SupplementalRecordName&gt;.
                 Example: <br/>
-                &lt;Term ConceptPreferredTermYN="Y"<br/>
-                IsPermutedTermYN="N"<br/>
-                LexicalTag="NON"<br/>
-                PrintFlagYN="Y"<br/>
-                RecordPreferredTermYN="Y"&gt;<br/>
+                &lt;Term ConceptPreferredTermYN=&quot;Y&quot;<br/>
+                IsPermutedTermYN=&quot;N&quot;<br/>
+                LexicalTag=&quot;NON&quot;<br/>
+                PrintFlagYN=&quot;Y&quot;<br/>
+                RecordPreferredTermYN=&quot;Y&quot;&gt;<br/>
                 &lt;TermUI&gt;T000002&lt;/TermUI&gt;<br/>
                 &lt;String&gt;Calcimycin&lt;/String&gt;<br/>
                 ... &lt;/Term&gt;<br/>
@@ -1646,7 +1624,7 @@
               <td>71</td>
               <td>&lt;SeeRelatedDescriptor&gt;<br/>
                 Description: Reference to a specific Descriptor to which
-                a user is referred by a "see related" cross-reference.
+                a user is referred by a &quot;see related&quot; cross-reference.
                 For example, in the Descriptor for 'Abdominal Muscles'
                 there is a see-related reference to another Descriptor
                 'Abdominal Wall'. As in all of XML MeSH, reference to a
@@ -1795,11 +1773,11 @@
                 between the &lt;String&gt; and &lt;Term&gt; is that the
                 &lt;Term&gt; is the bearer of a term's attributes, such
                 as Lexical Tag. Example: &lt;Term
-                ConceptPreferredTermYN="Y"<br/>
-                IsPermutedTermYN="N"<br/>
-                LexicalTag="NON"<br/>
-                PrintFlagYN="Y"<br/>
-                RecordPreferredTermYN="Y"&gt;<br/>
+                ConceptPreferredTermYN=&quot;Y&quot;<br/>
+                IsPermutedTermYN=&quot;N&quot;<br/>
+                LexicalTag=&quot;NON&quot;<br/>
+                PrintFlagYN=&quot;Y&quot;<br/>
+                RecordPreferredTermYN=&quot;Y&quot;&gt;<br/>
                 &lt;TermUI&gt;T000002&lt;/TermUI&gt;<br/>
                 &lt;String&gt;Calcimycin&lt;/String&gt;<br/>
                 ... &lt;/Term&gt;<br/>
@@ -1886,11 +1864,11 @@
                 PrintFlagYN <br/>
                 RecordPreferredTermYN <br/>
                 Example: <br/>
-                &lt;Term ConceptPreferredTermYN="Y"<br/>
-                IsPermutedTermYN="N"<br/>
-                LexicalTag="NON"<br/>
-                PrintFlagYN="Y"<br/>
-                RecordPreferredTermYN="Y"&gt;<br/>
+                &lt;Term ConceptPreferredTermYN=&quot;Y&quot;<br/>
+                IsPermutedTermYN=&quot;N&quot;<br/>
+                LexicalTag=&quot;NON&quot;<br/>
+                PrintFlagYN=&quot;Y&quot;<br/>
+                RecordPreferredTermYN=&quot;Y&quot;&gt;<br/>
                 &lt;TermUI&gt;T000002&lt;/TermUI&gt;<br/>
                 &lt;String&gt;Calcimycin&lt;/String&gt;<br/>
                 &lt;DateCreated&gt;<br/>
@@ -2073,5 +2051,4 @@
         </table>
       </div>
     </div>
-  </body>
-</html>
+

@@ -1,39 +1,17 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-<head>
-  <meta http-equiv="content-type"
- content="text/html; charset=ISO-8859-1">
-  <title></title>
-</head>
-<body>
-<div class="section-4">
-<ul id="menu">
-  <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
-  <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
-  <li id="nav-3"> <a href="sourcemetastats.html">Statistics and sample
-data</a>
-    <ul id="subnav-3">
-      <li> <a href="termtypes.html">Terms and term types</a> </li>
-      <li> <a href="attributes.html">Attributes</a> </li>
-      <li> <a href="relationships.html">Relationships</a> </li>
-      <li> <a href="semtypes.html">Semantic Types</a> </li>
-      <li> <a href="overlap.html">Source Overlap</a> </li>
-    </ul>
-  </li>
-  <li id="nav-4"> <a href="representation.html">Representation</a>
-    <ul id="subnav-4">
-      <li> <a href="sourcerepresentation.html" id="sourcerep">Source
-Representation</a> </li>
-      <li> <a href="metarepresentation.html">Metathesaurus
-Representation</a> </li>
-    </ul>
-  </li>
-</ul>
-</div>
+<p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p>
+<!--begin tabbed navigation area-->
+   <div class="section-5">
+      <ul id="menu">
+         <li id="nav-1"><a href="index.html">Synopsis</a></li>
+         <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+         <li id="nav-3"><a href="stats.html">Statistics</a></li>
+         <li id="nav-4"><a href="samples.html">Samples</a></li>
+         <li id="nav-5"><a href="sourcerepresentation.html">Source Representation</a></li>
+         <li id="nav-6"><a href="metarepresentation.html">Metathesaurus Representation</a></li>
+      </ul>
+   </div>
 <!-- end tabbed navigation area -->
-<br/>
-<br/>
-<br/>
+    <br/>
 <a name="top"></a>
 <span class="nav">Skip to: <a href="#general">Notes</a>, <a
  href="#change_summary">Summary of Changes</a>, <a href="#file_summary">Summary
@@ -41,13 +19,13 @@ of
 Source-Provided
 Files</a> <a href="#file_details">Source-Provided
 File Details</a></span>
-<a name="general"></a>
+<a name="general" id="general"></a>
 <div id="rep_general" class="rep_block_level_one">
 <h3>Notes</h3>
 <p>MEDCIN data files are submitted by Medicomp Systems.</p>
 </div>
 <div id="rep_change_summary" class="rep_block_level_one">
-<a name="change_summary"></a>
+<a name="change_summary" id="change_summary"></a>
 <h3>Summary of Changes</h3>
 &nbsp;&nbsp;<span class="nav"><a href="#top">return to top</a></span>
 <p>1) New relationship | relationship attribute(RELA) | RELA inverse:</p>
@@ -56,14 +34,14 @@ File Details</a></span>
 </ul>
 </div>
 <div id="rep_file_summary" class="rep_block_level_one">
-<a name="file_summary"></a>
+<a name="file_summary" id="file_summary"></a>
 <h3>Source-Provided Files: Summary</h3>
 &nbsp;&nbsp;<span class="nav"><a href="#top">return to top</a></span>
 <p>The MEDCIN distribution includes the following files:</p>
 <div class="rep_block_level_two">
 <!-- Make a table of each file that comes from the source   -->
 <h4>Data Files</h4>
-<a name="data_files"></a>
+<a name="data_files" id="data_files"></a>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
@@ -91,18 +69,18 @@ File Details</a></span>
 <br/>
 </div>
 </div>
-<a name="file_details"></a>
+<a name="file_details" id="file_details"></a>
 <div id="rep_file_details" class="rep_block_level_one">
 <h3>Source-Provided Files: Details</h3>
 &nbsp;&nbsp;<span class="nav"><a href="#top">return to top</a></span>
 <p>Details on format of input files and representation of source data.
 Consult the MEDCIN documentation for additional details.</p>
 <div class="rep_block_level_two">
-<a name="file1"></a>
+<a name="file1" id="file1"></a>
 <h4 class="file_field_name">file:UMLS_MEDCIN_CONCEPTSyyyy-mm-dd.TXT</h4>
 &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
 Files</a></span>
-<br><br/>
+<br /><br/>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
@@ -129,11 +107,11 @@ parentheses</td>
   </tbody>
 </table>
 <br/>
-<a name="file2"></a>
+<a name="file2" id="file2"></a>
 <h4 class="file_field_name">file:UMLS_MEDCIN_DESCRIPTIONSyyyy-mm-dd.TXT</h4>
 &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
 Files</a></span>
-<br><br/>
+<br /><br/>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
@@ -159,19 +137,19 @@ MRCONSO.SCUI</td>
       <td>3</td>
       <td>PREF_FLAG_ID</td>
       <td>1 = preferred, 0 = non-preferred</td>
-      <td>0 =&gt; MRCONSO.TTY = "SY",<br/>
-1 =&gt; MRCONSO.TTY = "PT"<br/>
-MRSAT.ATN = "PREF_FLAG_ID" (STYPE = "AUI")<br/>
+      <td>0 =&gt; MRCONSO.TTY = &quot;SY&quot;,<br/>
+1 =&gt; MRCONSO.TTY = &quot;PT&quot;<br/>
+MRSAT.ATN = &quot;PREF_FLAG_ID&quot; (STYPE = &quot;AUI&quot;)<br/>
       </td>
     </tr>
   </tbody>
 </table>
 <br/>
-<a name="file3"></a>
+<a name="file3" id="file3"></a>
 <h4 class="file_field_name">file:UMLS_MEDCIN_HIERARCHYyyyy-mm-dd.TXT</h4>
 &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
 Files</a></span>
-<br><br/>
+<br /><br/>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
@@ -192,10 +170,10 @@ to MEDCINID.</td>
       <td class="file_field_name">NODEKEY</td>
       <td>Hierarchical identifier</td>
       <td>Used to construct the hierarchical tree position, MRHIER.PTR,
-for this concept. The "NODEKEY" value is a series of two-character
-tokens (some of which include a space character), e.g., " CDA D P"
-breaks down as "&lt;space&gt;C", "DA", "&lt;space&gt;D", and "&lt;space&gt;P", and removing the last token
-(yielding " CDA D", in this example) produces the "NODEKEY" value of
+for this concept. The &quot;NODEKEY&quot; value is a series of two-character
+tokens (some of which include a space character), e.g., &quot; CDA D P&quot;
+breaks down as &quot;&lt;space&gt;C&quot;, &quot;DA&quot;, &quot;&lt;space&gt;D&quot;, and &quot;&lt;space&gt;P&quot;, and removing the last token
+(yielding &quot; CDA D&quot;, in this example) produces the &quot;NODEKEY&quot; value of
 this concept's hierarchical parent.<br/>
 Also used to populate MRHIER.HCD.&nbsp; Note that leading space
 characters have not been removed from the HCD value.<br/>
@@ -204,11 +182,11 @@ characters have not been removed from the HCD value.<br/>
   </tbody>
 </table>
 <br/>
-<a name="file4"></a>
+<a name="file4" id="file4"></a>
 <h4 class="file_field_name">file:UMLS_MEDCIN_SNOMEDyyyy-mm-dd.TXT</h4>
 &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
 Files</a></span>
-<br><br/>
+<br /><br/>
 <table class="elements" border="0" cellspacing="0">
   <tbody>
     <tr>
@@ -230,11 +208,11 @@ to MEDCINID</td>
       <td>The SNOMEDCT CONCEPTID indicating the type of this
 relationship</td>
       <td>Mapped to corresponding values in MRREL.REL and MRREL.RELA.
-E.g., the "RELATIONSHIPTYPE" 123005000, which is the SNOMEDCT CONCEPTID
-for "Part of (attribute)", is mapped to REL = "RN" (narrower
-relationship) and RELA = "part_of".<br/>
+E.g., the &quot;RELATIONSHIPTYPE&quot; 123005000, which is the SNOMEDCT CONCEPTID
+for &quot;Part of (attribute)&quot;, is mapped to REL = &quot;RN&quot; (narrower
+relationship) and RELA = &quot;part_of&quot;.<br/>
       <br/>
-If RELATIONSHIPTYPE = "168666000" (same_as), MRMAP.RRF and MRSMAP.RRF
+If RELATIONSHIPTYPE = &quot;168666000&quot; (same_as), MRMAP.RRF and MRSMAP.RRF
 entries are also created.<br/>
       </td>
     </tr>
@@ -250,12 +228,11 @@ to SCT_CONCEPTID</td>
       <td>4</td>
       <td class="file_field_name">PREF_FLAG_ID</td>
       <td>1=preferred, 0=non-preferred</td>
-      <td>MRSAT.ATN = "PREF_FLAG_ID" (STYPE = "RUI")<br/>
+      <td>MRSAT.ATN = &quot;PREF_FLAG_ID&quot; (STYPE = &quot;RUI&quot;)<br/>
       </td>
     </tr>
   </tbody>
 </table>
 </div>
 </div>
-</body>
-</html>
+

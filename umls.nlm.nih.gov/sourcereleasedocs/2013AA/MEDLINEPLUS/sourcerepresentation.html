@@ -1,50 +1,29 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html;
-      charset=ISO-8859-1">
-    <title></title>
-  </head>
-  <body>
-    <div class="section-4">
+<p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p>
+<!--begin tabbed navigation area-->
+   <div class="section-5">
       <ul id="menu">
-        <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
-        <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
-        <li id="nav-3"> <a href="sourcemetastats.html">Statistics and
-            sample data</a>
-          <ul id="subnav-3">
-            <li> <a href="termtypes.html">Terms and term types</a> </li>
-            <li> <a href="attributes.html">Attributes</a> </li>
-            <li> <a href="relationships.html">Relationships</a> </li>
-            <li> <a href="semtypes.html">Semantic Types</a> </li>
-            <li> <a href="overlap.html">Source Overlap</a> </li>
-          </ul>
-        </li>
-        <li id="nav-4"> <a href="representation.html">Representation</a>
-          <ul id="subnav-4">
-            <li> <a href="sourcerepresentation.html" id="sourcerep">Source
-                Representation</a> </li>
-            <li> <a href="metarepresentation.html">Metathesaurus
-                Representation</a> </li>
-          </ul>
-        </li>
+         <li id="nav-1"><a href="index.html">Synopsis</a></li>
+         <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+         <li id="nav-3"><a href="stats.html">Statistics</a></li>
+         <li id="nav-4"><a href="samples.html">Samples</a></li>
+         <li id="nav-5"><a href="sourcerepresentation.html">Source Representation</a></li>
+         <li id="nav-6"><a href="metarepresentation.html">Metathesaurus Representation</a></li>
       </ul>
-    </div>
-    <!-- end tabbed navigation area --> <br/>
-    <br/>
+   </div>
+<!-- end tabbed navigation area -->
     <br/>
     <a name="top"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
       <a href="#change_summary">Summary of Changes</a>, <a
         href="#file_summary">Summary of Source-Provided Files</a> <a
         href="#file_details">Source-Provided File Details</a></span> <a
-      name="general"></a>
+      name="general" id="general"></a>
     <div id="rep_general" class="rep_block_level_one"><br/>
     </div>
     <div id="rep_change_summary" class="rep_block_level_one"> <a
-        name="change_summary"></a>
+        name="change_summary" id="change_summary"></a>
       <h3>Summary of Changes:</h3>
       &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-      <br class="atl-forced-newline">
+      <br class="atl-forced-newline" />
         Change in the code format.  The preceding 'T' of the health topics code (e.g., T3061) has been deprecated.  The result is that the health code is no
         longer unique and can have the same code as the group id but have a different meaning. For example, group id=22
         (Immune System) and health topic code = 22 (Alzheimer's Disease).  With this change, codes are no longer being used in the
@@ -58,9 +37,9 @@
         <li>element: organization</li>
         <li>element: information-category</li>
       </ul>
-        <br class="atl-forced-newline">
+        <br class="atl-forced-newline" />
         Changed Element Names (old name -- new name)<br
-          class="atl-forced-newline">
+          class="atl-forced-newline" />
       <ul>
         <li>MedicalTopics&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;health-topics</li>
         <li>MedicalTopic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;health-topic</li>
@@ -74,9 +53,9 @@
         <li>DescriptorName&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;descriptor</li>
         <li>LanguageMappedTopic&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;language-mapped-topic</li>
       </ul>
-        <br class="atl-forced-newline">
+        <br class="atl-forced-newline" />
         Deprecated Element Names Replaced as Attributes<br
-          class="atl-forced-newline">
+          class="atl-forced-newline" />
       <ul>
         <li>ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;health-topic id</li>
         <li>MedicalTopicName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;health-topic title</li>
@@ -92,7 +71,7 @@
       </ul>
       </div>
       <div id="rep_file_summary" class="rep_block_level_one"> <a
-        name="file_summary"></a><br/>
+        name="file_summary" id="file_summary"></a><br/>
       <h3>Source-Provided Files: Summary</h3>
       &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
       <p>The following MedlinePlus files are used for Metathesaurus
@@ -123,7 +102,7 @@
         </table>
         <br/>
         <h4>XML Data Files</h4>
-        <a name="data_files"></a>
+        <a name="data_files" id="data_files"></a>
         <table class="elements" border="0" cellspacing="0">
           <tbody>
             <tr>
@@ -167,7 +146,7 @@
       
       <p>The following is a list of elements available for MedlinePlus
         data in XML format. </p>
-      <div class="rep_block_level_two"> <a name="file1"></a><br/>
+      <div class="rep_block_level_two"> <a name="file1" id="file1"></a><br/>
         File:&nbsp; mplus_topics_YYYY-MM-DD.xml<br/>
         <br/>
         <table class="elements" border="0" cellspacing="0">
@@ -186,23 +165,23 @@
                 to each topic by the MedlinePlus system.<br/>
                 language - the language of this topic. This can be
                 either English or Spanish, with English as the default.<br/>
-                title - name of the health topic page on MedlinePlus.</br>
+                title - name of the health topic page on MedlinePlus.<br/>
                 date-created - the date the health topic was first available on the MedlinePlus site.<br/>
                 url - the URL for the corresponding health topic page on MedlinePlus.<br/>
-                Example: &lt;health-topic title="Abdominal Pain" url="http://www.nlm.nih.gov/medlineplus/abdominalpain.html" id="3061" language="English" date-created="01/07/2003"
-                language="English"&gt;<br/>
+                Example: &lt;health-topic title=&quot;Abdominal Pain&quot; url=&quot;http://www.nlm.nih.gov/medlineplus/abdominalpain.html&quot; id=&quot;3061&quot; language=&quot;English&quot; date-created=&quot;01/07/2003&quot;
+                language=&quot;English&quot;&gt;<br/>
                 <br/>
               </td>
               <td>health-topic id:&nbsp;MRCONSO.CODE<br/>
                   health-topic language:&nbsp;MRCONSO.LAT, MRSAB.LAT (only English terms from MedlinePlus are included in the Metathesaurus).<br/>
-                  health-topic title:&nbsp;MRCONSO.STR, TTY = PT</br>
+                  health-topic title:&nbsp;MRCONSO.STR, TTY = PT<br/>
                   health-topic url:&nbsp;MRSAT.ATN = MP_HEALTH_TOPIC_URL<br/>
                   health-topic date-created:&nbsp;MSAT.ATN = DATE_CREATED<br/>
               </td>
             </tr>
             <tr>
               <td>&lt;also-called&gt;<br/>
-                Synonyms associated with the topic. A topic may have zero or more synonyms.</br>
+                Synonyms associated with the topic. A topic may have zero or more synonyms.<br/>
                 Example: &lt;also-called&gt;Bellyache&lt;/also-called&gt;<br/>
                 <br/>
               </td>
@@ -232,11 +211,11 @@
                 <br/>
                 &lt;descriptor&gt; with an id attribute<br/>
                 Refers to the Medical Subject Heading associated with the topic.<br/>
-                Example: &lt;descriptor id="D001132"&gt;Arm&lt;/descriptor&gt;<br/><br/>
+                Example: &lt;descriptor id=&quot;D001132&quot;&gt;Arm&lt;/descriptor&gt;<br/><br/>
                 
                 &lt;qualifier&gt; with an id attribute<br/>
                 Refers to the Medical Subject Heading subheadings associated with the &lt;descriptor&gt;.<br/>
-                Example: &lt;qualifier id="Q000503"&gt;physiopathology&lt;/qualifier&gt;<br/>
+                Example: &lt;qualifier id=&quot;Q000503&quot;&gt;physiopathology&lt;/qualifier&gt;<br/>
                 <br/>
                 
               </td>
@@ -257,7 +236,7 @@
                 <br/>
                 id - the unique identification number for the health topic group<br/>
                 url - the URL of the health topic group page<br/>
-                Example: &lt;group url="http://www.nlm.nih.gov/medlineplus/digestivesystem.html" id="2"&gt;Digestive System&lt;/group&gt;<br/><br/>
+                Example: &lt;group url=&quot;http://www.nlm.nih.gov/medlineplus/digestivesystem.html&quot; id=&quot;2&quot;&gt;Digestive System&lt;/group&gt;<br/><br/>
               </td>
               <td>Group information is used to create the hierarchy, as represented in MRHIER.<br/>
               </td>
@@ -270,17 +249,17 @@
                   than one &lt;related-topic&gt;. The attributes for this element include: <br/><br/>
                   id - the unique internal identification number assigned to each health topic<br/>
                   url - the related topic URL<br/>
-                  Example: &lt;related-topic url="http://www.nlm.nih.gov/medlineplus/pain.html" id="351"&gt;Pain&lt;/related-topic&gt;<br/><br/>
+                  Example: &lt;related-topic url=&quot;http://www.nlm.nih.gov/medlineplus/pain.html&quot; id=&quot;351&quot;&gt;Pain&lt;/related-topic&gt;<br/><br/>
               </td>
-              <td>MRREL.REL = "RO"<br/>
-                MRREL.RELA = "related_to"<br/>
+              <td>MRREL.REL = &quot;RO&quot;<br/>
+                MRREL.RELA = &quot;related_to&quot;<br/>
               </td>
             </tr>
             <tr>
               <td>&lt;language-mapped-topic&gt;<br/>
                 For English topics, this is the equivalent Spanish health topic. For Spanish topics, this is the equivalent English health topic. <br/>
                   Example:
-                  &lt;language-mapped-topic url="http://www.nlm.nih.gov/medlineplus/spanish/abortion.html" id="2238" language="Spanish"&gt;Aborto&lt;/language-mapped-topic&gt;<br/><br/>
+                  &lt;language-mapped-topic url=&quot;http://www.nlm.nih.gov/medlineplus/spanish/abortion.html&quot; id=&quot;2238&quot; language=&quot;Spanish&quot;&gt;Aborto&lt;/language-mapped-topic&gt;<br/><br/>
               </td>
               <td>Not applicable, since Spanish is not included in the
                 Metathesaurus.<br/>
@@ -290,7 +269,7 @@
               <td>&lt;other-language&gt;<br/>
                 The other language(s) associated with the health topic.<br/>
                   Example:
-                  &lt;other-language vernacular-name="espanol" url="http://www.nlm.nih.gov/medlineplus/spanish/abdominalpain.html"&gt;Spanish&lt;/other-language&gt;<br/><br/>
+                  &lt;other-language vernacular-name=&quot;espanol&quot; url=&quot;http://www.nlm.nih.gov/medlineplus/spanish/abdominalpain.html&quot;&gt;Spanish&lt;/other-language&gt;<br/><br/>
               </td>
               <td>MRSAT.ATN = MP_OTHER_LANGUAGE_URL<br/>
               </td>
@@ -299,7 +278,7 @@
               <td>&lt;primary-institute&gt;<br/>
                 Health topics may have a primary National Institutes of Health assigned to them.<br/>
                   Example:
-                  &lt;primary-institute url="http://www.nidcd.nih.gov/"&gt;National Institute on Deafness and Other Communication Disorders&lt;/primary-institute&gt;<br/><br/>
+                  &lt;primary-institute url=&quot;http://www.nidcd.nih.gov/&quot;&gt;National Institute on Deafness and Other Communication Disorders&lt;/primary-institute&gt;<br/><br/>
               </td>
               <td>MRSAT.ATN = MP_PRIMARY_INSTITUTE_URL<br/>
               </td>
@@ -307,7 +286,7 @@
             <tr>
               <td>&lt;site&gt;<br/>
                 For every health topic there will be at least one site record.<br/>
-                Example: &lt;site title="Acoustic Neuroma" url="http://www.irsa.org/acoustic_neuroma.html"&gt;
+                Example: &lt;site title=&quot;Acoustic Neuroma&quot; url=&quot;http://www.irsa.org/acoustic_neuroma.html&quot;&gt;
 &lt;information-category&gt;Treatment&lt;/information-category&gt;&lt;organization&gt;International Radiosurgery Support Association&lt;/organization&gt;&lt;/site&gt;<br/>
               </td>
               <td>Not processed.<br/>
@@ -333,7 +312,7 @@
                 id - identifical number<br/>
                 name - name of the health topic group<br/>
                 url - URL for the health topic group<br/>
-                Example: &lt;group language="English" id="1" url="http://www.nlm.nih.gov/medlineplus/cancers.html"&gt;Cancers&lt;/group&gt;
+                Example: &lt;group language=&quot;English&quot; id=&quot;1&quot; url=&quot;http://www.nlm.nih.gov/medlineplus/cancers.html&quot;&gt;Cancers&lt;/group&gt;
               </td>
               <td> group language: process only English entries<br/>
               group id: MRCONSO.CODE<br/>
@@ -345,5 +324,3 @@
         </table>
       </div>
     </div>
-  </body>
-</html>

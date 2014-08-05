@@ -1,48 +1,25 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html;
-      charset=ISO-8859-1">
-    <title></title>
-  </head>
-  <body>
-    <div class="section-4">
+<p>This page lists UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
+<!--begin tabbed navigation area-->
+<div class="section-6">
       <ul id="menu">
-        <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
-        <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
-        <li id="nav-3"> <a href="sourcemetastats.html">Statistics and
-            sample data</a>
-          <ul id="subnav-3">
-            <li> <a href="termtypes.html">Terms and term types</a> </li>
-            <li> <a href="attributes.html">Attributes</a> </li>
-            <li> <a href="relationships.html">Relationships</a> </li>
-            <li> <a href="semtypes.html">Semantic Types</a> </li>
-            <li> <a href="overlap.html">Source Overlap</a> </li>
-          </ul>
-        </li>
-        <li id="nav-4"> <a href="representation.html">Representation</a>
-          <ul id="subnav-4">
-            <li> <a href="sourcerepresentation.html">Source
-                Representation</a> </li>
-            <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
-
-                Representation</a> </li>
-          </ul>
-        </li>
+         <li id="nav-1"><a href="index.html">Synopsis</a></li>
+         <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+         <li id="nav-3"><a href="stats.html">Statistics</a></li>
+         <li id="nav-4"><a href="samples.html">Samples</a></li>
+         <li id="nav-5"><a href="sourcerepresentation.html">Source Representation</a></li>
+         <li id="nav-6"><a href="metarepresentation.html">Metathesaurus Representation</a></li>
       </ul>
-    </div>
-    <br/>
-    <br/>
+</div>
+<!-- end tabbed navigation area -->
     <br/>
     <a name="top"></a> <span class="nav">Skip to: </span><a
       href="#termtypes">Atoms</a>, <a href="#attributes">Attributes</a>,
-    <a href="#definitions">Definitions</a>, <a href="#relationships">Relationships</a>,
-    <a href="#mappings">Mappings</a>
+    <a href="#definitions">Definitions</a>, <a href="#relationships">Relationships</a>,    <a href="#mappings">Mappings</a>
     <p><b>VSAB:</b> HCPCS2013, HCPT2013, HCDT2013, MTHHH2013</p>
     <div id="rep_identifiers" class="rep_block_level_one">
       <h3>Summary of Changes:</h3>
       <p>No changes have been made to the format of original data files
-        or to Metathesaurus processing.&nbsp; A new "Consumer Friendly"
+        or to Metathesaurus processing.&nbsp; A new &quot;Consumer Friendly&quot;
         version of the data has been released, and it is anticipated
         that this format will be used for future HCPCS updates.<br/>
       </p>
@@ -59,12 +36,12 @@
           For MTHHH atoms: An MTHU# is generated during Metathesaurus
           source processing </li>
         <li>SAUI: Not Applicable</li>
-        <li>SCUI: Same as "CODE"</li>
+        <li>SCUI: Same as &quot;CODE&quot;</li>
         <li>SDUI: Not Applicable </li>
       </ul>
       <br/>
       <div id="rep_termtypes" class="rep_block_level_two"> <a
-          name="termtypes"></a><br/>
+          name="termtypes" id="termtypes"></a><br/>
         <h3>Atoms (MRCONSO):</h3>
         &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
         SAB assignment:<br/>
@@ -74,7 +51,7 @@
           <li>MTHHH: All hierarchical terms</li>
           <li>HCPT: 2 or 5-digit numeric code or 4 digits followed by T
             or F</li>
-          <li>HCDT: "D" followed by 4 digits: HCDT</li>
+          <li>HCDT: &quot;D&quot; followed by 4 digits: HCDT</li>
           <li>HCPCS: All other codes from the HCPCS data file</li>
         </ul>
         <table class="elements" border="0" cellspacing="0">
@@ -89,9 +66,9 @@
                 1-5)<br/>
                 STR = Short Description SCUI = procedure/modifier code
                 (character positions 1-5)<br/>
-                TTY = "AB" is assigned to atoms with a Record id code of
-                "3" and no "Termination Date"<br/>
-                SUPPRESS = "Y" &nbsp; </td>
+                TTY = &quot;AB&quot; is assigned to atoms with a Record id code of
+                &quot;3&quot; and no &quot;Termination Date&quot;<br/>
+                SUPPRESS = &quot;Y&quot; &nbsp; </td>
             </tr>
             <tr>
               <td>AM</td>
@@ -99,16 +76,16 @@
                 1-5)<br/>
                 STR = Short Description SCUI = procedure/modifier code
                 (character positions 1-5)<br/>
-                TTY = "AM" is assigned to atoms with a Record id code of
-                "7" and no "Termination Date"<br/>
-                SUPPRESS = "Y" </td>
+                TTY = &quot;AM&quot; is assigned to atoms with a Record id code of
+                &quot;7&quot; and no &quot;Termination Date&quot;<br/>
+                SUPPRESS = &quot;Y&quot; </td>
             </tr>
             <tr>
               <td>HT</td>
-              <td>CODE = "MTHU#", assigned during Metathesaurus source
+              <td>CODE = &quot;MTHU#&quot;, assigned during Metathesaurus source
                 processing <br/>
                 STR = value of Metathesaurus Hierarchical Term<br/>
-                SCUI = "MTHU#", assigned during Metathesaurus source
+                SCUI = &quot;MTHU#&quot;, assigned during Metathesaurus source
                 processing<br/>
                 Note: The standard HCPCS data files do not include a
                 hierarchy. The National Library of Medicine uses the
@@ -122,8 +99,8 @@
                 4-5)<br/>
                 STR = Long Description<br/>
                 SCUI = procedure/modifier code (character positions 1-5)<br/>
-                TTY = "MP" is assigned to atoms with a Record id code of
-                "7" and no "Termination Date."<br/>
+                TTY = &quot;MP&quot; is assigned to atoms with a Record id code of
+                &quot;7&quot; and no &quot;Termination Date.&quot;<br/>
               </td>
             </tr>
             <tr>
@@ -132,9 +109,9 @@
                 1-5)<br/>
                 STR = Short Description SCUI=procedure/modifier code
                 (character positions 1-5)<br/>
-                TTY = "OA" is assigned to atoms with a Record id code of
-                "3" and a non-blank "Termination Date."<br/>
-                SUPPRESS = "O" </td>
+                TTY = &quot;OA&quot; is assigned to atoms with a Record id code of
+                &quot;3&quot; and a non-blank &quot;Termination Date.&quot;<br/>
+                SUPPRESS = &quot;O&quot; </td>
             </tr>
             <tr>
               <td>OAM</td>
@@ -143,9 +120,9 @@
                 STR = Short Description<br/>
                 SCUI = procedure/modifier code (character positions
                 1-5). <br/>
-                TTY = "OAM" is assigned to atoms with a Record id code
-                of "7" and a non-blank "Termination Date."<br/>
-                SUPPRESS = "O" </td>
+                TTY = &quot;OAM&quot; is assigned to atoms with a Record id code
+                of &quot;7&quot; and a non-blank &quot;Termination Date.&quot;<br/>
+                SUPPRESS = &quot;O&quot; </td>
             </tr>
             <tr>
               <td>OM</td>
@@ -153,9 +130,9 @@
                 4-5)<br/>
                 STR = Long Description; SCUI=procedure/modifier code
                 (character positions 1-5).<br/>
-                TTY = "OM" is assigned to atoms with a Record id code of
-                "7" and a non-blank "Termination Date."<br/>
-                SUPPRESS = "O" </td>
+                TTY = &quot;OM&quot; is assigned to atoms with a Record id code of
+                &quot;7&quot; and a non-blank &quot;Termination Date.&quot;<br/>
+                SUPPRESS = &quot;O&quot; </td>
             </tr>
             <tr>
               <td>OP</td>
@@ -163,9 +140,9 @@
                 1-5)<br/>
                 STR = Long Description<br/>
                 SCUI = procedure/modifier code (character positions 1-5)<br/>
-                TTY = "OP" is assigned to atoms with a Record id code of
-                "3" and a non-blank "Termination Date."<br/>
-                SUPPRESS = "O" </td>
+                TTY = &quot;OP&quot; is assigned to atoms with a Record id code of
+                &quot;3&quot; and a non-blank &quot;Termination Date.&quot;<br/>
+                SUPPRESS = &quot;O&quot; </td>
             </tr>
             <tr>
               <td>PT</td>
@@ -173,13 +150,13 @@
                 1-5)<br/>
                 STR = Long Description<br/>
                 SCUI = procedure/modifier code (character positions 1-5)<br/>
-                TTY = "PT" is assigned to atoms with a Record id code of
-                "3" and no "Termination Date." </td>
+                TTY = &quot;PT&quot; is assigned to atoms with a Record id code of
+                &quot;3&quot; and no &quot;Termination Date.&quot; </td>
             </tr>
           </tbody>
         </table>
       </div>
-      <a name="attributes"></a><br/>
+      <a name="attributes" id="attributes"></a><br/>
       <h3>Attributes (MRSAT):</h3>
       &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
       <div id="rep_attributes" class="rep_block_level_two">
@@ -192,14 +169,14 @@
             <tr>
               <td>CPF</td>
               <td>HCPCS Long Description (character positions 12-91).
-                For modifiers, the STR is truncated at the ":", and the
+                For modifiers, the STR is truncated at the &quot;:&quot;, and the
                 entire Long Description is represented with ATN=CPF.</td>
             </tr>
             <tr>
               <td>HAC</td>
               <td>HCPCS Action Code (charcter position 293). Expanded
                 values for each Action Code are included in the ATV,
-                e.g. "N=No maintenance for this code"</td>
+                e.g. &quot;N=No maintenance for this code&quot;</td>
             </tr>
             <tr>
               <td>HAD</td>
@@ -285,14 +262,14 @@
         </table>
       </div>
       <div id="rep_definitions" class="rep_block_level_two"> <a
-          name="definitions"></a><br/>
+          name="definitions" id="definitions"></a><br/>
         <h3>Definitions (MRDEF):</h3>
         &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
         <p>No definitions are included with the standard format HCPCS
           release.</p>
       </div>
       <div id="rep_relationships" class="rep_block_level_two"> <a
-          name="relationships"></a><br/>
+          name="relationships" id="relationships"></a><br/>
         <h3>Relationships (MRREL):</h3>
         &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
         <table class="elements" border="0" cellspacing="0">
@@ -309,7 +286,7 @@
               <td>&nbsp;</td>
               <td>Hierarchy created by the NLM during Metathesaurus
                 source processing. This hierarchy has not been reviewed
-                by CMS, and is attributed to SAB = "MTHHH" </td>
+                by CMS, and is attributed to SAB = &quot;MTHHH&quot; </td>
             </tr>
             <tr>
               <td>RQ</td>
@@ -336,5 +313,4 @@
       <span class="nav">&nbsp;<a href="#top">(return to top</a></span>)
       <p>No mapping data to other sources is included for HCPCS</p>
     </div>
-  </body>
-</html>
+
