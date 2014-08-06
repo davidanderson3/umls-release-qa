@@ -14,11 +14,25 @@
             <xsl:for-each select = "ns0:DescribedValueSet">
                 <xsl:variable name = "oid" select = "@ID"/>
                 <xsl:variable name = "valueSetName" select = "@displayName"/>
-                <xsl:variable name = "expansionVersion" select = "@version"/>
-                <xsl:variable name = "definitionVersion" select = "ns0:RevisionDate"/>
                 <xsl:variable name = "codeCount" select = "string(count(ns0:ConceptList/child::*))"/>
                 <xsl:value-of select = "string-join(($oid,$valueSetName,$codeCount),'|')"/>
                 <xsl:text>&#10;</xsl:text>  
+            </xsl:for-each>  
+        </xsl:result-document>
+        
+        <xsl:result-document href = "value-set-code-counts-by-source.txt">
+            <!-- show number of codes in each value set  -->
+            <xsl:text>OID|CodeSystemName|NumberOfCodes&#10;</xsl:text>
+            <xsl:for-each select = "ns0:DescribedValueSet">
+                <xsl:variable name = "cs" select = "ns0:ConceptList/ns0:Concept/@codeSystemName"/>
+                <xsl:for-each select = "$cs">
+                    <xsl:sort select = "current()"/>
+                    <xsl:if test="generate-id() = generate-id($cs[. = current()][1])">
+                        <xsl:value-of select = "ancestor::*/@ID"/><xsl:text>|</xsl:text>
+                        <xsl:value-of select = "."/><xsl:text>|</xsl:text>
+                        <xsl:value-of select = "count($cs[.=current()])"/><xsl:text>&#10;</xsl:text>
+                    </xsl:if>                
+                </xsl:for-each>
             </xsl:for-each>  
         </xsl:result-document>
         
@@ -34,7 +48,7 @@
              </xsl:for-each>
         </xsl:result-document>
        
-        <xsl:result-document href = "measure-counts.txt">
+        <xsl:result-document href = "value-sets-per-measure.txt">
             <!-- how many value sets are in a given measure? -->
             <xsl:text>CMS Measure ID|NumberofOIDs&#10;</xsl:text>
             <xsl:variable name = "cms" select = "ns0:DescribedValueSet/ns0:Group[@displayName='CMS eMeasure ID']/ns0:Keyword"/>
@@ -67,9 +81,23 @@
             </xsl:for-each>
         </xsl:result-document>
         
+        <xsl:result-document href = "value-set-relationships.txt">
+        <xsl:text>OID|Parent_OID&#10;</xsl:text>
+            <!-- oids that belong to groups -->
+            <xsl:for-each select = "ns0:DescribedValueSet/ns0:Group">
+                <xsl:if test = "@displayName eq 'memberOf'">
+                <xsl:variable name = "oid" select = "ancestor::*/@ID"/>
+                <xsl:value-of select = "concat($oid,'|')"/>
+                <xsl:apply-templates select = "ns0:Keyword" mode = "multiple"/>
+                <xsl:text>&#10;</xsl:text>
+                </xsl:if>
+            </xsl:for-each>
+            
+        </xsl:result-document>
         
-        <xsl:result-document href = "value-set-metadata.txt">
-        <xsl:text>OID|Version|Source|Type|Definition|MUType|MeasureTitle|QDM|NQF|CMSId&#10;</xsl:text>  
+        
+        <xsl:result-document href = "value-set-usage.txt">
+        <xsl:text>OID|Version|Source|Type|Definition|MUType|MeasureTitle|QDM Category|NQF|CmsId&#10;</xsl:text>  
             <!-- produce value set "usage" file -->
             <xsl:for-each select = "ns0:DescribedValueSet">
                 
@@ -113,5 +141,6 @@
 <xsl:if test = "count(following-sibling::*) &gt; 0"><xsl:value-of select = "concat(.,',')"/></xsl:if>
 <xsl:if test = "count(following-sibling::*) = 0"><xsl:value-of select = "."/><xsl:text>|</xsl:text></xsl:if>
 </xsl:template>   
- 
+    
+
 </xsl:stylesheet>
