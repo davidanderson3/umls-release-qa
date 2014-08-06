@@ -1,40 +1,17 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html;
-      charset=ISO-8859-1">
-    <title></title>
-  </head>
-  <body>
-    <div class="section-4">
+<p>This page lists UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
+<!--begin tabbed navigation area-->
+<div class="section-6">
       <ul id="menu">
-        <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
-        <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
-        <li id="nav-3"> <a href="sourcemetastats.html">Statistics and
-            sample
-            data</a>
-          <ul id="subnav-3">
-            <li> <a href="termtypes.html">Terms and term types</a> </li>
-            <li> <a href="attributes.html">Attributes</a> </li>
-            <li> <a href="relationships.html">Relationships</a> </li>
-            <li> <a href="semtypes.html">Semantic Types</a> </li>
-            <li> <a href="overlap.html">Source Overlap</a> </li>
-          </ul>
-        </li>
-        <li id="nav-4"> <a href="representation.html">Representation</a>
-          <ul id="subnav-4">
-            <li> <a href="sourcerepresentation.html">Source
-                Representation</a> </li>
-            <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
-                Representation</a> </li>
-          </ul>
-        </li>
+         <li id="nav-1"><a href="index.html">Synopsis</a></li>
+         <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+         <li id="nav-3"><a href="stats.html">Statistics</a></li>
+         <li id="nav-4"><a href="samples.html">Samples</a></li>
+         <li id="nav-5"><a href="sourcerepresentation.html">Source Representation</a></li>
+         <li id="nav-6"><a href="metarepresentation.html">Metathesaurus Representation</a></li>
       </ul>
-    </div>
-    <br/>
-    <br/>
-    <br/>
-    <a name="top"></a>
+</div>
+<!-- end tabbed navigation area -->
+    <br/>    <a name="top"></a>
     <span class="nav">Skip to:</span><a href="#termtypes">Atoms</a>, <a
       href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
     <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a>
@@ -51,7 +28,7 @@
         <p>The UMLS uses an xml version of UMDNS which is created with
           the TDE
           tool from Apelon, Inc. The file used for 2013AA is
-          "NLM_20121130_v4.xml" (the defined view). (<a
+          &quot;NLM_20121130_v4.xml&quot; (the defined view). (<a
             href="http://apelon.com/dtd/tde/ontylog.dtd">http://apelon.com/dtd/tde/ontylog.dtd</a>)</p>
       </div>
       <div class="rep_block_level_one">
@@ -62,39 +39,39 @@
           are
           considered to be closely related (but not necessarily
           synonymous).
-          Therefore, atoms with TTY = "SY" are assigned the same
+          Therefore, atoms with TTY = &quot;SY&quot; are assigned the same
           Source-asserted
           Concept Identifer (SCUI), and Source-asserted Descriptor
           Identifier
           (SDUI) as their PT.
-          However, atoms with TTY = "ET" are considered to be in a
+          However, atoms with TTY = &quot;ET&quot; are considered to be in a
           different
           concept
-          from their "PT" (different SCUI) but members of the same
+          from their &quot;PT&quot; (different SCUI) but members of the same
           descriptor
           (same
           SDUI). Identifiers are assigned as follows:
         </p>
         <ul>
           <li>CODE: <br/>
-            For termtypes "PT", "ET", "RT", "HT": populated by the
-            "CODE_IN_SOURCE"
+            For termtypes &quot;PT&quot;, &quot;ET&quot;, &quot;RT&quot;, &quot;HT&quot;: populated by the
+            &quot;CODE_IN_SOURCE&quot;
             property.<br/>
-            For termtype "SY": populated by the "CODE_IN_SOURCE" value
-            of the "PT" </li>
+            For termtype &quot;SY&quot;: populated by the &quot;CODE_IN_SOURCE&quot; value
+            of the &quot;PT&quot; </li>
           <li>SAUI: <br/>
             Not Applicable</li>
           <li>SCUI: <br/>
-            Same as "CODE"</li>
+            Same as &quot;CODE&quot;</li>
           <li>SDUI: <br/>
-            For termtypes "PT", "SY", "ET": CODE of "PT"<br/>
-            For termtype "HT": CODE of "HT"<br/>
-            For termtype "RT": CODE of "RT" (An "RT" may have multiple
-            "PT"s, so we
-            can't use code of "PT") </li>
+            For termtypes &quot;PT&quot;, &quot;SY&quot;, &quot;ET&quot;: CODE of &quot;PT&quot;<br/>
+            For termtype &quot;HT&quot;: CODE of &quot;HT&quot;<br/>
+            For termtype &quot;RT&quot;: CODE of &quot;RT&quot; (An &quot;RT&quot; may have multiple
+            &quot;PT&quot;s, so we
+            can't use code of &quot;PT&quot;) </li>
         </ul>
         <br/>
-        <a name="termtypes"></a>
+        <a name="termtypes" id="termtypes"></a>
         <h3>Atoms (MRCONSO):</h3>
         &nbsp;<span class="nav">(<a href="#top">return to top</a>)</span>
         <div id="rep_termtypes" class="rep_block_level_two">
@@ -105,15 +82,15 @@
                 <th>Origin</th>
               </tr>
               <tr>
-                <td valign="top">PT</td>
+                <td>PT</td>
                 <td>CODE = value of &lt;CODE_IN_SOURCE&gt; property<br/>
                   STR = value of &lt;conceptDef&gt;&lt;name&gt;<br/>
                   SCUI = value of &lt;CODE_IN_SOURCE&gt; property<br/>
                   SDUI = value of &lt;CODE_IN_SOURCE&gt; property<br/>
                   <br/>
                   Termtypes are assigned based on the value of the
-                  "DEVICE_TYPE"
-                  property. "PT"s are created where the "DEVICE_TYPE" is
+                  &quot;DEVICE_TYPE&quot;
+                  property. &quot;PT&quot;s are created where the &quot;DEVICE_TYPE&quot; is
                   one of:<br/>
                   <ul>
                     <li>CATEGORY EXPANDED BELOW entry with SEE ALSO
@@ -126,15 +103,15 @@
                 </td>
               </tr>
               <tr>
-                <td valign="top">HT</td>
+                <td>HT</td>
                 <td>CODE = value of &lt;CODE_IN_SOURCE&gt; property<br/>
                   STR = value of &lt;conceptDef&gt;&lt;name&gt;<br/>
                   SCUI = value of &lt;CODE_IN_SOURCE&gt; property<br/>
                   SDUI = value of &lt;CODE_IN_SOURCE&gt; property<br/>
                   <br/>
                   Termtypes are assigned based on the value of the
-                  "DEVICE_TYPE"
-                  property. "HT"s are created where the "DEVICE_TYPE"
+                  &quot;DEVICE_TYPE&quot;
+                  property. &quot;HT&quot;s are created where the &quot;DEVICE_TYPE&quot;
                   is:
                   <ul>
                     <li>Hierarchical Term</li>
@@ -149,8 +126,8 @@
                   SDUI = value of &lt;CODE_IN_SOURCE&gt; property<br/>
                   <br/>
                   Termtypes are assigned based on the value of the
-                  "DEVICE_TYPE"
-                  property. "RT"s are created where the "DEVICE_TYPE"
+                  &quot;DEVICE_TYPE&quot;
+                  property. &quot;RT&quot;s are created where the &quot;DEVICE_TYPE&quot;
                   is:
                   <ul>
                     <li>Device is a USE MORE SPECIFIC TERM entry.</li>
@@ -158,29 +135,29 @@
                 </td>
               </tr>
               <tr>
-                <td valign="top">SY</td>
+                <td>SY</td>
                 <td>CODE = value of &lt;CODE_IN_SOURCE&gt; property of
                   associated
-                  "PT"<br/>
-                  STR = value of the "SYNONYM" property<br/>
+                  &quot;PT&quot;<br/>
+                  STR = value of the &quot;SYNONYM&quot; property<br/>
                   SCUI = value of &lt;CODE_IN_SOURCE&gt; property of
-                  associated "PT"<br/>
+                  associated &quot;PT&quot;<br/>
                   SDUI = value of &lt;CODE_IN_SOURCE&gt; property of
-                  associated "PT"<br/>
+                  associated &quot;PT&quot;<br/>
                   <br/>
-                  SYs are created when a "SYNONYM" property exists </td>
+                  SYs are created when a &quot;SYNONYM&quot; property exists </td>
               </tr>
               <tr>
-                <td valign="top">ET</td>
+                <td>ET</td>
                 <td>CODE = value of &lt;CODE_IN_SOURCE&gt; property<br/>
                   STR = value of &lt;conceptDef&gt;&lt;name&gt;<br/>
                   SCUI = value of &lt;CODE_IN_SOURCE&gt; property<br/>
                   SDUI = value of &lt;CODE_IN_SOURCE&gt; property of
-                  associated "PT"<br/>
+                  associated &quot;PT&quot;<br/>
                   <br/>
                   Termtypes are assigned based on the value of the
-                  "DEVICE_TYPE"
-                  property. ETs are created where the "DEVICE_TYPE" is:
+                  &quot;DEVICE_TYPE&quot;
+                  property. ETs are created where the &quot;DEVICE_TYPE&quot; is:
                   <ul>
                     <li>Device is a SEE reference.</li>
                   </ul>
@@ -189,7 +166,7 @@
             </tbody>
           </table>
         </div>
-        <a name="attributes"></a>
+        <a name="attributes" id="attributes"></a>
         <h3>Attributes (MRSAT):</h3>
         &nbsp;<span class="nav">(<a href="#top">return to top</a>)</span>
         <div id="rep_attributes" class="rep_block_level_two">
@@ -200,8 +177,8 @@
                 <th>Origin of ATV</th>
               </tr>
               <tr>
-                <td valign="top">DEVTYPE</td>
-                <td>The value of the "DEVICE_TYPE" property. One of the
+                <td>DEVTYPE</td>
+                <td>The value of the &quot;DEVICE_TYPE&quot; property. One of the
                   following:
                   <ul>
                     <li>CATEGORY EXPANDED BELOW entry with SEE ALSO
@@ -216,19 +193,19 @@
                   </ul>
                   Note: In the original data, some synonyms have a
                   qualifier
-                  of "Synonym_Device_Type," and some are assigned a
+                  of &quot;Synonym_Device_Type,&quot; and some are assigned a
                   blank or incorrect
                   DEVICE_TYPE.<br/>
                   For consistency, in the Metathesaurus, all SY atoms
                   are defaulted to
-                  "Device is a SEE reference."
+                  &quot;Device is a SEE reference.&quot;
                   DEVTYPE is attached to AUI for SY atoms; for all other
                   atoms, it is
                   attached to CODE. </td>
               </tr>
               <tr>
-                <td valign="top">SYCODE</td>
-                <td>The value of the "Synonym_Code" qualifier, if
+                <td>SYCODE</td>
+                <td>The value of the &quot;Synonym_Code&quot; qualifier, if
                   present.
                   Attached to AUI. </td>
               </tr>
@@ -236,7 +213,7 @@
           </table>
         </div>
         <br/>
-        <a name="definitions"></a>
+        <a name="definitions" id="definitions"></a>
         <h3>Definitions (MRDEF):</h3>
         &nbsp;<span class="nav">(<a href="#top">return to top</a>)</span>
         <div id="rep_definitions" class="rep_block_level_two">
@@ -246,17 +223,17 @@
                 <th>ORIGIN</th>
               </tr>
               <tr>
-                <td valign="top">The value of the "DEFINITION "
+                <td>The value of the &quot;DEFINITION &quot;
                   property, where
-                  value of the "Definition _Status" qualifier =
-                  "Releasable." Definitions
+                  value of the &quot;Definition _Status&quot; qualifier =
+                  &quot;Releasable.&quot; Definitions
                   with other qualifier values are excluded.</td>
               </tr>
             </tbody>
           </table>
         </div>
         <br/>
-        <a name="relationships"></a>
+        <a name="relationships" id="relationships"></a>
         <h3>Relationships (MRREL):</h3>
         &nbsp;<span class="nav">(<a href="#top">return to top</a>)</span>
         <div id="rep_relationships" class="rep_block_level_two">
@@ -268,16 +245,16 @@
                 <th>ORIGIN</th>
               </tr>
               <tr>
-                <td valign="top">CHD<br/>
+                <td>CHD<br/>
                   PAR<br/>
                   SIB</td>
                 <td>isa/inverse_isa</td>
                 <td>Hierarchy extracted from
-                  "&lt;definingConcept&gt;&lt;concept&gt;"
+                  &quot;&lt;definingConcept&gt;&lt;concept&gt;&quot;
                   values in original xml data </td>
               </tr>
               <tr>
-                <td valign="top">RB/RN<br/>
+                <td>RB/RN<br/>
                   RO<br/>
                 </td>
                 <td>&nbsp;&nbsp;</td>
@@ -298,11 +275,9 @@
           </table>
         </div>
         <br/>
-        <a name="mappings"></a>
+        <a name="mappings" id="mappings"></a>
         <h3>Mappings (MRMAP):</h3>
         &nbsp;<span class="nav">(<a href="#top">return to top</a>)</span>
           <p>No mapping data is included for UMDNS</p>
         </div>
     </div>
-  </body>
-</html>

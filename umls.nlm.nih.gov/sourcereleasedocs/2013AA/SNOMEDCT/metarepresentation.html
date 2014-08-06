@@ -1,47 +1,16 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html;
-      charset=windows-1252">
-    <title></title>
-  </head>
-  <body>
-    <div class="section-4">
+<p>This page lists UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
+<!--begin tabbed navigation area-->
+<div class="section-6">
       <ul id="menu">
-        <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
-        <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
-        <li id="nav-3"> <a href="sourcemetastats.html">Statistics and
-            sample data</a>
-          <ul id="subnav-3">
-            <li> <a href="termtypes.html">Terms and term types</a> </li>
-            <li> <a href="attributes.html">Attributes</a> </li>
-            <li> <a href="relationships.html">Relationships</a> </li>
-            <li> <a href="semtypes.html">Semantic Types</a> </li>
-            <li> <a href="overlap.html">Source Overlap</a> </li>
-          </ul>
-        </li>
-        <li id="nav-4"> <a href="representation.html">Representation</a>
-          <ul id="subnav-4">
-            <li> <a href="sourcerepresentation.html">Source
-                Representation</a> </li>
-            <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
-
-
-
-
-
-
-
-
-
-
-                Representation</a> </li>
-          </ul>
-        </li>
+         <li id="nav-1"><a href="index.html">Synopsis</a></li>
+         <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+         <li id="nav-3"><a href="stats.html">Statistics</a></li>
+         <li id="nav-4"><a href="samples.html">Samples</a></li>
+         <li id="nav-5"><a href="sourcerepresentation.html">Source Representation</a></li>
+         <li id="nav-6"><a href="metarepresentation.html">Metathesaurus Representation</a></li>
       </ul>
-    </div>
-    <br/>
-    <br/>
+</div>
+<!-- end tabbed navigation area -->
     <br/>
     <a name="top"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>,
       <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
@@ -154,7 +123,7 @@
         <li>SDUI: Not Applicable</li>
       </ul>
       <div id="rep_termtypes" class="rep_block_level_two"> <a
-          name="atoms"></a>
+          name="atoms" id="atoms"></a>
         <h3>Atoms (MRCONSO)</h3>
         &nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
         <table class="elements" border="0" cellspacing="0">
@@ -168,7 +137,7 @@
               <td>An FN (Fully Specified Name) atom is created for each
                 line of sct1_Descriptions_en_INT_yyyymmdd.txt having
                 DESCRIPTIONTYPE=3, DESCRIPTIONSTATUS=0, and a
-                LANGUAGECODE of "en" as follows:
+                LANGUAGECODE of &quot;en&quot; as follows:
                 <div style="margin: 4pt;">CODE, SCUI = CONCEPTID<br/>
                   SAUI = DESCRIPTIONID<br/>
                   STR = TERM<br/>
@@ -180,7 +149,7 @@
               <td>An OF (Obsolete Fully specified name) atom is created
                 for each line of sct1_Descriptions_en_INT_yyyymmdd.txt
                 having DESCRIPTIONTYPE=3, a DESCRIPTIONSTATUS other than
-                0, and a LANGUAGECODE of "en" as follows:
+                0, and a LANGUAGECODE of &quot;en&quot; as follows:
                 <div style="margin: 4pt;">CODE, SCUI = CONCEPTID<br/>
                   SAUI = DESCRIPTIONID<br/>
                   STR = TERM<br/>
@@ -192,7 +161,7 @@
               <td>A PT (Preferred Term) atom is created for each line of
                 sct1_Descriptions_en_INT_yyyymmdd.txt having
                 DESCRIPTIONTYPE=1, DESCRIPTIONSTATUS=0, and a
-                LANGUAGECODE of "en" or "en-US", as follows:
+                LANGUAGECODE of &quot;en&quot; or &quot;en-US&quot;, as follows:
                 <div style="margin: 4pt;">CODE, SCUI = CONCEPTID<br/>
                   SAUI = DESCRIPTIONID<br/>
                   STR = TERM<br/>
@@ -212,7 +181,7 @@
                 is created for each line of
                 sct1_Descriptions_en_INT_yyyymmdd.txt having
                 DESCRIPTIONTYPE=1, DESCRIPTIONSTATUS=0, and a
-                LANGUAGECODE of "en-GB", as follows:
+                LANGUAGECODE of &quot;en-GB&quot;, as follows:
                 <div style="margin: 4pt;">CODE, SCUI = CONCEPTID<br/>
                   SAUI = DESCRIPTIONID<br/>
                   STR = TERM<br/>
@@ -236,7 +205,7 @@
               <td>An SY (Synonym) atom is created for each line of
                 sct1_Descriptions_en_INT_yyyymmdd.txt having
                 DESCRIPTIONTYPE=2, DESCRIPTIONSTATUS=0, and a
-                LANGUAGECODE of "en" or "en-US", as follows:
+                LANGUAGECODE of &quot;en&quot; or &quot;en-US&quot;, as follows:
                 <div style="margin: 4pt;">CODE, SCUI = CONCEPTID<br/>
                   SAUI = DESCRIPTIONID<br/>
                   STR = TERM<br/>
@@ -256,7 +225,7 @@
                 created for each line of
                 sct1_Descriptions_en_INT_yyyymmdd.txt having
                 DESCRIPTIONTYPE=2, DESCRIPTIONSTATUS=0, and a
-                LANGUAGECODE of "en-GB", as follows:
+                LANGUAGECODE of &quot;en-GB&quot;, as follows:
                 <div style="margin: 4pt;">CODE, SCUI = CONCEPTID<br/>
                   SAUI = DESCRIPTIONID<br/>
                   STR = TERM<br/>
@@ -294,16 +263,16 @@
                   (lexical variant generation) tool<br/>
                   <br/>
                   (2) If the STR contains the markup syntax SNOMEDCT
-                  uses to indicate superscripts ("^sup^") and/or
-                  subscripts ("&gt;sub&lt;"), two MTH_* forms are
+                  uses to indicate superscripts (&quot;^sup^&quot;) and/or
+                  subscripts (&quot;&gt;sub&lt;&quot;), two MTH_* forms are
                   generated:
                   <div style="margin-top: 8pt; margin-right: 8pt;
                     margin-bottom: 8pt;">1. One in which the markup
-                    syntax is removed, e.g., "CO&gt;2&lt;" becomes "CO2"<br/>
+                    syntax is removed, e.g., &quot;CO&gt;2&lt;&quot; becomes &quot;CO2&quot;<br/>
                     2. One in which the markup syntax is converted to an
-                    xml-style syntax using "&lt;sup&gt; for superscripts
-                    and "&lt;sub&gt;" for subscripts, e.g.,
-                    "CO&gt;2&lt;" becomes "CO&lt;sub&gt;2&lt;/sub&gt;".<br/>
+                    xml-style syntax using &quot;&lt;sup&gt; for superscripts
+                    and &quot;&lt;sub&gt;&quot; for subscripts, e.g.,
+                    &quot;CO&gt;2&lt;&quot; becomes &quot;CO&lt;sub&gt;2&lt;/sub&gt;&quot;.<br/>
                     <br/>
                     <br/>
                     <br/>
@@ -328,7 +297,7 @@
                 line of der1_CrossMapSets_ICD9_INT_yyyymmdd.txt, as
                 follows:
                 <div style="margin: 4pt;">CODE, SCUI = MAPSETID<br/>
-                  STR = "SNOMEDCT_yyyy_mm_dd to ICD9CM_vvvv Mappings"
+                  STR = &quot;SNOMEDCT_yyyy_mm_dd to ICD9CM_vvvv Mappings&quot;
                   (where vvvv is the value of MAPSETSCHEMEVERSION)</div>
               </td>
             </tr>
@@ -336,7 +305,7 @@
         </table>
       </div>
       <div id="rep_attributes" class="rep_block_level_two"> <a
-          name="attributes"></a><br/>
+          name="attributes" id="attributes"></a><br/>
         <h3>Attributes (MRSAT)</h3>
         &nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
         <table class="elements" border="0" cellspacing="0">
@@ -349,7 +318,7 @@
             <tr>
               <td>AQ</td>
               <td>SCUI</td>
-              <td>Used for "allowed qualifier" relationships from
+              <td>Used for &quot;allowed qualifier&quot; relationships from
                 sct1_Relationships_Core_INT_yyyymmdd.txt, where
                 CHARACTERISTICTYPE=1 (qualifier) and REFINABILITY=2
                 (mandatory)</td>
@@ -385,13 +354,13 @@
             <tr>
               <td>FROMRSAB</td>
               <td>CODE</td>
-              <td>"SNOMEDCT", attached to the XM atom for the Cross Map
+              <td>&quot;SNOMEDCT&quot;, attached to the XM atom for the Cross Map
                 Set</td>
             </tr>
             <tr>
               <td>FROMVSAB</td>
               <td>CODE</td>
-              <td>"SNOMEDCT_yyyy_mm_dd", attached to the XM atom for the
+              <td>&quot;SNOMEDCT_yyyy_mm_dd&quot;, attached to the XM atom for the
                 Cross Map Set</td>
             </tr>
             <tr>
@@ -428,7 +397,7 @@
             <tr>
               <td>MAPSETRSAB</td>
               <td>CODE</td>
-              <td>"SNOMEDCT", attached to the XM atom for the Cross Map
+              <td>&quot;SNOMEDCT&quot;, attached to the XM atom for the Cross Map
                 Set</td>
             </tr>
             <tr>
@@ -490,7 +459,7 @@
             <tr>
               <td>MAPSETVSAB</td>
               <td>CODE</td>
-              <td>"SNOMEDCT_yyyy_mm_dd", attached to the XM atom for the
+              <td>&quot;SNOMEDCT_yyyy_mm_dd&quot;, attached to the XM atom for the
                 Cross Map Set</td>
             </tr>
             <tr>
@@ -504,7 +473,7 @@
             <tr>
               <td>MTH_MAPFROMCOMPLEXITY</td>
               <td>CODE</td>
-              <td>"SINGLE_SCUI", attached to the XM atom for the Cross
+              <td>&quot;SINGLE_SCUI&quot;, attached to the XM atom for the Cross
                 Map Set;&nbsp; this data is added during Metathesaurus
                 Source processing.<br/>
               </td>
@@ -512,35 +481,35 @@
             <tr>
               <td>MTH_MAPFROMEXHAUSTIVE</td>
               <td>CODE</td>
-              <td>"N", attached to the XM atom for the Cross Map
+              <td>&quot;N&quot;, attached to the XM atom for the Cross Map
                 Set;&nbsp; this data is added during Metathesaurus
                 Source processing</td>
             </tr>
             <tr>
               <td>MTH_MAPSETCOMPLEXITY</td>
               <td>CODE</td>
-              <td>"N TO ONE", attached to the XM atom for the Cross Map
+              <td>&quot;N TO ONE&quot;, attached to the XM atom for the Cross Map
                 Set;&nbsp; this data is added during Metathesaurus
                 Source processing</td>
             </tr>
             <tr>
               <td>MTH_MAPTOCOMPLEXITY</td>
               <td>CODE</td>
-              <td>"SINGLE CODE, MULTIPLE CODE", attached to the XM atom
+              <td>&quot;SINGLE CODE, MULTIPLE CODE&quot;, attached to the XM atom
                 for the Cross Map Set;&nbsp; this data is added during
                 Metathesaurus Source processing</td>
             </tr>
             <tr>
               <td>MTH_MAPTOEXHAUSTIVE</td>
               <td>CODE</td>
-              <td>"N", attached to the XM atom for the Cross Map
+              <td>&quot;N&quot;, attached to the XM atom for the Cross Map
                 Set;&nbsp; this data is added during Metathesaurus
                 Source processing</td>
             </tr>
             <tr>
               <td>MTH_UMLSMAPSETSEPARATOR</td>
               <td>CODE</td>
-              <td>"AND", attached to the XM atom for the Cross Map
+              <td>&quot;AND&quot;, attached to the XM atom for the Cross Map
                 Set;&nbsp; this data is added during Metathesaurus
                 Source processing</td>
             </tr>
@@ -558,9 +527,9 @@
             <tr>
               <td>SOS</td>
               <td>CODE</td>
-              <td>"This set maps SNOMEDCT concept identifiers to
+              <td>&quot;This set maps SNOMEDCT concept identifiers to
                 ICD-9-Cm codes; a single SNOMEDCT conce pt id may be
-                mapped to one or more ICD-9-CM codes", attached to the
+                mapped to one or more ICD-9-CM codes&quot;, attached to the
                 XM atom for the Cross Map Set</td>
             </tr>
             <tr>
@@ -578,7 +547,7 @@
             <tr>
               <td>SUBSETMEMBER</td>
               <td>AUI</td>
-              <td>Has 3 components, separated by "~" characters:
+              <td>Has 3 components, separated by &quot;~&quot; characters:
                 SUBSETID, MEMBERSTATUS, and LINKEDID, from
                 der1_SubsetMembers_en-GB_INT_yyyymmdd.txt and
                 der1_SubsetMembers_en-US_INT_yyyymmdd.txt</td>
@@ -619,14 +588,14 @@
             <tr>
               <td>TORSAB</td>
               <td>CODE</td>
-              <td>The RSAB ("ICD9CM") corresponding to the
+              <td>The RSAB (&quot;ICD9CM&quot;) corresponding to the
                 MAPSETSCHEMENAME from
                 der1_CrossMapSets_ICD9_INT_yyyymmdd.txt</td>
             </tr>
             <tr>
               <td>TOVSAB</td>
               <td>CODE</td>
-              <td>The VSAB ("ICD9CM_yyyy") corresponding to the
+              <td>The VSAB (&quot;ICD9CM_yyyy&quot;) corresponding to the
                 MAPSETSCHEMENAME and MAPSETSCHEMEVERSION from
                 der1_CrossMapSets_ICD9_INT_yyyymmdd.txt</td>
             </tr>
@@ -638,8 +607,8 @@
                 sct1_Relationships_Core_INT_yyyymmdd.txt. Note that this
                 will normally be the same as the REL value used in
                 MRREL.RRF for this relationship, except that when the
-                UMLSREL value is given as "RT" or "NT", the REL value in
-                MRREL.RRF will be "RO" or "RN", respectively. <br/>
+                UMLSREL value is given as &quot;RT&quot; or &quot;NT&quot;, the REL value in
+                MRREL.RRF will be &quot;RO&quot; or &quot;RN&quot;, respectively. <br/>
               </td>
             </tr>
             <tr>
@@ -653,7 +622,7 @@
         </table>
       </div>
       <div id="rep_definitions" class="rep_block_level_two"> <a
-          name="definitions"></a><br/>
+          name="definitions" id="definitions"></a><br/>
         <h3>Definitions (MRDEF)</h3>
         &nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
         <table class="elements" border="0" cellspacing="0">
@@ -669,7 +638,7 @@
         </table>
       </div>
       <div id="rep_relationships" class="rep_block_level_two"> <a
-          name="relationships"></a><br/>
+          name="relationships" id="relationships"></a><br/>
         <h3>Relationships (MRREL)</h3>
         &nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
         <table class="elements" border="0" cellspacing="0">
@@ -685,7 +654,7 @@
               <td>(blank)</td>
               <td>Hierarchical relationships are derived from rows of
                 sct1_Relationships_Core_INT_yyyymmdd.txt where
-                RELATIONSHIPTYPE is 116680003 ("Is a"). </td>
+                RELATIONSHIPTYPE is 116680003 (&quot;Is a&quot;). </td>
             </tr>
             <tr>
               <td>RB<br/>
@@ -695,7 +664,7 @@
               <td>&nbsp;(many RELA values)</td>
               <td>These are derived from rows of
                 sct1_Relationships_Core_INT_yyyymmdd.txt where
-                RELATIONSHIPTYPE is not 116680003 ("Is a"). The REL and
+                RELATIONSHIPTYPE is not 116680003 (&quot;Is a&quot;). The REL and
                 RELA values used for each RELATIONSHIPTYPE are specified
                 by UMLSREL and UMLSRELA attributes, respectively (see
                 above).</td>
@@ -721,8 +690,7 @@
           der1_CrossMapTargets_ICD9_INT_yyyymmdd.txt, and
           der1_CrossMaps_ICD9_INT_yyyymmdd.txt files.<br/>
         </p>
-        <p><big><span style="font-weight: bold;"><br/>
-            </span></big></p>
+        
         <h3>History (MRHIST)</h3>
         &nbsp;&nbsp;<span class="nav">(return to <a
             href="metarepresentation.html#top">top</a></span>)<br/>
@@ -733,10 +701,10 @@
         <table class="elements" border="0" cellspacing="0">
           <tbody>
             <tr>
-              <td style="vertical-align: top;"><span style="font-weight:
+              <td><span style="font-weight:
                   bold;">COLUMN</span><br/>
               </td>
-              <td style="vertical-align: top;"><span style="font-weight:
+              <td><span style="font-weight:
                   bold;">ORIGIN</span><br/>
               </td>
             </tr>
@@ -747,9 +715,9 @@
               </th>
             </tr>
             <tr>
-              <td style="vertical-align: top;">SVER<br/>
+              <td>SVER<br/>
               </td>
-              <td style="vertical-align: top;"><span style="font-weight:
+              <td><span style="font-weight:
                   normal;">RELEASEVERSION</span></td>
             </tr>
             <tr>
@@ -758,30 +726,26 @@
               <td><span style="font-weight: normal;">CHANGETYPE</span></td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">CHANGEKEY<br/>
+              <td>CHANGEKEY<br/>
               </td>
-              <td style="vertical-align: top;">DESCRIPTIONSTATUS if
+              <td>DESCRIPTIONSTATUS if
                 COMPONENTID is a DESCRIPTIONID<br/>
                 CONCEPTSTATUS if COMPONENTID is a CONCEPTID </td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">CHANGEVAL<br/>
+              <td>CHANGEVAL<br/>
               </td>
-              <td style="vertical-align: top;">STATUS<br/>
+              <td>STATUS<br/>
               </td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">REASON<br/>
+              <td>REASON<br/>
               </td>
-              <td style="vertical-align: top;">REASON<br/>
+              <td>REASON<br/>
               </td>
             </tr>
           </tbody>
         </table>
-        <br/>
-        <p><big><span style="font-weight: bold;"><br/>
-            </span></big></p>
-      </div>
+        
+       </div>
     </div>
-  </body>
-</html>
