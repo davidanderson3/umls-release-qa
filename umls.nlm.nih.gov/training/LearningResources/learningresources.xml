@@ -13,6 +13,19 @@
             </resource>
         </resources>
     </category>
+    <category name = "Value Set Authority Center" rank = "aa">
+        <resources>
+            <resource current = "Y">
+                <Project>VSAC</Project>
+                <Title>Updating Value Sets</Title>
+                <URL>http://www.nlm.nih.gov/research/umls/user_education/VSAC/Updating_Value_Sets.html</URL>
+                <Date>8/5/2014</Date>
+                <Runtime>9 min.</Runtime>              
+                <Format>Video Tutorial</Format>
+                <Organization externalcontentprovider = "N">NLM</Organization>
+            </resource>
+        </resources>
+    </category>
     <category name = "UMLS License" rank = "b">
         <resources>
             <resource current = "Y">
@@ -354,7 +367,7 @@
             </resource>
         </resources>       
     </category>
-    <category name = "SNOMED CT&#174;" rank = "a">
+    <category name = "SNOMED CT&#174;" rank = "ac">
         <subcategories>
             <subcategory name = "US SNOMEDCT Content Request System">
                 <resources>
