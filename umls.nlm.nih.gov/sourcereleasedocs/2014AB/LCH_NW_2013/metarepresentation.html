@@ -1,10 +1,3 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html;
-      charset=windows-1252">
-  </head>
-  <body>
     <p>This page lists UMLS Metathesaurus data elements and traces them
       back to the specific source data that populates them.</p>
     <!--begin tabbed navigation area-->
@@ -34,34 +27,93 @@
       <div id="rep_change_summary" class="rep_block_level_one">
         <h3>Source Provided Files:</h3>
         All files are available here:&nbsp; <a
-          href="http://files.library.northwestern.edu/public/lcshmesh/">http://files.library.northwestern.edu/public/lcshmesh/<br/>
-          <br/>
-        </a>Documentation:<br/>
-        &nbsp;&nbsp;&nbsp; lcsh-mesh_read.doc - Description of the
-        project and files<br/>
-        &nbsp;&nbsp;&nbsp; lchs-mesh_sample.txt - Sample data<br/>
-        &nbsp;&nbsp;&nbsp; <br/>
-        &nbsp;&nbsp;&nbsp; Additional documentation on the MARC 21
-        Format For Authority Data can be found here:&nbsp; <a
-          href="http://www.loc.gov/marc/authority/">http://www.loc.gov/marc/authority/<br/>
-        </a><br/>
-        Data:&nbsp; <br/>
-        &nbsp;&nbsp;&nbsp; <br/>
-        &nbsp;&nbsp;&nbsp; lcsh.mrc - MARC 21 format authority file,
-        with linking data to MeSH strings.<br/>
+          href="http://files.library.northwestern.edu/public/lcshmesh/">http://files.library.northwestern.edu/public/lcshmesh/</a><br/>
+        <br/>
+        Additional documentation on the MARC 21 Format For Authority
+        Data can be found here:&nbsp; <a
+          href="http://www.loc.gov/marc/authority/">http://www.loc.gov/marc/authority/</a><br/>
+        <br/>
+        <b>Documentation</b>:<br/>
+        <a href="http://files.library.northwestern.edu/public/lcshmesh/">
+        </a><td"><br/>
+        </td">
+        <table class="elements" border="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <th>File<br/>
+              </th>
+              <th>Description<br/>
+              </th>
+            </tr>
+            <tr>
+              <td>lcsh-mesh_read.doc</td>
+              <td>Description of the project and files</td>
+            </tr>
+            <tr>
+              <td>lchs-mesh_sample.txt </td>
+              <td> Sample data </td>
+            </tr>
+          </tbody>
+        </table>
+        <br/>
+        <b>Data</b>:<br/>
+        <br/>
+        <table class="elements" border="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <th>File<br/>
+              </th>
+              <th>Description<br/>
+              </th>
+            </tr>
+            <tr>
+              <td>lcsh.mrc</td>
+              <td>MARC 21 format authority file, with linking data to
+                MSH strings</td>
+            </tr>
+          </tbody>
+        </table>
+        <br/>
       </div>
       <div id="rep_identifers" class="rep_block_level_one">
         <h3>Identifiers:</h3>
         Identifiers are assigned as follows:<br/>
+        <br/>
+        <table class="elements" border="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <th>Identifier<br/>
+              </th>
+              <th>Origin<br/>
+              </th>
+            </tr>
+            <tr>
+              <td>CODE<br/>
+              </td>
+              <td>Value of the 010 tag (Library of Congress Control
+                Number)</td>
+            </tr>
+            <tr>
+              <td>SAUI<br/>
+              </td>
+              <td>Not Applicable<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>SCUI<br/>
+              </td>
+              <td>Same as CODE<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>SDUI<br/>
+              </td>
+              <td>Not Applicable<br/>
+              </td>
+            </tr>
+          </tbody>
+        </table>
         <ul>
-          <li>CODE: Value of the 010 tag (Library of Congress Control
-            Number)
-            <ul>
-            </ul>
-          </li>
-          <li>SAUI: Not Applicable</li>
-          <li>SCUI: Same as CODE</li>
-          <li>SDUI: Not Applicable</li>
         </ul>
         <div id="rep_termtypes" class="rep_block_level_two"> <a
             name="atoms"></a>
@@ -265,16 +317,10 @@
                   record has multiple "750" tags, without $8
                   subfields.&nbsp; This data condition indicates a
                   simple one to many mapping from LCH to MSH (i.e. there
-                  is no implied "AND."&nbsp; The MAPRANK field is used
+                  is no implied "AND").&nbsp; The MAPRANK field is used
                   in conjunction with MAPSUBSETID to allow for
                   representation when a given FROMEXPR has more than one
                   TOEXPR value in a simple map. <br/>
-                </td>
-              </tr>
-              <tr>
-                <td>MAPID<br/>
-                </td>
-                <td>NA (the ATUI)<br/>
                 </td>
               </tr>
               <tr>
@@ -337,7 +383,9 @@
               <tr>
                 <td>TOTYPE<br/>
                 </td>
-                <td>value is "SDUI" or "BOOLEAN_EXPR_SDUI" </td>
+                <td>Value is "SDUI" or "BOOLEAN_EXPR_SDUI" based on the
+                  absence or presence of $8 subfields.<br/>
+                </td>
               </tr>
             </tbody>
           </table>
