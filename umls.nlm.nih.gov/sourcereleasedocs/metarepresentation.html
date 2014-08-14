@@ -20,6 +20,20 @@
     <div id="general" class="rep_block_level_one">
       <p><b>VSAB:</b> CPT2014<br/>
       </p>
+      <h3>Notes</h3>
+      CPT data files are submitted by the American Medical Association
+      (AMA). The files processed for the UMLS Metathesaurus are
+      available for licensing at the <a
+href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=prod1510002">AMA
+        Bookstore</a>. <br/>
+      The information provided here applies explicitly to the English
+      version of CPT. The Spanish translation of CPT (CPTSP) was last
+      updated in 2001, and much of the information on this page is not
+      applicable.<br/>
+      <br/>
+      The UMLS does not include Guidelines or SNOMEDCT mappings from the
+      CPT DTK files due to licensing restrictions.
+
       <div id="rep_identifiers" class="rep_block_level_one">
         <h3>Summary of Changes</h3>
         The UMLS is now using the Developers Toolkit Version of CPT
@@ -45,8 +59,8 @@
                 </td>
                 <td>MTHCH/HT<br/>
                 </td>
-                <td>The hierarchy is now included in source
-                  the data files.<br/>
+                <td>The hierarchy is now included in source the data
+                  files.<br/>
                 </td>
               </tr>
               <tr>
@@ -162,76 +176,93 @@
         </div>
       </div>
       <div id="rep_change_summary" class="rep_block_level_one">
-        <h3>Source Provided Files:</h3>
-        Documentation:&nbsp; &nbsp;&nbsp;&nbsp; <br/>
+        <h3>Source Provided Files Summary:</h3>
+        &nbsp; (<span class="nav"><a
+href="file:///C:/Users/aalipows/Desktop/UMLS/sourcerepresentation.html#top">return
+            to top</a></span>)<br/>
         <br/>
+        The complete English language CPT distribution includes the
+        following:<br/>
+        <h4>Documentation and Reference</h4>
         <table class="elements" cellspacing="0" border="0">
           <tbody>
             <tr>
-              <td><b>File</b><br/>
-              </td>
-              <td><b>Description</b><br/>
-              </td>
+              <th>File Name</th>
+              <th>Description</th>
             </tr>
             <tr>
-              <td>2014 CONSUMER DESCRIPTORS ReadMe_FINAL.doc </td>
-              <td>Consumer Descriptors documentation<br/>
+              <td class="file_field_name">2014 CONSUMER DESCRIPTORS
+                ReadMe_FINAL.doc<br/>
+              </td>
+              <td>User guide for Consumer Descriptor data<br/>
               </td>
             </tr>
             <tr>
               <td>2014_CLINICIAN DESCRIPTORS_ReadMe_FINAL.doc</td>
-              <td>Clinician Descriptors documentation<br/>
+              <td>User guide for Clinician Descriptor data<br/>
               </td>
             </tr>
             <tr>
               <td>2014_CPT_DTK_ReadMe_with_OWL_FINAL.doc</td>
-              <td>DTK format documentation<br/>
+              <td>User guide for main data files<br/>
               </td>
             </tr>
           </tbody>
         </table>
         <br/>
-        <br/>
-        Data:&nbsp; DTK files are available in both "tab" and "pipe"
-        delmited formats.&nbsp; The UMLS uses the following data files:<br/>
-        &nbsp; <br/>
+        <h4>Data Files</h4>
+        <a name="data_files"></a>
         <table class="elements" cellspacing="0" border="0">
           <tbody>
             <tr>
-              <td><b>File</b><br/>
-              </td>
-              <td><b>Description</b><br/>
-              </td>
+              <th>File Name</th>
+              <th>Description</th>
             </tr>
             <tr>
-              <td>Relationship_DTK_pipe.txt</td>
-              <td>Relationships<br/>
-              </td>
-            </tr>
-            <tr>
-              <td>Property_DTK_pipe.txt</td>
-              <td>Properties (including codes and strings)<br/>
-              </td>
-            </tr>
-            <tr>
-              <td>Type_DTK_pipe.txt</td>
-              <td>Metadata for data files<br/>
-              </td>
-            </tr>
-            <tr>
-              <td>ConsumerDescriptor_DTK_pipe.txt</td>
-              <td>Consumer Descriptors<br/>
-              </td>
-            </tr>
-            <tr>
-              <td>ClinicianDescriptor_DTK_pipe.txt</td>
+              <td class="file_field_name">ClinicianDescriptor_DTK_pipe.txt</td>
               <td>Clinician Descriptors<br/>
               </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">ConsumerDescriptor_DTK_pipe.txt
+
+                <br/>
+              </td>
+              <td>Consumer-friendly Descriptors<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">Property_DTK_pipe.txt</td>
+              <td> In the Property File, a concept is represented by a
+                set of lines that all have the same CONCEPT ID. Some of
+                the concepts in the Property File correspond to
+                reportable CPT codes, some were constructed by the AMA
+                for the 2014 CPT DTK, and some were drawn from SNOMED
+                CT.</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">Relationship_DTK_pipe.txt</td>
+              <td>In the Relationship File, relationships between two
+                concepts are represented.<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">Type_DTK_pipe.txt<br/>
+              </td>
+              <td> The Type File provides a succinct representation of
+                the types of information contained in the Property File
+                and the Relationship File. The PROPERTY TYPE ID column
+                from the Property File and RELATIONSHIP TYPE ID column
+                from the Relationship File both correspond to the TYPE
+                ID number from the Type File. Thus, the Type File
+                enables a user to see at a glance all of the categories
+                of relationship types used in the 2014 CPT DTK </td>
             </tr>
           </tbody>
         </table>
         <br/>
-      </div>
+        * Certain fields and files may not be directly processed because
+        they contain redundant data. </div>
       <div id="rep_identifers" class="rep_block_level_one">
         <h3>Identifiers:</h3>
         Identifiers are assigned as follows:<br/>
@@ -275,8 +306,7 @@
           </tbody>
         </table>
         <br/>
-        <ul>
-        </ul>
+
         <div id="rep_termtypes" class="rep_block_level_two"> <a
             name="atoms"></a>
           <h3>Atoms (MRCONSO):</h3>
@@ -405,9 +435,9 @@
                   MODUL.txt. Note: Although the file MODUL.txt is not
                   delivered in a set format, in general the modifier
                   code can be found in character positions 1-2, and the
-                  MP string is found after the tab and before the ":"
-                  on a given line. Data appearing after the ":" is
-                  included in the CPF attribute.</td>
+                  MP string is found after the tab and before the ":" on
+                  a given line. Data appearing after the ":" is included
+                  in the CPF attribute.</td>
               </tr>
               <tr>
                 <td>CPTDTK_CONCEPT_ID</td>
@@ -545,4 +575,3 @@
         </div>
       </div>
     </div>
-  </body>
