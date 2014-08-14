@@ -1,3 +1,4 @@
+
     <p>This page lists UMLS Metathesaurus data elements and traces them
       back to the specific source data that populates them.</p>
     <!--begin tabbed navigation area-->
@@ -22,21 +23,21 @@
       </p>
       <div id="rep_identifiers" class="rep_block_level_one">
         <h3>Summary of Changes</h3>
-        LC_NW is a new source.<br/>
+        LCH_NW is a new source.<br/>
       </div>
       <div id="rep_change_summary" class="rep_block_level_one">
         <h3>Source Provided Files:</h3>
-        All files are available here:&nbsp; <a
+        All files are available here:  <a
           href="http://files.library.northwestern.edu/public/lcshmesh/">http://files.library.northwestern.edu/public/lcshmesh/</a><br/>
         <br/>
         Additional documentation on the MARC 21 Format For Authority
-        Data can be found here:&nbsp; <a
+        Data can be found here:  <a
           href="http://www.loc.gov/marc/authority/">http://www.loc.gov/marc/authority/</a><br/>
         <br/>
-        <b>Documentation</b>:<br/>
-        <a href="http://files.library.northwestern.edu/public/lcshmesh/"> </a> <br/>
-
-        <table class="elements" border="0" cellspacing="0">
+        <h4> <b>Documentation</b>:</h4>
+        <a href="http://files.library.northwestern.edu/public/lcshmesh/">
+        </a> <br/>
+        <table class="elements" cellspacing="0" border="0">
           <tbody>
             <tr>
               <th>File<br/>
@@ -55,9 +56,9 @@
           </tbody>
         </table>
         <br/>
-        <b>Data</b>:<br/>
+        <h4> <b>Data</b>:</h4>
         <br/>
-        <table class="elements" border="0" cellspacing="0">
+        <table class="elements" cellspacing="0" border="0">
           <tbody>
             <tr>
               <th>File<br/>
@@ -78,7 +79,7 @@
         <h3>Identifiers:</h3>
         Identifiers are assigned as follows:<br/>
         <br/>
-        <table class="elements" border="0" cellspacing="0">
+        <table class="elements" cellspacing="0" border="0">
           <tbody>
             <tr>
               <th>Identifier<br/>
@@ -112,13 +113,12 @@
             </tr>
           </tbody>
         </table>
-
         <div id="rep_termtypes" class="rep_block_level_two"> <a
             name="atoms"></a>
           <h3>Atoms (MRCONSO):</h3>
-          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+            <span class="nav">(<a href="#top">return to top</a></span>)<br/>
           <br/>
-          <table class="elements" border="0" cellspacing="0">
+          <table class="elements" cellspacing="0" border="0">
             <tbody>
               <tr>
                 <th>Term Type (TTY) <br/>
@@ -134,10 +134,10 @@
                 <td>CODE = Value of the 010 tag (Library of Congress
                   Control Number)<br/>
                   STR = Value of 150 or 151 tag (Heading Topical Term or
-                  Geographic Name Heading);&nbsp; subfield delimiters
+                  Geographic Name Heading);  subfield delimiters
                   are replaced with "--". <br/>
                   SCUI = Same as CODE<br/>
-                  SUPPRESS = "N"<br/>
+                  SUPPRESS = N<br/>
                 </td>
               </tr>
               <tr>
@@ -155,8 +155,8 @@
         <div id="rep_attributes" class="rep_block_level_two"> <a
             name="attributes"></a><br/>
           <h3>Attributes (MRSAT):</h3>
-          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-          <table class="elements" border="0" cellspacing="0">
+            <span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <table class="elements" cellspacing="0" border="0">
             <tbody>
               <tr>
                 <th>Attribute Name (ATN)<br/>
@@ -242,15 +242,15 @@
         <div id="rep_definitions" class="rep_block_level_two"> <a
             name="definitions"></a><br/>
           <h3>Definitions (MRDEF):</h3>
-          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+            <span class="nav">(<a href="#top">return to top</a></span>)<br/>
           <p>No definitions are included in this data.<br/>
           </p>
         </div>
         <div id="rep_relationships" class="rep_block_level_two"> <a
             name="relationships"></a><br/>
           <h3>Relationships (MRREL):</h3>
-          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-          <table class="elements" border="0" cellspacing="0">
+            <span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <table class="elements" cellspacing="0" border="0">
             <tbody>
               <tr>
                 <th>REL</th>
@@ -265,12 +265,10 @@
                 </td>
                 <td>A subset of data found in the 750 (Topical Mappings)
                   tag:<br/>
-                      Where FROMEXPR and TOEXPR are simple
-                      expressions, mapping data is redundantly
-                      represented as relationships in MRREL.RRF.&nbsp;
-                      See the Mappings (MRMAP) section below for
-                      details.
-                </td>
+                  Where FROMEXPR and TOEXPR are simple expressions,
+                  mapping data is redundantly represented as
+                  relationships in MRREL.RRF.  See the Mappings
+                  (MRMAP) section below for details. </td>
               </tr>
             </tbody>
           </table>
@@ -282,13 +280,13 @@
             750 (Topical Mappings) tag, where:<br/>
           </p>
           <ul>
-            <li>2nd indicator value of "2" is a mappng to MSH.&nbsp; </li>
+            <li>2nd indicator value of "2" is a mappng to MSH.</li>
             <li>Subfield $8 is a "field link/sequence number,"
               indicating that one LCH concept maps to two or more
               entities in the target source<br/>
             </li>
           </ul>
-          <table class="elements" border="0" cellspacing="0">
+          <table class="elements" cellspacing="0" border="0">
             <tbody>
               <tr>
                 <th>MRMAP Field<br/>
@@ -298,22 +296,22 @@
               <tr>
                 <td>MAPSUBSETID<br/>
                 </td>
-                <td>Value is always "1".&nbsp; Used in conjunction with
+                <td>Value is always "1".  Used in conjunction with
                   MAPRANK value to allow for representation when a given
                   FROMEXPR has more than one TOEXPR value in a simple
-                  map.&nbsp; This data condition is found in the source
+                  map.  This data condition is found in the source
                   where there is more than one "750" tag, and no
-                  subfield $8.&nbsp; <br/>
+                  subfield $8.  <br/>
                 </td>
               </tr>
               <tr>
                 <td>MAPRANK<br/>
                 </td>
-                <td>Value is an integer;&nbsp; incremented when an LCH
+                <td>Value is an integer;  incremented when an LCH
                   record has multiple "750" tags, without $8
-                  subfields.&nbsp; This data condition indicates a
+                  subfields.  This data condition indicates a
                   simple one to many mapping from LCH to MSH (i.e. there
-                  is no implied "AND").&nbsp; The MAPRANK field is used
+                  is no implied "AND").  The MAPRANK field is used
                   in conjunction with MAPSUBSETID to allow for
                   representation when a given FROMEXPR has more than one
                   TOEXPR value in a simple map. <br/>
@@ -323,7 +321,7 @@
                 <td>FROMID<br/>
                 </td>
                 <td>Identifier of the LCH_NW source entity being mapped
-                  from;&nbsp; for LCH_NW, this is always a single SCUI,
+                  from;  for LCH_NW, this is always a single SCUI,
                   with the same value as the FROMEXPR<br/>
                 </td>
               </tr>
@@ -331,7 +329,7 @@
                 <td>FROMEXPR<br/>
                 </td>
                 <td>Expression of the LCH_NW source entity being mapped
-                  from;&nbsp; LCH_NW, this is always a single SCUI, with
+                  from;  LCH_NW, this is always a single SCUI, with
                   the same value as the FROMEXPR </td>
               </tr>
               <tr>
@@ -356,7 +354,7 @@
                 <td>TOID<br/>
                 </td>
                 <td>Identifier of the MSH target entity being mapped
-                  to;&nbsp; this identifier is assigned during
+                  to;  this identifier is assigned during
                   Metathesaurus source processing. </td>
               </tr>
               <tr>
@@ -365,11 +363,11 @@
                 <td>The expression of the MSH target entity being mapped
                   to, derived from "750" tag values where subfield $8 is
                   populated, indicating a "field link/sequence
-                  number."&nbsp; Includes qualifier information
-                  extracted from the $x subfield, if present.&nbsp;
-                  Note:&nbsp; the original data in this field is
-                  populated by MSH strings.&nbsp; Where possible, the
-                  strings have been translated to MSH identfiers.&nbsp;
+                  number." Includes qualifier information
+                  extracted from the $x subfield, if present
+                  Note: the original data in this field is
+                  populated by MSH strings.  Where possible, the
+                  strings have been translated to MSH identfiers.
                   In a small number of cases, the string provided did
                   not correspond to a current MSH string, and these
                   entries were dropped during Metathesaurus source
@@ -385,12 +383,10 @@
               </tr>
             </tbody>
           </table>
-          <p>&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <p> <span class="nav">(<a href="#top">return to top</a></span>)<br/>
           </p>
           <p><br/>
           </p>
         </div>
       </div>
     </div>
-  </body>
-</html>
