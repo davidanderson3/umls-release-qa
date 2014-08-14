@@ -1,17 +1,19 @@
-<p>This page lists UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
-<!--begin tabbed navigation area-->
-<div class="section-6">
+    <p>This page lists UMLS Metathesaurus data elements and traces them
+      back to the specific source data that populates them.</p>
+    <!--begin tabbed navigation area-->
+    <div class="section-6">
       <ul id="menu">
-         <li id="nav-1"><a href="index.html">Synopsis</a></li>
-         <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
-         <li id="nav-3"><a href="stats.html">Statistics</a></li>
-         <li id="nav-4"><a href="samples.html">Samples</a></li>
-         <li id="nav-5"><a href="sourcerepresentation.html">Source Representation</a></li>
-         <li id="nav-6"><a href="metarepresentation.html">Metathesaurus Representation</a></li>
+        <li id="nav-1"><a href="index.html">Synopsis</a></li>
+        <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+        <li id="nav-3"><a href="stats.html">Statistics</a></li>
+        <li id="nav-4"><a href="samples.html">Samples</a></li>
+        <li id="nav-5"><a href="sourcerepresentation.html">Source
+            Representation</a></li>
+        <li id="nav-6"><a href="metarepresentation.html">Metathesaurus
+            Representation</a></li>
       </ul>
-</div>
-<!-- end tabbed navigation area -->
-    <br/>
+    </div>
+    <!-- end tabbed navigation area --> <br/>
     <a name="top"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>,
       <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
       <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
@@ -24,75 +26,263 @@
         (DTK), which is a set of relational-format files that include a
         hierarchy.
         <div>
-          <p>The resulting changes include: </p>
-          <p>Deprecated SAB/TTY: MTHCH/HT </p>
-          <p>New TTY: CPT/HT </p>
-          <p>New REL/RELA:&nbsp; RT/has_panel_element</p>
-          <p>Deprecated REL/RELA:&nbsp; BT/NT and RT with no RELA have
-            been deprecated; previously, these were created during
-            Metathesaurus source processing, based on substring
-            matching.<br/>
+          <p>The resulting changes include:<br/>
           </p>
-          <p>Deprecated ATN:&nbsp; CPT_CLINICIAN_DESC_ID - this data is
-            no longer present in the Clinician files. </p>
-          <p>New ATNs: </p>
-          <blockquote>
-            <p>ADDITIONAL_GUIDELINE<br/>
-              ADDON_CODE<br/>
-              CPT_LEVEL<br/>
-              DATE_CREATED<br/>
-              DATE_LAST_MODIFIED<br/>
-              DESCRIPTOR_EXTENSION<br/>
-              EXEMPT_MOD<br/>
-              FDA_APPROVAL_PENDING<br/>
-              MEASURE_DEVELOPER<br/>
-              MODERATE_CONSCIOUS_SEDATION </p>
-          </blockquote>
+          <h4>New:<br/>
+          </h4>
+          <table class="elements" cellspacing="0" border="0">
+            <tbody>
+              <tr>
+                <td><b>RRF Field(s)</b><br/>
+                </td>
+                <td><b>Value</b><br/>
+                </td>
+                <td><b>Notes</b><br/>
+                </td>
+              </tr>
+              <tr>
+                <td>SAB/TTY<br/>
+                </td>
+                <td>MTHCH/HT<br/>
+                </td>
+                <td>The hierarchy is now included in source
+                  the data files.<br/>
+                </td>
+              </tr>
+              <tr>
+                <td>REL/RELA</td>
+                <td>RT/has_panel_element<br/>
+                </td>
+                <td>New value in source data<br/>
+                </td>
+              </tr>
+              <tr>
+                <td>ATN<br/>
+                </td>
+                <td>ADDITIONAL_GUIDELINE<br/>
+                </td>
+                <td>New value in source data</td>
+              </tr>
+              <tr>
+                <td>ATN<br/>
+                </td>
+                <td>ADDON_CODE<br/>
+                </td>
+                <td>New value in source data</td>
+              </tr>
+              <tr>
+                <td>ATN<br/>
+                </td>
+                <td>CPT_LEVEL</td>
+                <td>New value in source data</td>
+              </tr>
+              <tr>
+                <td>ATN<br/>
+                </td>
+                <td>DATE_CREATED</td>
+                <td>New value in source data</td>
+              </tr>
+              <tr>
+                <td>ATN<br/>
+                </td>
+                <td>DATE_LAST_MODIFIED</td>
+                <td>New value in source data</td>
+              </tr>
+              <tr>
+                <td>ATN<br/>
+                </td>
+                <td>DESCRIPTOR_EXTENSION</td>
+                <td>New value in source data</td>
+              </tr>
+              <tr>
+                <td>ATN<br/>
+                </td>
+                <td>EXEMPT_MOD</td>
+                <td>New value in source data</td>
+              </tr>
+              <tr>
+                <td>ATN<br/>
+                </td>
+                <td>FDA_APPROVAL_PENDING</td>
+                <td>New value in source data</td>
+              </tr>
+              <tr>
+                <td>ATN<br/>
+                </td>
+                <td>MEASURE_DEVELOPER</td>
+                <td>New value in source data</td>
+              </tr>
+              <tr>
+                <td>ATN<br/>
+                </td>
+                <td>MODERATE_CONSCIOUS_SEDATION</td>
+                <td>New value in source data</td>
+              </tr>
+            </tbody>
+          </table>
+          <h4>Deprecated:<br/>
+          </h4>
+          <br/>
+          <table class="elements" cellspacing="0" border="0">
+            <tbody>
+              <tr>
+                <td><b>RRF Field(s)</b><br/>
+                </td>
+                <td><b>Value</b><br/>
+                </td>
+                <td><b>Notes</b><br/>
+                </td>
+              </tr>
+              <tr>
+                <td> SAB/TTY<br/>
+                </td>
+                <td>MTHCH/HT<br/>
+                </td>
+                <td> The hierarchy is now included as part of the CPT
+                  file. </td>
+              </tr>
+              <tr>
+                <td>REL/RELA</td>
+                <td>RB,RN,RO/&lt;no RELA&gt;<br/>
+                </td>
+                <td>Previously, these were created during Metathesaurus
+                  source processing, based on substring matching </td>
+              </tr>
+              <tr>
+                <td>ATN<br/>
+                </td>
+                <td>CPT_CLINICIAN_DESC_ID<br/>
+                </td>
+                <td>Data no longer present in Clinician files<br/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br/>
         </div>
       </div>
       <div id="rep_change_summary" class="rep_block_level_one">
         <h3>Source Provided Files:</h3>
-        Documentation:<br/>
-        &nbsp;&nbsp;&nbsp; Extensive documentation is provided,
-        including:<br/>
-        &nbsp;&nbsp;&nbsp; 2014 CONSUMER DESCRIPTORS ReadMe_FINAL.doc<br/>
-        &nbsp;&nbsp;&nbsp; 2014_CLINICIAN DESCRIPTORS_ReadMe_FINAL.doc<br/>
-        &nbsp;&nbsp;&nbsp; 2014_CPT_DTK_ReadMe_with_OWL_FINAL.doc<br/>
+        Documentation:&nbsp; &nbsp;&nbsp;&nbsp; <br/>
         <br/>
-        Data:&nbsp; <br/>
-        &nbsp;&nbsp;&nbsp; <br/>
-        DTK files are available in both "tab" and "pipe" delmited
-        formats.&nbsp; The UMLS uses the following data files:<br/>
-        &nbsp;&nbsp;&nbsp; Relationship_DTK_pipe.txt<br/>
-        &nbsp;&nbsp;&nbsp; Property_DTK_pipe.txt<br/>
-        &nbsp;&nbsp;&nbsp; Type_DTK_pipe.txt<br/>
-        &nbsp;&nbsp;&nbsp; ConsumerDescriptor_DTK_pipe.txt<br/>
-        &nbsp;&nbsp;&nbsp; ClinicianDescriptor_DTK_pipe.txt<br/>
+        <table class="elements" cellspacing="0" border="0">
+          <tbody>
+            <tr>
+              <td><b>File</b><br/>
+              </td>
+              <td><b>Description</b><br/>
+              </td>
+            </tr>
+            <tr>
+              <td>2014 CONSUMER DESCRIPTORS ReadMe_FINAL.doc </td>
+              <td>Consumer Descriptors documentation<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>2014_CLINICIAN DESCRIPTORS_ReadMe_FINAL.doc</td>
+              <td>Clinician Descriptors documentation<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>2014_CPT_DTK_ReadMe_with_OWL_FINAL.doc</td>
+              <td>DTK format documentation<br/>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br/>
+        <br/>
+        Data:&nbsp; DTK files are available in both "tab" and "pipe"
+        delmited formats.&nbsp; The UMLS uses the following data files:<br/>
+        &nbsp; <br/>
+        <table class="elements" cellspacing="0" border="0">
+          <tbody>
+            <tr>
+              <td><b>File</b><br/>
+              </td>
+              <td><b>Description</b><br/>
+              </td>
+            </tr>
+            <tr>
+              <td>Relationship_DTK_pipe.txt</td>
+              <td>Relationships<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>Property_DTK_pipe.txt</td>
+              <td>Properties (including codes and strings)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>Type_DTK_pipe.txt</td>
+              <td>Metadata for data files<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>ConsumerDescriptor_DTK_pipe.txt</td>
+              <td>Consumer Descriptors<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>ClinicianDescriptor_DTK_pipe.txt</td>
+              <td>Clinician Descriptors<br/>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br/>
       </div>
       <div id="rep_identifers" class="rep_block_level_one">
         <h3>Identifiers:</h3>
         Identifiers are assigned as follows:<br/>
+        <br/>
+        <table class="elements" cellspacing="0" border="0">
+          <tbody>
+            <tr>
+              <th>Identifier<br/>
+              </th>
+              <th>Origin<br/>
+              </th>
+            </tr>
+            <tr>
+              <td>CODE<br/>
+              </td>
+              <td>TTY = PT, SY, AB, ETCF, ETCLIN:&nbsp; Value of
+                CPT_Code Property (Type Id = 104)<br/>
+                TTY = HT:&nbsp; Concept Id value<br/>
+                TTY = MP:&nbsp; Value of Modifier_Code Property (Type Id
+                = 129)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>SAUI<br/>
+              </td>
+              <td>Not Applicable<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>SCUI<br/>
+              </td>
+              <td>Same as CODE<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>SDUI<br/>
+              </td>
+              <td>Not Applicable<br/>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br/>
         <ul>
-          <li>CODE:&nbsp;
-          <ul>
-            <li>TTY = PT, SY, AB, ETCF, ETCLIN:&nbsp; Value of CPT_Code
-              Property (Type Id = 104)</li>
-            <li>TTY = HT:&nbsp; Concept Id value</li>
-            <li>TTY = MP:&nbsp; Value of Modifier_Code Property (Type Id
-              = 129)<br/>
-            </li>
-          </ul>
-          </li>
-          <li>SAUI: Not Applicable</li>
-          <li>SCUI: Same as CODE</li>
-          <li>SDUI: Not Applicable</li>
         </ul>
         <div id="rep_termtypes" class="rep_block_level_two"> <a
             name="atoms"></a>
           <h3>Atoms (MRCONSO):</h3>
           &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
           <br/>
-          <table class="elements" border="0" cellspacing="0">
+          <table class="elements" cellspacing="0" border="0">
             <tbody>
               <tr>
                 <th>Term Type</th>
@@ -105,18 +295,16 @@
                   STR = Value of Short_Descriptor (Type Id = 111) in
                   Property_DTK_pipe.txt<br/>
                   SCUI = Same as CODE<br/>
-                  SUPPRESS = "Y"<br/>
+                  SUPPRESS = Y<br/>
                 </td>
               </tr>
               <tr>
                 <td>ETCF<br/>
                 </td>
-                <td>CODE = Value of CPT_Code (Type Id =
-                  104) in Property_DTK_pipe.txt<br/>
-                  STR = Value of
-                 Consumer_Friendly_Descriptor
-                          (Type Id = 123) in ConsumerDescriptor_DTK_pipe.txt
- <br/>
+                <td>CODE = Value of CPT_Code (Type Id = 104) in
+                  Property_DTK_pipe.txt<br/>
+                  STR = Value of Consumer_Friendly_Descriptor (Type Id =
+                  123) in ConsumerDescriptor_DTK_pipe.txt <br/>
                   SCUI = Same as CODE<br/>
                   SUPPRESS =<big> "N"</big><br/>
                 </td>
@@ -124,8 +312,8 @@
               <tr>
                 <td>ETCLIN<br/>
                 </td>
-                <td>CODE = Value of CPT_Code (Type Id =
-                  104) in Property_DTK_pipe.txt<br/>
+                <td>CODE = Value of CPT_Code (Type Id = 104) in
+                  Property_DTK_pipe.txt<br/>
                   STR = Value of Clinician_Descriptor (Type Id = 126) in
                   ClinicianDescriptor_DTK_pipe.txt<br/>
                   SCUI = Same as CODE<br/>
@@ -134,11 +322,11 @@
               <tr>
                 <td>HT<br/>
                 </td>
-                <td>CODE = DTK_CONCEPT_ID in  Property_DTK_pipe.txt<br/>
+                <td>CODE = DTK_CONCEPT_ID in Property_DTK_pipe.txt<br/>
                   STR = Value of Descriptor (Type Id = 106) in
                   Property_DTK_pipe.txt<br/>
                   SCUI = Same as CODE<br/>
-                  SUPPRESS = "N"<br/>
+                  SUPPRESS = N<br/>
                   Note:&nbsp; TTY = HT is assigned when the Level
                   Property (Type Id = 109) indicates that the concept is
                   a Heading.<br/>
@@ -154,7 +342,7 @@
                   STR = Value of Descriptor (Type Id = 106) in
                   Property_DTK_pipe.txt<br/>
                   SCUI = Same as CODE<br/>
-                  SUPPRESS = "N" <br/>
+                  SUPPRESS = N <br/>
                 </td>
               </tr>
               <tr>
@@ -164,7 +352,7 @@
                   STR = Value of Descriptor (Type Id = 106) in
                   Property_DTK_pipe.txt<br/>
                   SCUI =&nbsp; Same as CODE<br/>
-                  SUPPRESS = "N"<br/>
+                  SUPPRESS = N<br/>
                 </td>
               </tr>
               <tr>
@@ -174,7 +362,7 @@
                   STR = Value of Medium_Descriptor (Type Id = 110) in
                   Property_DTK_pipe.txt<br/>
                   SCUI = Same as CODE<br/>
-                  SUPPRESS = "N"<br/>
+                  SUPPRESS = N<br/>
                 </td>
               </tr>
             </tbody>
@@ -184,7 +372,7 @@
             name="attributes"></a><br/>
           <h3>Attributes (MRSAT):</h3>
           &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-          <table class="elements" border="0" cellspacing="0">
+          <table class="elements" cellspacing="0" border="0">
             <tbody>
               <tr>
                 <th>Attribute Name</th>
@@ -193,8 +381,8 @@
               <tr>
                 <td>ADDITIONAL_GUIDELINE<br/>
                 </td>
-                <td>Value of Additional_Guideline (Type Id
-                  = 122) in Property_DTK_pipe.txt</td>
+                <td>Value of Additional_Guideline (Type Id = 122) in
+                  Property_DTK_pipe.txt</td>
               </tr>
               <tr>
                 <td>ADDON_CODE<br/>
@@ -205,7 +393,7 @@
               </tr>
               <tr>
                 <td>
-                  <table class="elements" border="0" cellspacing="0">
+                  <table class="elements" cellspacing="0" border="0">
                     <tbody>
                       <tr>
                         <td>CPF</td>
@@ -213,13 +401,13 @@
                     </tbody>
                   </table>
                 </td>
-                <td>The complete value of the modifier
-                  string from MODUL.txt. Note: Although the file
-                  MODUL.txt is not delivered in a set format, in general
-                  the modifier code can be found in character positions
-                  1-2, and the "MP" string is found after the tab and
-                  before the ":" on a given line. Data appearing after
-                  the ":" is included in the "CPF" attribute.</td>
+                <td>The complete value of the modifier string from
+                  MODUL.txt. Note: Although the file MODUL.txt is not
+                  delivered in a set format, in general the modifier
+                  code can be found in character positions 1-2, and the
+                  "MP" string is found after the tab and before the ":"
+                  on a given line. Data appearing after the ":" is
+                  included in the CPF attribute.</td>
               </tr>
               <tr>
                 <td>CPTDTK_CONCEPT_ID</td>
@@ -235,8 +423,8 @@
               </tr>
               <tr>
                 <td>DATE_CREATED</td>
-                <td>Value of First_Appearance (Type Id =
-                  101) in Property_DTK_pipe.txt </td>
+                <td>Value of First_Appearance (Type Id = 101) in
+                  Property_DTK_pipe.txt </td>
               </tr>
               <tr>
                 <td>DATE_LAST_MODIFIED</td>
@@ -245,8 +433,8 @@
               </tr>
               <tr>
                 <td>DESCRIPTOR_EXTENSION </td>
-                <td>Value of Descriptor_Extension (Type Id
-                  = 121) in Property_DTK_pipe.txt </td>
+                <td>Value of Descriptor_Extension (Type Id = 121) in
+                  Property_DTK_pipe.txt </td>
               </tr>
               <tr>
                 <td>EXEMPT_MOD</td>
@@ -255,19 +443,19 @@
               </tr>
               <tr>
                 <td>FDA_APPROVAL_PENDING</td>
-                <td>Value of FDA_Approval_Pending (Type Id
-                  = 108) in Property_DTK_pipe.txt </td>
+                <td>Value of FDA_Approval_Pending (Type Id = 108) in
+                  Property_DTK_pipe.txt </td>
               </tr>
               <tr>
                 <td>MEASURE_DEVELOPER</td>
-                <td>Value of Measure_Developer (Type Id =
-                  127) in Property_DTK_pipe.txt </td>
+                <td>Value of Measure_Developer (Type Id = 127) in
+                  Property_DTK_pipe.txt </td>
               </tr>
               <tr>
                 <td>MODERATE_CONSCIOUS_SEDATION<br/>
                 </td>
-                <td>Value of Moderate_(Conscious)_Sedation
-                  (Type Id = 105) in Property_DTK_pipe.txt </td>
+                <td>Value of Moderate_(Conscious)_Sedation (Type Id =
+                  105) in Property_DTK_pipe.txt </td>
               </tr>
             </tbody>
           </table>
@@ -283,13 +471,13 @@
             name="relationships"></a><br/>
           <h3>Relationships (MRREL):</h3>
           &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-          <table class="elements" border="0" cellspacing="0">
+          <table class="elements" cellspacing="0" border="0">
             <tbody>
               <tr>
                 <th>REL</th>
                 <th>RELA<br/>
                   Inverse RELA</th>
-                <th>ORIGIN</th>
+                <th>Origin</th>
               </tr>
               <tr>
                 <td>CHD<br/>
@@ -332,7 +520,7 @@
                 <td>SY</td>
                 <td>expanded_form_of<br/>
                   has_expanded_form</td>
-                <td>Connects a "PT" with its "SY" and "AB"</td>
+                <td>Connects a PT with its SY and AB</td>
               </tr>
               <tr>
                 <td>RO<br/>
@@ -340,8 +528,8 @@
                 <td>panel_element_of<br/>
                   has_panel_element<br/>
                 </td>
-                <td>Indicates that a CPT laboratory panel
-                  test is a member of a laboratory panel<br/>
+                <td>Indicates that a CPT laboratory panel test is a
+                  member of a laboratory panel<br/>
                 </td>
               </tr>
             </tbody>
@@ -357,3 +545,4 @@
         </div>
       </div>
     </div>
+  </body>
