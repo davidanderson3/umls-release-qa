@@ -1,0 +1,214 @@
+<!--begin tabbed navigation area-->
+   <div class="section-5">
+      <ul id="menu">
+         <li id="nav-1"><a href="index.html">Synopsis</a></li>
+         <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+         <li id="nav-3"><a href="stats.html">Statistics</a></li>
+         <li id="nav-4"><a href="samples.html">Samples</a></li>
+         <li id="nav-5"><a href="sourcerepresentation.html">Source Representation</a></li>
+         <li id="nav-6"><a href="metarepresentation.html">Metathesaurus Representation</a></li>
+      </ul>
+   </div>
+<!-- end tabbed navigation area -->
+<br/>
+    <br/>
+    <br/>
+    <a name="top"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
+      <a href="#change_summary">Summary of Changes</a>, <a
+        href="#file_summary">Summary of Source-Provided Files</a> <a
+        href="#file_details">Source-Provided File Details</a></span> <a
+      name="general"></a>
+    <div id="rep_change_summary" class="rep_block_level_one">
+      <h3>Summary of Changes:</h3>
+      <p>CVX is a new source for 2013AB<b>.</b><br/>
+      </p>
+      <br/>
+      &nbsp; <span class="nav">(<a href="#top">return to top</a></span>)
+      <div style="margin-left: 40px;"><br/>
+      </div>
+    </div>
+    <div id="rep_file_summary" class="rep_block_level_one"> <a
+        name="file_summary"></a>
+      <h3>Source-Provided Files: Summary</h3>
+      &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
+      <div id="rep_file_details" class="rep_block_level_one">
+        <!-- Make a table of each file that comes from the source   --><br/>
+        Several file formats are available at <a
+href="http://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx">http://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx</a><br/>
+        <br/>
+        The flat file was used for Metathesaurus source processing.<br/>
+        <br/>
+        <table class="elements" border="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <th>File Name</th>
+              <td style="vertical-align: top; text-align: center;"><b>Description</b><br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">cvx.txt</td>
+              <td style="vertical-align: top;">"|" - delimited file<br/>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br/>
+        <h3>Source-Provided Files: Details</h3>
+        &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
+        <p>The following is a list of fields in the CVX source file:<br/>
+        </p>
+        <div class="rep_block_level_two"><a name="file1"></a><br/>
+          <br/>
+          Summary of TTY assignment:<br/>
+          <br/>
+          <table border="1" cellpadding="2" cellspacing="2"
+            width="829">
+            <tbody>
+              <tr>
+                <td align="center" valign="top"><b>Vaccine Status</b><br/>
+                </td>
+                <td valign="top"><b>Short Description</b><b> TTY</b><br/>
+                </td>
+                <td valign="top"><b>Suppress</b><br/>
+                </td>
+                <td valign="top"><b>Full Vaccine Name</b><b> TTY</b><b><br/>
+                  </b></td>
+                <td valign="top"><b>Suppress</b><br/>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">Active<br/>
+                </td>
+                <td valign="top">AB<br/>
+                </td>
+                <td valign="top">Y<br/>
+                </td>
+                <td valign="top">PT<br/>
+                </td>
+                <td valign="top">N<br/>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">Inactive<br/>
+                </td>
+                <td valign="top">OA<br/>
+                </td>
+                <td valign="top">O<br/>
+                </td>
+                <td valign="top">OP<br/>
+                </td>
+                <td valign="top">O<br/>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">Never Active<br/>
+                </td>
+                <td valign="top">OA<br/>
+                </td>
+                <td valign="top">O<br/>
+                </td>
+                <td valign="top">OP<br/>
+                </td>
+                <td valign="top">O<br/>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">Pending<br/>
+                </td>
+                <td valign="top">AB<br/>
+                </td>
+                <td valign="top">Y<br/>
+                </td>
+                <td valign="top">PT<br/>
+                </td>
+                <td valign="top">N<br/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br/>
+          <br/>
+          <table border="1" cellpadding="2" cellspacing="2"
+            width="829">
+            <tbody>
+              <tr>
+                <td align="center" valign="top"><b>Field</b><br/>
+                </td>
+                <td align="center" valign="top"><b>Representation</b><br/>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">CVX Code<br/>
+                </td>
+                <td valign="top">MRCONSO.CODE<br/>
+                  MRCONSO.SCUI<br/>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">Short Description<br/>
+                </td>
+                <td valign="top">MRCONSO.STR<br/>
+                  CODE = CVX Code<br/>
+                  TTY = AB or OA, depending on value of "Vaccine Status"
+                  field<br/>
+                  SUPPRESS = "Y" or "O" depending on value of "Vaccine
+                  Status field<br/>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">Full Vaccine Name<br/>
+                </td>
+                <td valign="top">MRCONSO.STR<br/>
+                  CODE = CVX Code<br/>
+                  TTY = PT or OP, depending on value of "Vaccine Status"
+                  field<br/>
+                  SUPPRESS = "N" or "O" depending on value of "Vaccine
+                  Status field<br/>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">Notes<br/>
+                </td>
+                <td valign="top">MRSAT.ATN = SOS<br/>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">Vaccine Status<br/>
+                </td>
+                <td valign="top">MRSAT.ATN = VACCINE_STATUS<br/>
+                  <br/>
+                  Vaccine Status is also used to assign TTYs<br/>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">NonVaccine<br/>
+                </td>
+                <td valign="top">Not included in Metathesaurus source
+                  processing<br/>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">Last Updated<br/>
+                </td>
+                <td valign="top">MRSAT.ATN = DATE_LAST_MODIFIED </td>
+              </tr>
+            </tbody>
+          </table>
+          <br/>
+          Note: <br/>
+          <br/>
+          The NonVaccine field is not included in Metathesaurus source
+          processing. &nbsp; A value of "True" indicates that the
+          concept is a non-vaccines.&nbsp; There are three concepts with
+          NonVaccine = "True," indicating that the concept is not a
+          vaccine:<br/>
+          &nbsp;&nbsp;&nbsp; no vaccine administered<br/>
+          &nbsp;&nbsp;&nbsp; unknown
+          <br/>
+          &nbsp;&nbsp;&nbsp; RESERVED - do not use<br/>
+          All other concepts have a NonVaccine value of "False"<br/>
+          <br/>
+        </div>
+      </div>
+    </div>
+
