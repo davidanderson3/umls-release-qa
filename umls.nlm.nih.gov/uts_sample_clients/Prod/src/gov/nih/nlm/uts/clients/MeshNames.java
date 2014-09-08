@@ -45,7 +45,7 @@ public class MeshNames {
     	
     }// end ticketGrantingTicket() method
 	
-    public String getTermUi(String term, String mode) throws Exception{
+    public String getTermUi(String term, String mode,String tgt) throws Exception{
     	String row = null;
     	gov.nih.nlm.uts.webservice.finder.Psf myPsf = new gov.nih.nlm.uts.webservice.finder.Psf();
     	myPsf.getIncludedSources().add("MSH");
@@ -58,7 +58,8 @@ public class MeshNames {
     	
     	
     	case "mui":{
-    	List<UiLabelRootSource> labels = utsFinderService.findSourceConcepts(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "atom", term, "exact", myPsf);
+    	
+    	List<UiLabelRootSource> labels = utsFinderService.findSourceConcepts(securityService.getProxyTicket(tgt,serviceName), umlsRelease, "atom", term, "exact", myPsf);
     	result = labels.isEmpty() ? false:true;
     	multiple = labels.size() > 1? true:false;
     	for (UiLabelRootSource label:labels){uis.add(label.getUi()); mhs.add(label.getLabel());}
@@ -69,7 +70,7 @@ public class MeshNames {
     	
     	
         case "cui":{
-        List<UiLabel> labels = utsFinderService.findConcepts(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "atom", term, "exact", myPsf);
+        List<UiLabel> labels = utsFinderService.findConcepts(securityService.getProxyTicket(tgt, serviceName), umlsRelease, "atom", term, "exact", myPsf);
         result = labels.isEmpty() ? false:true;
     	multiple = labels.size() > 1? true:false;
     	for (UiLabel label:labels){uis.add(label.getUi());}
@@ -96,6 +97,8 @@ public class MeshNames {
 			final MeshNames client = new MeshNames(args[0],args[1],args[2]);
 			String inputFile = "etc/mesh-names.txt";
 			BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+			String tgt = securityService.getProxyGrantTicket(username, password);
+			//System.out.println(tgt);
 			String line = null;
 			String output = "/Users/steveemrick/Desktop/mesh_cuis-2.txt";
 			
@@ -109,8 +112,8 @@ public class MeshNames {
 				String term = data[0];
 				
 			 
-				String umlsinfo = client.getTermUi(term,"cui");
-				String meshinfo = client.getTermUi(term,"mui");
+				String umlsinfo = client.getTermUi(term,"cui",tgt);
+				String meshinfo = client.getTermUi(term,"mui",tgt);
 				
 				System.out.println(index+":  "+StringUtils.join(term,"|",umlsinfo,"|",meshinfo));
 				bw.println(StringUtils.join(term,"|",umlsinfo,"|",meshinfo));
