@@ -1,3 +1,4 @@
+<p>This page list UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
 <!--begin tabbed navigation area-->
 <div class="section-6">
       <ul id="menu">
@@ -12,45 +13,180 @@
 <!-- end tabbed navigation area -->
 <span class = "nav">Skip to: <a href = "#atoms">Atoms</a>, <a href = "#attributes">Attributes</a>, <a href = "#definitions">Definitions</a>, <a href = "#relationships">Relationships</a>, <a href = "#mappings">Mappings</a></span>
 <div id = "general" class = "rep_block_level_one">
-<p><b>VSAB: </b>NCI2013_03D</p>
+<p><b>VSAB: </b>NCI2014_03E</p>
 <div id = "rep_identifiers" class = "rep_block_level_one">
+<h3>General Notes/Comments:</h3>
+<p>NCI Thesaurus (NCIt) is a widely recognized standard for biomedical coding and reference. It covers vocabulary for clinical care, translational and basic research, public information and administrative activities and is used by a broad variety of public and private partners both nationally and internationally.The scope of NCI is determined by the combined scope of its source vocabularies which include the following:</p>
+<table class = "elements" border = "0" cellspacing = "0">
+<tr><th>Source</th><th>Description</th></tr>
+<tr>
+    <td>BioC</td><td>BioCarta online maps of molecular pathways, adapted for NCI</td>
+</tr>
+<tr>
+    <td>BRIDG</td><td>Biomedical Research Integrated Domain Group Model</td>
+</tr>
+<tr>
+    <td>CDC</td><td>U.S. Centers for Disease Control and Prevention</td>
+</tr>
+<tr>
+    <td>CDISC</td><td>Clinical Data Interchange Standards Consortium</td>
+</tr>
+<tr>
+    <td>CRCH</td><td>Cancer Research Center of Hawaii</td>
+</tr>
+<tr>
+    <td>CTCAE</td><td>Common Terminology Criteria for Adverse Events</td>
+</tr>
+<tr>
+    <td>CTEP-SDC</td><td>Cancer Therapy Evaluation Program - Simple Disease Classification</td>
+</tr>
+<tr>
+    <td>DCP</td><td>NCI Division of Cancer Prevention Program</td>
+</tr>
+<tr>
+    <td>DICOM</td><td>Digital Imaging Communications in Medicine</td>
+</tr>
+<tr>
+    <td>DTP</td><td>NCI Developmental Therapeutics Program</td>
+</tr>
+<tr>
+    <td>FDA</td><td>U.S. Food and Drug Administration</td>
+</tr>
+<tr>
+    <td>ICH</td><td>International Conference on Harmonization</td>
+</tr>
+<tr>
+    <td>JAX</td><td>Jackson Laboratories Mouse Terminology, adapted for NCI use</td>
+</tr>
+<tr>
+    <td>KEGG</td><td>Kyoto Encyclopedia of Genes and Genomes (KEGG), KEGG Pathway Database, adapted for NCI use</td>
+</tr>
+<tr>
+    <td>NCI-GLOSS</td><td>NCI dictionary of Cancer Terms</td>
+</tr>
+<tr>
+    <td>NCI-HL7</td><td>NCI Health Level 7</td>
+</tr>
+<tr>
+    <td>NCPDP</td><td>National Council for Prescription Drug Programs</td>
+</tr>
+<tr>
+    <td>NICHD</td><td>National Institute of Child Health and Human Development</td>
+</tr>
+<tr>
+    <td>PID</td><td>National Cancer Institute Nature Pathway Interaction Database</td>
+</tr>
+<tr>
+    <td>RENIN</td><td>Registry Nomenclature Information</td>
+</tr>
+<tr>
+    <td>UCUM</td><td>Unified Code for Units of Measure</td>
+</tr>
+<tr>
+    <td>ZFIN</td><td>Zebrafish Model Organism Database</td>
+</tr>
+</table>
+</div>
 <h3>Summary of Changes</h3>
-<p>New term type (TTY):</p>
+<p>The TTY format of subsource+TTY (e.g., UCUMPT) has been deprecated and replaced with individual subsources prepended by 'NCI2014_' which can be used with the standard TTYs (i.e., PT, SY). New NCI subsources:</p>
 <ul>
-  <li>CTEP-SDCPT</li>
-  <li>CTEP-SDCSY</li>
+  <li>NCI2014_BioC_1403E</li>
+  <li>NCI2014_BRIDG_1403E</li>
+  <li>NCI2014_CDC_1403E</li>
+  <li>NCI2014_CDISC_1403E</li>
+  <li>NCI2014_CRCH_1403E</li>
+  <li>NCI2014_CTCAE_1403E</li>
+  <li>NCI2014_CTEP-SDC_1403E</li>
+  <li>NCI2014_DCP_1403E</li>
+  <li>NCI2014_DICOM_1403E</li>
+  <li>NCI2014_DTP_1403E</li>
+  <li>NCI2014_FDA_1403E</li>
+  <li>NCI2014_NCI-HL7_1403E</li>
+  <li>NCI2014_ICH_1403E</li>
+  <li>NCI2014_JAX_1403E</li>
+  <li>NCI2014_KEGG_1403E</li>
+  <li>NCI2014_NCI-GLOSS_1403E</li>
+  <li>NCI2014_NCPDP_1403E</li>
+  <li>NCI2014_NICHD_1403E</li>
+  <li>NCI2014_PID_1403E</li>
+  <li>NCI2014_RENI_1403E</li>
+  <li>NCI2014_UCUM_1403E</li>
+  <li>NCI2014_ZFin_1403E</li>
 </ul>
-New attribute name (ATN):  HGNC_ID<br/><br/>
-New relationship attributes (RELA): has_data_element|data_element_of<br/>
-<p>Dropped relationship attribute (RELA):</p>
-<ul>
-<li>allele_associated_with_disease</li>
-<li>allele_not_associated_with_disease</li>
-<li>gene_product_has_malfunction_type</li>
-</ul>
+<p>Deprecated term types:</p>
+  <ul>
+    <li>BRIDGPT</li>
+    <li>BioCPT</li>
+    <li>BioCSY</li>
+    <li>CDCPT</li>
+    <li>CDISCPT</li>
+    <li>CDISCSY</li>
+    <li>CRCHPT</li>
+    <li>CRCHSY</li>
+    <li>CTCAEPT</li>
+    <li>CTEP-SDCPT</li>
+    <li>CTEP-SDCSY</li>
+    <li>DCPPT</li>
+    <li>DCPSY</li>
+    <li>DICOMPT</li>
+    <li>DTPPT</li>
+    <li>DTPSY</li>
+    <li>FDAAB</li>
+    <li>FDAPT</li>
+    <li>FDASY</li>
+    <li>ICHAB</li>
+    <li>ICHPT</li>
+    <li>ICHSY</li>
+    <li>JAXPT</li>
+    <li>JAXSY</li>
+    <li>KEGGAB</li>
+    <li>KEGGPT</li>
+    <li>KEGGSY</li>
+    <li>NCI-GLOSSOP</li>
+    <li>NCI-GLOSSPT</li>
+    <li>NCI-GLOSSSY</li>
+    <li>NCI-HL7AB</li>
+    <li>NCI-HL7PT</li>
+    <li>NCI-HL7SY</li>
+    <li>NCPDPPT</li>
+    <li>NICHDAB</li>
+    <li>NICHDPT</li>
+    <li>NICHDSY</li>
+    <li>PIDPT</li>
+    <li>RENIDN</li>
+    <li>UCUMAB</li>
+    <li>UCUMPT</li>
+    <li>UCUMSY</li>
+    <li>ZFINPT</li>
+    <li>ZFINSY</li>
+  </ul>
+<p>Deprecated attribute name (ATN):</p>
+  <ul>
+    <li>CONTRIBUTING_SOURCE</li>
+    <li>ORIG_CODE</li>
+    <li>SUBSOURCE</li>
+  </ul>  
 </div>
 <div id = "rep_change_summary" class = "rep_block_level_one">
 <h3>Original Files:</h3>
 <table class = "elements" border = "0" cellspacing = "0">
 <tr><th>File Name</th><th>Description</th></tr>
 <tr><td  class = "file_field_name"><a href = "#file1">ThesaurusInferred.owl</a></td><td>Complete source data in an OWL By Code formatted file.</td></tr>
-<tr><td  class = "file_field_name"><a href = "#file2">NCI2013_13.03d.txt</a></td><td>Configuration file.</td></tr>
 </table>
 <br/>
 </div>
 <div id = "rep_identifers" class = "rep_block_level_one">
 <h3>Identifiers</h3>
 <ul>
-<li>CODE:  NCI code (e.g., C191)</li>
+<li>CODE:  NCI code or subsource code</li>
 <li>SAUI:  Not applicable</li>
-<li>SCUI:  NCI code (e.g., C191)</li>
+<li>SCUI:  NCI code or subsource code</li>
 <li>SDUI:  Not applicable</li>
 </ul>
 <div id = "rep_termtypes" class = "rep_block_level_two">
 <a name = "atoms">&nbsp;</a>
 <h3>Atoms (MRCONSO)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)<br/>
-<p>Term types are created by combining the root source name with the term type. For example, the source UCUM (Unified Code for Units of Measure) with a term type of PT will be represented as 'UCUMPT'. If there is no source name as a prefix to the term type (e.g., AB) then the source is presumed to be 'NCI'.</p>
-<p>The source names and term types are extracted from the field tagged, '&lt;P90...&lt;ncicp:term-name>...lt;/ncicp:term-name>&lt;ncicp:term-group>...&lt;/ncicp:term-group>...&lt;/P90&gt;' (FULL_SYN).</p>
+<p>The term names and term types are extracted from the field tagged, '&lt;P90...&lt;ncicp:term-name>...lt;/ncicp:term-name>&lt;ncicp:term-group>...&lt;/ncicp:term-group>...&lt;/P90&gt;' (FULL_SYN), unless otherwise noted.</p>
 <table class = "elements" border = "0" cellspacing = "0">
 <tr><th>Term Type</th><th>Description</th></tr>
 <tr>
@@ -60,16 +196,7 @@ New relationship attributes (RELA): has_data_element|data_element_of<br/>
     <td>AD</td><td>Adjective</td>
 </tr>
 <tr>
-    <td>BioCPT</td><td>BioCarta online maps of molecular pathways, adapted for NCI, preferred name</td>
-</tr>
-<tr>
-    <td>BioCSY</td><td>BioCarta online maps of molecular pathways, adapted for NCI, synonym</td>
-</tr>
-<tr>
     <td>BN</td><td>Fully-specified drug brand name that can not be prescribed</td>
-</tr>
-<tr>
-    <td>BRIDGPT</td><td>Biomedical Research Integrated Domain Group Model preferred name</td>
 </tr>
 <tr>
     <td>CA2</td><td>ISO 3166-1 standard country code in alpha-2 (two-letter) format</td>
@@ -84,148 +211,25 @@ New relationship attributes (RELA): has_data_element|data_element_of<br/>
     <td>CCS</td><td>FIPS 10-4 country code</td>
 </tr>
 <tr>
-    <td>CDCPT</td><td>U.S. Centers for Disease Control and Prevention preferred name</td>
-</tr>
-<tr>
-    <td>CDISCPT</td><td>Clinical Data Interchange Standards Consortium preferred name</td>
-</tr>
-<tr>
-    <td>CDISCSY</td><td>Clinical Data Interchange Standards Consortium synonym</td>
-</tr>
-<tr>
-    <td>CRCHPT</td><td>Cancer Research Center of Hawaii preferred name</td>
-</tr>
-<tr>
-    <td>CRCHSY</td><td>Cancer Research Center of Hawaii synonym</td>
-</tr>
-<tr>
     <td>CSN</td><td>Chemical Structure Name</td>
-</tr>
-<tr>
-    <td>CTCAEPT</td><td>Common Terminology Criteria for Adverse Events preferred name</td>
-</tr>
-<tr>
-    <td>CTEP-SDCPT</td><td>Cancer Therapy Evaluation Program - Simple Disease Classification preferred name</td>
-</tr>
-<tr>
-    <td>CTEP-SDCPT</td><td>Cancer Therapy Evaluation Program - Simple Disease Classification synonym</td>
-</tr>
-<tr>
-    <td>DCPPT</td><td>NCI Division of Cancer Prevention Program preferred name</td>
-</tr>
-<tr>
-    <td>DCPSY</td><td>NCI Division of Cancer Prevention Program synonym</td>
-</tr>
-<tr>
-    <td>DICOMPT</td><td>Digital Imaging Communications in Medicine preferred name</td>
 </tr>
 <tr>
     <td>DN</td><td>Display name</td>
 </tr>
 <tr>
-    <td>DTPPT</td><td>NCI Developmental Therapeutics Program preferred name</td>
-</tr>
-<tr>
-    <td>DTPSY</td><td>NCI Developmental Therapeutics Program synonym</td>
-</tr>
-<tr>
     <td>FBD</td><td>Foreign brand name</td>
-</tr>
-<tr>
-    <td>FDAAB</td><td>U.S. Food and Drug Administration abbreviation</td>
-</tr>
-<tr>
-    <td>FDAPT</td><td>U.S. Food and Drug Administration preferred name</td>
-</tr>
-<tr>
-    <td>FDASY</td><td>U.S. Food and Drug Administration synonym</td>
 </tr>
 <tr>
     <td>HD</td><td>Hierarchical descriptor</td>
 </tr>
 <tr>
-    <td>ICHAB</td><td>International Conference on Harmonization abbreviation</td>
-</tr>
-<tr>
-    <td>ICHPT</td><td>International Conference on Harmonization preferred name</td>
-</tr>
-<tr>
-    <td>ICHSY</td><td>International Conference on Harmonization synonym</td>
-</tr>
-<tr>
-    <td>JAXPT</td><td>Jackson Laboratories Mouse Terminology, adapted for NCI use, preferred name</td>
-</tr>
-<tr>
-    <td>JAXSY</td><td>Jackson Laboratories Mouse Terminology, adapted for NCI use, synonym</td>
-</tr>
-<tr>
-    <td>KEGGAB</td><td>Kyoto Encyclopedia of Genes and Genomes (KEGG), KEGG Pathway Database, adapted for NCI use, abbreviation</td>
-</tr>
-<tr>
-    <td>KEGGPT</td><td>Kyoto Encyclopedia of Genes and Genomes (KEGG), KEGG Pathway Database, adapted for NCI use, preferred name</td>
-</tr>
-<tr>
-    <td>KEGGSY</td><td>Kyoto Encyclopedia of Genes and Genomes (KEGG), KEGG Pathway Database, adapted for NCI use, synonym</td>
-</tr>
-<tr>
-    <td>NCI-GLOSSOP</td><td>NCI Dictionary of Cancer Terms obsolete preferred name</td>
-</tr>
-<tr>
-    <td>NCI-GLOSSPT</td><td>NCI Dictionary of Cancer Terms preferred name</td>
-</tr>
-<tr>
-    <td>NCI-GLOSSSY</td><td>NCI Dictionary of Cancer Terms synonym</td>
-</tr>
-<tr>
-    <td>NCI-HL7AB</td><td>NCI Health Level 7 abbreviation</td>
-</tr>
-<tr>
-    <td>NCI-HL7PT</td><td>NCI Health Level 7 preferred name</td>
-</tr>
-<tr>
-    <td>NCI-HL7SY</td><td>NCI Health Level 7 synonym</td>
-</tr>
-<tr>
-    <td>NCPDPPT</td><td>National Council for Prescription Drug Programs preferred name</td>
-</tr>
-<tr>
-    <td>NICHDAB</td><td>National Institute of Child Health and Human Development abbreviation</td>
-</tr>
-<tr>
-    <td>NICHDPT</td><td>National Institute of Child Health and Human Development preferred name</td>
-</tr>
-<tr>
-    <td>NICHDSY</td><td>National Institute of Child Health and Human Development synonym</td>
-</tr>
-<tr>
     <td>OP</td><td>Obsolete preferred name</td>
 </tr>
 <tr>
-    <td>PIDPT</td><td>National Cancer Institute Nature Pathway Interaction Database preferred name</td>
-</tr>
-<tr>
-    <td>PT</td><td>Preferred name</td>
-</tr>
-<tr>
-    <td>RENIDN</td><td>Registry Nomenclature Information display name</td>
+    <td>PT</td><td>Preferred name; extracted from field tagged &lt;P108</td>
 </tr>
 <tr>
     <td>SY</td><td>Synonym</td>
-</tr>
-<tr>
-    <td>UCUMAB</td><td>Unified Code for Units of Measure abbreviation</td>
-</tr>
-<tr>
-    <td>UCUMPT</td><td>Unified Code for Units of Measure preferred name</td>
-</tr>
-<tr>
-    <td>UCUMSY</td><td>Unified Code for Units of Measure synonym</td>
-</tr>
-<tr>
-    <td>ZFINPT</td><td>Zebrafish Model Organism Database preferred name</td>
-</tr>
-<tr>
-    <td>ZFINSY</td><td>Zebrafish Model Organism Database synonym</td>
 </tr>
 </table>
 </div>
@@ -249,8 +253,6 @@ New relationship attributes (RELA): has_data_element|data_element_of<br/>
 <td>&lt;P350 rdf:datatype="http://www.w3.org.../P350&gt;</td></tr>
 <tr><td>CNU</td>
 <td>'&lt;P90...ncicp:term-group' field = CNU</td></tr>
-<tr><td>CONTRIBUTING_SOURCE</td>
-<td>&lt;P322 rdf:datatype="http://www.w3.org.../P322&gt;</td></tr>
 <tr><td>DESIGN_NOTE</td>
 <td>&lt;P98 rdf:datatype="http://www.w3.org.../P98&gt;</td></tr>
 <tr><td>ENTREZGENE_ID</td>
@@ -311,8 +313,6 @@ New relationship attributes (RELA): has_data_element|data_element_of<br/>
 <td>&lt;P367 rdf:datatype="http://www.w3.org.../P367&gt;</td></tr>
 <tr><td>PUBMEDID_PRIMARY_REFERENCE</td>
 <td>&lt;P171 rdf:datatype="http://www.w3.org.../P171&gt;</td></tr>
-<tr><td>SUBSOURCE</td>
-<td>&lt;P92 rdf:datatype="http://www.w3.org.../P92&gt;</td></tr>
 <tr><td>SWISS_PROT</td>
 <td>&lt;P93 rdf:datatype="http://www.w3.org.../P93&gt;</td></tr>
 <tr><td>TOLERABLE_LEVEL</td>
@@ -565,4 +565,3 @@ Alt_Definition: &lt;P325...ncicp:ComplexDefinition xmlns:ncicp.../P325&gt;
 <h3>Mappings (MRMAP)</h3>
 &nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)<br/>
 <p>There are no mappings present.</p> 
-</div>
