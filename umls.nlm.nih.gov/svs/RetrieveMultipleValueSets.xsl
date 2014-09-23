@@ -6,7 +6,6 @@
     <xsl:output method = "text"  encoding = "utf-8"></xsl:output>
     <xsl:key name = "groups" match = "ns0:Group" use = "@displayName"/>
     <xsl:template match = "ns0:RetrieveMultipleValueSetsResponse">
-    <xsl:variable name="newline" select="normalize-space()"/>        
         
         <xsl:result-document href = "value-set-code-counts.txt">
             <!-- show number of codes in each value set  -->
@@ -22,13 +21,14 @@
         
         <xsl:result-document href = "value-set-code-counts-by-source.txt">
             <!-- show number of codes in each value set  -->
-            <xsl:text>OID|CodeSystemName|NumberOfCodes&#10;</xsl:text>
+            <xsl:text>OID|ValueSetName|CodeSystemName|NumberOfCodes&#10;</xsl:text>
             <xsl:for-each select = "ns0:DescribedValueSet">
                 <xsl:variable name = "cs" select = "ns0:ConceptList/ns0:Concept/@codeSystemName"/>
                 <xsl:for-each select = "$cs">
                     <xsl:sort select = "current()"/>
                     <xsl:if test="generate-id() = generate-id($cs[. = current()][1])">
                         <xsl:value-of select = "ancestor::*/@ID"/><xsl:text>|</xsl:text>
+                        <xsl:value-of select = "ancestor::ns0:DescribedValueSet/@displayName"/><xsl:text>|</xsl:text>
                         <xsl:value-of select = "."/><xsl:text>|</xsl:text>
                         <xsl:value-of select = "count($cs[.=current()])"/><xsl:text>&#10;</xsl:text>
                     </xsl:if>                
@@ -63,7 +63,7 @@
         
     
         <xsl:result-document href = "value-set-codes.txt">
-            <xsl:text>OID|ValueSetName|Source|Version|Code|Term|CodeSystemName|CodeSystemVersion|CodeSystemOID&#10;</xsl:text>
+            <xsl:text>OID|ValueSetName|Version|Code|Descriptor|CodeSystemName|CodeSystemVersion|CodeSystemOID&#10;</xsl:text>
             <!-- produce value set "codes" file -->
             <xsl:for-each select = "ns0:DescribedValueSet">
                 <xsl:variable name = "oid" select = "@ID"/>
@@ -81,6 +81,22 @@
             </xsl:for-each>
         </xsl:result-document>
         
+        
+        <xsl:result-document href = "value-set-definitions.txt">
+            <!-- produce value set definitions file -->
+            <xsl:text>OID|ValueSetName|Version|Definition&#10;</xsl:text>
+            <xsl:for-each select = "ns0:DescribedValueSet">
+               <xsl:variable name = "oid" select = "@ID"/>
+               <xsl:variable name = "valueSetName" select = "@displayName"/>
+               <xsl:variable name = "version" select = "@version"/>
+               <xsl:variable name = "definition" select = "ns0:Definition"/>
+                <xsl:if test = "$definition">
+                    <xsl:value-of select = "string-join(($oid,$valueSetName,$version,$definition),'|')"/><xsl:text>&#10;</xsl:text>
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:result-document>
+        
+        
         <xsl:result-document href = "value-set-relationships.txt">
         <xsl:text>OID|Parent_OID&#10;</xsl:text>
             <!-- oids that belong to groups -->
@@ -92,23 +108,23 @@
                 <xsl:text>&#10;</xsl:text>
                 </xsl:if>
             </xsl:for-each>
-            
         </xsl:result-document>
         
         
         <xsl:result-document href = "value-set-usage.txt">
-        <xsl:text>OID|Version|Source|Type|Definition|MUType|MeasureTitle|QDM Category|NQF|CmsId&#10;</xsl:text>  
+        <xsl:text>OID|ValueSetName|Version|Steward|Type|Definition|MUType|MeasureTitle|QDM Category|NQF|CmsId&#10;</xsl:text>  
             <!-- produce value set "usage" file -->
             <xsl:for-each select = "ns0:DescribedValueSet">
                 
                 <xsl:variable name = "oid" select = "@ID"/>
+                <xsl:variable name = "displayName" select = "@displayName"/>
                 <xsl:variable name = "version" select = "@version"/>
                 <xsl:variable name = "source" select = "ns0:Source"/>
                 <xsl:variable name = "definition" select = "ns0:Definition"/>
                 <xsl:variable name = "type" select = "ns0:Type"/>
                 <xsl:variable name = "record">
-                    <xsl:if test = "not($definition)"><xsl:value-of select = "string-join(($oid,$version,$source,$type,''),'|')"/></xsl:if>
-                    <xsl:if test = "$definition"><xsl:value-of select = "string-join(($oid,$version,$source,$type,$definition),'|')"/></xsl:if>
+                    <xsl:if test = "not($definition)"><xsl:value-of select = "string-join(($oid,$displayName,$version,$source,$type,''),'|')"/></xsl:if>
+                    <xsl:if test = "$definition"><xsl:value-of select = "string-join(($oid,$displayName,$version,$source,$type,$definition),'|')"/></xsl:if>
                 </xsl:variable>
                 
                 <!--don't include the memberOf groups-->
@@ -129,8 +145,6 @@
                 </xsl:for-each-group>
             </xsl:for-each>
         </xsl:result-document>
-        
-        
 </xsl:template>  
 
 <xsl:template match = "ns0:Keyword" mode = "singular">
