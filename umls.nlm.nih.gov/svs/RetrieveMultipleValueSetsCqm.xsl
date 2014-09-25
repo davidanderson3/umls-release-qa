@@ -7,8 +7,8 @@
     <xsl:key name = "groups" match = "ns0:Group" use = "@displayName"/>
     <xsl:template match = "ns0:RetrieveMultipleValueSetsResponse">
         
+        <!-- show number of codes in each value set  -->
         <xsl:result-document href = "value-set-code-counts.txt">
-            <!-- show number of codes in each value set  -->
             <xsl:text>OID|ValueSetName|NumberOfCodes&#10;</xsl:text>
             <xsl:for-each select = "ns0:DescribedValueSet">
                 <xsl:variable name = "oid" select = "@ID"/>
@@ -18,9 +18,8 @@
                 <xsl:text>&#10;</xsl:text>  
             </xsl:for-each>  
         </xsl:result-document>
-        
+        <!-- show number of codes in each value set  -->
         <xsl:result-document href = "value-set-code-counts-by-source.txt">
-            <!-- show number of codes in each value set  -->
             <xsl:text>OID|ValueSetName|CodeSystemName|NumberOfCodes&#10;</xsl:text>
             <xsl:for-each select = "ns0:DescribedValueSet">
                 <xsl:variable name = "cs" select = "ns0:ConceptList/ns0:Concept/@codeSystemName"/>
@@ -36,8 +35,8 @@
             </xsl:for-each>  
         </xsl:result-document>
         
+        <!-- how many measures are using a given value set ? -->
         <xsl:result-document href = "value-set-measure-counts.txt">
-            <!-- how many measures are using a given value set ? -->
             <xsl:text>OID|ValueSetName|NumberofCMSMeasures&#10;</xsl:text>
              <xsl:for-each select="ns0:DescribedValueSet">
                  <xsl:sort select = "count(distinct-values(ns0:Group[@displayName='CMS eMeasure ID']/ns0:Keyword))" order = "descending"/>
@@ -47,9 +46,9 @@
                  <xsl:text>&#10;</xsl:text> 
              </xsl:for-each>
         </xsl:result-document>
-       
+        
+        <!-- how many value sets are in a given measure? -->
         <xsl:result-document href = "value-sets-per-measure.txt">
-            <!-- how many value sets are in a given measure? -->
             <xsl:text>CMS Measure ID|NumberofOIDs&#10;</xsl:text>
             <xsl:variable name = "cms" select = "ns0:DescribedValueSet/ns0:Group[@displayName='CMS eMeasure ID']/ns0:Keyword"/>
                 <xsl:for-each select = "$cms">
@@ -60,11 +59,11 @@
                     </xsl:if>                
                 </xsl:for-each>
         </xsl:result-document>
+        <!-- produce value set "codes" file -->
         
-    
         <xsl:result-document href = "value-set-codes.txt">
             <xsl:text>OID|ValueSetName|Version|Code|Descriptor|CodeSystemName|CodeSystemVersion|CodeSystemOID&#10;</xsl:text>
-            <!-- produce value set "codes" file -->
+            
             <xsl:for-each select = "ns0:DescribedValueSet">
                 <xsl:variable name = "oid" select = "@ID"/>
                 <xsl:variable name = "valueSetName" select = "@displayName"/>
@@ -110,12 +109,10 @@
             </xsl:for-each>
         </xsl:result-document>
         
-        
+        <!-- produce value set "usage" file for measures (NQF,CMS), QDM, etc -->
         <xsl:result-document href = "value-set-usage.txt">
         <xsl:text>OID|ValueSetName|Version|Steward|Type|Definition|MUType|MeasureTitle|QDM Category|NQF|CmsId&#10;</xsl:text>  
-            <!-- produce value set "usage" file -->
             <xsl:for-each select = "ns0:DescribedValueSet">
-                
                 <xsl:variable name = "oid" select = "@ID"/>
                 <xsl:variable name = "displayName" select = "@displayName"/>
                 <xsl:variable name = "version" select = "@version"/>
