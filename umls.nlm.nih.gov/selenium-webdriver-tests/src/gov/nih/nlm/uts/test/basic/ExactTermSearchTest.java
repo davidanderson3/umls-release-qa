@@ -34,10 +34,10 @@ public class ExactTermSearchTest {
     driver.findElement(By.name("submit")).click();
     driver.findElement(By.id("gwt-debug-suggestBox-suggestBox")).click();
     driver.findElement(By.id("gwt-debug-suggestBox-suggestBox")).clear();
-    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    ///give UTS some time to load
+    Thread.sleep(5000);
     driver.findElement(By.id("gwt-debug-suggestBox-suggestBox")).sendKeys("pancreas");
-    driver.findElement(By.id("gwt-debug-suggestBox-suggestBox")).sendKeys(Keys.RETURN);
-    //driver.findElement(By.id("gwt-debug-button-searchButton")).click();
+    driver.findElement(By.id("gwt-debug-button-searchButton")).click();
     
     try {
       assertTrue(Pattern.compile("(Search *Results *)+\\(5+[0-9]{3}\\)").matcher(driver.findElement(By.cssSelector("b")).getText()).find());
