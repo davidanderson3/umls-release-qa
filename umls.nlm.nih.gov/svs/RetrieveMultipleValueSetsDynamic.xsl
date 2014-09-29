@@ -8,7 +8,7 @@
     <xsl:template match = "ns0:RetrieveMultipleValueSetsResponse">
 
         <!-- show number of codes in each value set  -->
-        <xsl:result-document href = "value-set-code-counts-by-source.txt">
+        <xsl:result-document href = "value-set-code-counts-by-codesystem.txt">
             <xsl:text>OID|ValueSetName|CodeSystemName|NumberOfCodes&#10;</xsl:text>
             <xsl:for-each select = "ns0:DescribedValueSet">
                 <xsl:variable name = "cs" select = "ns0:ConceptList/ns0:Concept/@codeSystemName"/>
