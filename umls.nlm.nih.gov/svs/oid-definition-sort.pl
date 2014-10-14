@@ -5,6 +5,7 @@ use warnings;
 use REST::Client;
 use Data::Dumper;
 use File::Stat;
+use List::Uniq ':all';
 
 my $defFilename = 'value-set-definitions.txt';
 my @columns;
@@ -34,8 +35,10 @@ open(DFILE, "<", $defFilename);
 		 		@oid = split(/\(/, $oids);
 		 		splice(@oid, 0, 1);
 		 		#print @oid;
+				
+				my @uniqOid = uniq(@oid);
 		 		
-		 		foreach (@oid){
+		 		foreach (@uniqOid){
 		 				print OIDS "$_\n";	
 		 			
 		 		}
