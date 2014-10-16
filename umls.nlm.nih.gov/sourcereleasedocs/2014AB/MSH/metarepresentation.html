@@ -117,11 +117,7 @@
                 <td>Entry term for a Supplementary Concept<br/>
                 </td>
                 <td>CODE = SupplementaryRecordUI<br/>
-                  STR = value of
-                  &lt;TermList&gt;&lt;Term&gt;&lt;String&gt;<span
-                    style="font-size: 11pt; font-family:
-                    &quot;Calibri&quot;,&quot;sans-serif&quot;; color:
-                    rgb(31, 73, 125);"></span><br/>
+                  STR = value of &lt;TermList&gt;&lt;Term&gt;&lt;String&gt;<br/>
                   SCUI = ConceptUI<br/>
                   SDUI = SupplementaryRecordUI<br/>
                   File:&nbsp; supp*.xml<br/>
@@ -512,18 +508,11 @@
                 </td>
               </tr>
               <tr>
-                <td>EC<br/>
-                </td>
+                <td>EC<br/></td>
                 <td>Entry combination</td>
                 <td>&lt;EntryCombination&gt;<br/>
-&lt;ECIN&gt;&lt;QualifierReferredTo&gt;&lt;QualifierName&gt;:<br/>
+                  &lt;ECIN&gt;&lt;QualifierReferredTo&gt;&lt;QualifierName&gt;:<br/>
                   &lt;ECOUT&gt;&lt;DescriptorReferredTo&gt;&lt;DescriptorName&gt;/&lt;QualifierReferredTo&gt;&lt;QualifierName&gt;
-
-
-
-
-
-
                 </td>
                 <td>desc*.xml<br/>
                 </td>
@@ -663,18 +652,6 @@
                 </td>
               </tr>
               <tr>
-                <td>RM<br/>
-                </td>
-                <td>Record Maintainer<br/>
-                </td>
-                <td>&lt;RecordMaintainer&gt;<br/>
-                </td>
-                <td>desc*.xml<br/>
-                    supp*xml<br/>
-                    qual*xml<br/>
-                </td>
-              </tr>
-              <tr>
                 <td>RN<br/>
                 </td>
                 <td>Registry Number<br/>
@@ -684,18 +661,6 @@
                 </td>
                 <td>desc*.xml<br/>
                   supp*.xml<br/>
-                </td>
-              </tr>
-              <tr>
-                <td>RO<br/>
-                </td>
-                <td>Record Originator<br/>
-                </td>
-                <td>&lt;RecordOriginator&gt;<br/>
-                </td>
-                <td>desc*.xml<br/>
-                    supp*xml<br/>
-                    qual*xml<br/>
                 </td>
               </tr>
               <tr>
@@ -841,17 +806,12 @@
                   isa<br/>
                 </td>
                 <td>
-                  <p><span class="SpellE"></span><span class="SpellE">Connect:
-
-
-
-                    </span>[&lt;DescriptorRecord&gt;&lt;DescriptorUI&gt;
-                    or
-                    &lt;SupplementalRecord&gt;&lt;SupplementalRecordUI&gt;]
-                    to <span class="SpellE">&lt;</span><span
-                      class="SpellE"></span><span class="SpellE">PharmacologicalAction</span>&gt;&lt;<span
-                      class="SpellE">DescriptorReferredTo</span>&gt;&lt;<span
-                      class="SpellE">DescriptorUI</span>&gt;</p>
+                  <p><span class="SpellE">Connect:</span>[&lt;DescriptorRecord&gt;&lt;DescriptorUI&gt;
+                    or &lt;SupplementalRecord&gt;&lt;SupplementalRecordUI&gt;] to <span
+                    class="SpellE">&lt;</span>
+                    <span class="SpellE">PharmacologicalAction</span>&gt;&lt;
+                    <span class="SpellE">DescriptorReferredTo</span>&gt;&lt;
+                    <span class="SpellE">DescriptorUI</span>&gt;</p>
                 </td>
                 <td>desc*.xml<br/>
                   supp*.xml<br/>
@@ -865,22 +825,7 @@
                   mapped_to<br/>
                 </td>
                 <td><span style="">Connect: </span>&lt;SupplementalRecord&gt;&lt;SupplementalRecordUI&gt;
-to
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                  <span style="">&lt;HeadingMappedTo&gt;&lt;DescriptorReferredTo&gt;&lt;DescriptorUI&gt;</span><br/>
+                  to <span style="">&lt;HeadingMappedTo&gt;&lt;DescriptorReferredTo&gt;&lt;DescriptorUI&gt;</span><br/>
                   <br/>
                   Note:&nbsp; In cases where the &lt;HeadingMappedTo&gt;
                   tag includes a &lt;QualifierReferredTo&gt;, an
@@ -888,9 +833,7 @@ to
                   relationship will also be created.&nbsp; To pair the
                   qualfier relationship with the correct mapped_to
                   relationship, the same value for MRREL.RG
-                  (relationship group) is assigned.<span
-                    style="font-size: 10pt; color: black; font-family:
-                    'Verdana','sans-serif';"></span> </td>
+                  (relationship group) is assigned.</td>
                 <td>supp*.xml<br/>
                 </td>
               </tr>
@@ -989,12 +932,8 @@ to
             </tbody>
           </table>
         </div>
-        <div id="mappings" class="rep_block_level_two"> <a
-            name="mappings"></a><br/>
-          <h3>Hierarchy (MRHIER):</h3>
-          &nbsp;&nbsp;<span class="nav">(return to <a
-              href="metarepresentation.html#top">top</a></span>)<a
-            name="mappings"></a><br/>
+        <div id="mappings" class="rep_block_level_two">
+          &nbsp;&nbsp;<span class="nav">(return to <a href="metarepresentation.html#top">top</a></span>)<br/>
           <br/>
           The hierarchy is created from values in the &lt;TreeNumber&gt;
           tags in desc*.xml and qual*.xml.&nbsp; Official MeSH xml
