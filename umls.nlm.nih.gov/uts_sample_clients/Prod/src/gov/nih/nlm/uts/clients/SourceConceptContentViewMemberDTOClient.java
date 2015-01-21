@@ -18,7 +18,7 @@ public class SourceConceptContentViewMemberDTOClient {
 
 	private static String username = "";
     private static String password = ""; 
-    static String umlsRelease = "2011AB";
+    static String umlsRelease = "2014AB";
 	static String serviceName = "http://umlsks.nlm.nih.gov";
     
 static UtsWsContentController utsContentService = (new UtsWsContentControllerImplService()).getUtsWsContentControllerImplPort();
@@ -53,7 +53,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
             switch (method) {
             case "getSourceConceptContentViewMemberships": mySourceConceptContentViewMember = utsContentService.getSourceConceptContentViewMemberships(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "195967001", "SNOMEDCT", myPsf); 
             break;
-            case "getContentViewSourceConceptMembers": mySourceConceptContentViewMember = utsContentService.getContentViewSourceConceptMembers(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "C2711988", myPsf);
+            case "getContentViewSourceConceptMembers": mySourceConceptContentViewMember = utsContentService.getContentViewSourceConceptMembers(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "C3812142", myPsf);
         	break;
         	default: out.println("Unrecognized input ");
         	break; 
@@ -64,10 +64,8 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
             	SourceConceptContentViewMemberDTO mySourceConceptCont = mySourceConceptContentViewMember.get(i);
                 String ui = mySourceConceptCont.getSourceConcept().getUi();
             	String name = mySourceConceptCont.getSourceConcept().getDefaultPreferredName();
-                String contviewhandle = mySourceConceptCont.getContentViewHandle();
-                int attributeCount = mySourceConceptCont.getSourceConcept().getCVMemberCount();
                                
-                System.out.println(ui+"|"+name+"|"+contviewhandle+"|"+attributeCount);
+                System.out.println(ui+"|"+name);
                 }
             
   
