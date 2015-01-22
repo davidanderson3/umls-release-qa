@@ -3,16 +3,14 @@ package gov.nih.nlm.uts.clients;
 import static java.lang.System.out;
 
 import java.util.ArrayList;
-import gov.nih.nlm.uts.webservice.content.SubsetDTO;
-import gov.nih.nlm.uts.webservice.content.UtsWsContentController;
-import gov.nih.nlm.uts.webservice.content.UtsWsContentControllerImplService;
-import gov.nih.nlm.uts.webservice.security.UtsWsSecurityController;
-import gov.nih.nlm.uts.webservice.security.UtsWsSecurityControllerImplService;
+import java.util.List;
+import gov.nih.nlm.uts.webservice.content.*;
+import gov.nih.nlm.uts.webservice.security.*;
 
 public class SubsetDTOClient {
 	private static String username = "";
     private static String password = ""; 
-    static String umlsRelease = "2011AB";
+    static String umlsRelease = "2014AB";
 	static String serviceName = "http://umlsks.nlm.nih.gov";
 	
     
@@ -42,12 +40,17 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
         	String method = args[2];
 
             gov.nih.nlm.uts.webservice.content.Psf myPsf = new gov.nih.nlm.uts.webservice.content.Psf();
+            int pageNum = 1;
+            
             
             java.util.List<SubsetDTO> mySubsetsDTO = new ArrayList<SubsetDTO>();
             SubsetDTO mySubsetDTO = new SubsetDTO();
+            List<SourceConceptSubsetMemberDTO> mySubsetMembersDTO = new ArrayList<SourceConceptSubsetMemberDTO>();
 
             
             switch (method) {
+            
+            //show me all the available subsets
             case "getSubsets": mySubsetsDTO = utsContentService.getSubsets(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, myPsf); 
             for (int i = 0; i < mySubsetsDTO.size(); i++) {
 
@@ -56,17 +59,35 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
                 String name = mySubsets.getName();
                 String srcui = mySubsets.getSourceUi();
                 int atommemcnt = mySubsets.getAtomMemberCount();
-               
-                System.out.println(ui+"|"+name+"|"+srcui+"|"+atommemcnt);                }
+                System.out.println(ui+"|"+name+"|"+srcui+"|"+atommemcnt);  
+                }
+            
             break;
+            
+            //what is the information about a given subset?
             case "getSubset": mySubsetDTO = utsContentService.getSubset(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "C1368722");
             String ui = mySubsetDTO.getUi();
             String name = mySubsetDTO.getName();
             String srcui = mySubsetDTO.getSourceUi();
             int atommemcnt = mySubsetDTO.getAtomMemberCount();
-           
             System.out.println(ui+"|"+name+"|"+srcui+"|"+atommemcnt);
+            
             break;
+            
+            //what are the members of a given subset?
+            case "getSubsetSourceConceptMembers": mySubsetMembersDTO = utsContentService.getSubsetSourceConceptMembers(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "C3853365", myPsf);
+            
+            System.out.println("id|term");
+            for(SourceConceptSubsetMemberDTO subsetMember:mySubsetMembersDTO) {
+            	
+            	String id = subsetMember.getSourceConcept().getUi();
+            	String term = subsetMember.getSourceConcept().getDefaultPreferredName();
+            	System.out.println(id+"|"+term);
+            	
+            }
+            
+            break;
+            
         	default: out.println("Unrecognized input ");
         	break; 
             }

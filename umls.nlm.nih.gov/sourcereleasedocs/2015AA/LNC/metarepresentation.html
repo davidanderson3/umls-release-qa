@@ -1,0 +1,910 @@
+    <p>This page lists UMLS Metathesaurus data elements and traces them
+      back to the specific source data that populates them.</p>
+    <!--begin tabbed navigation area-->
+    <div class="section-6">
+      <ul id="menu">
+        <li id="nav-1"><a href="index.html">Synopsis</a></li>
+        <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+        <li id="nav-3"><a href="stats.html">Statistics</a></li>
+        <li id="nav-4"><a href="samples.html">Samples</a></li>
+        <li id="nav-5"><a href="sourcerepresentation.html">Source
+            Representation</a></li>
+        <li id="nav-6"><a href="metarepresentation.html">Metathesaurus
+            Representation</a></li>
+      </ul>
+    </div>
+    <!-- end tabbed navigation area --> <br/>
+    <a name="top"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>,
+      <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
+      <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+    <p><b>VSAB: LNC250</b></p>
+    
+    <div id="rep_change_summary" class="rep_block_level_one">
+      <h3>Summary of Changes:</h3>
+      1. New data files:&nbsp;
+        <ul>
+          <li>TOP_2000_COMMON_LAB_RESUTS_SI_LOINC_V1-2.CSV</li>
+          <li>TOP_2000_COMMON_LAB_RESULTS_US_LOINC_V1-2.CSV</li>
+          <li>TOP_300_COMMON_LAB_ORDERS_US_LOINC_V1-2.XLSX</li>
+        </ul>
+      2. New RELs|RELAs:&nbsp;
+        <ul>
+          <li>RO|has_count/count_of</li>
+          <li>RN|mapped_to/mapped_from (added to the XMAP attribute value)</li>
+        </ul>             
+      3. New ATNs:&nbsp;
+        <ul>
+          <li>ANSWER_LIST_ID</li>
+          <li>ANSWER_LIST_NAME</li>
+          <li>EXTERNAL_COPYRIGHT_LINK</li>
+          <li>SUBSEQUENT_TEXT_PROMPT</li>
+          <li>TOP_2000_LAB_RESULTS_SI</li>
+          <li>TOP_2000_LAB_RESULTS_US</li>
+          <li>TOP_300_COMMON_LAB_ORDERS_US</li>
+        </ul>
+      4. New CLASS(es)|Expansion|Semantic Type:&nbsp;
+      <ul>
+        <li>DOC.ONTOLOGY|Document Ontology|Intellectual Product</li>
+        <li>HL7.CCDA|HL7 Consolidated Clinical Document Architecture|Intellectual Product</li>
+        <li>NAMCS|National Ambulatory Medical Care Survey (NAMCS)|Intellectual Product</li>
+        <li>NUTRITION&amp;DIETETICS|Nutrition and Dietetics|Intellectual Product</li>
+        <li>ONCOLOGY|Oncology|Intellectual Product</li>
+        <li>PANEL.HL7.CCDA|HL7 Consolidated Clinical Document Architecture set|Intellectual Product</li>
+        <li>PANEL.NUTRITION&amp;DIET|Nutrition and dietetics panel|Intellectual Product</li>
+        <li>PANEL.ONCO|Oncology set|Intellectual Product</li>
+        <li>PANEL.SURVEY.ADVAULT|ADVault survey set|Intellectual Product</li>
+        <li>PANEL.SURVEY.COOP|Dartmouth Cooperative Functional Status Test (COOP) set|Intellectual Product</li>
+        <li>PANEL.SURVEY.HAQ|Health Assessment Questionnaire (HAQ) set|Intellectual Product</li>
+        <li>PANEL.SURVEY.PAS|Patient Activity Scale (PAS) set|Intellectual Product</li>
+        <li>PANEL.SURVEY.PASII|Patient Activity Scale II (PAS-II) set|Intellectual Product</li>
+        <li>PANEL.SURVEY.PCORI|Patient-Centered Outcomes Research Institute (PCORI) set|Intellectual Product</li>
+        <li>PANEL.SURVEY.PCORNET|Patient-Centered Outcomes Research Network (PCORnet) Common Data Model (CDM) set|Intellectual Product</li>
+        <li>PANEL.NAMCS|National Ambulatory Medical Care Survey (NAMCS) set|Intellectual Product</li>
+        <li>SURVEY.ADVAULT|ADVault survey|Intellectual Product</li>
+        <li>SURVEY.COOP|Dartmouth Cooperative Functional Status Test (COOP)|Intellectual Product</li>
+        <li>SURVEY.HAQ|Health Assessment Questionnaire (HAQ)|Intellectual Product</li>
+        <li>SURVEY.NIH_TOOLBOX|NIH Toolbox survey|Intellectual Product</li>
+        <li>SURVEY.PAS|Patient Activity Scale (PAS)|Intellectual Product</li>
+        <li>SURVEY.PASII|Patient Activity Scale II (PAS-II)|Intellectual Product</li>
+        <li>SURVEY.PCORNET|Patient Centered Outcomes Research Network (PCORnet) Common Data Model (CDM)|Intellectual Product</li>
+        <li>TRAUMASKNFLD.MOLEC|Trauma Skinfold measurements molecular|Intellectual Product</li>
+        <li>TRNSPLNT.ORGANTRAUMA|Organ transplant Trauma|Intellectual Product</li>
+        <li>TUMRRGTTRNSPLNT.ORGAN|Tumor registry (NAACCR) Organ transplant|Intellectual Product</li>
+        <li>US.UROTUMRRGT|Urological ultrasoundTumor registry (NAACCR)|Intellectual Product</li>
+        <li>VACCINUS.URO|Vaccinations Urological ultrasound|Intellectual Product</li>
+        <li>VOLUME.MOLECVACCIN|Volume (specimen) molecular Vaccinations|Intellectual Product</li>
+      </ul>
+    </div>
+    <div id="rep_file_summary" class="rep_block_level_one"><br/></div>
+      <a name="original_files"></a>
+    <h4>Original Files:</h4>
+    <p>The UMLS uses files publically available at <a
+        href="http://www.loinc.org" target="_blank">www.loinc.org</a>,
+      including:</p>
+      <ul>
+          <li>loinc.csv (compressed in LOINC250.zip)</li>
+          <li>map_to.csv (compress in LOINC250.zip)</li>
+          <li>LOINC_250_MULTI-AXIAL_HIERARCHY.CSV</li>
+          <li>LOINC_250_SELECTED_FORMS.xlsx</li>
+      </ul> 
+      <p>In addition, the UMLS receives two files to facilitate building the hierarchy. For 2.50,
+      these files were: "LOINC_250_PartLinks_12192014.csv" and
+      "LOINC_250_Parts_12192014.csv". Additional information, such as
+      expansions of abbreviations, is extracted from LOINCManual.pdf. </p>
+    <div id="rep_identifiers" class="rep_block_level_one">
+      <h3>Overview</h3>
+      <h4>Identifiers</h4>
+      <p>LOINC Identifiers in the UMLS are generally based on field 1 of
+        loinc.csv, or field 1 of LOINC_PARTS (L_PART_ID).
+        For some termtypes, the atom may be associated with multiple
+        LOINC entities. For example, a component may be a part of
+        multiple fully-specified names. In these cases, the atom (e.g. a
+        CN, or Official Component Name), is assigned an MTHU# during
+        Metathesaurus source processing. </p>
+      <ul>
+        <li>CODE:
+          <ul>
+            <li>For term types LC, LN, LO, MTH_LN, MTH_LO, OLC, OOSN,
+              OSN: the LOINC _NUM (field 1) from loinc.csv</li>
+            <li>For term types LPDN, LPN: the L_PART_ID (field 1) from
+              LOINC_PARTS_*.csv</li>
+            <li>For term types CN, MTH_CN, HC, HS, LS: an MTHU#,
+              assigned during Metathesaurus source processing.</li>
+            <li>For term type LA: the AnswerStringID (field 7) from LOINC_250_SELECTED_FORMS.xlsx (ANSWERS tab)</li>
+          </ul>
+        </li>
+        <li>SAUI: Not Applicable</li>
+        <li>SCUI: Same as CODE for term types LA, LC, LN, LO, LPDN, LPN,
+          MTH_LN, MTH_LO, OLC, OOSN, OSN<br/>
+        </li>
+        <li>SDUI: Not Applicable</li>
+      </ul>
+      <h4>Expansions</h4>
+      <p>Expanded forms of certain atoms are created during
+        Metathesaurus source processing by applying abbreviation
+        expansions extracted from the LOINC Manual. In these cases, the
+        expanded form is generally assigned the same identifier as its
+        original form. Expansions may also include converting patterns
+        such as "little e" or &#8220;super little b" to &#8220;e" or "^b"
+        respectively. </p>
+      <div id="rep_termtypes" class="rep_block_level_two"> <a
+          name="termtypes"></a><br/>
+        <h4>Atoms</h4>
+        &nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
+        <table class="elements" border="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <th>TTY</th>
+              <th>ORIGIN</th>
+            </tr>
+            <tr>
+              <td class="file_field_name">CN</td>
+              <td>Official component name:<br/>
+                CODE = MTHU#, assigned during Metathesaurus source
+                processing; same as CODE for respective MTH_CN as
+                applicable.<br/>
+                STR = loinc.csv field 2, subfield 1 (COMPONENT).</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">HC</td>
+              <td>Hierarchical class:<br/>
+                CODE = MTHU#, assigned during Metathesaurus source
+                processing (same as CODE for respective HS).<br/>
+                STR = expanded form of loinc.csv field 8 for CLASS or
+                expanded form of loinc.csv field 16 for CLASSTYPE.<br/>
+                An additional HC atom, &#8220;LOINCCLASSTYPES,&#8221; is added
+                during Metathesaurus source processing as a hierarchical
+                placeholder.<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">HS</td>
+              <td>Short or alternate version of hierarchical term:<br/>
+                CODE = MTHU#, assigned during Metathesaurus source
+                processing (same as CODE for respective HC).<br/>
+                STR = value of loinc.csv field 8 for CLASS, or value
+                of loinc.csv field 16 for CLASSTYPE.</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LA</td>
+              <td>LOINC Answer:<br/>
+                CODE = LOINC_248_SELECTED_FORMS.xlsx (ANSWERS tab) field 7 (AnswerStringID)<br/>
+                STR = LOINC_248_SELECTED_FORMS.xlsx (ANSWERS tab) field 10 (DisplayText)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LC</td>
+              <td>Long common name:<br/>
+                CODE = loinc.csv field 1 (LOINC_NUM)<br/>
+                STR = loinc.csv field 35 (LONG_COMMON_NAME)<br/>
+                TTY = LC is assigned if field 13 (STATUS) is not = "DEPRECATED"<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LN</td>
+              <td>Official fully-specified name:<br/>
+                CODE = loinc.csv field 1 (LOINC_NUM)<br/>
+                STR = loinc.csv fields 2-7, concatenated with colons,
+                i.e. F2:F3:F4:F5:F6:F7<br/>
+                TTY = LN is assigned if field 13 (STATUS) is not = "DEPRECATED"<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LO</td>
+              <td>Obsolete official fully specified name:<br/>
+                CODE = loinc.csv field 1 (LOINC_NUM)<br/>
+                STR = loinc.csv fields 2-7, concatenated with colons,
+                i.e. F2:F3:F4:F5:F6:F7<br/>
+                TTY = LO is assigned if field 13 (STATUS) = "DEPRECATED"<br/>
+                SUPPRESS = "O"<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LPDN</td>
+              <td>Parts display name:<br/>
+                CODE = LOINC_PARTS_*.txt field 1 (L_PART_ID)<br/>
+                STR = LOINC_PARTS_*.txt field 4 (DISPLAY_NAME)<br/>
+                LPDN atoms are only created for strings containing the
+                pattern &#8220;Allergen Mix.&#8221;</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LPN</td>
+              <td>Parts name:<br/>
+                CODE = LOINC_PARTS_*.txt field 1 (L_PART_ID)<br/>
+                STR = LOINC_PARTS_*.txt field 3 (NAME_CASE_INSENSITIVE)<br/>
+                An additional LPN, &#8220;LOINCPARTS,&#8221; is added during
+                Metathesaurus source processing as a hierarchical
+                placeholder.</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LS</td>
+              <td>Expanded system/sample type:<br/>
+                CODE = MTHU#, assigned during Metathesaurus source
+                processing<br/>
+                STR = Expanded form of loinc.csv field 5, subfield 1
+                (SYSTEM).</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MTH_CN</td>
+              <td>Component, with abbreviations expanded:<br/>
+                CODE = MTHU#, assigned during Metathesaurus source
+                processing; same as CODE for respective CN as
+                applicable.<br/>
+                STR = Expanded form of loinc.csv field 2, subfield 1
+                (COMPONENT).</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MTH_LN</td>
+              <td>Official fully specified name with expanded abbreviations:<br/>
+                CODE = loinc.csv field 1 (LOINC_NUM)<br/>
+                STR = Expanded form of loinc.csv fields 2-7,
+                concatenated with colons, i.e. F2:F3:F4:F5:F6:F7<br/>
+                TTY = MTH_LN is assigned if field 13 (STATUS) is not =
+                &#8220;DEPRECATED&#8221;</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MTH_LO</td>
+              <td>Expanded obsolete fully specified name:<br/>
+                CODE = loinc.csv field 1 (LOINC_NUM)<br/>
+                STR = Expanded form of loinc.csv fields 2-7,
+                concatenated with colons, i.e. F2:F3:F4:F5:F6:F7<br/>
+                TTY = MTH_LO is assigned if field 13 (STATUS) = "DEPRECATED"<br/>
+                SUPPRESS = O<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">OLC</td>
+              <td>Obsolete long common name:<br/>
+                CODE = loinc.csv field 1 (LOINC_NUM)<br/>
+                STR = loinc.csv field 35 (LONG_COMMON_NAME)<br/>
+                TTY = OLC is assigned if field 13 (STATUS) = "DEPRECATED"<br/>
+                SUPPRESS = O<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">OOSN</td>
+              <td>Obsolete official short name:<br/>
+                CODE = loinc.csv field 1 (LOINC_NUM)<br/>
+                STR = loinc.csv field 29 (SHORTNAME)<br/>
+                TTY = OOSN is assigned if field 13 (STATUS) = "DEPRECATED"<br/>
+                SUPPRESS = "O"<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">OSN</td>
+              <td>Official short name:<br/>
+                CODE = loinc.csv field 1 (LOINC_NUM)<br/>
+                STR = loinc.csv field 29 (SHORTNAME)<br/>
+                TTY OSN is assigned if field 13 (STATUS) is not = &#8220;DEPRECATED&#8221;</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">XM</td>
+              <td>Cross-mapping set:<br/>
+                This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="rep_attributes" class="rep_block_level_two"> <a
+          name="attributes"></a><br/>
+        <h4>Attributes</h4>
+        &nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
+        <table class="elements" border="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <th>ATN [Description]</th>
+              <th>Origin</th>
+            </tr>
+            <tr>
+              <td>ANSWER_CODE</td>
+              <td>LOINC_250_SELECTED_FORMS.xlsx (ANSWERS tab) field 10 (AnswerCode)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>ANSWER_CODE_SYSTEM</td>
+              <td>LOINC_250_SELECTED_FORMS.xlsx (ANSWERS tab) field 13 (AnswerCodeSystem)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>ANSWER_LIST_ID</td>
+              <td>LOINC_250_SELECTED_FORMS.xlsx (ANSWERS tab) field 3 (AnswerListID)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>ANSWER_LIST_NAME</td>
+              <td>LOINC_250_SELECTED_FORMS.xlsx (ANSWERS tab) field 4 (AnswerListName)<br/>
+              </td>
+            </tr>  
+            <tr>
+              <td>COPYRIGHT</td>
+              <td>loinc.csv field 33 (EXTERNAL_COPYRIGHT_NOTICE)</td>
+            </tr>
+            <tr>
+              <td>CHANGE_REASON_PUBLIC</td>
+              <td>loinc.csv field 44<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>COMMON_SI_TEST_RANK<br/>
+              </td>
+              <td>loinc.csv field 47<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>COMMON_TEST_RANK<br/>
+              </td>
+              <td>loinc.csv field 45<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>COMMON_ORDER_RANK<br/>
+              </td>
+              <td>loinc.csv field 46<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>CONSUMER_NAME<br/>
+              </td>
+              <td>loinc.csv field 14<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">CURATED_RANGE_AND_UNITS</td>
+              <td>loinc.csv field 38</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">DOCUMENT_SECTION</td>
+              <td>loinc.csv field 39</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">EXAMPLE_UCUM_UNITS</td>
+              <td>loinc.csv field 40<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">EXAMPLE_UNITS</td>
+              <td>loinc.csv field 34<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">EXTERNAL_COPYRIGHT_LINK</td>
+              <td>loinc.csv field 49<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">EXTERNALLY_DEFINED</td>
+              <td>LOINC_250_SELECTED_FORMS.xlsx (ANSWERS tab) field 6 (ExternallyDefined)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">EXTERNALLY_DEFINED_CODE_SYSTEM</td>
+              <td>LOINC_250_SELECTED_FORMS.xlsx (ANSWERS tab) field 7 (ExternallyDefinedAnswerListCodeSystem)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">EXTERNAL_LIST_LINK</td>
+              <td>LOINC_250_SELECTED_FORMS.xlsx (ANSWERS tab) field 8 (LinkToExternalList)<br/>
+              </td>
+            </tr> 
+            <tr>
+              <td class="file_field_name">FROMRSAB</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">FROMVSAB</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">GLOBAL_ID</td>
+              <td>LOINC_250_SELECTED_FORMS.xlsx (ANSWERS tab) field 14 (GlobalID)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">GLOBAL_ID_CODE_SYSTEM</td>
+              <td>LOINC_250_SELECTED_FORMS.xlsx (ANSWERS tab) field 15 (GlobalIDCodeSystem)<br/>
+              </td>
+            </tr> 
+            <tr>
+              <td class="file_field_name">HL7_ATTACHMENT_STRUCTURE</td>
+              <td>loinc.csv field 48<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">HL7_FIELD_SUBFIELD_ID</td>
+              <td>loinc.csv field 32<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">HL7_V2_DATATYPE</td>
+              <td>loinc.csv field 36<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">HL7_V3_DATATYPE</td>
+              <td>loinc.csv field 37<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LCA [ACSSYM]</td>
+              <td>loinc.csv field 20 (ACSSYM)</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LCB [Chemical base name]</td>
+              <td>loinc.csv field 21 (BASE_NAME)</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LCD [CDISC common tests]</td>
+              <td>loinc.csv field 31 (CDISC_COMMON_TESTS)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LCL [Class]</td>
+              <td>loinc.csv field 8 (CLASS)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LCN [Classtype]</td>
+              <td>loinc.csv field 16 (CLASSTYPE)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LCS [Status]</td>
+              <td>loinc.csv field 13 (STATUS)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LCT [Change type]</td>
+              <td>loinc.csv field 11 (CHNG_TYPE)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LEA [Example answers]</td>
+              <td>loinc.csv field 19 (EXMPL_ANSWERS)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LFO [Formula]</td>
+              <td>loinc.csv field 17 (FORMULA)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LLR [Date last revised]</td>
+              <td>loinc.csv field 10 (DATE_LAST_CHANGED)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LMM [Molecular weights]</td>
+              <td>loinc.csv field 15 (MOLAR_MASS)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LMP [MAP TO code]</td>
+              <td>map_to.csv field 2 (MAP TO)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LNC [NAACCR ID]</td>
+              <td>loinc.csv field 22 (NAACCR_ID)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LNE [Code table]</td>
+              <td>loinc.csv field 23 (CODE_TABLE)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LOINC_COMPONENT</td>
+              <td>loinc.csv field 2 (all subfields)</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LOINC_METHOD_TYP</td>
+              <td>loinc.csv field 7</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LOINC_PROPERTY</td>
+              <td>loinc.csv field 3</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LOINC_SCALE_TYP</td>
+              <td>loinc.csv field 6</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LOINC_SYSTEM</td>
+              <td>loinc.csv field 5</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LOINC_TIME_ASPECT</td>
+              <td>loinc.csv field 4</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LOR [Order/observation]</td>
+              <td>loinc.csv field 30 (ORDER_OBS)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LQS [Survey question source]</td>
+              <td>loinc.csv field 25 (SURVEY_QUEST_SRC)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LQT [Survey question text]</td>
+              <td>loinc.csv field 24 (SURVEY_QUEST_TXT)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LRN2 [Related names 2]</td>
+              <td>loinc.csv field 28 (RELATEDNAMES2)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LSP [Species]</td>
+              <td>loinc.csv field 18 (SPECIES)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LSU [Submitted units]</td>
+              <td>loinc.csv field 27 (SUBMITTED_UNITS)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LUR [Units required]</td>
+              <td>loinc.csv field 26 (UNITS_REQUIRED)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MAPSETRSAB</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+           <tr>
+              <td class="file_field_name">MAPSETTYPE</td>
+              <td>This data is added only if the information is provided by the source</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MAPSETVERSION</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MAPSETVSAB</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MTH_MAPFROMCOMPLEXITY</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MTH_MAPFROMEXHAUSTIVE</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MTH_MAPSETCOMPLEXITY</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MTH_MAPTOCOMPLEXITY</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">MTH_MAPTOEXHAUSTIVE</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">OID</td>
+              <td>LOINC_250_SELECTED_FORMS.xlsx (ANSWERS tab) field 6 (AnswerListOID)</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">SEQ_NO</td>
+              <td>LOINC_250_SELECTED_FORMS.xlsx (ANSWERS tab) field 11 (SequenceNo)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">LOINC_SCORE</td>
+              <td>LOINC_250_SELECTED_FORMS.xlsx (ANSWERS tab) field 18 (Score)<br/>
+              </td>
+            </tr>  
+            <tr>
+              <td class="file_field_name">SOS</td>
+              <td>loinc.csv field 12 (COMMENTS)<br/>
+                LOINC_PARTS field 4 (DISPLAY_NAME)</td>
+            </tr>
+            <tr>
+              <td>STATUS_REASON<br/>
+              </td>
+              <td>loinc.csv field 42<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>STATUS_TEXT<br/>
+              </td>
+              <td>loinc.csv field 43<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>SUBSEQUENT_TEXT_PROMPT<br/>
+              </td>
+              <td>LOINC_250_SELECTED_FORMS.xlsx (ANSWERS tab) field 19 (SubsequentTextPrompt)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>TOP_2000_LAB_RESULTS_SI<br/>
+              </td>
+              <td>TOP_2000_COMMON_LAB_RESULTS_SI_LOINC_V1-2.CSV field 5 (RANK)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>TOP_2000_LAB_RESUlTS_US<br/>
+              </td>
+              <td>TOP_2000_COMMON_LAB_RESULTS_SI_LOINC_V1-2.CSV field 5 (RANK)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>TOP_300_COMMON_LAB_ORDERS_US<br/>
+              </td>
+              <td>TOP_300_COMMON_LAB_ORDERS_US_LOINC_V1-2.XLSX field 3 (RANK)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">TORSAB</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">TOVSAB</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">XMAP</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">XMAPFROM</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">XMAPTO</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="rep_definitions" class="rep_block_level_two"> <a
+          name="definitions"></a><br/>
+        <h4>Definitions</h4>
+        &nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
+        <p>Definitions come from LOINC_250_SELECTED_FORMS.xlsx (ANSWERS tab) field 17 (Description)</p>
+      </div>
+      <div id="rep_relationships" class="rep_block_level_two"> <a
+          name="relationships"></a><br/>
+        <h4>Relationships</h4>
+        &nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
+        <table class="elements" border="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <th>REL</th>
+              <th>RELA<br/>
+                inverse_RELA</th>
+              <th>Origin</th>
+            </tr>
+            <tr>
+              <td>CHD<br/>
+                PAR<br/>
+                SIB</td>
+              <td><br/>
+              </td>
+              <td>The hierarchy is extracted from:
+                <ul>
+                  <li>loinc.csv, field 8 (CLASS) and field 16
+                    (CLASSTYPE)</li>
+                  <li>LOINC_250_MULTI-AXIAL_HIERARCHY.CSV</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>analyzed_by<br/>
+                analyzes</td>
+              <td>Connects LS to LN or LO</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>associated_with</td>
+              <td>Connects CN to LO or LN with CLASSTYPE of 3
+                (Claims Attachment).</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_adjustment<br/>
+                adjustment_of</td>
+              <td>Connects LPN where PART_TYPE = "ADJUSTMENT" with LN or
+                LO, as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_answer<br/>
+                answer_to</td>
+              <td>Connects LN with LA as per LOINC_248_SELECTED_FORMS.xlsx (ANSWERS tab)</td>
+            </tr> 
+            <tr>
+              <td>RO</td>
+              <td>has_challenge<br/>
+                challenge_of</td>
+              <td>Connects LPN where PART_TYPE = "CHALLENGE" with LN or
+                LO, as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_class<br/>
+                class_of</td>
+              <td>Connects LPN where PART_TYPE = "CLASS" with LN or LO,
+                as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_component<br/>
+                component_of</td>
+              <td>Connects LPN where PART_TYPE = "COMPONENT" with LN or
+                LO, as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_count<br/>
+                count_of</td>
+              <td>Connects LPN where PART_TYPE = "COUNT" with LN or
+                LO, as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_divisor<br/>
+                divisor_of</td>
+              <td>Connects LPN where PART_TYPE = "DIVISORS" with LN or
+                LO, as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_evaluation<br/>
+                evaluation_of</td>
+              <td>Connects CN to LO or LN with CLASSTYPE of 4
+                (Surveys).</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_fragments_for_synonyms<br/>
+                fragments_for_synonyms_of</td>
+              <td>Connects LPN where PART_TYPE = "FRAGMENTS FOR
+                SYNONYMS" with LN or LO, as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_method<br/>
+                method_of</td>
+              <td>Connects LPN with PART_TYPE = "METHOD" with LOINC CODE
+                indicated in LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_multipart<br/>
+                multipart_of</td>
+              <td>Connects PART_TYPE = "MULTIPART" with LOINC CODE
+                indicated in LOINC_PART_LINKS_*.txt</td>
+            </tr>            
+            <tr>
+              <td>RO</td>
+              <td>has_property<br/>
+                property_of</td>
+              <td>Connects LPN where PART_TYPE = "PROPERTY" with LN or
+                LO, as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_quotient<br/>
+                quotient_of</td>
+              <td>Connects PART_TYPE = "QUOTIENTS" with LOINC CODE
+                indicated in LOINC_PART_LINKS_*.txt</td>
+            </tr>            
+            <tr>
+              <td>RO</td>
+              <td>has_scale<br/>
+                scale_of</td>
+              <td>Connects LPN where PART_TYPE = "SCALE" with LN or LO,
+                as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_suffix<br/>
+                suffix_of</td>
+              <td>Connects LPN where PART_TYPE = "SUFFIX" with LN or LO,
+                as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_supersystem<br/>
+                supersystem_of</td>
+              <td>Connects LPN where PART_TYPE = "SUPER SYSTEM" with LN
+                or LO, as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_system<br/>
+                system_of</td>
+              <td>Connects LPN where PART_TYPE = "SYSTEM" with LN or LO,
+                as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_time_aspect<br/>
+                has_time_aspect</td>
+              <td>Connects LPN where PART_TYPE = "TIME" with LN, as per
+                LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_time_modifier<br/>
+                time_modifier_of</td>
+              <td>Connects LPN where PART_TYPE = "TIME MODIFIER" with
+                LN, as per LOINC_PART_LINKS_*.txt</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>measured_by<br/>
+                measures</td>
+              <td>Connects CN to LO or MTH_LN with CLASSTYPE of 1
+                (Laboratory) or 2 (Clinical).</td>
+            </tr>
+            <tr>
+              <td>RQ</td>
+              <td>mapped_from<br/>
+                mapped_to</td>
+              <td>Connects an LO with an LN, indicating possible
+                synonymy between a current code and a retired code, as
+                per loinc.csv field 13 (STATUS) and map_to.csv</td>
+            </tr>
+            <tr>
+              <td>SY</td>
+              <td>common_name_of<br/>
+                has_common_name</td>
+              <td>Connects an LN or LO with its LC or OLC respectively</td>
+            </tr>
+            <tr>
+              <td>SY</td>
+              <td>expanded_form_of<br/>
+                has_expanded_form</td>
+              <td>Connects original and expanded forms of atoms,
+                including: HS &lt;--&gt; HC; OSN &lt;--&gt; LN; OOSN
+                &lt;--&gt; LO</td>
+            </tr>
+            <tr>
+              <td>SY<br/>
+              </td>
+              <td>mth_expanded_form_of<br/>
+                mth_has_expanded_form<br/>
+              </td>
+              <td>Connects original and
+                expanded forms of atoms, including: CN &lt;--&gt;
+                MTH_CN; LN &lt;--&gt; MTH_LN; LO &lt;--&gt; MTH_LO</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div id="rep_mappings" class="rep_block_level_one"> <a
+        name="mappings"></a>
+      <h4>Mappings</h4>
+      &nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
+      <p>The Metathesaurus includes mappings between <a
+href="http://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/mapping_projects/loinc.html"
+          target="_blank">LOINC 2.15 and CPT2005.</a></p>
+    </div>
