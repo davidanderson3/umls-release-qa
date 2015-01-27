@@ -1,18 +1,9 @@
 package gov.nih.nlm.uts.clients;
 
-import static java.lang.System.out;
-
-import java.awt.List;
 import java.util.ArrayList;
-
-import gov.nih.nlm.uts.webservice.content.AtomContentViewMemberDTO;
-import gov.nih.nlm.uts.webservice.content.AtomDTO;
-import gov.nih.nlm.uts.webservice.content.SourceAtomClusterDTO;
-import gov.nih.nlm.uts.webservice.content.SourceConceptContentViewMemberDTO;
-import gov.nih.nlm.uts.webservice.content.UtsWsContentController;
-import gov.nih.nlm.uts.webservice.content.UtsWsContentControllerImplService;
-import gov.nih.nlm.uts.webservice.security.UtsWsSecurityController;
-import gov.nih.nlm.uts.webservice.security.UtsWsSecurityControllerImplService;
+import java.util.List;
+import gov.nih.nlm.uts.webservice.content.*;
+import gov.nih.nlm.uts.webservice.security.*;
 
 public class SourceConceptContentViewMemberDTOClient {
 
@@ -51,11 +42,11 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
             java.util.List<SourceConceptContentViewMemberDTO> mySourceConceptContentViewMember = new ArrayList<SourceConceptContentViewMemberDTO>();
                         
             switch (method) {
-            case "getSourceConceptContentViewMemberships": mySourceConceptContentViewMember = utsContentService.getSourceConceptContentViewMemberships(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "195967001", "SNOMEDCT", myPsf); 
+            case "getSourceConceptContentViewMemberships": mySourceConceptContentViewMember = utsContentService.getSourceConceptContentViewMemberships(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "427419006", "SNOMEDCT", myPsf); 
             break;
             case "getContentViewSourceConceptMembers": mySourceConceptContentViewMember = utsContentService.getContentViewSourceConceptMembers(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "C2711988", myPsf);
         	break;
-        	default: out.println("Unrecognized input ");
+        	default: System.out.println("Unrecognized input ");
         	break; 
             }
             
@@ -64,10 +55,12 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
             	SourceConceptContentViewMemberDTO mySourceConceptCont = mySourceConceptContentViewMember.get(i);
                 String ui = mySourceConceptCont.getSourceConcept().getUi();
             	String name = mySourceConceptCont.getSourceConcept().getDefaultPreferredName();
-                String contviewhandle = mySourceConceptCont.getContentViewHandle();
-                int attributeCount = mySourceConceptCont.getSourceConcept().getCVMemberCount();
+            	String cvId = mySourceConceptCont.getContentViewHandle();
+            	ContentViewDTO myCv = utsContentService.getContentView(securityService.getProxyTicket(ticketGrantingTicket(), serviceName),umlsRelease, cvId);
+                String cvName = myCv.getName();
+            	
                                
-                System.out.println(ui+"|"+name+"|"+contviewhandle+"|"+attributeCount);
+                System.out.println(ui+"|"+name+"|"+cvId+"|"+cvName);
                 }
             
   
