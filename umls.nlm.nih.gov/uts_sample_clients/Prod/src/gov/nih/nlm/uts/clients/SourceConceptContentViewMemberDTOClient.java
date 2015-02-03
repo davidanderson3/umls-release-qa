@@ -9,7 +9,7 @@ public class SourceConceptContentViewMemberDTOClient {
 
 	private static String username = "";
     private static String password = ""; 
-    static String umlsRelease = "2011AB";
+    static String umlsRelease = "2013AB";
 	static String serviceName = "http://umlsks.nlm.nih.gov";
     
 static UtsWsContentController utsContentService = (new UtsWsContentControllerImplService()).getUtsWsContentControllerImplPort();

@@ -1,6 +1,7 @@
 package gov.nih.nlm.uts.clients;
 
 import static java.lang.System.out;
+
 import java.util.ArrayList;
 
 import gov.nih.nlm.uts.webservice.content.*;
@@ -45,7 +46,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
             String method = args[3];
         	
            switch (method) {
-           case "getConceptDefinitions": myDefinition = utsContentService.getConceptDefinitions(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "C0018946",  myPsf);
+           case "getConceptDefinitions": myDefinition = utsContentService.getConceptDefinitions(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "C0019682",  myPsf);
            break;
            case "getAtomDefinitions": myDefinition = utsContentService.getAtomDefinitions(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "A19031600", myPsf); 
        	   break;
@@ -63,12 +64,12 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 
             gov.nih.nlm.uts.webservice.content.DefinitionDTO myDefDTO = myDefinition.get(i);
             String ui = myDefDTO.getUi();
-            String value = myDefDTO.getValue();
+            String def = myDefDTO.getValue();
             //int attrCount = myDefDTO.getAttributeCount();
             //int relationCount = myDefDTO.getRelationCount();
             String rootSource = myDefDTO.getRootSource();
-            String sourceUi = myDefDTO.getSourceUi();
-            System.out.println(value+"|"+rootSource+"|"+ui);
+            //System.out.println(rootSource+"|"+def);
+            System.out.println("&lt;tr&gt;&lt;td&gt;"+rootSource+"&lt;/td&gt;"+"&lt;td&gt;"+def+"&lt;/td&gt;&lt;/tr&gt;");
             
            }
             

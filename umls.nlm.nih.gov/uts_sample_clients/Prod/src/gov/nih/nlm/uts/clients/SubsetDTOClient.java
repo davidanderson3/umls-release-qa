@@ -86,7 +86,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
             break;
             
             //what are the members of a given subset?
-            case "getSubsetSourceConceptMembers": mySubsetMembersDTO = utsContentService.getSubsetSourceConceptMembers(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "C3714473", myPsf);
+            case "getSubsetSourceConceptMembers": mySubsetMembersDTO = utsContentService.getSubsetSourceConceptMembers(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "C3853365", myPsf);
             
             System.out.println("id|term");
             for(SourceConceptSubsetMemberDTO subsetMember:mySubsetMembersDTO) {

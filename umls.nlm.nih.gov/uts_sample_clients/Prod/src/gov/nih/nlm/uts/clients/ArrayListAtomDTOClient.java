@@ -17,7 +17,7 @@ public class ArrayListAtomDTOClient {
 			// Runtime properties
 			String username = "debjaniani";
 			String password = "Cartoon123!";
-			String umlsRelease = "2010AB";
+			String umlsRelease = "2014AB";
 			String serviceName = "http://umlsks.nlm.nih.gov";
 			
                         
@@ -111,7 +111,7 @@ public class ArrayListAtomDTOClient {
             
             //myAtoms = utsContentService.getConceptAtoms(singleUseTicket, umlsRelease,"C0018787",myPsf);
             //myAtoms = utsContentService.getCodeAtoms(singleUseTicket, umlsRelease,"154895004","SNOMEDCT",myPsf);
-            myAtoms = utsContentService.getSourceConceptAtoms(singleUseTicket, umlsRelease,"4841000124109","SCTUSX",myPsf);
+            myAtoms = utsContentService.getSourceConceptAtoms(singleUseTicket, umlsRelease,"1361000119104","SNOMEDCT_US",myPsf);
             //myAtoms = utsContentService.getSourceDescriptorAtoms(singleUseTicket, umlsRelease,"D000103","MSH",myPsf);
             
             for (int i = 0; i < myAtoms.size(); i++) {
@@ -120,15 +120,15 @@ public class ArrayListAtomDTOClient {
             AtomDTO myAtomDTO = myAtoms.get(i);
 
             String aui = myAtomDTO.getUi();
-            String source = myAtomDTO.getRootSource();
+            String scui = myAtomDTO.getSourceConcept().getUi();
+            String sAui = myAtomDTO.getSourceUi();
             String name = myAtomDTO.getTermString().getName();
-            String TermType = myAtomDTO.getTermType();
-            //String srcUi = myAtomDTO.getSourceConcept().getUi();
-            //int cvMemberCount = myAtomDTO.getCvMemberCount();
+            String tty = myAtomDTO.getTermType();
             boolean obsolete = myAtomDTO.isObsolete();
-            boolean suppresible = myAtomDTO.isSuppressible();
             
-            System.out.println(aui+"|"+source+"|"+name+"|"+TermType+"|"+obsolete+"|"+suppresible);
+            System.out.println(aui+"|"+scui+"|"+sAui+"|"+name+"|"+tty+"|"+obsolete);
+            //System.out.println("&lt;tr&gt;&lt;td&gt;"+aui+"&lt;/td&gt;&lt;td&gt;"+scui+"&lt;/td&gt;&lt;td&gt;"+sAui+"&lt;/td&gt;&lt;td&gt;"+name+"&lt;/td&gt;&lt;td&gt;"+tty+"&lt;/td&gt;&lt;td&gt;"+obsolete+"&lt;/td&gt;&lt;/tr&gt;");
+            
             }
 	
 		} catch (Exception ex) {

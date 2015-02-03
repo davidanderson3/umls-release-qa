@@ -59,8 +59,9 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
                 int noAuis = myContentViewDTO.getAtomMemberCount();
                 int noScuis = myContentViewDTO.getSourceConceptMemberCount();
 
-                System.out.println("&lt;tr&gt;&lt;td&gt;"+cui+"&lt;/td&gt;"+"&lt;td&gt;"+name+"&lt;/td&gt;&lt;/tr&gt;");
-                }
+                //System.out.println("&lt;tr&gt;&lt;td&gt;"+cui+"&lt;/td&gt;"+"&lt;td&gt;"+name+"&lt;/td&gt;&lt;/tr&gt;");
+                System.out.println(cui+"|"+name+"|");
+            }
             break;
             
         	case "getContentView": myContentView = utsContentService.getContentView(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "C3812142");
