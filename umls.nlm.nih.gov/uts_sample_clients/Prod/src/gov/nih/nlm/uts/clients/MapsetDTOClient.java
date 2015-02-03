@@ -11,7 +11,7 @@ import gov.nih.nlm.uts.webservice.security.UtsWsSecurityControllerImplService;
 public class MapsetDTOClient {
 	private static String username = "";
     private static String password = ""; 
-    static String umlsRelease = "2011AB";
+    static String umlsRelease = "2014AB";
 	static String serviceName = "http://umlsks.nlm.nih.gov";
     
 static UtsWsContentController utsContentService = (new UtsWsContentControllerImplService()).getUtsWsContentControllerImplPort();
@@ -52,14 +52,13 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 
             	MapsetDTO myMapset = Mapsetdto.get(i);
                 String ui = myMapset.getUi();
-                String name = myMapset.getName();
+                String name  = myMapset.getName();
                 String version = myMapset.getVersion();
                 String frmrootsrc = myMapset.getFromRootSource();
                 String frmcomplexity = myMapset.getFromComplexity();
                 String torootsrc = myMapset.getToRootSource();
-                String tocomplexity = myMapset.getToComplexity();               
-               
-                System.out.println(ui+"|"+name+"|"+version+"|"+frmrootsrc+"|"+frmcomplexity+"|"+torootsrc+"|"+tocomplexity);
+
+                System.out.println(ui+"|"+name+"|"+version+"|"+frmrootsrc+"|"+frmcomplexity+"|"+torootsrc);
                 }
             
   

@@ -12,7 +12,7 @@ import gov.nih.nlm.uts.webservice.security.UtsWsSecurityControllerImplService;
 public class ContentViewDTOClient {
 	private static String username = "";
     private static String password = ""; 
-    static String umlsRelease = "2011AB";
+    static String umlsRelease = "2014AB";
 	static String serviceName = "http://umlsks.nlm.nih.gov";
     
 static UtsWsContentController utsContentService = (new UtsWsContentControllerImplService()).getUtsWsContentControllerImplPort();
@@ -40,8 +40,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 	public static void main(String[] args) {
 		try {
 			// Runtime properties
-//			String username = "debjaniani";
-//			String password = "Cartoon123!";
+
 			ContentViewDTOClient ConViewClient = new ContentViewDTOClient(args[0],args[1]);
             
         	String method = args[2];
@@ -55,20 +54,22 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
             for (int i = 0; i < myContentViews.size(); i++) {
 
             	ContentViewDTO myContentViewDTO = myContentViews.get(i);
+            	String cui = myContentViewDTO.getHandle();
                 String name = myContentViewDTO.getName();
-                int atommembercnt = myContentViewDTO.getAtomMemberCount();
-                String contributor = myContentViewDTO.getContributor();
-                String contributorurl = myContentViewDTO.getContributorURL();
-                System.out.println(name+"|"+atommembercnt+"|"+contributor+"|"+contributorurl);
-                }
+                int noAuis = myContentViewDTO.getAtomMemberCount();
+                int noScuis = myContentViewDTO.getSourceConceptMemberCount();
+
+                //System.out.println("&lt;tr&gt;&lt;td&gt;"+cui+"&lt;/td&gt;"+"&lt;td&gt;"+name+"&lt;/td&gt;&lt;/tr&gt;");
+                System.out.println(cui+"|"+name+"|");
+            }
             break;
             
-        	case "getContentView": myContentView = utsContentService.getContentView(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "C2711988");
+        	case "getContentView": myContentView = utsContentService.getContentView(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "C3812142");
         	String name = myContentView.getName();
-            int atommembercnt = myContentView.getAtomMemberCount();
+            int scuiCount = myContentView.getSourceConceptMemberCount();
             String contributor = myContentView.getContributor();
             String contributorurl = myContentView.getContributorURL();
-            System.out.println(name+"|"+atommembercnt+"|"+contributor+"|"+contributorurl);
+            System.out.println(name+"|"+scuiCount+"|"+contributor+"|"+contributorurl);
         	break;
         	
          	default: out.println("Unrecognized input ");

@@ -46,6 +46,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
             java.util.List<SubsetDTO> mySubsetsDTO = new ArrayList<SubsetDTO>();
             SubsetDTO mySubsetDTO = new SubsetDTO();
             List<SourceConceptSubsetMemberDTO> mySubsetMembersDTO = new ArrayList<SourceConceptSubsetMemberDTO>();
+            List<SourceConceptSubsetMemberDTO> mySubsetMemberships = new ArrayList<SourceConceptSubsetMemberDTO>();
 
             
             switch (method) {
@@ -57,9 +58,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
             	SubsetDTO mySubsets = mySubsetsDTO.get(i);
                 String ui = mySubsets.getUi();
                 String name = mySubsets.getName();
-                String srcui = mySubsets.getSourceUi();
-                int atommemcnt = mySubsets.getAtomMemberCount();
-                System.out.println(ui+"|"+name+"|"+srcui+"|"+atommemcnt);  
+                System.out.println(ui+"|"+name);  
                 }
             
             break;
@@ -68,9 +67,21 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
             case "getSubset": mySubsetDTO = utsContentService.getSubset(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "C1368722");
             String ui = mySubsetDTO.getUi();
             String name = mySubsetDTO.getName();
-            String srcui = mySubsetDTO.getSourceUi();
-            int atommemcnt = mySubsetDTO.getAtomMemberCount();
-            System.out.println(ui+"|"+name+"|"+srcui+"|"+atommemcnt);
+            System.out.println(ui+"|"+name);
+            
+            break;
+            
+            //to which subsets does a given source concept belong? *** not working ***?
+            case "getSourceConceptSubsetMemberships": mySubsetMemberships = utsContentService.getSourceConceptSubsetMemberships(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "SNOMEDCT_US", "141731000119108", myPsf);
+            for(SourceConceptSubsetMemberDTO mySubsetMemberDTO: mySubsetMemberships) {
+            	
+            	String scui = mySubsetMemberDTO.getSourceConcept().getUi();
+            	String term = mySubsetMemberDTO.getSourceConcept().getDefaultPreferredName();
+            	String subsetUi = mySubsetMemberDTO.getSubsetHandle();
+            	
+            	System.out.println (scui+"|"+term+"|"+subsetUi);
+            	
+            }
             
             break;
             
