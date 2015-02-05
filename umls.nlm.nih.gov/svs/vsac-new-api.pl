@@ -6,6 +6,7 @@ use LWP::UserAgent;
 use URI;
 use Getopt::Std;
 use XML::LibXML;
+use XML::Saxon::XSLT2;
 
 my $uri = URI->new("https://vsac.nlm.nih.gov");
 my $service = URI->new("http://umlsks.nlm.nih.gov");
@@ -13,9 +14,7 @@ our ($opt_u,$opt_p);
 getopt('up');
 my $username = $opt_u || die "please provide username";
 my $password = $opt_p || die "please provide password";
-
 my $ua = LWP::UserAgent->new;
-
 my $tgt = &getTgt();
 my $st;
 my $mode;
@@ -29,14 +28,30 @@ my %additional_parameters =  ( effectiveDate=>"",version=>"",tagName=>"",tagValu
 my $additional_parameters_ref = \%additional_parameters;
 my @responses;
 my $responses_ref = \@responses;
-#my $st = &getSingleUseTicket($tgt);
-#print qq{$st};
+my $parser = XML::LibXML->new;
 
 $mode = chooseMode();
 $path = choosePath($mode);
 $additional_parameters_ref = buildAdditionalParameters();
 
-if($mode eq "2"){
+if ($mode eq "1"){
+	
+	print "Enter your file containing a list of OIDs, one per line:\n";
+	my $file = <>;
+	chomp($file);
+	open FH, $file || die "could not open input $!";
+    while (<FH>) {
+    chomp($_);
+    my $oid = $_;
+    push(@oids, $oid);
+  
+    }
+    close(FH);
+	$responses_ref = executeQuery();
+}
+
+
+elsif($mode eq "2"){
 	
 	print "Please enter an OID: \n";
 	$oid = <>;
@@ -44,6 +59,9 @@ if($mode eq "2"){
 	push(@oids,$oid);
 	$responses_ref = executeQuery();
 }
+
+
+
 elsif ($mode eq "3") {
 	
 	$responses_ref = executeQuery();
@@ -51,7 +69,13 @@ elsif ($mode eq "3") {
 }
 
 for my $response(@responses) {
-	print qq{$response}
+	#print qq{$response};
+	my $xslt = $parser->load_xml( location => "valueset-mode.xsl" );
+	my $dom = $parser->load_xml( string => $response );
+	my $transformation = XML::Saxon::XSLT2->new($xslt);
+	my $output = $transformation->transform( $dom, 'text' );
+	print $output;
+
 }
 
 sub getTgt{
@@ -139,27 +163,25 @@ sub cleanParameters {
 
 sub executeQuery {
 	
-	 my $response;
+	my $response;
+	## are we dealing with OID-based calls or not?  
 	if (scalar(@oids) > 0) {
 	 
 	  foreach my $oid(@oids){
-	  #print qq{$oid};
 	  
 	  $st = getSingleUseTicket($tgt);
       $uri->path("/vsac/svs/".$path);
-      $base_parameters{id} .= $oid;
-      $base_parameters{ticket} .= $st;
+      $base_parameters{id} = $oid;
+      $base_parameters{ticket} = $st;
       
       my %final_parameters = (%base_parameters,%additional_parameters);
       $uri->query_form(\%final_parameters);
-    
-       print qq{$uri\n};
-      #my $query = $ua->get($uri);
-      #if ($query->is_success){$response = $query->{'_content'};push(@responses,$response);print qq{$response};} else {die "could not execute query on $oid\n";}
+      my $query = $ua->get($uri);
+      if ($query->is_success){$response = $query->{'_content'};push(@responses,$response);} else {die "could not execute query on $oid\n";}
 
 	  } ## end foreach
 	  
-	  #return @responses;
+	  return @responses;
 	  
     } ## endif
 	
@@ -172,9 +194,9 @@ sub executeQuery {
       $uri->query_form(\%final_parameters);
       #print qq{$uri\n};
       my $query = $ua->get($uri);
-      if ($query->is_success){$response = $query->{'_content'};} else {print "could not execute query for $oid\n";}
+      #if ($query->is_success){$response = $query->{'_content'};} else {print "could not execute query for $oid\n";}
       push(@responses,$response);
-		
+	  	
 	}##end else
 	return @responses;
 	
