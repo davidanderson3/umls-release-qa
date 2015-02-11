@@ -28,8 +28,9 @@ my $oid;
 my @oids;
 my %base_parameters;
 my %buildAdditionalParameters;
-my %additional_parameters =  ( effectiveDate=>"",version=>"",tagName=>"",tagValue=>"",profile=>"",includeDraft=>"" );
+my %additional_parameters;
 my $additional_parameters_ref = \%additional_parameters;
+my @additional_parameters = ("effectiveDate","version","tagName","tagValue","profile","includeDraft");
 my @responses;
 my $responses_ref = \@responses;
 my $parser = XML::LibXML->new;
@@ -78,6 +79,9 @@ elsif($mode eq "2"){
 
 elsif ($mode eq "3") {
 	
+	print "Enter the name of the output file:\n";
+	$outputfile = <>;
+	chomp($outputfile);
 	$responses_ref = executeQuery();
 	 
 }
@@ -86,7 +90,7 @@ open(OUT,">$outputdir/$outputfile") || die "cannot open output file$!";
 
 for my $response(@responses) {
 	
-	my $xslt = $parser->load_xml( location => "measure-mode.xsl" );
+	my $xslt = $parser->load_xml( location => "value-set-members.xsl" );
 	my $dom = $parser->load_xml( string => $response );
 	my $transformation = XML::Saxon::XSLT2->new($xslt);
 	my $output = $transformation->transform( $dom, 'text' );
@@ -105,7 +109,7 @@ sub getTgt{
     return $tgt;
     
    
-}
+} ## end getTgt
 
 sub getSingleUseTicket{
 	my $tgt = shift;
@@ -115,7 +119,8 @@ sub getSingleUseTicket{
 	my $query = $ua->post($uri) || die "could not obtain single-use ticket $!\n";
 	my $ticket = $query->{'_content'};
 	return $ticket;
-}
+
+} ## end getSingleUseTicket
 
 
 ##choose how to run the client
@@ -126,7 +131,7 @@ sub chooseMode{
  chomp $mode;
  return $mode;
 	
-}
+} ## end chooseMode
 
 sub choosePath{
 	
@@ -144,39 +149,26 @@ sub choosePath{
   elsif($mode eq "3") {$path = "RetrieveMultipleValueSets";}
   else {print "Invalid entry - exiting"; exit 1;}
   return $path;
-}
+} ## end choosePath
 
 
 sub buildAdditionalParameters{
 
-     my @keys = keys(%$additional_parameters_ref);
-     my $joined = join(", ", @keys);
-    
-     for my $key (sort @keys) {
+     for my $key (sort @additional_parameters) {
      	
      	print "Enter a value for $key, or hit the Enter key to skip to the next parameter:\n";
      	my $parameter_value = <>;
      	chomp $parameter_value;
-     	if($parameter_value !~/^$/) {$additional_parameters_ref->{$key} = $parameter_value;}
      	next if $parameter_value =~ /^$/;
-     	
+     	#if($parameter_value !~/^$/) {$additional_parameters_ref->{$key} = $parameter_value;}
+     	if (&isValid($key,$parameter_value) ne "false") {$additional_parameters_ref->{$key} = $parameter_value;}
+     	else{print qq{invalid entry for $key, exiting}; exit 1;}
      	
      }
-     
-     $additional_parameters_ref = &cleanParameters();
+
      return $additional_parameters_ref;
 
-}
-
-
-sub cleanParameters {
-	
-	foreach my $key(keys %additional_parameters) {
-		if($additional_parameters{$key} eq "" ) {delete $additional_parameters{$key};}
-	}
-	return %additional_parameters;
-}
-##end cleanParamters
+} ##end buildAdditionalParameters
 
 
 sub executeQuery {
@@ -212,7 +204,7 @@ sub executeQuery {
       $base_parameters{ticket} .= $st;
       my %final_parameters = (%base_parameters,%additional_parameters);
       $uri->query_form(\%final_parameters);
-      #print qq{$uri\n};
+      print qq{$uri\n};
       my $query = $ua->get($uri);
       if ($query->is_success){$response = $query->{'_content'};} else {print "could not execute query for $oid\n";}
       push(@responses,$response);
@@ -220,16 +212,21 @@ sub executeQuery {
 	}##end else
 	return @responses;
 	
-}
-## end executeQuery
+} ## end executeQuery
 
-##validation for entered values such as OIDs and other parameters
 
+##validation for entered values such as OIDs and other parameters for security reasons
 sub isValid {
 	
 	my($parameter,$value) = @_;
-	if($parameter eq "oid" && $value =~ /^[0-9\.]+(\.[0-9]+)$/) {return "true";} else {return "false";}
+	
+	if($parameter eq "oid" && $value =~ /^[0-9\.]+(\.[0-9]+)$/) {return "true";}
+	elsif($parameter eq "effectiveDate" && $value =~ /2{1}0{1}[0-9]{2}[0-1]{1}[1-9]{1}[0-3]{1}[0-9]{1}/) {return "true";}
+	elsif($parameter eq "includeDraft" && (lc($value) eq "yes" || lc($value) eq "no")) {return "true";}
+	elsif(($parameter eq "version" || $parameter eq "tagName" || $parameter eq "tagValue" || $parameter eq "profile")  && $value =~ /[0-9a-zA-Z]{3,25}/) {return "true";}
+	
+	else {return "false";}
 
-}
+} ## end isValid
 
 	
