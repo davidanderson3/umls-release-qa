@@ -1,4 +1,5 @@
 #!C:\strawberry\perl\bin
+
  
 use strict;
 use warnings;
@@ -7,7 +8,10 @@ use URI;
 use Getopt::Std;
 use XML::LibXML;
 use XML::Saxon::XSLT2;
-
+my $windows=($^O=~/Win/)?1:0;
+my $outputdir;
+my $outputfile;
+if(! $windows){$outputdir = "$ENV{'HOME'}/Desktop/svs";} else{$outputdir = "$ENV{'USERPROFILE'}/Desktop/svs";}
 my $uri = URI->new("https://vsac.nlm.nih.gov");
 my $service = URI->new("http://umlsks.nlm.nih.gov");
 our ($opt_u,$opt_p);
@@ -30,19 +34,25 @@ my @responses;
 my $responses_ref = \@responses;
 my $parser = XML::LibXML->new;
 
+
 $mode = chooseMode();
 $path = choosePath($mode);
 $additional_parameters_ref = buildAdditionalParameters();
+open(ERR,">$outputdir/error.txt") || die "could not open error file$!\n";
 
 if ($mode eq "1"){
 	
 	print "Enter your file containing a list of OIDs, one per line:\n";
 	my $file = <>;
 	chomp($file);
+	print "Enter the name of the output file:\n";
+	$outputfile = <>;
+	chomp($outputfile);
 	open FH, $file || die "could not open input $!";
     while (<FH>) {
     chomp($_);
     my $oid = $_;
+    if(&isValid("oid",$oid) ne "true") {print "OID is invalid - exiting"; exit 1;}
     push(@oids, $oid);
   
     }
@@ -56,6 +66,10 @@ elsif($mode eq "2"){
 	print "Please enter an OID: \n";
 	$oid = <>;
 	chomp $oid;
+	if(&isValid("oid",$oid) ne "true") {print "OID is invalid - exiting"; exit 1;}
+	print "Enter the name of the output file:\n";
+	$outputfile = <>;
+	chomp($outputfile);
 	push(@oids,$oid);
 	$responses_ref = executeQuery();
 }
@@ -68,15 +82,19 @@ elsif ($mode eq "3") {
 	 
 }
 
+open(OUT,">$outputdir/$outputfile") || die "cannot open output file$!";
+
 for my $response(@responses) {
-	#print qq{$response};
-	my $xslt = $parser->load_xml( location => "valueset-mode.xsl" );
+	
+	my $xslt = $parser->load_xml( location => "measure-mode.xsl" );
 	my $dom = $parser->load_xml( string => $response );
 	my $transformation = XML::Saxon::XSLT2->new($xslt);
 	my $output = $transformation->transform( $dom, 'text' );
-	print $output;
+	print OUT $output;
 
 }
+close(OUT);
+close(ERR);
 
 sub getTgt{
 	
@@ -176,8 +194,10 @@ sub executeQuery {
       
       my %final_parameters = (%base_parameters,%additional_parameters);
       $uri->query_form(\%final_parameters);
+      print qq{$uri\n};
       my $query = $ua->get($uri);
-      if ($query->is_success){$response = $query->{'_content'};push(@responses,$response);} else {die "could not execute query on $oid\n";}
+      if ($query->is_success){$response = $query->{'_content'};push(@responses,$response);} 
+      else {print ERR $oid."|".$query->status_line."\n";}
 
 	  } ## end foreach
 	  
@@ -194,7 +214,7 @@ sub executeQuery {
       $uri->query_form(\%final_parameters);
       #print qq{$uri\n};
       my $query = $ua->get($uri);
-      #if ($query->is_success){$response = $query->{'_content'};} else {print "could not execute query for $oid\n";}
+      if ($query->is_success){$response = $query->{'_content'};} else {print "could not execute query for $oid\n";}
       push(@responses,$response);
 	  	
 	}##end else
@@ -203,5 +223,13 @@ sub executeQuery {
 }
 ## end executeQuery
 
+##validation for entered values such as OIDs and other parameters
+
+sub isValid {
+	
+	my($parameter,$value) = @_;
+	if($parameter eq "oid" && $value =~ /^[0-9\.]+(\.[0-9]+)$/) {return "true";} else {return "false";}
+
+}
 
 	
