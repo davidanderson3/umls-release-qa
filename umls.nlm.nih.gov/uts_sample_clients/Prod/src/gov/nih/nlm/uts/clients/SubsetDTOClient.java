@@ -91,13 +91,10 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
             
             //what are the members of a given subset?
             case "getSubsetSourceConceptMembers": 
-            
-            
             do {	
             	myPsf.setPageNum(pageNum);
             	mySubsetMembersDTO = utsContentService.getSubsetSourceConceptMembers(securityService.getProxyTicket(ticket, serviceName), umlsRelease, "C3853365", myPsf);
-                System.out.println("*** page"+myPsf.getPageNum());
-                
+                //System.out.println("*** page"+myPsf.getPageNum());
                 for(SourceConceptSubsetMemberDTO subsetMember:mySubsetMembersDTO) {
             	String id = subsetMember.getSourceConcept().getUi();
             	String term = subsetMember.getSourceConcept().getDefaultPreferredName();
