@@ -28,6 +28,11 @@ Update history:
 # output will write to your $HOME/svs directory to the filename you specifiy
 # Only use mode RetrieveMultipleValueSets for now
 # Only use Batch OID or Single Use.  Measure Mode is not yet implemented.
+# Use 'Value Set Codes' output to get a list of all codes and names for each OID
+# Use 'Value Set Definitions' to get a list of member OIDs that belong to a grouping OID
+# Use 'Code Counts' to get the total number of codes per code system per value set
+# Use 'Measure Counts' to get a list of measure/QDMs (and their counts) that are using a value set
+
 
 
 
