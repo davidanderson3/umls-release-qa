@@ -1,6 +1,10 @@
-#!C:\strawberry\perl\bin
+#!/usr/bin/perl
 
- 
+##Version 0.1
+##Usage Notes
+##   Only use mode RetrieveMultipleValueSets for now
+##   Only use Batch OID or Single Use.  Measure Mode is not yet implemented.
+
 use strict;
 use warnings;
 use LWP::UserAgent;
@@ -11,7 +15,7 @@ use XML::Saxon::XSLT2;
 my $windows=($^O=~/Win/)?1:0;
 my $outputdir;
 my $outputfile;
-if(! $windows){$outputdir = "$ENV{'HOME'}/Desktop/svs";} else{$outputdir = "$ENV{'USERPROFILE'}/Desktop/svs";}
+if(! $windows){$outputdir = "$ENV{'HOME'}/svs";} else{$outputdir = "$ENV{'USERPROFILE'}/svs";}
 my $uri = URI->new("https://vsac.nlm.nih.gov");
 my $service = URI->new("http://umlsks.nlm.nih.gov");
 our ($opt_u,$opt_p);
@@ -31,13 +35,17 @@ my %buildAdditionalParameters;
 my %additional_parameters;
 my $additional_parameters_ref = \%additional_parameters;
 my @additional_parameters = ("effectiveDate","version","tagName","tagValue","profile","includeDraft");
+my %reports = ("Value Set Codes" => "value-set-codes.xsl","Value Set Definitions"=>"value-set-definitions.xsl","Code Counts"=>"value-set-code-counts.xsl");
+my @report_choices = keys(%reports);
 my @responses;
+my $stylesheet;
 my $responses_ref = \@responses;
 my $parser = XML::LibXML->new;
 
 
 $mode = chooseMode();
 $path = choosePath($mode);
+$stylesheet = getStyleSheet();
 $additional_parameters_ref = buildAdditionalParameters();
 open(ERR,">$outputdir/error.txt") || die "could not open error file$!\n";
 
@@ -64,6 +72,7 @@ if ($mode eq "1"){
 
 elsif($mode eq "2"){
 	
+    
 	print "Please enter an OID: \n";
 	$oid = <>;
 	chomp $oid;
@@ -90,7 +99,7 @@ open(OUT,">$outputdir/$outputfile") || die "cannot open output file$!";
 
 for my $response(@responses) {
 	
-	my $xslt = $parser->load_xml( location => "value-set-members.xsl" );
+	my $xslt = $parser->load_xml( location => $stylesheet );
 	my $dom = $parser->load_xml( string => $response );
 	my $transformation = XML::Saxon::XSLT2->new($xslt);
 	my $output = $transformation->transform( $dom, 'text' );
@@ -223,10 +232,18 @@ sub isValid {
 	if($parameter eq "oid" && $value =~ /^[0-9\.]+(\.[0-9]+)$/) {return "true";}
 	elsif($parameter eq "effectiveDate" && $value =~ /2{1}0{1}[0-9]{2}[0-1]{1}[1-9]{1}[0-3]{1}[0-9]{1}/) {return "true";}
 	elsif($parameter eq "includeDraft" && (lc($value) eq "yes" || lc($value) eq "no")) {return "true";}
-	elsif(($parameter eq "version" || $parameter eq "tagName" || $parameter eq "tagValue" || $parameter eq "profile")  && $value =~ /[0-9a-zA-Z]{3,25}/) {return "true";}
-	
+	elsif(($parameter eq "version" || $parameter eq "tagName" || $parameter eq "tagValue" || $parameter eq "profile")  && $value =~ /[0-9a-zA-Z]{2,25}/) {return "true";}
 	else {return "false";}
 
 } ## end isValid
+
+sub getStyleSheet {
+	
+	print "Please choose report format: ". join(',',@report_choices),"\n";
+	my $report_choice = <>;
+	chomp($report_choice);
+	if(exists($reports{$report_choice})) {$stylesheet = $reports{$report_choice};} else{print "invalid entry, exiting"; exit 1;}
+	return $stylesheet;
+}
 
 	

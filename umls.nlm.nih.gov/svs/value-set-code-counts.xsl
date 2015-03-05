@@ -3,17 +3,28 @@
     xmlns:java="http://www.java.com/"
     exclude-result-prefixes="java xs">
 <xsl:output method = "text"  encoding = "utf-8"></xsl:output>
+ 
 <xsl:template match = "ns0:RetrieveMultipleValueSetsResponse">
-    <xsl:variable name = "numberOfValueSets" select = "count(ns0:DescribedValueSet)"/>
-    <xsl:text>Number of value sets in measure: </xsl:text><xsl:value-of select = "$numberOfValueSets"/>
-    
-    <!--<xsl:for-each select = "ns0:DescribedValueSet">
-        <xsl:text>OID|ValueSetName|NumberOfCodes&#10;</xsl:text>
-        <xsl:variable name = "oid" select = "@ID"/>
-        <xsl:variable name = "valueSetName" select = "@displayName"/>
-        <xsl:variable name = "codeCount" select = "string(count(ns0:ConceptList/child::*))"/>
-        <xsl:value-of select = "string-join(($oid,$valueSetName,$codeCount),'|')"/>
-        <xsl:text>&#10;</xsl:text>  
-    </xsl:for-each>  -->  
+
+        <xsl:for-each select="ns0:DescribedValueSet">
+            <xsl:variable name = "cs" select = "ns0:ConceptList/ns0:Concept/@codeSystemName"/>
+            <xsl:value-of select = "@ID"/><xsl:text>|</xsl:text>
+            <!--<xsl:value-of select = "@displayName"/><xsl:text>|</xsl:text>-->
+            <!--<xsl:value-of select = "count(ns0:ConceptList/ns0:Concept)"/><xsl:text>|</xsl:text>-->
+            <xsl:for-each select = "$cs">
+                <xsl:sort select = "current()"/>
+                <xsl:if test="generate-id() = generate-id($cs[. = current()][1])">
+                    <xsl:value-of select = "."/>
+                    <xsl:text>:</xsl:text><xsl:value-of select = "count($cs[.=current()])"/><xsl:text> </xsl:text>
+                </xsl:if>
+            </xsl:for-each>
+            <xsl:text>&#10;</xsl:text>
+            <!--<xsl:text>|</xsl:text>
+            <xsl:value-of select = "ns0:Group[@displayName='CMS eMeasure ID']/ns0:Keyword"/><xsl:text>|</xsl:text>
+            <xsl:value-of select = "count(ns0:Group[@displayName='CMS eMeasure ID']/ns0:Keyword)"/><xsl:text>|</xsl:text>
+            <xsl:value-of select = "count(ns0:Group[@displayName='CATEGORY']/ns0:Keyword)"/><xsl:text>|</xsl:text>
+            <xsl:text>&#10;</xsl:text>-->
+        </xsl:for-each>
+
 </xsl:template>
 </xsl:stylesheet>

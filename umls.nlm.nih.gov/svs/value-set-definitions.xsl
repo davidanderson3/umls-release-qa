@@ -26,10 +26,6 @@
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:if>
-            <xsl:if test = "not(ns0:Definition)"><xsl:text>||</xsl:text></xsl:if>
-            <xsl:value-of select = "ns0:Group[@displayName='CMS eMeasure ID']/ns0:Keyword"/><xsl:text>|</xsl:text>
-            <xsl:value-of select = "count(ns0:Group[@displayName='CMS eMeasure ID']/ns0:Keyword)"/><xsl:text>|</xsl:text>
-            <xsl:value-of select = "count(ns0:Group[@displayName='CATEGORY']/ns0:Keyword)"/><xsl:text>|</xsl:text>
         </xsl:for-each>
     </xsl:template>
 </xsl:stylesheet>
