@@ -1,9 +1,16 @@
 #!/usr/bin/perl
 
-##Version 0.1
+##Version 0.2
+##Updates
+# Add ability to retrieve measure and QDM usage (via value-set-measure-counts.xsl)
+# Add ability to ouptut pure xml (use the 'SVS XML' report option)
+
 ##Usage Notes
-##   Only use mode RetrieveMultipleValueSets for now
-##   Only use Batch OID or Single Use.  Measure Mode is not yet implemented.
+# create a directory in your $HOME called 'svs'
+# to start the client: perl vsac-svs-api.pl -u username -p password
+# output will write to your $HOME/svs directory to the filename you specifiy
+# Only use mode RetrieveMultipleValueSets for now
+# Only use Batch OID or Single Use.  Measure Mode is not yet implemented.
 
 use strict;
 use warnings;
@@ -35,7 +42,7 @@ my %buildAdditionalParameters;
 my %additional_parameters;
 my $additional_parameters_ref = \%additional_parameters;
 my @additional_parameters = ("effectiveDate","version","tagName","tagValue","profile","includeDraft");
-my %reports = ("Value Set Codes" => "value-set-codes.xsl","Value Set Definitions"=>"value-set-definitions.xsl","Code Counts"=>"value-set-code-counts.xsl");
+my %reports = ("SVS XML"=>"none","Measure Counts" => "value-set-measure-counts.xsl","Value Set Codes" => "value-set-codes.xsl","Value Set Definitions"=>"value-set-definitions.xsl","Code Counts"=>"value-set-code-counts.xsl");
 my @report_choices = keys(%reports);
 my @responses;
 my $stylesheet;
@@ -98,13 +105,14 @@ elsif ($mode eq "3") {
 open(OUT,">$outputdir/$outputfile") || die "cannot open output file$!";
 
 for my $response(@responses) {
-	
+	if ($stylesheet eq "none") {print OUT $response;}
+	else {
 	my $xslt = $parser->load_xml( location => $stylesheet );
 	my $dom = $parser->load_xml( string => $response );
 	my $transformation = XML::Saxon::XSLT2->new($xslt);
 	my $output = $transformation->transform( $dom, 'text' );
 	print OUT $output;
-
+	}
 }
 close(OUT);
 close(ERR);
