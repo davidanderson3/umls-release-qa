@@ -6,7 +6,6 @@
     <xsl:output method = "text"  encoding = "utf-8"></xsl:output>
     
     <xsl:template match = "ns0:RetrieveMultipleValueSetsResponse">
-        <xsl:text>OID|ValueSetName|CMS Measures|#CMS Measures|QDM Categories|# QDMs&#10;</xsl:text>
         <xsl:for-each select = "ns0:DescribedValueSet">
             <xsl:value-of select = "@ID"/><xsl:text>|</xsl:text>
             <xsl:value-of select = "@displayName"/><xsl:text>|</xsl:text>
