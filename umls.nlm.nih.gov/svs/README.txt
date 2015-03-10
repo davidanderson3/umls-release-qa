@@ -14,13 +14,17 @@ To run from mlbapp01:
   
 Update history:
 
-##Version 0.1
-# Initial Commit
+##Version 0.3
+##Updates
+# Allows skipping single-OID entry when so users can retrieve info on measures using tagName/Value
 
 ##Version 0.2
 ##Updates
 # Add ability to retrieve measure and QDM usage (via value-set-measure-counts.xsl)
 # Add ability to ouptut pure xml (use the 'SVS XML' report option)
+
+##Version 0.1
+# Initial Commit
 
 ##Usage Notes
 # create a directory in your $HOME called 'svs'
