@@ -1,9 +1,8 @@
 #!/usr/bin/perl
 
-##Version 0.2
+##Version 0.3
 ##Updates
-# Add ability to retrieve measure and QDM usage (via value-set-measure-counts.xsl)
-# Add ability to ouptut pure xml (use the 'SVS XML' report option)
+# Allows skipping single-OID entry when so users can retrieve info on measures using tagName/Value
 
 ##Usage Notes
 # create a directory in your $HOME called 'svs'
@@ -80,14 +79,15 @@ if ($mode eq "1"){
 elsif($mode eq "2"){
 	
     
-	print "Please enter an OID: \n";
+	print "Please enter an OID, or hit the Enter key to skip: \n";
 	$oid = <>;
 	chomp $oid;
 	if(&isValid("oid",$oid) ne "true") {print "OID is invalid - exiting"; exit 1;}
 	print "Enter the name of the output file:\n";
 	$outputfile = <>;
 	chomp($outputfile);
-	push(@oids,$oid);
+	##users can skip the oid of they just want to run RetrieveMultipleValueSets against a single measure using tag names/values
+	if($oid !~ /^$/) {push(@oids,$oid)};
 	$responses_ref = executeQuery();
 }
 
@@ -143,7 +143,7 @@ sub getSingleUseTicket{
 ##choose how to run the client
 sub chooseMode{
 	
- print "Enter the mode -> 1 for Batch OID Mode, 2 for Single Use OID Mode, 3 for Measure Mode :";
+ print "Enter the mode -> 1 for Batch OID Mode, 2 for Single Use Mode, 3 for Measure Mode :";
  $mode = <>;
  chomp $mode;
  return $mode;
@@ -237,7 +237,7 @@ sub isValid {
 	
 	my($parameter,$value) = @_;
 	
-	if($parameter eq "oid" && $value =~ /^[0-9\.]+(\.[0-9]+)$/) {return "true";}
+	if($parameter eq "oid" && ($value =~ /^[0-9\.]+(\.[0-9]+)$/ || $value =~ /^$/)) {return "true";}
 	elsif($parameter eq "effectiveDate" && $value =~ /2{1}0{1}[0-9]{2}[0-1]{1}[1-9]{1}[0-3]{1}[0-9]{1}/) {return "true";}
 	elsif($parameter eq "includeDraft" && (lc($value) eq "yes" || lc($value) eq "no")) {return "true";}
 	elsif(($parameter eq "version" || $parameter eq "tagName" || $parameter eq "tagValue" || $parameter eq "profile")  && $value =~ /[0-9a-zA-Z]{2,25}/) {return "true";}
