@@ -9,8 +9,7 @@ Be sure you are in the 'develop' branch in git.  mlbapp01 is already configured 
 To run from mlbapp01:
   1) cd /umls_dev/mms/git/umlsdoc/umls.nlm.nih.gov/svs
   2) perl vsac-svs-api.pl -u username -p password (use your UMLS credentials for username/password)
-  3) select your options accordingly.   While the client does provide parameter validation, it doesn't force you to choose the 'right' parameters, so it
-  assumes some familiarity with the API.
+  3) select your options accordingly.   While the client does provide parameter validation, it doesn't force you to choose the 'right' parameters, so it assumes some familiarity with the API.
   
 Update history:
 
