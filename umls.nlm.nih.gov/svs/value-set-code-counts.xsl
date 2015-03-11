@@ -9,7 +9,7 @@
         <xsl:for-each select="ns0:DescribedValueSet">
             <xsl:variable name = "cs" select = "ns0:ConceptList/ns0:Concept/@codeSystemName"/>
             <xsl:value-of select = "@ID"/><xsl:text>|</xsl:text>
-            <!--<xsl:value-of select = "@displayName"/><xsl:text>|</xsl:text>-->
+            <xsl:value-of select = "@version"/><xsl:text>|</xsl:text>
             <!--<xsl:value-of select = "count(ns0:ConceptList/ns0:Concept)"/><xsl:text>|</xsl:text>-->
             <xsl:for-each select = "$cs">
                 <xsl:sort select = "current()"/>
