@@ -36,6 +36,7 @@ Update history:
 # Use 'Value Set Definitions' to get a list of member OIDs that belong to a grouping OID
 # Use 'Code Counts' to get the total number of codes per code system per value set
 # Use 'Measure Counts' to get a list of measure/QDMs (and their counts) that are using a value set
+# You can skip single OID entry if you want to run tagName/Value against a single measure.
 
 
 
