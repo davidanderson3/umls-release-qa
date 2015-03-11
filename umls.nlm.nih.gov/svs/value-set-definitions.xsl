@@ -4,8 +4,7 @@
     exclude-result-prefixes="java xs">
     <xsl:output method = "text"  encoding = "utf-8"></xsl:output>
     <xsl:template match = "ns0:RetrieveMultipleValueSetsResponse">
-          
-        <xsl:text>OID|ValueSetName|Member OID|Member OID Name&#10;</xsl:text>
+        <!--<xsl:text>OID|ValueSetName|Member OID|Member OID Name&#10;</xsl:text>-->
         <xsl:for-each select = "ns0:DescribedValueSet">
             <xsl:variable name = "oid" select = "@ID"/>
             <xsl:variable name = "valueSetName" select = "@displayName"/>

@@ -4,7 +4,7 @@
     xmlns:java="http://www.java.com/"
     exclude-result-prefixes="java xs">
     <xsl:output method = "text"  encoding = "utf-8"></xsl:output>
-    
+    <!-- each row is a list of measures, number of measures, QDM categories, and # of QDM categories per value set -->
     <xsl:template match = "ns0:RetrieveMultipleValueSetsResponse">
         <xsl:for-each select = "ns0:DescribedValueSet">
             <xsl:value-of select = "@ID"/><xsl:text>|</xsl:text>

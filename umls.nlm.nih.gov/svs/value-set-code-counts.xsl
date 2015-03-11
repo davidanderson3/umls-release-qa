@@ -3,14 +3,12 @@
     xmlns:java="http://www.java.com/"
     exclude-result-prefixes="java xs">
 <xsl:output method = "text"  encoding = "utf-8"></xsl:output>
- 
+<!-- each row is a list of code counts grouped by code system in a value set  -->
 <xsl:template match = "ns0:RetrieveMultipleValueSetsResponse">
-
         <xsl:for-each select="ns0:DescribedValueSet">
             <xsl:variable name = "cs" select = "ns0:ConceptList/ns0:Concept/@codeSystemName"/>
             <xsl:value-of select = "@ID"/><xsl:text>|</xsl:text>
             <xsl:value-of select = "@version"/><xsl:text>|</xsl:text>
-            <!--<xsl:value-of select = "count(ns0:ConceptList/ns0:Concept)"/><xsl:text>|</xsl:text>-->
             <xsl:for-each select = "$cs">
                 <xsl:sort select = "current()"/>
                 <xsl:if test="generate-id() = generate-id($cs[. = current()][1])">
@@ -19,12 +17,6 @@
                 </xsl:if>
             </xsl:for-each>
             <xsl:text>&#10;</xsl:text>
-            <!--<xsl:text>|</xsl:text>
-            <xsl:value-of select = "ns0:Group[@displayName='CMS eMeasure ID']/ns0:Keyword"/><xsl:text>|</xsl:text>
-            <xsl:value-of select = "count(ns0:Group[@displayName='CMS eMeasure ID']/ns0:Keyword)"/><xsl:text>|</xsl:text>
-            <xsl:value-of select = "count(ns0:Group[@displayName='CATEGORY']/ns0:Keyword)"/><xsl:text>|</xsl:text>
-            <xsl:text>&#10;</xsl:text>-->
         </xsl:for-each>
-
 </xsl:template>
 </xsl:stylesheet>
