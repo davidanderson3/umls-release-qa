@@ -27,6 +27,8 @@
 
 
 
+
+
                 Representation</a> </li>
             <li> <a href="metarepresentation.html">Metathesaurus
                 Representation</a> </li>
@@ -44,50 +46,46 @@
       name="general"></a>
     <div id="rep_change_summary" class="rep_block_level_one">
       <h3>Summary of Changes:</h3>
-      </br>
       <p>There were changes to both the original file format and to
         Metathesaurus source processing.</p>
-      <p>New ATN:&nbsp; SOS</br>
-        Previously, "Descriptor" values were made into
-        definitions.&nbsp; They are now represented as Scope Notes.</br>
+      <p>New ATN: SOS</br>
+        Previously, "Descriptor" values were represented as definitions.
+        They are now represented as Scope Notes.</br>
       </p>
-      <p>Deprecated:&nbsp; DEFINITION</br>
+      <p>Deprecated ATN: DEFINITION</br>
       </p>
       <p>The representation of the hierarchy in the original source data
-        files has changed.&nbsp; Previously, hierarchical terms were
-        indicated using a range in the "Code" field, e.g.
-        "D4000-D4999."&nbsp; The new format has fields for each level
-        the hierarchy, i.e. category, subcategory and subsubcategory.
-        &nbsp; </p>
+        files has changed. Previously, hierarchical terms were indicated
+        using a range in the "CODE" field, e.g. "D4000-D4999." The new
+        format has fields for each level in the hierarchy, i.e.
+        category, subcategory and subsubcategory. </p>
       <p><b>Notes:</b></br>
       </p>
       <ul>
-        <li>In the printed CDT book, some codes appear out of
-          order.&nbsp; The order information is not available in
-          electronic form, therefore the UMLS hierarchy varies slightly
-          from the hierarchy in the printed book.</li>
+        <li>In the printed CDT book, some codes appear out of order. The
+          order information is not available in electronic form,
+          therefore the UMLS hierarchy varies slightly from the
+          hierarchy in the printed book.</li>
       </ul>
       <ul>
         <li>A value of "None" in the original data is treated the same
           as a blank or null value.</li>
       </ul>
-      <ul>
-        <li> CDT in the Metathesaurus is extracted from a file provided
-          by the American Dental Association (ADA).&nbsp; The
-          Metathesaurus also includes the HCPCS version of CDT, which
-          has RSAB = "HCDT."&nbsp;&nbsp;&nbsp; The CDT hierarchy is
-          created from the data file provided by the ADA, while the HCDT
-          hierarchy is created during Metathesaurus production using
-          analysis of the HCPCS printed manual. </li>
-      </ul>
-      &nbsp; <span class="nav">(<a href="#top">return to top</a></span>)
+      CDT in the Metathesaurus is extracted from a file provided by the
+      American Dental Association (ADA). The Metathesaurus also includes
+      the HCPCS version of CDT, which has RSAB = "HCDT." The CDT
+      hierarchy is created from the data file provided by the ADA, while
+      the HCDT hierarchy is created during Metathesaurus production
+      using analysis of the HCPCS printed manual. </br>
+      </br>
+      <span class="nav">(<a href="#top">return to top</a></span>)
       <div style="margin-left: 40px;"></br>
       </div>
     </div>
     <div id="rep_file_summary" class="rep_block_level_one"> <a
         name="file_summary"></a>
       <h3>Source-Provided Files: Summary</h3>
-      &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
+      (<span class="nav"><a href="#top">return to top</a></span>)
       <div id="rep_file_details" class="rep_block_level_one">
         <!-- Make a table of each file that comes from the source   --></br>
         </br>
@@ -100,8 +98,7 @@
             </tr>
             <tr>
               <td class="file_field_name">b_CDT2015ASCIItext_tabdelimited_5.30.2014.txt</td>
-              <td>Documentation and tab
-                delimited text file </td>
+              <td>Documentation and tab delimited text file </td>
             </tr>
             <tr>
               <td>a_ReadMe_CDT2015.pdf</td>
@@ -112,7 +109,7 @@
         </table>
         </br>
         <h3>Source-Provided Files: Details</h3>
-        &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
+        (<span class="nav"><a href="#top">return to top</a></span>)
         <p>The following is a list of elements in the CDT source file:</br>
         </p>
         <div class="rep_block_level_two"><a name="file1"></a></br>
@@ -174,18 +171,18 @@
               <tr>
                 <td>Class2</br>
                 </td>
-                <td>Not processed;&nbsp; ambiguous as to
-                  whether this field refers to the category, subcategory
-                  or subsubcategory</br>
+                <td>Not processed; ambiguous as to whether this field
+                  refers to the category, subcategory or subsubcategory</br>
                 </td>
               </tr>
               <tr>
                 <td>Category</br>
                 </td>
                 <td>MRCONSO.STR</br>
-                  TTY = HT</br>
-                  CODE = computed based on the range of codes included
-                  under this Category</br>
+                  MRCONSO.TTY = HT</br>
+                  MRCONSO.CODE = computed based on the range of codes
+                  included under this Category</br>
+                  MRCONSO.SCUI = same as CODE</br>
                 </td>
               </tr>
               <tr>
