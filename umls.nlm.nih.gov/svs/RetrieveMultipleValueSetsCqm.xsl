@@ -62,19 +62,20 @@
         <!-- produce value set "codes" file -->
         
         <xsl:result-document href = "value-set-codes.txt">
-            <xsl:text>OID|ValueSetName|Version|Code|Descriptor|CodeSystemName|CodeSystemVersion|CodeSystemOID&#10;</xsl:text>
+            <xsl:text>OID|ValueSetName|Version|Type|Code|Descriptor|CodeSystemName|CodeSystemVersion|CodeSystemOID&#10;</xsl:text>
             
             <xsl:for-each select = "ns0:DescribedValueSet">
                 <xsl:variable name = "oid" select = "@ID"/>
                 <xsl:variable name = "valueSetName" select = "@displayName"/>
                 <xsl:variable name = "version" select = "@version"/>
+                <xsl:variable name = "type" select = "ns0:Type"/>
                 <xsl:for-each select = "ns0:ConceptList/ns0:Concept">
                     <xsl:variable name = "code" select = "@code"/>
                     <xsl:variable name = "displayName" select = "@displayName"/>
                     <xsl:variable name = "codeSystemName" select = "@codeSystemName"/>
                     <xsl:variable name = "codeSystemVersion" select = "@codeSystemVersion"/>
                     <xsl:variable name = "codeSystem" select = "@codeSystem"/>
-                    <xsl:value-of select = "string-join(($oid,$valueSetName,$version,$code,$displayName,$codeSystemName,$codeSystemVersion,$codeSystem),'|')"/>
+                    <xsl:value-of select = "string-join(($oid,$valueSetName,$version,$type,$code,$displayName,$codeSystemName,$codeSystemVersion,$codeSystem),'|')"/>
                     <xsl:text>&#10;</xsl:text>
                 </xsl:for-each>
             </xsl:for-each>
@@ -83,14 +84,15 @@
         
         <xsl:result-document href = "value-set-definitions.txt">
             <!-- produce value set definitions file -->
-            <xsl:text>OID|ValueSetName|Version|Definition&#10;</xsl:text>
+            <xsl:text>OID|ValueSetName|Version|Type|Definition&#10;</xsl:text>
             <xsl:for-each select = "ns0:DescribedValueSet">
                <xsl:variable name = "oid" select = "@ID"/>
                <xsl:variable name = "valueSetName" select = "@displayName"/>
                <xsl:variable name = "version" select = "@version"/>
-               <xsl:variable name = "definition" select = "ns0:Definition"/>
+                <xsl:variable name = "type" select = "ns0:Type"/>
+                <xsl:variable name = "definition" select = "ns0:Definition"/>
                 <xsl:if test = "$definition">
-                    <xsl:value-of select = "string-join(($oid,$valueSetName,$version,$definition),'|')"/><xsl:text>&#10;</xsl:text>
+                    <xsl:value-of select = "string-join(($oid,$valueSetName,$version,$type,$definition),'|')"/><xsl:text>&#10;</xsl:text>
                 </xsl:if>
             </xsl:for-each>
         </xsl:result-document>

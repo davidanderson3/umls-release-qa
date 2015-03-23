@@ -31,13 +31,14 @@
                 <xsl:variable name = "oid" select = "@ID"/>
                 <xsl:variable name = "valueSetName" select = "@displayName"/>
                 <xsl:variable name = "version" select = "@version"/>
+                <xsl:variable name = "type" select = "ns0:Type"/>
                 <xsl:for-each select = "ns0:ConceptList/ns0:Concept">
                     <xsl:variable name = "code" select = "@code"/>
                     <xsl:variable name = "displayName" select = "@displayName"/>
                     <xsl:variable name = "codeSystemName" select = "@codeSystemName"/>
                     <xsl:variable name = "codeSystemVersion" select = "@codeSystemVersion"/>
                     <xsl:variable name = "codeSystem" select = "@codeSystem"/>
-                    <xsl:value-of select = "string-join(($oid,$valueSetName,$version,$code,$displayName,$codeSystemName,$codeSystemVersion,$codeSystem),'|')"/>
+                    <xsl:value-of select = "string-join(($oid,$valueSetName,$type,$version,$code,$displayName,$codeSystemName,$codeSystemVersion,$codeSystem),'|')"/>
                     <xsl:text>&#10;</xsl:text>
                 </xsl:for-each>
             </xsl:for-each>
