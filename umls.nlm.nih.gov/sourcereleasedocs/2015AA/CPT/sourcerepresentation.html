@@ -1,0 +1,753 @@
+
+  <p>This page lists specific source data elements and provides
+        information on their representation in the UMLS Metathesaurus.</p>
+    <!--begin tabbed navigation area-->
+  <div class="section-5">
+      <ul id="menu">
+        <li id="nav-1"><a href="index.html">Synopsis</a></li>
+        <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+        <li id="nav-3"><a href="stats.html">Statistics</a></li>
+        <li id="nav-4"><a href="samples.html">Samples</a></li>
+        <li id="nav-5"><a href="sourcerepresentation.html">Source
+            Representation</a></li>
+        <li id="nav-6"><a href="metarepresentation.html">Metathesaurus
+            Representation</a></li>
+      </ul>
+    </div>
+    <!-- end tabbed navigation area --> </br>
+    <a name="top"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
+      <a href="#change_summary">Summary of Changes</a>, <a
+        href="#file_summary">Summary of Source-Provided Files</a> <a
+        href="#file_details">Source-Provided File Details</a></span> <a
+      name="general"></a>
+    <div id="rep_general" class="rep_block_level_one">
+      <h3>Notes</h3>
+      CPT data files are submitted by the American Medical Association
+      (AMA). The files processed for the UMLS Metathesaurus are
+      available for licensing at the <a
+href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=prod1510002">AMA
+        Bookstore</a>. </br>
+      The information provided here applies explicitly to the English
+      version of CPT. The Spanish translation of CPT (CPTSP) was last
+      updated in 2001, and much of the information on this page is not
+      applicable.</br>
+      </br>
+      The UMLS does not include Guidelines or SNOMEDCT mappings from the
+      CPT DTK files due to licensing restrictions.</br>
+      </br>
+    </div>
+    <div id="rep_change_summary" class="rep_block_level_one"> <a
+        name="change_summary"></a>
+      <h3>Summary of Changes:</h3>
+      New ATNs: </br>
+	          <blockquote>CODING_TIP </br>
+	            CITATION
+	            </br>
+	            PROPRIETARY_NAME
+	            </br>
+	            REPORTABLE - T/F indicates a reportable CODE. Previously, this
+	            information was embedded in the TTY. As of this release, the
+	            UMLS will include ADM codes, which will be TTY = PT, but
+	            REPORTABLE = F. </br>
+	          </blockquote>
+	          </br>
+	          "ADM" is a new CPT_LEVEL value: </br>
+	          <blockquote>Multianalyte Assays with Algorithmic Analyses
+	            (MAAA), from Appendix 0; The codes for these end in "M", e.g.
+	            0002M. T</br>
+	          </blockquote>
+	          </br>
+	          The following new data was not inverted: </br>
+	          <blockquote>Level = POS (place of service)</br>
+	            HCPCS Level II Codes</br>
+        </blockquote>
+      </br>
+    </div>
+    <div id="rep_file_summary" class="rep_block_level_one"> <a
+        name="file_summary"></a>
+      <h3>Source-Provided Files: Summary</h3>
+        (<span class="nav"><a href="#top">return to top</a></span>)
+      The complete English language CPT distribution includes the
+      following:</br>
+      <div class="rep_block_level_two">
+        <!-- Make a table of each file that comes from the source   -->
+        <h4>Documentation and Reference</h4>
+        <table class="elements" cellspacing="0" border="0">
+          <tbody>
+            <tr>
+              <th>File Name</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td class="file_field_name">2015 CONSUMER FRIENDLY
+                DESCRIPTORS ReadMe.doc</br>
+              </td>
+              <td>User guide for Consumer Descriptor data</br>
+              </td>
+            </tr>
+            <tr>
+              <td >2015_CLINICIAN DESCRIPTORS_ReadMe.doc</td>
+              <td >User guide for Clinician Descriptor data</br>
+              </td>
+            </tr>
+            <tr>
+              <td >2015_CPT_DTK_ReadMe_with_OWL.doc</td>
+              <td >User guide for main data files</br>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        </br>
+        <h4>Data Files</h4>
+        <a name="data_files"></a>
+        <table class="elements" cellspacing="0" border="0">
+          <tbody>
+            <tr>
+              <th>File Name</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td class="file_field_name">ClinicianDescriptor_DTK_pipe.txt</td>
+              <td>Clinician Descriptors</br>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">ConsumerDescriptor_DTK_pipe.txt
+
+                </br>
+              </td>
+              <td>Consumer-friendly Descriptors</br>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">Property_DTK_pipe.txt</td>
+              <td> In the Property File, a concept is represented by a
+                set of lines that all have the same CONCEPT ID. Some of
+                the concepts in the Property File correspond to
+                reportable CPT codes, some were constructed by the AMA
+                for the 2014 CPT DTK, and some were drawn from SNOMED
+                CT.</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">Relationship_DTK_pipe.txt</td>
+              <td>In the Relationship File, relationships between two
+                concepts are represented.</br>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">Type_DTK_pipe.txt</br>
+              </td>
+              <td> The Type File provides a succinct representation of
+                the types of information contained in the Property File
+                and the Relationship File. The PROPERTY TYPE ID column
+                from the Property File and RELATIONSHIP TYPE ID column
+                from the Relationship File both correspond to the TYPE
+                ID number from the Type File. Thus, the Type File
+                enables a user to see at a glance all of the
+                categories of relationship types used in the 2014 CPT
+                DTK </td>
+            </tr>
+          </tbody>
+        </table>
+        </br>
+        </br>
+      </div>
+    </div>
+    <div id="rep_file_details" class="rep_block_level_one"> <a
+        name="file_details"></a>
+      <h3>Source-Provided Files: Details</h3>
+        (<span class="nav"><a href="#top">return to top</a></span>)
+      Details on format of input files and representation of source
+      data. Consult the CPT documentation for additional details.</br>
+      <div class="rep_block_level_two"> <a name="file1"></a>
+        <h4 class="file_field_name">file:  Type_DTK_pipe.txt</br>
+        </h4>
+          <span class="nav">return to <a href="#data_files">Data
+            Files</a></span> </br>
+        </br>
+        <table class="elements" cellspacing="0" border="0">
+          <tbody>
+            <tr>
+              <th>Field Name</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td class="file_field_name">Type Id</br>
+              </td>
+              <td>This field corresponds to the Property Type Id in the
+                properties file or the Relationship Type Id in the
+                relationships file</br>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">Category</br>
+              </td>
+              <td>Value of "Property," "Relationship" or "Qualifier"
+                indicate the nature of the Type</br>
+              </td>
+            </tr>
+            <tr>
+              <td >Type Name</br>
+              </td>
+              <td >Type description</br>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        </br>
+        <a name="file2"></a>
+        <h4 class="file_field_name">file:  Property_DTK_pipe.txt</br>
+        </h4>
+          <span class="nav">return to <a href="#data_files">Data
+            Files</a></span> This file consists of 3 delimited fields:</br>
+        </br>
+        <table class="elements" cellspacing="0" border="0">
+          <tbody>
+            <tr>
+              <td class="file_field_name">Concept ID</br>
+              </td>
+              <td>Property Type ID</br>
+              </td>
+              <td>Property Value</br>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        The "Property Type ID" value determines how each row is
+        represented in the Metathesaurus:</br>
+        </br>
+        <table class="elements" cellspacing="0" border="0">
+          <tbody>
+            <tr>
+              <th>Property </br>
+                Type ID</br>
+              </th>
+              <td ><b>Element</b><b> Name</b></br>
+              </td>
+              <th>Description</th>
+              <th>Representation</th>
+            </tr>
+            <tr>
+              <td class="file_field_name">100</br>
+              </td>
+              <td >Guideline</td>
+              <td> Explanatory text attached to a concept
+                (code/heading/subheading). </td>
+              <td> Not included in the UMLS Metathesaurus due to
+                licensing restrictions. </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">101</br>
+              </td>
+              <td >First_Appearance</br>
+              </td>
+              <td> The year the code was first introduced to CPT.</td>
+              <td>MRSAT.ATN = DATE_CREATED</br>
+              </td>
+            </tr>
+            <tr>
+              <td >102</br>
+              </td>
+              <td >Addon_Code</br>
+              </td>
+              <td>Add-on code, i.e. it is commonly
+                  carried out in addition to the primary procedure
+                  performed.
+                  </td>
+              <td > MRSAT.ATN = ADDON_CODE </td>
+            </tr>
+            <tr>
+              <td >103</br>
+              </td>
+              <td >Reportable</br>
+              </td>
+              <td > T for CPT codes that can be used for the
+                reporting of services. F for headings/subheadings and
+                guidelines.</td>
+              <td >MRSAT.ATN = REPORTABLE</br>
+              </td>
+            </tr>
+            <tr>
+              <td >104</br>
+              </td>
+              <td >CPT_Code</br>
+              </td>
+              <td >The 5-character CPT Code</td>
+              <td > MRCONSO.CODE, MRCONSO.SCUI </td>
+            </tr>
+            <tr>
+              <td >105</br>
+              </td>
+              <td >Moderate_(Conscious)_Sedation</br>
+              </td>
+              <td > T for codes marked with the moderate
+                (conscious) sedation symbol.</td>
+              <td >MRSAT.ATN = MODERATE_CONSCIOUS_SEDATION</br>
+              </td>
+            </tr>
+            <tr>
+              <td >106</br>
+              </td>
+              <td >Descriptor</br>
+              </td>
+              <td >Full description of the concept (e.g.,
+                the CPT code's long descriptor, as listed in the CPT
+                book). </td>
+              <td >
+                <p>MRCONSO.STR</br>
+                  TTY=PT (preferred term) or HT (hierarchical term)</br>
+                  </br>
+                  For TTY = PT, the CODE and SCUI are the 5-character
+                  CPT code (Property Type ID = 104)</br>
+                  </br>
+                  For TTY = HT, the CODE and SCUI are the DTK_CONCEPT_ID</br>
+                  For TTY = MP, the CODE and SCUI are the Modifier Code
+                  (Property Type ID = 129)</br>
+                  </br>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td >107</br>
+              </td>
+              <td >Exempt_Mod</br>
+              </td>
+              <td >Contains 51 or 63 for codes where
+                Modifier 51 or 63 Exempt </td>
+              <td >MRSAT.ATN = EXEMPT_MOD</br>
+              </td>
+            </tr>
+            <tr>
+              <td >108</br>
+              </td>
+              <td >FDA_Approval_Pending</br>
+              </td>
+              <td > T for codes marked with the FDA approval
+                pending symbol </td>
+              <td >MRSAT.ATN = FDA_APPROVAL_PENDING</br>
+              </td>
+            </tr>
+            <tr>
+              <td >109</br>
+              </td>
+              <td >Level</br>
+              </td>
+              <td >For headings, a value ranging from H1 (a
+                top-level heading such as "Surgery" to H6 (a 6<sup>th</sup>-level
+
+                subheading) and HS (a heading for a small family of
+                related codes). For CPT codes, either PC for Parent Code
+                or CC for Child Code.</td>
+              <td >MRSAT.ATN = CPT_LEVEL</br>
+                Note:  This information is also implicit in the
+                hierarchy representation.</br>
+              </td>
+            </tr>
+            <tr>
+              <td >110</br>
+              </td>
+              <td >Medium_Descriptor</br>
+              </td>
+              <td >Descriptor limited to 48 characters</br>
+                </td>
+              <td >MRCONSO.STR;  TTY = AB</br>
+              </td>
+            </tr>
+            <tr>
+              <td >111</br>
+              </td>
+              <td >Short_Descriptor</br>
+              </td>
+              <td >Descriptor limited to 28 characters</br>
+                </td>
+              <td >MRCONSO.STR;  TTY = AB</br>
+              </td>
+            </tr>
+            <tr>
+              <td >112</br>
+              </td>
+              <td >SNOMED_CT_Fully_Specified_Name</br>
+              </td>
+              <td > A unique and unambiguous concept name
+                used to identify a SNOMED CT concept and clarify its
+                meaning </td>
+              <td >
+                <p style="LINE-HEIGHT: normal; MARGIN-BOTTOM: 0pt"
+                  class="MsoNormal">Not included in the UMLS
+                  Metathesaurus.  SNOMED Codes and strings are
+                  already present.<span style="mso-spacerun: yes"></br>
+                  </span></br>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td >113</br>
+              </td>
+              <td >SNOMED_CT_CODE_(SCTID)
+              </td>
+              <td > Non-semantic identifier from the SNOMED
+                CT terminology </td>
+              <td >Not included in the UMLS
+                Metathesaurus.  SNOMED Codes and strings are
+                already present.<span style="mso-spacerun: yes"></br>
+                </span> </td>
+            </tr>
+            <tr>
+              <td >120</br>
+              </td>
+              <td >Last_Revised</br>
+              </td>
+              <td > The year the CPT code was last revised.
+              </td>
+              <td >MRSAT.ATN = DATE_LAST_MODIFIED</br>
+              </td>
+            </tr>
+            <tr>
+              <td >121</br>
+              </td>
+              <td >Descriptor_Extension</br>
+              </td>
+              <td > Extension of full description of the
+                concept (e.g., the CPT code's long descriptor, as
+                listed in the CPT book). </td>
+              <td >MRSAT.ATN = DESCRIPTOR_EXTENSION</br>
+              </td>
+            </tr>
+            <tr>
+              <td >122</br>
+              </td>
+              <td >Additional_Guideline</br>
+              </td>
+              <td > Additional explanatory text that is
+                applicable to a concept
+                (code/heading/subheading). Note: not all of the
+                additional guidelines appear with the heading or code in
+                the published CPT code book. </td>
+              <td >MRSAT.ATN = ADDITIONAL_GUIDELINE</br>
+              </td>
+            </tr>
+            <tr>
+              <td >127</br>
+              </td>
+              <td >Measure_Developer</br>
+              </td>
+              <td > Name of the measure developer associated
+                with the Category II code </td>
+              <td >MRSAT.ATN = MEASURE_DEVELOPER</br>
+              </td>
+            </tr>
+            <tr>
+              <td >128</br>
+              </td>
+              <td >Descriptor_Element</br>
+              </td>
+              <td > The elements of a multi-paragraph
+                descriptor, such as lab panels, and molecular
+                pathology </td>
+              <td >MRSAT.ATN = CPF(Full form of descriptor) </td>
+            </tr>
+            <tr>
+              <td >129</br>
+              </td>
+              <td >Modifier_Code</br>
+              </td>
+              <td >The two-character modifier code</br>
+                </td>
+              <td >MRCONSO.TTY = CODE, SCUI where
+                MRCONSO.TTY = "MP"</br>
+                </br>
+              </td>
+            </tr>
+            <tr>
+              <td >132</br>
+              </td>
+              <td >Citation</br>
+              </td>
+              <td > Reference to CPT Assistant Newsletter articles; CPT Changes: An Insider's View; Clinical Examples in Radiology
+                </td>
+              <td >MRCONSO.ATN = CITATION</br>
+              </td>
+            </tr>
+            <tr>
+              <td >133</br>
+              </td>
+              <td >Coding_Tip</br>
+              </td>
+              <td >Coding Tip text</br>
+              </td>
+              <td >MRCONSO.ATN = CODING_TIP</br>
+              </td>
+            </tr>
+            <tr>
+              <td >134</br>
+              </td>
+              <td >Proprietary_Name</br>
+              </td>
+              <td >
+                Proprietary name for
+                  multianalyte assays with algorithmic
+                  analyses contained in Appendix O from the CPT codebook
+                </td>
+              <td >MRCONSO.ATN = PROPRIETARY_NAME</br>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        </br>
+        <a name="file3"></a>
+        <h4 class="file_field_name">file:
+          Relationship_DTK_pipe.txt</br>
+        </h4>
+          <span class="nav">return to <a href="#data_files">Data
+            Files</a></span> This file consists of 5 delimited fields:</br>
+        </br>
+        <table class="elements" cellspacing="0" border="0">
+          <tbody>
+            <tr>
+              <td class="file_field_name">Concept ID 1</br>
+              </td>
+              <td>Relationship Type ID</br>
+              </td>
+              <td>Concept ID2</br>
+              </td>
+              <td >Relationship Qualifier Type ID</br>
+              </td>
+              <td >Relationship Qualifier Value</br>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        The "Relationship Type ID" value determines how each row is
+        represented in the Metathesaurus.  The majority of
+        relationships connect CPT to SNOMED_CT, and are not released in
+        the Metathesaurus due to licensing restrictions.</br>
+        </br>
+        The following relationships are released:</br>
+        </br>
+        <table class="elements" cellspacing="0" border="0">
+          <tbody>
+            <tr>
+              <th>Relationship Type ID</br>
+              </th>
+              <th>Description</th>
+              <th>Representation</th>
+            </tr>
+            <tr>
+              <td class="file_field_name">1</br>
+              </td>
+              <td>Is_A</br>
+              </td>
+              <td>Used to create hierarchy.  Distributed in
+                MRHIER.RRF, MRREL.RRF</br>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">207</br>
+              </td>
+              <td>Has_Panel_Element</br>
+              </td>
+              <td>MRREL.RRF</br>
+                REL = RO</br>
+                RELA = has_panel_element/panel_element_of</br>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        </br>
+        The following relationships are not released:</br>
+        </br>
+        <table class="elements" cellspacing="0" border="0">
+          <tbody>
+            <tr>
+              <th>Relationship Type ID</br>
+              </th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td class="file_field_name">200</br>
+              </td>
+              <td>Anatomic_Site</br>
+              </td>
+            </tr>
+            <tr>
+              <td >201</br>
+              </td>
+              <td >Component</br>
+              </td>
+            </tr>
+            <tr>
+              <td >202</br>
+              </td>
+              <td >Device</br>
+              </td>
+            </tr>
+            <tr>
+              <td >203</br>
+              </td>
+              <td >Associated_Procedure</br>
+              </td>
+            </tr>
+            <tr>
+              <td >204</br>
+              </td>
+              <td >Method</br>
+              </td>
+            </tr>
+            <tr>
+              <td >205</br>
+              </td>
+              <td >Specimen</br>
+              </td>
+            </tr>
+            <tr>
+              <td >206</br>
+              </td>
+              <td >Substance</br>
+              </td>
+            </tr>
+            <tr>
+              <td >208</br>
+              </td>
+              <td >Surgical_Extent</br>
+              </td>
+            </tr>
+            <tr>
+              <td >210</br>
+              </td>
+              <td >Patient_Type</br>
+              </td>
+            </tr>
+            <tr>
+              <td >211</br>
+              </td>
+              <td >Pathology</br>
+              </td>
+            </tr>
+            <tr>
+              <td >212</br>
+              </td>
+              <td >Complexity</br>
+              </td>
+            </tr>
+            <tr>
+              <td >213</br>
+              </td>
+              <td >Approach</br>
+              </td>
+            </tr>
+            <tr>
+              <td >214</br>
+              </td>
+              <td >Locale</br>
+              </td>
+            </tr>
+            <tr>
+              <td >215</br>
+              </td>
+              <td >Associated_Finding</br>
+              </td>
+            </tr>
+            <tr>
+              <td >400</br>
+              </td>
+              <td >Replaced_By</br>
+              </td>
+            </tr>
+            <tr>
+              <td >401</br>
+              </td>
+              <td >Refers_To</br>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        </br>
+        </br>
+        <a name="file5"></a></br>
+        </br>
+        <h4 class="file_field_name">file:
+          ClinicianDescriptor_DTK_pipe.txt</br>
+        </h4>
+          </br>
+        </br>
+        <table class="elements" cellspacing="0" border="0">
+          <tbody>
+            <tr>
+              <th>Field Name</th>
+              <th>Description</th>
+              <th>Representation</th>
+            </tr>
+            <tr>
+              <td class="file_field_name">ConceptID</br>
+              </td>
+              <td>DTK Concept ID</br>
+              </td>
+              <td>MRSAT.ATN = CPT_DTK_CONCEPT_ID</br>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">Property Type ID</br>
+              </td>
+              <td>MRCONSO.TTY = ETCLIN</br>
+              </td>
+              <td>MRCONSO.TTY = ETCLIN</br>
+              </td>
+            </tr>
+            <tr>
+              <td >Property Value</br>
+              </td>
+              <td >Clincian Descriptor</br>
+              </td>
+              <td >MRCONSO.STR</br>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        </br>
+        </br>
+        <h4 class="file_field_name">file:
+          ConsumerDescriptor_DTK_pipe.txt</br>
+        </h4>
+          <span class="nav">return to <a
+href="file:///C:/Users/aalipows/Desktop/UMLS/current/CPT/sourcerepresentation.html#data_files">Data
+            Files</a></span></br>
+        </br>
+        <table class="elements" cellspacing="0" border="0">
+          <tbody>
+            <tr>
+              <th>Field Name</th>
+              <th>Description</th>
+              <th>Representation</th>
+            </tr>
+            <tr>
+              <td class="file_field_name">Concept ID</br>
+              </td>
+              <td>DTK Concept ID</br>
+              </td>
+              <td>MRSAT.ATN = CPT_DTK_CONCEPT_ID</br>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">Property Type ID</br>
+              </td>
+              <td>All rows in this file have value 123, "Consumer
+                Friendly Descriptor"</br>
+              </td>
+              <td>MRCONSO.TTY = ETCF</br>
+              </td>
+            </tr>
+            <tr>
+              <td >Property Value</br>
+              </td>
+              <td >Consumer Friendly Descriptor</br>
+              </td>
+              <td >MRCONSO.STR</br>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        </br>
+      </div>
+    </div>
+  </body>
+</html>

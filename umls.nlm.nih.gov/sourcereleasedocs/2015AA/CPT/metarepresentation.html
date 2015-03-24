@@ -1,0 +1,436 @@
+<p>This page lists UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
+
+<!--begin tabbed navigation area-->
+
+    <div class="section-6">
+      <ul id="menu">
+        <li id="nav-1"><a href="index.html">Synopsis</a></li>
+        <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+        <li id="nav-3"><a href="stats.html">Statistics</a></li>
+        <li id="nav-4"><a href="samples.html">Samples</a></li>
+        <li id="nav-5"><a href="sourcerepresentation.html">Source
+            Representation</a></li>
+        <li id="nav-6"><a href="metarepresentation.html">Metathesaurus
+            Representation</a></li>
+      </ul>
+    </div>
+    <!-- end tabbed navigation area --> </br>
+    </br>
+    </br>
+    <a name="top"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>,
+      <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
+      <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+    <div id="general" class="rep_block_level_one">
+      <p><b>VSAB:</b> CPT2015</br>
+      </p>
+      <div id="rep_identifiers" class="rep_block_level_one">
+        <h3>Summary of Changes</h3>
+        New ATNs: </br>
+        <blockquote>CODING_TIP </br>
+          CITATION
+          </br>
+          PROPRIETARY_NAME
+          </br>
+          REPORTABLE - T/F indicates a reportable CODE. Previously, this
+          information was embedded in the TTY. As of this release, the
+          UMLS will include ADM codes, which will be TTY = PT, but
+          REPORTABLE = F. </br>
+        </blockquote>
+        </br>
+        "ADM" is a new CPT_LEVEL value: </br>
+        <blockquote>Multianalyte Assays with Algorithmic Analyses
+          (MAAA), from Appendix 0; The codes for these end in "M", e.g.
+          0002M. T</br>
+        </blockquote>
+        </br>
+        The following new data was not inverted: </br>
+        <blockquote>Level = POS (place of service)</br>
+          HCPCS Level II Codes</br>
+        </blockquote>
+        <h3>Source Provided Files:</h3>
+        Documentation:</br>
+        Extensive documentation is provided, including:</br>
+        </br>
+        <table class="elements" cellspacing="0" border="0">
+          <tbody>
+            <tr>
+              <th>File Name</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td class="file_field_name">2015 CONSUMER FRIENDLY
+                DESCRIPTORS ReadMe.doc</br>
+              </td>
+              <td>User guide for Consumer Descriptor data</br>
+              </td>
+            </tr>
+            <tr>
+              <td>2015_CLINICIAN DESCRIPTORS_ReadMe.doc</td>
+              <td>User guide for Clinician Descriptor data</br>
+              </td>
+            </tr>
+            <tr>
+              <td>2015_CPT_DTK_ReadMe_with_OWL.doc</td>
+              <td>User guide for main data files</br>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        </br>
+        Data: </br>
+        </br>
+        DTK files are available in both "tab" and "pipe" delmited
+        formats. The UMLS uses the following data files:</br>
+        <table>
+          <tbody>
+            <tr>
+              <th>File Name</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td class="file_field_name">ClinicianDescriptor_DTK_pipe.txt</td>
+              <td>Clinician Descriptors</br>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">ConsumerDescriptor_DTK_pipe.txt
+
+
+                </br>
+              </td>
+              <td>Consumer-friendly Descriptors</br>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">Property_DTK_pipe.txt</td>
+              <td> In the Property File, a concept is represented by a
+                set of lines that all have the same CONCEPT ID. Some of
+                the concepts in the Property File correspond to
+                reportable CPT codes, some were constructed by the AMA
+                for the 2014 CPT DTK, and some were drawn from SNOMED
+                CT.</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">Relationship_DTK_pipe.txt</td>
+              <td>In the Relationship File, relationships between two
+                concepts are represented.</br>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">Type_DTK_pipe.txt</br>
+              </td>
+              <td> The Type File provides a succinct representation of
+                the types of information contained in the Property File
+                and the Relationship File. The PROPERTY TYPE ID column
+                from the Property File and RELATIONSHIP TYPE ID column
+                from the Relationship File both correspond to the TYPE
+                ID number from the Type File. Thus, the Type File
+                enables a user to see at a glance all of the
+                categories of relationship types used in the 2014 CPT
+                DTK </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="rep_identifers" class="rep_block_level_one">
+        <h3>Identifiers:</h3>
+        Identifiers are assigned as follows:</br>
+        <ul>
+          <li>CODE:
+            <ul>
+              <li>TTY = PT, SY, AB, ETCF, ETCLIN: Value of CPT_Code
+                Property (Type Id = 104)</li>
+              <li>TTY = HT: Concept Id value</li>
+              <li>TTY = MP: Value of Modifier_Code Property (Type Id =
+                129)</br>
+              </li>
+            </ul>
+          </li>
+          <li>SAUI: Not Applicable</li>
+          <li>SCUI: Same as CODE</li>
+          <li>SDUI: Not Applicable</li>
+        </ul>
+        <div id="rep_termtypes" class="rep_block_level_two"> <a
+            name="atoms"></a>
+          <h3>Atoms (MRCONSO):</h3>
+          <span class="nav">(<a href="#top">return to top</a></span>)</br>
+          </br>
+          <table>
+            <tbody>
+              <tr>
+                <th>Term Type</th>
+                <th>Origin</th>
+              </tr>
+              <tr>
+                <td>AB</td>
+                <td>CODE = Value of CPT_Code (Type Id = 104) in
+                  Property_DTK_pipe.txt</br>
+                  STR = Value of Short_Descriptor (Type Id = 111) in
+                  Property_DTK_pipe.txt</br>
+                  SCUI = Same as CODE</br>
+                  SUPPRESS = "Y"</br>
+                </td>
+              </tr>
+              <tr>
+                <td>ETCF</br>
+                </td>
+                <td>CODE = Value of CPT_Code (Type Id = 104) in
+                  Property_DTK_pipe.txt</br>
+                  STR = Value of Consumer_Friendly_Descriptor (Type Id =
+                  123) in ConsumerDescriptor_DTK_pipe.txt </br>
+                  SCUI = Same as CODE</br>
+                  SUPPRESS =<big> "N"</big></br>
+                </td>
+              </tr>
+              <tr>
+                <td>ETCLIN</br>
+                </td>
+                <td>CODE = Value of CPT_Code (Type Id = 104) in
+                  Property_DTK_pipe.txt</br>
+                  STR = Value of Clinician_Descriptor (Type Id = 126) in
+                  ClinicianDescriptor_DTK_pipe.txt</br>
+                  SCUI = Same as CODE</br>
+                  SUPPRESS ="N"</td>
+              </tr>
+              <tr>
+                <td>HT</br>
+                </td>
+                <td>CODE = DTK_CONCEPT_ID in Property_DTK_pipe.txt</br>
+                  STR = Value of Descriptor (Type Id = 106) in
+                  Property_DTK_pipe.txt</br>
+                  SCUI = Same as CODE</br>
+                  SUPPRESS = "N"</br>
+                  Note: TTY = HT is assigned when the Level Property
+                  (Type Id = 109) indicates that the concept is a
+                  Heading.</br>
+                  Values are: H1, H2, H3, H4, H5, H5, HS, root. </br>
+                  Concepts treed under the "H1-Guidelines" heading are
+                  not included in Metathesaurus source processing.</br>
+                </td>
+              </tr>
+              <tr>
+                <td>MP</td>
+                <td>CODE = Value of Modifier_Code (Type Id = 129)</br>
+                  STR = Value of Descriptor (Type Id = 106) in
+                  Property_DTK_pipe.txt</br>
+                  SCUI = Same as CODE</br>
+                  SUPPRESS = "N" </br>
+                </td>
+              </tr>
+              <tr>
+                <td>PT</td>
+                <td>CODE = Value of CPT_Code (Type Id = 104) in
+                  Property_DTK_pipe.txt</br>
+                  STR = Value of Descriptor (Type Id = 106) in
+                  Property_DTK_pipe.txt</br>
+                  SCUI = Same as CODE</br>
+                  SUPPRESS = "N"</br>
+                </td>
+              </tr>
+              <tr>
+                <td>SY</td>
+                <td>CODE = Value of CPT_Code (Type Id = 104) in
+                  Property_DTK_pipe.txt</br>
+                  STR = Value of Medium_Descriptor (Type Id = 110) in
+                  Property_DTK_pipe.txt</br>
+                  SCUI = Same as CODE</br>
+                  SUPPRESS = "N"</br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="rep_attributes" class="rep_block_level_two"> <a
+            name="attributes"></a></br>
+          <h3>Attributes (MRSAT):</h3>
+          <span class="nav">(<a href="#top">return to top</a></span>)</br>
+          <table>
+            <tbody>
+              <tr>
+                <th>Attribute Name</th>
+                <th>Origin</th>
+              </tr>
+              <tr>
+                <td>ADDITIONAL_GUIDELINE</br>
+                </td>
+                <td>Value of Additional_Guideline (Type Id = 122) in
+                  Property_DTK_pipe.txt.
+                </td>
+              </tr>
+              <tr>
+                <td>ADDON_CODE</br>
+                </td>
+                <td>Value of Addon_Code (Type Id = 102) in
+                  Property_DTK_pipe.txt</br>
+                </td>
+              </tr>
+              <tr>
+                <td>CITATION</br>
+                </td>
+                <td>Value of Citation (Type Id = 132) in
+                  Property_DTK_pipe.txt. </td>
+              </tr>
+              <tr>
+                <td>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td>CPF</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td>CPT Full Description - complete text of the CPT full
+                  description, in cases where the CPT term in the "STR"
+                  field of MRCON has been trimmed from its original
+                  form.</td>
+              </tr>
+              <tr>
+                <td>CODING_TIP</br>
+                </td>
+                <td>Value of Coding_Tip (Type Id = 133) in
+                  Property_DTK_pipe.txt</br>
+                </td>
+              </tr>
+              <tr>
+                <td>CPTDTK_CONCEPT_ID</td>
+                <td>Value of Concept Id in
+                  pub_clinician_descriptor_ids.txt,
+                  pub_consumer_friendly_descriptor_terms.txt </td>
+              </tr>
+              <tr>
+                <td>CPT_LEVEL</br>
+                </td>
+                <td>Value of Level (Type Id = 109) in
+                  Property_DTK_pipe.txt </td>
+              </tr>
+              <tr>
+                <td>DATE_CREATED</td>
+                <td>Value of First_Appearance (Type Id = 101) in
+                  Property_DTK_pipe.txt </td>
+              </tr>
+              <tr>
+                <td>DATE_LAST_MODIFIED</td>
+                <td>Value of Last_Revised (Type Id = 120) in
+                  Property_DTK_pipe.txt </td>
+              </tr>
+              <tr>
+                <td>DESCRIPTOR_EXTENSION </td>
+                <td>Value of Descriptor_Extension (Type Id = 121) in
+                  Property_DTK_pipe.txt </td>
+              </tr>
+              <tr>
+                <td>EXEMPT_MOD</td>
+                <td>Value of Exempt_Mod (Type Id = 107) in
+                  Property_DTK_pipe.txt </td>
+              </tr>
+              <tr>
+                <td>FDA_APPROVAL_PENDING</td>
+                <td>Value of FDA_Approval_Pending (Type Id = 108) in
+                  Property_DTK_pipe.txt </td>
+              </tr>
+              <tr>
+                <td>MEASURE_DEVELOPER</td>
+                <td>Value of Measure_Developer (Type Id = 127) in
+                  Property_DTK_pipe.txt </td>
+              </tr>
+              <tr>
+                <td>MODERATE_CONSCIOUS_SEDATION</br>
+                </td>
+                <td>Value of Moderate_(Conscious)_Sedation (Type Id =
+                  105) in Property_DTK_pipe.txt </td>
+              </tr>
+              <tr>
+                <td>PROPRIETARY_NAME</br>
+                </td>
+                <td>Value of Proprietary_Name (Type Id = 134) in
+                  Property_DTK_pipe.txt.
+                </td>
+              </tr>
+              <tr>
+                <td>REPORTABLE</br>
+                </td>
+                <td>Value of Reportable (Type Id = 103) in
+                  Property_DTK_pipe.txt</br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="rep_definitions" class="rep_block_level_two"> <a
+            name="definitions"></a></br>
+          <h3>Definitions (MRDEF):</h3>
+          <span class="nav">(<a href="#top">return to top</a></span>)</br>
+          <p>No definitions are included with the standard format CPT
+            release. </p>
+        </div>
+        <div id="rep_relationships" class="rep_block_level_two"> <a
+            name="relationships"></a></br>
+          <h3>Relationships (MRREL):</h3>
+          <span class="nav">(<a href="#top">return to top</a></span>)</br>
+          <table>
+            <tbody>
+              <tr>
+                <th>REL</th>
+                <th>RELA</br>
+                  Inverse RELA</th>
+                <th>ORIGIN</th>
+              </tr>
+              <tr>
+                <td>CHD</br>
+                  PAR</br>
+                  SIB</br>
+                </td>
+                <td>isa/inverse_isa</td>
+                <td>The hierarchy is derived from
+                  Relationship_DTK_pipe.txt. PAR/CHD isa rels are
+                  created where Relationship Type ID = 1 (Is_A)</br>
+                </td>
+              </tr>
+              <tr>
+                <td>RO</br>
+                </td>
+                <td>clinician_form_of</br>
+                  has_clinician_form</br>
+                </td>
+                <td>Connects a PT to its ETCF(s)</br>
+                </td>
+              </tr>
+              <tr>
+                <td>RO</br>
+                </td>
+                <td>consumer_friendly_form_of</br>
+                  has_consumer_friendly_form</br>
+                </td>
+                <td>Connects a PT to its ETCLIN</br>
+                </td>
+              </tr>
+              <tr>
+                <td>SY</td>
+                <td>expanded_form_of</br>
+                  has_expanded_form</td>
+                <td>Connects a "PT" with its "SY" and "AB"</td>
+              </tr>
+              <tr>
+                <td>RO</br>
+                </td>
+                <td>panel_element_of</br>
+                  has_panel_element</br>
+                </td>
+                <td>Indicates that a CPT laboratory panel test is a
+                  member of a laboratory panel</br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="rep_mappings" class="rep_block_level_two"> <a
+            name="mappings"></a></br>
+          <h3>Mappings (MRMAP):</h3>
+          <span class="nav">(<a href="#top">return to top</a></span>)</br>
+          <p>No mappings are supplied by the AMA, however mappings from
+            LNC215 to CPT2005 are included in the Metathesaurus.</br>
+          </p>
+        </div>
+      </div>
+    </div>
