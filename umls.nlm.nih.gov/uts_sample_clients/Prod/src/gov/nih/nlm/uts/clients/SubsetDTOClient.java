@@ -48,7 +48,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
             myPsf.setIncludedLanguage("ENG");
             
             
-            java.util.List<SubsetDTO> mySubsetsDTO = new ArrayList<SubsetDTO>();
+            List<SubsetDTO> mySubsets = new ArrayList<SubsetDTO>();
             SubsetDTO mySubsetDTO = new SubsetDTO();
             List<SourceConceptSubsetMemberDTO> mySubsetMembersDTO = new ArrayList<SourceConceptSubsetMemberDTO>();
             List<SourceConceptSubsetMemberDTO> mySubsetMemberships = new ArrayList<SourceConceptSubsetMemberDTO>();
@@ -57,14 +57,14 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
             switch (method) {
             
             //show me all the available subsets
-            case "getSubsets": mySubsetsDTO = utsContentService.getSubsets(securityService.getProxyTicket(ticket, serviceName), umlsRelease, myPsf); 
-            
-            for (int i = 0; i < mySubsetsDTO.size(); i++) {
+            case "getSubsets": mySubsets = utsContentService.getSubsets(securityService.getProxyTicket(ticket, serviceName), umlsRelease, myPsf); 
+            System.out.println(mySubsets.size());
+            for (SubsetDTO subset:mySubsets) {
 
-            	SubsetDTO mySubsets = mySubsetsDTO.get(i);
-                String ui = mySubsets.getUi();
-                String scui = mySubsets.getSourceUi();
-                String name = mySubsets.getName();
+            
+                String ui = subset.getUi();
+                String scui = subset.getSourceUi();
+                String name = subset.getName();
                 System.out.println(ui+"|"+scui+"|"+name);  
                 }
             
@@ -98,19 +98,20 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
             	myPsf.setPageNum(pageNum);
             	
             	gov.nih.nlm.uts.webservice.content.Psf mySubsetPsf = new gov.nih.nlm.uts.webservice.content.Psf(); 
-            	mySubsetPsf.setSortBy("NAME");
-            	mySubsetMembersDTO = utsContentService.getSubsetSourceConceptMembers(securityService.getProxyTicket(ticket, serviceName), umlsRelease, "C3714470", myPsf);
+            	//mySubsetPsf.setSortBy("NAME");
+            	mySubsetMembersDTO = utsContentService.getSubsetSourceConceptMembers(securityService.getProxyTicket(ticket, serviceName), umlsRelease, "C3853365", myPsf);
                 for(SourceConceptSubsetMemberDTO subsetMember:mySubsetMembersDTO) {
             	String id = subsetMember.getSourceConcept().getUi();
             	String term = subsetMember.getSourceConcept().getDefaultPreferredName();
-            	boolean obsolete = subsetMember.getSourceConcept().isSuppressible();
             	String atui = subsetMember.getUi();
+
             	List<AttributeDTO> subsetMemberAttributes = utsContentService.getSubsetMemberAttributes(securityService.getProxyTicket(ticket, serviceName), umlsRelease, atui, mySubsetPsf);
             	    
             		for(AttributeDTO subsetMemberAttribute:subsetMemberAttributes) {
+            			String handle = subsetMemberAttribute.getUi();
             			String atn = subsetMemberAttribute.getName();
             			String atv = subsetMemberAttribute.getValue();
-            			System.out.println(id+"|"+term+"|"+obsolete+"|"+atn+"|"+atv);
+            			System.out.println(handle+"|"+id+"|"+term+"|"+atn+"|"+atv);
             		}
 
                 }
