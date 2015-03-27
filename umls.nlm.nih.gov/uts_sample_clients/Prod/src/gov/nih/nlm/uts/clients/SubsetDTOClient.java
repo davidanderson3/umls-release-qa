@@ -104,14 +104,14 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
             	String id = subsetMember.getSourceConcept().getUi();
             	String term = subsetMember.getSourceConcept().getDefaultPreferredName();
             	String atui = subsetMember.getUi();
-
+            
             	List<AttributeDTO> subsetMemberAttributes = utsContentService.getSubsetMemberAttributes(securityService.getProxyTicket(ticket, serviceName), umlsRelease, atui, mySubsetPsf);
             	    
             		for(AttributeDTO subsetMemberAttribute:subsetMemberAttributes) {
-            			String handle = subsetMemberAttribute.getUi();
             			String atn = subsetMemberAttribute.getName();
             			String atv = subsetMemberAttribute.getValue();
-            			System.out.println(handle+"|"+id+"|"+term+"|"+atn+"|"+atv);
+            			String sourceAtui = subsetMemberAttribute.getSourceUi();
+            			System.out.println(sourceAtui+"|"+id+"|"+term+"|"+atn+"|"+atv);
             		}
 
                 }
