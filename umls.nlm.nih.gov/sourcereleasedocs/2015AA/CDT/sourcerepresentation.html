@@ -31,9 +31,9 @@
         </li>
       </ul>
     </div>
-    <!-- end tabbed navigation area --> </br>
-    </br>
-    </br>
+    <!-- end tabbed navigation area --> <br/>
+    <br/>
+    <br/>
     <a name="top"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
       <a href="#change_summary">Summary of Changes</a>, <a
         href="#file_summary">Summary of Source-Provided Files</a> <a
@@ -43,18 +43,18 @@
       <h3>Summary of Changes:</h3>
       <p>There were changes to both the original file format and to
         Metathesaurus source processing.</p>
-      <p>New ATN: SOS</br>
+      <p>New ATN: SOS<br/>
         Previously, "Descriptor" values were represented as definitions.
-        They are now represented as Scope Notes.</br>
+        They are now represented as Scope Notes.<br/>
       </p>
-      <p>Deprecated ATN: DEFINITION</br>
+      <p>Deprecated ATN: DEFINITION<br/>
       </p>
       <p>The representation of the hierarchy in the original source data
         files has changed. Previously, hierarchical terms were indicated
         using a range in the "CODE" field, e.g. "D4000-D4999." The new
         format has fields for each level in the hierarchy, i.e.
         category, subcategory and subsubcategory. </p>
-      <p><b>Notes:</b></br>
+      <p><b>Notes:</b><br/>
       </p>
       <ul>
         <li>In the printed CDT book, some codes appear out of order. The
@@ -71,10 +71,10 @@
       the HCPCS version of CDT, which has RSAB = "HCDT." The CDT
       hierarchy is created from the data file provided by the ADA, while
       the HCDT hierarchy is created during Metathesaurus production
-      using analysis of the HCPCS printed manual. </br>
-      </br>
+      using analysis of the HCPCS printed manual. <br/>
+      <br/>
       <span class="nav">(<a href="#top">return to top</a></span>)
-      <div style="margin-left: 40px;"></br>
+      <div style="margin-left: 40px;"><br/>
       </div>
     </div>
     <div id="rep_file_summary" class="rep_block_level_one"> <a
@@ -82,13 +82,13 @@
       <h3>Source-Provided Files: Summary</h3>
       (<span class="nav"><a href="#top">return to top</a></span>)
       <div id="rep_file_details" class="rep_block_level_one">
-        <!-- Make a table of each file that comes from the source   --></br>
-        </br>
+        <!-- Make a table of each file that comes from the source   --><br/>
+        <br/>
         <table class="elements" cellspacing="1" border="1">
           <tbody>
             <tr>
               <th>File Name</th>
-              <td><b>Description</b></br>
+              <td><b>Description</b><br/>
               </td>
             </tr>
             <tr>
@@ -97,40 +97,40 @@
             </tr>
             <tr>
               <td>a_ReadMe_CDT2015.pdf</td>
-              <td>Documentation</br>
+              <td>Documentation<br/>
               </td>
             </tr>
           </tbody>
         </table>
-        </br>
+        <br/>
         <h3>Source-Provided Files: Details</h3>
         (<span class="nav"><a href="#top">return to top</a></span>)
-        <p>The following is a list of elements in the CDT source file:</br>
+        <p>The following is a list of elements in the CDT source file:<br/>
         </p>
-        <div class="rep_block_level_two"><a name="file1"></a></br>
+        <div class="rep_block_level_two"><a name="file1"></a><br/>
           <table cellpadding="2" cellspacing="2" border="1">
             <tbody>
               <tr>
-                <td><b>Element</b></br>
+                <td><b>Element</b><br/>
                 </td>
-                <td><b>Representation</b></br>
-                </td>
-              </tr>
-              <tr>
-                <td>Code</br>
-                </td>
-                <td>MRCONSO.CODE</br>
-                  MRCONSO.SCUI</br>
+                <td><b>Representation</b><br/>
                 </td>
               </tr>
               <tr>
-                <td>Class</br>
+                <td>Code<br/>
                 </td>
-                <td>MRSAT.ATN = CHANGE_CLASS</br>
-                  </br>
+                <td>MRCONSO.CODE<br/>
+                  MRCONSO.SCUI<br/>
+                </td>
+              </tr>
+              <tr>
+                <td>Class<br/>
+                </td>
+                <td>MRSAT.ATN = CHANGE_CLASS<br/>
+                  <br/>
                   Identifies the type of change made to this version of
                   the Code (i.e., changes from the prior version), with
-                  the following meanings:</br>
+                  the following meanings:<br/>
                   <ul>
                     <li>30 = No change to existing code, nomenclature or
                       descriptor</li>
@@ -142,97 +142,97 @@
                     <li>99 = Entire CDT Code entry is no longer valid
                       (i.e., deleted) in this version.</li>
                   </ul>
-                  </br>
+                  <br/>
                 </td>
               </tr>
               <tr>
-                <td>Nomenclature</br>
+                <td>Nomenclature<br/>
                 </td>
-                <td>MRCONSO.STR</br>
-                  MRCONSO.TTY = PT unless Class = 99</br>
-                  MRCONSO.TTY = OP if Class = 99</br>
-                  MRCONSO.CODE = Code value</br>
-                  MRCONSO.SDUI = same as CODE</br>
-                  </br>
-                  </br>
-                </td>
-              </tr>
-              <tr>
-                <td>Descriptor</br>
-                </td>
-                <td>MRSAT.ATN = SOS</br>
+                <td>MRCONSO.STR<br/>
+                  MRCONSO.TTY = PT unless Class = 99<br/>
+                  MRCONSO.TTY = OP if Class = 99<br/>
+                  MRCONSO.CODE = Code value<br/>
+                  MRCONSO.SDUI = same as CODE<br/>
+                  <br/>
+                  <br/>
                 </td>
               </tr>
               <tr>
-                <td>Class2</br>
+                <td>Descriptor<br/>
+                </td>
+                <td>MRSAT.ATN = SOS<br/>
+                </td>
+              </tr>
+              <tr>
+                <td>Class2<br/>
                 </td>
                 <td>Not processed; ambiguous as to whether this field
-                  refers to the category, subcategory or subsubcategory</br>
+                  refers to the category, subcategory or subsubcategory<br/>
                 </td>
               </tr>
               <tr>
-                <td>Category</br>
+                <td>Category<br/>
                 </td>
-                <td>MRCONSO.STR</br>
-                  MRCONSO.TTY = HT</br>
+                <td>MRCONSO.STR<br/>
+                  MRCONSO.TTY = HT<br/>
                   MRCONSO.CODE = computed based on the range of codes
-                  included under this Category</br>
-                  MRCONSO.SCUI = same as CODE</br>
+                  included under this Category<br/>
+                  MRCONSO.SCUI = same as CODE<br/>
                 </td>
               </tr>
               <tr>
-                <td>CatDescriptor</br>
+                <td>CatDescriptor<br/>
                 </td>
-                <td>MRSAT.ATN = SOS</br>
+                <td>MRSAT.ATN = SOS<br/>
                 </td>
               </tr>
               <tr>
-                <td>Subcat</br>
+                <td>Subcat<br/>
                 </td>
-                <td>MRCONSO.STR</br>
-                  MRCONSO.TTY = HT</br>
+                <td>MRCONSO.STR<br/>
+                  MRCONSO.TTY = HT<br/>
                   MRCONSO.CODE = computed based on the range of codes
-                  included under this Subcategory</br>
-                  MRCONSO.SCUI = same as CODE</br>
-                  </br>
+                  included under this Subcategory<br/>
+                  MRCONSO.SCUI = same as CODE<br/>
+                  <br/>
                   Values of "None" are processed the same as null/blank
-                  values.</br>
+                  values.<br/>
                 </td>
               </tr>
               <tr>
-                <td>SubcatDescriptor</br>
+                <td>SubcatDescriptor<br/>
                 </td>
-                <td>MRSAT.ATN = SOS</br>
+                <td>MRSAT.ATN = SOS<br/>
                 </td>
               </tr>
               <tr>
-                <td>Subsubcat</br>
+                <td>Subsubcat<br/>
                 </td>
-                <td>MRCONSO.STR</br>
-                  MRCONSO.TTY = HT</br>
+                <td>MRCONSO.STR<br/>
+                  MRCONSO.TTY = HT<br/>
                   MRCONSO.CODE = computed based on the range of codes
-                  included under this Subsubcategory</br>
-                  MRCONSO.SCUI = same as CODE</br>
-                  </br>
+                  included under this Subsubcategory<br/>
+                  MRCONSO.SCUI = same as CODE<br/>
+                  <br/>
                   Values of "None" are processed the same as null/blank
-                  values.</br>
+                  values.<br/>
                 </td>
               </tr>
               <tr>
-                <td>SubsubcatDescriptor</br>
+                <td>SubsubcatDescriptor<br/>
                 </td>
-                <td>MRSAT.ATN = SOS</br>
-                  </br>
+                <td>MRSAT.ATN = SOS<br/>
+                  <br/>
                   In the case where the Subsubcat value = "None" but the
                   SubsubcatDescriptor is populated, the
                   SubsubcatDescriptor is considered an additional SOS
-                  for the Subcat.</br>
+                  for the Subcat.<br/>
                 </td>
               </tr>
             </tbody>
           </table>
-          </br>
-          </br>
+          <br/>
+          <br/>
         </div>
       </div>
     </div>

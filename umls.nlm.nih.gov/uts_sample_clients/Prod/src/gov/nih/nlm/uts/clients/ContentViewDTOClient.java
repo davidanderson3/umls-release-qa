@@ -1,7 +1,7 @@
 package gov.nih.nlm.uts.clients;
 
 import static java.lang.System.out;
-
+import java.util.List;
 import java.util.ArrayList;
 import gov.nih.nlm.uts.webservice.content.ContentViewDTO;
 import gov.nih.nlm.uts.webservice.content.UtsWsContentController;
@@ -12,16 +12,17 @@ import gov.nih.nlm.uts.webservice.security.UtsWsSecurityControllerImplService;
 public class ContentViewDTOClient {
 	private static String username = "";
     private static String password = ""; 
-    static String umlsRelease = "2014AB";
+    static String umlsRelease = "";
 	static String serviceName = "http://umlsks.nlm.nih.gov";
     
 static UtsWsContentController utsContentService = (new UtsWsContentControllerImplService()).getUtsWsContentControllerImplPort();
 static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImplService()).getUtsWsSecurityControllerImplPort();
 
     
-    public ContentViewDTOClient(String username, String password) {
+    public ContentViewDTOClient(String username, String password,String umlsRelease) {
 	ContentViewDTOClient.username = username;
 	ContentViewDTOClient.password = password;
+	ContentViewDTOClient.umlsRelease = umlsRelease;
 	
     }
 
@@ -41,27 +42,25 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
 		try {
 			// Runtime properties
 
-			ContentViewDTOClient ConViewClient = new ContentViewDTOClient(args[0],args[1]);
-            
-        	String method = args[2];
-
+			ContentViewDTOClient ConViewClient = new ContentViewDTOClient(args[0],args[1],args[2]);
+        	String method = args[3];
             gov.nih.nlm.uts.webservice.content.Psf myPsf = new gov.nih.nlm.uts.webservice.content.Psf();
             java.util.List<ContentViewDTO> myContentViews = new ArrayList<ContentViewDTO>();
             ContentViewDTO myContentView = new ContentViewDTO();
             
             switch (method) {
-            case "getContentViews": myContentViews = utsContentService.getContentViews(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, myPsf); 
-            for (int i = 0; i < myContentViews.size(); i++) {
+            case "getContentViews": 
+            List<ContentViewDTO> contentViews = new ArrayList<ContentViewDTO>();
+            contentViews = utsContentService.getContentViews(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, myPsf); 
+            for (ContentViewDTO contentView:contentViews) {
 
-            	ContentViewDTO myContentViewDTO = myContentViews.get(i);
-            	String cui = myContentViewDTO.getHandle();
-                String name = myContentViewDTO.getName();
-                int noAuis = myContentViewDTO.getAtomMemberCount();
-                int noScuis = myContentViewDTO.getSourceConceptMemberCount();
-
-                //System.out.println("&lt;tr&gt;&lt;td&gt;"+cui+"&lt;/td&gt;"+"&lt;td&gt;"+name+"&lt;/td&gt;&lt;/tr&gt;");
-                System.out.println(cui+"|"+name+"|");
+            	String cui = contentView.getHandle();
+                String name = contentView.getName();
+                int noAuis = contentView.getAtomMemberCount();
+                int noScuis = contentView.getSourceConceptMemberCount();
+                System.out.println(cui+"|"+name+"|"+noScuis);
             }
+            
             break;
             
         	case "getContentView": myContentView = utsContentService.getContentView(securityService.getProxyTicket(ticketGrantingTicket(), serviceName), umlsRelease, "C3812142");
@@ -75,6 +74,8 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
          	default: out.println("Unrecognized input ");
         	break; 
             }
+            
+            
             
   
 		} catch (Exception ex) {
