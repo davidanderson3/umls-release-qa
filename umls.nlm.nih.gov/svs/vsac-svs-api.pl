@@ -1,8 +1,8 @@
 #!/usr/bin/perl
 
-##Version 0.3
+##Version 0.4
 ##Updates
-# Allows skipping single-OID entry when so users can retrieve info on measures using tagName/Value
+# Added programType and subType as valid query parameters
 
 ##Usage Notes
 # create a directory in your $HOME called 'svs'
@@ -40,7 +40,7 @@ my %base_parameters;
 my %buildAdditionalParameters;
 my %additional_parameters;
 my $additional_parameters_ref = \%additional_parameters;
-my @additional_parameters = ("effectiveDate","version","tagName","tagValue","profile","includeDraft");
+my @additional_parameters = ("effectiveDate","version","tagName","tagValue","profile","includeDraft","programType","subType");
 my %reports = ("SVS XML"=>"none","Measure Counts" => "value-set-measure-counts.xsl","Value Set Codes" => "value-set-codes.xsl","Value Set Definitions"=>"value-set-definitions.xsl","Code Counts"=>"value-set-code-counts.xsl");
 my @report_choices = keys(%reports);
 my @responses;
@@ -240,7 +240,7 @@ sub isValid {
 	if($parameter eq "oid" && ($value =~ /^[0-9\.]+(\.[0-9]+)$/ || $value =~ /^$/)) {return "true";}
 	elsif($parameter eq "effectiveDate" && $value =~ /2{1}0{1}[0-9]{2}[0-1]{1}[1-9]{1}[0-3]{1}[0-9]{1}/) {return "true";}
 	elsif($parameter eq "includeDraft" && (lc($value) eq "yes" || lc($value) eq "no")) {return "true";}
-	elsif(($parameter eq "version" || $parameter eq "tagName" || $parameter eq "tagValue" || $parameter eq "profile")  && $value =~ /[0-9a-zA-Z]{2,25}/) {return "true";}
+	elsif(($parameter eq "version" || $parameter eq "tagName" || $parameter eq "tagValue" || $parameter eq "profile" || $parameter eq "programType" || $parameter eq "subType" )  && $value =~ /[0-9a-zA-Z]{2,25}/) {return "true";}
 	else {return "false";}
 
 } ## end isValid

@@ -14,6 +14,10 @@ To run from mlbapp01:
   
 Update history:
 
+##Version 0.4
+##Updates
+#Added programType and subType as valid query parameters
+
 ##Version 0.3
 ##Updates
 # Allows skipping single-OID entry when so users can retrieve info on measures using tagName/Value
