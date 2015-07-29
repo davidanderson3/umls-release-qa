@@ -44,7 +44,7 @@
         </ul>
       2. New ATNs:&nbsp;
         <ul>
-          <li>ASK_AT_ORDER_ENTRY</li>
+          <li>ASK_AT_ORDER_ENTRY - ATN established but source data field not currently populated</li>
           <li>ASSOC_OBSERVATIONS</li>
           <li>PANEL_TYPE</li>
           <li>UNITS_AND_RANGE</li>
@@ -70,6 +70,25 @@
         <li>UPDRS|Unified Parkinson's Disease Rating Scale (UPDRS)|Intellectual Product|</li>
         <li>MOLPATH.NUCREPEAT|MOLPATH.NUCREPEAT|Intellectual Product|</li>
       </ul>
+      4. Deprecated data fields (from the loinc.csv file unless otherwise noted):&nbsp;
+      <ul>
+        <li>MOLAR_MASS</li>
+        <li>ACSSYM</li>
+        <li>BASE_NAME</li>
+        <li>NAACCR_ID - source moved data to SURVEY_QUEST_SRC field with corresponding ATN = LQS</li>
+        <li>CODE_TABLE</li>
+        <li>HL7_V2_DATATYPE</li>
+        <li>HL7_V3_DATATYPE</li>
+        <li>SkipLogicTarget (from the FORMS tab of the LOINC Panels and Forms file)</li>
+        <li>SkipLogicTargetAnswer (from the FORMS tab of the LOINC Panels and Forms file)</li>
+        <li>AnswerRequired - replaced by AnswerCardinality (from the FORMS tab of the LOINC Panels and Forms file)</li>
+        <li>MaxNumberOfAnswers - replaced by AnswerCardinality (from the FORMS tab of the LOINC Panels and Forms file)</li>
+      </ul>
+      5. Renamed data fields: &nbsp;
+      <ul>
+          <li>UnitsAndRange - previously called CURATED_RANGE_AND_UNITS</li>
+          <li>DefinitionDescription - previously called COMMENTS </li>
+       </ul>
     </div>
     <div id="rep_file_summary" class="rep_block_level_one"><br/></div>
       <a name="original_files"></a>
@@ -675,6 +694,12 @@
                   <li>LOINC_252_MULTI-AXIAL_HIERARCHY.CSV</li>
                 </ul>
               </td>
+            </tr>
+            <tr>
+              <td>RN</td>
+              <td>member_of<br/>
+                has_member</td>
+              <td>Connects LOINC panels and their members</td>
             </tr>
             <tr>
               <td>RO</td>
