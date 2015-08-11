@@ -99,7 +99,7 @@ static UtsWsSecurityController securityService = (new UtsWsSecurityControllerImp
             	
             	gov.nih.nlm.uts.webservice.content.Psf mySubsetPsf = new gov.nih.nlm.uts.webservice.content.Psf(); 
             	//mySubsetPsf.setSortBy("NAME");
-            	mySubsetMembersDTO = utsContentService.getSubsetSourceConceptMembers(securityService.getProxyTicket(ticket, serviceName), umlsRelease, "C3853365", myPsf);
+            	mySubsetMembersDTO = utsContentService.getSubsetSourceConceptMembers(securityService.getProxyTicket(ticket, serviceName), umlsRelease, "C3882623", myPsf);
                 for(SourceConceptSubsetMemberDTO subsetMember:mySubsetMembersDTO) {
             	String id = subsetMember.getSourceConcept().getUi();
             	String term = subsetMember.getSourceConcept().getDefaultPreferredName();

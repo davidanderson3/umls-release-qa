@@ -13,17 +13,16 @@
             <xsl:if test = "ns0:Definition">
                 <xsl:choose>
                     <xsl:when test = "not(matches($definition,'[\),\(]{3}'))">
-                        <!-- <xsl:value-of select = "string-join(($oid,$valueSetName,$version,normalize-space(translate($definition,'()',''))),'|')"/><xsl:text>&#10;</xsl:text>-->
                         <xsl:variable name = "memberOid" select = "substring-before(normalize-space(translate($definition,'()','')),':')"/>
                         <xsl:variable name = "memberOidName" select = "substring-after(normalize-space(translate($definition,'()','')),':')"/> 
-                        <xsl:value-of select = "string-join(($oid,$valueSetName,$memberOid,$memberOidName),'|')"/><xsl:text>&#10;</xsl:text>
+                        <xsl:value-of select = "string-join(($oid,$valueSetName,$version,$memberOid,$memberOidName),'|')"/><xsl:text>&#10;</xsl:text>
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:variable name = "definitions" select = "tokenize($definition,'[\),\(]{3}')"></xsl:variable>
                         <xsl:for-each select="$definitions">
                             <xsl:variable name = "memberOid" select = "substring-before(normalize-space(translate(.,'()','')),':')"/>
                             <xsl:variable name = "memberOidName" select = "substring-after(normalize-space(translate(.,'()','')),':')"/>         
-                            <xsl:value-of select = "string-join(($oid,$valueSetName,$memberOid,$memberOidName),'|')"/><xsl:text>&#10;</xsl:text>
+                            <xsl:value-of select = "string-join(($oid,$valueSetName,$version,$memberOid,$memberOidName),'|')"/><xsl:text>&#10;</xsl:text>
                         </xsl:for-each>
                     </xsl:otherwise>
                 </xsl:choose>
