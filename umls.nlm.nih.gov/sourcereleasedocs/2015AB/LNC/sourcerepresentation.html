@@ -48,7 +48,7 @@
         </ul>
       2. New ATNs:&nbsp;
         <ul>
-          <li>ASK_AT_ORDER_ENTRY</li>
+          <li>ASK_AT_ORDER_ENTRY - ATN established but source data field not currently populated</li>
           <li>ASSOC_OBSERVATIONS</li>
           <li>PANEL_TYPE</li>
           <li>UNITS_AND_RANGE</li>
@@ -74,6 +74,25 @@
         <li>UPDRS|Unified Parkinson's Disease Rating Scale (UPDRS)|Intellectual Product|</li>
         <li>MOLPATH.NUCREPEAT|MOLPATH.NUCREPEAT|Intellectual Product|</li>
       </ul>
+      4. Deprecated data fields (from the loinc.csv file unless otherwise noted):&nbsp;
+      <ul>
+        <li>MOLAR_MASS</li>
+        <li>ACSSYM</li>
+        <li>BASE_NAME</li>
+        <li>NAACCR_ID - source moved data to SURVEY_QUEST_SRC field with corresponding ATN = LQS</li>
+        <li>CODE_TABLE</li>
+        <li>HL7_V2_DATATYPE</li>
+        <li>HL7_V3_DATATYPE</li>
+        <li>SkipLogicTarget (from the FORMS tab of the LOINC Panels and Forms file)</li>
+        <li>SkipLogicTargetAnswer (from the FORMS tab of the LOINC Panels and Forms file)</li>
+        <li>AnswerRequired - replaced by AnswerCardinality (from the FORMS tab of the LOINC Panels and Forms file)</li>
+        <li>MaxNumberOfAnswers - replaced by AnswerCardinality (from the FORMS tab of the LOINC Panels and Forms file)</li>
+      </ul>
+      5. Renamed data fields: &nbsp;
+      <ul>
+          <li>UnitsAndRange - previously called CURATED_RANGE_AND_UNITS</li>
+          <li>DefinitionDescription - previously called COMMENTS </li>
+       </ul>
     </div>
     <div id="rep_file_summary" class="rep_block_level_one"><br/>
       <a name="file_summary"></a>
@@ -909,7 +928,7 @@
               <tr>
                 <td>2</td>
                 <td>ParentLoinc</td>
-                <td>Used as id_1 in relationships</td>
+                <td>Used as id_1 in relationships; RELA = member_of/has_member; REL = RN</td>
               </tr>
               <tr>
                 <td>3</td>
@@ -929,7 +948,7 @@
               <tr>
                 <td>6</td>
                 <td>Loinc</td>
-                <td>Used as id_2 in relationships</td>
+                <td>Used as id_2 in relationships; RELA = member_of/has_member; REL = RN</td>
               </tr>
               <tr>
                 <td>7</td>
