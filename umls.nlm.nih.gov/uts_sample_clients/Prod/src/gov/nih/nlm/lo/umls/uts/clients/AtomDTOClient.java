@@ -15,8 +15,8 @@ public class AtomDTOClient {
 		// TODO Auto-generated method stub
 		try {
 			// Runtime properties
-			String username = "debjaniani";
-			String password = "Cartoon123!";
+			String username = "";
+			String password = "";
 			String umlsRelease = "2013AA";
 			String serviceName = "http://umlsks.nlm.nih.gov";
 			
