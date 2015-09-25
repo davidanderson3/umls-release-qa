@@ -17,7 +17,7 @@
     <a name="top"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>,
       <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
       <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
-    <p><b>VSAB: LNC252</b></p>
+    <p><strong>VSAB: </strong>LNC252</p>
     
     <div id="rep_change_summary" class="rep_block_level_one">
       <h3>Summary of Changes:</h3>
@@ -129,9 +129,7 @@
           </ul>
         </li>
         <li>SAUI: Not Applicable</li>
-        <li>SCUI: Same as CODE for term types LA, LC, LN, LO, LPDN, LPN,
-          MTH_LN, MTH_LO, OLC, OOSN, OSN<br/>
-        </li>
+        <li>SCUI: Same as CODE for term types LA, LC, LN, LO, LPDN, LPN, MTH_LN, MTH_LO, OLC, OOSN, OSN</li>
         <li>SDUI: Not Applicable</li>
       </ul>
       <h4>Expansions</h4>
@@ -146,7 +144,7 @@
           name="termtypes"></a><br/>
         <h4>Atoms</h4>
         &nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
-        <table class="elements" border="0" cellpadding="0">
+        <table>
           <tbody>
             <tr>
               <th>TTY</th>
@@ -169,8 +167,7 @@
                 expanded form of loinc.csv field 15 for CLASSTYPE.<br/>
                 An additional HC atom, &#8220;LOINCCLASSTYPES,&#8221; is added
                 during Metathesaurus source processing as a hierarchical
-                placeholder.<br/>
-              </td>
+                placeholder.</td>
             </tr>
             <tr>
               <td class="file_field_name">HS</td>
@@ -184,43 +181,36 @@
               <td class="file_field_name">LA</td>
               <td>LOINC Answer:<br/>
                 CODE = LOINC_252_PanelsAndForms.xlsx (ANSWERS tab) field 9 (AnswerStringID)<br/>
-                STR = LOINC_252_PanelsAndForms.xlsx (ANSWERS tab) field 12 (DisplayText)<br/>
-              </td>
+                STR = LOINC_252_PanelsAndForms.xlsx (ANSWERS tab) field 12 (DisplayText)</td>
             </tr>
             <tr>
               <td class="file_field_name">LC</td>
               <td>Long common name:<br/>
                 CODE = loinc.csv field 1 (LOINC_NUM)<br/>
                 STR = loinc.csv field 30 (LONG_COMMON_NAME)<br/>
-                TTY = LC is assigned if field 13 (STATUS) is not = "DEPRECATED"<br/>
-              </td>
+                TTY = LC is assigned if field 13 (STATUS) is not = "DEPRECATED"</td>
             </tr>
             <tr>
               <td class="file_field_name">LN</td>
               <td>Official fully-specified name:<br/>
                 CODE = loinc.csv field 1 (LOINC_NUM)<br/>
-                STR = loinc.csv fields 2-7, concatenated with colons,
-                i.e. F2:F3:F4:F5:F6:F7<br/>
-                TTY = LN is assigned if field 13 (STATUS) is not = "DEPRECATED"<br/>
-              </td>
+                STR = loinc.csv fields 2-7, concatenated with colons, i.e. F2:F3:F4:F5:F6:F7<br/>
+                TTY = LN is assigned if field 13 (STATUS) is not = "DEPRECATED"</td>
             </tr>
             <tr>
               <td class="file_field_name">LO</td>
               <td>Obsolete official fully specified name:<br/>
                 CODE = loinc.csv field 1 (LOINC_NUM)<br/>
-                STR = loinc.csv fields 2-7, concatenated with colons,
-                i.e. F2:F3:F4:F5:F6:F7<br/>
+                STR = loinc.csv fields 2-7, concatenated with colons, i.e. F2:F3:F4:F5:F6:F7<br/>
                 TTY = LO is assigned if field 13 (STATUS) = "DEPRECATED"<br/>
-                SUPPRESS = "O"<br/>
-              </td>
+                SUPPRESS = "O"</td>
             </tr>
             <tr>
               <td class="file_field_name">LPDN</td>
               <td>Parts display name:<br/>
                 CODE = LOINC_PARTS_*.txt field 1 (L_PART_ID)<br/>
                 STR = LOINC_PARTS_*.txt field 4 (DISPLAY_NAME)<br/>
-                LPDN atoms are only created for strings containing the
-                pattern &#8220;Allergen Mix.&#8221;</td>
+                LPDN atoms are only created for strings containing the pattern &#8220;Allergen Mix.&#8221;</td>
             </tr>
             <tr>
               <td class="file_field_name">LPN</td>
@@ -228,25 +218,20 @@
                 CODE = LOINC_PARTS_*.txt field 1 (L_PART_ID)<br/>
                 STR = LOINC_PARTS_*.txt field 3 (NAME_CASE_INSENSITIVE)<br/>
                 An additional LPN, &#8220;LOINCPARTS,&#8221; is added during
-                Metathesaurus source processing as a hierarchical
-                placeholder.</td>
+                Metathesaurus source processing as a hierarchical placeholder.</td>
             </tr>
             <tr>
               <td class="file_field_name">LS</td>
               <td>Expanded system/sample type:<br/>
-                CODE = MTHU#, assigned during Metathesaurus source
-                processing<br/>
-                STR = Expanded form of loinc.csv field 5, subfield 1
-                (SYSTEM).</td>
+                CODE = MTHU#, assigned during Metathesaurus source processing<br/>
+                STR = Expanded form of loinc.csv field 5, subfield 1 (SYSTEM).</td>
             </tr>
             <tr>
               <td class="file_field_name">MTH_CN</td>
               <td>Component, with abbreviations expanded:<br/>
                 CODE = MTHU#, assigned during Metathesaurus source
-                processing; same as CODE for respective CN as
-                applicable.<br/>
-                STR = Expanded form of loinc.csv field 2, subfield 1
-                (COMPONENT).</td>
+                processing; same as CODE for respective CN as applicable.<br/>
+                STR = Expanded form of loinc.csv field 2, subfield 1 COMPONENT).</td>
             </tr>
             <tr>
               <td class="file_field_name">MTH_LN</td>
@@ -264,8 +249,7 @@
                 STR = Expanded form of loinc.csv fields 2-7,
                 concatenated with colons, i.e. F2:F3:F4:F5:F6:F7<br/>
                 TTY = MTH_LO is assigned if field 13 (STATUS) = "DEPRECATED"<br/>
-                SUPPRESS = O<br/>
-              </td>
+                SUPPRESS = O</td>
             </tr>
             <tr>
               <td class="file_field_name">OLC</td>
@@ -273,8 +257,7 @@
                 CODE = loinc.csv field 1 (LOINC_NUM)<br/>
                 STR = loinc.csv field 30 (LONG_COMMON_NAME)<br/>
                 TTY = OLC is assigned if field 13 (STATUS) = "DEPRECATED"<br/>
-                SUPPRESS = O<br/>
-              </td>
+                SUPPRESS = O</td>
             </tr>
             <tr>
               <td class="file_field_name">OOSN</td>
@@ -282,8 +265,7 @@
                 CODE = loinc.csv field 1 (LOINC_NUM)<br/>
                 STR = loinc.csv field 24 (SHORTNAME)<br/>
                 TTY = OOSN is assigned if field 13 (STATUS) = "DEPRECATED"<br/>
-                SUPPRESS = "O"<br/>
-              </td>
+                SUPPRESS = "O"</td>
             </tr>
             <tr>
               <td class="file_field_name">OSN</td>
@@ -305,7 +287,7 @@
           name="attributes"></a><br/>
         <h4>Attributes</h4>
         &nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
-        <table class="elements" border="0" cellpadding="0">
+        <table>
           <tbody>
             <tr>
               <th>ATN [Description]</th>
@@ -313,23 +295,19 @@
             </tr>
             <tr>
               <td>ANSWER_CODE</td>
-              <td>LOINC_252_PanelsAndForms.xlsx (ANSWERS tab) field 10 (AnswerCode)<br/>
-              </td>
+              <td>LOINC_252_PanelsAndForms.xlsx (ANSWERS tab) field 10 (AnswerCode)</td>
             </tr>
             <tr>
               <td>ANSWER_CODE_SYSTEM</td>
-              <td>LOINC_252_PanelsAndForms.xlsx (ANSWERS tab) field 13 (AnswerCodeSystem)<br/>
-              </td>
+              <td>LOINC_252_PanelsAndForms.xlsx (ANSWERS tab) field 13 (AnswerCodeSystem)</td>
             </tr>
             <tr>
               <td>ANSWER_LIST_ID</td>
-              <td>LOINC_250_SELECTED_FORMS.xlsx (ANSWERS tab) field 3 (AnswerListID)<br/>
-              </td>
+              <td>LOINC_250_SELECTED_FORMS.xlsx (ANSWERS tab) field 3 (AnswerListID)</td>
             </tr>
             <tr>
               <td>ANSWER_LIST_NAME</td>
-              <td>LOINC_252_PanelsAndForms.xlsx (ANSWERS tab) field 4 (AnswerListName)<br/>
-              </td>
+              <td>LOINC_252_PanelsAndForms.xlsx (ANSWERS tab) field 4 (AnswerListName)</td>
             </tr>  
             <tr>
               <td>COPYRIGHT</td>
@@ -337,32 +315,23 @@
             </tr>
             <tr>
               <td>CHANGE_REASON_PUBLIC</td>
-              <td>loinc.csv field 37<br/>
-              </td>
+              <td>loinc.csv field 37</td>
             </tr>
             <tr>
-              <td>COMMON_SI_TEST_RANK<br/>
-              </td>
-              <td>loinc.csv field 40<br/>
-              </td>
+              <td>COMMON_SI_TEST_RANK</td>
+              <td>loinc.csv field 40</td>
             </tr>
             <tr>
-              <td>COMMON_TEST_RANK<br/>
-              </td>
-              <td>loinc.csv field 38<br/>
-              </td>
+              <td>COMMON_TEST_RANK</td>
+              <td>loinc.csv field 38</td>
             </tr>
             <tr>
-              <td>COMMON_ORDER_RANK<br/>
-              </td>
-              <td>loinc.csv field 39<br/>
-              </td>
+              <td>COMMON_ORDER_RANK</td>
+              <td>loinc.csv field 39</td>
             </tr>
             <tr>
-              <td>CONSUMER_NAME<br/>
-              </td>
-              <td>loinc.csv field 14<br/>
-              </td>
+              <td>CONSUMER_NAME</td>
+              <td>loinc.csv field 14</td>
             </tr>
             <tr>
               <td class="file_field_name">UNITS_AND_RANGE</td>
@@ -374,108 +343,87 @@
             </tr>
             <tr>
               <td class="file_field_name">EXAMPLE_UCUM_UNITS</td>
-              <td>loinc.csv field 33<br/>
-              </td>
+              <td>loinc.csv field 33</td>
             </tr>
             <tr>
               <td class="file_field_name">EXAMPLE_UNITS</td>
-              <td>loinc.csv field 29<br/>
-              </td>
+              <td>loinc.csv field 29</td>
             </tr>
             <tr>
               <td class="file_field_name">EXTERNAL_COPYRIGHT_LINK</td>
-              <td>loinc.csv field 42<br/>
-              </td>
+              <td>loinc.csv field 42</td>
             </tr>
             <tr>
               <td class="file_field_name">EXTERNALLY_DEFINED</td>
-              <td>LOINC_252_PanelsAndForms.xlsx (ANSWERS tab) field 6 (ExternallyDefined)<br/>
-              </td>
+              <td>LOINC_252_PanelsAndForms.xlsx (ANSWERS tab) field 6 (ExternallyDefined)</td>
             </tr>
             <tr>
               <td class="file_field_name">EXTERNALLY_DEFINED_CODE_SYSTEM</td>
-              <td>LOINC_252_PanelsAndForms.xlsx (ANSWERS tab) field 7 (ExternallyDefinedAnswerListCodeSystem)<br/>
-              </td>
+              <td>LOINC_252_PanelsAndForms.xlsx (ANSWERS tab) field 7 (ExternallyDefinedAnswerListCodeSystem)</td>
             </tr>
             <tr>
               <td class="file_field_name">EXTERNAL_LIST_LINK</td>
-              <td>LOINC_252_PanelsAndForms.xlsx (ANSWERS tab) field 8 (LinkToExternalList)<br/>
-              </td>
+              <td>LOINC_252_PanelsAndForms.xlsx (ANSWERS tab) field 8 (LinkToExternalList)</td>
             </tr> 
             <tr>
               <td class="file_field_name">FROMRSAB</td>
-              <td>This data is added during Metathesaurus source
-                processing</td>
+              <td>This data is added during Metathesaurus source processing</td>
             </tr>
             <tr>
               <td class="file_field_name">FROMVSAB</td>
-              <td>This data is added during Metathesaurus source
-                processing</td>
+              <td>This data is added during Metathesaurus source processing</td>
             </tr>
             <tr>
               <td class="file_field_name">GLOBAL_ID</td>
-              <td>LOINC_252_PanelsAndForms.xlsx (ANSWERS tab) field 14 (GlobalID)<br/>
-              </td>
+              <td>LOINC_252_PanelsAndForms.xlsx (ANSWERS tab) field 14 (GlobalID)</td>
             </tr>
             <tr>
               <td class="file_field_name">GLOBAL_ID_CODE_SYSTEM</td>
-              <td>LOINC_252_PanelsAndForms.xlsx (ANSWERS tab) field 15 (GlobalIDCodeSystem)<br/>
-              </td>
+              <td>LOINC_252_PanelsAndForms.xlsx (ANSWERS tab) field 15 (GlobalIDCodeSystem)</td>
             </tr> 
             <tr>
               <td class="file_field_name">HL7_ATTACHMENT_STRUCTURE</td>
-              <td>loinc.csv field 41<br/>
-              </td>
+              <td>loinc.csv field 41</td>
             </tr>
             <tr>
               <td class="file_field_name">HL7_FIELD_SUBFIELD_ID</td>
-              <td>loinc.csv field 27<br/>
-              </td>
+              <td>loinc.csv field 27</td>
             </tr>
             <tr>
               <td class="file_field_name">LCD [CDISC common tests]</td>
-              <td>loinc.csv field 26 (CDISC_COMMON_TESTS)<br/>
-              </td>
+              <td>loinc.csv field 26 (CDISC_COMMON_TESTS)</td>
             </tr>
             <tr>
               <td class="file_field_name">LCL [Class]</td>
-              <td>loinc.csv field 8 (CLASS)<br/>
-              </td>
+              <td>loinc.csv field 8 (CLASS)</td>
             </tr>
             <tr>
               <td class="file_field_name">LCN [Classtype]</td>
-              <td>loinc.csv field 15 (CLASSTYPE)<br/>
-              </td>
+              <td>loinc.csv field 15 (CLASSTYPE)</td>
             </tr>
             <tr>
               <td class="file_field_name">LCS [Status]</td>
-              <td>loinc.csv field 13 (STATUS)<br/>
-              </td>
+              <td>loinc.csv field 13 (STATUS)</td>
             </tr>
             <tr>
               <td class="file_field_name">LCT [Change type]</td>
-              <td>loinc.csv field 11 (CHNG_TYPE)<br/>
-              </td>
+              <td>loinc.csv field 11 (CHNG_TYPE)</td>
             </tr>
             <tr>
               <td class="file_field_name">LEA [Example answers]</td>
-              <td>loinc.csv field 18 (EXMPL_ANSWERS)<br/>
-              </td>
+              <td>loinc.csv field 18 (EXMPL_ANSWERS)</td>
             </tr>
             <tr>
               <td class="file_field_name">LFO [Formula]</td>
-              <td>loinc.csv field 16 (FORMULA)<br/>
-              </td>
+              <td>loinc.csv field 16 (FORMULA)</td>
             </tr>
             <tr>
               <td class="file_field_name">LLR [Date last revised]</td>
-              <td>loinc.csv field 10 (DATE_LAST_CHANGED)<br/>
-              </td>
+              <td>loinc.csv field 10 (DATE_LAST_CHANGED)</td>
             </tr>
             <tr>
               <td class="file_field_name">LMP [MAP TO code]</td>
-              <td>map_to.csv field 2 (MAP TO)<br/>
-              </td>
+              <td>map_to.csv field 2 (MAP TO)</td>
             </tr>
             <tr>
               <td class="file_field_name">LOINC_COMPONENT</td>
@@ -503,43 +451,35 @@
             </tr>
             <tr>
               <td class="file_field_name">LOR [Order/observation]</td>
-              <td>loinc.csv field 25 (ORDER_OBS)<br/>
-              </td>
+              <td>loinc.csv field 25 (ORDER_OBS)</td>
             </tr>
             <tr>
               <td class="file_field_name">LQS [Survey question source]</td>
-              <td>loinc.csv field 20 (SURVEY_QUEST_SRC)<br/>
-              </td>
+              <td>loinc.csv field 20 (SURVEY_QUEST_SRC)</td>
             </tr>
             <tr>
               <td class="file_field_name">LQT [Survey question text]</td>
-              <td>loinc.csv field 19 (SURVEY_QUEST_TXT)<br/>
-              </td>
+              <td>loinc.csv field 19 (SURVEY_QUEST_TXT)</td>
             </tr>
             <tr>
               <td class="file_field_name">LRN2 [Related names 2]</td>
-              <td>loinc.csv field 23 (RELATEDNAMES2)<br/>
-              </td>
+              <td>loinc.csv field 23 (RELATEDNAMES2)</td>
             </tr>
             <tr>
               <td class="file_field_name">LSP [Species]</td>
-              <td>loinc.csv field 17 (SPECIES)<br/>
-              </td>
+              <td>loinc.csv field 17 (SPECIES)</td>
             </tr>
             <tr>
               <td class="file_field_name">LSU [Submitted units]</td>
-              <td>loinc.csv field 22 (SUBMITTED_UNITS)<br/>
-              </td>
+              <td>loinc.csv field 22 (SUBMITTED_UNITS)</td>
             </tr>
             <tr>
               <td class="file_field_name">LUR [Units required]</td>
-              <td>loinc.csv field 21 (UNITS_REQUIRED)<br/>
-              </td>
+              <td>loinc.csv field 21 (UNITS_REQUIRED)</td>
             </tr>
             <tr>
               <td class="file_field_name">MAPSETRSAB</td>
-              <td>This data is added during Metathesaurus source
-                processing</td>
+              <td>This data is added during Metathesaurus source processing</td>
             </tr>
            <tr>
               <td class="file_field_name">MAPSETTYPE</td>
@@ -547,38 +487,31 @@
             </tr>
             <tr>
               <td class="file_field_name">MAPSETVERSION</td>
-              <td>This data is added during Metathesaurus source
-                processing</td>
+              <td>This data is added during Metathesaurus source processing</td>
             </tr>
             <tr>
               <td class="file_field_name">MAPSETVSAB</td>
-              <td>This data is added during Metathesaurus source
-                processing</td>
+              <td>This data is added during Metathesaurus source processing</td>
             </tr>
             <tr>
               <td class="file_field_name">MTH_MAPFROMCOMPLEXITY</td>
-              <td>This data is added during Metathesaurus source
-                processing</td>
+              <td>This data is added during Metathesaurus source processing</td>
             </tr>
             <tr>
               <td class="file_field_name">MTH_MAPFROMEXHAUSTIVE</td>
-              <td>This data is added during Metathesaurus source
-                processing</td>
+              <td>This data is added during Metathesaurus source processing</td>
             </tr>
             <tr>
               <td class="file_field_name">MTH_MAPSETCOMPLEXITY</td>
-              <td>This data is added during Metathesaurus source
-                processing</td>
+              <td>This data is added during Metathesaurus source processing</td>
             </tr>
             <tr>
               <td class="file_field_name">MTH_MAPTOCOMPLEXITY</td>
-              <td>This data is added during Metathesaurus source
-                processing</td>
+              <td>This data is added during Metathesaurus source processing</td>
             </tr>
             <tr>
               <td class="file_field_name">MTH_MAPTOEXHAUSTIVE</td>
-              <td>This data is added during Metathesaurus source
-                processing</td>
+              <td>This data is added during Metathesaurus source processing</td>
             </tr>
             <tr>
               <td class="file_field_name">OID</td>
@@ -586,13 +519,11 @@
             </tr>
             <tr>
               <td class="file_field_name">SEQ_NO</td>
-              <td>LOINC_252_PanelsAndForms.xlsx (ANSWERS tab) field 11 (SequenceNo)<br/>
-              </td>
+              <td>LOINC_252_PanelsAndForms.xlsx (ANSWERS tab) field 11 (SequenceNo)</td>
             </tr>
             <tr>
               <td class="file_field_name">LOINC_SCORE</td>
-              <td>LOINC_252_PanelsAndForms.xlsx (ANSWERS tab) field 18 (Score)<br/>
-              </td>
+              <td>LOINC_252_PanelsAndForms.xlsx (ANSWERS tab) field 18 (Score)</td>
             </tr>  
             <tr>
               <td class="file_field_name">SOS</td>
@@ -600,65 +531,48 @@
                 LOINC_PARTS field 4 (DISPLAY_NAME)</td>
             </tr>
             <tr>
-              <td>STATUS_REASON<br/>
-              </td>
-              <td>loinc.csv field 35<br/>
-              </td>
+              <td>STATUS_REASON</td>
+              <td>loinc.csv field 35</td>
             </tr>
             <tr>
-              <td>STATUS_TEXT<br/>
-              </td>
-              <td>loinc.csv field 36<br/>
-              </td>
+              <td>STATUS_TEXT</td>
+              <td>loinc.csv field 36</td>
             </tr>
             <tr>
-              <td>SUBSEQUENT_TEXT_PROMPT<br/>
-              </td>
-              <td>LOINC_252_PanelsAndForms.xlsx (ANSWERS tab) field 19 (SubsequentTextPrompt)<br/>
-              </td>
+              <td>SUBSEQUENT_TEXT_PROMPT</td>
+              <td>LOINC_252_PanelsAndForms.xlsx (ANSWERS tab) field 19 (SubsequentTextPrompt)</td>
             </tr>
             <tr>
-              <td>TOP_2000_LAB_RESULTS_SI<br/>
-              </td>
-              <td>LOINC_1.3_Top2000CommonLabResultsSI.csv field 6 (RANK)<br/>
-              </td>
+              <td>TOP_2000_LAB_RESULTS_SI</td>
+              <td>LOINC_1.3_Top2000CommonLabResultsSI.csv field 6 (RANK)</td>
             </tr>
             <tr>
-              <td>TOP_2000_LAB_RESUlTS_US<br/>
-              </td>
-              <td>LOINC_1.3_Top2000CommonLabResultsUS.csv field 6 (RANK)<br/>
-              </td>
+              <td>TOP_2000_LAB_RESUlTS_US</td>
+              <td>LOINC_1.3_Top2000CommonLabResultsUS.csv field 6 (RANK)</td>
             </tr>
             <tr>
-              <td>TOP_300_COMMON_LAB_ORDERS_US<br/>
-              </td>
-              <td>LOINC_1.2_Top300CommonLabOrdersUS.xlsx field 3 (RANK)<br/>
-              </td>
+              <td>TOP_300_COMMON_LAB_ORDERS_US</td>
+              <td>LOINC_1.2_Top300CommonLabOrdersUS.xlsx field 3 (RANK)</td>
             </tr>
             <tr>
               <td class="file_field_name">TORSAB</td>
-              <td>This data is added during Metathesaurus source
-                processing</td>
+              <td>This data is added during Metathesaurus source processing</td>
             </tr>
             <tr>
               <td class="file_field_name">TOVSAB</td>
-              <td>This data is added during Metathesaurus source
-                processing</td>
+              <td>This data is added during Metathesaurus source processing</td>
             </tr>
             <tr>
               <td class="file_field_name">XMAP</td>
-              <td>This data is added during Metathesaurus source
-                processing</td>
+              <td>This data is added during Metathesaurus source processing</td>
             </tr>
             <tr>
               <td class="file_field_name">XMAPFROM</td>
-              <td>This data is added during Metathesaurus source
-                processing</td>
+              <td>This data is added during Metathesaurus source processing</td>
             </tr>
             <tr>
               <td class="file_field_name">XMAPTO</td>
-              <td>This data is added during Metathesaurus source
-                processing</td>
+              <td>This data is added during Metathesaurus source processing</td>
             </tr>
           </tbody>
         </table>
@@ -673,12 +587,12 @@
           name="relationships"></a><br/>
         <h4>Relationships</h4>
         &nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
-        <table class="elements" border="0" cellpadding="0">
+        <table>
           <tbody>
             <tr>
               <th>REL</th>
               <th>RELA<br/>
-                inverse_RELA</th>
+                  inverse_RELA</th>
               <th>Origin</th>
             </tr>
             <tr>
