@@ -14,19 +14,18 @@
       </ul>
     </div>
     <!-- end tabbed navigation area --> <br/>
-    <br/>
-    <br/>
+
     <a name="top"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
       <a href="#change_summary">Summary of Changes</a>, <a
         href="#file_summary">Summary of Source-Provided Files</a> <a
         href="#file_details">Source-Provided File Details</a></span> <a
       name="general"></a>
     <div id="rep_change_summary" class="rep_block_level_one"> <br/>
-      <b>VSAB:</b> CVX2015_07_27
+      <strong>VSAB:</strong> CVX2015_07_27
       <h3>Summary of Changes:</h3>
       <div id="rep_identifiers" class="rep_block_level_one">
         <p>No changes were made to the source data format or to
-          Metathesaurus source processing.<br/>
+          Metathesaurus source processing.
         </p>
       </div>
       <h3>Source Provided Files:</h3>
@@ -35,16 +34,15 @@ href="http://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx">http:
       <br/>
       The flat file was used for Metathesaurus source processing.<br/>
       <br/>
-      <table class="elements" border="0" cellspacing="0">
+      <table>
         <tbody>
           <tr>
             <th>File Name</th>
-            <td style="vertical-align: top; text-align: center;"><b>Description</b><br/>
-            </td>
+            <th>Description</th>
           </tr>
           <tr>
-            <td class="file_field_name">cvx.txt</td>
-            <td style="vertical-align: top;">"|" - delimited file</td>
+            <td>cvx.txt</td>
+            <td>"|" - delimited file</td>
           </tr>
         </tbody>
       </table>
@@ -59,7 +57,6 @@ href="http://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx">http:
         <h3>Source-Provided Files: Details</h3>
         (<span class="nav"><a href="#top">return to top</a></span>)
         <p>The following is a list of fields in the CVX source file:<br/>
-        </p>
         <div class="rep_block_level_two"><a name="file1"></a><br/>
           <br/>
           Summary of TTY assignment:<br/>
@@ -67,63 +64,58 @@ href="http://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx">http:
           <table>
             <tbody>
               <tr>
-                <td><b>Vaccine Status</b><br/>
+                <th>Vaccine Status</th>
+                <th>Short Description TTY</th>
+                <th>Suppress</th>
+                <th>Full Vaccine Name TTY</th>
+                <th>Suppress</th>
+              </tr>
+              <tr>
+                <td>Active
                 </td>
-                <td><b>Short Description</b><b> TTY</b><br/>
+                <td>AB
                 </td>
-                <td><b>Suppress</b><br/>
+                <td>Y
                 </td>
-                <td><b>Full Vaccine Name</b><b> TTY</b><b><br/>
-                  </b></td>
-                <td><b>Suppress</b><br/>
+                <td>PT
+                </td>
+                <td>N
                 </td>
               </tr>
               <tr>
-                <td>Active<br/>
+                <td>Inactive
                 </td>
-                <td>AB<br/>
+                <td>OA
                 </td>
-                <td>Y<br/>
+                <td>O
                 </td>
-                <td>PT<br/>
+                <td>OP
                 </td>
-                <td>N<br/>
-                </td>
-              </tr>
-              <tr>
-                <td>Inactive<br/>
-                </td>
-                <td>OA<br/>
-                </td>
-                <td>O<br/>
-                </td>
-                <td>OP<br/>
-                </td>
-                <td>O<br/>
+                <td>O
                 </td>
               </tr>
               <tr>
-                <td>Never Active<br/>
+                <td>Never Active
                 </td>
-                <td>OA<br/>
+                <td>OA
                 </td>
-                <td>O<br/>
+                <td>O
                 </td>
-                <td>OP<br/>
+                <td>OP
                 </td>
-                <td>O<br/>
+                <td>O
                 </td>
               </tr>
               <tr>
-                <td>Pending<br/>
+                <td>Pending
                 </td>
-                <td>AB<br/>
+                <td>AB
                 </td>
-                <td>Y<br/>
+                <td>Y
                 </td>
-                <td>PT<br/>
+                <td>PT
                 </td>
-                <td>N<br/>
+                <td>N
                 </td>
               </tr>
             </tbody>
@@ -133,62 +125,59 @@ href="http://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx">http:
           <table>
             <tbody>
               <tr>
-                <td><b>Field</b><br/>
-                </td>
-                <td><b>Representation</b><br/>
-                </td>
+                <th>Field</th>
+                <th>Representation</th>
               </tr>
               <tr>
-                <td>CVX Code<br/>
+                <td>CVX Code
                 </td>
                 <td>MRCONSO.CODE<br/>
-                  MRCONSO.SCUI<br/>
+                  MRCONSO.SCUI
                 </td>
               </tr>
               <tr>
-                <td>Short Description<br/>
+                <td>Short Description
                 </td>
                 <td>MRCONSO.STR<br/>
                   CODE = CVX Code<br/>
                   TTY = "AB" or "OA", depending on value of "Vaccine
                   Status" field<br/>
                   SUPPRESS = "Y" or "O" depending on value of "Vaccine
-                  Status field<br/>
+                  Status field
                 </td>
               </tr>
               <tr>
-                <td>Full Vaccine Name<br/>
+                <td>Full Vaccine Name
                 </td>
                 <td>MRCONSO.STR<br/>
                   CODE = CVX Code<br/>
                   TTY = "PT" or "OP", depending on value of "Vaccine
                   Status" field<br/>
                   SUPPRESS = "N" or "O" depending on value of "Vaccine
-                  Status field<br/>
+                  Status field
                 </td>
               </tr>
               <tr>
-                <td>Notes<br/>
+                <td>Notes
                 </td>
-                <td>MRSAT.ATN = SOS<br/>
+                <td>MRSAT.ATN = SOS
                 </td>
               </tr>
               <tr>
-                <td>Vaccine Status<br/>
+                <td>Vaccine Status
                 </td>
                 <td>MRSAT.ATN = "VACCINE_STATUS"<br/>
-                  <br/>
-                  Vaccine Status is also used to assign TTYs<br/>
+                  Vaccine Status is also used to assign TTYs
                 </td>
               </tr>
               <tr>
-                <td>NonVaccine<br/>
+                <td>NonVaccine
                 </td>
-                <td>Not included in Metathesaurus source processing<br/>
+                <td>Not included in Metathesaurus source processing
                 </td>
               </tr>
               <tr>
-                <td>Last Updated<br/>
+                <td>Last Updated
                 </td>
                 <td>MRSAT.ATN = "DATE_LAST_MODIFIED" </td>
               </tr>
