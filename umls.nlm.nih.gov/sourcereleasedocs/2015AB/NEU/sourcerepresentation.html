@@ -14,7 +14,7 @@
     <br/>
 <a name = "top"></a>
 <span class = "nav">Skip to: <a href = "#general">General Notes/Comments</a>, <a href = "#change_summary">Summary of Changes</a>, <a href = "#file_summary">Summary of Source-Provided Files</a> <a href = "#file_details">Source-Provided File Details</a></span>
-<p>VSAB: NEU2015_06_02</p>
+<p><strong>VSAB: </strong>NEU2015_06_02</p>
 <a name = "general"></a>
 <div id = "rep_general" class = "rep_block_level_one">
 <h3>General Notes/Comments:</h3>
@@ -39,14 +39,22 @@ languages.</p>
 <!-- Make a table of each file that comes from the source   -->
 <h4>Documentation and Reference</h4>
 <table>
- <tr><td>http://braininfo.rprc.washington.edu/NeuroNames%20XML%20Excel%20Manual.pdf</td></tr>
+ <tr>
+  <td>http://braininfo.rprc.washington.edu/NeuroNames%20XML%20Excel%20Manual.pdf</td>
+ </tr>
 </table>
 <br/>
 
 
-<table class = "elements" border = "0" cellspacing = "0">
-<tr><th>File Name</th><th>Description</th></tr>
-<tr><td  class = "file_file_name">NeuroNames.xml</td><td>XML file of standard names, synonyms, acronyms, URLs, and codes.</td></tr>
+<table>
+<tr>
+  <th>File Name</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td  class = "file_file_name">NeuroNames.xml</td>
+  <td>XML file of standard names, synonyms, acronyms, URLs, and codes.</td>
+</tr>
 </table>
 <br/>
 
@@ -59,17 +67,65 @@ languages.</p>
 
 <div class = "rep_block_level_two">
 <a name = "file1"></a>
-<table class = "elements" border = "0" cellspacing = "0">
-<tr><th>Field Number</th><th>Field Name</th><th>Description</th><th>Representation</th></tr>
-<tr><td  class = "file_field_name">1</td><td>brainInfoID</td><td>Unique ID assigned to each neuroanatomical structure</td><td>MRCONSO.CODE; MRCONSO.SCUI</td></tr>
-<tr><td  class = "file_field_name">2</td><td>cNIDType</td><td>Identifies whether an item is in the classical hierarchy of brain structures (value = h) or not (value = a for ancillary)</td><td>MRSAT.ATN=CNIDTYPE</td></tr>
-<tr><td  class = "file_field_name">3</td><td>cNID</td><td>IDs used prior to 2009</td><td>MRSAT.ATN=CNID</td></tr>
-<tr><td  class = "file_field_name">4</td><td>standardName</td><td>Preferred name</td><td>MRCONSO.STR; MRCONSO.TTY=PT or MRCONSO.TTY=OP</td></tr>
-<tr><td  class = "file_field_name">5</td><td>standardAcronym</td><td>Acronym</td><td>MRCONSO.STR; MRCONSO.TTY=ACR</td></tr>
-<tr><td  class = "file_field_name">6</td><td>synonym</td><td>Synonym</td><td>MRCONSO.STR; MRCONSO.TTY=SY or MRCONSO.TTY=IS if language = English or Latin, otherwise, mapped to ATN = TRANSLATION</td></tr>
-<tr><td  class = "file_field_name">7</td><td>synonymLanguage</td><td>Language of the synonym</td><td>used to determine if TTY or ATN is assigned. If language = Mixed, it is not processed.</td></tr>
-<tr><td  class = "file_field_name">8</td><td>pubMedHits</td><td>Frequency of term in the PubMed abstracts of the past 25 years</td><td>not processed</td></tr>
-<tr><td  class = "file_field_name">9</td><td>brainInfoURL</td><td>URL of the central directory page in BrainInfo</td><td>MRSAT.ATN=BRAININFO_URL</td></tr>
+<table>
+<tr>
+  <th>Field Number</th>
+  <th>Field Name</th><th>Description</th>
+  <th>Representation</th>
+</tr>
+<tr>
+  <td  class = "file_field_name">1</td>
+  <td>brainInfoID</td>
+  <td>Unique ID assigned to each neuroanatomical structure</td>
+  <td>MRCONSO.CODE; MRCONSO.SCUI</td>
+</tr>
+<tr>
+  <td  class = "file_field_name">2</td>
+  <td>cNIDType</td>
+  <td>Identifies whether an item is in the classical hierarchy of brain structures (value = h) or not (value = a for ancillary)</td>
+  <td>MRSAT.ATN=CNIDTYPE</td>
+</tr>
+<tr>
+  <td  class = "file_field_name">3</td>
+  <td>cNID</td>
+  <td>IDs used prior to 2009</td>
+  <td>MRSAT.ATN=CNID</td>
+</tr>
+<tr>
+  <td  class = "file_field_name">4</td>
+  <td>standardName</td>
+  <td>Preferred name</td>
+  <td>MRCONSO.STR; MRCONSO.TTY=PT or MRCONSO.TTY=OP</td>
+</tr>
+<tr>
+  <td  class = "file_field_name">5</td>
+  <td>standardAcronym</td>
+  <td>Acronym</td>
+  <td>MRCONSO.STR; MRCONSO.TTY=ACR</td>
+</tr>
+<tr>
+  <td  class = "file_field_name">6</td>
+  <td>synonym</td>
+  <td>Synonym</td>
+  <td>MRCONSO.STR; MRCONSO.TTY=SY or MRCONSO.TTY=IS if language = English or Latin, otherwise, mapped to ATN = TRANSLATION</td>
+</tr>
+<tr>
+  <td  class = "file_field_name">7</td>
+  <td>synonymLanguage</td>
+  <td>Language of the synonym</td>
+  <td>used to determine if TTY or ATN is assigned. If language = Mixed, it is not processed.</td>
+</tr>
+<tr>
+  <td  class = "file_field_name">8</td>
+  <td>pubMedHits</td>
+  <td>Frequency of term in the PubMed abstracts of the past 25 years</td>
+  <td>not processed</td></tr>
+<tr>
+  <td  class = "file_field_name">9</td>
+  <td>brainInfoURL</td>
+  <td>URL of the central directory page in BrainInfo</td>
+  <td>MRSAT.ATN=BRAININFO_URL</td>
+</tr>
 </table>
 
 <p>The following fields can occur multiple times within a concept:</p>
