@@ -27,7 +27,7 @@
     <div id="rep_change_summary" class="rep_block_level_one"> <a
         name="change_summary"></a>
       <h3>Summary of Changes:</h3>
-      &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+      <span class="nav">(<a href="#top">return to top</a></span>)<br/>
       <br/>
       Not applicable<br/>
       <br/>
@@ -35,38 +35,38 @@
     <div id="rep_file_summary" class="rep_block_level_one"> <a
         name="file_summary"></a>
       <h3>Source-Provided Files: Summary</h3>
-      &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)<br/>
+      (<span class="nav"><a href="#top">return to top</a></span>)<br/>
       <div id="rep_file_details" class="rep_block_level_one">
         <h4>Data Files</h4>
         <a name="data_files"></a>
-        <table class="elements" border="0" cellspacing="0">
+        <table>
           <tbody>
             <tr>
               <th>File Name</th>
               <th>Description</th>
             </tr>
             <tr>
-              <td class="file_field_name">http://www2a.cdc.gov/vaccines/iis/iisstandards/downloads/mvx.txt</td>
-              <td>MVX data file<br/>
+              <td>http://www2a.cdc.gov/vaccines/iis/iisstandards/downloads/mvx.txt</td>
+              <td>MVX data file
               </td>
             </tr>
             <tr>
-              <td class="file_field_name">http://www2a.cdc.gov/vaccines/iis/iisstandards/downloads/TRADENAME.txt<br/>
+              <td>http://www2a.cdc.gov/vaccines/iis/iisstandards/downloads/TRADENAME.txt
               </td>
               <td>File connecting manufacturer names (MVX) to vaccine
-                names (CVX)<br/>
+                names (CVX)
               </td>
             </tr>
           </tbody>
         </table>
         <br/>
         <h3>Source-Provided Files: Details</h3>
-        &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
+        (<span class="nav"><a href="#top">return to top</a></span>)
         <br/>
         <div class="rep_block_level_two"> <a name="file1"></a>
-          <h4 class="file_field_name">file:&nbsp; mvx.txt<br/>
+          <h4 class="file_field_name">file: mvx.txt<br/>
           </h4>
-          &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
+          <span class="nav">return to <a href="#data_files">Data
 
 
 
@@ -74,113 +74,110 @@
 
               Files</a></span> <br/>
           <br/>
-          <table class="elements" border="0" cellspacing="0">
+          <table>
             <tbody>
               <tr>
                 <th>Field Name</th>
-                <td valign="top"><b>Representation</b><br/>
-                </td>
+                <th>Representation</th>
               </tr>
               <tr>
-                <td class="file_field_name">MVX CODE<br/>
+                <td>MVX CODE
                 </td>
-                <td valign="top">MRCONSO.CODE<br/>
+                <td>MRCONSO.CODE<br/>
                   MRCONSO.SCUI<br/>
                 </td>
               </tr>
               <tr>
-                <td class="file_field_name">MANUFACTURER NAME<br/>
+                <td>MANUFACTURER NAME
                 </td>
-                <td valign="top">MRCONSO.STR<br/>
-                </td>
-              </tr>
-              <tr>
-                <td>NOTES<br/>
-                </td>
-                <td valign="top">MRSAT.ATN = SOS<br/>
+                <td>MRCONSO.STR
                 </td>
               </tr>
               <tr>
-                <td valign="top">MANUFACTURER STATUS<br/>
+                <td>NOTES
                 </td>
-                <td valign="top">MRSAT.ATN = MANUFACTURER_STATUS<br/>
+                <td>MRSAT.ATN = SOS
+                </td>
+              </tr>
+              <tr>
+                <td>MANUFACTURER STATUS
+                </td>
+                <td>MRSAT.ATN = MANUFACTURER_STATUS<br/>
                   MRSAT.ATV = Active/Inactive<br/>
-                  Used to assign TTY (PT or OP)<br/>
+                  Used to assign TTY (PT or OP)
                 </td>
               </tr>
               <tr>
-                <td valign="top">LAST UPDATED DATE<br/>
+                <td>LAST UPDATED DATE
                 </td>
-                <td valign="top">MRSAT.ATN = DATE_LAST_MODIFIED<br/>
+                <td>MRSAT.ATN = DATE_LAST_MODIFIED
                 </td>
               </tr>
             </tbody>
           </table>
           <br/>
           <a name="file2"></a>
-          <h4 class="file_field_name">file:&nbsp; TRADENAME.txt<br/>
+          <h4>file: TRADENAME.txt
           </h4>
           Used to create relationships between Manufacturers in MVX and
           vaccines in CVX. <br/>
           MRREL.REL = RO<br/>
           MRREL.RELA = manufactures/manufactured_by<br/>
           <br/>
-          <table class="elements" border="0" cellspacing="0">
+          <table>
             <tbody>
               <tr>
-                <th>Field Name<br/>
-                </th>
+                <th>Field Name</th>
                 <th>Representation</th>
               </tr>
               <tr>
-                <td class="file_field_name">CDC PRODUCT NAME<br/>
-                </td>
-                <td>Not directly used (represented in SAB = CVX)<br/>
-                </td>
-              </tr>
-              <tr>
-                <td class="file_field_name">SHORT DESCRIPTION<br/>
-                </td>
-                <td>Not directly used (represented in SAB = CVX)<br/>
+                <td>CDC PRODUCT NAME</td>
+                <td>Not directly used (represented in SAB = CVX)
                 </td>
               </tr>
               <tr>
-                <td>CVX CODE<br/>
+                <td>SHORT DESCRIPTION
                 </td>
-                <td>Used to assign MRREL.CUI<br/>
-                </td>
-              </tr>
-              <tr>
-                <td>MANUFACTURER<br/>
-                </td>
-                <td>Not directly used<br/>
+                <td>Not directly used (represented in SAB = CVX)
                 </td>
               </tr>
               <tr>
-                <td>MVX CODE<br/>
+                <td>CVX CODE
                 </td>
-                <td>Used to assign MRREL.CUI<br/>
-                </td>
-              </tr>
-              <tr>
-                <td>MVX STATUS<br/>
-                </td>
-                <td>Not directly used<br/>
+                <td>Used to assign MRREL.CUI
                 </td>
               </tr>
               <tr>
-                <td>PRODUCT NAME STATUS<br/>
+                <td>MANUFACTURER
+                </td>
+                <td>Not directly used
+                </td>
+              </tr>
+              <tr>
+                <td>MVX CODE
+                </td>
+                <td>Used to assign MRREL.CUI
+                </td>
+              </tr>
+              <tr>
+                <td>MVX STATUS
+                </td>
+                <td>Not directly used
+                </td>
+              </tr>
+              <tr>
+                <td>PRODUCT NAME STATUS
                 </td>
                 <td>
-                  <p><br/>
-                    Not directly used (represented in SAB = CVX) </p>
+                  <p>
+                    Not directly used (represented in SAB = CVX)
                 </td>
               </tr>
               <tr>
-                <td>LAST UPDATED DATE<br/>
+                <td>LAST UPDATED DATE
                 </td>
                 <td>MRSAT.ATN = DATE_LAST_MODIFIED<br/>
-                  STYPE = SRUI<br/>
+                  STYPE = SRUI
                 </td>
               </tr>
             </tbody>

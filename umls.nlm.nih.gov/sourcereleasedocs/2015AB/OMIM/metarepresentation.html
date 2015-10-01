@@ -20,7 +20,7 @@
       <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
       <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
     <div id="general" class="rep_block_level_one">
-      <p><b>VSAB: 2015_03_18</b><br/>
+      <p><strong>VSAB: 2015_03_18</strong><br/>
       </p>
       <div id="rep_identifiers" class="rep_block_level_one">
         <h3>Summary of Changes</h3>
@@ -31,20 +31,20 @@
           been added or deprecated:<br/>
         </p>
         <p>New TTY:<br/>
-          ETAL:&nbsp; Entry term alias<br/>
-          PHENO:&nbsp; Phenotype<br/>
+          ETAL: Entry term alias<br/>
+          PHENO: Phenotype<br/>
           PHENO_ET: Phenotype entry term<br/>
         </p>
         <p>Deprecated TTY:<br/>
-          ETAV:&nbsp; Entry term allelic variant<br/>
+          ETAV: Entry term allelic variant<br/>
           SYN: Designated alias<br/>
         </p>
-        <p>New&nbsp; REL/RELA<br/>
-          RQ| allelic_variant_of<br/>
+        <p>New REL/RELA<br/>
+          RQ|allelic_variant_of<br/>
           RO|has_phenotype<br/>
         </p>
         <p>Deprecated REL/RELA<br/>
-          RO| allelic_variant_of<br/>
+          RO|allelic_variant_of<br/>
           RO|related_to<br/>
           <br/>
         </p>
@@ -70,142 +70,124 @@
                 &lt;Mim-entry_mimNumber&gt;.&lt;Mim-allelic-variant_number&gt;
                 (e.g. "606158.0015")<br/>
               </li>
-              <li>TTY = HT, PTCS:&nbsp; an MTHU# assigned during
+              <li>TTY = HT, PTCS: an MTHU# assigned during
                 Metathesaurus source processing</li>
             </ul>
           </li>
-          <li>SAUI:&nbsp; not applicable<br/>
+          <li>SAUI: not applicable<br/>
           </li>
-          <li>SCUI:&nbsp; not applicable<br/>
+          <li>SCUI: not applicable<br/>
           </li>
-          <li>SDUI:&nbsp; same as CODE<br/>
+          <li>SDUI: same as CODE<br/>
           </li>
         </ul>
         <div id="rep_termtypes" class="rep_block_level_two"> <a
             name="atoms"></a>
           <h3>Atoms (MRCONSO):</h3>
-          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <span class="nav">(<a href="#top">return to top</a></span>)<br/>
           <br/>
-          Note:&nbsp; Entries with &lt;Mim-entry_mimType&gt; value of
+          Note:Entries with &lt;Mim-entry_mimType&gt; value of
           "2" (caret) are not included in Metathesaurus source
-          processing.&nbsp; This value indicates that an entry no longer
+          processing. This value indicates that an entry no longer
           exists because it was removed from the database or moved to
           another entry as indicated.<br/>
           <br/>
-          <table class="elements" border="0" cellspacing="0">
+          <table>
             <tbody>
               <tr>
                 <th>Term Type</th>
                 <th>Origin</th>
               </tr>
               <tr>
-                <td>ACR<br/>
+                <td>ACR
                 </td>
                 <td>CODE: &lt;Mim-entry_mimNumber&gt;<br/>
                   <br/>
                   STRING: <br/>
-                  <div style="margin-left: 40px;">value of tag =
+                  value of tag =
                     &lt;Mim-entry_title&gt; <br/>
-                  </div>
-                  <div style="margin-left: 80px;">Information after
+                  Information after
                     semicolon is parsed to create ACR atoms<br/>
                     <br/>
-                  </div>
-                  <div style="margin-left: 40px;">value of tag =
+                  value of tag =
                     &lt;Mim-entry_included_E&gt; <br/>
-                  </div>
-                  <div style="margin-left: 80px;">Information after
+                  Information after
                     semicolon is parsed to create ACR atoms<br/>
                     The pattern ", INCLUDED" is removed from the string<br/>
                     <br/>
-                  </div>
-                  <div style="margin-left: 40px;">value of tag =
+                  value of tag =
                     &lt;Mim-entry_aliases_E&gt; <br/>
-                  </div>
-                  <div style="margin-left: 80px;">Information after
+                  Information after
                     semicolon is parsed to create ACR atoms<br/>
                     <br/>
-                  </div>
-                  SDUI:&nbsp; &lt;Mim-entry_mimNumber&gt;<br/>
+                  SDUI: &lt;Mim-entry_mimNumber&gt;
                 </td>
               </tr>
               <tr>
-                <td>ET<br/>
+                <td>ET
                 </td>
                 <td>CODE: &lt;Mim-entry_mimNumber&gt;<br/>
                   <br/>
-                  <span class="western__Char" style="text-decoration:
-                    none;">STRING:<br/>
-                  </span>
-                  <div style="margin-left: 40px;">value of tag =
+                  STRING:<br/>
+                  value of tag =
                     &lt;Mim-entry_included_E&gt; <br/>
-                  </div>
-                  <div>Information before the first semicolon is used to
+                  Information before the first semicolon is used to
                     create ET atoms<br/>
-                  </div>
-                  <div>The pattern ", INCLUDED" is removed from the
+                  The pattern ", INCLUDED" is removed from the
                     string<br/>
                     <br/>
-                  </div>
-                  <div>SDUI: &lt;Mim-entry_mimNumber&gt;<br/>
-                  </div>
+                  SDUI: &lt;Mim-entry_mimNumber&gt;<br/>
                 </td>
               </tr>
               <tr>
-                <td>ETAL<br/>
+                <td>ETAL
                 </td>
                 <td>CODE: &lt;Mim-entry_mimNumber&gt;<br/>
                   <br/>
                   STRING: <br/>
-                  <div>value of tag = &lt;Mim-entry_aliases_E&gt;<br/>
-                    <blockquote>Information before the first semicolon
+                  value of tag = &lt;Mim-entry_aliases_E&gt;<br/>
+                    Information before the first semicolon
                       is used to create an ETAL atom<br/>
-                    </blockquote>
-                    <div>The pattern ", INCLUDED" is removed from the
-                      string </div>
-                  </div>
-                  <div style="margin-left: 40px;"><br/>
-                  </div>
-                  SDUI:&nbsp; &lt;Mim-entry_mimNumber&gt;</td>
+                    The pattern ", INCLUDED" is removed from the
+                      string<br/><br/>
+                  SDUI:  &lt;Mim-entry_mimNumber&gt;</td>
               </tr>
               <tr>
-                <td>HT<br/>
+                <td>HT
                 </td>
-                <td>CODE:&nbsp; An MTHU# assigned during Metathesaurus
+                <td>CODE: An MTHU# assigned during Metathesaurus
                   source processing<br/>
                   <br/>
                   STRING:<br/>
-                  <div>value of tag = &lt;Mim-index-term_key&gt;<br/>
-                  </div>
-                  <div>Values are excluded from Metathesaurus source
+                  value of tag = &lt;Mim-index-term_key&gt;<br/>
+
+                  Values are excluded from Metathesaurus source
                     processing if they meet any of the following
-                    criteria:</div>
+                    criteria:
                   <div>
                     <ul>
-                      <li>The string is mixed-case/lower-case.&nbsp;
+                      <li>The string is mixed-case/lower-case.
                         These values have not yet been reviewed by OMIM</li>
                       <li>Have an edit date where the year is before
                         1996</li>
                       <li>Do not have a "MIM-entry_synopsisEditHistory"</li>
                     </ul>
                   </div>
-                  <div>value of tag =
-                    &lt;Mim-index-term_terms_E&gt;&nbsp; <br/>
-                  </div>
-                  <div>If the value is contained within square brackets,
+                  value of tag =
+                    &lt;Mim-index-term_terms_E&gt;  <br/>
+                  If the value is contained within square brackets,
                     the entry is considered a subheading and TTY = "HT"
                     is assigned; otherwise it is considered a leaf node
                     and TTY= "PTCS" is assigned<br/>
                     <br/>
-                  </div>
-                  SDUI:&nbsp; An MTHU# assigned during Metathesaurus
+                  SDUI: An MTHU# assigned during Metathesaurus
                   source processing<br/>
                 </td>
               </tr>
               <tr>
-                <td valign="top">PHENO<br/>
+                <td>PHENO
                 </td>
-                <td valign="top">CODE: &lt;Mim-entry_mimNumber&gt;<br/>
+                <td>CODE: &lt;Mim-entry_mimNumber&gt;<br/>
                   <br/>
                   STRING: <br/>
                   value of tag = &lt;Mim-allelic-variant_name&gt;<br/>
@@ -213,9 +195,9 @@
                   SDUI: &lt;Mim-entry_mimNumber&gt;</td>
               </tr>
               <tr>
-                <td valign="top">PHENO_ET<br/>
+                <td>PHENO_ET
                 </td>
-                <td valign="top">CODE: &lt;Mim-entry_mimNumber&gt;<br/>
+                <td>CODE: &lt;Mim-entry_mimNumber&gt;<br/>
                   <br/>
                   STRING:<br/>
                   value of tag =
@@ -226,51 +208,45 @@
                   SDUI: &lt;Mim-entry_mimNumber&gt;</td>
               </tr>
               <tr>
-                <td>PT<br/>
+                <td>PT
                 </td>
                 <td>CODE: &lt;Mim-entry_mimNumber&gt;<br/>
                   <br/>
                   STRING: <br/>
-                  <div>value of tag = &lt;Mim-entry_title&gt; <br/>
-                    <div>Information before the first semicolon is used
-                      to create PT atoms<br/>
-                    </div>
-                  </div>
+                  value of tag = &lt;Mim-entry_title&gt; <br/>
+                   Information before the first semicolon is used
+                      to create PT atoms<br/><br/>
                   SDUI: &lt;Mim-entry_mimNumber&gt;<br/>
                 </td>
               </tr>
               <tr>
-                <td valign="top">PTAV<br/>
+                <td>PTAV
                 </td>
-                <td valign="top">CODE:&nbsp;
+                <td>CODE:
  &lt;Mim-entry_mimNumber&gt;.&lt;Mim-allelic-variant_number&gt;<br/>
                   <br/>
                   STRING:<br/>
                   value of tag
                   &lt;Mim-allelic-variant_mutation&gt;&lt;Mim_text_text&gt;<br/>
                     <br/>
-                    <br/>
                     SDUI: &lt;Mim-entry_mimNumber&gt;.&lt;Mim-allelic-variant_number&gt;
                   </td>
               </tr>
               <tr>
-                <td>PTCS<br/>
+                <td>PTCS
                 </td>
-                <td>CODE:&nbsp; An MTHU# assigned during Metathesaurus
+                <td>CODE: An MTHU# assigned during Metathesaurus
                   source processing<br/>
                   <br/>
-                  <div>value of tag = &lt;Mim-index-term_terms_E&gt;<br/>
-                  </div>
-                  <div>
-                    <div>If the value is contained within square
+                  STRING:<br/>
+                  value of tag = &lt;Mim-index-term_terms_E&gt;<br/>
+                  If the value is contained within square
                       brackets, the entry is considered a subheading and
                       TTY = "HT" is assigned; otherwise it is considered
                       a leaf node and TTY= "PTCS" is assigned<br/>
-                    </div>
                     <br/>
-                  </div>
-                  SDUI:&nbsp; An MTHU# assigned during Metathesaurus
-                  source processing<br/>
+                  SDUI: An MTHU# assigned during Metathesaurus
+                  source processing
                 </td>
               </tr>
             </tbody>
@@ -278,59 +254,57 @@
         </div>
         <div id="rep_attributes" class="rep_block_level_two"> <a
             name="attributes"></a><br/>
-          <h3>Attributes (MRSAT):</h3>
-          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-          <table class="elements" border="0" cellspacing="0">
+          <h3>Attributes (MRSAT): </h3>
+          <span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <table>
             <tbody>
               <tr>
                 <th>Attribute Name</th>
                 <th>Origin</th>
               </tr>
               <tr>
-                <td>GENELOCUS<br/>
+                <td>GENELOCUS
                 </td>
                 <td>tag = &lt;Mim-entry_locus&gt;<br/>
-                  <div style="margin-left: 40px;">Comma-separated values
-                    are parsed to create one or more attributes <br/>
-                  </div>
+                  Comma-separated values
+                    are parsed to create one or more attributes
                 </td>
               </tr>
               <tr>
-                <td>GENESYMBOL<br/>
+                <td>GENESYMBOL
                 </td>
                 <td>tag = &lt;Mim-entry_symbol&gt;<br/>
-                  <div>Comma-separated values are parsed to create one
+                  Comma-separated values are parsed to create one
                     or more attributes <br/>
-                  </div>
                 </td>
               </tr>
               <tr>
-                <td>MIMTYPE<br/>
+                <td>MIMTYPE
                 </td>
-                <td>tag = &lt;Mim-entry_mimType&gt;<br/>
+                <td>tag = &lt;Mim-entry_mimType&gt;
                 </td>
               </tr>
               <tr>
-                <td>MIMTYPEMEANING<br/>
+                <td>MIMTYPEMEANING
                 </td>
                 <td>Textual description of the mimType, extracted from
-                  OMIM documentation<br/>
+                  OMIM documentation
                 </td>
               </tr>
               <tr>
-                <td>MIMTYPEVALUE<br/>
+                <td>MIMTYPEVALUE
                 </td>
-                <td>&lt;Mim-entry_mimType value&gt;<br/>
+                <td>&lt;Mim-entry_mimType value&gt;
                 </td>
               </tr>
               <tr>
-                <td>MOVED_FROM<br/>
+                <td>MOVED_FROM
                 </td>
                 <td>Extracted from tag = &lt;MIM-entry_title&gt; where
                   the value contains the pattern "MOVED TO"<br/>
                   The "MOVED_FROM" attribute is created for the current
                   entry, the ATV is the obsolete
-                  &lt;Mim-entry_mimNumber&gt;.&nbsp; No atom is created
+                  &lt;Mim-entry_mimNumber&gt;. No atom is created
                   for the obsolete entry. </td>
               </tr>
             </tbody>
@@ -338,16 +312,16 @@
         </div>
         <div id="rep_definitions" class="rep_block_level_two"> <a
             name="definitions"></a><br/>
-          <h3>Definitions (MRDEF):</h3>
-          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-          <p>No definitions are included in the OMIM data.<br/>
+          <h3>Definitions (MRDEF): </h3>
+          <span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <p>No definitions are included in the OMIM data.
           </p>
         </div>
         <div id="rep_relationships" class="rep_block_level_two"> <a
             name="relationships"></a><br/>
           <h3>Relationships (MRREL):</h3>
-          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-          <table class="elements" border="0" cellspacing="0">
+           <span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <table>
             <tbody>
               <tr>
                 <th>REL</th>
@@ -358,69 +332,69 @@
               <tr>
                 <td>PAR<br/>
                   CHD<br/>
-                  <br/>
+
                 </td>
-                <td>(no rela)<br/>
+                <td>(no rela)
                 </td>
                 <td>Hierarchy representing the clinical synopses.<br/>
                   <br/>
                   All atoms with TTY = HT or PTCS participate in the
-                  hierarchy. <br/>
+                  hierarchy.
                 </td>
               </tr>
               <tr>
                 <td>RQ<br/>
                 </td>
                 <td>allelic_variant_of<br/>
-                  has_allelic_variant<br/>
+                  has_allelic_variant
                 </td>
-                <td>Connects PTAV atom to its PT atom<br/>
+                <td>Connects PTAV atom to its PT atom
                 </td>
               </tr>
               <tr>
-                <td>RO<br/>
+                <td>RO
                 </td>
                 <td>has_inheritance_type<br/>
-                  inheritance_type_of<br/>
+                  inheritance_type_of
                 </td>
                 <td>Connects PTCS atom treed under "INHERITANCE" to PT
-                  atom<br/>
+                  atom
                 </td>
               </tr>
               <tr>
                 <td>RO<br/>
                 </td>
                 <td>has_manifestation<br/>
-                  manifestation_of<br/>
+                  manifestation_of
                 </td>
                 <td>Connects PTCS atom not treed under inheritance to PT
                   atom<br/>
                 </td>
               </tr>
               <tr>
-                <td>RQ<br/>
+                <td>RQ
                 </td>
                 <td>alias_of<br/>
-                  has_alias<br/>
+                  has_alias
                 </td>
                 <td>Connects ETAL atom to PT atom </td>
               </tr>
               <tr>
-                <td valign="top">RO<br/>
+                <td>RO
                 </td>
-                <td valign="top">phenotype_of<br/>
-                  has_phenotype<br/>
+                <td>phenotype_of<br/>
+                  has_phenotype
                 </td>
-                <td valign="top">Connects PTAV to PHENO or PHENO_ET<br/>
+                <td>Connects PTAV to PHENO or PHENO_ET
                 </td>
               </tr>
               <tr>
-                <td>SY<br/>
+                <td>SY
                 </td>
                 <td>expanded_form<br/>
-                  has_expanded_form<br/>
+                  has_expanded_form
                 </td>
-                <td>Connects ACR atom to ET, ETAL or PT atom<br/>
+                <td>Connects ACR atom to ET, ETAL or PT atom
                 </td>
               </tr>
             </tbody>
@@ -429,7 +403,7 @@
         <div id="rep_mappings" class="rep_block_level_two"> <a
             name="mappings"></a><br/>
           <h3>Mappings (MRMAP):</h3>
-          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+           <span class="nav">(<a href="#top">return to top</a></span>)<br/>
           <p>No mappings to external sources are processed from OMIM
             data.<br/>
           </p>
