@@ -31,6 +31,10 @@
     <td>Biomedical Research Integrated Domain Group Model</td>
 </tr>
 <tr>
+    <td>CareLex</td>
+    <td>Content Archive Resource Exchange Lexicon</td>
+</tr>
+<tr>
     <td>CDC</td>
     <td>U.S. Centers for Disease Control and Prevention</td>
 </tr>
@@ -113,90 +117,21 @@
 </table>
 </div>
 <h3>Summary of Changes</h3>
-<p>The TTY format of subsource+TTY (e.g., UCUMPT) has been deprecated and replaced with individual subsources prepended by "NCI2014_" which can be used with the standard TTYs (e.g., PT, SY). New NCI subsources:</p>
+<p>New subsource: NCI2015_CareLex_1502D</p>
+<p>New term groups:</p>
 <ul>
-  <li>NCI2014_BioC_1403E</li>
-  <li>NCI2014_BRIDG_1403E</li>
-  <li>NCI2014_CDC_1403E</li>
-  <li>NCI2014_CDISC_1403E</li>
-  <li>NCI2014_CRCH_1403E</li>
-  <li>NCI2014_CTCAE_1403E</li>
-  <li>NCI2014_CTEP-SDC_1403E</li>
-  <li>NCI2014_DCP_1403E</li>
-  <li>NCI2014_DICOM_1403E</li>
-  <li>NCI2014_DTP_1403E</li>
-  <li>NCI2014_FDA_1403E</li>
-  <li>NCI2014_NCI-HL7_1403E</li>
-  <li>NCI2014_ICH_1403E</li>
-  <li>NCI2014_JAX_1403E</li>
-  <li>NCI2014_KEGG_1403E</li>
-  <li>NCI2014_NCI-GLOSS_1403E</li>
-  <li>NCI2014_NCPDP_1403E</li>
-  <li>NCI2014_NICHD_1403E</li>
-  <li>NCI2014_PID_1403E</li>
-  <li>NCI2014_RENI_1403E</li>
-  <li>NCI2014_UCUM_1403E</li>
-  <li>NCI2014_ZFin_1403E</li>
+  <li>NCI2015_CareLex_1502D/PT</li>
+  <li>NCI2015_CareLex_1502D/AB</li>
+  <li>NCI2015_CareLex_1502D/SY</li>
+  <li>NCI2015_NICHD_1502D/OP</li>
+  <li>NCI2015_NICHD_1502D/HD</li>
 </ul>
-<p>Deprecated term types:</p>
-  <ul>
-    <li>BRIDGPT</li>
-    <li>BioCPT</li>
-    <li>BioCSY</li>
-    <li>CDCPT</li>
-    <li>CDISCPT</li>
-    <li>CDISCSY</li>
-    <li>CRCHPT</li>
-    <li>CRCHSY</li>
-    <li>CTCAEPT</li>
-    <li>CTEP-SDCPT</li>
-    <li>CTEP-SDCSY</li>
-    <li>DCPPT</li>
-    <li>DCPSY</li>
-    <li>DICOMPT</li>
-    <li>DTPPT</li>
-    <li>DTPSY</li>
-    <li>FDAAB</li>
-    <li>FDAPT</li>
-    <li>FDASY</li>
-    <li>ICHAB</li>
-    <li>ICHPT</li>
-    <li>ICHSY</li>
-    <li>JAXPT</li>
-    <li>JAXSY</li>
-    <li>KEGGAB</li>
-    <li>KEGGPT</li>
-    <li>KEGGSY</li>
-    <li>NCI-GLOSSOP</li>
-    <li>NCI-GLOSSPT</li>
-    <li>NCI-GLOSSSY</li>
-    <li>NCI-HL7AB</li>
-    <li>NCI-HL7PT</li>
-    <li>NCI-HL7SY</li>
-    <li>NCPDPPT</li>
-    <li>NICHDAB</li>
-    <li>NICHDPT</li>
-    <li>NICHDSY</li>
-    <li>PIDPT</li>
-    <li>RENIDN</li>
-    <li>UCUMAB</li>
-    <li>UCUMPT</li>
-    <li>UCUMSY</li>
-    <li>ZFINPT</li>
-    <li>ZFINSY</li>
-  </ul>
-<p>Deprecated attribute name (ATN):</p>
-  <ul>
-    <li>CONTRIBUTING_SOURCE</li>
-    <li>ORIG_CODE</li>
-    <li>SUBSOURCE</li>
-  </ul>  
 </div>
 <div id = "rep_change_summary" class = "rep_block_level_one">
 <h3>Original Files:</h3>
 <table>
 <tr><th>File Name</th><th>Description</th></tr>
-<tr><td  class = "file_field_name"><a href = "#file1">ThesaurusInferred.owl</a></td><td>Complete source data in an OWL By Code formatted file.</td></tr>
+<tr><td  class = "file_field_name">ThesaurusInferred.owl</td><td>Complete source data in an OWL By Code formatted file.</td></tr>
 </table>
 <br/>
 </div>
@@ -210,7 +145,7 @@
 </ul>
 <div id = "rep_termtypes" class = "rep_block_level_two">
 <a name = "atoms">&nbsp;</a>
-<h3>Atoms (MRCONSO)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)<br/>
+<h3>Atoms (MRCONSO)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)
 <p>The term names and term types are extracted from the field tagged, "&lt;P90...&lt;ncicp:term-name>...lt;/ncicp:term-name>&lt;ncicp:term-group>...&lt;/ncicp:term-group>...&lt;/P90&gt;" (FULL_SYN), unless otherwise noted.</p>
 <table>
 <tr><th>Term Type</th><th>Description</th></tr>
@@ -263,7 +198,7 @@
 </div>
 <div id = "rep_attributes" class = "rep_block_level_two">
 <a name = "attributes">&nbsp;</a><br/>
-<h3>Attributes (MRSAT)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)<br/>
+<h3>Attributes (MRSAT)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)
 <table>
 <tr><th>Attribute Name</th><th>Origin: OWL tag</th></tr>
 <tr><td>ACCEPTED_THERAPEUTIC_USE_FOR</td>
@@ -352,7 +287,7 @@
 </div>
 <div id = "rep_definitions" class = "rep_block_level_two">
 <a name = "definitions">&nbsp;</a><br/>
-<h3>Definitions (MRDEF)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)<br/>
+<h3>Definitions (MRDEF)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)
 <p>Only definitions with a source of NCI, NCI-GLOSS, or of an NCI subsource are included.  Definitions are attached to their corresponding PT.  For example, an NCI-GLOSS definition is attached to its NCI-GLOSS/PT.  If there is no corresponding PT then the definition is attached to the NCI/PT.  Definition attributions are enclosed within parentheses and appended to the definition.</p>
 Origin:
 <p>Definition: &lt;P97...ncicp:ComplexDefinition xmlns:ncicp.../P97&gt;</p>
@@ -360,7 +295,7 @@ Alt_Definition: &lt;P325...ncicp:ComplexDefinition xmlns:ncicp.../P325&gt;
 </div>
 <div id = "rep_relationships" class = "rep_block_level_two">
 <a name = "relationships">&nbsp;</a><br/>
-<h3>Relationships (MRREL)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)<br/>
+<h3>Relationships (MRREL)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)
 <p>Origin of the relationship is derived from the "owl:onPropertyrdf..." code (Roles) and/or the "&lt;A# rdf..." code (Associations).  For example:</p>
 &lt;rdfs:subClassOf&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;owl:Restriction&gt;<br/>
@@ -586,5 +521,5 @@ Alt_Definition: &lt;P325...ncicp:ComplexDefinition xmlns:ncicp.../P325&gt;
 &nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)<br/>
 <p>The hierarchy is created from the 'rdfs:subClassOfrdf:resource' tag which indicates the parent of the concept.  Sibling information is not included.</p> 
 <h3>Mappings (MRMAP)</h3>
-&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)<br/>
+&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)
 <p>No mappings are supplied by NCI.</p> 

@@ -14,17 +14,20 @@
 <span class = "nav">Skip to: <a href = "#general">General Notes/Comments</a>, <a href = "#change_summary">Summary of Changes</a>, <a href = "#file_summary">Summary of Source-Provided Files</a> <a href = "#file_details">Source-Provided File Details</a></span>
 <a name = "general">&nbsp;</a>
 <div id = "rep_general" class = "rep_block_level_one">
-<h3>VSAB: NCI2014_03E</h3>
+<h3>VSAB: NCI2015_02D</h3>
 <h3>General Notes/Comments:</h3>
 <p>NCI Thesaurus (NCIt) is a widely recognized standard for biomedical coding and reference. It covers vocabulary for clinical care, translational and basic research, public information and administrative activities and is used by a broad variety of public and private partners both nationally and internationally.
 The scope of NCI is determined by the combined scope of its source vocabularies which include the following:</p>
-<table class = "elements" border = "0" cellspacing = "0">
+<table>
 <tr><th>Source</th><th>Description</th></tr>
 <tr>
     <td>BioC</td><td>BioCarta online maps of molecular pathways, adapted for NCI</td>
 </tr>
 <tr>
     <td>BRIDG</td><td>Biomedical Research Integrated Domain Group Model</td>
+</tr>
+<tr>
+    <td>CareLex</td><td>Content Archive Resource Exchange Lexicon</td>
 </tr>
 <tr>
     <td>CDC</td><td>U.S. Centers for Disease Control and Prevention</td>
@@ -91,84 +94,16 @@ The scope of NCI is determined by the combined scope of its source vocabularies 
 <div id = "rep_change_summary" class = "rep_block_level_one">
 <a name = "change_summary">&nbsp;</a>
 <h3>Summary of Changes</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)
-<p>The TTY format of subsource+TTY (e.g., UCUMPT) has been deprecated and replaced with individual subsources prepended by "NCI2014_" which can be used with the standard TTYs (e.g., PT, SY). New NCI subsources:</p>
+<p>New NCI subsource: NCI2015_CareLex_1502D</p>
+<p>New term groups:</p>
 <ul>
-  <li>NCI2014_BioC_1403E</li>
-  <li>NCI2014_BRIDG_1403E</li>
-  <li>NCI2014_CDC_1403E</li>
-  <li>NCI2014_CDISC_1403E</li>
-  <li>NCI2014_CRCH_1403E</li>
-  <li>NCI2014_CTCAE_1403E</li>
-  <li>NCI2014_CTEP-SDC_1403E</li>
-  <li>NCI2014_DCP_1403E</li>
-  <li>NCI2014_DICOM_1403E</li>
-  <li>NCI2014_DTP_1403E</li>
-  <li>NCI2014_FDA_1403E</li>
-  <li>NCI2014_NCI-HL7_1403E</li>
-  <li>NCI2014_ICH_1403E</li>
-  <li>NCI2014_JAX_1403E</li>
-  <li>NCI2014_KEGG_1403E</li>
-  <li>NCI2014_NCI-GLOSS_1403E</li>
-  <li>NCI2014_NCPDP_1403E</li>
-  <li>NCI2014_NICHD_1403E</li>
-  <li>NCI2014_PID_1403E</li>
-  <li>NCI2014_RENI_1403E</li>
-  <li>NCI2014_UCUM_1403E</li>
-  <li>NCI2014_ZFin_1403E</li>
+  <li>NCI2015_CareLex_1502D/PT</li>
+  <li>NCI2015_CareLex_1502D/AB</li>
+  <li>NCI2015_CareLex_1502D/SY</li>
+  <li>NCI2015_NICHD_1502D/AQ</li>
+  <li>NCI2015_NICHD_1502D/AQS</li>
+  <li>NCI2015_NICHD_1502D/HD</li>
 </ul>
-<p>Deprecated term types:</p>
-  <ul>
-    <li>BRIDGPT</li>
-    <li>BioCPT</li>
-    <li>BioCSY</li>
-    <li>CDCPT</li>
-    <li>CDISCPT</li>
-    <li>CDISCSY</li>
-    <li>CRCHPT</li>
-    <li>CRCHSY</li>
-    <li>CTCAEPT</li>
-    <li>CTEP-SDCPT</li>
-    <li>CTEP-SDCSY</li>
-    <li>DCPPT</li>
-    <li>DCPSY</li>
-    <li>DICOMPT</li>
-    <li>DTPPT</li>
-    <li>DTPSY</li>
-    <li>FDAAB</li>
-    <li>FDAPT</li>
-    <li>FDASY</li>
-    <li>ICHAB</li>
-    <li>ICHPT</li>
-    <li>ICHSY</li>
-    <li>JAXPT</li>
-    <li>JAXSY</li>
-    <li>KEGGAB</li>
-    <li>KEGGPT</li>
-    <li>KEGGSY</li>
-    <li>NCI-GLOSSOP</li>
-    <li>NCI-GLOSSPT</li>
-    <li>NCI-GLOSSSY</li>
-    <li>NCI-HL7AB</li>
-    <li>NCI-HL7PT</li>
-    <li>NCI-HL7SY</li>
-    <li>NCPDPPT</li>
-    <li>NICHDAB</li>
-    <li>NICHDPT</li>
-    <li>NICHDSY</li>
-    <li>PIDPT</li>
-    <li>RENIDN</li>
-    <li>UCUMAB</li>
-    <li>UCUMPT</li>
-    <li>UCUMSY</li>
-    <li>ZFINPT</li>
-    <li>ZFINSY</li>
-  </ul>
-<p>Deprecated attribute name (ATN):</p>
-  <ul>
-    <li>CONTRIBUTING_SOURCE</li>
-    <li>ORIG_CODE</li>
-    <li>SUBSOURCE</li>
-  </ul>
 </div>
 <div id = "rep_file_summary" class = "rep_block_level_one"></div>
 <a name = "file_summary">&nbsp;</a>
@@ -176,7 +111,7 @@ The scope of NCI is determined by the combined scope of its source vocabularies 
 <div class = "rep_block_level_two">
 <!-- Make a table of each file that comes from the source   -->
 <h4>Documentation and Reference</h4>
-<table class = "elements" border = "1" cellspacing = "0">
+<table>
 <tr><th>File Name</th><th>Description</th></tr>
 <tr><td  class = "file_field_name">nci.cfg</td><td>Configuration file</td></tr>
 <tr><td  class = "file_field_name">ThesaurusInferred.owl</td><td>Complete source data in an OWL formatted file</td></tr>
@@ -191,7 +126,7 @@ The scope of NCI is determined by the combined scope of its source vocabularies 
 <p>Properties that start with "&lt;A" are associations and "&lt;R" are roles. Both are treated as relationship attributes (RELA). Properties starting with a "&lt;P" are attribute names.</p>
 <div class = "rep_block_level_two">
 <!-- Make a table of each file that comes from the source   -->
-<table class = "elements" border = "1" cellspacing = "0">
+<table>
 <tr><th>Tag/Element (examples)</th><th>Description</th><th>Representation</th></tr>
 <tr><td  class = "file_field_name">&lt;owl:Class rdf:about="#C...&gt;</td><td>Concept code</td><td>MRCONSO.CODE; MRCONSO.SCUI</td></tr>
 <tr><td  class = "file_field_name">&lt;rdfs:label rdf:datatype="http://www.w3.org....&lt;/rdfs:label&gt;</td><td>Preferred term</td><td>Not processed. Redundant information. Preferred name property (P108) used instead.</td></tr>
