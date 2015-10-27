@@ -1,0 +1,713 @@
+<p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p>
+<!--begin tabbed navigation area-->
+
+    <div class="section-5">
+      <ul id="menu">
+        <li id="nav-1"><a href="index.html">Synopsis</a></li>
+        <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+        <li id="nav-3"><a href="stats.html">Statistics</a></li>
+        <li id="nav-4"><a href="samples.html">Samples</a></li>
+        <li id="nav-5"><a href="sourcerepresentation.html">Source
+            Representation</a></li>
+        <li id="nav-6"><a href="metarepresentation.html">Metathesaurus
+            Representation</a></li>
+      </ul>
+    </div>
+    <!-- end tabbed navigation area --> <br/>
+    <br/>
+    <br/>
+    <a name="top"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
+      <a href="#change_summary">Summary of Changes</a>, <a
+        href="#file_summary">Summary of Source-Provided Files</a> <a
+        href="#file_details">Source-Provided File Details</a></span> <a
+      name="general"></a>
+    <div id="rep_general" class="rep_block_level_one">
+      <h3>Notes</h3>
+      The following files are downloaded from The following files are downloaded from
+      <a href="http://www.cdc.gov/nchs/icd/icd10cm.htm">http://www.cdc.gov/nchs/icd/icd10cm.htm</a>:
+      <ul>
+        <li> 2016_I10gem.txt</li>
+        <li>2016_I9gem.txt</li>
+        <li>reimb_map_dx_2016.txt</li>
+        <li> icd10cm_order_2016.txt</li>
+      </ul>
+      In addition, the Metathesaurus uses files submitted in TREF
+      (Terminology Representation and Exchange Format). These files are
+      produced by the National Center for Health Statistics (NCHS) for
+      Metathesaurus processing, and are not currently available
+      publicly. TREF was developed by the NLM and is a subset of the
+      Rich Release Format (RRF) - the format in which the UMLS
+      Metathesaurus is released. The following files are submitted for
+      ICD10CM:<br/>
+      <br/>
+      MRCONSO.TREF<br/>
+      MRDOC.TREF<br/>
+      MRREL.TREF<br/>
+      MRSAB.TREF<br/>
+      MRSAT.TREF<br/>
+      <br/>
+      The TREF files align with the publically-available .pdf release of
+      ICD10CM. When relevant, the origin of data from the NCHS .pdf file
+      is noted in the tables below.<br/>
+    </div>
+    <div id="rep_change_summary" class="rep_block_level_one"> <a
+        name="change_summary"></a>
+      <h3>Summary of Changes:</h3>
+        <span class="nav">(<a href="#top">return to top</a></span>)<br/>
+      <p>There have been no changes to the data format. There were no
+        updates to the atoms (order) file. The mapping data was updated. </p>
+      Changes for this version are:
+      <ul>
+        <li> Change totype from SDUI to BOOLEAN_EXPRESSION_SDUI when
+          there is an AND </li>
+        <li> Fixed bug, changed XRTARGETID from NODX to NOI9 </li>
+        <li> Fixed bug in placement of decimal for ICD9CM "E" codes. <br/>
+        </li>
+      </ul>
+    </div>
+    <div id="rep_file_summary" class="rep_block_level_one"> <a
+        name="file_summary"></a>
+      <h3>Source-Provided Files: Summary</h3>
+        (<span class="nav"><a href="#top">return to top</a></span>)
+      <p>The following are files used for Metathesaurus source
+        processing.<br/>
+      </p>
+      <div class="rep_block_level_two">
+        <!-- Make a table of each file that comes from the source   -->
+        <h4>Documentation and Reference</h4>
+        <table>
+          <tbody>
+            <tr>
+              <th>File Name</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td class="file_field_name">GemsTechDoc.pdf</td>
+              <td>GEMs guide for technical users</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">Dxgem_guide_2016.pdf</td>
+              <td>Diagnosis Code Set General Equivalence Mappings
+                Documentation and User's Guide</td>
+            </tr>
+            <tr>
+              <td>Gems2016UpdateSummary.pdf</td>
+              <td>GEMs update summary</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">reimb_map_guide_2016.pdf</td>
+              <td>ICD-10-CM/PCS to ICD-9-CM Reimbursement Mappings
+                Documentation and User's Guide</td>
+            </tr>
+            <tr>
+              <td>ICD10OrderFiles.pdf</td>
+              <td>Documentation for
+                icd10cm_order_2016.txt</td>
+            </tr>
+          </tbody>
+        </table>
+        <br/>
+        <h4>Data Files</h4>
+        <a name="data_files"></a>
+        <table>
+          <tbody>
+            <tr>
+              <th>File Name</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td class="file_field_name"><a href="#file1">MRCONSO.TREF</a></td>
+              <td>Concepts, atoms and descriptors</td>
+            </tr>
+            <tr>
+              <td class="file_field_name"><a href="#file2">MRDOC.TREF</a></td>
+              <td>Documentation for abbreviated values</td>
+            </tr>
+            <tr>
+              <td class="file_field_name"><a href="#file3">MRREL.TREF</a></td>
+              <td>Relationships</td>
+            </tr>
+            <tr>
+              <td class="file_field_name"><a href="#file4">MRSAB.TREF</a></td>
+              <td>Source metadata</td>
+            </tr>
+            <tr>
+              <td class="file_field_name"><a href="#file5">MRSAT.TREF</a></td>
+              <td>Attributes</td>
+            </tr>
+            <tr>
+              <td class="file_field_name"><a href="#file6">icd10cm_order_2016.txt</a></td>
+              <td>Code descriptions in Tabular Order</td>
+            </tr>
+            <tr>
+              <td class="file_field_name"><a href="#file7">2016_I10gem.txt</a></td>
+              <td>ICD-10-CM to ICD-9-CM General Equivalence Mappings (GEMs)</td>
+            </tr>
+            <tr>
+              <td class="file_field_name"><a href="#file8">2016_I9gem.txt</a></td>
+              <td>ICD-9-CM to ICD-10-CM General Equivalence Mappings
+                (GEMs)</td>
+            </tr>
+            <tr>
+              <td class="file_field_name"><a href="#file9">reimb_map_dx_2016.txt</a></td>
+              <td>ICD-10-CM to ICD-9-CM reimbursement mappings</td>
+            </tr>
+          </tbody>
+        </table>
+        <br/>
+        <br/>
+        Not included: All information from the ICD-10-CM TREF data files
+        and from the mapping files is included in the UMLS
+        representation.<br/>
+        <p>Certain fields and files may not be directly processed
+          because they contain redundant data. </p>
+      </div>
+    </div>
+    <div id="rep_file_details" class="rep_block_level_one"> <a
+        name="file_details"></a>
+      <h3>Source-Provided Files: Details</h3>
+        (<span class="nav"><a href="#top">return to top</a></span>)
+      <p>Details on format of input files and representation of source
+        data. <br/>
+      </p>
+      <div class="rep_block_level_two"> <a name="file1"></a>
+        <h4 class="file_field_name">file:MRCONSO.TREF</h4>
+          <span class="nav">return to <a href="#data_files">Data
+
+            Files</a></span>
+        <p><br/>
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <th>#</th>
+              <th>Field Name</th>
+              <th>Description</th>
+              <th>Representation</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td class="file_field_name">AUI</td>
+              <td>Atom Unique Identifier</td>
+              <td>not populated</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>STR</td>
+              <td>Name associated with an atom</td>
+              <td>MRCONSO.RRF.STR</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td class="file_field_name">CUI</td>
+              <td>Concept Unique Identifier</td>
+              <td>not populated</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>DUI</td>
+              <td>Descriptor Unique Identifier</td>
+              <td>MRCONSO.RRF.CODE,
+                MRCONSO.RRF.SDUI</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>TTY</td>
+              <td>Term Type</td>
+              <td>MRCONSO.RRF.TTY</td>
+            </tr>
+          </tbody>
+        </table>
+        <br/>
+        <a name="file2"></a>
+        <h4 class="file_field_name">file:MRDOC.TREF</h4>
+          <span class="nav">return to <a href="#data_files">Data
+
+            Files</a></span><br/>
+        <br/>
+        File not directly used<br/>
+        <a name="file3"></a>
+        <h4 class="file_field_name">file:MRREL.TREF</h4>
+          <span class="nav">return to <a href="#data_files">Data
+
+            Files</a></span><br/>
+        <br/>
+        <table>
+          <tbody>
+            <tr>
+              <th>#</th>
+              <th>Field Name</th>
+              <th>Description</th>
+              <th>Representation</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td class="file_field_name">RUI</td>
+              <td>Relationship Unique Identifier</td>
+              <td>not populated</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>UI1</td>
+              <td>Unique Identifier of the first element</td>
+              <td>MRREL.RRF.UI1</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>STYPE1</td>
+              <td>Name of the column in
+                MRCONSO.TREF that contains the identifier used for the first element</td>
+              <td>MRREL.RRF.STYPE1</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>REL</td>
+              <td> Relationship</td>
+              <td>Always "PAR"; used to
+                create the hierarchy in MRHIER.RRF and PAR/CHD/SIB
+                relationships in MRREL.RRF</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td class="file_field_name">RELA</td>
+              <td>Relationships attribute</td>
+              <td>not populated</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>UI2</td>
+              <td>Unique Identifier of the second element</td>
+              <td>MRREL.RRF.UI2</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>STYPE2</td>
+              <td>Name of the column in
+                MRCONSO.TREF that contains the identifier used for the
+                second element </td>
+                <td>MRREL.RRF.STYPE2</td>
+            </tr>
+          </tbody>
+        </table>
+        <br/>
+        <a name="file4"></a>
+        <h4 class="file_field_name">file:MRSAB.TREF</h4>
+          <span class="nav">return to <a href="#data_files">Data
+
+            Files</a></span><br/>
+        <br/>
+        Not directly used<br/>
+        <a name="file5"></a><br/>
+        <h4 class="file_field_name">file:MRSAT.TREF</h4>
+          <span class="nav">return to <a href="#data_files">Data
+
+            Files</a></span><br/>
+        <br/>
+        <table>
+          <tbody>
+            <tr>
+              <th>#</th>
+              <th>Field Name</th>
+              <th>Description</th>
+              <th>Representation</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td class="file_field_name">ATUI</td>
+              <td>Attribute Unique Identifier</td>
+              <td>not populated</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td class="file_field_name">UI</td>
+              <td>Unique Identifier of the thing to which the attribute
+                is attached</td>
+              <td>MRSAT.RRF.UI</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>STYPE</td>
+              <td>Type of identifier used
+                in the UI field</td>
+              <td>MRSAT.RRF.STYPE</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>ATN</td>
+              <td>Attribute name</td>
+              <td>MRSAT.RRF.ATN for attributes other than DEFINITION</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>ATV</td>
+              <td>Attribute value</td>
+              <td>MRSAT.RRF.ATV for
+                attributes other than DEFINITION<br/>
+                MRDEF.DEF for DEFINITIONS</td>
+            </tr>
+          </tbody>
+        </table>
+        <br/>
+        <a name="file6"></a><br/>
+        <h4 class="file_field_name">file: icd10cm_order_2016.txt</h4>
+          <span class="nav">return to <a href="#data_files">Data
+            Files</a></span><br/>
+        <br/>
+        <table>
+          <tbody>
+            <tr>
+              <th>Character<br/>
+                Position</th>
+              <th>Length</th>
+              <th>Description</th>
+              <th>Representation</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td class="file_field_name">5</td>
+              <td>Order number, right justified, zero filled.</td>
+              <td>MRSAT.ATN = ORDER_NO</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td class="file_field_name">1</td>
+              <td>Blank</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>7</td>
+              <td>ICD-10-CM or ICD-10-PCS
+                code. Dots are not included.</td>
+              <td>Not directly processed
+                (extracted from MRCONSO.RRF)</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>1</td>
+              <td>Blank</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>1</td>
+              <td>0 if the code is a header
+                not valid for submission on a UB04.<br/>
+                1 if the code is valid for submission on a UB04.</td>
+              <td>Not directly processed
+                (extracted from MRCONSO.RRF;  determines TTY:
+                "0" for HT; "1" for "PT"</td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td>1</td>
+              <td>Blank</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>17</td>
+              <td>60</td>
+              <td>Short description</td>
+              <td>Not directly processed
+                (extracted from MRCONSO.RRF;  TTY = AB)</td>
+            </tr>
+            <tr>
+              <td>77</td>
+              <td>1</td>
+              <td>Blank</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>78</td>
+              <td>Up to <br/>
+                300</td>
+              <td>Long description</td>
+              <td>Not directly processed
+                (extracted from MRCONSO.RRF;  TTY = PT or TTY = HT)</td>
+            </tr>
+          </tbody>
+        </table>
+        <br/>
+        <a name="file7"></a><br/>
+        <h4 class="file_field_name">file: 2016_I10gem.txt<br/>
+        </h4>
+          <span class="nav">return to <a href="#data_files">Data
+
+            Files</a></span><br/>
+        <br/>
+        <table>
+          <tbody>
+            <tr>
+              <th>Field</th>
+              <td>Length</td>
+              <td>Begin</td>
+              <td>End</td>
+              <th>Representation</th>
+            </tr>
+            <tr>
+              <td>ICD-10-CM Code (source)</td>
+              <td>7</td>
+              <td>1</td>
+              <td>7</td>
+              <td>MRMAP.RRF.FROMID<br/>
+                MRMAP.RRF.FROMEXPR<br/>
+                Decimal point added as appropriate</td>
+            </tr>
+            <tr>
+              <td>filler</td>
+              <td>1</td>
+              <td>8</td>
+              <td>8</td>
+              <td>not used</td>
+            </tr>
+            <tr>
+              <td>ICD-9-CM Code (target)</td>
+              <td>5</td>
+              <td>9</td>
+              <td>13</td>
+              <td>MRMAP.RRF.TOID<br/>
+                MRMAP.RRF.TOEXPR<br/>
+                Decimal point added as appropriate</td>
+            </tr>
+            <tr>
+              <td>filler</td>
+              <td>1</td>
+              <td>14</td>
+              <td>14</td>
+              <td>not used</td>
+            </tr>
+            <tr>
+              <td>Approximate flag</td>
+              <td>1</td>
+              <td>15</td>
+              <td>15<br/>
+              </td>
+              <td>Value of 1 (indicates the
+                entry is not equivalent):<br/>
+                <div style="margin-left: 40px;">MRMAP.RRF.REL=RO<br/>
+                  MRMAP.REL.RELA=approximately_mapped_to</div>
+                <br/>
+                Value of 0:  <br/>
+                <div style="margin-left: 40px;">MRMAP.RRF.REL=SY<br/>
+                  MRMAP.RRF.RELA=mapped_to</div>
+              </td>
+            </tr>
+            <tr>
+              <td>No map flag</td>
+              <td>1</td>
+              <td>16</td>
+              <td>16</td>
+              <td>Value of 1:<br/>
+                MRMAP.RRF.REL=XR</td>
+            </tr>
+            <tr>
+              <td>Combination flag</td>
+              <td>1</td>
+              <td>17</td>
+              <td>17</td>
+              <td>Value of "1" indicates
+                that more than one code is required.  This is
+                implied in MRMAP.RRF by non-zero values in MAPSUBSETID.</td>
+            </tr>
+            <tr>
+              <td>Scenario</td>
+              <td>1</td>
+              <td>18</td>
+              <td>18</td>
+              <td>MRMAP.RRF.MAPSUBSETID
+                (first subfield, before the ":")<br/>
+                Anything with the same FROMEXPR and MAPSUBSETID values
+                should be "OR'd" together</td>
+            </tr>
+            <tr>
+              <td>Choice list</td>
+              <td>1</td>
+              <td>19<td>19<br/>
+              </td>
+              <td>MRMAP.RRF.MAPSUBSETID
+                (second subfield, after the ":")<br/>
+                Anything with the same FROMEXPR and MAPSUBSETID values
+                should be "OR'd" together</td>
+            </tr>
+          </tbody>
+        </table>
+        <a name="file8"></a><br/>
+        <h4 class="file_field_name">file: 2016_I9gem.txt<br/>
+        </h4>
+          <span class="nav">return to <a href="#data_files">Data
+            Files</a></span><br/>
+        <br/>
+        <table>
+          <tbody>
+            <tr>
+              <th>Field</th>
+              <th>Length</th>
+              <th>Begin</th>
+              <th>End</th>
+              <th>Representation</th>
+            </tr>
+            <tr>
+              <td class="file_field_name">ICD-9-CM Code (source)</td>
+              <td>5</td>
+              <td>1</td>
+              <td>5</td>
+              <td>MRMAP.RRF.FROMID<br/>
+                MRMAP.RRF.FROMEXPR<br/>
+                Decimal point added as appropriate</td>
+            </tr>
+            <tr>
+              <td>filler</td>
+              <td>1</td>
+              <td>6</td>
+              <td>6</td>
+              <td>not used</td>
+            </tr>
+            <tr>
+              <td>ICD-10-CM code (target)</td>
+              <td>7</td>
+              <td>7</td>
+              <td>13</td>
+              <td>MRMAP.RRF.TOID<br/>
+                MRMAP.RRF.TOEXPR<br/>
+                Decimal point added as appropriate</td>
+            </tr>
+            <tr>
+              <td>filler</td>
+              <td>1</td>
+              <td>14</td>
+              <td>14</td>
+              <td>not used</td>
+            </tr>
+            <tr>
+              <td>Approximate flag</td>
+              <td>1</td>
+              <td>15</td>
+              <td>15</td>
+              <td>Value of 1 (indicates the
+                entry is not equivalent):<br/>
+                <div style="margin-left: 40px;">MRMAP.RRF.REL=RO<br/>
+                  MRMAP.REL.RELA=approximately_mapped_to<br/>
+                </div>
+                <br/>
+                Value of 0:  <br/>
+                <div style="margin-left: 40px;">MRMAP.RRF.REL=SY<br/>
+                  MRMAP.RRF.RELA=mapped_to</div>
+              </td>
+            </tr>
+            <tr>
+              <td>No map flag</td>
+              <td>1</td>
+              <td>16</td>
+              <td>16</td>
+              <td>Value of 1:<br/>
+                MRMAP.RRF.REL=XR</td>
+            </tr>
+            <tr>
+              <td>Combination flag</td>
+              <td>1</td>
+              <td>17</td>
+              <td>17</td>
+              <td>Value of "1" indicates
+                that more than one code is required.  This is
+                implied in MRMAP.RRF by non-zero values in MAPSUBSETID.</td>
+            </tr>
+            <tr>
+              <td>Scenario</td>
+              <td>1</td>
+              <td>18</td>
+              <td>18</td>
+              <td>MRMAP.RRF.MAPSUBSETID (first subfield, before the ":")<br/>
+                Anything with the same FROMEXPR and MAPSUBSETID values
+                should be "OR'd" together </td>
+            </tr>
+            <tr>
+              <td>Choice</td>
+              <td>1</td>
+              <td>19</td>
+              <td>19</td>
+              <td>MRMAP.RRF.MAPSUBSETID
+                (second subfield, after the ":")<br/>
+                Anything with the same FROMEXPR and MAPSUBSETID values
+                should be "OR'd" together</td>
+            </tr>
+          </tbody>
+        </table>
+        <br/>
+        <h4 class="file_field_name">file: reimb_map_dx_2016.txt</h4>
+          <span class="nav">return to <a href="#data_files">Data
+            Files</a></span><br/>
+        <br/>
+        <table>
+          <tbody>
+            <tr>
+              <th>Field Name</th>
+              <th>Length</th>
+              <th>Begin</th>
+              <th>End</th>
+              <th>Representation</th>
+            </tr>
+            <tr>
+              <td>ICD-10-CM Code</td>
+              <td>8</td>
+              <td>1</td>
+              <td>8</td>
+              <td>MRMAP.RRF.FROMID<br/>
+                MRMAP.RRF.FROMEXPR<br/>
+                Decimal point added as appropriate </td>
+            </tr>
+            <tr>
+              <td>Number of ICD-9-CM mapped to</td>
+              <td>1</td>
+              <td>9</td>
+              <td>9</td>
+              <td>not used</td>
+            </tr>
+            <tr>
+              <td>1st ICD-9-CM code mapped to</td>
+              <td>6</td>
+              <td>10</td>
+              <td>15</td>
+              <td>Used in MRMAP.RRF.TOEXPR;
+                if multiple ICD-9-CM codes are included, they are
+                concatenated with "AND"</td>
+            </tr>
+            <tr>
+              <td>2nd ICD-9-CM code mapped to</td>
+              <td>6</td>
+              <td>16</td>
+              <td>21</td>
+              <td>Used in MRMAP.RRF.TOEXPR;
+                if multiple ICD-9-CM codes are included, they are
+                concatenated with "AND"</td>
+            </tr>
+            <tr>
+              <td>3rd ICD-9-CM code mapped to</td>
+              <td>6</td>
+              <td>22</td>
+              <td>27</td>
+              <td>Used in MRMAP.RRF.TOEXPR;
+                if multiple ICD-9-CM codes are included, they are
+                concatenated with "AND"</td>
+            </tr>
+            <tr>
+              <td>4th ICD-9-CM code mapped to</td>
+              <td>6</td>
+              <td>28</td>
+              <td>33</td>
+              <td>Used in MRMAP.RRF.TOEXPR;
+                if multiple ICD-9-CM codes are included, they are
+                concatenated with "AND"</td>
+            </tr>
+            <tr>
+              <td>5th ICD-9-CM code mapped to</td>
+              <td>6</td>
+              <td>34</td>
+              <td>39</td>
+              <td>Used in MRMAP.RRF.TOEXPR;
+                if multiple ICD-9-CM codes are included, they are
+                concatenated with "AND"</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>

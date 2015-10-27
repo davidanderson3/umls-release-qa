@@ -1,0 +1,283 @@
+<!--begin tabbed navigation area-->
+   <div class="section-5">
+      <ul id="menu">
+         <li id="nav-1"><a href="index.html">Synopsis</a></li>
+         <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+         <li id="nav-3"><a href="stats.html">Statistics</a></li>
+         <li id="nav-4"><a href="samples.html">Samples</a></li>
+         <li id="nav-5"><a href="sourcerepresentation.html">Source Representation</a></li>
+         <li id="nav-6"><a href="metarepresentation.html">Metathesaurus Representation</a></li>
+      </ul>
+   </div>
+<!-- end tabbed navigation area -->
+    <br/>
+    <br/>
+    <br/>
+    <a name="top"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
+      <a href="#change_summary">Summary of Changes</a>, <a
+        href="#file_summary">Summary of Source-Provided Files</a> <a
+        href="#file_details">Source-Provided File Details</a></span> <a
+      name="general"></a>
+    <div id="rep_general" class="rep_block_level_one"><br/>
+    </div>
+    <div id="rep_change_summary" class="rep_block_level_one"> <a
+        name="change_summary"></a>
+     <p><b>VSAB: MEDLINEPLUS_20141119</b></p> 
+      <h3>Summary of Changes:</h3>
+      &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+      <br />
+        No changes for this version<br/><br/>
+    </div>
+      <div id="rep_file_summary" class="rep_block_level_one"> <a
+        name="file_summary"></a><br/>
+      <h3>Source-Provided Files: Summary</h3>
+      &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
+      <p>The following MedlinePlus files are used for Metathesaurus
+        processing. These files, along with additional information can
+        be accessed at <a
+          href="http://www.nlm.nih.gov/medlineplus/xmldescription.html"
+          target="_blank">http://www.nlm.nih.gov/medlineplus/xmldescription.html</a>.</p>
+      <div class="rep_block_level_two">
+        <!-- Make a table of each file that comes from the source   -->
+        <h4>Documentation and Reference</h4>
+        <table class="elements" border="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <th>File Name</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td class="file_field_name">mplus_topics_2012-06-01.dtd</td>
+              <td>dtd for mplus_topics_2014-11-19.xml<br/>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">mplus_groups_2012-06-01.dtd</td>
+              <td>dtd for mplus_topic_groups_2014-11-19.xml<br/>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br/>
+        <h4>XML Data Files</h4>
+        <a name="data_files"></a>
+        <table class="elements" border="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <th>File Name</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td class="file_field_name">mplus_topics_2014-11-19.xml</td>
+              <td>
+                <p>Contains information on all MedlinePlus health topics
+                  including:&nbsp; topic name; URL; creation date;
+                  associated terminology (synonyms, see references and
+                  MeSH headings); group membership. </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="file_field_name">mplus_topic_groups_2014-11-19.xml</td>
+              <td>Contains information on all health topic groups on
+                MedlinePlus. </td>
+            </tr>
+          </tbody>
+        </table>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br/>
+        <p><b>Not included</b>: <br/>
+        </p>
+        <p>Spanish language content is not included in the
+          Metathesaurus.&nbsp;</p>
+      </div>
+    </div>
+    <div id="rep_file_details" class="rep_block_level_one">
+      <h3>Source-Provided Files: Details</h3>
+      &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
+      <p>The source representation documentation below is based on
+        published MedlinePlus documentation describing XML data
+        elements. Details from this document that are not relevant to
+        Metathesaurus processing have been removed for cleaner
+        presentation. For each XML data element, the table below
+        describes where the data can be found in the RRF format.
+        Redundant data elements may not be processed directly for
+        inclusion in the Metathesaurus.</p>
+      
+      <p>The following is a list of elements available for MedlinePlus
+        data in XML format. </p>
+      <div class="rep_block_level_two"> <a name="file1"></a><br/>
+        File:&nbsp; mplus_topics_YYYY-MM-DD.xml<br/>
+        <br/>
+        <table class="elements" border="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <th>Element</th>
+              <th>Representation</th>
+            </tr>
+            <tr>
+              <td>&lt;health-topic&gt;<br/>
+                Each MedlinePlus topic represented by the file has its
+                own &lt;health-topic&gt; element. The attributes for
+                this element include:<br/>
+                <br/>
+                id - the unique internal identification number assigned
+                to each topic by the MedlinePlus system.<br/>
+                language - the language of this topic. This can be
+                either English or Spanish, with English as the default.<br/>
+                title - name of the health topic page on MedlinePlus.<br />
+                date-created - the date the health topic was first available on the MedlinePlus site.<br/>
+                url - the URL for the corresponding health topic page on MedlinePlus.<br/>
+                Example: &lt;health-topic title="Abdominal Pain" url="http://www.nlm.nih.gov/medlineplus/abdominalpain.html" id="3061" language="English" date-created="01/07/2003"
+                language="English"&gt;<br/>
+                <br/>
+              </td>
+              <td>health-topic id:&nbsp;MRCONSO.CODE<br/>
+                  health-topic language:&nbsp;MRCONSO.LAT, MRSAB.LAT (only English terms from MedlinePlus are included in the Metathesaurus).<br/>
+                  health-topic title:&nbsp;MRCONSO.STR, TTY = PT<br />
+                  health-topic url:&nbsp;MRSAT.ATN = MP_HEALTH_TOPIC_URL<br/>
+                  health-topic date-created:&nbsp;MSAT.ATN = DATE_CREATED<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>&lt;also-called&gt;<br/>
+                Synonyms associated with the topic. A topic may have zero or more synonyms.<br />
+                Example: &lt;also-called&gt;Bellyache&lt;/also-called&gt;<br/>
+                <br/>
+              </td>
+              <td>MRCONSO.STR, TTY=SY, MRREL=SY
+              </td>
+            </tr>
+            <tr>
+              <td>&lt;full-summary&gt;<br/>
+                The full text of the health topic summary. There is one
+                &lt;full-summary&gt; per &lt;health-topic&gt;.<br/><br/>
+              </td>
+              <td>MRDEF.DEF
+              </td>
+            </tr>
+            <tr>
+              <td>&lt;see-reference&gt;<br/>
+                See references associated with the &lt;health-topic&gt;. There may be 0 or more see references per topic.<br/>
+                Example: &lt;see-reference&gt;Pain, Abdominal&lt;/see-reference&gt;<br/><br/>
+              </td>
+              <td>MRCONSO.STR, TTY=ET, MRREL=RQ<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>&lt;mesh-heading&gt;<br/>
+                Medical Subject Headings (MeSH) associated with the &lt;health-topic&gt;. There 
+                may be more than one &lt;mesh-heading&gt; per topic. This tag includes the following elements:<br/>
+                <br/>
+                &lt;descriptor&gt; with an id attribute<br/>
+                Refers to the Medical Subject Heading associated with the topic.<br/>
+                Example: &lt;descriptor id="D001132"&gt;Arm&lt;/descriptor&gt;<br/><br/>
+                
+                &lt;qualifier&gt; with an id attribute<br/>
+                Refers to the Medical Subject Heading subheadings associated with the &lt;descriptor&gt;.<br/>
+                Example: &lt;qualifier id="Q000503"&gt;physiopathology&lt;/qualifier&gt;<br/>
+                <br/>
+                
+              </td>
+              <td>MRREL.REL = RQ (for descriptor), MRREL.REL=RO (for qualifier)<br/>
+                MRREL.RELA = mapped_from/mapped_to (for descriptor), MRREL.RELA = mapping_qualifier_of/has_mapping_qualifier(for qualifier)<br/>
+                <br/>
+                <br/>
+                Note: Because the combination of the Descriptor and
+                Qualifier taken together represent the expressed
+                relationship, the pair of rels are given a relationship
+                group code to link them together.<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>&lt;group&gt;<br/>
+                Refers to the health topic group of which the &lt;health-topic&gt; is a member. A
+                  &lt;health-topic&gt; must be a member of at least one group; it may be a member of several groups. The attributes for this element include:<br/>
+                <br/>
+                id - the unique identification number for the health topic group<br/>
+                url - the URL of the health topic group page<br/>
+                Example: &lt;group url="http://www.nlm.nih.gov/medlineplus/digestivesystem.html" id="2"&gt;Digestive System&lt;/group&gt;<br/><br/>
+              </td>
+              <td>Group information is used to create the hierarchy, as represented in MRHIER.<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>&lt;related-topic&gt;<br/>
+                The related health topic(s) associated with the
+                  &lt;health-topic&gt;. This element can occur 0 or more times.
+                  The attributes for this element include: <br/><br/>
+                  id - the unique internal identification number assigned to each health topic<br/>
+                  url - the related topic URL<br/>
+                  Example: &lt;related-topic url="http://www.nlm.nih.gov/medlineplus/pain.html" id="351"&gt;Pain&lt;/related-topic&gt;<br/><br/>
+              </td>
+              <td>MRREL.REL = "RO"<br/>
+                MRREL.RELA = "related_to"<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>&lt;language-mapped-topic&gt;<br/>
+                For English topics, this is the equivalent Spanish health topic. For Spanish topics, this is the equivalent English health topic. <br/>
+                  Example:
+                  &lt;language-mapped-topic url="http://www.nlm.nih.gov/medlineplus/spanish/abortion.html" id="2238" language="Spanish"&gt;Aborto&lt;/language-mapped-topic&gt;<br/><br/>
+              </td>
+              <td>Not applicable, since Spanish is not included in the
+                Metathesaurus.<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>&lt;other-language&gt;<br/>
+                The other language(s) associated with the health topic.<br/>
+                  Example:
+                  &lt;other-language vernacular-name="espanol" url="http://www.nlm.nih.gov/medlineplus/spanish/abdominalpain.html"&gt;Spanish&lt;/other-language&gt;<br/><br/>
+              </td>
+              <td>MRSAT.ATN = MP_OTHER_LANGUAGE_URL<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>&lt;primary-institute&gt;<br/>
+                Health topics may have a primary National Institutes of Health assigned to them.<br/>
+                  Example:
+                  &lt;primary-institute url="http://www.nidcd.nih.gov/"&gt;National Institute on Deafness and Other Communication Disorders&lt;/primary-institute&gt;<br/><br/>
+              </td>
+              <td>MRSAT.ATN = MP_PRIMARY_INSTITUTE_URL<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>&lt;site&gt;<br/>
+                For every health topic there will be at least one site record.<br/>
+                Example: &lt;site title="Acoustic Neuroma" url="http://www.irsa.org/acoustic_neuroma.html"&gt;
+&lt;information-category&gt;Treatment&lt;/information-category&gt;&lt;organization&gt;International Radiosurgery Support Association&lt;/organization&gt;&lt;/site&gt;<br/>
+              </td>
+              <td>Not processed.<br/>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br/>
+        <br/>
+        <span style="font-weight: bold;">File:&nbsp;
+          mplus_topic_groups_YYYY-MM-DD.xml</span><br/>
+        <br/>
+        <table class="elements" border="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <th>Element</th>
+              <th>Representation</th>
+            </tr>
+            <tr>
+              <td>&lt;group&gt;<br/>
+                Indicates group name. The attributes for this element include:<br/><br/>
+                language - Spanish-language groups are not included in the Metathesaurus.<br/>
+                id - identifical number<br/>
+                name - name of the health topic group<br/>
+                url - URL for the health topic group<br/>
+                Example: &lt;group language="English" id="1" url="http://www.nlm.nih.gov/medlineplus/cancers.html"&gt;Cancers&lt;/group&gt;
+              </td>
+              <td> group language: process only English entries<br/>
+              group id: MRCONSO.CODE<br/>
+              group name: MRCONSO.STR, TTY= HT<br/>
+              group url: MRSAT.ATN = MP_GROUP_URL<br/>
+              </td>
+            </tr>
+        </tbody>
+        </table>
+      </div>
+    </div>
