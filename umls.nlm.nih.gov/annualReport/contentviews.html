@@ -30,84 +30,87 @@
 </div>
 
 <!-- end banner -->
-<h4>Content Views</h4>
-<p>
-A Content View (CV) is any definable subset of the Metathesaurus that is useful for some specific purpose. Content Views are either created by NLM or submitted to the Metathesaurus by external authorities. Membership may be defined in a variety of ways, including:
-<ul>
-<li>A list of Metathesaurus UIs (CUIs, SUIs, AUIs, etc.), maintained over time.</li>
-<li>A list of sources that participate in the view.</li>
-<li>A complex query or algorithm that computes sets of atoms, source concepts, or relationships based on well-defined criteria and may also be configured to include other connected information, such as attributes or relationships. </li>
-</ul>
-</p>
 
-<h4>Content Views in the 2011AA/2011AB Releases</h4>
-<table cellspacing="1" cellpadding="10" summary=
-"This table charts lists the Content Views in the Metathesaurus"
-border="1">
-<thead>
-<tr>
-<th id="a1" align="left">CUI</th>
-<th id="a2" align="left">Content View</th>
-<th id="a3" align="left">CV_CODE</th>
-<th id="a4" align="left">CV_DESCRIPTION</th>
-</tr>
-</thead>
+
+<table>
 <tbody>
 <tr>
-<td valign="top">C1700357</td>
-<td valign="top">MetaMap NLP View</td>
-<td valign="top">256</td>
-<td valign="top">This Content View is built from mrcon.eng.strict
-(a subset of ORF MRCON) and converted into an AUI list based on
-2009AA. This view is not algorithmically generated during
-Metathesaurus construction.<br>
+<th >CUI</th><th>Content View</th><th>CV_CODE</th><th>CV_DESCRIPTION</th>
+</tr>
+<tbody>
+<tr>
+<td>C1700357</td>
+<td>MetaMap NLP View</td>
+<td>256</td>
+
+<td>This Content View is built from mrconso.eng.strict (a subset of  RRF MRCONSO) and converted into an AUI list based on 2014AB.  This view is not algorithmically generated during Metathesaurus construction.
+<br /><br />
+Additional Information:  
+<br />
+http://metamap.nlm.nih.gov/
+<br />
+http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2655934/
+</td>
+</tr>
+
+<tr>
+<td>C1964027</td>
+<td>UMLS enhanced VA/KP Problem List Subset of SNOMED (Level 0+SNOMED)*</td>
+
+<td>512</td>
+<td>This Content View provides a UMLS-enhanced view of the Veterans Health Administration and Kaiser Permanente (VA/KP) Problem List Subset of SNOMED, which is one of the controlled terminologies used for Structured Product Labeling (SPL). SPL is a document markup standard approved by Health Level Seven (HL7) and adopted by FDA as a mechanism for exchanging medication information. This set of SNOMED terms and codes is freely reusable worldwide without licensing or intellectual property restrictions. This Content View consists of all UMLS concepts containing the active SNOMED concepts in the Problem List Subset. It includes contents from SNOMED and other source vocabularies with no additional licensing restrictions. All non-English, obsolete and suppressible contents are excluded.
+<br /><br />
+Additional Information:
+<br />
+http://www.nlm.nih.gov/research/umls/licensedcontent/vakpproblemlist.html
+</td>
+</tr>
+
+<tr>
+<td>C1964028</td>
+<td>UMLS enhanced VA/KP Problem List Subset of SNOMED (Level 0+SNOMED+MDR)*</td>
+<td>1024</td>
+
+<td>This Content View provides a UMLS-enhanced view of the VA/KP Problem List Subset of SNOMED that also includes content from MedDRA.
+<br /><br />
+Additional Information: 
+<br /> 
+http://www.nlm.nih.gov/research/umls/licensedcontent/vakpproblemlist.html
+
+</td>
+</tr>
+
+<tr>
+<td>C2711988</td>
+<td>CORE Problem List Subset of SNOMED CT</td>
+<td>2048</td>
+
+<td>This Content View contains the subset of SNOMED CT concepts that are most frequently used in problem lists. The subset is derived from datasets from large health care institutions. The most commonly used problem list terms are mapped to SNOMED CT and other UMLS sources. The use of SNOMED CT contents in this subset is subject to the SNOMED CT license requirements. The use of SNOMED CT is free in IHTSDO member countries (including the U.S.) and low income countries.
+<br /><br />
+Additional Information:
+<br />
+http://www.nlm.nih.gov/research/umls/Snomed/core_subset.html
 </td>
 </tr>
 <tr>
-<td valign="top">C1964027</td>
-<td valign="top">UMLS enhanced VA/KP Problem List Subset of
-SNOMED (Level 0+SNOMED)*</td>
-<td valign="top">512</td>
-<td valign="top">This Content View provides a UMLS-enhanced view
-of the Veterans Health Administration and Kaiser Permanente
-(VA/KP) Problem List Subset of SNOMED, which is one of the
-controlled terminologies used for Structured Product Labeling
-(SPL). SPL is a document markup standard approved by Health Level
-Seven (HL7) and adopted by FDA as a mechanism for exchanging
-medication information. This set of SNOMED terms and codes is
-freely reusable worldwide without licensing or intellectual
-property restrictions. This Content View consists of all UMLS
-concepts containing the active SNOMED concepts in the Problem
-List Subset. It includes contents from SNOMED and other source
-vocabularies with no additional licensing restrictions. All
-non-English, obsolete and suppressible contents are excluded.<br>
-</td>
+  <td>C3503753</td>
+  <td>RxNorm Current Prescribable Content Subset</td>
+  <td>4096</td>
+  <td>This content view contains the subset of RXNORM concepts that are prescribable. </td>
 </tr>
 <tr>
-<td valign="top">C1964028</td>
-<td valign="top">UMLS enhanced VA/KP Problem List Subset of
-SNOMED (Level 0+SNOMED+MDR)*</td>
-<td valign="top">1024</td>
-<td valign="top">This Content View provides a UMLS-enhanced view
-of the VA/KP Problem List Subset of SNOMED that also includes
-content from MedDRA.<br>
-</td>
+  <td>C3812142</td>
+  <td>SNOMEDCT US Extension Subset</td>
+  <td>8192</td>
+  <td>This content view allows users to easily identify atoms in the UMLS that come from the US Extension to SNOMED CT and carry the NLM Module ID of '731000124108'.</td>
 </tr>
-<tr>
-<td valign="top">C2711988</td>
-<td valign="top">CORE Problem List Subset of SNOMED CT</td>
-<td valign="top">2048</td>
-<td valign="top">This Content View contains the subset of SNOMED
-CT concepts that are most frequently used in problem lists. The
-subset is derived from datasets from large health care
-institutions. The most commonly used problem list terms are
-mapped to SNOMED CT and other UMLS sources. The use of SNOMED CT
-contents in this subset is subject to the SNOMED CT license
-requirements. The use of SNOMED CT is free in IHTSDO member
-countries (including the U.S.) and low income countries.<br>
-</td>
-</tr>
+
 </tbody>
 </table>
+<br />
+*Note that the "UMLS enhanced VA/KP Problem List Subset of SNOMED (Level 0+SNOMED+MDR)" Content View is a superset of the "UMLS enhanced VA/KP Problem List Subset of SNOMED (Level 0+SNOMED)" Content View, and it is unnecessary to create a subset containing both views.
+
+
+
 </body>
 </html>
