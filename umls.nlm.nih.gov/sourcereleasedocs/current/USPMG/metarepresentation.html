@@ -1,0 +1,210 @@
+   <p>This page lists UMLS Metathesaurus data elements and traces them
+      back to the specific source data that populates them.</p>
+    <!--begin tabbed navigation area-->
+    <div class="section-6">
+      <ul id="menu">
+        <li id="nav-1"><a href="index.html">Synopsis</a></li>
+        <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+        <li id="nav-3"><a href="stats.html">Statistics</a></li>
+        <li id="nav-4"><a href="samples.html">Samples</a></li>
+        <li id="nav-5"><a href="sourcerepresentation.html">Source
+            Representation</a></li>
+        <li id="nav-6"><a href="metarepresentation.html">Metathesaurus
+            Representation</a></li>
+      </ul>
+    </div>
+    <!-- end tabbed navigation area --> <br/>
+    <a name="top"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>,
+      <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
+      <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+    <div id="general" class="rep_block_level_one">
+      <p><strong>VSAB:</strong> USPMG_2014
+      </p>
+      <div id="rep_identifiers" class="rep_block_level_one">
+        <h3>Summary of Changes</h3>
+        <div>
+          <h4>Deprecated TTY:<br/>
+          </h4>
+          HT: No longer created due to the fact that the 2014
+          format no longer includes a "Pharmacologic Class" column<br/>
+          <br/>
+        </div>
+      </div>
+      <div id="rep_change_summary" class="rep_block_level_one">
+        <h3>Source Provided Files Summary:</h3>
+        (<span class="nav"><a
+href="file:///C:/Users/aalipows/Desktop/UMLS/sourcerepresentation.html#top">return
+
+            to top</a></span>)<br/>
+        <br/>
+        The following Excel file was processed for inclusion in the UMLS
+        Metathesaurus<br/>
+        <h4><br/>
+        </h4>
+        <table>
+          <tbody>
+            <tr>
+              <th>File Name</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td class="file_field_name">uspmmg_v6_0_excelspreadsheetsrev140415.xlsx
+              </td>
+              <td>Data file
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br/>
+      </div>
+      <div id="rep_identifers" class="rep_block_level_one">
+        <h3>Identifiers:</h3>
+        Identifiers are assigned as follows:<br/>
+        <br/>
+        <table>
+          <tbody>
+            <tr>
+              <th>Identifier
+              </th>
+              <th>Origin
+              </th>
+            </tr>
+            <tr>
+              <td>CODE
+              </td>
+              <td>MTHU#<br/>
+                No CODE value is supplied by the source. This
+                value is assigned during Metathesaurus source processing
+              </td>
+            </tr>
+            <tr>
+              <td>SAUI
+              </td>
+              <td>Not applicable
+              </td>
+            </tr>
+            <tr>
+              <td>SCUI
+              </td>
+              <td>Not applicable
+              </td>
+            </tr>
+            <tr>
+              <td>SDUI<br/>
+              </td>
+              <td>Not applicable
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br/>
+        <div id="rep_termtypes" class="rep_block_level_two"> <a
+            name="atoms"></a>
+          <h3>Atoms (MRCONSO):</h3>
+          <span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <br/>
+          <table>
+            <tbody>
+              <tr>
+                <th>Term Type</th>
+                <th>Origin</th>
+              </tr>
+              <tr>
+                <td>HC</td>
+                <td>CODE = MTHU# assigned during Metathesaurus source
+                  processing<br/>
+                  STR = Value of "USP Category" or "USP Class" column in
+                  uspmmg_v6_0_excelspreadsheetsrev140415.xlsx<br/>
+                  SUPPRESS = "N"
+                </td>
+              </tr>
+              <tr>
+                <td>PT
+                </td>
+                <td>CODE = MTHU# assigned during Metathesaurus source
+                  processing<br/>
+                  STR = Value of "Example Part D Eligible Drugs" or
+                  "Example Part D Eligible Drugs" concatenated with
+                  Salt/Ester" columns in
+                  uspmmg_v6_0_excelspreadsheetsrev140415.xlsx<br/>
+                  SUPPRESS ="N"
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="rep_attributes" class="rep_block_level_two"> <a
+            name="attributes"></a><br/>
+          <h3>Attributes (MRSAT):</h3>
+          <span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <table>
+            <tbody>
+              <tr>
+                <th>Attribute Name</th>
+                <th>Origin</th>
+              </tr>
+              <tr>
+                <td>LEVEL</td>
+                <td>Value of column from original spreadsheet.
+                  Values are:<br/>
+                  Example Part D Eligible Drugs<br/>
+                  Salts/Esters<br/>
+                  USP Category<br/>
+                  USP Class
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="rep_definitions" class="rep_block_level_two"> <a
+            name="definitions"></a><br/>
+          <h3>Definitions (MRDEF):</h3>
+          <span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <p>No definitions are included with the standard format CPT
+            release. </p>
+        </div>
+        <div id="rep_relationships" class="rep_block_level_two"> <a
+            name="relationships"></a><br/>
+          <h3>Relationships (MRREL):</h3>
+          <span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <table>
+            <tbody>
+              <tr>
+                <th>REL</th>
+                <th>RELA<br/>
+                  Inverse RELA</th>
+                <th>Origin</th>
+              </tr>
+              <tr>
+                <td>CHD<br/>
+                  PAR<br/>
+                  SIB
+                </td>
+                <td>&lt;no RELA&gt;<br/>
+                </td>
+                <td>The hierarchy is created based on the columns in the
+                  spreadsheet, i.e.<br/>
+                  <br/>
+                  USP Category<br/>
+                  <blockquote>USP Class<br/>
+                    <blockquote>Example Part D Eligible Drugs<br/>
+                      <blockquote>Salts/Esters (concatenated with
+                        Example Drug)<br/>
+                      </blockquote>
+                    </blockquote>
+                  </blockquote>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="rep_mappings" class="rep_block_level_two"> <a
+            name="mappings"></a><br/>
+          <h3>Mappings (MRMAP):</h3>
+          <span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <p>No mappings are provided in the Excel file used for UMLS
+            Metathesaurus source processing.
+          </p>
+        </div>
+      </div>
+    </div>
