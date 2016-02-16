@@ -1,0 +1,531 @@
+<p>This page list UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
+<!--begin tabbed navigation area-->
+<div class="section-6">
+      <ul id="menu">
+         <li id="nav-1"><a href="index.html">Synopsis</a></li>
+         <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+         <li id="nav-3"><a href="stats.html">Statistics</a></li>
+         <li id="nav-4"><a href="samples.html">Samples</a></li>
+         <li id="nav-5"><a href="sourcerepresentation.html">Source Representation</a></li>
+         <li id="nav-6"><a href="metarepresentation.html">Metathesaurus Representation</a></li>
+      </ul>
+</div>
+<!-- end tabbed navigation area -->
+<span class = "nav">Skip to: <a href = "#atoms">Atoms</a>, <a href = "#attributes">Attributes</a>, <a href = "#definitions">Definitions</a>, <a href = "#relationships">Relationships</a>, <a href = "#mappings">Mappings</a></span>
+<div id = "general" class = "rep_block_level_one">
+<p><strong>VSAB: </strong>NCI2015_02D</p>
+<div id = "rep_identifiers" class = "rep_block_level_one">
+<h3>General Notes/Comments:</h3>
+<p>NCI Thesaurus (NCIt) is a widely recognized standard for biomedical coding and reference. It covers vocabulary for clinical care, translational and basic research, public information and administrative activities and is used by a broad variety of public and private partners both nationally and internationally.The scope of NCI is determined by the combined scope of its source vocabularies which include the following:</p>
+<table>
+<tr>
+  <th>Source</th>
+  <th>Description</th>
+</tr>
+<tr>
+    <td>BioC</td>
+    <td>BioCarta online maps of molecular pathways, adapted for NCI</td>
+</tr>
+<tr>
+    <td>BRIDG</td>
+    <td>Biomedical Research Integrated Domain Group Model</td>
+</tr>
+<tr>
+    <td>CareLex</td>
+    <td>Content Archive Resource Exchange Lexicon</td>
+</tr>
+<tr>
+    <td>CDC</td>
+    <td>U.S. Centers for Disease Control and Prevention</td>
+</tr>
+<tr>
+    <td>CDISC</td>
+    <td>Clinical Data Interchange Standards Consortium</td>
+</tr>
+<tr>
+    <td>CRCH</td>
+    <td>Cancer Research Center of Hawaii</td>
+</tr>
+<tr>
+    <td>CTCAE</td>
+    <td>Common Terminology Criteria for Adverse Events</td>
+</tr>
+<tr>
+    <td>CTEP-SDC</td>
+    <td>Cancer Therapy Evaluation Program - Simple Disease Classification</td>
+</tr>
+<tr>
+    <td>DCP</td>
+    <td>NCI Division of Cancer Prevention Program</td>
+</tr>
+<tr>
+    <td>DICOM</td>
+    <td>Digital Imaging Communications in Medicine</td>
+</tr>
+<tr>
+    <td>DTP</td>
+    <td>NCI Developmental Therapeutics Program</td>
+</tr>
+<tr>
+    <td>FDA</td>
+    <td>U.S. Food and Drug Administration</td>
+</tr>
+<tr>
+    <td>ICH</td>
+    <td>International Conference on Harmonization</td>
+</tr>
+<tr>
+    <td>JAX</td>
+    <td>Jackson Laboratories Mouse Terminology, adapted for NCI use</td>
+</tr>
+<tr>
+    <td>KEGG</td>
+    <td>Kyoto Encyclopedia of Genes and Genomes (KEGG), KEGG Pathway Database, adapted for NCI use</td>
+</tr>
+<tr>
+    <td>NCI-GLOSS</td>
+    <td>NCI dictionary of Cancer Terms</td>
+</tr>
+<tr>
+    <td>NCI-HL7</td>
+    <td>NCI Health Level 7</td>
+</tr>
+<tr>
+    <td>NCPDP</td>
+    <td>National Council for Prescription Drug Programs</td>
+</tr>
+<tr>
+    <td>NICHD</td>
+    <td>National Institute of Child Health and Human Development</td>
+</tr>
+<tr>
+    <td>PID</td>
+    <td>National Cancer Institute Nature Pathway Interaction Database</td>
+</tr>
+<tr>
+    <td>RENIN</td>
+    <td>Registry Nomenclature Information</td>
+</tr>
+<tr>
+    <td>UCUM</td>
+    <td>Unified Code for Units of Measure</td>
+</tr>
+<tr>
+    <td>ZFIN</td>
+    <td>Zebrafish Model Organism Database</td>
+</tr>
+</table>
+</div>
+<h3>Summary of Changes</h3>
+<p>New term group:</p>
+<ul>
+  <li>NCI_NCPDP/SY</li>
+</ul>
+<p>Deprecated term groups:</p>
+<ul>
+	<li>NCI_NICHD/AB</li>
+	<li>NCI_NICHD/HD</li>
+</ul>
+<p>New ATN:</p>
+<ul>
+	<li>NICHD_Hierarchy_Term</li>
+</ul>
+</div>
+<div id = "rep_change_summary" class = "rep_block_level_one">
+<h3>Original Files:</h3>
+<table>
+<tr><th>File Name</th><th>Description</th></tr>
+<tr><td  class = "file_field_name">ThesaurusInferred.owl</td><td>Complete source data in an OWL By Code formatted file.</td></tr>
+</table>
+<br/>
+</div>
+<div id = "rep_identifers" class = "rep_block_level_one">
+<h3>Identifiers</h3>
+<ul>
+<li>CODE:  NCI code or subsource code</li>
+<li>SAUI:  Not applicable</li>
+<li>SCUI:  NCI code or subsource code</li>
+<li>SDUI:  Not applicable</li>
+</ul>
+<div id = "rep_termtypes" class = "rep_block_level_two">
+<a name = "atoms">&nbsp;</a>
+<h3>Atoms (MRCONSO)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)
+<p>The term names and term types are extracted from the field tagged, "&lt;P90...&lt;ncicp:term-name>...lt;/ncicp:term-name>&lt;ncicp:term-group>...&lt;/ncicp:term-group>...&lt;/P90&gt;" (FULL_SYN), unless otherwise noted.</p>
+<table>
+<tr><th>Term Type</th><th>Description</th></tr>
+<tr>
+    <td>AB</td><td>Abbreviation</td>
+</tr>
+<tr>
+    <td>AD</td><td>Adjective</td>
+</tr>
+<tr>
+    <td>BN</td><td>Fully-specified drug brand name that can not be prescribed</td>
+</tr>
+<tr>
+    <td>CA2</td><td>ISO 3166-1 standard country code in alpha-2 (two-letter) format</td>
+</tr>
+<tr>
+    <td>CA3</td><td>ISO 3166-1 standard country code in alpha-3 (three-letter) format</td>
+ </tr>
+<tr>
+    <td>CCN</td><td>Chemical code name</td>
+ </tr>
+<tr>
+    <td>CCS</td><td>FIPS 10-4 country code</td>
+</tr>
+<tr>
+    <td>CSN</td><td>Chemical Structure Name</td>
+</tr>
+<tr>
+    <td>DN</td><td>Display name</td>
+</tr>
+<tr>
+    <td>FBD</td><td>Foreign brand name</td>
+</tr>
+<tr>
+    <td>HD</td><td>Hierarchical descriptor</td>
+</tr>
+<tr>
+    <td>OP</td><td>Obsolete preferred name</td>
+</tr>
+<tr>
+    <td>PT</td><td>Preferred name; extracted from field tagged &lt;P108</td>
+</tr>
+<tr>
+    <td>SY</td><td>Synonym</td>
+</tr>
+</table>
+</div>
+<h3>Suppressibility</h3>
+<p>For term type OP, the suppressible value is "O" (obsolete). For all others, the value is "N" (not suppressible).</p>
+</div>
+<div id = "rep_attributes" class = "rep_block_level_two">
+<a name = "attributes">&nbsp;</a><br/>
+<h3>Attributes (MRSAT)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)
+<table>
+<tr><th>Attribute Name</th><th>Origin: OWL tag</th></tr>
+<tr><td>ACCEPTED_THERAPEUTIC_USE_FOR</td>
+<td>&lt;P302 rdf:datatype="http://www.w3.org.../P302&gt;</td></tr>
+<tr><td>BIOCARTA_ID</td>
+<td>&lt;P216 rdf:datatype="http://www.w3.org.../P216&gt;</td></tr>
+<tr><td>CAS_REGISTRY</td>
+<td>&lt;P210 rdf:datatype="http://www.w3.org.../P210&gt;</td></tr>
+<tr><td>CHEBI_ID</td>
+<td>&lt;P368 rdf:datatype="http://www.w3.org.../P368&gt;</td></tr>
+<tr><td>CHEMICAL_FORMULA</td>
+<td>&lt;P350 rdf:datatype="http://www.w3.org.../P350&gt;</td></tr>
+<tr><td>CNU</td>
+<td>'&lt;P90...ncicp:term-group' field = CNU</td></tr>
+<tr><td>DESIGN_NOTE</td>
+<td>&lt;P98 rdf:datatype="http://www.w3.org.../P98&gt;</td></tr>
+<tr><td>ENTREZGENE_ID</td>
+<td>&lt;P321 rdf:datatype="http://www.w3.org.../P321&gt;</td></tr>
+<tr><td>ESSENTIAL_AMINO_ACID</td>
+<td>&lt;P356 rdf:datatype="http://www.w3.org.../P356&gt;</td></tr>
+<tr><td>ESSENTIAL_FATTY_ACID</td>
+<td>&lt;P357 rdf:datatype="http://www.w3.org.../P357&gt;</td></tr>
+<tr><td>EXTENSIBLE_LIST</td>
+<td>&lt;P361 rdf:datatype="http://www.w3.org.../P361&gt;</td></tr>
+<tr><td>FDA_TABLE</td>
+<td>&lt;P317 rdf:datatype="http://www.w3.org.../P317&gt;</td></tr>
+<tr><td>FDA_UNII_CODE</td>
+<td>&lt;P319 rdf:datatype="http://www.w3.org.../P319&gt;</td></tr>
+<tr><td>GENEBANK_ACCESSION_NUMBER</td>
+<td>&lt;P102 rdf:datatype="http://www.w3.org.../P102&gt;</td></tr>
+<tr><td>GENE_ENCODES_PRODUCT</td>
+<td>&lt;P96 rdf:datatype="http://www.w3.org.../P96&gt;</td></tr>
+<tr><td>GO_ANNOTATION</td>
+<td>&lt;P211 rdf:datatype="http://www.w3.org.../P211&gt;</td></tr>
+<tr><td>HGNC_ID</td>
+<td>&lt;P369 rdf:datatype="http://www.w3.org.../P369&gt;</td></tr>
+<tr><td>HOMOLOGOUS_GENE</td>
+<td>&lt;P101 rdf:datatype="http://www.w3.org.../P101&gt;</td></tr>
+<tr><td>ICD-O-3_CODE</td>
+<td>&lt;P334 rdf:datatype="http://www.w3.org.../P334&gt;</td></tr>
+<tr><td>INFOODS</td>
+<td>&lt;P353 rdf:datatype="http://www.w3.org.../P353&gt;</td></tr>
+<tr><td>KEGG_ID</td>
+<td>&lt;P215 rdf:datatype="http://www.w3.org.../P215&gt;</td></tr>
+<tr><td>LEXICAL_TAG</td>
+<td>'&lt;P90...ncicp:term-group' = FB or BR</td></tr>
+<tr><td>MACRONUTRIENT</td>
+<td>&lt;P360 rdf:datatype="http://www.w3.org.../P360&gt;</td></tr>
+<tr><td>MGI_ACCESSION_ID</td>
+<td>&lt;P332 rdf:datatype="http://www.w3.org.../P332&gt;</td></tr>
+<tr><td>MICRONUTRIENT</td>
+<td>&lt;P359 rdf:datatype="http://www.w3.org.../P359&gt;</td></tr>
+<tr><td>MIRBASE_ID</td>
+<td>&lt;P362 rdf:datatype="http://www.w3.org.../P362&gt;</td></tr>
+<tr><td>NCBI_TAXON_ID</td>
+<td>&lt;P331 rdf:datatype="http://www.w3.org.../P331&gt;</td></tr>
+<tr><td>NEOPLASTIC_STATUS</td>
+<td>&lt;P363 rdf:datatype="http://www.w3.org.../P363&gt;</td></tr>
+<tr><td>NICHD_Hierarchy_Term</td>
+<td>&lt;P371 rdf:datatype="http://www.w3.org.../P371&gt;</td></tr>
+<tr><td>NSC_CODE</td>
+<td>&lt;P175 rdf:datatype="http://www.w3.org.../P175&gt;</td></tr>
+<tr><td>NUTRIENT</td>
+<td>&lt;P358 rdf:datatype="http://www.w3.org.../P358&gt;</td></tr>
+<tr><td>OMIM_NUMBER</td>
+<td>&lt;P100 rdf:datatype="http://www.w3.org.../P100&gt;</td></tr>
+<tr><td>PDQ_CLOSED_TRIAL_SEARCH_ID</td>
+<td>&lt;P330 rdf:datatype="http://www.w3.org.../P330&gt;</td></tr>
+<tr><td>PDQ_OPEN_TRIAL_SEARCH_ID</td>
+<td>&lt;P329 rdf:datatype="http://www.w3.org.../P329&gt;</td></tr>
+<tr><td>PID_ID</td>
+<td>&lt;P367 rdf:datatype="http://www.w3.org.../P367&gt;</td></tr>
+<tr><td>PUBMEDID_PRIMARY_REFERENCE</td>
+<td>&lt;P171 rdf:datatype="http://www.w3.org.../P171&gt;</td></tr>
+<tr><td>SWISS_PROT</td>
+<td>&lt;P93 rdf:datatype="http://www.w3.org.../P93&gt;</td></tr>
+<tr><td>TOLERABLE_LEVEL</td>
+<td>&lt;P352 rdf:datatype="http://www.w3.org.../P352&gt;</td></tr>
+<tr><td>UNIT</td>
+<td>&lt;P355 rdf:datatype="http://www.w3.org.../P355&gt;</td></tr>
+<tr><td>USDA_ID</td>
+<td>&lt;P354 rdf:datatype="http://www.w3.org.../P354&gt;</td></tr>
+<tr><td>USE_FOR</td>
+<td>&lt;P333 rdf:datatype="http://www.w3.org.../P333&gt;</td></tr>
+<tr><td>US_RECOMMENDED_INTAKE</td>
+<td>&lt;P351 rdf:datatype="http://www.w3.org.../P351&gt;</td></tr>
+</table>
+</div>
+<div id = "rep_definitions" class = "rep_block_level_two">
+<a name = "definitions">&nbsp;</a><br/>
+<h3>Definitions (MRDEF)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)
+<p>Only definitions with a source of NCI, NCI-GLOSS, or of an NCI subsource are included.  Definitions are attached to their corresponding PT.  For example, an NCI-GLOSS definition is attached to its NCI-GLOSS/PT.  If there is no corresponding PT then the definition is attached to the NCI/PT.  Definition attributions are enclosed within parentheses and appended to the definition.</p>
+Origin:
+<p>Definition: &lt;P97...ncicp:ComplexDefinition xmlns:ncicp.../P97&gt;</p>
+Alt_Definition: &lt;P325...ncicp:ComplexDefinition xmlns:ncicp.../P325&gt;
+</div>
+<div id = "rep_relationships" class = "rep_block_level_two">
+<a name = "relationships">&nbsp;</a><br/>
+<h3>Relationships (MRREL)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)
+<p>Origin of the relationship is derived from the "owl:onPropertyrdf..." code (Roles) and/or the "&lt;A# rdf..." code (Associations).  For example:</p>
+&lt;rdfs:subClassOf&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;owl:Restriction&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;owl:onPropertyrdf:resource="#R.."/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;owl:someValuesFromrdf:resource="#C.."/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/owl:Restriction&gt;
+<p>&lt;/rdfs:subClassOf&gt;</p>
+<p>&lt;A1 rdf:resource="http://...owl#C..."/&gt;</p>
+<table>
+<tr><th>Relationship</th><th>Relationship Label/Inverse Relationship Label</th><th>Origin</th></tr>
+<tr><td>NT</td>
+<td>Conceptual_Part_Of/Has_Conceptual_Part</td><td>R27</td></tr>
+<tr><td>RT</td>
+<td>Allele_Absent_From_Wild-type_Chromosomal_Location/Chromosomal_Location_of_Wild-type_Gene</td><td>R156</td></tr>
+<tr><td>RT</td>
+<td>Allele_Has_Abnormality/Abnormality_Associated_With_Allele</td><td>R153</td></tr>
+<tr><td>RT</td>
+<td>Allele_Has_Activity/Activity_Of_Allele</td><td>R159</td></tr>
+<tr><td>RT</td>
+<td>Allele_In_Chromosomal_Location/Chromosomal_Location_Of_Allele</td><td>R155</td></tr>
+<tr><td>RT</td>
+<td>Allele_Plays_Altered_Role_In_Process/Process_Altered_By_Allele</td><td>R158</td></tr>
+<tr><td>RT</td>
+<td>Allele_Plays_Role_In_Metabolism_Of_Chemical_Or_Drug/Chemical_Or_Drug_Metabolism_Is_Associated_With_Allele</td><td>R160</td></tr>
+<tr><td>RT</td>
+<td>Anatomic_Structure_Has_Location/Is_Location_Of_Anatomic_Structure</td><td>R81</td></tr>
+<tr><td>RT</td>
+<td>Anatomic_Structure_Is_Physical_Part_Of/Has_Physical_Part_Of_Anatomic_Structure</td><td>R82</td></tr>
+<tr><td>RT</td>
+<td>Biological_Process_Has_Associated_Location/Is_Location_Of_Biological_Process</td><td>R30</td></tr>
+<tr><td>RT</td>
+<td>Biological_Process_Has_Initiator_Chemical_Or_Drug/Chemical_Or_Drug_Initiates_Biological_Process</td><td>R32</td></tr>
+<tr><td>RT</td>
+<td>Biological_Process_Has_Initiator_Process/Process_Initiates_Biological_Process</td><td>R28</td></tr>
+<tr><td>RT</td>
+<td>Biological_Process_Has_Result_AnatomyAnatomy_Originated_From_Biological_Process</td><td>R31</td></tr>
+<tr><td>RT</td>
+<td>Biological_Process_Has_Result_Biological_Process/Biological_Process_Results_From_Biological_Process</td><td>R34</td></tr>
+<tr><td>RT</td>
+<td>Biological_Process_Has_Result_Chemical_Or_Drug/Chemical_Or_Drug_Is_Product_Of_Biological_Process</td><td>R29</td></tr>
+<tr><td>RT</td>
+<td>Biological_Process_Is_Part_Of_Process/Process_Includes_Biological_Process</td><td>R35</td></tr>
+<tr><td>RT</td>
+<td>Chemical_Or_Drug_Affects_Abnormal_Cell/Abnormal_Cell_Affected_By_Chemical_Or_Drug</td><td>R150</td></tr>
+<tr><td>RT</td>
+<td>Chemical_Or_Drug_Affects_Cell_Type_Or_Tissue/Cell_Type_Or_Tissue_Affected_By_Chemical_Or_Drug</td><td>R72</td></tr>
+<tr><td>RT</td>
+<td>Chemical_Or_Drug_Affects_Gene_Product/Gene_Product_Affected_By_Chemical_Or_Drug</td><td>R146</td></tr>
+<tr><td>RT</td>
+<td>Chemical_Or_Drug_Has_Mechanism_Of_Action/Is_Mechanism_Of_Action_Of_Chemical_Or_Drug</td><td>R124</td></tr>
+<tr><td>RT</td>
+<td>Chemical_Or_Drug_Has_Physiologic_Effect/Is_Physiologic_Effect_Of_Chemical_Or_Drug</td><td>R125</td></tr>
+<tr><td>RT</td>
+<td>Chemical_Or_Drug_Is_Metabolized_By_Enzyme/Enzyme_Metabolizes_Chemical_Or_Drug</td><td>R122</td></tr>
+<tr><td>RT</td>
+<td>Chemical_Or_Drug_Plays_Role_In_Biological_Process/Biological_Process_Involves_Chemical_Or_Drug</td><td>R66</td></tr>
+<tr><td>RT</td>
+<td>Chemotherapy_Regimen_Has_Component/Is_Component_Of_Chemotherapy_Regimen</td><td>R123</td></tr>
+<tr><td>RT</td>
+<td>Concept_In_Subset/Subset_Includes_Concept</td><td>R48</td></tr>
+<tr><td>RT</td>
+<td>Cytogenetic_Abnormality_Involves_Chromosome/Chromosome_Involved_In_Cytogenetic_Abnormality</td><td>R173</td></tr>
+<tr><td>RT</td>
+<td>Disease_Excludes_Abnormal_Cell/Is_Not_Abnormal_Cell_Of_Disease</td><td>R139</td></tr>
+<tr><td>RT</td>
+<td>Disease_Excludes_Cytogenetic_Abnormality/Is_Not_Cytogenetic_Abnormality_Of_Disease</td><td>R141</td></tr>
+<tr><td>RT</td>
+<td>Disease_Excludes_Finding/Is_Not_Finding_Of_Disease</td><td>R142</td></tr>
+<tr><td>RT</td>
+<td>Disease_Excludes_Molecular_Abnormality/Is_Not_Molecular_Abnormality_Of_Disease</td><td>R140</td></tr>
+<tr><td>RT</td>
+<td>Disease_Excludes_Normal_Cell_Origin/Is_Not_Normal_Cell_Origin_Of_Disease</td><td>R138</td></tr>
+<tr><td>RT</td>
+<td>Disease_Excludes_Normal_Tissue_Origin/Is_Not_Normal_Tissue_Origin_Of_Disease</td><td>R137</td></tr>
+<tr><td>RT</td>
+<td>Disease_Excludes_Primary_Anatomic_Site/Is_Not_Primary_Anatomic_Site_Of_Disease</td><td>R135</td></tr>
+<tr><td>RT</td>
+<td>Disease_Has_Abnormal_Cell/Is_Abnormal_Cell_Of_Disease</td><td>R105</td></tr>
+<tr><td>RT</td>
+<td>Disease_Has_Associated_Anatomic_Site/Is_Associated_Anatomic_Site_Of</td><td>R100</td></tr>
+<tr><td>RT</td>
+<td>Disease_Has_Associated_Disease/Is_Associated_Disease_Of</td><td>R126</td></tr>
+<tr><td>RT</td>
+<td>Disease_Has_Cytogenetic_Abnormality/Is_Cytogenetic_Abnormality_Of_Disease</td><td>R107</td></tr>
+<tr><td>RT</td>
+<td>Disease_Has_Finding/Is_Finding_Of_Disease</td><td>R108</td></tr>
+<tr><td>RT</td>
+<td>Disease_Has_Metastatic_Anatomic_Site/Is_Metastatic_Anatomic_Site_Of_Disease</td><td>R102</td></tr>
+<tr><td>RT</td>
+<td>Disease_Has_Molecular_Abnormality/Is_Molecular_Abnormality_Of_Disease</td><td>R106</td></tr>
+<tr><td>RT</td>
+<td>Disease_Has_Normal_Cell_Origin/Is_Normal_Cell_Origin_Of_Disease</td><td>R104</td></tr>
+<tr><td>RT</td>
+<td>Disease_Has_Normal_Tissue_Origin/Is_Normal_Tissue_Origin_Of_Disease</td><td>R103</td></tr>
+<tr><td>RT</td>
+<td>Disease_Has_Primary_Anatomic_Site/Is_Primary_Anatomic_Site_Of_Disease</td><td>R101</td></tr>
+<tr><td>RT</td>
+<td>Disease_Is_Grade/Is_Grade_Of_Disease</td><td>R110</td></tr>
+<tr><td>RT</td>
+<td>Disease_Is_Stage/Is_Stage_Of_Disease</td><td>R88</td></tr>
+<tr><td>RT</td>
+<td>Disease_Mapped_To_Chromosome/Chromosome_Mapped_To_Disease</td><td>R174</td></tr>
+<tr><td>RT</td>
+<td>Disease_Mapped_To_Gene/Gene_Mapped_To_Disease</td><td>R176</td></tr>
+<tr><td>RT</td>
+<td>Disease_May_Have_Abnormal_Cell/May_Be_Abnormal_Cell_Of_Disease</td><td>R113</td></tr>
+<tr><td>RT</td>
+<td>Disease_May_Have_Associated_Disease/May_Be_Associated_Disease_Of_Disease</td><td>R116</td></tr>
+<tr><td>RT</td>
+<td>Disease_May_Have_Cytogenetic_Abnormality/May_Be_Cytogenetic_Abnormality_Of_Disease</td><td>R114</td></tr>
+<tr><td>RT</td>
+<td>Disease_May_Have_Finding/May_Be_Finding_Of_Disease</td><td>R115</td></tr>
+<tr><td>RT</td>
+<td>Disease_May_Have_Molecular_Abnormality/May_Be_Molecular_Abnormality_Of_Disease</td><td>R89</td></tr>
+<tr><td>RT</td>
+<td>Disease_May_Have_Normal_Cell_Origin/May_Be_Normal_Cell_Origin_Of_Disease</td><td>R112</td></tr>
+<tr><td>RT</td>
+<td>EO_Disease_Has_Associated_Cell_Type/Cell_Type_Is_Associated_With_EO_Disease</td><td>R23</td></tr>
+<tr><td>RT</td>
+<td>EO_Disease_Has_Associated_EO_Anatomy/EO_Anatomy_Is_Associated_With_EO_Disease</td><td>R25</td></tr>
+<tr><td>RT</td>
+<td>EO_Disease_Has_Property_Or_Attribute/Is_Property_Or_Attribute_Of_EO_Disease</td><td>R26</td></tr>
+<tr><td>RT</td>
+<td>EO_Disease_Maps_To_Human_Disease/Human_Disease_Map_To_EO_Disease</td><td>R24</td></tr>
+<tr><td>RT</td>
+<td>Gene_Associated_With_Disease/Disease_Has_Associated_Gene</td><td>R38</td></tr>
+<tr><td>RT</td>
+<td>Gene_Found_In_Organism/Organism_Has_Gene</td><td>R41</td></tr>
+<tr><td>RT</td>
+<td>Gene_Has_Abnormality/Is_Abnormality_Of_Gene</td><td>R132</td></tr>
+<tr><td>RT</td>
+<td>Gene_Has_Physical_Location/Is_Physical_Location_Of_Gene</td><td>R145</td></tr>
+<tr><td>RT</td>
+<td>Gene_In_Chromosomal_Location/Is_Chromosomal_Location_Of_Gene</td><td>R40</td></tr>
+<tr><td>RT</td>
+<td>Gene_Involved_In_Pathogenesis_Of_Disease/Pathogenesis_Of_Disease_Involves_Gene</td><td>R175</td></tr>
+<tr><td>RT</td>
+<td>Gene_Is_Biomarker_Of/Disease_Is_Marked_By_Gene</td><td>R39</td></tr>
+<tr><td>RT</td>
+<td>Gene_Is_Biomarker_Type/Biomarker_Type_Includes_Gene</td><td>R36</td></tr>
+<tr><td>RT</td>
+<td>Gene_Is_Element_In_Pathway/Pathway_Has_Gene_Element</td><td>R130</td></tr>
+<tr><td>RT</td>
+<td>Gene_Mutant_Encodes_Gene_Product_Sequence_Variation/Gene_Product_Sequence_Variation_Encoded_By_Gene_Mutant</td><td>R178</td></tr>
+<tr><td>RT</td>
+<td>Gene_Plays_Role_In_Process/Process_Involves_Gene</td><td>R37</td></tr>
+<tr><td>RT</td>
+<td>Gene_Product_Encoded_By_Gene/Gene_Encodes_Gene_Product</td><td>R54</td></tr>
+<tr><td>RT</td>
+<td>Gene_Product_Expressed_In_Tissue/Tissue_Is_Expression_Site_Of_Gene_Product</td><td>R49</td></tr>
+<tr><td>RT</td>
+<td>Gene_Product_has_Abnormality/Is_Abnormality_Of_Gene_Product</td><td>R133</td></tr>
+<tr><td>RT</td>
+<td>Gene_Product_Has_Associated_Anatomy/Is_Associated_Anatomy_Of_Gene_Product</td><td>R46</td></tr>
+<tr><td>RT</td>
+<td>Gene_Product_Has_Biochemical_Function/Is_Biochemical_Function_Of_Gene_Product</td><td>R52</td></tr>
+<tr><td>RT</td>
+<td>Gene_Product_Has_Chemical_Classification/Is_Chemical_Classification_Of_Gene_Product</td><td>R44</td></tr>
+<tr><td>RT</td>
+<td>Gene_Product_Has_Organism_Source/Is_Organism_Source_Of_Gene_Product</td><td>R45</td></tr>
+<tr><td>RT</td>
+<td>Gene_Product_Has_Structural_Domain_Or_Motif/Is_Structural_Domain_Or_Motif_Of_Gene_Product</td><td>R50</td></tr>
+<tr><td>RT</td>
+<td>Gene_Product_Is_Biomarker_Of/Is_Marked_By_Gene_Product</td><td>R47</td></tr>
+<tr><td>RT</td>
+<td>Gene_Product_Is_Biomarker_Type/Biomarker_Type_Includes_Gene_Product</td><td>R42</td></tr>
+<tr><td>RT</td>
+<td>Gene_Product_Is_Element_In_Pathway/Has_Gene_Product_Element</td><td>R131</td></tr>
+<tr><td>RT</td>
+<td>Gene_Product_Is_Physical_Part_Of/Complex_Has_Physical_Part</td><td>R51</td></tr>
+<tr><td>RT</td>
+<td>Gene_Product_Malfunction_Associated_With_Disease/Associated_With_Malfunction_Of_Gene_Product</td><td>R48</td></tr>
+<tr><td>RT</td>
+<td>Gene_Product_Plays_Role_In_Biological_Process/Biological_Process_Involves_Gene_Product</td><td>R53</td></tr>
+<tr><td>RT</td>
+<td>Gene_Product_Sequence_Variation_Encoded_By_Gene_Mutant/Gene_Mutant_Encodes_Gene_Product_Sequence_Variation</td><td>R179</td></tr>
+<tr><td>RT</td>
+<td>Has_CDRH_Parent/Parent_Is_CDRH</td><td>A10</td></tr>
+<tr><td>RT</td>
+<td>Has_Data_Element/Data_Element_Of</td><td>A12</td></tr>
+<tr><td>RT</td>
+<td>Has_NICHD_Parent/Parent_Is_NICHD</td><td>A11</td></tr>
+<tr><td>RT</td>
+<td>Has_Salt_Form/Has_Free_Acid_Or_Base_Form</td><td>A5</td></tr>
+<tr><td>RT</td>
+<td>Has_Target/Is_Target_Of_Agent</td><td>A7</td></tr>
+<tr><td>RT</td>
+<td>Is_Related_To_Endogenous_Product/Endogenous_Product_Related_To</td><td>A9</td></tr>
+<tr><td>RT</td>
+<td>Molecular_Abnormality_Involves_Gene/Gene_Involved_In_Molecular_Abnormality</td><td>R177</td></tr>
+<tr><td>RT</td>
+<td>Procedure_Has_Completely_Excised_Anatomy/Completely_Excised_Anatomy_Has_Procedure</td><td>R171</td></tr>
+<tr><td>RT</td>
+<td>Procedure_Has_Excised_Anatomy/Excised_Anatomy_Has_Procedure</td><td>R167</td></tr>
+<tr><td>RT</td>
+<td>Procedure_Has_Imaged_Anatomy/Imaged_Anatomy_Has_Procedure</td><td>R165</td></tr>
+<tr><td>RT</td>
+<td>Procedure_Has_Partially_Excised_Anatomy/Partially_Excised_Anatomy_Has_Procedure</td><td>R169</td></tr>
+<tr><td>RT</td>
+<td>Procedure_Has_Target_Anatomy/Target_Anatomy_Has_Procedure</td><td>R163</td></tr>
+<tr><td>RT</td>
+<td>Procedure_May_Have_Completely_Excised_Anatomy/Completely_Excised_Anatomy_May_Have_Procedure</td><td>R170</td></tr>
+<tr><td>RT</td>
+<td>Procedure_May_Have_Excised_Anatomy/Excised_Anatomy_May_Have_Procedure</td><td>R166</td></tr>
+<tr><td>RT</td>
+<td>Procedure_May_Have_Partially_Excised_Anatomy/Partially_Excised_Anatomy_May_Have_Procedure</td><td>R168</td></tr>
+<tr><td>RT</td>
+<td>Qualifier_Applies_To/Is_Qualified_By</td><td>A4</td></tr>
+<tr><td>RT</td>
+<td>Regimen_Has_Accepted_Use_For_Disease/Disease_Has_Accepted_Treatment_With_Regimen</td><td>R172</td></tr>
+<tr><td>RT</td>
+<td>Role_Has_Domain/Kind_Is_Domain_Of</td><td>A1</td></tr>
+<tr><td>RT</td>
+<td>Role_Has_Parent/Role_Is_Parent_Of</td><td>A3</td></tr>
+<tr><td>RT</td>
+<td>Role_Has_Range/Kind_Is_Range_Of</td><td>A2</td></tr>
+<tr><td>SY</td>
+<td>tradename_of/has_tradename</td><td>Brand names and generic names are not considered synonyms in NCI, so a relationship is created to link the two concepts.  This data is added during Metathesaurus source processing.</td></tr>
+</table>
+<p>(1) The relationship group is generated from the 'owl:Restriction' and 'owl:intersectionOf' tag in the source data file.</p>
+</div>
+<h3>Hierarchy (MRHIER)</h3>
+&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)<br/>
+<p>The hierarchy is created from the 'rdfs:subClassOfrdf:resource' tag which indicates the parent of the concept.  Sibling information is not included.</p>
+<h3>Mappings (MRMAP)</h3>
+&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)
+<p>No mappings are supplied by NCI.</p>
