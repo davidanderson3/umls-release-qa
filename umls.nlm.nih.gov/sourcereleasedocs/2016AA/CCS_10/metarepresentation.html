@@ -1,0 +1,291 @@
+    <p>This page lists UMLS Metathesaurus data elements and traces them
+      back to the specific source data that populates them.</p>
+    <!--begin tabbed navigation area-->
+    <div class="section-6">
+      <ul id="menu">
+        <li id="nav-1"><a href="index.html">Synopsis</a></li>
+        <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+        <li id="nav-3"><a href="stats.html">Statistics</a></li>
+        <li id="nav-4"><a href="samples.html">Samples</a></li>
+        <li id="nav-5"><a href="sourcerepresentation.html">Source
+            Representation</a></li>
+        <li id="nav-6"><a href="metarepresentation.html">Metathesaurus
+            Representation</a></li>
+      </ul>
+    </div>
+    <!-- end tabbed navigation area --><br/>
+<a name="top"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>,
+      <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
+      <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+    <div id="general" class="rep_block_level_one">
+      <p><strong>VSAB:</strong> CCS_10_2016
+      </p>
+      <div id="rep_identifiers" class="rep_block_level_one">
+        <h3>Summary of Changes</h3>
+        <p>CCS_10 is a new source.  It is based on the CCS for ICD-9-CM.</p>
+      </div>
+      <div id="rep_change_summary" class="rep_block_level_one">
+        <h3>Source Provided Files: </h3>
+        <p>The input files are in standard comma-separated-values format, with fields descriptions in the first line. </p>
+
+        <table>
+        	<tbody>
+        	<tr>
+        	<th>File Name</th>
+			<th>Description</th>
+			</tr>
+        	<tr>
+        	<td>ccs_dx_icd10cm_2016.csv</td>
+        	<td>Diagnosis categories and mappings </td>
+        	</tr>
+        	<tr>
+			<td>ccs_pr_icd10pcs_2016.csv</td>
+			<td>Procedure categories and mappings</td>
+			</tr>
+			</tbody>
+		</table>
+
+      </div>
+      <div id="rep_identifers" class="rep_block_level_one"><br/>
+        <h3>Identifiers:</h3>
+        <p>Identifiers are assigned as follows:</p>
+
+
+       <table>
+       <tbody>
+       <tr>
+       	<th> Identifier </th>
+   	   	<th> TTY </th>
+   	   	<th> Origin </th>
+       </tr>
+
+       <tr>
+	          	<td>CODE</td>
+				<td>HT</td>
+				<td>MTHU#, assigned during Metathesaurus processing</td>
+       </tr>
+       <tr>
+	   	          	<td>CODE</td>
+	   	          	<td>MD</td>
+	   	          	<td>MULTI CCS LVL 1 or MULTI CCS LVL 2</td>
+       </tr>
+       <tr>
+	          	<td>CODE</td>
+	          	<td>MV</td>
+	          	<td>MULTI CCS LVL 1 or MULTI CCS LVL 2</td>
+       </tr>
+       <tr>
+	          	<td>CODE</td>
+	          	<td>SD</td>
+	          	<td>CCS CATEGORY</td>
+       </tr>
+       <tr>
+	          	<td>CODE</td>
+	          	<td>SP</td>
+	          	<td>CCS CATEGORY</td>
+       </tr>
+       <tr>
+	          	<td>CODE</td>
+	          	<td>XM</td>
+	          	<td>MTHU#, assigned during Metathesaurus source processing</td>
+       </tr>
+       <tr>
+       			<td>SAUI</td>
+       			<td>All</td>
+       			<td>Not applicable</td>
+       </tr>
+       <tr>
+				<td>SCUI</td>
+				<td>All</td>
+				<td>Not applicable</td>
+	   </tr>
+		<tr>
+				<td>SDUI</td>
+				<td>All</td>
+				<td>Not applicable</td>
+	          </tr>
+
+       </tbody>
+       </table>
+
+
+        <div id="rep_termtypes" class="rep_block_level_two"> <a
+            name="atoms"></a>
+          <h3>Atoms (MRCONSO):</h3>
+          <span class="nav">(<a href="#top">return to top</a></span>)
+          <table>
+            <tbody>
+              <tr>
+                <th>Term Type</th>
+				<th>Description</th>
+                <th>Origin of CODE</th>
+                <th>Origin of STR </th>
+
+              </tr>
+              <tr>
+                <td>HT</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>MD</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>MV</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+			<tr>
+			  <td>SD</td>
+			  <td></td>
+			  <td></td>
+			  <td></td>
+			<tr>
+			  <td>SP</td>
+			  <td></td>
+			  <td></td>
+			  <td></td>
+		 </tr>
+			<tr>
+			  <td>XM</td>
+			  <td></td>
+			  <td></td>
+			  <td></td>
+		  </tr>
+            </tbody>
+          </table>
+          <br/>
+        </div>
+        <div id="rep_attributes" class="rep_block_level_two"> <a
+            name="attributes"></a><br/>
+          <h3>Attributes (MRSAT):</h3>
+
+          <span class="nav">(<a href="#top">return to top</a></span>)
+          <table>
+            <tbody>
+              <tr>
+                <th>ATN</th>
+
+                <th>Origin</th>
+
+              </tr>
+              <tr>
+                <td>FROMRSAB</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>FROMVSAB</td>
+                <td></td>
+              </tr>
+			  <tr>
+				<td>MAPSETRSAB</td>
+				<td></td>
+              </tr>
+			  <tr>
+				<td>MAPSETVERSION</td>
+				<td></td>
+              </tr>
+			  <tr>
+				<td>MAPSETVSAB</td>
+				<td></td>
+              </tr>
+			  <tr>
+				<td>MAPSETVERSION</td>
+				<td></td>
+              </tr>
+			  <tr>
+				<td>MTH_MAPFROMCOMPLEXITY</td>
+				<td></td>
+              </tr>
+			  <tr>
+				<td>MTH_MAPFROMEXHAUSTIVE</td>
+				<td></td>
+              </tr>
+			  <tr>
+				<td>MTY_MAPSETCOMPLEXITY</td>
+				<td></td>
+              </tr>
+			  <tr>
+				<td>MTH_MAPTOCOMPLEXITY</td>
+				<td></td>
+              </tr>
+			  <tr>
+				<td>MTH_MAPTOEXHAUSTIVE</td>
+				<td></td>
+              </tr>
+         	  <tr>
+				<td>TORSAB</td>
+				<td></td>
+              </tr>
+			  <tr>
+				<td>TOVSAB</td>
+				<td></td>
+              </tr>
+            </tbody>
+          </table>
+          <br/>
+          <br/>
+        </div>
+        <div id="rep_definitions" class="rep_block_level_two"> <a
+            name="definitions"></a><br/>
+          <h3>Definitions (MRDEF):</h3>
+          <span class="nav">(<a href="#top">return to top</a></span>)
+          <p>There are no definitions in CCS_10.<br/>
+          </p>
+        </div>
+        <div id="rep_relationships" class="rep_block_level_two"> <a
+            name="relationships"></a><br/>
+          <h3>Relationships (MRREL); Hierarchy (MRHIER)<br/>
+          </h3>
+          <span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <table>
+            <tbody>
+              <tr>
+                <th>REL</th>
+                <th>RELA<br/>
+				Inverse RELA</th>
+               <th>Origin</th>
+              </tr>
+              <tr>
+                <td>CHD<br/>
+                  PAR
+                </td>
+                <td>(no RELA)
+                </td>
+                <td>Hierarchy ...
+                </td>
+              </tr>
+              <tr>
+              	<td>RQ</td>
+              	<td>classified_as<br/>
+              	classifies</br>
+              	<td></td>
+              </tr>
+              <tr>
+                <td>SIB
+                </td>
+                <td>(no RELA)
+                </td>
+                <td>Relationships between codes with the same parents.
+                </td>
+              </tr>
+			  <tr>
+				<td>SY</td>
+				<td>has_single_level_category<br/>
+				has_multi_level_category</td>
+				<td></td>
+              </tr>
+            </tbody>
+          </table>
+          <br/>
+        </div>
+        <div id="mappings" class="rep_block_level_two">
+          <h3>Mappings (MRMAP):</h3>
+        </div>
+      </div>
+    </div>
