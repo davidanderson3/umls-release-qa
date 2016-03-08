@@ -34,6 +34,10 @@
         	<th>File Name</th>
 			<th>Description</th>
 			</tr>
+			<tr>
+			<td>CCSCategoryNames.pdf</td>
+			<td>Full labels for single-level and multi-level CCS Categories</td>
+			</tr>
         	<tr>
         	<td>ccs_dx_icd10cm_2016.csv</td>
         	<td>Diagnosis categories and mappings </td>
@@ -113,6 +117,7 @@
             name="atoms"></a>
           <h3>Atoms (MRCONSO):</h3>
           <span class="nav">(<a href="#top">return to top</a></span>)
+          <p>Data is extracted from files "ccs_dx_icd10cm_2016.csv" (Diagnoses) and "ccs_pr_icd10pcs_2016.csv" (Procedures)
           <table>
             <tbody>
               <tr>
@@ -124,38 +129,38 @@
               </tr>
               <tr>
                 <td>HT</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>Hierarchical term</td>
+                <td>MTHU# assigned during Metathesaurus source processing</td>
+                <td>Two hierarchical treetops ("Diagnoses" and "Procedures") are created during Metathesaurus source processing</td>
               </tr>
               <tr>
                 <td>MD</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>Multi-level diagnosis category</td>
+                <td>MULTI CCS LVL 1, MULTI CCS LVL 2</td>
+                <td>MULTI CCS LVL 1 LABEL, MULTI CCS LVL 2 LABEL</td>
               </tr>
               <tr>
                 <td>MV</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>Multi-level procedure category</td>
+                <td>MULTI CCS LVL 1, MULTI CCS LVL 2</td>
+                <td>MULTI CCS LVL 1 LABEL, MULTI CCS LVL 2 LABEL</td>
               </tr>
 			<tr>
 			  <td>SD</td>
-			  <td></td>
-			  <td></td>
-			  <td></td>
+			  <td>Single-level diagnosis category</td>
+			  <td>CCS CATEGORY</td>
+			  <td>CCS CATEGORY DESCRIPTION</td>
 			<tr>
 			  <td>SP</td>
-			  <td></td>
-			  <td></td>
-			  <td></td>
+			  <td>Single-level procedure category</td>
+			  <td>CCS CATEGORY</td>
+			  <td>CCS CATEGORY DESCRIPTION</td>
 		 </tr>
 			<tr>
 			  <td>XM</td>
-			  <td></td>
-			  <td></td>
-			  <td></td>
+			  <td>Cross mapping set</td>
+			  <td>MTHU# assigned during Metathesaurus source processing</td>
+			  <td>This data is added during Metathesaurus source processing</td>
 		  </tr>
             </tbody>
           </table>
@@ -170,61 +175,60 @@
             <tbody>
               <tr>
                 <th>ATN</th>
-
                 <th>Origin</th>
 
               </tr>
               <tr>
                 <td>FROMRSAB</td>
-                <td></td>
+                <td>This data is added during Metathesaurus source processing</td>
               </tr>
               <tr>
                 <td>FROMVSAB</td>
-                <td></td>
+                <td>This data is added during Metathesaurus source processing</td>
               </tr>
 			  <tr>
 				<td>MAPSETRSAB</td>
-				<td></td>
+				<td>This data is added during Metathesaurus source processing</td>
               </tr>
 			  <tr>
 				<td>MAPSETVERSION</td>
-				<td></td>
+				<td>This data is added during Metathesaurus source processing</td>
               </tr>
 			  <tr>
 				<td>MAPSETVSAB</td>
-				<td></td>
+				<td>This data is added during Metathesaurus source processing</td>
               </tr>
 			  <tr>
 				<td>MAPSETVERSION</td>
-				<td></td>
+				<td>This data is added during Metathesaurus source processing</td>
               </tr>
 			  <tr>
 				<td>MTH_MAPFROMCOMPLEXITY</td>
-				<td></td>
+				<td>This data is added during Metathesaurus source processing</td>
               </tr>
 			  <tr>
 				<td>MTH_MAPFROMEXHAUSTIVE</td>
-				<td></td>
+				<td>This data is added during Metathesaurus source processing</td>
               </tr>
 			  <tr>
 				<td>MTY_MAPSETCOMPLEXITY</td>
-				<td></td>
+				<td>This data is added during Metathesaurus source processing</td>
               </tr>
 			  <tr>
 				<td>MTH_MAPTOCOMPLEXITY</td>
-				<td></td>
+				<td>This data is added during Metathesaurus source processing</td>
               </tr>
 			  <tr>
 				<td>MTH_MAPTOEXHAUSTIVE</td>
-				<td></td>
+				<td>This data is added during Metathesaurus source processing</td>
               </tr>
          	  <tr>
 				<td>TORSAB</td>
-				<td></td>
+				<td>This data is added during Metathesaurus source processing</td>
               </tr>
 			  <tr>
 				<td>TOVSAB</td>
-				<td></td>
+				<td>This data is added during Metathesaurus source processing</td>
               </tr>
             </tbody>
           </table>
@@ -240,8 +244,7 @@
         </div>
         <div id="rep_relationships" class="rep_block_level_two"> <a
             name="relationships"></a><br/>
-          <h3>Relationships (MRREL); Hierarchy (MRHIER)<br/>
-          </h3>
+          <h3>Relationships (MRREL); Hierarchy (MRHIER)</h3>
           <span class="nav">(<a href="#top">return to top</a></span>)<br/>
           <table>
             <tbody>
@@ -257,14 +260,15 @@
                 </td>
                 <td>(no RELA)
                 </td>
-                <td>Hierarchy ...
-                </td>
+                <td>Hierarchy of Multi-level diagnoses and procedures (LVL 1 and LVL2)</td>
               </tr>
+              <!--classified_as rels are only created between the ICD10* code and the single level and MULTI LVL 2 codes,
+              not the LVL 1 codes-->
               <tr>
               	<td>RQ</td>
               	<td>classified_as<br/>
               	classifies</br>
-              	<td></td>
+              	<td>Connect ICD-10-CM or ICD-10-PCS with CCS CATEGORY and MULTI CCS LVL 2 atoms</td>
               </tr>
               <tr>
                 <td>SIB
@@ -274,11 +278,13 @@
                 <td>Relationships between codes with the same parents.
                 </td>
               </tr>
+			  <!--the single/multi level rels are only created where there is a square bracket in the LVL 2 LABEL, which is the actual mapping
+			  These are interpreted to be the only one-to-one mappings, the others correspond to more than one multi-level category-->
 			  <tr>
 				<td>SY</td>
 				<td>has_single_level_category<br/>
 				has_multi_level_category</td>
-				<td></td>
+				<td>Connect single-level CCS CATEGORY to MULTI CCS LVL 2 categories where there is a one-to-one mapping</td>
               </tr>
             </tbody>
           </table>
@@ -286,6 +292,25 @@
         </div>
         <div id="mappings" class="rep_block_level_two">
           <h3>Mappings (MRMAP):</h3>
+          <table>
+          <tbody>
+          	<tr>
+          		<th>Field</th>
+          		<th>Origin</th>
+          		<th>Notes</th>
+          	</tr>
+          	<!-- There is some overlap between codes of CCS categories and MULTI CCS LVL 1 atoms.  Mappings are only to CCS LVL 2.-->
+          	<tr>
+          		<td>REL</td>
+          		<td>RO</td>
+          	</tr>
+          	<tr>
+          		<td>RELA</td>
+          		<td>classified_as</td>
+          		<td>Connect ICD-10-CM or ICD-10-PCS with CCS CATEGORY and MULTI CCS LVL 2 atoms.  There is overlap between some CCS CATEGORY
+          		and CCS LVL 1 CODE values.  To disambiguate, note that TOEXPR values do not correspond to MULTI CCS LVL 1 CODES.  </td>
+          </tbody>
+          </table>
         </div>
       </div>
     </div>
