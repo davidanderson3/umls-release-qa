@@ -2,7 +2,7 @@
       back to the specific source data that populates them.</p>
     <!--begin tabbed navigation area-->
     <div class="section-6">
-      <ul id="menu">
+      <ul id="menu-source-docs">
         <li id="nav-1"><a href="index.html">Synopsis</a></li>
         <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
         <li id="nav-3"><a href="stats.html">Statistics</a></li>
@@ -14,7 +14,7 @@
       </ul>
     </div>
     <!-- end tabbed navigation area --><br/>
-<a name="top"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>,
+<a id="top-of-page"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>,
       <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
       <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
     <div id="general" class="rep_block_level_one">
@@ -114,10 +114,10 @@
 
 
         <div id="rep_termtypes" class="rep_block_level_two"> <a
-            name="atoms"></a>
+            id="atoms"></a>
           <h3>Atoms (MRCONSO):</h3>
-          <span class="nav">(<a href="#top">return to top</a></span>)
-          <p>Data is extracted from files "ccs_dx_icd10cm_2016.csv" (Diagnoses) and "ccs_pr_icd10pcs_2016.csv" (Procedures)
+          <span class="nav">(<a href="#top-of-page">return to top</a></span>)
+          <p>Data is extracted from files "ccs_dx_icd10cm_2016.csv" (Diagnoses) and "ccs_pr_icd10pcs_2016.csv" (Procedures)</p>
           <table>
             <tbody>
               <tr>
@@ -167,10 +167,10 @@
           <br/>
         </div>
         <div id="rep_attributes" class="rep_block_level_two"> <a
-            name="attributes"></a><br/>
+            id="attributes"></a><br/>
           <h3>Attributes (MRSAT):</h3>
 
-          <span class="nav">(<a href="#top">return to top</a></span>)
+          <span class="nav">(<a href="#top-of-page">return to top</a></span>)
           <table>
             <tbody>
               <tr>
@@ -236,16 +236,16 @@
           <br/>
         </div>
         <div id="rep_definitions" class="rep_block_level_two"> <a
-            name="definitions"></a><br/>
+            id="definitions"></a><br/>
           <h3>Definitions (MRDEF):</h3>
-          <span class="nav">(<a href="#top">return to top</a></span>)
+          <span class="nav">(<a href="#top-of-page">return to top</a></span>)
           <p>There are no definitions in CCS_10.<br/>
           </p>
         </div>
         <div id="rep_relationships" class="rep_block_level_two"> <a
-            name="relationships"></a><br/>
+            id="relationships"></a><br/>
           <h3>Relationships (MRREL); Hierarchy (MRHIER)</h3>
-          <span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <span class="nav">(<a href="#top-of-page">return to top</a></span>)<br/>
           <table>
             <tbody>
               <tr>
@@ -267,7 +267,7 @@
               <tr>
               	<td>RQ</td>
               	<td>classified_as<br/>
-              	classifies</br>
+              	classifies<br/>
               	<td>Connect ICD-10-CM or ICD-10-PCS with CCS CATEGORY and MULTI CCS LVL 2 atoms</td>
               </tr>
               <tr>
@@ -300,13 +300,12 @@
           		<th>Origin</th>
           	</tr>
           	<!-- There is some overlap between codes of CCS categories and MULTI CCS LVL 1 atoms.  Mappings are only to CCS LVL 2.-->
-          	          	<tr>
-
           	<tr>
           		<td>RELA</td>
           		<td>classified_as</td>
           		<td>Connect ICD-10-CM or ICD-10-PCS with CCS CATEGORY and MULTI CCS LVL 2 atoms.  There is overlap between some CCS CATEGORY
           		and CCS LVL 1 CODE values.  To disambiguate, note that TOEXPR values do not correspond to MULTI CCS LVL 1 CODES.  </td>
+                </tr>
           </tbody>
           </table>
         </div>
