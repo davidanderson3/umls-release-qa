@@ -1,10 +1,3 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-
-    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
-  </head>
-  <body>
     <p>This page lists UMLS Metathesaurus data elements and traces them
       back to the specific source data that populates them.</p>
     <!--begin tabbed navigation area-->
@@ -38,21 +31,19 @@
             processed for tabular data.</li>
         </ul>
         <ul>
-          <li>Deprecated ATNs.&nbsp; The following data is not included
-            in the tabular xml data:</li>
-        </ul>
-        <blockquote>
+          <li>Deprecated ATNs. The following data is not included
+            in the tabular xml data:
           <ul>
             <li>ALT_SORT_CODE</li>
             <li>NOTE</li>
           </ul>
-        </blockquote>
-        <p>&nbsp;Source Provided Files: <br/>
-        </p>
+          </li>
+		</ul>
+        <p>Source Provided Files: </p>
         The following files are downloaded and processed from <a
           href="http://www.cdc.gov/nchs/icd/icd10cm.htm">http://www.cdc.gov/nchs/icd/icd10cm.htm</a>:<br/>
         <br/>
-        Documentation:&nbsp; <br/>
+        Documentation: <br/>
         <ul>
           <li>icd10OrderFiles-508.pdf</li>
           <li>icd10cm_tabular_2017-508.pdf</li>
@@ -66,20 +57,19 @@
           <li> icd10cm_order_2017.txt</li>
           <li>icd10cm_tabular_2017.xml</li>
         </ul>
-        <ul>
-        </ul>
+
         The tabluar xml file aligns with the order file, and redundant
         data is not processed.<br/>
         <div id="rep_identifers" class="rep_block_level_one"> <br/>
           <h3><strong>Identifiers: </strong></h3>
           Identifiers are assigned as follows:<br/>
           <ul>
-            <li>CODE: <br/>
-            </li>
+            <li>CODE:
             <ul>
-              <li>For diagnoses or chapters: value of "&lt;name&gt;" tag<br/></li>
-              <li>For sections:&nbsp; value of "id" attribute of "&lt;section&gt;" tag</li>
+              <li>For diagnoses or chapters: value of "&lt;name&gt;" tag</li>
+              <li>For sections: value of "id" attribute of "&lt;section&gt;" tag
             </ul>
+            </li>
             <li>SAUI: Not Applicable</li>
             <li>SCUI: Not Applicable</li>
             <li>SDUI: same as CODE</li>
@@ -122,11 +112,9 @@
                   <td>CODE:&nbsp; <br/>
                     <ul>
                       <li>For diagnoses or chapters: value of
-                        "&lt;name&gt;" tag <br/>
-                      </li>
+                        "&lt;name&gt;" tag</li>
                       <li>For sections:&nbsp; value of "id" attribute of
-                        "&lt;section&gt;" tag<br/>
-                      </li>
+                        "&lt;section&gt;" tag</li>
                     </ul>
                     STR: value of "&lt;desc&gt;" tag in
                     icd10cm_tabular_&lt;YYYY&gt;.xml<br/>
@@ -433,5 +421,3 @@
         </div>
       </div>
     </div>
-  </body>
-</html>
