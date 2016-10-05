@@ -66,8 +66,9 @@
           <ul>
             <li>CODE:
             <ul>
-              <li>For diagnoses or chapters: value of "&lt;name&gt;" tag</li>
-              <li>For sections: value of "id" attribute of "&lt;section&gt;" tag
+              <li>Diagnoses, chapters: value of "&lt;name&gt;" tag</li>
+              <li>Diagnoses, 7 character codes: value of "&lt;name&gt;" tag" concatenated with "&lt;SevenChrDef&gt; &lt;extension&gt;" tag
+              <li>Sections: value of "id" attribute of "&lt;section&gt;" tag
             </ul>
             </li>
             <li>SAUI: Not Applicable</li>
@@ -131,9 +132,10 @@
                   <td>PT</td>
                   <td>Preferred Term</td>
                   <td>CODE:&nbsp; Value of "&lt;name&gt;" tag <br/>
-                    STR: value of "&lt;desc&gt;" tag in
-                    icd10cm_tabular_&lt;YYYY&gt;.xml<br/>
-                    SDUI: same as CODE<br/>
+                  	For 7th character extensions:  the "&lt;sevenChrDef extension&gt;" char is appended to the subcategory name value <br/>
+                    STR: value of "&lt;desc&gt;" tag in icd10cm_tabular_&lt;YYYY&gt;.xml<br/>
+                    For 7th character extensions:   The "&lt;sevenChrDef&gt;" value is appended to the desc value <br/>
+                  	SDUI: same as CODE<br/>
                     SUPPRESS = "N"<br/>
                     <br/>
                     Note: All "leaf" nodes are assigned TTY =
