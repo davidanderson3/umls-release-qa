@@ -43,40 +43,13 @@
 <td>MetaMap NLP View</td>
 <td>256</td>
 
-<td>This Content View is built from mrconso.eng.strict (a subset of  RRF MRCONSO) and converted into an AUI list based on 2014AB.  This view is not algorithmically generated during Metathesaurus construction.
+<td>This content view is built from mrconso.filtered.strict (a subset of RRF MRCONSO) and converted into an AUI list based on 2016AA. This view is not algorithmically generated during Metathesaurus construction.
 <br /><br />
 Additional Information:  
 <br />
-http://metamap.nlm.nih.gov/
+<a href="http://metamap.nlm.nih.gov/">http://metamap.nlm.nih.gov/</a>
 <br />
-http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2655934/
-</td>
-</tr>
-
-<tr>
-<td>C1964027</td>
-<td>UMLS enhanced VA/KP Problem List Subset of SNOMED (Level 0+SNOMED)*</td>
-
-<td>512</td>
-<td>This Content View provides a UMLS-enhanced view of the Veterans Health Administration and Kaiser Permanente (VA/KP) Problem List Subset of SNOMED, which is one of the controlled terminologies used for Structured Product Labeling (SPL). SPL is a document markup standard approved by Health Level Seven (HL7) and adopted by FDA as a mechanism for exchanging medication information. This set of SNOMED terms and codes is freely reusable worldwide without licensing or intellectual property restrictions. This Content View consists of all UMLS concepts containing the active SNOMED concepts in the Problem List Subset. It includes contents from SNOMED and other source vocabularies with no additional licensing restrictions. All non-English, obsolete and suppressible contents are excluded.
-<br /><br />
-Additional Information:
-<br />
-http://www.nlm.nih.gov/research/umls/licensedcontent/vakpproblemlist.html
-</td>
-</tr>
-
-<tr>
-<td>C1964028</td>
-<td>UMLS enhanced VA/KP Problem List Subset of SNOMED (Level 0+SNOMED+MDR)*</td>
-<td>1024</td>
-
-<td>This Content View provides a UMLS-enhanced view of the VA/KP Problem List Subset of SNOMED that also includes content from MedDRA.
-<br /><br />
-Additional Information: 
-<br /> 
-http://www.nlm.nih.gov/research/umls/licensedcontent/vakpproblemlist.html
-
+<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2655934/">http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2655934/</a>
 </td>
 </tr>
 
@@ -89,7 +62,7 @@ http://www.nlm.nih.gov/research/umls/licensedcontent/vakpproblemlist.html
 <br /><br />
 Additional Information:
 <br />
-http://www.nlm.nih.gov/research/umls/Snomed/core_subset.html
+<a href="http://www.nlm.nih.gov/research/umls/Snomed/core_subset.html">http://www.nlm.nih.gov/research/umls/Snomed/core_subset.html</a>
 </td>
 </tr>
 <tr>
@@ -105,10 +78,25 @@ http://www.nlm.nih.gov/research/umls/Snomed/core_subset.html
   <td>This content view allows users to easily identify atoms in the UMLS that come from the US Extension to SNOMED CT and carry the NLM Module ID of '731000124108'.</td>
 </tr>
 
+<tr>
+  <td>C4048847</td>
+  <td>LOINC Universal Lab Orders Value Set</td>
+  <td>16384</td>
+  <td>The Universal Lab Order Codes Value Set from LOINC is a collection of the most frequent lab orders. It was created for use by developers of provider order entry systems that would deliver them in HL7 messages to laboratories where they could be understood and fulfilled.
+The content view is defined as any atom belonging to sab = 'LNC'  with the attribute of 'UNIVERSAL_LAB_ORDERS_VALUE_SET'.
+</td>
+</tr>
+
+<tr>
+  <td>C4050460</td>
+  <td>LOINC Panels and Forms</td>
+  <td>32768</td>
+  <td>This content view contains LOINC identifiers that are used to identify panels and forms.  Any AUI with the TTY = ‘LN’, SAB  = ‘LOINC’ and attribute of ‘PANEL_TYPE’ belongs to this content view.</td>
+</tr>
+
 </tbody>
 </table>
-<br />
-*Note that the "UMLS enhanced VA/KP Problem List Subset of SNOMED (Level 0+SNOMED+MDR)" Content View is a superset of the "UMLS enhanced VA/KP Problem List Subset of SNOMED (Level 0+SNOMED)" Content View, and it is unnecessary to create a subset containing both views.
+
 
 
 
