@@ -31,9 +31,6 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
       updated in 2001, and much of the information on this page is not
       applicable.<br/>
       <br/>
-      The UMLS does not include Guidelines or SNOMEDCT mappings from the
-      CPT DTK files due to licensing restrictions.<br/>
-      <br/>
     </div>
     <div id="rep_change_summary" class="rep_block_level_one"> <a id="change_summary"></a>
         <h3>Summary of Changes</h3>
@@ -346,8 +343,7 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
                   from the Relationship File both correspond to the TYPE
                   ID number from the Type File. Thus, the Type File
                   enables a user to see at a glance all of the
-                  categories of relationship types used in the 2014 CPT
-                  DTK </td>
+                  categories of relationship types used in CPT Link</td>
               </tr>
   			<tr>
   			    <td>Days.txt</td>
@@ -559,38 +555,7 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
                 additional guidelines appear with the heading or code in
                 the published CPT code book. </td>
               <td>MRSAT.ATN = ADDITIONAL_GUIDELINE</td>
-            </tr>
-			<tr>
-			  <td>123</td>
-			  <td></td>
-			  <td></td>
-			  <td></td>
-            </tr>
-			<tr>
-			  <td>124</td>
-			  <td></td>
-			  <td></td>
-			  <td></td>
-            </tr>
-			<tr>
-			  <td>125</td>
-			  <td></td>
-			  <td></td>
-			  <td></td>
-            </tr>
-			<tr>
-			  <td>125</td>
-			  <td></td>
-			  <td></td>
-			  <td></td>
-            </tr>
-            <tr>
-			  <td>126</td>
-			  <td></td>
-			  <td></td>
-			  <td></td>
-            </tr>
-            <tr>
+             <tr>
               <td>127</td>
               <td>Measure_Developer</td>
               <td> Name of the measure developer associated
@@ -614,23 +579,22 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
             </tr>
             <tr>
 			  <td>130</td>
-			  <td></td>
-			  <td></td>
-			  <td></td>
+			  <td>Place_of_Service_Code</td>
+			  <td>Place of Service descriptor</td>
+			  <td>MRSAT.ATN = POS_CODE</td>
             </tr>
-
             <tr>
               <td>132</td>
               <td>Citation</td>
-              <td> Reference to CPT Assistant Newsletter articles; CPT Changes: An Insider's View; Clinical Examples in Radiology
+              <td>Reference to CPT Assistant Newsletter articles; CPT Changes: An Insider's View; Clinical Examples in Radiology
                 </td>
-              <td>MRCONSO.ATN = CITATION</td>
+              <td>MRSAT.ATN = CITATION</td>
             </tr>
             <tr>
               <td>133</td>
               <td>Coding_Tip</td>
               <td>Coding Tip text</td>
-              <td>MRCONSO.ATN = CODING_TIP</td>
+              <td>MRSAT.ATN = CODING_TIP</td>
             </tr>
             <tr>
               <td>134</td>
@@ -640,8 +604,188 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
                   multianalyte assays with algorithmic
                   analyses contained in Appendix O from the CPT codebook
                 </td>
-              <td>MRCONSO.ATN = PROPRIETARY_NAME</td>
+              <td>MRSAT.ATN = PROPRIETARY_NAME</td>
             </tr>
+            <tr>
+			  <td>138</td>
+			  <td>RVU_Work</td>
+			  <td>RVU Work</td>
+			  <td>MRSAT.ATN = RVU_WORK</td>
+			</tr>
+			<tr>
+			  <td>139</td>
+			  <td>RVU_Facility_Practice_Expense</td>
+			  <td>RVU Facility Practice Expense</td>
+			  <td>MRSAT.ATN = RVU_FACILITY_PRACTICE_EXPENSE</td>
+			</tr>
+			<tr>
+			  <td>140</td>
+			  <td>RVU_Nonfacility_Practice_Expense</td>
+			  <td>RVU Nonfacility Practice Expense</td>
+			  <td>MRSAT.ATN = RVU_NONFACILITY_PRACTICE_EXPENSE</td>
+			  </tr>
+			<tr>
+			  <td>141</td>
+			  <td>RVU_PLI</td>
+			  <td>RVU PLI</td>
+			  <td>MRSAT.ATN = RVU_PLI</td>
+			</tr>
+			<tr>
+			  <td>142</td>
+			  <td>RVU_Total_Facility</td>
+			  <td>RVU Total Facility</td>
+			  <td>MRSAT.ATN = RVU_TOTAL_FACILITY</td>
+			</tr>
+			<tr>
+			  <td>143</td>
+			  <td>RVU_Total_Nonfacility</td>
+			  <td>RVU Total Nonfacility</td>
+			  <td>MRSAT.ATN = RVU_TOTAL_NONFACILITY</td>
+			</tr>
+			<tr>
+			  <td>144</td>
+			  <td>RVU_Medicare_Global_Period</td>
+			  <td>RVU Medicare Global Period</td>
+			  <td>MRSAT.ATN = RVU_MEDICARE_GLOBAL_PERIOD</td>
+			</tr>
+			<tr>
+			  <td>145</td>
+			  <td>RVU_Work_Professional</td>
+			  <td>Professional component</td>
+			  <td>MRSAT.ATN = RVU_WORK_PROFESSIONAL</td>
+			</tr>
+			<tr>
+			  <td>146</td>
+			  <td>RVU_Facility_Practice_Expense_Professional</td>
+			  <td>Professional component</td>
+			  <td>MRSAT.ATN = RVU_FACILITY_PRACTICE_EXPENSE_PROFESSIONAL</td>
+			</tr>
+			<tr>
+			  <td>147</td>
+			  <td>RVU_Nonfacility_Practice_Expense_Professional</td>
+			  <td>Professional component</td>
+			  <td>MRSAT.ATN = RVU_NONFACILITY_PRACTICE_EXPENSE_PROFESSIONAL</td>
+			</tr>
+			<tr>
+			  <td>148</td>
+			  <td>RVU_PLI_Professional</td>
+			  <td>Professional component</td>
+			  <td>MRSAT.ATN = RVU_PLI_PROFESSIONAL</td>
+			</tr>
+			<tr>
+			  <td>149</td>
+			  <td>RVU_Total_Facility_Professional</td>
+			  <td>Professional component</td>
+			  <td>MRSAT.ATN = RVU_TOTAL_FACILITY_PROFESSIONAL</td>
+			</tr>
+			<tr>
+			  <td>150</td>
+			  <td>RVU_Total_Nonfacility_Professional</td>
+			  <td>Professional component</td>
+			  <td>MRSAT.ATN = RVU_TOTAL_NONFACILITY_PROFESSIONAL</td>
+			</tr>
+			<tr>
+			  <td>151</td>
+			  <td>RVU_Medicare_Global_Period_Professional</td>
+			  <td>Professional component</td>
+			  <td>MRSAT.ATN = RVU_MEDICARE_GLOBAL_PERIOD_PROFESSIONAL</td>
+			</tr>
+			<tr>
+			  <td>152</td>
+			  <td>RVU_Work_Technical</td>
+			  <td>Technical component</td>
+			  <td>MRSAT.ATN = RVU_WORK_TECHNICAL</td>
+			</tr>
+			<tr>
+			  <td>153</td>
+			  <td>RVU_Facility_Practice_Expense_Technical</td>
+			  <td>Technical component</td>
+			  <td>MRSAT.ATN = RVU_FACILITY_PRACTICE_EXPENSE_TECHNICAL</td>
+			</tr>
+			<tr>
+			  <td>154</td>
+			  <td>RVU_Nonfacility_Practice_Expense_Technical</td>
+			  <td>Technical component</td>
+			  <td>MRSAT.ATN = RVU_NONFACILITY_PRACTICE_EXPENSE_TECHNICAL</td>
+			</tr>
+			<tr>
+			  <td>155</td>
+			  <td>RVU_PLI_Technical</td>
+			  <td>Technical component</td>
+			  <td>MRSAT.ATN = RVU_PLI_TECHNICAL</td>
+			</tr>
+			<tr>
+			  <td>156</td>
+			  <td>RVU_Total_Facility_Technical</td>
+			  <td>Technical component</td>
+			  <td>MRSAT.ATN = RVU_TOTAL_FACILITY_TECHNICAL</td>
+			</tr>
+			<tr>
+			  <td>157</td>
+			  <td>RVU_Total_Nonfacility_Technical</td>
+			  <td>Technical component</td>
+			  <td>MRSAT.ATN = RVU_TOTAL_NONFACILITY_TECHNICAL</td>
+			</tr>
+			<tr>
+			  <td>158</td>
+			  <td>RVU_Medicare_Global_Period_Technical</td>
+			  <td>Technical component</td>
+			  <td>MRSAT.ATN = RVU_MEDICARE_GLOBAL_PERIOD_TECHNICAL</td>
+			</tr>
+			<tr>
+			  <td>159</td>
+			  <td>RVU_Work_Discontinued</td>
+			  <td>Discontinued</td>
+			  <td>MRSAT.ATN = RVU_WORK_DISCONTINUED</td>
+			</tr>
+			<tr>
+			  <td>160</td>
+			  <td>RVU_Facility_Practice_Expense_Discontinued</td>
+			  <td>Discontinued</td>
+			  <td>MRSAT.ATN = RVU_FACILITY_PRACTICE_EXPENSE_DISCONTINUED</td>
+			</tr>
+			<tr>
+			  <td>161</td>
+			  <td>RVU_Nonfacility_Practice_Expense_Discontinued</td>
+			  <td>Discontinued</td>
+			  <td>MRSAT.ATN = RVU_NONFACILITY_PRACTICE_EXPENSE_DISCONTINUED</td>
+			</tr>
+			<tr>
+			  <td>162</td>
+			  <td>RVU_PLI_Discontinued</td>
+			  <td>Discontinued</td>
+			  <td>MRSAT.ATN = RVU_PLI_DISCONTINUED</td>
+			</tr>
+			<tr>
+			  <td>163</td>
+			  <td>RVU_Total_Facility_Discontinued</td>
+			  <td>Discontinued</td>
+			  <td>MRSAT.ATN = RVU_TOTAL_FACILITY_DISCONTINUED</td>
+			</tr>
+			<tr>
+			  <td>164</td>
+			  <td>RVU_Total_Nonfacility_Discontinued</td>
+			  <td>Discontinued</td>
+			  <td>MRSAT.ATN = RVU_TOTAL_NONFACILITY_DISCONTINUED</td>
+			</tr>
+			<tr>
+			  <td>165</td>
+			  <td>RVU_Medicare_Global_Period_Discontinued</td>
+			  <td>Discontinued</td>
+			  <td>MRSAT.ATN = RVU_MEDICARE_GLOBAL_PERIOD</td>
+			</tr>
+			<tr>
+			  <td>166</td>
+			  <td>Global_Period_Code</td>
+			  <td>Code for global period in RVU Medicare Global Period property</td>
+			  <td>MRSAT.ATN = GLP</td>
+			</tr>
+			<tr>
+			  <td>167</td>
+			  <td>Telemedicine</td>
+			  <td>T for codes marked with the telemedicine symbol.</td>
+			  <td>MRSAT.ATN = TELEMEDICINE</td>
+			</tr>
           </tbody>
         </table>
         <br/>
@@ -836,8 +980,7 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
         <p>Relationship Qualifier ID/Value: used to assign the RELA.  Values are "EXCLUDED" and "POSSIBLY INCLUDED."</p>
         <p>Role Group: MRREL.RG.  Used to indicate that a set of relationships should be looked at in conjunction.</p>
         <p>Or Group:  MRSAT.ATN = OR_GROUP. Indicates that relationships with the same CUI2 and RG are disjunctive expressions (SGTYPE = RUI)</p>
-        <br/>
-        <br/>
+
         <a id="file5"></a><br/>
         <br/>
         <h4 class="file_field_name">file:
@@ -854,8 +997,8 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
             </tr>
             <tr>
               <td>ConceptID</td>
-              <td>DTK Concept ID</td>
-              <td>MRSAT.ATN = CPT_DTK_CONCEPT_ID</td>
+              <td>CPT Link Concept ID</td>
+              <td>MRSAT.ATN = CPTLINK_CONCEPT_ID</td>
             </tr>
             <tr>
               <td>Property Type ID</td>
@@ -874,9 +1017,7 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
         <h4 class="file_field_name">file:
           ConsumerDescriptor_DTK_pipe.txt<br/>
         </h4>
-          <span class="nav">return to <a
-href="file:///C:/Users/aalipows/Desktop/UMLS/current/CPT/sourcerepresentation.html#data_files">Data
-            Files</a></span><br/>
+          <span class="nav">return to <a href="#data_files">Data Files</a></span><br/>
         <br/>
         <table>
           <tbody>
@@ -887,8 +1028,8 @@ href="file:///C:/Users/aalipows/Desktop/UMLS/current/CPT/sourcerepresentation.ht
             </tr>
             <tr>
               <td class="file_field_name">Concept ID</td>
-              <td>DTK Concept ID</td>
-              <td>MRSAT.ATN = CPT_DTK_CONCEPT_ID</td>
+              <td>CPT Link Concept ID</td>
+              <td>MRSAT.ATN = CPTLINK_CONCEPT_ID</td>
             </tr>
             <tr>
               <td class="file_field_name">Property Type ID</td>
@@ -904,5 +1045,126 @@ href="file:///C:/Users/aalipows/Desktop/UMLS/current/CPT/sourcerepresentation.ht
           </tbody>
         </table>
         <br/>
+	   <h4>file: Days.txt<br/>
+		</h4>
+		  <span class="nav">return to <a href="#data_files">Data Files</a></span><br/>
+		<br/>
+		<table>
+		  <tbody>
+			<tr>
+			  <th>Field Name</th>
+			  <th>Description</th>
+			  <th>Representation</th>
+			</tr>
+			<tr>
+			  <td>Code 1</td>
+			  <td>CPT Code 1</td>
+			  <td>SCUI for MRSAT.ATN = DAYS_RESTRICTION; Also represented in the ATV if Code 1 is different from Code 2</td>
+			</tr>
+			<tr>
+			  <td>Descriptor 1</td>
+			  <td>CPT Descriptor 1</td>
+			  <td>N/A</td>
+			</tr>
+			<tr>
+			  <td>Code 2</td>
+			  <td>CPT Code 2</td>
+			  <td>SCUI for MRSAT.ATN = DAYS_RESTRICTION if Code 1 is different from Code 2; Also represented in the ATV
+			  if Code 1 equals Code 2</td>
+			</tr>
+			<tr>
+			  <td>Descriptor 2</td>
+			  <td>CPT Descriptor 2</td>
+			  <td>N/A</td>
+			</tr>
+			<tr>
+			  <td>Days</td>
+			  <td>Integer specifying time period in days.If Code 1 = Code 2, the code can be reported only once per &lt;Days&gt;.
+			  Some instructions restrict the use of two codes within a certain number of days.</td>
+			  <td>MRSAT.ATN = "DAYS_RESTRICTION"<br/>
+			  Format of the ATV is:  &lt;Code 2&gt; @ &lt;Days&gt;<br/>
+			  When Code 1 is different from Code 2, the attribute is also "flipped," i.e. the SCUI of Code 2 has a "DAYS_RESTRCTION"
+			  attribute with ATV = &lt;Code 1&gt; @ &lt;Days&gt</td>
+			</tr>
+		  </tbody>
+		</table>
+        <br/>
+	   <h4>file: Exclude.txt<br/>
+		</h4>
+		  <span class="nav">return to <a href="#data_files">Data Files</a></span><br/>
+		<br/>
+		<p>Listing of edits that are sourced from CPT instructions, such as "Do not report 00326 in conjunction with 99100".
+		Relationships are symmetrical (there is no meaning to the order of codes in the code pair).</p>
+		<table>
+		  <tbody>
+			<tr>
+			  <th>Field Name</th>
+			  <th>Description</th>
+			  <th>Representation</th>
+			</tr>
+			<tr>
+			  <td>Code 1</td>
+			  <td>CPT Code 1</td>
+			  <td>A relationship is created between Code 1 and Code 2<br/>
+			  MRREL.REL = RO, MRREL.RELA = "do_not_code_with"</td>
+			</tr>
+			<tr>
+			  <td>Descriptor 1</td>
+			  <td>CPT Descriptor 1</td>
+			  <td>N/A</td>
+			</tr>
+			<tr>
+			  <td>Code 2</td>
+			  <td>CPT Code 2</td>
+			  <td>A relationship is created between Code 1 and Code 2<br/>
+			  MRREL.REL = RO, MRREL.RELA = "do_not_code_with"</td>
+			</tr>
+			<tr>
+			  <td>Descriptor 2</td>
+			  <td>CPT Descriptor 2</td>
+			  <td>N/A</td>
+			</tr>
+		 </tbody>
+         </table>
+		<br/>
+	   <h4>file: ReportWith.txt<br/>
+		</h4>
+		  <span class="nav">return to <a href="#data_files">Data Files</a></span><br/>
+		<br/>
+		<p>Edits that are sourced from CPT instructions such as “Use 44139 in conjunction with 44140-44147”.
+		These code edit pairs are not symmetric.
+</p>
+		<table>
+		  <tbody>
+			<tr>
+			  <th>Field Name</th>
+			  <th>Description</th>
+			  <th>Representation</th>
+			</tr>
+			<tr>
+			  <td>Code 1</td>
+			  <td>CPT code for the add-on code</td>
+			  <td>A relationship is created between Code 1 and Code 2<br/>
+			  MRREL.REL = RO, MRREL.RELA = "add_on_code_for/has_add_on_code"</td>
+			</tr>
+			<tr>
+			  <td>Descriptor 1</td>
+			  <td>CPT Descriptor 1</td>
+			  <td>N/A</td>
+			</tr>
+			<tr>
+			  <td>Code 2</td>
+			  <td>CPT Code for the primary procedure</td>
+			  <td>A relationship is created between Code 1 and Code 2<br/>
+			  MRREL.REL = RO, MRREL.RELA = "add_on_code_for/has_add_on_code"</td>
+			</tr>
+			<tr>
+			  <td>Descriptor 2</td>
+			  <td>CPT Descriptor 2</td>
+			  <td>N/A</td>
+			</tr>
+		 </tbody>
+		 </table>
+		<br/>
       </div>
     </div>
