@@ -1,55 +1,29 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html;
-      charset=ISO-8859-1">
-    <title></title>
-  </head>
-  <body>
-    <div class="section-4">
-      <ul id="menu">
-        <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
-        <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
-        <li id="nav-3"> <a href="sourcemetastats.html">Statistics and
-            sample data</a>
-          <ul id="subnav-3">
-            <li> <a href="termtypes.html">Terms and term types</a> </li>
-            <li> <a href="attributes.html">Attributes</a> </li>
-            <li> <a href="relationships.html">Relationships</a> </li>
-            <li> <a href="semtypes.html">Semantic Types</a> </li>
-            <li> <a href="overlap.html">Source Overlap</a> </li>
-          </ul>
-        </li>
-        <li id="nav-4"> <a href="representation.html">Representation</a>
-          <ul id="subnav-4">
-            <li> <a href="sourcerepresentation.html">Source
-                Representation</a> </li>
-            <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
-
-                Representation</a> </li>
-          </ul>
-        </li>
+<!--begin tabbed navigation area-->
+<div class="section-6">
+      <ul id="menu-source-docs">
+         <li id="nav-1"><a href="index.html">Synopsis</a></li>
+         <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+         <!--<li id="nav-3"><a href="stats.html">Statistics</a></li>
+         <li id="nav-4"><a href="samples.html">Samples</a></li>-->
+         <li id="nav-5"><a href="sourcerepresentation.html">Source Representation</a></li>
+         <li id="nav-6"><a href="metarepresentation.html">Metathesaurus Representation</a></li>
       </ul>
-    </div>
-    <br/>
-    <br/>
-    <br/>
-    <a name="top"></a> <span class="nav">Skip to: </span><a
+</div>
+<!-- end tabbed navigation area -->
+
+    <a id="top-of-page"></a> <span class="nav">Skip to: </span><a
       href="#termtypes">Atoms</a>, <a href="#attributes">Attributes</a>,
     <a href="#definitions">Definitions</a>, <a href="#relationships">Relationships</a>,
     <a href="#mappings">Mappings</a>
-    <p><b>VSAB:</b> HCPCS2013, HCPT2013, HCDT2013, MTHHH2013</p>
+    <p><b>VSAB:</b> HCPCS2017, HCPT2017, HCDT2017, MTHHH2017</p>
     <div id="rep_identifiers" class="rep_block_level_one">
       <h3>Summary of Changes:</h3>
       <p>No changes have been made to the format of original data files
-        or to Metathesaurus processing.&nbsp; A new "Consumer Friendly"
-        version of the data has been released, and it is anticipated
-        that this format will be used for future HCPCS updates.<br/>
-      </p>
+        or to Metathesaurus processing.</p>
       <h3>Source Provided Files:</h3>
       <p>The Metathesaurus uses a fixed-length field file submitted by
         the Centers for Medicare &amp; Medicaid Services (CMS). The file
-        used for 2013 is: HCPC2012_CONTR.txt.</p>
+        used for 2017 is: HCPC2017_CONTR.txt.</p>
       <p>Not included: Field 2 (sequence number; character positions
         6-10) is excluded from Metathesaurus processing.</p>
       <h3>Identifiers:</h3>
@@ -63,10 +37,9 @@
         <li>SDUI: Not Applicable </li>
       </ul>
       <br/>
-      <div id="rep_termtypes" class="rep_block_level_two"> <a
-          name="termtypes"></a><br/>
+      <div id="rep_termtypes" class="rep_block_level_two"> <a id="termtypes"></a><br/>
         <h3>Atoms (MRCONSO):</h3>
-        &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+        &nbsp;&nbsp;<span class="nav">(<a href="#top-of-page">return to top</a></span>)<br/>
         SAB assignment:<br/>
         Atoms created from the HCPCS data file are assigned to an SAB
         based on their code:<br/>
@@ -77,7 +50,7 @@
           <li>HCDT: "D" followed by 4 digits: HCDT</li>
           <li>HCPCS: All other codes from the HCPCS data file</li>
         </ul>
-        <table class="elements" border="0" cellspacing="0">
+        <table>
           <tbody>
             <tr>
               <th>Term Type</th>
@@ -91,7 +64,7 @@
                 (character positions 1-5)<br/>
                 TTY = "AB" is assigned to atoms with a Record id code of
                 "3" and no "Termination Date"<br/>
-                SUPPRESS = "Y" &nbsp; </td>
+                SUPPRESS = "Y"</td>
             </tr>
             <tr>
               <td>AM</td>
@@ -179,11 +152,11 @@
           </tbody>
         </table>
       </div>
-      <a name="attributes"></a><br/>
+      <a id="attributes"></a><br/>
       <h3>Attributes (MRSAT):</h3>
-      &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
+      &nbsp;&nbsp;<span class="nav">(<a href="#top-of-page">return to top</a></span>)
       <div id="rep_attributes" class="rep_block_level_two">
-        <table class="elements" border="0" cellspacing="0">
+        <table>
           <tbody>
             <tr>
               <th>Attribute Name</th>
@@ -203,18 +176,15 @@
             </tr>
             <tr>
               <td>HAD</td>
-              <td>HCPCS Action Effective Date (character positions
-                277-284)</td>
+              <td>HCPCS Action Effective Date (character positions 277-284)</td>
             </tr>
             <tr>
               <td>HAQ</td>
-              <td>HCPCS Anesthesia Base Unit Quantity (character
-                positions 266-268)</td>
+              <td>HCPCS Anesthesia Base Unit Quantity (character positions 266-268)</td>
             </tr>
             <tr>
               <td>HBT</td>
-              <td>HCPCS Berenson-Eggers Type Of Service Code (character
-                positions 257-259)</td>
+              <td>HCPCS Berenson-Eggers Type Of Service Code (character positions 257-259)</td>
             </tr>
             <tr>
               <td>HCC</td>
@@ -284,18 +254,16 @@
           </tbody>
         </table>
       </div>
-      <div id="rep_definitions" class="rep_block_level_two"> <a
-          name="definitions"></a><br/>
+      <div id="rep_definitions" class="rep_block_level_two"> <a id="definitions"></a><br/>
         <h3>Definitions (MRDEF):</h3>
-        &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
+        &nbsp;&nbsp;<span class="nav">(<a href="#top-of-page">return to top</a></span>)
         <p>No definitions are included with the standard format HCPCS
           release.</p>
       </div>
-      <div id="rep_relationships" class="rep_block_level_two"> <a
-          name="relationships"></a><br/>
+      <div id="rep_relationships" class="rep_block_level_two"> <a id="relationships"></a><br/>
         <h3>Relationships (MRREL):</h3>
-        &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
-        <table class="elements" border="0" cellspacing="0">
+        &nbsp;&nbsp;<span class="nav">(<a href="#top-of-page">return to top</a></span>)
+        <table>
           <tbody>
             <tr>
               <th>Relationship</th>
@@ -331,10 +299,8 @@
         </table>
       </div>
     </div>
-    <div id="mappings" class="rep_block_level_one"> <a name="mappings"></a>
+    <div id="mappings" class="rep_block_level_one">
       <h3>Mappings (MRMAP):</h3>
-      <span class="nav">&nbsp;<a href="#top">(return to top</a></span>)
+      <span class="nav">&nbsp;<a href="#top-of-page">(return to top</a></span>)
       <p>No mapping data to other sources is included for HCPCS</p>
     </div>
-  </body>
-</html>

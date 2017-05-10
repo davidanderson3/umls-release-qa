@@ -1,52 +1,29 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-<head>
-
-<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
-<title></title>
-</head>
-<body>
-<div class="section-4">
-<ul id="menu">
-  <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
-  <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
-  <li id="nav-3"> <a href="sourcemetastats.html">Statistics and sample
-data</a>
-    <ul id="subnav-3">
-      <li> <a href="termtypes.html">Terms and term types</a> </li>
-      <li> <a href="attributes.html">Attributes</a> </li>
-      <li> <a href="relationships.html">Relationships</a> </li>
-      <li> <a href="semtypes.html">Semantic Types</a> </li>
-      <li> <a href="overlap.html">Source Overlap</a> </li>
-    </ul>
-  </li>
-  <li id="nav-4"> <a href="representation.html">Representation</a>
-    <ul id="subnav-4">
-      <li> <a href="sourcerepresentation.html">Source Representation</a>
-      </li>
-      <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
-Representation</a></li>
-    </ul>
-  </li>
-</ul>
+<p>This page lists UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
+<!--begin tabbed navigation area-->
+<div class="section-6">
+      <ul id="menu-source-docs">
+         <li id="nav-1"><a href="index.html">Synopsis</a></li>
+         <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+         <!--<li id="nav-3"><a href="stats.html">Statistics</a></li>
+         <li id="nav-4"><a href="samples.html">Samples</a></li>-->
+         <li id="nav-5"><a href="sourcerepresentation.html">Source Representation</a></li>
+         <li id="nav-6"><a href="metarepresentation.html">Metathesaurus Representation</a></li>
+      </ul>
 </div>
-<br/>
-<br/>
-<br/>
-<a name="top"></a>
+<!-- end tabbed navigation area -->
+<a name="top-of-page"></a>
 <span class="nav">Skip to: <a href="#atoms">Atoms</a>, <a
  href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
 <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
 <div id="general" class="rep_block_level_one">
-<p><b>VSAB:</b> MDRJPN16_1</p>
+<p><strong>VSAB: </strong>MDRJPN19_1</p>
 <div id="rep_identifiers" class="rep_block_level_one">
 <h3>Summary of Changes:</h3>
 <p>None</p>
 </div>
 <div id="rep_change_summary" class="rep_block_level_one">
 <h3>Source Provided Files:</h3>
-&nbsp;&nbsp;The UMLS uses MedDRA files distributed in the ASCII/MDRA_J161
-directory:<br/>
+The UMLS uses MedDRA files distributed in the ASCII/MDRA_J191 directory:<br/>
 <ul>
   <li>hlgt.asc </li>
   <li>hlgt_hlt.asc</li>
@@ -103,7 +80,7 @@ their "PT", all "LT"s are assigned the same the same Source-asserted
 Descriptor Identifer (SDUI).&nbsp; A descriptor is a collection of
 concepts (or atoms if there is no concept level organization) that are
 considered to be closely related (but not necessarily synonymous).</p>
-<p>Identifiers are assigned as follows:<br/>
+<p>Identifiers are assigned as follows:
 </p>
 <ul>
   <li>CODE: Populated by the "code" field in original data files, e.g.
@@ -126,7 +103,7 @@ the SDUI value found in the English version.
   <li>kana1:  alternate kana name</li>
   <li>kana2:  alternate kana name</li>
 </ul> 
-<table class="elements" border="0" cellspacing="0">
+<table>
   <tbody>
     <tr>
       <th>Term Type</th>
@@ -135,49 +112,49 @@ the SDUI value found in the English version.
     <tr>
       <td>HG</td>
       <td>CODE and SDUI = hlgt_code field of hlgt_j.asc<br/>
-STR = hlgt_kanji field of hlgt_j.asc<br/></br>
+STR = hlgt_kanji field of hlgt_j.asc<br /><br />
       </td>
     </tr>
     <tr>
       <td>HGJKN</td>
       <td>CODE and SDUI = hlgt_code field of hlgt_j.asc<br/>
-STR = hlgt_kana field of hlgt_j.asc<br/></br>
+STR = hlgt_kana field of hlgt_j.asc<br /><br />
       </td>
     </tr>
     <tr>
       <td>HGJKN1</td>
       <td>CODE and SDUI = hlgt_code field of hlgt_j.asc<br/>
-STR = hlgt_kana1 field of hlgt_j.asc<br/></br>
+STR = hlgt_kana1 field of hlgt_j.asc<br /><br />
       </td>
     </tr>
     <tr>
       <td>HGJKN2</td>
       <td>CODE and SDUI = hlgt_code field of hlgt_j.asc<br/>
-STR = hlgt_kana2 field of hlgt_j.asc<br/></br>
+STR = hlgt_kana2 field of hlgt_j.asc<br /><br />
       </td>
     </tr>    
     <tr>
       <td>HT</td>
       <td>CODE and SDUI = hlt_code field of hlt_j.asc<br/>
-STR = hlt_kanji field of hlt_j.asc<br/></br>
+STR = hlt_kanji field of hlt_j.asc<br /><br />
       </td>
     </tr>
     <tr>
       <td>HTJKN</td>
       <td>CODE and SDUI = hlt_code field of hlt_j.asc<br/>
-STR = hlt_kana field of hlt_j.asc<br/></br>
+STR = hlt_kana field of hlt_j.asc<br /><br />
       </td>
     </tr>
     <tr>
       <td>HTJKN1</td>
       <td>CODE and SDUI = hlt_code field of hlt_j.asc<br/>
-STR = hlt_kana1 field of hlt_j.asc<br/></br>
+STR = hlt_kana1 field of hlt_j.asc<br /><br />
       </td>
     </tr>
     <tr>
       <td>HTJKN2</td>
       <td>CODE and SDUI = hlt_code field of hlt_j.asc<br/>
-STR = hlt_kana2 field of hlt_j.asc<br/></br>
+STR = hlt_kana2 field of hlt_j.asc<br /><br />
       </td>
     </tr> 
     <tr>
@@ -185,28 +162,28 @@ STR = hlt_kana2 field of hlt_j.asc<br/></br>
       <td>CODE = llt_code field of llt_j.asc<br/>
 STR = llt_kanji field of llt_j.asc<br/>
 SDUI = SDUI of corresponding MedDRA English atom based on llt code<br/>
-LT atoms are created where llt_jcurr field of llt_j.asc = "Y"<br/></br>
+LT atoms are created where llt_jcurr field of llt_j.asc = "Y"<br /><br />
       </td>
     </tr>
     <tr>
       <td>LTJKN</td>
       <td>CODE = llt_code field of llt_j.asc<br/>
 STR = llt_kana field of llt_j.asc<br/>
-SDUI = SDUI of corresponding MedDRA English atom based on llt code<br/></br>
+SDUI = SDUI of corresponding MedDRA English atom based on llt code<br /><br />
       </td>
     </tr>
     <tr>
       <td>LTJKN1</td>
       <td>CODE = llt_code field of llt_j.asc<br/>
 STR = llt_kana1 field of llt_j.asc<br/>
-SDUI = SDUI of corresponding MedDRA English atom based on llt code<br/></br>
+SDUI = SDUI of corresponding MedDRA English atom based on llt code<br /><br />
       </td>
     </tr>
     <tr>
       <td>LTJKN2</td>
       <td>CODE = llt_code field of llt_j.asc<br/>
 STR = llt_kana2 field of llt_j.asc<br/>
-SDUI = SDUI of corresponding MedDRA English atom based on llt code<br/></br>
+SDUI = SDUI of corresponding MedDRA English atom based on llt code<br /><br />
       </td>
     </tr>
     <tr>
@@ -215,7 +192,7 @@ SDUI = SDUI of corresponding MedDRA English atom based on llt code<br/></br>
 STR = llt_kanji field of llt_j.asc<br/>
 SDUI = SDUI of corresponding MedDRA English atom based on llt code<br/>
 SUPPRESS = "Y"<br/>
-OL atoms are created where llt_jcurr field of llt_j.asc = "N"<br/></br>
+OL atoms are created where llt_jcurr field of llt_j.asc = "N"<br /><br />
       </td>
     </tr>
     <tr>
@@ -224,7 +201,7 @@ OL atoms are created where llt_jcurr field of llt_j.asc = "N"<br/></br>
 STR = llt_kana field of llt_j.asc<br/>
 SDUI = SDUI of corresponding MedDRA English atom based on llt code<br/>
 SUPPRESS = "Y"<br/>
-OLJKN atoms are created where llt_jcurr field of llt_j.asc = "N"<br/></br>
+OLJKN atoms are created where llt_jcurr field of llt_j.asc = "N"<br /><br />
       </td>
     </tr>
     <tr>
@@ -233,7 +210,7 @@ OLJKN atoms are created where llt_jcurr field of llt_j.asc = "N"<br/></br>
 STR = llt_kana1 field of llt_j.asc<br/>
 SDUI = SDUI of corresponding MedDRA English atom based on llt code<br/>
 SUPPRESS = "Y"<br/>
-OLJKN1 atoms are created where llt_jcurr field of llt_j.asc = "N"<br/></br>
+OLJKN1 atoms are created where llt_jcurr field of llt_j.asc = "N"<br /><br />
       </td>
     </tr>
     <tr>
@@ -242,55 +219,55 @@ OLJKN1 atoms are created where llt_jcurr field of llt_j.asc = "N"<br/></br>
 STR = llt_kana2 field of llt_j.asc<br/>
 SDUI = SDUI of corresponding MedDRA English atom based on llt code<br/>
 SUPPRESS = "Y"<br/>
-OLJKN2 atoms are created where llt_jcurr field of llt_j.asc = "N"<br/></br>
+OLJKN2 atoms are created where llt_jcurr field of llt_j.asc = "N"<br /><br />
       </td>
     </tr>
     <tr>
       <td>OS</td>
       <td>CODE and SDUI = soc_code field of soc_j.asc<br/>
-STR = soc_kanji field of soc_j.asc<br/></br>
+STR = soc_kanji field of soc_j.asc<br /><br />
       </td>
     </tr>
     <tr>
       <td>OSJKN</td>
       <td>CODE and SDUI = soc_code field of soc_j.asc<br/>
-STR = soc_kana field of soc_j.asc<br/></br>
+STR = soc_kana field of soc_j.asc<br /><br />
       </td>
     </tr>
     <tr>
       <td>OSJKN1</td>
       <td>CODE and SDUI = soc_code field of soc_j.asc<br/>
-STR = soc_kana1 field of soc_j.asc<br/></br>
+STR = soc_kana1 field of soc_j.asc<br /><br />
       </td>
     </tr>
     <tr>
       <td>OSJKN2</td>
       <td>CODE and SDUI = soc_code field of soc_j.asc<br/>
-STR = soc_kana2 field of soc_j.asc<br/></br>
+STR = soc_kana2 field of soc_j.asc<br /><br />
       </td>
     </tr>   
     <tr>
       <td>PT</td>
       <td>CODE and SDUI = pt_code field of pt_j.asc<br/>
-STR = pt_kanji field of pt_j.asc<br/></br>
+STR = pt_kanji field of pt_j.asc<br /><br />
       </td>
     </tr>
     <tr>
       <td>PTJKN</td>
       <td>CODE and SDUI = pt_code field of pt_j.asc<br/>
-STR = pt_kana field of pt_j.asc<br/></br>
+STR = pt_kana field of pt_j.asc<br /><br />
       </td>
     </tr>
     <tr>
       <td>PTJKN1</td>
       <td>CODE and SDUI = pt_code field of pt_j.asc<br/>
-STR = pt_kana1 field of pt_j.asc<br/></br>
+STR = pt_kana1 field of pt_j.asc<br /><br />
       </td>
     </tr>
     <tr>
       <td>PTJKN2</td>
       <td>CODE and SDUI = pt_code field of pt_j.asc<br/>
-STR = pt_kana2 field of pt_j.asc<br/></br>
+STR = pt_kana2 field of pt_j.asc<br /><br />
       </td>
     </tr>
     <tr>
@@ -305,8 +282,8 @@ STR = smq_kanji field of smq_list_j.asc<br/>
 <div id="rep_attributes" class="rep_block_level_two">
 <a name="attributes"></a><br/>
 <h3>Attributes (MRSAT):</h3>
-&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
-<table class="elements" border="0" cellspacing="0">
+&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)
+<table>
   <tbody>
     <tr>
       <th>Attribute Name</th>
@@ -353,8 +330,8 @@ smq_content.asc</td>
 <div id="rep_definitions" class="rep_block_level_two">
 <a name="definitions"></a><br/>
 <h3>Definitions (MRDEF):</h3>
-&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
-<table class="elements" border="0" cellspacing="0">
+&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)
+<table>
   <tbody>
     <tr>
       <th>ORIGIN</th>
@@ -362,7 +339,8 @@ smq_content.asc</td>
     <tr>
       <td>Extracted from the smq_desc_kanjii field of smq_list_j.asc.
 DEFINITIONs are present only for TTY = "SMQ", and include a description<br/>
-of the SMQ including inclusion and exclusion criteria</td>
+of the SMQ including inclusion and exclusion criteria.
+      </td>
     </tr>
   </tbody>
 </table>
@@ -370,8 +348,8 @@ of the SMQ including inclusion and exclusion criteria</td>
 <div id="rep_relationships" class="rep_block_level_two">
 <a name="relationships"></a><br/>
 <h3>Relationships (MRREL):</h3>
-&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
-<table class="elements" border="0" cellspacing="0">
+&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)
+<table>
   <tbody>
     <tr>
       <th>Relationship</th>
@@ -383,7 +361,7 @@ of the SMQ including inclusion and exclusion criteria</td>
 PAR<br/>
 SIB</td>
       <td>(no rela)</td>
-      <td valign="top">Hierarchy extracted from hlt_pt.asc,
+      <td>Hierarchy extracted from hlt_pt.asc,
 hlgt_hlt.asc, soc_hlgt.asc files (can also be computed from mdhier.asc) using the kanji name as the proxy for the whole concept.</td>
     </tr>
     <tr>
@@ -403,5 +381,3 @@ smq_content.asc.</td>
 </div>
 </div>
 </div>
-</body>
-</html>

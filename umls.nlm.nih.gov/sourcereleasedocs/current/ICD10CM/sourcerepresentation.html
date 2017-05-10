@@ -1,1080 +1,453 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html;
-      charset=windows-1252">
-    <title></title>
-  </head>
-  <body>
-    <div class="section-4">
-      <ul id="menu">
-        <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
-        <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
-        <li id="nav-3"> <a href="sourcemetastats.html">Statistics and
-            sample data</a>
-          <ul id="subnav-3">
-            <li> <a href="termtypes.html">Terms and term types</a> </li>
-            <li> <a href="attributes.html">Attributes</a> </li>
-            <li> <a href="relationships.html">Relationships</a> </li>
-            <li> <a href="semtypes.html">Semantic Types</a> </li>
-            <li> <a href="overlap.html">Source Overlap</a> </li>
-          </ul>
-        </li>
-        <li id="nav-4"> <a href="representation.html">Representation</a>
-          <ul id="subnav-4">
-            <li> <a href="sourcerepresentation.html" id="sourcerep">Source
+<p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p>
+<!--begin tabbed navigation area-->
 
-
-
-
-
-
-
-
-
-
-
-                Representation</a> </li>
-            <li> <a href="metarepresentation.html">Metathesaurus
-                Representation</a> </li>
-          </ul>
-        </li>
+    <div class="section-5">
+      <ul id="menu-source-docs">
+        <li id="nav-1"><a href="index.html">Synopsis</a></li>
+        <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+        <!--<li id="nav-3"><a href="stats.html">Statistics</a></li>
+        <li id="nav-4"><a href="samples.html">Samples</a></li>-->
+        <li id="nav-5"><a href="sourcerepresentation.html">Source
+            Representation</a></li>
+        <li id="nav-6"><a href="metarepresentation.html">Metathesaurus
+            Representation</a></li>
       </ul>
     </div>
-    <!-- end tabbed navigation area --> <br/>
-    <br/>
-    <br/>
-    <a name="top"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
+    <!-- end tabbed navigation area -->
+    <a id="top-of-page"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
       <a href="#change_summary">Summary of Changes</a>, <a
         href="#file_summary">Summary of Source-Provided Files</a> <a
-        href="#file_details">Source-Provided File Details</a></span> <a
-      name="general"></a>
-    <div id="rep_general" class="rep_block_level_one">
-      <h3>Notes</h3>
-      <ul>
-        <li>The Metathesaurus uses files submitted in TREF (Terminology
-          Representation and Exchange Format).&nbsp; These files are
-          produced by the National Center for Health Statistics (NCHS)
-          for Metathesaurus processing, and are not currently available
-          publically.&nbsp; TREF was developed by the NLM and is a
-          subset of the Rich Release Format (RRF) – the format in which
-          the UMLS Metathesaurus is released.&nbsp; There is now an xml
-          file available for ICD-10-PCS, which was processed and
-          compared to the TREF data.&nbsp; Discrepancies in the data
-          were addressed in the TREF files.<br/>
-        </li>
-      </ul>
-      <ul>
-        <li>Additional files and documentation are downloaded from
-          http://www.cms.gov/Medicare/Coding/ICD10/2014-ICD-10-CM-and-GEMs.html.</li>
-      </ul>
-      <br/>
-    </div>
-    <div id="rep_change_summary" class="rep_block_level_one"> <a
-        name="change_summary"></a>
+        href="#file_details">Source-Provided File Details</a></span> <a id="general"></a>
+
+    <div id="rep_change_summary" class="rep_block_level_one"> <a id="change_summary"></a>
       <h3>Summary of Changes:</h3>
-      &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-      Plain text forms of UTF-8 strings are no longer created.&nbsp; <br/>
-      <br/>
-      Deprecated TTYs:<br/>
-      &nbsp;&nbsp;&nbsp; MTH_AB<br/>
-      &nbsp;&nbsp;&nbsp; MTH_ET<br/>
-      &nbsp;&nbsp;&nbsp; MTH_HT<br/>
-      &nbsp;&nbsp;&nbsp; MTH_PT<br/>
-      <br/>
-      Deprecated REL/RELA<br/>
-      &nbsp;&nbsp;&nbsp; SY|has_plain_text_form/plain_text_form_of</div>
-    <div id="rep_file_summary" class="rep_block_level_one"> <a
-        name="file_summary"></a>
-      <h3>Source-Provided Files: Summary</h3>
-      &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
-      <p>The following are files used for Metathesaurus source
-        processing.<br/>
-      </p>
-      <div class="rep_block_level_two">
-        <!-- Make a table of each file that comes from the source   -->
-        <h4>Documentation and Reference</h4>
-        <table class="elements" border="0" cellspacing="0">
-          <tbody>
-            <tr>
-              <th>File Name</th>
-              <th>Description</th>
-            </tr>
-            <tr>
-              <td class="file_field_name">GemsTechDoc.pdf <br/>
-              </td>
-              <td>GEMs guide for technical users<br/>
-              </td>
-            </tr>
-            <tr>
-              <td class="file_field_name">Dxgem_guide_2014.pdf</td>
-              <td>Diagnosis Code Set General Equivalence Mappings
-                Documentation and User's Guide<br/>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">Gems2014UpdateSummary.pdf
-                <br/>
-              </td>
-              <td style="vertical-align: top;">GEMs update summary<br/>
-              </td>
-            </tr>
-            <tr>
-              <td class="file_field_name">reimb_map_guide_2014.pdf</td>
-              <td>ICD-10-CM/PCS to ICD-9-CM Reimbursement Mappings
-                Documentation and User's Guide<br/>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">ICD10OrderFiles.pdf<br/>
-              </td>
-              <td style="vertical-align: top;">Documentation for
-                icd10cm_order_2014.txt</td>
-            </tr>
-          </tbody>
-        </table>
-        <br/>
-        <h4>Data Files</h4>
-        <a name="data_files"></a>
-        <table class="elements" border="0" cellspacing="0">
-          <tbody>
-            <tr>
-              <th>File Name</th>
-              <th>Description</th>
-            </tr>
-            <tr>
-              <td class="file_field_name"><a href="#file1">MRCONSO.TREF</a></td>
-              <td>Concepts, atoms and descriptors<br/>
-              </td>
-            </tr>
-            <tr>
-              <td class="file_field_name"><a href="#file2">MRDOC.TREF</a></td>
-              <td>Documentation for abbreviated values<br/>
-              </td>
-            </tr>
-            <tr>
-              <td class="file_field_name"><a href="#file3">MRREL.TREF</a></td>
-              <td>Relationships<br/>
-              </td>
-            </tr>
-            <tr>
-              <td class="file_field_name"><a href="#file4">MRSAB.TREF</a></td>
-              <td>Source metadata<br/>
-              </td>
-            </tr>
-            <tr>
-              <td class="file_field_name"><a href="#file5">MRSAT.TREF</a></td>
-              <td>Attributes<br/>
-              </td>
-            </tr>
-            <tr>
-              <td class="file_field_name"><a href="#file6">icd10cm_order_2014.txt</a></td>
-              <td>Code descriptions in Tabular Order<br/>
-              </td>
-            </tr>
-            <tr>
-              <td class="file_field_name"><a href="#file7">2014_I10gem.txt</a></td>
-              <td>ICD-10-CM to ICD-9-CM General Equivalence Mappings
-                (GEMs)<br/>
-              </td>
-            </tr>
-            <tr>
-              <td class="file_field_name"><a href="#file8">2014_I9gem.txt</a></td>
-              <td>ICD-9-CM to ICD-10-CM General Equivalence Mappings
-                (GEMs)<br/>
-              </td>
-            </tr>
-            <tr>
-              <td class="file_field_name"><a href="#file9">reimb_map_dx_2014.txt</a></td>
-              <td>ICD-10-CM to ICD-9-CM reimbursement mappings<br/>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <br/>
-        <br/>
-        Not included: All information from the ICD-10-CM TREF data files
-        and from the mapping files is included in the UMLS
-        representation.<br/>
-        <p>Certain fields and files may not be directly processed
-          because they contain redundant data. </p>
-      </div>
+      Note:  ICD10CM_2017_2016_10_19 is a minor update to correct an omission in processing ICD10CM_2017. A small number of atoms,
+      relationships and the "NOTE" attribute were missing in 2017AA. The changes listed here are in comparison to ICD10CM_2016.
+<ul>
+          <li>The reimbursement mappings have been discontinued</li>
+        </ul>
+        <ul>
+          <li>Previously, the UMLS received and processed files
+            submitted in TREF (Terminology Representation and Exchange
+            Format). For 2017AA, a publicly available xml file was
+            processed for tabular data.</li>
+        </ul>
+        <ul>
+          <li>Deprecated ATN. The following data is not included
+            in the tabular xml data:
+          <ul>
+            <li>ALT_SORT_CODE</li>
+          </ul>
+          </li>
+		</ul>
+
     </div>
-    <div id="rep_file_details" class="rep_block_level_one"> <a
-        name="file_details"></a>
+    <div id="rep_file_summary" class="rep_block_level_one"> <a id="file_summary"></a>
+      <h3>Source-Provided Files: Summary</h3>
+   The following files are downloaded and processed from <a
+             href="http://www.cdc.gov/nchs/icd/icd10cm.htm">http://www.cdc.gov/nchs/icd/icd10cm.htm</a>:<br/>
+           <br/>
+           Documentation: <br/>
+           <ul>
+             <li>icd10OrderFiles-508.pdf</li>
+             <li>icd10cm_tabular_2017-508.pdf</li>
+             <li>GemsTec5hDoc_2017.pdf</li>
+           </ul>
+           <br/>
+           Data:<br/>
+           <ul>
+             <li>2017_I10gem.txt</li>
+             <li>2017_I9gem.txt</li>
+             <li> icd10cm_order_2017.txt</li>
+             <li>icd10cm_tabular_2017.xml</li>
+           </ul>
+
+           The tabluar xml file aligns with the order file, and redundant
+        data is not processed.<br/>
+</div>
+    <div id="rep_file_details" class="rep_block_level_one"> <a id="file_details"></a>
       <h3>Source-Provided Files: Details</h3>
-      &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
+        (<span class="nav"><a href="#top-of-page">return to top</a></span>)
       <p>Details on format of input files and representation of source
         data. <br/>
       </p>
-      <div class="rep_block_level_two"> <a name="file1"></a>
-        <h4 class="file_field_name">file:MRCONSO.TREF</h4>
-        &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
+      <div class="rep_block_level_two"> <a id="file1"></a>
+        <h4 class="file_field_name">file:icd10cm_tabular_&lt;YYYY&gt;.xml</h4>
+            <span class="nav">(<a href="#top-of-page">return to top</a></span>)<br/>
+            <br/>
 
-
-
-
-
-
-
-
-
-
-
-            Files</a></span>
-        <p><br/>
-        </p>
-        <table class="elements" border="0" cellspacing="0">
+The ICD-10-CM tabular data is represented as "chapter," "section," and "diag" elements: <br/>
+        <table>
           <tbody>
             <tr>
-              <th>#</th>
-              <th>Field Name</th>
+              <th>note type</th>
               <th>Description</th>
               <th>Representation</th>
             </tr>
             <tr>
-              <td style="vertical-align: top;">1<br/>
-              </td>
-              <td class="file_field_name">AUI<br/>
-              </td>
-              <td>Atom Unique Identifier<br/>
-              </td>
-              <td>not populated<br/>
-              </td>
+              <td>name<br/>
+              id (section attribute)</td>
+              <td></td>
+              <td>MRCONSO.CODE, SDUI<br/>
+              chapter:  TTY = HT<br/>
+              diag:  TTY = HT if there are children;  TTY = PT if leaf node<br/>
             </tr>
             <tr>
-              <td style="vertical-align: top;">2<br/>
-              </td>
-              <td style="vertical-align: top;">STR<br/>
-              </td>
-              <td style="vertical-align: top;">Name associated with an
-                atom<br/>
-              </td>
-              <td style="vertical-align: top;">MRCONSO.RRF.STR<br/>
-              </td>
+            	<td>inclusionTerm</td>
+            	<td></td>
+              	<td>MRCONSO.STR; TTY = ET </td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">3<br/>
-              </td>
-              <td class="file_field_name">CUI<br/>
-              </td>
-              <td>Concept Unique Identifier<br/>
-              </td>
-              <td>not populated<br/>
-              </td>
+				<td>includes</td>
+				<td></td>
+				<td>MRCONSO.STR; TTY = ET </td>
+            </tr>
+             <tr>
+            	<td>desc</td>
+            	<td></td>
+            	<td>MRCONSO.STR</td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">4<br/>
-              </td>
-              <td style="vertical-align: top;">DUI<br/>
-              </td>
-              <td style="vertical-align: top;">Descriptor Unique
-                Identifier<br/>
-              </td>
-              <td style="vertical-align: top;">MRCONSO.RRF.CODE,
-                MRCONSO.RRF.SDUI<br/>
-              </td>
+            	<td>sevenChrDef extension</td>
+            	<td>indicates that a seventh character is to be assigned to codes in a subcategory</td>
+            	<td>The extension char is appended to the subcategory name value to assign the MRCONSO.CODE, SDUI;  The tag value is appended to the desc value to create MRCONSO.STR</td>
             </tr>
-            <tr>
-              <td style="vertical-align: top;">5<br/>
-              </td>
-              <td style="vertical-align: top;">TTY<br/>
-              </td>
-              <td style="vertical-align: top;">Term Type<br/>
-              </td>
-              <td style="vertical-align: top;">MRCONSO.RRF.TTY<br/>
-              </td>
+			<tr>
+				<td>includes</td>
+				<td></td>
+				<td></td>
             </tr>
-          </tbody>
-        </table>
+			<tr>
+				<td>excludes1</td>
+				<td> A pure excludes, meaning "NOT CODED HERE!" Indicates that the code excluded should never be used at the same
+				time as the code above the Excludes1 note. Used for when two conditions cannot occur together, such as a congenital form
+				versus an acquired form of the same condition.</td>
+				<td>MRSAT.ATN = EXCLUDES1</td>
+            </tr>
+			<tr>
+				<td>excludes2</td>
+				<td>Represents "Not included here". Indicates that the condition excluded is not part of the condition it is excluded from but a patient
+				may have both conditions at the same time. When an Excludes2 note appears under a code it is acceptable to use both the code and the
+				excluded code together.
+				<td>MRSAT.EXCLUDES2</td>
+            </tr>
+			<tr>
+				<td>codeFirst</td>
+				<td>Certain conditions have both an underlying etiology and multiple body system manifestations due to the underlying etiology.
+				ICD-10-CM has a coding convention that requires the underlying condition be sequenced first followed by the manifestation.
+				Wherever such a combination exists there is a "code first" note at the manifestation code. These instructional notes indicate the
+				proper sequencing order of the codes, etiology followed by manifestation. In most cases the manifestation codes will have in the code
+				title, "in diseases classified elsewhere." Codes with this title are a component of the etiology/manifestation convention.
+				The code title indicates that it is a manifestation code. "In diseases classified elsewhere" codes are never permitted to be used
+				as first listed or principle diagnosis codes. They must be used in conjunction with an underlying condition code and they must be
+				listed following the underlying condition.</td>
+				<td>MRSAT.CODE_FIRST</td>
+            </tr>
+			<tr>
+				<td>useAdditionalCode</td>
+				<td>Certain conditions have both an underlying etiology and multiple body system manifestations due to the underlying etiology.
+				ICD-10-CM has a coding convention that requires the underlying condition be sequenced first followed by the manifestation.
+				Wherever such a combination exists there is a "use additional code" note at the etiology code. These instructional notes indicate the
+				proper sequencing order of the codes, etiology followed by manifestation. In most cases the manifestation codes will have in the code
+				title, "in diseases classified elsewhere." Codes with this title are a component of the etiology/ manifestation convention.
+				The code title indicates that it is a manifestation code. "In diseases classified elsewhere" codes are never permitted to be used
+				as first listed or principle diagnosis codes. They must be used in conjunction with an underlying condition code and they must be
+				listed following the underlying condition. </td>
+				<td>MRSAT.ATN = USE_ADDITIONAL</td>
+            </tr>
+			<tr>
+				<td>codeAlso</td>
+				<td>Instructs that 2 codes may be required to fully describe a condition but the sequencing of the two codes is discretionary,
+				depending on the severity of the conditions and the reason for the encounter.</td>
+				<td>MRSAT.ATN = CODE_ALSO</td>
+            </tr>
+			<tr>
+				<td>notes</td>
+				<td></td>
+				<td>
+            </tr>
+		</table>
+
+        <a id="file6"></a><br/>
+        <h4 class="file_field_name">file: icd10cm_order_&lt;YYYY&gt;.txt</h4>
+       <span class="nav">(<a href="#top-of-page">return to top</a></span>)<br/>
+
         <br/>
-        <a name="file2"></a>
-        <h4 class="file_field_name">file:MRDOC.TREF</h4>
-        &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
-
-
-
-
-
-
-
-
-
-
-
-            Files</a></span><br/>
-        <br/>
-        File not directly used<br/>
-        <a name="file3"></a>
-        <h4 class="file_field_name">file:MRREL.TREF</h4>
-        &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
-
-
-
-
-
-
-
-
-
-
-
-            Files</a></span><br/>
-        <br/>
-        <table class="elements" border="0" cellspacing="0">
-          <tbody>
-            <tr>
-              <th>#</th>
-              <th>Field Name</th>
-              <th>Description</th>
-              <th>Representation</th>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">1<br/>
-              </td>
-              <td class="file_field_name">RUI<br/>
-              </td>
-              <td>Relationship Unique Identifier<br/>
-              </td>
-              <td>not populated<br/>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">2<br/>
-              </td>
-              <td style="vertical-align: top;">UI1<br/>
-              </td>
-              <td style="vertical-align: top;">Unique Identifier of the
-                first element<br/>
-              </td>
-              <td style="vertical-align: top;">MRREL.RRF.UI1<br/>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">3<br/>
-              </td>
-              <td style="vertical-align: top;">STYPE1<br/>
-              </td>
-              <td style="vertical-align: top;">Name of the column in
-                MRCONSO.TREF that contains the identifier used for the
-                first element<br/>
-              </td>
-              <td style="vertical-align: top;">MRREL.RRF.STYPE1<br/>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">4<br/>
-              </td>
-              <td style="vertical-align: top;">REL<br/>
-              </td>
-              <td style="vertical-align: top;"> Relationship<br/>
-              </td>
-              <td style="vertical-align: top;">Always "PAR"; used to
-                create the hierarchy in MRHIER.RRF and PAR/CHD/SIB
-                relationships in MRREL.RRF<br/>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">5<br/>
-              </td>
-              <td class="file_field_name">RELA<br/>
-              </td>
-              <td>Relationships attribute<br/>
-              </td>
-              <td>not populated<br/>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">6<br/>
-              </td>
-              <td style="vertical-align: top;">UI2<br/>
-              </td>
-              <td style="vertical-align: top;">Unique Identifier of the
-                second element<br/>
-              </td>
-              <td style="vertical-align: top;">MRREL.RRF.UI2<br/>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">7<br/>
-              </td>
-              <td style="vertical-align: top;">STYPE2<br/>
-              </td>
-              <td style="vertical-align: top;">Name of the column in
-                MRCONSO.TREF that contains the identifier used for the
-                second element </td>
-              <td style="vertical-align: top;">MRREL.RRF.STYPE2<br/>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <br/>
-        <a name="file4"></a>
-        <h4 class="file_field_name">file:MRSAB.TREF</h4>
-        &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
-
-
-
-
-
-
-
-
-
-
-
-            Files</a></span><br/>
-        <br/>
-        Not directly used<br/>
-        <a name="file5"></a><br/>
-        <h4 class="file_field_name">file:MRSAT.TREF</h4>
-        &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
-
-
-
-
-
-
-
-
-
-
-
-            Files</a></span><br/>
-        <br/>
-        <table class="elements" border="0" cellspacing="0">
-          <tbody>
-            <tr>
-              <th>#</th>
-              <th>Field Name</th>
-              <th>Description</th>
-              <th>Representation</th>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">1<br/>
-              </td>
-              <td class="file_field_name">ATUI<br/>
-              </td>
-              <td>Attribute Unique Identifier<br/>
-              </td>
-              <td>not populated<br/>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">2<br/>
-              </td>
-              <td class="file_field_name">UI<br/>
-              </td>
-              <td>Unique Identifier of the thing to which the attribute
-                is attached<br/>
-              </td>
-              <td>MRSAT.RRF.UI<br/>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">3<br/>
-              </td>
-              <td style="vertical-align: top;">STYPE<br/>
-              </td>
-              <td style="vertical-align: top;">Type of identifier used
-                in the UI field</td>
-              <td style="vertical-align: top;">MRSAT.RRF.STYPE<br/>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">4<br/>
-              </td>
-              <td style="vertical-align: top;">ATN<br/>
-              </td>
-              <td style="vertical-align: top;">Attribute name<br/>
-              </td>
-              <td style="vertical-align: top;">MRSAT.RRF.ATN for
-                attributes other than DEFINITION<br/>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">5<br/>
-              </td>
-              <td style="vertical-align: top;">ATV<br/>
-              </td>
-              <td style="vertical-align: top;">Attribute value<br/>
-              </td>
-              <td style="vertical-align: top;">MRSAT.RRF.ATV for
-                attributes other than DEFINITION<br/>
-                MRDEF.DEF for DEFINITIONS<br/>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <br/>
-        <a name="file6"></a><br/>
-        <h4 class="file_field_name">file: icd10cm_order_2014.txt</h4>
-        &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
-
-
-
-
-
-
-
-
-
-            Files</a></span><br/>
-        <br/>
-        <table class="elements" border="0" cellspacing="0">
+        <table>
           <tbody>
             <tr>
               <th>Character<br/>
-                Position<br/>
-              </th>
+                Position</th>
               <th>Length</th>
               <th>Description</th>
               <th>Representation</th>
             </tr>
             <tr>
-              <td style="vertical-align: top;">1<br/>
-              </td>
-              <td class="file_field_name">5<br/>
-              </td>
-              <td>Order number, right justified, zero filled.<br/>
-              </td>
-              <td>MRSAT.ATN = ORDER_NO<br/>
-              </td>
+              <td>1</td>
+              <td class="file_field_name">5</td>
+              <td>Order number, right justified, zero filled.</td>
+              <td>MRSAT.ATN = ORDER_NO</td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">6<br/>
-              </td>
-              <td class="file_field_name">1<br/>
-              </td>
-              <td>Blank<br/>
-              </td>
-              <td>N/A<br/>
-              </td>
+              <td>6</td>
+              <td class="file_field_name">1</td>
+              <td>Blank</td>
+              <td>N/A</td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">7<br/>
-              </td>
-              <td style="vertical-align: top;">7<br/>
-              </td>
-              <td style="vertical-align: top;">ICD-10-CM or ICD-10-PCS
-                code. Dots are not included.<br/>
-              </td>
-              <td style="vertical-align: top;">Not directly processed
-                (extracted from MRCONSO.RRF)<br/>
-              </td>
+              <td>7</td>
+              <td>7</td>
+              <td>ICD-10-CM or ICD-10-PCS
+                code. Dots are not included.</td>
+              <td>Not directly processed
+                (extracted from icd10cm_tabular_&lt;YYYY&gt;.xml)</td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">14<br/>
-              </td>
-              <td style="vertical-align: top;">1<br/>
-              </td>
-              <td style="vertical-align: top;">Blank<br/>
-              </td>
-              <td style="vertical-align: top;">N/A<br/>
-              </td>
+              <td>14</td>
+              <td>1</td>
+              <td>Blank</td>
+              <td>N/A</td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">15<br/>
-              </td>
-              <td style="vertical-align: top;">1<br/>
-              </td>
-              <td style="vertical-align: top;">0 if the code is a
-                “header” – not valid for submission on a UB04.<br/>
-                1 if the code is valid for submission on a UB04.<br/>
-              </td>
-              <td style="vertical-align: top;">Not directly processed
-                (extracted from MRCONSO.RRF;&nbsp; determines TTY:&nbsp;
-                "0" for HT; "1" for "PT"<br/>
-              </td>
+              <td>15</td>
+              <td>1</td>
+              <td>0 if the code is a header
+                not valid for submission on a UB04.<br/>
+                1 if the code is valid for submission on a UB04.</td>
+              <td>Not directly processed
+                (extracted from icd10cm_tabular_&lt;YYYY&gt;.xml;  determines TTY:
+                "0" for HT; "1" for "PT"</td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">16<br/>
-              </td>
-              <td style="vertical-align: top;">1<br/>
-              </td>
-              <td style="vertical-align: top;">Blank<br/>
-              </td>
-              <td style="vertical-align: top;">N/A<br/>
-              </td>
+              <td>16</td>
+              <td>1</td>
+              <td>Blank</td>
+              <td>N/A</td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">17<br/>
-              </td>
-              <td style="vertical-align: top;">60<br/>
-              </td>
-              <td style="vertical-align: top;">Short description<br/>
-              </td>
-              <td style="vertical-align: top;">Not directly processed
-                (extracted from MRCONSO.RRF;&nbsp; TTY = AB)<br/>
-              </td>
+              <td>17</td>
+              <td>60</td>
+              <td>Short description</td>
+              <td>MRCONSO.STR; TTY = AB</td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">77<br/>
-              </td>
-              <td style="vertical-align: top;">1<br/>
-              </td>
-              <td style="vertical-align: top;">Blank<br/>
-              </td>
-              <td style="vertical-align: top;">N/A<br/>
-              </td>
+              <td>77</td>
+              <td>1</td>
+              <td>Blank</td>
+              <td>N/A</td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">78<br/>
-              </td>
-              <td style="vertical-align: top;">Up to <br/>
-                300<br/>
-              </td>
-              <td style="vertical-align: top;">Long description<br/>
-              </td>
-              <td style="vertical-align: top;">Not directly processed
-                (extracted from MRCONSO.RRF;&nbsp; TTY = PT or TTY = HT)<br/>
-              </td>
+              <td>78</td>
+              <td>Up to <br/>
+                300</td>
+              <td>Long description</td>
+              <td>Not directly processed
+                (extracted from icd10cm_tabular_&lt;YYYY&gt;.xml;  TTY = PT or TTY = HT)</td>
             </tr>
           </tbody>
         </table>
         <br/>
-        <a name="file7"></a><br/>
-        <h4 class="file_field_name">file: 2014_I10gem.txt<br/>
+        <a id="file7"></a><br/>
+        <h4 class="file_field_name">file: &lt;YYYY&gt;_I10gem.txt<br/>
         </h4>
-        &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
+		<span class="nav">(<a href="#top-of-page">return to top</a></span>)<br/>
 
-
-
-
-
-
-
-
-
-
-
-            Files</a></span><br/>
         <br/>
-        <table class="elements" border="0" cellspacing="0">
+        <table>
           <tbody>
             <tr>
-              <th>Field <br/>
-              </th>
-              <td style="vertical-align: top; font-weight: bold;">Length<br/>
-              </td>
-              <td style="vertical-align: top; font-weight: bold;">Begin<br/>
-              </td>
-              <td style="vertical-align: top; font-weight: bold;">End<br/>
-              </td>
+              <th>Field</th>
+              <td>Length</td>
+              <td>Begin</td>
+              <td>End</td>
               <th>Representation</th>
             </tr>
             <tr>
-              <td class="file_field_name">ICD-10-CM Code (source) <br/>
-              </td>
-              <td style="vertical-align: top;">7<br/>
-              </td>
-              <td style="vertical-align: top;">1<br/>
-              </td>
-              <td style="vertical-align: top;">7<br/>
-              </td>
-              <td>MRMAP.RRF.FROMID<br/>
-                MRMAP.RRF.FROMEXPR<br/>
-                Decimal point added as appropriate<br/>
-              </td>
-            </tr>
-            <tr>
-              <td class="file_field_name">filler<br/>
-              </td>
-              <td style="vertical-align: top;">1<br/>
-              </td>
-              <td style="vertical-align: top;">8<br/>
-              </td>
-              <td style="vertical-align: top;">8<br/>
-              </td>
-              <td>not used<br/>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">ICD-9-CM Code (target)<br/>
-              </td>
-              <td style="vertical-align: top;">5<br/>
-              </td>
-              <td style="vertical-align: top;">9<br/>
-              </td>
-              <td style="vertical-align: top;">13<br/>
-              </td>
-              <td style="vertical-align: top;">MRMAP.RRF.TOID<br/>
-                MRMAP.RRF.TOEXPR<br/>
-                Decimal point added as appropriate<br/>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">filler<br/>
-              </td>
-              <td style="vertical-align: top;">1<br/>
-              </td>
-              <td style="vertical-align: top;">14<br/>
-              </td>
-              <td style="vertical-align: top;">14<br/>
-              </td>
-              <td style="vertical-align: top;">not used<br/>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">Approximate flag<br/>
-              </td>
-              <td style="vertical-align: top;">1<br/>
-              </td>
-              <td style="vertical-align: top;">15<br/>
-              </td>
-              <td style="vertical-align: top;">15<br/>
-              </td>
-              <td style="vertical-align: top;">Value of 1 (indicates the
-                entry is not equivalent):<br/>
-                <div style="margin-left: 40px;">MRMAP.RRF.REL=RO<br/>
-                  MRMAP.REL.RELA=approximately_mapped_to<br/>
-                </div>
-                <br/>
-                Value of 0:&nbsp; <br/>
-                <div style="margin-left: 40px;">MRMAP.RRF.REL=SY<br/>
-                  MRMAP.RRF.RELA=mapped_to<br/>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">No map flag<br/>
-              </td>
-              <td style="vertical-align: top;">1<br/>
-              </td>
-              <td style="vertical-align: top;">16<br/>
-              </td>
-              <td style="vertical-align: top;">16<br/>
-              </td>
-              <td style="vertical-align: top;">Value of 1:<br/>
-                MRMAP.RRF.REL=XR<br/>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">Combination flag<br/>
-              </td>
-              <td style="vertical-align: top;">1<br/>
-              </td>
-              <td style="vertical-align: top;">17<br/>
-              </td>
-              <td style="vertical-align: top;">17<br/>
-              </td>
-              <td style="vertical-align: top;">Value of "1" indicates
-                that more than one code is required.&nbsp; This is
-                implied in MRMAP.RRF by non-zero values in MAPSUBSETID.<br/>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">Scenario<br/>
-              </td>
-              <td style="vertical-align: top;">1<br/>
-              </td>
-              <td style="vertical-align: top;">18<br/>
-              </td>
-              <td style="vertical-align: top;">18<br/>
-              </td>
-              <td style="vertical-align: top;">MRMAP.RRF.MAPSUBSETID
-                (first subfield, before the ":")<br/>
-                Anything with the same FROMEXPR and MAPSUBSETID values
-                should be "OR'd" together<br/>
-                <span style="font-size: 22pt; font-family: Calibri;
-                  color: black;"></span> </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">Choice list<br/>
-              </td>
-              <td style="vertical-align: top;">1<br/>
-              </td>
-              <td style="vertical-align: top;">19<br/>
-              </td>
-              <td style="vertical-align: top;">19<br/>
-              </td>
-              <td style="vertical-align: top;">MRMAP.RRF.MAPSUBSETID
-                (second subfield, after the ":")<br/>
-                Anything with the same FROMEXPR and MAPSUBSETID values
-                should be "OR'd" together<br/>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <a name="file8"></a><br/>
-        <h4 class="file_field_name">file: 2014_I9gem.txt<br/>
-        </h4>
-        &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
-
-
-
-
-
-
-
-
-
-
-
-            Files</a></span><br/>
-        <br/>
-        <table class="elements" border="0" cellspacing="0">
-          <tbody>
-            <tr>
-              <th>Field <br/>
-              </th>
-              <th>Length</th>
-              <td style="vertical-align: top;"><span style="font-weight:
-                  bold;">Begin</span><br/>
-              </td>
-              <td style="vertical-align: top;"><span style="font-weight:
-                  bold;">End</span><br/>
-              </td>
-              <th>Representation</th>
-            </tr>
-            <tr>
-              <td class="file_field_name">ICD-9-CM Code (source)<br/>
-              </td>
-              <td>5<br/>
-              </td>
-              <td style="vertical-align: top;">1<br/>
-              </td>
-              <td style="vertical-align: top;">5<br/>
-              </td>
+              <td>ICD-10-CM Code (source)</td>
+              <td>7</td>
+              <td>1</td>
+              <td>7</td>
               <td>MRMAP.RRF.FROMID<br/>
                 MRMAP.RRF.FROMEXPR<br/>
                 Decimal point added as appropriate</td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">filler<br/>
-              </td>
-              <td style="vertical-align: top;">1<br/>
-              </td>
-              <td style="vertical-align: top;">6<br/>
-              </td>
-              <td style="vertical-align: top;">6<br/>
-              </td>
-              <td style="vertical-align: top;">not used<br/>
-              </td>
+              <td>filler</td>
+              <td>1</td>
+              <td>8</td>
+              <td>8</td>
+              <td>not used</td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">ICD-10-CM code (target)<br/>
-              </td>
-              <td style="vertical-align: top;">7<br/>
-              </td>
-              <td style="vertical-align: top;">7<br/>
-              </td>
-              <td style="vertical-align: top;">13<br/>
-              </td>
-              <td style="vertical-align: top;">MRMAP.RRF.TOID<br/>
+              <td>ICD-9-CM Code (target)</td>
+              <td>5</td>
+              <td>9</td>
+              <td>13</td>
+              <td>MRMAP.RRF.TOID<br/>
                 MRMAP.RRF.TOEXPR<br/>
                 Decimal point added as appropriate</td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">filler<br/>
-              </td>
-              <td style="vertical-align: top;">1<br/>
-              </td>
-              <td style="vertical-align: top;">14<br/>
-              </td>
-              <td style="vertical-align: top;">14<br/>
-              </td>
-              <td style="vertical-align: top;">not used<br/>
-              </td>
+              <td>filler</td>
+              <td>1</td>
+              <td>14</td>
+              <td>14</td>
+              <td>not used</td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">Approximate flag<br/>
+              <td>Approximate flag</td>
+              <td>1</td>
+              <td>15</td>
+              <td>15<br/>
               </td>
-              <td style="vertical-align: top;">1<br/>
-              </td>
-              <td style="vertical-align: top;">15<br/>
-              </td>
-              <td style="vertical-align: top;">15<br/>
-              </td>
-              <td style="vertical-align: top;">Value of 1 (indicates the
+              <td>Value of 1 (indicates the
                 entry is not equivalent):<br/>
-                <div style="margin-left: 40px;">MRMAP.RRF.REL=RO<br/>
-                  MRMAP.REL.RELA=approximately_mapped_to<br/>
-                </div>
-                <br/>
-                Value of 0:&nbsp; <br/>
-                <div style="margin-left: 40px;">MRMAP.RRF.REL=SY<br/>
-                  MRMAP.RRF.RELA=mapped_to</div>
+                MRMAP.RRF.REL=RO<br/>
+                  MRMAP.REL.RELA=approximately_mapped_to <br/>
+                Value of 0:  <br/>
+                MRMAP.RRF.REL=SY<br/>
+                  MRMAP.RRF.RELA=mapped_to
               </td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">No map flag<br/>
-              </td>
-              <td style="vertical-align: top;">1<br/>
-              </td>
-              <td style="vertical-align: top;">16<br/>
-              </td>
-              <td style="vertical-align: top;">16<br/>
-              </td>
-              <td style="vertical-align: top;">Value of 1:<br/>
+              <td>No map flag</td>
+              <td>1</td>
+              <td>16</td>
+              <td>16</td>
+              <td>Value of 1:<br/>
                 MRMAP.RRF.REL=XR</td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">Combination flag<br/>
-              </td>
-              <td style="vertical-align: top;">1<br/>
-              </td>
-              <td style="vertical-align: top;">17<br/>
-              </td>
-              <td style="vertical-align: top;">17<br/>
-              </td>
-              <td style="vertical-align: top;">Value of "1" indicates
-                that more than one code is required.&nbsp; This is
+              <td>Combination flag</td>
+              <td>1</td>
+              <td>17</td>
+              <td>17</td>
+              <td>Value of "1" indicates
+                that more than one code is required.  This is
                 implied in MRMAP.RRF by non-zero values in MAPSUBSETID.</td>
             </tr>
             <tr>
-              <td class="file_field_name">Scenario<br/>
-              </td>
-              <td>1<br/>
-              </td>
-              <td style="vertical-align: top;">18<br/>
-              </td>
-              <td style="vertical-align: top;">18<br/>
-              </td>
-              <td>MRMAP.RRF.MAPSUBSETID (first subfield, before the ":")<br/>
+              <td>Scenario</td>
+              <td>1</td>
+              <td>18</td>
+              <td>18</td>
+              <td>MRMAP.RRF.MAPSUBSETID
+                (first subfield, before the ":")<br/>
                 Anything with the same FROMEXPR and MAPSUBSETID values
-                should be "OR'd" together </td>
+                should be "OR'd" together</td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">Choice<br/>
+              <td>Choice list</td>
+              <td>1</td>
+              <td>19<td>19<br/>
               </td>
-              <td style="vertical-align: top;">1<br/>
-              </td>
-              <td style="vertical-align: top;">19<br/>
-              </td>
-              <td style="vertical-align: top;">19<br/>
-              </td>
-              <td style="vertical-align: top;">MRMAP.RRF.MAPSUBSETID
+              <td>MRMAP.RRF.MAPSUBSETID
                 (second subfield, after the ":")<br/>
                 Anything with the same FROMEXPR and MAPSUBSETID values
                 should be "OR'd" together</td>
             </tr>
           </tbody>
         </table>
+        <a id="file8"></a><br/>
+        <h4 class="file_field_name">file: &lt;YYYY&gt;_I9gem.txt<br/>
+        </h4>
+            <span class="nav">(<a href="#top-of-page">return to top</a></span>)<br/>
         <br/>
-        <h4 class="file_field_name">file: reimb_map_dx_2014.txt</h4>
-        &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
-
-
-
-
-
-
-
-
-
-
-
-            Files</a></span><br/>
-        <br/>
-        <table class="elements" border="0" cellspacing="0">
+        <table>
           <tbody>
             <tr>
-              <th>Field Name</th>
+              <th>Field</th>
               <th>Length</th>
-              <td style="vertical-align: top;"><span style="font-weight:
-                  bold;">Begin</span><br/>
-              </td>
-              <td style="vertical-align: top;"><span style="font-weight:
-                  bold;">End</span><br/>
-              </td>
+              <th>Begin</th>
+              <th>End</th>
               <th>Representation</th>
             </tr>
             <tr>
-              <td class="file_field_name">ICD-10-CM Code<br/>
-              </td>
-              <td>8<br/>
-              </td>
-              <td style="vertical-align: top;">1<br/>
-              </td>
-              <td style="vertical-align: top;">8<br/>
-              </td>
+              <td class="file_field_name">ICD-9-CM Code (source)</td>
+              <td>5</td>
+              <td>1</td>
+              <td>5</td>
               <td>MRMAP.RRF.FROMID<br/>
                 MRMAP.RRF.FROMEXPR<br/>
-                Decimal point added as appropriate </td>
+                Decimal point added as appropriate</td>
             </tr>
             <tr>
-              <td class="file_field_name">Number of ICD-9-CM mapped to<br/>
-              </td>
-              <td>1<br/>
-              </td>
-              <td style="vertical-align: top;">9<br/>
-              </td>
-              <td style="vertical-align: top;">9<br/>
-              </td>
-              <td>not used<br/>
+              <td>filler</td>
+              <td>1</td>
+              <td>6</td>
+              <td>6</td>
+              <td>not used</td>
+            </tr>
+            <tr>
+              <td>ICD-10-CM code (target)</td>
+              <td>7</td>
+              <td>7</td>
+              <td>13</td>
+              <td>MRMAP.RRF.TOID<br/>
+                MRMAP.RRF.TOEXPR<br/>
+                Decimal point added as appropriate</td>
+            </tr>
+            <tr>
+              <td>filler</td>
+              <td>1</td>
+              <td>14</td>
+              <td>14</td>
+              <td>not used</td>
+            </tr>
+            <tr>
+              <td>Approximate flag</td>
+              <td>1</td>
+              <td>15</td>
+              <td>15</td>
+              <td>Value of 1 (indicates the
+                entry is not equivalent):<br/>
+                <div style="margin-left: 40px;">MRMAP.RRF.REL=RO<br/>
+                  MRMAP.REL.RELA=approximately_mapped_to<br/>
+                </div>
+                <br/>
+                Value of 0:  <br/>
+                <div style="margin-left: 40px;">MRMAP.RRF.REL=SY<br/>
+                  MRMAP.RRF.RELA=mapped_to</div>
               </td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">1st ICD-9-CM code mapped
-                to<br/>
-              </td>
-              <td style="vertical-align: top;">6<br/>
-              </td>
-              <td style="vertical-align: top;">10<br/>
-              </td>
-              <td style="vertical-align: top;">15<br/>
-              </td>
-              <td style="vertical-align: top;">Used in MRMAP.RRF.TOEXPR;
-                if multiple ICD-9-CM codes are included, they are
-                concatenated with "AND"<br/>
-              </td>
+              <td>No map flag</td>
+              <td>1</td>
+              <td>16</td>
+              <td>16</td>
+              <td>Value of 1:<br/>
+                MRMAP.RRF.REL=XR</td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">2nd ICD-9-CM code mapped
-                to</td>
-              <td style="vertical-align: top;">6<br/>
-              </td>
-              <td style="vertical-align: top;">16<br/>
-              </td>
-              <td style="vertical-align: top;">21<br/>
-              </td>
-              <td style="vertical-align: top;">Used in MRMAP.RRF.TOEXPR;
-                if multiple ICD-9-CM codes are included, they are
-                concatenated with "AND"</td>
+              <td>Combination flag</td>
+              <td>1</td>
+              <td>17</td>
+              <td>17</td>
+              <td>Value of "1" indicates
+                that more than one code is required.  This is
+                implied in MRMAP.RRF by non-zero values in MAPSUBSETID.</td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">3rd ICD-9-CM code mapped
-                to</td>
-              <td style="vertical-align: top;">6<br/>
-              </td>
-              <td style="vertical-align: top;">22<br/>
-              </td>
-              <td style="vertical-align: top;">27<br/>
-              </td>
-              <td style="vertical-align: top;">Used in MRMAP.RRF.TOEXPR;
-                if multiple ICD-9-CM codes are included, they are
-                concatenated with "AND"</td>
+              <td>Scenario</td>
+              <td>1</td>
+              <td>18</td>
+              <td>18</td>
+              <td>MRMAP.RRF.MAPSUBSETID (first subfield, before the ":")<br/>
+                Anything with the same FROMEXPR and MAPSUBSETID values
+                should be "OR'd" together </td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">4th ICD-9-CM code mapped
-                to</td>
-              <td style="vertical-align: top;">6<br/>
-              </td>
-              <td style="vertical-align: top;">28<br/>
-              </td>
-              <td style="vertical-align: top;">33<br/>
-              </td>
-              <td style="vertical-align: top;">Used in MRMAP.RRF.TOEXPR;
-                if multiple ICD-9-CM codes are included, they are
-                concatenated with "AND"</td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">5th ICD-9-CM code mapped
-                to</td>
-              <td style="vertical-align: top;">6<br/>
-              </td>
-              <td style="vertical-align: top;">34<br/>
-              </td>
-              <td style="vertical-align: top;">39<br/>
-              </td>
-              <td style="vertical-align: top;">Used in MRMAP.RRF.TOEXPR;
-                if multiple ICD-9-CM codes are included, they are
-                concatenated with "AND"</td>
+              <td>Choice</td>
+              <td>1</td>
+              <td>19</td>
+              <td>19</td>
+              <td>MRMAP.RRF.MAPSUBSETID
+                (second subfield, after the ":")<br/>
+                Anything with the same FROMEXPR and MAPSUBSETID values
+                should be "OR'd" together</td>
             </tr>
           </tbody>
         </table>
+
       </div>
     </div>
-  </body>
-</html>

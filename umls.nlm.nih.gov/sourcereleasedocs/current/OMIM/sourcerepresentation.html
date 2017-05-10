@@ -1,68 +1,36 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html;
-      charset=windows-1252">
-    <title></title>
-  </head>
-  <body>
-    <div class="section-4">
-      <ul id="menu">
-        <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
-        <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
-        <li id="nav-3"> <a href="sourcemetastats.html">Statistics and
-            sample data</a>
-          <ul id="subnav-3">
-            <li> <a href="termtypes.html">Terms and term types</a> </li>
-            <li> <a href="attributes.html">Attributes</a> </li>
-            <li> <a href="relationships.html">Relationships</a> </li>
-            <li> <a href="semtypes.html">Semantic Types</a> </li>
-            <li> <a href="overlap.html">Source Overlap</a> </li>
-          </ul>
-        </li>
-        <li id="nav-4"> <a href="representation.html">Representation</a>
-          <ul id="subnav-4">
-            <li> <a href="sourcerepresentation.html" id="sourcerep">Source
-
-
-                Representation</a> </li>
-            <li> <a href="metarepresentation.html">Metathesaurus
-                Representation</a> </li>
-          </ul>
-        </li>
+    <p>This page lists specific source data elements and provides
+      information on their representation in the UMLS Metathesaurus.</p>
+    <!--begin tabbed navigation area-->
+    <div class="section-5">
+      <ul id="menu-source-docs">
+         <li id="nav-1"><a href="index.html">Synopsis</a></li>
+         <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+         <!--<li id="nav-3"><a href="stats.html">Statistics</a></li>
+         <li id="nav-4"><a href="samples.html">Samples</a></li>-->
+         <li id="nav-5"><a href="sourcerepresentation.html">Source Representation</a></li>
+         <li id="nav-6"><a href="metarepresentation.html">Metathesaurus Representation</a></li>
       </ul>
     </div>
-    <!-- end tabbed navigation area --> <br/>
-    <br/>
-    <br/>
+    <!-- end tabbed navigation area --> 
     <a name="top"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
       <a href="#change_summary">Summary of Changes</a>, <a
         href="#file_summary">Summary of Source-Provided Files</a> <a
         href="#file_details">Source-Provided File Details</a></span> <a
       name="general"></a>
-    <div id="rep_general" class="rep_block_level_one">
-      <h3>Notes</h3>
-    </div>
-    <div id="rep_change_summary" class="rep_block_level_one">
+    <div id="rep_change_summary" class="rep_block_level_one"> </div>
       <h3>Summary of Changes:</h3>
-      &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
-      <p>No changes have been made to the original data file format or
-        to representation of OMIM in 2013AB.<br/>
-      </p>
-    </div>
+       <span class="nav">(<a href="#top">return to top</a></span>)
+      <p>No changes have been made to OMIM source processing</p>
     <div id="rep_file_summary" class="rep_block_level_one"> <a
-        name="file_summary"></a>
+        name="file_summary"></a> </div>
       <h3>Source-Provided Files: Summary</h3>
-      &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
+      (<span class="nav"><a href="#top">return to top</a></span>)
       <p>XML records are supplied according to Metathesaurus
         specifications. <br/>
-        <span style="font-weight: bold;"><br/>
-        </span></p>
-      <h4><span style="font-weight: bold;"></span>Documentation and
-        Reference</h4>
-      <p></p>
+
+      <h4>Documentation and Reference</h4>
       <div class="rep_block_level_two">
-        <table class="elements" border="0" cellspacing="0">
+        <table>
           <tbody>
             <tr>
               <th>File Name</th>
@@ -72,78 +40,70 @@
               <td class="file_field_name"><a
                   href="http://www.ncbi.nlm.nih.gov/dtd/NCBI_Mim.mod.dtd">http://www.ncbi.nlm.nih.gov/dtd/NCBI_Mim.mod.dtd</a>
               </td>
-              <td>XML dtd<br/>
-              </td>
+              <td>XML dtd</td>
             </tr>
             <tr>
               <td class="file_field_name"><a
                   href="http://www.ncbi.nlm.nih.gov/Omim/omimfaq.html">http://omim.org/help/faq</a><br/>
               </td>
-              <td>FAQ<br/>
-              </td>
+              <td>FAQ</td>
             </tr>
           </tbody>
         </table>
         <br/>
         <h4>XML Data<br/>
         </h4>
-        <b>Not included</b>:&nbsp; </div>
-    </div>
-    <div id="rep_file_details" class="rep_block_level_one">Data from
+        <strong>Not included</strong>:
+    Data from
       many tags are not included in Metathesaurus source processing,
       because they do not contain terminological content.<br/>
-      <h3>Source-Provided Data: Details</h3>
-      &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
+      <h3>Source-Provided Data: Details </h3>
+      (<span class="nav"><a href="#top">return to top</a></span>)
       <p>The following is a list of elements available for
         &lt;source&gt; data in XML format<br/>
       </p>
-      <p><span style="font-weight: bold;">Required Elements:</span><br/>
+      <p><strong>Required Elements: </strong>
       </p>
-      <div class="rep_block_level_two">
-        <table class="elements" border="0" cellspacing="0">
+        <table>
           <tbody>
             <tr>
               <th>Element</th>
-              <td style="vertical-align: top;"><span style="font-weight:
-                  bold;">Description</span><br/>
-              </td>
+              <th>Description</th>
               <th>Representation</th>
             </tr>
             <tr>
               <td>&lt;Mim-entry_mimNumber&gt; </td>
-              <td style="vertical-align: top;">Unique identifier<br/>
-              </td>
+              <td>Unique identifier</td>
               <td>MRCONSO.CODE<br/>
                 MRCONSO.SDUI<br/>
               </td>
             </tr>
             <tr>
               <td>&lt;Mim-entry_mimType&gt; </td>
-              <td style="vertical-align: top;">The type of OMIM records
-                (asterisk (*), number (#), plus (+), percent (%), caret
-                (^), or none)<br/>
-                <p><b>An asterisk (*)</b> before an entry number
+              <td>The type of OMIM records (asterisk (*), number (#),
+                plus (+), percent (%), caret (^), or none)<br/>
+                <p><strong>An asterisk (*)</strong> before an entry number
                   indicates a gene of known sequence.</p>
-                <p><b>A number symbol (#)</b> before an entry number
+                <p><strong>A number symbol (#)</strong> before an entry number
                   indicates that it is a descriptive entry, usually of a
                   phenotype, and does not represent a unique locus. The
                   reason for the use of the #-sign is given in the first
                   paragraph of the entry. Discussion of any gene(s)
                   related to the phenotype resides in another entry(ies)
                   as described in the first paragraph.</p>
-                <p><b>A plus sign (+)</b> before an entry number
+                <p><strong>A plus sign (+)</strong> before an entry number
                   indicates that the entry contains the description of a
                   gene of known sequence and a phenotype.</p>
-                <p><b>A percent sign (%)</b> before an entry number
+                <p><strong>A percent sign (%)</strong> before an entry number
                   indicates that the entry describes a confirmed
                   mendelian phenotype or phenotypic locus for which the
                   underlying molecular basis is not known.</p>
-                <p><b>No symbol</b> before an entry number generally
+                <p><strong>No symbol</strong> before an entry number generally
                   indicates a description of a phenotype for which the
                   mendelian basis, although suspected, has not been
                   clearly established or that the separateness of this
                   phenotype from that in another entry is unclear.</p>
-                <p><b>A caret symbol (^)</b> before an entry number
+                <p><strong>A caret symbol (^)</strong> before an entry number
                   means the entry no longer exists because it was
                   removed from the database or moved to another entry as
                   indicated.</p>
@@ -159,61 +119,37 @@
                 (^) are obsolete and are not included in Metathesaurus
                 source processing.<br/>
                 <br/>
-                <table style="text-align: left; width: 100%;" border="1"
-                  cellpadding="2" cellspacing="2">
+                <table>
                   <tbody>
                     <tr>
-                      <td style="vertical-align: top;">MIMTYPE<br/>
-                      </td>
-                      <td style="vertical-align: top;">MIMTYPEVALUE<br/>
-                      </td>
-                      <td style="vertical-align: top;">MIMTYPEMEANING<br/>
-                      </td>
+                      <th>MIMTYPE</th>
+                      <th>MIMTYPEVALUE</th>
+                      <th>MIMTYPEMEANING</th>
                     </tr>
                     <tr>
-                      <td style="vertical-align: top;">0<br/>
-                      </td>
-                      <td style="vertical-align: top;">none<br/>
-                      </td>
-                      <td style="vertical-align: top;">Other, mainly
-                        phenotypes with suspected Mendelian basis<br/>
-                      </td>
+                      <td>0</td>
+                      <td>none</td>
+                      <td>Other, mainly phenotypes with suspected Mendelian basis</td>
                     </tr>
                     <tr>
-                      <td style="vertical-align: top;">1<br/>
-                      </td>
-                      <td style="vertical-align: top;">star<br/>
-                      </td>
-                      <td style="vertical-align: top;">Gene with known
-                        sequence<br/>
-                      </td>
+                      <td>1</td>
+                      <td>star</td>
+                      <td>Gene with known sequence</td>
                     </tr>
                     <tr>
-                      <td style="vertical-align: top;">3<br/>
-                      </td>
-                      <td style="vertical-align: top;">pound<br/>
-                      </td>
-                      <td style="vertical-align: top;">Phenotype
-                        description, molecular basis known<br/>
-                      </td>
+                      <td>3</td>
+                      <td>pound</td>
+                      <td>Phenotype description, molecular basis known</td>
                     </tr>
                     <tr>
-                      <td style="vertical-align: top;">4<br/>
-                      </td>
-                      <td style="vertical-align: top;">plus<br/>
-                      </td>
-                      <td style="vertical-align: top;">Gene with known
-                        sequence and phenotype<br/>
-                      </td>
+                      <td>4</td>
+                      <td>plus</td>
+                      <td>Gene with known sequence and phenotype</td>
                     </tr>
                     <tr>
-                      <td style="vertical-align: top;">5<br/>
-                      </td>
-                      <td style="vertical-align: top;">perc<br/>
-                      </td>
-                      <td style="vertical-align: top;">Mendelian
-                        phenotype or locus, molecular basis unknown<br/>
-                      </td>
+                      <td>5</td>
+                      <td>perc</td>
+                      <td>Mendelian phenotype or locus, molecular basis unknown</td>
                     </tr>
                   </tbody>
                 </table>
@@ -221,190 +157,155 @@
               </td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">&lt;Mim-entry_title&gt;<br/>
-              </td>
-              <td style="vertical-align: top;">Contains the preferred
-                term <span class="western__Char"></span>naming the
-                entry.&nbsp; May include semicolon-separated acronyms. </td>
-              <td style="vertical-align: top;">MRCONSO.TTY = "PT",
-                MRCONSO.TTY = "ACR"<br/>
+              <td>&lt;Mim-entry_title&gt;</td>
+              <td>Contains the preferred term naming the entry. May include semicolon-separated acronyms. </td>
+              <td>MRCONSO.TTY = "PT", MRCONSO.TTY = "ACR"<br/>
                 <br/>
                 Information before the first semicolon is used to create
-                PT atoms.&nbsp; Information following the first
+                PT atoms. Information following the first
                 semicolon is used to create ACR atoms.<br/>
                 <br/>
                 Relationships are created to connect PT to ACR atoms:<br/>
                 REL = SY<br/>
-                RELA = expanded_form_of/has_expanded_form<br/>
+                RELA = expanded_form_of/has_expanded_form
               </td>
             </tr>
           </tbody>
         </table>
-      </div>
-      <p><span style="font-weight: bold;">Optional Elements</span><br/>
+      <p><strong>Optional Elements</strong>
       </p>
       <br/>
-      <p> </p>
-      <div class="rep_block_level_two">
-        <table class="elements" border="0" cellspacing="0">
+        <table>
           <tbody>
             <tr>
               <th>Element</th>
-              <td style="vertical-align: top;"><span style="font-weight:
-                  bold;">Description</span><br/>
-              </td>
+              <th>Description</th>
               <th>Representation</th>
             </tr>
             <tr>
               <td>&lt;Mim-entry_symbol&gt;</td>
-              <td style="vertical-align: top;">One or more
-                commas-separated gene symbols<br/>
-              </td>
-              <td>MRSAT.ATN = "GENESYMBOL"<br/>
-              </td>
+              <td>One or more commas-separated gene symbols</td>
+              <td>MRSAT.ATN = "GENESYMBOL"</td>
             </tr>
             <tr>
               <td>&lt;Mim-entry_locus&gt;</td>
-              <td style="vertical-align: top;">Notation for one or more
-                loci for the genes associated with this entry</td>
-              <td>MRSAT.ATN = "GENELOCUS"<br/>
-              </td>
+              <td>Notation for one or more loci for the genes associated
+                with this entry</td>
+              <td>MRSAT.ATN = "GENELOCUS"</td>
             </tr>
             <tr>
               <td>&lt;Mim-entry_aliases_E&gt;</td>
-              <td style="vertical-align: top;">Synonyms/acronyms<br/>
-              </td>
-              <td>MRCONSO.TTY = "SYN"<br/>
+              <td>Synonyms/acronyms</td>
+              <td>MRCONSO.TTY = "ETAL"<br/>
                 MRCONSO.TTY = "ACR"<br/>
                 <br/>
                 Information before the first semicolon is used to create
-                SYN atoms<br/>
+                ETAL atoms<br/>
                 <br/>
                 Information after the semicolon is parsed to create ACR
                 atoms<br/>
                 <br/>
-                SYN atom is not created if the string already exists as
+                ", INCLUDED" is removed from both ETAL and ACR atoms<br/>
+                <br/>
+                No ETAL atom is created if the string already exists as
                 an ACR atom<br/>
                 <br/>
-                Relationships are created to connect PT to SYN atoms:<br/>
+                Relationships are created to connect PT to ETAL atoms:<br/>
                 REL = RQ<br/>
                 RELA = has_alias/alias_of<br/>
                 <br/>
-                Relationships are created to connect SYN to ACR atoms:<br/>
+                Relationships are created to connect ETAL to ACR atoms:<br/>
                 REL = SY<br/>
-                RELA = expanded_form_of/has_expanded_form<br/>
+                RELA = expanded_form_of/has_expanded_form
               </td>
             </tr>
             <tr>
               <td>&lt;Mim-entry_included_E&gt; </td>
-              <td style="vertical-align: top;">Entry terms/acronyms<br/>
-              </td>
+              <td>Entry terms/acronyms</td>
               <td>MRCONSO.TTY = "ET"<br/>
                 MRCONSO.TTY = "ACR"<br/>
                 <br/>
-                <span class="western__Char" style="text-decoration:
-                  none;">Information before the first semicolon is used
+                Information before the first semicolon is used
                   to create ET atoms<br/>
                   <br/>
-                </span>Information after the semicolon is parsed to
+                Information after the semicolon is parsed to
                 create ACR atoms<br/>
                 <br/>
                 The pattern ", INCLUDED" is removed from the string<br/>
                 <br/>
-                Relationships are created to connect PT to ET atoms:<br/>
-                REL = RO<br/>
-                RELA = related_to<br/>
-                <br/>
                 Relationships are created to connect ET to ACR atoms:<br/>
                 REL = SY<br/>
-                RELA = expanded_form_of/has_expanded_form<br/>
+                RELA = expanded_form_of/has_expanded_form
               </td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">&lt;Mim-allelic-variant_number&gt;<br/>
-              </td>
-              <td style="vertical-align: top;">Allelic variant number (4
-                digits)<br/>
-              </td>
-              <td style="vertical-align: top;">MRCONSO.CODE,
-                MRCONSO.SDUI :&nbsp; Appended to the Mim-entry_mimNumber
-                for TTY=SYN, ETAV, PTAV <br/>
+              <td>&lt;Mim-allelic-variant_number&gt;</td>
+              <td>Allelic variant number (4 digits)</td>
+              <td>MRCONSO.CODE, MRCONSO.SDUI: Appended to the
+                Mim-entry_mimNumber for TTY= PTAV
               </td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">&lt;Mim-allelic-variant_name&gt;<br/>
+              <td>&lt;Mim-allelic-variant_name&gt;</td>
+              <td>Allelic variant name.  Most allelic variants
+                represent disease-producing mutations.  A few
+                polymorphisms are included. For most genes, only
+                selected mutations are included as specific entries.
               </td>
-              <td style="vertical-align: top;">Allelic variant
-                name.&nbsp; Most allelic variants represent
-                disease-producing mutations.&nbsp; A few polymorphisms
-                are included.&nbsp; For most genes, only selected
-                mutations are included as specific entries.<br/>
-              </td>
-              <td style="vertical-align: top;">MRCONSO.TTY = "PTAV"<br/>
+              <td>MRCONSO.TTY = "PHENO"<br/>
                 <br/>
-                The value of tag = "Mim-allelic-variant_name&gt; is
-                concatenated with information parsed after the first
-                comma in the value of tag =
-"&lt;Mim-allelic-variant_mutation&gt;&lt;Mim-text_text&gt;"<br/>
+                Relationships are created to connect PHENO to PTAV
+                atoms:<br/>
+                REL = RO<br/>
+                RELA = phenotype_of/has_phenotype
+              </td>
+            </tr>
+            <tr>
+              <td>&lt;Mim-allelic-variant_aliases_E&gt;</td>
+              <td>Allelic variant aliases</td>
+              <td>MRCONSO.TTY = "PHENO_ET"<br/>
+                <br/>
+                The pattern ", INCLUDED" is removed from the string<br/>
+                <br/>
+                Relationships are created to connect PHENO_ET to PTAV
+                atoms:<br/>
+                REL = RO<br/>
+                RELA = phenotype_of/has_phenotype
+              </td>
+            </tr>
+            <tr>
+              <td>&lt;Mim-allelic-variant_mutation&gt;&lt;Mim_text_text&gt;
+              </td>
+              <td>The type of mutations which show statistical
+                correlation to the particular disorders.
+              </td>
+              <td>MRCONSO.TTY = "PTAV"<br/>
                 <br/>
                 Relationships are created to connect PTAV to PT atoms:<br/>
                 REL = RO<br/>
                 RELA = allelic_variant_of/has_allelic_variant<br/>
                 <br/>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">&lt;Mim-allelic-variant_aliases_E&gt;<br/>
-              </td>
-              <td style="vertical-align: top;">Allelic variant aliases<br/>
-              </td>
-              <td style="vertical-align: top;">MRCONSO.TTY = "ETAV"<br/>
-                <br/>
-                If the pattern ", INCLUDED" is found in the string, it
-                is removed and an ETAV atom is created<br/>
-                <br/>
-                If the pattern ", INCLUDED" is not found in the string,
-                a SYN atom is created.<br/>
-                <br/>
-                Relationships are created to connect ETAV to PTAV atoms:<br/>
+                Relationships are created to connect PTAV to PHENO and
+                PHENO_ET atoms:<br/>
                 REL = RO<br/>
-                RELA = related_to<br/>
+                RELA = has_phenotype/phenotype_of<br/>
                 <br/>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">&lt;Mim-allelic-variant_mutation&gt;&lt;Mim_text_text&gt;<br/>
-              </td>
-              <td style="vertical-align: top;">The type of mutations
-                which show statistical correlation to the particular
-                disorders.<br/>
-              </td>
-              <td style="vertical-align: top;">MRCONSO.TTY = "PTAV"<br/>
-                MRCONSO.TTY = "SYN"<br/>
-                <br/>
-                For PTAV atoms, the value of tag =
-                "Mim-allelic-variant_name&gt; is concatenated with
-                information parsed after the first comma in the value of
-                tag =
-                "&lt;Mim-allelic-variant_mutation&gt;&lt;Mim-text_text&gt;"<br/>
-                <br/>
-                Relationships are created to connect PTAV to SYN atoms:<br/>
-                REL = RO<br/>
-                RELA = alias_of/has_alias<br/>
+                The CODE/SDUI has the
+                    Mim-allelic-variant_number appended.
+
               </td>
             </tr>
             <tr>
               <td>&lt;Mim-entry_clinicalSynopsis&gt;&lt;Mim-index-term_key&gt;</td>
-              <td style="vertical-align: top;">Clinical synopsis header
-                terms<br/>
+              <td>Clinical synopsis header terms
               </td>
               <td>MRCONSO.TTY = "HT"<br/>
                 <br/>
                 Values are excluded from Metathesaurus source processing
                 if they meet any of the following criteria:
                 <ul>
-                  <li>The string mixed-case/lower-case.&nbsp; These
-                    values have not yet been reviewed by OMIM </li>
+                  <li>Mixed-case/lower-case string. These values
+                    have not yet been reviewed by OMIM </li>
                   <li>Have an
                     &lt;Mim-entry_synopsisEditHistory&gt;&lt;Mim-date_year&gt;
                     before 1996 </li>
@@ -414,17 +315,15 @@
               </td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">&lt;Mim-entry_clinicalSynopsis&gt;&lt;Mim-index-term_terms_E&gt;</td>
-              <td style="vertical-align: top;">Clinical synopsis terms,
-                may be subheadings or leaf nodes<br/>
-              </td>
-              <td style="vertical-align: top;">MRCONSO.TTY = "HT"<br/>
+              <td>&lt;Mim-entry_clinicalSynopsis&gt;&lt;Mim-index-term_terms_E&gt;</td>
+              <td>Clinical synopsis terms, may be subheadings or leaf nodes</td>
+              <td>MRCONSO.TTY = "HT"<br/>
                 MRCONSO.TTY = "PTCS"<br/>
                 <br/>
-                <span class="western__Char">If the value is contained
+                If the value is contained
                   within square brackets, the entry is considered a
                   subheading and TTY = "HT" is assigned; otherwise it is
-                  considered a leaf node and TTY= "PTCS" is assigned</span>.<br/>
+                  considered a leaf node and TTY= "PTCS" is assigned<br/>
                 <br/>
                 Relationships are created to connect PTCS to PT atoms:<br/>
                 REL = RO<br/>
@@ -433,21 +332,17 @@
                 Relationships are created to connect PTCSto PT atoms:<br/>
                 REL = RO<br/>
                 RELA = inheritance_type_of/has_inheritance_type<br/>
-                <br/>
+
               </td>
             </tr>
             <tr>
               <td>&lt;Mim-entry_synopsisEditHistory&gt;&lt;Mim-date_year&gt;</td>
-              <td style="vertical-align: top;">Clinical synopsis year<br/>
-              </td>
+              <td>Clinical synopsis year</td>
               <td>Used to determine which clinical synopsis records to
-                process for inclusion in the Metathesaurus.&nbsp;
-                Records added before 1996 are not processed.&nbsp; <br/>
+                process for inclusion in the Metathesaurus. <br/>
+                Records added before 1996 are not processed.
               </td>
             </tr>
           </tbody>
         </table>
-      </div>
     </div>
-  </body>
-</html>

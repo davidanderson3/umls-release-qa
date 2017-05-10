@@ -1,46 +1,22 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html;
-      charset=windows-1252">
-    <title></title>
-  </head>
-  <body>
-    <div class="section-4">
-      <ul id="menu">
-        <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
-        <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
-        <li id="nav-3"> <a href="sourcemetastats.html">Statistics and
-            sample data</a>
-          <ul id="subnav-3">
-            <li> <a href="termtypes.html">Terms and term types</a> </li>
-            <li> <a href="attributes.html">Attributes</a> </li>
-            <li> <a href="relationships.html">Relationships</a> </li>
-            <li> <a href="semtypes.html">Semantic Types</a> </li>
-            <li> <a href="overlap.html">Source Overlap</a> </li>
-          </ul>
-        </li>
-        <li id="nav-4"> <a href="representation.html">Representation</a>
-          <ul id="subnav-4">
-            <li> <a href="sourcerepresentation.html" id="sourcerep">Source
-
-
-                Representation</a> </li>
-            <li> <a href="metarepresentation.html">Metathesaurus
-                Representation</a> </li>
-          </ul>
-        </li>
+<p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p>
+<!--begin tabbed navigation area-->
+   <div class="section-5">
+      <ul id="menu-source-docs">
+         <li id="nav-1"><a href="index.html">Synopsis</a></li>
+         <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+         <!--<li id="nav-3"><a href="stats.html">Statistics</a></li>
+         <li id="nav-4"><a href="samples.html">Samples</a></li>-->
+         <li id="nav-5"><a href="sourcerepresentation.html">Source Representation</a></li>
+         <li id="nav-6"><a href="metarepresentation.html">Metathesaurus Representation</a></li>
       </ul>
-    </div>
-    <!-- end tabbed navigation area --> <br/>
-    <br/>
-    <br/>
-    <a name="top"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
+   </div>
+<!-- end tabbed navigation area -->
+    <a id="top-of-page"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
       <a href="#change_summary">Summary of Changes</a>, <a
         href="#file_summary">Summary of Source-Provided Files</a> <a
-        href="#file_details">Source-Provided File Details</a></span> <a
-      name="general"></a>
+        href="#file_details">Source-Provided File Details</a></span> <a id="general"></a>
     <div id="rep_general" class="rep_block_level_one">
+      <p><strong>VSAB:</strong>MSH2017_2017_02_014</p>
       <h3>Notes</h3>
       <p>MeSH for the Metathesaurus is processed from the xml files. In
         addition to data from the xml files, top levels of the hierarchy
@@ -55,17 +31,14 @@
         formats and the details below may not apply. <br/>
       </p>
     </div>
-    <div id="rep_change_summary" class="rep_block_level_one"> <a
-        name="change_summary"></a>
+    <div id="rep_change_summary" class="rep_block_level_one"> <a id="change_summary"></a>
       <h3>Summary of Changes:</h3>
-      &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
-      <p>No changes have been made to the original data file format or
-        to Metathesaurus source processing.</p>
+      &nbsp;&nbsp;<span class="nav">(<a href="#top-of-page">return to top</a></span>)
+		<p>There were no changes to the original file format or to the Metathesaurus source processing.</p>
     </div>
-    <div id="rep_file_summary" class="rep_block_level_one"> <a
-        name="file_summary"></a>
+    <div id="rep_file_summary" class="rep_block_level_one"> <a id="file_summary"></a>
       <h3>Source-Provided Files: Summary</h3>
-      &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
+      &nbsp;&nbsp;(<span class="nav"><a href="#top-of-page">return to top</a></span>)
       <p>The English language MeSH distribution includes the following.
         These files, along with additional information can be accessed
         at <a href="http://www.nlm.nih.gov/mesh/filelist.html"
@@ -73,45 +46,45 @@
       <div class="rep_block_level_two">
         <!-- Make a table of each file that comes from the source   -->
         <h4>Documentation and Reference</h4>
-        <table class="elements" border="0" cellspacing="0">
+        <table>
           <tbody>
             <tr>
               <th>File Name</th>
               <th>Description</th>
             </tr>
             <tr>
-              <td class="file_field_name">desc2014.dtd</td>
+              <td class="file_field_name">nlmdescriptorrecordset_20170101.dtd</td>
               <td>Descriptor DTD</td>
             </tr>
             <tr>
-              <td class="file_field_name">qual2014.dtd</td>
+              <td class="file_field_name">nlmqualifierrecordset_20170101.dt</td>
               <td>Qualifier DTD</td>
             </tr>
             <tr>
-              <td class="file_field_name">supp2014.dtd</td>
-              <td>SCR DTD</td>
+              <td class="file_field_name">nlmsupplementalrecordset_20170101.dtd</td>
+              <td>SCR (Supplementary Concept Records) DTD</td>
             </tr>
           </tbody>
         </table>
         <br/>
         <h4>XML Data Files</h4>
-        <a name="data_files"></a>
-        <table class="elements" border="0" cellspacing="0">
+        <a id="data_files"></a>
+        <table>
           <tbody>
             <tr>
               <th>File Name</th>
               <th>Description</th>
             </tr>
             <tr>
-              <td class="file_field_name">desc2014.xml</td>
+              <td class="file_field_name">desc2017.xml</td>
               <td>Descriptor XML MeSH</td>
             </tr>
             <tr>
-              <td class="file_field_name">qual2014.xml</td>
+              <td class="file_field_name">qual2017.xml</td>
               <td>Qualifier XML MeSH</td>
             </tr>
             <tr>
-              <td class="file_field_name">supp2014.xml</td>
+              <td class="file_field_name">supp2017.xml</td>
               <td>SCR XML MeSH</td>
             </tr>
           </tbody>
@@ -120,22 +93,21 @@
         <p>In addition to data from the xml files, top levels of the
           hierarchy are created from external files for Metathesaurus
           representation.</p>
-        <p><b>Not included</b>: Certain data elements may not be
+        <p><strong>Not included</strong>: Certain data elements may not be
           directly processed because they contain redundant data. Data
           elements which are not included, e .g. because they are for
           internal purposes, are indicated below.</p>
-        <p><b>Term Type assignment:</b>Term type assignment is based on
+        <p><strong>Term Type assignment:</strong>Term type assignment is based on
           the Term attributes provided in the XML. For example, this
           term is an MH, based on the table below: </p>
         <p>&lt;Term ConceptPreferredTermYN="Y" IsPermutedTermYN="N"
-          LexicalTag="NON" PrintFlagYN="Y" RecordPreferredTermYN="Y"&gt;</p>
+          LexicalTag="NON" RecordPreferredTermYN="Y"&gt;</p>
         <h4>Descriptor MeSH (file: desc*.xml):</h4>
-        <table class="elements" border="0" cellspacing="0">
+        <table>
           <tbody>
             <tr>
               <th>ConceptPreferredTermYN</th>
               <th>IsPermutedTermYN</th>
-              <th>PrintFlagYN</th>
               <th>RecordPreferredTermYN</th>
               <th>TermType</th>
             </tr>
@@ -143,20 +115,11 @@
               <td>N</td>
               <td>N</td>
               <td>N</td>
-              <td>N</td>
-              <td>EN</td>
-            </tr>
-            <tr>
-              <td>N</td>
-              <td>N</td>
-              <td>Y</td>
-              <td>N</td>
-              <td>EP</td>
+              <td>ET</td>
             </tr>
             <tr>
               <td>Y</td>
               <td>N</td>
-              <td>Y</td>
               <td>Y</td>
               <td>MH</td>
             </tr>
@@ -164,20 +127,11 @@
               <td>Y</td>
               <td>N</td>
               <td>N</td>
-              <td>N</td>
-              <td>PEN</td>
-            </tr>
-            <tr>
-              <td>Y</td>
-              <td>N</td>
-              <td>Y</td>
-              <td>N</td>
               <td>PEP</td>
             </tr>
             <tr>
               <td>N</td>
               <td>Y</td>
-              <td>N</td>
               <td>N</td>
               <td>PM</td>
             </tr>
@@ -188,18 +142,16 @@
           &lt;SortVersion&gt; are used to create atoms with term types
           N1, DEV, and DSV, respectively.</p>
         <h4>Qualifier MeSH (file: qual*.xml):</h4>
-        <table class="elements" border="0" cellspacing="0">
+        <table>
           <tbody>
             <tr>
               <th>ConceptPreferredTermYN</th>
               <th>IsPermutedTermYN</th>
-              <th>PrintFlagYN</th>
               <th>RecordPreferredTermYN</th>
               <th>TermType</th>
             </tr>
             <tr>
               <td>Y</td>
-              <td>N</td>
               <td>N</td>
               <td>N</td>
               <td>PXQ</td>
@@ -208,11 +160,9 @@
               <td>Y</td>
               <td>N</td>
               <td>Y</td>
-              <td>Y</td>
               <td>TQ</td>
             </tr>
             <tr>
-              <td>N</td>
               <td>N</td>
               <td>N</td>
               <td>N</td>
@@ -221,17 +171,15 @@
           </tbody>
         </table>
         <h4>Supplemental MeSH (file: supp*.xml):</h4>
-        <table class="elements" border="0" cellspacing="0">
+        <table>
           <tbody>
             <tr>
               <th>ConceptPreferredTermYN</th>
               <th>IsPermutedTermYN</th>
-              <th>PrintFlagYN</th>
               <th>RecordPreferredTermYN</th>
               <th>TermType</th>
             </tr>
             <tr>
-              <td>N</td>
               <td>N</td>
               <td>N</td>
               <td>N</td>
@@ -241,12 +189,10 @@
               <td>Y</td>
               <td>N</td>
               <td>Y</td>
-              <td>Y</td>
               <td>NM</td>
             </tr>
             <tr>
               <td>Y</td>
-              <td>N</td>
               <td>N</td>
               <td>N</td>
               <td>PCE</td>
@@ -255,10 +201,9 @@
         </table>
       </div>
     </div>
-    <div id="rep_file_details" class="rep_block_level_one"> <a
-        name="file_details"></a>
+    <div id="rep_file_details" class="rep_block_level_one"> <a id="file_details"></a>
       <h3>Source-Provided Files: Details</h3>
-      &nbsp;&nbsp;(<span class="nav"><a href="#top">return to top</a></span>)
+      &nbsp;&nbsp;(<span class="nav"><a href="#top-of-page">return to top</a></span>)
       <p>The source representation documentation below is based on
         published MeSH documentation describing XML data elements.
         Details from this document that are not relevant to
@@ -273,18 +218,18 @@
       <p>The following is an alphabetic list of elements available for
         MeSH data in XML format, including Descriptors, Qualifiers, and
         Supplementary Concept Records. </p>
-      <p><b>RecordType:</b> may appear in records of the following
+      <p><strong>RecordType:</strong> may appear in records of the following
         types:<br/>
         D = Descriptor<br/>
         Q = Qualifier<br/>
         SCR = Supplementary Concept Record<br/>
       </p>
-      <p><b>Repeating element:</b> may occur more than once within a
+      <p><strong>Repeating element:</strong> may occur more than once within a
         record.<br/>
-        <b>Required element:</b> all records in the given Record Types
+        <strong>Required element:</strong> all records in the given Record Types
         have the element. </p>
-      <div class="rep_block_level_two"> <a name="file1"></a>
-        <table class="elements" border="0" cellspacing="0">
+      <div class="rep_block_level_two"> <a id="file1"></a>
+        <table>
           <tbody>
             <tr>
               <th>#</th>
@@ -327,13 +272,12 @@
               <td>&lt;Abbreviation&gt;<br/>
                 Description: Two-letter abbreviation for Qualifier
                 terms. Example: <br/>
-                &lt;Abbreviation&gt;GE&lt;/Abbreviation<br/>
+                &lt;Abbreviation&gt;GE&lt;/Abbreviation&gt;<br/>
                 Subelement of: &lt;Term&gt;, &lt;AllowableQualifier&gt;<br/>
                 Record Type: Q, D<br/>
                 Repeating element: yes<br/>
                 Required element: no</td>
-              <td> MRCONSO.STR (TTY = QAB)<br/>
-                <br/>
+              <td> MRCONSO.STR (TTY = QAB)
               </td>
             </tr>
             <tr>
@@ -485,7 +429,6 @@
                 &lt;Term ConceptPreferredTermYN="Y"<br/>
                 IsPermutedTermYN="N"<br/>
                 LexicalTag="NON"<br/>
-                PrintFlagYN="Y"<br/>
                 RecordPreferredTermYN="Y"&gt;<br/>
                 &lt;TermUI&gt;T000002&lt;/TermUI&gt;<br/>
                 &lt;String&gt;Calcimycin&lt;/String&gt;<br/>
@@ -1060,7 +1003,6 @@
                 &lt;Term ConceptPreferredTermYN="N"<br/>
                 IsPermutedTermYN="Y"<br/>
                 LexicalTag="LAB"<br/>
-                PrintFlagYN="N"<br/>
                 RecordPreferredTermYN="N"&gt;<br/>
                 &lt;TermUI&gt;T000001&lt;/TermUI&gt;<br/>
                 &lt;String&gt;A 23187&lt;/String&gt;<br/>
@@ -1104,7 +1046,6 @@
                 TRD (Trade name) Example: <br/>
                 &lt;Term ConceptPreferredTermYN="Y"<br/>
                 IsPermutedTermYN="N" LexicalTag="LAB"<br/>
-                PrintFlagYN="N"<br/>
                 RecordPreferredTermYN="N"&gt;<br/>
                 &lt;TermUI&gt;T000001&lt;/TermUI&gt;<br/>
                 &lt;String&gt;A-23187&lt;/String&gt;<br/>
@@ -1276,31 +1217,6 @@
             </tr>
             <tr>
               <td>50</td>
-              <td>PrintFlagYN<br/>
-                Description: Attribute of the &lt;Term&gt; element which
-                indicated whether or not the Descriptor term appeared in
-                the printed Medical Subject Headings (discontinued
-                2007). For Qualifiers and SCRs it indicates a subset of
-                terms that NLM recommends printing if a user wants to
-                print Qualifier or SCR terms. Example:<br/>
-                &lt;Term ConceptPreferredTermYN="Y"<br/>
-                IsPermutedTermYN="N"<br/>
-                LexicalTag="NON"<br/>
-                PrintFlagYN="Y"<br/>
-                RecordPreferredTermYN="Y"&gt;<br/>
-                &lt;TermUI&gt;T000002&lt;/TermUI&gt;<br/>
-                &lt;String&gt;&lt;/StCalcimycinring&gt;<br/>
-                ...<br/>
-                &lt;/Term&gt;<br/>
-                Subelement of: not applicable; attribute of &lt;Term&gt;<br/>
-                Record Type: D, Q, SCR<br/>
-                Repeating attribute: no<br/>
-                Required attribute: yes</td>
-              <td>Used to compute TTY assignments. See Term Type section
-                for details</td>
-            </tr>
-            <tr>
-              <td>51</td>
               <td>&lt;PublicMeSHNote&gt;<br/>
                 Description: Free-text information about the history of
                 changes in the record that may be helpful to the user of
@@ -1327,7 +1243,7 @@
               <td>MRSAT.ATN = PM</td>
             </tr>
             <tr>
-              <td>52</td>
+              <td>51</td>
               <td>&lt;QualifierName&gt;<br/>
                 Description: Term that uniquely names its
                 &lt;QualifierRecord&gt; and, along with the
@@ -1346,7 +1262,7 @@
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>53</td>
+              <td>52</td>
               <td>&lt;QualifierRecord&gt;<br/>
                 Description: Cluster of one or more concepts used in
                 combination with a &lt;DescriptorRecord&gt; for subject
@@ -1364,7 +1280,7 @@
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>54</td>
+              <td>53</td>
               <td>&lt;QualifierRecordSet&gt;<br/>
                 Description: The set of all &lt;QualifierRecord&gt;
                 elements in the Qualifier XML file.<br/>
@@ -1376,7 +1292,7 @@
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>55</td>
+              <td>54</td>
               <td>&lt;QualifierReferredTo&gt;<br/>
                 Description: The pair of elements &lt;QualifierUI&gt;
                 and &lt;QualifierName&gt; each of which uniquely refers
@@ -1397,7 +1313,7 @@
                 &lt;HeadingMappedTo&gt;</td>
             </tr>
             <tr>
-              <td>56</td>
+              <td>55</td>
               <td>QualifierType<br/>
                 Description: Attribute of &lt;QualifierRecord&gt;,
                 formerly used to indicate presence in Index Medicus.
@@ -1412,7 +1328,7 @@
               <td>Not included</td>
             </tr>
             <tr>
-              <td>57</td>
+              <td>56</td>
               <td>&lt;QualifierUI&gt;<br/>
                 Description: Qualifier Unique Identifier.
                 Seven-character alpha-numeric string uniquely
@@ -1428,7 +1344,7 @@
               <td> MRCONSO.CODE, MRCONSO.SDUI</td>
             </tr>
             <tr>
-              <td>58</td>
+              <td>57</td>
               <td>&lt;RecordAuthorizer&gt;<br/>
                 Description: Three-character user name of the MeSH
                 analyst or supervisor authorizing the record in the MeSH
@@ -1441,9 +1357,9 @@
               <td>Not included</td>
             </tr>
             <tr>
-              <td>59</td>
+              <td>58</td>
               <td>&lt;RecordMaintainer&gt;<br/>
-                Description: Three-character user name of the NLM editor
+                Description: User name of the NLM editor
                 who most recently modified the record in the MeSH
                 maintenance system. Example: <br/>
                 &lt;RecordMaintainer&gt;jls&lt;/RecordMaintainer&gt;<br/>
@@ -1454,7 +1370,7 @@
               <td>Not included</td>
             </tr>
             <tr>
-              <td>60</td>
+              <td>59</td>
               <td>&lt;RecordOriginator&gt;<br/>
                 Description: Three-character user name of the NLM editor
                 who created the original record in the MeSH maintenance
@@ -1470,7 +1386,7 @@
               <td>Not included</td>
             </tr>
             <tr>
-              <td>61</td>
+              <td>60</td>
               <td>&lt;RecordOriginatorsList&gt;<br/>
                 Description: Set of one or more of the elements
                 &lt;RecordOriginator&gt;, &lt;RecordMaintainer&gt;,
@@ -1483,7 +1399,7 @@
               <td>Not included</td>
             </tr>
             <tr>
-              <td>62</td>
+              <td>61</td>
               <td>RecordPreferredTermYN<br/>
                 Description: Attribute of the &lt;Term&gt; element which
                 indicates whether or not the term is the preferred term
@@ -1494,7 +1410,6 @@
                 &lt;Term ConceptPreferredTermYN="Y"<br/>
                 IsPermutedTermYN="N"<br/>
                 LexicalTag="NON"<br/>
-                PrintFlagYN="Y"<br/>
                 RecordPreferredTermYN="Y"&gt;<br/>
                 &lt;TermUI&gt;T000002&lt;/TermUI&gt;<br/>
                 &lt;String&gt;Calcimycin&lt;/String&gt;<br/>
@@ -1507,7 +1422,7 @@
                 for details.</td>
             </tr>
             <tr>
-              <td>63</td>
+              <td>62</td>
               <td>&lt;RegistryNumber&gt;<br/>
                 Description: Originally a Registry Number from CAS
                 (Chemical Abstracts Service) for the same chemical.
@@ -1530,7 +1445,7 @@
               <td>MRSAT.ATN = RN</td>
             </tr>
             <tr>
-              <td>64</td>
+              <td>63</td>
               <td>&lt;RelatedRegistryNumber&gt;<br/>
                 Description: The same type of value as the
                 &lt;RegistryNumber&gt; but for concepts which do not
@@ -1550,7 +1465,7 @@
               <td>MRSAT.ATN = RR</td>
             </tr>
             <tr>
-              <td>65</td>
+              <td>64</td>
               <td>&lt;RelatedRegistryNumberList&gt;<br/>
                 Description: The set of one or more occurrences of the
                 &lt;RelatedRegistryNumber&gt;.<br/>
@@ -1561,7 +1476,7 @@
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>66</td>
+              <td>65</td>
               <td>&lt;RelationAttribute&gt;<br/>
                 Description: Further specification of the particular
                 relationship between two concepts specified in
@@ -1574,7 +1489,7 @@
               <td>Not applicable</td>
             </tr>
             <tr>
-              <td>67</td>
+              <td>66</td>
               <td>RelationName<br/>
                 Description: Attribute of the &lt;ConceptRelation&gt;
                 element which indicates the relation between the two
@@ -1592,7 +1507,7 @@
               </td>
             </tr>
             <tr>
-              <td>68</td>
+              <td>67</td>
               <td>&lt;RunningHead&gt;<br/>
                 Description: The header string that was printed at the
                 top of each page in the Tree Structures section of the
@@ -1612,7 +1527,7 @@
               <td>Not included</td>
             </tr>
             <tr>
-              <td>69</td>
+              <td>68</td>
               <td>&lt;ScopeNote&gt;<br/>
                 Description: Free-text narrative giving the scope and
                 meaning of a &lt;Concept&gt;.<br/>
@@ -1626,7 +1541,7 @@
               <td>MRDEF.DEF</td>
             </tr>
             <tr>
-              <td>70</td>
+              <td>69</td>
               <td>SCRClass<br/>
                 Description: Attribute of &lt;DescriptorRecord&gt;
                 having as a value one of four numbers: <br/>
@@ -1644,7 +1559,7 @@
               <td>MRSAT.ATN = SC</td>
             </tr>
             <tr>
-              <td>71</td>
+              <td>70</td>
               <td>&lt;SeeRelatedDescriptor&gt;<br/>
                 Description: Reference to a specific Descriptor to which
                 a user is referred by a "see related" cross-reference.
@@ -1671,7 +1586,7 @@
                 MRSAT.ATN = FX</td>
             </tr>
             <tr>
-              <td>72</td>
+              <td>71</td>
               <td>&lt;SeeRelatedList&gt;<br/>
                 Description: Set of one or more
                 &lt;SeeRelatedDescriptor&gt; elements in a Descriptor
@@ -1683,7 +1598,7 @@
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>73</td>
+              <td>72</td>
               <td>&lt;SemanticType&gt;<br/>
                 Description: One of approximately 140 categories in the
                 UMLS Semantic Network which name properties of
@@ -1701,7 +1616,7 @@
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>74</td>
+              <td>73</td>
               <td>&lt;SemanticTypeList&gt;<br/>
                 Description: Set of one or more &lt;SemanticType&gt;
                 elements.<br/>
@@ -1712,7 +1627,7 @@
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>75</td>
+              <td>74</td>
               <td>&lt;SemanticTypeName&gt;<br/>
                 Description: Unique term for each of the approximately
                 140 categories in the UMLS Semantic Network. Used, along
@@ -1732,7 +1647,7 @@
                 in MRSTY.RRF, there are significant differences.</td>
             </tr>
             <tr>
-              <td>76</td>
+              <td>75</td>
               <td>&lt;SemanticTypeUI&gt;<br/>
                 Description: Unique four-character alphanumeric
                 identifier for each of the approximately 140 categories
@@ -1747,7 +1662,7 @@
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>77</td>
+              <td>76</td>
               <td>&lt;SortVersion&gt;<br/>
                 Description: Custom version of a &lt;Term&gt; that was
                 used to sort print output in printed Medical Subject
@@ -1764,7 +1679,7 @@
                 MRREL.REL=SY MRREL.RELA=sort_version_of</td>
             </tr>
             <tr>
-              <td>78</td>
+              <td>77</td>
               <td>&lt;Source&gt;<br/>
                 Description: Citation reference in which the indexing
                 concept was first found. Single occurrence since 1980.
@@ -1777,7 +1692,7 @@
               <td> MRSAT.ATN = SRC</td>
             </tr>
             <tr>
-              <td>79</td>
+              <td>78</td>
               <td>&lt;SourceList&gt;<br/>
                 Description: Set of one or more &lt;Source&gt; elements.<br/>
                 Subelement of: &lt;SupplementalRecord&gt;<br/>
@@ -1787,7 +1702,7 @@
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>80</td>
+              <td>79</td>
               <td>&lt;String&gt;<br/>
                 Description: The string itself that constitutes a
                 &lt;Term&gt; as well as object names, such as the
@@ -1799,7 +1714,6 @@
                 ConceptPreferredTermYN="Y"<br/>
                 IsPermutedTermYN="N"<br/>
                 LexicalTag="NON"<br/>
-                PrintFlagYN="Y"<br/>
                 RecordPreferredTermYN="Y"&gt;<br/>
                 &lt;TermUI&gt;T000002&lt;/TermUI&gt;<br/>
                 &lt;String&gt;Calcimycin&lt;/String&gt;<br/>
@@ -1813,7 +1727,7 @@
               <td> As subelement of &lt;Term&gt;: MRCONSO.STR</td>
             </tr>
             <tr>
-              <td>81</td>
+              <td>80</td>
               <td>&lt;SupplementalRecord&gt;<br/>
                 Description: Cluster of one or more concepts used for
                 subject indexing and retrieval. Identified uniquely by a
@@ -1831,7 +1745,7 @@
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>82</td>
+              <td>81</td>
               <td>&lt;SupplementalRecordName&gt;<br/>
                 Description: A term that uniquely names its
                 &lt;SupplementalRecord&gt; (SCR) and, along with the
@@ -1850,7 +1764,7 @@
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>83</td>
+              <td>82</td>
               <td>&lt;SupplementalRecordSet&gt;<br/>
                 Description: The set of all &lt;SupplementalRecord&gt;
                 elements in the SCR XML file.<br/>
@@ -1861,7 +1775,7 @@
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>84</td>
+              <td>83</td>
               <td>&lt;SupplementalRecordUI&gt; Description: Unique
                 Identifier for SCRs. Seven-character alpha-numeric
                 string uniquely identifying a &lt;SupplementalRecord&gt;
@@ -1875,22 +1789,20 @@
               <td>MRCONSO.CODE MRCONSO.SDUI</td>
             </tr>
             <tr>
-              <td>85</td>
+              <td>84</td>
               <td>&lt;Term&gt;<br/>
                 Description: Alpha-numeric string which comprises the
                 basic unit of the MeSH vocabulary. Also functions as the
                 name of a Descriptor and concept. The term itself is the
-                &lt;String&gt; element. Every Term has five XML
+                &lt;String&gt; element. Every Term has four XML
                 attributes: ConceptPreferredTermYN <br/>
                 IsPermutedTermYN <br/>
                 LexicalTag <br/>
-                PrintFlagYN <br/>
                 RecordPreferredTermYN <br/>
                 Example: <br/>
                 &lt;Term ConceptPreferredTermYN="Y"<br/>
                 IsPermutedTermYN="N"<br/>
                 LexicalTag="NON"<br/>
-                PrintFlagYN="Y"<br/>
                 RecordPreferredTermYN="Y"&gt;<br/>
                 &lt;TermUI&gt;T000002&lt;/TermUI&gt;<br/>
                 &lt;String&gt;Calcimycin&lt;/String&gt;<br/>
@@ -1909,7 +1821,7 @@
               <td> See subelements</td>
             </tr>
             <tr>
-              <td>86</td>
+              <td>85</td>
               <td>&lt;TermList&gt;<br/>
                 Description: Set of one or more &lt;Term&gt; elements in
                 a &lt;Concept&gt;.<br/>
@@ -1920,7 +1832,7 @@
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>87</td>
+              <td>86</td>
               <td>&lt;TermNote&gt; (Term Note)<br/>
                 Description: For institutions that translate MeSH into
                 their own language. Internal notes about a given term
@@ -1932,7 +1844,7 @@
               <td>Not applicable</td>
             </tr>
             <tr>
-              <td>88</td>
+              <td>87</td>
               <td>&lt;TermUI&gt; (Term Unique Identifier)<br/>
                 Description: Seven-character alpha-numeric string
                 uniquely identifying a &lt;Term&gt; (except
@@ -1946,7 +1858,7 @@
               <td> MRSAT.ATN = TERMUI</td>
             </tr>
             <tr>
-              <td>89</td>
+              <td>88</td>
               <td>&lt;ThesaurusID&gt;<br/>
                 Description: Name of a Thesaurus in which the terms
                 occurs, including NLM (=MeSH).<br/>
@@ -1958,7 +1870,7 @@
               <td> MRSAT.ATN = TH</td>
             </tr>
             <tr>
-              <td>90</td>
+              <td>89</td>
               <td>&lt;ThesaurusIDList&gt;<br/>
                 Description: Set of one or more &lt;ThesaurusID&gt;
                 elements in a Descriptor or SCR &lt;Term&gt;.<br/>
@@ -1969,7 +1881,7 @@
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>91</td>
+              <td>90</td>
               <td>&lt;TranslatorsEnglishScopeNote&gt;<br/>
                 Description: For institutions that translate MeSH into
                 their own language. The translator's English scope note
@@ -1982,7 +1894,7 @@
               <td>Not applicable</td>
             </tr>
             <tr>
-              <td>92</td>
+              <td>91</td>
               <td>&lt;TranslatorsScopeNote&gt;<br/>
                 Description: For institutions that translate MeSH into
                 their own language. Translation of an existing
@@ -1996,7 +1908,7 @@
               <td>Not applicable</td>
             </tr>
             <tr>
-              <td>93</td>
+              <td>92</td>
               <td>&lt;TreeNodeAllowed&gt;<br/>
                 Description: Name of a subcategory in the MeSH Trees,
                 indicating that for most Descriptors in that
@@ -2013,7 +1925,7 @@
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>94</td>
+              <td>93</td>
               <td>&lt;TreeNodeAllowedList&gt;<br/>
                 Description: Set of one or more &lt;TreeNodeAllowed&gt;
                 elements. Subelement of:<br/>
@@ -2023,7 +1935,7 @@
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>95</td>
+              <td>94</td>
               <td>&lt;TreeNumber&gt;<br/>
                 Description: Alpha-numeric string referring to location
                 within a Descriptor or Qualifier hierarchy. Used for
@@ -2043,7 +1955,7 @@
                 MRSAT.ATN = MN</td>
             </tr>
             <tr>
-              <td>96</td>
+              <td>95</td>
               <td>&lt;TreeNumberList&gt;<br/>
                 Description: Set of one or more &lt;TreeNumber&gt;
                 elements in a Descriptor or Qualifier record.<br/>
@@ -2056,7 +1968,7 @@
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>97</td>
+              <td>96</td>
               <td>&lt;Year&gt;<br/>
                 Description: Four-character year date in YYYY format.
                 Similar in format to the MEDLINE element of the same
@@ -2074,5 +1986,3 @@
         </table>
       </div>
     </div>
-  </body>
-</html>

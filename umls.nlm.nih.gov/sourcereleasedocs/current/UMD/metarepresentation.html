@@ -1,62 +1,37 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html;
-      charset=windows-1252">
-    <title></title>
-  </head>
-  <body>
-    <div class="section-4">
-      <ul id="menu">
-        <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
-        <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
-        <li id="nav-3"> <a href="sourcemetastats.html">Statistics and
-            sample data</a>
-          <ul id="subnav-3">
-            <li> <a href="termtypes.html">Terms and term types</a> </li>
-            <li> <a href="attributes.html">Attributes</a> </li>
-            <li> <a href="relationships.html">Relationships</a> </li>
-            <li> <a href="semtypes.html">Semantic Types</a> </li>
-            <li> <a href="overlap.html">Source Overlap</a> </li>
-          </ul>
-        </li>
-        <li id="nav-4"> <a href="representation.html">Representation</a>
-          <ul id="subnav-4">
-            <li> <a href="sourcerepresentation.html">Source
-                Representation</a> </li>
-            <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
-
-                Representation</a> </li>
-          </ul>
-        </li>
+<!--begin tabbed navigation area-->
+<div class="section-6">
+      <ul id="menu-source-docs">
+         <li id="nav-1"><a href="index.html">Synopsis</a></li>
+         <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+         <!--<li id="nav-3"><a href="stats.html">Statistics</a></li>
+         <li id="nav-4"><a href="samples.html">Samples</a></li>-->
+         <li id="nav-5"><a href="sourcerepresentation.html">Source Representation</a></li>
+         <li id="nav-6"><a href="metarepresentation.html">Metathesaurus Representation</a></li>
       </ul>
-    </div>
-    <br/>
-    <br/>
-    <br/>
-    <a name="top"></a> <span class="nav">Skip to:</span><a
+</div>
+<!-- end tabbed navigation area -->
+
+    <a id="top-of-page"></a> <span class="nav">Skip to:</span><a
       href="#termtypes">Atoms</a>, <a href="#attributes">Attributes</a>,
     <a href="#definitions">Definitions</a>, <a href="#relationships">Relationships</a>,
     <a href="#mappings">Mappings</a>
-    <p><b>VSAB</b>:UMD2014</p>
+    <p><b>VSAB</b>:UMD2017</p>
     <div id="general" class="rep_block_level_one">
       <div class="rep_block_level_one">
         <h3>Summary of Changes:</h3>
-        <p>No changes have been made to the original data files or to
-          representation of UMDNS.<br/>
-        </p>
+        <p>No changes have been made to the original data files or to representation of UMDNS.</p>
       </div>
       <div class="rep_block_level_one">
         <h3>Source Provided Files:</h3>
         <p>The UMLS uses an xml version of UMDNS which is created with
-          the TDE tool from Apelon, Inc. The file used for 2014AA is
-          "NLM_20130903_v3.xml" (the defined view). (<a
+          the TDE tool from Apelon, Inc. The file used for 2017AA is
+          "NLM_TaskII_2016_v3.xml" (the defined view). (<a
             href="http://apelon.com/dtd/tde/ontylog.dtd">http://apelon.com/dtd/tde/ontylog.dtd</a>)</p>
       </div>
       <div class="rep_block_level_one">
         <h3>Identifiers:</h3>
-        <p>UMDNS includes both “concepts,” i.e. collections of
-          synonymous atoms, and “descriptors,” i.e. collections of
+        <p>UMDNS includes both concepts, i.e. collections of
+          synonymous atoms, and descriptors, i.e. collections of
           concepts that are considered to be closely related (but not
           necessarily synonymous). Therefore, atoms with TTY = "SY" are
           assigned the same Source-asserted Concept Identifer (SCUI),
@@ -82,18 +57,18 @@
             "PT"s, so we can't use code of "PT") </li>
         </ul>
         <br/>
-        <a name="termtypes"></a>
+        <a id="termtypes"></a>
         <h3>Atoms (MRCONSO):</h3>
-        &nbsp;<span class="nav">(<a href="#top">return to top</a>)</span>
+        &nbsp;<span class="nav">(<a href="#top-of-page">return to top</a>)</span>
         <div id="rep_termtypes" class="rep_block_level_two">
-          <table class="elements" border="0" cellspacing="0">
+          <table>
             <tbody>
               <tr>
                 <th>Term Type</th>
                 <th>Origin</th>
               </tr>
               <tr>
-                <td valign="top">PT</td>
+                <td>PT</td>
                 <td>CODE = value of &lt;CODE_IN_SOURCE&gt; property<br/>
                   STR = value of &lt;conceptDef&gt;&lt;name&gt;<br/>
                   SCUI = value of &lt;CODE_IN_SOURCE&gt; property<br/>
@@ -113,7 +88,7 @@
                 </td>
               </tr>
               <tr>
-                <td valign="top">HT</td>
+                <td>HT</td>
                 <td>CODE = value of &lt;CODE_IN_SOURCE&gt; property<br/>
                   STR = value of &lt;conceptDef&gt;&lt;name&gt;<br/>
                   SCUI = value of &lt;CODE_IN_SOURCE&gt; property<br/>
@@ -143,7 +118,7 @@
                 </td>
               </tr>
               <tr>
-                <td valign="top">SY</td>
+                <td>SY</td>
                 <td>CODE = value of &lt;CODE_IN_SOURCE&gt; property of
                   associated "PT"<br/>
                   STR = value of the "SYNONYM" property<br/>
@@ -155,7 +130,7 @@
                   SYs are created when a "SYNONYM" property exists </td>
               </tr>
               <tr>
-                <td valign="top">ET</td>
+                <td>ET</td>
                 <td>CODE = value of &lt;CODE_IN_SOURCE&gt; property<br/>
                   STR = value of &lt;conceptDef&gt;&lt;name&gt;<br/>
                   SCUI = value of &lt;CODE_IN_SOURCE&gt; property<br/>
@@ -173,18 +148,18 @@
             </tbody>
           </table>
         </div>
-        <a name="attributes"></a>
+        <a id="attributes"></a>
         <h3>Attributes (MRSAT):</h3>
-        &nbsp;<span class="nav">(<a href="#top">return to top</a>)</span>
+        &nbsp;<span class="nav">(<a href="#top-of-page">return to top</a>)</span>
         <div id="rep_attributes" class="rep_block_level_two">
-          <table class="elements" border="0" cellspacing="0">
+          <table>
             <tbody>
               <tr>
                 <th>Attribute Name</th>
                 <th>Origin of ATV</th>
               </tr>
               <tr>
-                <td valign="top">DEVTYPE</td>
+                <td>DEVTYPE</td>
                 <td>The value of the "DEVICE_TYPE" property. One of the
                   following:
                   <ul>
@@ -207,7 +182,7 @@
                   it is attached to CODE. </td>
               </tr>
               <tr>
-                <td valign="top">SYCODE</td>
+                <td>SYCODE</td>
                 <td>The value of the "Synonym_Code" qualifier, if
                   present. Attached to AUI. </td>
               </tr>
@@ -215,17 +190,17 @@
           </table>
         </div>
         <br/>
-        <a name="definitions"></a>
+        <a id="definitions"></a>
         <h3>Definitions (MRDEF):</h3>
-        &nbsp;<span class="nav">(<a href="#top">return to top</a>)</span>
+        &nbsp;<span class="nav">(<a href="#top-of-page">return to top</a>)</span>
         <div id="rep_definitions" class="rep_block_level_two">
-          <table class="elements" border="0" cellspacing="0">
+          <table>
             <tbody>
               <tr>
                 <th>ORIGIN</th>
               </tr>
               <tr>
-                <td valign="top">The value of the "DEFINITION "
+                <td>The value of the "DEFINITION "
                   property, where value of the "Definition _Status"
                   qualifier = "Releasable." Definitions with other
                   qualifier values are excluded.</td>
@@ -234,11 +209,11 @@
           </table>
         </div>
         <br/>
-        <a name="relationships"></a>
+        <a id="relationships"></a>
         <h3>Relationships (MRREL):</h3>
-        &nbsp;<span class="nav">(<a href="#top">return to top</a>)</span>
+        &nbsp;<span class="nav">(<a href="#top-of-page">return to top</a>)</span>
         <div id="rep_relationships" class="rep_block_level_two">
-          <table class="elements" border="0" cellspacing="0">
+          <table>
             <tbody>
               <tr>
                 <th>Relationship</th>
@@ -246,7 +221,7 @@
                 <th>ORIGIN</th>
               </tr>
               <tr>
-                <td valign="top">CHD<br/>
+                <td>CHD<br/>
                   PAR<br/>
                   SIB</td>
                 <td>isa/inverse_isa</td>
@@ -255,7 +230,7 @@
                   original xml data </td>
               </tr>
               <tr>
-                <td valign="top">RB/RN<br/>
+                <td>RB/RN<br/>
                   RO<br/>
                 </td>
                 <td>&nbsp;&nbsp;</td>
@@ -275,11 +250,9 @@
           </table>
         </div>
         <br/>
-        <a name="mappings"></a>
+        <a id="mappings"></a>
         <h3>Mappings (MRMAP):</h3>
-        &nbsp;<span class="nav">(<a href="#top">return to top</a>)</span>
+        &nbsp;<span class="nav">(<a href="#top-of-page">return to top</a>)</span>
         <p>No mapping data is included for UMDNS</p>
       </div>
     </div>
-  </body>
-</html>
