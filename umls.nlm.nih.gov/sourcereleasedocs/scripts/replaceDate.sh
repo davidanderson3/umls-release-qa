@@ -9,4 +9,4 @@ sed -i "/date=/c\date=$CREATEDATE" "$BASEDIR""$DIRECTORY"/index.html;
 sed -i "/date=/c\date=$CREATEDATE" "$BASEDIR""$DIRECTORY"/Metadata.html;
 sed -i "/date=/c\date=$CREATEDATE" "$BASEDIR""$DIRECTORY"/sourcerepresentation.html;
 sed -i "/date=/c\date=$CREATEDATE" "$BASEDIR""$DIRECTORY"/metarepresentation.html;
-done < rsab-directory-map.csv
+done < rsab-directory-map.csv  

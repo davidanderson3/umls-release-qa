@@ -1,19 +1,99 @@
 title=NUCCPT - Source Representation
 date=2017-05-08
-date=2017-05-08
+updated=2017-05-08
 type=page
 status=published
 ~~~~~~
 
+
+<!--menu-->
 <div class="row">
  <div class="container-fluid navbar navbar-default" role="navigation">
   <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Source Metadata</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
   </div>
  </div>
 </div>
-<br/>
-
-    <p>This page lists specific source data elements and provides
+<!--endmenu-->
+<br/>    <p>This page lists specific source data elements and provides
       information on their representation in the UMLS Metathesaurus.</p>
     <!--begin tabbed navigation area-->
     <!-- end tabbed navigation area --> 
+<a id="top-of-page"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
+      <a href="#change_summary">Summary of Changes</a>, <a
+        href="#file_summary">Summary of Source-Provided Files</a> <a
+        href="#file_details">Source-Provided File Details</a></span> <a
+      id="general"></a>
+    	<div id="rep_identifiers" class="rep_block_level_one">
+	        <h3>Summary of Changes</h3>
+	        <p>Not applicable (new source).</p>
+	      </div>
+	      <div id="rep_change_summary" class="rep_block_level_one">
+	        <h3>Source Provided Files: </h3>
+	        <p>The input files are in standard comma-separated-values format, with fields descriptions in the first line. </p>
+
+	        <table>
+	        	<tbody>
+	        	<tr>
+	        	<th>File Name</th>
+				<th>Description</th>
+				</tr>
+				<tr>
+				<td>nucc_taxonomy_161.csv</td>
+				<td>Comma-separated data file</td>
+				</tr>
+	        	</tbody>
+			</table>
+
+      </div>
+
+        <br/>
+        <h3>Source-Provided Files: Details</h3>
+        (<span class="nav"><a href="#top-of-page">return to top</a></span>)
+        <p>The following is a list of elements in the NUCCPT .csv source files: </p>
+        Note:  MRCONSO.STR values are created by concatenating "Grouping," "Classification," and "Specialization"
+        columns, separated by ";" and "," respectively, e.g. the STR for 101YS0200X is
+        "Behavioral Health &amp; Social Service Providers; Counselor, School"
+        <div class="rep_block_level_two"><a id="file1"></a><br/>
+          <table>
+            <tbody>
+              <tr>
+                <th>Element</th>
+                <th>Representation</th>
+
+              </tr>
+              <tr>
+                <td>Code</td>
+                <td>MRCONSO.CODE, MRCONSO.SCUI</td>
+              </tr>
+              <tr>
+                <td>Grouping</td>
+                <td>First element of MRCONSO.STR (followed by ";")<br/>
+
+                </td>
+              </tr>
+              <tr>
+                <td>Classification</td>
+                <td>Second element of MRCONSO.STR (followed by ",")</td>
+              </tr>
+              <tr>
+                <td>Specialization</td>
+                <td>Third element of MRCONSO.STR</td>
+              </tr>
+              <tr>
+                <td>Definition</td>
+                <td>Not processed</td>
+              </tr>
+              <tr>
+                <td>Notes</td>
+                <td>Not processed</td>
+              </tr>
+              </tbody>
+          </table>
+          <br/>
+          <br/>
+        </div>
+

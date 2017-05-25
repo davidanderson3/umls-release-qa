@@ -5,8 +5,8 @@
 BASEDIR='jbake/content/current/'
 UPDATEDATE='2017-05-08'
 while IFS=',' read -r RSAB DIRECTORY; do
-sed -i "/updated=/c\date=$UPDATEDATE" "$BASEDIR""$DIRECTORY"/index.html;
-sed -i "/updated=/c\date=$UPDATEDATE" "$BASEDIR""$DIRECTORY"/Metadata.html;
-sed -i "/updated=/c\date=$UPDATEDATE" "$BASEDIR""$DIRECTORY"/sourcerepresentation.html;
-sed -i "/updated=/c\date=$UPDATEDATE" "$BASEDIR""$DIRECTORY"/metarepresentation.html;
-done < rsab-directory-map.csv
+sed -i "/updated=/c\updated=$UPDATEDATE" "$BASEDIR""$DIRECTORY"/index.html;
+sed -i "/updated=/c\updated=$UPDATEDATE" "$BASEDIR""$DIRECTORY"/Metadata.html;
+sed -i "/updated=/c\updated=$UPDATEDATE" "$BASEDIR""$DIRECTORY"/sourcerepresentation.html;
+sed -i "/updated=/c\updated=$UPDATEDATE" "$BASEDIR""$DIRECTORY"/metarepresentation.html;
+done < rsab-directory-map.csv 

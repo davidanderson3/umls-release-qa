@@ -1,19 +1,23 @@
 title=TKMT - Metathesaurus Representation
 date=2017-05-08
-date=2017-05-08
+updated=2017-05-08
 type=page
 status=published
 ~~~~~~
 
+
+<!--menu-->
 <div class="row">
  <div class="container-fluid navbar navbar-default" role="navigation">
   <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
   </div>
  </div>
 </div>
-<br/>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!--endmenu-->
+<br/><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html;
@@ -24,3 +28,174 @@ status=published
     <br/>
     <br/>
     <br/>
+    <a name="top"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>,
+      <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
+      <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+    <div id="general" class="rep_block_level_one">
+      <p><b>VSAB:</b> TKMT2010<br/>
+      </p>
+      <div id="rep_identifiers" class="rep_block_level_one">
+        <h3><br/>
+        </h3>
+        <h3>Summary of Changes</h3>
+        <p>For TKMT in 2011AB, new concepts related to herbal medicine
+          were added to existing acupunture content.<br/>
+        </p>
+        <h3>Notes</h3>
+        <p>a)&nbsp; Unlike other non-English sources, TKMT is not a
+          translation source.&nbsp; There is no English-language version
+          of TKMT.<br/>
+        </p>
+        <p>b)&nbsp; The original TKMT files do not explicitly represent
+          a hierarchy.&nbsp; However a hierarchy was constructed during
+          Metathesaurus source processing, using strings containing the
+          pattern "* acupuncture points" as parent nodes.<br/>
+          <br/>
+          The parent nodes are:<br/>
+        </p>
+        <div style="margin-left: 40px;">Lung acupuncture points<br/>
+          Large intestine acupuncture points<br/>
+          Stomach acupuncture points<br/>
+          Spleen acupuncture points<br/>
+          Heart acupuncture points<br/>
+          Small intestine acupuncture points<br/>
+          Bladder acupuncture points<br/>
+          Kidney acupuncture points<br/>
+          Pericardium acupuncture points<br/>
+          Triple energizer acupuncture points<br/>
+          Gallbladder acupuncture points<br/>
+          Liver acupuncture points<br/>
+          Governing vessel acupuncture points<br/>
+          Conception vessel acupuncture points<br/>
+          <br/>
+        </div>
+        c)&nbsp; Herbal medicine concepts are not included in the
+        hierarchy<br/>
+        <p></p>
+      </div>
+      <div id="rep_change_summary" class="rep_block_level_one">
+        <h3>Source Provided Files:</h3>
+        "|" - delimited data files:<br/>
+        <br/>
+        KIOM-AP.RRF:<br/>
+        Format is:<br/>
+UMLS_CUI|"ENG"|ENGLISH_STRING|SEMANTIC_TYPE|&lt;EMPTY&gt;|KOREAN_STRING<br/>
+        <br/>
+        TKMTHERBGP1-1.RRF<br/>
+        Format is:<br/>
+        UMLS_CUI| ENGLISH_STRING|Chinese character name of
+        concept|Chinese pinyin name of concept| Japanese name of
+        concept| KOREAN_STRING<br/>
+        <br/>
+        TKMTHERBGP2-1.RRF&nbsp; <br/>
+        Format is:<br/>
+        UMLS_CUI| ENGLISH_STRING|Chinese character name of concept
+        (EMPTY)|Chinese pinyin name of concept| Japanese name of concept
+        (EMPTY)| KOREAN_STRING<br/>
+        <br/>
+        TKMTHERBGP2-2.RRF<br/>
+        UMLS_CUI| ENGLISH_STRING|Chinese character name of
+        concept|Chinese pinyin name of concept|Japanese name of concept|
+        KOREAN_STRING<br/>
+        <br/>
+        TKMTHERBGP3.RRF<br/>
+        UMLS_CUI| ENGLISH_STRING|Chinese character name of
+        concept|Chinese pinyin name of concept|Japanese name of concept|
+        KOREAN_STRING<br/>
+        <br/>
+        Note:&nbsp; The UMLS_CUI and KOREAN_STRING in TKMTHERBGP2-2.RRF
+        is redundant to the information in TKMTHERBGP2-1.RRF so only one
+        file is processed.<br/>
+        <br/>
+      </div>
+      <div id="rep_identifers" class="rep_block_level_one">
+        <h3>Identifiers:</h3>
+        Identifiers are assigned as follows:<br/>
+        <ul>
+          <li>CODE:&nbsp; MTHU#, assigned during Metathesaurus source
+            processing<br/>
+          </li>
+          <li>SAUI:&nbsp;&nbsp; Not applicable<br/>
+          </li>
+          <li>SCUI:&nbsp;&nbsp; Not applicable<br/>
+          </li>
+          <li>SDUI:&nbsp;&nbsp; Not applicable<br/>
+          </li>
+        </ul>
+        <p></p>
+        <div id="rep_termtypes" class="rep_block_level_two"> <a
+            name="atoms"></a>
+          <h3>Atoms (MRCONSO):</h3>
+          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <table class="elements" border="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <th>Term Type</th>
+                <th>Origin</th>
+              </tr>
+              <tr>
+                <td>PT<br/>
+                </td>
+                <td>CODE:&nbsp; MTHU#, assigned during Metathesaurus
+                  source processing<br/>
+                  STR: *RRF.KOREAN_STRING<br/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="rep_attributes" class="rep_block_level_two"> <br/>
+          <a name="attributes"></a><br/>
+          <h3>Attributes (MRSAT):</h3>
+          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <br/>
+          There are no attributes provided for TKMT.<br/>
+          <br/>
+        </div>
+        <div id="rep_definitions" class="rep_block_level_two"> <a
+            name="definitions"></a><br/>
+          <h3>Definitions (MRDEF):</h3>
+          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <p>There are no definitions provided for TKMT.<br/>
+          </p>
+        </div>
+        <div id="rep_relationships" class="rep_block_level_two"> <a
+            name="relationships"></a><br/>
+          <h3>Relationships (MRREL):</h3>
+          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <table class="elements" border="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <th>REL</th>
+                <th>RELA<br/>
+                  Inverse RELA</th>
+                <th>ORIGIN</th>
+              </tr>
+              <tr>
+                <td>PAR<br/>
+                  CHD<br/>
+                </td>
+                <td>&lt;none&gt;<br/>
+                </td>
+                <td>The original TKMT files do not explicitly represent
+                  a hierarchy.&nbsp; However a hierarchy was constructed
+                  during Metathesaurus source processing, using strings
+                  containing the pattern "* acupuncture points" as
+                  parent nodes </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="mappings" class="rep_block_level_two"> <a
+            name="mappings"></a><br/>
+          <h3>Mappings (MRMAP):</h3>
+          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <p>There are no mappings to other sources provided for
+            TKMT.&nbsp; UMLS_CUIS are used to merge TKMT atoms into
+            existing Metathesaurus concepts.<br/>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

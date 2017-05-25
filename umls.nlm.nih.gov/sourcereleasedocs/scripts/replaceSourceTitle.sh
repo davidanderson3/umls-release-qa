@@ -9,4 +9,4 @@ sed -i "/title=/c\title=$RSAB - Synopsis" "$BASEDIR""$DIRECTORY"/index.html;
 sed -i "/title=/c\title=$RSAB - Source Metadata" "$BASEDIR""$DIRECTORY"/Metadata.html;
 sed -i "/title=/c\title=$RSAB - Source Representation" "$BASEDIR""$DIRECTORY"/sourcerepresentation.html;
 sed -i "/title=/c\title=$RSAB - Metathesaurus Representation" "$BASEDIR""$DIRECTORY"/metarepresentation.html;
-done < rsab-directory-map.csv
+done < rsab-directory-map.csv 

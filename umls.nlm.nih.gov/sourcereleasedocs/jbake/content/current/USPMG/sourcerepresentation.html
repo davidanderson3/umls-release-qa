@@ -1,19 +1,82 @@
 title=USPMG - Source Representation
 date=2017-05-08
-date=2017-05-08
+updated=2017-05-08
 type=page
 status=published
 ~~~~~~
 
+
+<!--menu-->
 <div class="row">
  <div class="container-fluid navbar navbar-default" role="navigation">
   <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
   </div>
  </div>
 </div>
-<br/>
-
-    <p>This page lists specific source data elements and provides
+<!--endmenu-->
+<br/>    <p>This page lists specific source data elements and provides
       information on their representation in the UMLS Metathesaurus.</p>
     <!--begin tabbed navigation area-->
     <!-- end tabbed navigation area --> <br/>
+    <a name="top"></a> <span class="nav">Skip to: <a
+        href="#change_summary">Summary of Changes</a>, <a
+        href="#file_summary">Summary of Source-Provided Files</a> <a
+        href="#file_details">Source-Provided File Details</a></span> <a
+      name="general"></a>
+    <div id="rep_file_details" class="rep_block_level_one">
+      <h3>Summary of Changes:</h3>
+      <span class="nav">(<a href="#top">return to top</a></span>)<br/>
+      <br/>
+      <h4>Deprecated TTY:<br/>
+      </h4></div>
+      HT: No longer created due to the fact that the 2014 format
+      no longer includes a "Pharmacologic Class" colum
+      <h3>Source-Provided Files: Details</h3>
+      (<span class="nav"><a href="#top">return to top</a></span>)
+      <br/>
+      <div class="rep_block_level_two"> <a name="file1"></a>
+        <br/>
+        file: uspmmg_v6_0_excelspreadsheetsrev140415.xlsx <br/> <br/>
+        <table>
+          <tbody>
+            <tr>
+              <th>Field Name</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>USP Category
+              </td>
+              <td>MRCONSO.STR<br/>
+                TTY = HC
+              </td>
+            </tr>
+            <tr>
+              <td>USP Class
+              </td>
+              <td>MRCONSO.STR<br/>
+                TTY = HC
+              </td>
+            </tr>
+            <tr>
+              <td>Example Part D Eligible Drug
+              </td>
+              <td>MRCONSO.STR<br/>
+                TTY = PT
+              </td>
+            </tr>
+            <tr>
+              <td>Salt/Ester
+              </td>
+              <td>MRCONSO.STR:  The "Salt/Ester" value
+                is appended to the value of the appropriate "Example
+                Part D Eligible Drug" to create an atom<br/>
+                TTY = PT
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+

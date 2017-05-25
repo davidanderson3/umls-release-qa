@@ -1,19 +1,97 @@
 title=DSM-5 - Source Representation
 date=2017-05-08
-date=2017-05-08
+updated=2017-05-08
 type=page
 status=published
 ~~~~~~
 
+
+<!--menu-->
 <div class="row">
  <div class="container-fluid navbar navbar-default" role="navigation">
   <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Source Metadata</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
   </div>
  </div>
 </div>
-<br/>
-
-    <p>This page lists UMLS Metathesaurus data elements and traces them
+<!--endmenu-->
+<br/>    <p>This page lists UMLS Metathesaurus data elements and traces them
       back to the specific source data that populates them.</p>
     <!--begin tabbed navigation area-->
     <!-- end tabbed navigation area --> <br/>
+    <a id="top"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
+      <a href="#change_summary">Summary of Changes</a>, <a
+        href="#file_summary">Summary of Source-Provided Files</a> <a
+        href="#file_details">Source-Provided File Details</a></span> <a
+      id="general"></a><br/>
+    <div id="rep_file_summary" class="rep_block_level_one">
+      <div id="rep_file_details" class="rep_block_level_one">
+        <div id="rep_identifiers" class="rep_block_level_one">
+          <h3>Summary of Changes:</h3>
+          DSM-V is a new source.&nbsp; DSM3R and DSM-IV are no longer
+          included in the UMLS Metathesaurus<br/>
+        </div>
+        <div id="rep_change_summary" class="rep_block_level_one">
+          <h3>Notes:</h3>
+          DSM-V is is a set of diagnostic criteria for ICD9CM and/or
+          ICD10CM codes.&nbsp; There are no native DSM-5 codes, it is
+          not a standalone terminology.<br/>
+          <h3>Source Provided Files: Summary<br/>
+          </h3>
+          <table>
+            <tbody>
+              <tr>
+                <th>File Name</th>
+                <th>Description</th>
+              </tr>
+              <tr>
+                <td>ICD 10 Numerical Listing.txt</td>
+                <td>ICD 10 Codes and Diagnostic Criteria<br/>
+                </td>
+              </tr>
+              <tr>
+                <td>ICD 9 Numerical Listing.txt</td>
+                <td>ICD 9 Codes and Diagnostic Criteria<br/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br/>
+        <h3>Source-Provided Files: Details</h3>
+        (<span class="nav"><a href="#top">return to top</a></span>)
+        <p>The following is a list of elements in the CDT source file: </p>
+        <div class="rep_block_level_two"><a id="file1"></a><br/>
+          <table>
+            <tbody>
+              <tr>
+                <th>Element</th>
+                <th>Representation</th>
+              </tr>
+              <tr>
+                <td>Code</td>
+                <td>MRCONSO.CODE<br/>
+                  MRCONSO.SDUI </td>
+              </tr>
+              <tr>
+                <td>String</td>
+                <td>MRCONSO.STR<br/>
+                  <br/>
+                  TTY = DC10 or DC9<br/>
+                  <br/>
+                  A relationship with REL = RQ and RELA =
+                  has_diagnostic_criteria/diagnostic_criteria_of is
+                  created between the AUI of the DSM-5 atom and the ICD
+                  SDUI.&nbsp; <br/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br/>
+          <br/>
+        </div>
+      </div>
+    </div>
