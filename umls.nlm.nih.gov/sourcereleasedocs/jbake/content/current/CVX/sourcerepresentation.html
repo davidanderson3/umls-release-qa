@@ -18,194 +18,224 @@ status=published
  </div>
 </div>
 <!--endmenu-->
-<br/> <p>This page lists specific source data elements and provides
-      information on their representation in the UMLS Metathesaurus.</p>
-    <!--begin tabbed navigation area-->
-    <!-- end tabbed navigation area -->
-    <br/>
-    <br/>
-    <br/>
-    <a id="top-of-page"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
-      <a href="#change_summary">Summary of Changes</a>, <a
-        href="#file_summary">Summary of Source-Provided Files</a> <a
-        href="#file_details">Source-Provided File Details</a></span> <a id="general"></a>
-    <div id="rep_change_summary" class="rep_block_level_one"> <br/>
-      <b>VSAB:</b> CVX2014_12_29
-      <h3>Summary of Changes:</h3>
-      <div id="rep_identifiers" class="rep_block_level_one">
-        <p>No changes were made to the source data format.  However, processing vaccines with a status of "Inactive" was updated to reflect
-		        a clarification from the CDC.    All CVX codes are considered 'active' except for when the vaccine status is 'NEVER ACTIVE', or the CVX code
-		        is 99, or 999.
-		        </p>
-		        This results in the following change to processing when the value of the status field is "Inactive":  <br/>
-				Previously:  TTY = OP/OA;  Suppress = "O"  <br/>
-				New:  TTY = PT/AB;  Suppress PT = "N"; Suppress AB = "Y" <br/>
-				Per above, codes 99 and 999 are considered obsolete, so even though they have an "Inactive" status, they are assigned TTY = OP/OA, Suppress = O (no change from previous version).
-		<br/>
-      </div>
-      <h3>Source Provided Files:</h3>
-      Several file formats are available at <a
-href="http://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx">http://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx</a><br/>
-      <br/>
-      The flat file was used for Metathesaurus source processing.<br/>
-      <br/>
+<br/><p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p><!--begin tabbed navigation area-->
+<!-- end tabbed navigation area -->
+<br>
+<br>
+<br>
+<a id="top-of-page" name="top-of-page"></a> <span class="nav">Skip to: <a href="#general">Notes</a>, <a href="#change_summary">Summary of Changes</a>, <a href="#file_summary">Summary of Source-Provided Files</a> <a href="#file_details">Source-Provided File Details</a></span> <a id="general" name="general"></a>
+
+<div id="rep_change_summary" class="rep_block_level_one">
+  <br>
+  <b>VSAB:</b> CVX2014_12_29
+
+  <h3>Summary of Changes:</h3>
+
+  <div id="rep_identifiers" class="rep_block_level_one">
+    <p>No changes were made to the source data format. However, processing vaccines with a status of "Inactive" was updated to reflect a clarification from the CDC. All CVX codes are considered 'active' except for when the vaccine status is 'NEVER ACTIVE', or the CVX code is 99, or 999.</p>This results in the following change to processing when the value of the status field is "Inactive":<br>
+    Previously: TTY = OP/OA; Suppress = "O"<br>
+    New: TTY = PT/AB; Suppress PT = "N"; Suppress AB = "Y"<br>
+    Per above, codes 99 and 999 are considered obsolete, so even though they have an "Inactive" status, they are assigned TTY = OP/OA, Suppress = O (no change from previous version).<br>
+  </div>
+
+  <h3>Source Provided Files:</h3>Several file formats are available at <a href="http://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx">http://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx</a><br>
+  <br>
+  The flat file was used for Metathesaurus source processing.<br>
+  <br>
+
+  <table>
+    <tbody>
+      <tr>
+        <th>File Name</th>
+
+        <th>Description</th>
+      </tr>
+
+      <tr>
+        <td class="file_field_name">cvx.txt</td>
+
+        <td>"|" - delimited file</td>
+      </tr>
+    </tbody>
+  </table><br>
+  <span class="nav">(<a href="#top-of-page">return to top</a></span>)
+
+  <div style="margin-left: 40px;">
+    <br>
+  </div>
+</div>
+
+<div id="rep_file_summary" class="rep_block_level_one">
+  <a id="file_summary" name="file_summary"></a>
+
+  <h3>Source-Provided Files: Summary</h3>(<span class="nav"><a href="#top-of-page">return to top</a></span>)
+
+  <div id="rep_file_details" class="rep_block_level_one">
+    <!-- Make a table of each file that comes from the source   --><br>
+    Several file formats are available at <a href="http://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx">http://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx</a><br>
+    <br>
+    The flat file was used for Metathesaurus source processing.<br>
+    <br>
+
+    <table>
+      <tbody>
+        <tr>
+          <th>File Name</th>
+
+          <th>Description</th>
+        </tr>
+
+        <tr>
+          <td class="file_field_name">cvx.txt</td>
+
+          <td>"|" - delimited file</td>
+        </tr>
+      </tbody>
+    </table><br>
+
+    <h3>Source-Provided Files: Details</h3>(<span class="nav"><a href="#top-of-page">return to top</a></span>)
+
+    <p>The following is a list of fields in the CVX source file:<br></p>
+
+    <div class="rep_block_level_two">
+      <a id="file1" name="file1"></a><br>
+      <br>
+      Summary of TTY assignment:<br>
+      <br>
+
       <table>
         <tbody>
           <tr>
-            <th>File Name</th>
-            <th>Description</th>
+            <th>Vaccine Status</th>
+
+            <th>Short Description</th>
+
+            <th>Suppress</th>
+
+            <th>Full Vaccine Name TTY</th>
+
+            <th>Suppress</th>
           </tr>
+
           <tr>
-            <td class="file_field_name">cvx.txt</td>
-            <td>"|" - delimited file</td>
+            <td>Active</td>
+
+            <td>AB</td>
+
+            <td>Y</td>
+
+            <td>PT</td>
+
+            <td>N</td>
+          </tr>
+
+          <tr>
+            <td>Inactive</td>
+
+            <td>AB</td>
+
+            <td>Y</td>
+
+            <td>PT</td>
+
+            <td>N</td>
+          </tr>
+
+          <tr>
+            <td>Never Active</td>
+
+            <td>OA</td>
+
+            <td>O</td>
+
+            <td>OP</td>
+
+            <td>O</td>
+          </tr>
+
+          <tr>
+            <td>Pending</td>
+
+            <td>AB</td>
+
+            <td>Y</td>
+
+            <td>PT</td>
+
+            <td>N</td>
           </tr>
         </tbody>
-      </table>
-      <br/>
-      <span class="nav">(<a href="#top-of-page">return to top</a></span>)
-      <div style="margin-left: 40px;"><br/>
-      </div>
+      </table>Exception: Codes 99 and 999 are "Inactive," but are assigned TTY = OP/OA per directions from the CDC<br>
+      <br>
+
+      <table>
+        <tbody>
+          <tr>
+            <th>Field</th>
+
+            <th>Representation</th>
+          </tr>
+
+          <tr>
+            <td>CVX Code</td>
+
+            <td>MRCONSO.CODE<br>
+            MRCONSO.SCUI</td>
+          </tr>
+
+          <tr>
+            <td>Short Description</td>
+
+            <td>MRCONSO.STR<br>
+            CODE = CVX Code<br>
+            TTY = "AB" or "OA", depending on value of "Vaccine Status" field<br>
+            SUPPRESS = "Y" or "O" depending on value of "Vaccine Status field</td>
+          </tr>
+
+          <tr>
+            <td>Full Vaccine Name</td>
+
+            <td>MRCONSO.STR<br>
+            CODE = CVX Code<br>
+            TTY = "PT" or "OP", depending on value of "Vaccine Status" field<br>
+            SUPPRESS = "N" or "O" depending on value of "Vaccine Status field</td>
+          </tr>
+
+          <tr>
+            <td>Notes</td>
+
+            <td>MRSAT.ATN = SOS</td>
+          </tr>
+
+          <tr>
+            <td>Vaccine Status</td>
+
+            <td>MRSAT.ATN = "VACCINE_STATUS"<br>
+            <br>
+            Vaccine Status is also used to assign TTYs</td>
+          </tr>
+
+          <tr>
+            <td>NonVaccine</td>
+
+            <td>Not included in Metathesaurus source processing</td>
+          </tr>
+
+          <tr>
+            <td>Last Updated</td>
+
+            <td>MRSAT.ATN = "DATE_LAST_MODIFIED"</td>
+          </tr>
+        </tbody>
+      </table><br>
+      Note:<br>
+      <br>
+      The NonVaccine field is not included in Metathesaurus source processing. A value of "True" indicates that the concept is a non-vaccines. There are three concepts with NonVaccine = "True," indicating that the concept is not a vaccine:<br>
+      no vaccine administered<br>
+      unknown<br>
+      RESERVED - do not use<br>
+      All other concepts have a NonVaccine value of "False"<br>
+      <br>
     </div>
-    <div id="rep_file_summary" class="rep_block_level_one"> <a id="file_summary"></a>
-      <h3>Source-Provided Files: Summary</h3>
-      (<span class="nav"><a href="#top-of-page">return to top</a></span>)
-      <div id="rep_file_details" class="rep_block_level_one">
-        <!-- Make a table of each file that comes from the source   --><br/>
-        Several file formats are available at <a
-href="http://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx">http://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx</a><br/>
-        <br/>
-        The flat file was used for Metathesaurus source processing.<br/>
-        <br/>
-        <table>
-          <tbody>
-            <tr>
-              <th>File Name</th>
-              <th>Description</th>
-            </tr>
-            <tr>
-              <td class="file_field_name">cvx.txt</td>
-              <td>"|" - delimited file</td>
-            </tr>
-          </tbody>
-        </table>
-        <br/>
-        <h3>Source-Provided Files: Details</h3>
-        (<span class="nav"><a href="#top-of-page">return to top</a></span>)
-        <p>The following is a list of fields in the CVX source file:<br/>
-        </p>
-        <div class="rep_block_level_two"><a id="file1"></a><br/>
-          <br/>
-          Summary of TTY assignment:<br/>
-          <br/>
-          <table>
-            <tbody>
-              <tr>
-                <th>Vaccine Status</th>
-                <th>Short Description</th>
-                <th>Suppress</th>
-                <th>Full Vaccine Name TTY</th>
-                <th>Suppress</th>
-              </tr>
-              <tr>
-                <td>Active</td>
-                <td>AB</td>
-                <td>Y</td>
-                <td>PT</td>
-                <td>N</td>
-              </tr>
-              <tr>
-                <td>Inactive</td>
-                <td>AB</td>
-                <td>Y</td>
-                <td>PT</td>
-                <td>N</td>
-              </tr>
-              <tr>
-                <td>Never Active</td>
-                <td>OA</td>
-                <td>O</td>
-                <td>OP</td>
-                <td>O</td>
-              </tr>
-              <tr>
-                <td>Pending</td>
-                <td>AB</td>
-                <td>Y</td>
-                <td>PT</td>
-                <td>N</td>
-              </tr>
-            </tbody>
-          </table>
-          Exception:  Codes 99 and 999 are "Inactive," but are assigned TTY = OP/OA per directions from the CDC
-          <br/>
-          <br/>
-          <table>
-            <tbody>
-              <tr>
-                <th>Field</th>
-                <th>Representation</th>
-              </tr>
-              <tr>
-                <td>CVX Code</td>
-                <td>MRCONSO.CODE<br/>
-                  MRCONSO.SCUI
-                </td>
-              </tr>
-              <tr>
-                <td>Short Description</td>
-                <td>MRCONSO.STR<br/>
-                  CODE = CVX Code<br/>
-                  TTY = "AB" or "OA", depending on value of "Vaccine Status" field<br/>
-                  SUPPRESS = "Y" or "O" depending on value of "Vaccine Status field
-                </td>
-              </tr>
-              <tr>
-                <td>Full Vaccine Name</td>
-                <td>MRCONSO.STR<br/>
-                  CODE = CVX Code<br/>
-                  TTY = "PT" or "OP", depending on value of "Vaccine
-                  Status" field<br/>
-                  SUPPRESS = "N" or "O" depending on value of "Vaccine
-                  Status field
-                </td>
-              </tr>
-              <tr>
-                <td>Notes</td>
-                <td>MRSAT.ATN = SOS
-                </td>
-              </tr>
-              <tr>
-                <td>Vaccine Status</td>
-                <td>MRSAT.ATN = "VACCINE_STATUS"<br/>
-                  <br/>
-                  Vaccine Status is also used to assign TTYs
-                </td>
-              </tr>
-              <tr>
-                <td>NonVaccine</td>
-                <td>Not included in Metathesaurus source
-                  processing
-                </td>
-              </tr>
-              <tr>
-                <td>Last Updated</td>
-                <td>MRSAT.ATN = "DATE_LAST_MODIFIED" </td>
-              </tr>
-            </tbody>
-          </table>
-          <br/>
-          Note: <br/>
-          <br/>
-          The NonVaccine field is not included in Metathesaurus source
-          processing.  A value of "True" indicates that the
-          concept is a non-vaccines. There are three concepts with
-          NonVaccine = "True," indicating that the concept is not a
-          vaccine:<br/>
-           no vaccine administered<br/>
-           unknown <br/>
-           RESERVED - do not use<br/>
-          All other concepts have a NonVaccine value of "False"<br/>
-          <br/>
-        </div>
-      </div>
-    </div>
+  </div>
+</div>

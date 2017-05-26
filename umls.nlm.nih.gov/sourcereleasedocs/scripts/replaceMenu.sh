@@ -1,7 +1,6 @@
 #!/bin/bash
 # run bash, navigate to the root directory (/sourcereleasedocs) and run bash scripts/replaceDate.sh
 # important - set the base directory to whichever directory contains SAB directories 
-# set a value for the CREATEDATE variable before running
 BASEDIR='jbake/content/current/'
 while IFS=',' read -r RSAB DIRECTORY; do
 if [ -f "$BASEDIR""$DIRECTORY"/index.html ] 

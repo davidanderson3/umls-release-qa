@@ -18,1165 +18,1669 @@ status=published
  </div>
 </div>
 <!--endmenu-->
-<br/>
-  <p>This page lists specific source data elements and provides
-        information on their representation in the UMLS Metathesaurus.</p>
-    <!--begin tabbed navigation area-->
-    <!-- end tabbed navigation area -->
-    <a id="top-of-page"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
-      <a href="#change_summary">Summary of Changes</a>, <a
-        href="#file_summary">Summary of Source-Provided Files</a> <a
-        href="#file_details">Source-Provided File Details</a></span> <a id="general"></a>
-    <div id="rep_general" class="rep_block_level_one">
-      <h3>Notes</h3>
-      CPT data files are submitted by the American Medical Association
-      (AMA). The files processed for the UMLS Metathesaurus are
-      available for licensing at the <a
-href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=prod1510002">AMA
-        Bookstore</a>. <br/>
-      The information provided here applies explicitly to the English
-      version of CPT. The Spanish translation of CPT (CPTSP) was last
-      updated in 2001, and much of the information on this page is not
-      applicable.<br/>
-      <br/>
-    </div>
-    <div id="rep_change_summary" class="rep_block_level_one"> <a id="change_summary"></a>
-        <h3>Summary of Changes</h3>
-         <p>"CPT DTK" is now referred to as "CPT Link."  No changes were made to the basic data format, however there are
-         several changes and additions, including:</p>
-         <ul>
-         <li>Many new property types</li>
-         <li>The UMLS received permission to release concepts treed under "Guidelines," as well as relationships between CPT and SNOMEDCT_US.</li>
-         <li>The UMLS now processes the "Relationship Groups" file.  The RG field in MRREL.RRF will now be populated for CPT, indicating
-         a set of relationships should be looked at in conjunction.  In addition, the CPT data file includes "Or groups," indicating
-         disjunctive expressions.</li>
-         <li>The AMA now releases Code Edits,
-         which have been derived from explicit instructions within the guidelines, parentheticals, and specific code designations.
-         These are represented in the UMLS as attributes or relationships, as appropriate.</li>
- 		</ul>
- 		<p>New TTYs:</p>
+<br/><p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p><!--begin tabbed navigation area-->
+<!-- end tabbed navigation area -->
+<a id="top-of-page" name="top-of-page"></a> <span class="nav">Skip to: <a href="#general">Notes</a>, <a href="#change_summary">Summary of Changes</a>, <a href="#file_summary">Summary of Source-Provided Files</a> <a href="#file_details">Source-Provided File Details</a></span> <a id="general" name="general"></a>
 
-         <table>
-         	<tbody>
-         	<tr>
-         		<td>GLP</td>
-         		<td>Global Period Code</td>
-         	</tr>
-         	<tr>
-         		<td>POS</td>
-         		<td>Place of Service Code</td>
-         	</tr>
-         	</tbody>
-         </table>
+<div id="rep_general" class="rep_block_level_one">
+  <h3>Notes</h3>CPT data files are submitted by the American Medical Association (AMA). The files processed for the UMLS Metathesaurus are available for licensing at the <a href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=prod1510002">AMA Bookstore</a>.<br>
+  The information provided here applies explicitly to the English version of CPT. The Spanish translation of CPT (CPTSP) was last updated in 2001, and much of the information on this page is not applicable.<br>
+  <br>
+</div>
 
- 		<p>New ATN:</p>
-         <table>
-         	<tbody>
- 			<tr>
- 			<td>ADDITIONAL_GUIDELINE</td>
- 			<td>Additional explanatory text that is applicable to a concept (code/heading/subheading)</td>
- 			</tr>
- 			<tr>
- 			<td>CPTLINK_CONCEPT_ID</td>
- 			<td>CPT Link concept identifier (Previously CPTDTK_CONCEPT_ID) </td>
- 			</tr>
- 			<tr>
- 			<td>DAYS_RESTRICTION</td>
- 			<td>Days restriction</td>
- 			</tr>
- 			<tr>
- 			<td>DESCRIPTOR_ELEMENT</td>
- 			<td>Elements of a multi-paragraph descriptor, such as, E&amp;M, lab panels, and molecular pathology</td>
- 			</tr>
- 			<tr>
- 			<td>GLOBAL_PERIOD_CODE</td>
- 			<td>Global period code</td>
- 			</tr>
- 			<tr>
- 			<td>GUIDELINE</td>
- 			<td>Guideline</td>
- 			</tr>
- 			<tr>
- 			<td>OR_GROUP</td>
- 			<td>Indicates that relationships with the same CUI2 and RG are disjunctive expressions</td>
- 			</tr>
- 			<tr>
- 			<td>PLACE_OF_SERVICE_CODE</td>
- 			<td>Place of Service Code</td>
- 			</tr>
- 			<tr>
- 			<td>RVU_FACILITY_PRACTICE_EXPENSE</td>
- 			<td>RVU facility practice expense</td>
- 			</tr>
- 			<tr>
- 			<td>RVU_FACILITY_PRACTICE_EXPENSE_DISCONTINUED</td>
- 			<td>RVU facility practice expense discontinued</td>
- 			</tr>
- 			<tr>
- 			<td>RVU_FACILITY_PRACTICE_EXPENSE_PROFESSIONAL</td>
- 			<td>RVU facility practice expense professional</td>
- 			</tr>
- 			<tr>
- 			<td>RVU_FACILITY_PRACTICE_EXPENSE_TECHNICAL</td>
- 			<td>RVU facility practice expense technical</td>
- 			</tr>
- 			<tr>
- 			<td>RVU_MEDICARE_GLOBAL_PERIOD</td>
- 			<td>RVU Medicare global period</td>
- 			</tr>
- 			<tr>
- 			<td>RVU_MEDICARE_GLOBAL_PERIOD_DISCONTINUED</td>
- 			<td>RVU Medicare global period discontinued</td>
- 			</tr>
- 			<tr>
- 			<td>RVU_MEDICARE_GLOBAL_PERIOD_PROFESSIONAL</td>
- 			<td>RVU Medicare global period professional</td>
- 			</tr>
- 			<tr>
- 			<td>RVU_MEDICARE_GLOBAL_PERIOD_TECHNICAL</td>
- 			<td>RVU Medicare global period technical</td>
- 			</tr>
- 			<tr>
- 			<td>RVU_NONFACILITY_PRACTICE_EXPENSE</td>
- 			<td>RVU nonfacility practice expense</td>
- 			</tr>
- 			<tr>
- 			<td>RVU_NONFACILITY_PRACTICE_EXPENSE_DISCONTINUED</td>
- 			<td>RVU nonfacility practice expanse discontinued</td>
- 			</tr>
- 			<tr>
- 			<td>RVU_NONFACILITY_PRACTICE_EXPENSE_PROFESSIONAL</td>
- 			<td>RVU nonfacility practice expense professional</td>
- 			</tr>
- 			<tr>
- 			<td>RVU_NONFACILITY_PRACTICE_EXPENSE_TECHNICAL</td>
- 			<td>RVU nonfacility practice expense technical</td>
- 			</tr>
- 			<tr>
- 			<td>RVU_PLI</td>
- 			<td>RVU PLI</td>
- 			</tr>
- 			<tr>
- 			<td>RVU_PLI_DISCONTINUED</td>
- 			<td>RVU PLI discontinued</td>
- 			</tr>
- 			<tr>
- 			<td>RVU_PLI_PROFESSIONAL</td>
- 			<td>RVU PLI professional</td>
- 			</tr>
- 			<tr>
- 			<td>RVU_PLI_TECHNICAL</td>
- 			<td>RVU PLI technical</td>
- 			</tr>
- 			<tr>
- 			<td>RVU_TOTAL_FACILITY</td>
- 			<td>RVU total facility</td>
- 			</tr>
- 			<tr>
- 			<td>RVU_TOTAL_FACILITY_DISCONTINUED</td>
- 			<td>RVU total facility discontinued</td>
- 			</tr>
- 			<tr>
- 			<td>RVU_TOTAL_FACILITY_PROFESSIONAL</td>
- 			<td>RVU total facility professional</td>
- 			</tr>
- 			<tr>
- 			<td>RVU_TOTAL_FACILITY_TECHNICAL</td>
- 			<td>RVU total facility technical</td>
- 			</tr>
- 			<tr>
- 			<td>RVU_TOTAL_NONFACILITY</td>
- 			<td>RVU total nonfacility</td>
- 			</tr>
- 			<tr>
- 			<td>RVU_TOTAL_NONFACILITY_DISCONTINUED</td>
- 			<td>RVU total nonfacility discontinued</td>
- 			</tr>
- 			<tr>
- 			<td>RVU_TOTAL_NONFACILITY_PROFESSIONAL</td>
- 			<td>RVU total nonfacility professional</td>
- 			</tr>
- 			<tr>
- 			<td>RVU_TOTAL_NONFACILITY_TECHNICAL</td>
- 			<td>RVU total nonfacility technical</td>
- 			</tr>
- 			<tr>
- 			<td>RVU_WORK</td>
- 			<td>RVU work</td>
- 			</tr>
- 			<tr>
- 			<td>RVU_WORK_DISCONTINUED</td>
- 			<td>RVU work discontinued</td>
- 			</tr>
- 			<tr>
- 			<td>RVU_WORK_PROFESSIONAL</td>
- 			<td>RVU work professional</td>
- 			</tr>
- 			<tr>
- 			<td>RVU_WORK_TECHNICAL</td>
- 			<td>RVU work technical</td>
- 			</tr>
- 			<tr>
- 			<td>TELEMEDICINE</td>
- 			<td>Telemedicine</td>
- 			</tr>
- 			</tbody>
- 			</table>
+<div id="rep_change_summary" class="rep_block_level_one">
+  <a id="change_summary" name="change_summary"></a>
 
- 	<p>New REL/RELA </p>
- 	<table>
- 	<tbody>
- 		<tr><td>add_on_code_for/has_add_on_code</td></tr>
- 		<tr><td>associated_procedure_of/has_associated_procedure</td></tr>
- 		<tr><td>associated_procedure_of_excluded/has_excluded_associated_procedure</td></tr>
- 		<tr><td>associated_procedure_of_possibly_included/has_possibly_included_associated_procedure</td></tr>
- 		<tr><td>do_not_code_with/do_not_code_with</td></tr>
- 		<tr><td>has_approach/approach_of</td></tr>
- 		<tr><td>has_associated_finding/associated_finding_of</td></tr>
- 		<tr><td>has_component/component_of</td></tr>
- 		<tr><td>has_excluded_approach/approach_of_excluded</td></tr>
- 		<tr><td>has_excluded_associated_finding/associated_finding_of_excluded</td></tr>
- 		<tr><td>has_excluded_component/component_of_excluded</td></tr>
- 		<tr><td>has_excluded_locale/locale_of_excluded</td></tr>
- 		<tr><td>has_excluded_method/method_of_excluded</td></tr>
- 		<tr><td>has_excluded_pathology/pathology_of_excluded</td></tr>
- 		<tr><td>has_excluded_patient_type/patient_type_of_excluded</td></tr>
- 		<tr><td>has_excluded_procedure_device/procedure_device_of_excluded</td></tr>
- 		<tr><td>has_excluded_procedure_site/procedure_site_of_excluded</td></tr>
- 		<tr><td>has_excluded_route_of_administration/route_of_administration_of_excluded</td></tr>
- 		<tr><td>has_excluded_specimen/specimen_of_excluded</td></tr>
- 		<tr><td>has_excluded_surgical_extent/surgical_extent_of_excluded</td></tr>
- 		<tr><td>has_locale/locale_of</td></tr>
- 		<tr><td>has_method/method_of</td></tr>
- 		<tr><td>has_pathology/pathology_of</td></tr>
- 		<tr><td>has_patient_type/patient_type_of</td></tr>
- 		<tr><td>has_possibly_included_approach/approach_of_possibly_included</td></tr>
- 		<tr><td>has_possibly_included_associated_finding/associated_finding_of_possibly_included</td></tr>
- 		<tr><td>has_possibly_included_component/component_of_possibly_included</td></tr>
- 		<tr><td>has_possibly_included_method/method_of_possibly_included</td></tr>
- 		<tr><td>has_possibly_included_pathology/pathology_of_possibly_included</td></tr>
- 		<tr><td>has_possibly_included_patient_type/patient_type_of_possibly_included</td></tr>
- 		<tr><td>has_possibly_included_procedure_device/procedure_device_of_possibly_included</td></tr>
- 		<tr><td>has_possibly_included_procedure_site/procedure_site_of_possibly_included</td></tr>
- 		<tr><td>has_possibly_included_route_of_administration/route_of_administration_of_possibly_included</td></tr>
- 		<tr><td>has_possibly_included_surgical_extent/surgical_extent_of_possibly_included</td></tr>
- 		<tr><td>has_procedure_device/procedure_device_of</td></tr>
- 		<tr><td>has_procedure_site/procedure_site_of</td></tr>
- 		<tr><td>has_route_of_administration/route_of_administration_of</td></tr>
- 		<tr><td>has_specimen/specimen_of</td></tr>
- 		<tr><td>has_surgical_extent/surgical_extent_of</td></tr>
- 		<tr><td>panel_element_of/has_panel_element</td></tr>
- 		<tr><td>panel_element_of_possibly_included/has_possibly_included_panel_element</td></tr>
- 		<tr><td>uses_excluded_substance/substance_used_by_excluded</td></tr>
- 		<tr><td>uses_possibly_included_substance/substance_used_by_possibly_included</td></tr>
- 		<tr><td>uses_substance/substance_used_by</td></tr>
- 	</tbody>
- 	</table>
+  <h3>Summary of Changes</h3>
 
- <p>Deprecated ATN:</p>
-         <table>
-         <tbody>
-         <tr><td>CPTDTK_CONCEPT_ID (previously CPTLINK_CONCEPT_ID)</td></tr>
- 		<tr><td>MODERATE_CONSCIOUS_SEDATION (no instances in data)</td></tr>
- 		</tbody>
- 		</table>
+  <p>"CPT DTK" is now referred to as "CPT Link." No changes were made to the basic data format, however there are several changes and additions, including:</p>
 
-      <br/>
-    </div>
-    <div id="rep_file_summary" class="rep_block_level_one"> <a id="file_summary"></a>
-      <h3>Source-Provided Files: Summary</h3>
-        (<span class="nav"><a href="#top-of-page">return to top</a></span>)
-      The complete English language CPT distribution includes the
-      following:<br/>
-      <div class="rep_block_level_two">
-        <!-- Make a table of each file that comes from the source   -->
-        <h4>Documentation and Reference</h4>
-        <table>
-          <tbody>
-            <tr>
-              <th>File Name</th>
-              <th>Description</th>
-            </tr>
-            <tr>
-              <td>2017 Consumer Friendly Descriptors README.docx</td>
-              <td>User guide for Consumer Descriptor data</td>
-            </tr>
-            <tr>
-              <td>2017 Clinician Descriptors README.docx</td>
-              <td>User guide for Clinician Descriptor data</td>
-            </tr>
-            <tr>
-              <td>2017_CPT_Link_ReadMe_20160901.pdf</td>
-              <td>User guide for main data files</td>
-            </tr>
-            <tr>
-              <td>2017_CPT_Sourced_Code_Edits.docx</td>
-              <td>User guide for Code Edits file</td>
-            </tr>
-          </tbody>
-          </table>
-        <br/>
-        <h4>Data Files</h4>
-        <a id="data_files"></a>
-          <table>
-            <tbody>
-              <tr>
-                <th>File Name</th>
-                <th>Description</th>
-              </tr>
-              <tr>
-                <td>ClinicianDescriptor_DTK_pipe.txt</td>
-                <td>Clinician Descriptors</td>
-              </tr>
-              <tr>
-                <td>ConsumerDescriptor_DTK_pipe.txt</td>
-                <td>Consumer-friendly Descriptors</td>
-              </tr>
-              <tr>
-                <td>Property_DTK_pipe.txt</td>
-                <td> In the Property File, a concept is represented by a
-                  set of lines that all have the same Concept ID. Some of
-                  the concepts in the Property File correspond to
-                  reportable CPT codes, some were constructed by the AMA
-                  for CPT Link, and some were drawn from SNOMED CT.
-                  CT.</td>
-              </tr>
-              <tr>
-                <td>RelationshipGroup_DTK_pipe.txt</td>
-                <td>In the Relationship File, relationships between two
-                  concepts are represented.</td>
-              </tr>
-              <tr>
-                <td>Type_DTK_pipe.txt</td>
-                <td> The Type File provides a succinct representation of
-                  the types of information contained in the Property File
-                  and the Relationship File. The PROPERTY TYPE ID column
-                  from the Property File and RELATIONSHIP TYPE ID column
-                  from the Relationship File both correspond to the TYPE
-                  ID number from the Type File. Thus, the Type File
-                  enables a user to see at a glance all of the
-                  categories of relationship types used in CPT Link</td>
-              </tr>
-  			<tr>
-  			    <td>Days.txt</td>
-  			    <td>Edits sourced from CPT instructions such as "Report 93228 only once per 30 days"</td>
-  			</tr>
-  			<tr>
-  			    <td>Exclude.txt</td>
-  			    <td>Edits sourced from CPT instructions such as "Do not report 00326 in conjunction with 99100"</td>
-  			</tr>
-  			<tr>
-  			    <td>ReportWith.txt</td>
-  			    <td>Edits sourced from CPT instructions such as "Use 44139 in conjunction with 44140-44147"</td>
-  			</tr>
+  <ul>
+    <li>Many new property types</li>
 
-            </tbody>
-        </table>
-        <br/>
-        <br/>
-      </div>
-    </div>
-    <div id="rep_file_details" class="rep_block_level_one"> <a id="file_details"></a>
-      <h3>Source-Provided Files: Details</h3>
-        (<span class="nav"><a href="#top-of-page">return to top</a></span>)
-      Details on format of input files and representation of source
-      data. Consult the CPT documentation for additional details.<br/>
-      <div class="rep_block_level_two"> <a id="file1"></a>
-        <h4 class="file_field_name">file:  Type_DTK_pipe.txt<br/>
-        </h4>
-          <span class="nav">return to <a href="#data_files">Data
-            Files</a></span> <br/>
-        <br/>
-        <table>
-          <tbody>
-            <tr>
-              <th>Field Name</th>
-              <th>Description</th>
-            </tr>
-            <tr>
-              <td class="file_field_name">Type Id</td>
-              <td>This field corresponds to the Property Type Id in the
-                properties file or the Relationship Type Id in the
-                relationships file</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">Category</td>
-              <td>Value of "Property," "Relationship" or "Qualifier"
-                indicate the nature of the Type</td>
-            </tr>
-            <tr>
-              <td >Type Name</td>
-              <td >Type description</td>
-            </tr>
-          </tbody>
-        </table>
-        <br/>
-        <a id="file2"></a>
-        <h4 class="file_field_name">file:  Property_DTK_pipe.txt<br/>
-        </h4>
-          <p><span class="nav">return to <a href="#data_files">Data
-          Files</a></span> </p>
-          <p>This file consists of 3 delimited fields:</p>
-        <ul>
-       	<li>Concept ID</li>
-        <li>Property Type ID</li>
-        <li>Property Value</li>
-        </ul>
-        <p>
-        The "Property Type ID" value determines how each row is
-        represented in the Metathesaurus:</p>
-        <table>
-          <tbody>
-            <tr>
-              <th>Property Type ID</th>
-              <th>Element Name</th>
-              <th>Description</th>
-              <th>Representation</th>
-            </tr>
-            <tr>
-              <td>100</td>
-              <td>Guideline</td>
-              <td>Explanatory text attached to a concept (code/heading/subheading).</td>
-              <td>MRSAT.ATN = GUIDELINE</td>
-            </tr>
-            <tr>
-              <td>101</td>
-              <td >First_Appearance</td>
-              <td> The year the code was first introduced to CPT.</td>
-              <td>MRSAT.ATN = DATE_CREATED</td>
-            </tr>
-            <tr>
-              <td >102</td>
-              <td >Addon_Code</td>
-              <td>Add-on code, i.e. it is commonly
-                  carried out in addition to the primary procedure
-                  performed.</td>
-              <td > MRSAT.ATN = ADDON_CODE </td>
-            </tr>
-            <tr>
-              <td>103</td>
-              <td >Reportable</td>
-              <td > T for CPT codes that can be used for the
-                reporting of services. F for headings/subheadings and
-                guidelines.</td>
-              <td >MRSAT.ATN = REPORTABLE</td>
-            </tr>
-            <tr>
-              <td>104</td>
-              <td>CPT_Code</td>
-              <td>The 5-character CPT Code</td>
-              <td> MRCONSO.CODE, MRCONSO.SCUI </td>
-            </tr>
-            <tr>
-              <td>106</td>
-              <td>Descriptor</td>
-              <td>Full description of the concept (e.g.,
-                the CPT code's long descriptor, as listed in the CPT
-                book). </td>
-              <td>
-                <p>MRCONSO.STR<br/>
-                  TTY=PT (preferred term) or HT (hierarchical term)<br/>
-                  <br/>
-                  For TTY = PT, the CODE and SCUI are the 5-character
-                  CPT code (Property Type ID = 104)<br/>
-                  <br/>
-                  For TTY = HT, POS, GLP, the CODE and SCUI are the CPTLINK_CONCEPT_ID<br/>
-                  For TTY = MP, the CODE and SCUI are the Modifier Code
-                  (Property Type ID = 129)<br/>
-                  <br/>
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td>107</td>
-              <td>Exempt_Mod</td>
-              <td>Contains 51 or 63 for codes where
-                Modifier 51 or 63 Exempt </td>
-              <td >MRSAT.ATN = EXEMPT_MOD</td>
-            </tr>
-            <tr>
-              <td>108</td>
-              <td>FDA_Approval_Pending</td>
-              <td> T for codes marked with the FDA approval
-                pending symbol </td>
-              <td>MRSAT.ATN = FDA_APPROVAL_PENDING</td>
-            </tr>
-            <tr>
-              <td>109</td>
-              <td>Level</td>
-              <td>For headings, a value ranging from H1 (a
-                top-level heading such as "Surgery" to H6 (a 6<sup>th</sup>-level
+    <li>The UMLS received permission to release concepts treed under "Guidelines," as well as relationships between CPT and SNOMEDCT_US.</li>
 
-                subheading) and HS (a heading for a small family of
-                related codes). For CPT codes, either PC for Parent Code
-                or CC for Child Code.</td>
-              <td>MRSAT.ATN = CPT_LEVEL<br/>
-                Note:  This information is also implicit in the
-                hierarchy representation.</td>
-            </tr>
-            <tr>
-              <td>110</td>
-              <td>Medium_Descriptor<br/>
-              </td>
-              <td >Descriptor limited to 48 characters</td>
-              <td>MRCONSO.STR;  TTY = AB</td>
-            </tr>
-            <tr>
-              <td>111</td>
-              <td>Short_Descriptor</td>
-              <td>Descriptor limited to 28 characters</td>
-              <td>MRCONSO.STR;  TTY = AB</td>
-            </tr>
-            <tr>
-              <td>112</td>
-              <td>SNOMED_CT_Fully_Specified_Name</td>
-              <td> A unique and unambiguous concept name
-                used to identify a SNOMED CT concept and clarify its
-                meaning </td>
-              <td>Not included in the UMLS Metathesaurus.  SNOMED Codes and strings are
-                  already present.</td>
-            </tr>
-            <tr>
-              <td>113</td>
-              <td>SNOMED_CT_CODE_(SCTID)</td>
-              <td> Non-semantic identifier from the SNOMEDCT terminology</td>
-              <td>Not included in the UMLS
-                Metathesaurus.  SNOMED Codes and strings are
-                already present.</td>
-            </tr>
-            <tr>
-              <td>120</td>
-              <td>Last_Revised</td>
-              <td> The year the CPT code was last revised.</td>
-              <td>MRSAT.ATN = DATE_LAST_MODIFIED</td>
-            </tr>
-            <tr>
-              <td>121</td>
-              <td>Descriptor_Extension</td>
-              <td> Extension of full description of the
-                concept (e.g., the CPT code's long descriptor, as
-                listed in the CPT book). </td>
-              <td>MRSAT.ATN = DESCRIPTOR_EXTENSION</td>
-            </tr>
-            <tr>
-              <td>122</td>
-              <td >Additional_Guideline</td>
-              <td> Additional explanatory text that is
-                applicable to a concept
-                (code/heading/subheading). Note: not all of the
-                additional guidelines appear with the heading or code in
-                the published CPT code book. </td>
-              <td>MRSAT.ATN = ADDITIONAL_GUIDELINE</td>
-             <tr>
-              <td>127</td>
-              <td>Measure_Developer</td>
-              <td> Name of the measure developer associated
-                with the Category II code </td>
-              <td>MRSAT.ATN = MEASURE_DEVELOPER</td>
-            </tr>
-            <tr>
-              <td>128</td>
-              <td>Descriptor_Element</td>
-              <td> The elements of a multi-paragraph
-                descriptor, such as lab panels, and molecular
-                pathology </td>
-              <td>MRSAT.ATN = CPF(Full form of descriptor) </td>
-            </tr>
-            <tr>
-              <td>129</td>
-              <td>Modifier_Code</td>
-              <td>The two-character modifier code</td>
-              <td>MRCONSO.TTY = CODE, SCUI where
-                MRCONSO.TTY = "MP"</td>
-            </tr>
-            <tr>
-			  <td>130</td>
-			  <td>Place_of_Service_Code</td>
-			  <td>Place of Service descriptor</td>
-			  <td>MRSAT.ATN = PLACE_OF_SERVICE_CODE</td>
-            </tr>
-            <tr>
-              <td>132</td>
-              <td>Citation</td>
-              <td>Reference to CPT Assistant Newsletter articles; CPT Changes: An Insider's View; Clinical Examples in Radiology
-                </td>
-              <td>MRSAT.ATN = CITATION</td>
-            </tr>
-            <tr>
-              <td>133</td>
-              <td>Coding_Tip</td>
-              <td>Coding Tip text</td>
-              <td>MRSAT.ATN = CODING_TIP</td>
-            </tr>
-            <tr>
-              <td>134</td>
-              <td>Proprietary_Name</td>
-              <td>
-                Proprietary name for
-                  multianalyte assays with algorithmic
-                  analyses contained in Appendix O from the CPT codebook
-                </td>
-              <td>MRSAT.ATN = PROPRIETARY_NAME</td>
-            </tr>
-            <tr>
-			  <td>138</td>
-			  <td>RVU_Work</td>
-			  <td>RVU Work</td>
-			  <td>MRSAT.ATN = RVU_WORK</td>
-			</tr>
-			<tr>
-			  <td>139</td>
-			  <td>RVU_Facility_Practice_Expense</td>
-			  <td>RVU Facility Practice Expense</td>
-			  <td>MRSAT.ATN = RVU_FACILITY_PRACTICE_EXPENSE</td>
-			</tr>
-			<tr>
-			  <td>140</td>
-			  <td>RVU_Nonfacility_Practice_Expense</td>
-			  <td>RVU Nonfacility Practice Expense</td>
-			  <td>MRSAT.ATN = RVU_NONFACILITY_PRACTICE_EXPENSE</td>
-			  </tr>
-			<tr>
-			  <td>141</td>
-			  <td>RVU_PLI</td>
-			  <td>RVU PLI</td>
-			  <td>MRSAT.ATN = RVU_PLI</td>
-			</tr>
-			<tr>
-			  <td>142</td>
-			  <td>RVU_Total_Facility</td>
-			  <td>RVU Total Facility</td>
-			  <td>MRSAT.ATN = RVU_TOTAL_FACILITY</td>
-			</tr>
-			<tr>
-			  <td>143</td>
-			  <td>RVU_Total_Nonfacility</td>
-			  <td>RVU Total Nonfacility</td>
-			  <td>MRSAT.ATN = RVU_TOTAL_NONFACILITY</td>
-			</tr>
-			<tr>
-			  <td>144</td>
-			  <td>RVU_Medicare_Global_Period</td>
-			  <td>RVU Medicare Global Period</td>
-			  <td>MRSAT.ATN = RVU_MEDICARE_GLOBAL_PERIOD</td>
-			</tr>
-			<tr>
-			  <td>145</td>
-			  <td>RVU_Work_Professional</td>
-			  <td>Professional component</td>
-			  <td>MRSAT.ATN = RVU_WORK_PROFESSIONAL</td>
-			</tr>
-			<tr>
-			  <td>146</td>
-			  <td>RVU_Facility_Practice_Expense_Professional</td>
-			  <td>Professional component</td>
-			  <td>MRSAT.ATN = RVU_FACILITY_PRACTICE_EXPENSE_PROFESSIONAL</td>
-			</tr>
-			<tr>
-			  <td>147</td>
-			  <td>RVU_Nonfacility_Practice_Expense_Professional</td>
-			  <td>Professional component</td>
-			  <td>MRSAT.ATN = RVU_NONFACILITY_PRACTICE_EXPENSE_PROFESSIONAL</td>
-			</tr>
-			<tr>
-			  <td>148</td>
-			  <td>RVU_PLI_Professional</td>
-			  <td>Professional component</td>
-			  <td>MRSAT.ATN = RVU_PLI_PROFESSIONAL</td>
-			</tr>
-			<tr>
-			  <td>149</td>
-			  <td>RVU_Total_Facility_Professional</td>
-			  <td>Professional component</td>
-			  <td>MRSAT.ATN = RVU_TOTAL_FACILITY_PROFESSIONAL</td>
-			</tr>
-			<tr>
-			  <td>150</td>
-			  <td>RVU_Total_Nonfacility_Professional</td>
-			  <td>Professional component</td>
-			  <td>MRSAT.ATN = RVU_TOTAL_NONFACILITY_PROFESSIONAL</td>
-			</tr>
-			<tr>
-			  <td>151</td>
-			  <td>RVU_Medicare_Global_Period_Professional</td>
-			  <td>Professional component</td>
-			  <td>MRSAT.ATN = RVU_MEDICARE_GLOBAL_PERIOD_PROFESSIONAL</td>
-			</tr>
-			<tr>
-			  <td>152</td>
-			  <td>RVU_Work_Technical</td>
-			  <td>Technical component</td>
-			  <td>MRSAT.ATN = RVU_WORK_TECHNICAL</td>
-			</tr>
-			<tr>
-			  <td>153</td>
-			  <td>RVU_Facility_Practice_Expense_Technical</td>
-			  <td>Technical component</td>
-			  <td>MRSAT.ATN = RVU_FACILITY_PRACTICE_EXPENSE_TECHNICAL</td>
-			</tr>
-			<tr>
-			  <td>154</td>
-			  <td>RVU_Nonfacility_Practice_Expense_Technical</td>
-			  <td>Technical component</td>
-			  <td>MRSAT.ATN = RVU_NONFACILITY_PRACTICE_EXPENSE_TECHNICAL</td>
-			</tr>
-			<tr>
-			  <td>155</td>
-			  <td>RVU_PLI_Technical</td>
-			  <td>Technical component</td>
-			  <td>MRSAT.ATN = RVU_PLI_TECHNICAL</td>
-			</tr>
-			<tr>
-			  <td>156</td>
-			  <td>RVU_Total_Facility_Technical</td>
-			  <td>Technical component</td>
-			  <td>MRSAT.ATN = RVU_TOTAL_FACILITY_TECHNICAL</td>
-			</tr>
-			<tr>
-			  <td>157</td>
-			  <td>RVU_Total_Nonfacility_Technical</td>
-			  <td>Technical component</td>
-			  <td>MRSAT.ATN = RVU_TOTAL_NONFACILITY_TECHNICAL</td>
-			</tr>
-			<tr>
-			  <td>158</td>
-			  <td>RVU_Medicare_Global_Period_Technical</td>
-			  <td>Technical component</td>
-			  <td>MRSAT.ATN = RVU_MEDICARE_GLOBAL_PERIOD_TECHNICAL</td>
-			</tr>
-			<tr>
-			  <td>159</td>
-			  <td>RVU_Work_Discontinued</td>
-			  <td>Discontinued</td>
-			  <td>MRSAT.ATN = RVU_WORK_DISCONTINUED</td>
-			</tr>
-			<tr>
-			  <td>160</td>
-			  <td>RVU_Facility_Practice_Expense_Discontinued</td>
-			  <td>Discontinued</td>
-			  <td>MRSAT.ATN = RVU_FACILITY_PRACTICE_EXPENSE_DISCONTINUED</td>
-			</tr>
-			<tr>
-			  <td>161</td>
-			  <td>RVU_Nonfacility_Practice_Expense_Discontinued</td>
-			  <td>Discontinued</td>
-			  <td>MRSAT.ATN = RVU_NONFACILITY_PRACTICE_EXPENSE_DISCONTINUED</td>
-			</tr>
-			<tr>
-			  <td>162</td>
-			  <td>RVU_PLI_Discontinued</td>
-			  <td>Discontinued</td>
-			  <td>MRSAT.ATN = RVU_PLI_DISCONTINUED</td>
-			</tr>
-			<tr>
-			  <td>163</td>
-			  <td>RVU_Total_Facility_Discontinued</td>
-			  <td>Discontinued</td>
-			  <td>MRSAT.ATN = RVU_TOTAL_FACILITY_DISCONTINUED</td>
-			</tr>
-			<tr>
-			  <td>164</td>
-			  <td>RVU_Total_Nonfacility_Discontinued</td>
-			  <td>Discontinued</td>
-			  <td>MRSAT.ATN = RVU_TOTAL_NONFACILITY_DISCONTINUED</td>
-			</tr>
-			<tr>
-			  <td>165</td>
-			  <td>RVU_Medicare_Global_Period_Discontinued</td>
-			  <td>Discontinued</td>
-			  <td>MRSAT.ATN = RVU_MEDICARE_GLOBAL_PERIOD</td>
-			</tr>
-			<tr>
-			  <td>166</td>
-			  <td>Global_Period_Code</td>
-			  <td>Code for global period in RVU Medicare Global Period property</td>
-			  <td>MRSAT.ATN = GLP</td>
-			</tr>
-			<tr>
-			  <td>167</td>
-			  <td>Telemedicine</td>
-			  <td>T for codes marked with the telemedicine symbol.</td>
-			  <td>MRSAT.ATN = TELEMEDICINE</td>
-			</tr>
-          </tbody>
-        </table>
-        <br/>
-        <a id="file3"></a>
-        <h4 class="file_field_name">file:
-          RelationshipGroup_DTK_pipe.txt</h4>
-          <p><span class="nav">return to <a href="#data_files">Data
-          Files</a></span> </p>
-          <p>This file consists of 5 delimited fields:</p>
-       <ul>
-       <li>Concept ID1</li>
-       <li>Relationship Type ID</li>
-       <li>Concept ID2</li>
-       <li>Relationship Qualifier Type ID</li>
-       <li>Relationship Qualifier Value</li>
-       <li>Role Group</li>
-       <li>Or Group</li>
-       </ul>
-       <p>The "Relationship Type ID" value determines how the relationship between Concept ID1 and Concept ID2 is
-        represented in the Metathesaurus.  Additional RELAs are created
-        where "Relationship Qualifier Value" is non-null (values are "EXCLUDED" or "POSSIBLY INCLUDED"</p>
-        <table>
-          <tbody>
-            <tr>
-              <th>Relationship Type ID</th>
-              <th>Description</th>
-              <th>Representation</th>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Is_A</td>
-              <td>Used to create hierarchy.  Distributed in
-                MRHIER.RRF, MRREL.RRF</td>
-            </tr>
-            <tr>
-              <td>200</td>
-              <td>Anatomic_Site</td>
-              <td>MRREL.RRF<br/>
-              REL = RO<br/>
-              RELA = procedure_site_of/has_procedure_site<br/>
-              procedure_site_of_excluded/has_excluded_procedure_site<br/>
-              procedure_site_of_possibly_included/has_possibly_included_procedure_site
-              </td>
-            </tr>
-            <tr>
-              <td>201</td>
-              <td>Component</td>
-			  <td>MRREL.RRF<br/>
-              REL = RO<br/>
-              RELA = component_of/has_component<br/>
-              component_of_excluded/has_excluded_component<br/>
-              component_of_possibly_included/has_possibly_included_component
-              </td>
-            </tr>
-            <tr>
-              <td>202</td>
-              <td>Device</td>
-              <td>MRREL.RRF<br/>
-              REL = RO<br/>
-              RELA = procedure_device_of/has_procedure_device<br/>
-              procedure_device_of_excluded/has_excluded_procedure_device<br/>
-              procedure_device_of_possibly_included<br/>has_possibly_included_procedure_device
-              </td>
-            </tr>
-            <tr>
-              <td>203</td>
-              <td>Associated_Procedure</td>
-              <td>MRREL.RRF<br/>
-              REL = RO<br/>
-              RELA = has_associated_procedure/associated_procedure_of<br/>
-              has_excluded_associated_procedure/associated_procedure_of_excluded<br/>
-              has_possibly_included_associated_procedure/associated_procedure_of_possibly_included
-              </td>
-            </tr>
-            <tr>
-              <td>204</td>
-              <td>Method</td>
-              <td>MRREL.RRF<br/>
-                REL = RO<br/>
-                RELA = method_of/has_method<br/>
-                method_of_excluded/has_excluded_method<br/>
-                method_of_possibly_included/has_possibly_included_method
-           	  </td>
-            </tr>
-            <tr>
-              <td>205</td>
-              <td>Specimen</td>
-			  <td>MRREL.RRF<br/>
-			  REL = RO<br/>
-              RELA = specimen_of/has_specimen<br/>
-              specimen_of_excluded/has_excluded_specimen
-              </td>
-            </tr>
-            <tr>
-              <td>206</td>
-              <td>Substance</td>
-              <td>MRREL.RRF<br/>
-			  REL = RO<br/>
-              RELA = substance_used_by/uses_substance<br/>
-              substance_used_by_excluded/uses_excluded_substance<br/>
-              substance_used_by_possibly_included/uses_possibly_included_substance
-              </td>
-            </tr>
-			<tr>
-			  <td>207</td>
-			  <td>Has_Panel_Element</td>
-			  <td>MRREL.RRF<br/>
-			  REL = RO<br/>
-			  RELA = has_panel_element/panel_element_of, panel_element_of_possibly_included/has_possibly_included_panel_element
-			  </td>
-            </tr>
-            <tr>
-              <td>208</td>
-              <td>Surgical_Extent</td>
-			  <td>MRREL.RRF<br/>
-			  REL = RO<br/>
-              RELA = surgical_extent_of/has_surgical_extent<br/>
-              surgical_extent_of_excluded/has_excluded_surgical_extent<br/>
-              surgical_extent_of_possibly_included/has_possibly_included_surgical_extent
-              </td>
-            </tr>
-            <tr>
-              <td>210</td>
-              <td>Patient_Type</td>
-              <td>MRREL.RRF<br/>
-  			  REL = RO<br/>
-              RELA = patient_type_of/has_patient_type<br/>
-              patient_type_of_excluded/has_excluded_patient_type<br/>
-              patient_type_of_possibly_included/has_possibly_included_patient_type
-              </td>
-            </tr>
-            <tr>
-              <td>211</td>
-              <td>Pathology</td>
-              <td>MRREL.RRF<br/>
-			  REL = RO<br/>
-			  RELA = pathology_of/has_pathology<br/>
-			  pathology_of_excluded/has_excluded_pathology<br/>
-			  pathology_of_possibly_included/has_possibly_included_pathology
-              </td>
-            </tr>
-            <tr>
-              <td>212</td>
-              <td>Complexity</td>
-              <td>MRREL.RRF<br/>
-     		  REL = RO<br/>
-              RELA = complexity_of/has_complexity<br/>
-              complexity_of_excluded/has_excluded_complexity
-              </td>
-            </tr>
-            <tr>
-              <td>213</td>
-              <td>Approach</td>
-              <td>MRREL.RRF<br/>
-			  REL = RO<br/>
-			  RELA = approach_of/has_approach<br/>
-			  approach_of_excluded/has_excluded_approach<br/>
-			  approach_of_possibly_included/has_possibly_included_approach
-              </td>
-            </tr>
-            <tr>
-              <td>214</td>
-              <td>Locale</td>
-              <td>MRREL.RRF<br/>
-			  REL = RO<br/>
-			  RELA = locale_of/has_locale<br/>
-			  locale_of_excluded/has_excluded_locale
-              </td>
-            </tr>
-            <tr>
-              <td>215</td>
-              <td>Associated_Finding</td>
-              <td>MRREL.RRF<br/>
-			  REL = RO<br/>
-			  RELA = associated_finding_of/has_associated_finding<br/>
-			  associated_finding_of_excluded/has_excluded_associated_finding<br/>
-			  associated_finding_of_possibly_included/has_possibly_included_associated_finding
-              </td>
-            </tr>
-			<tr>
-			  <td>216</td>
-			  <td>Route_of_Administration</td>
-			  <td>MRREL.RRF<br/>
-			  REL = RO<br/>
-			  RELA = route_of_administration_of/has_route_of_administration<br/>
-			  route_of_administration_of_excluded/has_excluded_route_of_administration<br/>
-			  route_of_administration_of_possibly_included/has_possibly_included_route_of_administration
-			</td>
-            </tr>
-        </tbody>
-        </table>
-        <p>Relationship Qualifier ID/Value: used to assign the RELA.  Values are "EXCLUDED" and "POSSIBLY INCLUDED."</p>
-        <p>Role Group: MRREL.RG.  Used to indicate that a set of relationships should be looked at in conjunction.</p>
-        <p>Or Group:  MRSAT.ATN = OR_GROUP. Indicates that relationships with the same CUI2 and RG are disjunctive expressions (SGTYPE = RUI)</p>
+    <li>The UMLS now processes the "Relationship Groups" file. The RG field in MRREL.RRF will now be populated for CPT, indicating a set of relationships should be looked at in conjunction. In addition, the CPT data file includes "Or groups," indicating disjunctive expressions.</li>
 
-        <a id="file5"></a><br/>
-        <br/>
-        <h4 class="file_field_name">file:
-          ClinicianDescriptor_DTK_pipe.txt<br/>
-        </h4>
-          <br/>
-        <br/>
-        <table>
-          <tbody>
-            <tr>
-              <th>Field Name</th>
-              <th>Description</th>
-              <th>Representation</th>
-            </tr>
-            <tr>
-              <td>ConceptID</td>
-              <td>CPT Link Concept ID</td>
-              <td>MRSAT.ATN = CPTLINK_CONCEPT_ID</td>
-            </tr>
-            <tr>
-              <td>Property Type ID</td>
-              <td>MRCONSO.TTY = ETCLIN</td>
-              <td>MRCONSO.TTY = ETCLIN</td>
-            </tr>
-            <tr>
-              <td>Property Value</td>
-              <td>Clincian Descriptor</td>
-              <td>MRCONSO.STR</td>
-            </tr>
-          </tbody>
-        </table>
-        <br/>
-        <br/>
-        <h4 class="file_field_name">file:
-          ConsumerDescriptor_DTK_pipe.txt<br/>
-        </h4>
-          <span class="nav">return to <a href="#data_files">Data Files</a></span><br/>
-        <br/>
-        <table>
-          <tbody>
-            <tr>
-              <th>Field Name</th>
-              <th>Description</th>
-              <th>Representation</th>
-            </tr>
-            <tr>
-              <td class="file_field_name">Concept ID</td>
-              <td>CPT Link Concept ID</td>
-              <td>MRSAT.ATN = CPTLINK_CONCEPT_ID</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">Property Type ID</td>
-              <td>All rows in this file have value 123, "Consumer
-                Friendly Descriptor"</td>
-              <td>MRCONSO.TTY = ETCF</td>
-            </tr>
-            <tr>
-              <td>Property Value</td>
-              <td>Consumer Friendly Descriptor</td>
-              <td>MRCONSO.STR</td>
-            </tr>
-          </tbody>
-        </table>
-        <br/>
-	   <h4>file: Days.txt<br/>
-		</h4>
-		  <span class="nav">return to <a href="#data_files">Data Files</a></span><br/>
-		<br/>
-		<table>
-		  <tbody>
-			<tr>
-			  <th>Field Name</th>
-			  <th>Description</th>
-			  <th>Representation</th>
-			</tr>
-			<tr>
-			  <td>Code 1</td>
-			  <td>CPT Code 1</td>
-			  <td>SCUI for MRSAT.ATN = DAYS_RESTRICTION; Also represented in the ATV if Code 1 is different from Code 2</td>
-			</tr>
-			<tr>
-			  <td>Descriptor 1</td>
-			  <td>CPT Descriptor 1</td>
-			  <td>N/A</td>
-			</tr>
-			<tr>
-			  <td>Code 2</td>
-			  <td>CPT Code 2</td>
-			  <td>SCUI for MRSAT.ATN = DAYS_RESTRICTION if Code 1 is different from Code 2; Also represented in the ATV
-			  if Code 1 equals Code 2</td>
-			</tr>
-			<tr>
-			  <td>Descriptor 2</td>
-			  <td>CPT Descriptor 2</td>
-			  <td>N/A</td>
-			</tr>
-			<tr>
-			  <td>Days</td>
-			  <td>Integer specifying time period in days.If Code 1 = Code 2, the code can be reported only once per &lt;Days&gt;.
-			  Some instructions restrict the use of two codes within a certain number of days.</td>
-			  <td>MRSAT.ATN = "DAYS_RESTRICTION"<br/>
-			  Format of the ATV is:  &lt;Code 2&gt; @ &lt;Days&gt;<br/>
-			  When Code 1 is different from Code 2, the attribute is also "flipped," i.e. the SCUI of Code 2 has a "DAYS_RESTRCTION"
-			  attribute with ATV = &lt;Code 1&gt; @ &lt;Days&gt;</td>
-			</tr>
-		  </tbody>
-		</table>
-        <br/>
-	   <h4>file: Exclude.txt<br/>
-		</h4>
-		  <span class="nav">return to <a href="#data_files">Data Files</a></span><br/>
-		<br/>
-		<p>Listing of edits that are sourced from CPT instructions, such as "Do not report 00326 in conjunction with 99100".
-		Relationships are symmetrical (there is no meaning to the order of codes in the code pair).</p>
-		<table>
-		  <tbody>
-			<tr>
-			  <th>Field Name</th>
-			  <th>Description</th>
-			  <th>Representation</th>
-			</tr>
-			<tr>
-			  <td>Code 1</td>
-			  <td>CPT Code 1</td>
-			  <td>A relationship is created between Code 1 and Code 2<br/>
-			  MRREL.REL = RO, MRREL.RELA = "do_not_code_with"</td>
-			</tr>
-			<tr>
-			  <td>Descriptor 1</td>
-			  <td>CPT Descriptor 1</td>
-			  <td>N/A</td>
-			</tr>
-			<tr>
-			  <td>Code 2</td>
-			  <td>CPT Code 2</td>
-			  <td>A relationship is created between Code 1 and Code 2<br/>
-			  MRREL.REL = RO, MRREL.RELA = "do_not_code_with"</td>
-			</tr>
-			<tr>
-			  <td>Descriptor 2</td>
-			  <td>CPT Descriptor 2</td>
-			  <td>N/A</td>
-			</tr>
-		 </tbody>
-         </table>
-		<br/>
-	   <h4>file: ReportWith.txt<br/>
-		</h4>
-		  <span class="nav">return to <a href="#data_files">Data Files</a></span><br/>
-		<br/>
-		<p>Edits that are sourced from CPT instructions such as "Use 44139 in conjunction with 44140-44147".
-		These code edit pairs are not symmetric.
-</p>
-		<table>
-		  <tbody>
-			<tr>
-			  <th>Field Name</th>
-			  <th>Description</th>
-			  <th>Representation</th>
-			</tr>
-			<tr>
-			  <td>Code 1</td>
-			  <td>CPT code for the add-on code</td>
-			  <td>A relationship is created between Code 1 and Code 2<br/>
-			  MRREL.REL = RO, MRREL.RELA = "add_on_code_for/has_add_on_code"</td>
-			</tr>
-			<tr>
-			  <td>Descriptor 1</td>
-			  <td>CPT Descriptor 1</td>
-			  <td>N/A</td>
-			</tr>
-			<tr>
-			  <td>Code 2</td>
-			  <td>CPT Code for the primary procedure</td>
-			  <td>A relationship is created between Code 1 and Code 2<br/>
-			  MRREL.REL = RO, MRREL.RELA = "add_on_code_for/has_add_on_code"</td>
-			</tr>
-			<tr>
-			  <td>Descriptor 2</td>
-			  <td>CPT Descriptor 2</td>
-			  <td>N/A</td>
-			</tr>
-		 </tbody>
-		 </table>
-		<br/>
-      </div>
-    </div>
+    <li>The AMA now releases Code Edits, which have been derived from explicit instructions within the guidelines, parentheticals, and specific code designations. These are represented in the UMLS as attributes or relationships, as appropriate.</li>
+  </ul>
+
+  <p>New TTYs:</p>
+
+  <table>
+    <tbody>
+      <tr>
+        <td>GLP</td>
+
+        <td>Global Period Code</td>
+      </tr>
+
+      <tr>
+        <td>POS</td>
+
+        <td>Place of Service Code</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>New ATN:</p>
+
+  <table>
+    <tbody>
+      <tr>
+        <td>ADDITIONAL_GUIDELINE</td>
+
+        <td>Additional explanatory text that is applicable to a concept (code/heading/subheading)</td>
+      </tr>
+
+      <tr>
+        <td>CPTLINK_CONCEPT_ID</td>
+
+        <td>CPT Link concept identifier (Previously CPTDTK_CONCEPT_ID)</td>
+      </tr>
+
+      <tr>
+        <td>DAYS_RESTRICTION</td>
+
+        <td>Days restriction</td>
+      </tr>
+
+      <tr>
+        <td>DESCRIPTOR_ELEMENT</td>
+
+        <td>Elements of a multi-paragraph descriptor, such as, E&amp;M, lab panels, and molecular pathology</td>
+      </tr>
+
+      <tr>
+        <td>GLOBAL_PERIOD_CODE</td>
+
+        <td>Global period code</td>
+      </tr>
+
+      <tr>
+        <td>GUIDELINE</td>
+
+        <td>Guideline</td>
+      </tr>
+
+      <tr>
+        <td>OR_GROUP</td>
+
+        <td>Indicates that relationships with the same CUI2 and RG are disjunctive expressions</td>
+      </tr>
+
+      <tr>
+        <td>PLACE_OF_SERVICE_CODE</td>
+
+        <td>Place of Service Code</td>
+      </tr>
+
+      <tr>
+        <td>RVU_FACILITY_PRACTICE_EXPENSE</td>
+
+        <td>RVU facility practice expense</td>
+      </tr>
+
+      <tr>
+        <td>RVU_FACILITY_PRACTICE_EXPENSE_DISCONTINUED</td>
+
+        <td>RVU facility practice expense discontinued</td>
+      </tr>
+
+      <tr>
+        <td>RVU_FACILITY_PRACTICE_EXPENSE_PROFESSIONAL</td>
+
+        <td>RVU facility practice expense professional</td>
+      </tr>
+
+      <tr>
+        <td>RVU_FACILITY_PRACTICE_EXPENSE_TECHNICAL</td>
+
+        <td>RVU facility practice expense technical</td>
+      </tr>
+
+      <tr>
+        <td>RVU_MEDICARE_GLOBAL_PERIOD</td>
+
+        <td>RVU Medicare global period</td>
+      </tr>
+
+      <tr>
+        <td>RVU_MEDICARE_GLOBAL_PERIOD_DISCONTINUED</td>
+
+        <td>RVU Medicare global period discontinued</td>
+      </tr>
+
+      <tr>
+        <td>RVU_MEDICARE_GLOBAL_PERIOD_PROFESSIONAL</td>
+
+        <td>RVU Medicare global period professional</td>
+      </tr>
+
+      <tr>
+        <td>RVU_MEDICARE_GLOBAL_PERIOD_TECHNICAL</td>
+
+        <td>RVU Medicare global period technical</td>
+      </tr>
+
+      <tr>
+        <td>RVU_NONFACILITY_PRACTICE_EXPENSE</td>
+
+        <td>RVU nonfacility practice expense</td>
+      </tr>
+
+      <tr>
+        <td>RVU_NONFACILITY_PRACTICE_EXPENSE_DISCONTINUED</td>
+
+        <td>RVU nonfacility practice expanse discontinued</td>
+      </tr>
+
+      <tr>
+        <td>RVU_NONFACILITY_PRACTICE_EXPENSE_PROFESSIONAL</td>
+
+        <td>RVU nonfacility practice expense professional</td>
+      </tr>
+
+      <tr>
+        <td>RVU_NONFACILITY_PRACTICE_EXPENSE_TECHNICAL</td>
+
+        <td>RVU nonfacility practice expense technical</td>
+      </tr>
+
+      <tr>
+        <td>RVU_PLI</td>
+
+        <td>RVU PLI</td>
+      </tr>
+
+      <tr>
+        <td>RVU_PLI_DISCONTINUED</td>
+
+        <td>RVU PLI discontinued</td>
+      </tr>
+
+      <tr>
+        <td>RVU_PLI_PROFESSIONAL</td>
+
+        <td>RVU PLI professional</td>
+      </tr>
+
+      <tr>
+        <td>RVU_PLI_TECHNICAL</td>
+
+        <td>RVU PLI technical</td>
+      </tr>
+
+      <tr>
+        <td>RVU_TOTAL_FACILITY</td>
+
+        <td>RVU total facility</td>
+      </tr>
+
+      <tr>
+        <td>RVU_TOTAL_FACILITY_DISCONTINUED</td>
+
+        <td>RVU total facility discontinued</td>
+      </tr>
+
+      <tr>
+        <td>RVU_TOTAL_FACILITY_PROFESSIONAL</td>
+
+        <td>RVU total facility professional</td>
+      </tr>
+
+      <tr>
+        <td>RVU_TOTAL_FACILITY_TECHNICAL</td>
+
+        <td>RVU total facility technical</td>
+      </tr>
+
+      <tr>
+        <td>RVU_TOTAL_NONFACILITY</td>
+
+        <td>RVU total nonfacility</td>
+      </tr>
+
+      <tr>
+        <td>RVU_TOTAL_NONFACILITY_DISCONTINUED</td>
+
+        <td>RVU total nonfacility discontinued</td>
+      </tr>
+
+      <tr>
+        <td>RVU_TOTAL_NONFACILITY_PROFESSIONAL</td>
+
+        <td>RVU total nonfacility professional</td>
+      </tr>
+
+      <tr>
+        <td>RVU_TOTAL_NONFACILITY_TECHNICAL</td>
+
+        <td>RVU total nonfacility technical</td>
+      </tr>
+
+      <tr>
+        <td>RVU_WORK</td>
+
+        <td>RVU work</td>
+      </tr>
+
+      <tr>
+        <td>RVU_WORK_DISCONTINUED</td>
+
+        <td>RVU work discontinued</td>
+      </tr>
+
+      <tr>
+        <td>RVU_WORK_PROFESSIONAL</td>
+
+        <td>RVU work professional</td>
+      </tr>
+
+      <tr>
+        <td>RVU_WORK_TECHNICAL</td>
+
+        <td>RVU work technical</td>
+      </tr>
+
+      <tr>
+        <td>TELEMEDICINE</td>
+
+        <td>Telemedicine</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>New REL/RELA</p>
+
+  <table>
+    <tbody>
+      <tr>
+        <td>add_on_code_for/has_add_on_code</td>
+      </tr>
+
+      <tr>
+        <td>associated_procedure_of/has_associated_procedure</td>
+      </tr>
+
+      <tr>
+        <td>associated_procedure_of_excluded/has_excluded_associated_procedure</td>
+      </tr>
+
+      <tr>
+        <td>associated_procedure_of_possibly_included/has_possibly_included_associated_procedure</td>
+      </tr>
+
+      <tr>
+        <td>do_not_code_with/do_not_code_with</td>
+      </tr>
+
+      <tr>
+        <td>has_approach/approach_of</td>
+      </tr>
+
+      <tr>
+        <td>has_associated_finding/associated_finding_of</td>
+      </tr>
+
+      <tr>
+        <td>has_component/component_of</td>
+      </tr>
+
+      <tr>
+        <td>has_excluded_approach/approach_of_excluded</td>
+      </tr>
+
+      <tr>
+        <td>has_excluded_associated_finding/associated_finding_of_excluded</td>
+      </tr>
+
+      <tr>
+        <td>has_excluded_component/component_of_excluded</td>
+      </tr>
+
+      <tr>
+        <td>has_excluded_locale/locale_of_excluded</td>
+      </tr>
+
+      <tr>
+        <td>has_excluded_method/method_of_excluded</td>
+      </tr>
+
+      <tr>
+        <td>has_excluded_pathology/pathology_of_excluded</td>
+      </tr>
+
+      <tr>
+        <td>has_excluded_patient_type/patient_type_of_excluded</td>
+      </tr>
+
+      <tr>
+        <td>has_excluded_procedure_device/procedure_device_of_excluded</td>
+      </tr>
+
+      <tr>
+        <td>has_excluded_procedure_site/procedure_site_of_excluded</td>
+      </tr>
+
+      <tr>
+        <td>has_excluded_route_of_administration/route_of_administration_of_excluded</td>
+      </tr>
+
+      <tr>
+        <td>has_excluded_specimen/specimen_of_excluded</td>
+      </tr>
+
+      <tr>
+        <td>has_excluded_surgical_extent/surgical_extent_of_excluded</td>
+      </tr>
+
+      <tr>
+        <td>has_locale/locale_of</td>
+      </tr>
+
+      <tr>
+        <td>has_method/method_of</td>
+      </tr>
+
+      <tr>
+        <td>has_pathology/pathology_of</td>
+      </tr>
+
+      <tr>
+        <td>has_patient_type/patient_type_of</td>
+      </tr>
+
+      <tr>
+        <td>has_possibly_included_approach/approach_of_possibly_included</td>
+      </tr>
+
+      <tr>
+        <td>has_possibly_included_associated_finding/associated_finding_of_possibly_included</td>
+      </tr>
+
+      <tr>
+        <td>has_possibly_included_component/component_of_possibly_included</td>
+      </tr>
+
+      <tr>
+        <td>has_possibly_included_method/method_of_possibly_included</td>
+      </tr>
+
+      <tr>
+        <td>has_possibly_included_pathology/pathology_of_possibly_included</td>
+      </tr>
+
+      <tr>
+        <td>has_possibly_included_patient_type/patient_type_of_possibly_included</td>
+      </tr>
+
+      <tr>
+        <td>has_possibly_included_procedure_device/procedure_device_of_possibly_included</td>
+      </tr>
+
+      <tr>
+        <td>has_possibly_included_procedure_site/procedure_site_of_possibly_included</td>
+      </tr>
+
+      <tr>
+        <td>has_possibly_included_route_of_administration/route_of_administration_of_possibly_included</td>
+      </tr>
+
+      <tr>
+        <td>has_possibly_included_surgical_extent/surgical_extent_of_possibly_included</td>
+      </tr>
+
+      <tr>
+        <td>has_procedure_device/procedure_device_of</td>
+      </tr>
+
+      <tr>
+        <td>has_procedure_site/procedure_site_of</td>
+      </tr>
+
+      <tr>
+        <td>has_route_of_administration/route_of_administration_of</td>
+      </tr>
+
+      <tr>
+        <td>has_specimen/specimen_of</td>
+      </tr>
+
+      <tr>
+        <td>has_surgical_extent/surgical_extent_of</td>
+      </tr>
+
+      <tr>
+        <td>panel_element_of/has_panel_element</td>
+      </tr>
+
+      <tr>
+        <td>panel_element_of_possibly_included/has_possibly_included_panel_element</td>
+      </tr>
+
+      <tr>
+        <td>uses_excluded_substance/substance_used_by_excluded</td>
+      </tr>
+
+      <tr>
+        <td>uses_possibly_included_substance/substance_used_by_possibly_included</td>
+      </tr>
+
+      <tr>
+        <td>uses_substance/substance_used_by</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Deprecated ATN:</p>
+
+  <table>
+    <tbody>
+      <tr>
+        <td>CPTDTK_CONCEPT_ID (previously CPTLINK_CONCEPT_ID)</td>
+      </tr>
+
+      <tr>
+        <td>MODERATE_CONSCIOUS_SEDATION (no instances in data)</td>
+      </tr>
+    </tbody>
+  </table><br>
+</div>
+
+<div id="rep_file_summary" class="rep_block_level_one">
+  <a id="file_summary" name="file_summary"></a>
+
+  <h3>Source-Provided Files: Summary</h3>(<span class="nav"><a href="#top-of-page">return to top</a></span>) The complete English language CPT distribution includes the following:<br>
+
+  <div class="rep_block_level_two">
+    <!-- Make a table of each file that comes from the source   -->
+
+    <h4>Documentation and Reference</h4>
+
+    <table>
+      <tbody>
+        <tr>
+          <th>File Name</th>
+
+          <th>Description</th>
+        </tr>
+
+        <tr>
+          <td>2017 Consumer Friendly Descriptors README.docx</td>
+
+          <td>User guide for Consumer Descriptor data</td>
+        </tr>
+
+        <tr>
+          <td>2017 Clinician Descriptors README.docx</td>
+
+          <td>User guide for Clinician Descriptor data</td>
+        </tr>
+
+        <tr>
+          <td>2017_CPT_Link_ReadMe_20160901.pdf</td>
+
+          <td>User guide for main data files</td>
+        </tr>
+
+        <tr>
+          <td>2017_CPT_Sourced_Code_Edits.docx</td>
+
+          <td>User guide for Code Edits file</td>
+        </tr>
+      </tbody>
+    </table><br>
+
+    <h4>Data Files</h4><a id="data_files" name="data_files"></a>
+
+    <table>
+      <tbody>
+        <tr>
+          <th>File Name</th>
+
+          <th>Description</th>
+        </tr>
+
+        <tr>
+          <td>ClinicianDescriptor_DTK_pipe.txt</td>
+
+          <td>Clinician Descriptors</td>
+        </tr>
+
+        <tr>
+          <td>ConsumerDescriptor_DTK_pipe.txt</td>
+
+          <td>Consumer-friendly Descriptors</td>
+        </tr>
+
+        <tr>
+          <td>Property_DTK_pipe.txt</td>
+
+          <td>In the Property File, a concept is represented by a set of lines that all have the same Concept ID. Some of the concepts in the Property File correspond to reportable CPT codes, some were constructed by the AMA for CPT Link, and some were drawn from SNOMED CT. CT.</td>
+        </tr>
+
+        <tr>
+          <td>RelationshipGroup_DTK_pipe.txt</td>
+
+          <td>In the Relationship File, relationships between two concepts are represented.</td>
+        </tr>
+
+        <tr>
+          <td>Type_DTK_pipe.txt</td>
+
+          <td>The Type File provides a succinct representation of the types of information contained in the Property File and the Relationship File. The PROPERTY TYPE ID column from the Property File and RELATIONSHIP TYPE ID column from the Relationship File both correspond to the TYPE ID number from the Type File. Thus, the Type File enables a user to see at a glance all of the categories of relationship types used in CPT Link</td>
+        </tr>
+
+        <tr>
+          <td>Days.txt</td>
+
+          <td>Edits sourced from CPT instructions such as "Report 93228 only once per 30 days"</td>
+        </tr>
+
+        <tr>
+          <td>Exclude.txt</td>
+
+          <td>Edits sourced from CPT instructions such as "Do not report 00326 in conjunction with 99100"</td>
+        </tr>
+
+        <tr>
+          <td>ReportWith.txt</td>
+
+          <td>Edits sourced from CPT instructions such as "Use 44139 in conjunction with 44140-44147"</td>
+        </tr>
+      </tbody>
+    </table><br>
+    <br>
+  </div>
+</div>
+
+<div id="rep_file_details" class="rep_block_level_one">
+  <a id="file_details" name="file_details"></a>
+
+  <h3>Source-Provided Files: Details</h3>(<span class="nav"><a href="#top-of-page">return to top</a></span>) Details on format of input files and representation of source data. Consult the CPT documentation for additional details.<br>
+
+  <div class="rep_block_level_two">
+    <a id="file1" name="file1"></a>
+
+    <h4 class="file_field_name">file: Type_DTK_pipe.txt<br></h4><span class="nav">return to <a href="#data_files">Data Files</a></span><br>
+    <br>
+
+    <table>
+      <tbody>
+        <tr>
+          <th>Field Name</th>
+
+          <th>Description</th>
+        </tr>
+
+        <tr>
+          <td class="file_field_name">Type Id</td>
+
+          <td>This field corresponds to the Property Type Id in the properties file or the Relationship Type Id in the relationships file</td>
+        </tr>
+
+        <tr>
+          <td class="file_field_name">Category</td>
+
+          <td>Value of "Property," "Relationship" or "Qualifier" indicate the nature of the Type</td>
+        </tr>
+
+        <tr>
+          <td>Type Name</td>
+
+          <td>Type description</td>
+        </tr>
+      </tbody>
+    </table><br>
+    <a id="file2" name="file2"></a>
+
+    <h4 class="file_field_name">file: Property_DTK_pipe.txt<br></h4>
+
+    <p><span class="nav">return to <a href="#data_files">Data Files</a></span></p>
+
+    <p>This file consists of 3 delimited fields:</p>
+
+    <ul>
+      <li>Concept ID</li>
+
+      <li>Property Type ID</li>
+
+      <li>Property Value</li>
+    </ul>
+
+    <p>The "Property Type ID" value determines how each row is represented in the Metathesaurus:</p>
+
+    <table>
+      <tbody>
+        <tr>
+          <th>Property Type ID</th>
+
+          <th>Element Name</th>
+
+          <th>Description</th>
+
+          <th>Representation</th>
+        </tr>
+
+        <tr>
+          <td>100</td>
+
+          <td>Guideline</td>
+
+          <td>Explanatory text attached to a concept (code/heading/subheading).</td>
+
+          <td>MRSAT.ATN = GUIDELINE</td>
+        </tr>
+
+        <tr>
+          <td>101</td>
+
+          <td>First_Appearance</td>
+
+          <td>The year the code was first introduced to CPT.</td>
+
+          <td>MRSAT.ATN = DATE_CREATED</td>
+        </tr>
+
+        <tr>
+          <td>102</td>
+
+          <td>Addon_Code</td>
+
+          <td>Add-on code, i.e. it is commonly carried out in addition to the primary procedure performed.</td>
+
+          <td>MRSAT.ATN = ADDON_CODE</td>
+        </tr>
+
+        <tr>
+          <td>103</td>
+
+          <td>Reportable</td>
+
+          <td>T for CPT codes that can be used for the reporting of services. F for headings/subheadings and guidelines.</td>
+
+          <td>MRSAT.ATN = REPORTABLE</td>
+        </tr>
+
+        <tr>
+          <td>104</td>
+
+          <td>CPT_Code</td>
+
+          <td>The 5-character CPT Code</td>
+
+          <td>MRCONSO.CODE, MRCONSO.SCUI</td>
+        </tr>
+
+        <tr>
+          <td>106</td>
+
+          <td>Descriptor</td>
+
+          <td>Full description of the concept (e.g., the CPT code's long descriptor, as listed in the CPT book).</td>
+
+          <td>
+            <p>MRCONSO.STR<br>
+            TTY=PT (preferred term) or HT (hierarchical term)<br>
+            <br>
+            For TTY = PT, the CODE and SCUI are the 5-character CPT code (Property Type ID = 104)<br>
+            <br>
+            For TTY = HT, POS, GLP, the CODE and SCUI are the CPTLINK_CONCEPT_ID<br>
+            For TTY = MP, the CODE and SCUI are the Modifier Code (Property Type ID = 129)<br>
+            <br></p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>107</td>
+
+          <td>Exempt_Mod</td>
+
+          <td>Contains 51 or 63 for codes where Modifier 51 or 63 Exempt</td>
+
+          <td>MRSAT.ATN = EXEMPT_MOD</td>
+        </tr>
+
+        <tr>
+          <td>108</td>
+
+          <td>FDA_Approval_Pending</td>
+
+          <td>T for codes marked with the FDA approval pending symbol</td>
+
+          <td>MRSAT.ATN = FDA_APPROVAL_PENDING</td>
+        </tr>
+
+        <tr>
+          <td>109</td>
+
+          <td>Level</td>
+
+          <td>For headings, a value ranging from H1 (a top-level heading such as "Surgery" to H6 (a 6<sup>th</sup>-level subheading) and HS (a heading for a small family of related codes). For CPT codes, either PC for Parent Code or CC for Child Code.</td>
+
+          <td>MRSAT.ATN = CPT_LEVEL<br>
+          Note: This information is also implicit in the hierarchy representation.</td>
+        </tr>
+
+        <tr>
+          <td>110</td>
+
+          <td>Medium_Descriptor<br></td>
+
+          <td>Descriptor limited to 48 characters</td>
+
+          <td>MRCONSO.STR; TTY = AB</td>
+        </tr>
+
+        <tr>
+          <td>111</td>
+
+          <td>Short_Descriptor</td>
+
+          <td>Descriptor limited to 28 characters</td>
+
+          <td>MRCONSO.STR; TTY = AB</td>
+        </tr>
+
+        <tr>
+          <td>112</td>
+
+          <td>SNOMED_CT_Fully_Specified_Name</td>
+
+          <td>A unique and unambiguous concept name used to identify a SNOMED CT concept and clarify its meaning</td>
+
+          <td>Not included in the UMLS Metathesaurus. SNOMED Codes and strings are already present.</td>
+        </tr>
+
+        <tr>
+          <td>113</td>
+
+          <td>SNOMED_CT_CODE_(SCTID)</td>
+
+          <td>Non-semantic identifier from the SNOMEDCT terminology</td>
+
+          <td>Not included in the UMLS Metathesaurus. SNOMED Codes and strings are already present.</td>
+        </tr>
+
+        <tr>
+          <td>120</td>
+
+          <td>Last_Revised</td>
+
+          <td>The year the CPT code was last revised.</td>
+
+          <td>MRSAT.ATN = DATE_LAST_MODIFIED</td>
+        </tr>
+
+        <tr>
+          <td>121</td>
+
+          <td>Descriptor_Extension</td>
+
+          <td>Extension of full description of the concept (e.g., the CPT code's long descriptor, as listed in the CPT book).</td>
+
+          <td>MRSAT.ATN = DESCRIPTOR_EXTENSION</td>
+        </tr>
+
+        <tr>
+          <td>122</td>
+
+          <td>Additional_Guideline</td>
+
+          <td>Additional explanatory text that is applicable to a concept (code/heading/subheading). Note: not all of the additional guidelines appear with the heading or code in the published CPT code book.</td>
+
+          <td>MRSAT.ATN = ADDITIONAL_GUIDELINE</td>
+        </tr>
+
+        <tr>
+          <td>127</td>
+
+          <td>Measure_Developer</td>
+
+          <td>Name of the measure developer associated with the Category II code</td>
+
+          <td>MRSAT.ATN = MEASURE_DEVELOPER</td>
+        </tr>
+
+        <tr>
+          <td>128</td>
+
+          <td>Descriptor_Element</td>
+
+          <td>The elements of a multi-paragraph descriptor, such as lab panels, and molecular pathology</td>
+
+          <td>MRSAT.ATN = CPF(Full form of descriptor)</td>
+        </tr>
+
+        <tr>
+          <td>129</td>
+
+          <td>Modifier_Code</td>
+
+          <td>The two-character modifier code</td>
+
+          <td>MRCONSO.TTY = CODE, SCUI where MRCONSO.TTY = "MP"</td>
+        </tr>
+
+        <tr>
+          <td>130</td>
+
+          <td>Place_of_Service_Code</td>
+
+          <td>Place of Service descriptor</td>
+
+          <td>MRSAT.ATN = PLACE_OF_SERVICE_CODE</td>
+        </tr>
+
+        <tr>
+          <td>132</td>
+
+          <td>Citation</td>
+
+          <td>Reference to CPT Assistant Newsletter articles; CPT Changes: An Insider's View; Clinical Examples in Radiology</td>
+
+          <td>MRSAT.ATN = CITATION</td>
+        </tr>
+
+        <tr>
+          <td>133</td>
+
+          <td>Coding_Tip</td>
+
+          <td>Coding Tip text</td>
+
+          <td>MRSAT.ATN = CODING_TIP</td>
+        </tr>
+
+        <tr>
+          <td>134</td>
+
+          <td>Proprietary_Name</td>
+
+          <td>Proprietary name for multianalyte assays with algorithmic analyses contained in Appendix O from the CPT codebook</td>
+
+          <td>MRSAT.ATN = PROPRIETARY_NAME</td>
+        </tr>
+
+        <tr>
+          <td>138</td>
+
+          <td>RVU_Work</td>
+
+          <td>RVU Work</td>
+
+          <td>MRSAT.ATN = RVU_WORK</td>
+        </tr>
+
+        <tr>
+          <td>139</td>
+
+          <td>RVU_Facility_Practice_Expense</td>
+
+          <td>RVU Facility Practice Expense</td>
+
+          <td>MRSAT.ATN = RVU_FACILITY_PRACTICE_EXPENSE</td>
+        </tr>
+
+        <tr>
+          <td>140</td>
+
+          <td>RVU_Nonfacility_Practice_Expense</td>
+
+          <td>RVU Nonfacility Practice Expense</td>
+
+          <td>MRSAT.ATN = RVU_NONFACILITY_PRACTICE_EXPENSE</td>
+        </tr>
+
+        <tr>
+          <td>141</td>
+
+          <td>RVU_PLI</td>
+
+          <td>RVU PLI</td>
+
+          <td>MRSAT.ATN = RVU_PLI</td>
+        </tr>
+
+        <tr>
+          <td>142</td>
+
+          <td>RVU_Total_Facility</td>
+
+          <td>RVU Total Facility</td>
+
+          <td>MRSAT.ATN = RVU_TOTAL_FACILITY</td>
+        </tr>
+
+        <tr>
+          <td>143</td>
+
+          <td>RVU_Total_Nonfacility</td>
+
+          <td>RVU Total Nonfacility</td>
+
+          <td>MRSAT.ATN = RVU_TOTAL_NONFACILITY</td>
+        </tr>
+
+        <tr>
+          <td>144</td>
+
+          <td>RVU_Medicare_Global_Period</td>
+
+          <td>RVU Medicare Global Period</td>
+
+          <td>MRSAT.ATN = RVU_MEDICARE_GLOBAL_PERIOD</td>
+        </tr>
+
+        <tr>
+          <td>145</td>
+
+          <td>RVU_Work_Professional</td>
+
+          <td>Professional component</td>
+
+          <td>MRSAT.ATN = RVU_WORK_PROFESSIONAL</td>
+        </tr>
+
+        <tr>
+          <td>146</td>
+
+          <td>RVU_Facility_Practice_Expense_Professional</td>
+
+          <td>Professional component</td>
+
+          <td>MRSAT.ATN = RVU_FACILITY_PRACTICE_EXPENSE_PROFESSIONAL</td>
+        </tr>
+
+        <tr>
+          <td>147</td>
+
+          <td>RVU_Nonfacility_Practice_Expense_Professional</td>
+
+          <td>Professional component</td>
+
+          <td>MRSAT.ATN = RVU_NONFACILITY_PRACTICE_EXPENSE_PROFESSIONAL</td>
+        </tr>
+
+        <tr>
+          <td>148</td>
+
+          <td>RVU_PLI_Professional</td>
+
+          <td>Professional component</td>
+
+          <td>MRSAT.ATN = RVU_PLI_PROFESSIONAL</td>
+        </tr>
+
+        <tr>
+          <td>149</td>
+
+          <td>RVU_Total_Facility_Professional</td>
+
+          <td>Professional component</td>
+
+          <td>MRSAT.ATN = RVU_TOTAL_FACILITY_PROFESSIONAL</td>
+        </tr>
+
+        <tr>
+          <td>150</td>
+
+          <td>RVU_Total_Nonfacility_Professional</td>
+
+          <td>Professional component</td>
+
+          <td>MRSAT.ATN = RVU_TOTAL_NONFACILITY_PROFESSIONAL</td>
+        </tr>
+
+        <tr>
+          <td>151</td>
+
+          <td>RVU_Medicare_Global_Period_Professional</td>
+
+          <td>Professional component</td>
+
+          <td>MRSAT.ATN = RVU_MEDICARE_GLOBAL_PERIOD_PROFESSIONAL</td>
+        </tr>
+
+        <tr>
+          <td>152</td>
+
+          <td>RVU_Work_Technical</td>
+
+          <td>Technical component</td>
+
+          <td>MRSAT.ATN = RVU_WORK_TECHNICAL</td>
+        </tr>
+
+        <tr>
+          <td>153</td>
+
+          <td>RVU_Facility_Practice_Expense_Technical</td>
+
+          <td>Technical component</td>
+
+          <td>MRSAT.ATN = RVU_FACILITY_PRACTICE_EXPENSE_TECHNICAL</td>
+        </tr>
+
+        <tr>
+          <td>154</td>
+
+          <td>RVU_Nonfacility_Practice_Expense_Technical</td>
+
+          <td>Technical component</td>
+
+          <td>MRSAT.ATN = RVU_NONFACILITY_PRACTICE_EXPENSE_TECHNICAL</td>
+        </tr>
+
+        <tr>
+          <td>155</td>
+
+          <td>RVU_PLI_Technical</td>
+
+          <td>Technical component</td>
+
+          <td>MRSAT.ATN = RVU_PLI_TECHNICAL</td>
+        </tr>
+
+        <tr>
+          <td>156</td>
+
+          <td>RVU_Total_Facility_Technical</td>
+
+          <td>Technical component</td>
+
+          <td>MRSAT.ATN = RVU_TOTAL_FACILITY_TECHNICAL</td>
+        </tr>
+
+        <tr>
+          <td>157</td>
+
+          <td>RVU_Total_Nonfacility_Technical</td>
+
+          <td>Technical component</td>
+
+          <td>MRSAT.ATN = RVU_TOTAL_NONFACILITY_TECHNICAL</td>
+        </tr>
+
+        <tr>
+          <td>158</td>
+
+          <td>RVU_Medicare_Global_Period_Technical</td>
+
+          <td>Technical component</td>
+
+          <td>MRSAT.ATN = RVU_MEDICARE_GLOBAL_PERIOD_TECHNICAL</td>
+        </tr>
+
+        <tr>
+          <td>159</td>
+
+          <td>RVU_Work_Discontinued</td>
+
+          <td>Discontinued</td>
+
+          <td>MRSAT.ATN = RVU_WORK_DISCONTINUED</td>
+        </tr>
+
+        <tr>
+          <td>160</td>
+
+          <td>RVU_Facility_Practice_Expense_Discontinued</td>
+
+          <td>Discontinued</td>
+
+          <td>MRSAT.ATN = RVU_FACILITY_PRACTICE_EXPENSE_DISCONTINUED</td>
+        </tr>
+
+        <tr>
+          <td>161</td>
+
+          <td>RVU_Nonfacility_Practice_Expense_Discontinued</td>
+
+          <td>Discontinued</td>
+
+          <td>MRSAT.ATN = RVU_NONFACILITY_PRACTICE_EXPENSE_DISCONTINUED</td>
+        </tr>
+
+        <tr>
+          <td>162</td>
+
+          <td>RVU_PLI_Discontinued</td>
+
+          <td>Discontinued</td>
+
+          <td>MRSAT.ATN = RVU_PLI_DISCONTINUED</td>
+        </tr>
+
+        <tr>
+          <td>163</td>
+
+          <td>RVU_Total_Facility_Discontinued</td>
+
+          <td>Discontinued</td>
+
+          <td>MRSAT.ATN = RVU_TOTAL_FACILITY_DISCONTINUED</td>
+        </tr>
+
+        <tr>
+          <td>164</td>
+
+          <td>RVU_Total_Nonfacility_Discontinued</td>
+
+          <td>Discontinued</td>
+
+          <td>MRSAT.ATN = RVU_TOTAL_NONFACILITY_DISCONTINUED</td>
+        </tr>
+
+        <tr>
+          <td>165</td>
+
+          <td>RVU_Medicare_Global_Period_Discontinued</td>
+
+          <td>Discontinued</td>
+
+          <td>MRSAT.ATN = RVU_MEDICARE_GLOBAL_PERIOD</td>
+        </tr>
+
+        <tr>
+          <td>166</td>
+
+          <td>Global_Period_Code</td>
+
+          <td>Code for global period in RVU Medicare Global Period property</td>
+
+          <td>MRSAT.ATN = GLP</td>
+        </tr>
+
+        <tr>
+          <td>167</td>
+
+          <td>Telemedicine</td>
+
+          <td>T for codes marked with the telemedicine symbol.</td>
+
+          <td>MRSAT.ATN = TELEMEDICINE</td>
+        </tr>
+      </tbody>
+    </table><br>
+    <a id="file3" name="file3"></a>
+
+    <h4 class="file_field_name">file: RelationshipGroup_DTK_pipe.txt</h4>
+
+    <p><span class="nav">return to <a href="#data_files">Data Files</a></span></p>
+
+    <p>This file consists of 5 delimited fields:</p>
+
+    <ul>
+      <li>Concept ID1</li>
+
+      <li>Relationship Type ID</li>
+
+      <li>Concept ID2</li>
+
+      <li>Relationship Qualifier Type ID</li>
+
+      <li>Relationship Qualifier Value</li>
+
+      <li>Role Group</li>
+
+      <li>Or Group</li>
+    </ul>
+
+    <p>The "Relationship Type ID" value determines how the relationship between Concept ID1 and Concept ID2 is represented in the Metathesaurus. Additional RELAs are created where "Relationship Qualifier Value" is non-null (values are "EXCLUDED" or "POSSIBLY INCLUDED"</p>
+
+    <table>
+      <tbody>
+        <tr>
+          <th>Relationship Type ID</th>
+
+          <th>Description</th>
+
+          <th>Representation</th>
+        </tr>
+
+        <tr>
+          <td>1</td>
+
+          <td>Is_A</td>
+
+          <td>Used to create hierarchy. Distributed in MRHIER.RRF, MRREL.RRF</td>
+        </tr>
+
+        <tr>
+          <td>200</td>
+
+          <td>Anatomic_Site</td>
+
+          <td>MRREL.RRF<br>
+          REL = RO<br>
+          RELA = procedure_site_of/has_procedure_site<br>
+          procedure_site_of_excluded/has_excluded_procedure_site<br>
+          procedure_site_of_possibly_included/has_possibly_included_procedure_site</td>
+        </tr>
+
+        <tr>
+          <td>201</td>
+
+          <td>Component</td>
+
+          <td>MRREL.RRF<br>
+          REL = RO<br>
+          RELA = component_of/has_component<br>
+          component_of_excluded/has_excluded_component<br>
+          component_of_possibly_included/has_possibly_included_component</td>
+        </tr>
+
+        <tr>
+          <td>202</td>
+
+          <td>Device</td>
+
+          <td>MRREL.RRF<br>
+          REL = RO<br>
+          RELA = procedure_device_of/has_procedure_device<br>
+          procedure_device_of_excluded/has_excluded_procedure_device<br>
+          procedure_device_of_possibly_included<br>
+          has_possibly_included_procedure_device</td>
+        </tr>
+
+        <tr>
+          <td>203</td>
+
+          <td>Associated_Procedure</td>
+
+          <td>MRREL.RRF<br>
+          REL = RO<br>
+          RELA = has_associated_procedure/associated_procedure_of<br>
+          has_excluded_associated_procedure/associated_procedure_of_excluded<br>
+          has_possibly_included_associated_procedure/associated_procedure_of_possibly_included</td>
+        </tr>
+
+        <tr>
+          <td>204</td>
+
+          <td>Method</td>
+
+          <td>MRREL.RRF<br>
+          REL = RO<br>
+          RELA = method_of/has_method<br>
+          method_of_excluded/has_excluded_method<br>
+          method_of_possibly_included/has_possibly_included_method</td>
+        </tr>
+
+        <tr>
+          <td>205</td>
+
+          <td>Specimen</td>
+
+          <td>MRREL.RRF<br>
+          REL = RO<br>
+          RELA = specimen_of/has_specimen<br>
+          specimen_of_excluded/has_excluded_specimen</td>
+        </tr>
+
+        <tr>
+          <td>206</td>
+
+          <td>Substance</td>
+
+          <td>MRREL.RRF<br>
+          REL = RO<br>
+          RELA = substance_used_by/uses_substance<br>
+          substance_used_by_excluded/uses_excluded_substance<br>
+          substance_used_by_possibly_included/uses_possibly_included_substance</td>
+        </tr>
+
+        <tr>
+          <td>207</td>
+
+          <td>Has_Panel_Element</td>
+
+          <td>MRREL.RRF<br>
+          REL = RO<br>
+          RELA = has_panel_element/panel_element_of, panel_element_of_possibly_included/has_possibly_included_panel_element</td>
+        </tr>
+
+        <tr>
+          <td>208</td>
+
+          <td>Surgical_Extent</td>
+
+          <td>MRREL.RRF<br>
+          REL = RO<br>
+          RELA = surgical_extent_of/has_surgical_extent<br>
+          surgical_extent_of_excluded/has_excluded_surgical_extent<br>
+          surgical_extent_of_possibly_included/has_possibly_included_surgical_extent</td>
+        </tr>
+
+        <tr>
+          <td>210</td>
+
+          <td>Patient_Type</td>
+
+          <td>MRREL.RRF<br>
+          REL = RO<br>
+          RELA = patient_type_of/has_patient_type<br>
+          patient_type_of_excluded/has_excluded_patient_type<br>
+          patient_type_of_possibly_included/has_possibly_included_patient_type</td>
+        </tr>
+
+        <tr>
+          <td>211</td>
+
+          <td>Pathology</td>
+
+          <td>MRREL.RRF<br>
+          REL = RO<br>
+          RELA = pathology_of/has_pathology<br>
+          pathology_of_excluded/has_excluded_pathology<br>
+          pathology_of_possibly_included/has_possibly_included_pathology</td>
+        </tr>
+
+        <tr>
+          <td>212</td>
+
+          <td>Complexity</td>
+
+          <td>MRREL.RRF<br>
+          REL = RO<br>
+          RELA = complexity_of/has_complexity<br>
+          complexity_of_excluded/has_excluded_complexity</td>
+        </tr>
+
+        <tr>
+          <td>213</td>
+
+          <td>Approach</td>
+
+          <td>MRREL.RRF<br>
+          REL = RO<br>
+          RELA = approach_of/has_approach<br>
+          approach_of_excluded/has_excluded_approach<br>
+          approach_of_possibly_included/has_possibly_included_approach</td>
+        </tr>
+
+        <tr>
+          <td>214</td>
+
+          <td>Locale</td>
+
+          <td>MRREL.RRF<br>
+          REL = RO<br>
+          RELA = locale_of/has_locale<br>
+          locale_of_excluded/has_excluded_locale</td>
+        </tr>
+
+        <tr>
+          <td>215</td>
+
+          <td>Associated_Finding</td>
+
+          <td>MRREL.RRF<br>
+          REL = RO<br>
+          RELA = associated_finding_of/has_associated_finding<br>
+          associated_finding_of_excluded/has_excluded_associated_finding<br>
+          associated_finding_of_possibly_included/has_possibly_included_associated_finding</td>
+        </tr>
+
+        <tr>
+          <td>216</td>
+
+          <td>Route_of_Administration</td>
+
+          <td>MRREL.RRF<br>
+          REL = RO<br>
+          RELA = route_of_administration_of/has_route_of_administration<br>
+          route_of_administration_of_excluded/has_excluded_route_of_administration<br>
+          route_of_administration_of_possibly_included/has_possibly_included_route_of_administration</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Relationship Qualifier ID/Value: used to assign the RELA. Values are "EXCLUDED" and "POSSIBLY INCLUDED."</p>
+
+    <p>Role Group: MRREL.RG. Used to indicate that a set of relationships should be looked at in conjunction.</p>
+
+    <p>Or Group: MRSAT.ATN = OR_GROUP. Indicates that relationships with the same CUI2 and RG are disjunctive expressions (SGTYPE = RUI)</p><a id="file5" name="file5"></a><br>
+    <br>
+
+    <h4 class="file_field_name">file: ClinicianDescriptor_DTK_pipe.txt<br></h4><br>
+    <br>
+
+    <table>
+      <tbody>
+        <tr>
+          <th>Field Name</th>
+
+          <th>Description</th>
+
+          <th>Representation</th>
+        </tr>
+
+        <tr>
+          <td>ConceptID</td>
+
+          <td>CPT Link Concept ID</td>
+
+          <td>MRSAT.ATN = CPTLINK_CONCEPT_ID</td>
+        </tr>
+
+        <tr>
+          <td>Property Type ID</td>
+
+          <td>MRCONSO.TTY = ETCLIN</td>
+
+          <td>MRCONSO.TTY = ETCLIN</td>
+        </tr>
+
+        <tr>
+          <td>Property Value</td>
+
+          <td>Clincian Descriptor</td>
+
+          <td>MRCONSO.STR</td>
+        </tr>
+      </tbody>
+    </table><br>
+    <br>
+
+    <h4 class="file_field_name">file: ConsumerDescriptor_DTK_pipe.txt<br></h4><span class="nav">return to <a href="#data_files">Data Files</a></span><br>
+    <br>
+
+    <table>
+      <tbody>
+        <tr>
+          <th>Field Name</th>
+
+          <th>Description</th>
+
+          <th>Representation</th>
+        </tr>
+
+        <tr>
+          <td class="file_field_name">Concept ID</td>
+
+          <td>CPT Link Concept ID</td>
+
+          <td>MRSAT.ATN = CPTLINK_CONCEPT_ID</td>
+        </tr>
+
+        <tr>
+          <td class="file_field_name">Property Type ID</td>
+
+          <td>All rows in this file have value 123, "Consumer Friendly Descriptor"</td>
+
+          <td>MRCONSO.TTY = ETCF</td>
+        </tr>
+
+        <tr>
+          <td>Property Value</td>
+
+          <td>Consumer Friendly Descriptor</td>
+
+          <td>MRCONSO.STR</td>
+        </tr>
+      </tbody>
+    </table><br>
+
+    <h4>file: Days.txt<br></h4><span class="nav">return to <a href="#data_files">Data Files</a></span><br>
+    <br>
+
+    <table>
+      <tbody>
+        <tr>
+          <th>Field Name</th>
+
+          <th>Description</th>
+
+          <th>Representation</th>
+        </tr>
+
+        <tr>
+          <td>Code 1</td>
+
+          <td>CPT Code 1</td>
+
+          <td>SCUI for MRSAT.ATN = DAYS_RESTRICTION; Also represented in the ATV if Code 1 is different from Code 2</td>
+        </tr>
+
+        <tr>
+          <td>Descriptor 1</td>
+
+          <td>CPT Descriptor 1</td>
+
+          <td>N/A</td>
+        </tr>
+
+        <tr>
+          <td>Code 2</td>
+
+          <td>CPT Code 2</td>
+
+          <td>SCUI for MRSAT.ATN = DAYS_RESTRICTION if Code 1 is different from Code 2; Also represented in the ATV if Code 1 equals Code 2</td>
+        </tr>
+
+        <tr>
+          <td>Descriptor 2</td>
+
+          <td>CPT Descriptor 2</td>
+
+          <td>N/A</td>
+        </tr>
+
+        <tr>
+          <td>Days</td>
+
+          <td>Integer specifying time period in days.If Code 1 = Code 2, the code can be reported only once per &lt;Days&gt;. Some instructions restrict the use of two codes within a certain number of days.</td>
+
+          <td>MRSAT.ATN = "DAYS_RESTRICTION"<br>
+          Format of the ATV is: &lt;Code 2&gt; @ &lt;Days&gt;<br>
+          When Code 1 is different from Code 2, the attribute is also "flipped," i.e. the SCUI of Code 2 has a "DAYS_RESTRCTION" attribute with ATV = &lt;Code 1&gt; @ &lt;Days&gt;</td>
+        </tr>
+      </tbody>
+    </table><br>
+
+    <h4>file: Exclude.txt<br></h4><span class="nav">return to <a href="#data_files">Data Files</a></span><br>
+    <br>
+
+    <p>Listing of edits that are sourced from CPT instructions, such as "Do not report 00326 in conjunction with 99100". Relationships are symmetrical (there is no meaning to the order of codes in the code pair).</p>
+
+    <table>
+      <tbody>
+        <tr>
+          <th>Field Name</th>
+
+          <th>Description</th>
+
+          <th>Representation</th>
+        </tr>
+
+        <tr>
+          <td>Code 1</td>
+
+          <td>CPT Code 1</td>
+
+          <td>A relationship is created between Code 1 and Code 2<br>
+          MRREL.REL = RO, MRREL.RELA = "do_not_code_with"</td>
+        </tr>
+
+        <tr>
+          <td>Descriptor 1</td>
+
+          <td>CPT Descriptor 1</td>
+
+          <td>N/A</td>
+        </tr>
+
+        <tr>
+          <td>Code 2</td>
+
+          <td>CPT Code 2</td>
+
+          <td>A relationship is created between Code 1 and Code 2<br>
+          MRREL.REL = RO, MRREL.RELA = "do_not_code_with"</td>
+        </tr>
+
+        <tr>
+          <td>Descriptor 2</td>
+
+          <td>CPT Descriptor 2</td>
+
+          <td>N/A</td>
+        </tr>
+      </tbody>
+    </table><br>
+
+    <h4>file: ReportWith.txt<br></h4><span class="nav">return to <a href="#data_files">Data Files</a></span><br>
+    <br>
+
+    <p>Edits that are sourced from CPT instructions such as "Use 44139 in conjunction with 44140-44147". These code edit pairs are not symmetric.</p>
+
+    <table>
+      <tbody>
+        <tr>
+          <th>Field Name</th>
+
+          <th>Description</th>
+
+          <th>Representation</th>
+        </tr>
+
+        <tr>
+          <td>Code 1</td>
+
+          <td>CPT code for the add-on code</td>
+
+          <td>A relationship is created between Code 1 and Code 2<br>
+          MRREL.REL = RO, MRREL.RELA = "add_on_code_for/has_add_on_code"</td>
+        </tr>
+
+        <tr>
+          <td>Descriptor 1</td>
+
+          <td>CPT Descriptor 1</td>
+
+          <td>N/A</td>
+        </tr>
+
+        <tr>
+          <td>Code 2</td>
+
+          <td>CPT Code for the primary procedure</td>
+
+          <td>A relationship is created between Code 1 and Code 2<br>
+          MRREL.REL = RO, MRREL.RELA = "add_on_code_for/has_add_on_code"</td>
+        </tr>
+
+        <tr>
+          <td>Descriptor 2</td>
+
+          <td>CPT Descriptor 2</td>
+
+          <td>N/A</td>
+        </tr>
+      </tbody>
+    </table><br>
+  </div>
+</div>

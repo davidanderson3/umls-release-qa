@@ -18,205 +18,472 @@ status=published
  </div>
 </div>
 <!--endmenu-->
-<br/><p>This page lists UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
-<!--begin tabbed navigation area-->
+<br/><p>This page lists UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p><!--begin tabbed navigation area-->
 <!-- end tabbed navigation area -->
-<a id = "top-of-page"> </a>
-<span class = "nav">Skip to: <a href = "#atoms">Atoms</a>, <a href = "#attributes">Attributes</a>, <a href = "#definitions">Definitions</a>, <a href = "#relationships">Relationships</a>, <a href = "#mappings">Mappings</a></span>
+ <a id="top-of-page" name="top-of-page"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>, <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>, <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
 
-<div id = "general" class = "rep_block_level_one">
-<p><strong>VSAB:</strong> HGNC2016_04</p>
+<div id="general" class="rep_block_level_one">
+  <p><strong>VSAB:</strong> HGNC2016_04</p>
 
-<div id = "rep_identifiers" class = "rep_block_level_one">
-<h3>Summary of Changes</h3>
-<p>1. Data fields have been renamed and field order has changed. (See HGNC Source Representational page for details).</p>
-<p>2. New data fields and corresponding new ATNs:</p>
-<ul>
-  <li>field: ena; ATN = ENA</li>
-  <li>field: location; ATN = CYTOGENETIC_LOCATION</li>
-  <li>field: location_sortable (not processed)</li>
-  <li>field: gene_family_id; ATN = GENE_FAM_ID</li>
-  <li>field: rgd_id; ATN = RGD_ID</li>
-</ul>
-<p>3. Deprecated fields:</p>
-<ul>
-  <li>Chromosome</li>
-  <li>Accession Numbers</li>
-  <li>Specialist Database Links</li>
-  <li>Specialist Database IDs</li>
-  <li>Mouse Genome Database ID (mapped)</li>
-  <li>Entrez Gene ID (mapped)</li>
-  <li>RefSeq (mapped)</li>
-  <li>Ensembl Gene ID (mapped)</li>
-  <li>Vega gene ID (mapped)</li>
-</ul>
-<p>4. Source data file now comes in UTF-8 rather than cp1252.</p>
-</div>
-<div id = "rep_change_summary" class = "rep_block_level_one">
-<h3>Original Files:</h3>
-<table>
-<tr><th>File Name</th><th>Description</th></tr>
-<tr><td  class = "file_field_name"><a href = "#file1">hgnc_complete_set_04142016.txt</a></td><td>Tab-delimited text file.</td></tr>
-</table>
-<br/>
-</div>
+  <div id="rep_identifiers" class="rep_block_level_one">
+    <h3>Summary of Changes</h3>
 
-<div id = "rep_identifers" class = "rep_block_level_one">
-<h3>Identifiers</h3>
+    <p>1. Data fields have been renamed and field order has changed. (See HGNC Source Representational page for details).</p>
 
-<ul>
-<li>CODE:  HGNC ID</li>
-<li>SAUI:  Not applicable</li>
-<li>SCUI:  HGNC ID</li>
-<li>SDUI:  Not applicable</li>
-</ul>
+    <p>2. New data fields and corresponding new ATNs:</p>
 
-<div id = "rep_termtypes" class = "rep_block_level_two">
-<a id = "atoms"></a>
-<h3>Atoms (MRCONSO)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)<br/>
-<table>
-<tr><th>Term Type</th><th>Description</th><th>Origin</th></tr>
-<tr>
-    <td>ACR</td>
-    <td>Acronym</td>
-    <td>symbol field</td>
-</tr>
-<tr>
-    <td>MTH_ACR</td>
-    <td>Metathesaurus created acronym.  The word 'gene' or 'gene cluster' was appended to the atom.</td>
-    <td>symbol field</td>
-</tr>
-<tr>
-    <td>NA</td>
-    <td>Alias Name</td>
-    <td>alias_name field</td>
-</tr>
-<tr>
-    <td>PT</td>
-    <td>Preferred Name</td>
-    <td>name field</td>
-</tr>
-<tr>
-    <td>SYN</td>
-    <td>Synonyms</td>
-    <td>alias_symbol field</td>
-</tr>
-</table>
-</div>
+    <ul>
+      <li>field: ena; ATN = ENA</li>
 
-<h3>Suppressibility</h3>
-<p>For all term types, suppressibility value 'N' (default value)</p> 
-</div>
+      <li>field: location; ATN = CYTOGENETIC_LOCATION</li>
 
-<div id = "rep_attributes" class = "rep_block_level_two">
-<a id = "attributes"></a><br/>
-<h3>Attributes (MRSAT)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)
-<table>
-<tr><th>Attribute Name</th><th>Origin</th></tr>
-<tr><td>GENESYMBOL</td>
-<td>symbol field</td></tr>
-<tr><td>CCDS_ID</td>
-<td>ccds_id field</td></tr>
-<tr><td>CYTOGENETIC_LOCATION</td>
-<td>location field</td></tr>
-<tr><td>DATE_CREATED</td>
-<td>date_approved_reserved field</td></tr>
-<tr><td>DATE_LAST_MODIFIED</td>
-<td>date_modified field</td></tr>
-<tr><td>DATE_NAME_CHANGED</td>
-<td>date_name_changed field</td></tr>
-<tr><td>DATE_SYMBOL_CHANGED</td>
-<td>date_symbol_changed field</td></tr>
-<tr><td>DB_XR_ID|COSMIC:</td>
-<td>cosmic field</td></tr>
-<tr><td>DB_XR_ID|MiRBase:</td>
-<td>mirbase field</td></tr>
-<tr><td>DB_XR_ID|HomeoDB:</td>
-<td>homeodb field</td></tr>
-<tr><td>DB_XR_ID|snoRNABase:</td>
-<td>snornabase field</td></tr>
-<tr><td>DB_XR_ID|BioParadigms:</td>
-<td>bioparadigms_slc field</td></tr>
-<tr><td>DB_XR_ID|Orphanet:</td>
-<td>orphanet field</td></tr>
-<tr><td>DB_XR_ID|Pseudogene.org:</td>
-<td>pseudogene.org field</td></tr>
-<tr><td>DB_XR_ID|HORDE_ID:</td>
-<td>horde_id field</td></tr>
-<tr><td>DB_XR_ID|MEROPS:</td>
-<td>merops field</td></tr>
-<tr><td>DB_XR_ID|IMGT/GENE-DB:</td>
-<td>imgt field</td></tr>
-<tr><td>DB_XR_ID|IUPHAR:</td>
-<td>iuphar field</td></tr>
-<tr><td>DB_XR_ID|KZNF Gene Catalog:</td>
-<td>kznf_gene_catalog field</td></tr>
-<tr><td>DB_XR_ID|Mamit-tRNAdb:</td>
-<td>mamit-trnadb field</td></tr>
-<tr><td>DB_XR_ID|CD:</td>
-<td>cd field</td></tr>
-<tr><td>DB_XR_ID|lncRNAdb:</td>
-<td>lncrnadb field</td></tr>
-<tr><td>DB_XR_ID|Intermediate Filament DB:</td>
-<td>intermediate_filament_db field</td></tr>
-<tr><td>ENA</td>
-<td>ena field</td></tr>
-<tr><td>ENSEMBLGEN_ID</td>
-<td>ensembl_gene_id field</td></tr>
-<tr><td>ENTREZGENE_ID</td>
-<td>entrez_id field</td></tr>
-<tr><td>EZ</td>
-<td>enzyme_id field</td></tr>
-<tr><td>GENE_FAM_DESC</td>
-<td>gene_family field</td></tr>
-<tr><td>GENE_FAM_ID</td>
-<td>gene_family_id field</td></tr>
-<tr><td>LOCUS_GROUP</td>
-<td>locus_group field</td></tr>
-<tr><td>LOCUS_SPECIFIC_DB_XR</td>
-<td>lsdb field</td></tr>
-<tr><td>LOCUS_TYPE</td>
-<td>locus_type field</td></tr>
-<tr><td>MGD_ID</td>
-<td>mgd_id field</td></tr>
-<tr><td>OMIM_NUMBER</td>
-<td>omim_id field</td></tr>
-<tr><td>PREV_NAME</td>
-<td>prev_name field</td></tr>
-<tr><td>PREV_SYMBOL</td>
-<td>prev_symbol field</td></tr>
-<tr><td>PMID</td>
-<td>pubmed_id field</td></tr>
-<tr><td>REFSEQ_ID</td>
-<td>refseq_accession field</td></tr>
-<tr><td>RGD_ID</td>
-<td>rgd_id field</td></tr>
-<tr><td>MAPPED_UCSC_ID</td>
-<td>ucsc_id field</td></tr>
-<tr><td>SWP</td>
-<td>uniprot_ids field</td></tr>
-<tr><td>VEGA_ID</td>
-<td>vega_id field</td></tr>
-</table>
-</div>
+      <li>field: location_sortable (not processed)</li>
 
-<div id = "rep_relationships" class = "rep_block_level_two">
-<a id = "relationships"></a><br/>
-<h3>Relationships (MRREL)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)<br/>
-<table>
-<tr><th>Source</th><th>Relationship</th><th>Relationship Label/Inverse Relationship Label</th><th>Description</th></tr>
-<tr><td>HUGO</td><td>CHD<br/>PAR<br/>SIB</td>
-<td>(no rela)</td><td>There are no CONTEXTS.</td></tr>
-<tr><td>HUGO</td><td>SFO/LFO</td>
-<td>has_expanded_form/expanded_form_of</td><td>Connects the symbol (TTY=ACR) with its expanded form (TTY=MTH_ACR).</td></tr>
-<tr><td>HUGO</td><td>SFO/LFO</td>
-<td>has_alias/alias_of</td><td>Connects the name (TTY=PT) with its alias_symbol (TTY=SYN).</td></tr>
-</table>
-</div>
-<div id = "mappings" class = "rep_block_level_two">
-<h3>Definitions (MRDEF)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)<br/>
-<p>There are no definitions.</p> 
-</div>
-<h3>Mappings (MRMAP)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top">top</a></span>)<br/>
-<p>There are no mappings present.</p> 
+      <li>field: gene_family_id; ATN = GENE_FAM_ID</li>
+
+      <li>field: rgd_id; ATN = RGD_ID</li>
+    </ul>
+
+    <p>3. Deprecated fields:</p>
+
+    <ul>
+      <li>Chromosome</li>
+
+      <li>Accession Numbers</li>
+
+      <li>Specialist Database Links</li>
+
+      <li>Specialist Database IDs</li>
+
+      <li>Mouse Genome Database ID (mapped)</li>
+
+      <li>Entrez Gene ID (mapped)</li>
+
+      <li>RefSeq (mapped)</li>
+
+      <li>Ensembl Gene ID (mapped)</li>
+
+      <li>Vega gene ID (mapped)</li>
+    </ul>
+
+    <p>4. Source data file now comes in UTF-8 rather than cp1252.</p>
+  </div>
+
+  <div id="rep_change_summary" class="rep_block_level_one">
+    <h3>Original Files:</h3>
+
+    <table>
+      <tr>
+        <th>File Name</th>
+
+        <th>Description</th>
+      </tr>
+
+      <tr>
+        <td class="file_field_name"><a href="#file1">hgnc_complete_set_04142016.txt</a></td>
+
+        <td>Tab-delimited text file.</td>
+      </tr>
+    </table><br>
+  </div>
+
+  <div id="rep_identifers" class="rep_block_level_one">
+    <h3>Identifiers</h3>
+
+    <ul>
+      <li>CODE: HGNC ID</li>
+
+      <li>SAUI: Not applicable</li>
+
+      <li>SCUI: HGNC ID</li>
+
+      <li>SDUI: Not applicable</li>
+    </ul>
+
+    <div id="rep_termtypes" class="rep_block_level_two">
+      <a id="atoms" name="atoms"></a>
+
+      <h3>Atoms (MRCONSO)</h3>&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br>
+
+      <table>
+        <tr>
+          <th>Term Type</th>
+
+          <th>Description</th>
+
+          <th>Origin</th>
+        </tr>
+
+        <tr>
+          <td>ACR</td>
+
+          <td>Acronym</td>
+
+          <td>symbol field</td>
+        </tr>
+
+        <tr>
+          <td>MTH_ACR</td>
+
+          <td>Metathesaurus created acronym. The word 'gene' or 'gene cluster' was appended to the atom.</td>
+
+          <td>symbol field</td>
+        </tr>
+
+        <tr>
+          <td>NA</td>
+
+          <td>Alias Name</td>
+
+          <td>alias_name field</td>
+        </tr>
+
+        <tr>
+          <td>PT</td>
+
+          <td>Preferred Name</td>
+
+          <td>name field</td>
+        </tr>
+
+        <tr>
+          <td>SYN</td>
+
+          <td>Synonyms</td>
+
+          <td>alias_symbol field</td>
+        </tr>
+      </table>
+    </div>
+
+    <h3>Suppressibility</h3>
+
+    <p>For all term types, suppressibility value 'N' (default value)</p>
+  </div>
+
+  <div id="rep_attributes" class="rep_block_level_two">
+    <a id="attributes" name="attributes"></a><br>
+
+    <h3>Attributes (MRSAT)</h3>&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)
+
+    <table>
+      <tr>
+        <th>Attribute Name</th>
+
+        <th>Origin</th>
+      </tr>
+
+      <tr>
+        <td>GENESYMBOL</td>
+
+        <td>symbol field</td>
+      </tr>
+
+      <tr>
+        <td>CCDS_ID</td>
+
+        <td>ccds_id field</td>
+      </tr>
+
+      <tr>
+        <td>CYTOGENETIC_LOCATION</td>
+
+        <td>location field</td>
+      </tr>
+
+      <tr>
+        <td>DATE_CREATED</td>
+
+        <td>date_approved_reserved field</td>
+      </tr>
+
+      <tr>
+        <td>DATE_LAST_MODIFIED</td>
+
+        <td>date_modified field</td>
+      </tr>
+
+      <tr>
+        <td>DATE_NAME_CHANGED</td>
+
+        <td>date_name_changed field</td>
+      </tr>
+
+      <tr>
+        <td>DATE_SYMBOL_CHANGED</td>
+
+        <td>date_symbol_changed field</td>
+      </tr>
+
+      <tr>
+        <td>DB_XR_ID|COSMIC:</td>
+
+        <td>cosmic field</td>
+      </tr>
+
+      <tr>
+        <td>DB_XR_ID|MiRBase:</td>
+
+        <td>mirbase field</td>
+      </tr>
+
+      <tr>
+        <td>DB_XR_ID|HomeoDB:</td>
+
+        <td>homeodb field</td>
+      </tr>
+
+      <tr>
+        <td>DB_XR_ID|snoRNABase:</td>
+
+        <td>snornabase field</td>
+      </tr>
+
+      <tr>
+        <td>DB_XR_ID|BioParadigms:</td>
+
+        <td>bioparadigms_slc field</td>
+      </tr>
+
+      <tr>
+        <td>DB_XR_ID|Orphanet:</td>
+
+        <td>orphanet field</td>
+      </tr>
+
+      <tr>
+        <td>DB_XR_ID|Pseudogene.org:</td>
+
+        <td>pseudogene.org field</td>
+      </tr>
+
+      <tr>
+        <td>DB_XR_ID|HORDE_ID:</td>
+
+        <td>horde_id field</td>
+      </tr>
+
+      <tr>
+        <td>DB_XR_ID|MEROPS:</td>
+
+        <td>merops field</td>
+      </tr>
+
+      <tr>
+        <td>DB_XR_ID|IMGT/GENE-DB:</td>
+
+        <td>imgt field</td>
+      </tr>
+
+      <tr>
+        <td>DB_XR_ID|IUPHAR:</td>
+
+        <td>iuphar field</td>
+      </tr>
+
+      <tr>
+        <td>DB_XR_ID|KZNF Gene Catalog:</td>
+
+        <td>kznf_gene_catalog field</td>
+      </tr>
+
+      <tr>
+        <td>DB_XR_ID|Mamit-tRNAdb:</td>
+
+        <td>mamit-trnadb field</td>
+      </tr>
+
+      <tr>
+        <td>DB_XR_ID|CD:</td>
+
+        <td>cd field</td>
+      </tr>
+
+      <tr>
+        <td>DB_XR_ID|lncRNAdb:</td>
+
+        <td>lncrnadb field</td>
+      </tr>
+
+      <tr>
+        <td>DB_XR_ID|Intermediate Filament DB:</td>
+
+        <td>intermediate_filament_db field</td>
+      </tr>
+
+      <tr>
+        <td>ENA</td>
+
+        <td>ena field</td>
+      </tr>
+
+      <tr>
+        <td>ENSEMBLGEN_ID</td>
+
+        <td>ensembl_gene_id field</td>
+      </tr>
+
+      <tr>
+        <td>ENTREZGENE_ID</td>
+
+        <td>entrez_id field</td>
+      </tr>
+
+      <tr>
+        <td>EZ</td>
+
+        <td>enzyme_id field</td>
+      </tr>
+
+      <tr>
+        <td>GENE_FAM_DESC</td>
+
+        <td>gene_family field</td>
+      </tr>
+
+      <tr>
+        <td>GENE_FAM_ID</td>
+
+        <td>gene_family_id field</td>
+      </tr>
+
+      <tr>
+        <td>LOCUS_GROUP</td>
+
+        <td>locus_group field</td>
+      </tr>
+
+      <tr>
+        <td>LOCUS_SPECIFIC_DB_XR</td>
+
+        <td>lsdb field</td>
+      </tr>
+
+      <tr>
+        <td>LOCUS_TYPE</td>
+
+        <td>locus_type field</td>
+      </tr>
+
+      <tr>
+        <td>MGD_ID</td>
+
+        <td>mgd_id field</td>
+      </tr>
+
+      <tr>
+        <td>OMIM_NUMBER</td>
+
+        <td>omim_id field</td>
+      </tr>
+
+      <tr>
+        <td>PREV_NAME</td>
+
+        <td>prev_name field</td>
+      </tr>
+
+      <tr>
+        <td>PREV_SYMBOL</td>
+
+        <td>prev_symbol field</td>
+      </tr>
+
+      <tr>
+        <td>PMID</td>
+
+        <td>pubmed_id field</td>
+      </tr>
+
+      <tr>
+        <td>REFSEQ_ID</td>
+
+        <td>refseq_accession field</td>
+      </tr>
+
+      <tr>
+        <td>RGD_ID</td>
+
+        <td>rgd_id field</td>
+      </tr>
+
+      <tr>
+        <td>MAPPED_UCSC_ID</td>
+
+        <td>ucsc_id field</td>
+      </tr>
+
+      <tr>
+        <td>SWP</td>
+
+        <td>uniprot_ids field</td>
+      </tr>
+
+      <tr>
+        <td>VEGA_ID</td>
+
+        <td>vega_id field</td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="rep_relationships" class="rep_block_level_two">
+    <a id="relationships" name="relationships"></a><br>
+
+    <h3>Relationships (MRREL)</h3>&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br>
+
+    <table>
+      <tr>
+        <th>Source</th>
+
+        <th>Relationship</th>
+
+        <th>Relationship Label/Inverse Relationship Label</th>
+
+        <th>Description</th>
+      </tr>
+
+      <tr>
+        <td>HUGO</td>
+
+        <td>CHD<br>
+        PAR<br>
+        SIB</td>
+
+        <td>(no rela)</td>
+
+        <td>There are no CONTEXTS.</td>
+      </tr>
+
+      <tr>
+        <td>HUGO</td>
+
+        <td>SFO/LFO</td>
+
+        <td>has_expanded_form/expanded_form_of</td>
+
+        <td>Connects the symbol (TTY=ACR) with its expanded form (TTY=MTH_ACR).</td>
+      </tr>
+
+      <tr>
+        <td>HUGO</td>
+
+        <td>SFO/LFO</td>
+
+        <td>has_alias/alias_of</td>
+
+        <td>Connects the name (TTY=PT) with its alias_symbol (TTY=SYN).</td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="mappings" class="rep_block_level_two">
+    <h3>Definitions (MRDEF)</h3>&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br>
+
+    <p>There are no definitions.</p>
+  </div>
+
+  <h3>Mappings (MRMAP)</h3>&nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br>
+
+  <p>There are no mappings present.</p>
 </div>

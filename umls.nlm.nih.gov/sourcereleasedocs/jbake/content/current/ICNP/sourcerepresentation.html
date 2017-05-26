@@ -17,174 +17,174 @@ status=published
  </div>
 </div>
 <!--endmenu-->
-<br/>    <p>This page lists specific source data elements and provides
-      information on their representation in the UMLS Metathesaurus.</p>
-    <!--begin tabbed navigation area-->
-    <!-- end tabbed navigation area -->
-    <br/>
-    <br/>
-    <br/>
-    <a name="top"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
-      <a href="#change_summary">Summary of Changes</a>, <a
-        href="#file_summary">Summary of Source-Provided Files</a> <a
-        href="#file_details">Source-Provided File Details</a></span> <a
-      name="general"></a>
-    <div id="rep_general" class="rep_block_level_one">
-      <h3>Notes</h3>
-    </div>
-    <div id="rep_change_summary" class="rep_block_level_one">
-      <h3>Summary of Changes:</h3>
-      <span class="nav">(<a href="#top">return to top</a></span>)<br/>
-      <br/>
-      There are no changes to the primary ICNP terminological data file
-      format or to UMLS source processing.<br/>
-      <br/>
-      There are minor changes to the ICNP-SCT mappings:<br/>
-      <ul>
-        <li>The mapping no longer includes "Mapping Notes."
-          Therefore, everything was processed as an exact match, there
-          are no longer any RB, RN or XR rels.</li>
-        <li>We now have mappings for both diagnoses (DC) and
-          interventions (IC). Previously, there were only mappings
-          for DC.</li>
-        <li>The MAPSETXRTARGETID attribute has been deprecated since
-          there are no "No match" values indicated.</li>
-      </ul>
-    </div>
-    <div id="rep_file_details" class="rep_block_level_one"> <a
-        name="file_summary"></a>
-      <h3>Source-Provided Files: Summary</h3>
-       (<span class="nav"><a href="#top">return to top</a></span>)<br/>
-      <br/>
-      The file ICNP2015-UMLS_1.xlsx includes the following tabs:<br/>
-      <br/>
-      <div style="margin-left: 40px;"> DC Asserted <br/>
-        IC Asserted<br/>
-        DC Inferred<br/>
-        IC Inferred<br/>
-        <br/>
-      </div>
-      The mappings to SNOMEDCT are provided in a separate
-      spreadsheet: ICNP-SCT_Equivalency_Table_2015.xlsx<br/>
-      <br/>
-      <h3>Source-Provided Files: Details</h3>
-      (<span class="nav"><a href="#top">return to top</a></span>)
-      <p>The following is a list of fields available for ICNP_2015 data:
-      </p>
-      <div class="rep_block_level_two"><a name="file1"></a>
+<br/><p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p><!--begin tabbed navigation area-->
+<!-- end tabbed navigation area -->
+<br>
+<br>
+<br>
+<a name="top" id="top"></a> <span class="nav">Skip to: <a href="#general">Notes</a>, <a href="#change_summary">Summary of Changes</a>, <a href="#file_summary">Summary of Source-Provided Files</a> <a href="#file_details">Source-Provided File Details</a></span> <a name="general" id="general"></a>
 
-        File: ICNP2015-UMLS_1.xlsx<br/>
-        tabs: DC Asserted, IC Asserted<br/>
-        <br/>
-        <table>
-          <tbody>
-            <tr>
-              <th>Field</th>
-              <th>Representation</th>
-            </tr>
-            <tr>
-              <td>Code
-              </td>
-              <td>MRCONSO.CODE<br/>
-                MRCONSO.SCUI
-              </td>
-            </tr>
-            <tr>
-              <td>Preferred Term
-              </td>
-              <td>MRCONSO.STR<br/>
-                TTY = PT
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <br/>
-        File: ICNP2015-UMLS_1.xlsx<br/>
-        tabs: DC Inferred, IC Inferred<br/>
-        <br/>
-        <table>
-          <tbody>
-            <tr>
-              <th>Field</th>
-              <th>Representation</th>
-            </tr>
-            <tr>
-              <td>Child Code
-              </td>
-              <td>Used to build hierarchy
-              </td>
-            </tr>
-            <tr>
-              <td>Preferred Term (Child)
-              </td>
-              <td>Not directly processed
-              </td>
-            </tr>
-            <tr>
-              <td>Axis (Child)
-              </td>
-              <td>MRSAT.ATN = ICNP_TYPE
-              </td>
-            </tr>
-            <tr>
-              <td>Parent Code
-              </td>
-              <td>Used to build hierarchy
-              </td>
-            </tr>
-            <tr>
-              <td>Preferred Term (Parent)
-              </td>
-              <td>Not directly processed
-              </td>
-            </tr>
-            <tr>
-              <td>Axis (Parent)
-              </td>
-              <td>MRSAT.ATN = ICNP_TYPE
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="rep_block_level_two"><a name="file2"></a><br/>
-      <br/>
-      File: ICNP-SCT_Equivalency_Table_2015.xlsx<br/>
-      tabs:  DC Mapping, IC Mapping<br/>
-      <br/>
-      <table>
-        <tbody>
-          <tr>
-            <th>Field</th>
-            <th>Representation</th>
-          </tr>
-          <tr>
-            <td>ICNP Code
-            </td>
-            <td>MRMAP.FROMID<br/>
-              MRREL.SGID
-            </td>
-          </tr>
-          <tr>
-            <td>ICNP Preferred Term (2015 release)
-            </td>
-            <td>Not directly processed
-            </td>
-          </tr>
-          <tr>
-            <td>SNOMED CT Code
-            </td>
-            <td>MRMAP.TOID<br/>
-              MRREL.SGID
-            </td>
-          </tr>
-          <tr>
-            <td>SNOMED CT Fully Specified Name (2015-01-31 release)
-            </td>
-            <td>Not directly processed
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+<div id="rep_general" class="rep_block_level_one">
+  <h3>Notes</h3>
+</div>
+
+<div id="rep_change_summary" class="rep_block_level_one">
+  <h3>Summary of Changes:</h3><span class="nav">(<a href="#top">return to top</a></span>)<br>
+  <br>
+  There are no changes to the primary ICNP terminological data file format or to UMLS source processing.<br>
+  <br>
+  There are minor changes to the ICNP-SCT mappings:<br>
+
+  <ul>
+    <li>The mapping no longer includes "Mapping Notes." Therefore, everything was processed as an exact match, there are no longer any RB, RN or XR rels.</li>
+
+    <li>We now have mappings for both diagnoses (DC) and interventions (IC). Previously, there were only mappings for DC.</li>
+
+    <li>The MAPSETXRTARGETID attribute has been deprecated since there are no "No match" values indicated.</li>
+  </ul>
+</div>
+
+<div id="rep_file_details" class="rep_block_level_one">
+  <a name="file_summary" id="file_summary"></a>
+
+  <h3>Source-Provided Files: Summary</h3>(<span class="nav"><a href="#top">return to top</a></span>)<br>
+  <br>
+  The file ICNP2015-UMLS_1.xlsx includes the following tabs:<br>
+  <br>
+
+  <div style="margin-left: 40px;">
+    DC Asserted<br>
+    IC Asserted<br>
+    DC Inferred<br>
+    IC Inferred<br>
+    <br>
+  </div>The mappings to SNOMEDCT are provided in a separate spreadsheet: ICNP-SCT_Equivalency_Table_2015.xlsx<br>
+  <br>
+
+  <h3>Source-Provided Files: Details</h3>(<span class="nav"><a href="#top">return to top</a></span>)
+
+  <p>The following is a list of fields available for ICNP_2015 data:</p>
+
+  <div class="rep_block_level_two">
+    <a name="file1" id="file1"></a> File: ICNP2015-UMLS_1.xlsx<br>
+    tabs: DC Asserted, IC Asserted<br>
+    <br>
+
+    <table>
+      <tbody>
+        <tr>
+          <th>Field</th>
+
+          <th>Representation</th>
+        </tr>
+
+        <tr>
+          <td>Code</td>
+
+          <td>MRCONSO.CODE<br>
+          MRCONSO.SCUI</td>
+        </tr>
+
+        <tr>
+          <td>Preferred Term</td>
+
+          <td>MRCONSO.STR<br>
+          TTY = PT</td>
+        </tr>
+      </tbody>
+    </table><br>
+    File: ICNP2015-UMLS_1.xlsx<br>
+    tabs: DC Inferred, IC Inferred<br>
+    <br>
+
+    <table>
+      <tbody>
+        <tr>
+          <th>Field</th>
+
+          <th>Representation</th>
+        </tr>
+
+        <tr>
+          <td>Child Code</td>
+
+          <td>Used to build hierarchy</td>
+        </tr>
+
+        <tr>
+          <td>Preferred Term (Child)</td>
+
+          <td>Not directly processed</td>
+        </tr>
+
+        <tr>
+          <td>Axis (Child)</td>
+
+          <td>MRSAT.ATN = ICNP_TYPE</td>
+        </tr>
+
+        <tr>
+          <td>Parent Code</td>
+
+          <td>Used to build hierarchy</td>
+        </tr>
+
+        <tr>
+          <td>Preferred Term (Parent)</td>
+
+          <td>Not directly processed</td>
+        </tr>
+
+        <tr>
+          <td>Axis (Parent)</td>
+
+          <td>MRSAT.ATN = ICNP_TYPE</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="rep_block_level_two">
+  <a name="file2" id="file2"></a><br>
+  <br>
+  File: ICNP-SCT_Equivalency_Table_2015.xlsx<br>
+  tabs: DC Mapping, IC Mapping<br>
+  <br>
+
+  <table>
+    <tbody>
+      <tr>
+        <th>Field</th>
+
+        <th>Representation</th>
+      </tr>
+
+      <tr>
+        <td>ICNP Code</td>
+
+        <td>MRMAP.FROMID<br>
+        MRREL.SGID</td>
+      </tr>
+
+      <tr>
+        <td>ICNP Preferred Term (2015 release)</td>
+
+        <td>Not directly processed</td>
+      </tr>
+
+      <tr>
+        <td>SNOMED CT Code</td>
+
+        <td>MRMAP.TOID<br>
+        MRREL.SGID</td>
+      </tr>
+
+      <tr>
+        <td>SNOMED CT Fully Specified Name (2015-01-31 release)</td>
+
+        <td>Not directly processed</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
