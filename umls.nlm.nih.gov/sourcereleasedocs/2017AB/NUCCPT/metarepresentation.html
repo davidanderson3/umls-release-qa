@@ -1,0 +1,146 @@
+    <p>This page lists UMLS Metathesaurus data elements and traces them
+      back to the specific source data that populates them.</p>
+    <!--begin tabbed navigation area-->
+    <div class="section-6">
+      <ul id="menu-source-docs">
+        <li id="nav-1"><a href="index.html">Synopsis</a></li>
+        <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+        <!-- <li id="nav-3"><a href="stats.html">Statistics</a></li>
+        <li id="nav-4"><a href="samples.html">Samples</a></li> -->
+        <li id="nav-5"><a href="sourcerepresentation.html">Source
+            Representation</a></li>
+        <li id="nav-6"><a href="metarepresentation.html">Metathesaurus
+            Representation</a></li>
+      </ul>
+    </div>
+    <!-- end tabbed navigation area -->
+<a id="top-of-page"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>,
+      <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
+      <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+    <div id="general" class="rep_block_level_one">
+      <p><strong>VSAB:</strong> NUCCPT_17.1</p>
+      <div id="rep_identifiers" class="rep_block_level_one">
+        <h3>Summary of Changes</h3>
+        New TTY: <br/>
+        <ul>
+        <li>OP (indicated by "inactive" notes)</li>
+        </ul>
+
+        New ATN:<br/>
+        <ul>
+        <li>NOTE (derived from "Notes" field in data)</li>
+        </ul>
+
+        New:  "Definition" data is now included in MRDEF.RRF
+      </div>
+      <div id="rep_change_summary" class="rep_block_level_one">
+        <h3>Source Provided Files: </h3>
+        <p>The input file is in standard comma-separated-values (csv) format, with fields descriptions in the first line. </p>
+
+        <table>
+        	<tbody>
+        	<tr>
+        	<th>File Name</th>
+			<th>Description</th>
+			</tr>
+			<tr>
+			<td>nucc_taxonomy_171.csv</td>
+			<td>Provider taxonomy data file</td>
+			</tr>
+        	</tbody>
+		</table>
+
+      </div>
+      <div id="rep_identifers" class="rep_block_level_one"><br/>
+        <h3>Identifiers:</h3>
+        <p>Identifiers are assigned as follows:</p>
+
+
+       <table>
+       <tbody>
+       <tr>
+       	<th> Identifier </th>
+   	   	<th> Origin </th>
+       </tr>
+
+       <tr>
+	          	<td>CODE</td>
+				<td>Code</td>
+       </tr>
+       <tr>
+       			<td>SAUI</td>
+       			<td>Not applicable</td>
+       </tr>
+       <tr>
+				<td>SCUI</td>
+				<td>Same as CODE</td>
+	   </tr>
+		<tr>
+				<td>SDUI</td>
+				<td>Not applicable</td>
+		</tr>
+
+       </tbody>
+       </table>
+
+
+        <div id="rep_termtypes" class="rep_block_level_two"> <a
+            id="atoms"></a>
+          <h3>Atoms (MRCONSO):</h3>
+          <span class="nav">(<a href="#top-of-page">return to top</a></span>)
+          <table>
+            <tbody>
+              <tr>
+                <th>Term Type</th>
+                <th>Origin of CODE</th>
+                <th>Origin of STR </th>
+
+              </tr>
+              <tr>
+                <td>PT</td>
+                <td>CODE, SCUI: Code value from data file</td>
+                <td>Created by concatenating &lt;Grouping&gt;; &lt;Classification&gt;, &lt;Specialization&gt; fields<br/>
+                For example, the STR for 101YS0200X is "Behavioral Health &amp; Social Service Providers; Counselor, School"</td>
+              </tr>
+			  <tr>
+				<td>OP</td>
+				<td>CODE, SCUI: Code value from data file</td>
+				<td>Created by concatenating &lt;Grouping&gt;; &lt;Classification&gt;, &lt;Specialization&gt; fields<br/>
+				For example, the STR for 103GC0700X is "Behavioral Health &amp; Social Service Providers; Clinical Neuropsychologist, Clinical"<br/>
+				TTY = OP is assigned when the "Notes" field indicates that the code is inactive.
+				</td>
+              </tr>
+            </tbody>
+          </table>
+          <br/>
+        </div>
+        <div id="rep_attributes" class="rep_block_level_two"> <a
+            id="attributes"></a><br/>
+		<table>
+            <tbody>
+              <tr>
+                <th>ATN</th>
+                <th>Origin</th>
+              </tr>
+              <tr>
+              	<td>NOTE</td>
+              	<td>Notes field</td>
+              </tr>
+            </tbody>
+        </table>
+        </div>
+        <div id="rep_definitions" class="rep_block_level_two"> <a
+            id="definitions"></a><br/>
+          <h3>Definitions (MRDEF):</h3>
+          <span class="nav">(<a href="#top-of-page">return to top</a></span>)
+          <p>Extracted from "Definition" field<br/>
+          </p>
+        </div>
+        <div id="rep_relationships" class="rep_block_level_two"> <a
+            id="relationships"></a><br/>
+
+        </div>
+        <div id="mappings" class="rep_block_level_two">
+        </div>
+      </div>
+    </div>
