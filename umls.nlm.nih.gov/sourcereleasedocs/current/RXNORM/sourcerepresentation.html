@@ -1,114 +1,104 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html;
-      charset=ISO-8859-1">
-    <title></title>
-  </head>
-  <body>
-    <div class="section-4">
-      <ul id="menu">
-        <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
-        <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
-        <li id="nav-3"> <a href="sourcemetastats.html">Statistics and
-            sample data</a>
-          <ul id="subnav-3">
-            <li> <a href="termtypes.html">Terms and term types</a> </li>
-            <li> <a href="attributes.html">Attributes</a> </li>
-            <li> <a href="relationships.html">Relationships</a> </li>
-            <li> <a href="semtypes.html">Semantic Types</a> </li>
-            <li> <a href="overlap.html">Source Overlap</a> </li>
-          </ul>
-        </li>
-        <li id="nav-4"> <a href="representation.html">Representation</a>
-          <ul id="subnav-4">
-            <li> <a href="sourcerepresentation.html" id="sourcerep">Source
-                Representation</a> </li>
-            <li> <a href="metarepresentation.html">Metathesaurus
-                Representation</a> </li>
-          </ul>
-        </li>
+<p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p>
+<!--begin tabbed navigation area-->
+   <div class="section-5">
+      <ul id="menu-source-docs">
+         <li id="nav-1"><a href="index.html">Synopsis</a></li>
+         <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+         <!--<li id="nav-3"><a href="stats.html">Statistics</a></li>
+         <li id="nav-4"><a href="samples.html">Samples</a></li>-->
+         <li id="nav-5"><a href="sourcerepresentation.html">Source Representation</a></li>
+         <li id="nav-6"><a href="metarepresentation.html">Metathesaurus Representation</a></li>
       </ul>
-    </div>
-    <!-- end tabbed navigation area --> <br>
-    <a name="top"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
-      <a href="#change_summary">Summary of Changes</a>, <a
-        href="#file_summary">Summary of Source-Provided Files</a> <a
-        href="#file_details">Source-Provided File Details</a></span> <a
-      name="general"></a>
+   </div>
+<!-- end tabbed navigation area -->
+
+    <a id="top-of-page"></a> 
+    <span class="nav">
+    Skip to: 
+    <a href="#rep_general">Notes</a>,
+      <a href="#change_summary">Summary of Changes</a>, 
+      <a href="#file_summary">Summary of Source-Provided Files</a>, 
+      <a href="#file_details">Source-Provided File Details</a></span> 
+
     <div id="rep_general" class="rep_block_level_one">
+      <p>VSAB: RXNORM_16AB_170306F</p>
       <div id="rep_identifiers" class="rep_block_level_one">
         <h3>Notes:</h3>
         <p>RxNorm, a standardized nomenclature for clinical drugs, is
           produced by the National Library of Medicine. Data files are
           released monthly and <a
 href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">available
-
             by download</a>. Within each Metathesaurus cycle, RxNorm is
           updated multiple times. This document reflects the latest
           cumulative update. The scope of RxNorm is determined by the
           combined scope of its source vocabularies which include the
-          following:<br>
+          following:
         </p>
-        <table style="width: 633px; height: 314px;" class="elements"
-          border="0" cellspacing="0">
+        <table>
           <tbody>
             <tr>
               <th>Sources</th>
               <th>Description</th>
             </tr>
             <tr>
-              <td class="file_field_name">ATC_2014_14_03_03</td>
+              <td class="file_field_name">ATC_2017_17_03_06</td>
               <td>Anatomical Therapeutic Chemical Classification System</td>
             </tr>
             <tr>
-              <td class="file_field_name">GS_2014_02_06</td>
+            <td class="file_field_name">CVX_2017_02_08</td>
+            <td>Vaccines Administered</td>
+            </tr>
+            <tr>
+            <td class="file_field_name">DRUGBANK5.0_2017_02_02</td>
+            <td>DrugBank</td>
+             </tr>
+            <tr>
+              <td class="file_field_name">GS_2017_02_13</td>
               <td>Gold Standard Drug Database</td>
             </tr>
             <tr>
-              <td class="file_field_name">MDDB_2014_01_29</td>
-              <td>Master Drug Data Base. Medi-Span, a division of
-                Wolters Kluwer Health</td>
+              <td class="file_field_name">MDDB_2017_02_08</td>
+              <td>Master Drug Data Base</td>
             </tr>
             <tr>
-              <td class="file_field_name">MMSL_2014_02_03</td>
+              <td class="file_field_name">MMSL_2017_02_01</td>
               <td>Multum MediSource Lexicon</td>
             </tr>
             <tr>
-              <td class="file_field_name">MMX_2014_02_03</td>
+              <td class="file_field_name">MMX_2017_02_06</td>
               <td>Micromedex RED BOOK</td>
             </tr>
             <tr>
-              <td class="file_field_name">MTHFDA_2011_06_01_13_05_06</td>
-              <td>FDA National Drug Code Directory</td>
+              <td class="file_field_name">MTHSPL_2017_02_27</td>
+              <td>Metathesaurus FDA Structured Product Labels</td>
             </tr>
             <tr>
-              <td class="file_field_name">MTHSPL_2014_02_24</td>
-              <td>FDA Structured Product Labels</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">NDDF_2014_02_05</td>
+              <td class="file_field_name">NDDF_2017_02_08</td>
               <td>FDB MedKnowledge</td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-              </td>
-              <td style="vertical-align: top;">National Drug File<br>
-              </td>
+              <td>NDFRT_2017_03_06</td>
+              <td>National Drug File</td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">RXNORM_13AB_140303F<br>
-              </td>
-              <td style="vertical-align: top;">RxNorm Vocabulary<br>
-              </td>
+              <td>NDFRT_FDASPL_2017_03_06</td>
+              <td>National Drug File - FDASPL</td>
             </tr>
             <tr>
-              <td class="file_field_name">VANDF_2014_01_23</td>
+              <td>NDFRT_FMTSME_2017_03_06</td>
+              <td>National Drug File - FMTSME</td>
+            </tr>
+            <tr>
+              <td>RXNORM_16AB_170306F</td>
+              <td>RxNorm Vocabulary</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">VANDF_2017_01_19</td>
               <td>Veterans Health Administration National Drug File</td>
             </tr>
           </tbody>
         </table>
-        <br>
+        <br/>
         Note: Selected portions of MSH and SNOMEDCT are included in the
         RxNorm release files, however, they are not processed as part of
         RxNorm for the Metathesaurus except in assigning RXCUI and RXAUI
@@ -117,396 +107,98 @@ href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">avail
         how the RxNorm release files (RXN*RRF) are processed for
         representation in the UMLS Metathesaurus.&nbsp; It does not
         cover processing of individual source vocabularies for inclusion
-        in RxNorm.&nbsp;<br><br>
-      MTHFDA is included in each Metathesaurus release as part of RxNorm,
-however, it was not updated in this version. MTHFDA was last updated in 2011.
-
+        in RxNorm.&nbsp;<br/><br/>
+      
+<div id="rep_change_summary" class="rep_block_level_one"> <a
+        id="change_summary"></a>
         <h3>Summary of Changes</h3>
         <p>No changes were made to the RXNORM format itself or to
-          Metathesaurus source processing for 2014AA.&nbsp; Data changes
-          include the following:<br>
+          Metathesaurus source processing for 2017AA.&nbsp; Data changes
+          include the following:
         </p>
-        Atoms:
-      <br>
-      <table class="elements" border="0" cellspacing="0">
-        <tbody>
-          <tr>
-            <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-            <th>TTY&nbsp;&nbsp;</th>
-            <td style="vertical-align: top;"><span style="font-weight:
-                bold;">SAB</span><br>
-            </td>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">FN<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated<br>
-            </td>
-            <td style="vertical-align: top;">HT<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <br>  
-      Relationships:&nbsp; <br>
-      <table class="elements" border="0" cellspacing="0">
-        <tbody>
-          <tr>
-            <th>Status</th>
-            <th>Relationship</th>
-            <th>Inverse</th>
-            <td style="vertical-align: top;"><span style="font-weight:
-                bold;">SAB</span><br>
-            </td>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New<br>
-            </td>
-            <td style="vertical-align: top;">has_member<br>
-            </td>
-            <td style="vertical-align: top;">member_of&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">ATC_2014_14_03_03<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">active_metabolites_of&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">has_active_metabolites<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated<br>
-            </td>
-            <td style="vertical-align: top;">chemical_structure_of<br>
-            </td>
-            <td style="vertical-align: top;">has_chemical_structure&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated<br>
-            </td>
-            <td style="vertical-align: top;">contraindicated_with_disease<br>
-            </td>
-            <td style="vertical-align: top;">disease_with_contraindication&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated<br>
-            </td>
-            <td style="vertical-align: top;">contraindicating_class_of<br>
-            </td>
-            <td style="vertical-align: top;">has_contraindicating_class&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated<br>
-            </td>
-            <td style="vertical-align: top;">contraindicating_mechanism_of_action_of<br>
-            </td>
-            <td style="vertical-align: top;">has_contraindicating_mechanism_of&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated<br>
-            </td>
-            <td style="vertical-align: top;">contraindicating_physiologic_effect_of<br>
-            </td>
-            <td style="vertical-align: top;">has_contraindicating_physiologic_e&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated<br>
-            </td>
-            <td style="vertical-align: top;">effect_may_be_inhibited_by<br>
-            </td>
-            <td style="vertical-align: top;">may_inhibit_effect_of&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated<br>
-            </td>
-            <td style="vertical-align: top;">has_contraindicated_drug<br>
-            </td>
-            <td style="vertical-align: top;">drug_contraindicated_for&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated<br>
-            </td>
-            <td style="vertical-align: top;">has_mechanism_of_action<br>
-            </td>
-            <td style="vertical-align: top;">mechanism_of_action_of&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated<br>
-            </td>
-            <td style="vertical-align: top;">has_participant<br>
-            </td>
-            <td style="vertical-align: top;">participates_in&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated<br>
-            </td>
-            <td style="vertical-align: top;">has_pharmacokinetics<br>
-            </td>
-            <td style="vertical-align: top;">pharmacokinetics_of&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated<br>
-            </td>
-            <td style="vertical-align: top;">has_physiologic_effect<br>
-            </td>
-            <td style="vertical-align: top;">physiologic_effect_of&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated<br>
-            </td>
-            <td style="vertical-align: top;">has_product_component<br>
-            </td>
-            <td style="vertical-align: top;">product_component_of&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated<br>
-            </td>
-            <td style="vertical-align: top;">has_therapeutic_class<br>
-            </td>
-            <td style="vertical-align: top;">therapeutic_class_of&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated<br>
-            </td>
-            <td style="vertical-align: top;">induced_by<br>
-            </td>
-            <td style="vertical-align: top;">induces&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated<br>
-            </td>
-            <td style="vertical-align: top;">may_be_diagnosed_by<br>
-            </td>
-            <td style="vertical-align: top;">may_diagnose&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated<br>
-            </td>
-            <td style="vertical-align: top;">may_be_prevented_by<br>
-            </td>
-            <td style="vertical-align: top;">may_prevent&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated<br>
-            </td>
-            <td style="vertical-align: top;">may_be_treated_by<br>
-            </td>
-            <td style="vertical-align: top;">may_treat&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated<br>
-            </td>
-            <td style="vertical-align: top;">metabolic_site_of<br>
-            </td>
-            <td style="vertical-align: top;">site_of_metabolism&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-          </tbody>
-      </table>
-      <br>
-      Attributes:&nbsp; <br>
-      <table class="elements" border="0" cellspacing="0">
+      Attributes:
+      <table>
         <tbody>
           <tr>
             <th>Status</th>
             <th>ATN</th>
-            <td style="vertical-align: top;"><span style="font-weight:
-                bold;">SAB</span><br>
-            </td>
+            <td><span style="font-weight: bold;">SAB</span></td>
           </tr>
           <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">FDA_UNII_CODE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>DATE_LAST_MODIFIED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>CVX_2017_02_08</td>
           </tr>
           <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">LEVEL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>IND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>MTHSPL_2017_02_27</td>
           </tr>
           <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">MESH_DEFINITION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>SID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>DRUGBANK5.0_2017_02_02</td>
+          </tr>  
+         <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>SOS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>CVX_2017_02_08</td>
           </tr>
           <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">MESH_DUI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">MESH_NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">MESH_UI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_KIND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDF_UNITS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NUI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">SEVERITY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">SNOMED_CID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">STRENGTH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">VANDF_RECORD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">VA_IEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">VUID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-            </td>
-            <td style="vertical-align: top;">NDFRT_2014_02_03<br>
-            </td>
-          </tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>VACCINE_STATUS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>CVX_2017_02_08</td>
+          </tr>    
+          
         </tbody>
       </table>
-      <br>
-    </div>
+      <br/>
+      Term Types:
+      <table>
+        <tbody>
+          <tr>
+            <th>Status</th>
+            <th>TTY</th>
+            <td><span style="font-weight: bold;">SAB</span></td>
+          </tr>
+          <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>FSY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>DRUGBANK5.0_2017_02_02</td>
+          </tr>
+       </tbody>
+      </table>
+      <br/>
+      Relationships:
+      <table>
+        <tbody>
+          <tr>
+            <th>Status</th>
+            <th>Relationship</th>
+            <th>RELA</th>
+            <th>RELA inverse</th>
+          </tr>
+          <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>RO</td>
+            <td>mapped_from&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>mapped_to</td>
+          </tr>
+          <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>RO</td>
+            <td>has_member&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>member_of</td>
+          </tr>
+       </tbody>
+      </table>
+      <br/> 
+      </div>
       Source Provided Files:
       <p>RXNORM&nbsp; data files are released monthly and <a
 href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">available
           by download</a>.</p>
-      <table class="elements" border="0" cellspacing="0">
+      <table>
         <tbody>
           <tr>
             <th>File Name</th>
@@ -548,29 +240,17 @@ href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">avail
             <td class="file_field_name">RXNCUI.RRF</td>
             <td>Retired CUIs.</td>
           </tr>
-          <tr>
-            <td class="file_field_name">RXNCONSOOCD.RRF</td>
-            <td>OCD concept and source information.</td>
-          </tr>
-          <tr>
-            <td class="file_field_name">RXNASATOCD.RRF</td>
-            <td>OCD simple concept and atom attribute information.</td>
-          </tr>
-          <tr>
-            <td class="file_field_name">RXNSTYOCD.RRF</td>
-            <td>OCD semantic type.</td>
-          </tr>
         </tbody>
       </table>
     </div>
     <div id="rep_file_summary" class="rep_block_level_one"><a
-        name="file_summary"></a>
+        id="file_summary"></a>
       <h3>Source-Provided Files: Summary</h3>
       &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
       <div class="rep_block_level_two">
         <!-- Make a table of each file that comes from the source   -->
         <h4>Documentation and Reference</h4>
-        <table class="elements" border="0" cellspacing="0">
+        <table>
           <tbody>
             <tr>
               <th>File Name</th>
@@ -588,8 +268,8 @@ href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">avail
           </tbody>
         </table>
         <h4>RXN RRF files</h4>
-        <a name="RXN_RRF_files"></a>
-        <table class="elements" border="0" cellspacing="0">
+        <a id="RXN_RRF_files"></a>
+        <table>
           <tbody>
             <tr>
               <th>File Name</th>
@@ -631,29 +311,13 @@ href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">avail
               <td class="file_field_name"><a href="#file9">RXNCUI.RRF</a></td>
               <td>Retired CUIs.</td>
             </tr>
-            <tr>
-              <td class="file_field_name"><a href="#file10">RXNCONSOOCD.RRF</a></td>
-              <td>OCD concept and source information.</td>
-            </tr>
-            <tr>
-              <td class="file_field_name"><a href="#file11">RXNASATOCD.RRF</a></td>
-              <td>OCD attribute information.</td>
-            </tr>
-            <tr>
-              <td class="file_field_name"><a href="#file12">RXNSTYOCD.RRF</a></td>
-              <td>OCD semantic type information.</td>
-            </tr>
           </tbody>
         </table>
-        <p>There are separate files for the obsolete clinical drug (OCD)
-          terms (i.e., RXNCONSOOCD.RRF, RXNASATOCD.RRF, RXNSTYOCD.RRF).
-          These files have formats similar to existing RXN files of the
-          same type so they have been appended to them.</p>
       </div>
     </div>
     <div id="rep_file_details" class="rep_block_level_one">
       <h3>Source-Provide Files: Details</h3>
-      <a name="file_details">&nbsp;&nbsp;<span class="nav">(return to </span></a><a
+      <a id="file_details">&nbsp;&nbsp;<span class="nav">(return to </span></a><a
         href="#top">top</a>)
       <p>RxNorm uses the Rich Release Format (RRF) of the Metathesaurus.
         There are some fields that are not populated by RxNorm and are
@@ -666,9 +330,9 @@ href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">avail
       <p>Also, some fields such as CODE may appear in multiple RXN RRF
         files. These fields are redundant and are not always used within
         a particular RRF file but are processed within another file.</p>
-      <div class="rep_block_level_two"> <a name="file1"></a>
+      <div class="rep_block_level_two"> <a id="file1"></a>
         <h4 class="file_field_name">file: RXNCONSO.RRF</h4>
-        <table class="elements" border="0" cellspacing="0">
+        <table>
           <tbody>
             <tr>
               <th>#</th>
@@ -787,9 +451,9 @@ href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">avail
             </tr>
           </tbody>
         </table>
-        <a name="file2"></a>
+        <a id="file2"></a>
         <h4 class="file_field_name">file: RXNDOC.RRF</h4>
-        <table class="elements" border="0" cellspacing="0">
+        <table>
           <tbody>
             <tr>
               <th>#</th>
@@ -823,9 +487,9 @@ href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">avail
             </tr>
           </tbody>
         </table>
-        <a name="file3"></a>
+        <a id="file3"></a>
         <h4 class="file_field_name">file: RXNREL.RRF</h4>
-        <table class="elements" border="0" cellspacing="0">
+        <table>
           <tbody>
             <tr>
               <th>#</th>
@@ -942,9 +606,9 @@ href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">avail
             </tr>
           </tbody>
         </table>
-        <a name="file4"></a>
+        <a id="file4"></a>
         <h4 class="file_field_name">file: RXNSAB.RRF</h4>
-        <table class="elements" border="0" cellspacing="0">
+        <table>
           <tbody>
             <tr>
               <th>#</th>
@@ -1104,9 +768,9 @@ href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">avail
             </tr>
           </tbody>
         </table>
-        <a name="file5"></a>
+        <a id="file5"></a>
         <h4 class="file_field_name">file: RXNSAT.RRF</h4>
-        <table class="elements" border="0" cellspacing="0">
+        <table>
           <tbody>
             <tr>
               <th>#</th>
@@ -1197,12 +861,12 @@ href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">avail
             </tr>
           </tbody>
         </table>
-        <br>
+        <br/>
         Note: Attributes with SAB=MSH plus ATNs UMLSCUI and UMLSAUI are
-        not processed. <br>
-        <a name="file6"></a>
+        not processed. <br/>
+        <a id="file6"></a>
         <h4 class="file_field_name">file: RXNSTY.RRF</h4>
-        <table class="elements" border="0" cellspacing="0">
+        <table>
           <tbody>
             <tr>
               <th>#</th>
@@ -1249,7 +913,7 @@ href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">avail
           </tbody>
         </table>
         <p>Note: STYs are subject to editing.</p>
-        <a name="file7"></a>
+        <a id="file7"></a>
         <h4 class="file_field_name">file: RXNATOMARCHIVE.RRF</h4>
         <p>This file is created by RxNorm for use in tracking the
           archival of names (atoms) no longer provided by RxNorm drug
@@ -1257,25 +921,23 @@ href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">avail
           system. Only atoms with SAB = "RXNORM" will be in the archive.
           This information is not processed for the Metathesaurus as
           part of RxNorm.</p>
-        <a name="file8"></a>
+        <a id="file8"></a>
         <h4 class="file_field_name">file: RXNCUICHANGES.RRF</h4>
         <p>This file provides information about changes to the
           concept_id (RXCUI) for atoms in RxNorm from release to
           release. It is not cumulative. This information is not
           processed for the Metathesaurus as part of RxNorm.</p>
-        
-        <a name="file9"></a>
+        <a id="file9"></a>
         <h4 class="file_field_name">file: RXNCUI.RRF</h4>
         <p>This file of retired CUIs will show each RxNorm Concept
           Unique Identifier (RXCUI) that existed in a prior release but
           is not present in the current release. The file includes
           mappings to current RXCUIs as synonymous or to one or more
           related current RXCUIs where possible.</p>
-        <table class="elements" border="0" cellspacing="0">
+        <table>
           <tbody>
             <tr>
-              <th>#<br>
-              </th>
+              <th>#</th>
               <th>Field Name</th>
               <th>Description</th>
               <th>Representation</th>
@@ -1316,27 +978,7 @@ href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">avail
             </tr>
           </tbody>
         </table>
-        
-        <a name="file10"></a>
-        <h4 class="file_field_name">file: RXNCONSOOCD.RRF</h4>
-        <p>This file contains information about RxNorm "OCD" term type
-          atoms only. For field name, description, and representation
-          information see <a href="#file1">RXNCONSO.RRF.</a></p>
-        
-        <a name="file11"></a>
-        <h4 class="file_field_name">file: RXNSATOCD.RRF</h4>
-        <p>This file lists each "OCD" concept, atom, or relationship
-          attribute that does not have a sub-element structure. For
-          field name, description, and representation information see <a
-            href="#file5">RXNSAT.RRF.</a></p>
-        
-        <a name="file12"></a>
-        <h4 class="file_field_name">file: RXNSTYOCD.RRF</h4>
-        <p>This file lists each semantic type assigned to each "OCD"
-          concept. For field name, description, and representation
-          information see <a href="#file6">RXNSTY.RRF.</a></p>
-        
       </div>
-    </div>
-  </body>
-</html>
+</div>
+</div>
+

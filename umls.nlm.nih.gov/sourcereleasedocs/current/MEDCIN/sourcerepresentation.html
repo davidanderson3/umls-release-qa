@@ -1,87 +1,69 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-<head>
-  <meta http-equiv="content-type"
- content="text/html; charset=ISO-8859-1">
-  <title></title>
-</head>
-<body>
-<div class="section-4">
-<ul id="menu">
-  <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
-  <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
-  <li id="nav-3"> <a href="sourcemetastats.html">Statistics and sample
-data</a>
-    <ul id="subnav-3">
-      <li> <a href="termtypes.html">Terms and term types</a> </li>
-      <li> <a href="attributes.html">Attributes</a> </li>
-      <li> <a href="relationships.html">Relationships</a> </li>
-      <li> <a href="semtypes.html">Semantic Types</a> </li>
-      <li> <a href="overlap.html">Source Overlap</a> </li>
-    </ul>
-  </li>
-  <li id="nav-4"> <a href="representation.html">Representation</a>
-    <ul id="subnav-4">
-      <li> <a href="sourcerepresentation.html" id="sourcerep">Source
-Representation</a> </li>
-      <li> <a href="metarepresentation.html">Metathesaurus
-Representation</a> </li>
-    </ul>
-  </li>
-</ul>
-</div>
+<p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p>
+<!--begin tabbed navigation area-->
+   <div class="section-5">
+      <ul id="menu-source-docs">
+         <li id="nav-1"><a href="index.html">Synopsis</a></li>
+         <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+         <!--<li id="nav-3"><a href="stats.html">Statistics</a></li>
+         <li id="nav-4"><a href="samples.html">Samples</a></li>--> 
+         <li id="nav-5"><a href="sourcerepresentation.html">Source Representation</a></li>
+         <li id="nav-6"><a href="metarepresentation.html">Metathesaurus Representation</a></li>
+      </ul>
+   </div>
 <!-- end tabbed navigation area -->
-<br/>
-<br/>
-<br/>
-<a name="top"></a>
+
+<a id="top-of-page"></a>
 <span class="nav">Skip to: <a href="#general">Notes</a>, <a
  href="#change_summary">Summary of Changes</a>, <a href="#file_summary">Summary
-of Source-Provided Files</a> <a href="#file_details">Source-Provided
+of
+Source-Provided
+Files</a> <a href="#file_details">Source-Provided
 File Details</a></span>
-<a name="general"></a>
+<br/>
+<p><strong>VSAB: MEDCIN3_2016_12_16</strong></p>
+<a id="general"></a>
 <div id="rep_general" class="rep_block_level_one">
-<p><b>VSAB:</b> MEDCIN3_2013_12_18</p> 
 <h3>Notes</h3>
 <p>MEDCIN data files are submitted by Medicomp Systems.</p>
 </div>
 <div id="rep_change_summary" class="rep_block_level_one">
-<a name="change_summary"></a>
+<a id="change_summary"></a>
 <h3>Summary of Changes</h3>
-&nbsp;&nbsp;<span class="nav"><a href="#top">return to top</a></span>
-<p>Ascii forms of strings generated from non-ascii strings are no longer
-    being created. MTH* atoms along with their associated relationships
-    have been deprecated (e.g., MTH_* atoms, SFO/LFO|mth_plain_text_form_of).</p>
+&nbsp;&nbsp;<span class="nav"><a href="#top-of-page">return to top</a></span>
+<p>New relationship attribute:</p>
+<ul>
+	<li>has_grade/grade_of</li>
+</ul>
 </div>
 <div id="rep_file_summary" class="rep_block_level_one">
-<a name="file_summary"></a>
+<a id="file_summary"></a>
 <h3>Source-Provided Files: Summary</h3>
-&nbsp;&nbsp;<span class="nav"><a href="#top">return to top</a></span>
+&nbsp;&nbsp;<span class="nav"><a href="#top-of-page">return to top</a></span>
 <p>The MEDCIN distribution includes the following files:</p>
 <div class="rep_block_level_two">
 <!-- Make a table of each file that comes from the source   -->
 <h4>Data Files</h4>
-<a name="data_files"></a>
-<table class="elements" border="0" cellspacing="0">
+<a id="data_files"></a>
+<table>
   <tbody>
     <tr>
       <th>File Name</th>
       <th>Description</th>
     </tr>
     <tr>
-      <td class="file_field_name"><a href="#file1">UMLS_MEDCIN_CONCEPTS2013-12-18.TXT</a></td>
+      <td class="file_field_name"><a href="#file1">UMLS_MEDCIN_CONCEPTS2016-12-16.TXT</a></td>
       <td>Concepts - Pipe-Delimited Format</td>
     </tr>
     <tr>
-      <td class="file_field_name"><a href="#file2">UMLS_MEDCIN_DESCRIPTIONS2013-12-18.TXT</a></td>
+      <td class="file_field_name"><a href="#file2">UMLS_MEDCIN_DESCRIPTIONS2016-12-16.TXT</a></td>
       <td>Descriptions - Pipe-Delimited Format</td>
     </tr>
     <tr>
-      <td class="file_field_name"><a href="#file3">UMLS_MEDCIN_HIERARCHY2013-12-18.TXT</a></td>
+      <td class="file_field_name"><a href="#file3">UMLS_MEDCIN_HIERARCHY2016-12-16.TXT</a></td>
       <td>Hierarchy - Pipe-Delimited Format</td>
     </tr>
     <tr>
-      <td class="file_field_name"><a href="#file4">UMLS_MEDCIN_SNOMED2013-12-18.TXT</a></td>
+      <td class="file_field_name"><a href="#file4">UMLS_MEDCIN_SNOMED2016-07.TXT</a></td>
       <td>MEDCIN to SNOMEDCT mappings - Pipe-Delimited Format</td>
     </tr>
   </tbody>
@@ -89,19 +71,19 @@ File Details</a></span>
 <br/>
 </div>
 </div>
-<a name="file_details"></a>
+<a id="file_details"></a>
 <div id="rep_file_details" class="rep_block_level_one">
 <h3>Source-Provided Files: Details</h3>
-&nbsp;&nbsp;<span class="nav"><a href="#top">return to top</a></span>
+&nbsp;&nbsp;<span class="nav"><a href="#top-of-page">return to top</a></span>
 <p>Details on format of input files and representation of source data.
 Consult the MEDCIN documentation for additional details.</p>
 <div class="rep_block_level_two">
-<a name="file1"></a>
+<a id="file1"></a>
 <h4 class="file_field_name">file:UMLS_MEDCIN_CONCEPTSyyyy-mm-dd.TXT</h4>
 &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
 Files</a></span>
-<br><br/>
-<table class="elements" border="0" cellspacing="0">
+<br/><br/>
+<table>
   <tbody>
     <tr>
       <th>Field #</th>
@@ -127,12 +109,12 @@ parentheses</td>
   </tbody>
 </table>
 <br/>
-<a name="file2"></a>
+<a id="file2"></a>
 <h4 class="file_field_name">file:UMLS_MEDCIN_DESCRIPTIONSyyyy-mm-dd.TXT</h4>
 &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
 Files</a></span>
-<br><br/>
-<table class="elements" border="0" cellspacing="0">
+<br/><br/>
+<table>
   <tbody>
     <tr>
       <th>Field #</th>
@@ -159,18 +141,18 @@ MRCONSO.SCUI</td>
       <td>1 = preferred, 0 = non-preferred</td>
       <td>0 =&gt; MRCONSO.TTY = "SY",<br/>
 1 =&gt; MRCONSO.TTY = "PT"<br/>
-MRSAT.ATN = "PREF_FLAG_ID" (STYPE = "AUI")<br/>
+MRSAT.ATN = "PREF_FLAG_ID" (STYPE = "AUI")
       </td>
     </tr>
   </tbody>
 </table>
 <br/>
-<a name="file3"></a>
+<a id="file3"></a>
 <h4 class="file_field_name">file:UMLS_MEDCIN_HIERARCHYyyyy-mm-dd.TXT</h4>
 &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
 Files</a></span>
-<br><br/>
-<table class="elements" border="0" cellspacing="0">
+<br/><br/>
+<table>
   <tbody>
     <tr>
       <th>Field #</th>
@@ -196,18 +178,18 @@ breaks down as "&lt;space&gt;C", "DA", "&lt;space&gt;D", and "&lt;space&gt;P", a
 (yielding " CDA D", in this example) produces the "NODEKEY" value of
 this concept's hierarchical parent.<br/>
 Also used to populate MRHIER.HCD.&nbsp; Note that leading space
-characters have not been removed from the HCD value.<br/>
+characters have not been removed from the HCD value.
       </td>
     </tr>
   </tbody>
 </table>
 <br/>
-<a name="file4"></a>
+<a id="file4"></a>
 <h4 class="file_field_name">file:UMLS_MEDCIN_SNOMEDyyyy-mm-dd.TXT</h4>
 &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
 Files</a></span>
-<br><br/>
-<table class="elements" border="0" cellspacing="0">
+<br/><br/>
+<table>
   <tbody>
     <tr>
       <th>Field #</th>
@@ -233,7 +215,7 @@ for "Part of (attribute)", is mapped to REL = "RN" (narrower
 relationship) and RELA = "part_of".<br/>
       <br/>
 If RELATIONSHIPTYPE = "168666000" (same_as), MRMAP.RRF and MRSMAP.RRF
-entries are also created.<br/>
+entries are also created.
       </td>
     </tr>
     <tr>
@@ -248,12 +230,10 @@ to SCT_CONCEPTID</td>
       <td>4</td>
       <td class="file_field_name">PREF_FLAG_ID</td>
       <td>1=preferred, 0=non-preferred</td>
-      <td>MRSAT.ATN = "PREF_FLAG_ID" (STYPE = "RUI")<br/>
+      <td>MRSAT.ATN = "PREF_FLAG_ID" (STYPE = "RUI")
       </td>
     </tr>
   </tbody>
 </table>
 </div>
 </div>
-</body>
-</html>

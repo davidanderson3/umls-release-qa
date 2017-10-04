@@ -1,54 +1,38 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html;
-      charset=windows-1252">
-    <title></title>
-  </head>
-  <body>
-    <div class="section-4">
-      <ul id="menu">
-        <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
-        <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
-        <li id="nav-3"> <a href="sourcemetastats.html">Statistics and
-            sample data</a>
-          <ul id="subnav-3">
-            <li> <a href="termtypes.html">Terms and term types</a> </li>
-            <li> <a href="attributes.html">Attributes</a> </li>
-            <li> <a href="relationships.html">Relationships</a> </li>
-            <li> <a href="semtypes.html">Semantic Types</a> </li>
-            <li> <a href="overlap.html">Source Overlap</a> </li>
-          </ul>
-        </li>
-        <li id="nav-4"> <a href="representation.html">Representation</a>
-          <ul id="subnav-4">
-            <li> <a href="sourcerepresentation.html">Source
-                Representation</a> </li>
-            <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
-
-
-
-
-
-                Representation</a> </li>
-          </ul>
-        </li>
+    <p>This page lists UMLS Metathesaurus data elements and traces them
+      back to the specific source data that populates them.</p>
+    <!--begin tabbed navigation area-->
+    <div class="section-6">
+      <ul id="menu-source-docs">
+        <li id="nav-1"><a href="index.html">Synopsis</a></li>
+        <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+        <li id="nav-3"><a href="stats.html">Statistics</a></li>
+        <li id="nav-4"><a href="samples.html">Samples</a></li>
+        <li id="nav-5"><a href="sourcerepresentation.html">Source
+            Representation</a></li>
+        <li id="nav-6"><a href="metarepresentation.html">Metathesaurus
+            Representation</a></li>
       </ul>
     </div>
+    <!-- end tabbed navigation area --> <br/>
     <br/>
     <br/>
-    <br/>
-    <a name="top"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>,
+    <a id="top-of-page"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>,
       <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
       <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
     <div id="general" class="rep_block_level_one">
-      <p><b>VSAB:</b> CVX2013_05_01<br/>
+      <p><b>VSAB:</b> CVX2016_01_04<br/>
       </p>
       <div id="rep_identifiers" class="rep_block_level_one">
         <h3>Summary of Changes</h3>
-        <p>CVX is a new source for 2013AB.&nbsp; <br/>
+        <p>No changes were made to the source data format.  However, processing vaccines with a status of "Inactive" was updated to reflect
+        a clarification from the CDC.    All CVX codes are considered 'active' except for when the vaccine status is 'NEVER ACTIVE', or the CVX code
+        is 99, or 999.
         </p>
-        <p></p>
+        This results in the following change to processing when the value of the status field is "Inactive":  <br/>
+		Previously:  TTY = OP/OA;  Suppress = "O"  <br/>
+		New:  TTY = PT/AB;  Suppress PT = "N"; Suppress AB = "Y" <br/>
+		Per above, codes 99 and 999 are considered obsolete, so even though they have an "Inactive" status, they are assigned TTY = OP/OA, Suppress = O (no change from previous version).
+		<br/>
       </div>
       <div id="rep_change_summary" class="rep_block_level_one">
         <h3>Source Provided Files:</h3>
@@ -57,176 +41,164 @@ href="http://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx">http:
         <br/>
         The flat file was used for Metathesaurus source processing.<br/>
         <br/>
-        <table class="elements" border="0" cellspacing="0">
+        <table>
           <tbody>
             <tr>
               <th>File Name</th>
-              <td style="vertical-align: top; text-align: center;"><b>Description</b><br/>
-              </td>
+              <th>Description</th>
             </tr>
             <tr>
               <td class="file_field_name">cvx.txt</td>
-              <td style="vertical-align: top;">"|" - delimited file<br/>
+              <td>"|" - delimited file<br/>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="rep_identifers" class="rep_block_level_one">
+        <h3>Identifiers:</h3>
+        Identifiers are assigned as follows:<br/>
+        <br/>
+        <table>
+          <tbody>
+            <tr>
+              <th>Identifier</th>
+              <th>Origin</th>
+            </tr>
+            <tr>
+              <td class="file_field_name">CODE<br/>
+              </td>
+              <td>CVX Code<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>SAUI<br/>
+              </td>
+              <td>Not Applicable<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>SCUI<br/>
+              </td>
+              <td>Same as CODE<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>SDUI<br/>
+              </td>
+              <td>Not Applicable<br/>
               </td>
             </tr>
           </tbody>
         </table>
         <br/>
-      </div>
-      <div id="rep_identifers" class="rep_block_level_one"><br/>
-        <h3>Identifiers:</h3>
-        Identifiers are assigned as follows:<br/>
-        <ul>
-          <li>CODE:&nbsp; CVX Code</li>
-          <li>SAUI:&nbsp; Not applicable<br/>
-          </li>
-          <li>SCUI:&nbsp; Same as CODE<br/>
-          </li>
-          <li>SDUI: Not applicable<br/>
-          </li>
-        </ul>
-        <p></p>
-        <div id="rep_termtypes" class="rep_block_level_two"> <a
-            name="atoms"></a>
+        <div id="rep_termtypes" class="rep_block_level_two"> <a id="atoms"></a>
           <h3>Atoms (MRCONSO):</h3>
-          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-          <table height="60" border="1" cellpadding="2" cellspacing="2"
-            width="451">
+          <span class="nav">(<a href="#top-of-page">return to top</a></span>)<br/>
+          <table>
             <tbody>
               <tr>
-                <td align="center" valign="top"><b>Term Type</b><br/>
-                </td>
-                <td align="center" valign="top"><b>Origin</b><br/>
+                <th>Term Type</th>
+                <th>Origin</th>
+              </tr>
+              <tr>
+                <td>AB</td>
+                <td>Short Description<br/>
+                  Vaccine Status = "Active," "Inactive," or "Pending"<br/>
+				  Exception:  Codes 99 and 999 are "Inactive," but are assigned TTY = OP/OA per directions from the CDC <br/>
                 </td>
               </tr>
               <tr>
-                <td valign="top">AB<br/>
-                </td>
-                <td valign="top">Short Description<br/>
-                  Vaccine Status = "Active" or "Pending"<br/>
-                </td>
-              </tr>
-              <tr>
-                <td valign="top">OA<br/>
-                </td>
-                <td valign="top">Short Description<br/>
-                  Vaccine Status = "Inactive" or "Never Active"<br/>
+                <td>OA</td>
+                <td>Short Description<br/>
+                  Vaccine Status = "Never Active"<br/>
                 </td>
               </tr>
               <tr>
-                <td valign="top">OP<br/>
-                </td>
-                <td valign="top">Full Vaccine Name<br/>
-                  Vaccine Status = "Inactive" or "Never Active"<br/>
+                <td>OP</td>
+                <td>Full Vaccine Name<br/>
+                  Vaccine Status = "Never Active"<br/>
                 </td>
               </tr>
               <tr>
-                <td valign="top">PT<br/>
-                </td>
-                <td valign="top">Full Vaccine Name<br/>
-                  Vaccine Status = "Active" or "Pending"<br/>
+                <td>PT</td>
+                <td>Full Vaccine Name<br/>
+                  Vaccine Status = "Active," "Inactive," or "Pending"<br/>
+                  Exception:  Codes 99 and 999 are "Inactive," but are assigned TTY = OP/OA per directions from the CDC <br/>
                 </td>
               </tr>
             </tbody>
           </table>
           <br/>
         </div>
-        <div id="rep_attributes" class="rep_block_level_two"> <a
-            name="attributes"></a><br/>
+        <div id="rep_attributes" class="rep_block_level_two"> <a id="attributes"></a><br/>
           <h3>Attributes (MRSAT):</h3>
           <br/>
-          &nbsp; <span class="nav">(<a href="#top">return to top</a></span>)<br/>
+           <span class="nav">(<a href="#top-of-page">return to top</a></span>)<br/>
           <br/>
-          <table height="60" border="1" cellpadding="2" cellspacing="2"
-            width="451">
+          <table>
             <tbody>
               <tr>
-                <td align="center" valign="top"><b>ATN</b><br/>
-                </td>
-                <td align="center" valign="top"><b>Origin</b><br/>
-                </td>
+                <th>ATN</th>
+                <th>Origin</th>
               </tr>
               <tr>
-                <td valign="top">DATE_LAST_MODIFIED<br/>
-                </td>
-                <td valign="top">Last Updated<br/>
-                </td>
+                <td>DATE_LAST_MODIFIED</td>
+                <td>Last Updated</td>
               </tr>
               <tr>
-                <td valign="top">SOS<br/>
-                </td>
-                <td valign="top">Notes<br/>
-                </td>
+                <td>SOS</td>
+                <td>Notes</td>
               </tr>
               <tr>
-                <td valign="top">VACCINE_STATUS<br/>
-                </td>
-                <td valign="top">Vaccine Status<br/>
-                </td>
+                <td>VACCINE_STATUS</td>
+                <td>Vaccine Status</td>
               </tr>
             </tbody>
           </table>
           <br/>
           <br/>
         </div>
-        <div id="rep_definitions" class="rep_block_level_two"> <a
-            name="definitions"></a><br/>
+        <div id="rep_definitions" class="rep_block_level_two"> <a id="definitions"></a><br/>
           <h3>Definitions (MRDEF):</h3>
-          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-          <p>No definitions are provided for CVX.&nbsp; "Notes" are
+          <span class="nav">(<a href="#top-of-page">return to top</a></span>)<br/>
+          <p>No definitions are provided for CVX. "Notes" are
             included as SOS attributes.<br/>
           </p>
         </div>
-        <div id="rep_relationships" class="rep_block_level_two"> <a
-            name="relationships"></a><br/>
-          <h3>Relationships (MRREL);&nbsp; Hierarchy (MRHIER)<br/>
+        <div id="rep_relationships" class="rep_block_level_two"> <a id="relationships"></a><br/>
+          <h3>Relationships (MRREL):<br/>
           </h3>
-          &nbsp; <span class="nav">(<a href="#top">return to top</a></span>)<br/>
           <br/>
-          There is no hierarchy for CVX.<br/>
-          <br/>
-          <table height="51" border="1" cellpadding="2" cellspacing="2"
-            width="788">
+          <table>
             <tbody>
               <tr>
-                <td align="center" valign="middle"><b>REL</b><br/>
-                </td>
-                <td valign="top">
-                  <table class="elements" height="46" align="center"
-                    border="0" cellspacing="0" width="127">
-                    <tbody>
-                      <tr>
-                        <th height="1" width="1">RELA<br/>
-                          Inverse RELA<br/>
-                        </th>
-                      </tr>
-                    </tbody>
-                  </table>
-                </td>
-                <td align="center" valign="middle"><b>Origin</b><br/>
-                </td>
+                <th><b>REL/<br/>
+                    Inverse REL</b>A </th>
+                <th>Origin</th>
+                <th>Description</th>
               </tr>
               <tr>
-                <td valign="top">SY<br/>
-                </td>
-                <td valign="middle">expanded_form_of<br/>
+                <td>SY</td>
+                <td>expanded_form_of<br/>
                   has_expanded_form<br/>
                 </td>
-                <td valign="top">Connect PT - AB, OP - AB atoms with
-                  same CVX Code<br/>
-                </td>
+                <td>Connect PT - AB, OP - AB atoms with same CVX Code</td>
               </tr>
             </tbody>
           </table>
           <br/>
+          <h3>Hierarchy (MRHIER)<br/>
+          </h3>
+           <span class="nav">(<a href="#top-of-page%22">return to top</a></span>)<br/>
+          <br/>
+          There is no hierarchy for CVX.<br/>
         </div>
         <div id="mappings" class="rep_block_level_two">
           <h3>Mappings (MRMAP):</h3>
-          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <span class="nav">(<a href="#top-of-page">return to top</a></span>)<br/>
           <p>No mappings are supplied for CVX.<br/>
           </p>
         </div>
       </div>
     </div>
-  </body>
-</html>

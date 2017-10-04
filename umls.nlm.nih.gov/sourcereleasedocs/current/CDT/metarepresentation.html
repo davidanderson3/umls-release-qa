@@ -1,83 +1,65 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html;
-      charset=windows-1252">
-    <title></title>
-  </head>
-  <body>
-    <div class="section-4">
-      <ul id="menu">
-        <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
-        <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
-        <li id="nav-3"> <a href="sourcemetastats.html">Statistics and
-            sample data</a>
-          <ul id="subnav-3">
-            <li> <a href="termtypes.html">Terms and term types</a> </li>
-            <li> <a href="attributes.html">Attributes</a> </li>
-            <li> <a href="relationships.html">Relationships</a> </li>
-            <li> <a href="semtypes.html">Semantic Types</a> </li>
-            <li> <a href="overlap.html">Source Overlap</a> </li>
-          </ul>
-        </li>
-        <li id="nav-4"> <a href="representation.html">Representation</a>
-          <ul id="subnav-4">
-            <li> <a href="sourcerepresentation.html">Source
-                Representation</a> </li>
-            <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
-
-
-
-                Representation</a> </li>
-          </ul>
-        </li>
+    <p>This page lists UMLS Metathesaurus data elements and traces them
+      back to the specific source data that populates them.</p>
+    <!--begin tabbed navigation area-->
+<div class="section-6">
+      <ul id = "menu-source-docs">
+        <li id="nav-1"><a href="index.html">Synopsis</a></li>
+       <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+        <!-- <li id="nav-3"><a href="stats.html">Statistics</a></li>
+        <li id="nav-4"><a href="samples.html">Samples</a></li>-->
+        <li id="nav-5"><a href="sourcerepresentation.html">Source
+            Representation</a></li>
+        <li id="nav-6"><a href="metarepresentation.html">Metathesaurus
+            Representation</a></li>
       </ul>
     </div>
-    <br/>
-    <br/>
-    <br/>
-    <a name="top"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>,
+    <!-- end tabbed navigation area -->
+    <a id="top-of-page"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>,
       <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
       <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
     <div id="general" class="rep_block_level_one">
-      <p><b>VSAB:</b> CDT2014<br/>
+      <p><strong>VSAB:</strong> CDT2017
       </p>
       <div id="rep_identifiers" class="rep_block_level_one">
         <h3>Summary of Changes</h3>
-        <p>New Class value = 99 in the source data indicates that the entire CDT Code entry is no longer valid (i.e.,
-    deleted) in this version. Assigned new TTY = OP (obsolete preferred term) for these entries.<br/>
-        </p>
-        <p><b>Notes:</b><br/>
-        </p>
-        <p>CDT in the 
-          Metathesaurus is extracted from a file provided by the
-          American Dental Association (ADA).&nbsp; The Metathesaurus
-          also includes the HCPCS version of CDT, which has RSAB =
-          "HCDT."&nbsp;&nbsp;&nbsp; The CDT hierarchy is created from the ascii data file
-          provided by the ADA, while the HCDT hierarchy is created
-          during Metathesaurus production using analysis of the HCPCS
-          printed manual.&nbsp; <br/>
-        </p>
+        <p>There were changes to both the original file format and to
+          Metathesaurus source processing.</p>
+        <p><strong>Notes:</strong></p>
+        <ul>
+          <li>In the printed CDT book, some codes appear out of order.
+            The order information is not available in electronic form,
+            therefore the UMLS hierarchy varies slightly from the
+            hierarchy in the printed book.</li>
+
+          <li>A value of "None" in the original data is treated the same
+            as a blank or null value.</li>
+
+          <li>CDT in the Metathesaurus is extracted from a file provided
+            by the American Dental Association (ADA). The Metathesaurus
+            also includes the HCPCS version of CDT, which has RSAB =
+            "HCDT." The CDT hierarchy is created from the data file
+            provided by the ADA, while the HCDT hierarchy is created
+            during Metathesaurus production using analysis of the HCPCS
+            printed manual.
+          </li>
+        </ul>
       </div>
       <div id="rep_change_summary" class="rep_block_level_one">
-        <h3>Source Provided Files:</h3>
-        <br/>
-        <table class="elements" border="0" cellspacing="0">
+        <h3>Source Provided Files:        </h3>
+        <table>
           <tbody>
             <tr>
-              <td style="vertical-align: top;" align="center"><b>File</b><b>
-                  Name</b><br/>
-              </td>
-              <td style="vertical-align: top;" align="center"><span
-                  style="font-weight: bold;">Description</span><br/>
-              </td>
+			<th>File Name</th>
+			<th>Description</th>
+			</tr>
+            <tr>
+              <td>b_CDT2017ASCII_TabDelimited_2016May01.txt</td>
+              <td>Documentation and tab-delimited data</td>
+
             </tr>
             <tr>
-              <th style="font-weight: normal;">2013-0424-CDTv2014-tab_delimited_ASCII_text_file.txt<br/>
-              </th>
-              <th><span style="font-weight: normal;">Documentation and
-                  data for CDT 2014<br/>
-                </span></th>
+              <td>a_Read Me_CDT 2017.pdf</td>
+              <td>Documentation</td>
             </tr>
           </tbody>
         </table>
@@ -86,96 +68,86 @@
         <h3>Identifiers:</h3>
         Identifiers are assigned as follows:<br/>
         <ul>
-          <li>CODE:&nbsp;&nbsp;</li>
+          <li>CODE: </li>
           <li style="list-style: none; display: inline">
-          <ul>
-            <li>For TTY = PT, TTY=OP, and certain cases of TTY = HT:&nbsp; the
-              value of the Code field from tab-delimited data file</li>
-            <li>For cases where the Code field of the tab-delimited file
-              is blank:&nbsp;&nbsp; MTHU#, assigned during Metathesaurus
-              source processing</li>
-          </ul>
+            <ul>
+              <li>TTY = PT, TTY=OP: the value of the Code field from
+                tab-delimited data file</li>
+              <li>TTY = HT: A range, e.g. "D4000-D4999," indicating the
+                high and low code values encompassed by the HT; this
+                value is computed during Metathesaurus source
+                processing.
+              </li>
+            </ul>
           </li>
-        </ul>
-        <ul>
-          <li>SAUI:&nbsp; Not applicable<br/>
+
+          <li>SAUI: Not applicable
           </li>
-          <li>SCUI:&nbsp; Same as CODE<br/>
+          <li>SCUI: Same as CODE
           </li>
-          <li>SDUI: Not applicable<br/>
-          </li>
+          <li>SDUI: Not applicable          </li>
         </ul>
         <div id="rep_termtypes" class="rep_block_level_two"> <a
-            name="atoms"></a>
+            id="atoms"></a>
           <h3>Atoms (MRCONSO):</h3>
-          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-          <table height="60" border="1" cellpadding="2" cellspacing="2" width="451">
+          <span class="nav">(<a href="#top">return to top</a></span>)
+          <table>
             <tbody>
               <tr>
-                <td align="center" valign="top"><b>Term Type</b><br/>
-                </td>
-                <td align="center" valign="top"><b>Origin</b><br/>
-                </td>
+                <th>Term Type</th>
+                <th>Origin</th>
               </tr>
               <tr>
-                <td valign="top">HT<br/>
-                </td>
-                <td valign="top">CODE:&nbsp; <br/>
-                  The value of the Code field from tab-delimited data
-                  file; OR<br/>
-                  if the Code field is &lt;null&gt;:&nbsp; MTHU#
-                  assigned during Metathesaurus source processing<br/>
+                <td>HT</td>
+                <td>CODE: <br/>
+                  A range, e.g. "D4000-D4999." This value is computed,
+                  based on the low and high code values encompassed by
+                  the HT.<br/>
                   <br/>
-                  STR:&nbsp; The value of the "Nomenclature" field in
-                  the tab-delimited file.<br/>
+                  STR: The value of the "Category," "Subcategory," or
+                  "Subsubcategory" field.<br/>
                   <br/>
-                  SCUI:&nbsp; Same as CODE<br/>
+                  SCUI: Same as CODE<br/>
                   <br/>
                   Suppress = 'N'<br/>
                   <br/>
-                  TTY = HT is assigned where:<br/>
-                  <ul>
-                    <li>The Code field contains a range (e.g.
-                      D4000-D4999)</li>
-                    <li>The Code field is &lt;null&gt;&nbsp; These cases
-                      are descendents of the concepts with "range"
-                      codes, and are parents/ancestors of PTs <br/>
-                    </li>
-                  </ul>
-                </td>
+                  One atom with TTY = HT is created for all unique
+                  values of "Category," "Subcategory" and
+                "Subsubcategory."</td>
               </tr>
               <tr>
-                <td valign="top">OP<br/>
-                </td>
-                <td valign="top">CODE:&nbsp; <br/>
-                  The value of the Code field from tab-delimited data
-                  file.<br/>
+                <td>OP</td>
+                <td>CODE: The value of the Code field from tab-delimited
+                  data file.<br/>
                   <br/>
-                  STR:&nbsp; The value of the "Nomenclature" field in
-                  the tab-delimited file.<br/>
+                  STR: The value of the "Nomenclature" field in the
+                  tab-delimited file.<br/>
                   <br/>
-                  SCUI:&nbsp; Same as CODE<br/>
+                  SCUI: Same as CODE<br/>
                   <br/>
                   Suppress = 'O'<br/>
                   <br/>
-                  TTY = OP is assigned where the Code field consists of the letter "D" followed by four numerals.<br/>
+                  TTY = OP is assigned where the Class1 value = 99 (The
+                  entire CDT Code entry is no longer valid, i.e. it was
+                  deleted in this version). Note: deleted codes are only
+                  maintained for one version. Codes deleted in previous
+                  CDT versions are no longer present in the ADA data.
                 </td>
               </tr>
               <tr>
-                <td valign="top">PT<br/>
-                </td>
-                <td valign="top">CODE:&nbsp; The value of the Code field
-                  form tab-delimited data file<br/>
+                <td>PT</td>
+                <td>CODE: The value of the Code field form tab-delimited
+                  data file<br/>
                   <br/>
-                  STR:&nbsp; The value of the "Nomenclature" field in
-                  the tab-delimited file.&nbsp; <br/>
+                  STR: The value of the "Nomenclature" field in the
+                  tab-delimited file. <br/>
                   <br/>
-                  SCUI:&nbsp; Same as CODE<br/>
+                  SCUI: Same as CODE<br/>
                   <br/>
                   Suppress = 'N'<br/>
                   <br/>
-                  TTY = PT is assigned where the Code field consists of
-                  the letter "D" followed by four numerals.&nbsp; <br/>
+                  TTY = PT is assigned where the the Class1 value is not
+                  99.
                 </td>
               </tr>
             </tbody>
@@ -183,31 +155,23 @@
           <br/>
         </div>
         <div id="rep_attributes" class="rep_block_level_two"> <a
-            name="attributes"></a><br/>
+            id="attributes"></a><br/>
           <h3>Attributes (MRSAT):</h3>
-          <br/>
-          &nbsp; <span class="nav">(<a href="#top">return to top</a></span>)<br/>
-          <br/>
-          <table height="60" border="1" cellpadding="2" cellspacing="2"
-            width="451">
+
+          <span class="nav">(<a href="#top">return to top</a></span>)
+          <table>
             <tbody>
               <tr>
-                <td align="center" valign="top"><b>ATN</b><br/>
-                </td>
-                <td align="center" valign="top"><b>Origin</b><br/>
-                </td>
-                <td valign="top"><b>Notes</b><br/>
-                </td>
+                <th>ATN</th>
+                <th>Origin</th>
+                <th>Notes</th>
               </tr>
               <tr>
-                <td valign="top">CHANGE_CLASS<br/>
-                </td>
-                <td valign="top">The value of the "Class" field in the
-                  tab-delmited file. <br/>
-                </td>
-                <td valign="top">Identifies the type of change made to
-                  this version of the Code (i.e., changes from the prior
-                  version), with the following meanings:<br/>
+                <td>CHANGE_CLASS</td>
+                <td>The value of the "Class" field in the tab-delmited file.</td>
+                <td>Identifies the type of change made to this version
+                  of the Code (i.e., changes from the prior version),
+                  with the following meanings:<br/>
                   <ul>
                     <li>30 = No change to existing code, nomenclature or
                       descriptor</li>
@@ -216,10 +180,15 @@
                     <li>35 = Revision in the nomenclature or descriptor
                       (or both), or to indicate a revision to an entire
                       subcategory." </li>
-                    <li>99 = Entire CDT Code entry is no longer valid (i.e.,
-                      deleted) in this version.</li>
+                    <li>99 = Entire CDT Code entry is no longer valid
+                      (i.e., deleted) in this version.</li>
                   </ul>
                 </td>
+              </tr>
+              <tr>
+                <td>SOS</td>
+                <td>The value of the Descriptor, CatDescriptor, SubcatDescriptor or SubsubcatDescriptor</td>
+                <td>Previously represented as DEFINITION</td>
               </tr>
             </tbody>
           </table>
@@ -227,63 +196,39 @@
           <br/>
         </div>
         <div id="rep_definitions" class="rep_block_level_two"> <a
-            name="definitions"></a><br/>
+            id="definitions"></a><br/>
           <h3>Definitions (MRDEF):</h3>
-          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-          <p>The value of the "Descriptor" field in the tab-delimited
-            file is used as a definition.<br/>
+          <span class="nav">(<a href="#top">return to top</a></span>)
+          <p>There are no definitions in CDT. Data that was previously
+            represented as definitions is now represented as ATN = SOS.<br/>
           </p>
         </div>
         <div id="rep_relationships" class="rep_block_level_two"> <a
-            name="relationships"></a><br/>
-          <h3>Relationships (MRREL);&nbsp; Hierarchy (MRHIER)<br/>
+            id="relationships"></a><br/>
+          <h3>Relationships (MRREL); Hierarchy (MRHIER)<br/>
           </h3>
-          &nbsp; <span class="nav">(<a href="#top">return to top</a></span>)<br/>
-          <table height="51" border="1" cellpadding="2" cellspacing="2"
-            width="788">
+          <span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <table>
             <tbody>
               <tr>
-                <td align="center" valign="middle"><b>REL</b><br/>
+                <th>REL</th>
+                <th>RELAInverse RELA</th>
+               <th>Origin</th>
+              </tr>
+              <tr>
+                <td>CHD<br/>
+                  PAR
                 </td>
-                <td valign="top">
-                  <table class="elements" height="46" align="center"
-                    border="0" cellspacing="0" width="127">
-                    <tbody>
-                      <tr>
-                        <th height="1" width="1">RELA<br/>
-                          Inverse RELA<br/>
-                        </th>
-                      </tr>
-                    </tbody>
-                  </table>
-                </td>
-                <td align="center" valign="middle"><b>Origin</b><br/>
+                <td>(no RELA)</td>
+                <td>Hierarchy, created based on the Category,
+                  Subcategory and Subsubcategory fields. PTs are leaf
+                  nodes.
                 </td>
               </tr>
               <tr>
-                <td valign="top">CHD<br/>
-                  PAR<br/>
-                </td>
-                <td valign="middle">(no RELA)<br/>
-                </td>
-                <td valign="top">Hierarchy, created based on the Code
-                  field in the tab-delimited data file.&nbsp; Concepts
-                  where the Code field contains a range of codes are at
-                  the top level.&nbsp; Concepts with Code = &lt;null&gt;
-                  and the Nomenclature is all uppercase are at the next
-                  level.&nbsp;&nbsp; There may be additional levels
-                  where the Code = &lt;null&gt; and the Nomenclature
-                  value is mixed case.&nbsp; PTs are leaf nodes.<br/>
-                </td>
-              </tr>
-              <tr>
-                <td valign="top">SIB<br/>
-                </td>
-                <td valign="top">(no RELA)<br/>
-                </td>
-                <td valign="top">Relationships between codes with the
-                  same parents.<br/>
-                </td>
+                <td>SIB</td>
+                <td>(no RELA)</td>
+                <td>Relationships between codes with the same parents.</td>
               </tr>
             </tbody>
           </table>
@@ -291,11 +236,9 @@
         </div>
         <div id="mappings" class="rep_block_level_two">
           <h3>Mappings (MRMAP):</h3>
-          &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <span class="nav">(<a href="#top">return to top</a></span>)
           <p>No mappings are supplied for CDT.<br/>
           </p>
         </div>
       </div>
     </div>
-  </body>
-</html>

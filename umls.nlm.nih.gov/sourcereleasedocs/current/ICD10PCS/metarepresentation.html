@@ -1,170 +1,98 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html;
-      charset=windows-1252">
-    <title></title>
-  </head>
-  <body>
-    <div class="section-4">
-      <ul id="menu">
-        <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
-        <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
-        <li id="nav-3"> <a href="sourcemetastats.html">Statistics and
-            sample data</a>
-          <ul id="subnav-3">
-            <li> <a href="termtypes.html">Terms and term types</a> </li>
-            <li> <a href="attributes.html">Attributes</a> </li>
-            <li> <a href="relationships.html">Relationships</a> </li>
-            <li> <a href="semtypes.html">Semantic Types</a> </li>
-            <li> <a href="overlap.html">Source Overlap</a> </li>
-          </ul>
-        </li>
-        <li id="nav-4"> <a href="representation.html">Representation</a>
-          <ul id="subnav-4">
-            <li> <a href="sourcerepresentation.html">Source
-                Representation</a> </li>
-            <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
-
-
-
-                Representation</a> </li>
-          </ul>
-        </li>
+    <p>This page lists UMLS Metathesaurus data elements and traces them
+      back to the specific source data that populates them.</p>
+    <!--begin tabbed navigation area--><!--begin tabbed navigation area-->
+    <div class="section-6">
+      <ul id="menu-source-docs">
+        <li id="nav-1"><a href="index.html">Synopsis</a></li>
+        <li id="nav-2"><a href="metadata.html">Source Metadata</a></li>
+        <!--<li id="nav-3"><a href="stats.html">Statistics</a></li>
+        <li id="nav-4"><a href="samples.html">Samples</a></li>-->
+        <li id="nav-5"><a href="sourcerepresentation.html">Source
+            Representation</a></li>
+        <li id="nav-6"><a href="metarepresentation.html">Metathesaurus
+            Representation</a></li>
       </ul>
     </div>
-    <br/>
-    <br/>
-    <a name="top"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>,
+    <!-- end tabbed navigation area --> <br/>
+
+    <a id="top-of-page"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>,
       <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
       <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
     <div id="general" class="rep_block_level_one">
-      <p><b>VSAB:</b> ICD10PCS_2014<br/>
+      <p><strong>VSAB:</strong> ICD10PCS_2017<br/>
       </p>
       <div id="rep_identifiers" class="rep_block_level_one">
         <h3>Summary of Changes</h3>
-        There are no changes to the format or processing of
-        ICD10-PCS.&nbsp; <br/>
-        <br/>
-      </div>
+        There were no changes to the file formats.
+        The reimbursement map set has been discontinued.</div>
       <div id="rep_change_summary" class="rep_block_level_one">
         <h3>Source Provided Files:</h3>
-        <p>Numerous documentation and data files are available at:&nbsp;
-          http://www.cms.gov/Medicare/Coding/ICD10/2014-ICD-10-PCS.html,
-          including the following:<br/>
+        <p>Numerous documentation and data files are available at: <a href =
+        "https://www.cms.gov/Medicare/Coding/ICD10/2017-ICD-10-PCS-and-GEMs.html">https://www.cms.gov/Medicare/Coding/ICD10/2017-ICD-10-PCS-and-GEMs.html </a>
+          , including the following:
         </p>
-        <span style="font-weight: bold;">Documentation and Reference</span><br/>
+        <strong>Documentation and Reference</strong><br/>
         <br/>
-        <table class="elements" border="0" cellspacing="0">
+        <table>
           <tbody>
             <tr>
               <th>File</th>
-              <th>Description<br/>
-              </th>
+              <th>Description</th>
             </tr>
             <tr>
-              <td style="vertical-align: top;">PCS_2014.pdf</td>
-              <td style="vertical-align: top;">Tables indicating meaning
-                for codes for specific character positions; index to
-                codes<br/>
-              </td>
+              <td>pcs_2017.pdf</td>
+              <td>Information about tables indicating meaning
+                of codes for specific character positions; index to
+                codes</td>
+            </tr>
+             <tr>
+              <td>GemsTechDoc.pdf</td>
+              <td>GEMs documentation for technical users</td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">Gems2014UpdateSummary.pdf</td>
-              <td style="vertical-align: top;">Summary of General
-                Equivalence Mappings (GEMs) updates and public comment<br/>
-              </td>
+              <td>pcs_gemguide_2017.pdf</td>
+              <td>GEMs documentation and user guide</td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">GemsTechDoc.pdf<br/>
-              </td>
-              <td style="vertical-align: top;">GEMs documentation for
-                technical users<br/>
-              </td>
+              <td>icd10pcs_tabular.xsd</td>
+              <td>xml schema document describing tabular xml format</td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">PCS-2014-guidelines.pdf</td>
-              <td style="vertical-align: top;">PCS coding conventions
-                and guidelines<br/>
-              </td>
+				<td>icd10pcs_definitions.xsd</td>
+				<td>xml schema document describing definitions xml format</td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">pcs_gemguide_2014.pdf</td>
-              <td style="vertical-align: top;">GEMs documentation and
-                user guide<br/>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">icd10pcs_tabular.xsd</td>
-              <td style="vertical-align: top;">xml schema document
-                describing xml format<br/>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">pcs-what-new-2014.pdf</td>
-              <td style="vertical-align: top;">Summary of updates and
-                changes for 2014<br/>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">reimb_map_guide_2014.pdf</td>
-              <td style="vertical-align: top;">Reimbursement mappings
-                documentation and user guide<br/>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">ICD10OrderFiles.pdf<br/>
-              </td>
-              <td style="vertical-align: top;">Documentation for the
-                icd10pcs_order_2014.txt file<br/>
-              </td>
+              <td>ICD10OrderFiles.pdf</td>
+              <td>Documentation for the icd10pcs_order_2016.txt file</td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
     <br/>
-    <span style="font-weight: bold;">Data files</span><br/>
+    <strong>Data files</strong>
     <br/>
-    <table class="elements" border="0" cellspacing="0">
+    <table>
       <tbody>
         <tr>
-          <td colspan="2" style="vertical-align: top;"><span
-              style="font-weight: bold;">Data</span><br/>
-          </td>
-        </tr>
-        <tr>
           <th>File</th>
-          <th>Description<br/>
-          </th>
+          <th>Description</th>
         </tr>
         <tr>
-          <td style="vertical-align: top;">gem_i9pcs.txt</td>
-          <td style="vertical-align: top;">ICD-9-CM to ICD-10-PCS
-            General Equivalence Mappings (GEMs)<br/>
-          </td>
+          <td>gem_i9pcs.txt</td>
+          <td>ICD-9-CM to ICD-10-PCS General Equivalence Mappings (GEMs)</td>
         </tr>
         <tr>
-          <td style="vertical-align: top;">gem_pcsi9.txt</td>
-          <td style="vertical-align: top;">ICD-10-PCS to ICD-9-CM GEMs<br/>
-          </td>
+          <td>gem_pcsi9.txt</td>
+          <td>ICD-10-PCS to ICD-9-CM GEMs</td>
         </tr>
         <tr>
-          <td style="vertical-align: top;">icd10pcs_order_2014.txt</td>
-          <td style="vertical-align: top;">Long and short descriptions<br/>
-          </td>
+          <td>icd10pcs_order_2017.txt</td>
+          <td>Long and short descriptions</td>
         </tr>
-        <tr>
-          <td style="vertical-align: top;">reimb_map_pr_2014.txt</td>
-          <td style="vertical-align: top;">ICD-10-CM to ICD-9-CM
-            reimbursement mappings<br/>
-          </td>
-        </tr>
-        <tr>
-          <td style="vertical-align: top;">icd10pcs_index_2014.xml<br/>
-          </td>
-          <td style="vertical-align: top;">Table file in xml<br/>
-          </td>
+		<tr>
+			<td>icd10pcs_tables_2017.xml</td>
+			<td>Tabular data</td>
         </tr>
       </tbody>
     </table>
@@ -174,292 +102,209 @@
       <h3>Identifiers:</h3>
       Identifiers are assigned as follows:<br/>
       <ul>
-        <li>CODE: 3 or 7-digit code from icd10pcs_order_YYYY.txt, or
-          assembled code from icd10pcs_index_YYYY.xml<br/>
-        </li>
-        <li>SAUI:&nbsp; Not applicable<br/>
-        </li>
-        <li>SCUI:&nbsp; 3 or 7-digit code from icd10pcs_order_YYYY.txt,
-          or assembled code from icd10pcs_index_YYYY.xml </li>
-        <li>SDUI: tag = Not applicable<br/>
-        </li>
+        <li>CODE: 3 or 7-character code from icd10pcs_order_YYYY.txt, or
+          assembled code from icd10pcs_tables_YYYY.xml</li>
+        <li>SAUI: Not applicable</li>
+        <li>SCUI: same as CODE </li>
+        <li>SDUI: Not applicable</li>
       </ul>
-      <div id="rep_termtypes" class="rep_block_level_two"> <a
-          name="atoms"></a>
+      <div id="rep_termtypes" class="rep_block_level_two"> <a id="atoms"></a>
         <h3>Atoms (MRCONSO):</h3>
-        &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-        <table class="elements" border="0" cellspacing="0">
+          <span class="nav">(<a href="#top-of-page">return to top</a></span>)<br/>
+        <table>
           <tbody>
             <tr>
               <th>Term Type</th>
               <th>Origin</th>
             </tr>
             <tr>
-              <td style="vertical-align: top;">AB<br/>
-              </td>
-              <td style="vertical-align: top;">CODE: 7-digit code from
+              <td>AB</td>
+              <td>CODE: 7-character code from
                 icd10pcs_order_YYYY.txt (character positions 7-13)<br/>
                 STR: Short description from icd10pcs_order_YYYY.txt
                 (character positions 6-76)<br/>
-                SCUI: 7-digit code from icd10pcs_order_YYYY.txt
-                (character positions 7-13)<br/>
+                SCUI: same as CODE<br/>
                 SUPPRESS = "Y"<br/>
                 <br/>
-                Note:&nbsp; AB atoms are created when character position
-                15 = "1", indicating that the code is valid for
-                submission on a UB04<br/>
-              </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">HS<br/>
-              </td>
-              <td style="vertical-align: top;">CODE: 3-digit code from
-                icd10pcs_order_YYYY.txt (character positions 7-13)<br/>
-                STR: Short description from icd10pcs_order_YYYY.txt
-                (character positions 6-76)<br/>
-                SCUI: 3-digit code from icd10pcs_order_YYYY.txt
-                (character positions 7-13)<br/>
-                SUPPRESS = "Y"<br/>
-                <br/>
-                Note:&nbsp; HS atoms are created when character position
-                15 = "0", indicating that the code is a "header" -- not
-                valid for submission on a UB04</td>
-            </tr>
-            <tr>
-              <td>HT<br/>
-              </td>
-              <td>CODE: 3-digit code from icd10pcs_order_YYYY.txt
-                (character positions 7-13)<br/>
-                STR: Short description from icd10pcs_order_YYYY.txt
-                (character positions 6-76)<br/>
-                SCUI: 3-digit code from icd10pcs_order_YYYY.txt
-                (character positions 7-13)<br/>
-                <br/>
-                Note:&nbsp; HS atoms are created when character position
-                15 = "0", indicating that the code is a "header" -- not
-                valid for submission on a UB04</td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">HX<br/>
-              </td>
-              <td style="vertical-align: top;">CODE:&nbsp; assembled
-                from values icd10pcs_index_YYYY.xml<br/>
-                STR:&nbsp; assembled from values in
-                icd10pcs_index_YYYY.xml, using "@" as a subfield
-                separator<br/>
-                SCUI: assembled from values icd10pcs_index_YYYY.xml<br/>
-                <br/>
-                TTY = "HX" atoms are created for levels 2-6<br/>
-              </td>
-            </tr>
-            <tr>
-              <td>MTH_HX<br/>
-              </td>
-              <td>CODE:&nbsp; assembled from values
-                icd10pcs_index_YYYY.xml<br/>
-                STR:&nbsp; assembled from values in
-                icd10pcs_index_YYYY.xml, using "@" as a subfield
-                separator;&nbsp; the string "(Therapy)" or "(Procedure)"
-                is appended as appropriate<br/>
-                SCUI: assembled from values icd10pcs_index_YYYY.xml<br/>
-                <br/>
-                TTY = "MTH_HT" atoms are created for levels 1-2<br/>
-              </td>
-            </tr>
-            <tr>
-              <td>PT<br/>
-              </td>
-              <td>CODE: 7-digit code from icd10pcs_order_YYYY.txt
-                (character positions 7-13)<br/>
-                STR: Long description from icd10pcs_order_YYYY.txt
-                (character positions 78 - end)<br/>
-                SCUI: 7-digit code from icd10pcs_order_YYYY.txt
-                (character positions 7-13)<br/>
-                SUPPRESS = "Y"<br/>
-                <br/>
-                Note:&nbsp; PT atoms are created when character position
+                Note:  AB atoms are created when character position
                 15 = "1", indicating that the code is valid for
                 submission on a UB04</td>
             </tr>
             <tr>
-              <td>PX<br/>
-              </td>
-              <td>CODE:&nbsp; assembled from values
-                icd10pcs_index_YYYY.xml<br/>
-                STR:&nbsp; assembled from values in
-                icd10pcs_index_YYYY.xml, using "@" as a subfield
+              <td>HS</td>
+              <td>CODE: 3-character code from
+                icd10pcs_order_YYYY.txt (character positions 7-9)<br/>
+                STR: Short description from icd10pcs_order_YYYY.txt
+                (character positions 6-76)<br/>
+                SCUI: same as CODE<br/>
+                SUPPRESS = "Y"<br/>
+                <br/>
+                Note:  HS atoms are created when character position
+                15 = "0", indicating that the code is a "header" -- not
+                valid for submission on a UB04</td>
+            </tr>
+            <tr>
+              <td>HT</td>
+              <td>CODE: 3-character code from icd10pcs_order_YYYY.txt
+                (character positions 7-9)<br/>
+                STR: Short description from icd10pcs_order_YYYY.txt
+                (character positions 6-76)<br/>
+                SCUI: Same as CODE<br/>
+                <br/>
+                Note:  HS atoms are created when character position
+                15 = "0", indicating that the code is a "header" -- not
+                valid for submission on a UB04</td>
+            </tr>
+            <tr>
+              <td>HX</td>
+              <td>CODE:  assembled
+                from values icd10pcs_tables_XXXX.xml<br/>
+                STR:  assembled from values in
+                icd10pcs_tables_XXXX.xml, using "@" as a subfield
                 separator<br/>
-                SCUI: assembled from values icd10pcs_index_YYYY.xml<br/>
+                SCUI: same as CODE<br/>
+                <br/>
+                TTY = "HX" atoms are created for levels 2-6</td>
+            </tr>
+            <tr>
+              <td>MTH_HX</td>
+              <td>CODE:  assembled from values
+                icd10pcs_tables_YYYY.xml<br/>
+                STR:  assembled from values in
+                icd10pcs_tables_YYYY.xml, using "@" as a subfield
+                separator;  the string "(Therapy)" or "(Procedure)"
+                is appended as appropriate<br/>
+                SCUI: same as CODE<br/>
+                <br/>
+                TTY = "MTH_HT" atoms are created for levels 1-2</td>
+            </tr>
+            <tr>
+              <td>PT</td>
+              <td>CODE: 7-character code from icd10pcs_order_YYYY.txt
+                (character positions 7-13)<br/>
+                STR: Long description from icd10pcs_order_YYYY.txt
+                (character positions 78 - end)<br/>
+                SCUI: same as CODE<br/>
+                SUPPRESS = "Y"<br/>
+                <br/>
+                Note:  PT atoms are created when character position
+                15 = "1", indicating that the code is valid for
+                submission on a UB04</td>
+            </tr>
+            <tr>
+              <td>PX</td>
+              <td>CODE:  assembled from values
+                icd10pcs_tables_YYYY.xml<br/>
+                STR:  assembled from values in
+                icd10pcs_tables_YYYY.xml, using "@" as a subfield
+                separator<br/>
+                SCUI: same as CODE<br/>
                 <br/>
                 TTY = "PX" atoms are created for level 7</td>
             </tr>
             <tr>
-              <td>XM<br/>
-              </td>
+              <td>XM</td>
               <td>This data is added during Metathesaurus source
                 processing </td>
             </tr>
           </tbody>
         </table>
       </div>
-      <div id="rep_attributes" class="rep_block_level_two"> <a
-          name="attributes"></a><br/>
+      <div id="rep_attributes" class="rep_block_level_two"> <a id="attributes"></a><br/>
         <h3>Attributes (MRSAT):</h3>
-        &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
+          <span class="nav">(<a href="#top-of-page">return to top</a></span>)<br/>
         <br/>
         <br/>
-        <table class="elements" border="0" cellspacing="0">
+        <table>
           <tbody>
             <tr>
               <th>Attribute Name</th>
               <th>Origin</th>
             </tr>
             <tr>
-              <td style="vertical-align: top;">ADDED_MEANING<br/>
-              </td>
-              <td style="vertical-align: top;">Additional&nbsp;descriptive&nbsp;information&nbsp;about&nbsp;a&nbsp;header&nbsp;term
-
-
-
-                extracted from &lt;definition&gt; tag in
-                icd10pcs_index_YYYY.xml<br/>
-              </td>
+              <td>ADDED_MEANING</td>
+              <td>Additional descriptive information about a header term extracted from &lt;definition&gt; tag in
+                icd10pcs_definitions_YYYY.xml</td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">ORDER_NO<br/>
-              </td>
-              <td style="vertical-align: top;">Order number from
-                icd10pcs_order_YYYY.txt (character positions 1-5)<br/>
-              </td>
+              <td>ORDER_NO</td>
+              <td>Order number from icd10pcs_order_YYYY.txt (character positions 1-5)</td>
             </tr>
             <tr>
-              <td>FROMRSAB<br/>
-              </td>
-              <td>This data is added during Metathesaurus source
-                processing </td>
+              <td>FROMRSAB</td>
+              <td>This data is added during Metathesaurus source processing </td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">FROMVSAB<br/>
-              </td>
-              <td style="vertical-align: top;">This data is added during
-                Metathesaurus source processing </td>
+              <td>FROMVSAB</td>
+              <td>This data is added during Metathesaurus source processing </td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">MAPSETRSAB<br/>
-              </td>
-              <td style="vertical-align: top;">This data is added during
-                Metathesaurus source processing </td>
+              <td>MAPSETRSAB</td>
+              <td>This data is added during Metathesaurus source processing </td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">MAPSETTYPE<br/>
-              </td>
-              <td style="vertical-align: top;">This data is added during
-                Metathesaurus source processing </td>
+              <td>MAPSETTYPE</td>
+              <td>This data is added during Metathesaurus source processing </td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">MAPSETVERSION<br/>
-              </td>
-              <td style="vertical-align: top;">This data is added during
-                Metathesaurus source processing </td>
+              <td>MAPSETVERSION</td>
+              <td>This data is added during Metathesaurus source processing </td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">MAPSETVSAB<br/>
-              </td>
-              <td style="vertical-align: top;">This data is added during
-                Metathesaurus source processing </td>
+              <td>MAPSETVSAB</td>
+              <td>This data is added during Metathesaurus source processing </td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">MAPSETXRTARGETID<br/>
-              </td>
-              <td style="vertical-align: top;">This data is added during
-                Metathesaurus source processing </td>
+              <td>MAPSETXRTARGETID</td>
+              <td>This data is added during Metathesaurus source processing </td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">MTH_MAPFROMCOMPLEXITY<br/>
-              </td>
-              <td style="vertical-align: top;">This data is added during
-                Metathesaurus source processing </td>
+              <td>MTH_MAPFROMCOMPLEXITY</td>
+              <td>This data is added during Metathesaurus source processing </td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">MTH_MAPFROMEXHAUSTIVE<br/>
-              </td>
-              <td style="vertical-align: top;">This data is added during
-                Metathesaurus source processing </td>
+              <td>MTH_MAPFROMEXHAUSTIVE</td>
+              <td>This data is added during Metathesaurus source processing </td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">MTH_MAPSETCOMPLEXITY<br/>
-              </td>
-              <td style="vertical-align: top;">This data is added during
-                Metathesaurus source processing </td>
+              <td>MTH_MAPSETCOMPLEXITY</td>
+              <td>This data is added during Metathesaurus source processing </td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">MTH_MAPTOCOMPLEXITY<br/>
-              </td>
-              <td style="vertical-align: top;">This data is added during
-                Metathesaurus source processing </td>
+              <td>MTH_MAPTOCOMPLEXITY</td>
+              <td>This data is added during Metathesaurus source processing </td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">MTH_MAPTOEXHAUSTIVE<br/>
-              </td>
-              <td style="vertical-align: top;">This data is added during
-                Metathesaurus source processing </td>
+              <td>MTH_MAPTOEXHAUSTIVE</td>
+              <td>This data is added during Metathesaurus source processing </td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">SOS<br/>
-              </td>
-              <td style="vertical-align: top;">This data is added during
-                Metathesaurus source processing </td>
+              <td>SOS</td>
+              <td>This data is added during Metathesaurus source processing </td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">TORSAB<br/>
-              </td>
-              <td style="vertical-align: top;">This data is added during
-                Metathesaurus source processing </td>
+              <td>TORSAB</td>
+              <td>This data is added during Metathesaurus source processing </td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">TOVSAB<br/>
-              </td>
-              <td style="vertical-align: top;">This data is added during
-                Metathesaurus source processing </td>
+              <td>TOVSAB</td>
+              <td>This data is added during Metathesaurus source processing </td>
             </tr>
-            <tr>
-              <td style="vertical-align: top;">XMAP<br/>
-              </td>
-              <td style="vertical-align: top;">This data is added during
-                Metathesaurus source processing </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">XMAPFROM<br/>
-              </td>
-              <td style="vertical-align: top;">This data is added during
-                Metathesaurus source processing </td>
-            </tr>
-            <tr>
-              <td style="vertical-align: top;">XMAPTO<br/>
-              </td>
-              <td style="vertical-align: top;">This data is added during
-                Metathesaurus source processing </td>
-            </tr>
-          </tbody>
+           </tbody>
         </table>
       </div>
-      <div id="rep_definitions" class="rep_block_level_two"> <a
-          name="definitions"></a><br/>
+      <div id="rep_definitions" class="rep_block_level_two"> <a id="definitions"></a><br/>
         <h3>Definitions (MRDEF):</h3>
-        &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-        <p>Additional&nbsp;descriptive&nbsp;information&nbsp;about&nbsp;a&nbsp;header&nbsp;term
-
-
-
+          <span class="nav">(<a href="#top-of-page">return to top</a></span>)<br/>
+        <p>Additional descriptive information about a header term
           extracted from &lt;definition&gt; tag in
-          icd10pcs_index_YYYY.xml is included in MRSAT.RRF with ATN =
+          icd10pcs_definitions_YYYY.xml is included in MRSAT.RRF with ATN =
           "ADDED_MEANING" </p>
       </div>
-      <div id="rep_relationships" class="rep_block_level_two"> <a
-          name="relationships"></a><br/>
+      <div id="rep_relationships" class="rep_block_level_two"> <a id="relationships"></a><br/>
         <h3>Relationships (MRREL):</h3>
-        &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-        <table class="elements" border="0" cellspacing="0">
+          <span class="nav">(<a href="#top-of-page">return to top</a></span>)<br/>
+        <table>
           <tbody>
             <tr>
               <th>REL</th>
@@ -468,82 +313,63 @@
               <th>ORIGIN</th>
             </tr>
             <tr>
-              <td>SY<br/>
-              </td>
+              <td>SY</td>
               <td>expanded_form_of<br/>
-                has_expanded_form<br/>
+                has_expanded_form
               </td>
               <td>Connect AB and PT descriptions<br/>
                 Connect PT and PX descriptions<br/>
                 Connect HS and HT descriptions<br/>
-                Connect HT and HX descriptions<br/>
+                Connect HT and HX descriptions
               </td>
             </tr>
           </tbody>
         </table>
       </div>
-      <div id="mappings" class="rep_block_level_two"> <a
-          name="mappings"></a><br/>
+      <div id="rep_mappings" class="rep_block_level_two"> <a id="mappings"></a><br/>
         <h3>Mappings (MRMAP):</h3>
-        &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)<br/>
-        <p> </p>
-        <p>Three Mapsets ("XM" atoms, along with associated attributes
+          <span class="nav">(<a href="#top-of-page">return to top</a></span>)<br/>
+
+        <p>Two Mapsets ("XM" atoms, along with associated attributes
           and mappings), are included for ICD-10-PCS. These are
-          extracted from the General Equivalence Mappings (GEMs) and
-          reimbursement mappings.<br/>
+          extracted from the General Equivalence Mappings (GEMs).
         </p>
-        <p>Note:&nbsp; The original mapping files do not include decimal
-          points for the ICD-9-CM codes.&nbsp; For clarity, decimals are
+        <p>Note:  The original mapping files do not include decimal
+          points for the ICD-9-CM codes.  For clarity, decimals are
           added appropriately to the MRMAP.RRF representation, e.g.
           "3929' is converted to "39.29" as a TOID.<br/>
         </p>
         <br/>
-        <table class="elements" border="0" cellspacing="0">
+        <table>
           <tbody>
             <tr>
               <th>Field</th>
-              <th>Value/Origin (GEMs)<br/>
-              </th>
-              <td style="vertical-align: top;"><span style="font-weight:
-                  bold;">Value/Origin (Reiumbursement mappings)</span><br/>
-              </td>
+              <th>Value/Origin (GEMs)</th>
             </tr>
             <tr>
-              <td style="vertical-align: top;">MAPSUBSETID<br/>
-              </td>
-              <td style="vertical-align: top;">Compound value of
+              <td>MAPSUBSETID</td>
+              <td>Compound value of
                 "Scenario:Choice"<br/>
                 Note: Anything with the same FROMEXPR and MAPSUBSETID
-                values should be "OR'd" together.<span style="font-size:
-                  22pt; color: black; font-family: Calibri;"></span> </td>
-              <td style="vertical-align: top;">Not populated<br/>
-              </td>
+                values should be "OR'd" together.</td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">REL<br/>
-              </td>
-              <td style="vertical-align: top;">RO where approximate flag
+              <td>REL</td>
+              <td>RO where approximate flag
                 = "1"<br/>
                 SY where approxmiate flag = "0"<br/>
-                XR where target value = "NoPCS"<br/>
-              </td>
-              <td style="vertical-align: top;">RQ<br/>
+                XR where target value = "NoPCS"
               </td>
             </tr>
             <tr>
-              <td style="vertical-align: top;">RELA<br/>
-              </td>
-              <td style="vertical-align: top;">approximately_mapped_to
+              <td>RELA</td>
+              <td>approximately_mapped_to
                 where approximate flag = "1"<br/>
                 mapped_to where approxmiate flag = "0"<br/>
-                null (empty) where target value = "NoPCS"<br/>
-              </td>
-              <td style="vertical-align: top;">mapped_to<br/>
+                null (empty) where target value = "NoPCS"
               </td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
-  </body>
-</html>
