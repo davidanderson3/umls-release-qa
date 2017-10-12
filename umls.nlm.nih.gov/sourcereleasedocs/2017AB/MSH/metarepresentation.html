@@ -11,537 +11,734 @@
       </ul>
 </div>
 <!-- end tabbed navigation area -->
-
-    <a id="top-of-page"></a> 
-    <span class="nav">Skip to: 
-    <a href="#atoms">Atoms</a>,
-      <a href="#attributes">Attributes</a>, 
-      <a href="#definitions">Definitions</a>,
-      <a href="#relationships">Relationships</a>, 
-      <a href="#mappings">Mappings</a></span>
-    <p><strong>VSAB: </strong>RXNORM_17AA_170905F<br/>
-    </p>
-    <div id="rep_identifiers" class="rep_block_level_one">
-      <h3>Notes:</h3>
-      <p>RxNorm, a standardized nomenclature for clinical drugs, is
-        produced by the National Library of Medicine. Data files are
-        released monthly and <a href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">available
-        by download</a>. Within each Metathesaurus cycle, RxNorm is
-        updated multiple times. This document reflects the latest
-        cumulative update. The scope of RxNorm is determined by the
-        combined scope of its source vocabularies which include the
-        following:
-      </p>
-      <table>
-        <tbody>
-          <tr>
-            <th>Sources</th>
-            <th>Description</th>
-          </tr>
-          <tr>
-            <td class="file_field_name">ATC_2017_17_09_05</td>
-            <td>Anatomical Therapeutic Chemical Classification System</td>
-          </tr>
-          <tr>
-            <td class="file_field_name">CVX_2017_08_24</td>
-            <td>Vaccines Administered</td>
-          </tr>
-          <tr>
-            <td class="file_field_name">DRUGBANK5.0_2017_08_01</td>
-            <td>DrugBank</td>
-          </tr>
-          <tr>
-            <td class="file_field_name">GS_2017_08_02</td>
-            <td>Gold Standard Drug Database</td>
-          </tr>
-          <tr>
-            <td class="file_field_name">MDDB_2017_08_02</td>
-            <td>Master Drug Data Base</td>
-          </tr>
-          <tr>
-            <td class="file_field_name">MMSL_2017_08_01</td>
-            <td>Multum MediSource Lexicon</td>
-          </tr>
-          <tr>
-            <td class="file_field_name">MMX_2017_08_07</td>
-            <td>Micromedex RED BOOK</td>
-          </tr>
-          <tr>
-            <td class="file_field_name">MTHSPL_2017_08_25</td>
-            <td>Metathesaurus FDA Structured Product Labels</td>
-          </tr>
-          <tr>
-            <td class="file_field_name">NDDF_2017_08_02</td>
-            <td>FDB MedKnowledge</td>
-          </tr>
-          <tr>
-            <td class="file_field_name">NDFRT_2017_09_05</td>
-            <td>National Drug File</td>
-          </tr>
-          <tr>
-            <td class="file_field_name">NDFRT_FDASPL_2017_09_05</td>
-            <td>National Drug File - FDASPL</td>
-          </tr>
-          <tr>
-            <td class="file_field_name">NDFRT_FMTSME_2017_09_05</td>
-            <td>National Drug File - FMTSME</td>
-          </tr>
-          <tr>
-            <td class="file_field_name">RXNORM_17AA_170905F</td>
-            <td>RxNorm Vocabulary</td>
-          </tr>
-          <tr>
-            <td class="file_field_name">VANDF_2017_07_20</td>
-            <td>Veterans Health Administration National Drug File</td>
-          </tr>
-        </tbody>
-      </table>
-      <br/>
-      Note: Selected portions of MSH and SNOMEDCT are included in the
-      RxNorm release files, however, they are not processed as part of
-      RxNorm for the Metathesaurus except in assigning RXCUI and RXAUI
-      attributes. All MSH or SNOMEDCT data in the Metathesaurus comes
-      directly from that source's data files. This document describes
-      how the RxNorm release files (RXN*RRF) are processed for
-      representation in the UMLS Metathesaurus.&nbsp; It does not cover
-      processing of individual source vocabularies for inclusion in
-      RxNorm.&nbsp;<br/><br/>
-      
-      <h3>Summary of Changes</h3>
-      <p>No changes were made to the RXNORM format itself or to
-        Metathesaurus source processing for 2017AB.&nbsp; Data changes
-        include the following:
-      </p>
-      Attributes:
-      <table>
-        <tbody>
-          <tr>
-            <th>Status</th>
-            <th>ATN</th>
-            <td><span style="font-weight:bold;">SAB</span></td>
-          </tr>
-          <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>EXPORT_ONLY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>MTHSPL_2017_08_25</td>
-          </tr>
-          <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>GPI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>MDDB_2017_08_02</td>
-          </tr>
-          <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>GPPC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>MDDB_2017_08_02</td>
-          </tr>
-          <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>HRI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>MDDB_2017_08_02</td>
-          </tr>
-          <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>NDC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>MDDB_2017_08_02</td>
-          </tr>
-          <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>NON_VACCINE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>CVX_2017_08_24</td>
-          </tr>
-          <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>UPC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>MDDB_2017_08_02</td>
-          </tr>
-          <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dropped&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>GFC_CODE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-      <br/>
-      Relationships:
-      <table>
-        <tbody>
-          <tr>
-            <th>Status</th>
-            <th>RELA</th>
-            <td><span style="font-weight:bold;">SAB</span></td>
-          </tr>
-          <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>has_ingredient/ingredient_of&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>MDDB_2017_08_02</td>
-          </tr>
-          <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>has_tradename/tradname_of&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>MDDB_2017_08_02</td>
-          </tr>
-      </tbody>
-      </table>
-      <br/>
-      Term types:
-      <table>
-        <tbody>
-          <tr>
-            <th>Status</th>
-            <th>TTY</th>
-            <td><span style="font-weight: bold;">SAB</span></td>
-          </tr>
-          <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>BD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>MDDB_2017_08_02</td>
-          </tr>
-          <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>IN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>MDDB_2017_08_02</td>
-          </tr>
-          <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>MTH_RXN_BD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>MDDB_2017_08_02</td>
-          </tr>
-          <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>MTH_RXN_CD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>MDDB_2017_08_02</td>
-          </tr>
-      </tbody>
-      </table>
+    <a id="top-of-page"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>,
+      <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
+      <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+    <div id="general" class="rep_block_level_one">
+      <p><strong>VSAB:</strong> MSH2018_2017_08_11</p>
+      <div id="rep_identifiers" class="rep_block_level_one">
+        <h3>Summary of Changes:</h3>
+        <p>There were no changes to the original file format or to the Metathesaurus source processing.</p>
       </div>
-        
-    <h3>Source Provided Files:</h3>
-    <div id="rep_change_summary" class="rep_block_level_one">
-      <p>RXNORM data files are released monthly and <a
-href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">available by download</a>.</p>
-      <table>
-        <tbody>
-          <tr>
-            <th>File Name</th>
-            <th>Description</th>
-          </tr>
-          <tr>
-            <td class="file_field_name">RXNCONSO.RRF</td>
-            <td>Concept and source information.</td>
-          </tr>
-          <tr>
-            <td class="file_field_name">RXNDOC.RRF</td>
-            <td>Abbreviated values.</td>
-          </tr>
-          <tr>
-            <td class="file_field_name">RXNREL.RRF</td>
-            <td>Relationship and merge information.</td>
-          </tr>
-          <tr>
-            <td class="file_field_name">RXNSAB.RRF</td>
-            <td>Source information.</td>
-          </tr>
-          <tr>
-            <td class="file_field_name">RXNSAT.RRF</td>
-            <td>Attribute information.</td>
-          </tr>
-          <tr>
-            <td class="file_field_name">RXNSTY.RRF</td>
-            <td>Semantic type information.</td>
-          </tr>
-          <tr>
-            <td class="file_field_name">RXNATOMARCHIVE.RRF</td>
-            <td>Archive data. Not used.</td>
-          </tr>
-          <tr>
-            <td class="file_field_name">RXNCUICHANGES.RRF</td>
-            <td>CUI changes. Not used.</td>
-          </tr>
-          <tr>
-            <td class="file_field_name">RXNCUI.RRF</td>
-            <td>Retired CUIs.</td>
-          </tr>
-        </tbody>
-      </table>
-      <br/>
-    </div>
-    <div id="rep_identifers" class="rep_block_level_one">
-      <h3>Identifiers:</h3>
-      <ul>
-        <li>CODE: RXNCONSO.CODE</li>
-        <li>SAUI: RXNCONSO.RXAUI for RXNORM atoms; RXNCONSO.SAUI for
-          other sources. (Currently SAUI is blank for other sources).</li>
-        <li>SCUI: RXNCONSO.RXCUI for RXNORM atoms; RXNCONSO.SCUI for
-          other sources. (Currently SCUI is blank for other sources
-          except NDFRT).</li>
-        <li>SDUI: RXNCONSO.SDUI (Currently always blank).</li>
-      </ul>
-      <div id="rep_termtypes" class="rep_block_level_two"> <a
-          id="atoms"></a>
-        <h3>Atoms (MRCONSO):</h3>
-        &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
-        <br/>
-        <h4>Term Type</h4>
-        <p>Term types are extracted from field 13 of RXNCONSO.RRF.</p>
-        <h4>Suppressibility</h4>
-        <p>For many RxNorm and subsource termtypes, the suppressibility
-          value can be either "O" or "N". For all others, the value is
-          "N". Suppressibility values are extracted from field 17 of
-          RXNCONSO.RRF.
-        </p>
-        <p>In addition, source NDC attributes may have
-          SUPPRESS="O".
-        </p>
+      <div id="rep_files" class="rep_block_level_one">
+        <h3>Source Provided Files:</h3>
+        &nbsp;&nbsp;The UMLS uses MeSH xml files downloaded from <a
+          href="http://www.nlm.nih.gov/mesh/filelist.html">http://www.nlm.nih.gov/mesh/filelist.html</a><br/>
+        <ul>
+          <li>desc2018.xml
+          </li>
+          <li>qual2018.xml
+          </li>
+          <li>supp2018.xml
+          </li>
+        </ul>
       </div>
-      <div id="rep_attributes" class="rep_block_level_two"> <a
-          id="attributes"></a>
-        <h3>Attributes (MRSAT):</h3>
-        &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
-        <p>All attribute names and their values are extracted from field
-          9 and 11 of RXNSAT.RRF except for RXCUI and
-          RXAUI which are created using RXNCONSO.RRF.</p>
-      </div>
-      <div id="rep_definitions" class="rep_block_level_two"> <a
-          id="definitions"></a>
-        <h3>Definitions (MRDEF):</h3>
-        &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
-        <p>There are no DEFINITIONS with SAB = "RXNORM".&nbsp;&nbsp;
-          NDFRT does contribute a small number of DEFINITIONS to
-          MRDEF.RRF.
-        </p>
-      </div>
-      <div id="rep_relationships" class="rep_block_level_two"> <a
-          id="relationships"></a>
-        <h3>Relationships (MRREL):</h3>
-        &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
-        <p>All relationships are extracted from field 4 (REL) and field
-          8 (RELA) of RXNREL.RRF
-        </p>
-        <p>Note:&nbsp; In the table below, where reasonable we have
-          supplied term types involved in the listed
-          relationships.&nbsp; For sources that do not have "semantic
-          term types" (e.g. NDFRT uses "HT" and "PT," which are based on
-          the structure of the source, rather than types like "IN" which
-          is derived from the meaning of the concept), these term types
-          may not apply.<br/><br/>
-        </p>
-        <table>
+      <div id="rep_identifers" class="rep_block_level_one">
+        <h3>Identifiers:</h3>
+          <table>
           <tbody>
             <tr>
-              <th>Source</th>
-              <th>Relationship</th>
-              <th>Relationship Label<br/>
-                Inverse Relationship Label</th>
-              <th>Description</th>
+              <th>
+              </th>
+              <th>Descriptor Records </th>
+              <th>Qualifier Records </th>
+              <th>Supplementary Concept Records </th>
+              <th>Hierarchical Terms </th>
             </tr>
             <tr>
-              <td>NDFRT</td>
-              <td>CHD<br/>
-                PAR
+              <td>CODE</td>
+              <td>DescriptorUI</td>
+              <td>QualifierUI</td>
+              <td>SupplementalRecordUI</td>
+              <td>Identifier generated during source processing, in the
+                format U######</td>
+            </tr>
+            <tr>
+              <td>SAUI</td>
+              <td>Not applicable<br/>
               </td>
-              <td>(no rela)</td>
-              <td>CREATED from the "PAR" relationships in
-                RXNREL.RRF.<br/>
-                Currently, NDFRT is the only RXNORM source with a
-                hierarchy.
-              </td>
+              <td>Not applicable</td>
+              <td>Not applicable</td>
+              <td>Not applicable</td>
             </tr>
             <tr>
-              <td>RXNORM</td>
-              <td>RB<br/>
-                RN
-              </td>
-              <td>contained_in<br/>
-                contains</td>
-              <td>Connects the "SBD", "SCD" with its drug
-                delivery device.</td>
+              <td>SCUI</td>
+              <td>ConceptUI</td>
+              <td>ConceptUI</td>
+              <td>ConceptUI</td>
+              <td>Not applicable</td>
             </tr>
             <tr>
-              <td>RXNORM</td>
-              <td>RB<br/>
-                RN</td>
-              <td>has_form<br/>
-                form_of</td>
-              <td>Connects the "PIN" with its "IN".</td>
-            </tr>
-            <tr>
-              <td>RXNORM</td>
-              <td>RB<br/>
-                RN</td>
-              <td>has_quantified_form<br/>
-                quantified_form_of</td>
-              <td>Creates relationships using the "SBD" or
-                "SCD".</td>
-            </tr>
-            <tr>
-              <td>RXNORM</td>
-              <td>RB<br/>
-                RN</td>
-              <td>has_tradename<br/>
-                tradename_of</td>
-              <td>Connects the branded name with the
-                generic or clinical name.</td>
-            </tr>
-            <tr>
-              <td>RXNORM<br/>
-                MMSL<br/>
-                VANDF
-              </td>
-              <td>RB<br/>
-                RN</td>
-              <td>inverse_isa<br/>
-                isa</td>
-              <td>Connects the "PT" with its clinical drug
-                name and connects the "SCD" &amp; "SBD" to its drug
-                form.</td>
-            </tr>
-            <tr>
-              <td>RXNORM</td>
-              <td>RB<br/>
-                RN</td>
-              <td>precise_ingredient_of<br/>
-                has_precise_ingredient</td>
-              <td>Connects the "BN" with its "PIN".</td>
-            </tr>
-            <tr>
-              <td>RXNORM</td>
-              <td>RO</td>
-              <td>precise_ingredient_of<br/>
-                has_precise_ingredient</td>
-              <td>Connects the "SCDC" with its "PIN".</td>
-            </tr>
-            <tr>
-              <td>RXNORM</td>
-              <td>RO</td>
-              <td>consists_of<br/>
-                constitutes</td>
-              <td>Connects the "SCD", "SBD" with its drug
-                component.</td>
-            </tr>
-            <tr>
-              <td>MMSL</td>
-              <td>RO</td>
-              <td>contained_in<br/>
-                contains</td>
-              <td>Connects "GN" atoms with other "GN"
-                atoms.</td>
-            </tr>
-            <tr>
-              <td>RXNORM<br/>
-              </td>
-              <td>RO</td>
-              <td>doseformgroup_of<br/>
-                has_doseformgroup
-              </td>
-              <td>Connects the "SCDG" and
-                "SBDG" with the dose form group.
-              </td>
-            </tr>
-            <tr>
-              <td>RXNORM<br/>
-                NDDF<br/>
-                NDFRT
-              </td>
-              <td>RO</td>
-              <td>dose_form_of<br/>
-                has_dose_form</td>
-              <td>Connects the "SCD", "SCDF", "SBD", and
-                "SBDF" with the dose form.</td>
-            </tr>
-            <tr>
-              <td>RXNORM</td>
-              <td>RO</td>
-              <td>included_in<br/>
-                includes</td>
-              <td>Connects the drug name with its
-                Metathesaurus created name.</td>
-            </tr>
-            <tr>
-              <td>RXNORM<br/>
-                MMSL<br/>
-                MTHSPL<br/>
-                NDDF<br/>
-                NDFRT<br/>
-                VANDF
-              </td>
-              <td>RO</td>
-              <td>ingredient_of<br/>
-                has_ingredient</td>
-              <td>Connects the "SCDF", "SCDC" to its
-                ingredients; connects the "SBD", "SBDC", "SBDF" to its
-                fully-specified drug brand name.</td>
-            </tr>
-            <tr>
-              <td>RXNORM</td>
-              <td>RO</td>
-              <td>ingredients_of<br/>
-                has_ingredients
-              </td>
-              <td>Connects "SCD" with "MIN"</td>
-            </tr>
-            <tr>
-              <td>NDFRT</td>
-              <td>RO</td>
-              <td>may_treat<br/>
-                may_be_treated_by
-              </td>
-              <td>Connects a concept of
-                "DRUG_KIND" with a concept of "DISEASE_KIND"</td>
-            </tr>
-            <tr>
-              <td>NDFRT</td>
-              <td>RO</td>
-              <td>mechanism_of_action_of<br/>
-                has_mechanism_of_action
-              </td>
-              <td>Connects a concept of
-                "MECHANISM_OF_ACTION_KIND" with a concept of "DRUG_KIND"</td>
-            </tr>
-            <tr>
-              <td>NDFRT</td>
-              <td>RO</td>
-              <td>metabolic_site_of<br/>
-                has_metabolic_site<br/>
-              </td>
-              <td>Connects a concept of
-                "PHARMACOKINETICS_KIND" with a concept of "DRUG_KIND"</td>
-            </tr>
-            <tr>
-              <td>RXNORM</td>
-              <td>RO</td>
-              <td>part_of<br/>
-                has_part</td>
-              <td>Connects "IN" or "PIN"
-                with "MIN"</td>
-            </tr>
-            <tr>
-              <td>RXNORM</td>
-              <td>RO</td>
-              <td>precise_ingredient_of<br/>
-                has_precise_ingredient
-              </td>
-              <td>Connects "PIN" with "SCDC"</td>
-            </tr>
-            <tr>
-              <td>RXNORM</td>
-              <td>RO</td>
-              <td>reformulated_to<br/>
-                reformulation_of</td>
-              <td>Creates relationships using "BN".</td>
-            </tr>
-            <tr>
-              <td>RXNORM</td>
-              <td>SY</td>
-              <td>(no rela)</td>
-              <td>Connects RXNORM atoms to other sources</td>
+              <td>SDUI</td>
+              <td>DescriptorUI</td>
+              <td>QualifierUI</td>
+              <td>SupplementalRecordUI</td>
+              <td>Identifier generated during source processing, in the
+                format U###### (same as CODE)</td>
             </tr>
           </tbody>
         </table>
-      </div>
-      <div id="mappings" class="rep_block_level_two">
-        <h3>Mappings (MRMAP):</h3>
-        &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
-        <p>There are no mappings present in RxNorm.</p>
+        <a id="atoms"></a> <br/>
+        <div id="rep_termtypes" class="rep_block_level_two">
+          <h3>Atoms (MRCONSO):</h3>
+          &nbsp;&nbsp;<span class="nav">(return to <a href="#top-of-page">top</a></span>)<br/>
+          <table>
+            <tbody>
+              <tr>
+                <th>Term Type</th>
+                <th>Description</th>
+                <th>Origin</th>
+              </tr>
+              <tr>
+                <td>CE</td>
+                <td>Entry term for a Supplementary Concept</td>
+                <td>CODE = SupplementaryRecordUI<br/>
+                  STR = value of &lt;TermList&gt;&lt;Term&gt;&lt;String&gt;<br/>
+                  SCUI = ConceptUI<br/>
+                  SDUI = SupplementaryRecordUI<br/>
+                  File: supp*.xml<br/>
+                  TTY = CE is assigned to records where:<br/>
+                  RecordPreferredTermYN = "N"<br/>
+                  ConceptPreferredTermYN = "N"<br/>
+                  IsPermutedTermYN = "N"
+                </td>
+              </tr>
+              <tr>
+                <td>DEV</td>
+                <td>Descriptor entry version</td>
+                <td>CODE = DescriptorUI<br/>
+                  STR = value of &lt;TermList&gt;&lt;Term&gt;&lt;EntryVersion&gt;<br/>
+                  SCUI = ConceptUI<br/>
+                  SDUI = DescriptorUI<br/>
+                  File: desc*.xml
+                </td>
+              </tr>
+              <tr>
+                <td>DSV</td>
+                <td>Descriptor sort version</td>
+                <td>CODE = DescriptorUI<br/>
+                  STR = value of &lt;TermList&gt;&lt;Term&gt;&lt;SortVersion&gt;<br/>
+                  SCUI = ConceptUI<br/>
+                  SDUI = DescriptorUI<br/>
+                  File: desc*.xml
+                </td>
+              </tr>
+              <tr>
+                <td>ET</td>
+                <td>Entry term</td>
+                <td>CODE = DescriptorUI<br/>
+                  STR = value of
+                  &lt;TermList&gt;&lt;Term&gt;&lt;String&gt;<br/>
+                  SCUI = ConceptUI<br/>
+                  SDUI = DescriptorUI<br/>
+                  File: desc*.xml<br/>
+                  TTY = ET is assigned to records where:<br/>
+                  RecordPreferredTermYN = "N"<br/>
+                  ConceptPreferredTermYN = "N"<br/>
+                  IsPermutedTermYN = "N"
+                </td>
+              </tr>
+              <tr>
+                <td>HS</td>
+                <td>Short/alternate form of hierarchical term</td>
+                <td>CODE = Identifier generated during source
+                  processing, in the format U######<br/>
+                  STR = Created from data provided by MeSH; not released
+                  in xml format<br/>
+                  SCUI = Not populated<br/>
+                  SDUI = Identifier generated during source processing,
+                  in the format U######<br/>
+                  This data is added during Metathesaurus source
+                  processing
+                </td>
+              </tr>
+              <tr>
+                <td>HT</td>
+                <td>Hierarchical term</td>
+                <td>CODE = Identifier generated during source
+                  processing, in the format U######<br/>
+                  STR = Created from data provided by MeSH; not released
+                  in xml format<br/>
+                  SCUI = Not populated<br/>
+                  SDUI = Identifier generated during source processing,
+                  in the format U######<br/>
+                  This data is added during Metathesaurus source
+                  processing
+                </td>
+              </tr>
+              <tr>
+                <td>MH</td>
+                <td>Main heading</td>
+                <td>CODE = DescriptorUI<br/>
+                  STR = value of
+                  &lt;TermList&gt;&lt;Term&gt;&lt;String&gt;<br/>
+                  SCUI = ConceptUI<br/>
+                  SDUI = DescriptorUI<br/>
+                  File: desc*.xml<br/>
+                  TTY = EP is assigned to records where:<br/>
+                  RecordPreferredTermYN = "Y"<br/>
+                  ConceptPreferredTermYN = "Y"<br/>
+                  IsPermutedTermYN = "N"
+                </td>
+              </tr>
+              <tr>
+                <td>N1</td>
+                <td>Chemical Abstracts Service Type 1 name of a chemical</td>
+                <td>CODE = SupplementalRecordUI<br/>
+                  STR = value of
+                  &lt;TermList&gt;&lt;Term&gt;&lt;CASN1Name&gt;<br/>
+                  SCUI = ConceptUI<br/>
+                  SDUI = SupplementalRecordUI<br/>
+                  File:  supp*.xml
+                </td>
+              </tr>
+              <tr>
+                <td>NM</td>
+                <td>Name of Supplementary Concept</td>
+                <td>CODE = SupplementalRecordUI<br/>
+                  STR = value of
+                  &lt;TermList&gt;&lt;Term&gt;&lt;String&gt;<br/>
+                  SCUI = ConceptUI<br/>
+                  SDUI = SupplementalRecordUI<br/>
+                  File: supp*.xml<br/>
+                  TTY = NM is assigned to records where:<br/>
+                  RecordPreferredTermYN = "Y"<br/>
+                  ConceptPreferredTermYN = "Y"<br/>
+                  IsPermutedTermYN = "N"<br/>
+                </td>
+              </tr>
+              <tr>
+                <td>PCE</td>
+                <td>Preferred entry term for Supplementary Concept</td>
+                <td>CODE = DescriptorUI<br/>
+                  STR = value of
+                  &lt;TermList&gt;&lt;Term&gt;&lt;String&gt;<br/>
+                  SCUI = ConceptUI<br/>
+                  SDUI = DescriptorUI<br/>
+                  File: supp*.xml<br/>
+                  TTY = PCE is assigned to records where:<br/>
+                  RecordPreferredTermYN = "N"<br/>
+                  ConceptPreferredTermYN = "Y"<br/>
+                  IsPermutedTermYN = "N"
+                </td>
+              </tr>
+              <tr>
+                <td>PEP</td>
+                <td>Preferred entry term</td>
+                <td>CODE = DescriptorUI<br/>
+                  STR = value of
+                  &lt;TermList&gt;&lt;Term&gt;&lt;String&gt;<br/>
+                  SCUI = ConceptUI<br/>
+                  SDUI = DescriptorUI<br/>
+                  File: desc*.xml<br/>
+                  TTY = PEP is assigned to records where:<br/>
+                  RecordPreferredTermYN = "N"<br/>
+                  ConceptPreferredTermYN = "Y"<br/>
+                  IsPermutedTermYN = "N"
+                </td>
+              </tr>
+              <tr>
+                <td>PM</td>
+                <td>Machine permutation</td>
+                <td>CODE = DescriptorUI<br/>
+                  STR = value of
+                  &lt;TermList&gt;&lt;Term&gt;&lt;String&gt;<br/>
+                  SCUI = ConceptUI<br/>
+                  SDUI = DescriptorUI<br/>
+                  File: desc*.xml<br/>
+                  TTY = PM is assigned to records where:<br/>
+                  RecordPreferredTermYN = "N"<br/>
+                  ConceptPreferredTermYN = "N"<br/>
+                  IsPermutedTermYN = "Y"
+                </td>
+              </tr>
+              <tr>
+                <td>PXQ</td>
+                <td>Preferred qualifier term</td>
+                <td>CODE = QualifierUI<br/>
+                  STR = value of
+                  &lt;TermList&gt;&lt;Term&gt;&lt;String&gt;<br/>
+                  SCUI = ConceptUI<br/>
+                  SDUI =QualifierUI<br/>
+                  File: qual*.xml<br/>
+                  TTY = PXQ is assigned to records where:<br/>
+                  RecordPreferredTermYN = "N"<br/>
+                  ConceptPreferredTermYN = "Y"<br/>
+                  IsPermutedTermYN = "N"
+                </td>
+              </tr>
+              <tr>
+                <td>QAB</td>
+                <td>Qualifier abbreviation</td>
+                <td>CODE = QualifierUI<br/>
+                  STR = value of
+                  &lt;TermList&gt;&lt;Term&gt;&lt;Abbreviation&gt;<br/>
+                  SCUI = ConceptUI<br/>
+                  SDUI = QualifierUI<br/>
+                  Suppress="Y"
+                </td>
+              </tr>
+              <tr>
+                <td>QEV</td>
+                <td>Qualifier entry version</td>
+                <td>CODE = QualifierUI<br/>
+                  STR = value of
+                  &lt;TermList&gt;&lt;Term&gt;&lt;EntryVersion&gt;<br/>
+                  SCUI = ConceptUI<br/>
+                  SDUI = QualifierUI</td>
+              </tr>
+              <tr>
+                <td>QSV</td>
+                <td>Qualifier sort version</td>
+                <td>CODE = QualifierUI<br/>
+                  STR = value of
+                  &lt;TermList&gt;&lt;Term&gt;&lt;SortVersion&gt;<br/>
+                  SCUI = ConceptUI<br/>
+                  SDUI = QualifierUI</td>
+              </tr>
+              <tr>
+                <td>TQ</td>
+                <td>Preferred qualifier term</td>
+                <td>CODE = QualifierUI<br/>
+                  STR = value of
+                  &lt;TermList&gt;&lt;Term&gt;&lt;String&gt;<br/>
+                  SCUI = ConceptUI<br/>
+                  SDUI = QualifierUI<br/>
+                  File: qual*.xml<br/>
+                  TTY = TQ is assigned to records where:<br/>
+                  RecordPreferredTermYN = "Y"<br/>
+                  ConceptPreferredTermYN = "Y"<br/>
+                  IsPermutedTermYN = "N"
+                </td>
+              </tr>
+              <tr>
+                <td>XQ</td>
+                <td>Alternate name for a qualifier</td>
+                <td>CODE = QualifierUI<br/>
+                  STR = value of
+                  &lt;TermList&gt;&lt;Term&gt;&lt;String&gt;<br/>
+                  SCUI = ConceptUI<br/>
+                  SDUI = QualifierUI<br/>
+                  File: qual*.xml<br/>
+                  TTY = XQ is assigned to records where:<br/>
+                  RecordPreferredTermYN = "N"<br/>
+                  ConceptPreferredTermYN = "N"<br/>
+                  IsPermutedTermYN = "N"
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="rep_attributes" class="rep_block_level_two"> <a id="attributes"></a><br/>
+          <h3>Attributes (MRSAT):</h3>
+          &nbsp;&nbsp;<span class="nav">(return to <a href="#top-of-page">top</a></span>)<br/>
+          <br/>
+          <br/>
+          <table>
+            <tbody>
+              <tr>
+                <th>Attribute Name</th>
+                <th>Description</th>
+                <th>Origin: XML tag</th>
+                <th>XML file(s)</th>
+              </tr>
+              <tr>
+                <td>AN</td>
+                <td>Annotation</td>
+                <td>&lt;Annotation&gt;
+                </td>
+                <td>desc*.xml<br/>
+                  qual*.xml
+                </td>
+              </tr>
+              <tr>
+                <td>AQL</td>
+                <td>Allowable Qualifier List</td>
+                <td>&lt;AllowableQualifiersList&gt;</td>
+                <td>desc*.xml</td>
+              </tr>
+              <tr>
+                <td>CX</td>
+                <td>Consider Also Note</td>
+                <td>&lt;ConsiderAlso&gt;</td>
+                <td>desc*.xml</td>
+              </tr>
+              <tr>
+                <td>DC</td>
+                <td>Descriptor class</td>
+                <td>&lt;DescriptorRecord DescriptorClass&gt;</td>
+                <td>desc*.xml
+                </td>
+              </tr>
+              <tr>
+                <td>DQ<br/>
+                </td>
+                <td>Date Qualifier Established</td>
+                <td>&lt;DateEstablished&gt;&lt;Year&gt;&lt;Month&gt;&lt;Day&gt;</td>
+                <td>qual*.xml</td>
+              </tr>
+              <tr>
+                <td>DX</td>
+                <td>Date major descriptor established</td>
+                <td>&lt;DateEstablished&gt;&lt;Year&gt;&lt;Month&gt;&lt;Day&gt;</td>
+                <td>desc*.xml</td>
+              </tr>
+              <tr>
+                <td>EC</td>
+                <td>Entry combination</td>
+                <td>&lt;EntryCombination&gt;<br/>
+                  &lt;ECIN&gt;&lt;QualifierReferredTo&gt;&lt;QualifierName&gt;:<br/>
+                  &lt;ECOUT&gt;&lt;DescriptorReferredTo&gt;&lt;DescriptorName&gt;/&lt;QualifierReferredTo&gt;&lt;QualifierName&gt;
+                </td>
+                <td>desc*.xml</td>
+              </tr>
+              <tr>
+                <td>FR</td>
+                <td>MeSH frequency</td>
+                <td>&lt;Frequency&gt;</td>
+                <td>supp*.xml</td>
+              </tr>
+              <tr>
+                <td>FX</td>
+                <td>See Related' mapping</td>
+                <td>&lt;SeeRelatedDescriptor&gt;</td>
+                <td>desc*.xml</td>
+              </tr>
+              <tr>
+                <td>HM</td>
+                <td>Heading Mapped To</td>
+                <td>&lt;HeadingMappedToList&gt;&lt;HeadingMappedTo&gt;&lt;DescriptorUI&gt;</td>
+                <td>supp*.xml</td>
+              </tr>
+              <tr>
+                <td>HN</td>
+                <td>History Note</td>
+                <td>&lt;HistoryNote&gt;</td>
+                <td>desc*.xml, qual*.xml</td>
+              </tr>
+              <tr>
+                <td>II</td>
+                <td>Indexing Information</td>
+                <td>&lt;IndexingInformationList&gt;&lt;IndexingInformation&gt;&lt;DescriptorUI&gt;</td>
+                <td>supp*.xml</td>
+              </tr>
+              <tr>
+                <td>LT</td>
+                <td>Lexical tag</td>
+                <td>&lt;LexicalTag&gt;<br/>
+                  Only LexicalTags with value = "TRD" are included in
+                  the Metathesaurus
+                </td>
+                <td>desc*.xml<br/>
+                  supp*.xml
+                </td>
+              </tr>
+              <tr>
+                <td>MDA</td>
+                <td>Date of entry</td>
+                <td>&lt;DescriptorRecord|QualifierRecord|SupplementaryRecord&gt;&lt;DateCreated&gt;&lt;Year&gt;&lt;Month&gt;&lt;Day&gt;</td>
+                <td>desc*.xml<br/>
+                  qual*.xml<br/>
+                  supp*.xml
+                </td>
+              </tr>
+              <tr>
+                <td>MMR</td>
+                <td>Revision date</td>
+                <td>&lt;DateRevised&gt;&lt;Year&gt;&lt;Month&gt;&lt;Day&gt;
+                </td>
+                <td>desc*.xml<br/>
+                  qual*.xml<br/>
+                  supp*.xml
+                </td>
+              </tr>
+              <tr>
+                <td>MN</td>
+                <td>Hierarchical number for tree structures.</td>
+                <td>&lt;TreeNumber&gt; </td>
+                <td>desc*.xml<br/>
+                  qual*.xml
+                </td>
+              </tr>
+              <tr>
+                <td>OL</td>
+                <td>Online note</td>
+                <td>&lt;OnlineNote&gt;
+                </td>
+                <td>desc*.xml<br/>
+                  qual*.xml
+                </td>
+              </tr>
+              <tr>
+                <td>PA</td>
+                <td>Pharmacologic action</td>
+                <td>&lt;PharmacologicalAction&gt;&lt;DescriptorReferredTo&gt;&lt;DescriptorUI&gt;</td>
+                <td>desc*.xml<br/>
+                  supp*.xml
+                </td>
+              </tr>
+              <tr>
+                <td>PI</td>
+                <td>Previous indexing</td>
+                <td>&lt;PreviousIndexing&gt;</td>
+                <td>desc*.xml<br/>
+                  supp*.xml
+                </td>
+              </tr>
+              <tr>
+                <td>PM</td>
+                <td>Public note</td>
+                <td>&lt;PublicMeSHNote&gt;</td>
+                <td>desc*.xml</td>
+              </tr>
+              <tr>
+                <td>RN</td>
+                <td>Registry Number</td>
+                <td>&lt;RegistryNumber&gt; (any leading zeroes are
+                  dropped)</td>
+                <td>desc*.xml<br/>
+                  supp*.xml
+                </td>
+              </tr>
+              <tr>
+                <td>RR</td>
+                <td>Related Chemical Abstracts Registry number</td>
+                <td>&lt;RelatedRegistryNumber&gt;</td>
+                <td>desc*.xml<br/>
+                  supp*.xml
+                </td>
+              </tr>
+              <tr>
+                <td>SC</td>
+                <td>Supplemental record class</td>
+                <td>&lt;SupplementalRecord SCRClass&gt;</td>
+                <td>supp*.xml</td>
+              </tr>
+              <tr>
+                <td>SOS</td>
+                <td>Scope statement</td>
+                <td>&lt;Note&gt;</td>
+                <td>supp*.xml</td>
+              </tr>
+              <tr>
+                <td>SRC</td>
+                <td>Literature source of chemical name</td>
+                <td>&lt;Source&gt;</td>
+                <td>supp*.xml</td>
+              </tr>
+              <tr>
+                <td>TERMUI</td>
+                <td>Term unique identifier</td>
+                <td>&lt;TermUI&gt;</td>
+                <td>desc*.xml<br/>
+                  qual*.xml<br/>
+                  supp*.xml
+                </td>
+              </tr>
+              <tr>
+                <td>TH</td>
+                <td>Thesaurus ID</td>
+                <td>&lt;ThesaurusID&gt;</td>
+                <td>desc*.xml<br/>
+                  supp*.xml
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="rep_definitions" class="rep_block_level_two"> <a id="definitions"></a><br/>
+          <h3>Definitions (MRDEF):</h3>
+          &nbsp;&nbsp;<span class="nav">(return to <a href="#top-of-page">top</a></span>)<br/>
+          <table>
+            <tbody>
+              <tr>
+                <th>Origin</th>
+              </tr>
+              <tr>
+                <td>XML tag: &lt;ScopeNote&gt;<br/>
+                  Files: dmesh*.xml, qmesh*.xml
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="rep_relationships" class="rep_block_level_two"> <a id="relationships"></a><br/>
+          <h3>Relationships (MRREL):</h3>
+          &nbsp;&nbsp;<span class="nav">(return to <a href="#top-of-page">top</a></span>)<br/>
+          <table>
+            <tbody>
+              <tr>
+                <th>REL</th>
+                <th>RELA/Inverse RELA</th>
+                <th>Origin</th>
+                <th>XML File(s)</th>
+              </tr>
+              <tr>
+                <td>CHD<br/>
+                  PAR<br/>
+                  SIB</td>
+                <td>(no rela)</td>
+                <td>Represent the hierarchy as created from
+                  the values in the &lt;TreeNumber&gt; tags in dmesh and
+                  qmesh. Official MeSH xml release files do not
+                  include the top levels of a hierarchy, so additional
+                  top level concepts are created and maintained in
+                  separate files. </td>
+                <td>desc*.xml<br/>
+                  qual*.xml
+                </td>
+              </tr>
+              <tr>
+                <td>AQ<br/>
+                  QB
+                </td>
+                <td>(no rela)</td>
+                <td>Connect descriptors with allowable qualifiers.
+                  Extracted from the &lt;AllowableQualifiersList&gt; tag
+                  in desc*.xml</td>
+                <td>desc*.xml</td>
+              </tr>
+              <tr>
+                <td>RB<br/>
+                  RN
+                </td>
+                <td>(no rela)</td>
+                <td>Connect: &lt;ConceptRelation&gt; &lt;Concept1UI&gt;
+                  to &lt;ConceptRelation&gt;&lt;Concept2UI&gt;<br/>
+                  Created where:<br/>
+                  &lt;ConceptRelation RelationName="NRW"&gt;<br/>
+                  &lt;ConceptRelation RelationName="BRD"&gt;<br/>
+                </td>
+                <td>desc*.xml<br/>
+                  qual*.xml<br/>
+                  supp*.xml
+                </td>
+              </tr>
+              <tr>
+                <td>RB<br/>
+                  RN
+                </td>
+                <td>inverse_isa<br/>
+                  isa
+                </td>
+                <td>
+                  Connect: [&lt;DescriptorRecord&gt;&lt;DescriptorUI&gt;
+                    or &lt;SupplementalRecord&gt;&lt;SupplementalRecordUI&gt;] to &lt;PharmacologicalAction&gt;&lt;
+                    DescriptorReferredTo&gt;&lt;DescriptorUI&gt;
+                </td>
+                <td>desc*.xml<br/>
+                  supp*.xml
+                </td>
+              </tr>
+              <tr>
+                <td>RB<br/>
+                  RN
+                </td>
+                <td>mapped_from<br/>
+                  mapped_to
+                </td>
+                <td>Connect: &lt;SupplementalRecord&gt;&lt;SupplementalRecordUI&gt;
+                  to &lt;HeadingMappedTo&gt;&lt;DescriptorReferredTo&gt;&lt;DescriptorUI&gt;<br/>
+                  <br/>
+                  Note: In cases where the &lt;HeadingMappedTo&gt;
+                  tag includes a &lt;QualifierReferredTo&gt;, an
+                  "RO|mapping_qualifier_of/has_mapping_qualifier"
+                  relationship will also be created. To pair the
+                  qualfier relationship with the correct mapped_to
+                  relationship, the same value for MRREL.RG
+                  (relationship group) is assigned.</td>
+                <td>supp*.xml</td>
+              </tr>
+              <tr>
+                <td>RO</td>
+                <td>(no rela)</td>
+                <td>SDUI - SDUI:<br/>
+                  Connect: <br/>
+                  &lt;DescriptorRecord&gt;&lt;DescriptorUI&gt; to &lt;SeeRelatedDescriptor&gt;&lt;DescriptorReferredTo&gt;&lt;DescriptorUI&gt;<br/>
+                  <br/>
+                  SCUI - SCUI:<br/>
+                  Connect: &lt;ConceptRelation&gt;&lt;Concept1UI&gt; to
+                  &lt;ConceptRelation&gt;&lt;Concept2UI&gt;<br/>
+                  Created where: &lt;ConceptRelation
+                  RelationName="REL"&gt;</td>
+                <td>desc*.xml</td>
+              </tr>
+              <tr>
+                <td>RO</td>
+                <td>mapping_qualifier_of<br/>
+                  has_mapping_qualifier
+                </td>
+                <td>&lt;SupplementalRecord&gt;&lt;SupplementalRecordUI&gt;
+to &lt;HeadingMappedTo&gt;&lt;QualifierReferredTo&gt;&lt;QualifierUI&gt;<br/>
+                    <br/>
+                    Note:
+                    mapping_qualifier_of/has_mapping_qualifier
+                    relationships are always paired with
+                    mapped_to/mapped_from relationships connecting
+                    Supplementary Concept records to Descriptor
+                    records.  To pair the qualifier relationship
+                    with the correct mapped_to relationship, the same
+                    value for MRREL.RG (relationship group) is assigned.
+                  </td>
+                <td>supp*.xml</td>
+              </tr>
+              <tr>
+                <td>SY</td>
+                <td>entry_version_of<br/>
+                  has_entry_version
+                </td>
+                <td>Connect: AUI of
+                  &lt;TermList&gt;&lt;Term&gt;&lt;String&gt; with AUI of
+                  string in &lt;EntryVersion&gt; tag
+                </td>
+                <td>desc*.xml</td>
+              </tr>
+              <tr>
+                <td>SY</td>
+                <td>expanded_form_of<br/>
+                  has_expanded_form
+                </td>
+                <td>Connect: AUI of
+                  &lt;TermList&gt;&lt;Term&gt;&lt;String&gt; with AUI of
+                  string in &lt;Abbreviation&gt; tag</td>
+                <td>qual*.xml</td>
+              </tr>
+              <tr>
+                <td>SY</td>
+                <td>has_permuted_term<br/>
+                  permuted_term_of
+                </td>
+                <td>For atoms with the same TERMUI, connects: AUI of
+                  string where IsPermutedTermYN="N" to AUI of string
+                  where IsPermutedTermYN="Y"
+                </td>
+                <td>desc*.xml</td>
+              </tr>
+              <tr>
+                <td>SY</td>
+                <td>has_sort_version<br/>
+                  sort_version_of
+                </td>
+                <td>Connect: AUI of
+                  &lt;TermList&gt;&lt;Term&gt;&lt;String&gt; with AUI of
+                  string in &lt;SortVersion&gt; tag </td>
+                <td>desc*.xml</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="mappings" class="rep_block_level_two">
+          &nbsp;&nbsp;<span class="nav">(return to <a href="metarepresentation.html#top-of-page">top</a></span>)<br/>
+          <br/>
+          The hierarchy is created from values in the &lt;TreeNumber&gt;
+          tags in desc*.xml and qual*.xml. Official MeSH xml
+          release files do not include the top levels of a hierarchy, so
+          additional top level concepts are created and maintained in
+          separate files.<br/>
+          <br/>
+          <h3>Mappings (MRMAP):</h3>
+          &nbsp;&nbsp;<span class="nav">(return to <a href="#top-of-page">top</a></span>)<br/>
+          <p>No mappings are represented for MeSH.</p>
+        </div>
       </div>
     </div>

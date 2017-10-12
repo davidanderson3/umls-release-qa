@@ -11,268 +11,38 @@
       </ul>
    </div>
 <!-- end tabbed navigation area -->
-
-    <a id="top-of-page"></a> 
-    <span class="nav">
-    Skip to: 
-    <a href="#rep_general">Notes</a>,
-      <a href="#change_summary">Summary of Changes</a>, 
-      <a href="#file_summary">Summary of Source-Provided Files</a>, 
-      <a href="#file_details">Source-Provided File Details</a></span> 
-
+    <a id="top-of-page"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
+      <a href="#change_summary">Summary of Changes</a>, <a
+        href="#file_summary">Summary of Source-Provided Files</a> <a
+        href="#file_details">Source-Provided File Details</a></span> <a id="general"></a>
     <div id="rep_general" class="rep_block_level_one">
-      <p>VSAB: RXNORM_17AA_170905F</p>
-      <div id="rep_identifiers" class="rep_block_level_one">
-        <h3>Notes:</h3>
-        <p>RxNorm, a standardized nomenclature for clinical drugs, is
-          produced by the National Library of Medicine. Data files are
-          released monthly and <a
-href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">available
-            by download</a>. Within each Metathesaurus cycle, RxNorm is
-          updated multiple times. This document reflects the latest
-          cumulative update. The scope of RxNorm is determined by the
-          combined scope of its source vocabularies which include the
-          following:
-        </p>
-        <table>
-          <tbody>
-            <tr>
-              <th>Sources</th>
-              <th>Description</th>
-            </tr>
-            <tr>
-              <td class="file_field_name">ATC_2017_17_09_05</td>
-              <td>Anatomical Therapeutic Chemical Classification System</td>
-            </tr>
-            <tr>
-            <td class="file_field_name">CVX_2017_08_24</td>
-            <td>Vaccines Administered</td>
-            </tr>
-            <tr>
-            <td class="file_field_name">DRUGBANK5.0_2017_08_01</td>
-            <td>DrugBank</td>
-             </tr>
-            <tr>
-              <td class="file_field_name">GS_2017_08_02</td>
-              <td>Gold Standard Drug Database</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">MDDB_2017_08_02</td>
-              <td>Master Drug Data Base</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">MMSL_2017_08_01</td>
-              <td>Multum MediSource Lexicon</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">MMX_2017_08_07</td>
-              <td>Micromedex RED BOOK</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">MTHSPL_2017_08_25</td>
-              <td>Metathesaurus FDA Structured Product Labels</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">NDDF_2017_08_02</td>
-              <td>FDB MedKnowledge</td>
-            </tr>
-            <tr>
-              <td>NDFRT_2017_09_05</td>
-              <td>National Drug File</td>
-            </tr>
-            <tr>
-              <td>NDFRT_FDASPL_2017_09_05</td>
-              <td>National Drug File - FDASPL</td>
-            </tr>
-            <tr>
-              <td>NDFRT_FMTSME_2017_09_05</td>
-              <td>National Drug File - FMTSME</td>
-            </tr>
-            <tr>
-              <td>RXNORM_17AA_170905F</td>
-              <td>RxNorm Vocabulary</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">VANDF_2017_07_20</td>
-              <td>Veterans Health Administration National Drug File</td>
-            </tr>
-          </tbody>
-        </table>
-        <br/>
-        Note: Selected portions of MSH and SNOMEDCT are included in the
-        RxNorm release files, however, they are not processed as part of
-        RxNorm for the Metathesaurus except in assigning RXCUI and RXAUI
-        attributes. All MSH or SNOMEDCT data in the Metathesaurus comes
-        directly from that source's data files. This document describes
-        how the RxNorm release files (RXN*RRF) are processed for
-        representation in the UMLS Metathesaurus.&nbsp; It does not
-        cover processing of individual source vocabularies for inclusion
-        in RxNorm.&nbsp;<br/><br/>
-      
-<div id="rep_change_summary" class="rep_block_level_one"> <a
-        id="change_summary"></a>
-        <h3>Summary of Changes</h3>
-        <p>No changes were made to the RXNORM format itself or to
-          Metathesaurus source processing for 2017AB.&nbsp; Data changes
-          include the following:
-        </p>
-      Attributes:
-      <table>
-        <tbody>
-          <tr>
-            <th>Status</th>
-            <th>ATN</th>
-            <td><span style="font-weight: bold;">SAB</span></td>
-          </tr>
-          <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>EXPORT_ONLY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>MTHSPL_2017_08_25</td>
-          </tr>
-          <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>GPI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>MDDB_2017_08_02</td>
-          </tr>  
-         <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>GPPC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>MDDB_2017_08_02</td>
-          </tr>
-          <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>HRI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>MDDB_2017_08_02</td>
-          </tr>
-         <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>NDC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>MDDB_2017_08_02</td>
-          </tr> 
-         <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>NON_VACCINE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>CVX_2017_08_24</td>
-          </tr>
-         <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>UPC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>MDDB_2017_08_02</td>
-          </tr>
-         <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dropped&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>GFC_CODE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td></td>
-          </tr> 
-        </tbody>
-      </table>
-      <br/>
-      Relationships:
-      <table>
-        <tbody>
-          <tr>
-            <th>Status</th>
-            <th>RELA</th>
-            <td><span style="font-weight: bold;">SAB</span></td>
-          </tr>
-          <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>has_ingredient/ingredient_of&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>MDDB_2017_08_02</td>
-          </tr>
-          <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>has_tradename/tradename_of&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>MDDB_2017_08_02</td>
-          </tr>  
-         </tbody>
-      </table>
-      <br/>
-      Term Types:
-      <table>
-        <tbody>
-          <tr>
-            <th>Status</th>
-            <th>TTY</th>
-            <td><span style="font-weight: bold;">SAB</span></td>
-          </tr>
-          <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>BD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>MDDB_2017_08_02</td>
-          </tr>
-         <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>IN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>MDDB_2017_08_02</td>
-          </tr>
-         <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>MTH_RXN_BD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>MDDB_2017_08_02</td>
-          </tr>
-         <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>MTH_RXN_CD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>MDDB_2017_08_02</td>
-          </tr>
-       </tbody>
-      </table>
-      <br/>
+      <p><strong>VSAB:</strong>MSH2018_2017_08_11</p>
+      <h3>Notes</h3>
+      <p>MeSH for the Metathesaurus is processed from the xml files. In
+        addition to data from the xml files, top levels of the hierarchy
+        are created from external files for Metathesaurus
+        representation. The information provided here applies explicitly
+        to the English version of MeSH.</p>
+      <p>The majority of it is also relevant to translations maintained
+        in the MeSH translation system (Croatian, Czech, French, German,
+        Italian, and Latvian). Other translations, including Dutch,
+        Finnish, Japanese, Polish, Portuguese, Russian, Spanish, and
+        Swedish are included in the UMLS but are submitted in different
+        formats and the details below may not apply. <br/>
+      </p>
     </div>
-      Source Provided Files:
-      <p>RXNORM&nbsp; data files are released monthly and <a
-href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">available
-          by download</a>.</p>
-      <table>
-        <tbody>
-          <tr>
-            <th>File Name</th>
-            <th>Description</th>
-          </tr>
-          <tr>
-            <td class="file_field_name">RXNCONSO.RRF</td>
-            <td>Concept and source information.</td>
-          </tr>
-          <tr>
-            <td class="file_field_name">RXNDOC.RRF</td>
-            <td>Abbreviated values.</td>
-          </tr>
-          <tr>
-            <td class="file_field_name">RXNREL.RRF</td>
-            <td>Relationship and merge information.</td>
-          </tr>
-          <tr>
-            <td class="file_field_name">RXNSAB.RRF</td>
-            <td>Source information.</td>
-          </tr>
-          <tr>
-            <td class="file_field_name">RXNSAT.RRF</td>
-            <td>Attribute information.</td>
-          </tr>
-          <tr>
-            <td class="file_field_name">RXNSTY.RRF</td>
-            <td>Semantic type information.</td>
-          </tr>
-          <tr>
-            <td class="file_field_name">RXNATOMARCHIVE.RRF</td>
-            <td>Archive data. Not used.</td>
-          </tr>
-          <tr>
-            <td class="file_field_name">RXNCUICHANGES.RRF</td>
-            <td>CUI changes. Not used.</td>
-          </tr>
-          <tr>
-            <td class="file_field_name">RXNCUI.RRF</td>
-            <td>Retired CUIs.</td>
-          </tr>
-        </tbody>
-      </table>
+    <div id="rep_change_summary" class="rep_block_level_one"> <a id="change_summary"></a>
+      <h3>Summary of Changes:</h3>
+      &nbsp;&nbsp;<span class="nav">(<a href="#top-of-page">return to top</a></span>)
+		<p>There were no changes to the original file format or to the Metathesaurus source processing.</p>
     </div>
-    <div id="rep_file_summary" class="rep_block_level_one"><a
-        id="file_summary"></a>
+    <div id="rep_file_summary" class="rep_block_level_one"> <a id="file_summary"></a>
       <h3>Source-Provided Files: Summary</h3>
-      &nbsp;&nbsp;<span class="nav">(<a href="#top">return to top</a></span>)
+      &nbsp;&nbsp;(<span class="nav"><a href="#top-of-page">return to top</a></span>)
+      <p>The English language MeSH distribution includes the following.
+        These files, along with additional information can be accessed
+        at <a href="http://www.nlm.nih.gov/mesh/filelist.html"
+          target="_blank">http://www.nlm.nih.gov/mesh/filelist.html</a>.</p>
       <div class="rep_block_level_two">
         <!-- Make a table of each file that comes from the source   -->
         <h4>Documentation and Reference</h4>
@@ -283,18 +53,22 @@ href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">avail
               <th>Description</th>
             </tr>
             <tr>
-              <td class="file_field_name">Readme_Full_*.txt</td>
-              <td>Provides information about the contents of the
-                downloaded zip file. Lists all updated and non-updated
-                sources. Provides information on database control files
-                and SQL commands for use in the automation of the
-                loading process of these files into a RDBMS (Oracle in
-                this case).</td>
+              <td class="file_field_name">nlmdescriptorrecordset_20180101.dtd</td>
+              <td>Descriptor DTD</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">nlmqualifierrecordset_20180101.dt</td>
+              <td>Qualifier DTD</td>
+            </tr>
+            <tr>
+              <td class="file_field_name">nlmsupplementalrecordset_20180101.dtd</td>
+              <td>SCR (Supplementary Concept Records) DTD</td>
             </tr>
           </tbody>
         </table>
-        <h4>RXN RRF files</h4>
-        <a id="RXN_RRF_files"></a>
+        <br/>
+        <h4>XML Data Files</h4>
+        <a id="data_files"></a>
         <table>
           <tbody>
             <tr>
@@ -302,709 +76,1913 @@ href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">avail
               <th>Description</th>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file1">RXNCONSO.RRF</a></td>
-              <td>Concept and source information.</td>
+              <td class="file_field_name">desc2018.xml</td>
+              <td>Descriptor XML MeSH</td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file2">RXNDOC.RRF</a></td>
-              <td>Data about RxNorm.</td>
+              <td class="file_field_name">qual2018.xml</td>
+              <td>Qualifier XML MeSH</td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file3">RXNREL.RRF</a></td>
-              <td>Relationship and merge information.</td>
+              <td class="file_field_name">supp2018.xml</td>
+              <td>SCR XML MeSH</td>
+            </tr>
+          </tbody>
+        </table>
+        <br/>
+        <p>In addition to data from the xml files, top levels of the
+          hierarchy are created from external files for Metathesaurus
+          representation.</p>
+        <p><strong>Not included</strong>: Certain data elements may not be
+          directly processed because they contain redundant data. Data
+          elements which are not included, e .g. because they are for
+          internal purposes, are indicated below.</p>
+        <p><strong>Term Type assignment:</strong>Term type assignment is based on
+          the Term attributes provided in the XML. For example, this
+          term is an MH, based on the table below: </p>
+        <p>&lt;Term ConceptPreferredTermYN="Y" IsPermutedTermYN="N"
+          LexicalTag="NON" RecordPreferredTermYN="Y"&gt;</p>
+        <h4>Descriptor MeSH (file: desc*.xml):</h4>
+        <table>
+          <tbody>
+            <tr>
+              <th>ConceptPreferredTermYN</th>
+              <th>IsPermutedTermYN</th>
+              <th>RecordPreferredTermYN</th>
+              <th>TermType</th>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file4">RXNSAB.RRF</a></td>
-              <td>Source information.</td>
+              <td>N</td>
+              <td>N</td>
+              <td>N</td>
+              <td>ET</td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file5">RXNSAT.RRF</a></td>
-              <td>Attribute information.</td>
+              <td>Y</td>
+              <td>N</td>
+              <td>Y</td>
+              <td>MH</td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file6">RXNSTY.RRF</a></td>
-              <td>Semantic type information.</td>
+              <td>Y</td>
+              <td>N</td>
+              <td>N</td>
+              <td>PEP</td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file7">RXNATOMARCHIVE.RRF</a></td>
-              <td>Archive data. Not used.</td>
+              <td>N</td>
+              <td>Y</td>
+              <td>N</td>
+              <td>PM</td>
+            </tr>
+          </tbody>
+        </table>
+        <br/>
+        <p>XML tags &lt;CASN1Name&gt;, &lt;EntryVersion&gt; and
+          &lt;SortVersion&gt; are used to create atoms with term types
+          N1, DEV, and DSV, respectively.</p>
+        <h4>Qualifier MeSH (file: qual*.xml):</h4>
+        <table>
+          <tbody>
+            <tr>
+              <th>ConceptPreferredTermYN</th>
+              <th>IsPermutedTermYN</th>
+              <th>RecordPreferredTermYN</th>
+              <th>TermType</th>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file8">RXNCUICHANGES.RRF</a></td>
-              <td>Concept changes. Not used.</td>
+              <td>Y</td>
+              <td>N</td>
+              <td>N</td>
+              <td>PXQ</td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file9">RXNCUI.RRF</a></td>
-              <td>Retired CUIs.</td>
+              <td>Y</td>
+              <td>N</td>
+              <td>Y</td>
+              <td>TQ</td>
+            </tr>
+            <tr>
+              <td>N</td>
+              <td>N</td>
+              <td>N</td>
+              <td>XQ</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>Supplemental MeSH (file: supp*.xml):</h4>
+        <table>
+          <tbody>
+            <tr>
+              <th>ConceptPreferredTermYN</th>
+              <th>IsPermutedTermYN</th>
+              <th>RecordPreferredTermYN</th>
+              <th>TermType</th>
+            </tr>
+            <tr>
+              <td>N</td>
+              <td>N</td>
+              <td>N</td>
+              <td>CE</td>
+            </tr>
+            <tr>
+              <td>Y</td>
+              <td>N</td>
+              <td>Y</td>
+              <td>NM</td>
+            </tr>
+            <tr>
+              <td>Y</td>
+              <td>N</td>
+              <td>N</td>
+              <td>PCE</td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
-    <div id="rep_file_details" class="rep_block_level_one">
-      <h3>Source-Provide Files: Details</h3>
-      <a id="file_details">&nbsp;&nbsp;<span class="nav">(return to </span></a><a
-        href="#top">top</a>)
-      <p>RxNorm uses the Rich Release Format (RRF) of the Metathesaurus.
-        There are some fields that are not populated by RxNorm and are
-        marked as "(no value provided)" in the description column with
-        "Not applicable" in the representation column. There are other
-        fields which do contain data such as the term status field (TS)
-        but the data is not extracted because the fields are computed
-        during Metathesaurus production. These fields are marked as "Not
-        processed" in the Representation column.</p>
-      <p>Also, some fields such as CODE may appear in multiple RXN RRF
-        files. These fields are redundant and are not always used within
-        a particular RRF file but are processed within another file.</p>
+    <div id="rep_file_details" class="rep_block_level_one"> <a id="file_details"></a>
+      <h3>Source-Provided Files: Details</h3>
+      &nbsp;&nbsp;(<span class="nav"><a href="#top-of-page">return to top</a></span>)
+      <p>The source representation documentation below is based on
+        published MeSH documentation describing XML data elements.
+        Details from this document that are not relevant to
+        Metathesaurus processing have been removed for cleaner
+        presentation. For each XML data element, the table below
+        describes where the data can be found in the RRF format.
+        Redundant data elements may not be processed directly for
+        inclusion in the Metathesaurus.</p>
+      <p>The complete original documentation can be accessed at: <a
+          href="http://www.nlm.nih.gov/mesh/xml_data_elements.html"
+          target="_blank">http://www.nlm.nih.gov/mesh/xml_data_elements.html</a></p>
+      <p>The following is an alphabetic list of elements available for
+        MeSH data in XML format, including Descriptors, Qualifiers, and
+        Supplementary Concept Records. </p>
+      <p><strong>RecordType:</strong> may appear in records of the following
+        types:<br/>
+        D = Descriptor<br/>
+        Q = Qualifier<br/>
+        SCR = Supplementary Concept Record<br/>
+      </p>
+      <p><strong>Repeating element:</strong> may occur more than once within a
+        record.<br/>
+        <strong>Required element:</strong> all records in the given Record Types
+        have the element. </p>
       <div class="rep_block_level_two"> <a id="file1"></a>
-        <h4 class="file_field_name">file: RXNCONSO.RRF</h4>
         <table>
           <tbody>
             <tr>
               <th>#</th>
-              <th>Field Name</th>
-              <th>Description</th>
+              <th>Element</th>
               <th>Representation</th>
             </tr>
             <tr>
-              <td class="file_field_name">1</td>
-              <td>RXCUI</td>
-              <td>RxNorm unique identifier for concept (concept ID)</td>
-              <td>MRCONSO.SCUI if SAB = "RXNORM"; MRSAT.ATN= "RXCUI"</td>
+              <td>1</td>
+              <td>&lt;ActiveMeSHYearList&gt;<br/>
+                Description: MeSH year(s) in which the record was active
+                since it was last modified. (So, for example, a record
+                not modified in the five years it has been in MeSH will
+                have five &lt;Year&gt; elements. A record modified in
+                the latest MeSH year will have one element.) Example: <br/>
+&lt;ActiveMeSHYearList&gt;&lt;Year&gt;2003&lt;/Year&gt;&lt;/ActiveMeSHYearList&gt;<br/>
+                Subelement of: &lt;DescriptorRecord&gt;;
+                &lt;QualifierRecord&gt;; &lt;SupplementalRecord&gt;<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating element: yes<br/>
+                Required element: yes</td>
+              <td>Not included</td>
             </tr>
             <tr>
-              <td class="file_field_name">2</td>
-              <td>LAT</td>
-              <td>Language of term</td>
-              <td>Not processed</td>
+              <td>2</td>
+              <td>&lt;Annotation&gt;<br/>
+                Description: Free-text information for indexers and
+                catalogers concerning the use of the
+                &lt;DescriptorRecord&gt; or &lt;QualifierRecord&gt; in
+                PubMed. Example: <br/>
+                &lt;Annotation&gt;coord with DNA or RNA or
+                specific&lt;/Annotation&gt;<br/>
+                Subelement of: &lt;DescriptorRecord&gt;<br/>
+                Record Type: D, Q<br/>
+                Repeating element: no<br/>
+                Required element: no</td>
+              <td> MRSAT.ATN = AN</td>
             </tr>
             <tr>
-              <td class="file_field_name">3</td>
-              <td>TS</td>
-              <td>Term status</td>
-              <td>Not processed</td>
+              <td>3</td>
+              <td>&lt;Abbreviation&gt;<br/>
+                Description: Two-letter abbreviation for Qualifier
+                terms. Example: <br/>
+                &lt;Abbreviation&gt;GE&lt;/Abbreviation&gt;<br/>
+                Subelement of: &lt;Term&gt;, &lt;AllowableQualifier&gt;<br/>
+                Record Type: Q, D<br/>
+                Repeating element: yes<br/>
+                Required element: no</td>
+              <td> MRCONSO.STR (TTY = QAB)
+              </td>
             </tr>
             <tr>
-              <td class="file_field_name">4</td>
-              <td>LUI</td>
-              <td>Unique identifier for term (no value provided)</td>
-              <td>Not applicable</td>
+              <td>4</td>
+              <td>&lt;AllowableQualifier&gt;<br/>
+                Description: A specific Qualifier allowed in combination
+                with the Descriptor for indexing. Example:
+                &lt;AllowableQualifier&gt;<br/>
+                &lt;QualifierReferredTo&gt;<br/>
+                &lt;QualifierUI&gt;Q000819&lt;/QualifierUI&gt;<br/>
+                &lt;QualifierName&gt;<br/>
+                &lt;String&gt;agonists&lt;/String&gt;<br/>
+                &lt;/QualifierName&gt;<br/>
+                &lt;/QualifierReferredTo&gt;<br/>
+                &lt;Abbreviation&gt;AG&lt;/Abbreviation&gt;<br/>
+                &lt;/AllowableQualifier&gt;<br/>
+                Subelement of: &lt;AllowableQualifiersList&gt;<br/>
+                Record Type: D<br/>
+                Repeating element: yes<br/>
+                Required element: no</td>
+              <td>MRSAT.ATN = AQL<br/>
+                MRREL.REL = AQ/QB </td>
             </tr>
             <tr>
-              <td class="file_field_name">5</td>
-              <td>STT</td>
-              <td>String type</td>
-              <td>Not processed</td>
+              <td>5</td>
+              <td>&lt;AllowableQualifiersList&gt;<br/>
+                Description: List of multiple occurrences of the
+                &lt;AllowableQualifier&gt; element for a given
+                &lt;DescriptorRecord&gt;. Example: <br/>
+                &lt;AllowableQualifiersList&gt;<br/>
+                &lt;AllowableQualifier&gt;<br/>
+                ...<br/>
+                &lt;/AllowableQualifier&gt;<br/>
+                &lt;/AllowableQualifiersList&gt;<br/>
+                Subelement of: &lt;DescriptorRecord&gt;<br/>
+                Record Type: D<br/>
+                Repeating element: no<br/>
+                Required element: no</td>
+              <td>See &lt;AllowableQualifier&gt;</td>
             </tr>
             <tr>
-              <td class="file_field_name">6</td>
-              <td>SUI</td>
-              <td>Unique identifier for string (no value provided)</td>
-              <td>Not applicable</td>
+              <td>6</td>
+              <td>&lt;CASN1Name&gt;<br/>
+                Description: Chemical Abstracts Type N1 Name. A
+                free-text element containing the systematic name used in
+                the Chemical Abstracts Chemical Substance and Formula
+                Indexes. The systematic name is a unique name assigned
+                to a chemical substance to represent its structure.
+                First available for Descriptors in 1995. Example: <br/>
+                &lt;CASN1Name&gt;1,3-Butadiene, 2-chloro-,
+                homopolymer&lt;/CASN1Name&gt;<br/>
+                Subelement of: &lt;Concept&gt;<br/>
+                Record Type: D, SCR<br/>
+                Repeating element: no<br/>
+                Required element: no</td>
+              <td>MRCONSO.STR (TTY = N1)</td>
             </tr>
             <tr>
-              <td class="file_field_name">7</td>
-              <td>ISPREF</td>
-              <td>Atom status - preferred (Y) or not (N) for this string
-                within the concept</td>
-              <td>Not processed</td>
+              <td>7</td>
+              <td>&lt;Concept&gt;<br/>
+                Description: The bearer of linguistic meaning in MeSH as
+                defined by the &lt;ScopeNote&gt;, comprising a
+                &lt;DescriptorRecord&gt; or &lt;SupplementalRecord&gt;
+                or &lt;QualifierRecord&gt;, and consisting of
+                &lt;Term&gt; elements. One of the three main objects in
+                the MeSH XML (the others being the record, and term). A
+                single record will have one or more concepts, one of
+                which is the preferred concept of the record. A Concept
+                will have one or more terms, one of which is the
+                preferred term for the concept. Referred to uniquely by
+                both a &lt;ConceptUI&gt; and a &lt;ConceptName&gt;.
+                Example: <br/>
+                &lt;Concept PreferredConceptYN="Y"&gt;<br/>
+                &lt;ConceptUI&gt;M0000001&lt;/ConceptUI&gt;<br/>
+                &lt;ConceptName&gt;<br/>
+                &lt;String&gt;Calcimycin&lt;/String&gt;<br/>
+                &lt;/ConceptName&gt;<br/>
+                &lt;ScopeNote&gt;An ionophorous, polyether antibiotic
+                from Streptomyces chartreusensis. ...<br/>
+                &lt;/ScopeNote&gt;<br/>
+                &lt;TermList&gt;<br/>
+                ...<br/>
+                &lt;/TermList&gt;<br/>
+                &lt;/Concept&gt;<br/>
+                Subelement of: &lt;ConceptList&gt;<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating element: yes<br/>
+                Required element: yes</td>
+              <td>Not directly processed</td>
             </tr>
             <tr>
-              <td class="file_field_name">8</td>
-              <td>RXAUI</td>
-              <td>Unique identifier for atom (RxNorm atom ID)</td>
-              <td>MRCONSO.SAUI if SAB = "RXNORM"; MRSAT.ATN = "RXAUI"</td>
+              <td>8</td>
+              <td>&lt;Concept1UI&gt;<br/>
+                Description: The &lt;ConceptUI&gt; of first concept in
+                the &lt;ConceptRelation&gt; element Subelement of:
+                &lt;ConceptRelation&gt;<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating element: yes<br/>
+                Required element: no</td>
+              <td>MRREL.CUI1 populated by the Metathesaurus CUI of
+                Concept1UI</td>
             </tr>
             <tr>
-              <td class="file_field_name">9</td>
-              <td>SAUI</td>
-              <td>Source asserted atom identifier</td>
-              <td>MRCONSO.SAUI</td>
+              <td>9</td>
+              <td> &lt;Concept2UI&gt;<br/>
+                Description: The &lt;ConceptUI&gt; of second concept in
+                the &lt;ConceptRelation&gt; element. Subelement of:
+                &lt;ConceptRelation&gt;<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating element: yes<br/>
+                Required element: no</td>
+              <td>MRREL.CUI1 populated by the Metathesaurus CUI of
+                Concept2UI</td>
             </tr>
             <tr>
-              <td class="file_field_name">10</td>
-              <td>SCUI</td>
-              <td>Source asserted concept identifier</td>
+              <td>10</td>
+              <td>&lt;ConceptList&gt;<br/>
+                Description: Set of one or more &lt;Concept&gt; elements
+                in a Descriptor, Qualifier, or Supplementary Concept
+                record.<br/>
+                Subelement of: &lt;DescriptorRecord&gt;;
+                &lt;QualifierRecord&gt;; &lt;SupplementalRecord&gt;<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating element: no<br/>
+                Required element: yes<br/>
+                MeSH Browser: none </td>
+              <td>Not directly processed</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>&lt;ConceptName&gt;<br/>
+                Description: The &lt;Term&gt; that uniquely names the
+                &lt;Concept&gt; and, along with the &lt;ConceptName&gt;,
+                is used to represent the Concept in other elements. The
+                same term as the preferred term of the concept.
+                Subelement of: &lt;Concept&gt;<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating element: yes<br/>
+                Required element: yes</td>
+              <td>Not directly processed</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>&lt;ConceptPreferredTermYN&gt;<br/>
+                Description: Attribute of the &lt;Term&gt; element which
+                indicates whether or not the term is the preferred term
+                of its concept. See Introduction to MeSH in XML format.
+                Example: <br/>
+                &lt;Term ConceptPreferredTermYN="Y"<br/>
+                IsPermutedTermYN="N"<br/>
+                LexicalTag="NON"<br/>
+                RecordPreferredTermYN="Y"&gt;<br/>
+                &lt;TermUI&gt;T000002&lt;/TermUI&gt;<br/>
+                &lt;String&gt;Calcimycin&lt;/String&gt;<br/>
+                ...<br/>
+                &lt;/Term&gt;<br/>
+                Subelement of: not applicable; attribute of &lt;Term&gt;<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating attribute: yes<br/>
+                Required attribute: yes<br/>
+                MeSH Browser: Preferred [in the Descriptor Expanded
+                Concept View; first term in the Standard Concept View]</td>
+              <td>Used to compute TTY assignments. See Term Type section
+                for details</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>&lt;ConceptRelation&gt;<br/>
+                Description: A semantic relation between a given
+                &lt;Concept&gt; and another &lt;Concept&gt;. The most
+                common case currently is the semantic relation between
+                the preferred concept and subordinate concept(s) in the
+                same record. The type of relation is specified by the
+                attribute RelationName, which consists of one of the
+                following values: BRD (broader)<br/>
+                NRW (narrower)<br/>
+                REL (related but not broader or narrower)<br/>
+                Example: <br/>
+                &lt;ConceptRelation RelationName="NRW"&gt;<br/>
+                &lt;Concept1UI&gt;M0000001&lt;/Concept1UI&gt;<br/>
+                &lt;Concept2UI&gt;M0353609&lt;/Concept2UI&gt;<br/>
+                &lt;/ConceptRelation&gt;<br/>
+                In this example the concept M0353609 has the relation
+                NRW with respect to concept M0000001. That is, M0353609
+                (A-23187) is narrower than M0000001 (Calcimycin).
+                Currently the maximum number of relations per concept is
+                one. And the minimum number of relations per
+                non-preferred concept is one. Subelement of:
+                &lt;ConceptRelationList&gt;<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating element: yes<br/>
+                Required element: no</td>
+              <td>See &lt;RelationName&gt;</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>&lt;ConceptRelationList&gt;<br/>
+                Description: The set of one or more named relations
+                between a given &lt;Concept&gt; and another
+                &lt;Concept&gt;. The name of the relation is specified
+                by the RelationName attribute of the subelement
+                &lt;ConceptRelation&gt;, e.g., NRW, etc.<br/>
+                Subelement of: &lt;Concept&gt;<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating element: no<br/>
+                Required element: no </td>
+              <td>Not directly processed</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>&lt;ConceptUI&gt;<br/>
+                Description: Concept Unique Identifier. Eight-character
+                alpha-numeric string uniquely identifying a
+                &lt;Concept&gt; and, along with the &lt;ConceptName&gt;,
+                is used to represent the &lt;Concept&gt; in other
+                elements. Example: <br/>
+                &lt;ConceptUI&gt;M0003047&lt;/ConceptUI&gt;<br/>
+                Subelement of: &lt;Concept&gt;<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating element: no<br/>
+                Required element: yes</td>
               <td>MRCONSO.SCUI</td>
             </tr>
             <tr>
-              <td class="file_field_name">11</td>
-              <td>SDUI</td>
-              <td>Source asserted descriptor identifier</td>
-              <td>MRCONSO.SDUI</td>
+              <td>16</td>
+              <td>&lt;ConceptUMLSUI&gt;<br/>
+                Description: Eight-character alpha-numeric string
+                uniquely identifying a MeSH &lt;Concept&gt; within the
+                UMLS Metathesaurus. Example: <br/>
+                &lt;ConceptUMLSUI&gt;C0000699&lt;/ConceptUMLSUI&gt;<br/>
+                Subelement of: &lt;Concept&gt;<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating element: yes<br/>
+                Required element: no<br/>
+                MeSH Browser: none</td>
+              <td>Not included</td>
             </tr>
             <tr>
-              <td class="file_field_name">12</td>
-              <td>SAB</td>
-              <td>Abbreviated source name</td>
-              <td>MRCONSO.SAB</td>
+              <td>17</td>
+              <td>&lt;ConsiderAlso&gt;<br/>
+                Description: Consider Also cross-reference. Free-text
+                element which refers a user from a Descriptor to other
+                terms which have related roots. For example, the CX
+                entry for BLOOD is: <br/>
+                &lt;ConsiderAlso&gt;consider also terms at
+                HEM-&lt;/ConsiderAlso&gt;<br/>
+                Subelement of: &lt;DescriptorRecord&gt;<br/>
+                Record Type: D<br/>
+                Repeating element: no<br/>
+                Required element: no</td>
+              <td>MRSAT.ATN = "CX"</td>
             </tr>
             <tr>
-              <td class="file_field_name">13</td>
-              <td>TTY</td>
-              <td>Abbreviation for term type</td>
-              <td>MRCONSO.TTY</td>
+              <td>18</td>
+              <td>&lt;DateCreated&gt;<br/>
+                Description: Date when a &lt;Term&gt; or record was
+                first entered in the MeSH data entry system. A
+                time-stamp, which may be a year behind the
+                &lt;DateEstablished&gt;. Note that when data were
+                converted to the new MeSH maintenance system in 1999,
+                many terms did not have a &lt;DateCreated&gt; value and
+                so were given a value of January 1, 1999. Similar in
+                format to the MEDLINE element of the same name. Example:
+                <br/>
+                &lt;DateCreated&gt;<br/>
+                &lt;Year&gt;1990&lt;/Year&gt;<br/>
+                &lt;Month&gt;03&lt;/Month&gt;<br/>
+                &lt;Day&gt;08&lt;/Day&gt;<br/>
+                &lt;/DateCreated&gt;<br/>
+                Subelement of: &lt;DescriptorRecord&gt;; &lt;Term&gt;<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating element: no<br/>
+                Required element: no</td>
+              <td>MRSAT.ATN = MDA<br/>
+                Value is &lt;Year&gt;&lt;Month&gt;&lt;Day&gt;<br/>
+                e.g., "19900308"<br/>
+                Note: MDA attributes are created from data at the
+                Descriptor (SDUI) level. They are not created from data
+                at the Term (AUI) level. </td>
             </tr>
             <tr>
-              <td class="file_field_name">14</td>
-              <td>CODE</td>
-              <td>Source asserted identifier</td>
-              <td>MRCONSO.CODE</td>
+              <td>19</td>
+              <td>&lt;DateEstablished&gt;<br/>
+                Description: First day of the first full month when a
+                &lt;DescriptorRecord&gt; or &lt;QualifierRecord&gt;
+                first becomes available for searching in NLM's online
+                databases, such as PubMed. (Formerly the first year
+                published in Index Medicus.) Usually the records
+                introduced in a given MeSH year will have the same
+                &lt;DateEstablished&gt;. Example: <br/>
+                &lt;DateEstablished&gt;<br/>
+                &lt;Year&gt;2001&lt;/Year&gt;<br/>
+                &lt;Month&gt;01&lt;/Month&gt;<br/>
+                &lt;Day&gt;01&lt;/Day&gt;<br/>
+                &lt;/DateEstablished&gt;<br/>
+                Subelement of: &lt;DescriptorRecord&gt;;
+                &lt;QualifierRecord&gt;<br/>
+                Record Type: D, Q<br/>
+                Repeating element: no<br/>
+                Required element: yes</td>
+              <td>MRSAT.ATN = "DX"<br/>
+                Value is &lt;Year&gt;&lt;Month&gt;&lt;Day&gt;<br/>
+                e.g., "20010101"<br/>
+              </td>
             </tr>
             <tr>
-              <td class="file_field_name">15</td>
-              <td>STR</td>
-              <td>String</td>
-              <td>MRCONSO.STR</td>
+              <td>20</td>
+              <td>&lt;DateRevised&gt;<br/>
+                Description: Date when a record was last changed.
+                Similar in format to the MEDLINE element of the same
+                name. Example: <br/>
+                &lt;DateRevised&gt;<br/>
+                &lt;Year&gt;2000&lt;/Year&gt;<br/>
+                &lt;Month&gt;06&lt;/Month&gt;<br/>
+                &lt;Day&gt;21&lt;/Day&gt;<br/>
+                &lt;/DateRevised&gt;<br/>
+                Subelement of: &lt;DescriptorRecord&gt;<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating element: no<br/>
+                Required element: no</td>
+              <td>MRSAT.ATN = MMR<br/>
+                Value is &lt;Year&gt;&lt;Month&gt;&lt;Day&gt;<br/>
+                e.g. 20000621 </td>
             </tr>
             <tr>
-              <td class="file_field_name">16</td>
-              <td>SRL</td>
-              <td>Source restriction level (no value provided)</td>
+              <td>21</td>
+              <td>&lt;Day&gt;<br/>
+                Description: Two-character string giving the day of the
+                month. Similar in format to the MEDLINE element of the
+                same name.<br/>
+                Subelement of: &lt;DateCreated&gt;; &lt;DateRevised&gt;;
+                &lt;DateEstablished&gt;<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating element: yes<br/>
+                Required element: no</td>
+              <td>See &lt;DateCreated&gt;, &lt;DateRevised&gt;,
+                &lt;DateEstablished&gt; </td>
+            </tr>
+            <tr>
+              <td>22</td>
+              <td>DescriptorClass Description: Attribute of
+                &lt;DescriptorRecord&gt; having as a value one of four
+                numbers indicating whether a record is (a) a topical
+                Descriptor, used to identify the subject of an indexed
+                document, or (b) a non-topical Descriptor. There are
+                four possible DC values: <br/>
+                <ol>
+                  <li> Topical Descriptor. </li>
+                  <li>Publication Types, for example, 'Review'. </li>
+                  <li>Check Tag, e.g., 'Male' (no tree number) </li>
+                  <li> Geographic Descriptor (Z category of tree
+                    number). </li>
+                </ol>
+                This element is not to be confused with the set or class
+                of &lt;Concept&gt; elements in a Descriptor which may
+                also be referred to as the Descriptor Class of that
+                record. Example: <br/>
+                &lt;DescriptorRecord DescriptorClass = "1"&gt;<br/>
+                Subelement of: not applicable . Attribute of
+                &lt;DescriptorRecord&gt;<br/>
+                Record Type: D<br/>
+                Repeating element: no<br/>
+                Required element: no</td>
+              <td>MRSAT.ATN = DC</td>
+            </tr>
+            <tr>
+              <td>23</td>
+              <td>&lt;DescriptorName&gt;<br/>
+                Description: A term that uniquely refers to its
+                &lt;DescriptorRecord&gt; and, along with the
+                &lt;DescriptorUI&gt;, is used to represent the
+                Descriptor in other elements, by the
+                &lt;DescriptorReferredTo&gt;. The same term as the
+                preferred &lt;Term&gt; of the preferred &lt;Concept&gt;.
+                Comparable to, and the source of, the MEDLINE element of
+                the same name. (Note that the MEDLINE element has
+                different attributes.) Subelement of:
+                &lt;DescriptorRecord&gt;; &lt;DescriptorReferredTo&gt;.<br/>
+                Record Type: D, Q, SCR<br/>
+                Example: <br/>
+                &lt;DescriptorName&gt;<br/>
+                &lt;String&gt;Calcimycin&gt;&lt;/String&gt;<br/>
+                &lt;/DescriptorName&gt;<br/>
+                Repeating element: yes<br/>
+                Required element: yes </td>
+              <td>Not directly processed</td>
+            </tr>
+            <tr>
+              <td>24</td>
+              <td>&lt;DescriptorRecord&gt;<br/>
+                Description: Cluster of one or more concepts used for
+                subject indexing and retrieval. Identified uniquely by a
+                &lt;DescriptorUI&gt; and &lt;DescriptorName&gt;. A
+                Descriptor. A Descriptor record. Also known as Main
+                Heading. (Note that this differs from the MEDLINE
+                &lt;MeshHeading&gt; element. For example, the MEDLINE
+                element includes both the Descriptor name and the
+                Qualifier name assigned to a citation.) Example: <br/>
+                &lt;DescriptorRecord DescriptorClass = "1"&gt;<br/>
+                ...<br/>
+                &lt;/DescriptorRecord&gt;<br/>
+                Subelement of: &lt;DescriptorRecordSet&gt;<br/>
+                Record Type: D<br/>
+                Repeating element: yes<br/>
+                Required element: yes </td>
+              <td>Not directly processed</td>
+            </tr>
+            <tr>
+              <td>25</td>
+              <td>&lt;DescriptorRecordSet&gt;<br/>
+                Description: The set of all &lt;DescriptorRecord&gt;
+                elements in the Descriptor XML file.<br/>
+                Subelement of: none; this is the root element.<br/>
+                Record Type: D<br/>
+                Repeating element: no<br/>
+                Required element: yes </td>
+              <td>Not directly processed</td>
+            </tr>
+            <tr>
+              <td>26</td>
+              <td>&lt;DescriptorReferredTo&gt;<br/>
+                Description: The pair of elements &lt;DescriptorUI&gt;
+                and &lt;DescriptorName&gt; each of which uniquely refers
+                to a &lt;DescriptorRecord&gt;. Used to represent the
+                &lt;DescriptorRecord&gt; in other elements. Example: <br/>
+                &lt;DescriptorReferredTo&gt;<br/>
+                &lt;DescriptorUI&gt;D000900&lt;/DescriptorUI&gt;<br/>
+                &lt;DescriptorName&gt;<br/>
+                &lt;String&gt;Antibiotics&lt;/String&gt;<br/>
+                &lt;/DescriptorName&gt;<br/>
+                &lt;/DescriptorReferredTo&gt;<br/>
+                Subelement of: &lt;ECIN&gt;; &lt;ECOUT&gt;;
+                &lt;SeeRelatedDescriptor&gt;;
+                &lt;PharmacologicalAction&gt;; &lt;HeadingMappedTo&gt;.<br/>
+                Record Type: D, SCR<br/>
+                Repeating element: yes<br/>
+                Required element: no</td>
+              <td>As a subelement of ECIN:<br/>
+                MRSAT.ATN = EC_OF<br/>
+                As a subelement of ECOUT:<br/>
+                MRREL.REL=RO; MREL.RELA=entry_combination_of<br/>
+                MRSAT.ATN = EC<br/>
+                As a subelement of SeeRelatedDescriptor:<br/>
+                MRREL.REL = RO;<br/>
+                MRREL.RELA = &lt;no RELA&gt;<br/>
+                As a subelement of PharmacologicAction:<br/>
+                MRREL.REL=RN<br/>
+                MRREL.RELA=isa<br/>
+                MRSAT.ATN = PA<br/>
+                As a subelement of HeadingMappedTo:<br/>
+                MRREL.REL=RN<br/>
+                MRREL.RELA=mapped_to</td>
+            </tr>
+            <tr>
+              <td>27</td>
+              <td>&lt;DescriptorUI&gt;<br/>
+                Description: Descriptor Unique Identifier.
+                Seven-character alpha-numeric string uniquely
+                identifying a &lt;DescriptorRecord&gt; and, along with
+                the &lt;DescriptorName&gt;, is used to represent the
+                &lt;DescriptorRecord&gt; in other elements, by the
+                &lt;DescriptorReferredTo&gt;. Example: <br/>
+                &lt;DescriptorUI&gt;D000001&lt;/DescriptorUI&gt;<br/>
+                Subelement of: &lt;DescriptorRecord&gt;;
+                &lt;DescriptorReferredTo&gt;.<br/>
+                Record Type: D, SCR<br/>
+                Repeating element: yes<br/>
+                Required element: yes</td>
+              <td>MRCONSO.CODE<br/>
+                MRCONSO.SDUI<br/>
+                Used as the SDUI and/or CODE value in MRSAT, MRREL as
+                appropriate</td>
+            </tr>
+            <tr>
+              <td>28</td>
+              <td>&lt;ECIN&gt;<br/>
+                Description: Descriptor/Qualifier combination prohibited
+                in the &lt;EntryCombination&gt; of a given
+                &lt;DescriptorRecord&gt;. Example: See
+                &lt;EntryCombination&gt;.<br/>
+                Subelement of: &lt;EntryCombination&gt;<br/>
+                Record Type: D<br/>
+                Repeating element: yes<br/>
+                Required element: no</td>
+              <td> See &lt;EntryCombination&gt;<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>29</td>
+              <td>&lt;ECOUT&gt;<br/>
+                Description: Descriptor or Descriptor/Qualifier
+                combination recommended in place of the prohibited
+                combination in the &lt;EntryCombination&gt; of a given
+                &lt;DescriptorRecord&gt;.<br/>
+                Example: See &lt;EntryCombination&gt;.<br/>
+                Subelement of: &lt;EntryCombination&gt;<br/>
+                Record Type: D, SCR<br/>
+                Repeating element: yes<br/>
+                Required element: no</td>
+              <td>See &lt;EntryCombination&gt;<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>30</td>
+              <td>&lt;EntryCombination&gt;<br/>
+                Description: A reference to a specific Qualifier that is
+                not to be used with the Descriptor in indexing. The
+                &lt;ECIN&gt; element specifies the Qualifier and
+                Descriptor combination that is prohibited. Instead of
+                this combination, another Descriptor is to be used,
+                specified by the &lt;ECOUT&gt; element. For example, in
+                the Descriptor for 'Abdomen', the &lt;ECIN&gt; refers to
+                the use of 'Abdomen' with 'radiography' and the
+                &lt;ECOUT&gt; specifies the Descriptor 'Radiography,
+                Abdominal'. This means that the combination of 'Abdomen'
+                and 'radiography' is prohibited but instead
+                'Radiography, Abdominal' should be used. The
+                &lt;ECOUT&gt; element may also be a Descriptor/Qualifier
+                combination as well as a Descriptor. As in most of XML
+                MeSH, the Descriptor and Qualifier are referred to both
+                by the Unique Identifier of the record as well as the
+                term that names the record. Example: <br/>
+                &lt;EntryCombination&gt;<br/>
+                &lt;ECIN&gt;<br/>
+                &lt;DescriptorReferredTo&gt;<br/>
+                &lt;DescriptorUI&gt;D000005&lt;/DescriptorUI&gt;<br/>
+                &lt;DescriptorName&gt;<br/>
+                &lt;String&gt;Abdomen&lt;/String&gt;<br/>
+                &lt;/DescriptorName&gt;<br/>
+                &lt;/DescriptorReferredTo&gt;<br/>
+                &lt;QualifierReferredTo&gt;<br/>
+                &lt;QualifierUI&gt;Q000530&lt;/QualifierUI&gt;<br/>
+                &lt;QualifierName&gt;<br/>
+                &lt;String&gt;radiography&lt;/String&gt;<br/>
+                &lt;/QualifierName&gt;<br/>
+                &lt;/QualifierReferredTo&gt;<br/>
+                &lt;/ECIN&gt;<br/>
+                &lt;ECOUT&gt;<br/>
+                &lt;DescriptorReferredTo&gt;<br/>
+                &lt;DescriptorUI&gt;D011860&lt;/DescriptorUI&gt;<br/>
+                &lt;DescriptorName&gt;<br/>
+                &lt;String&gt;Radiography, Abdominal&lt;/String&gt;<br/>
+                &lt;/DescriptorName&gt;<br/>
+                &lt;/DescriptorReferredTo&gt;<br/>
+                &lt;/ECOUT&gt;<br/>
+                &lt;/EntryCombination&gt;<br/>
+                Subelement of: &lt;EntryCombinationList&gt;<br/>
+                Record Type: D<br/>
+                Repeating element: yes<br/>
+                MeSH Browser: Entry Combination</td>
+              <td>MRSAT.ATN = "EC"<br/>
+                <br/>
+                ATV =
+&lt;ECIN&gt;&lt;QualifierReferredTo&gt;&lt;QualifierName&gt;:&lt;ECOUT&gt;&lt;DescriptorReferredTo&gt;&lt;DescriptorName&gt;/&lt;QualifierReferredTo&gt;&lt;QualifierName&gt;<br/>
+                <br/>
+                e.g., D000005 has an attribute where:<br/>
+                ATN = "EC" <br/>
+                ATV = "radiography:Radiography, Abdominal"<br/>
+                <br/>
+                <br/>
+              </td>
+            </tr>
+            <tr>
+              <td>31</td>
+              <td>&lt;EntryCombinationList&gt;<br/>
+                Description: The set of one or more &lt;ECIN&gt; and
+                &lt;ECOUT&gt; pairs in the &lt;EntryCombination&gt;
+                element.<br/>
+                Subelement of: &lt;DescriptorRecord&gt;<br/>
+                Record Type: D<br/>
+                Repeating element: no<br/>
+                Required element: no</td>
+              <td> See &lt;EntryCombination&gt;</td>
+            </tr>
+            <tr>
+              <td>32</td>
+              <td>&lt;EntryVersion&gt;<br/>
+                Description: Custom short form of a &lt;Term&gt; used
+                for NLM indexing and searching. All upper case. Example:
+                <br/>
+                &lt;EntryVersion&gt;OCCUP MED&lt;/EntryVersion&gt;<br/>
+                Subelement of: &lt;Term&gt;<br/>
+                Record Type: D, Q<br/>
+                Repeating element: no<br/>
+                Required element: no</td>
+              <td> MRCONSO.STR<br/>
+                &nbsp;&nbsp;TTY = QEV (qmesh)<br/>
+                &nbsp;&nbsp;TTY = DEV (dmesh)<br/>
+                MRREL.REL=SY<br/>
+                MRREL.RELA=entry_version_of </td>
+            </tr>
+            <tr>
+              <td>33</td>
+              <td>&lt;Frequency&gt;<br/>
+                Description: Number of citations indexed with the SCR in
+                PubMed. Automatically incremented monthly. Example: <br/>
+                &lt;Frequency&gt;1&lt;/Frequency&gt;<br/>
+                Subelement of: &lt;SupplementalRecord&gt;<br/>
+                Record Type: SCR<br/>
+                Repeating element: no<br/>
+                Required element: yes</td>
+              <td>MRSAT.ATN = FR</td>
+            </tr>
+            <tr>
+              <td>34</td>
+              <td>&lt;HeadingMappedTo&gt;<br/>
+                Description: &lt;DescriptorRecord&gt; or
+                &lt;DescriptorRecord&gt;&lt;QualifierRecord&gt;
+                combination, which is to be automatically attached to a
+                citation in PubMed whenever the SCR is used to index the
+                citation. The Descriptor's &lt;RegistryNumber&gt; is
+                also automatically attached unless it is 0. Example
+                (from C000011): <br/>
+                &lt;HeadingMappedTo&gt;<br/>
+                &lt;DescriptorReferredTo&gt;<br/>
+                &lt;DescriptorUI&gt;D015125&lt;/DescriptorUI&gt;<br/>
+                &lt;DescriptorName&gt;<br/>
+                &lt;String&gt;Oxyquinoline&lt;/String&gt;<br/>
+                &lt;/DescriptorName&gt;<br/>
+                &lt;/DescriptorReferredTo&gt;<br/>
+                &lt;QualifierReferredTo&gt;<br/>
+                &lt;QualifierUI&gt;*Q000031&lt;/QualifierUI&gt;<br/>
+                &lt;QualifierName&gt;analogs &amp; derivatives<br/>
+                &lt;/QualifierName&gt;<br/>
+                &lt;/QualifierReferredTo&gt;<br/>
+                &lt;/HeadingMappedTo&gt;<br/>
+                Subelement of: &lt;HeadingMappedToList&gt;<br/>
+                Record Type: SCR<br/>
+                Repeating element: yes<br/>
+                Required element: yes</td>
+              <td>MRREL.REL=RN<br/>
+                MRREL.RELA=mapped_to (DescriptorUI)<br/>
+                MRREL.REL=mapping_qualifier_of (QualifierUI)<br/>
+                MRSAT.ATN = HM<br/>
+                <br/>
+                <br/>
+              </td>
+            </tr>
+            <tr>
+              <td>35</td>
+              <td>&lt;HeadingMappedToList&gt;<br/>
+                Description: Set of one or more &lt;HeadingMapped&gt;
+                elements.<br/>
+                Subelement of: &lt;SupplementalRecord&gt;<br/>
+                Record Type: SCR<br/>
+                Repeating element: no<br/>
+                Required element: yes</td>
+              <td> See &lt;HeadingMappedTo&gt; </td>
+            </tr>
+            <tr>
+              <td>36</td>
+              <td>&lt;HistoryNote&gt;<br/>
+                Description: Free-text giving information deemed helpful
+                to the online searcher. Headings and entry terms are
+                entered in upper case. Initial characters refer to the
+                year in which the record was created in MeSH in its
+                current form (i.e., with the same preferred term). A
+                date in parentheses indicates the oldest creation date
+                of terms, provisional headings (before 1975), or minor
+                headings (before 1991), which are reflected in citations
+                indexed to the record. Entries without a year date are
+                early records, dating between 1963 and 1966. Example: <br/>
+                &lt;HistoryNote&gt;2004 (2002); for SMALL
+                ROUND-STRUCTURED VIRUSES use NORWALK VIRUS
+                1992-2001&lt;/HistoryNote&gt;<br/>
+                See also &lt;PublicMeSHNote&gt; which was designed for
+                the user of the printed Index Medicus (discontinued
+                2005) and reflects the MeSH vocabulary printed in Index
+                Medicus at that point in time.<br/>
+                Subelement of:
+                &lt;DescriptorRecord&gt;;&lt;QualifierRecord&gt;<br/>
+                Record Type: D, Q<br/>
+                Repeating element: no<br/>
+                Required element: no</td>
+              <td>MRSAT.ATN = HN</td>
+            </tr>
+            <tr>
+              <td>37</td>
+              <td>&lt;IndexingInformation&gt;<br/>
+                Description: &lt;DescriptorRecord&gt; or
+                &lt;DescriptorRecord&gt;&lt;QualifierRecord&gt;
+                combination which is usually broader than the SCR, and
+                which is suggested for addition to the citation. Example
+                (from C000063): <br/>
+                &lt;IndexingInformation&gt;<br/>
+                &lt;DescriptorReferredTo&gt;<br/>
+                &lt;DescriptorUI&gt;D007918&lt;/DescriptorUI&gt;<br/>
+                &lt;DescriptorName&gt;<br/>
+                &lt;String&gt;Leprosy&lt;/String&gt;<br/>
+                &lt;/DescriptorName&gt;<br/>
+                &lt;/DescriptorReferredTo&gt;<br/>
+                &lt;QualifierReferredTo&gt;<br/>
+                &lt;QualifierUI&gt;Q000188&lt;/QualifierUI&gt;<br/>
+                &lt;QualifierName&gt;<br/>
+                &lt;/QualifierName&lt;<br/>
+                &lt;/QualifierReferredTo&gt;<br/>
+                &lt;/IndexingInformation&gt;<br/>
+                Subelement of: &lt;IndexingInformationList&gt;<br/>
+                Record Type: SCR<br/>
+                Repeating element: yes<br/>
+                Required element: yes</td>
+              <td>MRSAT.ATN = II <br/>
+                <br/>
+              </td>
+            </tr>
+            <tr>
+              <td>38</td>
+              <td>&lt;IndexingInformationList&gt;<br/>
+                Description: Set of one or more
+                &lt;IndexingInformation&gt; elements. Subelement of:
+                &lt;SupplementalRecord&gt; Record Type: SCR Repeating
+                element: no Required element: yes</td>
+              <td> See &lt;IndexingInformation&gt;</td>
+            </tr>
+            <tr>
+              <td>39</td>
+              <td>IsPermutedTermYN<br/>
+                Description: Attribute of the &lt;Term&gt; element which
+                indicates whether or not the term is created
+                automatically in the MeSH editing application as a
+                variant of another term in the record. Example: Example:
+                <br/>
+                &lt;Term ConceptPreferredTermYN="N"<br/>
+                IsPermutedTermYN="Y"<br/>
+                LexicalTag="LAB"<br/>
+                RecordPreferredTermYN="N"&gt;<br/>
+                &lt;TermUI&gt;T000001&lt;/TermUI&gt;<br/>
+                &lt;String&gt;A 23187&lt;/String&gt;<br/>
+                ...<br/>
+                &lt;/Term&gt;<br/>
+                Subelement of: not applicable; attribute of &lt;Term&gt;<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating attribute: no<br/>
+                Required attribute: yes</td>
+              <td>Used to compute TTY assignments. See Term Type section
+                for details</td>
+            </tr>
+            <tr>
+              <td>40</td>
+              <td>LanguageCode<br/>
+                Description: Attribute of &lt;DescriptorRecordSet&gt;
+                having as values abbreviations for the language of the
+                XML data. For English, the value is 'eng'. Other
+                abbreviations will be used primarily by institutions
+                that translate MeSH into their own language. Subelement
+                of: not applicable. Attribute of
+                &lt;DescriptorRecordSet&gt;<br/>
+                Record Type: D<br/>
+                Repeating element: no<br/>
+                Required element: no</td>
+              <td> MRSAB.LAT</td>
+            </tr>
+            <tr>
+              <td>41</td>
+              <td>LexicalTag<br/>
+                Description: Attribute of the &lt;Term&gt; element,
+                consisting of one of the following lexical categories:<br/>
+                ABB (Abbreviation)<br/>
+                ABX (Embedded abbreviation)<br/>
+                ACR (Acronym)<br/>
+                ACX (Embedded acronym)<br/>
+                EPO (Eponym)<br/>
+                LAB (Lab number)<br/>
+                NAM (Proper name)<br/>
+                NON (None)<br/>
+                TRD (Trade name) Example: <br/>
+                &lt;Term ConceptPreferredTermYN="Y"<br/>
+                IsPermutedTermYN="N" LexicalTag="LAB"<br/>
+                RecordPreferredTermYN="N"&gt;<br/>
+                &lt;TermUI&gt;T000001&lt;/TermUI&gt;<br/>
+                &lt;String&gt;A-23187&lt;/String&gt;<br/>
+                ...<br/>
+                &lt;/Term&gt;<br/>
+                Note that a Permuted Term will always have the same
+                Lexical Tag value as the term from which it is
+                generated. See attribute IsPermutedTermYN. Subelement
+                of: not applicable . Attribute of &lt;Term&gt;<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating attribute: no</td>
+              <td>Required attribute: yes MRSAT.ATN = LT<br/>
+                Only LexicalTags with value = "TRD" are included in the
+                Metathesaurus</td>
+            </tr>
+            <tr>
+              <td>42</td>
+              <td>&lt;Month&gt;<br/>
+                Description: Two-character string giving the month of
+                the year. Similar in format to the MEDLINE element of
+                the same name.<br/>
+                Subelement of: &lt;DateCreated&gt;; &lt;DateRevised&gt;;
+                &lt;DateEstablished&gt;<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating element: yes<br/>
+                Required element: no</td>
+              <td> See &lt;DateCreated&gt;, &lt;DateRevised&gt;,
+                &lt;DateEstablished&gt;</td>
+            </tr>
+            <tr>
+              <td>43</td>
+              <td>&lt;Note&gt;<br/>
+                Description: Free-text narrative giving information
+                about the substance particularly its biological
+                properties, but may include other information such as
+                about the &lt;RegistryNumber&gt;. "structure" indicates
+                that the structure of the chemical is given in the first
+                &lt;Source&gt;. Example: <br/>
+                &lt;Note&gt;venous tonic; structure given in first
+                source&lt;/Note&gt;<br/>
+                Subelement of: &lt;SupplementalRecord&gt;<br/>
+                Record Type: SCR<br/>
+                Repeating element: no<br/>
+                Required element: no</td>
+              <td>MRSAT.ATN = SOS</td>
+            </tr>
+            <tr>
+              <td>44</td>
+              <td>&lt;OnlineNote&gt;<br/>
+                Description: Free-text information formerly intended to
+                help the online searcher. The Online Note is superseded
+                by the &lt;HistoryNote&gt; when the &lt;OnlineNote&gt;
+                is not present. Example: <br/>
+                &lt;OnlineNote&gt;search ALBUMINS
+                1966-72.&lt;/OnlineNote&gt;<br/>
+                Subelement of: &lt;DescriptorRecord&gt;<br/>
+                Record Type: D, Q<br/>
+                Repeating element: no<br/>
+                Required element: no</td>
+              <td>MRSAT.ATN = OL</td>
+            </tr>
+            <tr>
+              <td>45</td>
+              <td>&lt;PharmacologicalAction&gt;<br/>
+                Description: Reference to a Descriptor describing
+                observed biological activity of an exogenously
+                administered chemical represented by a Descriptor or
+                SCR. Example: <br/>
+                &lt;PharmacologicalAction&gt;<br/>
+                &lt;DescriptorReferredTo&gt;<br/>
+                &lt;DescriptorUI&gt;D000900&lt;/DescriptorUI&gt;<br/>
+                &lt;DescriptorName&gt;<br/>
+                &lt;String&gt;Antibiotics&lt;/String&gt;<br/>
+                &lt;/DescriptorName&gt;<br/>
+                &lt;/DescriptorReferredTo&gt;<br/>
+                &lt;/PharmacologicalAction&gt;<br/>
+                Subelement of: &lt;PharmacologicalActionList&gt;<br/>
+                Record Type: D, SCR<br/>
+                Repeating element: yes<br/>
+                Required element: no</td>
+              <td>MRREL.REL: RN MRREL.RELA: isa<br/>
+                MRSAT.ATN = PA</td>
+            </tr>
+            <tr>
+              <td>46</td>
+              <td>&lt;PharmacologicalActionList&gt;<br/>
+                Description: Set of one or more instances of a
+                &lt;PharmacologicalAction &gt; in a Descriptor or SCR.
+                Example (Descriptor): <br/>
+                &lt;DescriptorRecord DescriptorClass = "1"&gt;<br/>
+                &lt;PharmacologicalActionList&gt;<br/>
+                &lt;PharmacologicalAction&gt;<br/>
+                ...<br/>
+                &lt;/PharmacologicalAction&gt;<br/>
+                &lt;/PharmacologicalActionList&gt;<br/>
+                &lt;/DescriptorRecord&gt;<br/>
+                Subelement of: &lt;DescriptorRecord&gt;;
+                &lt;SupplementalRecord&gt;<br/>
+                Record Type: D, SCR<br/>
+                Repeating element: no<br/>
+                Required element: no</td>
+              <td>See &lt;PharmacologicalAction&gt;</td>
+            </tr>
+            <tr>
+              <td>47</td>
+              <td>PreferredConceptYN<br/>
+                Description: Attribute of the &lt;Concept&gt; element,
+                indicating whether or not the concept is the preferred
+                concept of the record. The preferred concept is the
+                meaning of the term which names the record. The
+                preferred concept is frequently a broader concept that
+                includes narrower sub-concepts, but may also be one
+                among several distinct concepts. In any case the
+                preferred concept is selected as the primary or most
+                prominent representation among the concepts in the
+                literature to be indexed by the record. Example:
+                &lt;Concept PreferredConceptYN="Y"&gt;<br/>
+                Subelement of: not applicable; attribute of
+                &lt;Concept&gt;<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating element: yes<br/>
+                Required element: yes</td>
+              <td>Not directly processed</td>
+            </tr>
+            <tr>
+              <td>48</td>
+              <td>&lt;PreviousIndexing&gt;<br/>
+                Description: Different usage in Descriptors and SCRs:<br/>
+                In Descriptors: Free-text field referring to Descriptors
+                or Descriptor/Qualifier combinations which were used to
+                index the concept in the MEDLINE databases before the
+                Descriptor was created. Intended to enable users of new
+                Descriptors to find similar concepts indexed before the
+                Descriptor was created. Includes dates of the format
+                (YYYY) for a single year or (YYYY-YYYY) for a range of
+                years. May include descriptive text referring to a group
+                of Descriptors as "specifics". References are not
+                currently maintained when a &lt;DescriptorName&gt; or
+                &lt;QualifierName&gt; changes. Example:
+                &lt;PreviousIndexing&gt;Hypertension/complications
+                (1972-1999)&lt;/PreviousIndexing&gt; Subelement of:
+                &lt;PreviousIndexingList&gt; In SCRs: The Descriptors or
+                Descriptor/Qualifier combinations refer to the Heading
+                Mapped to which the NM was previously mapped. Thus the
+                reference often exists concurrently with the SCR, unlike
+                the Descriptor PI, though the PI may also include
+                information on the history of the concept, such as if it
+                was previously a descriptor. Descriptor term is in upper
+                case, unlike the Descriptor PI. Example:
+                &lt;PreviousIndexing&gt;ASPARTIC ACID/*analogs
+                (75-91)&lt;/PreviousIndexing&gt;<br/>
+                Subelement of: &lt;PreviousIndexingList&gt;<br/>
+                Record Type: D, SCR<br/>
+                Repeating element: yes<br/>
+                Required element: no</td>
+              <td>MRSAT.ATN = PI</td>
+            </tr>
+            <tr>
+              <td>49</td>
+              <td>&lt;PreviousIndexingList&gt;<br/>
+                Description: Set of one or more &lt;PreviousIndexing&gt;
+                elements in a Descriptor or Supplementary Concept
+                record.<br/>
+                Subelement of: &lt;DescriptorRecord&gt;<br/>
+                Record Type: D, SCR<br/>
+                Repeating element: no<br/>
+                Required element: no</td>
+              <td> See &lt;PreviousIndexing&gt;</td>
+            </tr>
+            <tr>
+              <td>50</td>
+              <td>&lt;PublicMeSHNote&gt;<br/>
+                Description: Free-text information about the history of
+                changes in the record that may be helpful to the user of
+                Index Medicus. This includes the date the record was
+                created in MeSH, changes in the preferred term, earlier
+                status as a &lt;SupplementalRecord&gt;, etc. Unlike the
+                &lt;HistoryNote&gt;, MeSH terms reflect the MeSH
+                vocabulary printed in the Index Medicus (discontinued
+                2005) at that point in time, not as updated for online
+                databases. In Descriptors, applies only to records
+                having DescriptorClass value of 1. MeSH terms are in
+                upper case. Example: &lt;PublicMeSHNote&gt;2004; see
+                NORWALK-LIKE VIRUSES 2002-2003; for SMALL
+                ROUND-STRUCTURED VIRUSES<br/>
+                see NORWALK VIRUS 1992-2001<br/>
+                &lt;/PublicMeSHNote&gt;<br/>
+                See also &lt;HistoryNote&gt; which is designed for the
+                online searcher.<br/>
+                Subelement of: &lt;DescriptorRecord&gt;<br/>
+                Record Type: D, SCR<br/>
+                Repeating element: no<br/>
+                Required element: only in records in which
+                &lt;DescriptorClass&gt; has a value of 1.</td>
+              <td>MRSAT.ATN = PM</td>
+            </tr>
+            <tr>
+              <td>51</td>
+              <td>&lt;QualifierName&gt;<br/>
+                Description: Term that uniquely names its
+                &lt;QualifierRecord&gt; and, along with the
+                &lt;QualifierUI&gt;, is used to represent the Qualifier
+                in other elements. The same term as the preferred
+                &lt;Term&gt; of the preferred &lt;Concept&gt; of the
+                Qualifier record. Comparable to, and the source of, the
+                MEDLINE element of the same name. (Note that the MEDLINE
+                element has different attributes.) Example:
+                &lt;QualifierName&gt;
+                &lt;String&gt;biosynthesis&lt;/String&gt;
+                &lt;/QualifierName&gt; Subelement of:
+                &lt;QualifierRecord&gt;; &lt;QualifierReferredTo&gt;.
+                Record Type: D, Q, SCR Repeating element: yes Required
+                element: yes</td>
+              <td>Not directly processed</td>
+            </tr>
+            <tr>
+              <td>52</td>
+              <td>&lt;QualifierRecord&gt;<br/>
+                Description: Cluster of one or more concepts used in
+                combination with a &lt;DescriptorRecord&gt; for subject
+                indexing and retrieval. Identified uniquely by a
+                &lt;QualifierUI&gt; and &lt;QualifierName&gt;. A
+                Qualifier. A Qualifier record. Also known as a
+                Subheading. Example: &lt;QualifierRecord QualifierType =
+                "1"&gt;<br/>
+                ...<br/>
+                &lt;/QualifierRecord&gt;<br/>
+                Subelement of: &lt;QualifierRecordSet&gt;<br/>
+                Record Type: Q<br/>
+                Repeating element: no<br/>
+                Required element: yes</td>
+              <td>Not directly processed</td>
+            </tr>
+            <tr>
+              <td>53</td>
+              <td>&lt;QualifierRecordSet&gt;<br/>
+                Description: The set of all &lt;QualifierRecord&gt;
+                elements in the Qualifier XML file.<br/>
+                Subelement of: none; this is the root element.<br/>
+                Record Type: Q<br/>
+                Repeating element: no<br/>
+                Required element: yes<br/>
+              </td>
+              <td>Not directly processed</td>
+            </tr>
+            <tr>
+              <td>54</td>
+              <td>&lt;QualifierReferredTo&gt;<br/>
+                Description: The pair of elements &lt;QualifierUI&gt;
+                and &lt;QualifierName&gt; each of which uniquely refers
+                to a &lt;QualifierRecord&gt;, and is used to represent
+                the &lt;QualifierRecord&gt; in other elements.
+                &lt;QualifierReferredTo&gt;<br/>
+                &lt;QualifierUIQ000096&lt;/QualifierUI&gt;<br/>
+                &lt;QualifierName&gt;<br/>
+                &lt;String&gt;biosynthesis&lt;/String&gt;<br/>
+                &lt;/QualifierName&gt;<br/>
+                &lt;/QualifierReferredTo&gt;<br/>
+                Subelement of: &lt;AllowableQualifier&gt;; &lt;ECIN&gt;;
+                &lt;ECOUT&gt;; &lt;IndexingInformation&gt;;
+                &lt;HeadingMappedTo&gt;. Record Type: D, SCR Repeating
+                element: yes Required element: no</td>
+              <td> See &lt;AllowableQualifier&gt;, &lt;ECIN&gt;,
+                &lt;ECOUT&gt;, &lt;IndexingInformation&gt;,
+                &lt;HeadingMappedTo&gt;</td>
+            </tr>
+            <tr>
+              <td>55</td>
+              <td>QualifierType<br/>
+                Description: Attribute of &lt;QualifierRecord&gt;,
+                formerly used to indicate presence in Index Medicus.
+                Currently all Qualifiers have QualifierType of "1".
+                Example: <br/>
+                &lt;QualifierRecord QualifierType = "1"&gt;<br/>
+                Subelement of: not applicable . Attribute of
+                &lt;QualifierRecord&gt;<br/>
+                Record Type: Q<br/>
+                Repeating element: no<br/>
+                Required element: yes</td>
+              <td>Not included</td>
+            </tr>
+            <tr>
+              <td>56</td>
+              <td>&lt;QualifierUI&gt;<br/>
+                Description: Qualifier Unique Identifier.
+                Seven-character alpha-numeric string uniquely
+                identifying a &lt;QualifierRecord&gt; and, along with
+                the &lt;QualifierName&gt;, used to represent the
+                Qualifier record in other elements. Example:
+                &lt;QualifierUI&gt;Q000002&lt;/QualifierUI&gt;<br/>
+                Subelement of: &lt;QualifierRecord&gt;;
+                &lt;QualifierReferredTo&gt;.<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating element: yes<br/>
+                Required element: yes</td>
+              <td> MRCONSO.CODE, MRCONSO.SDUI</td>
+            </tr>
+            <tr>
+              <td>57</td>
+              <td>&lt;RecordAuthorizer&gt;<br/>
+                Description: Three-character user name of the MeSH
+                analyst or supervisor authorizing the record in the MeSH
+                maintenance system. Example: <br/>
+                &lt;RecordAuthorizer&gt;sjn&lt;/RecordAuthorizer&gt;<br/>
+                Subelement of: &lt;RecordOriginatorsList&gt;<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating element: no<br/>
+                Required element: yes</td>
+              <td>Not included</td>
+            </tr>
+            <tr>
+              <td>58</td>
+              <td>&lt;RecordMaintainer&gt;<br/>
+                Description: User name of the NLM editor
+                who most recently modified the record in the MeSH
+                maintenance system. Example: <br/>
+                &lt;RecordMaintainer&gt;jls&lt;/RecordMaintainer&gt;<br/>
+                Subelement of: &lt;RecordOriginatorsList&gt;<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating element: no<br/>
+                Required element: yes</td>
+              <td>Not included</td>
+            </tr>
+            <tr>
+              <td>59</td>
+              <td>&lt;RecordOriginator&gt;<br/>
+                Description: Three-character user name of the NLM editor
+                who created the original record in the MeSH maintenance
+                system. When a record is created by a batch process the
+                value may be "NLM." This value is also used for older
+                records which had no value in earlier versions of the
+                data. Example:<br/>
+                &lt;RecordOriginator&gt;ags&lt;/RecordOriginator&gt;<br/>
+                Subelement of: &lt;RecordOriginatorsList&gt;<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating element: no<br/>
+                Required element: yes</td>
+              <td>Not included</td>
+            </tr>
+            <tr>
+              <td>60</td>
+              <td>&lt;RecordOriginatorsList&gt;<br/>
+                Description: Set of one or more of the elements
+                &lt;RecordOriginator&gt;, &lt;RecordMaintainer&gt;,
+                &lt;RecordAuthorizer&gt; (maximum = one per each
+                element). Subelement of: &lt;DescriptorRecord&gt;;
+                &lt;QualifierRecord&gt;; &lt;SupplementalRecord&gt;<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating element: no<br/>
+                Required element: no</td>
+              <td>Not included</td>
+            </tr>
+            <tr>
+              <td>61</td>
+              <td>RecordPreferredTermYN<br/>
+                Description: Attribute of the &lt;Term&gt; element which
+                indicates whether or not the term is the preferred term
+                of the record. See Introduction to MeSH in XML format.
+                Similar to &lt;DescriptorName&gt;,
+                &lt;QualifierName&gt;, &lt;SupplementalRecordName&gt;.
+                Example: <br/>
+                &lt;Term ConceptPreferredTermYN="Y"<br/>
+                IsPermutedTermYN="N"<br/>
+                LexicalTag="NON"<br/>
+                RecordPreferredTermYN="Y"&gt;<br/>
+                &lt;TermUI&gt;T000002&lt;/TermUI&gt;<br/>
+                &lt;String&gt;Calcimycin&lt;/String&gt;<br/>
+                ... &lt;/Term&gt;<br/>
+                Subelement of: not applicable; attribute of &lt;Term&gt;<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating attribute: no<br/>
+                Required attribute: yes </td>
+              <td>Used to compute TTY assignments. See Term Type section
+                for details.</td>
+            </tr>
+            <tr>
+              <td>62</td>
+              <td>&lt;RegistryNumber&gt;<br/>
+                Description: Originally a Registry Number from CAS
+                (Chemical Abstracts Service) for the same chemical.
+                Compare to, and the source of, the MEDLINE element of
+                the same name. Currently it may be any one of the
+                following: Enzyme number from the Enzyme Commission.
+                Example: EC 2.4.2.17, partial enzyme number: EC 1.4.3.-.
+                Registry number from Chemical Abstracts Service (CAS).
+                Example: 7004-12-8. Sequence numbers from the NCBI
+                Reference Sequence project (RefSeq). Example: NM_123456.
+                Value of 0 if no match is available in the above
+                categories. Example: <br/>
+                &lt;RegistryNumber&gt;7004-12-8&lt;/RegistryNumber&gt;<br/>
+                These values are not presently maintained.<br/>
+                Subelement of: &lt;Concept&gt;<br/>
+                Record Type: D, SCR<br/>
+                Repeating element: no<br/>
+                Required element: In Descriptors having a D category
+                &lt;TreeNumber&gt;.</td>
+              <td>MRSAT.ATN = RN</td>
+            </tr>
+            <tr>
+              <td>63</td>
+              <td>&lt;RelatedRegistryNumber&gt;<br/>
+                Description: The same type of value as the
+                &lt;RegistryNumber&gt; but for concepts which do not
+                have their own Descriptor or Supplemental record. For
+                example, these might be salts and/or stereoisomers of
+                the parent compound. Most values correspond to a
+                &lt;RegistryNumber&gt; value in a sub-concept in the
+                record. A CAS number may be followed by note in
+                parentheses which specifies the chemical relation
+                between the &lt;RelatedRegistryNumber&gt; entry and the
+                concept compound. Example:
+                &lt;RelatedRegistryNumber&gt;157810-81-6 (sulfate (1:1)
+                (salt))&lt;/RelatedRegistryNumber&gt; These values are
+                not presently maintained. Subelement of:
+                &lt;RelatedRegistryNumberList&gt; Record Type: D, SCR
+                Repeating element: yes Required element: no</td>
+              <td>MRSAT.ATN = RR</td>
+            </tr>
+            <tr>
+              <td>64</td>
+              <td>&lt;RelatedRegistryNumberList&gt;<br/>
+                Description: The set of one or more occurrences of the
+                &lt;RelatedRegistryNumber&gt;.<br/>
+                Subelement of: &lt;Concept&gt;<br/>
+                Record Type: D, SCR<br/>
+                Repeating element: yes<br/>
+                Required element: no</td>
+              <td>Not directly processed</td>
+            </tr>
+            <tr>
+              <td>65</td>
+              <td>&lt;RelationAttribute&gt;<br/>
+                Description: Further specification of the particular
+                relationship between two concepts specified in
+                &lt;ConceptRelation&gt;. No data for this element are
+                current in the MeSH XML.<br/>
+                Subelement of: &lt;ConceptRelation&gt;.<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating element: yes<br/>
+                Required element: no</td>
               <td>Not applicable</td>
             </tr>
             <tr>
-              <td class="file_field_name">17</td>
-              <td>SUPPRESS</td>
-              <td>Suppressible flag</td>
-              <td>MRCONSO.SUPPRESS</td>
+              <td>66</td>
+              <td>RelationName<br/>
+                Description: Attribute of the &lt;ConceptRelation&gt;
+                element which indicates the relation between the two
+                concepts, e.g., NRW.<br/>
+                Subelement of: not applicable; attribute of
+                &lt;ConceptRelation&gt;.<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating element: yes<br/>
+                Required element: no</td>
+              <td>MRREL.REL &lt;ConceptRelation&gt; values are
+                represented as follows:<br/>
+                NRW: RN<br/>
+                BRD: RB<br/>
+                REL: RO<br/>
+              </td>
             </tr>
             <tr>
-              <td class="file_field_name">18</td>
-              <td>CVF</td>
-              <td>Content view flag</td>
-              <td>Not processed</td>
-            </tr>
-          </tbody>
-        </table>
-        <a id="file2"></a>
-        <h4 class="file_field_name">file: RXNDOC.RRF</h4>
-        <table>
-          <tbody>
-            <tr>
-              <th>#</th>
-              <th>Field Name</th>
-              <th>Description</th>
-              <th>Representation</th>
-            </tr>
-            <tr>
-              <td class="file_field_name">1</td>
-              <td>KEY</td>
-              <td>Data element or attribute</td>
-              <td>MRDOC.KEY</td>
+              <td>67</td>
+              <td>&lt;RunningHead&gt;<br/>
+                Description: The header string that was printed at the
+                top of each page in the Tree Structures section of the
+                printed Medical Subject Headings (discontinued 2007).
+                Currently used for the same purpose in the PDF version
+                of the MeSH Trees online. A separate header is used for
+                each of the (currently) 114 trees. The content is
+                similar to the preferred term for the Descriptor but
+                includes the tree number and is in all upper case.
+                Example: <br/>
+                &lt;RunningHead&gt;B5 - ORGANISMS-ORGANISM
+                FORMS&lt;/RunningHead&gt;<br/>
+                Subelement of: &lt;DescriptorRecord&gt;<br/>
+                Record Type: D<br/>
+                Repeating element: no<br/>
+                Required element: no</td>
+              <td>Not included</td>
             </tr>
             <tr>
-              <td class="file_field_name">2</td>
-              <td>VALUE</td>
-              <td>Abbreviation that is one of its values</td>
-              <td>MRDOC.VALUE</td>
+              <td>68</td>
+              <td>&lt;ScopeNote&gt;<br/>
+                Description: Free-text narrative giving the scope and
+                meaning of a &lt;Concept&gt;.<br/>
+                Example (for 'Arthroplasty, Replacement, Hip'): <br/>
+                &lt;ScopeNote&gt;Replacement of the hip
+                joint&lt;/ScopeNote&gt;<br/>
+                Subelement of: &lt;Concept&gt;<br/>
+                Record Type: D, Q<br/>
+                Repeating element: no<br/>
+                Required element: no</td>
+              <td>MRDEF.DEF</td>
             </tr>
             <tr>
-              <td class="file_field_name">3</td>
-              <td>TYPE</td>
-              <td>Type of information in EXPL column</td>
-              <td>MRDOC.TYPE</td>
+              <td>69</td>
+              <td>SCRClass<br/>
+                Description: Attribute of &lt;DescriptorRecord&gt;
+                having as a value one of four numbers: <br/>
+                <ol>
+                  <li> = Regular chemical, drug, or other substance (the
+                    most common type) </li>
+                  <li> = Protocol, for example, FOLFOXIRI protocol </li>
+                  <li> = Rare disease, for example, Canicola fever </li>
+                </ol>
+                Subelement of: not applicable . Attribute of
+                &lt;SupplementalRecord&gt;<br/>
+                Record Type: SCR<br/>
+                Repeating element: no<br/>
+                Required element: no</td>
+              <td>MRSAT.ATN = SC</td>
             </tr>
             <tr>
-              <td class="file_field_name">4</td>
-              <td>EXPL</td>
-              <td>Explanation of VALUE field</td>
-              <td>MRDOC.EXPL</td>
-            </tr>
-          </tbody>
-        </table>
-        <a id="file3"></a>
-        <h4 class="file_field_name">file: RXNREL.RRF</h4>
-        <table>
-          <tbody>
-            <tr>
-              <th>#</th>
-              <th>Field Name</th>
-              <th>Description</th>
-              <th>Representation</th>
-            </tr>
-            <tr>
-              <td class="file_field_name">1</td>
-              <td>RXCUI1</td>
-              <td>Unique identifier of first concept</td>
-              <td>MRREL.CUI1 populated by the Metathesaurus CUI of
-                RXAUI1</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">2</td>
-              <td>RXAUI1</td>
-              <td>Unique identifier of first atom</td>
-              <td>MRREL.AUI1 populated by the Metathesaurus AUI of
-                RXAUI1</td>
+              <td>70</td>
+              <td>&lt;SeeRelatedDescriptor&gt;<br/>
+                Description: Reference to a specific Descriptor to which
+                a user is referred by a "see related" cross-reference.
+                For example, in the Descriptor for 'Abdominal Muscles'
+                there is a see-related reference to another Descriptor
+                'Abdominal Wall'. As in all of XML MeSH, reference to a
+                Descriptor includes the unchanging name - the
+                &lt;DescriptorUI&gt; and &lt;DescriptorName&gt;, as
+                subelements of &lt;DescriptorReferredTo&gt;. Example, in
+                the Descriptor 'Abdominal Muscles': <br/>
+                &lt;SeeRelatedDescriptor&gt;<br/>
+                &lt;DescriptorReferredTo&gt;<br/>
+                &lt;DescriptorUI&gt;D034861&lt;/DescriptorUI&gt;<br/>
+                &lt;DescriptorName&gt;<br/>
+                &lt;String&gt;Abdominal Wall&lt;/String&gt;<br/>
+                &lt;/DescriptorName&gt;<br/>
+                &lt;/DescriptorReferredTo&gt;<br/>
+                &lt;/SeeRelatedDescriptor&gt;<br/>
+                Subelement of: &lt;SeeRelatedList&gt;<br/>
+                Record Type: D<br/>
+                Repeating element: yes<br/>
+                Required element: no</td>
+              <td>MRREL.REL = RO<br/>
+                MRSAT.ATN = FX</td>
             </tr>
             <tr>
-              <td class="file_field_name">3</td>
-              <td>STYPE1</td>
-              <td>Name of the column in RXNCONSO.RRF that contains the
-                identifier used for the first concept or first atom in
-                source of the relationship (either 'AUI' or 'CUI')</td>
-              <td>MRREL.STYPE1 </td>
+              <td>71</td>
+              <td>&lt;SeeRelatedList&gt;<br/>
+                Description: Set of one or more
+                &lt;SeeRelatedDescriptor&gt; elements in a Descriptor
+                record.<br/>
+                Subelement of: &lt;DescriptorRecord&gt;<br/>
+                Record Type: D<br/>
+                Repeating element: no<br/>
+                Required element: no</td>
+              <td>Not directly processed</td>
             </tr>
             <tr>
-              <td class="file_field_name">4</td>
-              <td>REL</td>
-              <td>Relationship of second concept or atom to the first
-                concept or atom</td>
-              <td>MRREL.REL</td>
+              <td>72</td>
+              <td>&lt;SemanticType&gt;<br/>
+                Description: One of approximately 140 categories in the
+                UMLS Semantic Network which name properties of
+                &lt;Concept&gt;s. Represented by its subelements:
+                &lt;SemanticTypeUI&gt; and &lt;SemanticTypeName&gt;.
+                Example: <br/>
+                &lt;SemanticType&gt;<br/>
+                &lt;SemanticTypeUI&gt;T109&lt;SemanticTypeUI&gt;<br/>
+                &lt;SemanticTypeName&gt;Organic
+                Chemical&lt;/SemanticTypeName&gt;<br/>
+                &lt;/SemanticType&gt;<br/>
+                Subelement of: &lt;SemanticTypeList&gt;<br/>
+                Repeating element: yes<br/>
+                Required element: yes</td>
+              <td>Not directly processed</td>
             </tr>
             <tr>
-              <td class="file_field_name">5</td>
-              <td>RXCUI2</td>
-              <td>Unique identifier of second concept</td>
-              <td>MRREL.CUI2 populated by the Metathesaurus CUI of
-                RXAUI2</td>
+              <td>73</td>
+              <td>&lt;SemanticTypeList&gt;<br/>
+                Description: Set of one or more &lt;SemanticType&gt;
+                elements.<br/>
+                Subelement of: &lt;Concept&gt;<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating element: no<br/>
+                Required element: no</td>
+              <td>Not directly processed</td>
             </tr>
             <tr>
-              <td class="file_field_name">6</td>
-              <td>RXAUI2</td>
-              <td>Unique identifier of second atom</td>
-              <td>MRREL.AUI2 populated by the Metathesaurus AUI of
-                RXAUI2</td>
+              <td>74</td>
+              <td>&lt;SemanticTypeName&gt;<br/>
+                Description: Unique term for each of the approximately
+                140 categories in the UMLS Semantic Network. Used, along
+                with the &lt;SemanticTypeUI&gt;, to refer to the
+                Semantic Type.<br/>
+                Example: <br/>
+                &lt;SemanticTypeName&gt;Organic
+                Chemical&lt;/SemanticTypeName&gt;<br/>
+                Subelement of: &lt;SemanticType&gt;<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating element: yes<br/>
+                Required element: no</td>
+              <td>Semantic types are used to initialize defaults which
+                are then reviewed by editors in the context of the
+                Metathesaurus. Although there is considerable overlap
+                between MeSH &lt;SemanticType&gt; values and STY values
+                in MRSTY.RRF, there are significant differences.</td>
             </tr>
             <tr>
-              <td class="file_field_name">7</td>
-              <td>STYPE2</td>
-              <td>Name of the column in RXNCONSO.RRF that contains the
-                identifier used for the second concept or second atom in
-                source of the relationship (either 'AUI' or 'CUI')</td>
-              <td>MRREL.STYPE2 </td>
+              <td>75</td>
+              <td>&lt;SemanticTypeUI&gt;<br/>
+                Description: Unique four-character alphanumeric
+                identifier for each of the approximately 140 categories
+                in the UMLS Semantic Network. Used, along with the
+                &lt;SemanticTypeName&gt;, to refer to the Semantic Type.
+                Example:
+                &lt;SemanticTypeUI&gt;T109&lt;SemanticTypeUI&gt;<br/>
+                Subelement of: &lt;SemanticType&gt;<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating element: yes<br/>
+                Required element: no </td>
+              <td>Not directly processed</td>
             </tr>
             <tr>
-              <td class="file_field_name">8</td>
-              <td>RELA</td>
-              <td>Additional relationship label</td>
-              <td>MRREL.RELA</td>
+              <td>76</td>
+              <td>&lt;SortVersion&gt;<br/>
+                Description: Custom version of a &lt;Term&gt; that was
+                used to sort print output in printed Medical Subject
+                Headings (discontinued 2007) when sorting according to
+                the &lt;Term&gt; is not desired. All upper case.
+                Example: <br/>
+                &lt;SortVersion&gt;KETOACYL COA THIOLASE
+                03&lt;/SortVersion&gt;<br/>
+                Subelement of: &lt;Term&gt;<br/>
+                Record Type: D, Q<br/>
+                Repeating element: yes<br/>
+                Required element: no</td>
+              <td> MRCONSO.STR TTY = QSV (qmesh) TTY = DSV (dmesh)
+                MRREL.REL=SY MRREL.RELA=sort_version_of</td>
             </tr>
             <tr>
-              <td class="file_field_name">9</td>
-              <td>RUI</td>
-              <td>Unique identifier of relationship (no value provided)</td>
+              <td>77</td>
+              <td>&lt;Source&gt;<br/>
+                Description: Citation reference in which the indexing
+                concept was first found. Single occurrence since 1980.
+                Example: <br/>
+                &lt;Source&gt;S Afr Med J 50(1):4;1976&lt;/Source&gt;<br/>
+                Subelement of: &lt;SourceList&gt;<br/>
+                Record Type: SCR<br/>
+                Repeating element: yes<br/>
+                Required element: no</td>
+              <td> MRSAT.ATN = SRC</td>
+            </tr>
+            <tr>
+              <td>78</td>
+              <td>&lt;SourceList&gt;<br/>
+                Description: Set of one or more &lt;Source&gt; elements.<br/>
+                Subelement of: &lt;SupplementalRecord&gt;<br/>
+                Record Type: SCR<br/>
+                Repeating element: no<br/>
+                Required element: no</td>
+              <td>Not directly processed</td>
+            </tr>
+            <tr>
+              <td>79</td>
+              <td>&lt;String&gt;<br/>
+                Description: The string itself that constitutes a
+                &lt;Term&gt; as well as object names, such as the
+                &lt;DescriptorName&gt;. There is exactly one
+                &lt;String&gt; for every &lt;Term&gt;. One difference
+                between the &lt;String&gt; and &lt;Term&gt; is that the
+                &lt;Term&gt; is the bearer of a term's attributes, such
+                as Lexical Tag. Example: &lt;Term
+                ConceptPreferredTermYN="Y"<br/>
+                IsPermutedTermYN="N"<br/>
+                LexicalTag="NON"<br/>
+                RecordPreferredTermYN="Y"&gt;<br/>
+                &lt;TermUI&gt;T000002&lt;/TermUI&gt;<br/>
+                &lt;String&gt;Calcimycin&lt;/String&gt;<br/>
+                ... &lt;/Term&gt;<br/>
+                Subelement of: &lt;Term&gt;; &lt;DescriptorName&gt;;
+                &lt;QualifierName&gt;; &lt;ConceptName&gt;;
+                &lt;SupplementalRecordName&gt;.<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating element: yes<br/>
+                Required element: yes</td>
+              <td> As subelement of &lt;Term&gt;: MRCONSO.STR</td>
+            </tr>
+            <tr>
+              <td>80</td>
+              <td>&lt;SupplementalRecord&gt;<br/>
+                Description: Cluster of one or more concepts used for
+                subject indexing and retrieval. Identified uniquely by a
+                &lt;SupplementalRecordUI&gt; and
+                &lt;SupplementalRecordName&gt;. SCR. Supplemental
+                Record. Formerly known as Supplementary Chemical
+                Records. Example: <br/>
+                &lt;SupplementalRecord&gt;<br/>
+                ...<br/>
+                &lt;/SupplementalRecord&gt;<br/>
+                Subelement of: &lt;SupplementalRecordSet&gt;<br/>
+                Record Type: SCR<br/>
+                Repeating element: yes<br/>
+                Required element: yes </td>
+              <td>Not directly processed</td>
+            </tr>
+            <tr>
+              <td>81</td>
+              <td>&lt;SupplementalRecordName&gt;<br/>
+                Description: A term that uniquely names its
+                &lt;SupplementalRecord&gt; (SCR) and, along with the
+                &lt;SupplementalRecordUI&gt;, is used to represent the
+                SCR. The same term as the preferred &lt;Term&gt; of the
+                preferred &lt;Concept&gt;. Comparable to, and the source
+                of, the &lt;NameOfSubstance&gt; element in MEDLINE.
+                Subelement of: &lt;SupplementalRecord&gt;<br/>
+                Record Type: SCR<br/>
+                Example: <br/>
+                &lt;SupplementalRecordName&gt;<br/>
+                &lt;String&gt;bevonium&lt;/String&gt;<br/>
+                &lt;/SupplementalRecordName&gt;<br/>
+                Repeating element: yes<br/>
+                Required element: yes </td>
+              <td>Not directly processed</td>
+            </tr>
+            <tr>
+              <td>82</td>
+              <td>&lt;SupplementalRecordSet&gt;<br/>
+                Description: The set of all &lt;SupplementalRecord&gt;
+                elements in the SCR XML file.<br/>
+                Subelement of: none; this is the root element.<br/>
+                Record Type: SCR<br/>
+                Repeating element: no<br/>
+                Required element: yes </td>
+              <td>Not directly processed</td>
+            </tr>
+            <tr>
+              <td>83</td>
+              <td>&lt;SupplementalRecordUI&gt; Description: Unique
+                Identifier for SCRs. Seven-character alpha-numeric
+                string uniquely identifying a &lt;SupplementalRecord&gt;
+                and, along with the &lt;SupplementalRecordName&gt;, is
+                used to represent the SCR in other elements. Example: <br/>
+&lt;SupplementalRecordUI&gt;C000002&lt;/SupplementalRecordUI&gt;<br/>
+                Subelement of: &lt;SupplementalRecord&gt;<br/>
+                Record Type: SCR<br/>
+                Repeating element: no<br/>
+                Required element: yes</td>
+              <td>MRCONSO.CODE MRCONSO.SDUI</td>
+            </tr>
+            <tr>
+              <td>84</td>
+              <td>&lt;Term&gt;<br/>
+                Description: Alpha-numeric string which comprises the
+                basic unit of the MeSH vocabulary. Also functions as the
+                name of a Descriptor and concept. The term itself is the
+                &lt;String&gt; element. Every Term has four XML
+                attributes: ConceptPreferredTermYN <br/>
+                IsPermutedTermYN <br/>
+                LexicalTag <br/>
+                RecordPreferredTermYN <br/>
+                Example: <br/>
+                &lt;Term ConceptPreferredTermYN="Y"<br/>
+                IsPermutedTermYN="N"<br/>
+                LexicalTag="NON"<br/>
+                RecordPreferredTermYN="Y"&gt;<br/>
+                &lt;TermUI&gt;T000002&lt;/TermUI&gt;<br/>
+                &lt;String&gt;Calcimycin&lt;/String&gt;<br/>
+                &lt;DateCreated&gt;<br/>
+                &lt;Year&gt;1999&lt;/Year&gt;<br/>
+                &lt;Month&gt;01&lt;/Month&gt;<br/>
+                &lt;Day&gt;01&lt;/Day&gt;<br/>
+                &lt;/DateCreated&gt;<br/>
+                &lt;ThesaurusIDlist&gt;<br/>
+                &lt;ThesaurusID&gt;NLM (1975)&lt;/ThesaurusID&gt;<br/>
+                &lt;/ThesaurusIDlist&gt;<br/>
+                &lt;/Term&gt;<br/>
+                Subelement of: &lt;TermList&gt;<br/>
+                Repeating element: yes<br/>
+                Required element: yes</td>
+              <td> See subelements</td>
+            </tr>
+            <tr>
+              <td>85</td>
+              <td>&lt;TermList&gt;<br/>
+                Description: Set of one or more &lt;Term&gt; elements in
+                a &lt;Concept&gt;.<br/>
+                Subelement of: &lt;Concept&gt;<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating element: yes<br/>
+                Required element: yes </td>
+              <td>Not directly processed</td>
+            </tr>
+            <tr>
+              <td>86</td>
+              <td>&lt;TermNote&gt; (Term Note)<br/>
+                Description: For institutions that translate MeSH into
+                their own language. Internal notes about a given term
+                for future reference by the translators. Free text
+                format.<br/>
+                Subelement of: &lt;Term&gt;<br/>
+                Repeating element: no<br/>
+                Required element: no </td>
               <td>Not applicable</td>
             </tr>
             <tr>
-              <td class="file_field_name">10</td>
-              <td>SRUI</td>
-              <td>Source asserted relationship identifier (no value
-                provided)</td>
+              <td>87</td>
+              <td>&lt;TermUI&gt; (Term Unique Identifier)<br/>
+                Description: Seven-character alpha-numeric string
+                uniquely identifying a &lt;Term&gt; (except
+                automatically generated Permuted Terms; see attribute
+                IsPermutedTermYN).<br/>
+                Example: <br/>
+                &lt;TermUI&gt;T000003&lt;/TermUI&gt;<br/>
+                Subelement of: &lt;Term&gt;<br/>
+                Repeating element: yes<br/>
+                Required element: yes</td>
+              <td> MRSAT.ATN = TERMUI</td>
+            </tr>
+            <tr>
+              <td>88</td>
+              <td>&lt;ThesaurusID&gt;<br/>
+                Description: Name of a Thesaurus in which the terms
+                occurs, including NLM (=MeSH).<br/>
+                Example: <br/>
+                &lt;ThesaurusID&gt;BIOETHICS (1991)&lt;/ThesaurusID&gt;<br/>
+                Subelement of: &lt;ThesaurusIDlist&gt;<br/>
+                Repeating element: yes<br/>
+                Required element: no</td>
+              <td> MRSAT.ATN = TH</td>
+            </tr>
+            <tr>
+              <td>89</td>
+              <td>&lt;ThesaurusIDList&gt;<br/>
+                Description: Set of one or more &lt;ThesaurusID&gt;
+                elements in a Descriptor or SCR &lt;Term&gt;.<br/>
+                Subelement of: &lt;Term&gt;<br/>
+                Record Type: D, SCR<br/>
+                Repeating element: yes<br/>
+                Required element: no</td>
+              <td>Not directly processed</td>
+            </tr>
+            <tr>
+              <td>90</td>
+              <td>&lt;TranslatorsEnglishScopeNote&gt;<br/>
+                Description: For institutions that translate MeSH into
+                their own language. The translator's English scope note
+                for a new concept which the translators themselves have
+                introduced.<br/>
+                Subelement of: &lt;Concept&gt;<br/>
+                Record Type: D<br/>
+                Repeating element: no<br/>
+                Required element: no</td>
               <td>Not applicable</td>
             </tr>
             <tr>
-              <td class="file_field_name">11</td>
-              <td>SAB</td>
-              <td>Abbreviated source name</td>
-              <td>MRREL.SAB</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">12</td>
-              <td>SL</td>
-              <td>Source of relationship labels (no value provided)</td>
+              <td>91</td>
+              <td>&lt;TranslatorsScopeNote&gt;<br/>
+                Description: For institutions that translate MeSH into
+                their own language. Translation of an existing
+                &lt;ScopeNote&gt; into a non-English translator's
+                language. It is also used for new concepts introduced by
+                translators in their own language. Subelement of:
+                &lt;Concept&gt;<br/>
+                Record Type: D<br/>
+                Repeating element: no<br/>
+                Required element: no </td>
               <td>Not applicable</td>
             </tr>
             <tr>
-              <td class="file_field_name">13</td>
-              <td>RG</td>
-              <td>Relationship group</td>
-              <td>Not processed</td>
+              <td>92</td>
+              <td>&lt;TreeNodeAllowed&gt;<br/>
+                Description: Name of a subcategory in the MeSH Trees,
+                indicating that for most Descriptors in that
+                subcategory, the &lt;AllowableQualifier&gt; value
+                includes the Qualifier. This value does not impact
+                Descriptors permitted with a given Qualifier, but is a
+                statistical summary of Descriptors permitted with the
+                Qualifier. Example: <br/>
+                &lt;TreeNodeAllowed&gt;A01&lt;/TreeNodeAllowed&gt;<br/>
+                Subelement of: &lt;TreeNodeAllowedList&gt;<br/>
+                Record Type: Q<br/>
+                Repeating element: yes<br/>
+                Required element: yes </td>
+              <td>Not directly processed</td>
             </tr>
             <tr>
-              <td class="file_field_name">14</td>
-              <td>DIR</td>
-              <td>Source asserted directionaltiy flag (no value
-                provided)</td>
-              <td>Not applicable</td>
+              <td>93</td>
+              <td>&lt;TreeNodeAllowedList&gt;<br/>
+                Description: Set of one or more &lt;TreeNodeAllowed&gt;
+                elements. Subelement of:<br/>
+                &lt;QualifierRecord&gt; Record Type: Q<br/>
+                Repeating element: no<br/>
+                Required element: yes </td>
+              <td>Not directly processed</td>
             </tr>
             <tr>
-              <td class="file_field_name">15</td>
-              <td>SUPPRESS</td>
-              <td>Suppressible flag</td>
-              <td>MRREL.SUPPRESS</td>
+              <td>94</td>
+              <td>&lt;TreeNumber&gt;<br/>
+                Description: Alpha-numeric string referring to location
+                within a Descriptor or Qualifier hierarchy. Used for
+                browsing the MeSH vocabulary and for inclusive searches
+                by retrieval systems using MeSH. (Note that the Trees
+                hierarchy is not represented in XML by using
+                subelements. The hierarchy is represented by the Tree
+                Number itself.) Example: <br/>
+                &lt;TreeNumber&gt;C02.839.040&lt;/TreeNumber&gt;<br/>
+                Subelement of: &lt;TreeNumberList&gt;<br/>
+                Record Type: D, Q<br/>
+                Repeating element: yes<br/>
+                Required element: yes</td>
+              <td> Used to compute MRHIER.PTR<br/>
+                MRHIER.HCD<br/>
+                MRREL.REL = PAR/CHD/SIB<br/>
+                MRSAT.ATN = MN</td>
             </tr>
             <tr>
-              <td class="file_field_name">16</td>
-              <td>CVF</td>
-              <td>Content view flag</td>
-              <td>Not processed</td>
-            </tr>
-          </tbody>
-        </table>
-        <a id="file4"></a>
-        <h4 class="file_field_name">file: RXNSAB.RRF</h4>
-        <table>
-          <tbody>
-            <tr>
-              <th>#</th>
-              <th>Field Name</th>
-              <th>Description</th>
-              <th>Representation</th>
+              <td>95</td>
+              <td>&lt;TreeNumberList&gt;<br/>
+                Description: Set of one or more &lt;TreeNumber&gt;
+                elements in a Descriptor or Qualifier record.<br/>
+                Subelement of: &lt;DescriptorRecord &gt;;
+                &lt;QualifierRecord&gt;<br/>
+                Record Type: D, SCR<br/>
+                Repeating element: yes<br/>
+                Required element: yes<br/>
+              </td>
+              <td>Not directly processed</td>
             </tr>
             <tr>
-              <td class="file_field_name">1</td>
-              <td>VCUI</td>
-              <td>CUI</td>
-              <td>Not processed</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">2</td>
-              <td>RCUI</td>
-              <td>Root CUI</td>
-              <td>Not processed</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">3</td>
-              <td>VSAB</td>
-              <td>Versioned source abbreviation</td>
-              <td>MRSAB.VSAB</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">4</td>
-              <td>RSAB</td>
-              <td>Root source abbreviation</td>
-              <td>MRSAB.RSAB</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">5</td>
-              <td>SON</td>
-              <td>Official name</td>
-              <td>MRSAB.SON</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">6</td>
-              <td>SF</td>
-              <td>Source familty</td>
-              <td>MRSAB.SF</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">7</td>
-              <td>SVER</td>
-              <td>Version</td>
-              <td>MRSAB.SVER</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">8</td>
-              <td>VSTART</td>
-              <td>Meta start date</td>
-              <td>Not processed</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">9</td>
-              <td>VEND</td>
-              <td>Meta end date</td>
-              <td>Not processed</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">10</td>
-              <td>IMETA</td>
-              <td>Meta insert version</td>
-              <td>Not processed</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">11</td>
-              <td>RMETA</td>
-              <td>Meta remove version</td>
-              <td>Not processed</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">12</td>
-              <td>SLC</td>
-              <td>Source license contact</td>
-              <td>MRSAB.SLC</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">13</td>
-              <td>SCC</td>
-              <td>Source content contact</td>
-              <td>MRSAB.SCC</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">14</td>
-              <td>SRL</td>
-              <td>Source restriction level</td>
-              <td>MRSAB.SRL</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">15</td>
-              <td>TFR</td>
-              <td>Term frequency</td>
-              <td>Not processed</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">16</td>
-              <td>CFR</td>
-              <td>CUI frequency</td>
-              <td>Not processed</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">17</td>
-              <td>CXTY</td>
-              <td>Context type</td>
-              <td>MRSAB.CXTY</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">18</td>
-              <td>TTYL</td>
-              <td>Term type list</td>
-              <td>Not processed</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">19</td>
-              <td>ATNL</td>
-              <td>Attribute name list</td>
-              <td>Not processed</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">20</td>
-              <td>LAT</td>
-              <td>Language</td>
-              <td>MRSAB.LAT</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">21</td>
-              <td>CENC</td>
-              <td>Character encoding</td>
-              <td>MRSAB.CENC</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">22</td>
-              <td>CURVER</td>
-              <td>Current version</td>
-              <td>Not processed</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">23</td>
-              <td>SABIN</td>
-              <td>source in subset</td>
-              <td>Not processed</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">24</td>
-              <td>SSN</td>
-              <td>Source short name</td>
-              <td>Not processed</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">25</td>
-              <td>SCIT</td>
-              <td>Source short name</td>
-              <td>MRSAB.CIT</td>
-            </tr>
-          </tbody>
-        </table>
-        <a id="file5"></a>
-        <h4 class="file_field_name">file: RXNSAT.RRF</h4>
-        <table>
-          <tbody>
-            <tr>
-              <th>#</th>
-              <th>Field Name</th>
-              <th>Description</th>
-              <th>Representation</th>
-            </tr>
-            <tr>
-              <td class="file_field_name">1</td>
-              <td>RXCUI</td>
-              <td>Unique identifier for concept (concept ID)</td>
-              <td>MRSAT.CUI populated by the Metathesarus CUI of RXCUI</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">2</td>
-              <td>LUI</td>
-              <td>Unique identifier for term (no value provided)</td>
-              <td>Not applicable</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">3</td>
-              <td>SUI</td>
-              <td>Unique identifier for string (no value provided)</td>
-              <td>Not applicable</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">4</td>
-              <td>RXAUI</td>
-              <td>Unique identifier for atom (RxNorm atom ID)</td>
-              <td>MRSAT.METAUI populated by the Metathesaurus AUI of
-                RXAUI</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">5</td>
-              <td>STYPE</td>
-              <td>Name of the column in RXNCONSO.RRF or RXNREL.RRF that
-                contains the identifier to which the attribute is
-                attached</td>
-              <td>MRSAT.STYPE</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">6</td>
-              <td>CODE</td>
-              <td>Source asserted identifier</td>
-              <td>Not processed</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">7</td>
-              <td>ATUI</td>
-              <td>Unique identifier for attribute</td>
-              <td>Not processed</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">8</td>
-              <td>SATUI</td>
-              <td>Source asserted attribute identifier</td>
-              <td>Not processed</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">9</td>
-              <td>ATN</td>
-              <td>Attribute name</td>
-              <td>MRSAT.ATN</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">10</td>
-              <td>SAB</td>
-              <td>Abbreviated source name</td>
-              <td>MRSAT.SAB</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">11</td>
-              <td>ATV</td>
-              <td>Attribute value</td>
-              <td>MRSAT.ATV</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">12</td>
-              <td>SUPPRESS</td>
-              <td>Suppressible flag</td>
-              <td>MRSAT.SUPPRESS</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">13</td>
-              <td>CVF</td>
-              <td>Content view flag</td>
-              <td>Not processed</td>
-            </tr>
-          </tbody>
-        </table>
-        <br/>
-        Note: Attributes with SAB=MSH plus ATNs UMLSCUI and UMLSAUI are
-        not processed. <br/>
-        <a id="file6"></a>
-        <h4 class="file_field_name">file: RXNSTY.RRF</h4>
-        <table>
-          <tbody>
-            <tr>
-              <th>#</th>
-              <th>Field Name</th>
-              <th>Description</th>
-              <th>Representation</th>
-            </tr>
-            <tr>
-              <td class="file_field_name">1</td>
-              <td>RXCUI</td>
-              <td>Unique identifier for concept (concept ID)</td>
-              <td>MRSTY.CUI populated by the Metathesaurus CUI of RXCUI</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">2</td>
-              <td>TUI</td>
-              <td>Unique identifier for semantic type</td>
-              <td>Not applicable</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">3</td>
-              <td>STN</td>
-              <td>Semantic type tree number</td>
-              <td>Not applicable</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">4</td>
-              <td>STY</td>
-              <td>Semantic type</td>
-              <td>MRSTY.STY</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">5</td>
-              <td>ATUI</td>
-              <td>Unique identifier for attribute</td>
-              <td>Not applicable</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">6</td>
-              <td>CVF</td>
-              <td>Content view flag</td>
-              <td>Not applicable</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>Note: STYs are subject to editing.</p>
-        <a id="file7"></a>
-        <h4 class="file_field_name">file: RXNATOMARCHIVE.RRF</h4>
-        <p>This file is created by RxNorm for use in tracking the
-          archival of names (atoms) no longer provided by RxNorm drug
-          source providers, or atoms no longer used by the RxNorm
-          system. Only atoms with SAB = "RXNORM" will be in the archive.
-          This information is not processed for the Metathesaurus as
-          part of RxNorm.</p>
-        <a id="file8"></a>
-        <h4 class="file_field_name">file: RXNCUICHANGES.RRF</h4>
-        <p>This file provides information about changes to the
-          concept_id (RXCUI) for atoms in RxNorm from release to
-          release. It is not cumulative. This information is not
-          processed for the Metathesaurus as part of RxNorm.</p>
-        <a id="file9"></a>
-        <h4 class="file_field_name">file: RXNCUI.RRF</h4>
-        <p>This file of retired CUIs will show each RxNorm Concept
-          Unique Identifier (RXCUI) that existed in a prior release but
-          is not present in the current release. The file includes
-          mappings to current RXCUIs as synonymous or to one or more
-          related current RXCUIs where possible.</p>
-        <table>
-          <tbody>
-            <tr>
-              <th>#</th>
-              <th>Field Name</th>
-              <th>Description</th>
-              <th>Representation</th>
-            </tr>
-            <tr>
-              <td class="file_field_name">1</td>
-              <td>RXCUI1</td>
-              <td>Unique identifier of retired concept</td>
-              <td>MRREL.CUI1 populated by the Metathesaurus CUI of
-                RXCUI1</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">2</td>
-              <td>VSAB_START</td>
-              <td>Version Source Abbreviation of the first RxNorm
-                release RXCUI1 appeared in</td>
-              <td>Not processed</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">3</td>
-              <td>VSAB_END</td>
-              <td>Version Source Abbreviation of the last RxNorm release
-                RXCUI1 appeared in</td>
-              <td>Not processed</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">4</td>
-              <td>Cardinality</td>
-              <td>The number of RXCUIs that RXCUI1 was moved or split to</td>
-              <td>Not processed</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">5</td>
-              <td>RXCUI2</td>
-              <td>Unique identifier of synonymous concept for RXCUI1</td>
-              <td>MRREL.CUI2 populated by the Metathesaurus CUI of
-                RXCUI2</td>
+              <td>96</td>
+              <td>&lt;Year&gt;<br/>
+                Description: Four-character year date in YYYY format.
+                Similar in format to the MEDLINE element of the same
+                name.<br/>
+                Subelement of: &lt;DateCreated&gt;; &lt;DateRevised&gt;;
+                &lt;DateEstablished&gt;<br/>
+                Record Type: D, Q, SCR<br/>
+                Repeating element: yes<br/>
+                Required element: no</td>
+              <td>See &lt;DateCreated&gt;, &lt;DateRevised&gt;,
+                &lt;DateEstablished&gt;<br/>
+              </td>
             </tr>
           </tbody>
         </table>
       </div>
-</div>
-</div>
-
+    </div>
