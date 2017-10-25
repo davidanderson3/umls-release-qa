@@ -1,7 +1,7 @@
 #!/bin/bash
-# run bash, navigate to the root directory (/sourcereleasedocs) and run bash scripts/replaceDate.sh
+# run bash, navigate to the root directory (/sourcereleasedocs) and run bash scripts/replaceMenu.sh
 # important - set the base directory to whichever directory contains SAB directories 
-BASEDIR='jbake/content/current/'
+BASEDIR='jbake/content/'
 while IFS=',' read -r RSAB DIRECTORY; do
 if [ -f "$BASEDIR""$DIRECTORY"/index.html ] 
 then 
@@ -16,7 +16,13 @@ if [ -f "$BASEDIR""$DIRECTORY"/metadata.html ]
 then 
 sed '/<!--menu/q' "$BASEDIR""$DIRECTORY"/metadata.html > "$BASEDIR""$DIRECTORY"/metadata.temp1
 awk '/endmenu-->/{y=1}y' "$BASEDIR""$DIRECTORY"/metadata.html > "$BASEDIR""$DIRECTORY"/metadata.temp2
-echo '   <a class="btn btn-md" role="button" href="metadata.html">Source Metadata</a>' >> "$BASEDIR""$DIRECTORY"/menu 
+echo '   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>' >> "$BASEDIR""$DIRECTORY"/menu 
+fi;
+if [ -f "$BASEDIR""$DIRECTORY"/stats.html ] 
+then 
+sed '/<!--menu/q' "$BASEDIR""$DIRECTORY"/stats.html > "$BASEDIR""$DIRECTORY"/stats.temp1
+awk '/endmenu-->/{y=1}y' "$BASEDIR""$DIRECTORY"/stats.html > "$BASEDIR""$DIRECTORY"/stats.temp2
+echo '   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>' >> "$BASEDIR""$DIRECTORY"/menu 
 fi;
 if [ -f "$BASEDIR""$DIRECTORY"/sourcerepresentation.html ] 
 then 
@@ -41,6 +47,10 @@ if [ -f "$BASEDIR""$DIRECTORY"/metadata.html ]
 then
 cat "$BASEDIR""$DIRECTORY"/metadata.temp1 "$BASEDIR""$DIRECTORY"/menu "$BASEDIR""$DIRECTORY"/metadata.temp2 > "$BASEDIR""$DIRECTORY"/metadata.html
 fi;
+if [ -f "$BASEDIR""$DIRECTORY"/stats.html ]
+then
+cat "$BASEDIR""$DIRECTORY"/stats.temp1 "$BASEDIR""$DIRECTORY"/menu "$BASEDIR""$DIRECTORY"/stats.temp2 > "$BASEDIR""$DIRECTORY"/stats.html
+fi;
 if [ -f "$BASEDIR""$DIRECTORY"/sourcerepresentation.html ]
 then
 cat "$BASEDIR""$DIRECTORY"/sourcerepresentation.temp1 "$BASEDIR""$DIRECTORY"/menu "$BASEDIR""$DIRECTORY"/sourcerepresentation.temp2 > "$BASEDIR""$DIRECTORY"/sourcerepresentation.html
@@ -57,6 +67,8 @@ rm "$BASEDIR""$DIRECTORY"/index.temp2;
 rm "$BASEDIR""$DIRECTORY"/metadata.temp2;
 rm "$BASEDIR""$DIRECTORY"/sourcerepresentation.temp2;
 rm "$BASEDIR""$DIRECTORY"/metarepresentation.temp2;
+rm "$BASEDIR""$DIRECTORY"/stats.temp1;
+rm "$BASEDIR""$DIRECTORY"/stats.temp2;
 rm "$BASEDIR""$DIRECTORY"/menu;
 done < rsab-directory-map.csv 
 
