@@ -4,10 +4,10 @@
 # run bash, navigate to the root directory (/sourcereleasedocs) and run bash scripts/replaceSourceTitle.sh
 # important - set the base directory to whichever directory contains SAB directories 
 BASEDIR='jbake/content/' 
-while IFS=',' read -r RSAB DIRECTORY SSN; do 
-sed -i "/title=/c\title=$SSN ($RSAB) - Synopsis" "$BASEDIR""$DIRECTORY"/index.html;
-sed -i "/title=/c\title=$SSN ($RSAB) - Metadata" "$BASEDIR""$DIRECTORY"/metadata.html;
-sed -i "/title=/c\title=$SSN ($RSAB) - Statistics" "$BASEDIR""$DIRECTORY"/stats.html;
-sed -i "/title=/c\title=$SSN ($RSAB) - Source Representation" "$BASEDIR""$DIRECTORY"/sourcerepresentation.html;
-sed -i "/title=/c\title=$SSN ($RSAB) - Metathesaurus Representation" "$BASEDIR""$DIRECTORY"/metarepresentation.html;
-done < rsab-directory-map.csv 
+while IFS='|' read -r RSAB DIRECTORY SSN; do 
+sed -i "/title=/c\title=$RSAB ($SSN) - Synopsis" "$BASEDIR""$DIRECTORY"/index.html;
+sed -i "/title=/c\title=$RSAB ($SSN) - Metadata" "$BASEDIR""$DIRECTORY"/metadata.html;
+sed -i "/title=/c\title=$RSAB ($SSN) - Statistics" "$BASEDIR""$DIRECTORY"/stats.html;
+sed -i "/title=/c\title=$RSAB ($SSN) - Source Representation" "$BASEDIR""$DIRECTORY"/sourcerepresentation.html;
+sed -i "/title=/c\title=$RSAB ($SSN) - Metathesaurus Representation" "$BASEDIR""$DIRECTORY"/metarepresentation.html;
+done < directorymap.txt 

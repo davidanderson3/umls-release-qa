@@ -2,7 +2,7 @@
 # run bash, navigate to the root directory (/sourcereleasedocs) and run bash scripts/replaceMenu.sh
 # important - set the base directory to whichever directory contains SAB directories 
 BASEDIR='jbake/content/'
-while IFS=',' read -r RSAB DIRECTORY; do
+while IFS='|' read -r RSAB DIRECTORY SSN; do
 if [ -f "$BASEDIR""$DIRECTORY"/index.html ] 
 then 
 sed '/<!--menu-->/q' "$BASEDIR""$DIRECTORY"/index.html > "$BASEDIR""$DIRECTORY"/index.temp1
@@ -70,5 +70,5 @@ rm "$BASEDIR""$DIRECTORY"/metarepresentation.temp2;
 rm "$BASEDIR""$DIRECTORY"/stats.temp1;
 rm "$BASEDIR""$DIRECTORY"/stats.temp2;
 rm "$BASEDIR""$DIRECTORY"/menu;
-done < rsab-directory-map.csv 
+done < directorymap.txt 
 
