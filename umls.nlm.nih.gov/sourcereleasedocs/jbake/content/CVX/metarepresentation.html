@@ -1,0 +1,230 @@
+title=CVX (Vaccines Administered) - Metathesaurus Representation
+date=2017-11-06
+updated=2017-11-06
+type=page
+status=published
+~~~~~~
+
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+<!--endmenu-->
+<br/><p>This page lists UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p><!--begin tabbed navigation area-->
+<!-- end tabbed navigation area --><br>
+<br>
+<br>
+<a id="top-of-page" name="top-of-page"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>, <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>, <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+
+<div id="general" class="rep_block_level_one">
+  <p><b>VSAB:</b> CVX2016_01_04<br></p>
+
+  <div id="rep_identifiers" class="rep_block_level_one">
+    <h3>Summary of Changes</h3>
+
+    <p>No changes were made to the source data format. However, processing vaccines with a status of "Inactive" was updated to reflect a clarification from the CDC. All CVX codes are considered 'active' except for when the vaccine status is 'NEVER ACTIVE', or the CVX code is 99, or 999.</p>This results in the following change to processing when the value of the status field is "Inactive":<br>
+    Previously: TTY = OP/OA; Suppress = "O"<br>
+    New: TTY = PT/AB; Suppress PT = "N"; Suppress AB = "Y"<br>
+    Per above, codes 99 and 999 are considered obsolete, so even though they have an "Inactive" status, they are assigned TTY = OP/OA, Suppress = O (no change from previous version).<br>
+  </div>
+
+  <div id="rep_change_summary" class="rep_block_level_one">
+    <h3>Source Provided Files:</h3>Several file formats are available at <a href="http://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx">http://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx</a><br>
+    <br>
+    The flat file was used for Metathesaurus source processing.<br>
+    <br>
+
+    <table>
+      <tbody>
+        <tr>
+          <th>File Name</th>
+
+          <th>Description</th>
+        </tr>
+
+        <tr>
+          <td class="file_field_name">cvx.txt</td>
+
+          <td>"|" - delimited file<br></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="rep_identifers" class="rep_block_level_one">
+    <h3>Identifiers:</h3>Identifiers are assigned as follows:<br>
+    <br>
+
+    <table>
+      <tbody>
+        <tr>
+          <th>Identifier</th>
+
+          <th>Origin</th>
+        </tr>
+
+        <tr>
+          <td class="file_field_name">CODE<br></td>
+
+          <td>CVX Code<br></td>
+        </tr>
+
+        <tr>
+          <td>SAUI<br></td>
+
+          <td>Not Applicable<br></td>
+        </tr>
+
+        <tr>
+          <td>SCUI<br></td>
+
+          <td>Same as CODE<br></td>
+        </tr>
+
+        <tr>
+          <td>SDUI<br></td>
+
+          <td>Not Applicable<br></td>
+        </tr>
+      </tbody>
+    </table><br>
+
+    <div id="rep_termtypes" class="rep_block_level_two">
+      <a id="atoms" name="atoms"></a>
+
+      <h3>Atoms (MRCONSO):</h3><br>
+
+      <table>
+        <tbody>
+          <tr>
+            <th>Term Type</th>
+
+            <th>Origin</th>
+          </tr>
+
+          <tr>
+            <td>AB</td>
+
+            <td>Short Description<br>
+            Vaccine Status = "Active," "Inactive," or "Pending"<br>
+            Exception: Codes 99 and 999 are "Inactive," but are assigned TTY = OP/OA per directions from the CDC<br></td>
+          </tr>
+
+          <tr>
+            <td>OA</td>
+
+            <td>Short Description<br>
+            Vaccine Status = "Never Active"<br></td>
+          </tr>
+
+          <tr>
+            <td>OP</td>
+
+            <td>Full Vaccine Name<br>
+            Vaccine Status = "Never Active"<br></td>
+          </tr>
+
+          <tr>
+            <td>PT</td>
+
+            <td>Full Vaccine Name<br>
+            Vaccine Status = "Active," "Inactive," or "Pending"<br>
+            Exception: Codes 99 and 999 are "Inactive," but are assigned TTY = OP/OA per directions from the CDC<br></td>
+          </tr>
+        </tbody>
+      </table><br>
+    </div>
+
+    <div id="rep_attributes" class="rep_block_level_two">
+      <a id="attributes" name="attributes"></a><br>
+
+      <h3>Attributes (MRSAT):</h3><br>
+      <br>
+      <br>
+
+      <table>
+        <tbody>
+          <tr>
+            <th>ATN</th>
+
+            <th>Origin</th>
+          </tr>
+
+          <tr>
+            <td>DATE_LAST_MODIFIED</td>
+
+            <td>Last Updated</td>
+          </tr>
+
+          <tr>
+            <td>SOS</td>
+
+            <td>Notes</td>
+          </tr>
+
+          <tr>
+            <td>VACCINE_STATUS</td>
+
+            <td>Vaccine Status</td>
+          </tr>
+        </tbody>
+      </table><br>
+      <br>
+    </div>
+
+    <div id="rep_definitions" class="rep_block_level_two">
+      <a id="definitions" name="definitions"></a><br>
+
+      <h3>Definitions (MRDEF):</h3><br>
+
+      <p>No definitions are provided for CVX. "Notes" are included as SOS attributes.<br></p>
+    </div>
+
+    <div id="rep_relationships" class="rep_block_level_two">
+      <a id="relationships" name="relationships"></a><br>
+
+      <h3>Relationships (MRREL):<br></h3><br>
+
+      <table>
+        <tbody>
+          <tr>
+            <th><b>REL/<br>
+            Inverse REL</b>A</th>
+
+            <th>Origin</th>
+
+            <th>Description</th>
+          </tr>
+
+          <tr>
+            <td>SY</td>
+
+            <td>expanded_form_of<br>
+            has_expanded_form<br></td>
+
+            <td>Connect PT - AB, OP - AB atoms with same CVX Code</td>
+          </tr>
+        </tbody>
+      </table><br>
+
+      <h3>Hierarchy (MRHIER)<br></h3>
+      <br>
+      There is no hierarchy for CVX.<br>
+    </div>
+
+    <div id="mappings" class="rep_block_level_two">
+      <h3>Mappings (MRMAP):</h3><br>
+
+      <p>No mappings are supplied for CVX.<br></p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,213 @@
+title=LCH_NW (Library of Congress Subject Headings) - Source Representation
+date=2017-11-06
+updated=2017-11-06
+type=page
+status=published
+~~~~~~
+
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+<!--endmenu-->
+<br/><p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p><!--begin tabbed navigation area-->
+<!-- end tabbed navigation area --><br>
+<a name="top" id="top"></a> <span class="nav">Skip to: <a href="#change_summary">Summary of Changes</a>, <a href="#file_summary">Summary of Source-Provided Files</a> <a href="#file_details">Source-Provided File Details</a></span> <a name="general" id="general"></a>
+
+<div id="rep_general" class="rep_block_level_one">
+  <br>
+</div>
+
+<div id="rep_change_summary" class="rep_block_level_one">
+  <h3>Summary of Changes:</h3>
+  <br>
+  LCH_NW is a new source.<br>
+  <br>
+</div>
+
+<div id="rep_file_summary" class="rep_block_level_one">
+  <a name="file_summary" id="file_summary"></a>
+
+  <h3>Source-Provided Files: Summary</h3><br>
+  <br>
+  All files are available here:&nbsp; <a href="http://files.library.northwestern.edu/public/lcshmesh/">http://files.library.northwestern.edu/public/lcshmesh/</a><br>
+  <br>
+  Additional documentation on the MARC 21 Format For Authority Data can be found here:&nbsp; <a href="http://www.loc.gov/marc/authority/">http://www.loc.gov/marc/authority/</a><br>
+  <br>
+  <b>Documentation</b>:<br>
+  <a href="http://files.library.northwestern.edu/public/lcshmesh/"></a><br>
+
+  <table class="elements" cellspacing="0" border="0">
+    <tbody>
+      <tr>
+        <th>File<br></th>
+
+        <th>Description<br></th>
+      </tr>
+
+      <tr>
+        <td>lcsh-mesh_read.doc</td>
+
+        <td>Description of the project and files</td>
+      </tr>
+
+      <tr>
+        <td>lchs-mesh_sample.txt</td>
+
+        <td>Sample data</td>
+      </tr>
+    </tbody>
+  </table><br>
+  <b>Data</b>:<br>
+  <br>
+
+  <table class="elements" cellspacing="0" border="0">
+    <tbody>
+      <tr>
+        <th>File<br></th>
+
+        <th>Description<br></th>
+      </tr>
+
+      <tr>
+        <td>lcsh.mrc</td>
+
+        <td>MARC 21 format authority file, with linking data to MSH strings</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="rep_block_level_two">
+    <br>
+  </div>
+</div>
+
+<div id="rep_file_details" class="rep_block_level_one">
+  <a name="file_details" id="file_details"></a>
+
+  <h3>Source-Provided Files: Details</h3><br>
+  <br>
+  The data is provided as a MARC 21 format authority file.&nbsp; Before Metathesaurus source processing, this file was converted to ascii using <a href="http://marcpm.sourceforge.net/cgi-bin/converter.cgi"></a><br>
+
+  <div class="rep_block_level_two">
+    <a name="file1" id="file1"></a>
+
+    <h4 class="file_field_name">file:&nbsp; lcsh.mrc (converted to lcsh.mrc.txt):<br></h4>Only the 010, 1XX (Heading Information) and 750 fields (Heading Linking Entry) were processed for inclusion in the Metathesaaurus. Other data such as 4XX (See From Tracing) and 5XX (See Also From Tracing) may be analyzed for inclusion in future versions.<br>
+    <br>
+    <br>
+
+    <table class="elements" cellspacing="0" border="0">
+      <tbody>
+        <tr>
+          <th>MARC Tag/<br>
+          Subfield<br></th>
+
+          <th>Description<br></th>
+
+          <td><b>Representation</b><br></td>
+        </tr>
+
+        <tr>
+          <td>010 $a<br></td>
+
+          <td>Library of Congress Control Number</td>
+
+          <td>MRCONSO.CODE<br>
+          MRCONSO.SCUI<br>
+          <br>
+          MRMAP.FROMEXPR<br></td>
+        </tr>
+
+        <tr>
+          <td>010 $z<br></td>
+
+          <td>Canceled/invalid LC control number<br></td>
+
+          <td>Not included in Metathesaurus source processing<br></td>
+        </tr>
+
+        <tr>
+          <td><br></td>
+
+          <td><br></td>
+
+          <td><br></td>
+        </tr>
+
+        <tr>
+          <td class="file_field_name">150, 151<br>
+          $a<br>
+          $x<br>
+          $v<br>
+          $y<br>
+          $z<br></td>
+
+          <td>Heading - Topical Term, Heading - Geographic Name<br>
+          name entry element<br>
+          general&nbsp; subdivision<br>
+          form subdivsion<br>
+          chronological subdivision<br>
+          geographical subdivision<br></td>
+
+          <td>MRCONSO.STR<br>
+          CODE = Value of tag = 010, subfield $a<br>
+          TTY = PT<br>
+          SUPPRESS = N<br>
+          <br>
+          MRCONSO.STR is assembled by using "--" to concatenate the values of the $a, $x, $v, $y and $z subfields.<br></td>
+        </tr>
+
+        <tr>
+          <td><br></td>
+
+          <td><br></td>
+
+          <td><br></td>
+        </tr>
+
+        <tr>
+          <td>750 $a<br></td>
+
+          <td>Established Heading Linking Entry.<br>
+          <br>
+          A 2nd indicator value of "2" indicates a MSH mapping.<br></td>
+
+          <td>MRREL.REL = RQ<br>
+          MRREL.RELA = mapped_from<br>
+          <br>
+          MRMAP.TOEXPR = SDUI of string of $a value<br>
+          <br>
+          Note:&nbsp; the original data in this field is populated by MSH strings.&nbsp; Where possible, the strings have been translated to MSH identfiers.&nbsp; In a small number of cases, the string provided did not correspond to a current MSH string, and these entries were dropped during Metathesaurus source processing.<br></td>
+        </tr>
+
+        <tr>
+          <td>$x<br></td>
+
+          <td>Indicates a MSH qualifier<br></td>
+
+          <td>MRMAP.TOEXPR = MSH SDUI values, in the format "Descriptor Identifier/Qualifier Identifier"<br></td>
+        </tr>
+
+        <tr>
+          <td>$8<br></td>
+
+          <td>field link/sequence number;&nbsp; indicates that one LCH concept maps to two or more MSH entity</td>
+
+          <td>MRMAP.TOEXPR = MSH SDUI values with the same sequence number, connected by "AND"&nbsp;<br>
+          MRMAP.TOTYPE = BOOLEAN_EXPRESSION_SDUI<br>
+          <br>
+          MRMAP.MAPRANK is incremented if there is more than one grouping (i.e. if the sequence number is incremented).<br></td>
+        </tr>
+      </tbody>
+    </table><br>
+  </div>
+</div>
