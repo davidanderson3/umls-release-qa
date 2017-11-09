@@ -1,0 +1,231 @@
+title=CHV (CHV) - Metathesaurus Representation
+date=2017-11-06
+updated=2017-11-06
+type=page
+status=published
+~~~~~~
+
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+<!--endmenu-->
+<br/><br>
+<br>
+<br>
+<a name="top" id="top"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>, <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>, <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+
+<div id="general" class="rep_block_level_one">
+  <p><b>VSAB:</b>&nbsp;&nbsp; CHV2011_02<br></p>
+
+  <div id="rep_identifiers" class="rep_block_level_one">
+    <h3>Summary of Changes</h3>
+
+    <p>No changes were made to the release format of CHV or the processing for the 2012AA Metathesaurus.&nbsp; Updates to the CHV content primarily consisted of deletion and/or correction of misspelled terms.&nbsp;<br></p>
+
+    <p>In the previous version, CHV term values with potential spelling errors were identified by setting MRCONSO.SUPPRESS="E". &nbsp; There are 20 atoms remaining with SUPPRESS="E" however these will be reviewed in future versions to determine if they should be changed to "N".<br></p>
+  </div>
+
+  <div id="rep_change_summary" class="rep_block_level_one">
+    <h3>Source Provided Files:</h3><span style="font-weight: bold;">Documentation:</span><br>
+    <br>
+
+    <table class="elements" border="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <td style="vertical-align: top;"><span style="font-weight: bold;">File</span><br></td>
+
+          <td style="vertical-align: top;"><span style="font-weight: bold;">Description</span><br></td>
+        </tr>
+
+        <tr>
+          <th style="font-weight: normal;">http://www.consumerhealthvocab.org/</th>
+
+          <th><span style="font-weight: normal;">source website</span><br></th>
+        </tr>
+
+        <tr>
+          <td style="vertical-align: top;">ReadMe.doc<br></td>
+
+          <td style="vertical-align: top;">README file<br></td>
+        </tr>
+      </tbody>
+    </table><br>
+    <span style="font-weight: bold;">Data:</span><br>
+    <br>
+
+    <table class="elements" border="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <td style="vertical-align: top;"><span style="font-weight: bold;">File</span><br></td>
+
+          <td style="vertical-align: top;"><span style="font-weight: bold;">Description</span><br></td>
+        </tr>
+
+        <tr>
+          <th style="font-weight: normal;">CHV_concepts_terms_flatfile_20110204.tsv</th>
+
+          <th><span style="font-weight: normal;">Tab-separated data file</span><br></th>
+        </tr>
+      </tbody>
+    </table><br>
+  </div>
+
+  <div id="rep_identifers" class="rep_block_level_one">
+    <h3>Identifiers:</h3>Identifiers are assigned as follows:<br>
+
+    <ul>
+      <li>CODE: <span class="c1">CHV_concept_id</span></li>
+
+      <li>SAUI:&nbsp; <span class="c1">CHV_string_id</span></li>
+
+      <li>SCUI:&nbsp; <span class="c1">CHV_concept_id</span></li>
+
+      <li>SDUI:&nbsp; Not applicable<br></li>
+    </ul>
+
+    <div id="rep_termtypes" class="rep_block_level_two">
+      <a name="atoms" id="atoms"></a>
+
+      <h3>Atoms (MRCONSO):</h3>
+      <br>
+      <br>
+
+      <table class="elements" border="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <th>Term Type</th>
+
+            <th>Origin</th>
+          </tr>
+
+          <tr>
+            <td>PT<br></td>
+
+            <td>
+              <p class="c0"><span class="c1">CODE:&nbsp; CHV_concept_id<br>
+              STR: Term<br>
+              SAUI:&nbsp;&nbsp; CHV_string_id<br>
+              SCUI: CHV_concept_id<br></span></p>
+
+              <p class="c0"><span class="c1">TTY= PT is assigned where CHV_preferred_name="yes"<br></span></p>
+            </td>
+          </tr>
+
+          <tr>
+            <td>SY<br></td>
+
+            <td><span class="c1">CODE:&nbsp; CHV_concept_id<br>
+            STR: Term<br>
+            SAUI:&nbsp;&nbsp; CHV_string_id<br>
+            SCUI: CHV_concept_id<br>
+            <br>
+            TTY=SY is assigned where CHV_preferred_name="no"<br></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="rep_attributes" class="rep_block_level_two">
+      <a name="attributes" id="attributes"></a><br>
+
+      <h3>Attributes (MRSAT):</h3>
+      <br>
+      Note: All score attributes have a range 0 to 1 (a higher score implies the term is easier). A value of -1 indicates the score could not be estimated.<br>
+      <br>
+
+      <table class="elements" border="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <th>Attribute Name</th>
+
+            <td style="vertical-align: top;"><span style="font-weight: bold;">Description</span><br></td>
+
+            <th>Origin</th>
+          </tr>
+
+          <tr>
+            <td>COMBO_SCORE<br></td>
+
+            <td style="vertical-align: top;">Combination of frequency, context and CUI scores.&nbsp; Also uses whether or not the term is a top word.&nbsp; (real number)<br></td>
+
+            <td>Combo_score<br></td>
+          </tr>
+
+          <tr>
+            <td style="vertical-align: top;">COMBO_SCORE_NO_TOP_WORDS<br></td>
+
+            <td style="vertical-align: top;">A slight modification to Combo_score that ignores top word criterion.&nbsp; The top word list is a list of easy words from the Dale-Chall list. (real number)<br></td>
+
+            <td style="vertical-align: top;">Combo_score_no_top_words<br></td>
+          </tr>
+
+          <tr>
+            <td style="vertical-align: top;">CONTEXT_SCORE<br></td>
+
+            <td style="vertical-align: top;">Context based estimate of the difficulty of the term.&nbsp; (real number)<br></td>
+
+            <td style="vertical-align: top;">Context_score<br></td>
+          </tr>
+
+          <tr>
+            <td style="vertical-align: top;">CUI_SCORE<br></td>
+
+            <td style="vertical-align: top;">Estimate of the difficulty of the concept (CUI) derived from determining how closely related the concept is to known examples of easy and difficult concepts. (real number)<br></td>
+
+            <td style="vertical-align: top;">CUI_score<br></td>
+          </tr>
+
+          <tr>
+            <td style="vertical-align: top;">DISPARAGED</td>
+
+            <td style="vertical-align: top;">A value of "yes" in the CHV data indicates a misspelling or other abnormality.&nbsp; For this version, disparaged terms were not processed, so all cases of ATN="DISPARAGED" have ATV="no"</td>
+
+            <td style="vertical-align: top;">Disparaged field (yes/no flag)</td>
+          </tr>
+
+          <tr>
+            <td style="vertical-align: top;">FREQUENCY<br></td>
+
+            <td style="vertical-align: top;">Estimate of thedifficulty of a term, i.e. how likely it is that an average reader will be familiar with or understand a given term.&nbsp; Based on the frequency in several large text corpora.&nbsp; A higher score indicates that a term is more familiar (less difficult).&nbsp;&nbsp; (real number)<br></td>
+
+            <td style="vertical-align: top;">Frequency_score<br></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="rep_definitions" class="rep_block_level_two">
+      <a name="definitions" id="definitions"></a><br>
+
+      <h3>Definitions (MRDEF):</h3>
+
+      <p>Definitions are created from data in the "Explanation" field.<br></p>
+    </div>
+
+    <div id="rep_relationships" class="rep_block_level_two">
+      <a name="relationships" id="relationships"></a><br>
+
+      <h3>Relationships (MRREL):</h3>
+      <br>
+      No relationships are processed for this version of CHV<br>
+    </div>
+
+    <div id="mappings" class="rep_block_level_two">
+      <a name="mappings" id="mappings"></a><br>
+
+      <h3>Mappings (MRMAP):</h3>
+
+      <p>No relationships to other sources are processed for this version of CHV, however UMLS CUI data was used to assess possible synonymy.</p>
+    </div>
+  </div>
+</div>

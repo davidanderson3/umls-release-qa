@@ -1,0 +1,340 @@
+title=PNDS (PNDS) - Source Representation
+date=2017-11-06
+updated=2017-11-06
+type=page
+status=published
+~~~~~~
+
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+<!--endmenu-->
+<br/><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta name="generator" content="HTML Tidy for Cygwin (vers 25 March 2009), see www.w3.org">
+  <meta http-equiv="content-type" content="text/html; charset=us-ascii">
+
+  <title></title>
+</head>
+
+<body>
+  <!-- end tabbed navigation area -->
+  <br>
+  <br>
+  <br>
+  <a name="top" id="top"></a> <span class="nav">Skip to: <a href="#general">Notes</a>, <a href="#change_summary">Summary of Changes</a>, <a href="#file_summary">Summary of Source-Provided Files</a> <a href="#file_details">Source-Provided File Details</a></span> <a name="general" id="general"></a>
+
+  <div id="rep_general" class="rep_block_level_one">
+    <h3>Notes</h3>
+  </div>
+
+  <div id="rep_change_summary" class="rep_block_level_one">
+    <h3>Summary of Changes:</h3>
+
+    <p>There have been significant&nbsp;changes made to the&nbsp;structure&nbsp;of the Perioperative Nursing Data Set (PNDS) and&nbsp;the&nbsp;way&nbsp;codes&nbsp;are&nbsp;assigned&nbsp;since the previous version was processed for inclusion in the Metathesaurus.&nbsp; PNDS 2nd edition (PNDS2002) included outcomes,&nbsp;diagnoses,&nbsp;interventions,&nbsp;and&nbsp;domains, which were assigned term types of PS/PX, DX, IV, and HT, respectively.&nbsp; In the current verison,&nbsp;there&nbsp;are&nbsp;assessments,&nbsp;evaluations,&nbsp;implementations,&nbsp;outcomes&nbsp;and&nbsp;domains, and term type assignments have changed accordingly.&nbsp; Domains are still assigned TTY = "HT," as are placeholder atoms for "Assessment," "Evaluation," "Implementation," and 'Outcome," which were created for the purpose of representing a navigational hierarchy.&nbsp; All other PNDS atoms are assigned TTY = "PT."&nbsp;<br>
+    <br>
+    The&nbsp;domains&nbsp;are&nbsp;the&nbsp;same&nbsp;and&nbsp;have&nbsp;the&nbsp;same&nbsp;codes&nbsp;as&nbsp;the&nbsp;previous&nbsp;version,&nbsp;but&nbsp;the&nbsp;code&nbsp;assignment&nbsp;for&nbsp;everything&nbsp;else&nbsp;has&nbsp;changed,&nbsp;and&nbsp;the&nbsp;strings&nbsp;have&nbsp;often&nbsp;changed&nbsp;also.<br></p>
+
+    <p>Differences between PNDS2002 and PNDS2011 in RRF format are:<br></p>1)&nbsp; The SRL has been changed from 0 to 3 for PNDS.<br>
+    <br>
+    <a>2)&nbsp; New term type (TTY) | Suppressible value:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PT|N<br>
+    <br>
+    3) Dropped term type (TTY):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DX<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IV<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PS<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PX<br>
+    <br>
+    3) Dropped relationship | relationship attribute(RELA):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RQ|has_outcome<br>
+    <br></a><a>This data is not available in machine-processable form</a><a><br>
+    <br>
+    4) New attribute name (ATN):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; INTERPRETIVE_STATEMENT<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RETIRED_CODE<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SOS<br>
+    <br>
+    5) Dropped attribute name (ATN):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; INTERVENTION_DESCRIPTION<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; INTERVENTION_SEQUENCE<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; INTERVENTION_TEXT<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OUTCOME_EXAMPLES<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OUTCOME_INDICATORS<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OUTCOME_STATEMENT</a>
+  </div>
+
+  <div id="rep_file_summary" class="rep_block_level_one">
+    <a name="file_summary" id="file_summary"></a>
+
+    <h3>Source-Provided Files: Summary</h3>
+
+    <p>The PNDS distribution includes the following:<br></p>
+
+    <div class="rep_block_level_two">
+      <!-- Make a table of each file that comes from the source   -->
+
+      <h4>Documentation and Reference</h4>The electronic distribution of PNDS did not include documentation or reference material.&nbsp; However, the printed book, "Perioperative Nusing Data Set 3rd Edition" may provide additional insight into the content and usage of PNDS and information is available here:&nbsp; <a href="http://www.aorn.org/PracticeResources/PNDSAndStandardizedPerioperativeRecord/">http://www.aorn.org/PracticeResources/PNDSAndStandardizedPerioperativeRecord/</a><br>
+
+      <h4>Data Files</h4><a name="data_files" id="data_files"></a>
+
+      <table class="elements" border="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <th>File Name</th>
+
+            <th>Description</th>
+          </tr>
+
+          <tr>
+            <td class="file_field_name">Revised PNDS codes all_Def_Final_10_29_10&nbsp; (5).xlsx<br></td>
+
+            <td>An excel file with 5 tabs:&nbsp; Assessment, Evaluation, Implementation, Outcome and Domain.&nbsp; Includes obsolete codes and labels, new codes, new labels, domains, and notes.&nbsp; Includes definitions and interpretive statements.&nbsp; This table contains essentially the same content as Chapter 3 in the printed book, however there are minor differences due to editing.</td>
+          </tr>
+        </tbody>
+      </table><b><br>
+      <br>
+      Not included</b>:&nbsp;
+    </div>
+  </div>
+
+  <div id="rep_file_details" class="rep_block_level_one">
+    <br>
+    All data in the excel file provided is included in the Metathesaurus except for obsolete labels and notes about code and definition changes.&nbsp;<br>
+
+    <h3>Source-Provided Files: Details</h3>
+
+    <p>The following is a list of data elements provided for PNDS:<br></p>Tab:&nbsp; Domains<br>
+    <br>
+
+    <div class="rep_block_level_two">
+      <a name="file1" id="file1"></a>
+
+      <table class="elements" border="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <th>#</th>
+
+            <th>Column</th>
+
+            <th>Representation</th>
+          </tr>
+
+          <tr>
+            <td>1</td>
+
+            <td>Code<br></td>
+
+            <td>MRCONSO.CODE, MRCONSO.SCUI<br></td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+
+            <td>Domain<br></td>
+
+            <td>MRCONSO.STR<br>
+            TTY = "HT"<br></td>
+          </tr>
+
+          <tr>
+            <td>3</td>
+
+            <td>Domain Expansion<br></td>
+
+            <td>MRSAT.ATN=SOS<br></td>
+          </tr>
+
+          <tr>
+            <td>4</td>
+
+            <td>Domain Definition<br></td>
+
+            <td>MRDEF.DEF<br></td>
+          </tr>
+        </tbody>
+      </table>
+    </div><br>
+    Tabs:&nbsp; Assessment, Evaluation, Implementation coding, Outcomes<br>
+
+    <div class="rep_block_level_two">
+      <a name="file1" id="file1"></a><br>
+      A PNDS concept record may span multiple rows in the excel format.&nbsp; A row may represent concept information (code and atom name) or an attribute (definition or interpretive statement).&nbsp; The RRF representation of data from these tabs is based on the value of column 1, "Obsolete code."&nbsp;<br>
+      <br>
+
+      <table class="elements" border="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <th>#</th>
+
+            <th>Column</th>
+
+            <th>Description</th>
+
+            <th>Representation</th>
+          </tr>
+
+          <tr>
+            <td>1</td>
+
+            <td>Obsolete code<br></td>
+
+            <td style="vertical-align: top;">This field may have one of the following values:<br>
+            <br>
+            An obsolete (retired) code from PNDS, 2nd edition<br>
+            "NA" (indicates that a code is new and the obsolete code value is not applicable<br>
+            "Definition" (indicates that the row contains a new or revised definition<br>
+            "Interpretive Statement" (indicates that the row contains a new or revised interpretive statement)<br></td>
+
+            <td style="vertical-align: top;">
+              <table class="elements" border="0" cellspacing="0">
+                <tbody>
+                  <tr>
+                    <td colspan="2" style="vertical-align: top;">
+                      The representation of this field is dependent on its value:<br>
+
+                      <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+                        <tbody>
+                          <tr>
+                            <td style="vertical-align: top;"><span style="font-weight: bold;">Value</span><br></td>
+
+                            <td style="vertical-align: top;"><span style="font-weight: bold;">Representation</span><br></td>
+                          </tr>
+
+                          <tr>
+                            <td style="vertical-align: top;">Code from PNDS, 2nd edition<br></td>
+
+                            <td style="vertical-align: top;">MRSAT.ATN = RETIRED_CODE<br></td>
+                          </tr>
+
+                          <tr>
+                            <td style="vertical-align: top;">"NA"<br></td>
+
+                            <td style="vertical-align: top;">Not applicable<br></td>
+                          </tr>
+
+                          <tr>
+                            <td style="vertical-align: top;">"Definition"<br></td>
+
+                            <td style="vertical-align: top;">Not applicable</td>
+                          </tr>
+
+                          <tr>
+                            <td style="vertical-align: top;">"Interpretive Statement"<br></td>
+
+                            <td style="vertical-align: top;">Not applicable</td>
+                          </tr>
+                        </tbody>
+                      </table><br>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+
+            <td>Obsolete label<br></td>
+
+            <td style="vertical-align: top;">The atom name, definition, or interpretive statement from the 2nd edition of PNDS, if applicable<br></td>
+
+            <td>Not included in Metathesaurus processing<br></td>
+          </tr>
+
+          <tr>
+            <td>3</td>
+
+            <td>New code<br></td>
+
+            <td style="vertical-align: top;">The PNDS2011 code, if this row represents a concept; otherwise null<br></td>
+
+            <td>MRCONSO.CODE, MRCONSO.SCUI<br></td>
+          </tr>
+
+          <tr>
+            <td>4</td>
+
+            <td>New labels<br></td>
+
+            <td style="vertical-align: top;">The atom name, definition, or interpretive statement from PNDS2011<br></td>
+
+            <td>
+              The representation of this field is dependent on the value of the "Obsolete code":<br>
+
+              <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+                <tbody>
+                  <tr>
+                    <td style="vertical-align: top;">Value<br></td>
+
+                    <td style="vertical-align: top;">Representation<br></td>
+                  </tr>
+
+                  <tr>
+                    <td style="vertical-align: top;">Code from PNDS<br></td>
+
+                    <td style="vertical-align: top;">MRCONSO.STR<br>
+                    TTY = "PT"<br></td>
+                  </tr>
+
+                  <tr>
+                    <td style="vertical-align: top;">"NA"<br></td>
+
+                    <td style="vertical-align: top;">MRCONSO.STR<br>
+                    TTY = "PT"<br></td>
+                  </tr>
+
+                  <tr>
+                    <td style="vertical-align: top;">"Definition"<br></td>
+
+                    <td style="vertical-align: top;">MRDEF.DEF<br></td>
+                  </tr>
+
+                  <tr>
+                    <td style="vertical-align: top;">"Interpretive statement"<br></td>
+
+                    <td style="vertical-align: top;">MRSAT.ATN = INTERPRETIVE_STATEMENT<br></td>
+                  </tr>
+                </tbody>
+              </table><br>
+            </td>
+          </tr>
+
+          <tr>
+            <td>5</td>
+
+            <td>Domain<br></td>
+
+            <td style="vertical-align: top;">The domain associated with this PNDS code, if this row represents a concept; otherwise null<br></td>
+
+            <td>Used to create the hierarchy<br></td>
+          </tr>
+
+          <tr>
+            <td>6</td>
+
+            <td>Notes<br></td>
+
+            <td style="vertical-align: top;">Information regarding revisions, additions, or deletions of atom names or attributes, if applicable; otherwise null<br></td>
+
+            <td>Not included in Metathesaurus source processing<br></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
