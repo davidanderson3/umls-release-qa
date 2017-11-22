@@ -1,6 +1,7 @@
 <!DOCTYPE html>  
 <html lang="en">
   <head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
       <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -17,7 +18,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="DC.Rights" content="Public Domain" />
     <meta name="DC.Language" content="eng" />
     <meta name="generator" content="JBake">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge;IE=9;IE=8;"/>
 	<meta name="NLM.Contact.Email" content="nlmumlscustserv@mail.nlm.nih.gov" />
 
     <!-- Le styles -->
