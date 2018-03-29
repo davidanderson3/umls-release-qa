@@ -1,13 +1,11 @@
 #!/bin/bash
-# This script replaces the title field in the jbake metadata. It uses rsab-directory-map.csv to get from the 
-# directory name to the RSAB, which is inserted in the title field. 
-# run bash, navigate to the root directory (/sourcereleasedocs) and run bash scripts/replaceSourceTitle.sh
-# important - set the base directory to whichever directory contains SAB directories 
-BASEDIR='jbake/content/' 
-while IFS='|' read -r RSAB DIRECTORY SSN; do 
-sed -i "/title=/c\title=$RSAB ($SSN) - Synopsis" "$BASEDIR""$DIRECTORY"/index.html;
-sed -i "/title=/c\title=$RSAB ($SSN) - Metadata" "$BASEDIR""$DIRECTORY"/metadata.html;
-sed -i "/title=/c\title=$RSAB ($SSN) - Statistics" "$BASEDIR""$DIRECTORY"/stats.html;
-sed -i "/title=/c\title=$RSAB ($SSN) - Source Representation" "$BASEDIR""$DIRECTORY"/sourcerepresentation.html;
-sed -i "/title=/c\title=$RSAB ($SSN) - Metathesaurus Representation" "$BASEDIR""$DIRECTORY"/metarepresentation.html;
-done < directorymap.txt 
+# This script replaces the title field in the jbake metadata. It uses MRSAB.RRF to insert the RSAB and SSN into the title field. 
+# make sure the BASEDIR variable is set for your local environment
+BASEDIR='/Users/andersondm2/umlsdoc/umls.nlm.nih.gov/sourcereleasedocs/' 
+while IFS='|' read -r VCUI RCUI VSAB RSAB SON SF SVER VSTART VEND IMETA RMETA SLC SCC SRL TFR CFR CXTY TTYL ATNL LAT CENC CURVER SABIN SSN SCIT; do 
+sed -i "/title=/c\title=$RSAB ($SSN) - Synopsis" "$BASEDIR"jbake/content/"$RSAB"/index.html;
+sed -i "/title=/c\title=$RSAB ($SSN) - Metadata" "$BASEDIR"jbake/content/"$RSAB"/metadata.html;
+sed -i "/title=/c\title=$RSAB ($SSN) - Statistics" "$BASEDIR"jbake/content/"$RSAB"/stats.html;
+sed -i "/title=/c\title=$RSAB ($SSN) - Source Representation" "$BASEDIR"jbake/content/"$RSAB"/sourcerepresentation.html;
+sed -i "/title=/c\title=$RSAB ($SSN) - Metathesaurus Representation" "$BASEDIR"jbake/content/"$RSAB"/metarepresentation.html;
+done < "$BASEDIR"MRSAB.RRF 
