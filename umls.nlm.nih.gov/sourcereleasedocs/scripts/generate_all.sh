@@ -1,6 +1,8 @@
 #!/bin/sh
 # run from the base directory (.../sourcereleasedocs/)
 
+bash scripts/syncLatestVersion.sh
+
 python scripts/process_mrsab.py
 
 bash scripts/semicolon.sh
