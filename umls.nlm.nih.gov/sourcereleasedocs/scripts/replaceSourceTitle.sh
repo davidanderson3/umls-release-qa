@@ -8,4 +8,4 @@ sed -i "/title=/c\title=$RSAB ($SSN) - Metadata" "$BASEDIR"jbake/content/"$RSAB"
 sed -i "/title=/c\title=$RSAB ($SSN) - Statistics" "$BASEDIR"jbake/content/"$RSAB"/stats.html;
 sed -i "/title=/c\title=$RSAB ($SSN) - Source Representation" "$BASEDIR"jbake/content/"$RSAB"/sourcerepresentation.html;
 sed -i "/title=/c\title=$RSAB ($SSN) - Metathesaurus Representation" "$BASEDIR"jbake/content/"$RSAB"/metarepresentation.html;
-done < "$BASEDIR"MRSAB.RRF 
+done < "$BASEDIR"MRSAB_all.txt

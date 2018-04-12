@@ -10,4 +10,4 @@ sed -i "/date=/c\date=$CREATEDATE" "$BASEDIR"jbake/content/"$RSAB"/metadata.html
 sed -i "/date=/c\date=$CREATEDATE" "$BASEDIR"jbake/content/"$RSAB"/stats.html;
 sed -i "/date=/c\date=$CREATEDATE" "$BASEDIR"jbake/content/"$RSAB"/sourcerepresentation.html;
 sed -i "/date=/c\date=$CREATEDATE" "$BASEDIR"jbake/content/"$RSAB"/metarepresentation.html;
-done < "$BASEDIR"MRSAB.RRF
+done < "$BASEDIR"MRSAB_all.txt

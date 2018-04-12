@@ -70,5 +70,5 @@ rm "$BASEDIR"jbake/content/"$RSAB"/metarepresentation.temp2;
 rm "$BASEDIR"jbake/content/"$RSAB"/stats.temp1;
 rm "$BASEDIR"jbake/content/"$RSAB"/stats.temp2;
 rm "$BASEDIR"jbake/content/"$RSAB"/menu;
-done < "$BASEDIR"MRSAB.RRF
+done < "$BASEDIR"MRSAB_all.txt
 

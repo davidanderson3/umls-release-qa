@@ -10,3 +10,5 @@ bash scripts/replaceSourceTitle.sh
 bash scripts/replaceMenu.sh
 
 bash scripts/replaceUpdatedDate.sh
+
+bash scripts/create_qa_page.sh

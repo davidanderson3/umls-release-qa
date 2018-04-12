@@ -10,4 +10,4 @@ sed -i "/updated=/c\updated=$UPDATEDATE" "$BASEDIR"jbake/content/"$RSAB"/metadat
 sed -i "/updated=/c\updated=$UPDATEDATE" "$BASEDIR"jbake/content/"$RSAB"/stats.html;
 sed -i "/updated=/c\updated=$UPDATEDATE" "$BASEDIR"jbake/content/"$RSAB"/sourcerepresentation.html;
 sed -i "/updated=/c\updated=$UPDATEDATE" "$BASEDIR"jbake/content/"$RSAB"/metarepresentation.html;
-done < "$BASEDIR"MRSAB.RRF 
+done < "$BASEDIR"MRSAB_all.txt 
