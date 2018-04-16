@@ -14,3 +14,5 @@ bash scripts/replaceMenu.sh
 bash scripts/replaceUpdatedDate.sh
 
 bash scripts/create_qa_page.sh
+
+bash scripts/create_rsab_page.sh
