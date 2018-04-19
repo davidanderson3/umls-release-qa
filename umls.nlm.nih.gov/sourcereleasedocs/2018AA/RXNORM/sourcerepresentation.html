@@ -1,6 +1,6 @@
 title=RXNORM (RXNORM) - Source Representation
-date=2017-11-06
-updated=2017-11-06
+date=2018-05-07
+updated=2018-05-07
 type=page
 status=published
 ~~~~~~
@@ -30,7 +30,7 @@ status=published
       <a href="#file_details">Source-Provided File Details</a></span>
 
     <div id="rep_general" class="rep_block_level_one">
-      <p>VSAB: RXNORM_17AA_170905F</p>
+		<p>VSAB: RXNORM_17AA_170905F</p></div>
       <div id="rep_identifiers" class="rep_block_level_one">
         <h3>Notes:</h3>
         <p>RxNorm, a standardized nomenclature for clinical drugs, is
@@ -43,7 +43,6 @@ href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">avail
           combined scope of its source vocabularies which include the
           following:
         </p>
-        <table>
        <table>
          <tbody>
            <tr>
@@ -119,6 +118,7 @@ href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">avail
         representation in the UMLS Metathesaurus.&nbsp; It does not
         cover processing of individual source vocabularies for inclusion
         in RxNorm.&nbsp;<br/><br/>
+		</div>
 
 <div id="rep_change_summary" class="rep_block_level_one"> <a
         id="change_summary"></a>
@@ -200,8 +200,7 @@ href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">avail
       </div>
     </div>
     <div id="rep_file_details" class="rep_block_level_one">
-      <h3>Source-Provide Files: Details</h3>
-      <a id="file_details">
+      <h3 id="file_details">Source-Provide Files: Details</h3>
       <p>RxNorm uses the Rich Release Format (RRF) of the Metathesaurus.
         There are some fields that are not populated by RxNorm and are
         marked as "(no value provided)" in the description column with
@@ -212,8 +211,8 @@ href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">avail
         processed" in the Representation column.</p>
       <p>Also, some fields such as CODE may appear in multiple RXN RRF
         files. These fields are redundant and are not always used within
-        a particular RRF file but are processed within another file.</p>
-      <div class="rep_block_level_two"> <a id="file1"></a>
+		  a particular RRF file but are processed within another file.</p></div>
+      <div id="file1" class="rep_block_level_two"> 
         <h4 class="file_field_name">file: RXNCONSO.RRF</h4>
         <table>
           <tbody>
@@ -334,8 +333,7 @@ href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">avail
             </tr>
           </tbody>
         </table>
-        <a id="file2"></a>
-        <h4 class="file_field_name">file: RXNDOC.RRF</h4>
+        <h4 id="file2" class="file_field_name">file: RXNDOC.RRF</h4>
         <table>
           <tbody>
             <tr>
@@ -370,8 +368,7 @@ href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">avail
             </tr>
           </tbody>
         </table>
-        <a id="file3"></a>
-        <h4 class="file_field_name">file: RXNREL.RRF</h4>
+       <h4 id="file3" class="file_field_name">file: RXNREL.RRF</h4>
         <table>
           <tbody>
             <tr>
@@ -489,8 +486,7 @@ href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">avail
             </tr>
           </tbody>
         </table>
-        <a id="file4"></a>
-        <h4 class="file_field_name">file: RXNSAB.RRF</h4>
+        <h4 id="file4" class="file_field_name">file: RXNSAB.RRF</h4>
         <table>
           <tbody>
             <tr>
@@ -651,8 +647,7 @@ href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">avail
             </tr>
           </tbody>
         </table>
-        <a id="file5"></a>
-        <h4 class="file_field_name">file: RXNSAT.RRF</h4>
+        <h4 id="file5" class="file_field_name">file: RXNSAT.RRF</h4>
         <table>
           <tbody>
             <tr>
@@ -747,8 +742,7 @@ href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">avail
         <br/>
         Note: Attributes with SAB=MSH plus ATNs UMLSCUI and UMLSAUI are
         not processed. <br/>
-        <a id="file6"></a>
-        <h4 class="file_field_name">file: RXNSTY.RRF</h4>
+        <h4 id="file6" class="file_field_name">file: RXNSTY.RRF</h4>
         <table>
           <tbody>
             <tr>
@@ -796,22 +790,19 @@ href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">avail
           </tbody>
         </table>
         <p>Note: STYs are subject to editing.</p>
-        <a id="file7"></a>
-        <h4 class="file_field_name">file: RXNATOMARCHIVE.RRF</h4>
+        <h4 id="file7" class="file_field_name">file: RXNATOMARCHIVE.RRF</h4>
         <p>This file is created by RxNorm for use in tracking the
           archival of names (atoms) no longer provided by RxNorm drug
           source providers, or atoms no longer used by the RxNorm
           system. Only atoms with SAB = "RXNORM" will be in the archive.
           This information is not processed for the Metathesaurus as
           part of RxNorm.</p>
-        <a id="file8"></a>
-        <h4 class="file_field_name">file: RXNCUICHANGES.RRF</h4>
+        <h4 id="file8" class="file_field_name">file: RXNCUICHANGES.RRF</h4>
         <p>This file provides information about changes to the
           concept_id (RXCUI) for atoms in RxNorm from release to
           release. It is not cumulative. This information is not
           processed for the Metathesaurus as part of RxNorm.</p>
-        <a id="file9"></a>
-        <h4 class="file_field_name">file: RXNCUI.RRF</h4>
+        <h4 id="file9" class="file_field_name">file: RXNCUI.RRF</h4>
         <p>This file of retired CUIs will show each RxNorm Concept
           Unique Identifier (RXCUI) that existed in a prior release but
           is not present in the current release. The file includes
@@ -862,6 +853,3 @@ href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">avail
           </tbody>
         </table>
       </div>
-</div>
-</div>
-
