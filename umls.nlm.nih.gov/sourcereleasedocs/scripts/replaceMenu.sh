@@ -58,16 +58,6 @@ if [ -f jbake/content/"$RSAB"/metarepresentation.html ]
 then
 cat jbake/content/"$RSAB"/metarepresentation.temp1 jbake/content/"$RSAB"/menu jbake/content/"$RSAB"/metarepresentation.temp2 > jbake/content/"$RSAB"/metarepresentation.html
 fi;
-rm jbake/content/"$RSAB"/index.temp1;
-rm jbake/content/"$RSAB"/metadata.temp1;
-rm jbake/content/"$RSAB"/sourcerepresentation.temp1;
-rm jbake/content/"$RSAB"/metarepresentation.temp1;
-rm jbake/content/"$RSAB"/index.temp2;
-rm jbake/content/"$RSAB"/metadata.temp2;
-rm jbake/content/"$RSAB"/sourcerepresentation.temp2;
-rm jbake/content/"$RSAB"/metarepresentation.temp2;
-rm jbake/content/"$RSAB"/stats.temp1;
-rm jbake/content/"$RSAB"/stats.temp2;
-rm jbake/content/"$RSAB"/menu;
+find jbake/content/ -type f ! -name '*.html' -delete
 done < MRSAB_all.txt
 
