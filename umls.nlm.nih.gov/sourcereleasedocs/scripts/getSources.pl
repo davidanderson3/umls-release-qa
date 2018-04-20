@@ -280,7 +280,7 @@ sub processCategories{
     
     $writer->startTag("categories");
     foreach $category (sort keys %categories) {
-       print qq{$category\n};
+       #print qq{$category\n};
        @sources = @{ $categories{$category} };
        #print qq{$muCategory:\t @muSources\n};
        $writer->startTag("category","name"=>$category);

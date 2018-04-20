@@ -1,6 +1,6 @@
 #!/bin/bash
 # This script replaces the title field in the jbake metadata. It uses MRSAB.RRF to insert the RSAB and SSN into the title field. 
-# Run this script from /umlsdoc/umls.nlm.nih.gov/sourcereleasedocs/ - bash scripts/create_rsab_page.sh' 
+# run from the base directory (.../sourcereleasedocs/)
 rm jbake/content/source-abbreviations.html
 sort -k4 -t'|' MRSAB_all.txt -o MRSAB_all.txt
 echo "title=UMLS Source Abbreviations
