@@ -42,4 +42,4 @@ perl scripts/getSources.pl -r current -i MRSAB.RRF
 
 # transforms sources.xml to sources.html, which can then be QAed and pasted into Teamsite. Dependent on saxon being installed. must point to YOUR saxon jar file. 
 
-java -jar /usr/local/Cellar/saxon/9.8.0.8/libexec/saxon9he.jar -xsl:index.xsl -s:sources.xml -o:index.html
+java -jar /usr/local/Cellar/saxon/9.8.0.8/libexec/saxon9he.jar -xsl:scripts/index.xsl -s:sources.xml -o:home.html

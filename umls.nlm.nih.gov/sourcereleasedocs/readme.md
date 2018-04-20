@@ -22,7 +22,7 @@ Before doing anything, make a new branch from the develop branch. Name it after 
 
 ## UPDATE VARIABLES
 
-There is a variable $UPDATEDATE in scripts/replaceUpdatedDate.sh. This should be updated to match the release date. 
+There is a variable $UPDATEDATE in scripts/replaceUpdatedDate.sh. This should be updated to match the release date. The $VERSION variable in scripts/syncLatestVersion.sh should be updated to the release version (for example, 2018AA). 
 
 ## GENERATING NEW STATS.HTML FILES
 
