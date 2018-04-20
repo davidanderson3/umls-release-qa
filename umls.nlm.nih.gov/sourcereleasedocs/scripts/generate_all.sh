@@ -1,18 +1,45 @@
 #!/bin/sh
 # run from the base directory (.../sourcereleasedocs/)
+# dependencies - bash, python(3?), perl, saxon
+
+# before running this, update MRSAB.RRF and make sure variables within scripts are up to date. 
+
+# syncs the contents of a versioned folder (IE 2018AA) with the production folder (jbake/content/)
 
 bash scripts/syncLatestVersion.sh
 
+# makes a derivative of MRSAB.RRF and then makes metadata.html files for each vocabulary
+
 python scripts/process_mrsab.py
+
+# removes semicolons from metadata.html files
 
 bash scripts/semicolon.sh
 
+# replaces the source titles using current RSAB and SSN from MRSAB
+
 bash scripts/replaceSourceTitle.sh
+
+# replaces the menus based on the current set of files within each folder
 
 bash scripts/replaceMenu.sh
 
+# replaces the updated date to reflect the next release date
+
 bash scripts/replaceUpdatedDate.sh
+
+# creates a qa page for QAing the website before deploying
 
 bash scripts/create_qa_page.sh
 
+# creates a list of RSABs that is published in the root directory for users' reference
+
 bash scripts/create_rsab_page.sh
+
+# makes an xml file (sources.xml) with source information for the vocabulary documentation homepage
+
+perl scripts/getSources.pl -r current -i MRSAB.RRF
+
+# transforms sources.xml to sources.html, which can then be QAed and pasted into Teamsite. Dependent on saxon being installed. must point to YOUR saxon jar file. 
+
+java -jar /usr/local/Cellar/saxon/9.8.0.8/libexec/saxon9he.jar -xsl:index.xsl -s:sources.xml -o:index.html
