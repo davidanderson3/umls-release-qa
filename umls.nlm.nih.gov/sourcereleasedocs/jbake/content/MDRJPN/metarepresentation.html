@@ -1,11 +1,9 @@
 title=MDRJPN (MedDRA Japanese) - Metathesaurus Representation
-date=2017-11-06
-updated=2017-11-06
+date=2018-05-07
+updated=2018-05-07
 type=page
 status=published
 ~~~~~~
-
-
 <!--menu-->
 <div class="row">
  <div class="container-fluid navbar navbar-default" role="navigation">
@@ -27,70 +25,33 @@ status=published
  href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
 <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
 <div id="general" class="rep_block_level_one">
-<p><strong>VSAB: </strong>MDRJPN20_0</p>
+<p><strong>VSAB: </strong>MDRJPN20_1</p>
 <div id="rep_identifiers" class="rep_block_level_one">
 <h3>Summary of Changes:</h3>
 <p>None</p>
 </div>
 <div id="rep_change_summary" class="rep_block_level_one">
 <h3>Source Provided Files:</h3>
-The UMLS uses MedDRA files distributed in the ASCII/MDRA_J200 directory:<br/>
+The UMLS uses MedDRA files distributed in the ASCII/MDRA_J201 directory:<br/>
 <ul>
-  <li>hlgt.asc </li>
   <li>hlgt_hlt.asc</li>
   <li>hlgt_j.asc</li>
-  <li>hlt.asc</li>
   <li>hlt_j.asc</li>
   <li>hlt_pt.asc</li>
   <li>intl_ord.asc</li>
-  <li>llt.asc</li>
   <li>llt_j.asc</li>
   <li>mdhier.asc</li>
   <li>meddra_release.asc</li>
-  <li>pt.asc</li>
   <li>pt_j.asc</li>
   <li>smq_content.asc</li>
-  <li>smq_list.asc</li>
   <li>smq_list_j.asc</li>
-  <li>soc.asc</li>
   <li>soc_hlgt.asc</li>
   <li>soc_j.asc</li>
 </ul>
 </div>
 <div id="rep_identifers" class="rep_block_level_one">
 <h3>Identifiers:</h3>
-<p>Overview: Lower Level Terms ("LT"s) in MedDRA have any of the
-following relationships to their "PT":</p>
-<ul>
-  <li>Synonyms: Different terms for the same concept inherent in the
-"PT"
-(e.g., "PT" Arthritis and its subordinate "LT" Joint inflammation)</li>
-  <li>Lexical variants: Different word forms for the same expression.
-These include full names vs. abbreviations and direct vs. inverted word
-order (e.g., "PT" Acquired immunodeficiency syndrome and its
-subordinate
-"LT" AIDS or "PT" Biopsy tongue and its subordinate "LT" Tongue biopsy).</li>
-  <li>Quasi-synonyms: Quasi-synonyms are terms that are not precisely
-the same meaning as another term, but are treated as synonymous in a
-given terminology. These include site and laterality descriptions
-(e.g., "PT" Otitis externa and its subordinate "LT" Bilateral otitis
-externa).</li>
-  <li>Sub-element: Sub-elements (of the parent "PT") are represented by
-"LT"s with more detailed information such as anatomic specificity
-(e.g.,
-"PT"Contusion with LT Bruising of face or "LT" Bruising of leg).</li>
-  <li>Identical "LT": One "LT" is identical to its "PT" for data entry
-purposes (e.g., "PT" Dementia Alzheimer&#8217;s type and its subordinate "LT"
-Dementia Alzheimer&#8217;s type). In this instance, the "LT" and parent "PT"
-have
-the same MedDRA code but appear at both levels.</li>
-</ul>
-<p>Since MedDRA does not indicate which "LT"s share the same meaning
-with
-their "PT", all "LT"s are assigned the same the same Source-asserted
-Descriptor Identifer (SDUI).&nbsp; A descriptor is a collection of
-concepts (or atoms if there is no concept level organization) that are
-considered to be closely related (but not necessarily synonymous).</p>
+
 <p>Identifiers are assigned as follows:
 </p>
 <ul>
@@ -107,13 +68,11 @@ the SDUI value found in the English version.
 <div id="rep_termtypes" class="rep_block_level_two">
 <a id="termtypes"></a>
 <h3>Atoms (MRCONSO):</h3>
-<br/><br/>
 <ul>
   <li>kanji:  Japanese-Chinese characters</li>
   <li>kana:   Japanese phonetic symbols</li>
   <li>kana1:  alternate kana name</li>
-  <li>kana2:  alternate kana name</li>
-</ul> 
+</ul>
 <table>
   <tbody>
     <tr>
@@ -135,15 +94,9 @@ STR = hlgt_kana field of hlgt_j.asc<br /><br />
     <tr>
       <td>HGJKN1</td>
       <td>CODE and SDUI = hlgt_code field of hlgt_j.asc<br/>
-STR = hlgt_kana1 field of hlgt_j.asc<br /><br />
+STR = hlgt_kana1  field of hlgt_j.asc<br /><br />
       </td>
     </tr>
-    <tr>
-      <td>HGJKN2</td>
-      <td>CODE and SDUI = hlgt_code field of hlgt_j.asc<br/>
-STR = hlgt_kana2 field of hlgt_j.asc<br /><br />
-      </td>
-    </tr>    
     <tr>
       <td>HT</td>
       <td>CODE and SDUI = hlt_code field of hlt_j.asc<br/>
@@ -162,14 +115,8 @@ STR = hlt_kana field of hlt_j.asc<br /><br />
 STR = hlt_kana1 field of hlt_j.asc<br /><br />
       </td>
     </tr>
-    <tr>
-      <td>HTJKN2</td>
-      <td>CODE and SDUI = hlt_code field of hlt_j.asc<br/>
-STR = hlt_kana2 field of hlt_j.asc<br /><br />
-      </td>
-    </tr> 
-    <tr>
-      <td>LT</td>
+     <tr>
+      <td>LLT</td>
       <td>CODE = llt_code field of llt_j.asc<br/>
 STR = llt_kanji field of llt_j.asc<br/>
 SDUI = SDUI of corresponding MedDRA English atom based on llt code<br/>
@@ -187,13 +134,6 @@ SDUI = SDUI of corresponding MedDRA English atom based on llt code<br /><br />
       <td>LTJKN1</td>
       <td>CODE = llt_code field of llt_j.asc<br/>
 STR = llt_kana1 field of llt_j.asc<br/>
-SDUI = SDUI of corresponding MedDRA English atom based on llt code<br /><br />
-      </td>
-    </tr>
-    <tr>
-      <td>LTJKN2</td>
-      <td>CODE = llt_code field of llt_j.asc<br/>
-STR = llt_kana2 field of llt_j.asc<br/>
 SDUI = SDUI of corresponding MedDRA English atom based on llt code<br /><br />
       </td>
     </tr>
@@ -224,16 +164,7 @@ SUPPRESS = "Y"<br/>
 OLJKN1 atoms are created where llt_jcurr field of llt_j.asc = "N"<br /><br />
       </td>
     </tr>
-    <tr>
-      <td>OLJKN2</td>
-      <td>CODE = llt_code field of llt_j.asc<br/>
-STR = llt_kana2 field of llt_j.asc<br/>
-SDUI = SDUI of corresponding MedDRA English atom based on llt code<br/>
-SUPPRESS = "Y"<br/>
-OLJKN2 atoms are created where llt_jcurr field of llt_j.asc = "N"<br /><br />
-      </td>
-    </tr>
-    <tr>
+     <tr>
       <td>OS</td>
       <td>CODE and SDUI = soc_code field of soc_j.asc<br/>
 STR = soc_kanji field of soc_j.asc<br /><br />
@@ -252,12 +183,6 @@ STR = soc_kana1 field of soc_j.asc<br /><br />
       </td>
     </tr>
     <tr>
-      <td>OSJKN2</td>
-      <td>CODE and SDUI = soc_code field of soc_j.asc<br/>
-STR = soc_kana2 field of soc_j.asc<br /><br />
-      </td>
-    </tr>   
-    <tr>
       <td>PT</td>
       <td>CODE and SDUI = pt_code field of pt_j.asc<br/>
 STR = pt_kanji field of pt_j.asc<br /><br />
@@ -273,12 +198,6 @@ STR = pt_kana field of pt_j.asc<br /><br />
       <td>PTJKN1</td>
       <td>CODE and SDUI = pt_code field of pt_j.asc<br/>
 STR = pt_kana1 field of pt_j.asc<br /><br />
-      </td>
-    </tr>
-    <tr>
-      <td>PTJKN2</td>
-      <td>CODE and SDUI = pt_code field of pt_j.asc<br/>
-STR = pt_kana2 field of pt_j.asc<br /><br />
       </td>
     </tr>
     <tr>

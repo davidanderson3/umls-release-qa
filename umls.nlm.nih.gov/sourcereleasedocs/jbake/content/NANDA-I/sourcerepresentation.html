@@ -1,6 +1,6 @@
-title=NANDA-I (NANDA-I) - Source Representation
-date=2017-11-06
-updated=2017-11-06
+title=NANDA-I (NANDA-I Taxonomy) - Source Representation
+date=2018-05-07
+updated=2018-05-07
 type=page
 status=published
 ~~~~~~
@@ -20,52 +20,26 @@ status=published
 </div>
 <!--endmenu-->
 <br/><p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p><!--begin tabbed navigation area-->
-<!-- end tabbed navigation area --><br>
-<a id="top-of-page" name="top-of-page"></a> <span class="nav">Skip to: <a href="#general">Notes</a>, <a href="#change_summary">Summary of Changes</a>, <a href="#file_summary">Summary of Source-Provided Files</a> <a href="#file_details">Source-Provided File Details</a></span> <a id="general" name="general"></a>
+<!-- end tabbed navigation area --><br/>
+<a id="top-of-page"></a> <span class="nav">Skip to: <a href="#general">Notes</a>, <a href="#change_summary">Summary of Changes</a>, <a href="#file_summary">Summary of Source-Provided Files</a> <a href="#file_details">Source-Provided File Details</a></span> <a id="general"></a>
 
 <div id="rep_change_summary" class="rep_block_level_one">
   <h3>Summary of Changes:</h3>
 
-  <p>The previous version of NANDA was NAN2004. Significant changes have been made to the file format and to Metathesaurus source processing.</p><strong>SAB Change:</strong>
+  <p>The NANDA-I data format had signficant changes, and UMLS source processing was adjusted accordingly.</p>
 
-  <ul>
-    <li>previous: RSAB = "NAN"</li>
+      New ATNS:
+      <ul>
+  	<li>LOE</li>
+  	<li>SOS</li>
+  	</ul>
 
-    <li>new: RSAB = "NANDA-I"</li>
-  </ul><strong>MRCONSO.RRF:</strong><br>
-  TTY changes:<br>
+  	New RELA/RELA_INVERSE:
+  	<ul>
+  	<li>associated_condition_of/has_associated_condition</li>
+  	<li>population_at_risk_for/has_at_risk_population</li>
+  	</ul>
 
-  <ul>
-    <li>previous: "RT" was assigned to atoms created by parsing instructions to further specify a diagnosis</li>
-
-    <li>new:"RT" is now assigned to atoms created from "Phrase"values</li>
-  </ul><strong>MRSAT.RRF:</strong><br>
-  Deprecated ATNs:
-
-  <ul>
-    <li>REF: References no longer provided</li>
-
-    <li>DEFCHARACTERISTICS, RELATEDFACTORS, RISKFACTORS: Now represented as atoms, with TTY = "RT." The RT atom has a relationship to its PT, based on the value of the DC/Ref/RiF field.</li>
-  </ul>New ATNs:
-
-  <ul>
-    <li>DATE_CREATED</li>
-
-    <li>DATE_LAST_MODIFIED</li>
-
-    <li>SUBCATEGORY</li>
-  </ul><strong>MRREL.RRF</strong><br>
-  Deprecated REL/RELA: RO/&lt;null&gt;. These were created to connect PT and RT atoms
-
-  <p>New REL|RELA/Inverse_RELA:The following relationships are now created based on the value of the DC/ReF/RiF field</p>
-
-  <ul>
-    <li>RO|defining_characteristic_of/has_defining_characteristic</li>
-
-    <li>RO|related_factor_of/has_related_factor</li>
-
-    <li>RO|risk_factor_of/has_risk_factor</li>
-  </ul>
 </div>
 
 <div>
@@ -80,7 +54,7 @@ status=published
       </tr>
 
       <tr>
-        <td>2015-2017-NANDA-I_Eng_Def-and-Class_Dx.xlsx</td>
+        <td>NANDA_ALLDATA_EXCEL_English_updated-20180108.xlsx</td>
 
         <td>Data file</td>
       </tr>
@@ -93,147 +67,115 @@ status=published
 <p>The following is a list of fields in the NANDA-I source file:</p>
 
 <div class="rep_block_level_two">
-  <a id="file1" name="file1"></a><br>
+  <a id="file1"></a><br/>
 
   <table>
     <tbody>
       <tr>
         <th>Field</th>
-
-        <th>Description</th>
-
-        <th>Representation</th>
+	    <th>Representation</th>
       </tr>
 
       <tr>
-        <td>Domain - Tax 2</td>
+        <td>Domain Id</td>
+        <td>MRCONSO.CODE for atoms where TTY = HT<br/>
+       </tr>
 
-        <td>Domain code and name<br>
-        There are 13 Domains, representing the top of the hierarchy<br>
-        Example: 01. Health Promotion</td>
-
-        <td>MRCONSO.STR = Value of string after the "."<br>
-        e.g. "Health Promotion"<br>
-        MRCONSO.TTY = "HT"<br>
-        MRCONSO.CODE = Numeric value before the "." Leading zeroes stripped. (e.g. "1" for "Health Promotion")</td>
+      <tr>
+        <td>Domain Label</td>
+        <td>MRCONSO.STR<br/>
+        MRCONSO.TTY = HT</td>
       </tr>
 
       <tr>
-        <td>Class - Tax 2</td>
-
-        <td>Class code and name<br>
-        There are 40 Classes, representing the second level of the hierarchy<br>
-        Examples:<br>
-        1. Attention<br>
-        1. Caregiving Roles<br>
-        1. Growth<br>
-        1. Health Awareness</td>
-
-        <td>MRCONSO.STR = Value of string after the "."<br>
-        e.g. "Attention"<br>
-        MRCONSO.TTY = "HC"<br>
-        MRCONSO.CODE = Domain concatenated with Class Code, using a "_"<br>
-        Example:<br>
-        "1. Attention" is under the domain "05. Perception / Cognition"<br>
-        The code for "Attention" is "5_1"</td>
+        <td>Domain Definition</td>
+        <td>MRDEF.DEF</td>
       </tr>
 
       <tr>
-        <td>Diagnosis Label<br></td>
-
-        <td>Diagnosis Name<br></td>
-
-        <td>MRCONSO.STR<br>
-        MRCONSO.TTY = PT<br>
-        MRCONSO.CODE = Diagnosis Code value</td>
+        <td>Class Id</td>
+		<td>MRSCONSO.CODE for atoms where TTY = HC</td>
       </tr>
 
       <tr>
-        <td>Original Year</td>
-
-        <td>YYYY</td>
-
-        <td>MRSAT.ATN = DATE_CREATED</td>
+        <td>Class Label</td>
+        <td>MRCONSO.STR<br/>
+        MRCONSO.TTY = HC</td>
       </tr>
 
       <tr>
-        <td>Revision Year</td>
-
-        <td>May have multiple YYYY values for a single diagnosis, e.g. "1986, 2004, 2006</td>
-
-        <td>DATE_MODIFIED</td>
-      </tr>
-
-      <tr>
-        <td>LOE Criteria</td>
-
-        <td>Indicates the level of effort NANDA put into reviewing a submitted diagnosis</td>
-
-        <td>Not included in Metathesaurus source processing</td>
-      </tr>
-
-      <tr>
-        <td>Definition</td>
-
-        <td></td>
-
+        <td>Class Definition</td>
         <td>MRDEF.DEF</td>
       </tr>
 
       <tr>
         <td>Diagnosis Code</td>
-
-        <td>5-digit numeric code, e.g. 00113</td>
-
-        <td>MRCONSO.CODE for PT atom</td>
+        <td>MRCONSO.CODE for atoms where TTY = PT</td>
       </tr>
 
       <tr>
-        <td>DC/ReF/RiF</td>
-
-        <td>Indicates whether the "Current Phrase" in this row is a "Defining Characteristic," "Related Factor," or "Risk Factor."</td>
-
-        <td>Used to assign the RELA between PT and RT atoms as follows:<br>
-        DC: has_defining_characteristic/defining_characteristic_of<br>
-        ReF: has_related_factor/related_factor_of<br>
-        RiF: has_risk_factor/risk_factor_of<br></td>
+        <td>Diagnosis Focus</td>
+        <td>Not processed; for internal use only</td>
       </tr>
 
       <tr>
-        <td>Subcategory</td>
-
-        <td>Within DC/Ref/RiF, this indicates a subheading.</td>
-
-        <td>MRSAT.ATN = SUBCATEGORY.<br>
-        Attached to the RUI for the relationship between the PT and RT.</td>
+        <td>Diagnosis Label</td>
+        <td>MRCONSO.STR<br/>
+        MRCONSO.TTY = PT</td>
       </tr>
 
       <tr>
-        <td>Current Phrase (2015-2017)</td>
-
-        <td>Phrase associated with a given diagnosis</td>
-
-        <td>MRCONSO.STR<br>
-        MRCONSO.TTY = "RT"<br>
-        MRCONSO.CODE = Phrase Code</td>
+        <td>Year Established</td>
+        <td>MRSAT.ATN = DATE_CREATED</td>
       </tr>
 
       <tr>
-        <td>Previous Phrase (2012-2014)</td>
-
-        <td></td>
-
-        <td>Not included in Metathesaurus source processing</td>
+        <td>Years Revised</td>
+        <td>MRSAT.ATN = DATE_LAST_MODIFIED</td>
       </tr>
 
       <tr>
-        <td>Phrase Code</td>
-
-        <td>5-digit numeric code</td>
-
-        <td>MRCONSO.CODE for RT atom</td>
+        <td>LOE</td>
+        <td>MRSAT.ATN = LOE; Level of Effort; for clarity, the ATV includes the numeric value of the LOE as well as an expanded explanation</td>
       </tr>
+
+      <tr>
+        <td>Diagnosis Definition</td>
+        <td>MRDEF.DEF</td>
+      </tr>
+
+    <tr>
+      <td>Literature</td>
+      <td>Not processed; for internal use only</td>
+    </tr>
+
+    <tr>
+      <td>Footnote</td>
+      <td>MRSAT.ATN = SOS</td>
+    </tr>
+
+    <tr>
+      <td>Category</td>
+      <td>Used to create relationship between Diagnosis (PT) and Phrase (RT) atoms</td>
+    </tr>
+
+    <tr>
+      <td>Subcategory</td>
+      <td>MRSAT.ATN = SUBCATEGORY; attached to RUI of relationship between PT and RT</td>
+    </tr>
+
+    <tr>
+      <td>Phrase Code</td>
+      <td>MRCONSO.CODE for atoms where TTY = RT</td>
+    </tr>
+
+    <tr>
+      <td>Phrase</td>
+      <td>MRCONSO.STR<br/>
+      MRCONSO.TTY = RT</td>
+    </tr>
+
     </tbody>
-  </table><br>
-  <br>
+  </table><br/>
+  <br/>
 </div>

@@ -1,6 +1,6 @@
 title=NCI (NCI Thesaurus) - Source Representation
-date=2017-11-06
-updated=2017-11-06
+date=2018-05-07
+updated=2018-05-07
 type=page
 status=published
 ~~~~~~
@@ -20,11 +20,12 @@ status=published
 </div>
 <!--endmenu-->
 <br/>
+
 <p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p>
 <a id="top-of-page"></a> <span class = "nav">Skip to: <a href = "#general">General Notes/Comments</a>, <a href = "#change_summary">Summary of Changes</a>, <a href = "#file_summary">Summary of Source-Provided Files</a> <a href = "#file_details">Source-Provided File Details</a></span>
 <a id= "general">&nbsp;</a>
 <div id = "rep_general" class = "rep_block_level_one">
-<h3>VSAB: NCI2017_03D</h3>
+<h3>VSAB: NCI2017_09D</h3>
 <h3>General Notes/Comments:</h3>
 <p>NCI Thesaurus (NCIt) is a widely recognized standard for biomedical coding and reference. It covers vocabulary for clinical care, translational and basic research, public information and administrative activities and is used by a broad variety of public and private partners both nationally and internationally.
 The scope of NCI is determined by the combined scope of its source vocabularies which include the following:</p>
@@ -53,6 +54,9 @@ The scope of NCI is determined by the combined scope of its source vocabularies 
 </tr>
 <tr>
     <td>CTEP-SDC</td><td>Cancer Therapy Evaluation Program - Simple Disease Classification</td>
+</tr>
+<tr>
+    <td>CTRP-SDC</td><td>Clinical Trials Reporting Program</td>
 </tr>
 <tr>
     <td>DCP</td><td>NCI Division of Cancer Prevention Program</td>
@@ -117,37 +121,38 @@ The scope of NCI is determined by the combined scope of its source vocabularies 
 </div>
 <div id = "rep_change_summary" class = "rep_block_level_one">
 <a id= "change_summary">&nbsp;</a>
-<h3>Summary of Changes</h3>
+<h3>Summary of Changes</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top-of-page">top</a></span>)
 <p>New subsources:</p>
 <ul>
-  <li>NCI-HGNC (NCI HUGO Gene Nomenclature)</li>
+  <li>CTRP-SDC (Clinical Trials Reporting Program)</li>
 </ul>
 <p>New term groups:</p>
 <ul>
-  <li>NCI2017_NCI-HGNC_1703D/PT</li>
-  <li>NCI2017_NCI-HGNC_1703D/SY</li>
+  <li>NCI2017_CTRP-SDC_1709D/PT</li>
+  <li>NCI2017_CTRP-SDC_1709D/SY</li>
+  <li>NCI2017_CTRP-SDC_1709D/DN</li>
 </ul>
 <p>New relationship attribute (RELA) | RELA inverse:</p>
 <ul>
-  <li>gene_product_variant_of_gene_product|gene_product_has_gene_product_variant</li>
+  <li>related_to_genetic_biomarker|genetic_biomarker_related_to</li>
 </ul>
 </div>
 <div id = "rep_file_summary" class = "rep_block_level_one"></div>
 <a id= "file_summary">&nbsp;</a>
-<h3>Summary of Source-Provided Files</h3>
+<h3>Summary of Source-Provided Files</h3><span class = "nav">(return to <a href = "#top-of-page">top</a>)</span>
 <div class = "rep_block_level_two">
 <!-- Make a table of each file that comes from the source   -->
 <h4>Documentation and Reference</h4>
 <table>
 <tr><th>File Name</th><th>Description</th></tr>
 <tr><td  class = "file_field_name">nci.cfg</td><td>Configuration file</td></tr>
-<tr><td  class = "file_field_name">ThesaurusInferred.owl</td><td>Complete source data in an OWL formatted file</td></tr>
+<tr><td  class = "file_field_name">ThesaurusInferred.owl</td><td>Complete source data in an OWL2 formatted file</td></tr>
 </table>
 <br/>
 </div>
 <a id= "file_details">&nbsp;</a>
 <div id = "rep_file_details" class = "rep_block_level_one"></div>
-<h3>Source-Provided File Details</h3>
+<h3>Source-Provided File Details</h3><span class = "nav">(return to <a href = "#top-of-page">top</a>)</span>
 <p>Certain data elements may not be processed because they contain redundant data.</p>
 <p>MRREL.CUI* is populated by the Metathesuarus CUI of the given code unless otherwise stated.</p>
 <p>Properties that start with "&lt;A" are associations and "&lt;R" are roles. Both are treated as relationship attributes (RELA). Properties starting with a "&lt;P" are attribute names.</p>
@@ -171,6 +176,7 @@ The scope of NCI is determined by the combined scope of its source vocabularies 
 <tr><td  class = "file_field_name">&lt;A10 rdf:resource="http://...owl#C..."/&gt;</td><td>Has_CDRH_Parent</td><td>MRREL.CUI*; MRREL.RELA=has_cdrh_parent</td></tr>
 <tr><td  class = "file_field_name">&lt;A11 rdf:resource="http://...owl#C..."/&gt;</td><td>Has_NICHD_Parent</td><td>MRREL.CUI*; MRREL.RELA=has_nichd_parent</td></tr>
 <tr><td  class = "file_field_name">&lt;A12 rdf:resource="http://...owl#C..."/&gt;</td><td>Has_Data_Element</td><td>MRREL.CUI*; MRREL.RELA=has_data_element</td></tr>
+<tr><td  class = "file_field_name">&lt;A13 rdf:resource="http://...owl#C..."/&gt;</td><td>Related_To_Genetic_Biomarker</td><td>MRREL.CUI*; MRREL.RELA=related_to_genetic_biomarker</td></tr>
 <tr><td  class = "file_field_name">&lt;P90 rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"&gt;&lt;ncicp:ComplexTerm
 xmlns:ncicp="http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#"&gt;&lt;ncicp:term-name&gt;...&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;...&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;...&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplextTerm&gt;&lt;/P90&gt;
 </td><td>FULL_SYN. Includes term name, term type, term source, and source code.</td><td>MRCONSO.STR = term name; MRCONSO.TTY = term type; MRCONSO.SAB = term source. NCI/PTs are not processed and NCI/CNUs are assigned to the ATN = CNU.</td></tr>

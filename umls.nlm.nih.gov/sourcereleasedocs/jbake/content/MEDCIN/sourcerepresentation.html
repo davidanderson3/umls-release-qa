@@ -1,6 +1,6 @@
 title=MEDCIN (MEDCIN) - Source Representation
-date=2017-11-06
-updated=2017-11-06
+date=2018-05-07
+updated=2018-05-07
 type=page
 status=published
 ~~~~~~
@@ -29,7 +29,7 @@ Source-Provided
 Files</a> <a href="#file_details">Source-Provided
 File Details</a></span>
 <br/>
-<p><strong>VSAB: MEDCIN3_2017_07_21</strong></p>
+<p><strong>VSAB: MEDCIN3_2017_12_22</strong></p>
 <a id="general"></a>
 <div id="rep_general" class="rep_block_level_one">
 <h3>Notes</h3>
@@ -39,7 +39,23 @@ File Details</a></span>
 <a id="change_summary"></a>
 <h3>Summary of Changes</h3>
 
-<p>No changes for this version.</p>
+<table>
+<tbody>
+	<tr>
+		<th>New REL</th>
+		<th>New RELA/Inverse RELA</th>
+	</tr>
+	<tr>
+		<td>RO</td>
+		<td>during/inverse_during</td>
+	</tr>
+	<tr>
+		<td>RO</td>
+		<td>has_specimen_substance/specimen_substance_of</td>
+	</tr>
+</tbody>
+</table>
+
 </div>
 <div id="rep_file_summary" class="rep_block_level_one">
 <a id="file_summary"></a>
@@ -57,19 +73,19 @@ File Details</a></span>
       <th>Description</th>
     </tr>
     <tr>
-      <td class="file_field_name"><a href="#file1">UMLS_MEDCIN_CONCEPTS2017-07-21.TXT</a></td>
+      <td><a href="#file1">UMLS_MEDCIN_CONCEPTS2017-12-22.TXT</a></td>
       <td>Concepts - Pipe-Delimited Format</td>
     </tr>
     <tr>
-      <td class="file_field_name"><a href="#file2">UMLS_MEDCIN_DESCRIPTIONS2017-07-21.TXT</a></td>
+      <td><a href="#file2">UMLS_MEDCIN_DESCRIPTIONS2017-12-22.TXT</a></td>
       <td>Descriptions - Pipe-Delimited Format</td>
     </tr>
     <tr>
-      <td class="file_field_name"><a href="#file3">UMLS_MEDCIN_HIERARCHY2017-07-21.TXT</a></td>
+      <td><a href="#file3">UMLS_MEDCIN_HIERARCHY2017-12-22.TXT</a></td>
       <td>Hierarchy - Pipe-Delimited Format</td>
     </tr>
     <tr>
-      <td class="file_field_name"><a href="#file4">UMLS_MEDCIN_SNOMED2017-07-21.TXT</a></td>
+      <td><a href="#file4">UMLS_MEDCIN_SNOMED2017-12-22.TXT</a></td>
       <td>MEDCIN to SNOMEDCT mappings - Pipe-Delimited Format</td>
     </tr>
   </tbody>
@@ -85,7 +101,7 @@ File Details</a></span>
 Consult the MEDCIN documentation for additional details.</p>
 <div class="rep_block_level_two">
 <a id="file1"></a>
-<h4 class="file_field_name">file:UMLS_MEDCIN_CONCEPTSyyyy-mm-dd.TXT</h4>
+<h4>file:UMLS_MEDCIN_CONCEPTSyyyy-mm-dd.TXT</h4>
 &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
 Files</a></span>
 <br/><br/>
@@ -99,7 +115,7 @@ Files</a></span>
     </tr>
     <tr>
       <td>1</td>
-      <td class="file_field_name">MEDCINID</td>
+      <td>MEDCINID</td>
       <td>MEDCIN concept ID</td>
       <td>MRCONSO.CODE<br/>
 MRCONSO.SCUI<br/>
@@ -107,7 +123,7 @@ MRCONSO.TTY = FN</td>
     </tr>
     <tr>
       <td>2</td>
-      <td class="file_field_name">CONCEPT_DESCRIPTION</td>
+      <td>CONCEPT_DESCRIPTION</td>
       <td>Fully-specified concept name with domain appended in
 parentheses</td>
       <td>MRCONSO.STR</td>
@@ -116,7 +132,7 @@ parentheses</td>
 </table>
 <br/>
 <a id="file2"></a>
-<h4 class="file_field_name">file:UMLS_MEDCIN_DESCRIPTIONSyyyy-mm-dd.TXT</h4>
+<h4>file:UMLS_MEDCIN_DESCRIPTIONSyyyy-mm-dd.TXT</h4>
 &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
 Files</a></span>
 <br/><br/>
@@ -130,14 +146,14 @@ Files</a></span>
     </tr>
     <tr>
       <td>1</td>
-      <td class="file_field_name">MEDCINID</td>
+      <td>MEDCINID</td>
       <td>MEDCIN concept ID</td>
       <td>MRCONSO.CODE<br/>
 MRCONSO.SCUI</td>
     </tr>
     <tr>
       <td>2</td>
-      <td class="file_field_name">DESCRIPTION</td>
+      <td>DESCRIPTION</td>
       <td>Concept description</td>
       <td>MRCONSO.STR</td>
     </tr>
@@ -154,7 +170,7 @@ MRSAT.ATN = "PREF_FLAG_ID" (STYPE = "AUI")
 </table>
 <br/>
 <a id="file3"></a>
-<h4 class="file_field_name">file:UMLS_MEDCIN_HIERARCHYyyyy-mm-dd.TXT</h4>
+<h4>file:UMLS_MEDCIN_HIERARCHYyyyy-mm-dd.TXT</h4>
 &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
 Files</a></span>
 <br/><br/>
@@ -168,14 +184,14 @@ Files</a></span>
     </tr>
     <tr>
       <td>1</td>
-      <td class="file_field_name">MEDCINID</td>
+      <td>MEDCINID</td>
       <td>MEDCIN concept ID</td>
       <td>MRHIER.CUI populated by the Metathesaurus CUI corresponding
 to MEDCINID.</td>
     </tr>
     <tr>
       <td>2</td>
-      <td class="file_field_name">NODEKEY</td>
+      <td>NODEKEY</td>
       <td>Hierarchical identifier</td>
       <td>Used to construct the hierarchical tree position, MRHIER.PTR,
 for this concept. The "NODEKEY" value is a series of two-character
@@ -191,7 +207,7 @@ characters have not been removed from the HCD value.
 </table>
 <br/>
 <a id="file4"></a>
-<h4 class="file_field_name">file:UMLS_MEDCIN_SNOMEDyyyy-mm-dd.TXT</h4>
+<h4>file:UMLS_MEDCIN_SNOMEDyyyy-mm-dd.TXT</h4>
 &nbsp;&nbsp;<span class="nav">return to <a href="#data_files">Data
 Files</a></span>
 <br/><br/>
@@ -205,14 +221,14 @@ Files</a></span>
     </tr>
     <tr>
       <td>1</td>
-      <td class="file_field_name">MEDCINID</td>
+      <td>MEDCINID</td>
       <td>MEDCIN concept ID</td>
       <td>MRREL.CUI1 populated by the Metathesaurus CUI corresponding
 to MEDCINID</td>
     </tr>
     <tr>
       <td>2</td>
-      <td class="file_field_name">RELATIONSHIPTYPE</td>
+      <td>RELATIONSHIPTYPE</td>
       <td>The SNOMEDCT CONCEPTID indicating the type of this
 relationship</td>
       <td>Mapped to corresponding values in MRREL.REL and MRREL.RELA.
@@ -226,7 +242,7 @@ entries are also created.
     </tr>
     <tr>
       <td>3</td>
-      <td class="file_field_name">SCT_CONCEPTID</td>
+      <td>SCT_CONCEPTID</td>
       <td>The SNOMEDCT CONCEPTID of the concept having the specified
 type of relationship to the concept indicated by MEDCINID</td>
       <td>MRREL.CUI2 populated by the Metathesaurus CUI corresponding
@@ -234,7 +250,7 @@ to SCT_CONCEPTID</td>
     </tr>
     <tr>
       <td>4</td>
-      <td class="file_field_name">PREF_FLAG_ID</td>
+      <td>PREF_FLAG_ID</td>
       <td>1=preferred, 0=non-preferred</td>
       <td>MRSAT.ATN = "PREF_FLAG_ID" (STYPE = "RUI")
       </td>

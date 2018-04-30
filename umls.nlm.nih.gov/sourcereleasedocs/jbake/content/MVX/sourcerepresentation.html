@@ -1,6 +1,6 @@
 title=MVX (Manufacturers of Vaccines) - Source Representation
-date=2017-11-06
-updated=2017-11-06
+date=2018-05-07
+updated=2018-05-07
 type=page
 status=published
 ~~~~~~
@@ -29,14 +29,14 @@ status=published
 
     <div id="rep_change_summary" class="rep_block_level_one"> <a id="change_summary"></a>
       <h3>Summary of Changes:</h3>
-      <br/>
+      <span class="nav">(<a href="#top-of-page">return to top</a></span>)<br/>
 
-      <p>No changes were made to the source data format or Metathesaurus processing.</p>
+      <p>ATN = DATE_LAST_MODIFIED changed to ATN = DATE_MODIFIED</p>
 
     </div>
     <div id="rep_file_summary" class="rep_block_level_one"> <a id="file_summary"></a>
       <h3>Source-Provided Files: Summary</h3>
-      <br/>
+      (<span class="nav"><a href="#top-of-page">return to top</a></span>)<br/>
 
       <div id="rep_file_details" class="rep_block_level_one">
 
@@ -49,15 +49,14 @@ status=published
               <th>Description</th>
             </tr>
             <tr>
-              <td>http://www2a.cdc.gov/vaccines/iis/iisstandards/downloads/mvx.txt</td>
+              <td>mvx_20180205.txt</td>
               <td>MVX data file
               </td>
             </tr>
             <tr>
-              <td>http://www2a.cdc.gov/vaccines/iis/iisstandards/downloads/TRADENAME.txt
+              <td>cvx_mvx_tradename_20180205.txt
               </td>
-              <td>File connecting manufacturer names (MVX) to vaccine
-                names (CVX)
+              <td>File connecting manufacturer names (MVX) to vaccine names (CVX)
               </td>
             </tr>
           </tbody>
@@ -67,10 +66,10 @@ status=published
 
        <div id="rep_file_details2" class="rep_block_level_two">
         <h3>Source-Provided Files: Details</h3>
-        
+        (<span class="nav"><a href="#top-of-page">return to top</a></span>)
         <br/>
         <div class="rep_block_level_two"> <a id="file1"></a>
-          <h4 class="file_field_name">file: mvx.txt<br/>
+          <h4 class="file_field_name">file: mvx_20180205.txt<br/>
           </h4>
           <table>
             <tbody>
@@ -81,15 +80,12 @@ status=published
               <tr>
                 <td>MVX CODE
                 </td>
-                <td>MRCONSO.CODE<br/>
-                  MRCONSO.SCUI<br/>
-                </td>
+                <td>MRCONSO.CODE, MRCONSO.SCUI</td>
               </tr>
               <tr>
                 <td>MANUFACTURER NAME
                 </td>
-                <td>MRCONSO.STR
-                </td>
+                <td>MRCONSO.STR, MRCONSO.TTY = PT</td>
               </tr>
               <tr>
                 <td>NOTES
@@ -101,29 +97,17 @@ status=published
                 <td>MANUFACTURER STATUS
                 </td>
 
-                <td>MRSAT.ATN = MANUFACTURER_STATUS</td>
+                <td>MRSAT.ATN = MANUFACTURER_STATUS, MRSAT.ATV = Active/Inactive<br/></td>
               </tr>
               <tr>
                 <td>LAST UPDATED DATE</td>
-                <td>MRSAT.ATN = DATE_LAST_MODIFIED
-
-                <br/>MRSAT.ATN = MANUFACTURER_STATUS
-                  MRSAT.ATV = Active/Inactive<br/>
-                  Used to assign TTY (PT or OP)
-                </td>
+                <td>MRSAT.ATN = DATE_MODIFIED</td>
               </tr>
-              <tr>
-                <td>LAST UPDATED DATE
-                </td>
-                <td>MRSAT.ATN = DATE_LAST_MODIFIED
-                </td>
-
-              </tr>
-            </tbody>
+             </tbody>
           </table>
           <br/>
           <a id="file2"></a>
-          <h4>file: TRADENAME.txt
+          <h4>file: cvx_mvx_tradename_20180205.txt
           </h4>
           Used to create relationships between Manufacturers in MVX and
           vaccines in CVX. <br/>
@@ -182,7 +166,7 @@ status=published
               <tr>
                 <td>LAST UPDATED DATE
                 </td>
-                <td>MRSAT.ATN = DATE_LAST_MODIFIED<br/>
+                <td>MRSAT.ATN = DATE_MODIFIED<br/>
                   STYPE = SRUI
                 </td>
               </tr>

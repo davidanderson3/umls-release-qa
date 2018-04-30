@@ -1,6 +1,6 @@
 title=CCC (Clinical Care Classification) - Metathesaurus Representation
-date=2017-11-06
-updated=2017-11-06
+date=2018-05-07
+updated=2018-05-07
 type=page
 status=published
 ~~~~~~
@@ -19,201 +19,216 @@ status=published
  </div>
 </div>
 <!--endmenu-->
-<br/><br>
-<br>
-<br>
-<a name="top" id="top"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>, <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>, <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+<br/>
 
-<div id="general" class="rep_block_level_one">
-  <p><b>VSAB:</b>&nbsp;&nbsp; CCC2_5<br></p>
+<p>This page lists UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
+
+    <a id="top-of-page"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>,
+      <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
+      <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+    <div id="general" class="rep_block_level_one">
+
+  <p><strong>VSAB: CCC2_5_2018</strong></p>
 
   <div id="rep_identifiers" class="rep_block_level_one">
     <h3>Summary of Changes</h3>
 
-    <p>CCC (Clinical Care Classification) was previously labeled "HHC" (Home Healthcare Classification) in the Metathesaurus. CCC2_5 is an update to HHC2003.<br></p>
+ <p>File format:  In collaboration with Dr. Virginia Saba, the NLM developed a simplified file format for UMLS source processing.  The files reflect content changes, but
+     there is no change to the data elements as compared to CCC2_5.  These files will be available at http://www.sabacare.com in both Excel and delimited
+     text format. Contact Dr. Saba for access information.</p>
+     <p>Metathesaurus soruce processing: SCUIs are no longer assigned due to ambiguity.  Relationships are
+    attached to AUIs rather than SCUIs.</p>
 
-    <p>Changes from HHC2003 to CCC2_5:</p>Assigned "structural" termtypes (HT, PT) instead of "semantic" termtypes (CO, DX, IV):
-
-    <ul>
-      <li>Deleted TTYs: CO, DX, IV</li>
-
-      <li>New TTYs: PT, HT, MTH_HT</li>
-    </ul>Separated diagnoses and interventions in hierarchy (required new TTY, MTH_HT for "placeholder" atoms)
   </div>
 
   <div id="rep_change_summary" class="rep_block_level_one">
-    <h3>Source Provided Files:</h3>The CCC distribution includes the following files. This data, along with additional information can be accessed at http://www.sabacare.com/<br>
-    CCC_Diagnoses_HL7_V2.5_21SEPT11.xlsx<br>
-    CCC_Interventions_HL7_V2.5_Version-A_21Sept11.xlsx<br>
-    CCC_Outcomes_HL7_V2.5_ 21Sept11.xlsx<br>
-    <br>
-    These files were converted to text.&nbsp; Metathesaurus source processing included some data and format clean up.<br>
-    <br>
-    Additional files of components and modifiers were created for inclusion in the Metathesaurus.&nbsp;
+    <h3>Files:</h3>
+    <table>
+    <tbody>
+    	<tr>
+    		<th>File Name</th>
+    		<th>Description</th>
+    	</tr>
+    	<tr>
+    		<td>action_modifiers.txt</td>
+    		<td>Action Types to expand the scope of the Intervention</td>
+    	</tr>
+    	<tr>
+			<td>care_components.txt</td>
+			<td>Classify the CCC Terminologies</td>
+		</tr>
+		<tr>
+			<td>diagnoses.txt</td>
+			<td>Nursing diagnoses/problems</td>
+		</tr>
+		<tr>
+			<td>interventions.txt</td>
+			<td>Core nursing interventions</td>
+		<tr>
+			<td>outcome_qualifiers.txt</td>
+			<td>Expected or actual outcome qualifiers</td>
+		</tr>
+	</tbody>
+	</table>
   </div>
 
   <div id="rep_identifers" class="rep_block_level_one">
-    <h3>Identifiers:</h3>Identifiers are assigned as follows:<br>
-    <br>
-
-    <div style="margin-left: 40px;">
-      CODE:&nbsp;<br>
-    </div>
-
-    <ul style="margin-left: 40px;">
-      <li>Components:&nbsp; Component Letter</li>
-
-      <li>Diagnoses:&nbsp; Component Letter concatenated with Diagnosis Code</li>
-
-      <li>Interventions:&nbsp; Component Letter concatenated with Intervention Code</li>
-
-      <li>Modifiers:&nbsp; Modifier Number</li>
-    </ul>
-
-    <div style="margin-left: 40px;">
-      SAUI:&nbsp; <span class="c1">Not applicable</span><br>
-      SCUI:&nbsp; <span class="c1">Same as CODE</span><br>
-      SDUI:&nbsp; <span class="c1">Not applicable</span>
+    <h3>Identifiers:</h3><br/>
+    <p>Identifiers are assigned as follows:</p>
+    CODE:<br/>
+    <table>
+	<tbody>
+		<tr>
+			<th>Concept type</th>
+			<th>TTY</th>
+			<th>CODE</th>
+		</tr>
+		<tr>
+      		<td>Components</td>
+      		<td>HT</td>
+      		<td>Component Letter Code</td>
+      	</tr>
+      	<tr>
+      		<td>Diagnoses</td>
+      		<td>PT</td>
+      		<td>Diagnosis Code (includes Component Letter Code)</td>
+      	</tr>
+      	<tr>
+      		<td>Interventions</td>
+      		<td>PT</td>
+      		<td>Intervention Code (includes Component Letter Code)</td>
+      	</tr>
+      	<tr>
+      		<td>Modifiers</td>
+      		<td>MP</td>
+      		<td>Action Modifier or Outcome Qualifier Code</td>
+      	</tr>
+      	<tr>
+      		<td>Types</td>
+      		<td>HT</td>
+      		<td>Two "type" atoms are created for hierarchy purposes during UMLS source processing to categorize
+      		Interventions and Diagnoses. CODE = MTHU000001 and MTHU000002, respectively</td>
+      	</tr>
+    </tbody>
+    </table>
+	<br/>
+      SAUI: Not applicable<br/>
+      SCUI: Not applicable<br/>
+      SDUI: Not applicable<br/>
     </div>
 
     <div id="rep_termtypes" class="rep_block_level_two">
-      <a name="atoms" id="atoms"></a>
+      <a id="atoms"></a>
 
       <h3>Atoms (MRCONSO):</h3>
-      <br>
+      <br/>
 
-      <table class="elements" border="0" cellspacing="0">
+      <table>
         <tbody>
           <tr>
             <th>Term Type</th>
-
-            <td style="vertical-align: top;"><span style="font-weight: bold;">Description</span><br></td>
-
-            <td style="vertical-align: top;"><span style="font-weight: bold;">Origin</span><br></td>
+            <th>Description</th>
+            <th>Origin</th>
           </tr>
 
           <tr>
-            <td>HT<br></td>
-
-            <td style="vertical-align: top;">Hierarchical Term (Component)<br></td>
-
+            <td>HT<br/></td>
+            <td>Hierarchical Term (Component)</td>
             <td>
-              <p class="c0"><span class="c1">CODE:&nbsp; Component Letter<br>
-              STR:&nbsp;&nbsp; Component Name<br>
-              SCUI: Component Letter<br></span></p>
-            </td>
+              CODE: Component Letter<br/>
+              STR:  Component Name</td>
           </tr>
 
           <tr>
-            <td>MP<br></td>
-
-            <td style="vertical-align: top;">Modifier<br></td>
-
-            <td><span class="c1">CODE:&nbsp; Modifier Number<br>
-            STR: Modifier Name<br>
-            SCUI: Modifier Number<br></span></td>
+            <td>MP</td>
+            <td>Modifier</td>
+            <td>CODE: Action Modifier or Outcome Qualifier Code<br/>
+            STR: Modifier or Qualifier Name</td>
           </tr>
 
           <tr>
-            <td style="vertical-align: top;">MTH_HT<br></td>
-
-            <td style="vertical-align: top;">MTH Hierarchical Placeholder Term<br>
-            Created to separate Intervention and Diagnoses sections of hierarchy<br></td>
-
-            <td style="vertical-align: top;">CODE:&nbsp; MTHU#<br>
-            STR:&nbsp; "Interventions" or "Diagnoses"<br>
-            SCUI:&nbsp; MTHU#<br>
-            <br>
-            The CODE and STR are created during Metathesaurus source processing<br></td>
+            <td>MTH_HT</td>
+            <td>MTH Hierarchical Placeholder Term</td>
+            <td>CODE: MTHU# assigned during Metathesaurus source processing<br/>
+            STR: "Interventions" or "Diagnoses"<br/>
+            Created to separate Intervention and Diagnoses sections of hierarchy</td>
           </tr>
 
           <tr>
-            <td style="vertical-align: top;">PT<br></td>
-
-            <td style="vertical-align: top;">Preferred Term (Diagnosis or Intervention)<br></td>
-
-            <td style="vertical-align: top;">CODE:&nbsp; Component Letter, concatenated with Diagnosis or Intervention Code<br>
-            STR:&nbsp; Diagnosis or Intervention Name<br>
-            SCUI:&nbsp; Component Letter, concatenated with Diagnosis or Intervention Code</td>
+            <td>PT</td>
+            <td>Preferred Term (Diagnosis or Intervention)</td>
+            <td>Diagnosis or Intervention Code (includes Component Letter)<br/>
+            STR: Diagnosis or Intervention Name</td>
           </tr>
         </tbody>
       </table>
     </div>
 
     <div id="rep_attributes" class="rep_block_level_two">
-      <a name="attributes" id="attributes"></a><br>
+      <a id="attributes"></a><br/>
 
       <h3>Attributes (MRSAT):</h3>
-      <br>
-      No attributes are included for CCC2_5<br>
-      <br>
-      <br>
+      <br/>
+      No attributes are included for CCC<br/>
+      <br/>
+      <br/>
     </div>
 
     <div id="rep_definitions" class="rep_block_level_two">
-      <a name="definitions" id="definitions"></a><br>
+      <a id="definitions"></a><br/>
 
       <h3>Definitions (MRDEF):</h3>
 
-      <p>Definitions are created from data in the "Definition/Description" fields.<br></p>
+      <p>Definitions are created from data in the "Definition/Description" fields.<br/></p>
     </div>
 
     <div id="rep_relationships" class="rep_block_level_two">
-      <a name="relationships" id="relationships"></a><br>
+      <a id="relationships"></a><br/>
 
       <h3>Relationships (MRREL):</h3>
-      <br>
+      <br/>
 
-      <table class="elements" border="0" cellspacing="0">
+      <table>
         <tbody>
           <tr>
             <th>REL</th>
-
-            <td style="vertical-align: top;"><span style="font-weight: bold;">RELA<br>
-            inverse_RELA<br></span></td>
-
-            <td style="vertical-align: top;"><span style="font-weight: bold;">Origin</span><br></td>
+            <th>RELA<br/>
+            inverse_RELA</th>
+            <th>Origin</th>
           </tr>
 
           <tr>
-            <td>AQ<br>
-            QB<br></td>
-
-            <td style="vertical-align: top;">actual_outcome_of<br>
-            has_actual_outcome<br></td>
-
-            <td>Connects modifiers to diagnoses to create "outcomes"<br></td>
+            <td>AQ<br/>
+            QB</td>
+            <td>actual_outcome_of<br/>
+            has_actual_outcome<br/></td>
+            <td>Connects Outcome Qualifiers to Diagnoses to to code the "actual outcome" (past tense)</td>
+          </tr>
+          <tr>
+            <td>AQ<br/>
+            QB</td>
+            <td>expected_outcome_of<br/>
+            has_expectted_outcome</td>
+            <td>Connects Outcome Qualifiers to Diagnoses to to code the "expected outcome" (present tense)</td>
           </tr>
 
           <tr>
-            <td>AQ<br>
-            QB<br></td>
-
-            <td style="vertical-align: top;">expected_outcome_of<br>
-            has_expectted_outcome<br></td>
-
-            <td>Connects modifiers to diagnoses to create "outcomes"<br></td>
-          </tr>
-
-          <tr>
-            <td style="vertical-align: top;">AQ<br>
-            QB<br></td>
-
-            <td style="vertical-align: top;">modifies<br>
-            modified_by<br></td>
-
-            <td style="vertical-align: top;">Connects modifiers to interventions<br></td>
+            <td>AQ<br/>
+            QB</td>
+            <td>modifies<br/>
+            modified_by</td>
+            <td>Connects Action Modifiers to Interventions. Used to modify a CCC Intervention concept to
+            build a CCC Intervention Action concept</td>
           </tr>
         </tbody>
-      </table><br>
+      </table>
     </div>
 
-    <div id="mappings" class="rep_block_level_two">
-      <a name="mappings" id="mappings"></a><br>
+    <div id="rep_mappings" class="rep_block_level_two">
+      <a id="mappings"></a><br/>
 
       <h3>Mappings (MRMAP):</h3>
 
-      <p>No relationships to other sources are processed for this version of CCC.</p>
+      <p>No relationships to other sources are processed for CCC.</p>
     </div>
   </div>
-</div>
