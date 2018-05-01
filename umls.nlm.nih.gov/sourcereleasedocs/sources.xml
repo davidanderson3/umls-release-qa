@@ -743,10 +743,23 @@
                 <source ssn="LOINC Linguistic Variant - French, France" imeta="2018AA">LNC-FR-FR</source>
             </sources>
         </language>
-        <language type="Czech">
+        <language type="Latvian">
             <sources>
-                <source ssn="MedDRA Czech" imeta="2018AA">MDRCZE</source>
-                <source ssn="MeSH Czech" imeta="2018AA">MSHCZE</source>
+                <source ssn="MeSH Latvian" imeta="2012AA">MSHLAV</source>
+            </sources>
+        </language>
+        <language type="Danish">
+            <sources>
+                <source ssn="ICPC Danish" imeta="1999AA">ICPCDAN</source>
+            </sources>
+        </language>
+        <language type="Portuguese">
+            <sources>
+                <source ssn="ICPC Portuguese" imeta="1999AA">ICPCPOR</source>
+                <source ssn="WHOART Portuguese" imeta="1999AA">WHOPOR</source>
+                <source ssn="MedDRA Portuguese" imeta="2018AA">MDRPOR</source>
+                <source ssn="MeSH Portuguese" imeta="2018AA">MSHPOR</source>
+                <source ssn="LOINC Linguistic Variant - Portuguese, Brazil" imeta="2018AA">LNC-PT-BR</source>
             </sources>
         </language>
         <language type="German">
@@ -773,87 +786,10 @@
                 <source ssn="LOINC Linguistic Variant - Dutch, Netherlands" imeta="2018AA">LNC-NL-NL</source>
             </sources>
         </language>
-        <language type="Portuguese">
-            <sources>
-                <source ssn="ICPC Portuguese" imeta="1999AA">ICPCPOR</source>
-                <source ssn="WHOART Portuguese" imeta="1999AA">WHOPOR</source>
-                <source ssn="MedDRA Portuguese" imeta="2018AA">MDRPOR</source>
-                <source ssn="MeSH Portuguese" imeta="2018AA">MSHPOR</source>
-                <source ssn="LOINC Linguistic Variant - Portuguese, Brazil" imeta="2018AA">LNC-PT-BR</source>
-            </sources>
-        </language>
-        <language type="Latvian">
-            <sources>
-                <source ssn="MeSH Latvian" imeta="2012AA">MSHLAV</source>
-            </sources>
-        </language>
-        <language type="Norwegian">
-            <sources>
-                <source ssn="ICPC Norwegian" imeta="1999AA">ICPCNOR</source>
-                <source ssn="MeSH Norwegian" imeta="2018AA">MSHNOR</source>
-            </sources>
-        </language>
-        <language type="Japanese">
-            <sources>
-                <source ssn="MeSH Japanese" imeta="2015AB">MSHJPN</source>
-                <source ssn="MedDRA Japanese" imeta="2018AA">MDRJPN</source>
-            </sources>
-        </language>
         <language type="Russian">
             <sources>
                 <source ssn="MeSH Russian" imeta="2018AA">MSHRUS</source>
                 <source ssn="LOINC Linguistic Variant - Russian, Russia" imeta="2018AA">LNC-RU-RU</source>
-            </sources>
-        </language>
-        <language type="Spanish">
-            <sources>
-                <source ssn="ICPC Spanish" imeta="2000AA">ICPCSPA</source>
-                <source ssn="WHOART Spanish" imeta="1999AA">WHOSPA</source>
-                <source ssn="Current Procedural Terminology Spanish" imeta="2001AC">CPTSP</source>
-                <source ssn="SNOMED CT Spanish Edition" imeta="2018AA">SCTSPA</source>
-                <source ssn="MedDRA Spanish" imeta="2018AA">MDRSPA</source>
-                <source ssn="MeSH Spanish" imeta="2018AA">MSHSPA</source>
-                <source ssn="LOINC Linguistic Variant - Spanish, Argentina" imeta="2018AA">LNC-ES-AR</source>
-                <source ssn="LOINC Linguistic Variant - Spanish, Switzerland" imeta="2018AA">LNC-ES-CH</source>
-                <source ssn="LOINC Linguistic Variant - Spanish, Spain" imeta="2018AA">LNC-ES-ES</source>
-            </sources>
-        </language>
-        <language type="Polish">
-            <sources>
-                <source ssn="MeSH Polish" imeta="2018AA">MSHPOL</source>
-            </sources>
-        </language>
-        <language type="Korean">
-            <sources>
-                <source ssn="Korean Standard Classification of Disease Version 5" imeta="2009AA">KCD5</source>
-                <source ssn="Traditional Korean Medical Terms" imeta="2011AB">TKMT</source>
-                <source ssn="LOINC Linguistic Variant - Korea, Korean" imeta="2018AA">LNC-KO-KR</source>
-            </sources>
-        </language>
-        <language type="Hebrew">
-            <sources>
-                <source ssn="ICPC Hebrew" imeta="2000AA">ICPCHEB</source>
-            </sources>
-        </language>
-        <language type="Hungarian">
-            <sources>
-                <source ssn="ICPC Hungarian" imeta="1999AA">ICPCHUN</source>
-                <source ssn="MedDRA Hungarian" imeta="2018AA">MDRHUN</source>
-            </sources>
-        </language>
-        <language type="Italian">
-            <sources>
-                <source ssn="Minimal Standard Terminology Italian (UMLS)" imeta="2002AA">MTHMSTITA</source>
-                <source ssn="ICPC Italian" imeta="1999AA">ICPCITA</source>
-                <source ssn="MedDRA Italian" imeta="2018AA">MDRITA</source>
-                <source ssn="MeSH Italian" imeta="2018AA">MSHITA</source>
-                <source ssn="LOINC Linguistic Variant - Italian, Switzerland" imeta="2018AA">LNC-IT-CH</source>
-                <source ssn="LOINC Linguistic Variant - Italian, Italy" imeta="2018AA">LNC-IT-IT</source>
-            </sources>
-        </language>
-        <language type="Basque">
-            <sources>
-                <source ssn="ICPC Basque" imeta="2000AA">ICPCBAQ</source>
             </sources>
         </language>
         <language type="Serbo-Croatian">
@@ -861,10 +797,9 @@
                 <source ssn="MeSH Croatian" imeta="2018AA">MSHSCR</source>
             </sources>
         </language>
-        <language type="Swedish">
+        <language type="Hebrew">
             <sources>
-                <source ssn="ICPC Swedish" imeta="2000AA">ICPCSWE</source>
-                <source ssn="MeSH Swedish" imeta="2017AA">MSHSWE</source>
+                <source ssn="ICPC Hebrew" imeta="2000AA">ICPCHEB</source>
             </sources>
         </language>
         <language type="English">
@@ -1102,9 +1037,74 @@
                 </letter>
             </letters>
         </language>
-        <language type="Danish">
+        <language type="Polish">
             <sources>
-                <source ssn="ICPC Danish" imeta="1999AA">ICPCDAN</source>
+                <source ssn="MeSH Polish" imeta="2018AA">MSHPOL</source>
+            </sources>
+        </language>
+        <language type="Italian">
+            <sources>
+                <source ssn="Minimal Standard Terminology Italian (UMLS)" imeta="2002AA">MTHMSTITA</source>
+                <source ssn="ICPC Italian" imeta="1999AA">ICPCITA</source>
+                <source ssn="MedDRA Italian" imeta="2018AA">MDRITA</source>
+                <source ssn="MeSH Italian" imeta="2018AA">MSHITA</source>
+                <source ssn="LOINC Linguistic Variant - Italian, Switzerland" imeta="2018AA">LNC-IT-CH</source>
+                <source ssn="LOINC Linguistic Variant - Italian, Italy" imeta="2018AA">LNC-IT-IT</source>
+            </sources>
+        </language>
+        <language type="Norwegian">
+            <sources>
+                <source ssn="ICPC Norwegian" imeta="1999AA">ICPCNOR</source>
+                <source ssn="MeSH Norwegian" imeta="2018AA">MSHNOR</source>
+            </sources>
+        </language>
+        <language type="Spanish">
+            <sources>
+                <source ssn="ICPC Spanish" imeta="2000AA">ICPCSPA</source>
+                <source ssn="WHOART Spanish" imeta="1999AA">WHOSPA</source>
+                <source ssn="Current Procedural Terminology Spanish" imeta="2001AC">CPTSP</source>
+                <source ssn="SNOMED CT Spanish Edition" imeta="2018AA">SCTSPA</source>
+                <source ssn="MedDRA Spanish" imeta="2018AA">MDRSPA</source>
+                <source ssn="MeSH Spanish" imeta="2018AA">MSHSPA</source>
+                <source ssn="LOINC Linguistic Variant - Spanish, Argentina" imeta="2018AA">LNC-ES-AR</source>
+                <source ssn="LOINC Linguistic Variant - Spanish, Switzerland" imeta="2018AA">LNC-ES-CH</source>
+                <source ssn="LOINC Linguistic Variant - Spanish, Spain" imeta="2018AA">LNC-ES-ES</source>
+            </sources>
+        </language>
+        <language type="Korean">
+            <sources>
+                <source ssn="Korean Standard Classification of Disease Version 5" imeta="2009AA">KCD5</source>
+                <source ssn="Traditional Korean Medical Terms" imeta="2011AB">TKMT</source>
+                <source ssn="LOINC Linguistic Variant - Korea, Korean" imeta="2018AA">LNC-KO-KR</source>
+            </sources>
+        </language>
+        <language type="Japanese">
+            <sources>
+                <source ssn="MeSH Japanese" imeta="2015AB">MSHJPN</source>
+                <source ssn="MedDRA Japanese" imeta="2018AA">MDRJPN</source>
+            </sources>
+        </language>
+        <language type="Basque">
+            <sources>
+                <source ssn="ICPC Basque" imeta="2000AA">ICPCBAQ</source>
+            </sources>
+        </language>
+        <language type="Swedish">
+            <sources>
+                <source ssn="ICPC Swedish" imeta="2000AA">ICPCSWE</source>
+                <source ssn="MeSH Swedish" imeta="2017AA">MSHSWE</source>
+            </sources>
+        </language>
+        <language type="Hungarian">
+            <sources>
+                <source ssn="ICPC Hungarian" imeta="1999AA">ICPCHUN</source>
+                <source ssn="MedDRA Hungarian" imeta="2018AA">MDRHUN</source>
+            </sources>
+        </language>
+        <language type="Czech">
+            <sources>
+                <source ssn="MedDRA Czech" imeta="2018AA">MDRCZE</source>
+                <source ssn="MeSH Czech" imeta="2018AA">MSHCZE</source>
             </sources>
         </language>
     </languages>

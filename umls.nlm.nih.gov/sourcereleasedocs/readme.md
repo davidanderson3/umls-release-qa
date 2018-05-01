@@ -8,9 +8,7 @@ Go through this checklist for each release:
 
 ## EDITING WEB CONTENT FOR THE NEXT RELEASE (Inverters)
 
-Inverters create a folder named for the release (for example, 2018AA). Within that folder, create a folder named for the SAB being updated (for example, CPT). They should edit the html within the files, but ignore the header and menu content. Once the files are edited, they can be merged with the content in the jbake/content folder by running the following command:
-
-bash scripts/syncLatestVersion.sh
+Inverters create a folder named for the release (for example, 2018AA). Within that folder, create a folder named for the SAB being updated (for example, CPT). They should edit the html within the files, but ignore the header and menu content.
 
 ## PREPARING THE NEXT RELEASE
 
