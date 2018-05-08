@@ -1,5 +1,5 @@
 <xsl:stylesheet xmlns:xsl = "http://www.w3.org/1999/XSL/Transform" version = "2.0"
-xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/">
+xmlns:sourcereleasedocs="https://www.nlm.nih.gov/research/umls/sourcereleasedocs/">
 <xsl:output method = "xml" omit-xml-declaration = "yes" indent = "yes" use-character-maps="cm1" doctype-public = "-//W3C//DTD XHTML 1.0 Transitional//EN"  encoding="utf-8" />
 <xsl:character-map name="cm1">
 <xsl:output-character character="&#160;" string="&amp;nbsp;"/>
@@ -36,9 +36,9 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
 
 <ul> 
 <li><a class="ajaxlink" title="alphabet" href="#tabs-1">Alphabetical List</a></li> 
-<li><a class="ajaxlink" title="category" href="#tabs-2">Restriction Categories*</a><a href="https://uts.nlm.nih.gov/help/license/licensecategoryhelp.html" target="_blank"><img style="width: 14px; height: 14px;" src="https://uts.nlm.nih.gov//images/help.png" alt="Restriction Category Help" /></a></li>
-<!--<li><a class="ajaxlink" title="language" href="#tabs-3">Meaningful Use Categories*</a><a href="/research/umls/sourcereleasedocs/meaningful_use_help.html" target="_blank"><img style="width: 14px; height: 14px;" src="https://uts.nlm.nih.gov//images/help.png" alt="Meaningful Use Category Help" /></a></li>-->
-<li><a class="ajaxlink" title="language" href="#tabs-4">Content Categories*</a></li>
+<li><a class="ajaxlink" title="category" href="#tabs-2">Restriction Categories</a><a href="https://uts.nlm.nih.gov/help/license/licensecategoryhelp.html" target="_blank"><img style="width: 14px; height: 14px;" src="https://uts.nlm.nih.gov//images/help.png" alt="Restriction Category Help" /></a></li>
+<!--<li><a class="ajaxlink" title="language" href="#tabs-3">Meaningful Use Categories*</a><a href="/research/umls/sourcereleasedocs/meaningful_use_help.html" target="_blank"><img style="width: 14px; height: 14px;" src="https://uts.nlm.nih.gov//images/help.png" alt="Meaningful Use Category Help" /></a></li>
+<li><a class="ajaxlink" title="language" href="#tabs-4">Content Categories*</a></li>-->
 <li><a class="ajaxlink" title="language" href="#tabs-5">Languages</a></li>
 </ul>
 
@@ -50,7 +50,7 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
 <div id = "tabs-2" class = "content">
   <h3>Restriction Categories <xsl:if test = "$release ne 'current'"><span style = "font-size:80%;color:black;">(includes only sources updated in this release. The <a href = "index.html"> current version of UMLS source documentation</a> is updated with each release.)</span></xsl:if></h3>
 <xsl:apply-templates select = "restrictions"/>
-<div class = "content-footnote"><p><em>*as of 2011AA UMLS.  <br/>Source vocabularies in Category 4 are free for use in the United States. Category 3 rules apply for all other uses</em></p></div>
+<div class = "content-footnote"><p><em>Source vocabularies in Category 4 are free for use in the United States. Category 3 rules apply for all other uses</em></p></div>
 </div>
 <!--
 <div id = "tabs-3" class = "content">
@@ -294,7 +294,7 @@ xmlns:sourcereleasedocs="http://www.nlm.nih.gov/research/umls/sourcereleasedocs/
     <xsl:for-each select = "source">
     <xsl:sort select = "." order = "ascending"/>
     <tr>
-        <td valign = "top"><a href = "http://www.nlm.nih.gov/research/umls/sourcereleasedocs/{$release}/{.}" target = "_blank"><xsl:value-of select = "."/> (<xsl:value-of select = "@ssn"/>)</a></td>
+        <td valign = "top"><a href = "https://www.nlm.nih.gov/research/umls/sourcereleasedocs/{$release}/{.}" target = "_blank"><xsl:value-of select = "."/> (<xsl:value-of select = "@ssn"/>)</a></td>
         <td valign = "top"><xsl:value-of select = "@imeta"/></td>
     </tr>
     </xsl:for-each>   
