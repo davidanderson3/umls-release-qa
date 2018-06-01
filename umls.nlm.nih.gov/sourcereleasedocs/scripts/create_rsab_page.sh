@@ -16,7 +16,7 @@ status=published
 <tr><th>Abbreviation</th><th>Vocabulary Name</th></tr>
 " >> jbake/content/source-abbreviations.html
 while IFS='|' read -r VCUI RCUI VSAB RSAB SON SF SVER VSTART VEND IMETA RMETA SLC SCC SRL TFR CFR CXTY TTYL ATNL LAT CENC CURVER SABIN SSN SCIT; do 
-echo "<tr><td>$RSAB</td><td><a href=\"$SSN/\">$SSN</a></td></tr>" >> jbake/content/source-abbreviations.html
+echo "<tr><td>$RSAB</td><td><a href=\"$RSAB/\">$SSN</a></td></tr>" >> jbake/content/source-abbreviations.html
 done < MRSAB_all.txt
 
 echo "</table>" >> jbake/content/source-abbreviations.html
