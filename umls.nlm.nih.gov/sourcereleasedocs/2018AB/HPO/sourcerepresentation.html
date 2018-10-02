@@ -1,0 +1,240 @@
+title=HPO (Human Phenotype Ontology) - Source Representation
+date=2018-05-07
+updated=2018-05-07
+type=page
+status=published
+~~~~~~
+
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+<!--endmenu-->
+<br/>
+    <p>This page lists specific source data elements and provides
+      information on their representation in the UMLS Metathesaurus.</p>
+    <a id="top-of-page"></a> <span class="nav">Skip to:
+      <a href="#change_summary">Summary of Changes</a>, <a
+        href="#file_summary">Summary of Source-Provided Files</a> <a
+        href="#file_details">Source-Provided File Details</a></span> <a id="general"></a>
+    <div id="rep_general" class="rep_block_level_one"> <br/>
+      <strong>VSAB:</strong> HPO2018_07_23<br/>
+    </div>
+    <div id="rep_change_summary" class="rep_block_level_one">
+      <h3>Summary of Changes:</h3>
+	Deprecated TTY:  OET    </div>
+    <div id="rep_file_summary" class="rep_block_level_one"> <a id="file_summary"></a>
+      <h3>Source-Provided Files: Summary</h3>
+
+      <p>Documentation on the obo format is available at: <a
+          href="http://www.geneontology.org/">http://www.geneontology.org/</a></p>
+      <div class="rep_block_level_two">
+        <h4>Data Files</h4>
+        <p>HPO is released in both owl and obo formats. The obo format
+          is processed for the UMLS Metathesaurus.</p>
+        <a id="data_files"></a>
+        <table>
+          <tbody>
+            <tr>
+              <th>File Name</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>hp.obo</td>
+              <td>obo format data file</td>
+            </tr>
+          </tbody>
+        </table>
+        <br/>
+        <p>Not included: <br/>
+          * Certain fields and data elements may not be directly
+          processed because they contain redundant or internal data. </p>
+      </div>
+    </div>
+    <div id="rep_file_details" class="rep_block_level_one"> <a id="file_details"></a>
+      <h3>Source-Provided Files: Details</h3>
+
+      <p>Content is structured as tag-value pairs, with optional
+        trailing modifiers. Tag-value pairs consist of a tag name, an
+        unescaped colon, the tag value, and a newline.</p>
+      <p>Consult the GO OBO format documentation at www.geneontology.org
+        for additional details.</p>
+      <div class="rep_block_level_two"> <a id="file1"></a>
+        <h4 class="file_field_name">file:hp.obo</h4>
+        For inclusion in the Metathesaurus, all tags in a [Term] Stanza,
+            are processed, as described in the OBO format documentation.
+        Required tags:<br/>
+        <br/>
+        <table>
+          <tbody>
+            <tr>
+              <th>Tag Name</th>
+              <th>Description</th>
+              <th>Representation</th>
+            </tr>
+            <tr>
+              <td>id</td>
+              <td>Unique identifier</td>
+              <td>MRCONSO.CODE, MRCONSO.SDUI</td>
+            </tr>
+            <tr>
+              <td>name</td>
+              <td>Term name</td>
+              <td>MRCONSO.STR<br/>
+                TTY = "PT" if there is no is_obsolete flag<br/>
+                TTY = "OP" if is_obsolete = true
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br/>
+        Optional tags: the following table lists only tags actually
+        present in the data processed for inclusion in this version of
+        the Metathesaurus. Tags are presented in the order in which they
+        appear in a [Term] Stanza. For information on all optional OBO
+        tags, including deprecated tags, please consult the OBO format
+        documentation.<br/>
+        <br/>
+        <table>
+          <tbody>
+            <tr>
+              <th>Tag Name</th>
+              <th>Description</th>
+              <th>Representation</th>
+            </tr>
+            <tr>
+              <td>def
+              </td>
+              <td>Definition</td>
+              <td>MRDEF.DEF
+              </td>
+            </tr>
+            <tr>
+              <td>comment
+              </td>
+              <td>Comment
+              </td>
+              <td>MRSAT.ATN = "HPO_COMMENT"
+              </td>
+            </tr>
+            <tr>
+              <td>synonym
+              </td>
+              <td>Synonym
+              </td>
+              <td>MRCONSO.STR
+                TTYs are assigned based on the value of the scope
+                identifier and the presence or absence of the
+                "is_obsolete" tag.<br/>
+                <br/>
+                MRREL.REL<br/>
+                REL values are assigned based on the value of the scope
+                identifier<br/>
+                <br/>
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>Scope identifier</th>
+                      <th>is_obsolete</th>
+                      <th>MRCONSO.TTY</th>
+                      <th>MRREL.REL</th>
+                    </tr>
+                    <tr>
+                      <td>EXACT</td>
+                      <td>(no value)</td>
+                      <td>SY</td>
+                      <td>SY</td>
+                    </tr>
+                    <tr>
+                      <td>EXACT</td>
+                      <td>true</td>
+                      <td>IS</td>
+                      <td>SY</td>
+                    </tr>
+                    <tr>
+                      <td>NARROW</td>
+                      <td>(no value)</td>
+                      <td>ET</td>
+                      <td>RN</td>
+                    </tr>
+                    <tr>
+                      <td>BROAD</td>
+                      <td>(no value)</td>
+                      <td>ET</td>
+                      <td>RB</td>
+                    </tr>
+                    <tr>
+                      <td>RELATED</td>
+                      <td>(no value)</td>
+                      <td>ET</td>
+                      <td>RO</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <br/>
+                Optional dbxref lists included in synonym tags are
+                represented in MRSAT.ATN = "REF" <br/>
+                Optional synonymtypedef values in synonym tags are represented in MRSAT.ATN = SYN_QUALIFIER<br/>
+                <br/>
+              </td>
+            </tr>
+            <tr>
+              <td>xref</td>
+              <td>Cross-reference (dbxref) describing an analagous term
+                in another vocabulary
+              </td>
+              <td>MRSAT.ATN = "HXR"</td>
+            </tr>
+            <tr>
+              <td>is_a</td>
+              <td>Indicates a subclassing relationship between one term
+                and another</td>
+              <td>Used to create a hierarchy, represented in MRHIER.RRF
+                and MRREL.RRF (REL = "PAR," "CHD," "SIB"; RELA = "isa")
+              </td>
+            </tr>
+            <tr>
+              <td>is_obsolete</td>
+              <td>Indicates if a term is obsolete</td>
+              <td>Used to compute termtype assignments</td>
+            </tr>
+            <tr>
+              <td>replaced_by</td>
+              <td>Gives a term which replaces an obsolete term</td>
+              <td>MRREL.REL = "RO"<br/>
+                MRREL.RELA = "replaced_by/replaces"
+              </td>
+            </tr>
+            <tr>
+              <td>consider</td>
+              <td>Gives a term which may be an appropriate substitute or
+                an obsolete term, but requires human review</td>
+              <td>MRREL.REL = "RO"<br/>
+                MRREL.RELA = "consider/consider_from"
+              </td>
+            </tr>
+            <tr>
+              <td>creation_date</td>
+              <td>Indicates the creation time and date of the term </td>
+              <td>MRSAT.ATN = "DATE_CREATED"</td>
+            </tr>
+             <tr>
+				<td>alt_id</td>
+				<td>An alternative (secondary) identifier</td>
+				<td>MRSAT.ATN = "SID"</td>
+            </tr>
+          </tbody>
+        </table>
+        <br/>
+        <br/>
+      </div>
+    </div>
