@@ -1,0 +1,193 @@
+title=PNDS (Perioperative Nursing Data Set) - Source Representation
+date=2017-11-06
+updated=2018-05-07
+type=page
+status=published
+~~~~~~
+
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+<!--endmenu-->
+<p>This page lists UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
+
+  <!-- end tabbed navigation area -->
+  <br/>
+  <br/>
+  <br/>
+  <a name="top" id="top"></a> <span class="nav">Skip to: <a href="#general">Notes</a>, <a href="#change_summary">Summary of Changes</a>, <a href="#file_summary">Summary of Source-Provided Files</a> <a href="#file_details">Source-Provided File Details</a></span> <a name="general" id="general"></a>
+
+  <div id="rep_general" class="rep_block_level_one">
+    <h3>Notes</h3>
+  </div>
+
+  <div id="rep_change_summary" class="rep_block_level_one">
+    <h3>Summary of Changes:</h3>
+
+          <p>There have changes made to the layout of the Perioperative Nursing Data Set (PNDS) .xslx file that do not affect content.
+	      In addition, there is an new tab to represent "Nursing Problems."  These codes are prefixed with "NP" and are represented
+	      with TTY = PT.</p>
+
+	      <p>PNDS_4_2018 includes mappings to SNOMEDCT_US.  These are represented in MRREL.RRF as well
+	      as in MRMAP.RRF and MRSMAP.RRF.</p>
+
+	      New TTY:<br/>
+	      <ul>
+	      <li>XM</li>
+	      </ul>
+
+	      New REL/RELA:<br/>
+	      <ul>
+	      <li>RQ|mapped_to/mapped_from</li>
+	      </ul>
+
+	      New ATNs:<br/>
+	      <ul>
+	      	<li>FROMRSAB</li>
+		  	<li>FROMVSAB</li>
+		  	<li>MAPSETRSAB</li>
+		  	<li>MAPSETTYPE</li>
+		  	<li>MAPSETVERSION</li>
+		  	<li>MAPSETVSAB</li>
+		  	<li>MTH_MAPFROMCOMPLEXITY</li>
+		  	<li>MTH_MAPFROMEXHAUSTIVE</li>
+		  	<li>MTH_MAPSETCOMPLEXITY</li>
+		  	<li>MTH_MAPTOCOMPLEXITY</li>
+		  	<li>MTH_MAPTOEXHAUSTIVE</li>
+		  	<li>TORSAB</li>
+		  	<li>TOVSAB</li>
+		  </ul>
+
+	      <br/>
+
+	      Dropped ATNs:<br/>
+		 	<ul>
+		 	<li>INTERPRETIVE_STATEMENT</li>
+		 	<li>RETIRED_CODE</li>
+		 	</ul>
+
+
+  <div id="rep_file_summary" class="rep_block_level_one">
+    <a name="file_summary" id="file_summary"></a>
+
+    <h3>Source-Provided Files: Summary</h3>
+
+    <p>The PNDS distribution includes the following:</p>
+
+    <div class="rep_block_level_two">
+
+      <h4>Data Files</h4><a name="data_files" id="data_files"></a>
+
+      <table>
+        <tbody>
+          <tr>
+            <th>File Name</th>
+            <th>Description</th>
+          </tr>
+
+          <tr>
+            <td>PNDS VERSION 4 FOR NLM.xlsx</td>
+            <td>An Excel file with 6 tabs: Assessment, Nursing Problem, Implementation, Outcome, Evaluation and Domains.</td></td>
+          </tr>
+        </tbody>
+      </table>
+      <br/>
+    </div>
+  </div>
+
+    <h3>Source-Provided Files: Details</h3>
+
+    <p>The following is a list of data elements provided for PNDS:<br/></p>Tab: domains<br/>
+    <br/>
+
+    <div class="rep_block_level_two">
+      <a name="file1" id="file1"></a>
+
+      <table>
+        <tbody>
+          <tr>
+            <th>Column</th>
+            <th>Representation</th>
+          </tr>
+
+          <tr>
+            <td>Code</td>
+            <td>MRCONSO.CODE, MRCONSO.SCUI</td>
+          </tr>
+
+          <tr>
+            <td>Domain</td>
+            <td>MRCONSO.STR<br/>
+            TTY = "HT"</td>
+          </tr>
+
+          <tr>
+            <td>Extension</td>
+            <td>MRSAT.ATN=SOS</td>
+          </tr>
+
+          <tr>
+            <td>Domain Definition</td>
+            <td>MRDEF.DEF</td>
+          </tr>
+          <tr>
+          	<td>Domain Range</td>
+          	<td>Used to create hierarchy</td>
+          </tr>
+        </tbody>
+      </table>
+    </div><br/>
+    Tabs: Assessment, Evaluation, Implementation, Problem, Outcomes<br/>
+
+    <div class="rep_block_level_two">
+      <a name="file1" id="file1"></a><br/>
+
+
+      <table>
+        <tbody>
+          <tr>
+            <th>Column</th>
+            <th>Representation</th>
+          </tr>
+			<tr>
+            <td>CODE</td>
+            <td>MRCONSO.CODE, MRCONSO.SCUI<br/></td>
+          </tr>
+
+          <tr>
+            <td>LABEL</td>
+			<td>MRCONSO.STR; TTY = PT</td>
+          </tr>
+
+          <tr>
+            <td>CODE_DEFINITION</td>
+            <td>DEFINITION</td>
+          </tr>
+
+          <tr>
+            <td>SCT</td>
+            <td>Used to create mappings and mapping relationships (RQ|mapped_to/mapped_from)</td>
+          </tr>
+          <tr>
+          	<td>SCT_DESCRIPTION</td>
+          	<td>Not used</td>
+          </tr>
+          <tr>
+          	<td>SNOMED UMLS CUI</td>
+          	<td>Not used</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
