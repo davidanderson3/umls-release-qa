@@ -1,4 +1,4 @@
-title=NOC (Nursing Outcomes Classification) - Metathesaurus Representation
+title=NIC (Nursing Interventions Classification) - Metathesaurus Representation
 date=2018-05-07
 updated=2018-05-07
 type=page
@@ -24,14 +24,14 @@ status=published
       back to the specific source data that populates them.</p>
     <a id="top-of-page"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>,
       <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
-      <a href="#relationships">Relationships</a></span>
+      <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
     <div id="general" class="rep_block_level_one">
-      <p><strong>VSAB:</strong> NOC6</p>
+      <p><strong>VSAB:</strong>NIC7</p>
       <div id="rep_identifiers" class="rep_block_level_one">
         <h3>Summary of Changes</h3>
 
-		Deprecated TTY:  MTH_ID<br/>
-		Deprecated REL|RELA/inverse_RELA: SY/mth_expanded_form_of/mth_has_expanded_form<br/>
+		The source data file format has changed significantly, but the UMLS Metathesaurus representation is
+		the same as the previous version.<br/>
         <div id="rep_termtypes" class="rep_block_level_two"> <a id="atoms"></a>
           <h3>Atoms (MRCONSO):</h3>
           <br/>
@@ -51,22 +51,21 @@ status=published
               <tr>
                 <td>HT</td>
                 <td>CODE: Domains.DomainNum<br/>
-                  STR: Domains.Description<br/>
-                  SCUI: Same as CODE
-                </td>
+                  STR: Domains.Description; "(NIC Domain)" is appended to the string
+                  to disambiguate names<br/>
+                  SCUI: Same as CODES</td>
               </tr>
               <tr>
-                <td>ID</td>
-                <td>CODE: Indicators.OutcomeCode.IndicatorCode<br/>
-                  STR: Indicators.Description<br/>
+                <td>IV</td>
+                <td>CODE:  Interventions.Code<br/>
+                  STR: Interventions.Label<br/>
+                  SCUI: Same as CODE</td>
+              </tr>
+              <tr>
+                <td>AC</td>
+                <td>CODE: MTHU# assigned during Metathesaurus source processing <br/>
+                  STR: Activities.Description<br/>
                   SCUI: Same as CODE<br/>
-                </td>
-              </tr>
-              <tr>
-                <td>OC</td>
-                <td>CODE: Outcomes.OutcomeCode<br/>
-                  STR:Outcomes.Label<br/>
-                  SCUI: Same as CODE
                 </td>
               </tr>
             </tbody>
@@ -79,23 +78,18 @@ status=published
             <tbody>
               <tr>
                 <th>Attribute Name</th>
-                <th>Origin: Table (fields)</th>
-              </tr>
-              <tr>
-                <td>MEA</td>
-                <td>Scales (concatenation of ScaleCode, Scale Desecription and Levels 1-5)</td>
+                <th>Origin</th>
               </tr>
               <tr>
                 <td>REF</td>
-                <td>References (reference value; attached to OutcomeCode)</td>
+                <td>References.Reference</td>
               </tr>
-
             </tbody>
           </table>
         </div>
         <div id="rep_definitions" class="rep_block_level_two"> <a id="definitions"></a><br/>
           <h3>Definitions (MRDEF):</h3>
-          Extracted from Definition fields<br/>
+          Extracted from Definitions fields<br/>
         </div>
         <div id="rep_relationships" class="rep_block_level_two"> <a id="relationships"></a><br/>
           <h3>Relationships (MRREL):</h3>
@@ -114,7 +108,8 @@ status=published
                   SIB
                 </td>
                 <td>N/A</td>
-                <td>A hierarchy is built to represent the relationships between Domain --&gt; Class --&gt; Outcome --&gt; Indicator</td>
+                <td>Hierarchy created: Domain --&gt; Class --&gt; Intervention --&gt;
+				 Activity</td>
               </tr>
                </tbody>
           </table>
