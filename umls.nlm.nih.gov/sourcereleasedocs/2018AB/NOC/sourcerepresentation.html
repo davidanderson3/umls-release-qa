@@ -1,0 +1,222 @@
+title=NOC (Nursing Outcomes Classification) - Source Representation
+date=2018-05-07
+updated=2018-05-07
+type=page
+status=published
+~~~~~~
+
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+<!--endmenu-->
+<br/>
+    <p>This page lists specific source data elements and provides
+      information on their representation in the UMLS Metathesaurus.</p>
+    <a id="top-of-page"></a> <span class="nav">Skip to:
+      <a href="#change_summary">Summary of Changes</a>,
+      <a href="#file_summary">Source-Provided Files</a></span>
+      <p>
+      <strong>VSAB:</strong>NOC6
+      </p>
+	<div class="rep_block_level_two"><a id="change_summary"></a>
+      <h3>Summary of Changes:</h3>
+
+		Deprecated TTY:<br />
+  <ul>
+   <li>MTH_ID</li>
+  </ul>
+		Deprecated REL|RELA/inverse_RELA:<br />
+  <ul>
+   <li>SY|mth_expanded_form_of/mth_has_expanded_form</li>
+  </ul>
+  Deprecated ATN(s):<br />
+  <ul>
+   <li>CITE</li>
+   <li>MTH_REF</li>
+  </ul>
+
+<div class="rep_block_level_two"><a id="file_summary"></a>
+
+		<h3>Source-Provided Files:</h3>
+NLM received an Access (.mdb) database containing eight tables:
+        <ul>
+        	<li>Class</li>
+        	<li>Domains</li>
+        	<li>Indicators</li>
+        	<li>OtherText (file not used)</li>
+        	<li>OutcomeScales</li>
+        	<li>Outcomes</li>
+        	<li>References</li>
+        	<li>Scales</li>
+        </ul>
+        <table>
+          <tbody>
+            <tr>
+              <th>Table Name</th>
+              <th>Field Name</th>
+              <th>Representation</th>
+            </tr>
+			<tr>
+				<td>Class</td>
+				<td>ClassCode</td>
+				<td>MRCONSO.CODE, SCUI</td>
+			</tr>
+			<tr>
+				<td>Class</td>
+				<td>Definition</td>
+				<td>MRDEF.DEF</td>
+			</tr>
+			<tr>
+				<td>Class</td>
+				<td>Description</td>
+				<td>MRCONSO.STR; TTY = HC</td>
+			</tr>
+			<tr>
+				<td>Domains</td>
+				<td>DomainNum</td>
+				<td>MRCONSO.CODE, SCUI</td>
+			</tr>
+			<tr>
+				<td>Domains</td>
+				<td>Description</td>
+				<td>MRCONSO.STR; TTY = HT</td>
+			</tr>
+			<tr>
+				<td>Domains</td>
+				<td>Definition</td>
+				<td>MRDEF.DEF</td>
+			</tr>
+			<tr>
+				<td>Indicators</td>
+				<td>ID</td>
+				<td>N/A</td>
+			</tr>
+			<tr>
+				<td>Indicators</td>
+				<td>OutcomeCode</td>
+				<td>Prepended to IndicatorCode to make CODE,SCUI for TTY = ID; used to create hierarchy</td>
+			</tr>
+			<tr>
+				<td>Indicators</td>
+				<td>IndicatorCode</td>
+				<td>Appended to OutcomeCode to make CODE,SCUI for TTY = ID</td>
+			</tr>
+			<tr>
+				<td>Indicators</td>
+				<td>ScaleCode</td>
+				<td>Used to create MRSAT.ATN = MEA for indicator</td>
+			</tr>
+			<tr>
+				<td>Indicators</td>
+				<td>Description</td>
+				<td>MRCONSO.STR; TTY = ID</td>
+			</tr>
+			<tr>
+				<td>OutcomeScales</td>
+				<td>OutcomeCode</td>
+				<td>See Scales table</td>
+			</tr>
+			<tr>
+				<td>OutcomeScales</td>
+				<td>ScaleCode</td>
+				<td>Connects MRSAT.ATN = MEA to Outcome</td>
+			</tr>
+			<tr>
+				<td>Outcomes</td>
+				<td>OutcomeCode</td>
+				<td>MRCONSO.CODE, SCUI</td>
+			</tr>
+			<tr>
+				<td>Outcomes</td>
+				<td>Label</td>
+				<td>MRCONSO.STR; TTY = OC</td>
+			</tr>
+			<tr>
+				<td>Outcomes</td>
+				<td>Definition</td>
+				<td>MRDEF.DEF</td>
+			</tr>
+			<tr>
+				<td>Outcomes</td>
+				<td>Domain</td>
+				<td>Used to create hierarchy</td>
+			</tr>
+			<tr>
+				<td>Outcomes</td>
+				<td>Class</td>
+				<td>Used to create hierarchy</td>
+			</tr>
+			<tr>
+				<td>References</td>
+				<td>ID</td>
+				<td>N/A</td>
+			</tr>
+			<tr>
+				<td>References</td>
+				<td>OutcomeCode</td>
+				<td>Used to connect MRSAT.ATN = REF to Outcome</td>
+			</tr>
+			<tr>
+				<td>References</td>
+				<td>Reference</td>
+				<td>MRSAT.ATV for ATN = REF</td>
+			</tr>
+			<tr>
+				<td>Scales</td>
+				<td>ScaleCode</td>
+				<td>MRSAT.ATV = MEA; ScaleCode, Scale Description, and Level 1-5 values are concatenated</td>
+			</tr>
+			<tr>
+				<td>Scales</td>
+				<td>Scale Description</td>
+				<td>MRSAT.ATV = MEA; ScaleCode, Scale Description, and Level 1-5 values are concatenated</td>
+			</tr>
+			<tr>
+				<td>Scales</td>
+				<td>Level1</td>
+				<td>MRSAT.ATV = MEA; ScaleCode, Scale Description, and Level 1-5 values are concatenated</td>
+			</tr>
+			<tr>
+				<td>Scales</td>
+				<td>Level2</td>
+				<td>MRSAT.ATV = MEA; ScaleCode, Scale Description, and Level 1-5 values are concatenated</td>
+			</tr>
+			<tr>
+				<td>Scales</td>
+				<td>Level3</td>
+				<td>MRSAT.ATV = MEA; ScaleCode, Scale Description, and Level 1-5 values are concatenated</td>
+			</tr>
+			<tr>
+				<td>Scales</td>
+				<td>Level4</td>
+				<td>MRSAT.ATV = MEA; ScaleCode, Scale Description, and Level 1-5 values are concatenated</td>
+			</tr>
+			<tr>
+				<td>Scales</td>
+				<td>Level5</td>
+				<td>MRSAT.ATV = MEA; ScaleCode, Scale Description, and Level 1-5 values are concatenated</td>
+			</tr>
+			<tr>
+				<td>Scales</td>
+				<td>N/A</td>
+				<td>N/A</td>
+			</tr>
+			<tr>
+				<td>Scales</td>
+				<td>Total Outcomes</td>
+				<td>N/A</td>
+			</tr>
+         </tbody>
+        </table>
+      </div>
+    </div>
