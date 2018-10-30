@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<statisticalReport>
+    <result>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>1230</count>
+            <expandedForm>Designated preferred name</expandedForm>
+            <termType>PT</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>22</count>
+            <expandedForm>Metathesaurus preferred term</expandedForm>
+            <termType>MTH_PT</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>4</count>
+            <expandedForm>MTH Hierarchical term</expandedForm>
+            <termType>MTH_HT</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>265</count>
+            <expandedForm>Hierarchical term</expandedForm>
+            <termType>HT</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+    </result>
+    <source>ICF</source>
+</statisticalReport>

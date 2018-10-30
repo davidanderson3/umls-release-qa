@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<statisticalReport>
+    <result>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>500</count>
+            <expandedForm>has relationship other than synonymous, narrower, or broader/has product monograph title</expandedForm>
+            <termType>RO/has_product_monograph_title</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>500</count>
+            <expandedForm>has relationship other than synonymous, narrower, or broader/product monograph title of</expandedForm>
+            <termType>RO/product_monograph_title_of</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+    </result>
+    <source>USP</source>
+</statisticalReport>

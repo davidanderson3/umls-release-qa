@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<statisticalReport>
+    <result>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>1549</count>
+            <expandedForm>ICD10AM Sex Edit flag to indicate whether the code is valid for a particular sex. Sex flags are 1 (male) or 2 (female).</expandedForm>
+            <termType>IAS</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>1549</count>
+            <expandedForm>ICD10AM Sex Edit Type - all sex flagged codes are followed by a "sex edit type" flag. The sex edit type flags are 1 (fatal) or 2 (warning). </expandedForm>
+            <termType>IAT</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>972</count>
+            <expandedForm>Annotation or Usage Note - a value of "+" or "DAGGER," denotes a code describing the etiology or underlying cause of the disease; an "*" or "ASTERISK," denotes a code describing the manifestation of a disease.  A value of "DEFAULT" indicates that dual coding is not indicated.</expandedForm>
+            <termType>IAN</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>517</count>
+            <expandedForm>ICD10AM Neoplasm code (e.g. C34.- )</expandedForm>
+            <termType>INC</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>24603</count>
+            <expandedForm>ICD10AM Abbreviated Descriptor</expandedForm>
+            <termType>IAA</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>951</count>
+            <expandedForm>ICD10AM Relationship Note - code embedded in the term, may have a * or +.</expandedForm>
+            <termType>IAR</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>1576</count>
+            <expandedForm>ICD10AM Age Edit, lower limit - minimum age is expressed as a three digit field.</expandedForm>
+            <termType>IAL</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>2087</count>
+            <expandedForm>ICD10AM Age Edit, higher limit - minimum age is expressed as a three digit field.</expandedForm>
+            <termType>IAH</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>2087</count>
+            <expandedForm>ICD10AM Age Edit Type - all age flagged codes are followed by an age edit type flag. The age edit type flags are 1 (fatal) or 2 (warning). </expandedForm>
+            <termType>IAY</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>24603</count>
+            <expandedForm>ICD10AM Effective from - indicates the date that the code is effective from.</expandedForm>
+            <termType>IAD</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>1277</count>
+            <expandedForm>ICD10AM Australian Code - Contains a flag "1" for codes that have been exclusively developed in Australia.</expandedForm>
+            <termType>IAC</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+    </result>
+    <source>ICD10AM</source>
+</statisticalReport>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<statisticalReport>
+    <result>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="statisticalReportBySource">
+            <percentage>75.3</percentage>
+            <source>RXNORM</source>
+            <statisticalCount>173338</statisticalCount>
+            <statisticalType>Clinical Drug</statisticalType>
+            <totalCount>0</totalCount>
+            <cID>T200</cID>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="statisticalReportBySource">
+            <percentage>9.3</percentage>
+            <source>RXNORM</source>
+            <statisticalCount>21524</statisticalCount>
+            <statisticalType>Organic Chemical</statisticalType>
+            <totalCount>0</totalCount>
+            <cID>T109</cID>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="statisticalReportBySource">
+            <percentage>11.3</percentage>
+            <source>RXNORM</source>
+            <statisticalCount>26076</statisticalCount>
+            <statisticalType>Pharmacologic Substance</statisticalType>
+            <totalCount>0</totalCount>
+            <cID>T121</cID>
+        </sourceList>
+    </result>
+    <source>RXNORM</source>
+</statisticalReport>

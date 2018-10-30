@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<statisticalReport>
+    <result>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>7647</count>
+            <expandedForm>Original semantic type</expandedForm>
+            <termType>ORIG_STY</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>516</count>
+            <expandedForm>NSC Code</expandedForm>
+            <termType>NSC_CODE</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>2987</count>
+            <expandedForm>Date last modified</expandedForm>
+            <termType>DATE_LAST_MODIFIED</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>627</count>
+            <expandedForm>PDQ Protocol Exclusion Criteria - terms with type "exclusion criteria," which may be indexed on protocol records to identify conditions that exclude a patient from eligibility. </expandedForm>
+            <termType>PXC</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>6066</count>
+            <expandedForm>Legacy PDQ ID</expandedForm>
+            <termType>PID</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>836</count>
+            <expandedForm>Link information to Term Menu parent. This may not always be the same as the TermParent. Element will not exist for top level menus, e.g. cancer.</expandedForm>
+            <termType>MENU_PARENT</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>789</count>
+            <expandedForm>Values are Clinical Trials--Cancer Type, Clinical Trials--Drug, or Cancer Information.</expandedForm>
+            <termType>MENU_TYPE</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>1716</count>
+            <expandedForm>Date first published</expandedForm>
+            <termType>DATE_FIRST_PUBLISHED</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>409</count>
+            <expandedForm>IND Code</expandedForm>
+            <termType>IND_CODE</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>560</count>
+            <expandedForm>CAS Registry</expandedForm>
+            <termType>CAS_REGISTRY</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>1767</count>
+            <expandedForm>Indicates if a chemicals or medical device is a tradename (present in older versions of the Metathesaurus and was discontinued, then brought back starting in 2002AD)</expandedForm>
+            <termType>LT</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>1401</count>
+            <expandedForm>NCI thesaurus concept id</expandedForm>
+            <termType>NCI_ID</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+    </result>
+    <source>PDQ</source>
+</statisticalReport>

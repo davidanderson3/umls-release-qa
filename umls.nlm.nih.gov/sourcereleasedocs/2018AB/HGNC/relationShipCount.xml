@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<statisticalReport>
+    <result>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>40736</count>
+            <expandedForm>source asserted synonymy./Has alias</expandedForm>
+            <termType>SY/has_alias</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>40736</count>
+            <expandedForm>source asserted synonymy./Alias_of</expandedForm>
+            <termType>SY/alias_of</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>41309</count>
+            <expandedForm>source asserted synonymy./Has expanded form</expandedForm>
+            <termType>SY/has_expanded_form</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>41309</count>
+            <expandedForm>source asserted synonymy./Expanded form of</expandedForm>
+            <termType>SY/expanded_form_of</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+    </result>
+    <source>HGNC</source>
+</statisticalReport>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<statisticalReport>
+    <result>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>5976</count>
+            <expandedForm>FDA UNII Code</expandedForm>
+            <termType>FDA_UNII_CODE</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>2175</count>
+            <expandedForm>Secondary GO ID (e.g. GO:0020034)</expandedForm>
+            <termType>SID</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+    </result>
+    <source>DRUGBANK</source>
+</statisticalReport>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<statisticalReport>
+    <result>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>29363</count>
+            <expandedForm>VA Class - the code of an NDF/HT drug class name (e.g. AM110)</expandedForm>
+            <termType>VAC</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>25174</count>
+            <expandedForm>VA CMOP (central mail - order pharmacy) ID</expandedForm>
+            <termType>VMO</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>28785</count>
+            <expandedForm>VA generic name</expandedForm>
+            <termType>VA_GENERIC_NAME</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>28785</count>
+            <expandedForm>VA class name</expandedForm>
+            <termType>VA_CLASS_NAME</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>252565</count>
+            <expandedForm>National Drug Code corresponding to a clinical drug (e.g. 000023082503)</expandedForm>
+            <termType>NDC</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>28785</count>
+            <expandedForm>National Formulary Name</expandedForm>
+            <termType>NF_NAME</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>9396</count>
+            <expandedForm>National Formulary Inactivation Date - the date a drug was removed from the VA's National Formulary</expandedForm>
+            <termType>NF_INACTIVATE</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>543</count>
+            <expandedForm>VA Internal entry number of the parent class</expandedForm>
+            <termType>PARENT_CLASS</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>25142</count>
+            <expandedForm>VA dispense unit</expandedForm>
+            <termType>VA_DISPENSE_UNIT</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>28787</count>
+            <expandedForm>National formulary indicator - "YES" or "NO" indicating whether a drug is in the VA's National Formulary</expandedForm>
+            <termType>NFI</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>28774</count>
+            <expandedForm>NDF Transmit to Consolidated Mail Outpatient Pharmacy (CMOP)</expandedForm>
+            <termType>NDF_TRANSMIT_TO_CMOP</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>12178</count>
+            <expandedForm>Single or multi-source product</expandedForm>
+            <termType>SNGL_OR_MULT_SRC_PRD</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>578</count>
+            <expandedForm>VA Drug class type - Values can be "Major","Minor","Sub Class", or "0","1","2" respectively</expandedForm>
+            <termType>DRUG_CLASS_TYPE</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>12189</count>
+            <expandedForm>Exclude drug interaction check</expandedForm>
+            <termType>EXCLUDE_DI_CHECK</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>28765</count>
+            <expandedForm>Controlled Substance Act designation code (e.g. 0,2,3n)</expandedForm>
+            <termType>DCSA</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>28785</count>
+            <expandedForm>Drug Doseform (e.g. chewable tablet)</expandedForm>
+            <termType>DDF</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+    </result>
+    <source>VANDF</source>
+</statisticalReport>

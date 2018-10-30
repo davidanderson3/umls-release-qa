@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<statisticalReport>
+    <result>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>363</count>
+            <expandedForm>Name of a problem</expandedForm>
+            <termType>PR</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>22</count>
+            <expandedForm>Component name (these are hierarchical terms, as opposed to the LOINC component names which are analytes)</expandedForm>
+            <termType>CO</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>55</count>
+            <expandedForm>Expanded version of short hierarchical term</expandedForm>
+            <termType>HX</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>1357</count>
+            <expandedForm>Orders</expandedForm>
+            <termType>OR</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>311</count>
+            <expandedForm>Goal</expandedForm>
+            <termType>GO</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>121</count>
+            <expandedForm>Hierarchical term</expandedForm>
+            <termType>HT</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+    </result>
+    <source>PCDS</source>
+</statisticalReport>
