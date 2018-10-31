@@ -1,6 +1,6 @@
 title=NCI (NCI Thesaurus) - Source Representation
 date=2018-05-07
-updated=2018-05-07
+updated=2018-11-05
 type=page
 status=published
 ~~~~~~
@@ -25,7 +25,7 @@ status=published
 <a id="top-of-page"></a> <span class = "nav">Skip to: <a href = "#general">General Notes/Comments</a>, <a href = "#change_summary">Summary of Changes</a>, <a href = "#file_summary">Summary of Source-Provided Files</a> <a href = "#file_details">Source-Provided File Details</a></span>
 <a id= "general">&nbsp;</a>
 <div id = "rep_general" class = "rep_block_level_one">
-<h3>VSAB: NCI2017_09D</h3>
+<h3>VSAB: NCI2018_03D</h3>
 <h3>General Notes/Comments:</h3>
 <p>NCI Thesaurus (NCIt) is a widely recognized standard for biomedical coding and reference. It covers vocabulary for clinical care, translational and basic research, public information and administrative activities and is used by a broad variety of public and private partners both nationally and internationally.
 The scope of NCI is determined by the combined scope of its source vocabularies which include the following:</p>
@@ -47,16 +47,25 @@ The scope of NCI is determined by the combined scope of its source vocabularies 
     <td>CDISC</td><td>Clinical Data Interchange Standards Consortium</td>
 </tr>
 <tr>
+    <td>CDISC-GLOSS</td><td>CDISC Glossary Terminology</td>
+</tr>
+<tr>
     <td>CRCH</td><td>Cancer Research Center of Hawaii</td>
 </tr>
 <tr>
     <td>CTCAE</td><td>Common Terminology Criteria for Adverse Events</td>
 </tr>
 <tr>
+    <td>CTCAE_3</td><td>Common Terminology Criteria for Adverse Events 3.0</td>
+</tr>
+<tr>
+    <td>CTCAE_5</td><td>Common Terminology Criteria for Adverse Events 5.0</td>
+</tr>
+<tr>
     <td>CTEP-SDC</td><td>Cancer Therapy Evaluation Program - Simple Disease Classification</td>
 </tr>
 <tr>
-    <td>CTRP-SDC</td><td>Clinical Trials Reporting Program</td>
+    <td>CTRP</td><td>Clinical Trials Reporting Program</td>
 </tr>
 <tr>
     <td>DCP</td><td>NCI Division of Cancer Prevention Program</td>
@@ -122,20 +131,23 @@ The scope of NCI is determined by the combined scope of its source vocabularies 
 <div id = "rep_change_summary" class = "rep_block_level_one">
 <a id= "change_summary">&nbsp;</a>
 <h3>Summary of Changes</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top-of-page">top</a></span>)
-<p>New subsources:</p>
+<p>New subsource(s):</p>
 <ul>
-  <li>CTRP-SDC (Clinical Trials Reporting Program)</li>
+  <li>CDISC-GLOSS (CDISC Glossary Terminology)</li>
+  <li>CTCAE_3 (Common Terminology Criteria for Adverse Events 3.0)</li>
+  <li>CTCAE_5 (Common Terminology Criteria for Adverse Events 5.0)</li>
 </ul>
-<p>New term groups:</p>
+<p>New attribute name(s) (ATN):</p>
 <ul>
-  <li>NCI2017_CTRP-SDC_1709D/PT</li>
-  <li>NCI2017_CTRP-SDC_1709D/SY</li>
-  <li>NCI2017_CTRP-SDC_1709D/DN</li>
+  <li>PUBLISH_VALUE_SET</li>
+  <li>TERM_BROWSER_VALUE_SET_DESCRIPTION</li>
 </ul>
-<p>New relationship attribute (RELA) | RELA inverse:</p>
+<p>New relationship attribute(s) (RELA) | RELA inverse(s):</p>
 <ul>
-  <li>related_to_genetic_biomarker|genetic_biomarker_related_to</li>
+  <li>has_ctcae_5_parent|ctcae_5_parent_of</li>
+  <li>neoplasm_has_special_category|special_category_includes_neoplasm</li>
 </ul>
+<p>Subsource = CTRP-SDC has been changed to CTRP</p>
 </div>
 <div id = "rep_file_summary" class = "rep_block_level_one"></div>
 <a id= "file_summary">&nbsp;</a>
@@ -177,6 +189,8 @@ The scope of NCI is determined by the combined scope of its source vocabularies 
 <tr><td  class = "file_field_name">&lt;A11 rdf:resource="http://...owl#C..."/&gt;</td><td>Has_NICHD_Parent</td><td>MRREL.CUI*; MRREL.RELA=has_nichd_parent</td></tr>
 <tr><td  class = "file_field_name">&lt;A12 rdf:resource="http://...owl#C..."/&gt;</td><td>Has_Data_Element</td><td>MRREL.CUI*; MRREL.RELA=has_data_element</td></tr>
 <tr><td  class = "file_field_name">&lt;A13 rdf:resource="http://...owl#C..."/&gt;</td><td>Related_To_Genetic_Biomarker</td><td>MRREL.CUI*; MRREL.RELA=related_to_genetic_biomarker</td></tr>
+<tr><td  class = "file_field_name">&lt;A14 rdf:resource="http://...owl#C..."/&gt;</td><td>Neoplasm_Has_Special_Category</td><td>MRREL.CUI*; MRREL.RELA=neoplasm_has_special_category</td></tr>
+<tr><td  class = "file_field_name">&lt;A15 rdf:resource="http://...owl#C..."/&gt;</td><td>Has_CTCAE_5_Parent</td><td>MRREL.CUI*; MRREL.RELA=has_ctcae_5_parent</td></tr>
 <tr><td  class = "file_field_name">&lt;P90 rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"&gt;&lt;ncicp:ComplexTerm
 xmlns:ncicp="http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#"&gt;&lt;ncicp:term-name&gt;...&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;...&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;...&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplextTerm&gt;&lt;/P90&gt;
 </td><td>FULL_SYN. Includes term name, term type, term source, and source code.</td><td>MRCONSO.STR = term name; MRCONSO.TTY = term type; MRCONSO.SAB = term source. NCI/PTs are not processed and NCI/CNUs are assigned to the ATN = CNU.</td></tr>
@@ -242,7 +256,9 @@ Includes definition and source of definition.</td><td>MRDEF.SAB = source; MRDEF.
 <tr><td  class = "file_field_name">&lt;P367 rdf:datatype="http://www... &lt;/P367&gt;</td><td>PID_ID</td><td>MRSAT.ATN=PID_ID</td></tr>
 <tr><td  class = "file_field_name">&lt;P368 rdf:datatype="http://www... &lt;/P368&gt;</td><td>CHEBI_ID</td><td>MRSAT.ATN=CHEBI_ID</td></tr>
 <tr><td  class = "file_field_name">&lt;P369 rdf:datatype="http://www... &lt;/P369&gt;</td><td>HGNC_ID</td><td>MRSAT.ATN=HGNC_ID</td></tr>
-<tr><td  class = "file_field_name">&lt;P371 rdf:datatype="http://www... &lt;/P371&gt;</td><td>NICHD_Hierarchy_Term</td><td>MRSAT.ATN= NICHD_Hierarchy_Term</td></tr>
+<tr><td  class = "file_field_name">&lt;P371 rdf:datatype="http://www... &lt;/P371&gt;</td><td>NICHD_Hierarchy_Term</td><td>MRSAT.ATN=NICHD_HIERARCHY_TERM</td></tr>
+<tr><td  class = "file_field_name">&lt;P372 rdf:datatype="http://www... &lt;/P372&gt;</td><td>Publish_Value_Set</td><td>MRSAT.ATN= PUBLISH_VALUE_SET</td></tr>
+<tr><td  class = "file_field_name">&lt;P376 rdf:datatype="http://www... &lt;/P376&gt;</td><td>Term_Browser_Value_Set_Description</td><td>MRSAT.ATN= TERM_BROWSER_VALUE_SET_DESCRIPTION</td></tr>
 <tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R24"&gt;</td><td>EO_Disease_Maps_To_Human_Disease</td><td>MRREL.RELA =
 eo_disease_maps_to_human_disease</td></tr>
 <tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R25"&gt;</td><td>EO_Disease_Has_Associated_EO_Anatomy</td><td>MRREL.RELA =

@@ -1,6 +1,6 @@
 title=ICD10PCS (ICD-10 Procedure Coding System) - Source Representation
 date=2017-11-06
-updated=2018-05-07
+updated=2018-11-05
 type=page
 status=published
 ~~~~~~
@@ -31,15 +31,31 @@ status=published
     <div id="rep_change_summary" class="rep_block_level_one">
       <h3>Summary of Changes:</h3>
         <br/>
-      <br/>
-      There were no changes to the file formats.
-        The reimbursement map set has been discontinued.
+             General Equivalence Mappings (GEMs) have been discontinued for ICD10PCS, resulting in the following changes: <br/>
+	  		Deprecated TTY:  XM<br/>
+	  		Deprecated ATNs:
+	  		<ul>
+	  			<li>FROMRSAB</li>
+	  			<li>FROMVSAB</li>
+	  			<li>MAPSETRSAB</li>
+	  			<li>MAPSETVERSION</li>
+	  			<li>MAPSETVSAB</li>
+	  			<li>MAPSETXRTARGETID</li>
+	  			<li>MTH_MAPFROMCOMPLEXITY</li>
+	  			<li>MTH_MAPFROMEXHAUSTIVE</li>
+	  			<li>MTH_MAPSETCOMPLEXITY</li>
+	  			<li>MTH_MAPTOCOMPLEXITY</li>
+	  			<li>MTH_MAPTOEXHAUSTIVE</li>
+	  			<li>TORSAB</li>
+	  			<li>TOVSAB</li>
+	  		</ul>
+		MRMAP, MRSMAP:  No entries for ICD10PCS<br/>
     </div>
     <div id="rep_file_summary" class="rep_block_level_one"> <a id="file_summary"></a>
       <h3>Source-Provided Files: Summary</h3>
-        
+
      <p>Numerous documentation and data files are available at: <a href =
-	         "https://www.cms.gov/Medicare/Coding/ICD10/2018-ICD-10-PCS-and-GEMs.html">https://www.cms.gov/Medicare/Coding/ICD10/2018-ICD-10-PCS-and-GEMs.html </a>
+	         "https://www.cms.gov/Medicare/Coding/ICD10/2019-ICD-10-CM.html">https://www.cms.gov/Medicare/Coding/ICD10/2019-ICD-10-CM.html</a>
           , including the following:
       </p>
         <strong>Documentation and Reference</strong><br/>
@@ -51,18 +67,10 @@ status=published
               <th>Description</th>
             </tr>
             <tr>
-              <td>pcs_2018.pdf</td>
+              <td>pcs_2019.pdf</td>
               <td>Information about tables indicating meaning
                 of codes for specific character positions; index to
                 codes</td>
-            </tr>
-             <tr>
-              <td>GemsTechDoc.pdf</td>
-              <td>GEMs documentation for technical users</td>
-            </tr>
-            <tr>
-              <td>pcs_gemguide_2018.pdf</td>
-              <td>GEMs documentation and user guide</td>
             </tr>
             <tr>
               <td>icd10pcs_tables.xsd</td>
@@ -74,7 +82,7 @@ status=published
             </tr>
             <tr>
               <td>ICD10OrderFiles.pdf</td>
-              <td>Documentation for the icd10pcs_order_2018.txt file</td>
+              <td>Documentation for the icd10pcs_order_2019.txt file</td>
             </tr>
           </tbody>
         </table>
@@ -89,19 +97,11 @@ status=published
           <th>Description</th>
         </tr>
         <tr>
-          <td>gem_i9pcs.txt</td>
-          <td>ICD-9-CM to ICD-10-PCS General Equivalence Mappings (GEMs)</td>
-        </tr>
-        <tr>
-          <td>gem_pcsi9.txt</td>
-          <td>ICD-10-PCS to ICD-9-CM GEMs</td>
-        </tr>
-        <tr>
-          <td>icd10pcs_order_2018.txt</td>
+          <td>icd10pcs_order_2019.txt</td>
           <td>Long and short descriptions</td>
         </tr>
 		<tr>
-			<td>icd10pcs_tables_2018.xml</td>
+			<td>icd10pcs_tables_2019.xml</td>
 			<td>Tabular data</td>
         </tr>
       </tbody>
@@ -110,12 +110,12 @@ status=published
     <br/>
       <strong>Not included</strong>:
     <div id="rep_file_details" class="rep_block_level_one"><br/>
-      All data from the order and mappings files is represented in the
+      All data from the order file is represented in the
       Metathesaurus.  Selected tags from the xml file are not
       processed at this time, including &lt;explanation&gt; and
       &lt;includes&gt;.<br/>
       <h3>Source-Provided Files: Details</h3>
-        
+
       <p>The following is a list of elements available for ICD-10-PCS
         data:<br/>
       </p>
@@ -234,209 +234,4 @@ status=published
       </div>
       <br/>
       <br/>
-      <div class="rep_block_level_two"><a id="file3"></a><br/>
-        <span style="font-weight: bold;">File:  gem_i9pcs.txt</span>
       </div>
-      <br/>
-      <table>
-        <tbody>
-          <tr>
-            <th>Field</th>
-            <th>Length</th>
-            <th>Begin</th>
-            <th>End</th>
-            <th>Representation</th>
-          </tr>
-          <tr>
-            <td class="file_field_name">ICD-9-CM Code (source)<br/>
-            </td>
-            <td>5</td>
-            <td>1</td>
-            <td>5</td>
-            <td>MRMAP.RRF.FROMID<br/>
-              MRMAP.RRF.FROMEXPR<br/>
-              Decimal point added as appropriate</td>
-          </tr>
-          <tr>
-            <td>filler</td>
-            <td>1</td>
-            <td>6</td>
-            <td>6</td>
-            <td>not used</td>
-          </tr>
-          <tr>
-            <td>ICD-10-PCS code (target)</td>
-            <td>7</td>
-            <td>7</td>
-            <td>13</td>
-            <td>MRMAP.RRF.TOID<br/>
-              MRMAP.RRF.TOEXPR</td>
-          </tr>
-          <tr>
-            <td>filler</td>
-            <td>1</td>
-            <td>14</td>
-            <td>14</td>
-            <td>not used</td>
-          </tr>
-          <tr>
-            <td>Approximate flag</td>
-            <td>1</td>
-            <td>15</td>
-            <td>15</td>
-            <td>Value of 1 (indicates the
-              entry is not equivalent):<br/>
-              <div style="margin-left: 40px;">MRMAP.RRF.REL=RO<br/>
-                MRMAP.REL.RELA=approximately_mapped_to<br/>
-              </div>
-              <br/>
-              Value of 0:  <br/>
-              <div style="margin-left: 40px;">MRMAP.RRF.REL=SY<br/>
-                MRMAP.RRF.RELA=mapped_to</div>
-            </td>
-          </tr>
-          <tr>
-            <td>No map flag</td>
-            <td>1</td>
-            <td>16</td>
-            <td>16</td>
-            <td>Value of 1:<br/>
-              MRMAP.RRF.REL=XR</td>
-          </tr>
-          <tr>
-            <td>Combination flag</td>
-            <td>1</td>
-            <td>17</td>
-            <td>17</td>
-            <td>Value of "1" indicates that
-              more than one code is required.  This is implied in
-              MRMAP.RRF by non-zero values in MAPSUBSETID.</td>
-          </tr>
-          <tr>
-            <td>Scenario</td>
-            <td>1</td>
-            <td>18</td>
-            <td>18<br/>
-            </td>
-            <td>MRMAP.RRF.MAPSUBSETID (first subfield, before the ":")<br/>
-              Anything with the same FROMEXPR and MAPSUBSETID values
-              should be "OR'd" together </td>
-          </tr>
-          <tr>
-            <td>Choice</td>
-            <td>1</td>
-            <td>19</td>
-            <td>19</td>
-            <td>MRMAP.RRF.MAPSUBSETID
-              (second subfield, after the ":")<br/>
-              Anything with the same FROMEXPR and MAPSUBSETID values
-              should be "OR'd" together</td>
-          </tr>
-        </tbody>
-      </table>
-      <br/>
-      <div class="rep_block_level_two"><a id="file4"></a><br/>
-        <strong>File:  gem_pcsi9.txt</strong>
-        <br/>
-        <table>
-          <tbody>
-            <tr>
-              <th>Field</th>
-              <th>Length</th>
-              <th>Begin</th>
-              <th>End</th>
-              <th>Representation</th>
-            </tr>
-            <tr>
-              <td>ICD-10-PCS Code (source)</td>
-              <td>7</td>
-              <td>1</td>
-              <td>7</td>
-              <td>MRMAP.RRF.FROMID<br/>
-                MRMAP.RRF.FROMEXPR
-              </td>
-            </tr>
-            <tr>
-              <td>filler</td>
-              <td>1</td>
-              <td>8</td>
-              <td>8</td>
-              <td>not used</td>
-            </tr>
-            <tr>
-              <td>ICD-9-CM Code (target)</td>
-              <td>5</td>
-              <td>9</td>
-              <td>13</td>
-              <td>MRMAP.RRF.TOID<br/>
-                MRMAP.RRF.TOEXPR<br/>
-                Decimal point added as appropriate
-              </td>
-            </tr>
-            <tr>
-              <td>filler</td>
-              <td>1</td>
-              <td>14</td>
-              <td>14</td>
-              <td>not used</td>
-            </tr>
-            <tr>
-              <td>Approximate flag</td>
-              <td>1</td>
-              <td>15</td>
-              <td>15</td>
-              <td>Value of 1 (indicates the
-                entry is not equivalent):<br/>
-                <div style="margin-left: 40px;">MRMAP.RRF.REL=RO<br/>
-                  MRMAP.REL.RELA=approximately_mapped_to<br/>
-                </div>
-                <br/>
-                Value of 0:  <br/>
-                <div style="margin-left: 40px;">MRMAP.RRF.REL=SY<br/>
-                  MRMAP.RRF.RELA=mapped_to<br/>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>No map flag</td>
-              <td>1</td>
-              <td>16</td>
-              <td>16</td>
-              <td>Value of 1:<br/>
-                MRMAP.RRF.REL=XR
-              </td>
-            </tr>
-            <tr>
-              <td>Combination flag</td>
-              <td>1</td>
-              <td>17</td>
-              <td>17</td>
-              <td>Value of "1" indicates
-                that more than one code is required.  This is
-                implied in MRMAP.RRF by non-zero values in MAPSUBSETID.</td>
-            </tr>
-            <tr>
-              <td>Scenario</td>
-              <td>1</td>
-              <td>18</td>
-              <td>18<br/>
-              </td>
-              <td>MRMAP.RRF.MAPSUBSETID
-                (first subfield, before the ":")<br/>
-                Anything with the same FROMEXPR and MAPSUBSETID values
-                should be "OR'd" together</td>
-            </tr>
-            <tr>
-              <td>Choice list</td>
-              <td>1</td>
-              <td>19</td>
-              <td>19</td>
-              <td>MRMAP.RRF.MAPSUBSETID
-                (second subfield, after the ":")<br/>
-                Anything with the same FROMEXPR and MAPSUBSETID values
-                should be "OR'd" together</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>

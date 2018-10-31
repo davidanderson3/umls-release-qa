@@ -1,6 +1,6 @@
 title=CDT (Current Dental Terminology) - Metathesaurus Representation
 date=2017-11-06
-updated=2018-05-07
+updated=2018-11-05
 type=page
 status=published
 ~~~~~~
@@ -26,8 +26,7 @@ status=published
       <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
       <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
     <div id="general" class="rep_block_level_one">
-      <p><strong>VSAB:</strong> CDT2018
-      </p>
+      <p><strong>VSAB:</strong> CDT2019</p>
       <div id="rep_identifiers" class="rep_block_level_one">
         <h3>Summary of Changes</h3>
         <p>There were no changes to the original file format or to
@@ -61,12 +60,12 @@ status=published
 			<th>Description</th>
 			</tr>
             <tr>
-              <td>b_CDT2018ASCII_2017June26.txt</td>
-              <td>Documentation and tab-delimited data</td>
+              <td>CDT2019ASCIIText_2018May01.txt</td>
+              <td>Documentation and tab-delimited data (the data is also available from the ADA as an Excel file)</td>
 
             </tr>
             <tr>
-              <td>a_CORRECTED_Read Me_CDT 2018.pdf</td>
+              <td>a_Read Me_CDT 2019.pdf</td>
               <td>Documentation</td>
             </tr>
           </tbody>
@@ -81,7 +80,7 @@ status=published
             <ul>
               <li>TTY = PT, TTY=OP: the value of the Code field from
                 tab-delimited data file</li>
-              <li>TTY = HT: A range, e.g. "D4000-D4999," indicating the
+              <li>TTY = HT: A range, e.g. "D4210-D4999," indicating the
                 high and low code values encompassed by the HT; this
                 value is computed during Metathesaurus source
                 processing.
@@ -98,7 +97,7 @@ status=published
         <div id="rep_termtypes" class="rep_block_level_two"> <a
             id="atoms"></a>
           <h3>Atoms (MRCONSO):</h3>
-   
+
           <table>
             <tbody>
               <tr>
@@ -108,7 +107,7 @@ status=published
               <tr>
                 <td>HT</td>
                 <td>CODE: <br/>
-                  A range, e.g. "D4000-D4999." This value is computed,
+                  A range, e.g. "D4210-D4999." This value is computed,
                   based on the low and high code values encompassed by
                   the HT.<br/>
                   <br/>
@@ -166,7 +165,7 @@ status=published
             id="attributes"></a><br/>
           <h3>Attributes (MRSAT):</h3>
 
-   
+
           <table>
             <tbody>
               <tr>
@@ -187,7 +186,8 @@ status=published
                       descriptor, if present</li>
                     <li>35 = Revision in the nomenclature or descriptor
                       (or both), or to indicate a revision to an entire
-                      subcategory." </li>
+                      subcategory</li>
+                    <li>39 = Editorial (e.g., syntax; spelling)</li>
                     <li>99 = Entire CDT Code entry is no longer valid
                       (i.e., deleted) in this version.</li>
                   </ul>
@@ -206,7 +206,7 @@ status=published
         <div id="rep_definitions" class="rep_block_level_two"> <a
             id="definitions"></a><br/>
           <h3>Definitions (MRDEF):</h3>
-   
+
           <p>There are no definitions in CDT. Data that was previously
             represented as definitions is now represented as ATN = SOS.<br/>
           </p>
@@ -215,7 +215,7 @@ status=published
             id="relationships"></a><br/>
           <h3>Relationships (MRREL); Hierarchy (MRHIER)<br/>
           </h3>
-          
+
           <table>
             <tbody>
               <tr>
@@ -244,7 +244,7 @@ status=published
         </div>
         <div id="mappings" class="rep_block_level_two">
           <h3>Mappings (MRMAP):</h3>
-   
+
           <p>No mappings are supplied for CDT.<br/>
           </p>
         </div>

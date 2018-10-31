@@ -1,6 +1,6 @@
 title=ICD10PCS (ICD-10 Procedure Coding System) - Metathesaurus Representation
 date=2017-11-06
-updated=2018-05-07
+updated=2018-11-05
 type=page
 status=published
 ~~~~~~
@@ -24,18 +24,35 @@ status=published
       back to the specific source data that populates them.</p>
     <a id="top-of-page"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>,
       <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
-      <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+      <a href="#relationships">Relationships</a></span>
     <div id="general" class="rep_block_level_one">
-      <p><strong>VSAB:</strong> ICD10PCS_2018<br/>
+      <p><strong>VSAB:</strong> ICD10PCS_2019<br/>
       </p>
       <div id="rep_identifiers" class="rep_block_level_one">
         <h3>Summary of Changes</h3>
-        There were no changes to the file formats.
-        The reimbursement map set has been discontinued.</div>
+        General Equivalence Mappings (GEMs) have been discontinued for ICD10PCS, resulting in the following changes: <br/>
+		Deprecated TTY:  XM<br/>
+		Deprecated ATNs:
+		<ul>
+			<li>FROMRSAB</li>
+			<li>FROMVSAB</li>
+			<li>MAPSETRSAB</li>
+			<li>MAPSETVERSION</li>
+			<li>MAPSETVSAB</li>
+			<li>MAPSETXRTARGETID</li>
+			<li>MTH_MAPFROMCOMPLEXITY</li>
+			<li>MTH_MAPFROMEXHAUSTIVE</li>
+			<li>MTH_MAPSETCOMPLEXITY</li>
+			<li>MTH_MAPTOCOMPLEXITY</li>
+			<li>MTH_MAPTOEXHAUSTIVE</li>
+			<li>TORSAB</li>
+			<li>TOVSAB</li>
+		</ul>
+		MRMAP, MRSMAP:  No entries for ICD10PCS<br/></div>
       <div id="rep_change_summary" class="rep_block_level_one">
         <h3>Source Provided Files:</h3>
         <p>Numerous documentation and data files are available at: <a href =
-        "https://www.cms.gov/Medicare/Coding/ICD10/2018-ICD-10-PCS-and-GEMs.html">https://www.cms.gov/Medicare/Coding/ICD10/2018-ICD-10-PCS-and-GEMs.html</a>
+        "https://www.cms.gov/Medicare/Coding/ICD10/2019-ICD-10-CM.html">https://www.cms.gov/Medicare/Coding/ICD10/2019-ICD-10-CM.html</a>
           , including the following:
         </p>
         <strong>Documentation and Reference</strong><br/>
@@ -47,18 +64,10 @@ status=published
               <th>Description</th>
             </tr>
             <tr>
-              <td>pcs_2018.pdf</td>
+              <td>pcs_2019.pdf</td>
               <td>Information about tables indicating meaning
                 of codes for specific character positions; index to
                 codes</td>
-            </tr>
-             <tr>
-              <td>GemsTechDoc.pdf</td>
-              <td>GEMs documentation for technical users</td>
-            </tr>
-            <tr>
-              <td>pcs_gemguide_2018.pdf</td>
-              <td>GEMs documentation and user guide</td>
             </tr>
             <tr>
               <td>icd10pcs_tables.xsd</td>
@@ -69,7 +78,7 @@ status=published
 				<td>xml schema document describing definitions xml format</td>
             </tr>
             <tr>
-              <td>ICD10OrderFiles.pdf</td>
+              <td>icd10pcsOrderFile.pdf</td>
               <td>Documentation for the icd10pcs_order_2016.txt file</td>
             </tr>
           </tbody>
@@ -86,19 +95,11 @@ status=published
           <th>Description</th>
         </tr>
         <tr>
-          <td>gem_i9pcs.txt</td>
-          <td>ICD-9-CM to ICD-10-PCS General Equivalence Mappings (GEMs)</td>
-        </tr>
-        <tr>
-          <td>gem_pcsi9.txt</td>
-          <td>ICD-10-PCS to ICD-9-CM GEMs</td>
-        </tr>
-        <tr>
-          <td>icd10pcs_order_2018.txt</td>
+          <td>icd10pcs_order_2019.txt</td>
           <td>Long and short descriptions</td>
         </tr>
 		<tr>
-			<td>icd10pcs_tables_2018.xml</td>
+			<td>icd10pcs_tables_2019.xml</td>
 			<td>Tabular data</td>
         </tr>
       </tbody>
@@ -209,11 +210,6 @@ status=published
                 <br/>
                 TTY = "PX" atoms are created for level 7</td>
             </tr>
-            <tr>
-              <td>XM</td>
-              <td>This data is added during Metathesaurus source
-                processing </td>
-            </tr>
           </tbody>
         </table>
       </div>
@@ -237,76 +233,8 @@ status=published
               <td>ORDER_NO</td>
               <td>Order number from icd10pcs_order_YYYY.txt (character positions 1-5)</td>
             </tr>
-            <tr>
-              <td>FROMRSAB</td>
-              <td>This data is added during Metathesaurus source processing </td>
-            </tr>
-            <tr>
-              <td>FROMVSAB</td>
-              <td>This data is added during Metathesaurus source processing </td>
-            </tr>
-            <tr>
-              <td>MAPSETRSAB</td>
-              <td>This data is added during Metathesaurus source processing </td>
-            </tr>
-            <tr>
-              <td>MAPSETTYPE</td>
-              <td>This data is added during Metathesaurus source processing </td>
-            </tr>
-            <tr>
-              <td>MAPSETVERSION</td>
-              <td>This data is added during Metathesaurus source processing </td>
-            </tr>
-            <tr>
-              <td>MAPSETVSAB</td>
-              <td>This data is added during Metathesaurus source processing </td>
-            </tr>
-            <tr>
-              <td>MAPSETXRTARGETID</td>
-              <td>This data is added during Metathesaurus source processing </td>
-            </tr>
-            <tr>
-              <td>MTH_MAPFROMCOMPLEXITY</td>
-              <td>This data is added during Metathesaurus source processing </td>
-            </tr>
-            <tr>
-              <td>MTH_MAPFROMEXHAUSTIVE</td>
-              <td>This data is added during Metathesaurus source processing </td>
-            </tr>
-            <tr>
-              <td>MTH_MAPSETCOMPLEXITY</td>
-              <td>This data is added during Metathesaurus source processing </td>
-            </tr>
-            <tr>
-              <td>MTH_MAPTOCOMPLEXITY</td>
-              <td>This data is added during Metathesaurus source processing </td>
-            </tr>
-            <tr>
-              <td>MTH_MAPTOEXHAUSTIVE</td>
-              <td>This data is added during Metathesaurus source processing </td>
-            </tr>
-            <tr>
-              <td>SOS</td>
-              <td>This data is added during Metathesaurus source processing </td>
-            </tr>
-            <tr>
-              <td>TORSAB</td>
-              <td>This data is added during Metathesaurus source processing </td>
-            </tr>
-            <tr>
-              <td>TOVSAB</td>
-              <td>This data is added during Metathesaurus source processing </td>
-            </tr>
            </tbody>
         </table>
-      </div>
-      <div id="rep_definitions" class="rep_block_level_two"> <a id="definitions"></a><br/>
-        <h3>Definitions (MRDEF):</h3>
-          <br/>
-        <p>Additional descriptive information about a header term
-          extracted from &lt;definition&gt; tag in
-          icd10pcs_definitions_YYYY.xml is included in MRSAT.RRF with ATN =
-          "ADDED_MEANING" </p>
       </div>
       <div id="rep_relationships" class="rep_block_level_two"> <a id="relationships"></a><br/>
         <h3>Relationships (MRREL):</h3>
@@ -333,50 +261,4 @@ status=published
           </tbody>
         </table>
       </div>
-      <div id="rep_mappings" class="rep_block_level_two"> <a id="mappings"></a><br/>
-        <h3>Mappings (MRMAP):</h3>
-          <br/>
-
-        <p>Two Mapsets ("XM" atoms, along with associated attributes
-          and mappings), are included for ICD-10-PCS. These are
-          extracted from the General Equivalence Mappings (GEMs).
-        </p>
-        <p>Note:  The original mapping files do not include decimal
-          points for the ICD-9-CM codes.  For clarity, decimals are
-          added appropriately to the MRMAP.RRF representation, e.g.
-          "3929' is converted to "39.29" as a TOID.<br/>
-        </p>
-        <br/>
-        <table>
-          <tbody>
-            <tr>
-              <th>Field</th>
-              <th>Value/Origin (GEMs)</th>
-            </tr>
-            <tr>
-              <td>MAPSUBSETID</td>
-              <td>Compound value of
-                "Scenario:Choice"<br/>
-                Note: Anything with the same FROMEXPR and MAPSUBSETID
-                values should be "OR'd" together.</td>
-            </tr>
-            <tr>
-              <td>REL</td>
-              <td>RO where approximate flag
-                = "1"<br/>
-                SY where approxmiate flag = "0"<br/>
-                XR where target value = "NoPCS"
-              </td>
-            </tr>
-            <tr>
-              <td>RELA</td>
-              <td>approximately_mapped_to
-                where approximate flag = "1"<br/>
-                mapped_to where approxmiate flag = "0"<br/>
-                null (empty) where target value = "NoPCS"
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+     </div>
