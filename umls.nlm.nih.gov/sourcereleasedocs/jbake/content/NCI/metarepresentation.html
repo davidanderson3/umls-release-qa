@@ -1,6 +1,6 @@
 title=NCI (NCI Thesaurus) - Metathesaurus Representation
 date=2018-05-07
-updated=2018-05-07
+updated=2018-11-05
 type=page
 status=published
 ~~~~~~
@@ -24,7 +24,7 @@ status=published
 <p>This page list UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
 <a id="top-of-page"></a> <span class = "nav">Skip to: <a href = "#atoms">Atoms</a>, <a href = "#attributes">Attributes</a>, <a href = "#definitions">Definitions</a>, <a href = "#relationships">Relationships</a>, <a href = "#mappings">Mappings</a></span>
 <div id = "general" class = "rep_block_level_one">
-<p><strong>VSAB: </strong>NCI2017_09D</p>
+<p><strong>VSAB: </strong>NCI2018_03D</p>
 <div id = "rep_identifiers" class = "rep_block_level_one">
 <h3>general notes/Comments:</h3>
 <p>NCI Thesaurus (NCIt) is a widely recognized standard for biomedical coding and reference. It covers vocabulary for clinical care, translational and basic research, public information and administrative activities and is used by a broad variety of public and private partners both nationally and internationally.The scope of NCI is determined by the combined scope of its source vocabularies which include the following:</p>
@@ -54,6 +54,10 @@ status=published
     <td>Clinical Data Interchange Standards Consortium</td>
 </tr>
 <tr>
+    <td>CDISC-GLOSS</td>
+    <td>CDISC Glossary Terminology</td>
+</tr>
+<tr>
     <td>CRCH</td>
     <td>Cancer Research Center of Hawaii</td>
 </tr>
@@ -62,11 +66,19 @@ status=published
     <td>Common Terminology Criteria for Adverse Events</td>
 </tr>
 <tr>
+    <td>CTCAE_3</td>
+    <td>Common Terminology Criteria for Adverse Events 3.0</td>
+</tr>
+<tr>
+    <td>CTCAE_5</td>
+    <td>Common Terminology Criteria for Adverse Events 5.0</td>
+</tr>
+<tr>
     <td>CTEP-SDC</td>
     <td>Cancer Therapy Evaluation Program - Simple Disease Classification</td>
 </tr>
 <tr>
-    <td>CTRP-SDC</td>
+    <td>CTRP</td>
     <td>Clinical Trials Reporting Program</td>
 </tr>
 <tr>
@@ -148,20 +160,23 @@ status=published
 </table>
 </div>
 <h3>Summary of Changes</h3>
-<p>New subsources:</p>
+<p>New subsource(s):</p>
 <ul>
-  <li>CTRP-SDC (Clinical Trials Reporting Program)</li>
-  </ul>
-<p>New term groups:</p>
-<ul>
-  <li>NCI2017_CTRP-SDC_1709D/PT</li>
-  <li>NCI2017_CTRP-SDC_1709D/SY</li>
-  <li>NCI2017_CTRP-SDC_1709D/DN</li>
+  <li>CDISC-GLOSS (CDISC Glossary Terminology)</li>
+  <li>CTCAE_3 (Common Terminology Criteria for Adverse Events 3.0)</li>
+  <li>CTCAE_5 (Common Terminology Criteria for Adverse Events 5.0)</li>
 </ul>
-<p>New relationship attribute (RELA) | RELA inverse:</p>
+<p>New attribute name(s) (ATN):</p>
 <ul>
-  <li>related_to_genetic_biomarker|genetic_biomarker_related_to</li>
+  <li>PUBLISH_VALUE_SET</li>
+  <li>TERM_BROWSER_VALUE_SET_DESCRIPTION</li>
 </ul>
+<p>New relationship attribute(s) (RELA) | RELA inverse(s):</p>
+<ul>
+  <li>has_ctcae_5_parent|ctcae_5_parent_of</li>
+  <li>neoplasm_has_special_category|special_category_includes_neoplasm</li>
+</ul>
+<p>Subsource = CTRP-SDC (Clinical Trials Reporting Program) has been changed to CTRP.</p>
 </div>
 <div id = "rep_change_summary" class = "rep_block_level_one">
 <h3>Original Files:</h3>
@@ -307,10 +322,14 @@ status=published
 <td>&lt;P329 rdf:datatype="http://www.w3.org.../P329&gt;</td></tr>
 <tr><td>PID_ID</td>
 <td>&lt;P367 rdf:datatype="http://www.w3.org.../P367&gt;</td></tr>
+<tr><td>PUBLISH_VALUE_SET</td>
+<td>&lt;P372 rdf:datatype="http://www.w3.org.../P372&gt;</td></tr>
 <tr><td>PUBMEDID_PRIMARY_REFERENCE</td>
 <td>&lt;P171 rdf:datatype="http://www.w3.org.../P171&gt;</td></tr>
 <tr><td>SWISS_PROT</td>
 <td>&lt;P93 rdf:datatype="http://www.w3.org.../P93&gt;</td></tr>
+<tr><td>TERM_BROWSER_VALUE_SET_DESCRIPTION</td>
+<td>&lt;P376 rdf:datatype="http://www.w3.org.../P376&gt;</td></tr>
 <tr><td>TOLERABLE_LEVEL</td>
 <td>&lt;P352 rdf:datatype="http://www.w3.org.../P352&gt;</td></tr>
 <tr><td>UNIT</td>
@@ -513,11 +532,13 @@ Alt_Definition: &lt;P325...ncicp:complexDefinition xmlns:ncicp.../P325&gt;
 <tr><td>RT</td>
 <td>gene_product_variant_of_gene_product/gene_product_has_gene_product_variant</td><td>R182</td></tr>
 <tr><td>RT</td>
-<td>has_cdrh_parent/parent_is_cdrh</td><td>A10</td></tr>
+<td>has_cdrh_parent/cdrh_parent_of</td><td>A10</td></tr>
+<tr><td>RT</td>
+<td>has_ctcae_5_parent/ctcae_5_parent_of</td><td>A15</td></tr>
 <tr><td>RT</td>
 <td>has_data_element/data_element_of</td><td>A12</td></tr>
 <tr><td>RT</td>
-<td>has_nichd_parent/parent_is_nichd</td><td>A11</td></tr>
+<td>has_nichd_parent/nichd_parent_of</td><td>A11</td></tr>
 <tr><td>RT</td>
 <td>has_salt_form/has_free_acid_or_base_form</td><td>A5</td></tr>
 <tr><td>RT</td>
@@ -526,6 +547,8 @@ Alt_Definition: &lt;P325...ncicp:complexDefinition xmlns:ncicp.../P325&gt;
 <td>is_related_To_endogenous_product/endogenous_product_related_to</td><td>A9</td></tr>
 <tr><td>RT</td>
 <td>molecular_abnormality_involves_gene/gene_involved_in_molecular_abnormality</td><td>R177</td></tr>
+<tr><td>RT</td>
+<td>neoplasm_has_special_category/special_category_includes_neoplasm</td><td>A14</td></tr>
 <tr><td>RT</td>
 <td>procedure_has_completely_excised_anatomy/completely_excised_anatomy_has_procedure</td><td>R171</td></tr>
 <tr><td>RT</td>

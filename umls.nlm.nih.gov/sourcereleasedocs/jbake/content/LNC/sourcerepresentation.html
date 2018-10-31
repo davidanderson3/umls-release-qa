@@ -1,6 +1,6 @@
 title=LNC (LOINC) - Source Representation
 date=2018-05-07
-updated=2018-05-07
+updated=2018-11-05
 type=page
 status=published
 ~~~~~~
@@ -28,38 +28,91 @@ status=published
         Files</a> <a href="#file_details">Source-Provided File Details</a></span>
     <div id="rep_change_summary" class="rep_block_level_one"> <a
         id="change_summary"></a>
-      <p><strong>VSAB: </strong>LNC263</p>
+      <p><strong>VSAB: </strong>LNC264</p>
       <h3>Summary of Changes:</h3>
-      New Classes:
-      <ul>
-         <li>PANEL.TRAUMA|Trauma Panel</li>
-         <li>ADMIN.ID|Administrative ID</li>
-      </ul>
+            <p>
+	        Minor changes have been made to LOINC file names and formats which have been described in the relevant
+	        ReadMe and ReleaseNotes available with the LOINC distribution.  The "Answers" tab of the "PanelsAndForms" spreadsheet
+	        has been discontinued and that data is now represented in "AnswerList.csv" and "LoincAnswerListLink.csv."
+	        "Parts" and "PartLinks" data previously distributed
+	        specifically to NLM for UMLS purposes are now publicly available in beta version with slight format variations.
+	        For 2.64, the "NLM" version of these files was processed, however we will use the publicly available files
+	        when they are official.</p>
+	        New Classes:
+	        <table>
+	        	<tbody>
+	        		<tr>
+	        			<th>Abbreviation</th>
+	        			<th>Class</th>
+	        		</tr>
+	        		<tr>
+	        			<td>ADMIN.FACILITY</td>
+	        			<td>Facility Observations</td>
+	        		</tr>
+	        		<tr>
+	        			<td>AUDIO</td>
+	        			<td>Audiology</td>
+	        		</tr>
+	        		<tr>
+	  	  			<td>CLIN.RISK</td>
+	  	  			<td>Clinical Risk</td>
+	  	  		</tr>
+	  	  		<tr>
+	  	  			<td>PANEL.ADMIN</td>
+	  	  			<td>Administrative information panel</td>
+	  	  		</tr>
+	  	  		<tr>
+	  	  			<td>PANEL.CLIN.RISK</td>
+	  	  			<td>Clinical risk panel</td>
+	  	  		</tr>
+	  	  		<tr>
+	  	  			<td>PANEL.SURVEY.BDI</td>
+	  	  			<td>Beck Depression Inventory (BDI) Set</td>
+	  	  		</tr>
+	  	  		<tr>
+	  	  			<td>PANEL.SURVEY.CESD</td>
+	  	  			<td>Center for Epidemiological Studies Depression (CESD) set</td>
+	  	  		</tr>
+	  	  		<tr>
+	  	  			<td>PANEL.SURVEY.NIH.EMO</td>
+	  	  			<td>NIH Toolbox Emotion Domain panels</td>
+	  	  		</tr>
+	  	  		<tr>
+	  	  			<td>SURVEY.BDI</td>
+	  	  			<td>Beck Depression Inventory (BDI)</td>
+	  	  		</tr>
+	  	  		<tr>
+	  	  			<td>SURVEY.CESD</td>
+	  	  			<td>Center for Epidemiological Studies Depression (CESD) survey</td>
+	  	  		</tr>
+	          </tbody>
+	        </table>
+	        <br/>
+	  	  New ATN:<br/>
+	  	  	<ul>
+	  	  	<li>IMAGING_DOCUMENT_VALUE_SET</li>
+	  	  	</ul>
+	  	  	IMAGING_DOCUMENT_VALUE_SET is a subset of document codes in LOINC that represent imaging procedures and reports.
+	  	  	The value of this ATN is set to 'TRUE' when appropriate.<br /><br />
+
+	  	  Deprecated ATN:<br/>
+	  	  	<ul>
+	  	  	<li>EXTERNALLY_DEFINED</li>
+	  	  	<li>EXTERNALLY_DEFINED_CODE_SYSTEM</li>
+	  	  	<li>EXTERNAL_LIST_LINK</li>
+	  	  	</ul>
+	These attributes have been dropped due to changes in the representation of Answers data.
     </div>
     <div id="rep_file_summary" class="rep_block_level_one"><br/>
       <a id="file_summary"></a>
       <h3>Source-Provided Files: Summary</h3>
-      &nbsp; 
+      &nbsp;
       <p>The complete LOINC distribution includes the following.</p>
       <div class="rep_block_level_two"><!-- Make a table of each file that comes from the source   -->
-        <h4>Documentation and Reference</h4>
-        <table>
-          <tbody>
-            <tr>
-              <th>File Name</th>
-              <th>Description</th>
-            </tr>
-            <tr>
-              <td>LOINC_ReleaseNotes.txt</td>
-              <td>Release notes, updated with each LOINC version</td>
-            </tr>
-            <tr>
-              <td>LOINCManual.pdf</td>
-              <td>The complete documentation, including tables used to
-                expand abbreviations</td>
-            </tr>
-          </tbody>
-        </table>
+        <h4>Documentation and Reference:</h4>
+        All data files have accompanying ReadMe and ReleaseNotes text files.  In addition, LOINCUsersGuide.pdf provides
+        detailed information.<br/>
+
         <h4>Data files</h4>
         <table>
           <tbody>
@@ -68,15 +121,15 @@ status=published
               <th>Description</th>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file1">loinc.csv</a></td>
+              <td class="file_field_name"><a href="#file1">Loinc.csv</a></td>
               <td>Primary LOINC data files</td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file2">map_to.csv</a></td>
+              <td class="file_field_name"><a href="#file2">MapTo.csv</a></td>
               <td>Mappings between current and retired codes</td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file3">LOINC_2.63_MULTI-AXIAL_HIERARCHY.CSV</a></td>
+              <td class="file_field_name"><a href="#file3">MultiAxialHierarchy.csv</a></td>
               <td>The records in this file represent nodes of the
                 hierarchy, whether LOINC Parts or full LOINC codes.<br/>
                 The ordered sequence at any level of the hierarchy is
@@ -86,45 +139,59 @@ status=published
                 text file.</td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file4">LOINC_2.63_Parts_12152017.csv</a></td>
+              <td class="file_field_name"><a href="#file4">Parts.csv</a></td>
               <td>Parts names and codes</td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file5">LOINC_2.63_PartLinks_12152017.csv</a></td>
+              <td class="file_field_name"><a href="#file5">PartLinks.csv</a></td>
               <td>Part links, for relationships and hierarchy</td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file6">LOINC_263_PanelsAndForms.xlsx (FORMS)</a></td>
+              <td class="file_field_name"><a href="#file6">PanelsAndForms.xlsx</a></td>
               <td>Mappings between LOINC panels and their members.</td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file7">LOINC_263_PanelsAndForms.xlsx (ANSWERS)</a></td>
-              <td>Mappings between LOINC panels and their members.</td>
+			  <td class="file_field_name"><a href="#file7">LoincAnswerListLink.csv</a></td>
+			  <td>Links LOINC terms with associated Answer Lists</td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file8"> LOINC_1.6_Top2000CommonLabResultsSI.csv</a></td>
+              <td class="file_field_name"><a href="#file8">AnswerList.csv</a></td>
+              <td>Data for Answer Lists that
+              are associated with any of the LOINC terms included in the current LOINC release.</td>
+            </tr>
+            <tr>
+              <td class="file_field_name"><a href="#file9">Top2000CommonLabResultsSi.csv</a></td>
               <td>Listing of the top 2000 common lab results (SI).</td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file9"> LOINC_1.6_Top2000CommonLabResultsUS.csv</a></td>
+              <td class="file_field_name"><a href="#file10">Top2000CommonLabResultsUs.csv</a></td>
               <td>Listing of the top 2000 common lab results (US).</td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file10">LoincUniversalLabOrdersValueSet.csv</a></td>
+              <td class="file_field_name"><a href="#file11">LoincUniversalLabOrdersValueSet.csv</a></td>
               <td>Members of the LOINC Universal Lab Orders Value Set<br/>
               </td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file10">LoincRsnaRadiologyPlaybook.csv</a></td>
+              <td class="file_field_name"><a href="#file12">LoincIeeeMedicalDeviceCodeMappingTable.csv</a></td>
+			  <td>Linkages between LOINC terms and content from the IEEE 11073(TM) 10101 Standard for Health informatics -
+			  Point-of-care medical device communication - Nomenclature and 10101a Nomenclature Amendment.</td>
+            </tr>
+            <tr>
+              <td class="file_field_name"><a href="#file13">LoincRsnaRadiologyPlaybook.csv</a></td>
               <td>Linkages between LOINC radiology terms, the attribute
                 values of the Unified Model as both LOINC Parts and
                 RadLex terms, and any applicable mappings to RadLex
                 Playbook terms.</td>
             </tr>
+            <tr>
+            	<td class="file_field_name"><a href="#file14">ImagingDocumentCodes.csv</a></td>
+            	<td>A subset of document codes in LOINC that represent imaging procedures and reports.</td>
+            </tr>
           </tbody>
         </table>
         <p><strong>Not included:</strong><br/>
-          <span class="file_field_name">loinc.csv:</span>Fields that are
+          <span class="file_field_name">Loinc.csv:</span>Fields that are
           for internal (LOINC) use are not processed for the
           Metathesaurus.<br/>
           Fields that are not used are indicated by "Not used" in the
@@ -136,7 +203,7 @@ status=published
         <p>Details on format of input files and representation of source
           data. Consult the LOINC documentation for additional details.</p>
         <div class="rep_block_level_two"><a id="file1"></a>
-          <h4 class="file_field_name">file: loinc.csv</h4>
+          <h4 class="file_field_name">file: Loinc.csv</h4>
           <table>
             <tbody>
               <tr>
@@ -552,12 +619,12 @@ status=published
                 <td>ValidHL7AttachmentRequest</td>
                 <td>A value of 'Y' indicates that the LOINC code can be sent by a payer as part of an HL7 attachment request for additional information.</td>
                 <td>MRSAT.ATN = "HL7_ATTACHMENT_REQUEST"</td>
-              </tr>             
+              </tr>
             </tbody>
           </table>
         </div>
         <div class="rep_block_level_two"><a id="file2"></a>
-          <h4 class="file_field_name">file: map_to.csv</h4>
+          <h4 class="file_field_name">file: MapTo.csv</h4>
           <table>
             <tbody>
               <tr>
@@ -590,7 +657,7 @@ status=published
         </div>
         <div class="rep_block_level_two"><a id="file3"></a>
           <h4 class="file_field_name">file:
-            LOINC_2.61_MULTI-AXIAL_HIERARCHY .CSV</h4>
+            MultiAxialHierarchy.csv</h4>
           <table>
             <tbody>
               <tr>
@@ -630,7 +697,7 @@ status=published
         </div>
         <div class="rep_block_level_two"><a id="file4"></a>
           <h4 class="file_field_name">file:
-            LOINC_2.61_Parts_06222017.csv</h4>
+            Parts.csv</h4>
           <table>
             <tbody>
               <tr>
@@ -682,7 +749,7 @@ status=published
         </div>
         <div class="rep_block_level_two"><a id="file5"></a>
           <h4 class="file_field_name">file:
-            LOINC_2.61_PartLinks_0622201</h4>
+            PartLinks.csv</h4>
           <table>
             <tbody>
               <tr>
@@ -805,7 +872,7 @@ status=published
         </div>
         <div class="rep_block_level_two"><a id="file6"></a>
           <h4 class="file_field_name">file:
-            LOINC_261_PanelsAndForms.xlsx (FORMS tab)</h4>
+            PanelsAndForms.xlsx</h4>
           <table>
             <tbody>
               <tr>
@@ -869,8 +936,53 @@ status=published
           </table>
         </div>
         <div class="rep_block_level_two"><a id="file7"></a>
+			<h4 class="file_field_name">file:
+		    LoincAnswerListLink.csv</h4>
+		    <table>
+		       <tbody>
+			     <tr>
+			      <th>#</th>
+			      <th>Field</th>
+			      <th>Representation</th>
+                </tr>
+                <tr>
+                	<td>1</td>
+                	<td>LoincNumber</td>
+                	<td>Relationship created between Loinc concept code and
+                  AnswerList.csv.AnswerStringID; RELA = has_answer/answer_to</td>
+                </tr>
+                <tr>
+                	<td>2</td>
+                	<td>LongCommonName</td>
+                	<td>N/A</td>
+                </tr>
+                <tr>
+                	<td>3</td>
+                	<td>AnswerListId</td>
+                	<td>MRSAT.ATN = ANSWER_LIST_ID (Join field to AnswerList.csv)</td>
+                </tr>
+                <tr>
+                	<td>4</td>
+                	<td>AnswerListName</td>
+                	<td>MRSAT.ATN = ANSWER_LIST_NAME</td>
+                </tr>
+                <tr>
+                	<td>5</td>
+                	<td>AnswerListLinkType</td>
+                	<td>N/A</td>
+                </tr>
+                <tr>
+                	<td>6</td>
+                	<td>ApplicableContext</td>
+                	<td>N/A</td>
+                </tr>
+			  </tbody>
+		    </table>
+        </div>
+        <div class="rep_block_level_two"><a id="file8"></a>
           <h4 class="file_field_name">file:
-            LOINC_261_PanelsAndForms.xlsx (ANSWERS tab)</h4>
+            AnswerList.csv</h4>
+
           <table>
             <tbody>
               <tr>
@@ -879,51 +991,63 @@ status=published
                 <th>Representation</th>
               </tr>
               <tr>
-                <td>1</td>
-                <td>Loinc concept code</td>
-                <td>Relationship created between Loinc concept code and
-                  AnswerStringID; RELA = has_answer/answer_to<br/>
-                </td>
+              	<td>1</td>
+              	<td>AnswerListId</td>
+              	<td>MRSAT.ATN = ANSWER_LIST_ID (Join field to AnswerList.csv)</td>
               </tr>
-              <tr>
-                <td>2</td>
-                <td>LoincName</td>
-                <td>Not used</td>
+			<tr>
+				<td>2</td>
+				<td>AnswerListName</td>
+				<td>MRSAT.ATN = ANSWER_LIST_NAME</td>
               </tr>
-              <tr>
-                <td>3</td>
-                <td>AnswerListID</td>
-                <td>ATN=ANSWER_LIST_ID</td>
+			<tr>
+				<td>3</td>
+				<td>AnswerListOID</td>
+				<td>MRSAT.ATN = OID</td>
               </tr>
-              <tr>
-                <td>4</td>
-                <td>AnswerListName</td>
-                <td>ATN=ANSWER_LIST_NAME</td>
+			<tr>
+				<td>4</td>
+				<td>ExtDefinedYN</td>
+				<td>Not used</td>
               </tr>
               <tr>
                 <td>5</td>
-                <td>AnswerListOID</td>
-                <td>ATN=OID</td>
+                <td>ExtDefinedAnswerListCodeSystem</td>
+                <td>Not used</td>
               </tr>
               <tr>
                 <td>6</td>
-                <td>ExternallyDefined</td>
-                <td>ATN=EXTERNALLY_DEFINED</td>
+                <td>ExtDefinedAnswerListLink</td>
+                <td>Not used</td>
               </tr>
               <tr>
                 <td>7</td>
-                <td>ExternallyDefinedAnswerListCodeSystem </td>
-                <td>ATN=EXTERNALLY_DEFINED_CODE_SYSTEM</td>
+                <td>AnswerStringId</td>
+                <td>Relationship created between AnswerStringID and AnswerListLink.LoincNumber; MRCONSO.CODE,
+                SCUI for TTY = LA</td>
               </tr>
               <tr>
                 <td>8</td>
-                <td>LinkToExternalList</td>
-                <td>ATN=EXTERNAL_LIST_LINK; currently, entries with this
-                  field populated lack an AnswerStringID so these are
-                  not being processed.</td>
+                <td>LocalAnswerCode</td>
+                <td>MRSAT.ATN = ANSWER_CODE</td>
               </tr>
               <tr>
                 <td>9</td>
+                <td>LocalAnswerCodeSystem</td>
+                <td>MRSAT.ATN = ANSWER_CODE_SYSTEM</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>SequenceNumber </td>
+                <td>MRSAT.ATN = SEQ_NO</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>DisplayText</td>
+                <td>MRCONSO.STR; TTY = LA; CODE = AnswerStringId</td>
+              </tr>
+              <tr>
+                <td>12</td>
                 <td>AnswerStringID</td>
                 <td>Relationship created between Loinc concept code and
                   AnswerStringID; RELA = has_answer/answer_to</td>
@@ -931,60 +1055,62 @@ status=published
               <tr>
                 <td>10</td>
                 <td>AnswerCode</td>
-                <td>ATN=ANSWER_CODE</td>
+                <td>MRSAT.ATN=ANSWER_CODE</td>
               </tr>
               <tr>
                 <td>11</td>
                 <td>SequenceNo</td>
-                <td>ATN=SEQ_NO; attached to the rel_id of the
+                <td>MRSAT.ATN=SEQ_NO; attached to the rel_id of the
                   'has_answer/answer_to' relationship.</td>
               </tr>
               <tr>
                 <td>12</td>
-                <td>DisplayText</td>
-                <td>Atom name</td>
-              </tr>
-              <tr>
-                <td>13</td>
-                <td>AnswerCodeSystem</td>
-                <td>ATN=ANSWER_CODE_SYSTEM</td>
-              </tr>
-              <tr>
-                <td>14</td>
-                <td>GlobalID</td>
-                <td>ATN=GLOBAL_ID</td>
-              </tr>
-              <tr>
-                <td>15</td>
-                <td>GlobalIDCodeSystem</td>
-                <td>ATN=GLOBAL_ID_CODE_SYSTEM</td>
-              </tr>
-              <tr>
-                <td>16</td>
-                <td>CopyrightNotice</td>
+                <td>ExtCodeId</td>
                 <td>Not used</td>
               </tr>
               <tr>
-                <td>17</td>
+                <td>13</td>
+                <td>ExtCodeDisplayName</td>
+                <td>Not used</td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>ExtCodeSystem</td>
+                <td>Not used</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>ExtCodeSystemVersion</td>
+                <td>Not used</td>
+              </tr>
+              <tr>
+                <td>16</td>
+                <td>ExtCodeSystemCopyrightNotice</td>
+                <td>Not used</td>
+              </tr>
+			  <tr>
+				<td>17</td>
+                <td>SubsequentTextPrompt</td>
+                <td>ATN=SUBSEQUENT_TEXT_PROMPT</td>
+              </tr>
+              <tr>
+                <td>18</td>
                 <td>Description</td>
                 <td>ATN=DEFINITION</td>
               </tr>
               <tr>
-                <td>18</td>
+                <td>19</td>
                 <td>Score</td>
                 <td>ATN=LOINC_SCORE</td>
               </tr>
-              <tr>
-                <td>19</td>
-                <td>SubsequentTextPrompt</td>
-                <td>ATN=SUBSEQUENT_TEXT_PROMPT</td>
-              </tr>
             </tbody>
           </table>
+
+
         </div>
-        <div class="rep_block_level_two"><a id="file8"></a>
+        <div class="rep_block_level_two"><a id="file9"></a>
           <h4 class="file_field_name">file:
-            LOINC_1.6_Top2000CommonLabResultsSI.csv</h4>
+            Top2000CommonLabResultsSi.csv</h4>
           <table>
             <tbody>
               <tr>
@@ -1020,9 +1146,9 @@ status=published
             </tbody>
           </table>
         </div>
-        <div class="rep_block_level_two"><a id="file9"></a>
+        <div class="rep_block_level_two"><a id="file10"></a>
           <h4 class="file_field_name">file:
-            LOINC_1.6_Top2000CommonLabResultsUS.csv</h4>
+            Top2000CommonLabResultsUs.csv</h4>
           <table>
             <tbody>
               <tr>
@@ -1042,7 +1168,7 @@ status=published
               </tr>
               <tr>
                 <td>3</td>
-                <td>SHORTNAMe</td>
+                <td>SHORTNAME</td>
                 <td>Not used</td>
               </tr>
               <tr>
@@ -1058,7 +1184,7 @@ status=published
             </tbody>
           </table>
         </div>
-        <div class="rep_block_level_two"><a id="file10"></a>
+        <div class="rep_block_level_two"><a id="file11"></a>
           <h4 class="file_field_name">file:
             LoincUniversalLabOrdersValueSet.csv<br/>
           </h4>
@@ -1085,15 +1211,15 @@ status=published
               <tr>
                 <td>3</td>
                 <td>ORDER_OBS</td>
-                <td>Redundant to ORDER_OBS attribute in loinc.csv
+                <td>Redundant to ORDER_OBS attribute in Loinc.csv
                   (represented as ATN = LOR) <br/>
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
-        <div class="rep_block_level_two"><a id="file11"></a>
-          <h4 class="file_field_name">file:LoincIeeeMedicalDeviceCodeMappingTable.csv</h4>
+        <div class="rep_block_level_two"><a id="file12"></a>
+          <h4 class="file_field_name">file:LoincIeeeMedicalDeviceCodeMappingTable.csv<br/></h4>
           <table>
             <tbody>
               <tr>
@@ -1139,8 +1265,8 @@ status=published
             </tbody>
           </table>
         </div>
-        <div class="rep_block_level_two"><a id="file12"></a>
-          <h4 class="file_field_name">file:LoincRsnaRadiologyPlaybook.csv</h4>
+        <div class="rep_block_level_two"><a id="file13"></a>
+          <h4 class="file_field_name">file:LoincRsnaRadiologyPlaybook.csv<br/></h4>
           <table>
             <tbody>
               <tr>
@@ -1204,5 +1330,9 @@ status=published
             </tbody>
           </table>
         </div>
+        <div class="rep_block_level_two"><a id="file14"></a>
+		<h4 class="file_field_name">file: ImagingDocumentCodes.csv<br/></h4>
+		All LOINC Numbers in this file are assigned a MRSAT.RRF ATN = IMAGING_DOCUMENT_VALUE_SET, ATV = TRUE<br/>
+		</div>
       </div>
     </div>

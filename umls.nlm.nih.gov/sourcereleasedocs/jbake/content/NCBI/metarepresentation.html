@@ -1,6 +1,6 @@
-title=NCBI (NCBI Taxonomy) - Metathesaurus Representation
+title=NCBI (NCBI) - Metathesaurus Representation
 date=2017-11-06
-updated=2018-05-07
+updated=2018-11-05
 type=page
 status=published
 ~~~~~~
@@ -28,7 +28,7 @@ status=published
  href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
 <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
 <div id="general" class="rep_block_level_one">
-<p><strong>VSAB: </strong>NCBI2017_05_04<br/>
+<p><strong>VSAB: </strong>NCBI2018_04_19<br/>
 </p>
 <div id="rep_identifiers" class="rep_block_level_one">
 <h3>Summary of Changes</h3>
@@ -40,35 +40,37 @@ None<br/>
 Many concepts and terms from the NCBI Taxonomy are excluded during
 Metathesarus source processing.&nbsp; The criteria for determining
 which concepts and terms are excluded or retained are outlined
-below.&nbsp; See term type descriptions for additional information.<br/>
+below. See term type descriptions for additional information.<br/>
 <br/>
-1.&nbsp; Exclude all names that do not have one of the following name
-classes:<br/>
-&nbsp;&nbsp;&nbsp; scientific name<br/>
-&nbsp;&nbsp;&nbsp; synonym<br/>
-&nbsp;&nbsp;&nbsp; equivalent name<br/>
-&nbsp;&nbsp;&nbsp; common name<br/>
-&nbsp;&nbsp;&nbsp; authority<br/>
-<br/>
-2.&nbsp; Exclude all concepts below the "species" level in the
+1. Exclude all names that do not have one of the following name
+classes:
+<ul>
+	<li>scientific name</li>
+	<li>synonym</li>
+	<li>equivalent name</li>
+	<li>common name</li>
+	<li>authority</li>
+</ul>
+
+2. Exclude all concepts below the "species" level in the
 hierarchy.&nbsp; Selected concepts with a rank of "no rank" may be
 retained, depending on their hierarchical level.<br/>
 <br/>
-3.&nbsp; Exclude all concepts that have a "division id" value of 11
+3. Exclude all concepts that have a "division id" value of 11
 (environmental samples) and exclude their descendents.<br/>
 <br/>
-4.&nbsp; Exclude concepts and terms based on certain patterns, e.g.
+4. Exclude concepts and terms based on certain patterns, e.g.
 remove concepts with rank = "species" and the following words in the
 scientific name "uncultured," "clone," "unidentified," "uncultivated."<br/>
 <br/>
-5. &nbsp; Exclude concepts with ugly names (e.g., "xxxx", "4").<br/>
+5. Exclude concepts with ugly names (e.g., "xxxx", "4").<br/>
 <br/>
-6. &nbsp; Exclude concepts and their children if the information is enclosed in single or double quotes<br/>
+6. Exclude concepts and their children if the information is enclosed in single or double quotes<br/>
 <br/>
-7. &nbsp; Exclude concepts starting with "other", "unclassified", "unclassified sequences", "artificial sequences", "insertion sequences", "midivariant sequence", "transposons"
+7. Exclude concepts starting with "other", "unclassified", "unclassified sequences", "artificial sequences", "insertion sequences", "midivariant sequence", "transposons"
 and all their children.<br/>
 <br/>
-8. &nbsp; Exclude concepts containing "?" and their children<br/>
+8. Exclude concepts containing "?" and their children<br/>
 <br/>
 
 Source file: taxdmp.zip.<br/>
@@ -125,7 +127,7 @@ Files included in taxdmp.zip are:<br/>
 Identifiers are assigned as follows:<br/>
 <ul>
   <li>CODE: names.dmp.tax_id</li>
-  <li>SAUI:&nbsp; not applicable</li>
+  <li>SAUI: not applicable</li>
   <li>SCUI: names.dmp.tax_id</li>
   <li>SDUI: not applicable</li>
 </ul>
@@ -133,12 +135,12 @@ Identifiers are assigned as follows:<br/>
 <div id="rep_termtypes" class="rep_block_level_two">
 <a id="atoms"></a>
 <h3>Atoms (MRCONSO):</h3>
-&nbsp;&nbsp;
+
 <table>
   <tbody>
     <tr>
       <th>Term Type</th>
-      <td><span style="font-weight: bold;">Description</span></td>
+      <td>Description</td>
       <th>Origin</th>
     </tr>
     <tr>
@@ -223,16 +225,16 @@ MRCONSO.SUPPRESS is set to "Y"&nbsp; <br/>
 <br/>
 Atoms with other term types may systematically be
 set to "E" based on certain string patterns which indicate ambiguity or
-are not terminologically useful.&nbsp; In addition, for term types
+are not terminologically useful. In addition, for term types
 other than "SCN," if names.dmp contains a "unique_name," the atom
-created from "name_txt" will have SUPPRESS set to "E."&nbsp; <br/>
+created from "name_txt" will have SUPPRESS set to "E." <br/>
 <h3>Attributes (MRSAT):</h3>
 
 <table>
   <tbody>
     <tr>
       <th>Attribute Name</th>
-      <td><span style="font-weight: bold;">Description</span><br/>
+      <td>Description<br/>
       </td>
       <th>Origin</th>
     </tr>
@@ -288,7 +290,7 @@ has_expanded_form</td>
 
 <h3>Mappings (MRMAP):</h3>
 
-<p>No mappings are included in the NCBI data.<br/>
+<p>No mappings are included in the NCBI data.
 </p>
 </div>
 </div>
