@@ -1,6 +1,6 @@
 title=FMA (Foundational Model of Anatomy) - Source Representation
 date=2017-11-06
-updated=2018-05-07
+updated=2018-11-05
 type=page
 status=published
 ~~~~~~
@@ -26,65 +26,42 @@ status=published
 <a id="top-of-page"></a>
 <span class="nav">Skip to: <a href="#general">Notes</a>, <a
  href="#change_summary">Summary of Changes</a>, <a href="#file_summary">Summary
-of
-Source-Provided
-Files</a>
-<a href="#file_details">Source-Provided
-File Details</a></span>
+of Source-Provided Files</a>, <a href="#file_details">Source-Provided File Details</a></span>
 <a id="general"></a>
 <div id="rep_general" class="rep_block_level_one">
-<h3>Notes</h3> 
+<h3>Notes</h3>
 </div>
 <div id="rep_change_summary" class="rep_block_level_one">
 
 
         <h3>Summary of Changes</h3>
-        <p><strong>FMA4_6 inlcudes the following new data types:</strong><br/>
+        <p><strong>FMA4_10 inlcudes the following new data types:</strong><br/>
         </p>
         <br/>
-        REL = RO:<br/>
-        RELA/inverse_RELA:<br/>
-        <blockquote>anteroinferior_to/posterosuperior_to<br/>
-          anterolateral_to/posteromedial_to<br/>
-          anteromedial_to/posterolateral_to<br/>
-          anterosuperior_to/posteroinferior_to<br/>
-          corresponds_to/corresponds_to<br/>
-          develops_into/develops_from<br/>
-          inferolateral_to/superomedial_to<br/>
-          inferomedial_to/superolateral_to<br/>
-          matures_from/matures_into<br/>
-          related_part/related_part<br/>
-        </blockquote>
+        Term types (TTY):<br/>
+        <ul>
+        	<li>IS</li>
+        </ul>
+        Attributes (ATN):<br/>
+        <ul>
+        <li>CONTRIBUTING_AUTHOR</li>
+          <li>EUPROSTATE16</li>
+          <li>EUPROSTATE27</li>
+          <li>NEUROQUANT</li>
+          <li>PIRADSV2</li>
+          <li>SLOT_SYNONYM</li>
+        </ul>
         <br/>
-        <strong>The following data types were deprecated in FMA4_6:</strong><br/>
+        <strong>The following data types were deprecated in FMA4_10:</strong><br/>
         <br/>
-        Relationships: <br/>
-        REL = RO:<br/>
-        REL/inverse_rela<br/>
-        <div>
-          <blockquote>direct_anterior_to/direct_posterior_to<br/>
-            direct_anteroinferior_to/direct_posterosuperior_to<br/>
-            direct_anterolateral_to/direct_posteromedial_to<br/>
-            direct_anteromedial_to/direct_posterolateral_to<br/>
-            direct_anterosuperior_to/direct_posteroinferior_to<br/>
-            direct_constitutional_part_of/has_direct_constitutional_part<br/>
-            direct_continuous_with/direct_continuous_with<br/>
-            direct_distal_to/direct_proximal_to<br/>
-            direct_inferior_to/direct_superior_to<br/>
-            direct_inferolateral_to/direct_superomedial_to<br/>
-            direct_inferomedial_to/direct_superolateral_to<br/>
-            direct_lateral_to/direct_medial_to<br/>
-            gives_rise_to/develops_from<br/>
-            direct_part_of/has_direct_part<br/>
-            direct_regional_part_of/has_direct_regional_part<br/>
-            has_muscle_insertion/muscle_insertion_of<br/>
-            has_muscle_origin/muscle_origin_of</blockquote>
+        Attributes (ATN):<br/>
+        <ul>
+          <li>AUTHORITY (STYPE = RUI)</li>
+          </ul>
         </div>
+       <br/>
         <h3>Source Provided Files:</h3>
-      </div>
-        <br>
-        <h3>Source Provided Files:</h3>
-      <div>fma.owl<br>
+      <div>fma.owl<br/>
       </div>
 
 
@@ -124,15 +101,15 @@ File Details</a></span>
 		   <td>AUI</td>
 		 </tr>
 		 <tr>
-		   <td>authority (collection on an objectProperty)</td>
-		   <td>MRSAT.AUTHORITY</td>
-		   <td>RUI</td>
-		 </tr>
-		 <tr>
 		   <td>cell_appendage_type</td>
 		   <td>MRSAT.CELL_APPENDAGE_TYPE</td>
 		   <td>SCUI</td>
 		 </tr>
+		 <tr>
+		   <td>contributing_author</td>
+		   <td>MRSAT.CONTRIBUTING_AUTHOR</td>
+		   <td>SCUI</td>
+         </tr>
 		 <tr>
 		   <td>has_direct_number_of_pairs_per_nucleus</td>
 		   <td>MRSAT.CHROMOSOME_PAIRS_PER_NUCLEUS</td>
@@ -147,6 +124,16 @@ File Details</a></span>
 		   <td>comment</td>
 		   <td>MRSAT.COMMENT</td>
 		   <td>AUI</td>
+		 </tr>
+		 <tr>
+			<td>EuProstate16</td>
+			<td>MRSAT.EUPROSTATE16</td>
+			<td>SCUI</td>
+		 </tr>
+		 <tr>
+			<td>EuProstate27</td>
+			<td>MRSAT.EUPROSTATE27</td>
+			<td>SCUI</td>
 		 </tr>
 		 <tr>
 		   <td>modification</td>
@@ -239,6 +226,11 @@ File Details</a></span>
 		   <td>SCUI</td>
 		 </tr>
 		 <tr>
+			<td>NEUROQUANT</td>
+			<td>MRSAT.NEUROQUANT</td>
+		    <td>SCUI</td>
+         </tr>
+		 <tr>
 		   <td>outdated_meaning</td>
 		   <td>MRSAT.OUTDATED_MEANING</td>
 		   <td>AUI</td>
@@ -259,14 +251,19 @@ File Details</a></span>
 		   <td>SCUI</td>
 		 </tr>
 		 <tr>
+		 	<td>PIRADSv2</td>
+		 	<td>MRSAT.PIRADSV2</td>
+		 	<td>SCUI</td>
+		 </tr>
+		 <tr>
 		   <td>polarity</td>
 		   <td>MRSAT.POLARITY</td>
 		   <td>SCUI</td>
 		 </tr>
-		 		 <tr>
-		 		   <td>preferred_name</td>
-		 		   <td>MRCONSO.TTY = PT, OP</td>
-		 		   <td>Children of concept "Deprecated Term" are assigned obsolete TTYs.</td>
+		 <tr>
+		 	<td>preferred_name</td>
+		    <td>MRCONSO.TTY = PT, OP</td>
+		 	<td>Children of concept "Deprecated Term" are assigned obsolete TTYs.</td>
 		 </tr>
 		 <tr>
 		   <td>RadLex_ID</td>
@@ -274,24 +271,24 @@ File Details</a></span>
 		   <td>SCUI</td>
 		 </tr>
 		 <tr>
-		   <td>reference</td>
-		   <td>MRSAT.REFERENCE</td>
-		   <td>RUI</td>
-		 </tr>
-		 <tr>
 		   <td>species</td>
 		   <td>MRSAT.SPECIES</td>
 		   <td>SCUI</td>
+		 </tr>
+		 <tr>
+		 	<td>slot_synonym</td>
+		 	<td>SLOT_SYNONYM</td>
+		 	<td>SCUI</td>
 		 </tr>
 		 <tr>
 		   <td>state_of_determination</td>
 		   <td>MRSAT.STATE_OF_DETERMINATION</td>
 		   <td>SCUI</td>
 		 </tr>
-			<tr>
-		 		 		   <td>synonym</td>
-		 		 		   <td>MRCONSO.TTY = SY</td>
-		 		 		   <td></td>
+		 <tr>
+		 	<td>synonym</td>
+		 	<td>MRCONSO.TTY = SY, IS</td>
+		 	<td>Children of concept "Deprecated Term" are assigned obsolete TTYs.</td>
 		 </tr>
 		 <tr>
 		   <td>Talairach (appended to annotationTarget identifier)</td>
@@ -323,23 +320,23 @@ File Details</a></span>
 
 	        </div>
 	        <div id="rep_definitions" class="rep_block_level_two"> <a
-	            id="definitions"></a><br>
+	            id="definitions"></a><br/>
 	          <h3>Definitions (MRDEF):</h3>
-	          
+
 	          <p>Definitions are created from data in the "definition"
-	            property.<br>
+	            property.<br/>
 	          </p>
 	        </div>
 	        <div id="rep_relationships" class="rep_block_level_two"> <a
-	            id="relationships"></a><br>
+	            id="relationships"></a><br/>
 	          <h3>Relationships (MRREL):</h3>
-	          
+
 	          <table>
 	            <tbody>
 	 <tr>
-	   <th>Origin (ObjectProperty)<br>
+	   <th>Origin (ObjectProperty)<br/>
 	     If no inverse is listed below, the inverse was not
-	     indicated in the original owl file property definition<br>
+	     indicated in the original owl file property definition<br/>
 	     Some inverse RELA values were inferred during
 	     Metathesaurus source processing
 	   </th>

@@ -1,6 +1,6 @@
 title=NUCCPT (National Uniform Claim Committee - Health Care Provider Taxonomy) - Source Representation
 date=2017-11-06
-updated=2018-05-07
+updated=2018-11-05
 type=page
 status=published
 ~~~~~~
@@ -29,17 +29,20 @@ status=published
       id="general"></a>
     	<div id="rep_identifiers" class="rep_block_level_one">
 	        <h3>Summary of Changes</h3>
-			New TTY: <br/>
-			<ul>
-			  <li>OP (indicated by "inactive" notes)</li>
-			</ul>
+			        New file:  nucc_characteristics_30.csv
+			        <p>
+			        The Provider Characteristics code set is for use with health care provider information for enrollment
+			        and credentialing transactions and their corresponding responses. It is intended to provide codified responses
+			        to questions presented to a health care provider applying to or registering with an entity and to report the
+			        outcome of such application or registration. It may also be used for responses to inquiries regarding provider
+			        participation or registration in a program or plan.  Provider characteristics are represented as
+			        modifiers in the UMLS Metathesaurus.</p>
 
-			New ATN:<br/>
-			<ul>
-			  <li>NOTE (derived from "Notes" field in data)</li>
-			</ul>
+			        New TTY: <br/>
+			        <ul>
+			        <li>MP</li>
+			        </ul>
 
-        New:  "Definition" data is now included in MRDEF.RRF
 	      </div>
 	      <div id="rep_change_summary" class="rep_block_level_one">
 	        <h3>Source Provided Files: </h3>
@@ -52,8 +55,12 @@ status=published
 				<th>Description</th>
 				</tr>
 				<tr>
-				<td>nucc_taxonomy_171.csv</td>
-				<td>Comma-separated data file</td>
+				<td>nucc_taxonomy_181.csv</td>
+				<td>NUCC taxonomy.  Comma-separated data file</td>
+				</tr>
+				<tr>
+				<td>nucc_characteristics_30.csv</td>
+				<td>Provider Characteristics code set.  Comma-separated data file</td>
 				</tr>
 	        	</tbody>
 			</table>
@@ -62,12 +69,13 @@ status=published
 
         <br/>
         <h3>Source-Provided Files: Details</h3>
-        
+
         <p>The following is a list of elements in the NUCCPT .csv source files: </p>
-        Note:  MRCONSO.STR values are created by concatenating "Grouping," "Classification," and "Specialization"
+        Note:  For TTY = PT/OP, MRCONSO.STR values are created by concatenating "Grouping," "Classification," and "Specialization"
         columns, separated by ";" and "," respectively, e.g. the STR for 101YS0200X is
         "Behavioral Health &amp; Social Service Providers; Counselor, School"
         <div class="rep_block_level_two"><a id="file1"></a><br/>
+        File: nucc_taxonomy_181.csv<br/>
           <table>
             <tbody>
               <tr>
@@ -104,6 +112,23 @@ status=published
               </tbody>
           </table>
           <br/>
+		File: nucc_characteristics_30.csv<br/>
+		<table>
+			<tbody>
+				<tr>
+				<th>Element</th>
+				<th>Representation</th>
+		        </tr>
+		        <tr>
+		        	<td>Code</td>
+		        	<td>MRCONSO.CODE, MRCONSO.SCUI</td>
+		        </tr>
+		        <tr>
+		        	<td>Description</td>
+		        	<td>MRCONSO.STR; TTY = MP</td>
+		        </tr>
+		        </tbody>
+		        </table>
           <br/>
         </div>
 

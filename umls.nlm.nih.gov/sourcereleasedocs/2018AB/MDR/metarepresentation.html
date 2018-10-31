@@ -1,0 +1,474 @@
+title=MDR (MedDRA) - Metathesaurus Representation
+date=2018-05-07
+updated=2018-05-07
+type=page
+status=published
+~~~~~~
+
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+<!--endmenu-->
+<br/>
+<p>This page lists UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
+
+<a id="top-of-page"></a>
+<span class="nav">Skip to: <a href="#atoms">Atoms</a>, <a
+ href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
+<a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+<div id="general" class="rep_block_level_one">
+<p><strong>VSAB: </strong>MDR21_0</p>
+<div id="rep_identifiers" class="rep_block_level_one">
+<h3>Summary of Changes:</h3>
+There were no changes to the original file format or in the Metathesaurus source processing.
+</div>
+<div id="rep_change_summary" class="rep_block_level_one">
+<h3>Source Provided Files:</h3>
+The UMLS uses MedDRA files distributed in the MedAscii directory:<br/>
+<ul>
+  <li>hlgt.asc </li>
+  <li>hlgt_hlt.asc</li>
+  <li>hlt.asc</li>
+  <li>hlt_pt.asc</li>
+  <li>intl_ord.asc</li>
+  <li>llt.asc</li>
+  <li>mdhier.asc</li>
+  <li>meddra_history_english.asc</li>
+  <li>meddra_release.asc</li>
+  <li>pt.asc</li>
+  <li>smq_content.asc</li>
+  <li>smq_list.asc</li>
+  <li>soc.asc</li>
+  <li>soc_hlgt.asc</li>
+</ul>
+</div>
+<div id="rep_identifers" class="rep_block_level_one">
+<h3>Identifiers:</h3>
+<p>Overview: Lower Level Terms ("LLT"s) in MedDRA have any of the
+following relationships to their "PT":</p>
+<ul>
+  <li>Synonyms: Different terms for the same concept inherent in the
+"PT"
+(e.g., "PT" Arthritis and its subordinate "LLT" Joint inflammation)</li>
+  <li>Lexical variants: Different word forms for the same expression.
+These include full names vs. abbreviations and direct vs. inverted word
+order (e.g., "PT" Acquired immunodeficiency syndrome and its
+subordinate
+"LLT" AIDS or "PT" Biopsy tongue and its subordinate "LLT" Tongue biopsy).</li>
+  <li>Quasi-synonyms: Quasi-synonyms are terms that are not precisely
+the same meaning as another term, but are treated as synonymous in a
+given terminology. These include site and laterality descriptions
+(e.g., "PT" Otitis externa and its subordinate "LLT" Bilateral otitis
+externa).</li>
+  <li>Sub-element: Sub-elements (of the parent "PT") are represented by
+"LLT"s with more detailed information such as anatomic specificity
+(e.g.,
+"PT"Contusion with "LLT" Bruising of face or "LLT" Bruising of leg).</li>
+  <li>Identical "LLT": One "LLT" is identical to its "PT" for data entry
+purposes (e.g., "PT" Dementia Alzheimer&#8217;s type and its subordinate "LLT"
+Dementia Alzheimer&#8217;s type). In this instance, the "LLT" and parent "PT"
+have
+the same MedDRA code but appear at both levels.</li>
+</ul>
+<p>Since MedDRA does not indicate which "LLT"s share the same meaning
+with
+their "PT", all "LLT"s are assigned the same the same Source-asserted
+Descriptor Identifer (SDUI).&nbsp; A descriptor is a collection of
+concepts (or atoms if there is no concept level organization) that are
+considered to be closely related (but not necessarily synonymous).</p>
+<p>Identifiers are assigned as follows:<br/>
+</p>
+<ul>
+  <li>CODE: Populated by the "code" fields in original data files, e.g.
+the code for an "LLT" or "OL" atom comes from the llt_code field in
+llt.asc</li>
+  <li>SAUI: Not Applicable</li>
+  <li>SCUI: Not Applicable</li>
+  <li>SDUI: Populated by the "code" fields in original data files,
+except for TTY = "LLT" and TTY = "OL", where the pt_code field from
+llt.asc
+is used.
+This is because every "PT" has one identical "LLT" for data entry
+purposes.
+In addition, LLTs may be synonyms, lexical variants, quasi-synonyms, or
+sub-elements of their "PT".
+Therefore, the pt_code is represented in MRCONSO as a Source-asserted
+Descriptor Identifier (SDUI), indicating that the "LLT" and "PT" are
+closely
+related but not necessarily synonymous.
+  </li>
+</ul>
+<div id="rep_atoms" class="rep_block_level_two">
+<a id="atoms"></a>
+<h3>Atoms (MRCONSO):</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <th>Term Type</th>
+      <th>Origin</th>
+    </tr>
+    <tr>
+      <td>AB</td>
+      <td>CODE = soc_code field of soc.asc<br/>
+STR = soc_abbrev field of soc.asc<br/>
+SDUI = soc_code field of soc.asc
+      </td>
+    </tr>
+    <tr>
+      <td>HG</td>
+      <td>CODE = hlgt_code field of hlgt.asc<br/>
+STR = hlgt_name field of hlgt.asc<br/>
+SDUI = hlgt_code field of hlgt.asc
+      </td>
+    </tr>
+    <tr>
+      <td>HT</td>
+      <td>CODE = hlt_code field of hlt.asc<br/>
+STR = hlt_name field of hlt.asc<br/>
+SDUI = hlt_code field of hlt.asc
+      </td>
+    </tr>
+    <tr>
+      <td>LLT</td>
+      <td>CODE = llt_code field of llt.asc<br/>
+STR = llt_name field of llt.asc<br/>
+SDUI = pt_code field of llt.asc
+      </td>
+    </tr>
+    <tr>
+      <td>MTH_HG</td>
+      <td>CODE = hlgt_code field of hlgt.asc<br/>
+STR = hlgt_name field of hlgt.asc, with Americanization or abbreviation
+expansion algorithm applied<br/>
+SDUI = hlgt_code field of hlgt.asc.<br/>
+This data is added during Metathesaurus source processing.
+      </td>
+    </tr>
+    <tr>
+      <td>MTH_HT</td>
+      <td>CODE = hlt_code field of hlt.asc<br/>
+STR = hlt_name field of hlt.asc, with Americanization or abbreviation
+expansion algorithm applied<br/>
+SDUI = hlt_code field of hlt.asc.<br/>
+This data is added during Metathesaurus source processing.
+      </td>
+    </tr>
+    <tr>
+      <td>MTH_LLT</td>
+      <td>CODE = llt_code field of llt.asc<br/>
+STR = llt_name field of llt.asc, with Americanization or abbreviation expansion algorithm applied<br/>
+SDUI = pt_code field of llt.asc.<br/>
+LLT atoms are created where llt_currency field of llt.asc = "Y"<br/>
+This data is added during Metathesaurus source processing.
+      </td>
+    </tr>
+    <tr>
+      <td>MTH_OL</td>
+      <td>CODE = llt_code field of llt.asc<br/>
+STR = llt_name field of llt.asc, with Americanization or abbreviation expansion algorithm applied<br/>
+SDUI = pt_code field of llt.asc.<br/>
+SUPRESS = "Y"<br/>
+OL atoms are created where llt_currency field of llt.asc = "Y"<br/>
+This data is added during Metathesaurus source processing.
+      </td>
+    </tr>
+    <tr>
+      <td>MTH_OS</td>
+      <td>CODE = soc_code field of soc.asc<br/>
+STR = soc_name field of soc.asc, with Americanization or abbreviation expansion algorithm applied<br/>
+SDUI = soc_code field of soc.asc<br/>
+This data is added during Metathesaurus source processing.
+      </td>
+    </tr>
+    <tr>
+      <td>MTH_PT</td>
+      <td>CODE = pt_code field of pt.asc<br/>
+STR = pt_name field of pt.asc, with Americanization or abbreviation expansion algorithmn applied<br/>
+SDUI = pt_code field of pt.asc<br/>
+This data is added during Metathesaurus source processing.
+      </td>
+    </tr>
+    <tr>
+      <td>MTH_SMQ</td>
+      <td>CODE = smq_code field of SMQ_List.asc<br/>
+STR = smq_name field of SMQ_List.asc, with Americanization or abbreviation expansion algorithm applied<br/>
+SDUI = smq_code field of SMQ_List.asc<br/>
+This data is added during Metathesaurus source processing.
+      </td>
+    </tr>
+    <tr>
+      <td>OL</td>
+      <td>CODE = llt_code field of llt.asc<br/>
+STR = llt_name field of llt.asc<br/>
+SDUI = pt_code field of llt.asc<br/>
+SUPPRESS = "Y"<br/>
+OL atoms are created where llt_currency field of llt.asc = "N"
+      </td>
+    </tr>
+    <tr>
+      <td>OS</td>
+      <td>CODE = soc_code field of soc.asc<br/>
+STR = soc_name field of soc.asc<br/>
+SDUI = soc_code field of soc.asc
+      </td>
+    </tr>
+    <tr>
+      <td>PT </td>
+      <td>CODE = pt_code field of pt.asc<br/>
+STR = pt_name field of pt.asc<br/>
+SDUI = pt_code field of pt.asc
+      </td>
+    </tr>
+    <tr>
+      <td>SMQ</td>
+      <td>CODE = smq_code field of SMQ_List.asc<br/>
+STR = smq_name field of SMQ_List.asc<br/>
+SDUI = smq_code field of SMQ_List.asc
+      </td>
+    </tr>
+    <tr>
+      <td>XM</td>
+      <td> This data is added during Metathesaurus source processing </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div id="rep_attributes" class="rep_block_level_two">
+<a id="attributes"></a><br/>
+<h3>Attributes (MRSAT):</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <th>Attribute Name</th>
+      <th>Origin</th>
+    </tr>
+    <tr>
+      <td>FROMRSAB</td>
+      <td>This data is added during Metathesaurus source processing</td>
+    </tr>
+    <tr>
+      <td>FROMVSAB</td>
+      <td>This data is added during Metathesaurus source processing</td>
+    </tr>
+    <tr>
+      <td>MAPSETRSAB</td>
+      <td>This data is added during Metathesaurus source processing</td>
+    </tr>
+    <tr>
+      <td>MAPSETVERSION</td>
+      <td>This data is added during Metathesaurus source processing</td>
+    </tr>
+    <tr>
+      <td>MAPSETVSAB</td>
+      <td>This data is added during Metathesaurus source processing</td>
+    </tr>
+    <tr>
+      <td>MISO</td>
+      <td>Serial code for international System Organ Class sort order.
+Extracted from the intl_ord_code field of intl_ord.asc.</td>
+    </tr>
+    <tr>
+      <td>MPS</td>
+      <td>The primary System Organ Class to which a preferred term is
+linked. Extracted from the pt_soc_code field of pt.asc.</td>
+    </tr>
+    <tr>
+      <td>MTH_MAPFROMCOMPLEXITY</td>
+      <td>This data is added during Metathesarus source processing</td>
+    </tr>
+    <tr>
+      <td>MTH_MAPFROMEXHAUSTIVE</td>
+      <td>This data is added during Metathesaurus source processing</td>
+    </tr>
+    <tr>
+      <td>MTH_MAPSETCOMPLEXITY</td>
+      <td>This data is added during Metathesaurus source processing</td>
+    </tr>
+    <tr>
+      <td>MTH_MAPTOCOMPLEXITY</td>
+      <td>This data is added during Metathesaurus source processing</td>
+    </tr>
+    <tr>
+      <td>MTH_MAPTOEXHAUSTIVE</td>
+      <td>This data is added during Metathesaurus source processing</td>
+    </tr>
+    <tr>
+      <td>MXR</td>
+      <td>Extracted from the whoart_code, harts_code, costart_sym,
+icd9_code, icd9cm_code, icd10_code, or jart_code in original files,
+e.g. the pt_icd9cm_code field in pt.asc. For codes in sources that are
+present in the Metathesaurus, a mapped_to relationship may also be
+created.</td>
+    </tr>
+    <tr>
+      <td>SMQ_ALGO</td>
+      <td>Extracted from the SMQ_Algorithm field of SMQ_List.asc</td>
+    </tr>
+    <tr>
+      <td>SMQ_LEVEL</td>
+      <td>Extracted from the SMQ_level field of SMQ_List.asc</td>
+    </tr>
+    <tr>
+      <td>SMQ_SOURCE</td>
+      <td>Extracted from the SMQ_source field of SMQ_List.asc</td>
+    </tr>
+    <tr>
+      <td>SMQ_STATUS</td>
+      <td>Extracted from the Status field of SMQ_List.asc</td>
+    </tr>
+    <tr>
+      <td>SMQ_TERM_ADDVERSION</td>
+      <td>Extracted from the Term_addition_version field of
+SMQ_Content.asc</td>
+    </tr>
+    <tr>
+      <td>SMQ_TERM_CAT</td>
+      <td>Extracted from the Term_category field of SMQ_Content.asc</td>
+    </tr>
+    <tr>
+      <td>SMQ_TERM_LEVEL</td>
+      <td>Extracted from the Term_level field of SMQ_Content.asc</td>
+    </tr>
+    <tr>
+      <td>SMQ_TERM_LMVERSION</td>
+      <td>Extracted from the Term_last_modified_version field of
+SMQ_Content.asc</td>
+    </tr>
+    <tr>
+      <td>SMQ_TERM_SCOPE</td>
+      <td>Extracted from the Term_scope field of SMQ_Content.asc</td>
+    </tr>
+    <tr>
+      <td>SMQ_TERM_STATUS</td>
+      <td>Extracted from the Term_status field of SMQ_Content.asc</td>
+    </tr>
+    <tr>
+      <td>SMQ_TERM_WEIGHT</td>
+      <td>Extracted from the Term_weight field of SMQ_Content.asc</td>
+    </tr>
+    <tr>
+      <td>SOS</td>
+      <td>Extracted from the SMQ_note field of SMQ_List.asc</td>
+    </tr>
+    <tr>
+      <td>TORSAB</td>
+      <td>This data is added during Metathesaurus source processing</td>
+    </tr>
+    <tr>
+      <td>TOVSAB</td>
+      <td>This data is added during Metathesaurus source processing</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div id="rep_definitions" class="rep_block_level_two">
+<a id="definitions"></a><br/>
+<h3>Definitions (MRDEF):</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <th>ORIGIN</th>
+    </tr>
+    <tr>
+      <td>Extracted from the SMQ_description field of smq_list.asc.
+DEFINITIONs are present only for TTY = "SMQ", and include a description
+of the SMQ including inclusion and exclusion criteria.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div id="rep_relationships" class="rep_block_level_two">
+<a id="relationships"></a><br/>
+<h3>Relationships (MRREL):</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <th>Relationship</th>
+      <th>Relationship Label/Inverse Relationship Label</th>
+      <th>ORIGIN</th>
+    </tr>
+    <tr>
+      <td>CHD<br/>
+PAR<br/>
+SIB</td>
+      <td>(no rela)</td>
+      <td>Hierarchy extracted from hlt_pt.asc,
+hlgt_hlt.asc, soc_hlgt.asc files (can also be computed from mdhier.asc).</td>
+    </tr>
+    <tr>
+      <td>RQ</td>
+      <td>classifies/classified_by</td>
+      <td>Connects a "PT" to its "LLT"s or "OL"s. Data is derived from
+the
+llt_code and pt_code fields of llt.asc.</td>
+    </tr>
+    <tr>
+      <td>RQ</td>
+      <td>mapped_to/mapped_from</td>
+      <td>Connects a MedDRA atom to a CODE from another source included
+in the Metathesaurus. Data is derived from the icd9cm_code and
+costart_sym fields in original data files, e.g. a "PT" gets a mapping
+relationship to the value present in the pt_icd9cm_code field of pt.asc.
+Due to version differences, some code values provided by MedDRA for
+other sources are not present in the Metathesaurus, so relationships
+cannot be created. Therefore, complete MedDRA-asserted cross-reference
+data is included in the "MXR" attribute.
+Note that in many cases UMLS editors have determined that the MedDRA
+atom has the same meaning as the code in the other source, so they will
+share the same CUI in addition to the mapping relationship.</td>
+    </tr>
+    <tr>
+      <td>RO</td>
+      <td>has_member/member_of</td>
+      <td>Connects a Standardised MedDRA Query (SMQ) with subordinate
+terms. Derived from the SMQ_code and Term_code fields of
+SMQ_content.asc.</td>
+    </tr>
+    <tr>
+      <td>SY</td>
+      <td>expanded_form_of/has_expanded_form</td>
+      <td>Connects atoms with TTY = "OS" (Organ System) to their short
+forms (TTY = "AB").</td>
+    </tr>
+    <tr>
+      <td>SY</td>
+      <td>mth_british_form_of/mth_has_british_form</td>
+      <td>Connects atoms with British spelling to atoms with American
+spelling. This data is added during Metathesaurus source processing.</td>
+    </tr>
+    <tr>
+      <td>SY</td>
+      <td>mth_has_expanded_form/mth_expanded_form_of</td>
+      <td>Connects original MedDRA atoms with atoms with expanded
+abbreviations. For example, "excl" has been expanded to "excluding".
+This data is added during Metathesaurus source processing.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div id="mappings" class="rep_block_level_two">
+<h3>Mappings (MRMAP):</h3>
+
+<p>When available, two Mapsets ("XM" atoms, along with associated attributes and
+mappings), are included for MedDRA. These are extracted from the
+ICD9_CM code and COSTART symbol fields in the relevant MedDRA files.
+An &#8220;RQ|mapped_to&#8221; REL/RELA are assigned. When possible, these mappings
+are also present in MRREL.RRF, however due to version issues a small
+portion of this data cannot be represented in MRREL.RRF. </p>
+</div>
+</div>
+</div>

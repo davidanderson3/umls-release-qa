@@ -1,6 +1,6 @@
 title=RXNORM (RXNORM) - Metathesaurus Representation
 date=2018-05-07
-updated=2018-05-07
+updated=2018-11-05
 type=page
 status=published
 ~~~~~~
@@ -28,7 +28,7 @@ status=published
       <a href="#definitions">Definitions</a>,
       <a href="#relationships">Relationships</a>,
       <a href="#mappings">Mappings</a></span>
-    <p><strong>VSAB: </strong>RXNORM_17AB_180305F<br/>
+    <p><strong>VSAB: </strong>RXNORM_18AA_180904F<br/>
     </p>
     <div id="rep_identifiers" class="rep_block_level_one">
       <h3>Notes:</h3>
@@ -48,59 +48,63 @@ status=published
             <th>Description</th>
           </tr>
           <tr>
-            <td class="file_field_name">ATC_2018_18_03_05</td>
+            <td class="file_field_name">ATC_2018_18_09_04</td>
             <td>Anatomical Therapeutic Chemical Classification System</td>
           </tr>
           <tr>
-            <td class="file_field_name">CVX_2018_01_18_18_03_05</td>
+            <td class="file_field_name">CVX_2018_06_22_18_09_04</td>
             <td>Vaccines Administered</td>
           </tr>
           <tr>
-            <td class="file_field_name">DRUGBANK5.0_2018_01_29</td>
+            <td class="file_field_name">DRUGBANK5.0_2018_07_31</td>
             <td>DrugBank</td>
           </tr>
           <tr>
-            <td class="file_field_name">GS_2018_01_31</td>
+            <td class="file_field_name">GS_2018_08_01</td>
             <td>Gold Standard Drug Database</td>
           </tr>
           <tr>
-            <td class="file_field_name">MMSL_2018_02_01</td>
+            <td class="file_field_name">MMSL_2018_08_01</td>
             <td>Multum MediSource Lexicon</td>
           </tr>
           <tr>
-            <td class="file_field_name">MMX_2018_01_29</td>
+            <td class="file_field_name">MMX_2018_07_31</td>
             <td>Micromedex RED BOOK</td>
           </tr>
           <tr>
-          	<td>MTHCMSFRF_2014_18_03_05</td>
+          	<td class="file_field_name">MTHCMSFRF_2014_18_09_04</td>
           	<td>Metathesaurus CMS Formulary Reference File</td>
 		  </tr>
 		  <tr>
-            <td class="file_field_name">MTHSPL_2018_02_23</td>
+            <td class="file_field_name">MTHSPL_2018_08_24</td>
             <td>Metathesaurus FDA Structured Product Labels</td>
           </tr>
           <tr>
-            <td class="file_field_name">NDDF_2018_01_31</td>
+            <td class="file_field_name">NDDF_2018_08_08</td>
             <td>FDB MedKnowledge</td>
           </tr>
           <tr>
-            <td class="file_field_name">NDFRT_2018_02_05_18_03_05</td>
+            <td class="file_field_name">NDFRT_2018_02_05_18_09_04</td>
             <td>National Drug File</td>
           </tr>
           <tr>
-            <td class="file_field_name">NDFRT_FDASPL_2018_02_05_18_03_05</td>
+            <td class="file_field_name">NDFRT_FDASPL_2018_02_05_18_09_04</td>
             <td>National Drug File - FDASPL</td>
           </tr>
           <tr>
-            <td class="file_field_name">NDFRT_FMTSME_2018_02_05_18_03_05</td>
+            <td class="file_field_name">NDFRT_FMTSME_2018_02_05_18_09_04</td>
             <td>National Drug File - FMTSME</td>
           </tr>
           <tr>
-            <td class="file_field_name">RXNORM_17AB_180305F</td>
+            <td class="file_field_name">RXNORM_18AA_180904F</td>
             <td>RxNorm Vocabulary</td>
           </tr>
           <tr>
-            <td class="file_field_name">VANDF_2018_01_26</td>
+            <td class="file_field_name">USP_2018_08_27</td>
+            <td>USP Compendial Nomenclature</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">VANDF_2018_08_01</td>
             <td>Veterans Health Administration National Drug File</td>
           </tr>
         </tbody>
@@ -117,9 +121,32 @@ status=published
       RxNorm.&nbsp;<br/><br/>
 
       <h3>Summary of Changes</h3>
-      <p>No changes were made to the RXNORM format itself or to
-        Metathesaurus source processing for 2018AA.</p>
-            </div>
+      <p>New subsource(s):</p>
+      <ul>
+        <li>USP (USP Compendial Nomenclature)</li>
+      </ul>
+      <p>New term type(s) (TTY):</p>
+      <ul>
+        <li>IN</li>
+        <li>CD</li>
+      </ul>
+      <p>New attribute name(s) (ATN):</p>
+      <ul>
+        <li>MONOGRAPH_OFFICIAL_DATE</li>
+        <li>MONOGRAPH_STATUS</li>
+        <li>RXN_BOSS_AI</li>
+        <li>RXN_BOSS_AM</li>
+        <li>RXN_BOSS_FROM</li>
+        <li>RXN_BOSS_STRENGTH_DENOM_UNIT</li>
+        <li>RXN_BOSS_STRENGTH_DENOM_VALUE</li>
+        <li>RXN_BOSS_STRENGTH_NUM_UNIT</li>
+        <li>RXN_BOSS_STRENGTH_NUM_VALUE</li>
+      </ul>
+      <p>New relationship attribute(s) (RELA) | RELA inverse(s):</p>
+      <ul>
+        <li>has_product_monograph_title|product_monograph_title_of</li>
+      </ul>
+      </div>
 
     <h3>Source Provided Files:</h3>
     <div id="rep_change_summary" class="rep_block_level_one">
