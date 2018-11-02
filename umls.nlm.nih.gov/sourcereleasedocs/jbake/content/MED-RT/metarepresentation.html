@@ -1,6 +1,6 @@
-title=MED-RT (MED-RT) - Metathesaurus Representation
+title=MED-RT (Medication Reference Terminology) - Metathesaurus Representation
 date=2018-05-07
-updated=2018-05-07
+updated=2018-11-05
 type=page
 status=published
 ~~~~~~
@@ -26,11 +26,50 @@ status=published
       <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
       <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
     <div id="general" class="rep_block_level_one">
-      <p><strong>VSAB: MED-RT_2018_03_05</strong><br/>
+      <p><strong>VSAB: MED-RT_2018_09_04</strong><br/>
       </p>
       <div id="rep_identifiers" class="rep_block_level_one">
         <h3>Summary of Changes</h3>
-        <p>MED-RT is the evolutionary successor to NDF-RT and is a new source for 2018AA</p>
+        <p>
+        The following relationship names were changed in the MED-RT data file: <br/>
+		<ul>
+		<li>has_Ingredient -> Synonym Of</li>
+		<li>has_Chemical_Structure -> has_SC</li>
+		<li>has_SNOMED_parent -> Child Of</li>
+		<li>has_SNOMED_child -> Parent Of</li>
+		<li>has_SNOMED_synonym -> Synonym Of</li>
+		</ul>
+
+        These updates are reflected in the UMLS Metathesaurus as follows: <br/>
+        <br/>
+        New REL/RELA values for MED-RT:<br/>
+		<ul>
+		<li>REL:  SY (no RELA)</li>
+		<li>RELA:   has_structural_class/structural_class_of</li>
+		</ul>
+
+		Deprecated RELAs for MED-RT (may still be valid for other sources):<br/>
+		<ul>
+		<li>has_ingredient/ingredient_of</li>
+		<li>has_chemical_structure/chemical_structure_of</li>
+		<li>has_SNOMED_parent</li>
+		<li>has_SNOMED_child</li>
+		<li>has_SNOMED_synonym</li>
+		</ul>
+
+		Additional changes:</br>
+		<ul>
+		<li>To facilitate navigation, a MED-RT hierarchy was created.  MRHIER.RRF only includes Parent/Child relationships between two
+		MED-RT concepts.  Parent/Child relationships involving concepts in other
+		sources are not included in the hierarchy, they are only included
+		as pairwise relationships in MRREL.RRF.  Every MED-RT concept exists in this hierarchy.
+		</li>
+
+		<li>A new authority with a value of 'NLMUMLS' was added to this
+		release to support relationships from RxNorm ingredients to MeSH
+		structural classes as defined by the UMLS Metathesaurus.
+		</li>
+		</ul>
 
       </div>
       <div id="rep_change_summary" class="rep_block_level_one">
@@ -46,7 +85,7 @@ status=published
         	<th>Description</th>
         </tr>
         <tr>
-        	<td>Core_MEDRT_2018.03.05_XML.xml</td>
+        	<td>Core_MEDRT_2018.09.04_XML.xml</td>
         	<td>Data file</td>
         </tr>
         <tr>
@@ -181,24 +220,10 @@ status=published
                   CHD</td>
                 <td>parent_of/has_parent</td>
                 <td>&lt;association&gt;&lt;name&gt; = Parent of</td>
-                <td>Hierarchical or taxonomic parent of concept</td>
-                <td>CTY: same as concept of origin (e.g., MoA, PE, EPC, PK, TC, EXT)</td>
-              </tr>
-              <tr>
-                <td>PAR<br/>
-                  CHD</td>
-                <td>has_snomed_parent/snomed_parent_of</td>
-                <td>&lt;association&gt;&lt;name&gt; = has_SNOMED_parent</td>
-                <td>Mapped hierarchical or taxonomic parent of concept in SNOMED CT</td>
-                <td>SNOMED CT</td>
-              </tr>
-              <tr>
-                <td>PAR<br/>
-                  CHD</td>
-                <td>has_snomed_child/snomed_child_of</td>
-                <td>&lt;association&gt;&lt;name&gt; = has_SNOMED_child</td>
-                <td>Mapped hierarchical or taxonomic child of concept in SNOMED CT</td>
-                <td>SNOMED CT</td>
+                <td>Hierarchical or taxonomic parent of concept.  PAR/CHD relationships between two
+                	MED-RT concepts are also represented in MRHIER.RRF</td>
+                <td>CTY: same CTY as concept of origin (e.g., MoA, PE, EPC, PK, TC, EXT) if MED-RT target, or
+              		Target: SNOMED CT US Edition or MeSH if mapped into external terminology hierarchy</td>
               </tr>
               <tr>
 			  	<td>RO</td>
@@ -244,20 +269,6 @@ status=published
 			  </tr>
 			  <tr>
 			  	<td>RO</td>
-			  	<td>has_chemical_structure<br/>chemical_structure_of</td>
-			  	<td>&lt;association&gt;&lt;name&gt; = has_Chemical_Structure</td>
-			  	<td>Chemical structural class mapping of an ingredient</td>
-			  	<td>MeSH</td>
-			  </tr>
-			  <tr>
-			  	<td>RO</td>
-			  	<td>has_ingredient<br/>ingredient_of</td>
-			  	<td>&lt;association&gt;&lt;name&gt; = has_Ingredient</td>
-			  	<td>Chemical structure mapping of an ingredient</td>
-			  	<td>MeSH</td>
-			  </tr>
-			  <tr>
-			  	<td>RO</td>
 			  	<td>has_mechanism_of_action<br/>mechanism_of_action_of</td>
 			  	<td>&lt;association&gt;&lt;name&gt; = has_MoA</td>
 			  	<td>Molecular, subcellular, or cellular level functional activity of an ingredient</td>
@@ -276,6 +287,13 @@ status=published
 			  	<td>&lt;association&gt;&lt;name&gt; = has_PE</td>
 			  	<td>Tissue, organ, or organ system level functional activity of an ingredient</td>
 			  	<td>CTY: PE</td>
+			  </tr>
+			  <tr>
+			  	<td>RO</td>
+			  	<td>has_structural_class<br/>structural_class_of</td>
+			  	<td>&lt;association&gt;&lt;name&gt; = has_SC</td>
+			  	<td>Structural classification mapping of an ingredient</td>
+			  	<td>MeSH</td>
 			  </tr>
 			  <tr>
 			  	<td>RO</td>
@@ -321,10 +339,10 @@ status=published
 			  </tr>
 			  <tr>
 			   	<td>SY</td>
-			   	<td>has_snomed_synonym<br/>snomed_synonym_of</td>
-			   	<td>&lt;association&gt;&lt;name&gt; = has_SNOMED_synonym</td>
-			   	<td>mapped equivalent concept in SNOMED CT</td>
-			   	<td>SNOMED CT</td>
+			   	<td></td>
+			   	<td>&lt;association&gt;&lt;name&gt; = Synonym Of</td>
+			   	<td>mapped equivalent or synonymous concept in external terminology hierarchy</td>
+			   	<td>SNOMED CT US Edition or MeSH</td>
 			  </tr>
             </tbody>
           </table>

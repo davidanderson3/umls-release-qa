@@ -1,6 +1,6 @@
 title=LNC (LOINC) - Metathesaurus Representation
 date=2018-05-07
-updated=2018-05-07
+updated=2018-11-05
 type=page
 status=published
 ~~~~~~
@@ -21,40 +21,108 @@ status=published
 <!--endmenu-->
 <br/>
     <p>This page lists UMLS Metathesaurus data elements and traces them
-      back to the specific source data that populates them.</p> 
+      back to the specific source data that populates them.</p>
     <a id="top-of-page"></a> <span class="nav">Skip to: <a
         href="#atoms">Atoms</a>, <a href="#attributes">Attributes</a>,
       <a href="#definitions">Definitions</a>, <a href="#relationships">Relationships</a>,
       <a href="#mappings">Mappings</a></span>
-    <p><strong>VSAB: </strong>LNC263</p>
+    <p><strong>VSAB: </strong>LNC264</p>
     <div id="rep_change_summary" class="rep_block_level_one">
       <h3>Summary of Changes:</h3>
-      New Classes:  
-      <ul>
-            <li>PANEL.TRAUMA|Trauma Panel</li>
-            <li>ADMIN.ID|Administrative ID</li>
-      </ul>
-      </div>
+      <p>
+      Minor changes have been made to LOINC file names and formats which have been described in the relevant
+      ReadMe and ReleaseNotes available with the LOINC distribution.  The "Answers" tab of the "PanelsAndForms" spreadsheet
+      has been discontinued and that data is now represented in "AnswerList.csv" and "LoincAnswerListLink.csv."
+      "Parts" and "PartLinks" data previously distributed
+      specifically to NLM for UMLS purposes are now publicly available in beta version with slight format variations.
+      For 2.64, the "NLM" version of these files was processed, however we will use the publicly available files
+      when they are official.</p>
+      New Classes:
+      <table>
+      	<tbody>
+      		<tr>
+      			<th>Abbreviation</th>
+      			<th>Class</th>
+      		</tr>
+      		<tr>
+      			<td>ADMIN.FACILITY</td>
+      			<td>Facility Observations</td>
+      		</tr>
+      		<tr>
+      			<td>AUDIO</td>
+      			<td>Audiology</td>
+      		</tr>
+      		<tr>
+	  			<td>CLIN.RISK</td>
+	  			<td>Clinical Risk</td>
+	  		</tr>
+	  		<tr>
+	  			<td>PANEL.ADMIN</td>
+	  			<td>Administrative information panel</td>
+	  		</tr>
+	  		<tr>
+	  			<td>PANEL.CLIN.RISK</td>
+	  			<td>Clinical risk panel</td>
+	  		</tr>
+	  		<tr>
+	  			<td>PANEL.SURVEY.BDI</td>
+	  			<td>Beck Depression Inventory (BDI) Set</td>
+	  		</tr>
+	  		<tr>
+	  			<td>PANEL.SURVEY.CESD</td>
+	  			<td>Center for Epidemiological Studies Depression (CESD) set</td>
+	  		</tr>
+	  		<tr>
+	  			<td>PANEL.SURVEY.NIH.EMO</td>
+	  			<td>NIH Toolbox Emotion Domain panels</td>
+	  		</tr>
+	  		<tr>
+	  			<td>SURVEY.BDI</td>
+	  			<td>Beck Depression Inventory (BDI)</td>
+	  		</tr>
+	  		<tr>
+	  			<td>SURVEY.CESD</td>
+	  			<td>Center for Epidemiological Studies Depression (CESD) survey</td>
+	  		</tr>
+        </tbody>
+      </table>
+      <br/>
+	  New ATN:<br/>
+	  	<ul>
+	  	<li>IMAGING_DOCUMENT_VALUE_SET</li>
+	  	</ul>
+	  	IMAGING_DOCUMENT_VALUE_SET is a subset of document codes in LOINC that represent imaging procedures and reports.
+	  	The value of this ATN is set to 'TRUE' when appropriate.<br /><br />
+
+	  Deprecated ATN:<br/>
+	  	<ul>
+	  	<li>EXTERNALLY_DEFINED</li>
+	  	<li>EXTERNALLY_DEFINED_CODE_SYSTEM</li>
+	  	<li>EXTERNAL_LIST_LINK</li>
+	  	</ul>
+	These attributes have been dropped due to changes in the representation of Answers data.
+	</div>
     <h4>Original Files:</h4>
     <p>The UMLS uses files publically available at <a
         href="http://www.loinc.org" target="_blank">www.loinc.org</a>,
       including:</p>
     <ul>
-      <li>loinc.csv</li>
-      <li>map_to.csv</li>
-      <li>LOINC_2.63_MULTI-AXIAL_HIERARCHY.CSV</li>
-      <li>LOINC_263_PanelsAndForms.xlsx</li>
+      <li>Loinc.csv</li>
+      <li>MapTo.csv</li>
+      <li>MultiAxialHierarchy.csv</li>
+      <li>PanelsAndForms.xlsx</li>
       <li>LoincIeeeMedicalDeviceCodeMappingTable.csv</li>
       <li>LoincRsnaRadiologyPlaybook.csv</li>
-      <li>LOINC_1.6_Top2000CommonLabResultsSI.csv</li>
-      <li>LOINC_1.6_Top2000CommonLabResultsUS.csv</li>
-      <li>LoincUniversalLabOrdersValueSet.csv<br/>
-      </li>
+      <li>Top2000CommonLabResultsSi.csv</li>
+      <li>Top2000CommonLabResultsUs.csv</li>
+      <li>LoincUniversalLabOrdersValueSet.csv</li>
+      <li>AnswerList.csv</li>
+      <li>ImagingDocumentCodes.csv</li>
+	  <li>LoincAnswerListLink.csv</li>
     </ul>
     <p>In addition, the UMLS receives two files to facilitate building
-      the hierarchy. For 2.63, these files were:
-      "LOINC_2.63_PartLinks_12152017.csv" and
-      "LOINC_2.63_Parts_12152017.csv". Additional information, such as
+      the hierarchy. For 2.64, these files were:
+      "PartLinks.csv,"  and "Parts.csv."  Additional information, such as
       expansions of abbreviations, is extracted from LOINCManual.pdf. </p>
     <div id="rep_identifiers" class="rep_block_level_one">
       <h3>Overview</h3>
@@ -70,14 +138,13 @@ status=published
         <li>CODE:
           <ul>
             <li>For term types LC, LN, LO, MTH_LN, MTH_LO, OLC, OOSN,
-              OSN: the LOINC _NUM (field 1) from loinc.csv</li>
+              OSN: the LOINC _NUM (field 1) from Loinc.csv</li>
             <li>For term types LPDN, LPN: the L_PART_ID (field 1) from
-              LOINC_PARTS_*.csv or PartNumber (field 3) from
+              Parts.csv or PartNumber (field 3) from
               LoincRsnaRadiologyPlaybook.csv</li>
             <li>For term types CN, MTH_CN, HC, HS, LS: an MTHU#,
               assigned during Metathesaurus source processing.</li>
-            <li>For term type LA: the AnswerStringID (field 9) from
-              LOINC_263_PanelsAndForms.xlsx (ANSWERS tab)</li>
+            <li>For term type LA: the AnswerStringID from AnswerList.csv</li>
           </ul>
         </li>
         <li>SAUI: Not Applicable</li>
@@ -133,10 +200,8 @@ status=published
             <tr>
               <td>LA</td>
               <td>LOINC Answer:<br/>
-                CODE = LOINC_&lt;ver&gt;_PanelsAndForms.xlsx (ANSWERS
-                tab) field 9 (AnswerStringID)<br/>
-                STR = LOINC_&lt;ver&gt;_PanelsAndForms.xlsx (ANSWERS
-                tab) field 12 (DisplayText)</td>
+                CODE = AnswerList.csv field 7 (AnswerStringID)<br/>
+                STR = AnswerList.csv field 11 (DisplayText)</td>
             </tr>
             <tr>
               <td>LC</td>
@@ -265,23 +330,23 @@ status=published
             </tr>
             <tr>
               <td>ANSWER_CODE</td>
-              <td>LOINC_&lt;ver&gt;_PanelsAndForms.xlsx (ANSWERS tab)
-                field 10 (AnswerCode)</td>
+              <td>AnswerList.csv
+                field 8 (LocalAnswerCode)</td>
             </tr>
             <tr>
               <td>ANSWER_CODE_SYSTEM</td>
-              <td>LOINC_&lt;ver&gt;_PanelsAndForms.xlsx (ANSWERS tab)
-                field 13 (AnswerCodeSystem)</td>
+              <td>AnswerList.csv
+                field 9 (LocalAnswerCodeSystem)</td>
             </tr>
             <tr>
               <td>ANSWER_LIST_ID</td>
-              <td>LOINC_&lt;ver&gt;_SELECTED_FORMS.xlsx (ANSWERS tab)
-                field 3 (AnswerListID)</td>
+              <td>AnswerList.csv
+                field 1 (AnswerListID)</td>
             </tr>
             <tr>
               <td>ANSWER_LIST_NAME</td>
-              <td>LOINC_&lt;ver&gt;_PanelsAndForms.xlsx (ANSWERS tab)
-                field 4 (AnswerListName)</td>
+              <td>AnswerList.csv
+                field 2 (AnswerListName)</td>
             </tr>
             <tr>
               <td>ASK_AT_ORDER_ENTRY</td>
@@ -334,21 +399,6 @@ status=published
               <td>loinc.csv field 41</td>
             </tr>
             <tr>
-              <td>EXTERNALLY_DEFINED</td>
-              <td>LOINC_&lt;ver&gt;_PanelsAndForms.xlsx (ANSWERS tab)
-                field 6 (ExternallyDefined)</td>
-            </tr>
-            <tr>
-              <td>EXTERNALLY_DEFINED_CODE_SYSTEM</td>
-              <td>LOINC_&lt;ver&gt;_PanelsAndForms.xlsx (ANSWERS tab)
-                field 7 (ExternallyDefinedAnswerListCodeSystem)</td>
-            </tr>
-            <tr>
-              <td>EXTERNAL_LIST_LINK</td>
-              <td>LOINC_&lt;ver&gt;_PanelsAndForms.xlsx (ANSWERS tab)
-                field 8 (LinkToExternalList)</td>
-            </tr>
-            <tr>
               <td>FROMRSAB</td>
               <td>This data is added during Metathesaurus source
                 processing</td>
@@ -357,16 +407,6 @@ status=published
               <td>FROMVSAB</td>
               <td>This data is added during Metathesaurus source
                 processing</td>
-            </tr>
-            <tr>
-              <td>GLOBAL_ID</td>
-              <td>LOINC_&lt;ver&gt;_PanelsAndForms.xlsx (ANSWERS tab)
-                field 14 (GlobalID)</td>
-            </tr>
-            <tr>
-              <td>GLOBAL_ID_CODE_SYSTEM</td>
-              <td>LOINC_&lt;ver&gt;_PanelsAndForms.xlsx (ANSWERS tab)
-                field 15 (GlobalIDCodeSystem)</td>
             </tr>
             <tr>
               <td>HL7_ATTACHMENT_REQUEST</td>
@@ -400,6 +440,10 @@ status=published
               <td>IEEE_UOM_UCUM</td>
               <td>LoincIeeeMedicalDeviceCodeMappingTable.csv, field 7</td>
             </tr>
+            <tr>
+      			<td>IMAGING_DOCUMENT_VALUE_SET</td>
+      			<td>A subset of document codes in LOINC that represent imaging procedures and reports,
+      			as indicated in ImagingDocumentCodes.csv.  ATV = "TRUE" when appropriate.
             <tr>
               <td>LCD [CDISC common tests]</td>
               <td>loinc.csv field 25 (CDISC_COMMON_TESTS)</td>
@@ -450,8 +494,8 @@ status=published
             </tr>
             <tr>
               <td>LOINC_SCORE</td>
-              <td>LOINC_&lt;ver&gt;_PanelsAndForms.xlsx (ANSWERS tab)
-                field 18 (Score)</td>
+              <td>AnswerList.csv
+                field 19 (Score)</td>
             </tr>
             <tr>
               <td>LOINC_SYSTEM</td>
@@ -536,8 +580,8 @@ status=published
             </tr>
             <tr>
               <td>OID</td>
-              <td>LOINC_&lt;ver&gt;_PanelsAndForms.xlsx (ANSWERS tab)
-                field 5 (AnswerListOID)</td>
+              <td>AnswerList.csv
+                field 3 (AnswerListOID)</td>
             </tr>
             <tr>
               <td>PART_SEQ_ORDER</td>
@@ -561,8 +605,8 @@ status=published
             </tr>
             <tr>
               <td>SEQ_NO</td>
-              <td>LOINC_&lt;ver&gt;_PanelsAndForms.xlsx (ANSWERS tab)
-                field 11 (SequenceNo)</td>
+              <td>AnswerList.csv
+                field 10 (SequenceNumber)</td>
             </tr>
             <tr>
               <td>STATUS_REASON</td>
@@ -574,17 +618,17 @@ status=published
             </tr>
             <tr>
               <td>SUBSEQUENT_TEXT_PROMPT</td>
-              <td>LOINC_&lt;ver&gt;_PanelsAndForms.xlsx (ANSWERS tab)
-                field 19 (SubsequentTextPrompt)</td>
+              <td>AnswerList.csv
+                field 17 (SubsequentTextPrompt)</td>
             </tr>
             <tr>
               <td>TOP_2000_LAB_RESULTS_SI</td>
-              <td>LOINC_&lt;ver&gt;_Top2000CommonLabResultsSI.csv field
+              <td>Top2000CommonLabResultsSi.csv field
                 6 (RANK)</td>
             </tr>
             <tr>
               <td>TOP_2000_LAB_RESUlTS_US</td>
-              <td>LOINC_&lt;ver&gt;_Top2000CommonLabResultsUS.csv field
+              <td>Top2000CommonLabResultsUs.csv field
                 6 (RANK)</td>
             </tr>
             <tr>
@@ -632,8 +676,7 @@ status=published
           id="definitions"></a><br/>
         <h4>Definitions</h4>
         &nbsp;
-        <p>Definitions come from LOINC_&lt;ver&gt;_PanelsAndForms.xlsx
-          (ANSWERS tab) field 17 (Description)</p>
+        <p>Definitions come from AnswerList.csv field 18 (Description)</p>
       </div>
       <div id="rep_relationships" class="rep_block_level_two"> <a
           id="relationships"></a><br/>
@@ -657,7 +700,7 @@ status=published
                 <ul>
                   <li>loinc.csv, field 8 (CLASS) and field 14
                     (CLASSTYPE)</li>
-                  <li>LOINC_&lt;ver&gt;_MULTI-AXIAL_HIERARCHY.CSV</li>
+                  <li>MultiAxialHierarchy.csv</li>
                 </ul>
               </td>
             </tr>
@@ -665,7 +708,7 @@ status=published
               <td>RN</td>
               <td>member_of<br/>
                 has_member</td>
-              <td>Connects LOINC panels and their members</td>
+              <td>Connects LOINC panels and their members, extracted from PanelsAndForms.xlsx</td>
             </tr>
             <tr>
               <td>RO</td>
@@ -707,7 +750,7 @@ status=published
               <td>has_answer<br/>
                 answer_to</td>
               <td>Connects LN with LA as per
-                LOINC_&lt;ver&gt;_PanelsAndForms.xlsx (ANSWERS tab)</td>
+                LoincAnswerListLink.csv</td>
             </tr>
             <tr>
               <td>RO</td>

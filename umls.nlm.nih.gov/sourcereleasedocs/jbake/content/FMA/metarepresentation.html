@@ -1,6 +1,6 @@
 title=FMA (Foundational Model of Anatomy) - Metathesaurus Representation
 date=2017-11-06
-updated=2018-05-07
+updated=2018-11-05
 type=page
 status=published
 ~~~~~~
@@ -27,51 +27,33 @@ status=published
         href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
       <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
     <div id="general" class="rep_block_level_one">
-      <p><b>VSAB:</b> FMA4_6<br/>
+      <p><b>VSAB:</b> FMA4_10<br/>
       </p>
       <div id="rep_identifiers" class="rep_block_level_one">
         <h3>Summary of Changes</h3>
-        <p><strong>FMA4_6 inlcudes the following new data types:</strong><br/>
+        <p><strong>FMA4_10 inlcudes the following new data types:</strong><br/>
         </p>
         <br/>
-        REL = RO:<br/>
-        RELA/inverse_RELA:<br/>
-        <blockquote>anteroinferior_to/posterosuperior_to<br/>
-          anterolateral_to/posteromedial_to<br/>
-          anteromedial_to/posterolateral_to<br/>
-          anterosuperior_to/posteroinferior_to<br/>
-          corresponds_to/corresponds_to<br/>
-          develops_into/develops_from<br/>
-          inferolateral_to/superomedial_to<br/>
-          inferomedial_to/superolateral_to<br/>
-          matures_from/matures_into<br/>
-          related_part/related_part<br/>
-        </blockquote>
+        Term types (TTY):<br/>
+        <ul>
+        	<li>IS</li>
+        </ul>
+        Attributes (ATN):<br/>
+        <ul>
+        <li>CONTRIBUTING_AUTHOR</li>
+          <li>EUPROSTATE16</li>
+          <li>EUPROSTATE27</li>
+          <li>NEUROQUANT</li>
+          <li>PIRADSV2</li>
+          <li>SLOT_SYNONYM</li>
+        </ul>
         <br/>
-        <strong>The following data types were deprecated in FMA4_6:</strong><br/>
+        <strong>The following data types were deprecated in FMA4_10:</strong><br/>
         <br/>
-        Relationships: <br/>
-        REL = RO:<br/>
-        REL/inverse_rela<br/>
-        <div>
-          <blockquote>direct_anterior_to/direct_posterior_to<br/>
-            direct_anteroinferior_to/direct_posterosuperior_to<br/>
-            direct_anterolateral_to/direct_posteromedial_to<br/>
-            direct_anteromedial_to/direct_posterolateral_to<br/>
-            direct_anterosuperior_to/direct_posteroinferior_to<br/>
-            direct_constitutional_part_of/has_direct_constitutional_part<br/>
-            direct_continuous_with/direct_continuous_with<br/>
-            direct_distal_to/direct_proximal_to<br/>
-            direct_inferior_to/direct_superior_to<br/>
-            direct_inferolateral_to/direct_superomedial_to<br/>
-            direct_inferomedial_to/direct_superolateral_to<br/>
-            direct_lateral_to/direct_medial_to<br/>
-            gives_rise_to/develops_from<br/>
-            direct_part_of/has_direct_part<br/>
-            direct_regional_part_of/has_direct_regional_part<br/>
-            has_muscle_insertion/muscle_insertion_of<br/>
-            has_muscle_origin/muscle_origin_of</blockquote>
-        </div>
+        Attributes (ATN):<br/>
+        <ul>
+          <li>AUTHORITY (STYPE = RUI)</li>
+          </ul>
         <h3>Source Provided Files:</h3>
       </div>
       <div id="rep_change_summary" class="rep_block_level_one"> fma.owl<br/>
@@ -88,12 +70,20 @@ status=published
         <div id="rep_termtypes" class="rep_block_level_two"> <a
             id="atoms"></a>
           <h3>Atoms (MRCONSO):</h3>
-          &nbsp;&nbsp;
           <table>
             <tbody>
               <tr>
                 <th>Term Type</th>
                 <th>Origin (property)</th>
+              </tr>
+              <tr>
+              	<td>AB</td>
+              	<td>abbreviation</td>
+              </tr>
+              <tr>
+              	<td>IS</td>
+              	<td>synonym (childrent of the concept "Deprecated term" are
+              	assigned obsolete term types)</td>
               </tr>
               <tr>
                 <td>OP</td>
@@ -106,7 +96,7 @@ status=published
               </tr>
               <tr>
                 <td>SY</td>
-                <td>synonym;&nbsp; Latin_name__TA_</td>
+                <td>synonym; Latin_name__TA_</td>
               </tr>
             </tbody>
           </table>
@@ -115,7 +105,7 @@ status=published
             id="attributes"></a><br/>
           <h3>Attributes (MRSAT):</h3>
           <br/>
-          &nbsp; 
+          &nbsp;
           <table>
             <tbody>
               <tr>
@@ -139,11 +129,6 @@ status=published
                 <td>AUI</td>
               </tr>
               <tr>
-                <td>AUTHORITY</td>
-                <td>authority (collection on an objectProperty)</td>
-                <td>RUI</td>
-              </tr>
-              <tr>
                 <td>CELL_APPENDAGE_TYPE</td>
                 <td>cell_appendage_type</td>
                 <td>SCUI</td>
@@ -164,6 +149,11 @@ status=published
                 <td>AUI</td>
               </tr>
               <tr>
+                <td>CONTRIBUTING_AUTHOR</td>
+                <td>contributing_author</td>
+                <td>SCUI</td>
+              </tr>
+              <tr>
                 <td>DATE_LAST_MODIFIED</td>
                 <td>modification</td>
                 <td>AUI</td>
@@ -182,6 +172,16 @@ status=published
                 <td>EPONYM</td>
                 <td>Eponym</td>
                 <td>AUI</td>
+              </tr>
+              <tr>
+              	<td>EUPROSTATE16</td>
+              	<td>EuProstate16</td>
+              	<td>SCUI</td>
+              </tr>
+			  <tr>
+				<td>EUPROSTATE27</td>
+               	<td>EuProstate27</td>
+               	<td>SCUI</td>
               </tr>
               <tr>
                 <td>FREESURFER_TERM</td>
@@ -254,6 +254,11 @@ status=published
                 <td>Neurolex</td>
                 <td>SCUI</td>
               </tr>
+			  <tr>
+			    <td>NEUROQUANT</td>
+			    <td>NEUROQUANT</td>
+			    <td>SCUI</td>
+              </tr>
               <tr>
                 <td>OUTDATED_MEANING</td>
                 <td>outdated_meaning</td>
@@ -275,6 +280,11 @@ status=published
                 <td>SCUI</td>
               </tr>
               <tr>
+                <td>PIRADSV2</td>
+                <td>PIRADSv2</td>
+                <td>SCUI</td>
+              </tr>
+              <tr>
                 <td>POLARITY</td>
                 <td>polarity</td>
                 <td>SCUI</td>
@@ -285,9 +295,9 @@ status=published
                 <td>SCUI</td>
               </tr>
               <tr>
-                <td>REFERENCE</td>
-                <td>reference</td>
-                <td>RUI</td>
+              	<td>SLOT_SYNONYM</td>
+              	<td>slot_synonym</td>
+              	<td>SCUI</td>
               </tr>
               <tr>
                 <td>SPECIES</td>
@@ -339,7 +349,7 @@ status=published
         <div id="rep_relationships" class="rep_block_level_two"> <a
             id="relationships"></a><br/>
           <h3>Relationships (MRREL):</h3>
-          &nbsp; 
+          &nbsp;
           <table>
             <tbody>
               <tr>
@@ -716,7 +726,6 @@ status=published
           <br/>
           <br/>
           <h3>Mappings (MRMAP):</h3>
-          &nbsp;&nbsp;
           <p>No mappings to external sources are provided for FMA. </p>
         </div>
       </div>

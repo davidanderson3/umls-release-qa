@@ -1,6 +1,6 @@
 title=MTHMST (Minimal Standard Terminology (UMLS)) - Statistics
 date=
-updated=2018-05-07
+updated=2018-11-05
 type=page
 status=published
 ~~~~~~
@@ -21,7 +21,7 @@ status=published
 <th>Semantic Type ID</th><th>Semantic Type Name</th><th>Count </th><th>Percentage Distribution</th>
 </tr>
 <tr>
-<td>T033</td><td>Finding</td><td>803</td><td>49.1</td>
+<td>T033</td><td>Finding</td><td>802</td><td>49.1</td>
 </tr>
 <tr>
 <td>T047</td><td>Disease or Syndrome</td><td>157</td><td>9.6</td>
@@ -90,31 +90,31 @@ status=published
 <th>Relation Name/Additional Label</th><th>Expanded Form</th><th>Count </th>
 </tr>
 <tr>
-<td>RO/has_location</td><td>has relationship other than synonymous, narrower, or broader/Has location</td><td>2882</td>
-</tr>
-<tr>
 <td>RO/location_of</td><td>has relationship other than synonymous, narrower, or broader/Location of</td><td>2882</td>
 </tr>
 <tr>
-<td>RB/inverse_isa</td><td>has a broader relationship/Inverse is a</td><td>1063</td>
+<td>RO/has_location</td><td>has relationship other than synonymous, narrower, or broader/Has location</td><td>2882</td>
 </tr>
 <tr>
 <td>RN/isa</td><td>has a narrower relationship/Is a</td><td>1063</td>
 </tr>
 <tr>
-<td>RO/has_manifestation</td><td>has relationship other than synonymous, narrower, or broader/Has manifestation</td><td>235</td>
+<td>RB/inverse_isa</td><td>has a broader relationship/Inverse is a</td><td>1063</td>
 </tr>
 <tr>
 <td>RO/manifestation_of</td><td>has relationship other than synonymous, narrower, or broader/Manifestation of</td><td>235</td>
 </tr>
 <tr>
+<td>RO/has_manifestation</td><td>has relationship other than synonymous, narrower, or broader/Has manifestation</td><td>235</td>
+</tr>
+<tr>
 <td>RO/</td><td>has relationship other than synonymous, narrower, or broader/Empty relationship attribute</td><td>110</td>
 </tr>
 <tr>
-<td>RO/evaluation_of</td><td>has relationship other than synonymous, narrower, or broader/Evaluation of</td><td>105</td>
+<td>RO/has_evaluation</td><td>has relationship other than synonymous, narrower, or broader/Has evaluation</td><td>105</td>
 </tr>
 <tr>
-<td>RO/has_evaluation</td><td>has relationship other than synonymous, narrower, or broader/Has evaluation</td><td>105</td>
+<td>RO/evaluation_of</td><td>has relationship other than synonymous, narrower, or broader/Evaluation of</td><td>105</td>
 </tr>
 <tr>
 <td>RN/part_of</td><td>has a narrower relationship/Part of</td><td>85</td>
@@ -123,10 +123,10 @@ status=published
 <td>RB/has_part</td><td>has a broader relationship/Has part</td><td>85</td>
 </tr>
 <tr>
-<td>RO/uses</td><td>has relationship other than synonymous, narrower, or broader/Uses</td><td>21</td>
+<td>RO/used_by</td><td>has relationship other than synonymous, narrower, or broader/Used by</td><td>21</td>
 </tr>
 <tr>
-<td>RO/used_by</td><td>has relationship other than synonymous, narrower, or broader/Used by</td><td>21</td>
+<td>RO/uses</td><td>has relationship other than synonymous, narrower, or broader/Uses</td><td>21</td>
 </tr>
 <tr>
 <td>RO/degree_of</td><td>has relationship other than synonymous, narrower, or broader/Degree of</td><td>10</td>
@@ -201,7 +201,7 @@ status=published
 <td>SCTSPA</td><td>302/1634</td><td>18.5</td>
 </tr>
 <tr>
-<td>CHV</td><td>248/1634</td><td>15.2</td>
+<td>CHV</td><td>247/1634</td><td>15.1</td>
 </tr>
 <tr>
 <td>RCD</td><td>230/1634</td><td>14.1</td>
@@ -267,13 +267,13 @@ status=published
 <td>MSHSPA</td><td>134/1634</td><td>8.2</td>
 </tr>
 <tr>
-<td>MEDCIN</td><td>129/1634</td><td>7.9</td>
+<td>MEDCIN</td><td>130/1634</td><td>8.0</td>
+</tr>
+<tr>
+<td>SNM</td><td>127/1634</td><td>7.8</td>
 </tr>
 <tr>
 <td>MSHDUT</td><td>128/1634</td><td>7.8</td>
-</tr>
-<tr>
-<td>SNM</td><td>128/1634</td><td>7.8</td>
 </tr>
 <tr>
 <td>MSHPOL</td><td>114/1634</td><td>7.0</td>
@@ -312,10 +312,10 @@ status=published
 <td>NDFRT</td><td>70/1634</td><td>4.3</td>
 </tr>
 <tr>
-<td>ICD10CM</td><td>67/1634</td><td>4.1</td>
+<td>LNC</td><td>69/1634</td><td>4.2</td>
 </tr>
 <tr>
-<td>LNC</td><td>67/1634</td><td>4.1</td>
+<td>ICD10CM</td><td>67/1634</td><td>4.1</td>
 </tr>
 <tr>
 <td>COSTAR</td><td>65/1634</td><td>4.0</td>
@@ -327,10 +327,10 @@ status=published
 <td>LCH_NW</td><td>64/1634</td><td>3.9</td>
 </tr>
 <tr>
-<td>ICPC2P</td><td>62/1634</td><td>3.8</td>
+<td>DXP</td><td>61/1634</td><td>3.7</td>
 </tr>
 <tr>
-<td>DXP</td><td>61/1634</td><td>3.7</td>
+<td>ICPC2P</td><td>61/1634</td><td>3.7</td>
 </tr>
 <tr>
 <td>RCDAE</td><td>59/1634</td><td>3.6</td>
@@ -339,19 +339,19 @@ status=published
 <td>ICD10AM</td><td>58/1634</td><td>3.5</td>
 </tr>
 <tr>
-<td>OMIM</td><td>52/1634</td><td>3.2</td>
-</tr>
-<tr>
 <td>FMA</td><td>53/1634</td><td>3.2</td>
 </tr>
 <tr>
-<td>ICD9CM</td><td>50/1634</td><td>3.1</td>
+<td>OMIM</td><td>53/1634</td><td>3.2</td>
 </tr>
 <tr>
 <td>NCI_NCI-GLOSS</td><td>50/1634</td><td>3.1</td>
 </tr>
 <tr>
 <td>CST</td><td>49/1634</td><td>3.0</td>
+</tr>
+<tr>
+<td>ICD9CM</td><td>49/1634</td><td>3.0</td>
 </tr>
 <tr>
 <td>UWDA</td><td>47/1634</td><td>2.9</td>
@@ -372,25 +372,25 @@ status=published
 <td>DMDICD10</td><td>44/1634</td><td>2.7</td>
 </tr>
 <tr>
-<td>WHO</td><td>42/1634</td><td>2.6</td>
-</tr>
-<tr>
-<td>WHOFRE</td><td>42/1634</td><td>2.6</td>
-</tr>
-<tr>
-<td>WHOPOR</td><td>42/1634</td><td>2.6</td>
-</tr>
-<tr>
 <td>LCH</td><td>41/1634</td><td>2.5</td>
 </tr>
 <tr>
-<td>MEDLINEPLUS</td><td>39/1634</td><td>2.4</td>
+<td>WHO</td><td>41/1634</td><td>2.5</td>
+</tr>
+<tr>
+<td>WHOFRE</td><td>41/1634</td><td>2.5</td>
+</tr>
+<tr>
+<td>WHOPOR</td><td>41/1634</td><td>2.5</td>
+</tr>
+<tr>
+<td>WHOGER</td><td>39/1634</td><td>2.4</td>
+</tr>
+<tr>
+<td>MEDLINEPLUS</td><td>40/1634</td><td>2.4</td>
 </tr>
 <tr>
 <td>NCI_CDISC</td><td>40/1634</td><td>2.4</td>
-</tr>
-<tr>
-<td>WHOGER</td><td>40/1634</td><td>2.4</td>
 </tr>
 <tr>
 <td>NCI_NICHD</td><td>38/1634</td><td>2.3</td>
@@ -399,7 +399,7 @@ status=published
 <td>BI</td><td>36/1634</td><td>2.2</td>
 </tr>
 <tr>
-<td>WHOSPA</td><td>36/1634</td><td>2.2</td>
+<td>WHOSPA</td><td>35/1634</td><td>2.1</td>
 </tr>
 <tr>
 <td>NCI_CTCAE</td><td>27/1634</td><td>1.7</td>
