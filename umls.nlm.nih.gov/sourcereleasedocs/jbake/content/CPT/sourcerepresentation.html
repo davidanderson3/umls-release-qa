@@ -53,11 +53,12 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
 		        <li>207L00000X/Anesthesiology/59%</li>
 				<li>367500000X/Nurse Anesthetist, Certified Registered/39%</li>
 		</ul>
-      <br/>
+      	<p>New REL/RELA</p>
+	has_specialty/specialty_of<br/>
     </div>
     <div id="rep_file_summary" class="rep_block_level_one"> <a id="file_summary"></a>
       <h3>Source-Provided Files: Summary</h3>
-        (<span class="nav"><a href="#top-of-page">return to top</a></span>)
+        <span class="nav"><a href="#top-of-page">return to top</a></span>
       The complete English language CPT distribution includes the
       following:<br/>
       <div class="rep_block_level_two">
@@ -70,13 +71,6 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
               <th>Description</th>
             </tr>
             <tr>
-              <td>2018 Consumer Friendly Descriptors README.docx</td>
-              <td>User guide for Consumer Descriptor data</td>
-            </tr>
-            <tr>
-              <td>2018 Clinician Descriptors README.docx</td>
-              <td>User guide for Clinician Descriptor data</td>
-            </tr>
             <tr>
               <td>2018_CPT_Link_ReadMe_20170901.pdf</td>
               <td>User guide for main data files</td>
@@ -91,14 +85,6 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
               <tr>
                 <th>File Name</th>
                 <th>Description</th>
-              </tr>
-              <tr>
-                <td>ClinicianDescriptor.txt</td>
-                <td>Clinician Descriptors</td>
-              </tr>
-              <tr>
-                <td>ConsumerDescriptor.txt</td>
-                <td>Consumer-friendly Descriptors</td>
               </tr>
               <tr>
                 <td>Property_DTK_pipe.txt</td>
@@ -146,7 +132,7 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
     </div>
     <div id="rep_file_details" class="rep_block_level_one"> <a id="file_details"></a>
       <h3>Source-Provided Files: Details</h3>
-        (<span class="nav"><a href="#top-of-page">return to top</a></span>)
+        <span class="nav"><a href="#top-of-page">return to top</a></span>
       Details on format of input files and representation of source
       data. Consult the CPT documentation for additional details.<br/>
       <div class="rep_block_level_two"> <a id="file1"></a>
@@ -336,6 +322,19 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
                 the published CPT code book. </td>
               <td>MRSAT.ATN = ADDITIONAL_GUIDELINE</td>
              <tr>
+             <tr>
+             	<td>123</td>
+             	<td>Consumer_Friendly_Descriptor</td>
+             	<td>The translation of the CPT long descriptor into laymen terms.</td>
+             	<td>MRCONSO.STR; TTY = ETCF</td>
+             </tr>
+             <tr>
+			    <td>126</td>
+			    <td>Clinician_Descriptor</td>
+			    <td>The translation of the CPT long descriptor into terms precisely describing the procedure or service
+				performed by a physician or qualified healthcare professional.</td>
+			  	<td>MRCONSO.STR; TTY = ETCLIN</td>
+             </tr>
               <td>127</td>
               <td>Measure_Developer</td>
               <td> Name of the measure developer associated
@@ -780,69 +779,7 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
 
         <a id="file5"></a><br/>
         <br/>
-        <h4 class="file_field_name">file:
-          ClinicianDescriptor_DTK_pipe.txt<br/>
-        </h4>
-          <br/>
-        <br/>
-        <table>
-          <tbody>
-            <tr>
-              <th>Field Name</th>
-              <th>Description</th>
-              <th>Representation</th>
-            </tr>
-            <tr>
-              <td>ConceptID</td>
-              <td>CPT Link Concept ID</td>
-              <td>MRSAT.ATN = CPTLINK_CONCEPT_ID</td>
-            </tr>
-            <tr>
-              <td>Property Type ID</td>
-              <td>MRCONSO.TTY = ETCLIN</td>
-              <td>MRCONSO.TTY = ETCLIN</td>
-            </tr>
-            <tr>
-              <td>Property Value</td>
-              <td>Clincian Descriptor</td>
-              <td>MRCONSO.STR</td>
-            </tr>
-          </tbody>
-        </table>
-        <br/>
-        <br/>
-        <h4 class="file_field_name">file:
-          ConsumerDescriptor_DTK_pipe.txt<br/>
-        </h4>
-          <span class="nav">return to <a href="#data_files">Data Files</a></span><br/>
-        <br/>
-        <table>
-          <tbody>
-            <tr>
-              <th>Field Name</th>
-              <th>Description</th>
-              <th>Representation</th>
-            </tr>
-            <tr>
-              <td class="file_field_name">Concept ID</td>
-              <td>CPT Link Concept ID</td>
-              <td>MRSAT.ATN = CPTLINK_CONCEPT_ID</td>
-            </tr>
-            <tr>
-              <td class="file_field_name">Property Type ID</td>
-              <td>All rows in this file have value 123, "Consumer
-                Friendly Descriptor"</td>
-              <td>MRCONSO.TTY = ETCF</td>
-            </tr>
-            <tr>
-              <td>Property Value</td>
-              <td>Consumer Friendly Descriptor</td>
-              <td>MRCONSO.STR</td>
-            </tr>
-          </tbody>
-        </table>
-        <br/>
-	   <h4>file: Days.txt<br/>
+ 	   <h4>file: Days.txt<br/>
 		</h4>
 		  <span class="nav">return to <a href="#data_files">Data Files</a></span><br/>
 		<br/>
