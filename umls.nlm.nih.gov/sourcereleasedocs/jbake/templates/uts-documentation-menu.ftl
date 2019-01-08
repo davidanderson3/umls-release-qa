@@ -29,7 +29,7 @@
 </div>
 <div class = "row uts-nav">
    <div class="col-md-8 col-sm-8 col-xs-12">
-      <a href="${content.rootpath}"><img class= "img-responsive pull-left" style = "padding-top:.2em; padding-left:1em; margin-right:1em;" alt="UTS Logo" src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>umls-xs.gif"></a>
+      <a href="//www.nlm.nih.gov/research/umls/"><img class= "img-responsive pull-left" style = "padding-top:.2em; padding-left:1em; margin-right:1em;" alt="UTS Logo" src="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/umls-xs.gif"></a>
       <p class = "orange uts-title">Unified Medical Language System (UMLS)</p>
    </div>
    <div class="col-md-4 col-sm-8 col-xs-12 umls-menu">
