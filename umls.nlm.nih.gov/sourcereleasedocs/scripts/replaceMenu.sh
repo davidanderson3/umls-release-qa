@@ -7,7 +7,7 @@ then
 sed '/<!--menu-->/q' jbake/content/"$RSAB"/index.html > jbake/content/"$RSAB"/index.temp1
 awk '/<!--endmenu-->/{y=1}y' jbake/content/"$RSAB"/index.html > jbake/content/"$RSAB"/index.temp2
 echo '<div class="row">
- <div class="container-fluid navbar navbar-default" role="navigation">
+ <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
   <div class="btn-group navbar-btn visible-*" role="group">
    <a class="btn btn-md" role="button" href="index.html">Synopsis</a>' > jbake/content/"$RSAB"/menu 
 fi;
