@@ -1,62 +1,10 @@
-<#assign categories = ['Retrieving UMLS Data', 'Retrieving Source-Asserted Data', 'REST API Cookbook']>
-<div class = "row header">
-  <div class="container-fluid">
-     <div class = "row">
-        <div class = "col-md-6 col-sm-8 col-xs-12">
-            <a href = "https://www.nlm.nih.gov"><img class= "nlm-logo img-responsive" alt="National Library of Medicine" style="margin-right:1em;" src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>nlm-logo.png"></a>
-        </div>
-        <div class = "col-md-6 col-sm-8 col-xs-12" id = "search-form">
-         <form method="get" action="//vsearch.nlm.nih.gov/vivisimo/cgi-bin/query-meta" target="_self" name="searchForm" id="searchForm">
-         <label for="search" class="hidden">Search</label>
-         <input type="text" name="query" value="Search" class="search-input" id="search"/>
-         <input type="hidden" name="v:project" value="nlm-main-website" />
-         </form>
-       </div>
-       <div class = "col-md-6 col-sm-8 col-xs-12">
-           <a class = "pull-right white" style = "margin-right:1em;" href="https://support.nlm.nih.gov/ics/support/ticketnewwizard.asp?style=classic&deptID=28054&category=umls"><b>Contact NLM</b></a>
-       </div>
+<div id="barbranding">
+  <h3><span style="color: white;">Unified Medical Language System (UMLS)</span></h3>
+  <div class="breadcrumb-brand umls-div">
+    <ul>
+      <li style="color: white;"><a style="color: white;" href="//www.nlm.nih.gov/research/umls/quickstart.html" title="UMLS Quick Start Guide" id="anch_28"><strong>UMLS Quick Start Guide</strong></a></li>  
+      <li style="color: white;"><a style="color: white;" href="//www.nlm.nih.gov/research/umls/faq_main.html" title="Unified Medical Language System FAQs" id="anch_29"><strong>FAQs</strong></a></li> 
+      <li style="color: white;"><a style="color: white;" href="//www.nlm.nih.gov/research/umls/support.html" title="Unified Medical Language System Support" id="anch_30"><strong>Customer Support</strong></a></li>
+    </ul>
     </div>
-  </div>
-</div>
-<div class = "row nlm-dropdown-menu">
-  <div class = "container-fluid">
-      <div id = "nav">
-         <ul class = "topnav">
-         <li></li>
-         </ul>
-      </div>
-  </div>
-</div>
-<div class = "row uts-nav">
-   <div class="col-md-8 col-sm-8 col-xs-12">
-      <a href="//www.nlm.nih.gov/research/umls/"><img class= "img-responsive pull-left" style = "padding-top:.2em; padding-left:1em; margin-right:1em;" alt="UTS Logo" src="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/umls-xs.gif"></a>
-      <p class = "orange uts-title">Unified Medical Language System (UMLS)</p>
-   </div>
-   <div class="col-md-4 col-sm-8 col-xs-12 umls-menu">
-     <a href = "https://www.nlm.nih.gov/research/umls/quickstart.html">UMLS Quick Start Guide</a>&nbsp;<b>|</b>&nbsp;
-     <a href = "https://www.nlm.nih.gov/research/umls/faq_main.html">FAQs</a>&nbsp;<b>|</b>&nbsp;
-     <a href = "https://support.nlm.nih.gov/ics/support/ticketnewwizard.asp?style=classic&deptID=28054&category=umls">Customer Support</a>
-   </div>
-</div>
-<!-- only build the REST Menu if we're in the REST API -->
-<#if (content.uri)??  && content.uri?starts_with("rest/")>
-<div class = "row">
-  <div class = "container-fluid navbar navbar-default" role = "navigation">
-   <div class="btn-group navbar-btn visible-*" role="group">
-    <#list published_pages?sort_by('navorder') as page>
-    <#if !(page.category)?? && (page.uri != "rest/home.html" && page.uri?starts_with("rest/"))><#if (content.rootpath)??><a class = "btn btn-md" role = "button" href = "${content.rootpath}${page.uri}">${page.title}</a><#else></#if></#if>
-    </#list>
-      <#list categories as cat>
-      <div class="btn-group" role="group">
-        <button type="button" class="btn btn-md dropdown-toggle" data-toggle="dropdown" aria-expanded="false">${cat}<span class = "caret"></span></button>    
-         <ul class = "dropdown-menu" role = "menu">
-          <#list published_pages?sort_by('navorder') as page>
-           <#if (page.category)?? && page.category = cat><li><#if (content.rootpath)??><a href = "${content.rootpath}${page.uri}">${page.title}</a></li><#else></#if></#if>
-          </#list>
-         </ul>
-      </div><!--//btn-group-->
-     </#list>  
-   </div>
  </div>
-</div>
-</#if>
