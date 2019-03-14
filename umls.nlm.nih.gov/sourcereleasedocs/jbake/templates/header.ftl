@@ -14,7 +14,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="DC.Title" content="<#if (content.title)??>UMLS Metathesaurus - <#escape x as x?xml>${content.title}</#escape><#else>UMLS Vocabulary Documentation</#if>" />
   <meta name="DC.Publisher" content="U.S. National Library of Medicine" />
-  <meta name="DC.Subject.Keyword" content="Unified Medical Language System API, UMLS REST API, UMLS API, Terminology Service, Biomedical Terminology Endpoint">
+  <meta name="DC.Subject.Keyword" content="Unified Medical Language System, Vocabularies, Terminologies, <#escape x as x?xml>${content.title}</#escape>">
   <meta name="DC.Rights" content="Public Domain" />
   <meta name="DC.Language" content="eng" />
   <meta name="generator" content="JBake">
