@@ -9,12 +9,10 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
   <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/local-uts.css" rel="stylesheet" type="text/css">
   <title>
-    <#if (content.title)??>
-      <#escape x as x?xml>${content.title}</#escape>
-      <#else>UMLS Terminology Services REST API Technical Documentation</#if>
+    <#if (content.title)??>UMLS Metathesaurus - <#escape x as x?xml>${content.title}</#escape><#else>UMLS Vocabulary Documentation</#if>
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="DC.Title" content="<#if (content.title)??><#escape x as x?xml>${content.title}</#escape><#else>UMLS Terminology Services REST API Technical Documentation</#if>" />
+  <meta name="DC.Title" content="<#if (content.title)??>UMLS Metathesaurus - <#escape x as x?xml>${content.title}</#escape><#else>UMLS Vocabulary Documentation</#if>" />
   <meta name="DC.Publisher" content="U.S. National Library of Medicine" />
   <meta name="DC.Subject.Keyword" content="Unified Medical Language System API, UMLS REST API, UMLS API, Terminology Service, Biomedical Terminology Endpoint">
   <meta name="DC.Rights" content="Public Domain" />
