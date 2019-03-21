@@ -1,0 +1,354 @@
+title=HCPCS (Healthcare Common Procedure Coding System) - Metathesaurus Representation
+date=2018-05-07
+updated=2018-11-05
+type=page
+status=published
+~~~~~~
+
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+<!--endmenu-->
+<br/><a id="top-of-page"></a> <span class="nav">Skip to:</span> <a href="#termtypes">Atoms</a>, <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>, <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a>
+
+<p><b>VSAB:</b> HCPCS2019_19_03_21, HCDT2019_18_03_21, HCPT2019_18_03_21, MTHHH2019_18_03_21</p>
+
+<div id="rep_identifiers" class="rep_block_level_one">
+  <h3>Summary of Changes:</h3>
+
+  <p>No changes have been made to the format of original data files or to Metathesaurus processing.  The data is
+  the official HCPCS 2019 release file (dated 11-02-2018), the VSABs reflect the Metathesaurus processing date.</p>
+
+  <h3>Source Provided Files:</h3>
+
+  <p>The Metathesaurus uses a fixed-length field file submitted by the Centers for Medicare &amp; Medicaid Services
+  (CMS). The file used for 2019 is: HCPC2019_CONTR.txt.</p>
+
+  <p>Not included: Field 2 (sequence number; character positions 6-10) is excluded from Metathesaurus processing.</p>
+
+  <h3>Identifiers:</h3>
+
+  <ul>
+    <li>CODE: For HCPCS, HCPT, HCDT atoms: Field 1 (HCPCS Procedure or Modifier Code; Character positions 1-5).<br/>
+    For MTHHH atoms: An MTHU# is generated during Metathesaurus source processing</li>
+
+    <li>SAUI: Not Applicable</li>
+
+    <li>SCUI: Same as "CODE"</li>
+
+    <li>SDUI: Not Applicable</li>
+  </ul><br/>
+
+  <div id="rep_termtypes" class="rep_block_level_two">
+    <a id="termtypes"></a><br/>
+
+    <h3>Atoms (MRCONSO):</h3>&nbsp;&nbsp;<br/>
+    SAB assignment:<br/>
+    Atoms created from the HCPCS data file are assigned to an SAB based on their code:<br/>
+
+    <ul>
+      <li>MTHHH: All hierarchical terms</li>
+
+      <li>HCPT: 2 or 5-digit numeric code or 4 digits followed by T or F</li>
+
+      <li>HCDT: "D" followed by 4 digits: HCDT</li>
+
+      <li>HCPCS: All other codes from the HCPCS data file</li>
+    </ul>
+
+    <table>
+      <tbody>
+        <tr>
+          <th>Term Type</th>
+
+          <th>Origin</th>
+        </tr>
+
+        <tr>
+          <td>AB</td>
+
+          <td>CODE = procedure/modifier code (character positions 1-5)<br/>
+          STR = Short Description SCUI = procedure/modifier code (character positions 1-5)<br/>
+          TTY = "AB" is assigned to atoms with a Record id code of "3" and no "Termination Date"<br/>
+          SUPPRESS = "Y"</td>
+        </tr>
+
+        <tr>
+          <td>AM</td>
+
+          <td>CODE = procedure/modifier code (character positions 1-5)<br/>
+          STR = Short Description SCUI = procedure/modifier code (character positions 1-5)<br/>
+          TTY = "AM" is assigned to atoms with a Record id code of "7" and no "Termination Date"<br/>
+          SUPPRESS = "Y"</td>
+        </tr>
+
+        <tr>
+          <td>HT</td>
+
+          <td>CODE = "MTHU#", assigned during Metathesaurus source processing<br/>
+          STR = value of Metathesaurus Hierarchical Term<br/>
+          SCUI = "MTHU#", assigned during Metathesaurus source processing<br/>
+          Note: The standard HCPCS data files do not include a hierarchy. The National Library of Medicine uses
+          the printed book and other resources to generate a hierarchy during Metathesaurus source processing. This
+          hierarchy has not been reviewed by CMS.</td>
+        </tr>
+
+        <tr>
+          <td>MP</td>
+
+          <td>CODE = procedure/modifier code (character positions 4-5)<br/>
+          STR = Long Description<br/>
+          SCUI = procedure/modifier code (character positions 1-5)<br/>
+          TTY = "MP" is assigned to atoms with a Record id code of "7" and no "Termination Date."</td>
+        </tr>
+
+        <tr>
+          <td>OA</td>
+
+          <td>CODE = procedure/modifier code (character positions 1-5)<br/>
+          STR = Short Description SCUI=procedure/modifier code (character positions 1-5)<br/>
+          TTY = "OA" is assigned to atoms with a Record id code of "3" and a non-blank "Termination Date."<br/>
+          SUPPRESS = "O"</td>
+        </tr>
+
+        <tr>
+          <td>OAM</td>
+
+          <td>CODE = procedure/modifier code (character positions 4-5)<br/>
+          STR = Short Description<br/>
+          SCUI = procedure/modifier code (character positions 1-5).<br/>
+          TTY = "OAM" is assigned to atoms with a Record id code of "7" and a non-blank "Termination Date."<br/>
+          SUPPRESS = "O"</td>
+        </tr>
+
+        <tr>
+          <td>OM</td>
+
+          <td>CODE = procedure/modifier code (character positions 4-5)<br/>
+          STR = Long Description; SCUI=procedure/modifier code (character positions 1-5).<br/>
+          TTY = "OM" is assigned to atoms with a Record id code of "7" and a non-blank "Termination Date."<br/>
+          SUPPRESS = "O"</td>
+        </tr>
+
+        <tr>
+          <td>OP</td>
+
+          <td>CODE = procedure/modifier code (character positions 1-5)<br/>
+          STR = Long Description<br/>
+          SCUI = procedure/modifier code (character positions 1-5)<br/>
+          TTY = "OP" is assigned to atoms with a Record id code of "3" and a non-blank "Termination Date."<br/>
+          SUPPRESS = "O"</td>
+        </tr>
+
+        <tr>
+          <td>PT</td>
+
+          <td>CODE = procedure/modifier code (character positions 1-5)<br/>
+          STR = Long Description<br/>
+          SCUI = procedure/modifier code (character positions 1-5)<br/>
+          TTY = "PT" is assigned to atoms with a Record id code of "3" and no "Termination Date."</td>
+        </tr>
+      </tbody>
+    </table>
+  </div><a id="attributes"></a><br/>
+
+  <h3>Attributes (MRSAT):</h3>&nbsp;&nbsp;
+
+  <div id="rep_attributes" class="rep_block_level_two">
+    <table>
+      <tbody>
+        <tr>
+          <th>Attribute Name</th>
+
+          <th>Origin</th>
+        </tr>
+
+        <tr>
+          <td>CPF</td>
+
+          <td>HCPCS Long Description (character positions 12-91). For modifiers, the STR is truncated at the ":", and the entire Long Description is represented with ATN=CPF.</td>
+        </tr>
+
+        <tr>
+          <td>HAC</td>
+
+          <td>HCPCS Action Code (charcter position 293). Expanded values for each Action Code are included in the ATV, e.g. "N=No maintenance for this code"</td>
+        </tr>
+
+        <tr>
+          <td>HAD</td>
+
+          <td>HCPCS Action Effective Date (character positions 277-284)</td>
+        </tr>
+
+        <tr>
+          <td>HAQ</td>
+
+          <td>HCPCS Anesthesia Base Unit Quantity (character positions 266-268)</td>
+        </tr>
+
+        <tr>
+          <td>HBT</td>
+
+          <td>HCPCS Berenson-Eggers Type Of Service Code (character positions 257-259)</td>
+        </tr>
+
+        <tr>
+          <td>HCC</td>
+
+          <td>HCPCS Coverage Code (character position 230)</td>
+        </tr>
+
+        <tr>
+          <td>HCD</td>
+
+          <td>HCPCS Code Added Date (character positions 269-276)</td>
+        </tr>
+
+        <tr>
+          <td>HIR</td>
+
+          <td>HCPCS Coverage Issues Manual Reference Section Number (character posistions 129-134)</td>
+        </tr>
+
+        <tr>
+          <td>HLC</td>
+
+          <td>HCPCS Lab Certification Code (character positions 181-183)</td>
+        </tr>
+
+        <tr>
+          <td>HMP</td>
+
+          <td>HCPCS Multiple Pricing Indicator Code (character position 128)</td>
+        </tr>
+
+        <tr>
+          <td>HMR</td>
+
+          <td>HCPCS Medicare Carriers Manual Reference Section Number (character positions 147-154)</td>
+        </tr>
+
+        <tr>
+          <td>HPD</td>
+
+          <td>HCPCS ASC Payment Group Effective Date (character positions 233-240)</td>
+        </tr>
+
+        <tr>
+          <td>HPG</td>
+
+          <td>HCPCS ASC Payment Group Code (character positions 231-232)</td>
+        </tr>
+
+        <tr>
+          <td>HPI</td>
+
+          <td>HCPCS Pricing Indicator Code (character positions 120-121)</td>
+        </tr>
+
+        <tr>
+          <td>HPN</td>
+
+          <td>HCPCS Processing Note Number (character positions 253-256)</td>
+        </tr>
+
+        <tr>
+          <td>HSN</td>
+
+          <td>HCPCS Statute Number (character positions 171-180)</td>
+        </tr>
+
+        <tr>
+          <td>HTD</td>
+
+          <td>HCPCS Termination Date (character positions 285-292)</td>
+        </tr>
+
+        <tr>
+          <td>HTS</td>
+
+          <td>HCPCS Type Of Service Code (character position 261)</td>
+        </tr>
+
+        <tr>
+          <td>HXR</td>
+
+          <td>HCPCS Cross Reference Code (character positions 205-209)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="rep_definitions" class="rep_block_level_two">
+    <a id="definitions"></a><br/>
+
+    <h3>Definitions (MRDEF):</h3>&nbsp;&nbsp;
+
+    <p>No definitions are included with the standard format HCPCS release.</p>
+  </div>
+
+  <div id="rep_relationships" class="rep_block_level_two">
+    <a id="relationships"></a><br/>
+
+    <h3>Relationships (MRREL):</h3>&nbsp;&nbsp;
+
+    <table>
+      <tbody>
+        <tr>
+          <th>Relationship</th>
+
+          <th>RELA/Inverse RELA</th>
+
+          <th>Origin</th>
+        </tr>
+
+        <tr>
+          <td>CHD<br/>
+          PAR<br/>
+          SIB</td>
+
+          <td>&nbsp;</td>
+
+          <td>Hierarchy created by the NLM during Metathesaurus source processing. This hierarchy has not
+          been reviewed by CMS, and is attributed to SAB = "MTHHH"</td>
+        </tr>
+
+        <tr>
+          <td>RQ</td>
+
+          <td>mapped_from<br/>
+          mapped_to</td>
+
+          <td>HCPCS Cross Reference Code (character positions 205-209). A small number of cross references are provided to invalid codes or ranges of codes.<br/>
+          These are not made into relationships, however the data is included in the HXR attribute.</td>
+        </tr>
+
+        <tr>
+          <td>SY</td>
+
+          <td>expanded_form_of<br/>
+          has_expanded_form</td>
+
+          <td>Connect a PT with its AB</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div id="mappings" class="rep_block_level_one">
+  <h3>Mappings (MRMAP):</h3>
+
+  <p>No mapping data to other sources is included for HCPCS</p>
+</div>
