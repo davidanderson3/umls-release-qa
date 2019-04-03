@@ -2,7 +2,7 @@
   <h3 class="mb-3 text-center"><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/index.html">UMLS Vocabularies</a></h3>
   <div id="accordion-umls-vocabularies" class="mb-3">
     <div class="card">
-      <div class="card-header" id="heading-umls-vocabularies-section-1">
+      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-1">
         <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-1" aria-expanded="false" aria-controls="umls-vocabularies-section-1">
                     <h4 class="mb-0">
                          A
@@ -33,7 +33,7 @@
       </div>
     </div>
     <div class="card">
-      <div class="card-header" id="heading-umls-vocabularies-section-2">
+      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-2">
         <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-2" aria-expanded="false" aria-controls="umls-vocabularies-section-2">
                     <h4 class="mb-0">
                          B
@@ -56,7 +56,7 @@
       </div>
     </div>
     <div class="card">
-      <div class="card-header" id="heading-umls-vocabularies-section-3">
+      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-3">
         <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-3" aria-expanded="false" aria-controls="umls-vocabularies-section-3">
                     <h4 class="mb-0">
                          C
@@ -103,7 +103,7 @@
       </div>
     </div>
     <div class="card">
-      <div class="card-header" id="heading-umls-vocabularies-section-4">
+      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-4">
         <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-4" aria-expanded="false" aria-controls="umls-vocabularies-section-4">
                     <h4 class="mb-0">
                          D
@@ -136,7 +136,7 @@
       </div>
     </div>
     <div class="card">
-      <div class="card-header" id="heading-umls-vocabularies-section-5">
+      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-5">
         <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-5" aria-expanded="false" aria-controls="umls-vocabularies-section-5">
                     <h4 class="mb-0">
                          F
@@ -159,7 +159,7 @@
       </div>
     </div>
     <div class="card">
-      <div class="card-header" id="heading-umls-vocabularies-section-6">
+      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-6">
         <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-6" aria-expanded="false" aria-controls="umls-vocabularies-section-6">
                     <h4 class="mb-0">
                          G
@@ -184,7 +184,7 @@
       </div>
     </div>
     <div class="card">
-      <div class="card-header" id="heading-umls-vocabularies-section-7">
+      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-7">
         <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-7" aria-expanded="false" aria-controls="umls-vocabularies-section-7">
                     <h4 class="mb-0">
                          H
@@ -221,7 +221,7 @@
       </div>
     </div>
     <div class="card">
-      <div class="card-header" id="heading-umls-vocabularies-section-8">
+      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-8">
         <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-8" aria-expanded="false" aria-controls="umls-vocabularies-section-8">
                     <h4 class="mb-0">
                          I
@@ -302,7 +302,7 @@
       </div>
     </div>
     <div class="card">
-      <div class="card-header" id="heading-umls-vocabularies-section-9">
+      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-9">
         <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-9" aria-expanded="false" aria-controls="umls-vocabularies-section-9">
                     <h4 class="mb-0">
                          J
@@ -325,7 +325,7 @@
       </div>
     </div>
     <div class="card">
-      <div class="card-header" id="heading-umls-vocabularies-section-10">
+      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-10">
         <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-10" aria-expanded="false" aria-controls="umls-vocabularies-section-10">
                     <h4 class="mb-0">
                          K
@@ -348,7 +348,7 @@
       </div>
     </div>
     <div class="card">
-      <div class="card-header" id="heading-umls-vocabularies-section-11">
+      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-11">
         <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-11" aria-expanded="false" aria-controls="umls-vocabularies-section-11">
                     <h4 class="mb-0">
                          L
@@ -415,7 +415,7 @@
       </div>
     </div>
     <div class="card">
-      <div class="card-header" id="heading-umls-vocabularies-section-12">
+      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-12">
         <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-12" aria-expanded="false" aria-controls="umls-vocabularies-section-12">
                     <h4 class="mb-0">
                          M
@@ -522,7 +522,7 @@
       </div>
     </div>
     <div class="card">
-      <div class="card-header" id="heading-umls-vocabularies-section-13">
+      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-13">
         <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-13" aria-expanded="false" aria-controls="umls-vocabularies-section-13">
                     <h4 class="mb-0">
                          N
@@ -627,7 +627,7 @@
       </div>
     </div>
     <div class="card">
-      <div class="card-header" id="heading-umls-vocabularies-section-14">
+      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-14">
         <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-14" aria-expanded="false" aria-controls="umls-vocabularies-section-14">
                     <h4 class="mb-0">
                          O
@@ -652,7 +652,7 @@
       </div>
     </div>
     <div class="card">
-      <div class="card-header" id="heading-umls-vocabularies-section-15">
+      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-15">
         <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-15" aria-expanded="false" aria-controls="umls-vocabularies-section-15">
                     <h4 class="mb-0">
                          P
@@ -683,7 +683,7 @@
       </div>
     </div>
     <div class="card">
-      <div class="card-header" id="heading-umls-vocabularies-section-16">
+      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-16">
         <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-16" aria-expanded="false" aria-controls="umls-vocabularies-section-16">
                     <h4 class="mb-0">
                          Q
@@ -706,7 +706,7 @@
       </div>
     </div>
     <div class="card">
-      <div class="card-header" id="heading-umls-vocabularies-section-17">
+      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-17">
         <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-17" aria-expanded="false" aria-controls="umls-vocabularies-section-17">
                     <h4 class="mb-0">
                          R
@@ -739,7 +739,7 @@
       </div>
     </div>
     <div class="card">
-      <div class="card-header" id="heading-umls-vocabularies-section-18">
+      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-18">
         <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-18" aria-expanded="false" aria-controls="umls-vocabularies-section-18">
                     <h4 class="mb-0">
                          S
@@ -776,7 +776,7 @@
       </div>
     </div>
     <div class="card">
-      <div class="card-header" id="heading-umls-vocabularies-section-19">
+      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-19">
         <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-19" aria-expanded="false" aria-controls="umls-vocabularies-section-19">
                     <h4 class="mb-0">
                          T
@@ -799,7 +799,7 @@
       </div>
     </div>
     <div class="card">
-      <div class="card-header" id="heading-umls-vocabularies-section-20">
+      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-20">
         <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-20" aria-expanded="false" aria-controls="umls-vocabularies-section-20">
                     <h4 class="mb-0">
                          U
@@ -830,7 +830,7 @@
       </div>
     </div>
     <div class="card">
-      <div class="card-header" id="heading-umls-vocabularies-section-21">
+      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-21">
         <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-21" aria-expanded="false" aria-controls="umls-vocabularies-section-21">
                     <h4 class="mb-0">
                          V
@@ -853,7 +853,7 @@
       </div>
     </div>
     <div class="card">
-      <div class="card-header" id="heading-umls-vocabularies-section-22">
+      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-22">
         <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-22" aria-expanded="false" aria-controls="umls-vocabularies-section-22">
                     <h4 class="mb-0">
                          W
