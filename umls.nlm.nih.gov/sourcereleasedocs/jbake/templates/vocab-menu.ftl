@@ -1,6 +1,6 @@
 <div class="col-lg-3 col-xl-2 d-none d-lg-block border-right px-2 py-4">
   <h3 class="mb-3 text-center"><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/index.html">UMLS Vocabularies</a></h3>
-  <div id="accordion-umls-vocabularies" class="mb-3">
+  <div id="accordion-umls-vocabularies" class="pb-3">
     <div class="card">
       <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-1">
         <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-1" aria-expanded="false" aria-controls="umls-vocabularies-section-1">
