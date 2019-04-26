@@ -1,0 +1,198 @@
+title=PDQ (Physician Data Query) - Metathesaurus Representation
+date=2017-11-06
+updated=2018-05-07
+type=page
+status=published
+~~~~~~
+
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+<!--endmenu-->
+<br/>
+<p>This page lists UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
+
+<a id = "top"> </a>
+<span class = "nav">Skip to: <a href = "#atoms">Atoms</a>, <a href = "#attributes">Attributes</a>, <a href = "#definitions">Definitions</a>, <a href = "#relationships">Relationships</a>, <a href = "#mappings">Mappings</a></span>
+
+<div id = "general" class = "rep_block_level_one">
+<p><strong>VSAB:</strong> PDQ_2018_10_27</p>
+
+<div id = "rep_identifiers" class = "rep_block_level_one">
+<h3>Summary of Changes</h3>
+<p>New TTY = BN (fully-specified drug brand name that CANNOT be prescribed). This replaces the previous TTY=BD (fully-specified drug brand name that CAN be prescribed).</p>
+</div>
+<div id = "rep_change_summary" class = "rep_block_level_one">
+<h3>Original Files:</h3>
+<table>
+<tr><th>File Name</th><th>Description</th></tr>
+<tr><td  class = "file_field_name"><a href = "#file1">Terminology.tar</a></td><td>When uncompressed there are a total of 13,407 individual xml files (CDR256085.xml, CDR256086.xml, CDR256087.xml, etc.)</td></tr>
+</table>
+<br/>
+</div>
+
+<div id = "rep_identifers" class = "rep_block_level_one">
+<h3>Identifiers</h3>
+
+<ul>
+<li>CODE:  PDQ ID</li>
+<li>SAUI:  Not applicable</li>
+<li>SCUI:  Not applicable</li>
+<li>SDUI:  PDQ ID</li>
+</ul>
+
+<div id = "rep_termtypes" class = "rep_block_level_two">
+<a id = "atoms"></a>
+<h3>Atoms (MRCONSO)</h3>
+<table>
+<tr><th>Term Type</th><th>Description</th><th>Origin</th></tr>
+<tr>
+    <td>AB</td>
+    <td>Abbreviation</td>
+    <td>Abbreviation field</td>
+</tr>
+<tr>
+    <td>ACR</td>
+    <td>Acronym</td>
+    <td>Acronym field</td>
+</tr>
+<tr>
+    <td>BN</td>
+    <td>US brand name</td>
+    <td>Common usage field</td>
+</tr>
+<tr>
+    <td>CCN</td>
+    <td>Chemical code name</td>
+    <td>Chemcial code name field</td>
+</tr>
+<tr>
+    <td>CHN</td>
+    <td>Chemical structure name</td>
+    <td>Chemical structure name field</td>
+</tr>
+<tr>
+    <td>CU</td>
+    <td>Common usage</td>
+    <td>Common usage field</td>
+</tr>
+<tr>
+    <td>ET</td>
+    <td>Display name</td>
+    <td>Display name field</td>
+</tr>
+<tr>
+    <td>FBD</td>
+    <td>Foreign brand name</td>
+    <td>Foreign brand name field</td>
+</tr>
+<tr>
+    <td>HT</td>
+    <td>Header term</td>
+    <td>Header term field</td>
+</tr>
+<tr>
+    <td>IS</td>
+    <td>Obsolete name</td>
+    <td>Obsolete name field</td>
+</tr>
+<tr>
+    <td>LV</td>
+    <td>Lexical variant</td>
+    <td>Lexical variant field</td>
+</tr>
+<tr>
+    <td>OP</td>
+    <td>Obsolete term</td>
+    <td>Obsolete term field</td>
+</tr>
+<tr>
+    <td>PSC</td>
+    <td>Protocol selection criteria</td>
+    <td>Protocol selection criteria field</td>
+</tr>
+<tr>
+    <td>PT</td>
+    <td>Preferred name</td>
+    <td>Preferred name field</td>
+</tr>
+<tr>
+    <td>SY</td>
+    <td>Synonym</td>
+    <td>Synonym field</td>
+</tr>
+</table>
+</div>
+
+<h3>Suppressibility</h3>
+<p>All term types have suppressibility value 'N' (default value) except for IS and OP which have suppressibility value 'O'.</p> 
+</div>
+
+<div id = "rep_attributes" class = "rep_block_level_two">
+<a id = "attributes"></a><br/>
+<h3>Attributes (MRSAT)</h3>
+<table>
+<tr><th>Attribute Name</th><th>Origin</th></tr>
+<tr><td>CAS_REGISTRY</td>
+<td>CAS Registry name field</td></tr>
+<tr><td>DATE_FIRST_PUBLISHED</td>
+<td>DateFirstPublished field</td></tr>
+<tr><td>DATE_LAST_MODIFIED</td>
+<td>DateLastModified field</td></tr>
+<tr><td>IND_CODE</td>
+<td>IND code field</td></tr>
+<tr><td>LEXICAL_TAG; value = LAB</td>
+<td>Chemical code name field</td></tr>
+<tr><td>LEXICAL_TAG; value = TRD</td>
+<td>Foreign or US brand name field</td></tr>
+<tr><td>MENU_PARENT</td>
+<td>MenuParent field</td></tr>
+<tr><td>MENU_TYPE</td>
+<td>MenuType field</td></tr>
+<tr><td>NCI_ID</td>
+<td>NCIMetathesaurusConceptID field</td></tr>
+<tr><td>NSC_CODE</td>
+<td>NSC number field</td></tr>
+<tr><td>ORIG_STY</td>
+<td>SemanticType field</td></tr>
+</table>
+</div>
+
+<div id = "rep_relationships" class = "rep_block_level_two">
+<a id = "relationships"></a><br/>
+<h3>Relationships (MRREL)</h3>
+<table>
+<tr><th>Source</th><th>Relationship</th><th>Relationship Label/Inverse Relationship Label</th><th>Description</th></tr>
+<tr><td>PDQ</td><td>CHD<br/>PAR<br/></td>
+<td>(no rela)</td><td>Hierarchy created from the &lt;ParentTerm&gt; values</td></tr>
+<tr><td>PDQ</td><td>NT</td>
+<td>tradename_of/has_tradename</td><td>Connects the brand name (TTY=BN/FBD) with its generic name.</td></tr>
+<tr><td>PDQ</td><td>NT</td>
+<td>lab_number_of/has_lab_number</td><td>Connects the name (TTY=PT) with its chemical code name (TTY=CCN).</td></tr>
+<tr><td>PDQ</td><td>RT</td>
+<td>associated_genetic_condition/associated_disease</td><td>Connects the name (TTY=PT) with its RelatedTermName.</td></tr>
+<tr><td>PDQ</td><td>RT</td>
+<td>has_component/component_of</td><td>Connects the name (TTY=PT) with its RelatedTermName.</td></tr>
+<tr><td>PDQ</td><td>SFO/LFO</td>
+<td>has_expanded_form/expanded_form_of</td><td>Connects the name (TTY=PT) with its acronym (TTY=ACR).</td></tr>
+<tr><td>PDQ</td><td>SY</td>
+<td>(no rela)</td><td>Connects the name (TTY=PT) with its abbreviation (TTY=AB).</td></tr>
+</table>
+</div>
+<div id = "mappings" class = "rep_block_level_two">
+<h3>Definitions (MRDEF)</h3>
+<p>Definitions present.</p> 
+</div>
+<h3>Mappings (MRMAP)</h3>
+<p>There are no mappings present.</p> 
+</div>
