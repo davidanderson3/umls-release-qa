@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<statisticalReport>
+    <result>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>138</count>
+            <expandedForm>has relationship other than synonymous, narrower, or broader/ICD asterisk</expandedForm>
+            <termType>RO/icd_asterisk</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>404</count>
+            <expandedForm>has relationship other than synonymous, narrower, or broader/ICD dagger</expandedForm>
+            <termType>RO/icd_dagger</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>466</count>
+            <expandedForm>source asserted synonymy./Empty relationship attribute</expandedForm>
+            <termType>SY/</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>582</count>
+            <expandedForm>has relationship other than synonymous, narrower, or broader/Empty relationship attribute</expandedForm>
+            <termType>RO/</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>5751</count>
+            <expandedForm>has relationship other than synonymous, narrower, or broader/Other mapped from</expandedForm>
+            <termType>RO/other_mapped_from</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>5751</count>
+            <expandedForm>has relationship other than synonymous, narrower, or broader/Other mapped to</expandedForm>
+            <termType>RO/other_mapped_to</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>17430</count>
+            <expandedForm>related and possibly synonymous./Primary mapped from</expandedForm>
+            <termType>RQ/primary_mapped_from</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>17430</count>
+            <expandedForm>related and possibly synonymous./Primary mapped to</expandedForm>
+            <termType>RQ/primary_mapped_to</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>24823</count>
+            <expandedForm>has parent relationship in a Metathesaurus source vocabulary /Empty relationship attribute</expandedForm>
+            <termType>PAR/</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>24823</count>
+            <expandedForm>has child relationship in a Metathesaurus source vocabulary /Empty relationship attribute</expandedForm>
+            <termType>CHD/</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>164168</count>
+            <expandedForm>has sibling relationship in a Metathesaurus source vocabulary./Empty relationship attribute</expandedForm>
+            <termType>SIB/</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+    </result>
+    <source>ICD10AM</source>
+</statisticalReport>

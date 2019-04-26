@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<statisticalReport>
+    <result>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>486</count>
+            <expandedForm>VA Class - the code of an NDF/HT drug class name (e.g. AM110)</expandedForm>
+            <termType>VAC</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>4720</count>
+            <expandedForm>FDA UNII Code</expandedForm>
+            <termType>FDA_UNII_CODE</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>45605</count>
+            <expandedForm>NDFRT kind</expandedForm>
+            <termType>NDFRT_KIND</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>758</count>
+            <expandedForm>SNOMED PARENT</expandedForm>
+            <termType>SNOMED_PARENT</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>45605</count>
+            <expandedForm>NDFRT numerical unique identifier</expandedForm>
+            <termType>NUI</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>18666</count>
+            <expandedForm>National Formulary Name</expandedForm>
+            <termType>NF_NAME</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>26828</count>
+            <expandedForm>RXNORM: Specifies the type of drug concepts - Values can be "Ingredient", "VA Class", or "VA Product"; ICF: hierarchical level number</expandedForm>
+            <termType>LEVEL</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>13660</count>
+            <expandedForm>MeSH definition for MeSH main heading</expandedForm>
+            <termType>MESH_DEFINITION</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>41492</count>
+            <expandedForm>VA individual entry number</expandedForm>
+            <termType>VA_IEN</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>9</count>
+            <expandedForm>SNOMED CHILD</expandedForm>
+            <termType>SNOMED_CHILD</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>15320</count>
+            <expandedForm>The MeSH descriptor unique identifier to which the given NDFRT term maps</expandedForm>
+            <termType>MESH_DUI</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>40944</count>
+            <expandedForm>NDF strength</expandedForm>
+            <termType>STRENGTH</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>26828</count>
+            <expandedForm>VHA unique identifier assigned to the product</expandedForm>
+            <termType>VUID</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>5038</count>
+            <expandedForm>SNOMED-CT concept ID mapping for NDFRT disease name term</expandedForm>
+            <termType>SNOMED_CID</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>29346</count>
+            <expandedForm>Concatenated triple of VANDF file number, VANDF file IEN, VANDF file record status</expandedForm>
+            <termType>VANDF_RECORD</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>18646</count>
+            <expandedForm>Controlled Substance Act designation code (e.g. 0,2,3n)</expandedForm>
+            <termType>DCSA</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>42047</count>
+            <expandedForm>NDF units</expandedForm>
+            <termType>NDF_UNITS</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>15257</count>
+            <expandedForm>The MeSH Unique Identifier to which the given NDFRT term maps</expandedForm>
+            <termType>MESH_UI</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>15320</count>
+            <expandedForm>MeSH name</expandedForm>
+            <termType>MESH_NAME</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+    </result>
+    <source>NDFRT</source>
+</statisticalReport>
