@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,900" rel="stylesheet">
   <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" title="The Dublin Core metadata Element Set" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-  <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/local-uts.css" rel="stylesheet" type="text/css">
+  <link href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/local-uts.css?version=1.1" rel="stylesheet" type="text/css">
   <title>
     <#if (content.title)??>UMLS Metathesaurus - <#escape x as x?xml>${content.title}</#escape><#else>UMLS Vocabulary Documentation</#if>
   </title>
@@ -47,30 +47,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
     </div>
     <div class="container-fluid">
-      <div class="container branding">
-        <div class="row">
-          <div class="col-xl-1 col-md-1 col-2 my-md-2 mt-3 pt-md-1 pt-lg-0 pr-0"><a href="https://www.nih.gov/"><img src="https://www.nlm.nih.gov/images/NIH_Black.png" class="nih_logo img-fluid" alt="NIH logo"/></a> </div>
-          <div class="col-lg-4 col-md-3 col-10   ml-0 ">
-            <p class="h4 mt-xl-4 mt-lg-3 pt-lg-0 mt-md-0 pt-md-2 pt-3 mb-0"><a href="https://www.nlm.nih.gov/">U.S. National Library of Medicine</a></p>
-
-          </div>
-          <div class="col-lg-3 col-md-3">
-            <ul class="list-inline mt-xl-3 mt-md-3 mt-3 social_media d-none d-sm-block   float-right">
-              <li class="list-inline-item"><a href="https://www.facebook.com/nationallibraryofmedicine"><img class="img-fluid" src="https://www.nlm.nih.gov/images/Facebook_B.svg" alt="Facebook"/></a></li>
-              <li class="list-inline-item"><a href="https://twitter.com/nlm_news"><img class="img-fluid" src="https://www.nlm.nih.gov/images/Twitter_B.svg" alt="Twitter"/></a></li>
-              <li class="list-inline-item"><a href="https://www.youtube.com/user/NLMNIH"><img class="img-fluid" src="https://www.nlm.nih.gov/images/YouTube_B.svg" alt="YouTube"/></a></li>
-            </ul>
-          </div>
-          <div class="col-lg-4 col-md-5 pt-xl-3 pt-lg-2 pt-md-2">
-
-            <form method="get" action="//vsearch.nlm.nih.gov/vivisimo/cgi-bin/query-meta" target="_self" name="searchForm" id="searchForm" class="form-inline">
-              <input type="text" name="query" placeholder="Search for" aria-label="Search" class="form-control col-md-9 col-lg-10 col-9 my-2 my-md-0" id="search" autocomplete="off">
-              <input type="hidden" name="v:project" value="nlm-main-website">
-              <button class="btn btn-search" type="submit"><i class="fas fa-2x fa-search"></i></button>
-            </form>
-          </div>
-
+    <div class="container branding">
+      <div class="row container py-3">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 pb-md-0 pb-2">
+      <a href="https://www.nlm.nih.gov/"><img src="//www.nlm.nih.gov/images/nlm_logo.png" class="img-fluid" alt="NLM logo"></a>
         </div>
-      </div>
+        <div class="col-lg-4 offset-lg-4 col-md-6 col-sm-6 col-xs-12 pt-xl-2 pt-lg-1 pt-md-2">
+          <form method="get" action="//vsearch.nlm.nih.gov/vivisimo/cgi-bin/query-meta" target="_self" name="searchForm" id="searchForm2" class="form-inline">
+            <input type="text" name="query" placeholder="Search for" aria-label="Search" class="form-control col-10" id="search2" autocomplete="off">
+            <input type="hidden" name="v:project" value="nlm-main-website">
+            <button class="btn btn-search" type="submit"><i class="fas fa-search"></i></button>
+          </form>
+        </div>  
+      </div>  
+    </div>  
     </div>
   </header>   
