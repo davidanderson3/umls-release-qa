@@ -1,6 +1,6 @@
 title=MED-RT (Medication Reference Terminology) - Metathesaurus Representation
 date=2018-05-07
-updated=2018-11-05
+updated=2019-05-06
 type=page
 status=published
 ~~~~~~
@@ -26,50 +26,11 @@ status=published
       <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
       <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
     <div id="general" class="rep_block_level_one">
-      <p><strong>VSAB: MED-RT_2018_09_04</strong><br/>
+      <p><strong>VSAB: MED-RT_2019_03_04</strong><br/>
       </p>
       <div id="rep_identifiers" class="rep_block_level_one">
         <h3>Summary of Changes</h3>
-        <p>
-        The following relationship names were changed in the MED-RT data file: <br/>
-		<ul>
-		<li>has_Ingredient -> Synonym Of</li>
-		<li>has_Chemical_Structure -> has_SC</li>
-		<li>has_SNOMED_parent -> Child Of</li>
-		<li>has_SNOMED_child -> Parent Of</li>
-		<li>has_SNOMED_synonym -> Synonym Of</li>
-		</ul>
-
-        These updates are reflected in the UMLS Metathesaurus as follows: <br/>
-        <br/>
-        New REL/RELA values for MED-RT:<br/>
-		<ul>
-		<li>REL:  SY (no RELA)</li>
-		<li>RELA:   has_structural_class/structural_class_of</li>
-		</ul>
-
-		Deprecated RELAs for MED-RT (may still be valid for other sources):<br/>
-		<ul>
-		<li>has_ingredient/ingredient_of</li>
-		<li>has_chemical_structure/chemical_structure_of</li>
-		<li>has_SNOMED_parent</li>
-		<li>has_SNOMED_child</li>
-		<li>has_SNOMED_synonym</li>
-		</ul>
-
-		Additional changes:</br>
-		<ul>
-		<li>To facilitate navigation, a MED-RT hierarchy was created.  MRHIER.RRF only includes Parent/Child relationships between two
-		MED-RT concepts.  Parent/Child relationships involving concepts in other
-		sources are not included in the hierarchy, they are only included
-		as pairwise relationships in MRREL.RRF.  Every MED-RT concept exists in this hierarchy.
-		</li>
-
-		<li>A new authority with a value of 'NLMUMLS' was added to this
-		release to support relationships from RxNorm ingredients to MeSH
-		structural classes as defined by the UMLS Metathesaurus.
-		</li>
-		</ul>
+        There have been no changes to the MED-RT release format or to Metathesaurus source processing. 
 
       </div>
       <div id="rep_change_summary" class="rep_block_level_one">
@@ -85,7 +46,7 @@ status=published
         	<th>Description</th>
         </tr>
         <tr>
-        	<td>Core_MEDRT_2018.09.04_XML.xml</td>
+        	<td>Core_MEDRT_2019.03.04_XML.xml</td>
         	<td>Data file</td>
         </tr>
         <tr>
@@ -168,6 +129,7 @@ status=published
 				<li>MEDRT - relationship asserted by legacy NDF-RT subject matter experts or by MED-RT</li>
 				<li>FMTSME - relationship recommended by FMT subject matter experts for SPL</li>
 				<li>FDASPL - relationship assigned by FDA SPL to active ingredient moieties</li>
+				<li>NLMUMLS - relationships from RxNorm ingredients to MeSH structural classes as defined by the UMLS Metathesaurus
 				</ul>
               </tr>
               <tr>

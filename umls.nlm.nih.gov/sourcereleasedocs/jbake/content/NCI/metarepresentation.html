@@ -1,6 +1,6 @@
 title=NCI (NCI Thesaurus) - Metathesaurus Representation
 date=2018-05-07
-updated=2018-11-05
+updated=2019-05-06
 type=page
 status=published
 ~~~~~~
@@ -24,7 +24,7 @@ status=published
 <p>This page list UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
 <a id="top-of-page"></a> <span class = "nav">Skip to: <a href = "#atoms">Atoms</a>, <a href = "#attributes">Attributes</a>, <a href = "#definitions">Definitions</a>, <a href = "#relationships">Relationships</a>, <a href = "#mappings">Mappings</a></span>
 <div id = "general" class = "rep_block_level_one">
-<p><strong>VSAB: </strong>NCI2018_03D</p>
+<p><strong>VSAB: </strong>NCI2018_12E</p>
 <div id = "rep_identifiers" class = "rep_block_level_one">
 <h3>general notes/Comments:</h3>
 <p>NCI Thesaurus (NCIt) is a widely recognized standard for biomedical coding and reference. It covers vocabulary for clinical care, translational and basic research, public information and administrative activities and is used by a broad variety of public and private partners both nationally and internationally.The scope of NCI is determined by the combined scope of its source vocabularies which include the following:</p>
@@ -56,6 +56,10 @@ status=published
 <tr>
     <td>CDISC-GLOSS</td>
     <td>CDISC Glossary Terminology</td>
+</tr>
+<tr>
+    <td>CPTAC</td>
+    <td>Clinical Proteomic Tumor Analysis Consortium Terms</td>
 </tr>
 <tr>
     <td>CRCH</td>
@@ -110,6 +114,10 @@ status=published
     <td>International Conference on Harmonization</td>
 </tr>
 <tr>
+    <td>INC</td>
+    <td>International Neonatal Consortium Terms</td>
+</tr>
+<tr>
     <td>JAX</td>
     <td>Jackson Laboratories Mouse Terminology, adapted for NCI use</td>
 </tr>
@@ -162,21 +170,14 @@ status=published
 <h3>Summary of Changes</h3>
 <p>New subsource(s):</p>
 <ul>
-  <li>CDISC-GLOSS (CDISC Glossary Terminology)</li>
-  <li>CTCAE_3 (Common Terminology Criteria for Adverse Events 3.0)</li>
-  <li>CTCAE_5 (Common Terminology Criteria for Adverse Events 5.0)</li>
-</ul>
-<p>New attribute name(s) (ATN):</p>
-<ul>
-  <li>PUBLISH_VALUE_SET</li>
-  <li>TERM_BROWSER_VALUE_SET_DESCRIPTION</li>
+  <li>CPTAC (Clinical Proteomic Tumor Analysis Consortium Terms)</li>
+  <li>INC (International Neonatal Consortium Terms)</li>
 </ul>
 <p>New relationship attribute(s) (RELA) | RELA inverse(s):</p>
 <ul>
-  <li>has_ctcae_5_parent|ctcae_5_parent_of</li>
-  <li>neoplasm_has_special_category|special_category_includes_neoplasm</li>
+  <li>has_inc_parent|inc_parent_of</li>
+  <li>disease_excludes_metastatic_anatomic_site|is_not_metastatic_anatomic_site_of_disease</li>
 </ul>
-<p>Subsource = CTRP-SDC (Clinical Trials Reporting Program) has been changed to CTRP.</p>
 </div>
 <div id = "rep_change_summary" class = "rep_block_level_one">
 <h3>Original Files:</h3>
@@ -360,7 +361,7 @@ Alt_Definition: &lt;P325...ncicp:complexDefinition xmlns:ncicp.../P325&gt;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;owl:someValuesFromrdf:resource="#C.."/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/owl:Restriction&gt;
 <p>&lt;/rdfs:subClassOf&gt;</p>
-<p>&lt;A1 rdf:resource="http://...owl#C..."/&gt;</p>
+<p>&lt;A1 rdf:resource="http://...owl#A..."/&gt;</p>
 <table>
 <tr><th>Relationship</th><th>Relationship Label/inverse Relationship Label</th><th>Origin</th></tr>
 <tr><td>NT</td>
@@ -422,6 +423,8 @@ Alt_Definition: &lt;P325...ncicp:complexDefinition xmlns:ncicp.../P325&gt;
 <tr><td>RT</td>
 <td>disease_excludes_finding/is_not_finding_of_disease</td><td>R142</td></tr>
 <tr><td>RT</td>
+<td>disease_excludes_metastatic_anatomic_site</td><td>R136</td></tr>
+<tr><td>RT</td>
 <td>disease_excludes_molecular_abnormality/is_not_molecular_abnormality_of_disease</td><td>R140</td></tr>
 <tr><td>RT</td>
 <td>disease_excludes_normal_cell_origin/is_not_normal_cell_origin_of_disease</td><td>R138</td></tr>
@@ -467,6 +470,8 @@ Alt_Definition: &lt;P325...ncicp:complexDefinition xmlns:ncicp.../P325&gt;
 <td>disease_may_have_finding/may_be_finding_of_disease</td><td>R115</td></tr>
 <tr><td>RT</td>
 <td>disease_may_have_molecular_abnormality/may_be_molecular_abnormality_of_disease</td><td>R89</td></tr>
+<tr><td>RT</td>
+<td>disease_may_have_normal_cell_origin/may_be_normal_cell_origin_of_disease</td><td>R112</td></tr>
 <tr><td>RT</td>
 <td>disease_may_have_normal_cell_origin/may_be_normal_cell_origin_of_disease</td><td>R112</td></tr>
 <tr><td>RT</td>
@@ -537,6 +542,8 @@ Alt_Definition: &lt;P325...ncicp:complexDefinition xmlns:ncicp.../P325&gt;
 <td>has_ctcae_5_parent/ctcae_5_parent_of</td><td>A15</td></tr>
 <tr><td>RT</td>
 <td>has_data_element/data_element_of</td><td>A12</td></tr>
+<tr><td>RT</td>
+<td>has_inc_parent/inc_parent_of</td><td>A16</td></tr>
 <tr><td>RT</td>
 <td>has_nichd_parent/nichd_parent_of</td><td>A11</td></tr>
 <tr><td>RT</td>

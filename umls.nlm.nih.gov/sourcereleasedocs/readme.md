@@ -34,6 +34,10 @@ Check to make sure the release folder (ex, /2018AA) is finalized and ready to be
 
 The repository contains a copy of MRSAB.RRF. This should be taken from the latest release. This can be retrieved from /umls_s/dist_root/{version}/RRF_usr/META once the release is ready, ordinarily the first Wednesday or Thursday of April or October. Copy this file to the root directory of this repository, overwriting the existing file.
 
+## UPDATING THE LEFT-SIDE MENU
+
+A left-side navigation menu was added in early 2019. This is not dynamically generated, so if we add or remove sources, this needs to be updated manually. The template file is /jbake/templates/vocab-menu.ftl. 
+
 ## UPDATING NEW CONTENT, METADATA.HTML FILES, TITLES, DATES, MENUS
 
 Once the previous steps have been completed, you can run the following script to update everything. Again, make sure the variables are set properly. 

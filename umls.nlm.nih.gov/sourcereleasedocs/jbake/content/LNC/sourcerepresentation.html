@@ -1,6 +1,6 @@
 title=LNC (LOINC) - Source Representation
 date=2018-05-07
-updated=2018-11-05
+updated=2019-05-06
 type=page
 status=published
 ~~~~~~
@@ -26,18 +26,12 @@ status=published
         href="#general">Notes</a>, <a href="#change_summary">Summary of
         Changes</a>, <a href="#file_summary">Summary of Source-Provided
         Files</a> <a href="#file_details">Source-Provided File Details</a></span>
-    <div id="rep_change_summary" class="rep_block_level_one"> <a
-        id="change_summary"></a>
-      <p><strong>VSAB: </strong>LNC264</p>
+    <div id="rep_change_summary" class="rep_block_level_one"></div>
+    <a>id="change_summary"></a>
+          <p><strong>VSAB: </strong>LNC265</p>
+   
       <h3>Summary of Changes:</h3>
-            <p>
-	        Minor changes have been made to LOINC file names and formats which have been described in the relevant
-	        ReadMe and ReleaseNotes available with the LOINC distribution.  The "Answers" tab of the "PanelsAndForms" spreadsheet
-	        has been discontinued and that data is now represented in "AnswerList.csv" and "LoincAnswerListLink.csv."
-	        "Parts" and "PartLinks" data previously distributed
-	        specifically to NLM for UMLS purposes are now publicly available in beta version with slight format variations.
-	        For 2.64, the "NLM" version of these files was processed, however we will use the publicly available files
-	        when they are official.</p>
+            
 	        New Classes:
 	        <table>
 	        	<tbody>
@@ -46,64 +40,38 @@ status=published
 	        			<th>Class</th>
 	        		</tr>
 	        		<tr>
-	        			<td>ADMIN.FACILITY</td>
-	        			<td>Facility Observations</td>
+	        			<td>CARD</td>
+	        			<td>Cardiology</td>
 	        		</tr>
 	        		<tr>
-	        			<td>AUDIO</td>
-	        			<td>Audiology</td>
+	        			<td>PANEL.SURVEY.DUKE-AD</td>
+	        			<td>Duke Anxiety Depression Scale (DUKE-AD) set</td>
 	        		</tr>
 	        		<tr>
-	  	  			<td>CLIN.RISK</td>
-	  	  			<td>Clinical Risk</td>
-	  	  		</tr>
-	  	  		<tr>
-	  	  			<td>PANEL.ADMIN</td>
-	  	  			<td>Administrative information panel</td>
-	  	  		</tr>
-	  	  		<tr>
-	  	  			<td>PANEL.CLIN.RISK</td>
-	  	  			<td>Clinical risk panel</td>
-	  	  		</tr>
-	  	  		<tr>
-	  	  			<td>PANEL.SURVEY.BDI</td>
-	  	  			<td>Beck Depression Inventory (BDI) Set</td>
-	  	  		</tr>
-	  	  		<tr>
-	  	  			<td>PANEL.SURVEY.CESD</td>
-	  	  			<td>Center for Epidemiological Studies Depression (CESD) set</td>
-	  	  		</tr>
-	  	  		<tr>
-	  	  			<td>PANEL.SURVEY.NIH.EMO</td>
-	  	  			<td>NIH Toolbox Emotion Domain panels</td>
-	  	  		</tr>
-	  	  		<tr>
-	  	  			<td>SURVEY.BDI</td>
-	  	  			<td>Beck Depression Inventory (BDI)</td>
-	  	  		</tr>
-	  	  		<tr>
-	  	  			<td>SURVEY.CESD</td>
-	  	  			<td>Center for Epidemiological Studies Depression (CESD) survey</td>
-	  	  		</tr>
-	          </tbody>
+	  	  			   <td>PANEL.SURVEY.PEG</td>
+	  	  			   <td>Pain intensity, Enjoyment of life, General activity (PEG) set</td>
+	  	  		   </tr>
+	  	  		   <tr>
+	  	  			   <td>SURVEY.DUKE-AD</td>
+	  	  			   <td>Duke Anxiety Depression Scale (DUKE-AD)</td>
+	  	  		   </tr>
+	  	  		   <tr>
+	  	  			   <td>SURVEY.PEG</td>
+	  	  			   <td>Pain intensity, Enjoyment of life, General activity (PEG)</td>
+	  	  		   </tr>
+	  	  		  </tbody>
 	        </table>
 	        <br/>
 	  	  New ATN:<br/>
 	  	  	<ul>
-	  	  	<li>IMAGING_DOCUMENT_VALUE_SET</li>
-	  	  	</ul>
-	  	  	IMAGING_DOCUMENT_VALUE_SET is a subset of document codes in LOINC that represent imaging procedures and reports.
-	  	  	The value of this ATN is set to 'TRUE' when appropriate.<br /><br />
-
+	  	  	<li>EXAMPLE_SI_UCUM_UNITS</li>
+       </ul>
+	  	  	<br />
 	  	  Deprecated ATN:<br/>
 	  	  	<ul>
-	  	  	<li>EXTERNALLY_DEFINED</li>
-	  	  	<li>EXTERNALLY_DEFINED_CODE_SYSTEM</li>
-	  	  	<li>EXTERNAL_LIST_LINK</li>
+	  	  	<li>STATUS_REASON</li>
 	  	  	</ul>
-	These attributes have been dropped due to changes in the representation of Answers data.
-    </div>
-    <div id="rep_file_summary" class="rep_block_level_one"><br/>
+	   <div id="rep_file_summary" class="rep_block_level_one"></div><br/>
       <a id="file_summary"></a>
       <h3>Source-Provided Files: Summary</h3>
       &nbsp;
@@ -1335,4 +1303,4 @@ status=published
 		All LOINC Numbers in this file are assigned a MRSAT.RRF ATN = IMAGING_DOCUMENT_VALUE_SET, ATV = TRUE<br/>
 		</div>
       </div>
-    </div>
+    

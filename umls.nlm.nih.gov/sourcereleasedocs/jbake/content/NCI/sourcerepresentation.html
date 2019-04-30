@@ -1,6 +1,6 @@
 title=NCI (NCI Thesaurus) - Source Representation
 date=2018-05-07
-updated=2018-11-05
+updated=2019-05-06
 type=page
 status=published
 ~~~~~~
@@ -25,7 +25,7 @@ status=published
 <a id="top-of-page"></a> <span class = "nav">Skip to: <a href = "#general">General Notes/Comments</a>, <a href = "#change_summary">Summary of Changes</a>, <a href = "#file_summary">Summary of Source-Provided Files</a> <a href = "#file_details">Source-Provided File Details</a></span>
 <a id= "general">&nbsp;</a>
 <div id = "rep_general" class = "rep_block_level_one">
-<h3>VSAB: NCI2018_03D</h3>
+<h3>VSAB: NCI2018_12E</h3>
 <h3>General Notes/Comments:</h3>
 <p>NCI Thesaurus (NCIt) is a widely recognized standard for biomedical coding and reference. It covers vocabulary for clinical care, translational and basic research, public information and administrative activities and is used by a broad variety of public and private partners both nationally and internationally.
 The scope of NCI is determined by the combined scope of its source vocabularies which include the following:</p>
@@ -65,6 +65,9 @@ The scope of NCI is determined by the combined scope of its source vocabularies 
     <td>CTEP-SDC</td><td>Cancer Therapy Evaluation Program - Simple Disease Classification</td>
 </tr>
 <tr>
+    <td>CPTAC</td><td>Clinical Proteomic Tumor Analysis Consortium Terms</td>
+</tr>
+<tr>
     <td>CTRP</td><td>Clinical Trials Reporting Program</td>
 </tr>
 <tr>
@@ -88,6 +91,9 @@ The scope of NCI is determined by the combined scope of its source vocabularies 
 </tr>
 <tr>
     <td>ICH</td><td>International Conference on Harmonization</td>
+</tr>
+<tr>
+    <td>INC</td><td>International Neonatal Consortium Terms</td>
 </tr>
 <tr>
     <td>JAX</td><td>Jackson Laboratories Mouse Terminology, adapted for NCI use</td>
@@ -133,21 +139,14 @@ The scope of NCI is determined by the combined scope of its source vocabularies 
 <h3>Summary of Changes</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top-of-page">top</a></span>)
 <p>New subsource(s):</p>
 <ul>
-  <li>CDISC-GLOSS (CDISC Glossary Terminology)</li>
-  <li>CTCAE_3 (Common Terminology Criteria for Adverse Events 3.0)</li>
-  <li>CTCAE_5 (Common Terminology Criteria for Adverse Events 5.0)</li>
-</ul>
-<p>New attribute name(s) (ATN):</p>
-<ul>
-  <li>PUBLISH_VALUE_SET</li>
-  <li>TERM_BROWSER_VALUE_SET_DESCRIPTION</li>
+  <li>CPTAC (Clinical Proteomic Tumor Analysis Consortium Terms)</li>
+  <li>INC (International Neonatal Consortium Terms)</li>
 </ul>
 <p>New relationship attribute(s) (RELA) | RELA inverse(s):</p>
 <ul>
-  <li>has_ctcae_5_parent|ctcae_5_parent_of</li>
-  <li>neoplasm_has_special_category|special_category_includes_neoplasm</li>
+  <li>has_inc_parent|inc_parent_of</li>
+  <li>disease_has_metastatic_anatomic_site|is_metastatic_anatomic_site_of_disease</li>
 </ul>
-<p>Subsource = CTRP-SDC has been changed to CTRP</p>
 </div>
 <div id = "rep_file_summary" class = "rep_block_level_one"></div>
 <a id= "file_summary">&nbsp;</a>
@@ -176,21 +175,22 @@ The scope of NCI is determined by the combined scope of its source vocabularies 
 <tr><td  class = "file_field_name">&lt;rdfs:label rdf:datatype="http://www.w3.org....&lt;/rdfs:label&gt;</td><td>Preferred term</td><td>Not processed. Redundant information. Preferred name property (P108) used instead.</td></tr>
 <tr><td  class = "file_field_name">&lt;rdfs:subClassOf rdf:resource="#C28533"/&gt;</td><td>Parent concept</td><td>MRREL.CUI*</td></tr>
 <tr><td  class = "file_field_name">&lt;rdfs:subClassOf&gt;&lt;owl:Restriction&gt;...&lt;/owl:Restriction&gt;&lt;/rdfs:subClassOf&gt;</td><td>Specifies the relationship attribute and code of the 2nd concept to the first concept.</td><td>MRREL.CUI*; MRREL.RELA</td></tr>
-<tr><td  class = "file_field_name">&lt;A1 rdf:resource="http://...owl#C..."/&gt;</td><td>Role_Has_Domain</td><td>MRREL.CUI*; MRREL.RELA=role_has_domain</td></tr>
-<tr><td  class = "file_field_name">&lt;A2 rdf:resource="http://...owl#C..."/&gt;</td><td>Role_Has_Range</td><td>MRREL.CUI*; MRREL.RELA=role_has_range</td></tr>
-<tr><td  class = "file_field_name">&lt;A3 rdf:resource="http://...owl#C..."/&gt;</td><td>Role_Has_Parent</td><td>MRREL.CUI*; MRREL.RELA=role_has_parent</td></tr>
-<tr><td  class = "file_field_name">&lt;A4 rdf:resource="http://...owl#C..."/&gt;</td><td>Qualifier_Applies_To</td><td>MRREL.CUI*; MRREL.RELA=qualifier_applies_to</td></tr>
-<tr><td  class = "file_field_name">&lt;A5 rdf:resource="http://...owl#C..."/&gt;</td><td>Has_Salt_Form</td><td>MRREL.CUI*; MRREL.RELA=has_salt_form</td></tr>
-<tr><td  class = "file_field_name">&lt;A6 rdf:resource="http://...owl#C..."/&gt;</td><td>Has_Free_Acid_Or_Base_Form</td><td>MRREL.CUI*; MRREL.RELA=has_free_acid_or_base_form</td></tr>
-<tr><td  class = "file_field_name">&lt;A7 rdf:resource="http://...owl#C..."/&gt;</td><td>Has_Target</td><td>MRREL.CUI*; MRREL.RELA=has_target</td></tr>
-<tr><td  class = "file_field_name">&lt;A8 rdf:resource="http://...owl#C..."/&gt;</td><td>Concept_In_Subset</td><td>MRREL.CUI*; MRREL.RELA=concept_in_subset</td></tr>
-<tr><td  class = "file_field_name">&lt;A9 rdf:resource="http://...owl#C..."/&gt;</td><td>Is_Related_To_Endogenous_Product</td><td>MRREL.CUI*; MRREL.RELA=is_related_to_endogenous_product</td></tr>
-<tr><td  class = "file_field_name">&lt;A10 rdf:resource="http://...owl#C..."/&gt;</td><td>Has_CDRH_Parent</td><td>MRREL.CUI*; MRREL.RELA=has_cdrh_parent</td></tr>
-<tr><td  class = "file_field_name">&lt;A11 rdf:resource="http://...owl#C..."/&gt;</td><td>Has_NICHD_Parent</td><td>MRREL.CUI*; MRREL.RELA=has_nichd_parent</td></tr>
-<tr><td  class = "file_field_name">&lt;A12 rdf:resource="http://...owl#C..."/&gt;</td><td>Has_Data_Element</td><td>MRREL.CUI*; MRREL.RELA=has_data_element</td></tr>
-<tr><td  class = "file_field_name">&lt;A13 rdf:resource="http://...owl#C..."/&gt;</td><td>Related_To_Genetic_Biomarker</td><td>MRREL.CUI*; MRREL.RELA=related_to_genetic_biomarker</td></tr>
-<tr><td  class = "file_field_name">&lt;A14 rdf:resource="http://...owl#C..."/&gt;</td><td>Neoplasm_Has_Special_Category</td><td>MRREL.CUI*; MRREL.RELA=neoplasm_has_special_category</td></tr>
-<tr><td  class = "file_field_name">&lt;A15 rdf:resource="http://...owl#C..."/&gt;</td><td>Has_CTCAE_5_Parent</td><td>MRREL.CUI*; MRREL.RELA=has_ctcae_5_parent</td></tr>
+<tr><td  class = "file_field_name">&lt;A1 rdf:resource="http://...owl#A..."/&gt;</td><td>Role_Has_Domain</td><td>MRREL.CUI*; MRREL.RELA=role_has_domain</td></tr>
+<tr><td  class = "file_field_name">&lt;A2 rdf:resource="http://...owl#A..."/&gt;</td><td>Role_Has_Range</td><td>MRREL.CUI*; MRREL.RELA=role_has_range</td></tr>
+<tr><td  class = "file_field_name">&lt;A3 rdf:resource="http://...owl#A..."/&gt;</td><td>Role_Has_Parent</td><td>MRREL.CUI*; MRREL.RELA=role_has_parent</td></tr>
+<tr><td  class = "file_field_name">&lt;A4 rdf:resource="http://...owl#A..."/&gt;</td><td>Qualifier_Applies_To</td><td>MRREL.CUI*; MRREL.RELA=qualifier_applies_to</td></tr>
+<tr><td  class = "file_field_name">&lt;A5 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_Salt_Form</td><td>MRREL.CUI*; MRREL.RELA=has_salt_form</td></tr>
+<tr><td  class = "file_field_name">&lt;A6 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_Free_Acid_Or_Base_Form</td><td>MRREL.CUI*; MRREL.RELA=has_free_acid_or_base_form</td></tr>
+<tr><td  class = "file_field_name">&lt;A7 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_Target</td><td>MRREL.CUI*; MRREL.RELA=has_target</td></tr>
+<tr><td  class = "file_field_name">&lt;A8 rdf:resource="http://...owl#A..."/&gt;</td><td>Concept_In_Subset</td><td>MRREL.CUI*; MRREL.RELA=concept_in_subset</td></tr>
+<tr><td  class = "file_field_name">&lt;A9 rdf:resource="http://...owl#A..."/&gt;</td><td>Is_Related_To_Endogenous_Product</td><td>MRREL.CUI*; MRREL.RELA=is_related_to_endogenous_product</td></tr>
+<tr><td  class = "file_field_name">&lt;A10 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_CDRH_Parent</td><td>MRREL.CUI*; MRREL.RELA=has_cdrh_parent</td></tr>
+<tr><td  class = "file_field_name">&lt;A11 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_NICHD_Parent</td><td>MRREL.CUI*; MRREL.RELA=has_nichd_parent</td></tr>
+<tr><td  class = "file_field_name">&lt;A12 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_Data_Element</td><td>MRREL.CUI*; MRREL.RELA=has_data_element</td></tr>
+<tr><td  class = "file_field_name">&lt;A13 rdf:resource="http://...owl#A..."/&gt;</td><td>Related_To_Genetic_Biomarker</td><td>MRREL.CUI*; MRREL.RELA=related_to_genetic_biomarker</td></tr>
+<tr><td  class = "file_field_name">&lt;A14 rdf:resource="http://...owl#A..."/&gt;</td><td>Neoplasm_Has_Special_Category</td><td>MRREL.CUI*; MRREL.RELA=neoplasm_has_special_category</td></tr>
+<tr><td  class = "file_field_name">&lt;A15 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_CTCAE_5_Parent</td><td>MRREL.CUI*; MRREL.RELA=has_ctcae_5_parent</td></tr>
+<tr><td  class = "file_field_name">&lt;A16 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_INC_Parent</td><td>MRREL.CUI*; MRREL.RELA=has_INC_parent</td></tr>
 <tr><td  class = "file_field_name">&lt;P90 rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"&gt;&lt;ncicp:ComplexTerm
 xmlns:ncicp="http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#"&gt;&lt;ncicp:term-name&gt;...&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;...&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;...&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplextTerm&gt;&lt;/P90&gt;
 </td><td>FULL_SYN. Includes term name, term type, term source, and source code.</td><td>MRCONSO.STR = term name; MRCONSO.TTY = term type; MRCONSO.SAB = term source. NCI/PTs are not processed and NCI/CNUs are assigned to the ATN = CNU.</td></tr>
@@ -379,6 +379,8 @@ gene_has_abnormality</td></tr>
 gene_product_has_abnormality</td></tr>
 <tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R135"&gt;</td><td>Disease_Excludes_Primary_Anatomic_Site</td><td>MRREL.RELA =
 disease_excludes_primary_anatomic_site</td></tr>
+<tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R136"&gt;</td><td>Disease_Excludes_Metastatic_Anatomic_Site</td><td>MRREL.RELA =
+disease_excludes_metastatic_anatomic_site</td></tr>
 <tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R137"&gt;</td><td>Disease_Excludes_Normal_Tissue_Origin</td><td>MRREL.RELA =
 disease_excludes_normal_tissue_origin</td></tr>
 <tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R138"&gt;</td><td>Disease_Excludes_Normal_Cell_Origin</td><td>MRREL.RELA =
