@@ -1,6 +1,6 @@
 title=PNDS (Perioperative Nursing Data Set) - Statistics
 date=
-updated=2018-11-05
+updated=2019-05-06
 type=page
 status=published
 ~~~~~~
@@ -62,13 +62,13 @@ status=published
 <td>SOS</td><td>Scope Statement</td><td>6</td>
 </tr>
 <tr>
+<td>TORSAB</td><td>Root source abbreviation for the "to" identifiers of a map set</td><td>1</td>
+</tr>
+<tr>
 <td>MTH_MAPFROMCOMPLEXITY</td><td>Indicates the complexity of "from" expressions used in a map set</td><td>1</td>
 </tr>
 <tr>
 <td>FROMRSAB</td><td>Root source abbreviation for the "from" identifiers of a map set</td><td>1</td>
-</tr>
-<tr>
-<td>TORSAB</td><td>Root source abbreviation for the "to" identifiers of a map set</td><td>1</td>
 </tr>
 <tr>
 <td>MAPSETTYPE</td><td>Indicates the nature of a map set. Its value is map set specific. It can be used to indicate the inclusion of one to one, one to many and choices of maps.</td><td>1</td>
@@ -77,10 +77,10 @@ status=published
 <td>MTH_MAPFROMEXHAUSTIVE</td><td>Indicates whether or not the "from" source of a map set is completely mapped</td><td>1</td>
 </tr>
 <tr>
-<td>MTH_MAPTOCOMPLEXITY</td><td>Indicates the complexity of "to" expressions in a map set</td><td>1</td>
+<td>FROMVSAB</td><td>Versioned source abbreviation for the "from" identifiers of a map set</td><td>1</td>
 </tr>
 <tr>
-<td>FROMVSAB</td><td>Versioned source abbreviation for the "from" identifiers of a map set</td><td>1</td>
+<td>MTH_MAPTOCOMPLEXITY</td><td>Indicates the complexity of "to" expressions in a map set</td><td>1</td>
 </tr>
 <tr>
 <td>MTH_MAPSETCOMPLEXITY</td><td>Indicates the overall complexity of a map set</td><td>1</td>
@@ -116,10 +116,10 @@ status=published
 <td>CHD/</td><td>has child relationship in a Metathesaurus source vocabulary /Empty relationship attribute</td><td>281</td>
 </tr>
 <tr>
-<td>RQ/mapped_to</td><td>related and possibly synonymous./Mapped to</td><td>256</td>
+<td>RQ/mapped_from</td><td>related and possibly synonymous./Mapped from</td><td>256</td>
 </tr>
 <tr>
-<td>RQ/mapped_from</td><td>related and possibly synonymous./Mapped from</td><td>256</td>
+<td>RQ/mapped_to</td><td>related and possibly synonymous./Mapped to</td><td>256</td>
 </tr>
 </table>
 <h2>Definition Count</h2>
@@ -149,7 +149,7 @@ status=published
 <td>CHV</td><td>15/261</td><td>5.7</td>
 </tr>
 <tr>
-<td>MEDCIN</td><td>14/261</td><td>5.4</td>
+<td>MEDCIN</td><td>15/261</td><td>5.7</td>
 </tr>
 <tr>
 <td>LNC</td><td>12/261</td><td>4.6</td>
@@ -278,6 +278,9 @@ status=published
 <td>SNM</td><td>5/261</td><td>1.9</td>
 </tr>
 <tr>
+<td>NCI_CTRP</td><td>4/261</td><td>1.5</td>
+</tr>
+<tr>
 <td>NIC</td><td>4/261</td><td>1.5</td>
 </tr>
 <tr>
@@ -297,6 +300,9 @@ status=published
 </tr>
 <tr>
 <td>NCI_NICHD</td><td>3/261</td><td>1.1</td>
+</tr>
+<tr>
+<td>PDQ</td><td>3/261</td><td>1.1</td>
 </tr>
 <tr>
 <td>WHO</td><td>3/261</td><td>1.1</td>

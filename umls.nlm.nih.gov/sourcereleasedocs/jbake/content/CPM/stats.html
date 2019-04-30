@@ -1,6 +1,6 @@
 title=CPM (Medical Entities Dictionary) - Statistics
 date=
-updated=2018-11-05
+updated=2019-05-06
 type=page
 status=published
 ~~~~~~
@@ -42,7 +42,7 @@ status=published
 <td>T109</td><td>Organic Chemical</td><td>148</td><td>4.1</td>
 </tr>
 <tr>
-<td>T123</td><td>Biologically Active Substance</td><td>123</td><td>3.4</td>
+<td>T123</td><td>Biologically Active Substance</td><td>122</td><td>3.3</td>
 </tr>
 <tr>
 <td>T126</td><td>Enzyme</td><td>51</td><td>1.4</td>
@@ -69,10 +69,10 @@ status=published
 <td>SIB/</td><td>has sibling relationship in a Metathesaurus source vocabulary./Empty relationship attribute</td><td>320576</td>
 </tr>
 <tr>
-<td>CHD/isa</td><td>has child relationship in a Metathesaurus source vocabulary /Is a</td><td>3853</td>
+<td>PAR/inverse_isa</td><td>has parent relationship in a Metathesaurus source vocabulary /Inverse is a</td><td>3853</td>
 </tr>
 <tr>
-<td>PAR/inverse_isa</td><td>has parent relationship in a Metathesaurus source vocabulary /Inverse is a</td><td>3853</td>
+<td>CHD/isa</td><td>has child relationship in a Metathesaurus source vocabulary /Is a</td><td>3853</td>
 </tr>
 <tr>
 <td>RO/measured_by</td><td>has relationship other than synonymous, narrower, or broader/Measured by</td><td>2016</td>
@@ -99,7 +99,7 @@ status=published
 <td>SNOMEDCT_US</td><td>930/3079</td><td>30.2</td>
 </tr>
 <tr>
-<td>SCTSPA</td><td>923/3079</td><td>30.0</td>
+<td>SCTSPA</td><td>924/3079</td><td>30.0</td>
 </tr>
 <tr>
 <td>LNC</td><td>716/3079</td><td>23.3</td>
@@ -120,31 +120,31 @@ status=published
 <td>NCI</td><td>436/3079</td><td>14.2</td>
 </tr>
 <tr>
-<td>MSHFRE</td><td>434/3079</td><td>14.1</td>
+<td>MSHFRE</td><td>435/3079</td><td>14.1</td>
 </tr>
 <tr>
-<td>MSHITA</td><td>431/3079</td><td>14.0</td>
+<td>MSHCZE</td><td>431/3079</td><td>14.0</td>
 </tr>
 <tr>
-<td>MSHGER</td><td>428/3079</td><td>13.9</td>
+<td>MSHITA</td><td>432/3079</td><td>14.0</td>
 </tr>
 <tr>
-<td>MSHCZE</td><td>429/3079</td><td>13.9</td>
+<td>MSHGER</td><td>429/3079</td><td>13.9</td>
 </tr>
 <tr>
-<td>MSHPOR</td><td>423/3079</td><td>13.7</td>
+<td>MSHPOR</td><td>425/3079</td><td>13.8</td>
 </tr>
 <tr>
-<td>MSHSPA</td><td>423/3079</td><td>13.7</td>
+<td>MSHSPA</td><td>425/3079</td><td>13.8</td>
+</tr>
+<tr>
+<td>MSHPOL</td><td>402/3079</td><td>13.1</td>
+</tr>
+<tr>
+<td>MSHRUS</td><td>402/3079</td><td>13.1</td>
 </tr>
 <tr>
 <td>SNM</td><td>403/3079</td><td>13.1</td>
-</tr>
-<tr>
-<td>MSHPOL</td><td>401/3079</td><td>13.0</td>
-</tr>
-<tr>
-<td>MSHRUS</td><td>401/3079</td><td>13.0</td>
 </tr>
 <tr>
 <td>MSHSWE</td><td>401/3079</td><td>13.0</td>
@@ -216,13 +216,16 @@ status=published
 <td>RXNORM</td><td>167/3079</td><td>5.4</td>
 </tr>
 <tr>
+<td>NCI_CTRP</td><td>162/3079</td><td>5.3</td>
+</tr>
+<tr>
 <td>PSY</td><td>152/3079</td><td>4.9</td>
 </tr>
 <tr>
-<td>NCI_FDA</td><td>148/3079</td><td>4.8</td>
+<td>NCI_FDA</td><td>145/3079</td><td>4.7</td>
 </tr>
 <tr>
-<td>NCI_NCI-GLOSS</td><td>143/3079</td><td>4.6</td>
+<td>NCI_NCI-GLOSS</td><td>141/3079</td><td>4.6</td>
 </tr>
 <tr>
 <td>VANDF</td><td>143/3079</td><td>4.6</td>
@@ -234,10 +237,13 @@ status=published
 <td>MTHSPL</td><td>140/3079</td><td>4.5</td>
 </tr>
 <tr>
-<td>MMSL</td><td>135/3079</td><td>4.4</td>
+<td>DRUGBANK</td><td>136/3079</td><td>4.4</td>
 </tr>
 <tr>
-<td>DRUGBANK</td><td>136/3079</td><td>4.4</td>
+<td>MMSL</td><td>136/3079</td><td>4.4</td>
+</tr>
+<tr>
+<td>GS</td><td>132/3079</td><td>4.3</td>
 </tr>
 <tr>
 <td>ICNP</td><td>104/3079</td><td>3.4</td>
@@ -258,13 +264,13 @@ status=published
 <td>NANDA-I</td><td>82/3079</td><td>2.7</td>
 </tr>
 <tr>
-<td>NCI_CDISC</td><td>73/3079</td><td>2.4</td>
+<td>NCI_CDISC</td><td>82/3079</td><td>2.7</td>
 </tr>
 <tr>
-<td>PDQ</td><td>73/3079</td><td>2.4</td>
+<td>CPT</td><td>73/3079</td><td>2.4</td>
 </tr>
 <tr>
-<td>CPT</td><td>72/3079</td><td>2.3</td>
+<td>PDQ</td><td>71/3079</td><td>2.3</td>
 </tr>
 <tr>
 <td>USP</td><td>68/3079</td><td>2.2</td>
@@ -273,16 +279,16 @@ status=published
 <td>PCDS</td><td>63/3079</td><td>2.0</td>
 </tr>
 <tr>
-<td>HCPT</td><td>59/3079</td><td>1.9</td>
+<td>HCPT</td><td>60/3079</td><td>1.9</td>
 </tr>
 <tr>
 <td>USPMG</td><td>60/3079</td><td>1.9</td>
 </tr>
 <tr>
-<td>NCI_DCP</td><td>51/3079</td><td>1.7</td>
+<td>MEDLINEPLUS</td><td>53/3079</td><td>1.7</td>
 </tr>
 <tr>
-<td>MEDLINEPLUS</td><td>53/3079</td><td>1.7</td>
+<td>NCI_DCP</td><td>48/3079</td><td>1.6</td>
 </tr>
 <tr>
 <td>ICPC2P</td><td>50/3079</td><td>1.6</td>
@@ -297,10 +303,10 @@ status=published
 <td>NCI_NICHD</td><td>41/3079</td><td>1.3</td>
 </tr>
 <tr>
-<td>MSHLAV</td><td>37/3079</td><td>1.2</td>
+<td>NCI_DTP</td><td>36/3079</td><td>1.2</td>
 </tr>
 <tr>
-<td>NCI_DTP</td><td>37/3079</td><td>1.2</td>
+<td>MSHLAV</td><td>37/3079</td><td>1.2</td>
 </tr>
 <tr>
 <td>NCI_CRCH</td><td>35/3079</td><td>1.1</td>
