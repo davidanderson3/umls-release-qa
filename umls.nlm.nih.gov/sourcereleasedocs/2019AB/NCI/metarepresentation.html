@@ -24,7 +24,7 @@ status=published
 <p>This page list UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
 <a id="top-of-page"></a> <span class = "nav">Skip to: <a href = "#atoms">Atoms</a>, <a href = "#attributes">Attributes</a>, <a href = "#definitions">Definitions</a>, <a href = "#relationships">Relationships</a>, <a href = "#mappings">Mappings</a></span>
 <div id = "general" class = "rep_block_level_one">
-<p><strong>VSAB: </strong>NCI2019_03D</p>
+<p><strong>VSAB: </strong>NCI2019_08D</p>
 <div id = "rep_identifiers" class = "rep_block_level_one">
 <h3>general notes/Comments:</h3>
 <p>NCI Thesaurus (NCIt) is a widely recognized standard for biomedical coding and reference. It covers vocabulary for clinical care, translational and basic research, public information and administrative activities and is used by a broad variety of public and private partners both nationally and internationally.The scope of NCI is determined by the combined scope of its source vocabularies which include the following:</p>
@@ -39,7 +39,11 @@ status=published
 </tr>
 <tr>
     <td>BRIDG</td>
-    <td>Biomedical Research Integrated Domain Group Model</td>
+    <td>Biomedical Research Integrated Domain Group Model Subset</td>
+</tr>
+<tr>
+    <td>BRIDG_3_0_3</td>
+    <td>Biomedical Research Integrated Domain Group Model 3.0.3</td>
 </tr>
 <tr>
     <td>CARELEX</td>
@@ -62,16 +66,12 @@ status=published
     <td>CDISC Glossary Terminology</td>
 </tr>
 <tr>
-    <td>CPTAC</td>
-    <td>Clinical Proteomic Tumor Analysis Consortium Terms</td>
-</tr>
-<tr>
     <td>CRCH</td>
     <td>Cancer Research Center of Hawaii</td>
 </tr>
 <tr>
     <td>CTCAE</td>
-    <td>Common Terminology Criteria for Adverse Events</td>
+    <td>Common Terminology Criteria for Adverse Events 4.3 Subset</td>
 </tr>
 <tr>
     <td>CTCAE_3</td>
@@ -103,7 +103,7 @@ status=published
 </tr>
 <tr>
     <td>EDQM-HC</td>
-    <td>European Directorate for the Quality of Medicines & Healthcare</td>
+    <td>European Directorate for the Quality of Medicines &amp; Healthcare</td>
 </tr>
 <tr>
     <td>FDA</td>
@@ -178,8 +178,22 @@ status=published
 <h3>Summary of Changes</h3>
 <p>New subsource(s):</p>
 <ul>
-  <li>CBDD (Chemical Biology and Drug Development Vocabulary)</li>
- </ul>
+  <li>BRIDG_3_0_3 (Biomedical Research Integrated Domain Group Model 3.0.3)</li>
+</ul>
+<p>New property(s):</p>
+<ul>
+  <li>P397 Target_Terminology_Version</li>
+</ul>
+<p>New associations(s) | Inverse(s):</p>
+<ul>
+  <li>A17|Has_Pharmaceutical_State_Of_Matter|Pharmaceutical_State_Of_Matter_Of</li>
+  <li>A18|Has_Pharmaceutical_Basic_Dose_Form|Pharmaceutical_Basic_Dose_Form_Of</li>
+  <li>A19|Has_Pharmaceutical_Administration_Method|Pharmaceutical_Administration_Method_Of</li>
+  <li>A20|Has_Pharmaceutical_Intended_Site|Pharmaceutical_Intended_Site_Of</li>
+  <li>A21|Has_Pharmaceutical_Release_Characteristics|Pharmaceutical_Release_Characteristics_Of</li>
+  <li>A22|Has_Pharmaceutical_Transformation|Pharmaceutical_Transformation_Of</li>
+</ul>
+<p>The subsource CPTAC (Clinical Proteomic Tumor Analysis Consortium Terms) has been deprecated.</p>
 </div>
 <div id = "rep_change_summary" class = "rep_block_level_one">
 <h3>Original Files:</h3>
@@ -562,6 +576,18 @@ Alt_Definition: &lt;P325...ncicp:complexDefinition xmlns:ncicp.../P325&gt;
 <td>molecular_abnormality_involves_gene/gene_involved_in_molecular_abnormality</td><td>R177</td></tr>
 <tr><td>RT</td>
 <td>neoplasm_has_special_category/special_category_includes_neoplasm</td><td>A14</td></tr>
+<tr><td>RT</td>
+<td>pharmaceutical_state_of_matter_of/has_pharmaceutical_state_of_matter</td><td>A17</td></tr>
+<tr><td>RT</td>
+<td>pharmaceutical_basic_dose_form_of/has_pharmaceutical_basic_dose_form</td><td>A18</td></tr>
+<tr><td>RT</td>
+<td>pharmaceutical_administration_method_of/has_pharmaceutical_administration_method</td><td>A19</td></tr>
+<tr><td>RT</td>
+<td>pharmaceutical_intended_site_of/has_pharmaceutical_intended_site</td><td>A20</td></tr>
+<tr><td>RT</td>
+<td>pharmaceutical_release_characteristics_of/has_pharmaceutical_release_characteristics</td><td>A21</td></tr>
+<tr><td>RT</td>
+<td>pharmaceutical_transformation_of/has_pharmaceutical_transformation</td><td>A22</td></tr>
 <tr><td>RT</td>
 <td>procedure_has_completely_excised_anatomy/completely_excised_anatomy_has_procedure</td><td>R171</td></tr>
 <tr><td>RT</td>
