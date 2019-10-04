@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<statisticalReport>
+    <result>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>30</count>
+            <expandedForm>Disjoint from</expandedForm>
+            <termType>DISJOINT_FROM</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>2502</count>
+            <expandedForm>Secondary GO ID (e.g. GO:0020034)</expandedForm>
+            <termType>SID</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>17678</count>
+            <expandedForm>Date created</expandedForm>
+            <termType>DATE_CREATED</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>5666</count>
+            <expandedForm>GO Comment field data</expandedForm>
+            <termType>GO_COMMENT</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>2305</count>
+            <expandedForm>Go Subset field data</expandedForm>
+            <termType>GO_SUBSET</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>111</count>
+            <expandedForm>Synonym qualifier</expandedForm>
+            <termType>SYN_QUALIFIER</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>25618</count>
+            <expandedForm>GO Cross Reference to external databases (e.g. MetaCyc:TRNA-CHARGING-PWY)</expandedForm>
+            <termType>GXR</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>80365</count>
+            <expandedForm>References or citations related to a given atom or concept.</expandedForm>
+            <termType>REF</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>47405</count>
+            <expandedForm>Go Namespace field data</expandedForm>
+            <termType>GO_NAMESPACE</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+    </result>
+    <source>GO</source>
+</statisticalReport>

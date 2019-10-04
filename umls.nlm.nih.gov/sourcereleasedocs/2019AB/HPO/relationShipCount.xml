@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<statisticalReport>
+    <result>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>73</count>
+            <expandedForm>related and possibly synonymous./Consider from</expandedForm>
+            <termType>RQ/consider_from</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>73</count>
+            <expandedForm>related and possibly synonymous./Consider</expandedForm>
+            <termType>RQ/consider</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>150</count>
+            <expandedForm>related and possibly synonymous./Replaced by</expandedForm>
+            <termType>RQ/replaced_by</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>150</count>
+            <expandedForm>related and possibly synonymous./Replaces</expandedForm>
+            <termType>RQ/replaces</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>942</count>
+            <expandedForm>has a broader relationship/Empty relationship attribute</expandedForm>
+            <termType>RB/</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>942</count>
+            <expandedForm>has a narrower relationship/Empty relationship attribute</expandedForm>
+            <termType>RN/</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>2754</count>
+            <expandedForm>has relationship other than synonymous, narrower, or broader/Empty relationship attribute</expandedForm>
+            <termType>RO/</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>18313</count>
+            <expandedForm>has child relationship in a Metathesaurus source vocabulary /Is a</expandedForm>
+            <termType>CHD/isa</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>18313</count>
+            <expandedForm>has parent relationship in a Metathesaurus source vocabulary /Inverse is a</expandedForm>
+            <termType>PAR/inverse_isa</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>32540</count>
+            <expandedForm>source asserted synonymy./Empty relationship attribute</expandedForm>
+            <termType>SY/</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>125230</count>
+            <expandedForm>has sibling relationship in a Metathesaurus source vocabulary./Empty relationship attribute</expandedForm>
+            <termType>SIB/</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+    </result>
+    <source>HPO</source>
+</statisticalReport>

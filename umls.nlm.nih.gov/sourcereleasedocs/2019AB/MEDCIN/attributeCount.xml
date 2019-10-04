@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<statisticalReport>
+    <result>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>1</count>
+            <expandedForm>Indicates whether or not the "to" source is completely mapped</expandedForm>
+            <termType>MTH_MAPTOEXHAUSTIVE</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>1</count>
+            <expandedForm>Indicates the complexity of "from" expressions used in a map set</expandedForm>
+            <termType>MTH_MAPFROMCOMPLEXITY</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>1</count>
+            <expandedForm>Versioned source abbreviation for the "to" identifiers of a map set</expandedForm>
+            <termType>TOVSAB</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>1</count>
+            <expandedForm>Version of the map set</expandedForm>
+            <termType>MAPSETVERSION</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>1</count>
+            <expandedForm>Root source abbreviation for the "from" identifiers of a map set</expandedForm>
+            <termType>FROMRSAB</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>1</count>
+            <expandedForm>Indicates whether or not the "from" source of a map set is completely mapped</expandedForm>
+            <termType>MTH_MAPFROMEXHAUSTIVE</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>1</count>
+            <expandedForm>Indicates the complexity of "to" expressions in a map set</expandedForm>
+            <termType>MTH_MAPTOCOMPLEXITY</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>1</count>
+            <expandedForm>Versioned source abbreviation for the "from" identifiers of a map set</expandedForm>
+            <termType>FROMVSAB</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>1</count>
+            <expandedForm>Root source abbreviation for the "to" identifiers of a map set</expandedForm>
+            <termType>TORSAB</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>1</count>
+            <expandedForm>Versioned source abbreviation for a map set</expandedForm>
+            <termType>MAPSETVSAB</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>1</count>
+            <expandedForm>Indicates the overall complexity of a map set</expandedForm>
+            <termType>MTH_MAPSETCOMPLEXITY</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>1185665</count>
+            <expandedForm>Preferred flag</expandedForm>
+            <termType>PREF_FLAG_ID</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>1</count>
+            <expandedForm>Root source abbreviation for a map set</expandedForm>
+            <termType>MAPSETRSAB</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+    </result>
+    <source>MEDCIN</source>
+</statisticalReport>

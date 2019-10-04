@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<statisticalReport>
+    <result>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>7170</count>
+            <expandedForm>Multum HCPCS J-code Multum clinical drugs linked to HCPCS J-codes where applicable (e.g. J7507)</expandedForm>
+            <termType>DHJC</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>12132</count>
+            <expandedForm>Multum Medical Supply Category (e.g. natural supplements)</expandedForm>
+            <termType>TYPE</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>193362</count>
+            <expandedForm>National Drug Code corresponding to a clinical drug (e.g. 000023082503)</expandedForm>
+            <termType>NDC</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>43632</count>
+            <expandedForm>Drug Doseform Abbreviation (e.g. SOLN)</expandedForm>
+            <termType>DDFA</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>43632</count>
+            <expandedForm>Drug Route of Administration Abbreviation (e.g. INJ)</expandedForm>
+            <termType>DRTA</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>43632</count>
+            <expandedForm>Drug Doseform (e.g. chewable tablet)</expandedForm>
+            <termType>DDF</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>3544</count>
+            <expandedForm>Multum Pregnancy Hazard Classification Code assigned to Multum clinical drugs. (e.g. X, D) </expandedForm>
+            <termType>DPC</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>43632</count>
+            <expandedForm>Controlled Substance Act designation code (e.g. 0,2,3n)</expandedForm>
+            <termType>DCSA</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>43632</count>
+            <expandedForm>Drug Strength (e.g. 0.01%, 0.02 MG, 0.02 MG/ML)</expandedForm>
+            <termType>DST</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>43632</count>
+            <expandedForm>Drug Route of Administration (e.g. Injection (systemic) )</expandedForm>
+            <termType>DRT</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+    </result>
+    <source>MMSL</source>
+</statisticalReport>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<statisticalReport>
+    <result>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>3330</count>
+            <expandedForm>has child relationship in a Metathesaurus source vocabulary /Empty relationship attribute</expandedForm>
+            <termType>CHD/</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>3330</count>
+            <expandedForm>has parent relationship in a Metathesaurus source vocabulary /Empty relationship attribute</expandedForm>
+            <termType>PAR/</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>6509</count>
+            <expandedForm>related and possibly synonymous./Mapped to</expandedForm>
+            <termType>RQ/mapped_to</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>6509</count>
+            <expandedForm>related and possibly synonymous./Mapped from</expandedForm>
+            <termType>RQ/mapped_from</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+    </result>
+    <source>CST</source>
+</statisticalReport>

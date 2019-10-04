@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<statisticalReport>
+    <result>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>99</count>
+            <expandedForm>has relationship other than synonymous, narrower, or broader/Ingredient of</expandedForm>
+            <termType>RO/ingredient_of</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>99</count>
+            <expandedForm>has relationship other than synonymous, narrower, or broader/Has ingredient</expandedForm>
+            <termType>RO/has_ingredient</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>34254</count>
+            <expandedForm>has relationship other than synonymous, narrower, or broader/Has dose form</expandedForm>
+            <termType>RO/has_dose_form</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>34254</count>
+            <expandedForm>has relationship other than synonymous, narrower, or broader/Dose form of</expandedForm>
+            <termType>RO/dose_form_of</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+    </result>
+    <source>NDDF</source>
+</statisticalReport>

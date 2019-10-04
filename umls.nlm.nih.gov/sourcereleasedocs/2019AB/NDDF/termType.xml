@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<statisticalReport>
+    <result>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>14579</count>
+            <expandedForm>Name for an ingredient</expandedForm>
+            <termType>IN</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>369</count>
+            <expandedForm>RxNorm Created CDC</expandedForm>
+            <termType>MTH_RXN_CDC</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>839</count>
+            <expandedForm>Dose Form</expandedForm>
+            <termType>DF</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>32683</count>
+            <expandedForm>Clinical drug name in concatenated format (NDDF), Clinical drug name (NDFRT)</expandedForm>
+            <termType>CDC</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>32683</count>
+            <expandedForm>Clinical drug name in abbreviated format</expandedForm>
+            <termType>CDA</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>32683</count>
+            <expandedForm>Clinical drug name in delimited format</expandedForm>
+            <termType>CDD</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+    </result>
+    <source>NDDF</source>
+</statisticalReport>

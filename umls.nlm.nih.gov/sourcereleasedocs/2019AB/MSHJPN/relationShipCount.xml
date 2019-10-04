@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<statisticalReport>
+    <result>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>3911</count>
+            <expandedForm>has a narrower relationship/Is a</expandedForm>
+            <termType>RN/isa</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>3911</count>
+            <expandedForm>has a broader relationship/Inverse is a</expandedForm>
+            <termType>RB/inverse_isa</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>10514</count>
+            <expandedForm>has relationship other than synonymous, narrower, or broader/Empty relationship attribute</expandedForm>
+            <termType>RO/</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>34003</count>
+            <expandedForm>has child relationship in a Metathesaurus source vocabulary /Empty relationship attribute</expandedForm>
+            <termType>CHD/</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>34003</count>
+            <expandedForm>has parent relationship in a Metathesaurus source vocabulary /Empty relationship attribute</expandedForm>
+            <termType>PAR/</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>385346</count>
+            <expandedForm>has sibling relationship in a Metathesaurus source vocabulary./Empty relationship attribute</expandedForm>
+            <termType>SIB/</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+    </result>
+    <source>MSHJPN</source>
+</statisticalReport>

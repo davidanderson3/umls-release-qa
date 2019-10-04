@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<statisticalReport>
+    <result>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>451</count>
+            <expandedForm>Vaccine status. CVX codes for inactive vaccines allow transmission of historical immunization records.</expandedForm>
+            <termType>VACCINE_STATUS</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>213</count>
+            <expandedForm>Scope Statement</expandedForm>
+            <termType>SOS</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>451</count>
+            <expandedForm>Date last modified</expandedForm>
+            <termType>DATE_LAST_MODIFIED</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>577</count>
+            <expandedForm>National Drug Code corresponding to a clinical drug (e.g. 000023082503)</expandedForm>
+            <termType>NDC</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>451</count>
+            <expandedForm>Non Vaccine</expandedForm>
+            <termType>NON_VACCINE</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+    </result>
+    <source>CVX</source>
+</statisticalReport>
