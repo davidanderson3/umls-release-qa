@@ -1,6 +1,6 @@
 title=NCI (NCI Thesaurus) - Source Representation
 date=2018-05-07
-updated=2019-05-06
+updated=2019-11-04
 type=page
 status=published
 ~~~~~~
@@ -25,7 +25,7 @@ status=published
 <a id="top-of-page"></a> <span class = "nav">Skip to: <a href = "#general">General Notes/Comments</a>, <a href = "#change_summary">Summary of Changes</a>, <a href = "#file_summary">Summary of Source-Provided Files</a> <a href = "#file_details">Source-Provided File Details</a></span>
 <a id= "general">&nbsp;</a>
 <div id = "rep_general" class = "rep_block_level_one">
-<h3>VSAB: NCI2018_12E</h3>
+<h3>VSAB: NCI2019_03D</h3>
 <h3>General Notes/Comments:</h3>
 <p>NCI Thesaurus (NCIt) is a widely recognized standard for biomedical coding and reference. It covers vocabulary for clinical care, translational and basic research, public information and administrative activities and is used by a broad variety of public and private partners both nationally and internationally.
 The scope of NCI is determined by the combined scope of its source vocabularies which include the following:</p>
@@ -35,10 +35,16 @@ The scope of NCI is determined by the combined scope of its source vocabularies 
     <td>BioC</td><td>BioCarta online maps of molecular pathways, adapted for NCI</td>
 </tr>
 <tr>
-    <td>BRIDG</td><td>Biomedical Research Integrated Domain Group Model</td>
+    <td>BRIDG</td><td>Biomedical Research Integrated Domain Group Model Subset</td>
+</tr>
+<tr>
+    <td>BRIDG_3_0_3</td><td>Biomedical Research Integrated Domain Group Model 3.0.3</td>
 </tr>
 <tr>
     <td>CARELEX</td><td>Content Archive Resource Exchange Lexicon</td>
+</tr>
+<tr>
+    <td>CBDD</td><td>Chemcial Biology and Drug Development Vocabulary</td>
 </tr>
 <tr>
     <td>CDC</td><td>U.S. Centers for Disease Control and Prevention</td>
@@ -53,7 +59,7 @@ The scope of NCI is determined by the combined scope of its source vocabularies 
     <td>CRCH</td><td>Cancer Research Center of Hawaii</td>
 </tr>
 <tr>
-    <td>CTCAE</td><td>Common Terminology Criteria for Adverse Events</td>
+    <td>CTCAE</td><td>Common Terminology Criteria for Adverse Events 4.3 Subset</td>
 </tr>
 <tr>
     <td>CTCAE_3</td><td>Common Terminology Criteria for Adverse Events 3.0</td>
@@ -63,9 +69,6 @@ The scope of NCI is determined by the combined scope of its source vocabularies 
 </tr>
 <tr>
     <td>CTEP-SDC</td><td>Cancer Therapy Evaluation Program - Simple Disease Classification</td>
-</tr>
-<tr>
-    <td>CPTAC</td><td>Clinical Proteomic Tumor Analysis Consortium Terms</td>
 </tr>
 <tr>
     <td>CTRP</td><td>Clinical Trials Reporting Program</td>
@@ -78,6 +81,9 @@ The scope of NCI is determined by the combined scope of its source vocabularies 
 </tr>
 <tr>
     <td>DTP</td><td>NCI Developmental Therapeutics Program</td>
+</tr>
+<tr>
+    <td>EDQM-HC</td><td>European Directorate for the Quality of Medicines &amp; Healthcare</td>
 </tr>
 <tr>
     <td>FDA</td><td>U.S. Food and Drug Administration</td>
@@ -139,14 +145,22 @@ The scope of NCI is determined by the combined scope of its source vocabularies 
 <h3>Summary of Changes</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top-of-page">top</a></span>)
 <p>New subsource(s):</p>
 <ul>
-  <li>CPTAC (Clinical Proteomic Tumor Analysis Consortium Terms)</li>
-  <li>INC (International Neonatal Consortium Terms)</li>
+  <li>BRIDG_3_0_3 (Biomedical Research Integrated Domain Group Model 3.0.3))</li>
 </ul>
-<p>New relationship attribute(s) (RELA) | RELA inverse(s):</p>
+<p>New property(s):</p>
 <ul>
-  <li>has_inc_parent|inc_parent_of</li>
-  <li>disease_has_metastatic_anatomic_site|is_metastatic_anatomic_site_of_disease</li>
+  <li>P397 Target_Terminology_Version</li>
 </ul>
+<p>New associations(s) | Inverse(s):</p>
+<ul>
+  <li>A17|Has_Pharmaceutical_State_Of_Matter|Pharmaceutical_State_Of_Matter_Of</li>
+  <li>A18|Has_Pharmaceutical_Basic_Dose_Form|Pharmaceutical_Basic_Dose_Form_Of</li>
+  <li>A19|Has_Pharmaceutical_Administration_Method|Pharmaceutical_Administration_Method_Of</li>
+  <li>A20|Has_Pharmaceutical_Intended_Site|Pharmaceutical_Intended_Site_Of</li>
+  <li>A21|Has_Pharmaceutical_Release_Characteristics|Pharmaceutical_Release_Characteristics_Of</li>
+  <li>A22|Has_Pharmaceutical_Transformation|Pharmaceutical_Transformation_Of</li>
+</ul>
+<p>The subsource CPTAC (Clinical Proteomic Tumor Analysis Consortium Terms) has been deprecated.</p>
 </div>
 <div id = "rep_file_summary" class = "rep_block_level_one"></div>
 <a id= "file_summary">&nbsp;</a>
@@ -190,7 +204,13 @@ The scope of NCI is determined by the combined scope of its source vocabularies 
 <tr><td  class = "file_field_name">&lt;A13 rdf:resource="http://...owl#A..."/&gt;</td><td>Related_To_Genetic_Biomarker</td><td>MRREL.CUI*; MRREL.RELA=related_to_genetic_biomarker</td></tr>
 <tr><td  class = "file_field_name">&lt;A14 rdf:resource="http://...owl#A..."/&gt;</td><td>Neoplasm_Has_Special_Category</td><td>MRREL.CUI*; MRREL.RELA=neoplasm_has_special_category</td></tr>
 <tr><td  class = "file_field_name">&lt;A15 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_CTCAE_5_Parent</td><td>MRREL.CUI*; MRREL.RELA=has_ctcae_5_parent</td></tr>
-<tr><td  class = "file_field_name">&lt;A16 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_INC_Parent</td><td>MRREL.CUI*; MRREL.RELA=has_INC_parent</td></tr>
+<tr><td  class = "file_field_name">&lt;A16 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_INC_Parent</td><td>MRREL.CUI*; MRREL.RELA=has_INC_paren</td></tr>
+<tr><td  class = "file_field_name">&lt;A17 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_Pharmaceutical_State_Of_Matter</td><td>MRREL.CUI*; MRREL.RELA=has_pharmaceutical_state_of_matter</td></tr>
+<tr><td  class = "file_field_name">&lt;A18 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_Pharmaceutical_Basic_Dose_Form</td><td>MRREL.CUI*; MRREL.RELA=has_pharmaceutical_basic_dose_form</td></tr>
+<tr><td  class = "file_field_name">&lt;A19 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_Pharmaceutical_Administration_Method</td><td>MRREL.CUI*; MRREL.RELA=has_pharmaceutical_administration_method</td></tr>
+<tr><td  class = "file_field_name">&lt;A20 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_Pharmaceutical_Intended_Site</td><td>MRREL.CUI*; MRREL.RELA=has_pharmaceutical_intended_site</td></tr>
+<tr><td  class = "file_field_name">&lt;A21 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_Pharmaceutical_Release_Characteristics</td><td>MRREL.CUI*; MRREL.RELA=has_pharmaceutical_release_characteristics</td></tr>
+<tr><td  class = "file_field_name">&lt;A21 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_Pharmaceutical_Transformation</td><td>MRREL.CUI*; MRREL.RELA=has_pharmaceutical_transformation</td></tr>
 <tr><td  class = "file_field_name">&lt;P90 rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"&gt;&lt;ncicp:ComplexTerm
 xmlns:ncicp="http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#"&gt;&lt;ncicp:term-name&gt;...&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;...&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;...&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplextTerm&gt;&lt;/P90&gt;
 </td><td>FULL_SYN. Includes term name, term type, term source, and source code.</td><td>MRCONSO.STR = term name; MRCONSO.TTY = term type; MRCONSO.SAB = term source. NCI/PTs are not processed and NCI/CNUs are assigned to the ATN = CNU.</td></tr>
@@ -258,7 +278,13 @@ Includes definition and source of definition.</td><td>MRDEF.SAB = source; MRDEF.
 <tr><td  class = "file_field_name">&lt;P369 rdf:datatype="http://www... &lt;/P369&gt;</td><td>HGNC_ID</td><td>MRSAT.ATN=HGNC_ID</td></tr>
 <tr><td  class = "file_field_name">&lt;P371 rdf:datatype="http://www... &lt;/P371&gt;</td><td>NICHD_Hierarchy_Term</td><td>MRSAT.ATN=NICHD_HIERARCHY_TERM</td></tr>
 <tr><td  class = "file_field_name">&lt;P372 rdf:datatype="http://www... &lt;/P372&gt;</td><td>Publish_Value_Set</td><td>MRSAT.ATN= PUBLISH_VALUE_SET</td></tr>
+<tr><td  class = "file_field_name">&lt;P375 rdf:datatype="http://www... &lt;/P375&gt;</td><td>Maps_To</td><td>MRREL.RELA = mapped_to/mapped_from</td></tr>
 <tr><td  class = "file_field_name">&lt;P376 rdf:datatype="http://www... &lt;/P376&gt;</td><td>Term_Browser_Value_Set_Description</td><td>MRSAT.ATN= TERM_BROWSER_VALUE_SET_DESCRIPTION</td></tr>
+<tr><td  class = "file_field_name">&lt;P393 rdf:datatype="http://www... &lt;/P393&gt;</td><td>Relationship_to_Target</td><td>MRREL.REL = BT/NT/SY</td></tr>
+<tr><td  class = "file_field_name">&lt;P394 rdf:datatype="http://www... &lt;/P394&gt;</td><td>Target_Term_Type</td><td>MRREL.CUI*</td></tr>
+<tr><td  class = "file_field_name">&lt;P395 rdf:datatype="http://www... &lt;/P395&gt;</td><td>Target_Code</td><td>MRREL.CUI*</td></tr>
+<tr><td  class = "file_field_name">&lt;P396 rdf:datatype="http://www... &lt;/P396&gt;</td><td>Target_Terminology</td><td>MRREL.CUI</td></tr>
+<tr><td  class = "file_field_name">&lt;P397 rdf:datatype="http://www... &lt;/P397&gt;</td><td>Target_Terminology_Version</td><td>Not processed</td></tr>
 <tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R24"&gt;</td><td>EO_Disease_Maps_To_Human_Disease</td><td>MRREL.RELA =
 eo_disease_maps_to_human_disease</td></tr>
 <tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R25"&gt;</td><td>EO_Disease_Has_Associated_EO_Anatomy</td><td>MRREL.RELA =

@@ -1,6 +1,6 @@
-title=HCDT (Current Dental Terminology in HCPCS) - Statistics
+title=HCDT (CDT in HCPCS) - Statistics
 date=
-updated=2019-05-06
+updated=2019-11-04
 type=page
 status=published
 ~~~~~~
@@ -21,10 +21,10 @@ status=published
 <th>Semantic Type ID</th><th>Semantic Type Name</th><th>Count </th><th>Percentage Distribution</th>
 </tr>
 <tr>
-<td>T061</td><td>Therapeutic or Preventive Procedure</td><td>535</td><td>74.6</td>
+<td>T061</td><td>Therapeutic or Preventive Procedure</td><td>534</td><td>74.5</td>
 </tr>
 <tr>
-<td>T074</td><td>Medical Device</td><td>63</td><td>8.8</td>
+<td>T074</td><td>Medical Device</td><td>64</td><td>8.9</td>
 </tr>
 <tr>
 <td>T060</td><td>Diagnostic Procedure</td><td>60</td><td>8.4</td>
@@ -42,16 +42,16 @@ status=published
 <th>Term Type</th><th>Expanded Form</th><th>Count </th>
 </tr>
 <tr>
-<td>PT</td><td>Designated preferred name</td><td>699</td>
-</tr>
-<tr>
 <td>AB</td><td>Abbreviation in any source vocabulary</td><td>699</td>
 </tr>
 <tr>
-<td>OP</td><td>Obsolete preferred name</td><td>21</td>
+<td>PT</td><td>Designated preferred name</td><td>699</td>
 </tr>
 <tr>
 <td>OA</td><td>Obsolete abbreviation</td><td>21</td>
+</tr>
+<tr>
+<td>OP</td><td>Obsolete preferred name</td><td>21</td>
 </tr>
 </table>
 <h2>Attribute Counts</h2>
@@ -60,31 +60,31 @@ status=published
 <th>Attribute Type</th><th>Expanded Form</th><th>Count </th>
 </tr>
 <tr>
-<td>HTS</td><td>HCPCS Type of Service Code - carrier assigned HCFA Type of Service which describes the particular kind(s) of service represented by the procedure code.</td><td>720</td>
-</tr>
-<tr>
-<td>HPI</td><td>HCPCS Pricing Indicator Code - used to identify the appropriate methodology for developing unique pricing amounts under Part B.</td><td>720</td>
-</tr>
-<tr>
-<td>HBT</td><td>HCPCS Berenson-Eggers Type of Service Code - BETOS for the procedure code based on generally agreed upon clinically meaningful groupings of procedures and services.</td><td>720</td>
-</tr>
-<tr>
-<td>HAQ</td><td>HCPCS Anesthesia Base Unit Quantity - base unit represents the level of intensity for anesthesia procedure services that reflects all activities except time.</td><td>720</td>
+<td>HMP</td><td>HCPCS Multiple Pricing Indicator Code - code used to identify instances where a procedure could be priced.</td><td>720</td>
 </tr>
 <tr>
 <td>HAD</td><td>HCPCS Action Effective Date - effective date of action to a procedure or modifier code.</td><td>720</td>
 </tr>
 <tr>
-<td>HAC</td><td>HCPCS action code - code denoting the change made to a procedure or modifier code within the HCPCS system.</td><td>720</td>
+<td>HCD</td><td>HCPCS Code Added Date - year the HCPCS code was added to the HCFA Common Procedure Coding System.</td><td>720</td>
+</tr>
+<tr>
+<td>HBT</td><td>HCPCS Berenson-Eggers Type of Service Code - BETOS for the procedure code based on generally agreed upon clinically meaningful groupings of procedures and services.</td><td>720</td>
 </tr>
 <tr>
 <td>HCC</td><td>HCPCS Coverage Code - code denoting Medicare coverage status. There are two subelements separated by "=".</td><td>720</td>
 </tr>
 <tr>
-<td>HMP</td><td>HCPCS Multiple Pricing Indicator Code - code used to identify instances where a procedure could be priced.</td><td>720</td>
+<td>HPI</td><td>HCPCS Pricing Indicator Code - used to identify the appropriate methodology for developing unique pricing amounts under Part B.</td><td>720</td>
 </tr>
 <tr>
-<td>HCD</td><td>HCPCS Code Added Date - year the HCPCS code was added to the HCFA Common Procedure Coding System.</td><td>720</td>
+<td>HAC</td><td>HCPCS action code - code denoting the change made to a procedure or modifier code within the HCPCS system.</td><td>720</td>
+</tr>
+<tr>
+<td>HTS</td><td>HCPCS Type of Service Code - carrier assigned HCFA Type of Service which describes the particular kind(s) of service represented by the procedure code.</td><td>720</td>
+</tr>
+<tr>
+<td>HAQ</td><td>HCPCS Anesthesia Base Unit Quantity - base unit represents the level of intensity for anesthesia procedure services that reflects all activities except time.</td><td>720</td>
 </tr>
 <tr>
 <td>HSN</td><td>HCPCS Statute Number identifying statute reference for coverage or noncoverage of procedure or service.</td><td>359</td>
@@ -111,10 +111,10 @@ status=published
 <th>Relation Name/Additional Label</th><th>Expanded Form</th><th>Count </th>
 </tr>
 <tr>
-<td>SY/has_expanded_form</td><td>source asserted synonymy./Has expanded form</td><td>720</td>
+<td>SY/expanded_form_of</td><td>source asserted synonymy./Expanded form of</td><td>720</td>
 </tr>
 <tr>
-<td>SY/expanded_form_of</td><td>source asserted synonymy./Expanded form of</td><td>720</td>
+<td>SY/has_expanded_form</td><td>source asserted synonymy./Has expanded form</td><td>720</td>
 </tr>
 <tr>
 <td>RQ/mapped_to</td><td>related and possibly synonymous./Mapped to</td><td>137</td>
@@ -138,19 +138,19 @@ status=published
 <th>Source</th><th># Concepts Sharing Atom/# Total Concepts</th><th>Percentage Distribution</th>
 </tr>
 <tr>
-<td>CDT</td><td>685/717</td><td>95.5</td>
+<td>CDT</td><td>681/717</td><td>95.0</td>
 </tr>
 <tr>
-<td>MEDCIN</td><td>157/717</td><td>21.9</td>
+<td>MEDCIN</td><td>153/717</td><td>21.3</td>
 </tr>
 <tr>
-<td>SCTSPA</td><td>88/717</td><td>12.3</td>
+<td>SCTSPA</td><td>86/717</td><td>12.0</td>
 </tr>
 <tr>
-<td>SNOMEDCT_US</td><td>88/717</td><td>12.3</td>
+<td>SNOMEDCT_US</td><td>86/717</td><td>12.0</td>
 </tr>
 <tr>
-<td>SNMI</td><td>81/717</td><td>11.3</td>
+<td>SNMI</td><td>80/717</td><td>11.2</td>
 </tr>
 <tr>
 <td>RCD</td><td>21/717</td><td>2.9</td>

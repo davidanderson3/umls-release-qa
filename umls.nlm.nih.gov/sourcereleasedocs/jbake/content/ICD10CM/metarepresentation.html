@@ -1,6 +1,6 @@
 title=ICD10CM (International Classification of Diseases, Tenth Revision, Clinical Modification) - Metathesaurus Representation
 date=2017-11-06
-updated=2019-05-06
+updated=2019-11-04
 type=page
 status=published
 ~~~~~~
@@ -39,29 +39,23 @@ status=published
     <a href="#atoms">Atoms</a>, <a href="#attributes">Attributes</a>,
       <a href="#definitions">Definitions</a>, <a href="#relationships">Relationships</a></span>
     <div id="general" class="rep_block_level_one">
-      <p><strong>VSAB:</strong> ICD10CM_2019</p>
+      <p><strong>VSAB:</strong> ICD10CM_2020</p>
       <div id="rep_change_summary" class="rep_block_level_one">
         <h3>Summary of Changes</h3>
-		General Equivalence Mappings (GEMs) have been discontinued for ICD10CM, resulting in the following changes: <br/>
-		Deprecated TTY:  XM<br/>
-		Deprecated ATNs:
+		There have been no changes to the source format, however Metathesaurus source processing has been updated:
 		<ul>
-			<li>FROMRSAB</li>
-			<li>FROMVSAB</li>
-			<li>MAPSETRSAB</li>
-			<li>MAPSETVERSION</li>
-			<li>MAPSETVSAB</li>
-			<li>MAPSETXRTARGETID</li>
-			<li>MTH_MAPFROMCOMPLEXITY</li>
-			<li>MTH_MAPFROMEXHAUSTIVE</li>
-			<li>MTH_MAPSETCOMPLEXITY</li>
-			<li>MTH_MAPTOCOMPLEXITY</li>
-			<li>MTH_MAPTOEXHAUSTIVE</li>
-			<li>TORSAB</li>
-			<li>TOVSAB</li>
+			<li>TTY = AB atoms are now being created for hierarchical terms (HT); previously they were only created for preferred terms (PT)</li>
+			<li>Multiple values of attributes are now concatenated rather than being represented as separate rows in MRSAT.RRF, e.g.:</li>
+			</ul>
+		<ul style="list-style: none;">
+			<li>ICD9CM_2019:</li>
+			<li>C41.0|EXCLUDES2|carcinoma, any type except intraosseous or odontogenic of:</li>
+			<li>C41.0|EXCLUDES2|maxillary sinus (C31.0)</li>
+			<li>C41.0|EXCLUDES2|upper jaw (C03.0)</li>
+			<li>C41.0|EXCLUDES2|malignant neoplasm of jaw bone (lower) (C41.1)</li>
+			<li>ICD10CM_2020:</li>
+			<li>C41.0|EXCLUDES2|carcinoma, any type except intraosseous or odontogenic of: maxillary sinus (C31.0); upper jaw (C03.0); malignant neoplasm of jaw bone (lower) (C41.1)</li>
 		</ul>
-		MRMAP, MRSMAP:  No entries for ICD10CM<br/>
-
         <h3>Source Provided Files: </h3>
         The following files are downloaded and processed from <a
           href="http://www.cdc.gov/nchs/icd/icd10cm.htm">http://www.cdc.gov/nchs/icd/icd10cm.htm</a>:<br/>
@@ -69,13 +63,13 @@ status=published
         Documentation: <br/>
         <ul>
           <li>icd10OrderFiles.pdf</li>
-          <li>icd10cm_tabular_2019.pdf</li>
+          <li>icd10cm_tabular_2020.pdf</li>
         </ul>
         <br/>
         Data:<br/>
         <ul>
-          <li> icd10cm_order_2019.txt</li>
-          <li>icd10cm_tabular_2019.xml</li>
+          <li> icd10cm_order_2020.txt</li>
+          <li>icd10cm_tabular_2020.xml</li>
         </ul>
 
         The tabluar xml file aligns with the order file, and redundant

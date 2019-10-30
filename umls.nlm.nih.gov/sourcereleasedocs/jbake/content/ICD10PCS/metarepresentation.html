@@ -1,6 +1,6 @@
 title=ICD10PCS (ICD-10 Procedure Coding System) - Metathesaurus Representation
 date=2017-11-06
-updated=2019-05-06
+updated=2019-11-04
 type=page
 status=published
 ~~~~~~
@@ -26,33 +26,16 @@ status=published
       <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
       <a href="#relationships">Relationships</a></span>
     <div id="general" class="rep_block_level_one">
-      <p><strong>VSAB:</strong> ICD10PCS_2019<br/>
+      <p><strong>VSAB:</strong> ICD10PCS_2020<br/>
       </p>
       <div id="rep_identifiers" class="rep_block_level_one">
         <h3>Summary of Changes</h3>
-        General Equivalence Mappings (GEMs) have been discontinued for ICD10PCS, resulting in the following changes: <br/>
-		Deprecated TTY:  XM<br/>
-		Deprecated ATNs:
-		<ul>
-			<li>FROMRSAB</li>
-			<li>FROMVSAB</li>
-			<li>MAPSETRSAB</li>
-			<li>MAPSETVERSION</li>
-			<li>MAPSETVSAB</li>
-			<li>MAPSETXRTARGETID</li>
-			<li>MTH_MAPFROMCOMPLEXITY</li>
-			<li>MTH_MAPFROMEXHAUSTIVE</li>
-			<li>MTH_MAPSETCOMPLEXITY</li>
-			<li>MTH_MAPTOCOMPLEXITY</li>
-			<li>MTH_MAPTOEXHAUSTIVE</li>
-			<li>TORSAB</li>
-			<li>TOVSAB</li>
-		</ul>
-		MRMAP, MRSMAP:  No entries for ICD10PCS<br/></div>
+        No updates for this version.<br/>
+		  </div>
       <div id="rep_change_summary" class="rep_block_level_one">
         <h3>Source Provided Files:</h3>
         <p>Numerous documentation and data files are available at: <a href =
-        "https://www.cms.gov/Medicare/Coding/ICD10/2019-ICD-10-CM.html">https://www.cms.gov/Medicare/Coding/ICD10/2019-ICD-10-CM.html</a>
+        "https://www.cms.gov/Medicare/Coding/ICD10/2020-ICD-10-PCS.html">https://www.cms.gov/Medicare/Coding/ICD10/2020-ICD-10-PCS.html</a>
           , including the following:
         </p>
         <strong>Documentation and Reference</strong><br/>
@@ -64,22 +47,38 @@ status=published
               <th>Description</th>
             </tr>
             <tr>
-              <td>pcs_2019.pdf</td>
-              <td>Information about tables indicating meaning
-                of codes for specific character positions; index to
-                codes</td>
+              <td>definitions_addenda_2020.pdf</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>icd10pcsConversionTable</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>icd10pcsOrderFile.pdf</td>
+              <td>Documentation for the icd10pcs_order_2020.txt file</td>
+            </tr>
+            <tr>
+              <td>icd10pcs_definitions.xsd</td>
+              <td>xml schema document describing definitions xml format</td>
             </tr>
             <tr>
               <td>icd10pcs_tables.xsd</td>
               <td>xml schema document describing tabular xml format</td>
             </tr>
             <tr>
-				<td>icd10pcs_definitions.xsd</td>
-				<td>xml schema document describing definitions xml format</td>
+              <td>index_addenda_2020.pdf</td>
+              <td></td>
             </tr>
             <tr>
-              <td>icd10pcsOrderFile.pdf</td>
-              <td>Documentation for the icd10pcs_order_2016.txt file</td>
+              <td>pcs_2020.pdf</td>
+              <td>Information about tables indicating meaning
+                of codes for specific character positions; index to
+                codes</td>
+            </tr>
+            <tr>
+              <td>tables_addenda_2020.pdf</td>
+              <td></td>
             </tr>
           </tbody>
         </table>
@@ -95,12 +94,12 @@ status=published
           <th>Description</th>
         </tr>
         <tr>
-          <td>icd10pcs_order_2019.txt</td>
+          <td>icd10pcs_order_2020.txt</td>
           <td>Long and short descriptions</td>
         </tr>
-		<tr>
-			<td>icd10pcs_tables_2019.xml</td>
-			<td>Tabular data</td>
+        <tr>
+          <td>icd10pcs_tables_2020.xml</td>
+          <td>Tabular data</td>
         </tr>
       </tbody>
     </table>
@@ -193,7 +192,7 @@ status=published
                 STR: Long description from icd10pcs_order_YYYY.txt
                 (character positions 78 - end)<br/>
                 SCUI: same as CODE<br/>
-                SUPPRESS = "Y"<br/>
+                SUPPRESS = "N"<br/>
                 <br/>
                 Note:  PT atoms are created when character position
                 15 = "1", indicating that the code is valid for

@@ -1,6 +1,6 @@
 title=NCI (NCI Thesaurus) - Metathesaurus Representation
 date=2018-05-07
-updated=2019-05-06
+updated=2019-11-04
 type=page
 status=published
 ~~~~~~
@@ -24,7 +24,7 @@ status=published
 <p>This page list UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
 <a id="top-of-page"></a> <span class = "nav">Skip to: <a href = "#atoms">Atoms</a>, <a href = "#attributes">Attributes</a>, <a href = "#definitions">Definitions</a>, <a href = "#relationships">Relationships</a>, <a href = "#mappings">Mappings</a></span>
 <div id = "general" class = "rep_block_level_one">
-<p><strong>VSAB: </strong>NCI2018_12E</p>
+<p><strong>VSAB: </strong>NCI2019_03D</p>
 <div id = "rep_identifiers" class = "rep_block_level_one">
 <h3>general notes/Comments:</h3>
 <p>NCI Thesaurus (NCIt) is a widely recognized standard for biomedical coding and reference. It covers vocabulary for clinical care, translational and basic research, public information and administrative activities and is used by a broad variety of public and private partners both nationally and internationally.The scope of NCI is determined by the combined scope of its source vocabularies which include the following:</p>
@@ -39,11 +39,19 @@ status=published
 </tr>
 <tr>
     <td>BRIDG</td>
-    <td>Biomedical Research Integrated Domain Group Model</td>
+    <td>Biomedical Research Integrated Domain Group Model Subset</td>
+</tr>
+<tr>
+    <td>BRIDG_3_0_3</td>
+    <td>Biomedical Research Integrated Domain Group Model 3.0.3</td>
 </tr>
 <tr>
     <td>CARELEX</td>
     <td>Content Archive Resource Exchange Lexicon</td>
+</tr>
+<tr>
+    <td>CBDD</td>
+    <td>Chemical Biology and Drug Development Vocabulary</td>
 </tr>
 <tr>
     <td>CDC</td>
@@ -58,16 +66,12 @@ status=published
     <td>CDISC Glossary Terminology</td>
 </tr>
 <tr>
-    <td>CPTAC</td>
-    <td>Clinical Proteomic Tumor Analysis Consortium Terms</td>
-</tr>
-<tr>
     <td>CRCH</td>
     <td>Cancer Research Center of Hawaii</td>
 </tr>
 <tr>
     <td>CTCAE</td>
-    <td>Common Terminology Criteria for Adverse Events</td>
+    <td>Common Terminology Criteria for Adverse Events 4.3 Subset</td>
 </tr>
 <tr>
     <td>CTCAE_3</td>
@@ -96,6 +100,10 @@ status=published
 <tr>
     <td>DTP</td>
     <td>NCI Developmental Therapeutics Program</td>
+</tr>
+<tr>
+    <td>EDQM-HC</td>
+    <td>European Directorate for the Quality of Medicines &amp; Healthcare</td>
 </tr>
 <tr>
     <td>FDA</td>
@@ -170,20 +178,28 @@ status=published
 <h3>Summary of Changes</h3>
 <p>New subsource(s):</p>
 <ul>
-  <li>CPTAC (Clinical Proteomic Tumor Analysis Consortium Terms)</li>
-  <li>INC (International Neonatal Consortium Terms)</li>
+  <li>BRIDG_3_0_3 (Biomedical Research Integrated Domain Group Model 3.0.3)</li>
 </ul>
-<p>New relationship attribute(s) (RELA) | RELA inverse(s):</p>
+<p>New property(s):</p>
 <ul>
-  <li>has_inc_parent|inc_parent_of</li>
-  <li>disease_excludes_metastatic_anatomic_site|is_not_metastatic_anatomic_site_of_disease</li>
+  <li>P397 Target_Terminology_Version</li>
 </ul>
+<p>New associations(s) | Inverse(s):</p>
+<ul>
+  <li>A17|Has_Pharmaceutical_State_Of_Matter|Pharmaceutical_State_Of_Matter_Of</li>
+  <li>A18|Has_Pharmaceutical_Basic_Dose_Form|Pharmaceutical_Basic_Dose_Form_Of</li>
+  <li>A19|Has_Pharmaceutical_Administration_Method|Pharmaceutical_Administration_Method_Of</li>
+  <li>A20|Has_Pharmaceutical_Intended_Site|Pharmaceutical_Intended_Site_Of</li>
+  <li>A21|Has_Pharmaceutical_Release_Characteristics|Pharmaceutical_Release_Characteristics_Of</li>
+  <li>A22|Has_Pharmaceutical_Transformation|Pharmaceutical_Transformation_Of</li>
+</ul>
+<p>The subsource CPTAC (Clinical Proteomic Tumor Analysis Consortium Terms) has been deprecated.</p>
 </div>
 <div id = "rep_change_summary" class = "rep_block_level_one">
 <h3>Original Files:</h3>
 <table>
 <tr><th>File Name</th><th>Description</th></tr>
-<tr><td  class = "file_field_name">Thesaurusinferred.owl</td><td>Complete source data in an OWL2 (by code) formatted file.</td></tr>
+<tr><td  class = "file_field_name">ThesaurusInferred.owl</td><td>Complete source data in an OWL2 (by code) formatted file.</td></tr>
 </table>
 <br/>
 </div>
@@ -364,6 +380,10 @@ Alt_Definition: &lt;P325...ncicp:complexDefinition xmlns:ncicp.../P325&gt;
 <p>&lt;A1 rdf:resource="http://...owl#A..."/&gt;</p>
 <table>
 <tr><th>Relationship</th><th>Relationship Label/inverse Relationship Label</th><th>Origin</th></tr>
+<tr><td>BT</td>
+<td>mapped_to/mapped_from</td><td>P375 (RELA), P393 (REL)</td></tr>
+<tr><td>NT</td>
+<td>mapped_to/mapped_from</td><td>P375 (RELA), P393 (REL)</td></tr>
 <tr><td>NT</td>
 <td>conceptual_part_of/has_conceptual_part</td><td>R27</td></tr>
 <tr><td>RT</td>
@@ -557,6 +577,18 @@ Alt_Definition: &lt;P325...ncicp:complexDefinition xmlns:ncicp.../P325&gt;
 <tr><td>RT</td>
 <td>neoplasm_has_special_category/special_category_includes_neoplasm</td><td>A14</td></tr>
 <tr><td>RT</td>
+<td>pharmaceutical_state_of_matter_of/has_pharmaceutical_state_of_matter</td><td>A17</td></tr>
+<tr><td>RT</td>
+<td>pharmaceutical_basic_dose_form_of/has_pharmaceutical_basic_dose_form</td><td>A18</td></tr>
+<tr><td>RT</td>
+<td>pharmaceutical_administration_method_of/has_pharmaceutical_administration_method</td><td>A19</td></tr>
+<tr><td>RT</td>
+<td>pharmaceutical_intended_site_of/has_pharmaceutical_intended_site</td><td>A20</td></tr>
+<tr><td>RT</td>
+<td>pharmaceutical_release_characteristics_of/has_pharmaceutical_release_characteristics</td><td>A21</td></tr>
+<tr><td>RT</td>
+<td>pharmaceutical_transformation_of/has_pharmaceutical_transformation</td><td>A22</td></tr>
+<tr><td>RT</td>
 <td>procedure_has_completely_excised_anatomy/completely_excised_anatomy_has_procedure</td><td>R171</td></tr>
 <tr><td>RT</td>
 <td>procedure_has_excised_anatomy/excised_anatomy_has_procedure</td><td>R167</td></tr>
@@ -584,6 +616,8 @@ Alt_Definition: &lt;P325...ncicp:complexDefinition xmlns:ncicp.../P325&gt;
 <td>role_has_parent/role_is_parent_of</td><td>A3</td></tr>
 <tr><td>RT</td>
 <td>role_has_range/kind_is_range_of</td><td>A2</td></tr>
+<tr><td>SY</td>
+<td>mapped_to/mapped_from</td><td>P375 (RELA), P393 (REL)</td></tr>
 <tr><td>SY</td>
 <td>tradename_of/has_tradename</td><td>Brand names and generic names are not considered synonyms in NCI, so a relationship is created to link the two concepts.  This data is added during Metathesaurus source processing.</td></tr>
 </table>

@@ -1,6 +1,6 @@
 title=LNC (LOINC) - Source Representation
 date=2018-05-07
-updated=2019-05-06
+updated=2019-11-04
 type=page
 status=published
 ~~~~~~
@@ -28,7 +28,7 @@ status=published
         Files</a> <a href="#file_details">Source-Provided File Details</a></span>
     <div id="rep_change_summary" class="rep_block_level_one"></div>
     <a>id="change_summary"></a>
-          <p><strong>VSAB: </strong>LNC265</p>
+          <p><strong>VSAB: </strong>LNC266</p>
    
       <h3>Summary of Changes:</h3>
             
@@ -40,38 +40,37 @@ status=published
 	        			<th>Class</th>
 	        		</tr>
 	        		<tr>
-	        			<td>CARD</td>
-	        			<td>Cardiology</td>
+	        			<td>ADMIN.PATIENT</td>
+	        			<td>Patient administrative information</td>
 	        		</tr>
 	        		<tr>
-	        			<td>PANEL.SURVEY.DUKE-AD</td>
-	        			<td>Duke Anxiety Depression Scale (DUKE-AD) set</td>
+	        			<td>ADMIN.PATIENT.DEMOG</td>
+	        			<td>Patient demographics</td>
 	        		</tr>
 	        		<tr>
-	  	  			   <td>PANEL.SURVEY.PEG</td>
-	  	  			   <td>Pain intensity, Enjoyment of life, General activity (PEG) set</td>
+	  	  			   <td>ADMIN.PATIENT.ID</td>
+	  	  			   <td>Patient identification numbers</td>
 	  	  		   </tr>
 	  	  		   <tr>
-	  	  			   <td>SURVEY.DUKE-AD</td>
-	  	  			   <td>Duke Anxiety Depression Scale (DUKE-AD)</td>
+	  	  			   <td>BLDBK.GENOTYPING</td>
+	  	  			   <td>Blood bank genotyping)</td>
 	  	  		   </tr>
 	  	  		   <tr>
-	  	  			   <td>SURVEY.PEG</td>
-	  	  			   <td>Pain intensity, Enjoyment of life, General activity (PEG)</td>
+	  	  			   <td>PANEL.BLDBK.GENOTYPE</td>
+	  	  			   <td>Blood bank genotyping panel</td>
+	  	  		   </tr>
+           <tr>
+	  	  			   <td>PANEL.SURVEY.PRAPARE</td>
+	  	  			   <td>Protocol for Responding to and Assessing Patients Assets Risks and Experiences (PRAPARE) set</td>
+	  	  		   </tr>
+           <tr>
+	  	  			   <td>SURVEY.PRAPARE</td>
+	  	  			   <td>Protocol for Responding to and Assessing Patients Assets Risks and Experiences (PRAPARE)</td>
 	  	  		   </tr>
 	  	  		  </tbody>
 	        </table>
 	        <br/>
-	  	  New ATN:<br/>
-	  	  	<ul>
-	  	  	<li>EXAMPLE_SI_UCUM_UNITS</li>
-       </ul>
-	  	  	<br />
-	  	  Deprecated ATN:<br/>
-	  	  	<ul>
-	  	  	<li>STATUS_REASON</li>
-	  	  	</ul>
-	   <div id="rep_file_summary" class="rep_block_level_one"></div><br/>
+     	<div id="rep_file_summary" class="rep_block_level_one"></div><br/>
       <a id="file_summary"></a>
       <h3>Source-Provided Files: Summary</h3>
       &nbsp;
@@ -115,7 +114,7 @@ status=published
               <td>Part links, for relationships and hierarchy</td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file6">PanelsAndForms.xlsx</a></td>
+              <td class="file_field_name"><a href="#file6">PanelsAndForms.csv</a></td>
               <td>Mappings between LOINC panels and their members.</td>
             </tr>
             <tr>
@@ -155,6 +154,10 @@ status=published
             <tr>
             	<td class="file_field_name"><a href="#file14">ImagingDocumentCodes.csv</a></td>
             	<td>A subset of document codes in LOINC that represent imaging procedures and reports.</td>
+            </tr>
+            <tr>
+            	<td class="file_field_name"><a href="#file15">ConsumerName.csv</a></td>
+            	<td>LOINC term Consumer Names</td>
             </tr>
           </tbody>
         </table>
@@ -1059,17 +1062,17 @@ status=published
 			  <tr>
 				<td>17</td>
                 <td>SubsequentTextPrompt</td>
-                <td>ATN=SUBSEQUENT_TEXT_PROMPT</td>
+                <td>MRSAT.ATN=SUBSEQUENT_TEXT_PROMPT</td>
               </tr>
               <tr>
                 <td>18</td>
                 <td>Description</td>
-                <td>ATN=DEFINITION</td>
+                <td>MRSAT.ATN=DEFINITION</td>
               </tr>
               <tr>
                 <td>19</td>
                 <td>Score</td>
-                <td>ATN=LOINC_SCORE</td>
+                <td>MRSAT.ATN=LOINC_SCORE</td>
               </tr>
             </tbody>
           </table>
@@ -1109,7 +1112,7 @@ status=published
               <tr>
                 <td>5</td>
                 <td>RANK</td>
-                <td>ATN=TOP_2000_LAB_RESULTS_SI</td>
+                <td>MRSAT.ATN=TOP_2000_LAB_RESULTS_SI</td>
               </tr>
             </tbody>
           </table>
@@ -1147,7 +1150,7 @@ status=published
               <tr>
                 <td>5</td>
                 <td>RANK</td>
-                <td>ATN=TOP_2000_LAB_RESULTS_US</td>
+                <td>MRSAT.ATN=TOP_2000_LAB_RESULTS_US</td>
               </tr>
             </tbody>
           </table>
@@ -1167,7 +1170,7 @@ status=published
                 <td>1</td>
                 <td>LOINC_NUM</td>
                 <td>LOINC codes included in this file have MRSAT.ATN =
-                  UNIVERSAL_LAB_ORDERS_VALUE_SET with ATV = TRUE<br/>
+                  UNIVERSAL_LAB_ORDERS_VALUE_SET with MRSAT.ATV = TRUE<br/>
                 </td>
               </tr>
               <tr>
@@ -1180,7 +1183,7 @@ status=published
                 <td>3</td>
                 <td>ORDER_OBS</td>
                 <td>Redundant to ORDER_OBS attribute in Loinc.csv
-                  (represented as ATN = LOR) <br/>
+                  (represented as MRSAT.ATN = LOR) <br/>
                 </td>
               </tr>
             </tbody>
@@ -1208,27 +1211,27 @@ status=published
               <tr>
                 <td>3</td>
                 <td>IEEE_CF_CODE10</td>
-                <td>ATN=IEEE_CF_CODE10</td>
+                <td>MRSAT.ATN=IEEE_CF_CODE10</td>
               </tr>
               <tr>
                 <td>4</td>
                 <td>IEEE_REFID</td>
-                <td>ATN=IEEE_REFID</td>
+                <td>MRSAT.ATN=IEEE_REFID</td>
               </tr>
               <tr>
                 <td>5</td>
                 <td>IEEE_DESCRIPTION</td>
-                <td>ATN=IEEE_DESCRIPTION</td>
+                <td>MRSAT.ATN=IEEE_DESCRIPTION</td>
               </tr>
               <tr>
                 <td>6</td>
                 <td>IEEE_DIM</td>
-                <td>ATN=IEEE_DIM</td>
+                <td>MRSAT.ATN=IEEE_DIM</td>
               </tr>
               <tr>
                 <td>7</td>
                 <td>IEEE_UOM_UCUM</td>
-                <td>ATN=IEEE_UOM_UCUM</td>
+                <td>MRSAT.ATN=IEEE_UOM_UCUM</td>
               </tr>
             </tbody>
           </table>
@@ -1268,39 +1271,79 @@ status=published
               <tr>
                 <td>5</td>
                 <td>PartName</td>
-                <td>Part name; TTY=LPN</td>
+                <td>Part name; MRCONSO.STR.TTY=LPN</td>
               </tr>
               <tr>
                 <td>6</td>
                 <td>PartSequenceOrder</td>
-                <td>ATN=PART_SEQ_ORDER</td>
+                <td>MRSAT.ATN=PART_SEQ_ORDER</td>
               </tr>
               <tr>
                 <td>7</td>
                 <td>RID</td>
-                <td>ATN=RID</td>
+                <td>MRSAT.ATN=RID</td>
               </tr>
               <tr>
                 <td>8</td>
                 <td>PreferredName</td>
-                <td>ATN=RADLEX_PREF_NAME</td>
+                <td>MRSAT.ATN=RADLEX_PREF_NAME</td>
               </tr>
               <tr>
                 <td>9</td>
                 <td>RPID</td>
-                <td>ATN=RPID</td>
+                <td>MRSAT.ATN=RPID</td>
               </tr>
               <tr>
                 <td>10</td>
                 <td>LongName</td>
-                <td>ATN=RADLEX_PLAYBOOK_LONG_NAME</td>
+                <td>MRSAT.ATN=RADLEX_PLAYBOOK_LONG_NAME</td>
               </tr>
             </tbody>
           </table>
         </div>
         <div class="rep_block_level_two"><a id="file14"></a>
 		<h4 class="file_field_name">file: ImagingDocumentCodes.csv<br/></h4>
-		All LOINC Numbers in this file are assigned a MRSAT.RRF ATN = IMAGING_DOCUMENT_VALUE_SET, ATV = TRUE<br/>
-		</div>
+           <table>
+            <tbody>
+              <tr>
+                <th>#</th>
+                <th>Field</th>
+                <th>Representation</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>LOINC_NUM</td>
+                <td>Code; MRSAT.ATN = IMAGING_DOCUMENT_VALUE_SET, MRSAT.ATV = TRUE</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>LOINC_LONG_COMMON_NAME</td>
+                <td>Not used</td>
+              </tr>
+            </tbody>
+          </table>  
+		 		   </div>
+               <div class="rep_block_level_two"><a id="file15"></a>
+		<h4 class="file_field_name">file: ConsumerName.csv<br/></h4>
+           <table>
+            <tbody>
+              <tr>
+                <th>#</th>
+                <th>Field</th>
+                <th>Representation</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>LoincNumber</td>
+                <td>Code</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>ConsumerName</td>
+                <td>MRSAT.ATN = CONSUMER_NAME</td>
+              </tr>
+            </tbody>
+          </table>  
+		 		   </div>
       </div>
     

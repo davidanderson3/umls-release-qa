@@ -1,6 +1,6 @@
 title=MSH (MeSH) - Source Representation
 date=2018-05-07
-updated=2019-05-06
+updated=2019-11-04
 type=page
 status=published
 ~~~~~~
@@ -26,20 +26,14 @@ status=published
         href="#file_summary">Summary of Source-Provided Files</a> <a
         href="#file_details">Source-Provided File Details</a></span> <a id="general"></a>
     <div id="rep_general" class="rep_block_level_one">
-      <p><strong>VSAB:</strong>MSH2019_2019_01_07</p>
+      <p><strong>VSAB:</strong>MSH2020_2019_08_27</p>
       <h3>Notes</h3>
       <p>MeSH for the Metathesaurus is processed from the xml files. In
         addition to data from the xml files, top levels of the hierarchy
         are created from external files for Metathesaurus
         representation. The information provided here applies explicitly
         to the English version of MeSH.</p>
-      <p>The majority of it is also relevant to translations maintained
-        in the MeSH translation system (Croatian, Czech, French, German,
-        Italian, and Latvian). Other translations, including Dutch,
-        Finnish, Japanese, Polish, Portuguese, Russian, Spanish, and
-        Swedish are included in the UMLS but are submitted in different
-        formats and the details below may not apply. <br/>
-      </p>
+      
     </div>
     <div id="rep_change_summary" class="rep_block_level_one"> <a id="change_summary"></a>
       <h3>Summary of Changes:</h3>
@@ -63,15 +57,15 @@ status=published
               <th>Description</th>
             </tr>
             <tr>
-              <td class="file_field_name">nlmdescriptorrecordset_20190101.dtd</td>
+              <td class="file_field_name">nlmdescriptorrecordset_20290101.dtd</td>
               <td>Descriptor DTD</td>
             </tr>
             <tr>
-              <td class="file_field_name">nlmqualifierrecordset_20190101.dtd</td>
+              <td class="file_field_name">nlmqualifierrecordset_20100101.dtd</td>
               <td>Qualifier DTD</td>
             </tr>
             <tr>
-              <td class="file_field_name">nlmsupplementalrecordset_20190101.dtd</td>
+              <td class="file_field_name">nlmsupplementalrecordset_20200101.dtd</td>
               <td>SCR (Supplementary Concept Records) DTD</td>
             </tr>
           </tbody>
@@ -86,15 +80,15 @@ status=published
               <th>Description</th>
             </tr>
             <tr>
-              <td class="file_field_name">desc2019.xml</td>
+              <td class="file_field_name">desc2020.xml</td>
               <td>Descriptor XML MeSH</td>
             </tr>
             <tr>
-              <td class="file_field_name">qual2019.xml</td>
+              <td class="file_field_name">qual2020.xml</td>
               <td>Qualifier XML MeSH</td>
             </tr>
             <tr>
-              <td class="file_field_name">supp2019.xml</td>
+              <td class="file_field_name">supp2020.xml</td>
               <td>SCR XML MeSH</td>
             </tr>
           </tbody>
@@ -1030,9 +1024,7 @@ status=published
               <td>LanguageCode<br/>
                 Description: Attribute of &lt;DescriptorRecordSet&gt;
                 having as values abbreviations for the language of the
-                XML data. For English, the value is 'eng'. Other
-                abbreviations will be used primarily by institutions
-                that translate MeSH into their own language. Subelement
+                XML data. Subelement
                 of: not applicable. Attribute of
                 &lt;DescriptorRecordSet&gt;<br/>
                 Record Type: D<br/>
