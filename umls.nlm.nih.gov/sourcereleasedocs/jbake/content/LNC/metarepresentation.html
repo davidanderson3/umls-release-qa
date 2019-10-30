@@ -1,6 +1,6 @@
 title=LNC (LOINC) - Metathesaurus Representation
 date=2018-05-07
-updated=2019-05-06
+updated=2019-11-04
 type=page
 status=published
 ~~~~~~
@@ -26,7 +26,7 @@ status=published
         href="#atoms">Atoms</a>, <a href="#attributes">Attributes</a>,
       <a href="#definitions">Definitions</a>, <a href="#relationships">Relationships</a>,
       <a href="#mappings">Mappings</a></span>
-    <p><strong>VSAB: </strong>LNC265</p>
+    <p><strong>VSAB: </strong>LNC266</p>
     <div id="rep_change_summary" class="rep_block_level_one"></div>
       <h3>Summary of Changes:</h3>
       New Classes:
@@ -37,37 +37,37 @@ status=published
       			<th>Class</th>
       		</tr>
       		<tr>
-      			<td>CARD</td>
-      			<td>Cardiology</td>
+      			<td>ADMIN.PATIENT</td>
+      			<td>Patient administrative information</td>
       		</tr>
       		<tr>
-      			<td>PANEL.SURVEY.DUKE-AD</td>
-      			<td>Duke Anxiety Depression Scale (DUKE-AD) set</td>
+      			<td>ADMIN.PATIENT.DEMOG</td>
+      			<td>Patient demographics</td>
       		</tr>
       		<tr>
-         <td>PANEL.SURVEY.PEG</td>
-         <td>Pain intensity, Enjoyment of life, General activity (PEG) set</td>
+         <td>ADMIN.PATIENT.ID</td>
+         <td>Patient identification numbers</td>
         </tr>
         <tr>
-         <td>SURVEY.DUKE-AD</td>
-         <td>Duke Anxiety Depression Scale (DUKE-AD)</td>
+         <td>BLDBK.GENOTYPING</td>
+         <td>Blood bank genotyping</td>
         </tr>
         <tr>
-         <td>SURVEY.PEG</td>
-         <td>Pain intensity, Enjoyment of life, General activity (PEG)</td>
+         <td>PANEL.BLDBK.GENOTYPE</td>
+         <td>Blood bank genotyping panel</td>
+        </tr>
+        <tr>
+         <td>PANEL.SURVEY.PRAPARE</td>
+         <td>Protocol for Responding to and Assessing Patients Assets Risks and Experiences (PRAPARE) set</td>
+        </tr>
+        <tr>
+         <td>SURVEY.PRAPARE</td>
+         <td>Protocol for Responding to and Assessing Patients Assets Risks and Experiences (PRAPARE)</td>
         </tr>
 	  		  </tbody>
       </table>
       <br/>
-	  New ATN:<br/>
-	  	<ul>
-	  	<li>EXAMPLE_SI_UCUM_UNITS</li>
-    </ul>
-	  Deprecated ATN:<br/>
-	  	<ul>
-	  	<li>STATUS_REASON</li>
-	  	</ul>
-	 <div>
+	  <div>
     <h4>Original Files:</h4>
     <p>The UMLS uses files publically available at <a
         href="http://www.loinc.org" target="_blank">www.loinc.org</a>,
@@ -83,11 +83,13 @@ status=published
       <li>Top2000CommonLabResultsUs.csv</li>
       <li>LoincUniversalLabOrdersValueSet.csv</li>
       <li>AnswerList.csv</li>
+      <li>LoincAnswerListLink.csv</li>
       <li>ImagingDocumentCodes.csv</li>
-	  <li>LoincAnswerListLink.csv</li>
+      <li>ConsumerName.csv</li>
+	  
     </ul>
     <p>In addition, the UMLS receives two files to facilitate building
-      the hierarchy. For 2.65 these files were:
+      the hierarchy. For 2.66 these files were:
       "PartLinks.csv,"  and "Parts.csv."  Additional information, such as
       expansions of abbreviations, is extracted from LOINCManual.pdf. </p>
   </div>
@@ -343,7 +345,7 @@ status=published
             </tr>
             <tr>
               <td>CONSUMER_NAME</td>
-              <td>loinc.csv field 13</td>
+              <td>loinc.csv field 13 - not populated. Use ConsumerName file</td>
             </tr>
             <tr>
               <td>UNITS_AND_RANGE</td>

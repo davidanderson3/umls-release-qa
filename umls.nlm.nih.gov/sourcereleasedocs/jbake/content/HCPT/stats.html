@@ -1,6 +1,6 @@
 title=HCPT (CPT in HCPCS) - Statistics
 date=
-updated=2019-05-06
+updated=2019-11-04
 type=page
 status=published
 ~~~~~~
@@ -42,16 +42,16 @@ status=published
 <th>Term Type</th><th>Expanded Form</th><th>Count </th>
 </tr>
 <tr>
-<td>AB</td><td>Abbreviation in any source vocabulary</td><td>10322</td>
-</tr>
-<tr>
 <td>PT</td><td>Designated preferred name</td><td>10322</td>
 </tr>
 <tr>
-<td>OP</td><td>Obsolete preferred name</td><td>480</td>
+<td>AB</td><td>Abbreviation in any source vocabulary</td><td>10322</td>
 </tr>
 <tr>
 <td>OA</td><td>Obsolete abbreviation</td><td>480</td>
+</tr>
+<tr>
+<td>OP</td><td>Obsolete preferred name</td><td>480</td>
 </tr>
 <tr>
 <td>AM</td><td>Short form of modifier</td><td>39</td>
@@ -72,31 +72,31 @@ status=published
 <td>HPI</td><td>HCPCS Pricing Indicator Code - used to identify the appropriate methodology for developing unique pricing amounts under Part B.</td><td>10842</td>
 </tr>
 <tr>
+<td>HAC</td><td>HCPCS action code - code denoting the change made to a procedure or modifier code within the HCPCS system.</td><td>10841</td>
+</tr>
+<tr>
 <td>HCD</td><td>HCPCS Code Added Date - year the HCPCS code was added to the HCFA Common Procedure Coding System.</td><td>10841</td>
 </tr>
 <tr>
 <td>HCC</td><td>HCPCS Coverage Code - code denoting Medicare coverage status. There are two subelements separated by "=".</td><td>10841</td>
 </tr>
 <tr>
-<td>HAC</td><td>HCPCS action code - code denoting the change made to a procedure or modifier code within the HCPCS system.</td><td>10841</td>
-</tr>
-<tr>
 <td>HAD</td><td>HCPCS Action Effective Date - effective date of action to a procedure or modifier code.</td><td>10840</td>
-</tr>
-<tr>
-<td>HBT</td><td>HCPCS Berenson-Eggers Type of Service Code - BETOS for the procedure code based on generally agreed upon clinically meaningful groupings of procedures and services.</td><td>10802</td>
 </tr>
 <tr>
 <td>HMP</td><td>HCPCS Multiple Pricing Indicator Code - code used to identify instances where a procedure could be priced.</td><td>10802</td>
 </tr>
 <tr>
+<td>HBT</td><td>HCPCS Berenson-Eggers Type of Service Code - BETOS for the procedure code based on generally agreed upon clinically meaningful groupings of procedures and services.</td><td>10802</td>
+</tr>
+<tr>
 <td>HAQ</td><td>HCPCS Anesthesia Base Unit Quantity - base unit represents the level of intensity for anesthesia procedure services that reflects all activities except time.</td><td>10801</td>
 </tr>
 <tr>
-<td>HPG</td><td>HCPCS ASC payment group code which represents the dollar amount of the facility charge payable by Medicare for the procedure.</td><td>3210</td>
+<td>HPD</td><td>HCPCS ASC payment group effective date - date the procedure is assigned to the ASC payment group.</td><td>3210</td>
 </tr>
 <tr>
-<td>HPD</td><td>HCPCS ASC payment group effective date - date the procedure is assigned to the ASC payment group.</td><td>3210</td>
+<td>HPG</td><td>HCPCS ASC payment group code which represents the dollar amount of the facility charge payable by Medicare for the procedure.</td><td>3210</td>
 </tr>
 <tr>
 <td>HLC</td><td>HCPCS Lab Certification Code - code used to classify laboratory procedures according to the specialty certification categories listed by CMS(formerly HCFA).</td><td>2288</td>
@@ -129,10 +129,10 @@ status=published
 <th>Relation Name/Additional Label</th><th>Expanded Form</th><th>Count </th>
 </tr>
 <tr>
-<td>SY/expanded_form_of</td><td>source asserted synonymy./Expanded form of</td><td>519</td>
+<td>SY/has_expanded_form</td><td>source asserted synonymy./Has expanded form</td><td>519</td>
 </tr>
 <tr>
-<td>SY/has_expanded_form</td><td>source asserted synonymy./Has expanded form</td><td>519</td>
+<td>SY/expanded_form_of</td><td>source asserted synonymy./Expanded form of</td><td>519</td>
 </tr>
 <tr>
 <td>RQ/mapped_from</td><td>related and possibly synonymous./Mapped from</td><td>217</td>
@@ -159,69 +159,72 @@ status=published
 <td>CPT</td><td>17423/17833</td><td>97.7</td>
 </tr>
 <tr>
-<td>SNOMEDCT_US</td><td>3170/17833</td><td>17.8</td>
+<td>SNOMEDCT_US</td><td>3168/17833</td><td>17.8</td>
 </tr>
 <tr>
-<td>SCTSPA</td><td>3165/17833</td><td>17.7</td>
+<td>SCTSPA</td><td>3164/17833</td><td>17.7</td>
 </tr>
 <tr>
-<td>SNMI</td><td>2949/17833</td><td>16.5</td>
+<td>SNMI</td><td>2948/17833</td><td>16.5</td>
 </tr>
 <tr>
 <td>CPTSP</td><td>2671/17833</td><td>15.0</td>
 </tr>
 <tr>
-<td>MEDCIN</td><td>1810/17833</td><td>10.1</td>
+<td>MEDCIN</td><td>1814/17833</td><td>10.2</td>
 </tr>
 <tr>
-<td>CHV</td><td>585/17833</td><td>3.3</td>
+<td>CHV</td><td>586/17833</td><td>3.3</td>
 </tr>
 <tr>
-<td>RCD</td><td>573/17833</td><td>3.2</td>
+<td>RCD</td><td>572/17833</td><td>3.2</td>
 </tr>
 <tr>
-<td>MDR</td><td>471/17833</td><td>2.6</td>
+<td>MDR</td><td>473/17833</td><td>2.7</td>
 </tr>
 <tr>
-<td>MDRCZE</td><td>471/17833</td><td>2.6</td>
+<td>MDRCZE</td><td>473/17833</td><td>2.7</td>
 </tr>
 <tr>
-<td>MDRDUT</td><td>471/17833</td><td>2.6</td>
+<td>MDRDUT</td><td>473/17833</td><td>2.7</td>
 </tr>
 <tr>
-<td>MDRFRE</td><td>471/17833</td><td>2.6</td>
+<td>MDRFRE</td><td>473/17833</td><td>2.7</td>
 </tr>
 <tr>
-<td>MDRGER</td><td>471/17833</td><td>2.6</td>
+<td>MDRGER</td><td>473/17833</td><td>2.7</td>
 </tr>
 <tr>
-<td>MDRHUN</td><td>471/17833</td><td>2.6</td>
+<td>MDRHUN</td><td>473/17833</td><td>2.7</td>
 </tr>
 <tr>
-<td>MDRITA</td><td>471/17833</td><td>2.6</td>
+<td>MDRITA</td><td>473/17833</td><td>2.7</td>
 </tr>
 <tr>
-<td>MDRJPN</td><td>471/17833</td><td>2.6</td>
+<td>MDRJPN</td><td>473/17833</td><td>2.7</td>
 </tr>
 <tr>
-<td>MDRPOR</td><td>471/17833</td><td>2.6</td>
+<td>MDRPOR</td><td>473/17833</td><td>2.7</td>
 </tr>
 <tr>
-<td>MDRSPA</td><td>471/17833</td><td>2.6</td>
+<td>MDRRUS</td><td>473/17833</td><td>2.7</td>
+</tr>
+<tr>
+<td>MDRSPA</td><td>473/17833</td><td>2.7</td>
 </tr>
 <tr>
 <td>SNM</td><td>410/17833</td><td>2.3</td>
 </tr>
 <tr>
-<td>NCI</td><td>328/17833</td><td>1.8</td>
+<td>NCI</td><td>333/17833</td><td>1.9</td>
 </tr>
 <tr>
-<td>ICD10AM</td><td>256/17833</td><td>1.4</td>
+<td>ICD10AM</td><td>257/17833</td><td>1.4</td>
 </tr>
 <tr>
-<td>ICD9CM</td><td>213/17833</td><td>1.2</td>
+<td>ICD9CM</td><td>212/17833</td><td>1.2</td>
 </tr>
 <tr>
-<td>NCI_CDISC</td><td>195/17833</td><td>1.1</td>
+<td>NCI_CDISC</td><td>196/17833</td><td>1.1</td>
 </tr>
 </table>

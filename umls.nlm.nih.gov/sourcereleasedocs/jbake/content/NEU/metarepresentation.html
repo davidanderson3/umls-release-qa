@@ -1,6 +1,6 @@
 title=NEU (Neuronames Brain Hierarchy) - Metathesaurus Representation
 date=2017-11-06
-updated=2019-05-06
+updated=2019-11-04
 type=page
 status=published
 ~~~~~~
@@ -21,16 +21,17 @@ status=published
 <!--endmenu-->
 <br/><p>This page lists UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p><!--begin tabbed navigation area-->
 <!-- end tabbed navigation area -->
-<a name="top-of-page" id="top-of-page"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>, <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>, <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+<a id="top-of-page"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>, <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>, <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
 
 <div id="general" class="rep_block_level_one">
-  <p><strong>VSAB:</strong> NEU2018_05_16</p>
+  <p><strong>VSAB:</strong> NEU2019_05_08</p>
 </div>
 
 <div id="rep_identifiers" class="rep_block_level_one">
   <h3>Summary of Changes</h3>
 
-  <p>No changes in this version.</p>
+  <p>New property:  eDefinition. ATN = DEFINITION.</p>
+  <p>New property:  parentBrainInfoID. Used to create PAR/CHD hierarchy & contexts.</p>
 </div>
 
 <div id="rep_change_summary" class="rep_block_level_one">
@@ -44,7 +45,7 @@ status=published
     </tr>
 
     <tr>
-      <td class="file_field_name">NeuroNames_05162018.xml</td>
+      <td class="file_field_name">NeuroNames_05082019.xml</td>
 
       <td>XML file of standard names, synonyms, acronyms, URLs, and codes.</td>
     </tr>
@@ -65,7 +66,7 @@ status=published
   </ul>
 
   <div id="rep_termtypes" class="rep_block_level_two">
-    <a id="termtypes" name="termtypes"></a>
+    <a id="termtypes"></a>
 
     <h3>Atoms (MRCONSO)</h3>
 
@@ -145,7 +146,7 @@ status=published
   </div>
 
   <div id="rep_attributes" class="rep_block_level_two">
-    <a id="attributes" name="attributes"></a><br>
+    <a id="attributes"></a><br>
 
     <h3>Attributes (MRSAT)</h3>
 
@@ -175,6 +176,11 @@ status=published
       </tr>
 
       <tr>
+        <td>DEFINITION</td>
+
+        <td>eDefinition field</td>
+      </tr>
+      <tr>
         <td>NSR</td>
 
         <td>species restriction data stripped from the PT/OP and SY/IS</td>
@@ -189,7 +195,7 @@ status=published
   </div>
 
   <div id="rep_relationships" class="rep_block_level_two">
-    <a id="relationships" name="relationships"></a><br>
+    <a id="relationships"></a><br>
 
     <h3>Relationships (MRREL)</h3>
 
@@ -213,7 +219,7 @@ status=published
 
         <td>(no rela)</td>
 
-        <td>There are no CONTEXTS.</td>
+        <td>CONTEXTS.</td>
       </tr>
 
       <tr>
@@ -231,7 +237,7 @@ status=published
   <div id="mappings" class="rep_block_level_two">
     <h3>Definitions (MRDEF)</h3>
 
-    <p>There are no definitions.</p>
+    <p>Taken from the eDefintion field.</p>
   </div>
 
   <h3>Mappings (MRMAP)</h3>

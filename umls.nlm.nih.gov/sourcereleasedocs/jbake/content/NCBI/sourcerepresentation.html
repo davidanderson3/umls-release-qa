@@ -1,6 +1,6 @@
 title=NCBI (NCBI Taxonomy) - Source Representation
 date=2017-11-06
-updated=2019-05-06
+updated=2019-11-04
 type=page
 status=published
 ~~~~~~
@@ -31,7 +31,7 @@ File Details</a></span>
 <a id="general"></a>
 <div id="rep_general" class="rep_block_level_one">
 <br/>
-<strong>VSAB: </strong>NCBI2018_04_19
+<strong>VSAB: </strong>NCBI2019_05_08
 <h3>Notes</h3>
 <p>Many concepts and terms from the NCBI Taxonomy are excluded during
 Metathesarus source processing.&nbsp; The criteria for determining
@@ -74,14 +74,14 @@ and all their children.<br/>
 <a id="change_summary"></a>
 <h3>Summary of Changes:</h3>
 
-<p>None</p>
+<p>No changes have been made to the source data format or to Metathesaurus source processing.</p>
 </div>
 <div id="rep_file_summary" class="rep_block_level_one">
 <a id="file_summary"></a>
 <h3>Source-Provided Files: Summary</h3>
 
 <p>The complete NCBI release can be downloaded from the taxonomy ftp
-site:&nbsp; <a href="ftp://ftp.ncbi.nih.gov/pub/taxonomy/">ftp://ftp.ncbi.nih.gov/pub/taxonomy/</a></p>
+site: <a href="ftp://ftp.ncbi.nih.gov/pub/taxonomy/">ftp://ftp.ncbi.nih.gov/pub/taxonomy/</a></p>
 <div class="rep_block_level_two">
 <!-- Make a table of each file that comes from the source   -->
 <h4>Documentation and Reference</h4>
@@ -174,29 +174,29 @@ Files</a></span>
       <th>Representation</th>
     </tr>
     <tr>
-      <td style="vertical-align: top;">1</td>
-      <td class="file_field_name">division id</td>
+      <td>1</td>
+      <td>division id</td>
       <td>taxonomy database division id</td>
       <td>Used to map the "division id" field of nodes.dmp to the
 expanded value found in the "division name" </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">2</td>
-      <td class="file_field_name">division cde</td>
+      <td>2</td>
+      <td>division cde</td>
       <td>GenBank division code (three characters)</td>
       <td>not processed</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">3</td>
-      <td style="vertical-align: top;">division name</td>
-      <td style="vertical-align: top;">division name</td>
-      <td style="vertical-align: top;">MRSAT.ATN = "DIV"</td>
+      <td>3</td>
+      <td>division name</td>
+      <td>division name</td>
+      <td>MRSAT.ATN = "DIV"</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">4</td>
-      <td style="vertical-align: top;">comments</td>
-      <td style="vertical-align: top;">comments</td>
-      <td style="vertical-align: top;">not processed</td>
+      <td>4</td>
+      <td>comments</td>
+      <td>comments</td>
+      <td>not processed</td>
     </tr>
   </tbody>
 </table>
@@ -215,67 +215,67 @@ Files</a></span>
       <th>Representation</th>
     </tr>
     <tr>
-      <td style="vertical-align: top;">1</td>
-      <td class="file_field_name">tax_id</td>
+      <td>1</td>
+      <td>tax_id</td>
       <td>identifier of node associated with this name</td>
       <td>MRCONSO.CODE<br/>
           MRCONSO.SCUI</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">2</td>
-      <td class="file_field_name">name_txt</td>
+      <td>2</td>
+      <td>name_txt</td>
       <td>name itself</td>
       <td>MRCONSO.STR</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">3</td>
-      <td style="vertical-align: top;">unique name</td>
-      <td style="vertical-align: top;">unique variant of the name if not unique</td>
-      <td style="vertical-align: top;">MRCONSO.STR</td>
+      <td>3</td>
+      <td>unique name</td>
+      <td>unique variant of the name if not unique</td>
+      <td>MRCONSO.STR</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">4</td>
-      <td style="vertical-align: top;">name class</td>
-      <td style="vertical-align: top;">type of name<br/><br/>
+      <td>4</td>
+      <td>name class</td>
+      <td>type of name<br/><br/>
 Only the following name class values are included in the Metathesaurus:<br/><br/>
 scientific name<br/>
 synonym<br/>
 equivalent name<br/>
 common name<br/>
 authority</td>
-      <td style="vertical-align: top;">Used to assign MRCONSO.TTY<br/><br/>
+      <td>Used to assign MRCONSO.TTY<br/><br/>
 TTY values are assigned as follows:<br/>
       <table>
         <tbody>
           <tr>
-            <td style="vertical-align: top;">name class</td>
-            <td style="vertical-align: top;">name_txt TTY</td>
-            <td style="vertical-align: top;">unique name TTY (if populated)</td>
+            <td>name class</td>
+            <td>name_txt TTY</td>
+            <td>unique name TTY (if populated)</td>
           </tr>
           <tr>
-            <td style="vertical-align: top;">scientific name</td>
-            <td style="vertical-align: top;">SCN</td>
-            <td style="vertical-align: top;">USN</td>
+            <td>scientific name</td>
+            <td>SCN</td>
+            <td>USN</td>
           </tr>
           <tr>
-            <td style="vertical-align: top;">synonym</td>
-            <td style="vertical-align: top;">SY</td>
-            <td style="vertical-align: top;">USY</td>
+            <td>synonym</td>
+            <td>SY</td>
+            <td>USY</td>
           </tr>
           <tr>
-            <td style="vertical-align: top;">equivalent name</td>
-            <td style="vertical-align: top;">EQ</td>
-            <td style="vertical-align: top;">UE</td>
+            <td>equivalent name</td>
+            <td>EQ</td>
+            <td>UE</td>
           </tr>
           <tr>
-            <td style="vertical-align: top;">common name</td>
-            <td style="vertical-align: top;">CMN</td>
-            <td style="vertical-align: top;">UCN</td>
+            <td>common name</td>
+            <td>CMN</td>
+            <td>UCN</td>
           </tr>
           <tr>
-            <td style="vertical-align: top;">authority</td>
-            <td style="vertical-align: top;">AUN</td>
-            <td style="vertical-align: top;">UAUN</td>
+            <td>authority</td>
+            <td>AUN</td>
+            <td>UAUN</td>
           </tr>
         </tbody>
       </table>
@@ -285,12 +285,7 @@ Atoms with other "name class" values are excluded during
 UMLS source processing<br/>
       </td>
     </tr>
-    <tr>
-      <td style="vertical-align: top;"></td>
-      <td style="vertical-align: top;"></td>
-      <td style="vertical-align: top;"></td>
-      <td style="vertical-align: top;"></td>
-    </tr>
+
   </tbody>
 </table>
 <br/>
@@ -309,93 +304,93 @@ Files</a></span><br/>
       <th>Representation</th>
     </tr>
     <tr>
-      <td style="vertical-align: top;">1</td>
-      <td class="file_field_name">tax_id</td>
+      <td>1</td>
+      <td>tax_id</td>
       <td>node id in GenBank taxonomy database</td>
       <td>Used to create the hierarchy.<br/>
 Also used to identify concepts to be excluded based on "rank":&nbsp;
 all concepts below the "species" level are excluded.</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">2</td>
-      <td class="file_field_name">parent_tax_id</td>
+      <td>2</td>
+      <td>parent_tax_id</td>
       <td>parent node id in GenBank taxonomy database</td>
       <td>Used to create the hierarchy.<br/>
 Also used to identify concepts to be excluded based on "rank":&nbsp;
 all concepts below the "species" level are excluded.</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">3</td>
-      <td style="vertical-align: top;">rank</td>
-      <td style="vertical-align: top;">rank of this node (e.g.
+      <td>3</td>
+      <td>rank</td>
+      <td>rank of this node (e.g.
 superkingdome, kingdom, etc.)</td>
-      <td style="vertical-align: top;">MRSAT.ATN = "RANK"<br/>
+      <td>MRSAT.ATN = "RANK"<br/>
 Also used to identify concepts to be excluded based on "rank":&nbsp;
 all concepts below the "species" level are excluded.</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">4</td>
-      <td style="vertical-align: top;">embl code</td>
-      <td style="vertical-align: top;">locus-name prefix</td>
-      <td style="vertical-align: top;">not processed</td>
+      <td>4</td>
+      <td>embl code</td>
+      <td>locus-name prefix</td>
+      <td>not processed</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">5</td>
-      <td style="vertical-align: top;">division id</td>
-      <td style="vertical-align: top;">division id (see division.dmp file)</td>
-      <td style="vertical-align: top;">MRSAT.ATN = "DIV"<br/>
+      <td>5</td>
+      <td>division id</td>
+      <td>division id (see division.dmp file)</td>
+      <td>MRSAT.ATN = "DIV"<br/>
 The ATV is the value of the division name for this division id, from
 division.dmp</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">6</td>
-      <td style="vertical-align: top;">inherited div flag</td>
-      <td style="vertical-align: top;">1 if node inherits division from parent</td>
-      <td style="vertical-align: top;">not processed</td>
+      <td>6</td>
+      <td>inherited div flag</td>
+      <td>1 if node inherits division from parent</td>
+      <td>not processed</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">7</td>
-      <td style="vertical-align: top;">genetic code id</td>
-      <td style="vertical-align: top;">see gencode.dmp fille</td>
-      <td style="vertical-align: top;">not processed</td>
+      <td>7</td>
+      <td>genetic code id</td>
+      <td>see gencode.dmp fille</td>
+      <td>not processed</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">8</td>
-      <td style="vertical-align: top;">inherited GC flag</td>
-      <td style="vertical-align: top;">1 if node inherits genetic code from parent</td>
-      <td style="vertical-align: top;">not processed</td>
+      <td>8</td>
+      <td>inherited GC flag</td>
+      <td>1 if node inherits genetic code from parent</td>
+      <td>not processed</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">9</td>
-      <td style="vertical-align: top;">mitochondrial genetic code id</td>
-      <td style="vertical-align: top;">see gencode.dmp file</td>
-      <td style="vertical-align: top;">not processed</td>
+      <td>9</td>
+      <td>mitochondrial genetic code id</td>
+      <td>see gencode.dmp file</td>
+      <td>not processed</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">10</td>
-      <td style="vertical-align: top;">inherited MGC flag</td>
-      <td style="vertical-align: top;">1 if node inherits mitochondrial
+      <td>10</td>
+      <td>inherited MGC flag</td>
+      <td>1 if node inherits mitochondrial
 gencode from parent</td>
-      <td style="vertical-align: top;">not processed</td>
+      <td>not processed</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">11</td>
-      <td style="vertical-align: top;">GenBank hidden flag</td>
-      <td style="vertical-align: top;">1 if name is suppressed in
+      <td>11</td>
+      <td>GenBank hidden flag</td>
+      <td>1 if name is suppressed in
 GenBank entry lineage</td>
-      <td style="vertical-align: top;">not processed</td>
+      <td>not processed</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">12</td>
-      <td style="vertical-align: top;">hidden subtree root flag</td>
-      <td style="vertical-align: top;">1 if this subtree has no sequence data yet</td>
-      <td style="vertical-align: top;">not processed</td>
+      <td>12</td>
+      <td>hidden subtree root flag</td>
+      <td>1 if this subtree has no sequence data yet</td>
+      <td>not processed</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">13</td>
-      <td style="vertical-align: top;">comments</td>
-      <td style="vertical-align: top;">free text comments and citations</td>
-      <td style="vertical-align: top;">not processed</td>
+      <td>13</td>
+      <td>comments</td>
+      <td>free text comments and citations</td>
+      <td>not processed</td>
     </tr>
   </tbody>
 </table>
