@@ -1,0 +1,270 @@
+title=HPO (Human Phenotype Ontology) - Metathesaurus Representation
+date=2018-05-07
+updated=2019-11-04
+type=page
+status=published
+~~~~~~
+
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+<!--endmenu-->
+<br/>
+    <p>This page lists UMLS Metathesaurus data elements and traces them
+      back to the specific source data that populates them.</p>
+    <a id="top-of-page"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>,
+      <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
+      <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+    <div id="general" class="rep_block_level_one">
+      <p><strong>VSAB:</strong> HPO2019_09_06</p>
+      <div id="rep_identifiers" class="rep_block_level_one">
+        <h3>Summary of Changes</h3>
+		There were no changes to the source file format or Metathesaurus source processing
+		<h3>Source-Provided Files: Summary</h3>
+        <p>HPO is released in both owl and obo formats. The obo format
+          is processed for the UMLS Metathesaurus.<br/>
+        </p>
+        <h4>Data Files</h4>
+        <a id="data_files"></a>
+        <table>
+          <tbody>
+            <tr>
+              <th>File Name</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td class="file_field_name">hp.obo.txt
+              </td>
+              <td>OBO data file
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="rep_identifers" class="rep_block_level_one">
+        <h3>Identifiers:</h3>
+        Identifiers are assigned as follows:<br/>
+        <br/>
+        <table>
+          <tbody>
+            <tr>
+              <th>Identifier
+              </th>
+              <th>Origin
+              </th>
+            </tr>
+            <tr>
+              <td>CODE
+              </td>
+              <td>tag = "id"
+              </td>
+            </tr>
+            <tr>
+              <td>SAUI
+              </td>
+              <td>Not Applicable
+              </td>
+            </tr>
+            <tr>
+              <td>SCUI
+              </td>
+              <td>Not Applicable
+              </td>
+            </tr>
+            <tr>
+              <td>SDUI
+              </td>
+              <td>tag = "id"
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br/>
+        <div id="rep_termtypes" class="rep_block_level_two"> <a id="atoms"></a>
+          <h3>Atoms (MRCONSO):</h3>
+          <br/>
+          <table>
+            <tbody>
+              <tr>
+                <th>Term Type</th>
+                <th>Origin</th>
+              </tr>
+              <tr>
+                <td>ET</td>
+                <td>CODE: tag = "id"<br/>
+                  STR: tag = "synonym"<br/>
+                  SDUI: tag = "id"<br/>
+                  TTY = "ET" is assigned to the value of tag = "synonym"
+                  where the scope identifier is "BROAD," "NARROW," or
+                  "RELATED" in records where there is no "is_obsolete"
+                  tag. </td>
+              </tr>
+              <tr>
+                <td>IS</td>
+                <td>CODE: tag = "id"<br/>
+                  STR: tag = "synonym"<br/>
+                  SDUI: tag = "id"<br/>
+                  TTY = "IS" is assigned to the value of tag = "synonym"
+                  where the scope identifier = "EXACT" and
+                  tag="is_obsolete" has a value of "true."
+                </td>
+              </tr>
+              <tr>
+                <td>OP</td>
+                <td>CODE: tag = "id"<br/>
+                  STR: tag = "synonym"<br/>
+                  SDUI: tag = "id"<br/>
+                  TTY = "OP" is assigned to the value of tag = "name" in
+                  records where is_obsolete has a value of "true."
+                </td>
+              </tr>
+              <tr>
+                <td>PT</td>
+                <td>CODE: tag = "id"<br/>
+                  STR: tag = "synonym"<br/>
+                  SDUI: tag = "id"<br/>
+                  TTY = "PT" is assigned to the value of tag = "name" in
+                  reocrds with no "is_obsolete" tag.
+                </td>
+              </tr>
+              <tr>
+                <td>SY</td>
+                <td>CODE: tag = "id"<br/>
+                  STR: tag = "synonym"<br/>
+                  SDUI: tag = "id"<br/>
+                  TTY = "SY" is assigned to hte value of tag = synonym
+                  where the scope identifier is "EXACT" in records where
+                  there is no "is_obsolete" tag.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="rep_attributes" class="rep_block_level_two"> <a id="attributes"></a><br/>
+          <h3>Attributes (MRSAT):</h3>
+          <br/>
+          <table>
+            <tbody>
+              <tr>
+                <th>Attribute Name</th>
+                <th>Origin</th>
+              </tr>
+              <tr>
+                <td>DATE_CREATED</td>
+                <td>tag = "creation_date"</td>
+              </tr>
+              <tr>
+                <td>HPO_COMMENT</td>
+                <td>tag = "comment"</td>
+              </tr>
+              <tr>
+                <td>HXR</td>
+                <td>tag = "xref"</td>
+              </tr>
+              <tr>
+                <td>REF
+                </td>
+                <td>tag = "synonym," dbxref list (information extracted
+                  from square brackets at the end of the field)</td>
+              </tr>
+              <tr>
+              	<td>SID</td>
+              	<td>tag = "alt_id"</td>
+              </tr>
+              <tr>
+              	<td>SYN_QUALIFIER</td>
+              	<td>tag = "synonym" synonymtypedef value</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="rep_definitions" class="rep_block_level_two"> <a id="definitions"></a><br/>
+          <h3>Definitions (MRDEF):</h3>
+          <br/>
+          <p>Definitions are created from data with the "def" tag in the
+            OBO format.<br/>
+          </p>
+        </div>
+        <div id="rep_relationships" class="rep_block_level_two"> <a id="relationships"></a><br/>
+          <h3>Relationships (MRREL):</h3>
+          <br/>
+          <table>
+            <tbody>
+              <tr>
+                <th>REL</th>
+                <th>RELA<br/>
+                  Inverse RELA</th>
+                <th>ORIGIN</th>
+              </tr>
+              <tr>
+                <td>CHD<br/>
+                  PAR<br/>
+                  SIB
+                </td>
+                <td>isa<br/>
+                  inverse_isa
+                </td>
+                <td>hierarchy created from tag = "is_a"</td>
+              </tr>
+              <tr>
+                <td>RN<br/>
+                  RB</td>
+                <td> (no rela)
+                </td>
+                <td>Connects an atom created from tag = "synonym" with a
+                  scope identifier of "BROAD" or "NARROW" with the
+                  preferred atom of the HPO [term] record.
+                </td>
+              </tr>
+              <tr>
+                <td>RO</td>
+                <td>(no rela)</td>
+                <td>Connects an atom created from tag = "synonym" with a
+                  scope identifier of "RELATED" with the preferred atom
+                  of the HPO [term] record. </td>
+              </tr>
+              <tr>
+                <td>RQ</td>
+                <td>consider<br/>
+                  consider_from
+                </td>
+                <td>created from tag = "consider"</td>
+              </tr>
+              <tr>
+                <td>RQ</td>
+                <td>replaced_by<br/>
+                  replaces
+                </td>
+                <td>created from tag = "replaced_by"</td>
+              </tr>
+              <tr>
+                <td>SY</td>
+                <td>(no rela)</td>
+                <td>Connects an atom created from tag = "synonym" with a
+                  scope identifier of "EXACT" with the preferred atom of
+                  the HPO [term] record.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="rep_mappings" class="rep_block_level_two"> <a id="mappings"></a><br/>
+          <h3>Mappings (MRMAP):</h3>
+          <br/>
+          <p>No mappings are represented for HPO. Cross Reference to
+            external databases (e.g. MeSH) are represented in MRSAT.RRF
+            (ATN = "HXR").
+          </p>
+        </div>
+      </div>
+    </div>
