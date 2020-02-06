@@ -3,7 +3,7 @@
 
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <link rel="stylesheet" href="https://www.nlm.nih.gov/home_assets/css/nlm_main.css">
+  <link rel="stylesheet" href="https://www.nlm.nih.gov/home_assets/css/nlm_main.css?20200206">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,900" rel="stylesheet">
   <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" title="The Dublin Core metadata Element Set" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
@@ -36,30 +36,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <body onload="prettyPrint();hljs.initHighlighting();">
   <noscript><iframe src="//www.googletagmanager.com/ns.html?id= GTM-MT6MLL " height="0" width="0" style="display:none;visibility:hidden" title="googletagmanager"></iframe></noscript>
   <header>
-    <div class="container-fluid  bg-primary">
-      <div class="container top_row">
-        <div class="row">
-          <div class="col"> <a href="https://www.hhs.gov/" class="text-white"><img src="https://www.nlm.nih.gov/images/HHS_White.png" class="hhslogo float-left img-fluid d-none d-sm-block"  alt="HHS logo"/>
-          <p class="float-left mt-1 mb-0"><small> U.S. Department of Health & Human Services</small></p></a>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid">
+<div class="container-fluid bg-primary">
     <div class="container branding">
-      <div class="row container py-3">
-        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 pb-md-0 pb-2">
-      <a href="https://www.nlm.nih.gov/"><img src="//www.nlm.nih.gov/images/nlm_logo.png" class="img-fluid" alt="NLM logo"></a>
+      <div class="row container">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 pb-md-0 pb-2 pl-3 pl-sm-0">
+      <a href="/" id="anch_1"><img src="https://www.nlm.nih.gov/images/NLM_White.png" class="img-fluid" alt="NLM logo"></a>
         </div>
-        <div class="col-lg-4 offset-lg-4 col-md-6 col-sm-6 col-xs-12 pt-xl-2 pt-lg-1 pt-md-2">
-          <form method="get" action="//vsearch.nlm.nih.gov/vivisimo/cgi-bin/query-meta" target="_self" name="searchForm" id="searchForm2" class="form-inline">
-            <input type="text" name="query" placeholder="Search for" aria-label="Search" class="form-control col-10" id="search2" autocomplete="off">
+        <div class="col-lg-4 offset-lg-4 col-md-6 col-sm-6 col-xs-12 pt-xl-4 pt-lg-3 pt-md-4 pt-sm-3 pt-xs-0">
+          <form method="get" action="//vsearch.nlm.nih.gov/vivisimo/cgi-bin/query-meta" target="_self" name="searchForm" id="searchForm2" class="form-inline mb-3 mb-md-0 mt-0 mt-xl-2">
+            <input type="text" name="query" placeholder="Search NLM" aria-label="Search" class="form-control col-10 ui-autocomplete-input" id="search2" autocomplete="off">
             <input type="hidden" name="v:project" value="nlm-main-website">
-            <button class="btn btn-search" type="submit"><i class="fas fa-search"></i></button>
+            <button class="btn btn-search" type="submit" aria-label="Search NLM"><i class="fas fa-search"></i></button>
           </form>
         </div>  
       </div>  
     </div>  
-    </div>
+  </div>
   </header>   

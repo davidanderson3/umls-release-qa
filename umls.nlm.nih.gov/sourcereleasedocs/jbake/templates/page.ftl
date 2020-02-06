@@ -1,5 +1,5 @@
 <#include "header.ftl">
-  <div class="container-fluid bg-primary">
+  <div class="container-fluid" style="background-color:#63666a !important;">
     <div class="container">
       <#include "uts-documentation-menu.ftl">
     </div>
