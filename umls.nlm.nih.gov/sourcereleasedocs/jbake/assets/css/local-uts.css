@@ -5,11 +5,22 @@ table {
 
 .vocab-docs-navbar {
     background-color: #f8f8f8;
-    border: 1px solid #e7e7e7;
+    border-top: 3px solid gray;
+    border-bottom: 3px solid gray;
 }
 
 .vocab-left-menu {
 padding: 0px 5px 0px 15px !important;
 background-color: white !important;
 border-top: none !important;
+}
+
+hr {
+    border-top: 1px solid gray;
+    margin: 20px 0px 20px 0px;
+}
+
+.mini-menu {
+	border-top: 2px solid gray;
+	border-bottom: 2px solid gray;
 }
