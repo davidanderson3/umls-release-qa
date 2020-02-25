@@ -21,28 +21,35 @@ status=published
 <!--endmenu-->
 <br/>
 <p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p>
-    <a id="top-of-page"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
-      <a href="#change_summary">Summary of Changes</a>, <a
-        href="#file_summary">Summary of Source-Provided Files</a> <a
-        href="#file_details">Source-Provided File Details</a></span> <a id="general"></a>
-
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#change_summary">Summary of Changes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_summary">Summary of Source-Provided Files</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_details">Source-Provided File Details</a></div>
+    </div>
+<hr>
     <div id="rep_change_summary" class="rep_block_level_one"> <a id="change_summary"></a>
-      <h3>Summary of Changes:</h3>
-		There have been no changes to the source format, however Metathesaurus source processing has been updated:
-		<ul>
-			<li>TTY = AB atoms are now being created for hierarchical terms (HT); previously they were only created for preferred terms (PT)</li>
-			<li>Multiple values of attributes are now concatenated rather than being represented as separate rows in MRSAT.RRF, e.g.:</li>
-			</ul>
+        <h3>Summary of Changes</h3>
+		<p>There have been no changes to the source format, however Metathesaurus source processing has been updated. 
+		TTY = AB atoms are now being created for hierarchical terms (HT); previously they were only created for preferred terms (PT)
+		Multiple values of attributes are now concatenated rather than being represented as separate rows in MRSAT.RRF, e.g.:</p>
+
 		<ul style="list-style: none;">
 			<li>ICD9CM_2019:</li>
+			<ul>
 			<li>C41.0|EXCLUDES2|carcinoma, any type except intraosseous or odontogenic of:</li>
 			<li>C41.0|EXCLUDES2|maxillary sinus (C31.0)</li>
 			<li>C41.0|EXCLUDES2|upper jaw (C03.0)</li>
 			<li>C41.0|EXCLUDES2|malignant neoplasm of jaw bone (lower) (C41.1)</li>
+			</ul>
+		
 			<li>ICD10CM_2020:</li>
+			<ul>
 			<li>C41.0|EXCLUDES2|carcinoma, any type except intraosseous or odontogenic of: maxillary sinus (C31.0); upper jaw (C03.0); malignant neoplasm of jaw bone (lower) (C41.1)</li>
+			</ul>
 		</ul>
     </div>
+    <hr>
     <div id="rep_file_summary" class="rep_block_level_one"> <a id="file_summary"></a>
       <h3>Source-Provided Files: Summary</h3>
    The following files are downloaded and processed from <a
@@ -53,16 +60,16 @@ status=published
              <li>icd10OrderFiles.pdf</li>
              <li>icd10cm_tabular_2020.pdf</li>
            </ul>
-           <br/>
            Data:<br/>
            <ul>
              <li>icd10cm_order_2020.txt</li>
              <li>icd10cm_tabular_20120.xml</li>
            </ul>
 
-           The tabluar xml file aligns with the order file, and redundant
-        data is not processed.<br/>
+           The tabular xml file aligns with the order file, and redundant
+        data is not processed.
 </div>
+<hr>
     <div id="rep_file_details" class="rep_block_level_one"> <a id="file_details"></a>
       <h3>Source-Provided Files: Details</h3>
 
@@ -71,8 +78,6 @@ status=published
       </p>
       <div class="rep_block_level_two"> <a id="file1"></a>
         <h4 class="file_field_name">file:icd10cm_tabular_&lt;YYYY&gt;.xml</h4>
-            <br/>
-            <br/>
 
 The ICD-10-CM tabular data is represented as "chapter," "section," and "diag" elements: <br/>
         <table>
@@ -161,11 +166,9 @@ The ICD-10-CM tabular data is represented as "chapter," "section," and "diag" el
             </tr>
 		</table>
 
-        <a id="file6"></a><br/>
+        <a id="file6"></a>
         <h4 class="file_field_name">file: icd10cm_order_&lt;YYYY&gt;.txt</h4>
-       <br/>
 
-        <br/>
         <table>
           <tbody>
             <tr>
@@ -239,7 +242,7 @@ The ICD-10-CM tabular data is represented as "chapter," "section," and "diag" el
             </tr>
           </tbody>
         </table>
-        <br/>
+
 
       </div>
     </div>

@@ -23,18 +23,24 @@ status=published
 
     <p>This page lists UMLS Metathesaurus data elements and traces them
       back to the specific source data that populates them.</p>
-    <a id="top-of-page"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>,
-      <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
-      <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#atoms">Atoms</a></div>
+    	<div class="col-sm-auto border-left"><a href="#attributes">Attributes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#definitions">Definitions</a></div>
+    	<div class="col-sm-auto border-left"><a href="#relationships">Relationships</a></div>
+    	<div class="col-sm-auto border-left"><a href="#mappings">Mappings</a></div>
+    </div>
     <div id="general" class="rep_block_level_one">
       <p><strong>VSAB:</strong> GO2019_06_01</p>
+      <hr>
       <div id="rep_identifiers" class="rep_block_level_one">
         <h3>Summary of Changes</h3>
 
-        <div id="rep_change_summary" class="rep_block_level_one"> <br/>
+        <div id="rep_change_summary" class="rep_block_level_one"> 
           There have been no changes to the GO release format or Metathesaurus source processing.
         </div>
-
+<hr>
               <div id="rep_file_summary" class="rep_block_level_two">
 		        <a id="file_summary"></a>
 		        <h3>Source-Provided Files: Summary</h3>
@@ -58,7 +64,7 @@ status=published
           </tbody>
         </table>
         </div>
-        <br/>
+        
         <h4>Data Files</h4>
         <a id="data_files"></a>
         <table>
@@ -74,10 +80,11 @@ status=published
           </tbody>
         </table>
       </div>
+      <hr>
       <div id="rep_identifers" class="rep_block_level_one">
         <h3>Identifiers:</h3>
-        Identifiers are assigned as follows:<br/>
-        <br/>
+        Identifiers are assigned as follows:
+        
         <table>
           <tbody>
             <tr>
@@ -102,7 +109,7 @@ status=published
             </tr>
           </tbody>
         </table>
-        <br/>
+        <hr>
         <div id="rep_termtypes" class="rep_block_level_two"> <a
             id="atoms"></a>
           <h3>Atoms (MRCONSO):</h3>
@@ -269,8 +276,9 @@ status=published
             </tbody>
           </table>
         </div>
+        <hr>
         <div id="rep_attributes" class="rep_block_level_two"> <a
-            id="attributes"></a><br/>
+            id="attributes"></a>
           <h3>Attributes (MRSAT):</h3>
 
           <table>
@@ -323,15 +331,16 @@ status=published
           </table>
         </div>
         <div id="rep_definitions" class="rep_block_level_two"> <a
-            id="definitions"></a><br/>
+            id="definitions"></a>
           <h3>Definitions (MRDEF):</h3>
 
           <p>Definitions are created from data with the "def" tag in the
             OBO format.<br/>
           </p>
         </div>
+        <hr>
         <div id="rep_relationships" class="rep_block_level_two"> <a
-            id="relationships"></a><br/>
+            id="relationships"></a>
           <h3>Relationships (MRREL):</h3>
 
           <table>
@@ -471,10 +480,10 @@ status=published
             </tbody>
           </table>
         </div>
+        <hr>
         <div id="rep_mappings" class="rep_block_level_two"> <a
-            id="mappings"></a><br/>
+            id="mappings"></a>
           <h3>Mappings (MRMAP):</h3>
-
           <p>No mappings are represented for GO. Cross Reference to
             external databases (e.g. MetaCyc:TRNA-CHARGING-PWY) are
             represented in MRSAT.RRF (ATN = "GXR").<br/>

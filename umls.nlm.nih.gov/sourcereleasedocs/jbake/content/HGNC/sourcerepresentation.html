@@ -21,16 +21,22 @@ status=published
 <!--endmenu-->
 <br/>
 <a id = "top"></a>
-<span class = "nav">Skip to: <a href = "#general">General Notes/Comments</a>, <a href = "#change_summary">Summary of Changes</a>, <a href = "#file_summary">Summary of Source-Provided Files</a> <a href = "#file_details">Source-Provided File Details</a></span>
-<br/>
-<br/>
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#change_summary">Summary of Changes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_summary">Summary of Source-Provided Files</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_details">Source-Provided File Details</a></div>
+    </div>
+
 <strong>VSAB:</strong> HGNC2019_03
+<hr>
 <a id = "general"></a>
 <div id = "rep_general" class = "rep_block_level_one">
-<h3>General Notes/Comments:</h3>
+<h3>Notes</h3>
 <p>The HUGO Gene Nomenclature Committee (HGNC) is an international organization whose primary ethos is to promote and sustain collaboration in the field of human genetics.</p>
 <p>Data is supplied in a single, tab-delimited, text file (UTF-8).</p>
 </div>
+<hr>
 <div id = "rep_change_summary" class = "rep_block_level_one">
 <a id = "change_summary"></a>
 <h3>Summary of Changes</h3>
@@ -38,6 +44,7 @@ status=published
 <p>New value for ATN = DB_XR_ID  --> GtRNAdb: xxx</p>
 <p>GtRNAdb = database that contains tRNA gene predictions made by tRNAscan-SE on complete or nearly complete genomes.</p>
 </div>
+<hr>
 <div id = "rep_file_summary" class = "rep_block_level_one">
 <a id = "file_summary"></a>
 <h3>Summary of Source-Provided Files</h3>
@@ -48,14 +55,14 @@ status=published
 <table><tr><td>http://www.genenames.org/help/statistics-downloads</td></tr>
 <tr><td>www.hugo-international.org</td></tr>
 </table>
-<br/>
+ <h4>Data Files</h4>
 <table>
 <tr><th>File Name</th><th>Description</th></tr>
 <tr><td  class = "file_file_name">hgnc_complete_set_03212019.txt</td><td>Tab-delimited text file.</td></tr>
 </table>
 </div>
 </div>
-
+<hr>
 <div id = "rep_file_details" class = "rep_block_level_one">
 <a id = "file_details"></a>
 <h3>Source-Provided File Details</h3>
@@ -115,5 +122,5 @@ status=published
 <tr><td  class = "file_field_name">49</td><td>rna_central_ids</td><td>RNA Central ID</td><td>MRSAT.ATN=RNA_CENTRAL_ID</td></tr>
 <tr><td  class = "file_field_name">50</td><td>lncipedia</td><td>Comprehensive compendium of human long non-coding RNAs</td><td>MRSAT.ATN=LNCIPEDIA</td></tr>
 <tr><td  class = "file_field_name">51</td><td>gtrnadb</td><td>Database that contains tRNA gene predictions made by tRNAscan-SE on complete or nearly complete genomes</td><td>MRSAT.ATN=DB_XR_ID|GtRNAdb:</td></tr>
-</table><br/>
+</table>
 </div></div>
