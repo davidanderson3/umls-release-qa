@@ -21,8 +21,8 @@
       </div>
       <div class="col-md-3 col-sm-6 col-6">
         <p><a class="supportLink text-white" href="//support.nlm.nih.gov?from=https://www.nlm.nih.gov/research/umls/sourcereleasedocs/index.html" id="anch_458"> NLM Support Center </a> <br>
-          <a href="https://www.nih.gov/accessibility.html" class="text-white" id="anch_459"> Accessibility </a><br>
-          <a href="https://www.nih.gov/careers/careers.html" class="text-white" id="anch_460"> Careers </a></p>
+          <a href="https://www.nlm.nih.gov/accessibility.html" class="text-white" id="anch_459"> Accessibility </a><br>
+          <a href="https://www.nlm.nih.gov/careers/careers.html" class="text-white" id="anch_460"> Careers </a></p>
       </div>
     </div>
     <div class="row">
