@@ -22,16 +22,18 @@ status=published
 <br/>
     <p>This page lists specific source data elements and provides
       information on their representation in the UMLS Metathesaurus.</p>
-    <a id="top-of-page"></a> <span class="nav">Skip to:
-      <a href="#change_summary">Summary of Changes</a>, <a
-        href="#file_summary">Summary of Source-Provided Files</a> <a
-        href="#file_details">Source-Provided File Details</a></span> <a id="general"></a>
-    <div id="rep_general" class="rep_block_level_one"> <br/>
-      <strong>VSAB:</strong>HPO2019_06_03<br/>
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#change_summary">Summary of Changes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_summary">Summary of Source-Provided Files</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_details">Source-Provided File Details</a></div>
     </div>
-    <div id="rep_change_summary" class="rep_block_level_one">
+      <strong>VSAB:</strong>HPO2019_06_03
+<hr>
+    <div id="change_summary" class="rep_block_level_one">
       <h3>Summary of Changes:</h3>
 	No changes were made to the source format or Metathesaurus source processing</div>
+	<hr>
     <div id="rep_file_summary" class="rep_block_level_one"> <a id="file_summary"></a>
       <h3>Source-Provided Files: Summary</h3>
 
@@ -54,12 +56,13 @@ status=published
             </tr>
           </tbody>
         </table>
-        <br/>
+
         <p>Not included: <br/>
           * Certain fields and data elements may not be directly
           processed because they contain redundant or internal data. </p>
       </div>
     </div>
+    <hr>
     <div id="rep_file_details" class="rep_block_level_one"> <a id="file_details"></a>
       <h3>Source-Provided Files: Details</h3>
 
@@ -70,10 +73,9 @@ status=published
         for additional details.</p>
       <div class="rep_block_level_two"> <a id="file1"></a>
         <h4 class="file_field_name">file:hp.obo</h4>
-        For inclusion in the Metathesaurus, all tags in a [Term] Stanza,
-            are processed, as described in the OBO format documentation.
-        Required tags:<br/>
-        <br/>
+        <p>For inclusion in the Metathesaurus, all tags in a [Term] Stanza,
+            are processed, as described in the OBO format documentation.</p>
+        <p> Required tags:</p>
         <table>
           <tbody>
             <tr>
@@ -96,14 +98,13 @@ status=published
             </tr>
           </tbody>
         </table>
-        <br/>
-        Optional tags: the following table lists only tags actually
+        <p>Optional tags: the following table lists only tags actually
         present in the data processed for inclusion in this version of
         the Metathesaurus. Tags are presented in the order in which they
         appear in a [Term] Stanza. For information on all optional OBO
         tags, including deprecated tags, please consult the OBO format
-        documentation.<br/>
-        <br/>
+        documentation.
+
         <table>
           <tbody>
             <tr>
@@ -180,11 +181,11 @@ status=published
                     </tr>
                   </tbody>
                 </table>
-                <br/>
+                <p>
                 Optional dbxref lists included in synonym tags are
-                represented in MRSAT.ATN = "REF" <br/>
-                Optional synonymtypedef values in synonym tags are represented in MRSAT.ATN = SYN_QUALIFIER<br/>
-                <br/>
+                represented in MRSAT.ATN = "REF" </p>>
+                <p>Optional synonymtypedef values in synonym tags are represented in MRSAT.ATN = SYN_QUALIFIER
+                </p>
               </td>
             </tr>
             <tr>
@@ -234,7 +235,5 @@ status=published
             </tr>
           </tbody>
         </table>
-        <br/>
-        <br/>
       </div>
     </div>
