@@ -21,26 +21,27 @@ status=published
 <!--endmenu-->
 <br/>
 <p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p>
-    <a id="top-of-page"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
-      <a href="#change_summary">Summary of Changes</a>, <a
-        href="#file_summary">Summary of Source-Provided Files</a> <a
-        href="#file_details">Source-Provided File Details</a></span> <a id="general"></a>
-    <div id="rep_general" class="rep_block_level_one">
-      <h3>Notes</h3>
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#change_summary">Summary of Changes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_summary">Summary of Source-Provided Files</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_details">Source-Provided File Details</a></div>
     </div>
-    <div id="rep_change_summary" class="rep_block_level_one">
+    <hr>
+    <div id="change_summary" class="rep_block_level_one">
       <h3>Summary of Changes:</h3>
         <br/>No updates for this version.<br/>
 	  	</div>
-    <div id="rep_file_summary" class="rep_block_level_one"> <a id="file_summary"></a>
+	  	    <hr>
+    <div id="file_summary" class="rep_block_level_one"> <a id="file_summary"></a>
       <h3>Source-Provided Files: Summary</h3>
 
      <p>Numerous documentation and data files are available at: <a href =
-	         "hhttps://www.cms.gov/Medicare/Coding/ICD10/2020-ICD-10-PCS.html">https://www.cms.gov/Medicare/Coding/ICD10/2020-ICD-10-PCS.html</a>
+	         "https://www.cms.gov/Medicare/Coding/ICD10/2020-ICD-10-PCS.html">https://www.cms.gov/Medicare/Coding/ICD10/2020-ICD-10-PCS.html</a>
           , including the following:
       </p>
-        <strong>Documentation and Reference</strong><br/>
-        <br/>
+        <strong>Documentation and Reference</strong>
+        
         <table>
           <tbody>
             <tr>
@@ -84,7 +85,6 @@ status=published
           </tbody>
         </table>
       </div>
-    <br/>
     <strong>Data files</strong>
     <br/>
     <table>
@@ -103,23 +103,24 @@ status=published
         </tr>
       </tbody>
     </table>
-      <br/>
-    <br/>
+      
       <strong>Not included</strong>:
-    <div id="rep_file_details" class="rep_block_level_one"><br/>
+      
+    <br/>
       All data from the order file is represented in the
       Metathesaurus.  Selected tags from the xml file are not
       processed at this time, including &lt;explanation&gt; and
       &lt;includes&gt;.<br/>
+      <div id="file_details" class="rep_block_level_one">
+       <hr>
       <h3>Source-Provided Files: Details</h3>
 
       <p>The following is a list of elements available for ICD-10-PCS
-        data:<br/>
+        data:
       </p>
-      <div class="rep_block_level_two"><a id="file1"></a><br/>
+      <div class="rep_block_level_two"><a id="file1"></a>
         <span style="font-weight: bold;">File:
-          icd10pcs_order_YYYY.txt</span><br/>
-        <br/>
+          icd10pcs_order_YYYY.txt</span>
         <table>
           <tbody>
             <tr>
@@ -193,17 +194,13 @@ status=published
             </tr>
           </tbody>
         </table>
-        <br/>
       </div>
-      <br/>
-      <br/>
       <div class="rep_block_level_two"><a id="file2"></a><br/>
         <strong>File: icd10pcs_tables_YYYY.xml</strong>
         <br/>
-        This file is parsed to extract data for codes at each level of
+        <p>        This file is parsed to extract data for codes at each level of
         the table, as well as information in the "&lt;definition&gt;"
-        tag.<br/>
-        <br/>
+        tag.</p>
         <table>
           <tbody>
             <tr>
@@ -229,6 +226,4 @@ status=published
           </tbody>
         </table>
       </div>
-      <br/>
-      <br/>
       </div>
