@@ -19,25 +19,31 @@ status=published
  </div>
 </div>
 <!--endmenu-->
-<br/><p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p><!--begin tabbed navigation area-->
-<!-- end tabbed navigation area --><a name="top" id="top"></a> <span class="nav">Skip to: <a href="#general">Notes</a>, <a href="#change_summary">Summary of Changes</a>, <a href="#file_summary">Summary of Source-Provided Files</a> <a href="#file_details">Source-Provided File Details</a></span> <a name="general" id="general"></a>
+<br/>
+<p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p><!--begin tabbed navigation area-->
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#change_summary">Summary of Changes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_summary">Summary of Source-Provided Files</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_details">Source-Provided File Details</a></div>
+    </div>
 
-<div id="rep_general" class="rep_block_level_one">
+<div id="general" class="rep_block_level_one">
   <p><b>VSAB:</b> ICD9CM_2014, MTHICD9_2014</p>
-
+<hr>
   <h3>Notes</h3>
 
   <p>There are no notes for this release.</p>
 </div>
-
-<div id="rep_change_summary" class="rep_block_level_one">
+<hr>
+<div id="change_summary" class="rep_block_level_one">
   <h3>Summary of Changes:</h3>
   <br>
   This version includes minor updates to procedures. No changes were made to the original source format or to Metathesaurus source processing.<br>
   <br>
 </div>
-
-<div id="rep_file_details" class="rep_block_level_one">
+<hr>
+<div class="rep_block_level_one">
   <a name="file_summary" id="file_summary"></a>
 
   <h3>Source-Provided Files: Summary</h3>
@@ -61,7 +67,7 @@ status=published
   Procedures: https://www.cms.gov/ICD9ProviderDiagnosticCodes/04_addendum.asp<br>
   Attributes, entry terms (SAB = MTHICD9, TTY = ET), and hierarchical Terms (TTY = HT) were extracted from these files.</p>
 
-  <h3>Source-Provided Files: Details</h3>
+  <h3 id="file_details">Source-Provided Files: Details</h3>
 
   <p>Files:<br>
   CMS&lt;VER&gt;_DESC_LONG_DX.txt<br>
@@ -99,8 +105,8 @@ status=published
     </tbody>
   </table>
 
-  <p><br>
-  Attributes and some entry terms (SAB = MTHICD9, TTY = ET) were created by analyzing tags and/or patterns seen in ICD9CM addenda in .pdf format. Additional updates are made based on interpretation of markup in the "Add" "Revise" or "Delete" tags.<br></p><br>
+  <p>
+  Attributes and some entry terms (SAB = MTHICD9, TTY = ET) were created by analyzing tags and/or patterns seen in ICD9CM addenda in .pdf format. Additional updates are made based on interpretation of markup in the "Add" "Revise" or "Delete" tags.</p>>
 
   <div class="rep_block_level_two">
     <a name="file1" id="file1"></a>
@@ -170,6 +176,6 @@ status=published
           <td>MRSAT.ATN = "SOS"<br></td>
         </tr>
       </tbody>
-    </table><br>
+    </table>
   </div>
 </div>
