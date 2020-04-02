@@ -19,33 +19,29 @@ status=published
  </div>
 </div>
 <!--endmenu-->
-<br/><br>
-<br>
-<br>
-<a name="top" id="top"></a> <span class="nav">Skip to: <a href="#general">Notes</a>, <a href="#change_summary">Summary of Changes</a>, <a href="#file_summary">Summary of Source-Provided Files</a> <a href="#file_details">Source-Provided File Details</a></span> <a name="general" id="general"></a>
-
-<div id="rep_general" class="rep_block_level_one">
-  <h3>Notes</h3>
-</div>
-
-<div id="rep_change_summary" class="rep_block_level_one">
+<br/>
+<a name="top" id="top"></a> 
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#change_summary">Summary of Changes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_summary">Summary of Source-Provided Files</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_details">Source-Provided File Details</a></div>
+    </div>
+    <hr>
+<div id="change_summary" class="rep_block_level_one">
   <h3>Summary of Changes:</h3>
-
-  <p>No changes were made to the release format of CHV or the processing for the 2012AA Metathesaurus.&nbsp; Updates to the CHV content primarily consisted of deletion and/or correction of misspelled terms.&nbsp;<br></p>
-
+  <p>No changes were made to the release format of CHV or the processing for the 2012AA Metathesaurus.&nbsp; Updates to the CHV content primarily consisted of deletion and/or correction of misspelled terms.&nbsp;</p>
   <p>In the previous version, CHV term values with potential spelling errors were identified by setting MRCONSO.SUPPRESS="E". &nbsp; There are 20 atoms remaining with SUPPRESS="E" however these will be reviewed in future versions to determine if they should be changed to "N".</p>
 </div>
-
-<div id="rep_file_summary" class="rep_block_level_one">
+<hr>
+<div id="file_summary" class="rep_block_level_one">
   <a name="file_summary" id="file_summary"></a>
-
   <h3>Source-Provided Files: Summary</h3>
-
-  <p>The CHV distribution includes the following. These files, along with additional information can be accessed at http://www.consumerhealthvocab.org<br></p>
+  <p>The CHV distribution includes the following. These files, along with additional information can be accessed at http://www.consumerhealthvocab.org</p>
 
   <div class="rep_block_level_two">
     <!-- Make a table of each file that comes from the source   --><span style="font-weight: bold;">Documentation:</span><br>
-    <br>
+    
 
     <table class="elements" border="0" cellspacing="0">
       <tbody>
@@ -67,9 +63,9 @@ status=published
           <td style="vertical-align: top;">README file<br></td>
         </tr>
       </tbody>
-    </table><br>
+    </table>
     <span style="font-weight: bold;">Data:</span><br>
-    <br>
+    
 
     <table class="elements" border="0" cellspacing="0">
       <tbody>
@@ -85,18 +81,17 @@ status=published
           <th><span style="font-weight: normal;">Tab-separated data file</span><br></th>
         </tr>
       </tbody>
-    </table><a name="data_files" id="data_files"></a><b><br>
-    <br>
+    </table><a name="data_files" id="data_files"></a><b>
     Not included</b>:&nbsp;
   </div>
 </div>
 
-<div id="rep_file_details" class="rep_block_level_one">
-  The CUI and UMLS Preferred Name are not explicitly represented in the Metathesaurus, however they are processed to help discover synonymy between CHV terminology and other UMLS sources.<br>
-  The UMLS preferred flag column is not processed<br>
-  CHV terms with disparaged = "yes" are not included in the Metathesarus at this time<br>
-  Attributes with value "\N" are not included in the Metathesaurus release<br>
-
+<div id="file_details" class="rep_block_level_one">
+  <p>The CUI and UMLS Preferred Name are not explicitly represented in the Metathesaurus, however they are processed to help discover synonymy between CHV terminology and other UMLS sources.
+  The UMLS preferred flag column is not processed. 
+  CHV terms with disparaged = "yes" are not included in the Metathesarus at this time. 
+  Attributes with value "\N" are not included in the Metathesaurus release. </p>
+<hr>
   <h3>Source-Provided Files: Details</h3>
 
   <p>The following is a list of elements available for CHV in the tab-separated data file.<br></p>Notes:&nbsp;<br>
@@ -109,7 +104,7 @@ status=published
     <ul>
       <li>All score attributes have a range 0 to 1 (a higher score implies the term is easier). A value of -1 indicates the score could not be estimated.</li>
     </ul>
-  </div><br>
+  </div>
 
   <div class="rep_block_level_two">
     <a name="file1" id="file1"></a>
