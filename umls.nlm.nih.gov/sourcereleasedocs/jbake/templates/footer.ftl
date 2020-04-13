@@ -2,7 +2,7 @@
   <div class="container pt-5">
     <div class="row mt-3">
       <div class="col-md-3 col-sm-6 col-6">
-        <p class="text-white">Follow NLM</p>
+        <p class="text-white"><a href="https://www.nlm.nih.gov/socialmedia/index.html">Follow NLM</a></p>
         <ul class="list-inline social_media">
           <li class="list-inline-item"><a href="https://www.facebook.com/nationallibraryofmedicine" title="External link: please review our privacy policy." id="anch_451"><img src="/images/Facebook_W.svg" class="img-fluid" alt="Facebook"></a></li>
           <li class="list-inline-item"><a href="https://twitter.com/nlm_news" title="External link: please review our privacy policy." id="anch_452"><img src="/images/Twitter_W.svg" class="img-fluid" alt="Twitter"></a></li>
