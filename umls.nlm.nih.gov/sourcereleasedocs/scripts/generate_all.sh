@@ -28,6 +28,10 @@ bash scripts/replaceMenu.sh
 
 bash scripts/replaceUpdatedDate.sh
 
+# replaces the date for stats.html pages to reflect the next release date 
+
+bash scripts/replaceDate.sh
+
 # creates a qa page for QAing the website before deploying
 
 bash scripts/create_qa_page.sh
