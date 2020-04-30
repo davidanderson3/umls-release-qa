@@ -22,11 +22,18 @@ status=published
 <br/>
 <p>This page lists UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
 
-<a id = "top"> </a>
-<span class = "nav">Skip to: <a href = "#atoms">Atoms</a>, <a href = "#attributes">Attributes</a>, <a href = "#definitions">Definitions</a>, <a href = "#relationships">Relationships</a>, <a href = "#mappings">Mappings</a></span>
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#atoms">Atoms</a></div>
+    	<div class="col-sm-auto border-left"><a href="#attributes">Attributes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#definitions">Definitions</a></div>
+    	<div class="col-sm-auto border-left"><a href="#relationships">Relationships</a></div>
+    	<div class="col-sm-auto border-left"><a href="#mappings">Mappings</a></div>
+    </div>
 
 <div id = "general" class = "rep_block_level_one">
 <p><strong>VSAB:</strong> PDQ_2018_10_27</p>
+<hr>
 
 <div id = "rep_identifiers" class = "rep_block_level_one">
 <h3>Summary of Changes</h3>
@@ -38,9 +45,8 @@ status=published
 <tr><th>File Name</th><th>Description</th></tr>
 <tr><td  class = "file_field_name"><a href = "#file1">Terminology.tar</a></td><td>When uncompressed there are a total of 13,407 individual xml files (CDR256085.xml, CDR256086.xml, CDR256087.xml, etc.)</td></tr>
 </table>
-<br/>
 </div>
-
+<hr>
 <div id = "rep_identifers" class = "rep_block_level_one">
 <h3>Identifiers</h3>
 
@@ -50,7 +56,7 @@ status=published
 <li>SCUI:  Not applicable</li>
 <li>SDUI:  PDQ ID</li>
 </ul>
-
+<hr>
 <div id = "rep_termtypes" class = "rep_block_level_two">
 <a id = "atoms"></a>
 <h3>Atoms (MRCONSO)</h3>
@@ -137,9 +143,9 @@ status=published
 <h3>Suppressibility</h3>
 <p>All term types have suppressibility value 'N' (default value) except for IS and OP which have suppressibility value 'O'.</p> 
 </div>
-
+<hr>
 <div id = "rep_attributes" class = "rep_block_level_two">
-<a id = "attributes"></a><br/>
+<a id = "attributes"></a>
 <h3>Attributes (MRSAT)</h3>
 <table>
 <tr><th>Attribute Name</th><th>Origin</th></tr>
@@ -167,9 +173,8 @@ status=published
 <td>SemanticType field</td></tr>
 </table>
 </div>
-
-<div id = "rep_relationships" class = "rep_block_level_two">
-<a id = "relationships"></a><br/>
+<hr>
+<div><a id = "relationships"></a>
 <h3>Relationships (MRREL)</h3>
 <table>
 <tr><th>Source</th><th>Relationship</th><th>Relationship Label/Inverse Relationship Label</th><th>Description</th></tr>
@@ -189,10 +194,12 @@ status=published
 <td>(no rela)</td><td>Connects the name (TTY=PT) with its abbreviation (TTY=AB).</td></tr>
 </table>
 </div>
+<hr>
 <div id = "mappings" class = "rep_block_level_two">
 <h3>Definitions (MRDEF)</h3>
 <p>Definitions present.</p> 
 </div>
+<hr>
 <h3>Mappings (MRMAP)</h3>
 <p>There are no mappings present.</p> 
 </div>

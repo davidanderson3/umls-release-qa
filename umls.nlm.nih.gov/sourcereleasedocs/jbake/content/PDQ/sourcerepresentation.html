@@ -20,21 +20,26 @@ status=published
 </div>
 <!--endmenu-->
 <br/>
-<a id = "top"></a>
-<span class = "nav">Skip to: <a href = "#general">General Notes/Comments</a>, <a href = "#change_summary">Summary of Changes</a>, <a href = "#file_summary">Summary of Source-Provided Files</a> <a href = "#file_details">Source-Provided File Details</a></span>
-<br/>
-<br/>
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#change_summary">Summary of Changes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_summary">Summary of Source-Provided Files</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_details">Source-Provided File Details</a></div>
+    </div>
 <strong>VSAB:</strong> PDQ_2018_10_27
+<hr>
 <a id = "general"></a>
 <div id = "rep_general" class = "rep_block_level_one">
 <h3>General Notes/Comments:</h3>
 <p>Data is supplied in a single 'Terminology.tar' file. When uncompressed, there are a total of 13,407 individual xml files (CDR256085.xml, CDR256086.xml, CDR256087.xml, etc.).</p>
 </div>
+<hr>
 <div id = "rep_change_summary" class = "rep_block_level_one">
 <a id = "change_summary"></a>
 <h3>Summary of Changes</h3>
 <p>New TTY = BN (fully-specified drug brand name that CANNOT be prescribed). This replaces the previous TTY=BD (fully-specified drug brand name that CAN be prescribed).</p>
 </div>
+<hr>
 <div id = "rep_file_summary" class = "rep_block_level_one">
 <a id = "file_summary"></a>
 <h3>Summary of Source-Provided Files</h3>
@@ -53,7 +58,7 @@ status=published
 </table>
 </div>
 </div>
-
+<hr>
 <div id = "rep_file_details" class = "rep_block_level_one">
 <a id = "file_details"></a>
 <h3>Source-Provided File Details</h3>
@@ -83,5 +88,5 @@ status=published
 <tr><td  class = "file_field_name">19</td><td>MenuParent</td><td>Link information to Term Menu parent. This may not always be the same as the TermParent. Element will not exist for top level menus, e.g. cancer.</td><td>MRSAT.ATN=MENU_PARENT</td></tr>
 <tr><td  class = "file_field_name">20</td><td>MenuType</td><td>Values are one of Clinical Trials - CancerType, ClinicalTrials - Drug, or Cancer Information</td><td>MRSAT.ATN=MENU_TYPE</td></tr>
 <tr><td  class = "file_field_name">21</td><td>DisplayName</td><td>Display name of the term</td><td>MRCONSO.STR; MRCONSO.TTY = ET</td></tr>
-</table><br/>
+</table>
 </div></div>
