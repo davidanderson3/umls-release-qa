@@ -1,6 +1,6 @@
 title=MEDLINEPLUS (MedlinePlus Health Topics) - Source Representation
 date=2018-05-07
-updated=2019-11-04
+updated=2020-05-04
 type=page
 status=published
 ~~~~~~
@@ -28,10 +28,10 @@ status=published
 <div id="rep_change_summary" class="rep_block_level_one">
   <a id="change_summary"></a>
 
-  <p><b>VSAB: MEDLINEPLUS_20181108</b></p>
+  <p><b>VSAB: MEDLINEPLUS_20191029</b></p>
 
   <h3>Summary of Changes:</h3>&nbsp;&nbsp;<br>
-    New health-topic attribute: meta-desc. Mapped to ATN = SOS<br>
+    ATN = MP_HEALTH_TOPIC_URL deprecated and the information integrated into ATN = SOS.<br>
   </div>
 
 <div id="rep_file_summary" class="rep_block_level_one">
@@ -67,7 +67,7 @@ status=published
         </tr>
 
         <tr>
-          <td class="file_field_name">mplus_topics_2018-11-08.xml</td>
+          <td class="file_field_name">mplus_topics_2019-10-29.xml</td>
 
           <td>
             <p>Contains information on all MedlinePlus health topics including:&nbsp; topic name; URL; creation date; associated terminology (synonyms, see references and MeSH headings); group membership.</p>
@@ -75,7 +75,7 @@ status=published
         </tr>
 
         <tr>
-          <td class="file_field_name">mplus_topic_groups_2018-11-08.xml</td>
+          <td class="file_field_name">mplus_topic_groups_2019-10-29.xml</td>
 
           <td>Contains information on all health topic groups on MedlinePlus.</td>
         </tr>
@@ -112,20 +112,19 @@ status=published
           <td>&lt;health-topic&gt;<br>
           Each MedlinePlus topic represented by the file has its own &lt;health-topic&gt; element. The attributes for this element include:<br>
           <br>
-          meta-desc - a short description (200 characters maximum) summarizing the page content. It's use on MedlinePlus: provides a description of the page for social sharing and external search engines.<br>
+          meta-desc - a short description (200 characters maximum) summarizing the page content. Its use on MedlinePlus provides a description of the page for social sharing and external search engines.<br>
           id - the unique internal identification number assigned to each topic by the MedlinePlus system.<br>
           language - the language of this topic. This can be either English or Spanish, with English as the default.<br>
           title - name of the health topic page on MedlinePlus.<br>
           date-created - the date the health topic was first available on the MedlinePlus site.<br>
           url - the URL for the corresponding health topic page on MedlinePlus.<br>
-title=MEDLINEPLUS (MedlinePlus Health Topics) - Source Representation
           <br></td>
 
           <td>health-topic meta-desc:&nbsp;MRSAT.ATN = SOS<br>
           health-topic id:&nbsp;MRCONSO.CODE<br>
           health-topic language:&nbsp;MRCONSO.LAT, MRSAB.LAT (only English terms from MedlinePlus are included in the Metathesaurus).<br>
           health-topic title:&nbsp;MRCONSO.STR, TTY = PT<br>
-          health-topic url:&nbsp;MRSAT.ATN = MP_HEALTH_TOPIC_URL<br>
+          health-topic url:&nbsp;integrated with the meta-desc data into MRSAT.ATN = SOS<br>
           health-topic date-created:&nbsp;MSAT.ATN = DATE_CREATED<br></td>
         </tr>
 

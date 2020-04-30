@@ -1,6 +1,6 @@
 title=LNC (LOINC) - Metathesaurus Representation
 date=2018-05-07
-updated=2019-11-04
+updated=2020-05-04
 type=page
 status=published
 ~~~~~~
@@ -26,10 +26,47 @@ status=published
         href="#atoms">Atoms</a>, <a href="#attributes">Attributes</a>,
       <a href="#definitions">Definitions</a>, <a href="#relationships">Relationships</a>,
       <a href="#mappings">Mappings</a></span>
-    <p><strong>VSAB: </strong>LNC266</p>
+    <p><strong>VSAB: </strong>LNC267</p>
     <div id="rep_change_summary" class="rep_block_level_one"></div>
       <h3>Summary of Changes:</h3>
-      New Classes:
+      New Group Files:
+      <ul>
+       <li>Group.csv</li>
+       <li>GroupAttributes.csv</li>
+       <li>GroupLoincTerms.csv</li>
+       <li>ParentGroup.csv</li>
+       <li>ParentGroupAttributes.csv</li>
+      </ul>
+      <p>New field in loinc.csv file: DisplayName (field 46)</p>
+      New TTYs:
+      <ul>
+       <li>DN (Display Name)</li>
+       <li>LG (Loinc Group Name)</li>
+       <li>OLG (Obsolete Loinc Group Name)</li>
+      </ul>
+      <p>New ATNs:</p>
+      <ul>
+       <li>CATEGORY</li>
+       <li>DESCRIPTION</li>
+       <li>EQUIVALENCE</li>
+       <li>MOLECULAR_WIEGHT_OF_ANALYTE</li>
+       <li>STATUS</li>
+       <li>USAGE_NOTES</li>
+      </ul>
+      <p>Dropped ATNs:</p>
+      <ul>
+       <li>IEEE_DESCRIPTION</li>
+       <li>IEEE_DIM</li>
+       <li>IEEE_UOM_UCUM</li>
+       <li>LSP</li>
+      </ul>
+      <p>New RELAs:</p>
+       <ul>
+       <li>has_parent_group|parent_group_of</li>
+       <li>has_archetype|archetype_of</li>
+       <li>has_loinc_number|loinc_number_of</li>
+      </ul>
+      <p>New Classes:</p>
       <table>
       	<tbody>
       		<tr>
@@ -37,32 +74,28 @@ status=published
       			<th>Class</th>
       		</tr>
       		<tr>
-      			<td>ADMIN.PATIENT</td>
-      			<td>Patient administrative information</td>
+      			<td>CLIN.VET</td>
+      			<td>Clinical veterinary</td>
       		</tr>
       		<tr>
-      			<td>ADMIN.PATIENT.DEMOG</td>
-      			<td>Patient demographics</td>
+      			<td>PANEL.MOLPATH.PHARMG</td>
+      			<td>Pharmacogenomics panel</td>
       		</tr>
       		<tr>
-         <td>ADMIN.PATIENT.ID</td>
-         <td>Patient identification numbers</td>
+         <td>PANEL.SURVEY.CSSRS</td>
+         <td>Columbia Suicide Severity Rating Scale (CSSRS) set</td>
         </tr>
         <tr>
-         <td>BLDBK.GENOTYPING</td>
-         <td>Blood bank genotyping</td>
+         <td>PANEL.SURVEY.WELLRX</td>
+         <td>WellRX Questionnaire set</td>
         </tr>
         <tr>
-         <td>PANEL.BLDBK.GENOTYPE</td>
-         <td>Blood bank genotyping panel</td>
+         <td>SURVEY.CSSRS</td>
+         <td>Columbia Suicide Severity Rating Scale (CSSRS)</td>
         </tr>
         <tr>
-         <td>PANEL.SURVEY.PRAPARE</td>
-         <td>Protocol for Responding to and Assessing Patients Assets Risks and Experiences (PRAPARE) set</td>
-        </tr>
-        <tr>
-         <td>SURVEY.PRAPARE</td>
-         <td>Protocol for Responding to and Assessing Patients Assets Risks and Experiences (PRAPARE)</td>
+         <td>SURVEY.WELLRX</td>
+         <td>WellRX Questionnaire</td>
         </tr>
 	  		  </tbody>
       </table>
@@ -76,7 +109,7 @@ status=published
       <li>Loinc.csv</li>
       <li>MapTo.csv</li>
       <li>MultiAxialHierarchy.csv</li>
-      <li>PanelsAndForms.xlsx</li>
+      <li>PanelsAndForms.csv</li>
       <li>LoincIeeeMedicalDeviceCodeMappingTable.csv</li>
       <li>LoincRsnaRadiologyPlaybook.csv</li>
       <li>Top2000CommonLabResultsSi.csv</li>
@@ -86,10 +119,15 @@ status=published
       <li>LoincAnswerListLink.csv</li>
       <li>ImagingDocumentCodes.csv</li>
       <li>ConsumerName.csv</li>
+      <li>Group.csv</li>
+      <li>GroupAttributes.csv</li>
+      <li>GroupLoincTerms.csv</li>
+      <li>ParentGroup.csv</li>
+      <li>ParentGroupAttributes.csv</li>
 	  
     </ul>
     <p>In addition, the UMLS receives two files to facilitate building
-      the hierarchy. For 2.66 these files were:
+      the hierarchy. For 2.67 these files were:
       "PartLinks.csv,"  and "Parts.csv."  Additional information, such as
       expansions of abbreviations, is extracted from LOINCManual.pdf. </p>
   </div>
@@ -106,7 +144,7 @@ status=published
       <ul>
         <li>CODE:
           <ul>
-            <li>For term types LC, LN, LO, MTH_LN, MTH_LO, OLC, OOSN,
+            <li>For term types DN, LC, LN, LO, MTH_LN, MTH_LO, OLC, OOSN,
               OSN: the LOINC _NUM (field 1) from Loinc.csv</li>
             <li>For term types LPDN, LPN: the L_PART_ID (field 1) from
               Parts.csv or PartNumber (field 3) from
@@ -114,11 +152,12 @@ status=published
             <li>For term types CN, MTH_CN, HC, HS, LS: an MTHU#,
               assigned during Metathesaurus source processing.</li>
             <li>For term type LA: the AnswerStringID from AnswerList.csv</li>
+            <li> For termtypes LG and OLG: the GroupID (field 2) from Group.csv and/or ParentGroupId (field 1) from ParentGroup.csv</li>
           </ul>
         </li>
         <li>SAUI: Not Applicable</li>
-        <li>SCUI: Same as CODE for term types LA, LC, LN, LO, LPDN, LPN,
-          MTH_LN, MTH_LO, OLC, OOSN, OSN</li>
+        <li>SCUI: Same as CODE for term types DN, LA, LC, LG, LN, LO, LPDN, LPN,
+          MTH_LN, MTH_LO, OLC, OLG, OOSN, OSN</li>
         <li>SDUI: Not Applicable</li>
       </ul>
       <h4>Expansions</h4>
@@ -146,6 +185,12 @@ status=published
                 processing; same as CODE for respective MTH_CN as
                 applicable.<br/>
                 STR = loinc.csv field 2, subfield 1 (COMPONENT).</td>
+            </tr>
+            <tr>
+              <td>DN</td>
+              <td>Display Name:<br/>
+                CODE = loinc.csv field 1 (LOINC_NUM)<br/>
+                STR = loinc.csv field 46 (DisplayName)</td>
             </tr>
             <tr>
               <td>HC</td>
@@ -179,6 +224,12 @@ status=published
                 STR = loinc.csv field 29 (LONG_COMMON_NAME)<br/>
                 TTY = LC is assigned if field 12 (STATUS) is not =
                 "DEPRECATED"</td>
+            </tr>
+            <tr>
+              <td>LG</td>
+              <td>Loinc Group Name:<br/>
+                CODE = Group.csv field 2 (GroupId) or ParentGroup.csv field 1 (ParentGroupId)<br/>
+                STR = Group.csv field 3 (Group) or ParentGroup.csv field 2 (ParentGroup)</td>
             </tr>
             <tr>
               <td>LN</td>
@@ -262,6 +313,13 @@ status=published
                 SUPPRESS = O</td>
             </tr>
             <tr>
+              <td>OLG</td>
+              <td>Obsolete Loinc Group Name:<br/>
+                CODE = Group.csv field 2 (GroupId) or ParentGroup.csv field 1 (ParentGroupId)<br/>
+                STR = Group.csv field 3 (Group) or ParentGroup.csv field 2 (ParentGroup)<br/>
+                TTY = OLG is assigned if field 5 (Status for Group.csv) or field 3 (Status for ParentGroup.csv) = "DEPRECATED"</td>
+            </tr>
+            <tr>
               <td>OOSN</td>
               <td>Obsolete official short name:<br/>
                 CODE = loinc.csv field 1 (LOINC_NUM)<br/>
@@ -323,6 +381,10 @@ status=published
               </td>
             </tr>
             <tr>
+             <td>CATEGORY</td>
+             <td>GroupLoincTerms.csv field 1 (Category)</td>
+            </tr>
+            <tr>
               <td>COPYRIGHT</td>
               <td>loinc.csv field 27 (EXTERNAL_COPYRIGHT_NOTICE)</td>
             </tr>
@@ -348,12 +410,16 @@ status=published
               <td>loinc.csv field 13 - not populated. Use ConsumerName file</td>
             </tr>
             <tr>
-              <td>UNITS_AND_RANGE</td>
-              <td>loinc.csv field 30</td>
+              <td>DESCRIPTION</td>
+              <td>ParentGroupAttributes.csv field 2</td>
             </tr>
             <tr>
               <td>DOCUMENT_SECTION</td>
               <td>loinc.csv field 31</td>
+            </tr>
+            <tr>
+              <td>EQUIVALENCE</td>
+              <td>LoincIeeeMedicalDeviceCodeMappingTable.csv field 5</td>
             </tr>
             <tr>
               <td>EXAMPLE_SI_UCUM_NITS</td>
@@ -414,9 +480,8 @@ status=published
               <td>LoincIeeeMedicalDeviceCodeMappingTable.csv, field 7</td>
             </tr>
             <tr>
-      			<td>IMAGING_DOCUMENT_VALUE_SET</td>
-      			<td>A subset of document codes in LOINC that represent imaging procedures and reports,
-      			as indicated in ImagingDocumentCodes.csv.  ATV = "TRUE" when appropriate.
+              <td>IMAGING_DOCUMENT_VALUE_SET</td>
+      			     <td>A subset of document codes in LOINC that represent imaging procedures and reports, as indicated in ImagingDocumentCodes.csv.  ATV = "TRUE" when appropriate.
             <tr>
               <td>LCD [CDISC common tests]</td>
               <td>loinc.csv field 25 (CDISC_COMMON_TESTS)</td>
@@ -527,6 +592,10 @@ status=published
                 processing</td>
             </tr>
             <tr>
+              <td>MOLECULAR_WEIGHT_OF_ANALYTE</td>
+              <td>GroupAttributes.csv field 3 or ParentGroupAttributes.csv field 2</td>
+            </tr>
+            <tr>
               <td>MTH_MAPFROMCOMPLEXITY</td>
               <td>This data is added during Metathesaurus source
                 processing</td>
@@ -582,6 +651,10 @@ status=published
                 field 10 (SequenceNumber)</td>
             </tr>
             <tr>
+              <td>STATUS</td>
+              <td>Group.csv field 5 or ParentGroup.csv field 3</td>
+            </tr>
+            <tr>
               <td>STATUS_REASON</td>
               <td>loinc.csv field 34</td>
             </tr>
@@ -615,9 +688,17 @@ status=published
                 processing</td>
             </tr>
             <tr>
+              <td>UNITS_AND_RANGE</td>
+              <td>loinc.csv field 30</td>
+            </tr> 
+            <tr>
               <td>UNIVERSAL_LAB_ORDERS_VALUE_SET</td>
               <td>A value of true indicates that the LOINC
                 CODE is a member of the Universal Lab Orders Value Set</td>
+            </tr>
+            <tr>
+              <td>USAGE_NOTES</td>
+              <td>GroupAttributes.csv field 3 or ParentGroupAttributes.csv field 2</td>
             </tr>
             <tr>
               <td>VERSION_FIRST_RELEASED</td>
@@ -735,6 +816,13 @@ status=published
             </tr>
             <tr>
               <td>RO</td>
+              <td>has_archetype<br/>
+                archetype_of</td>
+              <td>Connects the GroupId to its archetype as per Group.csv. (The
+              archetype is the Loinc Number of the most general representative term for a specific Group.</td>
+            </tr>
+            <tr>
+              <td>RO</td>
               <td>has_challenge<br/>
                 challenge_of</td>
               <td>Connects LPN where PART_TYPE = "CHALLENGE" with LN or
@@ -831,6 +919,12 @@ status=published
             </tr>
             <tr>
               <td>RO</td>
+              <td>has_loinc_number<br/>
+                loinc_number_of</td>
+              <td>Assigns a Loinc number to a Loinc Group as per GroupLoincTerms.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
               <td>has_method<br/>
                 method_of</td>
               <td>Connects LPN with PART_TYPE = "METHOD" with LOINC CODE
@@ -865,6 +959,12 @@ status=published
               <td>Connects LPN where PartTypeName = "Rad.Guidance
                 for.Object" with LN or LO, as per
                 LoincRsnaRadiologyPlaybook.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_parent_group<br/>
+                parent_group_of</td>
+              <td>Connects the GroupId with the ParentGroupID as per Group.csv</td>
             </tr>
             <tr>
               <td>RO</td>

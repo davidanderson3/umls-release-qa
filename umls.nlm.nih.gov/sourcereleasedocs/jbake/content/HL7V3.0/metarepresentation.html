@@ -1,6 +1,6 @@
 title=HL7V3.0 (HL7 Version 3.0) - Metathesaurus Representation
 date=2018-05-07
-updated=2019-11-04
+updated=2020-05-04
 type=page
 status=published
 ~~~~~~
@@ -24,14 +24,19 @@ status=published
 <a id="top-of-page"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>, <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>, <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
 
 <div id="general" class="rep_block_level_one">
-  <p><b>VSAB:</b> HL7V3.0_2019_03<br></p>
+  <p><b>VSAB:</b> HL7V3.0_2019_12<br></p>
 
   <div id="rep_identifiers" class="rep_block_level_one">
-    <h3>Summary of Changes</h3>There are no changes to the source format or to Metathesarus source processing.
+    <h3>Summary of Changes</h3>
+    <p>Dropped attribute name(s) (ATN): </p>
+    <ul>
+     <li>HL7LT (HL7 license terms)</li>
+     <li>HL7VP (HL7 versioning policy)</li>
+    </ul>
   </div>
 
   <div id="rep_change_summary" class="rep_block_level_one">
-    <h3>Source Provided Files:</h3>The HL7V3.0 source is provided in DEFN=UV=VO=1436-20190320.coremif. Elements in this file can be described by their path of xml tags starting from the root. In the xml path descriptions below, an XPath-like format is used to describe the origin of various items, but the top-level &lt;vocabularyModel&gt; path element is omitted for brevity.<br>
+    <h3>Source Provided Files:</h3>The HL7V3.0 source is provided in DEFN=UV=VO=1451-20191215.coremif. Elements in this file can be described by their path of xml tags starting from the root. In the xml path descriptions below, an XPath-like format is used to describe the origin of various items, but the top-level &lt;vocabularyModel&gt; path element is omitted for brevity.<br>
     <br>
     Note that some HL7V3.0 elements, such as &lt;conceptProperty&gt;, use a "name, value" format instead of nested xml tags to represent properties, e.g., &lt;conceptProperty name="status" value="retired"/&gt; instead of &lt;conceptProperty&gt;&lt;status&gt;retired&lt;/status&gt;&lt;/conceptProperty&gt;. Such a "name, value" item is represented in the xml path descriptions below using the format "conceptProperty/@name=status".
   </div>
@@ -334,12 +339,6 @@ status=published
           </tr>
 
           <tr>
-            <td>HL7LT</td>
-            <td>CSY</td>
-            <td>codeSystem/header/legalese/licenseTerms</td>
-          </tr>
-
-          <tr>
             <td>HL7MI</td>
             <td>CSY</td>
             <td>codeSystem/releasedVersion/@hl7MaintainedIndicator</td>
@@ -529,12 +528,6 @@ status=published
             <td>HL7VE</td>
             <td>root</td>
             <td>packageLocation/@version</td>
-          </tr>
-
-          <tr>
-            <td>HL7VP</td>
-            <td>CSY</td>
-            <td>codeSystem/header/legalese/versioningPolicy</td>
           </tr>
 
           <tr>

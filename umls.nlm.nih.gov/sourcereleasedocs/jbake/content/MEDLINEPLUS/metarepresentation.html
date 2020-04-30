@@ -1,6 +1,6 @@
 title=MEDLINEPLUS (MedlinePlus Health Topics) - Metathesaurus Representation
 date=2018-05-07
-updated=2019-11-04
+updated=2020-05-04
 type=page
 status=published
 ~~~~~~
@@ -24,21 +24,21 @@ status=published
 <a id="top-of-page"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>, <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>, <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
 
 <div id="general" class="rep_block_level_one">
-  <p><b>VSAB:</b>MEDLINEPLUS_20181108</p>
+  <p><b>VSAB:</b>MEDLINEPLUS_20191029</p>
 
   <div id="rep_identifiers" class="rep_block_level_one">
     <h3>Summary of Changes:</h3>&nbsp;&nbsp;<br>
-        New health-topic attribute: meta-desc.  Assigned to ATN = SOS.<br>
+        ATN = MP_HEALTH_TOPIC_URL deprecated and the information integrated into ATN = SOS.<br>
     </div>
 
   <h3>Source Provided Files:</h3>The UMLS uses MedlinePlus xml files downloaded from <a href="http://www.nlm.nih.gov/medlineplus/xmldescription.html">http://www.nlm.nih.gov/medlineplus/xmldescription.html</a><br>
   <br>
-  For 2019AA, the files used were:<br>
+  For 2020AA, the files used were:<br>
 
   <ul>
-    <li>mplus_topics_2018-11-08.xml</li>
+    <li>mplus_topics_2019-10-29.xml</li>
 
-    <li>mplus_topic_groups_2018-11-08.xml</li>
+    <li>mplus_topic_groups_2019-10-29.xml</li>
   </ul>
 </div>
 
@@ -185,14 +185,6 @@ status=published
         </tr>
 
         <tr>
-          <td>MP_HEALTH_TOPIC_URL<br></td>
-
-          <td>&lt;health-topics url&gt;<br></td>
-
-          <td>mplus_topics_YYYY-MM-DD.xml</td>
-        </tr>
-
-        <tr>
           <td>MP_OTHER_LANGUAGE_URL<br></td>
 
           <td>&lt;other-language url&gt;<br></td>
@@ -218,7 +210,7 @@ status=published
         <tr>
           <td>SOS<br></td>
 
-          <td>&lt;health-topic meta-desc&gt;<br></td>
+          <td>&lt;health-topic meta-desc + health topic url&gt;<br></td>
 
           <td>mplus_topics_YYYY-MM-DD.xml<br></td>
         </tr>
