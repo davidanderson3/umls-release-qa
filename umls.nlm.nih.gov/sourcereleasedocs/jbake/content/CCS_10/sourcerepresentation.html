@@ -1,6 +1,6 @@
-title=CCS_10 (Clinical Classifications Software 10) - Source Representation
+title=CCS_10 (Clinical Classifications Software for ICD-10-PCS) - Source Representation
 date=2018-05-07
-updated=2019-11-04
+updated=2020-05-04
 type=page
 status=published
 ~~~~~~
@@ -19,21 +19,31 @@ status=published
  </div>
 </div>
 <!--endmenu-->
-<br/><p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p><!--begin tabbed navigation area-->
-<!-- end tabbed navigation area --><br>
-<a id="top-of-page"></a> <span class="nav">Skip to: <a href="#general">Notes</a>, <a href="#change_summary">Summary of Changes</a>, <a href="#file_summary">Summary of Source-Provided Files</a> <a href="#file_details">Source-Provided File Details</a></span> <a id="general"></a>
-
-<div id="rep_identifiers" class="rep_block_level_one">
+<br/>
+<p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p><!--begin tabbed navigation area-->
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#change_summary">Summary of Changes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_summary">Summary of Source-Provided Files</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_details">Source-Provided File Details</a></div>
+    </div>
+<hr>
+<div id="change_summary" class="rep_block_level_one">
   <h3>Summary of Changes</h3>
 
-  <p>There are no changes to the original data format or to UMLS source processing.</p>
-</div>
-
-<div id="rep_change_summary" class="rep_block_level_one">
+    <p>CCS_10 has been divided into two sources, CCS_10 (for procedure categories) and CCSR_10 (for diagnosis categories)</p>
+	<p>Deprecated TTYs:</p>
+	<ul>
+		<li>SD (Single-level diagnosis categories) - now included with SAB = CCSR_10</li>
+		<li>MD (Multi-level diagnosis categories) - the file ccs_dx_icd10cm_20##_1.csv was not released so these atoms are not present in CCS_10 or CCSR_10. 
+		The new diagnosis mapping file, $DXCCSR2020.CSV, only has mappings to the new single-level CCSR code and is represented with SAB = CCSR_10.</li>
+	</ul>
+	</div>
+<hr>
+<div id="file_summary" class="rep_block_level_one">
   <h3>Source Provided Files:</h3>
 
   <p>The input files are in standard comma-separated-values format, with fields descriptions in the first line.</p>
-
   <table>
     <tbody>
       <tr>
@@ -41,34 +51,22 @@ status=published
 
         <th>Description</th>
       </tr>
-
       <tr>
-        <td>CCSCategoryNames(FullLabels).pdf</td>
-
-        <td>Full labels for single-level and multi-level CCS Categories</td>
-      </tr>
-
-      <tr>
-        <td>ccs_dx_icd10cm_2019_1.csv</td>
-
-        <td>Diagnosis categories and mappings</td>
-      </tr>
-
-      <tr>
-        <td>ccs_pr_icd10pcs_2019_1.csv</td>
+        <td>ccs_pr_icd10pcs_2030_1.csv</td>
 
         <td>Procedure categories and mappings</td>
       </tr>
     </tbody>
   </table>
-</div><br>
-
+</div>
+<hr>
+<div id="file_details">
 <h3>Source-Provided Files: Details</h3>
 
-<p>The following is a list of elements in the CCS .csv source files:</p>
+<p>The following is a list of elements in ccs_pr_icd10pcs_20##_1.csv:</p>
 
-<div class="rep_block_level_two">
-  <a id="file1"></a><br>
+
+  <a id="file1"></a>
 
   <table>
     <tbody>
@@ -79,7 +77,7 @@ status=published
       </tr>
 
       <tr>
-        <td>ICD-10-CM or ICD-10-PCS CODE</td>
+        <td>ICD-10-PCS CODE</td>
 
         <td>MRMAP.FROMEXPR</td>
       </tr>
@@ -87,12 +85,12 @@ status=published
       <tr>
         <td>CCS CATEGORY</td>
 
-        <td>MRCONSO.CODE; TTY = SD or TTY = SP<br>
+        <td>MRCONSO.CODE; TTY = SP<br>
         MRMAP.TOEXPR<br></td>
       </tr>
 
       <tr>
-        <td>ICD-10-CM or ICD-10-PCS CODE DESCRIPTION</td>
+        <td>ICD-10-PCS CODE DESCRIPTION</td>
 
         <td>Not processed</td>
       </tr>
@@ -100,34 +98,34 @@ status=published
       <tr>
         <td>CCS CATEGORY DESCRIPTION</td>
 
-        <td>MRCONSO.STR; TTY = SD or TTY = SP</td>
+        <td>MRCONSO.STR; TTY = SP</td>
       </tr>
 
       <tr>
         <td>MULTI CCS LVL 1</td>
 
-        <td>MRCONSO.CODE; TTY = MD or TTY = MV</td>
+        <td>MRCONSO.CODE; TTY = MV</td>
       </tr>
 
       <tr>
         <td>MULTI CCS LVL 1 LABEL</td>
 
-        <td>MRCONSO.STR; TTY = MD or TTY = MV</td>
+        <td>MRCONSO.STR; TTY = MV</td>
       </tr>
 
       <tr>
         <td>MULTI CCS LVL 2</td>
 
-        <td>MRCONSO.CODE; TTY = MD or TTY = MV<br>
+        <td>MRCONSO.CODE; TTY = MV<br>
         MRMAP.TOEXPR</td>
       </tr>
 
       <tr>
         <td>MULTI CCS LVL 2 LABEL</td>
 
-        <td>MRCONSO.STR; TTY = MD or TTY = MV</td>
+        <td>MRCONSO.STR; TTY = MV</td>
       </tr>
     </tbody>
-  </table><br>
-  <br>
+  </table>
+
 </div>

@@ -1,6 +1,6 @@
 title=CPT (CPT - Current Procedural Terminology) - Source Representation
 date=2017-05-07
-updated=2019-11-04
+updated=2020-05-04
 type=page
 status=published
 ~~~~~~
@@ -24,10 +24,13 @@ status=published
   <p>This page lists specific source data elements and provides
         information on their representation in the UMLS Metathesaurus.</p>
 
-    <a id="top-of-page"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
-      <a href="#change_summary">Summary of Changes</a>, <a
-        href="#file_summary">Summary of Source-Provided Files</a>, <a
-        href="#file_details">Source-Provided File Details</a></span> <a id="general"></a>
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#change_summary">Summary of Changes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_summary">Summary of Source-Provided Files</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_details">Source-Provided File Details</a></div>
+    </div>
+    <hr>
     <div id="rep_general" class="rep_block_level_one">
       <h3>Notes</h3>
       CPT data files are submitted by the American Medical Association
@@ -39,17 +42,19 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
       version of CPT. The Spanish translation of CPT (CPTSP) was last
       updated in 2001, and much of the information on this page is not
       applicable.<br/>
-      <br/>
+      
     </div>
+    <hr>
     <div id="rep_change_summary" class="rep_block_level_one"> <a id="change_summary"></a>
         <h3>Summary of Changes</h3>
 				<p>There were no changes to the source format or Metathesaurus source processing.</p>
 	    </div>
+	    <hr>
     <div id="rep_file_summary" class="rep_block_level_one"> <a id="file_summary"></a>
       <h3>Source-Provided Files: Summary</h3>
-        <span class="nav"><a href="#top-of-page">return to top</a></span>
-      The complete English language CPT distribution includes the
-      following:<br/>
+
+      <p>The complete English language CPT distribution includes the
+      following:</p>
       <div class="rep_block_level_two">
         <!-- Make a table of each file that comes from the source   -->
         <h4>Documentation and Reference</h4>
@@ -60,12 +65,12 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
               <th>Description</th>
             </tr>
             <tr>
-              <td>2019_CPT_Link_ReadMe_20180901.pdf</td>
+              <td>2020 CPT Link ReadMe 20190831.pdf</td>
               <td>User guide for main data files</td>
             </tr>
           </tbody>
           </table>
-        <br/>
+
         <h4>Data Files</h4>
         <a id="data_files"></a>
           <table>
@@ -114,21 +119,18 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
 
             </tbody>
         </table>
-        <br/>
-        <br/>
+
       </div>
     </div>
+    <hr>
     <div id="rep_file_details" class="rep_block_level_one"> <a id="file_details"></a>
       <h3>Source-Provided Files: Details</h3>
-        <span class="nav"><a href="#top-of-page">return to top</a></span>
+      <p>
       Details on format of input files and representation of source
-      data. Consult the CPT documentation for additional details.<br/>
+      data. Consult the CPT documentation for additional details.</p>
       <div class="rep_block_level_two"> <a id="file1"></a>
-        <h4 class="file_field_name">file:  Type_DTK_pipe.txt<br/>
+        <h4 class="file_field_name">file:  Type_DTK_pipe.txt
         </h4>
-          <span class="nav">return to <a href="#data_files">Data
-            Files</a></span> <br/>
-        <br/>
         <table>
           <tbody>
             <tr>
@@ -152,12 +154,11 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
             </tr>
           </tbody>
         </table>
-        <br/>
+
         <a id="file2"></a>
         <h4 class="file_field_name">file:  Property_DTK_pipe.txt<br/>
         </h4>
-          <p><span class="nav">return to <a href="#data_files">Data
-          Files</a></span> </p>
+
           <p>This file consists of 3 delimited fields:</p>
         <ul>
        	<li>Concept ID</li>
@@ -406,7 +407,7 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
 			</tr>
 			<tr>
 			  <td>143</td>
-			  <td>RVU_Total_Nonfacility</td>
+			 <td>RVU_Total_Nonfacility</td>
 			  <td>RVU Total Nonfacility</td>
 			  <td>MRSAT.ATN = RVU_TOTAL_NONFACILITY</td>
 			</tr>
@@ -564,12 +565,11 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
 			</tr>
           </tbody>
         </table>
-        <br/>
+        
         <a id="file3"></a>
         <h4 class="file_field_name">file:
           RelationshipGroup_DTK_pipe.txt</h4>
-          <p><span class="nav">return to <a href="#data_files">Data
-          Files</a></span> </p>
+
           <p>This file consists of 5 delimited fields:</p>
        <ul>
        <li>Concept ID1</li>
@@ -766,12 +766,11 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
         <p>Role Group: MRREL.RG.  Used to indicate that a set of relationships should be looked at in conjunction.</p>
         <p>Or Group:  MRSAT.ATN = OR_GROUP. Indicates that relationships with the same CUI2 and RG are disjunctive expressions (SGTYPE = RUI)</p>
 
-        <a id="file5"></a><br/>
-        <br/>
- 	   <h4>file: Days.txt<br/>
+        <a id="file5"></a>
+
+ 	   <h4>file: Days.txt
 		</h4>
-		  <span class="nav">return to <a href="#data_files">Data Files</a></span><br/>
-		<br/>
+
 		<table>
 		  <tbody>
 			<tr>
@@ -811,11 +810,10 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
 			</tr>
 		  </tbody>
 		</table>
-        <br/>
+
 	   <h4>file: Exclude.txt<br/>
 		</h4>
-		  <span class="nav">return to <a href="#data_files">Data Files</a></span><br/>
-		<br/>
+
 		<p>Listing of edits that are sourced from CPT instructions, such as "Do not report 00326 in conjunction with 99100".
 		Relationships are symmetrical (there is no meaning to the order of codes in the code pair).</p>
 		<table>
@@ -852,8 +850,6 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
 		<br/>
 	   <h4>file: ReportWith.txt<br/>
 		</h4>
-		  <span class="nav">return to <a href="#data_files">Data Files</a></span><br/>
-		<br/>
 		<p>Edits that are sourced from CPT instructions such as "Use 44139 in conjunction with 44140-44147".
 		These code edit pairs are not symmetric.
 </p>
@@ -888,6 +884,5 @@ href="https://catalog.ama-assn.org/Catalog/product/product_detail.jsp?productId=
 			</tr>
 		 </tbody>
 		 </table>
-		<br/>
       </div>
     </div>
