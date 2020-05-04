@@ -19,13 +19,21 @@ status=published
  </div>
 </div>
 <!--endmenu-->
-<br/><p>This page lists UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p><!--begin tabbed navigation area-->
-<!-- end tabbed navigation area -->
-<a id="top-of-page"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>, <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>, <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+<br/>
+
+<p>This page lists UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p><!--begin tabbed navigation area-->
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#atoms">Atoms</a></div>
+    	<div class="col-sm-auto border-left"><a href="#attributes">Attributes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#definitions">Definitions</a></div>
+    	<div class="col-sm-auto border-left"><a href="#relationships">Relationships</a></div>
+    	<div class="col-sm-auto border-left"><a href="#mappings">Mappings</a></div>
+    </div>
 
 <div id="general" class="rep_block_level_one">
-  <p><b>VSAB:</b> HL7V3.0_2019_12<br></p>
-
+  <p><b>VSAB:</b> HL7V3.0_2019_12</p>
+<hr>
   <div id="rep_identifiers" class="rep_block_level_one">
     <h3>Summary of Changes</h3>
     <p>Dropped attribute name(s) (ATN): </p>
@@ -34,16 +42,15 @@ status=published
      <li>HL7VP (HL7 versioning policy)</li>
     </ul>
   </div>
-
+<hr>
   <div id="rep_change_summary" class="rep_block_level_one">
     <h3>Source Provided Files:</h3>The HL7V3.0 source is provided in DEFN=UV=VO=1451-20191215.coremif. Elements in this file can be described by their path of xml tags starting from the root. In the xml path descriptions below, an XPath-like format is used to describe the origin of various items, but the top-level &lt;vocabularyModel&gt; path element is omitted for brevity.<br>
     <br>
     Note that some HL7V3.0 elements, such as &lt;conceptProperty&gt;, use a "name, value" format instead of nested xml tags to represent properties, e.g., &lt;conceptProperty name="status" value="retired"/&gt; instead of &lt;conceptProperty&gt;&lt;status&gt;retired&lt;/status&gt;&lt;/conceptProperty&gt;. Such a "name, value" item is represented in the xml path descriptions below using the format "conceptProperty/@name=status".
   </div>
-
+<hr>
   <div id="rep_identifers" class="rep_block_level_one">
     <h3>Identifiers:</h3>HL7V3.0 SAUI and SDUI identifiers are not assigned. There are several types of HL7V3.0 atoms that each get different assignments of CODE and SCUI identifiers, as follows:<br>
-    <br/>
 
     <table>
       <tbody>
@@ -87,12 +94,12 @@ status=published
           SCUI = valueSet/@id</td>
         </tr>
       </tbody>
-    </table><br>
-
+    </table>
+<hr>
     <div id="rep_atoms" class="rep_block_level_two">
       <a id="atoms"></a>
 
-      <h3>Atoms (MRCONSO):</h3>&nbsp;&nbsp;<br>
+      <h3>Atoms (MRCONSO):</h3>
 
       <table>
         <tbody>
@@ -159,14 +166,13 @@ status=published
           </tr>
         </tbody>
       </table>
-    </div><br>
-
+    </div>
+<hr>
     <div id="rep_attributes" class="rep_block_level_two">
-      <a id="attributes"></a><br>
+      <a id="attributes"></a>
 
-      <h3>Attributes (MRSAT):</h3>Note: ATNs HL7BR, HL7CST and HL7ED are attached to relationships, see below.<br>
-      <br/>
-      <br/>
+      <h3>Attributes (MRSAT):</h3>Note: ATNs HL7BR, HL7CST and HL7ED are attached to relationships, see below.
+
 
       <table>
         <tbody>
@@ -538,11 +544,11 @@ status=published
         </tbody>
       </table>
     </div>
-
+<hr>
     <div id="rep_definitions" class="rep_block_level_two">
-      <a id="definitions"></a><br>
+      <a id="definitions"></a>
 
-      <h3>Definitions (MRDEF):</h3>&nbsp;&nbsp;<br>
+      <h3>Definitions (MRDEF):</h3>
 
       <p>Definitions are created as follows:</p>
 
@@ -585,11 +591,11 @@ status=published
         </tbody>
       </table>
     </div>
-
+<hr>
     <div id="rep_relationships" class="rep_block_level_two">
-      <a id="relationships"></a><br>
+      <a id="relationships"></a>
 
-      <h3>Relationships (MRREL):</h3>&nbsp; <br>
+      <h3>Relationships (MRREL):</h3>
 
       <table>
         <tbody>
@@ -710,15 +716,13 @@ status=published
         </tbody>
       </table>
     </div>
-
+<hr>
     <div id="mappings" class="rep_block_level_two">
-      <br>
-      <br>
-      <br>
+
 
       <h3>Mappings (MRMAP):</h3>&nbsp;&nbsp;<br>
 
-      <p>No mappings to external sources are provided for HL7V3.0.<br></p>
+      <p>No mappings to external sources are provided for HL7V3.0.</p>
     </div>
   </div>
 </div>

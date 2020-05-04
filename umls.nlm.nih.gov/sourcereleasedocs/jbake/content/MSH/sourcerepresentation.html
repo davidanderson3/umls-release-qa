@@ -21,10 +21,13 @@ status=published
 <!--endmenu-->
 <br/>
 <p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p>
-    <a id="top-of-page"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
-      <a href="#change_summary">Summary of Changes</a>, <a
-        href="#file_summary">Summary of Source-Provided Files</a> <a
-        href="#file_details">Source-Provided File Details</a></span>
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#change_summary">Summary of Changes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_summary">Summary of Source-Provided Files</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_details">Source-Provided File Details</a></div>
+    </div>
+   <hr>
     <div id="general" class="rep_block_level_one">
       <p><strong>VSAB:</strong>MSH2020_2020_01_15</p>
       <h3>Notes</h3>
@@ -35,11 +38,13 @@ status=published
         to the English version of MeSH.</p>
       
     </div>
+    <hr>
     <div id="change_summary" class="rep_block_level_one">
       <h3>Summary of Changes:</h3>
-      &nbsp;&nbsp;
+ 
 		<p>There were no changes to the original file format or to the Metathesaurus source processing.</p>
     </div>
+       <hr>
     <div id="file_summary" class="rep_block_level_one">
       <h3>Source-Provided Files: Summary</h3>
       &nbsp;&nbsp;
@@ -70,7 +75,6 @@ status=published
             </tr>
           </tbody>
         </table>
-        <br/>
         <h4>XML Data Files</h4>
         <a id="data_files"></a>
         <table>
@@ -93,7 +97,7 @@ status=published
             </tr>
           </tbody>
         </table>
-        <br/>
+
         <p>In addition to data from the xml files, top levels of the
           hierarchy are created from external files for Metathesaurus
           representation.</p>
@@ -141,7 +145,7 @@ status=published
             </tr>
           </tbody>
         </table>
-        <br/>
+
         <p>XML tags &lt;CASN1Name&gt;, &lt;EntryVersion&gt; and
           &lt;SortVersion&gt; are used to create atoms with term types
           N1, DEV, and DSV, respectively.</p>
@@ -205,9 +209,9 @@ status=published
         </table>
       </div>
     </div>
+    <hr>
     <div id="file_details" class="rep_block_level_one">
       <h3>Source-Provided Files: Details</h3>
-      &nbsp;&nbsp;
       <p>The source representation documentation below is based on
         published MeSH documentation describing XML data elements.
         Details from this document that are not relevant to
