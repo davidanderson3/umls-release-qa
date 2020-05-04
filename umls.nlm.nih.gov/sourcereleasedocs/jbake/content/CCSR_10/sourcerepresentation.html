@@ -19,10 +19,15 @@ status=published
  </div>
 </div>
 <!--endmenu-->
-<br/><p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p><!--begin tabbed navigation area-->
-<!-- end tabbed navigation area --><br>
-<a id="top-of-page"></a> <span class="nav">Skip to: <a href="#general">Notes</a>, <a href="#change_summary">Summary of Changes</a>, <a href="#file_summary">Summary of Source-Provided Files</a> <a href="#file_details">Source-Provided File Details</a></span> <a id="general"></a>
-
+<br/>
+<p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p>
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#change_summary">Summary of Changes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_summary">Summary of Source-Provided Files</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_details">Source-Provided File Details</a></div>
+    </div>
+    <hr>
 <div id="rep_identifiers" class="rep_block_level_one">
   <h3>Summary of Changes</h3>
 
@@ -35,7 +40,7 @@ status=published
 	<p>Note:  MD (Multi-level diagnosis categories), which were present in CCS_10 are not included in CCSR_10. The file ccs_dx_icd10cm_20##_1.csv was not released so these atoms are not present in CCS_10 or CCSR_10. 
 		The new diagnosis mapping file, $DXCCSR2020.CSV, only has mappings to the new single-level CCSR code and is represented with SAB = CCSR_10, TTY = SD.</p>
 	</div>
-
+<hr>
 <div id="rep_change_summary" class="rep_block_level_one">
   <h3>Source Provided Files:</h3>
 
@@ -55,14 +60,14 @@ status=published
       </tr>
     </tbody>
   </table>
-</div><br>
-
+</div>
+<hr>
 <h3>Source-Provided Files: Details</h3>
 
 <p>The following is a list of elements in DXCCSR2020.CSV:</p>
 
 <div class="rep_block_level_two">
-  <a id="file1"></a><br>
+  <a id="file1"></a>
 
   <table>
     <tbody>
@@ -98,6 +103,5 @@ status=published
         <td>MRCONSO.STR; TTY = SD</td>
       </tr>
     </tbody>
-  </table><br>
-  <br>
+  </table>
 </div>
