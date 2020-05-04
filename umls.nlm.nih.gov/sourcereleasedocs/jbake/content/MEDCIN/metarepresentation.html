@@ -1,6 +1,6 @@
 title=MEDCIN (MEDCIN) - Metathesaurus Representation
 date=2018-05-07
-updated=2019-11-04
+updated=2020-05-04
 type=page
 status=published
 ~~~~~~
@@ -22,28 +22,35 @@ status=published
 <br/>
 <p>This page lists UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
 <a id="top-of-page"></a>
-<span class="nav">Skip to: <a href="#atoms">Atoms</a>, <a
- href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
-<a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#atoms">Atoms</a></div>
+    	<div class="col-sm-auto border-left"><a href="#attributes">Attributes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#definitions">Definitions</a></div>
+    	<div class="col-sm-auto border-left"><a href="#relationships">Relationships</a></div>
+    	<div class="col-sm-auto border-left"><a href="#mappings">Mappings</a></div>
+    </div>
 <div id="general" class="rep_block_level_one">
-<p><strong>VSAB:</strong> MEDCIN3_2019_07_16</p>
+<p><strong>VSAB:</strong> MEDCIN3_2019_12_16</p>
 </div>
+<hr>
 <div id="rep_identifiers" class="rep_block_level_one">
 </div>
 <h3>Summary of Changes</h3>
-<p>None</p>
-
+<p>New RELA:  during_and_or_after/inverse_during_and_or_after</p>
+<hr>
 <div id="rep_change_summary" class="rep_block_level_one">
 <h3>Source Provided Files:</h3>
 
 The Metathesaurus uses the following four pipe-delimited MEDCIN files:
 <ul>
-  <li>UMLS_MEDCIN_CONCEPTS2019-07-16.TXT</li>
-  <li>UMLS_MEDCIN_DESCRIPTIONS2019-07-16.TXT</li>
-  <li>UMLS_MEDCIN_HIERARCHY2019-07-16.TXT</li>
-  <li>UMLS_MEDCIN_SNOMED2019-07-16.TXT</li>
+  <li>UMLS_MEDCIN_CONCEPTS2019-12-16.TXT</li>
+  <li>UMLS_MEDCIN_DESCRIPTIONS2019-12-16.TXT</li>
+  <li>UMLS_MEDCIN_HIERARCHY2019-12-16.TXT</li>
+  <li>UMLS_MEDCIN_SNOMED2019-12-16.TXT</li>
 </ul>
 </div>
+<hr>
 <div id="rep_identifers" class="rep_block_level_one">
 <h3>Identifiers:</h3>
 
@@ -104,10 +111,10 @@ This data is added during Metathesaurus source processing.</td>
   </tbody>
 </table>
 </div>
+<hr>
 <div id="rep_attributes" class="rep_block_level_two">
-<a id="attributes"></a><br/>
+<a id="attributes"></a>
 <h3>Attributes (MRSAT):</h3>
-&nbsp;&nbsp;<br/>
 <table>
   <tbody>
     <tr>
@@ -128,6 +135,7 @@ This data is added during Metathesaurus source processing.</td>
   </tbody>
 </table>
 </div>
+<hr>
 <div id="rep_definitions" class="rep_block_level_two">
 <br/>
 In addition, the following map set attributes are added during
@@ -148,15 +156,17 @@ XMAP<br/>
 XMAPFROM<br/>
 XMAPTO<br/>
 </div>
-<a id="definitions"></a><br/>
+<hr>
+<a id="definitions"></a>
 <h3>Definitions (MRDEF):</h3>
-&nbsp;&nbsp;<br/>
+
 <p>No definitions are provided for MEDCIN.</p>
 </div>
+<hr> 
 <div id="rep_relationships" class="rep_block_level_two">
-<a id="relationships"></a><br/>
+<a id="relationships"></a>
 <h3>Relationships (MRREL):</h3>
-&nbsp;&nbsp;<br/>
+
 <table>
   <tbody>
     <tr>
@@ -185,11 +195,12 @@ in UMLS_MEDCIN_SNOMEDyyyy-mm-dd.TXT. The "REL" and "RELA" are set
 corresponding to the "RELATIONSHIPTYPE" field.</td>
     </tr>
   </tbody>
-</table>
+</table> 
 </div>
+<hr>
 <div id="mappings" class="rep_block_level_two">
 <h3>Mappings (MRMAP):</h3>
-&nbsp;&nbsp;<br/>
+
 <p>One map set ("XM" atom, along with associated attributes and
 mappings) is included for MEDCIN.&nbsp; Mappings are extracted from the
 file "UMLS_MEDCIN_SNOMEDyy-mm-dd.TXT.&nbsp; Mappings are created for

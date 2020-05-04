@@ -1,6 +1,6 @@
 title=MSH (MeSH) - Metathesaurus Representation
 date=2018-05-07
-updated=2019-11-04
+updated=2020-05-04
 type=page
 status=published
 ~~~~~~
@@ -22,16 +22,22 @@ status=published
 <br/>
 
 <p>This page lists UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
-
-    <a id="top-of-page"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>,
-      <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
-      <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#atoms">Atoms</a></div>
+    	<div class="col-sm-auto border-left"><a href="#attributes">Attributes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#definitions">Definitions</a></div>
+    	<div class="col-sm-auto border-left"><a href="#relationships">Relationships</a></div>
+    	<div class="col-sm-auto border-left"><a href="#mappings">Mappings</a></div>
+    </div>
     <div id="general" class="rep_block_level_one">
-      <p><strong>VSAB:</strong>MSH2020_2019_08_27</p>
+      <p><strong>VSAB:</strong> MSH2020_2020_01_15</p>
+      <hr>
       <div id="rep_identifiers" class="rep_block_level_one">
         <h3>Summary of Changes:</h3>
         <p>There were no changes to the original file format or to the Metathesaurus source processing.</p>
       </div>
+       <hr>
       <div id="rep_files" class="rep_block_level_one">
         <h3>Source Provided Files:</h3>
         &nbsp;&nbsp;The UMLS uses MeSH xml files downloaded from <a
@@ -45,6 +51,7 @@ status=published
           </li>
         </ul>
       </div>
+       <hr>
       <div id="rep_identifers" class="rep_block_level_one">
         <h3>Identifiers:</h3>
           <table>
@@ -90,7 +97,8 @@ status=published
             </tr>
           </tbody>
         </table>
-        <a id="atoms"></a> <br/>
+         <hr>
+        <a id="atoms"></a> 
         <div id="rep_termtypes" class="rep_block_level_two">
           <h3>Atoms (MRCONSO):</h3>
 
@@ -341,11 +349,10 @@ status=published
             </tbody>
           </table>
         </div>
-        <div id="rep_attributes" class="rep_block_level_two"> <a id="attributes"></a><br/>
+         <hr>
+        <div id="rep_attributes" class="rep_block_level_two"> <a id="attributes"></a>
           <h3>Attributes (MRSAT):</h3>
 
-          <br/>
-          <br/>
           <table>
             <tbody>
               <tr>
@@ -412,7 +419,7 @@ status=published
               </tr>
               <tr>
                 <td>FX</td>
-                <td>See Related' mapping</td>
+                <td>See Related mapping</td>
                 <td>&lt;SeeRelatedDescriptor&gt;</td>
                 <td>desc*.xml</td>
               </tr>
@@ -493,9 +500,7 @@ status=published
                 <td>PI</td>
                 <td>Previous indexing</td>
                 <td>&lt;PreviousIndexing&gt;</td>
-                <td>desc*.xml<br/>
-                  supp*.xml
-                </td>
+                <td>supp*.xml</td>
               </tr>
               <tr>
                 <td>PM</td>
@@ -558,7 +563,7 @@ status=published
             </tbody>
           </table>
         </div>
-        <div id="rep_definitions" class="rep_block_level_two"> <a id="definitions"></a><br/>
+        <div id="rep_definitions" class="rep_block_level_two"> <a id="definitions"></a>
           <h3>Definitions (MRDEF):</h3>
 
           <table>
@@ -574,7 +579,8 @@ status=published
             </tbody>
           </table>
         </div>
-        <div id="rep_relationships" class="rep_block_level_two"> <a id="relationships"></a><br/>
+         <hr>
+        <div id="rep_relationships" class="rep_block_level_two"> <a id="relationships"></a>
           <h3>Relationships (MRREL):</h3>
 
           <table>
@@ -673,7 +679,9 @@ status=published
                   &lt;ConceptRelation&gt;&lt;Concept2UI&gt;<br/>
                   Created where: &lt;ConceptRelation
                   RelationName="REL"&gt;</td>
-                <td>desc*.xml</td>
+                <td>desc*.xml<br/>
+				supp*xml (SCUI - SCUI only)<br/>
+				qual*xml (SCUI - SCUI only)<br/></td>
               </tr>
               <tr>
                 <td>RO</td>
@@ -739,15 +747,15 @@ to &lt;HeadingMappedTo&gt;&lt;QualifierReferredTo&gt;&lt;QualifierUI&gt;<br/>
             </tbody>
           </table>
         </div>
+         
         <div id="mappings" class="rep_block_level_two">
-
-          <br/>
+          <p>
           The hierarchy is created from values in the &lt;TreeNumber&gt;
           tags in desc*.xml and qual*.xml. Official MeSH xml
           release files do not include the top levels of a hierarchy, so
           additional top level concepts are created and maintained in
-          separate files.<br/>
-          <br/>
+          separate files.</p>
+          <hr>
           <h3>Mappings (MRMAP):</h3>
 
           <p>No mappings are represented for MeSH.</p>

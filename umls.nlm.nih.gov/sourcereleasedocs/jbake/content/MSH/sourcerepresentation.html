@@ -1,6 +1,6 @@
 title=MSH (MeSH) - Source Representation
 date=2018-05-07
-updated=2019-11-04
+updated=2020-05-04
 type=page
 status=published
 ~~~~~~
@@ -21,12 +21,15 @@ status=published
 <!--endmenu-->
 <br/>
 <p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p>
-    <a id="top-of-page"></a> <span class="nav">Skip to: <a href="#general">Notes</a>,
-      <a href="#change_summary">Summary of Changes</a>, <a
-        href="#file_summary">Summary of Source-Provided Files</a> <a
-        href="#file_details">Source-Provided File Details</a></span>, <a id="general"></a>
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#change_summary">Summary of Changes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_summary">Summary of Source-Provided Files</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_details">Source-Provided File Details</a></div>
+    </div>
+   <hr>
     <div id="general" class="rep_block_level_one">
-      <p><strong>VSAB:</strong>MSH2020_2019_08_27</p>
+      <p><strong>VSAB:</strong>MSH2020_2020_01_15</p>
       <h3>Notes</h3>
       <p>MeSH for the Metathesaurus is processed from the xml files. In
         addition to data from the xml files, top levels of the hierarchy
@@ -35,12 +38,14 @@ status=published
         to the English version of MeSH.</p>
       
     </div>
-    <div id="change_summary" class="rep_block_level_one"> <a id="change_summary"></a>
+    <hr>
+    <div id="change_summary" class="rep_block_level_one">
       <h3>Summary of Changes:</h3>
-      &nbsp;&nbsp;
+ 
 		<p>There were no changes to the original file format or to the Metathesaurus source processing.</p>
     </div>
-    <div id="file_summary" class="rep_block_level_one"> <a id="file_summary"></a>
+       <hr>
+    <div id="file_summary" class="rep_block_level_one">
       <h3>Source-Provided Files: Summary</h3>
       &nbsp;&nbsp;
       <p>The English language MeSH distribution includes the following.
@@ -57,11 +62,11 @@ status=published
               <th>Description</th>
             </tr>
             <tr>
-              <td class="file_field_name">nlmdescriptorrecordset_20290101.dtd</td>
+              <td class="file_field_name">nlmdescriptorrecordset_20200101.dtd</td>
               <td>Descriptor DTD</td>
             </tr>
             <tr>
-              <td class="file_field_name">nlmqualifierrecordset_20100101.dtd</td>
+              <td class="file_field_name">nlmqualifierrecordset_20200101.dtd</td>
               <td>Qualifier DTD</td>
             </tr>
             <tr>
@@ -70,7 +75,6 @@ status=published
             </tr>
           </tbody>
         </table>
-        <br/>
         <h4>XML Data Files</h4>
         <a id="data_files"></a>
         <table>
@@ -93,7 +97,7 @@ status=published
             </tr>
           </tbody>
         </table>
-        <br/>
+
         <p>In addition to data from the xml files, top levels of the
           hierarchy are created from external files for Metathesaurus
           representation.</p>
@@ -141,7 +145,7 @@ status=published
             </tr>
           </tbody>
         </table>
-        <br/>
+
         <p>XML tags &lt;CASN1Name&gt;, &lt;EntryVersion&gt; and
           &lt;SortVersion&gt; are used to create atoms with term types
           N1, DEV, and DSV, respectively.</p>
@@ -205,9 +209,9 @@ status=published
         </table>
       </div>
     </div>
-    <div id="file_details" class="rep_block_level_one"> <a id="file_details"></a>
+    <hr>
+    <div id="file_details" class="rep_block_level_one">
       <h3>Source-Provided Files: Details</h3>
-      &nbsp;&nbsp;
       <p>The source representation documentation below is based on
         published MeSH documentation describing XML data elements.
         Details from this document that are not relevant to
@@ -1175,32 +1179,17 @@ status=published
             <tr>
               <td>48</td>
               <td>&lt;PreviousIndexing&gt;<br/>
-                Description: Different usage in Descriptors and SCRs:<br/>
-                In Descriptors: Free-text field referring to Descriptors
-                or Descriptor/Qualifier combinations which were used to
-                index the concept in the MEDLINE databases before the
-                Descriptor was created. Intended to enable users of new
-                Descriptors to find similar concepts indexed before the
-                Descriptor was created. Includes dates of the format
-                (YYYY) for a single year or (YYYY-YYYY) for a range of
-                years. May include descriptive text referring to a group
-                of Descriptors as "specifics". References are not
-                currently maintained when a &lt;DescriptorName&gt; or
-                &lt;QualifierName&gt; changes. Example:
-                &lt;PreviousIndexing&gt;Hypertension/complications
-                (1972-1999)&lt;/PreviousIndexing&gt; Subelement of:
-                &lt;PreviousIndexingList&gt; In SCRs: The Descriptors or
+                Description: The Descriptors or
                 Descriptor/Qualifier combinations refer to the Heading
                 Mapped to which the NM was previously mapped. Thus the
-                reference often exists concurrently with the SCR, unlike
-                the Descriptor PI, though the PI may also include
+                reference often exists concurrently with the SCR, though the PI may also include
                 information on the history of the concept, such as if it
                 was previously a descriptor. Descriptor term is in upper
-                case, unlike the Descriptor PI. Example:
+                case. Example:
                 &lt;PreviousIndexing&gt;ASPARTIC ACID/*analogs
                 (75-91)&lt;/PreviousIndexing&gt;<br/>
                 Subelement of: &lt;PreviousIndexingList&gt;<br/>
-                Record Type: D, SCR<br/>
+                Record Type: SCR<br/>
                 Repeating element: yes<br/>
                 Required element: no</td>
               <td>MRSAT.ATN = PI</td>
@@ -1212,7 +1201,7 @@ status=published
                 elements in a Descriptor or Supplementary Concept
                 record.<br/>
                 Subelement of: &lt;DescriptorRecord&gt;<br/>
-                Record Type: D, SCR<br/>
+                Record Type: SCR<br/>
                 Repeating element: no<br/>
                 Required element: no</td>
               <td> See &lt;PreviousIndexing&gt;</td>

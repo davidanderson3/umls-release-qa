@@ -1,6 +1,6 @@
 title=NUCCPT (National Uniform Claim Committee - Health Care Provider Taxonomy) - Source Representation
 date=2017-11-06
-updated=2019-11-04
+updated=2020-05-04
 type=page
 status=published
 ~~~~~~
@@ -22,30 +22,22 @@ status=published
 <br/>
     <p>This page lists specific source data elements and provides
       information on their representation in the UMLS Metathesaurus.</p>
-<span class="nav">Skip to: <a
- href="#change_summary">Summary of Changes</a>, <a href="#file_summary">Summary
-of
-Source-Provided
-Files</a>,  <a href="#file_details">Source-Provided
-File Details</a></span>
-    	<div id="change_summary" class="rep_block_level_one">
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#change_summary">Summary of Changes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_summary">Summary of Source-Provided Files</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_details">Source-Provided File Details</a></div>
+    </div>
+    <hr>
+        <a
+      id="general"></a>
+    	<div id="change_summary">
 	        <h3>Summary of Changes</h3>
-			        New file:  nucc_characteristics_30.csv
-			        <p>
-			        The Provider Characteristics code set is for use with health care provider information for enrollment
-			        and credentialing transactions and their corresponding responses. It is intended to provide codified responses
-			        to questions presented to a health care provider applying to or registering with an entity and to report the
-			        outcome of such application or registration. It may also be used for responses to inquiries regarding provider
-			        participation or registration in a program or plan.  Provider characteristics are represented as
-			        modifiers in the UMLS Metathesaurus.</p>
-
-			        New TTY: <br/>
-			        <ul>
-			        <li>MP</li>
-			        </ul>
+			        There were no changes to the original file format or to Metathesaurus source processing.
 
 	      </div>
-	      <div id="file_summary" class="rep_block_level_one">
+	      <hr>
+	      <div id="file_summary">
 	        <h3>Source Provided Files: </h3>
 	        <p>The input files are in standard comma-separated-values format, with fields descriptions in the first line. </p>
 
@@ -56,27 +48,27 @@ File Details</a></span>
 				<th>Description</th>
 				</tr>
 				<tr>
-				<td>nucc_taxonomy_181.csv</td>
+				<td>nucc_taxonomy_200.csv</td>
 				<td>NUCC taxonomy.  Comma-separated data file</td>
 				</tr>
 				<tr>
-				<td>nucc_characteristics_30.csv</td>
+				<td>nucc_characteristics_40.csv</td>
 				<td>Provider Characteristics code set.  Comma-separated data file</td>
 				</tr>
 	        	</tbody>
 			</table>
 
       </div>
-
-        <br/>
-        <h3 id="file_details">Source-Provided Files: Details</h3>
+       <hr>
+        <div id="file_details">
+        <h3>Source-Provided Files: Details</h3>
 
         <p>The following is a list of elements in the NUCCPT .csv source files: </p>
         Note:  For TTY = PT/OP, MRCONSO.STR values are created by concatenating "Grouping," "Classification," and "Specialization"
         columns, separated by ";" and "," respectively, e.g. the STR for 101YS0200X is
         "Behavioral Health &amp; Social Service Providers; Counselor, School"
         <div class="rep_block_level_two"><a id="file1"></a><br/>
-        File: nucc_taxonomy_181.csv<br/>
+        File: nucc_taxonomy_200.csv<br/>
           <table>
             <tbody>
               <tr>
@@ -112,8 +104,8 @@ File Details</a></span>
               </tr>
               </tbody>
           </table>
-          <br/>
-		File: nucc_characteristics_30.csv<br/>
+
+		File: nucc_characteristics_40.csv<br/>
 		<table>
 			<tbody>
 				<tr>
@@ -131,5 +123,6 @@ File Details</a></span>
 		        </tbody>
 		        </table>
           <br/>
+        </div>
         </div>
 

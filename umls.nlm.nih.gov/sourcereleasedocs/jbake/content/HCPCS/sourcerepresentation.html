@@ -1,6 +1,6 @@
 title=HCPCS (HCPCS - Healthcare Common Procedure Coding System) - Source Representation
 date=2018-05-07
-updated=2019-11-04
+updated=2020-05-04
 type=page
 status=published
 ~~~~~~
@@ -19,16 +19,22 @@ status=published
  </div>
 </div>
 <!--endmenu-->
-<br/><a id="top-of-page"></a> Skip to: <a href="#general">Notes</a>, <a href="#change_summary">Summary of Changes</a>, <a href="#file_summary">Summary of Source-Provided Files</a>, <a href="#file_details">Source-Provided File Details</a><br/>
-
+<br/>
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#change_summary">Summary of Changes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_summary">Summary of Source-Provided Files</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_details">Source-Provided File Details</a></div>
+    </div>
 <div id="rep_general" class="rep_block_level_one">
   <a id="general"></a>
 
-  <p><b>VSAB: HCPCS2019</b></p>
+  <p><b>VSAB: HCPCS2020</b></p>
+  <hr>
 
   <h3>Notes</h3>
 
-  <p>Four SABs are assigned to HCPCS data, based on the code value.</p>
+  <p>Three SABs are assigned to HCPCS data, based on the code value.</p>
 
   <ul>
     <li>Level I codes are copyrighted by the American Medical Association (AMA) and are assigned RSAB = "HCPT".</li>
@@ -36,23 +42,22 @@ status=published
     <li>Level II codes include data copyrighted by the American Dental Association&rsquo;s Current Dental Terminology (CDT). 5-character alpha-numeric codes beginning with the letter "D," and are assigned RSAB = "HCDT". All other Level II codes are assigned RSAB = "HCPCS."</li>
   </ul>
 
-  <p>The standard HCPCS data files do not include a hierarchy. The NLM uses the printed book and other resources to generate a hierarchy during Metathesaurus source processing. This hierarchy has not been reviewed by CMS and is attributed to SAB = "MTHHH."</p>
+  <p>The standard HCPCS data files do not include a hierarchy. The NLM uses the printed book and other resources to generate a hierarchy during Metathesaurus source processing. This hierarchy has not been reviewed by CMS and is attributed to SAB = HCPCS, TTY = MTH_HT.</p>
 
   <p>HCPCS includes many attributes. When possible, NLM source processing has attempted to include an expanded value in the ATV field of MRSAT to enable the data to be self-documenting.<br/>
-  The expanded values have been extracted from HCPCS2019_recordlayout.txt and proc_notes2019.txt as appropriate.<br/>
+  The expanded values have been extracted from HCPCS2020_recordlayout.txt and proc_notes2020.txt as appropriate.<br/>
   For example, for the HCPCS Multiple Pricing Indicator Code is assigned an ATN of "HMP" in MRSAT.RRF.<br/>
   A value that appears as "A"in the data file is given an expanded ATV of "A = Not applicable as HCPCS priced under one methodology" in MRSAT.RRF.</p>
 </div>
-
+<hr>
 <div id="rep_change_summary" class="rep_block_level_one">
   <a id="change_summary"></a>
 
   <h3>Summary of Changes</h3>&nbsp;
 
-  <p>No changes have been made to the format of original data files or to Metathesaurus processing.  The data is
-  the official HCPCS 2019 release file (dated 11-02-2018), the VSABs reflect the Metathesaurus processing date.</p>
+  <p>SAB = MTHHH has been deprecated. The HCPCS hierarchy is now represented as SAB = HCPCS, TTY = MTH_HT</p>
 </div>
-
+<hr>
 <div id="rep_file_summary" class="rep_block_level_one">
   <a id="file_summary"></a>
 
@@ -74,24 +79,24 @@ status=published
         </tr>
 
         <tr>
-          <td>HCPC19_Trans_Report_ALL.xlsx</td>
+          <td>HCPC2020_Trans_Report_ALL.xlsx</td>
 
           <td>A series of reports containing information on the types of transactions (updates and changes) which were made to the HCPCS database. This file is not processed directly.</td>
         </tr>
 
         <tr>
-          <td>HCPCS2019_recordlayout.txt</td>
+          <td>HCPC2020_recordlayout.txt</td>
 
           <td>Documentation for the contractor record layout, including field names, lengths, beginning and ending character positions, and detailed descriptions of the values.</td>
         </tr>
 
         <tr>
-          <td>proc_notes_2019.txt</td>
+          <td>proc_notes_2020.txt</td>
 
           <td>Explanations of values for HCPCS Processing Notes.</td>
         </tr>
       </tbody>
-    </table><br/>
+    </table>
 
     <h4>Data File</h4>
 
@@ -103,21 +108,21 @@ status=published
         </tr>
 
         <tr>
-          <td>HCPC2019_CONTR.txt</td>
+          <td>HCPC2020_CONTR_FINAL_11042019.txt</td>
           <td>Fixed-length field data file, including Level I and Level II codes and all associated data.</td>
         </tr>
       </tbody>
-    </table><br/>
+    </table>
   </div>
 </div>
-
+<hr>
 <div id="rep_file_details" class="rep_block_level_one">
   <a id="file_details"></a>
 
   <h3>Source-Provided Files: Details</h3>
   <br/>
   <p>Details on format of input files and representation of source data. Consult the HCPCS documentation for additional details.</p>
-  <h4>file: HCPC2019_CONTR.txt</h4>
+  <h4>file: HCPC2020_CONTR_FINAL_11042019.txt</h4>
 
   <table>
     <tbody>

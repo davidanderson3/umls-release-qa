@@ -1,6 +1,6 @@
 title=LNC (LOINC) - Source Representation
 date=2018-05-07
-updated=2019-11-04
+updated=2020-05-04
 type=page
 status=published
 ~~~~~~
@@ -22,63 +22,99 @@ status=published
 <br/>
     <p>This page lists specific source data elements and provides
       information on their representation in the UMLS Metathesaurus.</p>
-    <a id="top-of-page"></a> <span class="nav">Skip to: <a
-        href="#general">Notes</a>, <a href="#change_summary">Summary of
-        Changes</a>, <a href="#file_summary">Summary of Source-Provided
-        Files</a> <a href="#file_details">Source-Provided File Details</a></span>
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#change_summary">Summary of Changes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_summary">Summary of Source-Provided Files</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_details">Source-Provided File Details</a></div>
+    </div>
     <div id="rep_change_summary" class="rep_block_level_one"></div>
-    <a>id="change_summary"></a>
-          <p><strong>VSAB: </strong>LNC266</p>
-   
+
+    <a id="change_summary"></a>
+          <p><strong>VSAB: </strong>LNC267</p>
+   <hr>
       <h3>Summary of Changes:</h3>
-            
-	        New Classes:
-	        <table>
-	        	<tbody>
-	        		<tr>
-	        			<th>Abbreviation</th>
-	        			<th>Class</th>
-	        		</tr>
-	        		<tr>
-	        			<td>ADMIN.PATIENT</td>
-	        			<td>Patient administrative information</td>
-	        		</tr>
-	        		<tr>
-	        			<td>ADMIN.PATIENT.DEMOG</td>
-	        			<td>Patient demographics</td>
-	        		</tr>
-	        		<tr>
-	  	  			   <td>ADMIN.PATIENT.ID</td>
-	  	  			   <td>Patient identification numbers</td>
-	  	  		   </tr>
-	  	  		   <tr>
-	  	  			   <td>BLDBK.GENOTYPING</td>
-	  	  			   <td>Blood bank genotyping)</td>
-	  	  		   </tr>
-	  	  		   <tr>
-	  	  			   <td>PANEL.BLDBK.GENOTYPE</td>
-	  	  			   <td>Blood bank genotyping panel</td>
-	  	  		   </tr>
-           <tr>
-	  	  			   <td>PANEL.SURVEY.PRAPARE</td>
-	  	  			   <td>Protocol for Responding to and Assessing Patients Assets Risks and Experiences (PRAPARE) set</td>
-	  	  		   </tr>
-           <tr>
-	  	  			   <td>SURVEY.PRAPARE</td>
-	  	  			   <td>Protocol for Responding to and Assessing Patients Assets Risks and Experiences (PRAPARE)</td>
-	  	  		   </tr>
-	  	  		  </tbody>
-	        </table>
-	        <br/>
-     	<div id="rep_file_summary" class="rep_block_level_one"></div><br/>
+      New Group Files:
+      <ul>
+       <li>Group.csv</li>
+       <li>GroupAttributes.csv</li>
+       <li>GroupLoincTerms.csv</li>
+       <li>ParentGroup.csv</li>
+       <li>ParentGroupAttributes.csv</li>
+      </ul>
+      <p>New field in loinc.csv file: DisplayName (field 46)</p>
+     
+      <p>New TTYs:</p>
+      <ul>
+       <li>DN (Display Name)</li>
+       <li>LG (Loinc Group Name)</li>
+       <li>OLG (Obsolete Loinc Group Name)</li>
+      </ul>
+      <p>New ATNs:</p>
+      <ul>
+       <li>CATEGORY</li>
+       <li>DESCRIPTION</li>
+       <li>EQUIVALENCE</li>
+       <li>MOLECULAR_WIEGHT_OF_ANALYTE</li>
+       <li>STATUS</li>
+       <li>USAGE_NOtES</li>
+      </ul>
+      <p>Dropped ATNs:</p>
+      <ul>
+       <li>IEEE_DESCRIPTION</li>
+       <li>IEEE_DIM</li>
+       <li>IEEE_UOM_UCUM</li>
+       <li>LSP</li>
+      </ul>
+      <p>New RELAs:</p>
+      <ul>
+       <li>has_parent_group|parent_group_of</li>
+       <li>has_archetype|archetype_of</li>
+       <li>has_loinc_number|loinc_number_of</li>
+      </ul>
+      <p>New Classes:</p>
+	     <table>
+	     	<tbody>
+        <tr>
+      			<th>Abbreviation</th>
+      			<th>Class</th>
+      		</tr>
+      		<tr>
+      			<td>CLIN.VET</td>
+      			<td>Clinical veterinary</td>
+      		</tr>
+      		<tr>
+      			<td>PANEL.MOLPATH.PHARMG</td>
+      			<td>Pharmacogenomics panel</td>
+      		</tr>
+      		<tr>
+         <td>PANEL.SURVEY.CSSRS</td>
+         <td>Columbia Suicide Severity Rating Scale (CSSRS) set</td>
+        </tr>
+        <tr>
+         <td>PANEL.SURVEY.WELLRX</td>
+         <td>WellRX Questionnaire set</td>
+        </tr>
+        <tr>
+         <td>SURVEY.CSSRS</td>
+         <td>Columbia Suicide Severity Rating Scale (CSSRS)</td>
+        </tr>
+        <tr>
+         <td>SURVEY.WELLRX</td>
+         <td>WellRX Questionnaire</td>
+        </tr>
+	      </tbody>
+	     </table>
+	     <hr>
+     	<div id="rep_file_summary" class="rep_block_level_one"></div>
       <a id="file_summary"></a>
       <h3>Source-Provided Files: Summary</h3>
-      &nbsp;
+      
       <p>The complete LOINC distribution includes the following.</p>
       <div class="rep_block_level_two"><!-- Make a table of each file that comes from the source   -->
         <h4>Documentation and Reference:</h4>
-        All data files have accompanying ReadMe and ReleaseNotes text files.  In addition, LOINCUsersGuide.pdf provides
-        detailed information.<br/>
+        <p>All data files have accompanying ReadMe and ReleaseNotes text files.  In addition, LOINCUsersGuide.pdf provides
+        detailed information.</p>
 
         <h4>Data files</h4>
         <table>
@@ -159,6 +195,26 @@ status=published
             	<td class="file_field_name"><a href="#file15">ConsumerName.csv</a></td>
             	<td>LOINC term Consumer Names</td>
             </tr>
+            <tr>
+            	<td class="file_field_name"><a href="#file16">Group.csv</a></td>
+            	<td>Data representing unique Groups. Includes parent, inactive, and deprecated groups.</td>
+            </tr>
+            <tr>
+            	<td class="file_field_name"><a href="#file17">GroupLoincTerms.csv</a></td>
+            	<td>Data representing unique Groups and their unique LOINC terms</td>
+            </tr>
+            <tr>
+            	<td class="file_field_name"><a href="#file18">GroupAttributes.csv</a></td>
+            	<td>Data representing unique Groups and their attributes</td>
+            </tr>
+            <tr>
+            	<td class="file_field_name"><a href="#file19">ParentGroup.csv</a></td>
+            	<td>Data representing unique Parent Groups</td>
+            </tr>
+            <tr>
+            	<td class="file_field_name"><a href="#file20">ParentGroupAttributes.csv</a></td>
+            	<td>Data representing unique Parent Groups and their attributes</td>
+            </tr>
           </tbody>
         </table>
         <p><strong>Not included:</strong><br/>
@@ -168,7 +224,8 @@ status=published
           Fields that are not used are indicated by "Not used" in the
           "Representation" columns below.</p>
       </div>
-      <div id="rep_file_details" class="rep_block_level_one">
+      <hr>
+      <div id="rep_file_details" class="rep_block_level_one"></div>
         <h3>Source-Provided Files: Details</h3>
         <a id="file_details"></a>
         <p>Details on format of input files and representation of source
@@ -475,25 +532,18 @@ status=published
               </tr>
               <tr>
                 <td>31</td>
-                <td>DOCUMENT_SECTION</td>
-                <td>Classification of whether this code can be used as a
-                  full document, section of a document, or both</td>
-                <td>MRSAT.ATN = "DOCUMENT_SECTION"</td>
-              </tr>
-              <tr>
-                <td>32</td>
                 <td>EXAMPLE_UCUM_UNITS</td>
                 <td>Example units of measure expressed as UCUM units</td>
                 <td>MRSAT.ATN = "EXAMPLE_UCUM_UNITS"</td>
               </tr>
               <tr>
-                <td>33</td>
+                <td>32</td>
                 <td>EXAMPLE_SI_UCUM_UNITS</td>
-                <td>Not currently populated</td>
-                <td>not applicable</td>
+                <td>Example units of measure expressed as SI UCUM</td>
+                <td>MRSAT.ATN = EXAMPLE_SI_UCUM_UNITS</td>
               </tr>
               <tr>
-                <td>34</td>
+                <td>33</td>
                 <td>STATUS_REASON</td>
                 <td>Classification of the reason for concept status.
                   This field will be Null for ACTIVE concepts, and
@@ -503,7 +553,7 @@ status=published
                 <td>MRSAT.ATN = "STATUS_REASON"</td>
               </tr>
               <tr>
-                <td>35</td>
+                <td>34</td>
                 <td>STATUS_TEXT</td>
                 <td>Explanation of concept status in narrative text.
                   This field will be Null for ACTIVE concepts, and
@@ -511,36 +561,35 @@ status=published
                 <td>MRSAT.ATN = "STATUS_TEXT"</td>
               </tr>
               <tr>
-                <td>36</td>
+                <td>35</td>
                 <td>CHANGE_REASON_PUBLIC</td>
                 <td>Detailed explanation about special changes to the
                   term over time.</td>
                 <td>MRSAT.ATN = "CHANGE_REASON_PUBLIC"</td>
               </tr>
               <tr>
-                <td>37</td>
+                <td>36</td>
                 <td>COMMON_TEST_RANK</td>
                 <td>Numeric ranking of approximately 2,000 common tests
                   performed by hospitals.</td>
                 <td>MRSAT.ATN = "COMMON_TEST_RANK"</td>
               </tr>
               <tr>
-                <td>38<br/>
-                </td>
+                <td>37<br/>
                 <td>COMMON_ORDER_RANK</td>
                 <td>Ranking of approximately 300 common orders performed
                   by laboratories in the USA.</td>
                 <td>MRSAT.ATN = "COMMON_ORDER_RANK"</td>
               </tr>
               <tr>
-                <td>39</td>
+                <td>38</td>
                 <td>COMMON_SI_TEST_RANK</td>
                 <td>Corresponding SI terms for 2000 common tests
                   performed by laboratories in USA.</td>
                 <td>MRSAT.ATN = "COMMON_SI_TEST_RANK"</td>
               </tr>
               <tr>
-                <td>40</td>
+                <td>39</td>
                 <td>HL7_ATTACHMENT_STRUCTURE</td>
                 <td>Valid values: STRUCTURED or UNSTRUCTURED. STRUCTURED
                   terms are the allowed document type codes in the
@@ -549,7 +598,7 @@ status=published
                 <td>MRSAT.ATN = "HL7_ATTACHMENT_STRUCTURE"</td>
               </tr>
               <tr>
-                <td>41</td>
+                <td>40</td>
                 <td>EXTERNAL_COPYRIGHT_LINK</td>
                 <td>Used for terms with an additional third party
                   copyright. The field is populated with the
@@ -559,37 +608,43 @@ status=published
                 <td>MRSAT.ATN = "EXTERNAL_COPYRIGHT_LINK"</td>
               </tr>
               <tr>
-                <td>42</td>
+                <td>41</td>
                 <td>PanelType</td>
                 <td>Describes a panel as a "Convenience group",
                   "Organizer", or "Panel'.</td>
                 <td>MRSAT.ATN = "PANEL_TYPE"</td>
               </tr>
               <tr>
-                <td>43</td>
+                <td>42</td>
                 <td>AskAtOrderEntry</td>
                 <td>List of LOINC codes that represent optional Ask at
                   Order Entry (AOE) observations.</td>
                 <td>MRSAT.ATN = "ASK_AT_ORDER_ENTRY"</td>
               </tr>
               <tr>
-                <td>44</td>
+                <td>43</td>
                 <td>AssociatedObservations</td>
                 <td>List of LOINC codes that represent option associated
                   observation(s).</td>
                 <td>MRSAT.ATN = "ASSOC_OBSERVATIONS"</td>
               </tr>
               <tr>
-                <td>45</td>
+                <td>44</td>
                 <td>VersionFirstReleased</td>
                 <td>LOINC version number in which the record was first released. For oldest records where the version released number is not known, this field will be null.</td>
                 <td>MRSAT.ATN = "VERSION_FIRST_RELEASED"</td>
               </tr>
                <tr>
-                <td>46</td>
+                <td>45</td>
                 <td>ValidHL7AttachmentRequest</td>
                 <td>A value of 'Y' indicates that the LOINC code can be sent by a payer as part of an HL7 attachment request for additional information.</td>
                 <td>MRSAT.ATN = "HL7_ATTACHMENT_REQUEST"</td>
+              </tr>
+               <tr>
+                <td>46</td>
+                <td>DisplayName</td>
+                <td>Clinician friendly name. Algorithmically created.</td>
+                <td>MRCONSO.STR, TTY = "DN"</td>
               </tr>
             </tbody>
           </table>
@@ -1323,7 +1378,7 @@ status=published
             </tbody>
           </table>  
 		 		   </div>
-               <div class="rep_block_level_two"><a id="file15"></a>
+        <div class="rep_block_level_two"><a id="file15"></a>
 		<h4 class="file_field_name">file: ConsumerName.csv<br/></h4>
            <table>
             <tbody>
@@ -1345,5 +1400,172 @@ status=published
             </tbody>
           </table>  
 		 		   </div>
-      </div>
-    
+        <div class="rep_block_level_two"><a id="file16"></a>
+		<h4 class="file_field_name">file: Group.csv<br/></h4>
+           <table>
+            <tbody>
+              <tr>
+                <th>#</th>
+                <th>Field</th>
+                <th>Representation</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>ParentGroupId</td>
+                <td>Relationship created between the ParentGroupId and the GroupID. MRREL.RELA = has_parent_group/parent_group_of</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>GroupId</td>
+                <td>Code, SCUI</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Group</td>
+                <td>MRCONS.STR</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Archetype</td>
+                <td>Relationship created between the GroupId and its Archetype. MRREL.RELA = has_archetype/archetype_of</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Status</td>
+                <td>Used in determining the TTY (LG or OLG) and in creating MRSAT.ATN = STATUS.
+                Valid values: Active, Inactive, Deprecated.</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>VersionFirstReleased</td>
+                <td>Not populated</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+              <div class="rep_block_level_two"><a id="file17"></a>
+		<h4 class="file_field_name">file: GroupLoincTerms.csv<br/></h4>
+           <table>
+            <tbody>
+              <tr>
+                <th>#</th>
+                <th>Field</th>
+                <th>Representation</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Category</td>
+                <td>MRSAT.ATN = CATEGORY. Linked to the rel_id of the 'has_loinc_number/loinc_umber_of' relationship.</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>GroupId</td>
+                <td>Used with MRREL.RELA = has_archetype/archetype_of and MRREL.RELA = has_loinc_number/loinc_number_of</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Archetype</td>
+                <td>Relationship created between the GroupId and its Archetype.
+                MRREL.RELA = has_archetype/archetype_of</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>LoincNumber</td>
+                <td>Relationship created between the GroupId and its LoincNumber.
+                MRREL.RELA = has_loinc_number/loinc_number_of</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>LongCommonName</td>
+                <td>Not used</td>
+              </tr>
+            </tbody>
+          </table>
+              </div>
+              <div class="rep_block_level_two"><a id="file18"></a>
+		<h4 class="file_field_name">file: GroupAttributes.csv<br/></h4>
+           <table>
+            <tbody>
+              <tr>
+                <th>#</th>
+                <th>Field</th>
+                <th>Representation</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>ParentGroupId</td>
+                <td>Not used</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>GroupId</td>
+                <td>MRSAT.CODE</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Type</td>
+                <td>MRSAT.ATN. Valid values: MOLECULAR_WEIGHT_OF_ANALYTE, DESCRIPTION, USAGE_NOTES</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Value</td>
+                <td>MRSAT.ATV</td>
+              </tr>
+            </tbody>
+          </table>
+              </div>
+              <div class="rep_block_level_two"><a id="file19"></a>
+		<h4 class="file_field_name">file: ParentGroup.csv<br/></h4>
+           <table>
+            <tbody>
+              <tr>
+                <th>#</th>
+                <th>Field</th>
+                <th>Representation</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>ParentGroupId</td>
+                <td>MRCONSO.CODE, SCUI</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>ParentGroup</td>
+                <td>MRCONSO.STR</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>STATUS</td>
+                <td>Used to determine MRCONSO.TTY. MRSAT.ATN = STATUS. Valid  values: Active, Inactive, Deprecated</td>
+              </tr>
+            </tbody>
+          </table>
+              </div>
+              <div class="rep_block_level_two"><a id="file20"></a>
+		<h4 class="file_field_name">file: ParentGroupAttributes.csv<br/></h4>
+           <table>
+            <tbody>
+              <tr>
+                <th>#</th>
+                <th>Field</th>
+                <th>Representation</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>ParentGroupId</td>
+                <td>MRSAT.CODE</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Type</td>
+                <td>MRSAT.ATN. Valid values: MOLECULAR_WEIGHT_OF_ANALYTE, DESCRIPTION, USAGE_NOTES</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Value</td>
+                <td>MRSAT.ATV</td>
+              </tr>
+           </tbody>
+          </table>
+         </div>
+       

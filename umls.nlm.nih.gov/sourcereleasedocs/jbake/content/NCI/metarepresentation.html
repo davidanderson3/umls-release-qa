@@ -1,6 +1,6 @@
 title=NCI (NCI Thesaurus) - Metathesaurus Representation
 date=2018-05-07
-updated=2019-11-04
+updated=2020-05-04
 type=page
 status=published
 ~~~~~~
@@ -30,10 +30,11 @@ status=published
     	<div class="col-sm-auto border-left"><a href="#relationships">Relationships</a></div>
     	<div class="col-sm-auto border-left"><a href="#mappings">Mappings</a></div>
     </div>
-<p><strong>VSAB: </strong>NCI2019_03D</p>
+<div id = "general" class = "rep_block_level_one">
+<p><strong>VSAB: </strong>NCI2019_08D</p>
 <hr>
 <div id = "rep_identifiers" class = "rep_block_level_one">
-<h3>Notes</h3>
+<h3>General Notes/Comments:</h3>
 <p>NCI Thesaurus (NCIt) is a widely recognized standard for biomedical coding and reference. It covers vocabulary for clinical care, translational and basic research, public information and administrative activities and is used by a broad variety of public and private partners both nationally and internationally.The scope of NCI is determined by the combined scope of its source vocabularies which include the following:</p>
 <table>
 <tr>
@@ -181,16 +182,12 @@ status=published
     <td>Zebrafish Model Organism Database</td>
 </tr>
 </table>
-
+</div>
 <hr>
 <h3>Summary of Changes</h3>
 <p>New subsource(s):</p>
 <ul>
   <li>BRIDG_3_0_3 (Biomedical Research Integrated Domain Group Model 3.0.3)</li>
-</ul>
-<p>New property(s):</p>
-<ul>
-  <li>P397 Target_Terminology_Version</li>
 </ul>
 <p>New associations(s) | Inverse(s):</p>
 <ul>
@@ -203,13 +200,13 @@ status=published
 </ul>
 <p>The subsource CPTAC (Clinical Proteomic Tumor Analysis Consortium Terms) has been deprecated.</p>
 </div>
-<hr>
 <div id = "rep_change_summary" class = "rep_block_level_one">
 <h3>Original Files:</h3>
 <table>
 <tr><th>File Name</th><th>Description</th></tr>
 <tr><td  class = "file_field_name">ThesaurusInferred.owl</td><td>Complete source data in an OWL2 (by code) formatted file.</td></tr>
 </table>
+
 </div>
 <hr>
 <div id = "rep_identifers" class = "rep_block_level_one">
@@ -220,7 +217,6 @@ status=published
 <li>SCUI:  NCI code or subsource code</li>
 <li>SDUI:  not applicable</li>
 </ul>
-</div>
 <hr>
 <div id = "rep_termtypes" class = "rep_block_level_two">
 <a id= "atoms"></a>
@@ -272,9 +268,9 @@ status=published
 </tr>
 </table>
 </div>
-<hr>
 <h3>Suppressibility</h3>
 <p>For term type OP, the suppressible value is "O" (obsolete). For all others, the value is "N" (not suppressible).</p>
+</div>
 <hr>
 <div id = "rep_attributes" class = "rep_block_level_two">
 <a id= "attributes"></a>
@@ -380,9 +376,9 @@ Origin:
 <p>Definition: &lt;P97...ncicp:complexDefinition xmlns:ncicp.../P97&gt;</p>
 Alt_Definition: &lt;P325...ncicp:complexDefinition xmlns:ncicp.../P325&gt;
 </div>
-<hr>
 <div id = "rep_relationships" class = "rep_block_level_two">
 <a id= "relationships"></a>
+<hr>
 <h3>Relationships (MRREL)</h3>
 <p>Origin of the relationship is derived from the "owl:onPropertyrdf..." code (Roles) and/or the "&lt;A# rdf..." code (Associations).  For example:</p>
 &lt;rdfs:subClassOf&gt;<br/>
@@ -639,7 +635,9 @@ Alt_Definition: &lt;P325...ncicp:complexDefinition xmlns:ncicp.../P325&gt;
 </div>
 <hr>
 <h3>Hierarchy (MRHIER)</h3>
+
 <p>The hierarchy is created from the 'rdfs:subClassOfrdf:resource' tag which indicates the parent of the concept.  Sibling information is not included.</p>
 <hr>
-<h3 id="mappings">Mappings (MRMAP)</h3>
+<h3>Mappings (MRMAP)</h3>
+
 <p>No mappings are supplied by NCI.</p>
