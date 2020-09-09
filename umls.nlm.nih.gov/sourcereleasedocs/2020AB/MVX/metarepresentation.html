@@ -1,0 +1,179 @@
+title=MVX (Manufacturers of Vaccines) - Metathesaurus Representation
+date=2018-05-07
+updated=2020-05-04
+type=page
+status=published
+~~~~~~
+
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+<!--endmenu-->
+<br/>
+    <p>This page lists UMLS Metathesaurus data elements and traces them
+      back to the specific source data that populates them.</p>
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#atoms">Atoms</a></div>
+    	<div class="col-sm-auto border-left"><a href="#attributes">Attributes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#definitions">Definitions</a></div>
+    	<div class="col-sm-auto border-left"><a href="#relationships">Relationships</a></div>
+    	<div class="col-sm-auto border-left"><a href="#mappings">Mappings</a></div>
+    </div>
+    <div id="general" class="rep_block_level_one">
+      <p><strong>VSAB:</strong> MVX2020_09_04
+      </p>
+      <hr>
+       <div id="rep_identifiers" class="rep_block_level_one">
+        <h3>Summary of Changes</h3>
+      <p>None</p>
+       </div>
+       <hr>
+      <div id="rep_change_summary" class="rep_block_level_one">
+        <h3>Source Provided Files Summary:</h3>
+        <h4>Data Files</h4>
+        <a id="data_files"></a>
+        <table>
+          <tbody>
+            <tr>
+              <th>File Name</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>mvx_20200904.txt</td>
+              <td>MVX data file</td>
+            </tr>
+            <tr>
+              <td>cvx_mvx_TRADENAME_20200904.txt</td>
+              <td>File connecting manufacturer names (MVX) to vaccine names (CVX)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <hr>
+      <div id="rep_identifers" class="rep_block_level_one">
+        <h3>Identifiers:</h3>
+        Identifiers are assigned as follows:<br/>
+        
+        <table>
+          <tbody>
+            <tr>
+              <th>Identifier</th>
+              <th>Origin</th>
+            </tr>
+            <tr>
+              <td>CODE</td>
+              <td>MVX CODE</td>
+            </tr>
+            <tr>
+              <td>SAUI</td>
+              <td>Not Applicable</td>
+            </tr>
+            <tr>
+              <td>SCUI</td>
+              <td>Same as CODE</td>
+            </tr>
+            <tr>
+              <td>SDUI</td>
+              <td>Not Applicable</td>
+            </tr>
+          </tbody>
+        </table>
+        <hr>
+        <div id="rep_termtypes" class="rep_block_level_two"> <a id="atoms"></a>
+          <h3>Atoms (MRCONSO):</h3>
+          <table>
+            <tbody>
+              <tr>
+                <th>Term Type</th>
+                <th>Origin</th>
+              </tr>
+              <tr>
+                <td>PT</td>
+                <td>CODE = Value of MVX CODE<br/>
+                  STR = Value of Manufacturer Name<br/>
+                  SCUI = Same as CODE<br/>
+                  <br/>
+                </td>
+              </tr>
+             </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="rep_attributes" class="rep_block_level_two"> <a id="attributes"></a>
+          <h3>Attributes (MRSAT):</h3>
+          <table>
+            <tbody>
+              <tr>
+                <th>Attribute Name</th>
+                <th>Origin</th>
+              </tr>
+              <tr>
+                <td>DATE_MODIFIED</td>
+                  <td>1) Attributes indicating the last update date for the
+                  Manufacturer data are attached to an MVX SCUI<br/>
+                  2) Attributes indicating the last update date for the
+                  relationship between MVX and CVX are attached to the RUI.
+                </td>
+              </tr>
+              <tr>
+                <td>MANUFACTURER_STATUS</td>
+                <td>Manufacturer Status
+                </td>
+              </tr>
+              <tr>
+                <td>SOS
+                </td>
+                <td>Notes
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="rep_definitions" class="rep_block_level_two"> <a id="definitions"></a>
+          <h3>Definitions (MRDEF):</h3>
+          <p>No definitions are included with MVX</p>
+        </div>
+        <hr>
+        <div id="rep_relationships" class="rep_block_level_two"> <a id="relationships"></a>
+          <h3>Relationships (MRREL):</h3>
+          <table>
+            <tbody>
+              <tr>
+                <th>REL</th>
+                <th>RELA<br/>
+                  Inverse RELA</th>
+                <th>Origin</th>
+              </tr>
+              <tr>
+                <td>RO
+                </td>
+                <td>manufactured_by<br/>
+                  manufactures
+                </td>
+                <td>Connects vaccines (CVX) to manufacturers (MVX)
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="rep_mappings" class="rep_block_level_two"> <a id="mappings"></a>
+          <h3>Mappings (MRMAP):</h3>
+          <p>"Mappings" between manufacturers (MVX) and vaccines (CVX)
+            are represented as relationships.<br/>
+          </p>
+        </div>
+      </div>
+    </div>
