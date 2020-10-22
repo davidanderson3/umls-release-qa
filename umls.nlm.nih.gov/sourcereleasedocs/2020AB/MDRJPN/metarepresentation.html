@@ -1,0 +1,313 @@
+title=MDRJPN (MedDRA Japanese) - Metathesaurus Representation
+date=2018-05-07
+updated=2020-05-04
+type=page
+status=published
+~~~~~~
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+<!--endmenu-->
+<br/>
+<p>This page lists UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
+
+<a id="top-of-page"></a>
+<span class="nav">Skip to: <a href="#atoms">Atoms</a>, <a
+ href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
+<a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
+<div id="general" class="rep_block_level_one">
+<p><strong>VSAB: </strong>MDRJPN23_0</p>
+<div id="rep_identifiers" class="rep_block_level_one">
+<h3>Summary of Changes:</h3>
+<p>None</p>
+</div>
+<div id="rep_change_summary" class="rep_block_level_one">
+<h3>Source Provided Files:</h3>
+The UMLS uses MedDRA files distributed in the ASCII/MDRA_J221 directory:<br/>
+<ul>
+  <li>hlgt_hlt.asc</li>
+  <li>hlgt_j.asc</li>
+  <li>hlt_j.asc</li>
+  <li>hlt_pt.asc</li>
+  <li>intl_ord.asc</li>
+  <li>llt_j.asc</li>
+  <li>mdhier.asc</li>
+  <li>meddra_release.asc</li>
+  <li>pt_j.asc</li>
+  <li>smq_content.asc</li>
+  <li>smq_list_j.asc</li>
+  <li>soc_hlgt.asc</li>
+  <li>soc_j.asc</li>
+</ul>
+</div>
+<div id="rep_identifers" class="rep_block_level_one">
+<h3>Identifiers:</h3>
+
+<p>Identifiers are assigned as follows:
+</p>
+<ul>
+  <li>CODE: Populated by the "code" field in original data files, e.g.
+the code for an "HT" or "HTJKN" atom comes from the hlt_code field in
+hlt_j.asc</li>
+  <li>SAUI: Not Applicable</li>
+  <li>SCUI: Not Applicable</li>
+  <li>SDUI: Populated by the "code" field in original data files,
+except for TTY = LT* and TTY = OL*.  For these cases, the SDUI is populated by matching the llt code to the MedDRA English llt code and using
+the SDUI value found in the English version.
+</li>
+</ul>
+<div id="rep_termtypes" class="rep_block_level_two">
+<a id="termtypes"></a>
+<h3>Atoms (MRCONSO):</h3>
+<ul>
+  <li>kanji:  Japanese-Chinese characters</li>
+  <li>kana:   Japanese phonetic symbols</li>
+  <li>kana1:  alternate kana name</li>
+</ul>
+<table>
+  <tbody>
+    <tr>
+      <th>Term Type</th>
+      <th>Origin</th>
+    </tr>
+    <tr>
+      <td>HG</td>
+      <td>CODE and SDUI = hlgt_code field of hlgt_j.asc<br/>
+STR = hlgt_kanji field of hlgt_j.asc<br /><br />
+      </td>
+    </tr>
+    <tr>
+      <td>HGJKN</td>
+      <td>CODE and SDUI = hlgt_code field of hlgt_j.asc<br/>
+STR = hlgt_kana field of hlgt_j.asc<br /><br />
+      </td>
+    </tr>
+    <tr>
+      <td>HGJKN1</td>
+      <td>CODE and SDUI = hlgt_code field of hlgt_j.asc<br/>
+STR = hlgt_kana1  field of hlgt_j.asc<br /><br />
+      </td>
+    </tr>
+    <tr>
+      <td>HT</td>
+      <td>CODE and SDUI = hlt_code field of hlt_j.asc<br/>
+STR = hlt_kanji field of hlt_j.asc<br /><br />
+      </td>
+    </tr>
+    <tr>
+      <td>HTJKN</td>
+      <td>CODE and SDUI = hlt_code field of hlt_j.asc<br/>
+STR = hlt_kana field of hlt_j.asc<br /><br />
+      </td>
+    </tr>
+    <tr>
+      <td>HTJKN1</td>
+      <td>CODE and SDUI = hlt_code field of hlt_j.asc<br/>
+STR = hlt_kana1 field of hlt_j.asc<br /><br />
+      </td>
+    </tr>
+     <tr>
+      <td>LLT</td>
+      <td>CODE = llt_code field of llt_j.asc<br/>
+STR = llt_kanji field of llt_j.asc<br/>
+SDUI = SDUI of corresponding MedDRA English atom based on llt code<br/>
+LT atoms are created where llt_jcurr field of llt_j.asc = "Y"<br /><br />
+      </td>
+    </tr>
+    <tr>
+      <td>LTJKN</td>
+      <td>CODE = llt_code field of llt_j.asc<br/>
+STR = llt_kana field of llt_j.asc<br/>
+SDUI = SDUI of corresponding MedDRA English atom based on llt code<br /><br />
+      </td>
+    </tr>
+    <tr>
+      <td>LTJKN1</td>
+      <td>CODE = llt_code field of llt_j.asc<br/>
+STR = llt_kana1 field of llt_j.asc<br/>
+SDUI = SDUI of corresponding MedDRA English atom based on llt code<br /><br />
+      </td>
+    </tr>
+    <tr>
+      <td>OL</td>
+      <td>CODE = llt_code field of llt_j.asc<br/>
+STR = llt_kanji field of llt_j.asc<br/>
+SDUI = SDUI of corresponding MedDRA English atom based on llt code<br/>
+SUPPRESS = "Y"<br/>
+OL atoms are created where llt_jcurr field of llt_j.asc = "N"<br /><br />
+      </td>
+    </tr>
+    <tr>
+      <td>OLJKN</td>
+      <td>CODE = llt_code field of llt_j.asc<br/>
+STR = llt_kana field of llt_j.asc<br/>
+SDUI = SDUI of corresponding MedDRA English atom based on llt code<br/>
+SUPPRESS = "Y"<br/>
+OLJKN atoms are created where llt_jcurr field of llt_j.asc = "N"<br /><br />
+      </td>
+    </tr>
+    <tr>
+      <td>OLJKN1</td>
+      <td>CODE = llt_code field of llt_j.asc<br/>
+STR = llt_kana1 field of llt_j.asc<br/>
+SDUI = SDUI of corresponding MedDRA English atom based on llt code<br/>
+SUPPRESS = "Y"<br/>
+OLJKN1 atoms are created where llt_jcurr field of llt_j.asc = "N"<br /><br />
+      </td>
+    </tr>
+     <tr>
+      <td>OS</td>
+      <td>CODE and SDUI = soc_code field of soc_j.asc<br/>
+STR = soc_kanji field of soc_j.asc<br /><br />
+      </td>
+    </tr>
+    <tr>
+      <td>OSJKN</td>
+      <td>CODE and SDUI = soc_code field of soc_j.asc<br/>
+STR = soc_kana field of soc_j.asc<br /><br />
+      </td>
+    </tr>
+    <tr>
+      <td>OSJKN1</td>
+      <td>CODE and SDUI = soc_code field of soc_j.asc<br/>
+STR = soc_kana1 field of soc_j.asc<br /><br />
+      </td>
+    </tr>
+    <tr>
+      <td>PT</td>
+      <td>CODE and SDUI = pt_code field of pt_j.asc<br/>
+STR = pt_kanji field of pt_j.asc<br /><br />
+      </td>
+    </tr>
+    <tr>
+      <td>PTJKN</td>
+      <td>CODE and SDUI = pt_code field of pt_j.asc<br/>
+STR = pt_kana field of pt_j.asc<br /><br />
+      </td>
+    </tr>
+    <tr>
+      <td>PTJKN1</td>
+      <td>CODE and SDUI = pt_code field of pt_j.asc<br/>
+STR = pt_kana1 field of pt_j.asc<br /><br />
+      </td>
+    </tr>
+    <tr>
+      <td>SMQ</td>
+      <td>CODE and SDUI = smq_code field of smq_list_j.asc<br/>
+STR = smq_kanji field of smq_list_j.asc<br/>
+      </td>
+    </tr>
+   </tbody>
+</table>
+</div>
+<div id="rep_attributes" class="rep_block_level_two">
+<a id="attributes"></a><br/>
+<h3>Attributes (MRSAT):</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <th>Attribute Name</th>
+      <th>Origin</th>
+    </tr>
+    <tr>
+      <td>MISO</td>
+      <td>Serial code for international System Organ Class sort order.
+Extracted from the intl_ord_code field of intl_ord.asc.</td>
+    </tr>
+    <tr>
+      <td>SMQ_TERM_ADDVERSION</td>
+      <td>Extracted from the Term_addition_version field of
+smq_content.asc</td>
+    </tr>
+    <tr>
+      <td>SMQ_TERM_CAT</td>
+      <td>Extracted from the Term_category field of smq_content.asc</td>
+    </tr>
+    <tr>
+      <td>SMQ_TERM_LEVEL</td>
+      <td>Extracted from the Term_level field of smq_content.asc</td>
+    </tr>
+    <tr>
+      <td>SMQ_TERM_LMVERSION</td>
+      <td>Extracted from the Term_last_modified_version field of
+smq_content.asc</td>
+    </tr>
+    <tr>
+      <td>SMQ_TERM_SCOPE</td>
+      <td>Extracted from the Term_scope field of smq_content.asc</td>
+    </tr>
+    <tr>
+      <td>SMQ_TERM_STATUS</td>
+      <td>Extracted from the Term_status field of smq_content.asc</td>
+    </tr>
+    <tr>
+      <td>SMQ_TERM_WEIGHT</td>
+      <td>Extracted from the Term_weight field of smq_content.asc</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div id="rep_definitions" class="rep_block_level_two">
+<a id="definitions"></a><br/>
+<h3>Definitions (MRDEF):</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <th>ORIGIN</th>
+    </tr>
+    <tr>
+      <td>Extracted from the smq_desc_kanjii field of smq_list_j.asc.
+DEFINITIONs are present only for TTY = "SMQ", and include a description<br/>
+of the SMQ including inclusion and exclusion criteria.
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div id="rep_relationships" class="rep_block_level_two">
+<a id="relationships"></a><br/>
+<h3>Relationships (MRREL):</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <th>Relationship</th>
+      <th>Relationship Label/Inverse Relationship Label</th>
+      <th>ORIGIN</th>
+    </tr>
+    <tr>
+      <td>CHD<br/>
+PAR<br/>
+SIB</td>
+      <td>(no rela)</td>
+      <td>Hierarchy extracted from hlt_pt.asc,
+hlgt_hlt.asc, soc_hlgt.asc files (can also be computed from mdhier.asc) using the kanji name as the proxy for the whole concept.</td>
+    </tr>
+    <tr>
+      <td>RO</td>
+      <td>has_member/member_of</td>
+      <td>Connects a Standardised MedDRA Query (SMQ) with subordinate
+terms. Derived from the SMQ_code and Term_code fields of
+smq_content.asc.</td>
+    </tr>
+    <tr>
+      <td>SY</td>
+      <td>translation_of/has_translation</td>
+      <td>Connects MedDRA English atoms with MedDRA Japanese atoms based on code and TTY.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
