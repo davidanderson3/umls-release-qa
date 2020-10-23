@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<statisticalReport>
+    <result>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>57055</count>
+            <expandedForm>Drug Strength (e.g. 0.01%, 0.02 MG, 0.02 MG/ML)</expandedForm>
+            <termType>DST</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>66527</count>
+            <expandedForm>Drug Route of Administration (e.g. Injection (systemic) )</expandedForm>
+            <termType>DRT</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>306506</count>
+            <expandedForm>National Drug Code corresponding to a clinical drug (e.g. 000023082503)</expandedForm>
+            <termType>NDC</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>56057</count>
+            <expandedForm>Source drug efficacy study implementation indicator</expandedForm>
+            <termType>DESI_DESC</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>68862</count>
+            <expandedForm>Micromedex Product Category Code</expandedForm>
+            <termType>MMX_RXO</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>169281</count>
+            <expandedForm>FDA Structured Product Label Manufacturer/Distributor/Supplier name</expandedForm>
+            <termType>LABELER</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>15973</count>
+            <expandedForm>Universal Product Code</expandedForm>
+            <termType>UPC</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>56685</count>
+            <expandedForm>Controlled Substance Act designation code (e.g. 0,2,3n)</expandedForm>
+            <termType>DCSA</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>70498</count>
+            <expandedForm>Drug Doseform (e.g. chewable tablet)</expandedForm>
+            <termType>DDF</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+    </result>
+    <source>MMX</source>
+</statisticalReport>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<statisticalReport>
+    <result>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="statisticalReportBySource">
+            <percentage>26.3</percentage>
+            <source>CCS_10</source>
+            <statisticalCount>74</statisticalCount>
+            <statisticalType>Diagnostic Procedure</statisticalType>
+            <totalCount>0</totalCount>
+            <cID>T060</cID>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="statisticalReportBySource">
+            <percentage>3.2</percentage>
+            <source>CCS_10</source>
+            <statisticalCount>9</statisticalCount>
+            <statisticalType>Health Care Activity</statisticalType>
+            <totalCount>0</totalCount>
+            <cID>T058</cID>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="statisticalReportBySource">
+            <percentage>68.7</percentage>
+            <source>CCS_10</source>
+            <statisticalCount>193</statisticalCount>
+            <statisticalType>Therapeutic or Preventive Procedure</statisticalType>
+            <totalCount>0</totalCount>
+            <cID>T061</cID>
+        </sourceList>
+    </result>
+    <source>CCS_10</source>
+</statisticalReport>

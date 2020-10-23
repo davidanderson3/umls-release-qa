@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<statisticalReport>
+    <result>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>4413090</count>
+            <expandedForm>Major revision date YYYYMMDD - date the Metathesaurus entry for the concept underwent any revision in content. </expandedForm>
+            <termType>MR</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>2</count>
+            <expandedForm>Root source abbreviation for a map set</expandedForm>
+            <termType>MAPSETRSAB</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>2</count>
+            <expandedForm>Root source abbreviation for the "from" identifiers of a map set</expandedForm>
+            <termType>FROMRSAB</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>2</count>
+            <expandedForm>Versioned source abbreviation for a map set</expandedForm>
+            <termType>MAPSETVSAB</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>2</count>
+            <expandedForm>Versioned source abbreviation for the "from" identifiers of a map set</expandedForm>
+            <termType>FROMVSAB</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>6</count>
+            <expandedForm>Content view class</expandedForm>
+            <termType>CV_CLASS</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>1</count>
+            <expandedForm>Content view includes obsolete data: YN</expandedForm>
+            <termType>CV_INCLUDE_OBSOLETE</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>2</count>
+            <expandedForm>Scope Statement</expandedForm>
+            <termType>SOS</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>6</count>
+            <expandedForm>Version of this content view submitted by the contributor</expandedForm>
+            <termType>CV_CONTRIBUTOR_VERSION</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>6</count>
+            <expandedForm>Content view code</expandedForm>
+            <termType>CV_CODE</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>1</count>
+            <expandedForm>Previous UMLS Metathesaurus version used to generate content view. A null value means the content view is generated based on current UMLS Metathesaurus version.</expandedForm>
+            <termType>CV_PREVIOUS_META</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>6</count>
+            <expandedForm>Version of this content view submitted by the maintainer</expandedForm>
+            <termType>CV_MAINTAINER_VERSION</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>2</count>
+            <expandedForm>Indicates whether or not the "from" source of a map set is completely mapped</expandedForm>
+            <termType>MTH_MAPFROMEXHAUSTIVE</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>6</count>
+            <expandedForm>Content view generated: Y/N</expandedForm>
+            <termType>CV_IS_GENERATED</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>34424</count>
+            <expandedForm>Indicates if a chemicals or medical device is a tradename (present in older versions of the Metathesaurus and was discontinued, then brought back starting in 2002AD)</expandedForm>
+            <termType>LT</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>2</count>
+            <expandedForm>Indicates the complexity of "from" expressions used in a map set</expandedForm>
+            <termType>MTH_MAPFROMCOMPLEXITY</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>2</count>
+            <expandedForm>Indicates the nature of a map set. Its value is map set specific. It can be used to indicate the inclusion of one to one, one to many and choices of maps.</expandedForm>
+            <termType>MAPSETTYPE</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>4413090</count>
+            <expandedForm>Concept Attributes Status - valid values: R Reviewed, U Unreviewed </expandedForm>
+            <termType>ST</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>6</count>
+            <expandedForm>URL corresponding to the maintainer version of this concept view</expandedForm>
+            <termType>CV_MAINTAINER_URL</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>2</count>
+            <expandedForm>Indicates the overall complexity of a map set</expandedForm>
+            <termType>MTH_MAPSETCOMPLEXITY</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>6</count>
+            <expandedForm>URL corresponding to the contributor version of this concept view</expandedForm>
+            <termType>CV_CONTRIBUTOR_URL</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>6</count>
+            <expandedForm>Content view category</expandedForm>
+            <termType>CV_CATEGORY</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>26260</count>
+            <expandedForm>Describes the membership for an atom belonging to a particular content view.  The value for this attribute is a tilde-delimited microsyntax.  The first field is the content view bitflag (e.g. 2048), followed by field name-value pairs describing the member.</expandedForm>
+            <termType>CV_MEMBER</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>6</count>
+            <expandedForm>Content view description</expandedForm>
+            <termType>CV_DESCRIPTION</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>2</count>
+            <expandedForm>Indicates whether or not the "to" source is completely mapped</expandedForm>
+            <termType>MTH_MAPTOEXHAUSTIVE</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>6</count>
+            <expandedForm>Date corresponding to the maintainer version of this concept view</expandedForm>
+            <termType>CV_MAINTAINER_DATE</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>2</count>
+            <expandedForm>Grammar used to describe boolean expressions used in a map set</expandedForm>
+            <termType>MAPSETGRAMMAR</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>2</count>
+            <expandedForm>Source asserted identifier for a map set</expandedForm>
+            <termType>MAPSETSID</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>2</count>
+            <expandedForm>Version of the map set</expandedForm>
+            <termType>MAPSETVERSION</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>2</count>
+            <expandedForm>Root source abbreviation for the "to" identifiers of a map set</expandedForm>
+            <termType>TORSAB</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>2</count>
+            <expandedForm>Versioned source abbreviation for the "to" identifiers of a map set</expandedForm>
+            <termType>TOVSAB</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>6</count>
+            <expandedForm>Date corresponding to the contributor version of this concept view</expandedForm>
+            <termType>CV_CONTRIBUTOR_DATE</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>2</count>
+            <expandedForm>Indicates the complexity of "to" expressions in a map set</expandedForm>
+            <termType>MTH_MAPTOCOMPLEXITY</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>6</count>
+            <expandedForm>Content view maintainer</expandedForm>
+            <termType>CV_MAINTAINER</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>4413090</count>
+            <expandedForm>Metathesaurus Date of entry - YYYYMMDD, e.g., 19920830 - date of entry of the concept into the Metathesaurus. </expandedForm>
+            <termType>DA</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>6</count>
+            <expandedForm>Content view contributor</expandedForm>
+            <termType>CV_CONTRIBUTOR</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>6</count>
+            <expandedForm>Content view algorithm</expandedForm>
+            <termType>CV_ALGORITHM</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+    </result>
+    <source>MTH</source>
+</statisticalReport>

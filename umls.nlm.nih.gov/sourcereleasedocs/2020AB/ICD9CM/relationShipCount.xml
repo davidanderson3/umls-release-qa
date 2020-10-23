@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<statisticalReport>
+    <result>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>18449</count>
+            <expandedForm>source asserted synonymy./Expanded form of</expandedForm>
+            <termType>SY/expanded_form_of</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>18449</count>
+            <expandedForm>source asserted synonymy./Has expanded form</expandedForm>
+            <termType>SY/has_expanded_form</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>22406</count>
+            <expandedForm>has parent relationship in a Metathesaurus source vocabulary /Empty relationship attribute</expandedForm>
+            <termType>PAR/</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>22406</count>
+            <expandedForm>has child relationship in a Metathesaurus source vocabulary /Empty relationship attribute</expandedForm>
+            <termType>CHD/</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>138124</count>
+            <expandedForm>has sibling relationship in a Metathesaurus source vocabulary./Empty relationship attribute</expandedForm>
+            <termType>SIB/</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+    </result>
+    <source>ICD9CM</source>
+</statisticalReport>

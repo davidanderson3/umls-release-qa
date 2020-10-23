@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<statisticalReport>
+    <result>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>474</count>
+            <expandedForm>HL7 Anchor: HTML-Reference to the Standard</expandedForm>
+            <termType>HTA</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>4541</count>
+            <expandedForm>HL7 Usage: How is this data element used (Original, Added, Deleted)</expandedForm>
+            <termType>HUS</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>478</count>
+            <expandedForm>HL7 Table Type: Number specifying the type of this table (user defined, HL7 defined, ..)</expandedForm>
+            <termType>HTT</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>478</count>
+            <expandedForm>HL7 Generate: Yes/No</expandedForm>
+            <termType>HTG</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>4555</count>
+            <expandedForm>HL7 Table ID</expandedForm>
+            <termType>HTID</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>4553</count>
+            <expandedForm>HL7 Sort Number: Number for sorting the values according to the official document</expandedForm>
+            <termType>HSNU</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>173</count>
+            <expandedForm>HL7 Comment</expandedForm>
+            <termType>HCO</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>1040</count>
+            <expandedForm>HL7 Interpretation: German Interpretation according to the German HL/ user group</expandedForm>
+            <termType>HIT</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>478</count>
+            <expandedForm>HL7 Section: Chapter</expandedForm>
+            <termType>HSE</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+    </result>
+    <source>HL7V2.5</source>
+</statisticalReport>
