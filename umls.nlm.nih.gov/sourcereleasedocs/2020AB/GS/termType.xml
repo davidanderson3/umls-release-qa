@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<statisticalReport>
+    <result>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>5350</count>
+            <expandedForm>Name for an ingredient</expandedForm>
+            <termType>IN</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>33163</count>
+            <expandedForm>Fully-specified drug brand name that can be prescribed</expandedForm>
+            <termType>BD</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>594</count>
+            <expandedForm>RxNorm Created CD</expandedForm>
+            <termType>MTH_RXN_CD</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>6862</count>
+            <expandedForm>Clinical Drug</expandedForm>
+            <termType>CD</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>295</count>
+            <expandedForm>RxNorm Created BD</expandedForm>
+            <termType>MTH_RXN_BD</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+    </result>
+    <source>GS</source>
+</statisticalReport>

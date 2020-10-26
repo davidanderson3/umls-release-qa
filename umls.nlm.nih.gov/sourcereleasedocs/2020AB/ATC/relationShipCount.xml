@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<statisticalReport>
+    <result>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>1264</count>
+            <expandedForm>has parent relationship in a Metathesaurus source vocabulary /Inverse is a</expandedForm>
+            <termType>PAR/inverse_isa</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>1264</count>
+            <expandedForm>has child relationship in a Metathesaurus source vocabulary /Is a</expandedForm>
+            <termType>CHD/isa</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>5067</count>
+            <expandedForm>has parent relationship in a Metathesaurus source vocabulary /Has member</expandedForm>
+            <termType>PAR/has_member</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>5067</count>
+            <expandedForm>has child relationship in a Metathesaurus source vocabulary /Member of</expandedForm>
+            <termType>CHD/member_of</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+    </result>
+    <source>ATC</source>
+</statisticalReport>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<statisticalReport>
+    <result>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>5039</count>
+            <expandedForm>has a broader relationship/Inverse is a</expandedForm>
+            <termType>RB/inverse_isa</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>5039</count>
+            <expandedForm>has a narrower relationship/Is a</expandedForm>
+            <termType>RN/isa</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>13058</count>
+            <expandedForm>has relationship other than synonymous, narrower, or broader/Empty relationship attribute</expandedForm>
+            <termType>RO/</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>29636</count>
+            <expandedForm>source asserted synonymy./Translation of</expandedForm>
+            <termType>SY/translation_of</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>29636</count>
+            <expandedForm>source asserted synonymy./Has translation</expandedForm>
+            <termType>SY/has_translation</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>40364</count>
+            <expandedForm>has child relationship in a Metathesaurus source vocabulary /Empty relationship attribute</expandedForm>
+            <termType>CHD/</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>40364</count>
+            <expandedForm>has parent relationship in a Metathesaurus source vocabulary /Empty relationship attribute</expandedForm>
+            <termType>PAR/</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>483598</count>
+            <expandedForm>has sibling relationship in a Metathesaurus source vocabulary./Empty relationship attribute</expandedForm>
+            <termType>SIB/</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+    </result>
+    <source>MSHPOL</source>
+</statisticalReport>

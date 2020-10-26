@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<statisticalReport>
+    <result>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>122</count>
+            <expandedForm>source asserted synonymy./Empty relationship attribute</expandedForm>
+            <termType>SY/</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>508</count>
+            <expandedForm>related and possibly synonymous./dxx</expandedForm>
+            <termType>RQ/ddx</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>2606</count>
+            <expandedForm>related and possibly synonymous./scc</expandedForm>
+            <termType>RQ/ssc</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>13768</count>
+            <expandedForm>related and possibly synonymous./Co-ocurrs with</expandedForm>
+            <termType>RQ/co-occurs_with</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>15531</count>
+            <expandedForm>related and possibly synonymous./Is a</expandedForm>
+            <termType>RQ/isa</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>15531</count>
+            <expandedForm>related and possibly synonymous./Inverse is a</expandedForm>
+            <termType>RQ/inverse_isa</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+        <sourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="termType">
+            <count>29632</count>
+            <expandedForm>related and possibly synonymous./Clinically associated with</expandedForm>
+            <termType>RQ/clinically_associated_with</termType>
+            <totalCountValidation>0</totalCountValidation>
+        </sourceList>
+    </result>
+    <source>CCPSS</source>
+</statisticalReport>
