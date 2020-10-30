@@ -36,31 +36,31 @@ status=published
       <div id="rep_identifiers" class="rep_block_level_one">
         <h3>Summary of Changes</h3>
         <p>No changes were made to the OMIM source format, however significant changes were made to UMLS source processing:</p>
-		New ATNs: </br>
+		New ATNs: <br>
 		<ul>
 			<li>QUALIFIER: Frequency information previously enclosed in parentheses for a PTCS, PHENO or PHENO_ET atom.  STYPE = RUI</li>
 			<li>SOS: Previously represented as PTCS atoms treed under "MISCELLANEOUS" or "MOLECULAR BASIS".</li>
 		</ul>
-		Explanation:</br>
+		Explanation:<br>
 		
 		<p>QUALIFIER: For atoms with TTY of PTCS, PHENO or PHENO_ET, frequency information was often included parenthetically.  Based on pattern matching, this information was stripped from the atom 
 			string and is now represented as an attribute on the relationship between the atom and its preferred form (ATN = QUALIFIER).  Examples of "stripped" information 
 			include "in some patients," "rare," "1 family," and "less common." </p>
-			Example: </br>
-			Previous representaton: </br>
+			Example: <br>
+			Previous representaton: <br>
 			<ul>
 				<li>ATOM:  STR = "Doughy or puffy skin (rare)"; TTY = PTCS</li>
 				<li>RELATIONSHIP:  RELA = "manifestation_of" to OMIM PT atom "DESBUQUOIS DYSPLASIA 2" (CODE = 615777)</li>
 				<li>ATTRIBUTE: N/A</li>
 			</ul>
-			Current representation: </br>
+			Current representation: <br>
 			<ul>
 				<li>ATOM:  STR = "Doughy or puffy skin"; TTY = PTCS</li>
 				<li>RELATIONSHIP:  RELA = "manifestation_of" to OMIM PT atom "DESBUQUOIS DYSPLASIA 2" (CODE = 615777)</li>
 				<li>ATTRIBUTE:  ATN = "QUALIFIER"; ATV = "rare"; STYPE = "RUI"</li>
 			</ul>
 		<p>SOS: Atoms in the "MISCELLANEOUS" and "MOLECULAR BASIS" branches of the PTCS tree were removed and are now represented as attributes (ATN = SOS; STYPE = AUI)</p>
-		Examples:</br>
+		Examples:<br>
 		<ul>
 			<li>Caused by mutations in merlin (NF2, 101000.0001) [MOLECULAR BASIS]</li>
 			<li>Incidence of 1 in 25,000 livebirths [MISCELLANEOUS]</li>
@@ -205,7 +205,7 @@ status=published
                   <br/>
                   STRING: <br/>
                   value of tag = &lt;Mim-allelic-variant_name&gt;<br/>
-				  Parenthetical frequency information such as "1 family" or "1 patient" may be removed from the atom name and is included as an attribute on the relationship to the preferred form.  See ATN = "QUALIFIER"</br>
+				  Parenthetical frequency information such as "1 family" or "1 patient" may be removed from the atom name and is included as an attribute on the relationship to the preferred form.  See ATN = "QUALIFIER"<br>
                   <br/>
                   SDUI: &lt;Mim-entry_mimNumber&gt;</td>
               </tr>
@@ -219,7 +219,7 @@ status=published
                   &lt;Mim-allelic-variant_aliases_E&gt;<br/>
                   The pattern ", INCLUDED" is removed from the
                   string<br/>
-				  Parenthetical frequency information such as "1 family" or "1 patient" may be removed from the atom name and is included as an attribute on the relationship to the preferred form.  See ATN = "QUALIFIER"</br>
+				  Parenthetical frequency information such as "1 family" or "1 patient" may be removed from the atom name and is included as an attribute on the relationship to the preferred form.  See ATN = "QUALIFIER"<br>
                   <br/>
                   SDUI: &lt;Mim-entry_mimNumber&gt;</td>
               </tr>
@@ -258,7 +258,7 @@ status=published
                       TTY = "HT" is assigned; otherwise it is considered
                       a leaf node and TTY= "PTCS" is assigned<br/>
                     <br/>
-				Parenthetical frequency information such as "In some patients" or "rare" may be removed from the atom name and is included as an attribute on the relationship to the preferred form.  See ATN = "QUALIFIER"</br>
+				Parenthetical frequency information such as "In some patients" or "rare" may be removed from the atom name and is included as an attribute on the relationship to the preferred form.  See ATN = "QUALIFIER"<br>
                   SDUI: An MTHU# assigned during Metathesaurus
                   source processing
                 </td>
