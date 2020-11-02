@@ -1,6 +1,6 @@
 title=NEU (Neuronames Brain Hierarchy) - Metathesaurus Representation
 date=2017-11-06
-updated=2020-05-04
+updated=2020-11-02
 type=page
 status=published
 ~~~~~~
@@ -31,14 +31,14 @@ status=published
     </div>
 
 <div id="general" class="rep_block_level_one">
-  <p><strong>VSAB:</strong> NEU2019_05_08</p>
+  <p><strong>VSAB:</strong> NEU2020_05_28</p>
 </div>
 <hr>
 <div id="rep_identifiers" class="rep_block_level_one">
   <h3>Summary of Changes</h3>
 
-  <p>New property:  eDefinition. ATN = DEFINITION.</p>
-  <p>New property:  parentBrainInfoID. Used to create PAR/CHD hierarchy & contexts.</p>
+  <p>New format of source file: JSON</p>
+  <p>ATNs = CNID and CNIDTYPE deprecated. Per source, information is obsolete.</p>
 </div>
 <hr>
 <div id="rep_change_summary" class="rep_block_level_one">
@@ -52,9 +52,9 @@ status=published
     </tr>
 
     <tr>
-      <td class="file_field_name">NeuroNames_05082019.xml</td>
+      <td class="file_field_name">NeuroNames_2020_06_02.json</td>
 
-      <td>XML file of standard names, synonyms, acronyms, URLs, and codes.</td>
+      <td>JSON file of standard names, synonyms, acronyms, URLs, and codes.</td>
     </tr>
   </table>
 </div>
@@ -63,11 +63,11 @@ status=published
   <h3>Identifiers</h3>
 
   <ul>
-    <li>CODE: brainInfoID</li>
+    <li>CODE: neuroNamesID</li>
 
     <li>SAUI: Not applicable</li>
 
-    <li>SCUI: brainInfoID</li>
+    <li>SCUI: neuroNamesID</li>
 
     <li>SDUI: Not applicable</li>
   </ul>
@@ -112,7 +112,7 @@ status=published
 
         <td>N</td>
 
-        <td>synonym field</td>
+        <td>synonymName field</td>
       </tr>
 
       <tr>
@@ -148,7 +148,7 @@ status=published
 
         <td>N</td>
 
-        <td>synonym field</td>
+        <td>synonymName field</td>
       </tr>
     </table>
   </div>
@@ -172,21 +172,9 @@ status=published
       </tr>
 
       <tr>
-        <td>CNID</td>
-
-        <td>cNID field</td>
-      </tr>
-
-      <tr>
-        <td>CNIDTYPE</td>
-
-        <td>cNIDType field</td>
-      </tr>
-
-      <tr>
         <td>DEFINITION</td>
 
-        <td>eDefinition field</td>
+        <td>cDefinition field</td>
       </tr>
       <tr>
         <td>NSR</td>
@@ -245,7 +233,7 @@ status=published
   <div id="mappings" class="rep_block_level_two">
     <h3>Definitions (MRDEF)</h3>
 
-    <p>Taken from the eDefinition field.</p>
+    <p>Taken from the cDefinition field.</p>
   </div>
   <hr>
 

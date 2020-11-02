@@ -1,6 +1,6 @@
 title=HGNC (HUGO Gene Nomenclature Committee) - Source Representation
 date=2017-11-06
-updated=2020-05-04
+updated=2020-11-02
 type=page
 status=published
 ~~~~~~
@@ -28,7 +28,7 @@ status=published
     	<div class="col-sm-auto border-left"><a href="#file_details">Source-Provided File Details</a></div>
     </div>
 
-<strong>VSAB:</strong> HGNC2019_03
+<strong>VSAB:</strong> HGNC2020_05
 <hr>
 <a id = "general"></a>
 <div id = "rep_general" class = "rep_block_level_one">
@@ -40,9 +40,25 @@ status=published
 <div id = "rep_change_summary" class = "rep_block_level_one">
 <a id = "change_summary"></a>
 <h3>Summary of Changes</h3>
-<p>New ATN = LNCIPEDIA (comprehensive compendium of human long non-coding RNAs)</p>
-<p>New value for ATN = DB_XR_ID  --> GtRNAdb: xxx</p>
-<p>GtRNAdb = database that contains tRNA gene predictions made by tRNAscan-SE on complete or nearly complete genomes.</p>
+<p>1.  New ATN = AGR (Alliance of Genome Resources)</p>
+<p>2.  New TTYs</p>
+<ul>
+<li>NP (non-preferred term)</li>
+<li>NS (short form of non-preferred term)</li>
+</ul>
+<p>3.  Deprecated ATNs:</p>
+<ul>
+ <li>PREV_NAME</li>
+ <li>PREV_SYMBOL</li>
+ <li>RNA_CENTRAL_ID</li>
+ <li>GENE_FAM_DESC</li>
+ <li>GENE_FAM_ID</li>
+</ul>
+<p>4. New RELAs:</p>
+<ul>
+ <li>RT|has_prev_name/prev_name_of</li>
+ <li>SFO/LFO|has_prev_symbol/prev_symbol_of</li>
+</ul>
 </div>
 <hr>
 <div id = "rep_file_summary" class = "rep_block_level_one">
@@ -58,7 +74,7 @@ status=published
  <h4>Data Files</h4>
 <table>
 <tr><th>File Name</th><th>Description</th></tr>
-<tr><td  class = "file_file_name">hgnc_complete_set_03212019.txt</td><td>Tab-delimited text file.</td></tr>
+<tr><td  class = "file_file_name">hgnc_complete_set_05202020.txt</td><td>Tab-delimited text file.</td></tr>
 </table>
 </div>
 </div>
@@ -122,5 +138,6 @@ status=published
 <tr><td  class = "file_field_name">49</td><td>rna_central_ids</td><td>RNA Central ID</td><td>MRSAT.ATN=RNA_CENTRAL_ID</td></tr>
 <tr><td  class = "file_field_name">50</td><td>lncipedia</td><td>Comprehensive compendium of human long non-coding RNAs</td><td>MRSAT.ATN=LNCIPEDIA</td></tr>
 <tr><td  class = "file_field_name">51</td><td>gtrnadb</td><td>Database that contains tRNA gene predictions made by tRNAscan-SE on complete or nearly complete genomes</td><td>MRSAT.ATN=DB_XR_ID|GtRNAdb:</td></tr>
+<tr><td  class = "file_field_name">52</td><td>agr</td><td>Alliance of Genome Resources. HGNC will link to the Human Gene page at the AGR via HGNC ID if such a page exists.</td><td>MRSAT.ATN=AGR</td></tr>
 </table>
 </div></div>
