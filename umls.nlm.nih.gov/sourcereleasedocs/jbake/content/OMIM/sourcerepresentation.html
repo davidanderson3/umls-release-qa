@@ -1,6 +1,6 @@
 title=OMIM (Online Mendelian Inheritance in Man) - Source Representation
 date=2018-05-07
-updated=2020-05-04
+updated=2020-11-02
 type=page
 status=published
 ~~~~~~
@@ -28,13 +28,44 @@ status=published
     	<div class="col-sm-auto border-left"><a href="#file_summary">Summary of Source-Provided Files</a></div>
     	<div class="col-sm-auto border-left"><a href="#file_details">Source-Provided File Details</a></div>
     </div>
-    <br>
-    <div id="change_summary" class="rep_block_level_one"> </div>
-      <h3>Summary of Changes:</h3>
-
-      <p>No changes have been made to OMIM source processing</p>
+    <p><strong>VSAB: OMIM2020_07_27</strong>
+      </p>
       <hr>
-    <div id="file_summary" class="rep_block_level_one">  </div>
+    <div id="change_summary" class="rep_block_level_one"> 
+            <h3>Summary of Changes</h3>
+        <p>No changes were made to the OMIM source format, however significant changes were made to UMLS source processing:</p>
+		New ATNs: <br>
+		<ul>
+			<li>QUALIFIER: Frequency information previously enclosed in parentheses for a PTCS, PHENO or PHENO_ET atom.  STYPE = RUI</li>
+			<li>SOS: Previously represented as PTCS atoms treed under "MISCELLANEOUS" or "MOLECULAR BASIS".</li>
+		</ul>
+		Explanation:<br>
+		
+		<p>QUALIFIER: For atoms with TTY of PTCS, PHENO or PHENO_ET, frequency information was often included parenthetically.  Based on pattern matching, this information was stripped from the atom 
+			string and is now represented as an attribute on the relationship between the atom and its preferred form (ATN = QUALIFIER).  Examples of "stripped" information 
+			include "in some patients," "rare," "1 family," and "less common." </p>
+			Example: <br>
+			Previous representaton: <br>
+			<ul>
+				<li>ATOM:  STR = "Doughy or puffy skin (rare)"; TTY = PTCS</li>
+				<li>RELATIONSHIP:  RELA = "manifestation_of" to OMIM PT atom "DESBUQUOIS DYSPLASIA 2" (CODE = 615777)</li>
+				<li>ATTRIBUTE: N/A</li>
+			</ul>
+			Current representation: <br>
+			<ul>
+				<li>ATOM:  STR = "Doughy or puffy skin"; TTY = PTCS</li>
+				<li>RELATIONSHIP:  RELA = "manifestation_of" to OMIM PT atom "DESBUQUOIS DYSPLASIA 2" (CODE = 615777)</li>
+				<li>ATTRIBUTE:  ATN = "QUALIFIER"; ATV = "rare"; STYPE = "RUI"</li>
+			</ul>
+		<p>SOS: Atoms in the "MISCELLANEOUS" and "MOLECULAR BASIS" branches of the PTCS tree were removed and are now represented as attributes (ATN = SOS; STYPE = AUI)</p>
+		Examples:<br>
+		<ul>
+			<li>Caused by mutations in merlin (NF2, 101000.0001) [MOLECULAR BASIS]</li>
+			<li>Incidence of 1 in 25,000 livebirths [MISCELLANEOUS]</li>
+		</ul>
+</div>
+      <hr>
+    <div id="file_summary" class="rep_block_level_one">  
       <h3>Source-Provided Files: Summary</h3>
 
       <p>XML records are supplied according to Metathesaurus
@@ -67,7 +98,7 @@ status=published
         <p><strong>Not included</strong>:
     Data from
       many tags are not included in Metathesaurus source processing,
-      because they do not contain terminological content.</p>
+			because they do not contain terminological content.</p></div>
       <hr>
       <h3 id="file_details">Source-Provided Data: Details </h3>
 
@@ -262,7 +293,8 @@ status=published
               <td>Allelic variant name.  Most allelic variants
                 represent disease-producing mutations.  A few
                 polymorphisms are included. For most genes, only
-                selected mutations are included as specific entries.
+                selected mutations are included as specific entries. In many cases, parenthetical information such as "1 family" or "1 patient" indicates frequency.  
+				  This segment of the string has been stripped and is represented as an attribute connected to the PHENO - PTAV RUI.
               </td>
               <td>MRCONSO.TTY = "PHENO"<br/>
                 <br/>
@@ -277,7 +309,8 @@ status=published
               <td>Allelic variant aliases</td>
               <td>MRCONSO.TTY = "PHENO_ET"<br/>
                 <br/>
-                The pattern ", INCLUDED" is removed from the string<br/>
+                The pattern ", INCLUDED" is removed from the string. In many cases, parenthetical information such as "1 family" or "1 patient" indicates frequency.  
+				  This segment of the string has been stripped and is represented as an attribute connected to the PHENO_ET - PTAV RUI.<br/>
                 <br/>
                 Relationships are created to connect PHENO_ET to PTAV
                 atoms:<br/>
@@ -335,7 +368,9 @@ status=published
                 If the value is contained
                   within square brackets, the entry is considered a
                   subheading and TTY = "HT" is assigned; otherwise it is
-                  considered a leaf node and TTY= "PTCS" is assigned<br/>
+                  considered a leaf node and TTY= "PTCS" is assigned. In many cases, parenthetical information such as "in some families" or "rare" indicates frequency.  
+				  This segment of the string has been stripped and is represented as an attribute connected to the PTCS - PT RUI.  Values that are treed under "MISCELLANEOUS"
+				  or "MOLECULAR BASIS" are represented as attributes (ATN = SOS).<br/>
                 <br/>
                 Relationships are created to connect PTCS to PT atoms:<br/>
                 REL = RO<br/>

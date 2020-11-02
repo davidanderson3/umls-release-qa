@@ -1,6 +1,6 @@
 title=PDQ (Physician Data Query) - Statistics
 date=2020-05-04
-updated=2020-05-04
+updated=2020-11-02
 type=page
 status=published
 ~~~~~~
@@ -23,31 +23,31 @@ status=published
 <th>Semantic Type ID</th><th>Semantic Type Name</th><th>Count </th><th>Percentage Distribution</th>
 </tr>
 <tr>
-<td>T121</td><td>Pharmacologic Substance</td><td>9690</td><td>32.2</td>
+<td>T121</td><td>Pharmacologic Substance</td><td>9702</td><td>32.2</td>
 </tr>
 <tr>
-<td>T109</td><td>Organic Chemical</td><td>5681</td><td>18.9</td>
+<td>T109</td><td>Organic Chemical</td><td>5697</td><td>18.9</td>
 </tr>
 <tr>
-<td>T061</td><td>Therapeutic or Preventive Procedure</td><td>4234</td><td>14.1</td>
+<td>T061</td><td>Therapeutic or Preventive Procedure</td><td>4235</td><td>14.1</td>
 </tr>
 <tr>
-<td>T116</td><td>Amino Acid, Peptide, or Protein</td><td>2493</td><td>8.3</td>
+<td>T116</td><td>Amino Acid, Peptide, or Protein</td><td>2509</td><td>8.3</td>
 </tr>
 <tr>
-<td>T191</td><td>Neoplastic Process</td><td>2330</td><td>7.7</td>
+<td>T191</td><td>Neoplastic Process</td><td>2331</td><td>7.7</td>
 </tr>
 <tr>
-<td>T129</td><td>Immunologic Factor</td><td>2008</td><td>6.7</td>
+<td>T129</td><td>Immunologic Factor</td><td>2026</td><td>6.7</td>
 </tr>
 <tr>
-<td>T114</td><td>Nucleic Acid, Nucleoside, or Nucleotide</td><td>455</td><td>1.5</td>
+<td>T114</td><td>Nucleic Acid, Nucleoside, or Nucleotide</td><td>456</td><td>1.5</td>
 </tr>
 <tr>
 <td>T025</td><td>Cell</td><td>386</td><td>1.3</td>
 </tr>
 <tr>
-<td>T130</td><td>Indicator, Reagent, or Diagnostic Aid</td><td>371</td><td>1.2</td>
+<td>T130</td><td>Indicator, Reagent, or Diagnostic Aid</td><td>373</td><td>1.2</td>
 </tr>
 <tr>
 <td>T195</td><td>Antibiotic</td><td>335</td><td>1.1</td>
@@ -125,7 +125,7 @@ status=published
 <td>PID</td><td>Legacy PDQ ID</td><td>5943</td>
 </tr>
 <tr>
-<td>LT</td><td>Indicates if a chemicals or medical device is a tradename (present in older versions of the Metathesaurus and was discontinued, then brought back starting in 2002AD)</td><td>2906</td>
+<td>LT</td><td>Indicates if a chemicals or medical device is a tradename (present in older versions of the Metathesaurus and was discontinued, then brought back starting in 2002AD)</td><td>2905</td>
 </tr>
 <tr>
 <td>MENU_PARENT</td><td>Link information to Term Menu parent. This may not always be the same as the TermParent. Element will not exist for top level menus, e.g. cancer.</td><td>1477</td>
@@ -152,10 +152,10 @@ status=published
 <th>Relation Name/Additional Label</th><th>Expanded Form</th><th>Count </th>
 </tr>
 <tr>
-<td>RO/component_of</td><td>has relationship other than synonymous, narrower, or broader/Component of</td><td>10814</td>
+<td>RO/has_component</td><td>has relationship other than synonymous, narrower, or broader/Has component</td><td>10814</td>
 </tr>
 <tr>
-<td>RO/has_component</td><td>has relationship other than synonymous, narrower, or broader/Has component</td><td>10814</td>
+<td>RO/component_of</td><td>has relationship other than synonymous, narrower, or broader/Component of</td><td>10814</td>
 </tr>
 <tr>
 <td>SY/</td><td>source asserted synonymy./Empty relationship attribute</td><td>4690</td>
@@ -167,16 +167,16 @@ status=published
 <td>PAR/inverse_isa</td><td>has parent relationship in a Metathesaurus source vocabulary /Inverse is a</td><td>4298</td>
 </tr>
 <tr>
-<td>RB/has_lab_number</td><td>has a broader relationship/Has lab number</td><td>4204</td>
-</tr>
-<tr>
 <td>RN/lab_number_of</td><td>has a narrower relationship/Lab number</td><td>4204</td>
 </tr>
 <tr>
-<td>SY/has_expanded_form</td><td>source asserted synonymy./Has expanded form</td><td>3606</td>
+<td>RB/has_lab_number</td><td>has a broader relationship/Has lab number</td><td>4204</td>
 </tr>
 <tr>
 <td>SY/expanded_form_of</td><td>source asserted synonymy./Expanded form of</td><td>3606</td>
+</tr>
+<tr>
+<td>SY/has_expanded_form</td><td>source asserted synonymy./Has expanded form</td><td>3606</td>
 </tr>
 <tr>
 <td>RN/tradename_of</td><td>has a narrower relationship/Tradename of</td><td>2910</td>
@@ -206,216 +206,638 @@ status=published
 <th>Source</th><th># Concepts Sharing Atom/# Total Concepts</th><th>Percentage Distribution</th>
 </tr>
 <tr>
-<td>NCI</td><td>16758/18880</td><td>88.8</td>
+<td>NCI</td><td>16762/18888</td><td>88.7</td>
 </tr>
 <tr>
-<td>MSH</td><td>6264/18880</td><td>33.2</td>
+<td>MSH</td><td>6313/18888</td><td>33.4</td>
 </tr>
 <tr>
-<td>NCI_CTRP</td><td>5356/18880</td><td>28.4</td>
+<td>NCI_CTRP</td><td>5313/18888</td><td>28.1</td>
 </tr>
 <tr>
-<td>CHV</td><td>2922/18880</td><td>15.5</td>
+<td>CHV</td><td>2921/18888</td><td>15.5</td>
 </tr>
 <tr>
-<td>SNOMEDCT_US</td><td>2537/18880</td><td>13.4</td>
+<td>SNOMEDCT_US</td><td>2565/18888</td><td>13.6</td>
 </tr>
 <tr>
-<td>SCTSPA</td><td>2490/18880</td><td>13.2</td>
+<td>RXNORM</td><td>2492/18888</td><td>13.2</td>
 </tr>
 <tr>
-<td>RXNORM</td><td>2480/18880</td><td>13.1</td>
+<td>SCTSPA</td><td>2499/18888</td><td>13.2</td>
 </tr>
 <tr>
-<td>MMSL</td><td>2331/18880</td><td>12.3</td>
+<td>MMSL</td><td>2344/18888</td><td>12.4</td>
 </tr>
 <tr>
-<td>NCI_NCI-GLOSS</td><td>2171/18880</td><td>11.5</td>
+<td>NCI_FDA</td><td>2197/18888</td><td>11.6</td>
 </tr>
 <tr>
-<td>NCI_FDA</td><td>2175/18880</td><td>11.5</td>
+<td>NCI_NCI-GLOSS</td><td>2172/18888</td><td>11.5</td>
 </tr>
 <tr>
-<td>MSHGER</td><td>2041/18880</td><td>10.8</td>
+<td>MSHGER</td><td>2041/18888</td><td>10.8</td>
 </tr>
 <tr>
-<td>MSHFRE</td><td>2018/18880</td><td>10.7</td>
+<td>MSHFRE</td><td>2019/18888</td><td>10.7</td>
 </tr>
 <tr>
-<td>MSHCZE</td><td>1937/18880</td><td>10.3</td>
+<td>MSHCZE</td><td>1938/18888</td><td>10.3</td>
 </tr>
 <tr>
-<td>DRUGBANK</td><td>1907/18880</td><td>10.1</td>
+<td>DRUGBANK</td><td>1914/18888</td><td>10.1</td>
 </tr>
 <tr>
-<td>MSHPOR</td><td>1888/18880</td><td>10.0</td>
+<td>MSHPOR</td><td>1888/18888</td><td>10.0</td>
 </tr>
 <tr>
-<td>MSHSPA</td><td>1831/18880</td><td>9.7</td>
+<td>MEDCIN</td><td>1867/18888</td><td>9.9</td>
 </tr>
 <tr>
-<td>MEDCIN</td><td>1839/18880</td><td>9.7</td>
+<td>MSHSPA</td><td>1829/18888</td><td>9.7</td>
 </tr>
 <tr>
-<td>RCD</td><td>1794/18880</td><td>9.5</td>
+<td>RCD</td><td>1793/18888</td><td>9.5</td>
 </tr>
 <tr>
-<td>MSHITA</td><td>1645/18880</td><td>8.7</td>
+<td>MSHITA</td><td>1645/18888</td><td>8.7</td>
 </tr>
 <tr>
-<td>MSHPOL</td><td>1357/18880</td><td>7.2</td>
+<td>MSHSWE</td><td>1355/18888</td><td>7.2</td>
 </tr>
 <tr>
-<td>MSHSWE</td><td>1357/18880</td><td>7.2</td>
+<td>MSHPOL</td><td>1357/18888</td><td>7.2</td>
 </tr>
 <tr>
-<td>MSHRUS</td><td>1358/18880</td><td>7.2</td>
+<td>MSHRUS</td><td>1359/18888</td><td>7.2</td>
 </tr>
 <tr>
-<td>SNMI</td><td>1360/18880</td><td>7.2</td>
+<td>SNMI</td><td>1361/18888</td><td>7.2</td>
 </tr>
 <tr>
-<td>NDDF</td><td>1325/18880</td><td>7.0</td>
+<td>NDDF</td><td>1335/18888</td><td>7.1</td>
 </tr>
 <tr>
-<td>MDR</td><td>1162/18880</td><td>6.2</td>
+<td>MDR</td><td>1168/18888</td><td>6.2</td>
 </tr>
 <tr>
-<td>MDRCZE</td><td>1162/18880</td><td>6.2</td>
+<td>MDRBPO</td><td>1168/18888</td><td>6.2</td>
 </tr>
 <tr>
-<td>MDRDUT</td><td>1162/18880</td><td>6.2</td>
+<td>MDRCZE</td><td>1168/18888</td><td>6.2</td>
 </tr>
 <tr>
-<td>MDRFRE</td><td>1162/18880</td><td>6.2</td>
+<td>MDRDUT</td><td>1168/18888</td><td>6.2</td>
 </tr>
 <tr>
-<td>MDRGER</td><td>1162/18880</td><td>6.2</td>
+<td>MDRFRE</td><td>1168/18888</td><td>6.2</td>
 </tr>
 <tr>
-<td>MDRHUN</td><td>1162/18880</td><td>6.2</td>
+<td>MDRGER</td><td>1168/18888</td><td>6.2</td>
 </tr>
 <tr>
-<td>MDRITA</td><td>1162/18880</td><td>6.2</td>
+<td>MDRHUN</td><td>1168/18888</td><td>6.2</td>
 </tr>
 <tr>
-<td>MDRJPN</td><td>1162/18880</td><td>6.2</td>
+<td>MDRITA</td><td>1168/18888</td><td>6.2</td>
 </tr>
 <tr>
-<td>MDRKOR</td><td>1162/18880</td><td>6.2</td>
+<td>MDRJPN</td><td>1168/18888</td><td>6.2</td>
 </tr>
 <tr>
-<td>MDRPOR</td><td>1162/18880</td><td>6.2</td>
+<td>MDRKOR</td><td>1168/18888</td><td>6.2</td>
 </tr>
 <tr>
-<td>MDRRUS</td><td>1162/18880</td><td>6.2</td>
+<td>MDRPOR</td><td>1168/18888</td><td>6.2</td>
 </tr>
 <tr>
-<td>MDRSPA</td><td>1162/18880</td><td>6.2</td>
+<td>MDRRUS</td><td>1168/18888</td><td>6.2</td>
 </tr>
 <tr>
-<td>VANDF</td><td>1159/18880</td><td>6.1</td>
+<td>MDRSPA</td><td>1168/18888</td><td>6.2</td>
 </tr>
 <tr>
-<td>MSHFIN</td><td>1127/18880</td><td>6.0</td>
+<td>VANDF</td><td>1174/18888</td><td>6.2</td>
 </tr>
 <tr>
-<td>MTHSPL</td><td>1137/18880</td><td>6.0</td>
+<td>MTHSPL</td><td>1152/18888</td><td>6.1</td>
 </tr>
 <tr>
-<td>GS</td><td>1106/18880</td><td>5.9</td>
+<td>MSHFIN</td><td>1127/18888</td><td>6.0</td>
 </tr>
 <tr>
-<td>MSHJPN</td><td>1108/18880</td><td>5.9</td>
+<td>MSHJPN</td><td>1108/18888</td><td>5.9</td>
 </tr>
 <tr>
-<td>MSHNOR</td><td>1025/18880</td><td>5.4</td>
+<td>GS</td><td>1122/18888</td><td>5.9</td>
 </tr>
 <tr>
-<td>NCI_DTP</td><td>993/18880</td><td>5.3</td>
+<td>MSHNOR</td><td>1025/18888</td><td>5.4</td>
 </tr>
 <tr>
-<td>CSP</td><td>982/18880</td><td>5.2</td>
+<td>NCI_DTP</td><td>993/18888</td><td>5.3</td>
 </tr>
 <tr>
-<td>ATC</td><td>850/18880</td><td>4.5</td>
+<td>CSP</td><td>982/18888</td><td>5.2</td>
 </tr>
 <tr>
-<td>USP</td><td>792/18880</td><td>4.2</td>
+<td>ATC</td><td>851/18888</td><td>4.5</td>
 </tr>
 <tr>
-<td>LNC</td><td>772/18880</td><td>4.1</td>
+<td>USP</td><td>791/18888</td><td>4.2</td>
 </tr>
 <tr>
-<td>SNM</td><td>762/18880</td><td>4.0</td>
+<td>LNC</td><td>777/18888</td><td>4.1</td>
 </tr>
 <tr>
-<td>MSHDUT</td><td>618/18880</td><td>3.3</td>
+<td>SNM</td><td>764/18888</td><td>4.0</td>
 </tr>
 <tr>
-<td>USPMG</td><td>604/18880</td><td>3.2</td>
+<td>MSHDUT</td><td>617/18888</td><td>3.3</td>
 </tr>
 <tr>
-<td>LCH_NW</td><td>610/18880</td><td>3.2</td>
+<td>USPMG</td><td>604/18888</td><td>3.2</td>
 </tr>
 <tr>
-<td>MSHSCR</td><td>587/18880</td><td>3.1</td>
+<td>LCH_NW</td><td>610/18888</td><td>3.2</td>
 </tr>
 <tr>
-<td>NCI_DCP</td><td>482/18880</td><td>2.6</td>
+<td>MSHSCR</td><td>587/18888</td><td>3.1</td>
 </tr>
 <tr>
-<td>AOD</td><td>485/18880</td><td>2.6</td>
+<td>NCI_DCP</td><td>482/18888</td><td>2.6</td>
 </tr>
 <tr>
-<td>CCPSS</td><td>405/18880</td><td>2.1</td>
+<td>AOD</td><td>485/18888</td><td>2.6</td>
 </tr>
 <tr>
-<td>OMIM</td><td>341/18880</td><td>1.8</td>
+<td>CCPSS</td><td>405/18888</td><td>2.1</td>
 </tr>
 <tr>
-<td>ICD10AM</td><td>346/18880</td><td>1.8</td>
+<td>OMIM</td><td>352/18888</td><td>1.9</td>
 </tr>
 <tr>
-<td>LCH</td><td>348/18880</td><td>1.8</td>
+<td>NCI_GDC</td><td>356/18888</td><td>1.9</td>
 </tr>
 <tr>
-<td>NCI_NICHD</td><td>321/18880</td><td>1.7</td>
+<td>LCH</td><td>347/18888</td><td>1.8</td>
 </tr>
 <tr>
-<td>ICPC2ICD10ENG</td><td>302/18880</td><td>1.6</td>
+<td>ICD10AM</td><td>348/18888</td><td>1.8</td>
 </tr>
 <tr>
-<td>NCI_CPTAC</td><td>275/18880</td><td>1.5</td>
+<td>NCI_NICHD</td><td>321/18888</td><td>1.7</td>
 </tr>
 <tr>
-<td>ICD10CM</td><td>283/18880</td><td>1.5</td>
+<td>ICPC2ICD10ENG</td><td>302/18888</td><td>1.6</td>
 </tr>
 <tr>
-<td>ICPC2ICD10DUT</td><td>244/18880</td><td>1.3</td>
+<td>NCI_CELLOSAURUS</td><td>280/18888</td><td>1.5</td>
 </tr>
 <tr>
-<td>MEDLINEPLUS</td><td>246/18880</td><td>1.3</td>
+<td>ICD10CM</td><td>283/18888</td><td>1.5</td>
 </tr>
 <tr>
-<td>HPO</td><td>250/18880</td><td>1.3</td>
+<td>ICPC2ICD10DUT</td><td>244/18888</td><td>1.3</td>
 </tr>
 <tr>
-<td>ICD9CM</td><td>227/18880</td><td>1.2</td>
+<td>MEDLINEPLUS</td><td>246/18888</td><td>1.3</td>
 </tr>
 <tr>
-<td>DXP</td><td>229/18880</td><td>1.2</td>
+<td>HPO</td><td>250/18888</td><td>1.3</td>
 </tr>
 <tr>
-<td>ICPC2P</td><td>235/18880</td><td>1.2</td>
+<td>ICD9CM</td><td>228/18888</td><td>1.2</td>
 </tr>
 <tr>
-<td>MTHICD9</td><td>199/18880</td><td>1.1</td>
+<td>DXP</td><td>229/18888</td><td>1.2</td>
 </tr>
 <tr>
-<td>RCDAE</td><td>214/18880</td><td>1.1</td>
+<td>ICPC2P</td><td>236/18888</td><td>1.2</td>
 </tr>
 <tr>
-<td>PSY</td><td>215/18880</td><td>1.1</td>
+<td>MTHICD9</td><td>200/18888</td><td>1.1</td>
+</tr>
+<tr>
+<td>PSY</td><td>215/18888</td><td>1.1</td>
+</tr>
+<tr>
+<td>RCDAE</td><td>215/18888</td><td>1.1</td>
+</tr>
+</table>
+title=PDQ (Physician Data Query) - Statistics
+date=2020-05-04
+updated=2020-11-02
+type=page
+status=published
+~~~~~~
+<!--menu-->
+<!--endmenu-->
+<br/><h2>Semantic Type Distribution</h2>
+<table>
+<tr>
+<th>Semantic Type ID</th><th>Semantic Type Name</th><th>Count </th><th>Percentage Distribution</th>
+</tr>
+<tr>
+<td>T121</td><td>Pharmacologic Substance</td><td>9702</td><td>32.2</td>
+</tr>
+<tr>
+<td>T109</td><td>Organic Chemical</td><td>5697</td><td>18.9</td>
+</tr>
+<tr>
+<td>T061</td><td>Therapeutic or Preventive Procedure</td><td>4235</td><td>14.1</td>
+</tr>
+<tr>
+<td>T116</td><td>Amino Acid, Peptide, or Protein</td><td>2509</td><td>8.3</td>
+</tr>
+<tr>
+<td>T191</td><td>Neoplastic Process</td><td>2331</td><td>7.7</td>
+</tr>
+<tr>
+<td>T129</td><td>Immunologic Factor</td><td>2026</td><td>6.7</td>
+</tr>
+<tr>
+<td>T114</td><td>Nucleic Acid, Nucleoside, or Nucleotide</td><td>456</td><td>1.5</td>
+</tr>
+<tr>
+<td>T025</td><td>Cell</td><td>386</td><td>1.3</td>
+</tr>
+<tr>
+<td>T130</td><td>Indicator, Reagent, or Diagnostic Aid</td><td>373</td><td>1.2</td>
+</tr>
+<tr>
+<td>T195</td><td>Antibiotic</td><td>335</td><td>1.1</td>
+</tr>
+</table>
+<h2>Term Type Counts</h2>
+<table>
+<tr>
+<th>Term Type</th><th>Expanded Form</th><th>Count </th>
+</tr>
+<tr>
+<td>SY</td><td>Designated synonym</td><td>17669</td>
+</tr>
+<tr>
+<td>PT</td><td>Designated preferred name</td><td>12462</td>
+</tr>
+<tr>
+<td>CCN</td><td>Chemical code name</td><td>4204</td>
+</tr>
+<tr>
+<td>ACR</td><td>Acronym</td><td>3606</td>
+</tr>
+<tr>
+<td>AB</td><td>Abbreviation in any source vocabulary</td><td>2345</td>
+</tr>
+<tr>
+<td>BN</td><td>Fully-specified drug brand name that can not be prescribed</td><td>1690</td>
+</tr>
+<tr>
+<td>CHN</td><td>Chemical structure name</td><td>1651</td>
+</tr>
+<tr>
+<td>FBD</td><td>Foreign brand name</td><td>1220</td>
+</tr>
+<tr>
+<td>LV</td><td>Lexical variant</td><td>609</td>
+</tr>
+<tr>
+<td>PSC</td><td>Protocol selection criteria</td><td>571</td>
+</tr>
+<tr>
+<td>ET</td><td>Entry term</td><td>264</td>
+</tr>
+<tr>
+<td>IS</td><td>Obsolete Synonym</td><td>230</td>
+</tr>
+<tr>
+<td>OP</td><td>Obsolete preferred name</td><td>195</td>
+</tr>
+<tr>
+<td>HT</td><td>Hierarchical term</td><td>179</td>
+</tr>
+<tr>
+<td>CU</td><td>Common usage</td><td>7</td>
+</tr>
+</table>
+<h2>Attribute Counts</h2>
+<table>
+<tr>
+<th>Attribute Type</th><th>Expanded Form</th><th>Count </th>
+</tr>
+<tr>
+<td>ORIG_STY</td><td>Original semantic type</td><td>13185</td>
+</tr>
+<tr>
+<td>NCI_ID</td><td>NCI thesaurus concept id</td><td>10674</td>
+</tr>
+<tr>
+<td>DATE_LAST_MODIFIED</td><td>Date last modified</td><td>9465</td>
+</tr>
+<tr>
+<td>DATE_FIRST_PUBLISHED</td><td>Date first published</td><td>7458</td>
+</tr>
+<tr>
+<td>PID</td><td>Legacy PDQ ID</td><td>5943</td>
+</tr>
+<tr>
+<td>LT</td><td>Indicates if a chemicals or medical device is a tradename (present in older versions of the Metathesaurus and was discontinued, then brought back starting in 2002AD)</td><td>2905</td>
+</tr>
+<tr>
+<td>MENU_PARENT</td><td>Link information to Term Menu parent. This may not always be the same as the TermParent. Element will not exist for top level menus, e.g. cancer.</td><td>1477</td>
+</tr>
+<tr>
+<td>MENU_TYPE</td><td>Values are Clinical Trials--Cancer Type, Clinical Trials--Drug, or Cancer Information.</td><td>1371</td>
+</tr>
+<tr>
+<td>CAS_REGISTRY</td><td>CAS Registry</td><td>1159</td>
+</tr>
+<tr>
+<td>PXC</td><td>PDQ Protocol Exclusion Criteria - terms with type "exclusion criteria," which may be indexed on protocol records to identify conditions that exclude a patient from eligibility. </td><td>620</td>
+</tr>
+<tr>
+<td>NSC_CODE</td><td>NSC Code</td><td>607</td>
+</tr>
+<tr>
+<td>IND_CODE</td><td>IND Code</td><td>337</td>
+</tr>
+</table>
+<h2>Relationship Counts</h2>
+<table>
+<tr>
+<th>Relation Name/Additional Label</th><th>Expanded Form</th><th>Count </th>
+</tr>
+<tr>
+<td>RO/has_component</td><td>has relationship other than synonymous, narrower, or broader/Has component</td><td>10814</td>
+</tr>
+<tr>
+<td>RO/component_of</td><td>has relationship other than synonymous, narrower, or broader/Component of</td><td>10814</td>
+</tr>
+<tr>
+<td>SY/</td><td>source asserted synonymy./Empty relationship attribute</td><td>4690</td>
+</tr>
+<tr>
+<td>CHD/isa</td><td>has child relationship in a Metathesaurus source vocabulary /Is a</td><td>4298</td>
+</tr>
+<tr>
+<td>PAR/inverse_isa</td><td>has parent relationship in a Metathesaurus source vocabulary /Inverse is a</td><td>4298</td>
+</tr>
+<tr>
+<td>RB/has_lab_number</td><td>has a broader relationship/Has lab number</td><td>4204</td>
+</tr>
+<tr>
+<td>RN/lab_number_of</td><td>has a narrower relationship/Lab number</td><td>4204</td>
+</tr>
+<tr>
+<td>SY/has_expanded_form</td><td>source asserted synonymy./Has expanded form</td><td>3606</td>
+</tr>
+<tr>
+<td>SY/expanded_form_of</td><td>source asserted synonymy./Expanded form of</td><td>3606</td>
+</tr>
+<tr>
+<td>RB/has_tradename</td><td>has a broader relationship/Has tradename</td><td>2910</td>
+</tr>
+<tr>
+<td>RN/tradename_of</td><td>has a narrower relationship/Tradename of</td><td>2910</td>
+</tr>
+<tr>
+<td>RO/associated_disease</td><td>has relationship other than synonymous, narrower, or broader/Associated disease</td><td>243</td>
+</tr>
+<tr>
+<td>RO/associated_genetic_condition</td><td>has relationship other than synonymous, narrower, or broader/Associated genetic condition</td><td>243</td>
+</tr>
+</table>
+<h2>Definition Count</h2>
+<table>
+<tr>
+<th>Count</th>
+</tr>
+<tr>
+<td>6374</td>
+</tr>
+</table>
+<h2>Source Overlap</h2>
+<table>
+<tr>
+<th>Source</th><th># Concepts Sharing Atom/# Total Concepts</th><th>Percentage Distribution</th>
+</tr>
+<tr>
+<td>NCI</td><td>16762/18888</td><td>88.7</td>
+</tr>
+<tr>
+<td>MSH</td><td>6313/18888</td><td>33.4</td>
+</tr>
+<tr>
+<td>NCI_CTRP</td><td>5313/18888</td><td>28.1</td>
+</tr>
+<tr>
+<td>CHV</td><td>2921/18888</td><td>15.5</td>
+</tr>
+<tr>
+<td>SNOMEDCT_US</td><td>2565/18888</td><td>13.6</td>
+</tr>
+<tr>
+<td>RXNORM</td><td>2492/18888</td><td>13.2</td>
+</tr>
+<tr>
+<td>SCTSPA</td><td>2499/18888</td><td>13.2</td>
+</tr>
+<tr>
+<td>MMSL</td><td>2344/18888</td><td>12.4</td>
+</tr>
+<tr>
+<td>NCI_FDA</td><td>2197/18888</td><td>11.6</td>
+</tr>
+<tr>
+<td>NCI_NCI-GLOSS</td><td>2172/18888</td><td>11.5</td>
+</tr>
+<tr>
+<td>MSHGER</td><td>2041/18888</td><td>10.8</td>
+</tr>
+<tr>
+<td>MSHFRE</td><td>2019/18888</td><td>10.7</td>
+</tr>
+<tr>
+<td>MSHCZE</td><td>1938/18888</td><td>10.3</td>
+</tr>
+<tr>
+<td>DRUGBANK</td><td>1914/18888</td><td>10.1</td>
+</tr>
+<tr>
+<td>MSHPOR</td><td>1888/18888</td><td>10.0</td>
+</tr>
+<tr>
+<td>MEDCIN</td><td>1867/18888</td><td>9.9</td>
+</tr>
+<tr>
+<td>MSHSPA</td><td>1829/18888</td><td>9.7</td>
+</tr>
+<tr>
+<td>RCD</td><td>1793/18888</td><td>9.5</td>
+</tr>
+<tr>
+<td>MSHITA</td><td>1645/18888</td><td>8.7</td>
+</tr>
+<tr>
+<td>MSHSWE</td><td>1355/18888</td><td>7.2</td>
+</tr>
+<tr>
+<td>MSHPOL</td><td>1357/18888</td><td>7.2</td>
+</tr>
+<tr>
+<td>MSHRUS</td><td>1359/18888</td><td>7.2</td>
+</tr>
+<tr>
+<td>SNMI</td><td>1361/18888</td><td>7.2</td>
+</tr>
+<tr>
+<td>NDDF</td><td>1335/18888</td><td>7.1</td>
+</tr>
+<tr>
+<td>MDR</td><td>1168/18888</td><td>6.2</td>
+</tr>
+<tr>
+<td>MDRBPO</td><td>1168/18888</td><td>6.2</td>
+</tr>
+<tr>
+<td>MDRCZE</td><td>1168/18888</td><td>6.2</td>
+</tr>
+<tr>
+<td>MDRDUT</td><td>1168/18888</td><td>6.2</td>
+</tr>
+<tr>
+<td>MDRFRE</td><td>1168/18888</td><td>6.2</td>
+</tr>
+<tr>
+<td>MDRGER</td><td>1168/18888</td><td>6.2</td>
+</tr>
+<tr>
+<td>MDRHUN</td><td>1168/18888</td><td>6.2</td>
+</tr>
+<tr>
+<td>MDRITA</td><td>1168/18888</td><td>6.2</td>
+</tr>
+<tr>
+<td>MDRJPN</td><td>1168/18888</td><td>6.2</td>
+</tr>
+<tr>
+<td>MDRKOR</td><td>1168/18888</td><td>6.2</td>
+</tr>
+<tr>
+<td>MDRPOR</td><td>1168/18888</td><td>6.2</td>
+</tr>
+<tr>
+<td>MDRRUS</td><td>1168/18888</td><td>6.2</td>
+</tr>
+<tr>
+<td>MDRSPA</td><td>1168/18888</td><td>6.2</td>
+</tr>
+<tr>
+<td>VANDF</td><td>1174/18888</td><td>6.2</td>
+</tr>
+<tr>
+<td>MTHSPL</td><td>1152/18888</td><td>6.1</td>
+</tr>
+<tr>
+<td>MSHFIN</td><td>1127/18888</td><td>6.0</td>
+</tr>
+<tr>
+<td>MSHJPN</td><td>1108/18888</td><td>5.9</td>
+</tr>
+<tr>
+<td>GS</td><td>1122/18888</td><td>5.9</td>
+</tr>
+<tr>
+<td>MSHNOR</td><td>1025/18888</td><td>5.4</td>
+</tr>
+<tr>
+<td>NCI_DTP</td><td>993/18888</td><td>5.3</td>
+</tr>
+<tr>
+<td>CSP</td><td>982/18888</td><td>5.2</td>
+</tr>
+<tr>
+<td>ATC</td><td>851/18888</td><td>4.5</td>
+</tr>
+<tr>
+<td>USP</td><td>791/18888</td><td>4.2</td>
+</tr>
+<tr>
+<td>LNC</td><td>777/18888</td><td>4.1</td>
+</tr>
+<tr>
+<td>SNM</td><td>764/18888</td><td>4.0</td>
+</tr>
+<tr>
+<td>MSHDUT</td><td>617/18888</td><td>3.3</td>
+</tr>
+<tr>
+<td>USPMG</td><td>604/18888</td><td>3.2</td>
+</tr>
+<tr>
+<td>LCH_NW</td><td>610/18888</td><td>3.2</td>
+</tr>
+<tr>
+<td>MSHSCR</td><td>587/18888</td><td>3.1</td>
+</tr>
+<tr>
+<td>NCI_DCP</td><td>482/18888</td><td>2.6</td>
+</tr>
+<tr>
+<td>AOD</td><td>485/18888</td><td>2.6</td>
+</tr>
+<tr>
+<td>CCPSS</td><td>405/18888</td><td>2.1</td>
+</tr>
+<tr>
+<td>OMIM</td><td>352/18888</td><td>1.9</td>
+</tr>
+<tr>
+<td>NCI_GDC</td><td>356/18888</td><td>1.9</td>
+</tr>
+<tr>
+<td>LCH</td><td>347/18888</td><td>1.8</td>
+</tr>
+<tr>
+<td>ICD10AM</td><td>348/18888</td><td>1.8</td>
+</tr>
+<tr>
+<td>NCI_NICHD</td><td>321/18888</td><td>1.7</td>
+</tr>
+<tr>
+<td>ICPC2ICD10ENG</td><td>302/18888</td><td>1.6</td>
+</tr>
+<tr>
+<td>NCI_CELLOSAURUS</td><td>280/18888</td><td>1.5</td>
+</tr>
+<tr>
+<td>ICD10CM</td><td>283/18888</td><td>1.5</td>
+</tr>
+<tr>
+<td>ICPC2ICD10DUT</td><td>244/18888</td><td>1.3</td>
+</tr>
+<tr>
+<td>MEDLINEPLUS</td><td>246/18888</td><td>1.3</td>
+</tr>
+<tr>
+<td>HPO</td><td>250/18888</td><td>1.3</td>
+</tr>
+<tr>
+<td>ICD9CM</td><td>228/18888</td><td>1.2</td>
+</tr>
+<tr>
+<td>DXP</td><td>229/18888</td><td>1.2</td>
+</tr>
+<tr>
+<td>ICPC2P</td><td>236/18888</td><td>1.2</td>
+</tr>
+<tr>
+<td>MTHICD9</td><td>200/18888</td><td>1.1</td>
+</tr>
+<tr>
+<td>PSY</td><td>215/18888</td><td>1.1</td>
+</tr>
+<tr>
+<td>RCDAE</td><td>215/18888</td><td>1.1</td>
 </tr>
 </table>

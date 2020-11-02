@@ -1,6 +1,6 @@
 title=PCDS (Patient Care Data Set) - Statistics
 date=2020-05-04
-updated=2020-05-04
+updated=2020-11-02
 type=page
 status=published
 ~~~~~~
@@ -27,7 +27,7 @@ status=published
 <td>T058</td><td>Health Care Activity</td><td>483</td><td>22.2</td>
 </tr>
 <tr>
-<td>T033</td><td>Finding</td><td>249</td><td>11.5</td>
+<td>T033</td><td>Finding</td><td>248</td><td>11.4</td>
 </tr>
 <tr>
 <td>T065</td><td>Educational Activity</td><td>155</td><td>7.1</td>
@@ -72,10 +72,10 @@ status=published
 <th>Relation Name/Additional Label</th><th>Expanded Form</th><th>Count </th>
 </tr>
 <tr>
-<td>PAR/</td><td>has parent relationship in a Metathesaurus source vocabulary /Empty relationship attribute</td><td>2174</td>
+<td>CHD/</td><td>has child relationship in a Metathesaurus source vocabulary /Empty relationship attribute</td><td>2174</td>
 </tr>
 <tr>
-<td>CHD/</td><td>has child relationship in a Metathesaurus source vocabulary /Empty relationship attribute</td><td>2174</td>
+<td>PAR/</td><td>has parent relationship in a Metathesaurus source vocabulary /Empty relationship attribute</td><td>2174</td>
 </tr>
 <tr>
 <td>SY/</td><td>source asserted synonymy./Empty relationship attribute</td><td>110</td>
@@ -114,7 +114,7 @@ status=published
 <td>SNMI</td><td>87/2172</td><td>4.0</td>
 </tr>
 <tr>
-<td>CCC</td><td>85/2172</td><td>3.9</td>
+<td>CCC</td><td>84/2172</td><td>3.9</td>
 </tr>
 <tr>
 <td>RCD</td><td>78/2172</td><td>3.6</td>
@@ -127,6 +127,9 @@ status=published
 </tr>
 <tr>
 <td>MDR</td><td>68/2172</td><td>3.1</td>
+</tr>
+<tr>
+<td>MDRBPO</td><td>68/2172</td><td>3.1</td>
 </tr>
 <tr>
 <td>MDRCZE</td><td>68/2172</td><td>3.1</td>
@@ -162,7 +165,7 @@ status=published
 <td>MDRSPA</td><td>68/2172</td><td>3.1</td>
 </tr>
 <tr>
-<td>CPM</td><td>63/2172</td><td>2.9</td>
+<td>CPM</td><td>62/2172</td><td>2.9</td>
 </tr>
 <tr>
 <td>MSH</td><td>63/2172</td><td>2.9</td>
@@ -261,13 +264,13 @@ status=published
 <td>WHOPOR</td><td>40/2172</td><td>1.8</td>
 </tr>
 <tr>
-<td>OMIM</td><td>36/2172</td><td>1.7</td>
-</tr>
-<tr>
 <td>COSTAR</td><td>37/2172</td><td>1.7</td>
 </tr>
 <tr>
 <td>HPO</td><td>37/2172</td><td>1.7</td>
+</tr>
+<tr>
+<td>OMIM</td><td>37/2172</td><td>1.7</td>
 </tr>
 <tr>
 <td>WHOSPA</td><td>37/2172</td><td>1.7</td>
@@ -291,7 +294,312 @@ status=published
 <td>LCH</td><td>31/2172</td><td>1.4</td>
 </tr>
 <tr>
-<td>PSY</td><td>28/2172</td><td>1.3</td>
+<td>DMDICD10</td><td>29/2172</td><td>1.3</td>
+</tr>
+<tr>
+<td>ICD10DUT</td><td>29/2172</td><td>1.3</td>
+</tr>
+<tr>
+<td>KCD5</td><td>29/2172</td><td>1.3</td>
+</tr>
+<tr>
+<td>MTHICD9</td><td>29/2172</td><td>1.3</td>
+</tr>
+<tr>
+<td>NCI_FDA</td><td>25/2172</td><td>1.2</td>
+</tr>
+<tr>
+<td>PSY</td><td>27/2172</td><td>1.2</td>
+</tr>
+<tr>
+<td>NCI_CTCAE</td><td>24/2172</td><td>1.1</td>
+</tr>
+</table>
+title=PCDS (Patient Care Data Set) - Statistics
+date=2020-05-04
+updated=2020-11-02
+type=page
+status=published
+~~~~~~
+<!--menu-->
+<!--endmenu-->
+<br/><h2>Semantic Type Distribution</h2>
+<table>
+<tr>
+<th>Semantic Type ID</th><th>Semantic Type Name</th><th>Count </th><th>Percentage Distribution</th>
+</tr>
+<tr>
+<td>T061</td><td>Therapeutic or Preventive Procedure</td><td>1110</td><td>51.1</td>
+</tr>
+<tr>
+<td>T058</td><td>Health Care Activity</td><td>483</td><td>22.2</td>
+</tr>
+<tr>
+<td>T033</td><td>Finding</td><td>248</td><td>11.4</td>
+</tr>
+<tr>
+<td>T065</td><td>Educational Activity</td><td>155</td><td>7.1</td>
+</tr>
+<tr>
+<td>T046</td><td>Pathologic Function</td><td>35</td><td>1.6</td>
+</tr>
+<tr>
+<td>T170</td><td>Intellectual Product</td><td>33</td><td>1.5</td>
+</tr>
+<tr>
+<td>T047</td><td>Disease or Syndrome</td><td>24</td><td>1.1</td>
+</tr>
+</table>
+<h2>Term Type Counts</h2>
+<table>
+<tr>
+<th>Term Type</th><th>Expanded Form</th><th>Count </th>
+</tr>
+<tr>
+<td>OR</td><td>Orders</td><td>1357</td>
+</tr>
+<tr>
+<td>PR</td><td>Name of a problem</td><td>363</td>
+</tr>
+<tr>
+<td>GO</td><td>Goal</td><td>311</td>
+</tr>
+<tr>
+<td>HT</td><td>Hierarchical term</td><td>121</td>
+</tr>
+<tr>
+<td>HX</td><td>Expanded version of short hierarchical term</td><td>55</td>
+</tr>
+<tr>
+<td>CO</td><td>Component name (these are hierarchical terms, as opposed to the LOINC component names which are analytes)</td><td>22</td>
+</tr>
+</table>
+<h2>Relationship Counts</h2>
+<table>
+<tr>
+<th>Relation Name/Additional Label</th><th>Expanded Form</th><th>Count </th>
+</tr>
+<tr>
+<td>CHD/</td><td>has child relationship in a Metathesaurus source vocabulary /Empty relationship attribute</td><td>2174</td>
+</tr>
+<tr>
+<td>PAR/</td><td>has parent relationship in a Metathesaurus source vocabulary /Empty relationship attribute</td><td>2174</td>
+</tr>
+<tr>
+<td>SY/</td><td>source asserted synonymy./Empty relationship attribute</td><td>110</td>
+</tr>
+</table>
+<h2>Definition Count</h2>
+<table>
+<tr>
+<th>Count</th>
+</tr>
+<tr>
+<td>0</td>
+</tr>
+</table>
+<h2>Source Overlap</h2>
+<table>
+<tr>
+<th>Source</th><th># Concepts Sharing Atom/# Total Concepts</th><th>Percentage Distribution</th>
+</tr>
+<tr>
+<td>SCTSPA</td><td>128/2172</td><td>5.9</td>
+</tr>
+<tr>
+<td>SNOMEDCT_US</td><td>129/2172</td><td>5.9</td>
+</tr>
+<tr>
+<td>CHV</td><td>108/2172</td><td>5.0</td>
+</tr>
+<tr>
+<td>MEDCIN</td><td>105/2172</td><td>4.8</td>
+</tr>
+<tr>
+<td>LNC</td><td>99/2172</td><td>4.6</td>
+</tr>
+<tr>
+<td>SNMI</td><td>87/2172</td><td>4.0</td>
+</tr>
+<tr>
+<td>CCC</td><td>84/2172</td><td>3.9</td>
+</tr>
+<tr>
+<td>RCD</td><td>78/2172</td><td>3.6</td>
+</tr>
+<tr>
+<td>ICNP</td><td>75/2172</td><td>3.5</td>
+</tr>
+<tr>
+<td>NANDA-I</td><td>67/2172</td><td>3.1</td>
+</tr>
+<tr>
+<td>MDR</td><td>68/2172</td><td>3.1</td>
+</tr>
+<tr>
+<td>MDRBPO</td><td>68/2172</td><td>3.1</td>
+</tr>
+<tr>
+<td>MDRCZE</td><td>68/2172</td><td>3.1</td>
+</tr>
+<tr>
+<td>MDRDUT</td><td>68/2172</td><td>3.1</td>
+</tr>
+<tr>
+<td>MDRFRE</td><td>68/2172</td><td>3.1</td>
+</tr>
+<tr>
+<td>MDRGER</td><td>68/2172</td><td>3.1</td>
+</tr>
+<tr>
+<td>MDRHUN</td><td>68/2172</td><td>3.1</td>
+</tr>
+<tr>
+<td>MDRITA</td><td>68/2172</td><td>3.1</td>
+</tr>
+<tr>
+<td>MDRJPN</td><td>68/2172</td><td>3.1</td>
+</tr>
+<tr>
+<td>MDRKOR</td><td>68/2172</td><td>3.1</td>
+</tr>
+<tr>
+<td>MDRPOR</td><td>68/2172</td><td>3.1</td>
+</tr>
+<tr>
+<td>MDRRUS</td><td>68/2172</td><td>3.1</td>
+</tr>
+<tr>
+<td>MDRSPA</td><td>68/2172</td><td>3.1</td>
+</tr>
+<tr>
+<td>CPM</td><td>62/2172</td><td>2.9</td>
+</tr>
+<tr>
+<td>MSH</td><td>63/2172</td><td>2.9</td>
+</tr>
+<tr>
+<td>MSHCZE</td><td>63/2172</td><td>2.9</td>
+</tr>
+<tr>
+<td>MSHFRE</td><td>63/2172</td><td>2.9</td>
+</tr>
+<tr>
+<td>MSHGER</td><td>63/2172</td><td>2.9</td>
+</tr>
+<tr>
+<td>MSHITA</td><td>63/2172</td><td>2.9</td>
+</tr>
+<tr>
+<td>MSHNOR</td><td>63/2172</td><td>2.9</td>
+</tr>
+<tr>
+<td>MSHPOR</td><td>63/2172</td><td>2.9</td>
+</tr>
+<tr>
+<td>MSHSPA</td><td>63/2172</td><td>2.9</td>
+</tr>
+<tr>
+<td>NCI</td><td>63/2172</td><td>2.9</td>
+</tr>
+<tr>
+<td>MSHDUT</td><td>59/2172</td><td>2.7</td>
+</tr>
+<tr>
+<td>MSHPOL</td><td>55/2172</td><td>2.5</td>
+</tr>
+<tr>
+<td>MSHRUS</td><td>55/2172</td><td>2.5</td>
+</tr>
+<tr>
+<td>MSHSWE</td><td>55/2172</td><td>2.5</td>
+</tr>
+<tr>
+<td>MSHFIN</td><td>52/2172</td><td>2.4</td>
+</tr>
+<tr>
+<td>SNM</td><td>52/2172</td><td>2.4</td>
+</tr>
+<tr>
+<td>CCPSS</td><td>49/2172</td><td>2.3</td>
+</tr>
+<tr>
+<td>MSHJPN</td><td>50/2172</td><td>2.3</td>
+</tr>
+<tr>
+<td>ICPC2ICD10ENG</td><td>51/2172</td><td>2.3</td>
+</tr>
+<tr>
+<td>ICPC2P</td><td>45/2172</td><td>2.1</td>
+</tr>
+<tr>
+<td>CSP</td><td>44/2172</td><td>2.0</td>
+</tr>
+<tr>
+<td>ICD10CM</td><td>44/2172</td><td>2.0</td>
+</tr>
+<tr>
+<td>CST</td><td>41/2172</td><td>1.9</td>
+</tr>
+<tr>
+<td>ICPC2ICD10DUT</td><td>41/2172</td><td>1.9</td>
+</tr>
+<tr>
+<td>WHO</td><td>41/2172</td><td>1.9</td>
+</tr>
+<tr>
+<td>AOD</td><td>39/2172</td><td>1.8</td>
+</tr>
+<tr>
+<td>DXP</td><td>39/2172</td><td>1.8</td>
+</tr>
+<tr>
+<td>LCH_NW</td><td>39/2172</td><td>1.8</td>
+</tr>
+<tr>
+<td>MSHSCR</td><td>40/2172</td><td>1.8</td>
+</tr>
+<tr>
+<td>NCI_NICHD</td><td>40/2172</td><td>1.8</td>
+</tr>
+<tr>
+<td>NOC</td><td>40/2172</td><td>1.8</td>
+</tr>
+<tr>
+<td>WHOFRE</td><td>40/2172</td><td>1.8</td>
+</tr>
+<tr>
+<td>WHOPOR</td><td>40/2172</td><td>1.8</td>
+</tr>
+<tr>
+<td>COSTAR</td><td>37/2172</td><td>1.7</td>
+</tr>
+<tr>
+<td>HPO</td><td>37/2172</td><td>1.7</td>
+</tr>
+<tr>
+<td>OMIM</td><td>37/2172</td><td>1.7</td>
+</tr>
+<tr>
+<td>WHOSPA</td><td>37/2172</td><td>1.7</td>
+</tr>
+<tr>
+<td>WHOGER</td><td>38/2172</td><td>1.7</td>
+</tr>
+<tr>
+<td>ICD10AM</td><td>34/2172</td><td>1.6</td>
+</tr>
+<tr>
+<td>ICD9CM</td><td>35/2172</td><td>1.6</td>
+</tr>
+<tr>
+<td>ICD10</td><td>30/2172</td><td>1.4</td>
+</tr>
+<tr>
+<td>MEDLINEPLUS</td><td>30/2172</td><td>1.4</td>
+</tr>
+<tr>
+<td>LCH</td><td>31/2172</td><td>1.4</td>
 </tr>
 <tr>
 <td>DMDICD10</td><td>29/2172</td><td>1.3</td>
@@ -307,6 +615,9 @@ status=published
 </tr>
 <tr>
 <td>NCI_FDA</td><td>25/2172</td><td>1.2</td>
+</tr>
+<tr>
+<td>PSY</td><td>27/2172</td><td>1.2</td>
 </tr>
 <tr>
 <td>NCI_CTCAE</td><td>24/2172</td><td>1.1</td>

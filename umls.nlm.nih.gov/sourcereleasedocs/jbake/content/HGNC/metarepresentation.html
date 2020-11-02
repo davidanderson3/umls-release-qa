@@ -1,6 +1,6 @@
 title=HGNC (HUGO Gene Nomenclature Committee) - Metathesaurus Representation
 date=2017-11-06
-updated=2020-05-04
+updated=2020-11-02
 type=page
 status=published
 ~~~~~~
@@ -32,20 +32,36 @@ status=published
     </div>
 
 <div id = "general" class = "rep_block_level_one">
-<p><strong>VSAB:</strong> HGNC2019_03</p>
+<p><strong>VSAB:</strong> HGNC2020_05</p>
 <hr>
 <div id = "rep_identifiers" class = "rep_block_level_one">
 <h3>Summary of Changes</h3>
-<p>New ATN = LNCIPEDIA (comprehensive compendium of human long non-coding RNAs)</p>
-<p>New value for ATN = DB_XR_ID  --> GtRNAdb: xxx</p>
-<p>GtRNAdb = database that contains tRNA gene predictions made by tRNAscan-SE on complete or nearly complete genomes.</p>
+<p>1.  New ATN = AGR (Alliance of Genome Resources)</p>
+<p>2.  New TTYs</p>
+<ul>
+<li>NP (non-preferred term)</li>
+<li>NS (short form of non-preferred term)</li>
+</ul>
+<p>3.  Deprecated ATNs:</p>
+<ul>
+ <li>PREV_NAME</li>
+ <li>PREV_SYMBOL</li>
+ <li>RNA_CENTRAL_ID</li>
+ <li>GENE_FAM_DESC</li>
+ <li>GENE_FAM_ID</li>
+</ul>
+<p>4. New RELAs:</p>
+<ul>
+ <li>RT|has_prev_name/prev_name_of</li>
+ <li>SFO/LFO|has_prev_symbol/prev_symbol_of</li>
+</ul>
 </div>
 <hr>
 <div id = "rep_change_summary" class = "rep_block_level_one">
 <h3>Original Files:</h3>
 <table>
 <tr><th>File Name</th><th>Description</th></tr>
-<tr><td  class = "file_field_name"><a href = "#file1">hgnc_complete_set_03212019.txt</a></td><td>Tab-delimited text file (UTF-8).</td></tr>
+<tr><td  class = "file_field_name"><a href = "#file1">hgnc_complete_set_05202020.txt</a></td><td>Tab-delimited text file (UTF-8).</td></tr>
 </table>
 
 </div>
@@ -81,6 +97,16 @@ status=published
     <td>alias_name field</td>
 </tr>
 <tr>
+    <td>NP</td>
+    <td>non-preferred term</td>
+    <td>prev_name field</td>
+</tr>
+<tr>
+    <td>NS</td>
+    <td>short for of non-preferred term</td>
+    <td>prev_symbol field</td>
+</tr>
+<tr>
     <td>PT</td>
     <td>Preferred Name</td>
     <td>name field</td>
@@ -102,8 +128,8 @@ status=published
 <h3>Attributes (MRSAT)</h3>
 <table>
 <tr><th>Attribute Name</th><th>Origin</th></tr>
-<tr><td>GENESYMBOL</td>
-<td>symbol field</td></tr>
+<tr><td>AGR</td>
+<td>agr field</td></tr>
 <tr><td>CCDS_ID</td>
 <td>ccds_id field</td></tr>
 <tr><td>CYTOGENETIC_LOCATION</td>
@@ -162,6 +188,8 @@ status=published
 <td>gene_family field</td></tr>
 <tr><td>GENE_FAM_ID</td>
 <td>gene_family_id field</td></tr>
+<tr><td>GENESYMBOL</td>
+<td>symbol field</td></tr>
 <tr><td>LNCIPEDIA</td>
 <td>lncipedia</td></tr>
 <tr><td>LOCUS_GROUP</td>
@@ -174,10 +202,6 @@ status=published
 <td>mgd_id field</td></tr>
 <tr><td>OMIM_NUMBER</td>
 <td>omim_id field</td></tr>
-<tr><td>PREV_NAME</td>
-<td>prev_name field</td></tr>
-<tr><td>PREV_SYMBOL</td>
-<td>prev_symbol field</td></tr>
 <tr><td>PMID</td>
 <td>pubmed_id field</td></tr>
 <tr><td>REFSEQ_ID</td>
@@ -200,12 +224,16 @@ status=published
 <h3>Relationships (MRREL)</h3>
 <table>
 <tr><th>Source</th><th>Relationship</th><th>Relationship Label/Inverse Relationship Label</th><th>Description</th></tr>
-<tr><td>HUGO</td><td>CHD<br/>PAR<br/>SIB</td>
+<tr><td>HGNC</td><td>CHD<br/>PAR<br/>SIB</td>
 <td>(no rela)</td><td>There are no CONTEXTS.</td></tr>
-<tr><td>HUGO</td><td>SFO/LFO</td>
+<tr><td>HGNC</td><td>SFO/LFO</td>
 <td>has_expanded_form/expanded_form_of</td><td>Connects the symbol (TTY=ACR) with its expanded form (TTY=MTH_ACR).</td></tr>
-<tr><td>HUGO</td><td>SFO/LFO</td>
+<tr><td>HGNC</td><td>SFO/LFO</td>
 <td>has_alias/alias_of</td><td>Connects the name (TTY=PT) with its alias_symbol (TTY=SYN).</td></tr>
+<tr><td>HGNC</td><td>SFO/LFO</td>
+<td>has_prev_symbol/prev_symbol_of</td><td>Connects the name (TTY=PT) with its alias_symbol (TTY=NS).</td></tr>
+<tr><td>HGNC</td><td>RT</td>
+<td>has_prev_name/prev_name_of</td><td>Connects the name (TTY=PT) with its alias_symbol (TTY=NP).</td></tr>
 </table>
 </div>
 <hr>

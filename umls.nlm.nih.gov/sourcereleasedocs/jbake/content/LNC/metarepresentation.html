@@ -1,6 +1,6 @@
 title=LNC (LOINC) - Metathesaurus Representation
 date=2018-05-07
-updated=2020-05-04
+updated=2020-11-02
 type=page
 status=published
 ~~~~~~
@@ -30,48 +30,11 @@ status=published
     	<div class="col-sm-auto border-left"><a href="#relationships">Relationships</a></div>
     	<div class="col-sm-auto border-left"><a href="#mappings">Mappings</a></div>
     </div>
-    <p><strong>VSAB: </strong>LNC267</p>
+    <p><strong>VSAB: </strong>LNC268</p>
     <hr>
     <div id="rep_change_summary" class="rep_block_level_one"></div>
       <h3>Summary of Changes:</h3>
-      New Group Files:
-      <ul>
-       <li>Group.csv</li>
-       <li>GroupAttributes.csv</li>
-       <li>GroupLoincTerms.csv</li>
-       <li>ParentGroup.csv</li>
-       <li>ParentGroupAttributes.csv</li>
-      </ul>
-      <p>New field in loinc.csv file: DisplayName (field 46)</p>
-      New TTYs:
-      <ul>
-       <li>DN (Display Name)</li>
-       <li>LG (Loinc Group Name)</li>
-       <li>OLG (Obsolete Loinc Group Name)</li>
-      </ul>
-      <p>New ATNs:</p>
-      <ul>
-       <li>CATEGORY</li>
-       <li>DESCRIPTION</li>
-       <li>EQUIVALENCE</li>
-       <li>MOLECULAR_WIEGHT_OF_ANALYTE</li>
-       <li>STATUS</li>
-       <li>USAGE_NOTES</li>
-      </ul>
-      <p>Dropped ATNs:</p>
-      <ul>
-       <li>IEEE_DESCRIPTION</li>
-       <li>IEEE_DIM</li>
-       <li>IEEE_UOM_UCUM</li>
-       <li>LSP</li>
-      </ul>
-      <p>New RELAs:</p>
-       <ul>
-       <li>has_parent_group|parent_group_of</li>
-       <li>has_archetype|archetype_of</li>
-       <li>has_loinc_number|loinc_number_of</li>
-      </ul>
-      <p>New Classes:</p>
+      New Classes:
       <table>
       	<tbody>
       		<tr>
@@ -79,30 +42,18 @@ status=published
       			<th>Class</th>
       		</tr>
       		<tr>
-      			<td>CLIN.VET</td>
-      			<td>Clinical veterinary</td>
+      			<td>EYE.LENSOMETRY</td>
+      			<td>Lensometry</td>
       		</tr>
       		<tr>
-      			<td>PANEL.MOLPATH.PHARMG</td>
-      			<td>Pharmacogenomics panel</td>
-      		</tr>
-      		<tr>
-         <td>PANEL.SURVEY.CSSRS</td>
-         <td>Columbia Suicide Severity Rating Scale (CSSRS) set</td>
+         <td>PANEL.SURVEY.SEEK</td>
+         <td>Safe Environment for Every Kid</td>
         </tr>
         <tr>
-         <td>PANEL.SURVEY.WELLRX</td>
-         <td>WellRX Questionnaire set</td>
+         <td>SURVEY.SEEK</td>
+         <td>Safe Environment for Every Kid</td>
         </tr>
-        <tr>
-         <td>SURVEY.CSSRS</td>
-         <td>Columbia Suicide Severity Rating Scale (CSSRS)</td>
-        </tr>
-        <tr>
-         <td>SURVEY.WELLRX</td>
-         <td>WellRX Questionnaire</td>
-        </tr>
-	  		  </tbody>
+       </tbody>
       </table>
       <br/>
 	  <div>
@@ -132,7 +83,7 @@ status=published
 	  
     </ul>
     <p>In addition, the UMLS receives two files to facilitate building
-      the hierarchy. For 2.67 these files were:
+      the hierarchy. For 2.68 these files were:
       "PartLinks.csv,"  and "Parts.csv."  Additional information, such as
       expansions of abbreviations, is extracted from LOINCManual.pdf. </p>
   </div>

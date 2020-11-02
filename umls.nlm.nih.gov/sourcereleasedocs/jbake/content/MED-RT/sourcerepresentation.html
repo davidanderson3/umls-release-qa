@@ -1,6 +1,6 @@
 title=MED-RT (Medication Reference Terminology) - Source Representation
 date=2018-05-07
-updated=2020-05-04
+updated=2020-11-02
 type=page
 status=published
 ~~~~~~
@@ -31,10 +31,17 @@ status=published
     <hr>
     <div id="change_summary" class="rep_block_level_one"> </div>
       <h3>Summary of Changes:</h3>
-	There have been no changes to the MED-RT release format or to Metathesaurus source processing.
-	<hr>
-    <div id="file_summary" class="rep_block_level_one"> <a
-        id="file_summary"></a> </div>
+There have been no changes to the MED-RT release format or Metathesaurus source processing, however two notable changes to the hierarchy were introduced in the May, 2020 release:
+		<ol>
+		<li>Established Pharmacologic Class (EPC) concepts have been 
+		restructured to create a more comprehensive hierarchy of the classes. 
+		A new CONCEPT_TYPE of APC (Additional Pharmacologic Class) was createad to support the addition of grouper concepts for this effort.
+		The hierarchies are included as children of the "Preparations by FDA Established Pharmacologic Class" concept.</li>
+		<li>Established Pharmacologic Class concepts that are not linked to an actively marketed drug in the FDA Structured Product Labeling have been placed beneath a new 
+		concept "Inactive Preparations by FDA Established Pharmacologic Class."</li>
+		</ol>	<hr>
+    <div id="file_summary1" class="rep_block_level_one"> <a 
+	id="file_summary"></a> </div>
       <h3>Source Provided Files:</h3>
 	          <p>
 	          All source files, including documentation, are available for download from the Federal Medications (FedMed) collaboration site:
@@ -95,6 +102,7 @@ status=published
             	Valid CTY values include: <br/>
                 <ul>
                 	<li>EPC - FDA SPL established pharmacologic class</li>
+					<li>APC - additional pharmacologic class</li>
                 	<li>MoA - mechanism of action</li>
                 	<li>PE - physiologic effect</li>
                 	<li>TC - therapeutic category</li>
