@@ -30,7 +30,7 @@ status=published
     	<div class="col-sm-auto border-left"><a href="#relationships">Relationships</a></div>
     	<div class="col-sm-auto border-left"><a href="#mappings">Mappings</a></div>
     </div>
-    <p><strong>VSAB: </strong>LNC268</p>
+    <p><strong>VSAB: </strong>LNC269</p>
     <hr>
     <div id="rep_change_summary" class="rep_block_level_one"></div>
       <h3>Summary of Changes:</h3>
@@ -42,19 +42,82 @@ status=published
       			<th>Class</th>
       		</tr>
       		<tr>
-      			<td>EYE.LENSOMETRY</td>
-      			<td>Lensometry</td>
+      			<td>PANEL.SURVEY.BADS</td>
+      			<td>Brief Anxiety and Depression Scale set</td>
       		</tr>
       		<tr>
-         <td>PANEL.SURVEY.SEEK</td>
-         <td>Safe Environment for Every Kid</td>
+         <td>PANEL.SURVEY.BCAT</td>
+         <td>Brief Cognitive Assessment Tool set</td>
         </tr>
         <tr>
-         <td>SURVEY.SEEK</td>
-         <td>Safe Environment for Every Kid</td>
+         <td>PANEL.SURVEY.BRIEF</td>
+         <td>BRIEF Health Literacy Screening Tool set</td>
+        </tr>
+        <tr>
+      			<td>PANEL.SURVEY.HITS</td>
+      			<td>HITS Survey set</td>
+      		</tr>
+      		<tr>
+         <td>PANEL.SURVEY.NIDA</td>
+         <td>National Institute on Drug Abuse set</td>
+        </tr>
+        <tr>
+         <td>PANEL.SURVEY.NPASS</td>
+         <td>Neonatal Pain, Agitation and Sedation Scale set</td>
+        </tr>
+        <tr>
+      			<td>PANEL.SURVEY.SDOH</td>
+      			<td>Social determinants of health set</td>
+      		</tr>
+      		<tr>
+         <td>PANEL.SURVEY.SKINDEX</td>
+         <td>Skindex set</td>
+        </tr>
+        <tr>
+         <td>SURVEY.BADS</td>
+         <td>Brief Anxiety and Depression Scale (BADS)</td>
+        </tr>
+        <tr>
+         <td>SURVEY.BCAT</td>
+         <td>Brief Cognitive Assessment Tool (BCAT)</td>
+        </tr>
+        <tr>
+      			<td>SURVEY.BRIEF</td>
+      			<td>BRIEF Survey</td>
+      		</tr>
+      		<tr>
+         <td>SURVEY.HITS</td>
+         <td>HITS Survey</td>
+        </tr>
+        <tr>
+         <td>SURVEY.NIDA</td>
+         <td>National Institute on Drug Abuse</td>
+        </tr>
+        <tr>
+         <td>SURVEY.NPASS</td>
+         <td>Neonatal Pain, Agitation and Sedation Scale)</td>
+        </tr>
+        <tr>
+         <td>SURVEY.SDOH</td>
+         <td>Social Determinants of Health)</td>
+        </tr>
+        <tr>
+      			<td>SURVEY.SKINDEX</td>
+      			<td>Skindex</td>
+      		</tr>
+      		<tr>
+         <td>EYE.ERG</td>
+         <td>electroretinogram concepts</td>
         </tr>
        </tbody>
       </table>
+      
+      <p>Deprecated ATNs:</p>
+      <ul>
+       <li>LSP</li>
+       <li>TOP_2000_LAB_RESULTS_SI</li>
+       <li>TOP_2000_LAB_RESULTS_US</li>
+      </ul>
       <br/>
 	  <div>
     <h4>Original Files:</h4>
@@ -68,8 +131,6 @@ status=published
       <li>PanelsAndForms.csv</li>
       <li>LoincIeeeMedicalDeviceCodeMappingTable.csv</li>
       <li>LoincRsnaRadiologyPlaybook.csv</li>
-      <li>Top2000CommonLabResultsSi.csv</li>
-      <li>Top2000CommonLabResultsUs.csv</li>
       <li>LoincUniversalLabOrdersValueSet.csv</li>
       <li>AnswerList.csv</li>
       <li>LoincAnswerListLink.csv</li>
@@ -83,7 +144,7 @@ status=published
 	  
     </ul>
     <p>In addition, the UMLS receives two files to facilitate building
-      the hierarchy. For 2.68 these files were:
+      the hierarchy. For 2.69 these files were:
       "PartLinks.csv,"  and "Parts.csv."  Additional information, such as
       expansions of abbreviations, is extracted from LOINCManual.pdf. </p>
   </div>
@@ -521,10 +582,6 @@ status=published
               <td>loinc.csv field 22 (RELATEDNAMES2)</td>
             </tr>
             <tr>
-              <td>LSP [Species]</td>
-              <td>loinc.csv field 16 (SPECIES)</td>
-            </tr>
-            <tr>
               <td>LSU [Submitted units]</td>
               <td>loinc.csv field 21 (SUBMITTED_UNITS)</td>
             </tr>
@@ -627,16 +684,6 @@ status=published
               <td>SUBSEQUENT_TEXT_PROMPT</td>
               <td>AnswerList.csv
                 field 17 (SubsequentTextPrompt)</td>
-            </tr>
-            <tr>
-              <td>TOP_2000_LAB_RESULTS_SI</td>
-              <td>Top2000CommonLabResultsSi.csv field
-                6 (RANK)</td>
-            </tr>
-            <tr>
-              <td>TOP_2000_LAB_RESUlTS_US</td>
-              <td>Top2000CommonLabResultsUs.csv field
-                6 (RANK)</td>
             </tr>
             <tr>
               <td>TORSAB</td>
