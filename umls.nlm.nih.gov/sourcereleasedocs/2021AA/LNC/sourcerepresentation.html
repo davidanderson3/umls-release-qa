@@ -355,7 +355,7 @@ status=published
                 <td>8</td>
                 <td>CLASS</td>
                 <td>Arbitrary classification of the terms for grouping
-                  related observations together. See Table 29 in the
+                  related observations together. See Table 32 in the
                   LOINC Users' Guide for values.</td>
                 <td>
                   <ul>
@@ -599,8 +599,7 @@ status=published
                 <td>EXTERNAL_COPYRIGHT_LINK</td>
                 <td>Used for terms with an additional third party
                   copyright. The field is populated with the
-                  COPYRIGHT_ID from the Source Organization table (Table
-                  28c in the LOINC Manual).<br/>
+                  COPYRIGHT_ID from SourceOrganization.csv.<br/>
                 </td>
                 <td>MRSAT.ATN = "EXTERNAL_COPYRIGHT_LINK"</td>
               </tr>
@@ -789,7 +788,7 @@ status=published
                   the LOINC CODE and the LOINC PART.<br/>
                   The REL = "RO";<br/>
                   The RELA is assigned based on the
-                  LOINC_PARTS.PART_TYPE of the L_PART_ID as follows:<br/>
+                  PARTS.PART_TYPE of the L_PART_ID as follows:<br/>
                   <br/>
                   <table>
                     <tbody>
@@ -871,7 +870,7 @@ status=published
                   <br/>
                   <p>Note: Some PART TYPEs (e.g., "MULTI-AXIAL" and
                     "SUPERSYSTEMMULTI-AXIAL"<br/>
-                    may not appear in the current "LOINC_PART_LINKS"
+                    may not appear in the current PartLinks.csv
                     file, therefore, no relationships are created for
                     these PART TYPE values.</p>
                 </td>
@@ -880,7 +879,7 @@ status=published
                 <td>2</td>
                 <td>L_PART_ID</td>
                 <td>LOINC PART CODE</td>
-                <td>Relationship created between tthe LOINC_NUM the
+                <td>Relationship created between the LOINC_NUM the
                   L_PART_ID<br/>
                 </td>
               </tr>
