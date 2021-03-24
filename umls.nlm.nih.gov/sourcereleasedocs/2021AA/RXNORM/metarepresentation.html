@@ -1,0 +1,230 @@
+title=RXNORM (RXNORM) - Metathesaurus Representation
+date=2018-05-07
+updated=2020-11-02
+type=page
+status=published
+~~~~~~
+
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+<!--endmenu-->
+<br/>
+
+<p>This page lists UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#atoms">Atoms</a></div>
+    	<div class="col-sm-auto border-left"><a href="#attributes">Attributes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#definitions">Definitions</a></div>
+    	<div class="col-sm-auto border-left"><a href="#relationships">Relationships</a></div>
+    	<div class="col-sm-auto border-left"><a href="#mappings">Mappings</a></div>
+    </div>
+    <p><strong>VSAB: </strong>RXNORM_20AA_210301F<br/>
+    </p>
+    <hr>
+    <div id="rep_identifiers" class="rep_block_level_one">
+      <h3>Notes:</h3>
+      <p>RxNorm, a standardized nomenclature for clinical drugs, is
+        produced by the National Library of Medicine. Data files are
+        released monthly and <a href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">available
+        by download</a>. Within each Metathesaurus cycle, RxNorm is
+        updated multiple times. This document reflects the latest
+        cumulative update. The scope of RxNorm is determined by the
+        combined scope of its source vocabularies which include the
+        following:
+      </p>
+      <table>
+        <tbody>
+          <tr>
+            <th>Sources</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td class="file_field_name">ATC_2020_20_09_08</td>
+            <td>Anatomical Therapeutic Chemical Classification System</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">CVX_2021_01_29</td>
+            <td>Vaccines Administered</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">DRUGBANK5.0_2021_01_29</td>
+            <td>DrugBank</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">GS_2021_02_09</td>
+            <td>Gold Standard Drug Database</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">MMSL_2021_02_01</td>
+            <td>Multum MediSource Lexicon</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">MMX_2021_02_08</td>
+            <td>Micromedex RED BOOK</td>
+          </tr>
+          <tr>
+          	<td class="file_field_name">MTHCMSFRF_2020_21_03_01</td>
+          	<td>Metathesaurus CMS Formulary Reference File</td>
+		  </tr>
+		  <tr>
+            <td class="file_field_name">MTHSPL_2021_02_19</td>
+            <td>Metathesaurus FDA Structured Product Labels</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">NDDF_2021_02_10</td>
+            <td>FDB MedKnowledge</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">RXNORM_20AA_210301F</td>
+            <td>RxNorm Vocabulary</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">USP_2021_02_15</td>
+            <td>USP Compendial Nomenclature</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">VANDF_2021_01_29</td>
+            <td>Veterans Health Administration National Drug File</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+      Note: Selected portions of MSH and SNOMEDCT are included in the
+      RxNorm release files, however, they are not processed as part of
+      RxNorm for the Metathesaurus except in assigning RXCUI and RXAUI
+      attributes. All MSH or SNOMEDCT data in the Metathesaurus comes
+      directly from that source's data files. This document describes
+      how the RxNorm release files (RXN*RRF) are processed for
+      representation in the UMLS Metathesaurus. It does not cover
+      processing of individual source vocabularies for inclusion in
+      RxNorm.</p>
+<hr>
+      <h3>Summary of Changes</h3>
+
+      <p>No changes were made for this version.</p>
+
+      </div>
+<hr>
+    <h3>Source Provided Files:</h3>
+    <div id="rep_change_summary" class="rep_block_level_one">
+      <p>RXNORM data files are released monthly and <a
+href="http://www.nlm.nih.gov/research/umls/licensedcontent/downloads.html">available by download</a>.</p>
+      <table>
+        <tbody>
+          <tr>
+            <th>File Name</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td class="file_field_name">RXNCONSO.RRF</td>
+            <td>Concept and source information.</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">RXNDOC.RRF</td>
+            <td>Abbreviated values.</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">RXNREL.RRF</td>
+            <td>Relationship information, including synonymy</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">RXNSAB.RRF</td>
+            <td>Source information.</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">RXNSAT.RRF</td>
+            <td>Attribute information.</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">RXNSTY.RRF</td>
+            <td>Semantic type information.</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">RXNATOMARCHIVE.RRF</td>
+            <td>Archive data. Not used.</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">RXNCUICHANGES.RRF</td>
+            <td>CUI changes. Not used.</td>
+          </tr>
+          <tr>
+            <td class="file_field_name">RXNCUI.RRF</td>
+            <td>Retired CUIs.</td>
+          </tr>
+        </tbody>
+      </table>
+ 
+    </div>
+    <hr>
+    <div id="rep_identifers" class="rep_block_level_one">
+      <h3>Identifiers:</h3>
+      <ul>
+        <li>CODE: RXNCONSO.CODE</li>
+        <li>SAUI: RXNCONSO.RXAUI or RXNCONSO.SAUI</li>
+        <li>SCUI: RXNCONSO.RXCUI or RXNCONSO.SCUI</li>
+        <li>SDUI: RXNCONSO.SDUI (Currently always blank).</li>
+      </ul>
+      <hr>
+      <div id="rep_termtypes" class="rep_block_level_two"> <a
+          id="atoms"></a>
+        <h3>Atoms (MRCONSO):</h3>
+        <h4>Term Type</h4>
+        <p>Term types are extracted from field 13 of RXNCONSO.RRF.</p>
+        <h4>Suppressibility</h4>
+        <p>For many RxNorm and subsource termtypes, the suppressibility
+          value can be either "O" or "E". For all others, the value is
+          "N". Suppressibility values are extracted from field 17 of
+          RXNCONSO.RRF.
+        </p>
+        <p>In addition, source NDC attributes may have
+          SUPPRESS="O" or "Y".
+        </p>
+      </div>
+      <hr>
+      <div id="rep_attributes" class="rep_block_level_two"> <a
+          id="attributes"></a>
+        <h3>Attributes (MRSAT):</h3>
+
+        <p>All attribute names and their values are extracted from field
+          9 and 11 of RXNSAT.RRF except for RXCUI and
+          RXAUI which are created using RXNCONSO.RRF.</p>
+      </div>
+      <hr>
+      <div id="rep_definitions" class="rep_block_level_two"> <a
+          id="definitions"></a>
+        <h3>Definitions (MRDEF):</h3>
+
+        <p>There are no DEFINITIONS in RXNORM or subsources.
+        </p>
+      </div>
+      <hr>
+      <div id="rep_relationships" class="rep_block_level_two"> <a
+          id="relationships"></a>
+        <h3>Relationships (MRREL):</h3>
+
+        <p>All relationships are extracted from field 4 (REL) and field
+          8 (RELA) of RXNREL.RRF
+        </p>
+        <p>For detailed information on relationships, see <a href="https://www.nlm.nih.gov/research/umls/rxnorm/docs/appendix1.html">RxNorm documentation</a>
+        </p>
+  
+      </div>
+      <hr>
+      <div id="mappings" class="rep_block_level_two">
+        <h3>Mappings (MRMAP):</h3>
+
+        <p>There are no mappings present in RxNorm.</p>
+      </div>
+    </div>
