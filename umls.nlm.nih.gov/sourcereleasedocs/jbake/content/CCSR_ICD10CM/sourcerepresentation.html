@@ -1,6 +1,6 @@
-title=CCSR_10 (Clinical Classifications Software Refined for ICD-10-CM) - Source Representation
+title=CCSR_ICD10CM (Clinical Classifications Software Refined for ICD-10-CM) - Source Representation
 date=2018-05-07
-updated=2020-11-02
+updated=2021-05-03
 type=page
 status=published
 ~~~~~~
@@ -31,14 +31,21 @@ status=published
 <div id="rep_identifiers" class="rep_block_level_one">
   <h3>Summary of Changes</h3>
 
-    <p>CCSR_10 is a new source in META2020AA.  CCS_10 was split into two sources, CCS_10 (for procedure categories) and CCSR_10 (for diagnosis categories)</p>
-	<p>New TTYs:</p>
-	<ul>
-		<li>SD (Single-level diagnosis categories); previously included in CCS_10</li>
-		<li>XM: Cross-mapping set for ICD10CM_2020 to CCSR_10_2020 Mappings</li>
-	</ul>
-	<p>Note:  MD (Multi-level diagnosis categories), which were present in CCS_10 are not included in CCSR_10. The file ccs_dx_icd10cm_20##_1.csv was not released so these atoms are not present in CCS_10 or CCSR_10. 
-		The new diagnosis mapping file, $DXCCSR2020.CSV, only has mappings to the new single-level CCSR code and is represented with SAB = CCSR_10, TTY = SD.</p>
+ <ul>
+    <li>CCSR_ICD10CM is a new SAB in 2021AA, replacing CCSR_10.</li>
+	<li>Previously CCSR_10 mapped ICD10CM codes to single CCSR categories. 
+	Now CCSR_ICD10CM maps ICD10CM codes to one or more (currently up to 6) CCSR_ICD10CM categories, in addition to defining a single default inpatient 
+	category and a single default outpatient category for each mapped ICD10CM code.</li>
+
+	<li>The default inpatient/outpatient categories are represented with two new RELAs:
+		<ul>
+		<li>has_default_inpatient_classification</li>
+		<li>has_default_outpatient_classification</li>
+		</ul>
+	</li>
+	<li>Previously the mapping relationships used SGTYPE = AUI but they have been changed to use CODE.</li>
+  </ul>
+  
 	</div>
 <hr>
 <div id="rep_change_summary" class="rep_block_level_one">
@@ -54,17 +61,21 @@ status=published
         <th>Description</th>
       </tr>
       <tr>
-        <td>DXCCSR2020.CSV</td>
+        <td>DXCCSR_v2021-1.CSV</td>
 
         <td>Diagnosis categories and mappings</td>
       </tr>
+	  <tr>
+		<td>DXCCSR-User-Guide-v2021-1.pdf</td>
+		<td>Documentation</td>
+	  </tr>
     </tbody>
   </table>
 </div>
 <hr>
 <h3>Source-Provided Files: Details</h3>
 
-<p>The following is a list of elements in DXCCSR2020.CSV:</p>
+<p>The following is a list of elements in DXCCSR_v2021-1.CSV:</p>
 
 <div class="rep_block_level_two">
   <a id="file1"></a>
@@ -79,27 +90,48 @@ status=published
 
       <tr>
         <td>ICD-10-CM CODE</td>
-
-        <td>MRMAP.FROMEXPR</td>
+        <td>MRMAP.FROMEXPR<br/>
+		MRREL: Relationship to CCSR Category Codes, per below
+		</td>
       </tr>
-	  
-     <tr>
+	  <tr>
         <td>ICD-10-CM CODE DESCRIPTION</td>
-
         <td>Not processed</td>
       </tr>
 
       <tr>
-        <td>CCSR CATEGORY</td>
-
-        <td>MRCONSO.CODE; TTY = SD<br>
-        MRMAP.TOEXPR<br></td>
+        <td>Default CCSR CATEGORY IP</td>
+        <td>MRCONSO.CODE; TTY = SD<br/>
+		 MRMAP.TOEXPR<br/>
+		 MRREL.REL, MRMAP.REL = RQ to ICD-10-CM CODE<br/>
+		 MRREL.RELA, MRMAP.RELA = "default_inpatient_classification" 
       </tr>
-
- 
+       <tr>
+        <td>Default CCSR CATEGORY DESCRIPTION IP</td>
+        <td>MRCONSO.STR; TTY = SD</td>
+      </tr>
+       
+	   <tr>
+        <td>Default CCSR CATEGORY OP</td>
+        <td>MRCONSO.CODE; TTY = SD<br/>
+        MRMAP.TOEXPR/<br/>
+		MRREL.REL, MRMAP.REL = RQ to ICD-10-CM CODE<br/>
+		MRREL.RELA, MRMAP.RELA = "default_outpatient_classification" </td>
+      </tr>
+       <tr>
+        <td>CCSR CATEGORY DESCRIPTION OP</td>
+        <td>MRCONSO.STR; TTY = SD</td>
+      </tr>
+	  
+	  <tr>
+        <td>CCSR CATEGORY [1 - 6]</td>
+        <td>MRCONSO.CODE; TTY = SD<br/>
+        MRMAP.TOEXPR<br/>
+		MRREL.REL, MRMAP.REL = RQ to ICD-10-CM CODE<br/>
+		MRREL.RELA MRMAP.RELA = "classified_as" </td>
+      </tr>
       <tr>
-        <td>CCSR CATEGORY DESCRIPTION</td>
-
+        <td>CCSR CATEGORY [1-6] DESCRIPTION</td>
         <td>MRCONSO.STR; TTY = SD</td>
       </tr>
     </tbody>

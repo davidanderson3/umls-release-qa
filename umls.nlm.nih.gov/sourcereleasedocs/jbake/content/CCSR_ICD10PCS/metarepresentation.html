@@ -1,6 +1,6 @@
-title=CCS_10 (Clinical Classifications Software for ICD-10-PCS) - Metathesaurus Representation
+title=CCSR_ICD10PCS (Clinical Classifications Software Refined for ICD-10-PCS) - Metathesaurus Representation
 date=2018-05-07
-updated=2020-11-02
+updated=2021-05-03
 type=page
 status=published
 ~~~~~~
@@ -36,19 +36,28 @@ status=published
   <div id="rep_identifiers" class="rep_block_level_one">
     <h3>Summary of Changes</h3>
 
-    <p>CCS_10 has been divided into two sources, CCS_10 (for procedure categories) and CCSR_10 (for diagnosis categories)</p>
-	<p>Deprecated TTYs:</p>
+<ul>
+    <li>CCSR_ICD10PCS is a new SAB, but it is an update to CCS_10. Previously CCS_10 mapped ICD10PCS codes to single-level and multi-level 
+	categories. Now CCSR_ICD10PCS maps ICD10PCS codes to CCSR_ICD10PCS categories, each of which is within one of 31 clinical domains.</li>
+
+	<li> Previously the mapping relationships used AUIs but they have been changed to use CODE.</li>
+	
+	<li>Deprecated TTY: 
 	<ul>
-		<li>SD (Single-level diagnosis categories) - now represented with SAB = CCSR_10</li>
-		<li>MD (Multi-level diagnosis categories) - the file ccs_dx_icd10cm_20##_1.csv was not released so these atoms are not present in CCS_10 or CCSR_10. 
-		The new diagnosis mapping file, $DXCCSR2020.CSV, only has mappings to the new single-level CCSR code and is represented with SAB = CCSR_10.</li>
+		<li>MV: No multi-level system with additional procedure specificity has been developed for CCSR_ICD10PCS</li>
+	</ul>
+	<li>Deprecated REL/RELA:
+	<ul>	
+		<li>SY/has_single_level_category: Previously connected single-level CCS CATEGORY to MULTI CCS LVL 2 categories, which no longer exist</li>
+	</ul>
+	</li>
 	</ul>
   </div>
 <hr>
   <div id="rep_change_summary" class="rep_block_level_one">
     <h3>Source Provided Files:</h3>
 
-    <p>The input files are in standard comma-separated-values format, with fields descriptions in the first line.</p>
+    <p>The input file is in standard comma-separated-values format, with fields descriptions in the header row.</p>
 
     <table>
       <tbody>
@@ -58,9 +67,13 @@ status=published
           <th>Description</th>
         </tr>
 		<tr>
-          <td>ccs_pr_icd10pcs_2020_1.csv</td>
+          <td>PRCCSR_v2021-1.CSV</td>
           <td>Procedure categories and mappings</td>
         </tr>
+		<tr>
+			<td>PRCCSR-User-Guide-v2021-1.pdf</td>
+			<td>Documentation</td>
+		</tr>
       </tbody>
     </table>
   </div>
@@ -87,22 +100,15 @@ status=published
 
           <td>HT</td>
 
-          <td>MTHU#, assigned during Metathesaurus processing</td>
+          <td>First 3 characters of PRCCSR</td>
         </tr>
 
-        <tr>
-          <td>CODE</td>
-
-          <td>MV</td>
-
-          <td>MULTI CCS LVL 1 or MULTI CCS LVL 2</td>
-        </tr>
-        <tr>
+         <tr>
           <td>CODE</td>
 
           <td>SP</td>
 
-          <td>CCS CATEGORY</td>
+          <td>PRCCSR</td>
         </tr>
 
         <tr>
@@ -144,7 +150,7 @@ status=published
 
       <h3>Atoms (MRCONSO):</h3>
 
-      <p>Data is extracted from "ccs_pr_icd10pcs_2019_1.csv" (Procedures)</p>
+      <p>Data is extracted from "PRCCSR_v2021-1.CSV"</p>
 
       <table>
         <tbody>
@@ -163,24 +169,15 @@ status=published
 
             <td>Hierarchical term</td>
 
-            <td>MTHU# assigned during Metathesaurus source processing</td>
+            <td>First 3 characters of PRCCSR</td>
 
-            <td>The hierarchical treetop ("Procedures") is created during Metathesaurus source processing</td>
+            <td>CLINICAL DOMAIN</td>
           </tr>
 
-          <tr>
-            <td>MV</td>
-
-            <td>Multi-level procedure category</td>
-
-            <td>MULTI CCS LVL 1, MULTI CCS LVL 2</td>
-
-            <td>MULTI CCS LVL 1 LABEL, MULTI CCS LVL 2 LABEL</td>
-          </tr> 
-          <tr>
+           <tr>
             <td>SP</td>
 
-            <td>Single-level procedure category</td>
+            <td>Procedure CCSR Category</td>
 
             <td>CCS CATEGORY</td>
 
@@ -313,48 +310,30 @@ status=published
           <tr>
             <th>REL</th>
 
-            <th>RELA<br>
+            <th>RELA<br/>
             Inverse RELA</th>
 
             <th>Origin</th>
           </tr>
 
           <tr>
-            <td>CHD<br>
+            <td>CHD<br/>
             PAR</td>
 
             <td>(no RELA)</td>
 
-            <td>Hierarchy of Multi-level diagnoses and procedures (LVL 1 and LVL2)</td>
-          </tr><!--classified_as rels are only created between the ICD10* code and the single level and MULTI LVL 2 codes,
-              not the LVL 1 codes-->
+            <td>Hierarchy of Clinical Domains (TTY = HT) and Procedure CCSR Categories (TTY = SP)</td>
+          </tr>
 
           <tr>
             <td>RQ</td>
 
-            <td>classified_as<br>
-            classifies<br></td>
+            <td>classified_as<br/>
+            classifies<br/></td>
 
-            <td>Connect ICD-10-PCS with CCS CATEGORY and MULTI CCS LVL 2 atoms</td>
+            <td>Connect ICD-10-PCS with Procedure CCSR CATEGORY</td>
           </tr>
 
-          <tr>
-            <td>SIB</td>
-
-            <td>(no RELA)</td>
-
-            <td>Relationships between codes with the same parents.</td>
-          </tr><!--the single/multi level rels are only created where there is a square bracket in the LVL 2 LABEL, which is the actual mapping
-                          These are interpreted to be the only one-to-one mappings, the others correspond to more than one multi-level category-->
-
-          <tr>
-            <td>SY</td>
-
-            <td>has_single_level_category<br>
-            has_multi_level_category</td>
-
-            <td>Connect single-level CCS CATEGORY to MULTI CCS LVL 2 categories where there is a one-to-one mapping</td>
-          </tr>
         </tbody>
       </table>
     </div>
@@ -370,14 +349,14 @@ status=published
             <th>Value</th>
 
             <th>Origin</th>
-          </tr><!-- There is some overlap between codes of CCS categories and MULTI CCS LVL 1 atoms.  Mappings are only to CCS LVL 2.-->
+          </tr>
 
           <tr>
             <td>RELA</td>
 
             <td>classified_as</td>
 
-            <td>Connect ICD-10-PCS with CCS CATEGORY and MULTI CCS LVL 2 atoms. There is overlap between some CCS CATEGORY and CCS LVL 1 CODE values. To disambiguate, note that TOEXPR values do not correspond to MULTI CCS LVL 1 CODES.</td>
+            <td>Map ICD-10-PCS to Procedure CCSR CATEGORY</td>
           </tr>
         </tbody>
       </table>

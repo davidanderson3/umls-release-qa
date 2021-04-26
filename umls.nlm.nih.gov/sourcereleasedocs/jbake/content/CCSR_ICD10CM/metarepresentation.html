@@ -1,6 +1,6 @@
-title=CCSR_10 (Clinical Classifications Software Refined for ICD-10-CM) - Metathesaurus Representation
+title=CCSR_ICD10CM (Clinical Classifications Software Refined for ICD-10-CM) - Metathesaurus Representation
 date=2018-05-07
-updated=2020-11-02
+updated=2021-05-03
 type=page
 status=published
 ~~~~~~
@@ -30,25 +30,31 @@ status=published
     	<div class="col-sm-auto border-left"><a href="#mappings">Mappings</a></div>
     </div>
 <div id="general" class="rep_block_level_one">
-  <p><strong>VSAB:</strong> CCSR_10_2020</p>
+  <p><strong>VSAB:</strong> CCSR_ICD10CM_2021</p>
 <hr>
   <div id="rep_identifiers" class="rep_block_level_one">
     <h3>Summary of Changes</h3>
 
-    <p>CCSR_10 is a new source in META2020AA.  CCS_10 was split into two sources, CCS_10 (for procedure categories) and CCSR_10 (for diagnosis categories)</p>
-	<p>New TTYs:</p>
-	<ul>
-		<li>SD (Single-level diagnosis categories); previously included in CCS_10</li>
-		<li>XM: Cross-mapping set for ICD10CM_2020 to CCSR_10_2020 Mappings</li>
-	</ul>
-	<p>Note:  MD (Multi-level diagnosis categories), which were present in CCS_10 are not included in CCSR_10. The file ccs_dx_icd10cm_20##_1.csv was not released so these atoms are not present in CCS_10 or CCSR_10. 
-		The new diagnosis mapping file, $DXCCSR2020.CSV, only has mappings to the new single-level CCSR code and is represented with SAB = CCSR_10, TTY = SD.</p>
+<ul>
+    <li>CCSR_ICD10CM is a new SAB in 2021AA, replacing CCSR_10.</li>
+	<li>Previously CCSR_10 mapped ICD10CM codes to single CCSR categories. 
+	Now CCSR_ICD10CM maps ICD10CM codes to one or more (currently up to 6) CCSR_ICD10CM categories, in addition to defining a single default inpatient 
+	category and a single default outpatient category for each mapped ICD10CM code.</li>
+
+	<li>The default inpatient/outpatient categories are represented with two new RELAs:
+		<ul>
+		<li>has_default_inpatient_classification</li>
+		<li>has_default_outpatient_classification</li>
+		</ul>
+	</li>
+	<li>Previously the mapping relationships used SGTYPE = AUI but they have been changed to use CODE.</li>
+  </ul>
   </div>
 <hr>
   <div id="rep_change_summary" class="rep_block_level_one">
     <h3>Source Provided Files:</h3>
 
-    <p>The input files are in standard comma-separated-values format, with fields descriptions in the first line.</p>
+    <p>The input file is in standard comma-separated-values format, with fields descriptions in the header row.</p>
 
     <table>
       <tbody>
@@ -58,9 +64,13 @@ status=published
           <th>Description</th>
         </tr>
 		<tr>
-          <td>$DXCCSR2020.CSV</td>
+          <td>DXCCSR_v2021-1.CSV</td>
           <td>Diagnoses categories and mappings</td>
         </tr>
+		<tr>
+			<td>DXCCSR-User-Guide-v2021-1.pdf</td>
+			<td>Documentation</td>
+		</tr>
       </tbody>
     </table>
   </div>
@@ -85,7 +95,7 @@ status=published
 
           <td>SD</td>
 
-          <td>CCSR CATEGORY</td>
+          <td>CCSR CATEGORY (Default IP, Default OP, [1-6])</td>
         </tr>
 
         <tr>
@@ -127,7 +137,7 @@ status=published
 
       <h3>Atoms (MRCONSO):</h3>
 
-      <p>Data is extracted from "$DXCCSR2020.CSV"</p>
+      <p>Data is extracted from "DXCCSR_v2021-1.CSV"</p>
 
       <table>
         <tbody>
@@ -146,9 +156,9 @@ status=published
 
             <td>Single-level diagnosis category</td>
 
-            <td>CCSR CATEGORY</td>
+            <td>CCSR CATEGORY (Default IP, Default OP, [1-6])</td>
 
-            <td>CCSR CATEGORY DESCRIPTION</td>
+            <td>CCSR CATEGORY DESCRIPTION (Default IP, Default OP, [1-6])</td>
           </tr>
 
           <tr>
@@ -277,7 +287,7 @@ status=published
           <tr>
             <th>REL</th>
 
-            <th>RELA<br>
+            <th>RELA<br/>
             Inverse RELA</th>
 
             <th>Origin</th>
@@ -285,10 +295,26 @@ status=published
           <tr>
             <td>RQ</td>
 
-            <td>classified_as<br>
-            classifies<br></td>
+            <td>classified_as<br/>
+            classifies<br/></td>
 
-            <td>Connect ICD-10-CM with CCSR CATEGORYatoms</td>
+            <td>Connect ICD-10-CM with CCSR CATEGORY [1 - 6] codes</td>
+          </tr>
+        <tr>
+            <td>RQ</td>
+
+            <td>has_default_inpatient_classification<br/>
+            default_inpatient_classification_of<br/></td>
+
+            <td>Connect ICD-10-CM with Default CCSR CATEGORY IP codes</td>
+          </tr>
+                <tr>
+            <td>RQ</td>
+
+            <td>has_default_outpatient_classification<br/>
+            default_outpatient_classification_of<br/></td>
+
+            <td>Connect ICD-10-CM with Default CCSR CATEGORY OP codes</td>
           </tr>
 
         </tbody>
@@ -311,9 +337,9 @@ status=published
           <tr>
             <td>RELA</td>
 
-            <td>classified_as</td>
+            <td>classified_as/has_default_inpatient_classification/has_default_outpatient_classification</td>
 
-            <td>Connect ICD-10-CM with CCSR_10 CATEGORY atoms</td>
+            <td>Connect ICD-10-CM with CCSR_10 CATEGORY (Default IP, Default OP, [1-6])</td>
           </tr>
         </tbody>
       </table>

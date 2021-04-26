@@ -1,6 +1,6 @@
-title=CCS_10 (Clinical Classifications Software for ICD-10-PCS) - Source Representation
+title=CCSR_ICD10PCS (Clinical Classifications Software Refined for ICD-10-PCS) - Source Representation
 date=2018-05-07
-updated=2020-11-02
+updated=2021-05-03
 type=page
 status=published
 ~~~~~~
@@ -31,12 +31,21 @@ status=published
 <div id="change_summary" class="rep_block_level_one">
   <h3>Summary of Changes</h3>
 
-    <p>CCS_10 has been divided into two sources, CCS_10 (for procedure categories) and CCSR_10 (for diagnosis categories)</p>
-	<p>Deprecated TTYs:</p>
+<ul>
+    <li>CCSR_ICD10PCS is a new SAB, but it is an update to CCS_10. Previously CCS_10 mapped ICD10PCS codes to single-level and multi-level 
+	categories. Now CCSR_ICD10PCS maps ICD10PCS codes to CCSR_ICD10PCS categories, each of which is within one of 31 clinical domains.</li>
+
+	<li> Previously the mapping relationships used AUIs but they have been changed to use CODE.</li>
+	
+	<li>Deprecated TTY: 
 	<ul>
-		<li>SD (Single-level diagnosis categories) - now included with SAB = CCSR_10</li>
-		<li>MD (Multi-level diagnosis categories) - the file ccs_dx_icd10cm_20##_1.csv was not released so these atoms are not present in CCS_10 or CCSR_10. 
-		The new diagnosis mapping file, $DXCCSR2020.CSV, only has mappings to the new single-level CCSR code and is represented with SAB = CCSR_10.</li>
+		<li>MV: No multi-level system with additional procedure specificity has been developed for CCSR_ICD10PCS</li>
+	</ul>
+	<li>Deprecated REL/RELA:
+	<ul>	
+		<li>SY/has_single_level_category: Previously connected single-level CCS CATEGORY to MULTI CCS LVL 2 categories, which no longer exist</li>
+	</ul>
+	</li>
 	</ul>
 	</div>
 <hr>
@@ -51,11 +60,14 @@ status=published
 
         <th>Description</th>
       </tr>
-      <tr>
-        <td>ccs_pr_icd10pcs_2030_1.csv</td>
-
-        <td>Procedure categories and mappings</td>
-      </tr>
+		<tr>
+          <td>PRCCSR_v2021-1.CSV</td>
+          <td>Procedure categories and mappings</td>
+        </tr>
+		<tr>
+			<td>PRCCSR-User-Guide-v2021-1.pdf</td>
+			<td>Documentation</td>
+		</tr>
     </tbody>
   </table>
 </div>
@@ -77,54 +89,35 @@ status=published
       </tr>
 
       <tr>
-        <td>ICD-10-PCS CODE</td>
+        <td>ICD-10-PCS</td>
 
-        <td>MRMAP.FROMEXPR</td>
+        <td>MRMAP.FROMEXPR<br/>
+		MRREL: Relationship to CCSR Category Codes, per below.</td>
       </tr>
 
-      <tr>
-        <td>CCS CATEGORY</td>
-
-        <td>MRCONSO.CODE; TTY = SP<br>
-        MRMAP.TOEXPR<br></td>
-      </tr>
-
-      <tr>
-        <td>ICD-10-PCS CODE DESCRIPTION</td>
+     <tr>
+        <td>ICD-10-PCS DESCRIPTION</td>
 
         <td>Not processed</td>
       </tr>
-
       <tr>
-        <td>CCS CATEGORY DESCRIPTION</td>
+        <td>PCCSR</td>
+
+        <td>MRCONSO.CODE; TTY = SP<br/>
+		First 3 characters are used to assign codes for TTY = HT (Clinical Domain)<br/>
+        MRMAP.TOEXPR<br/>
+		MRREL.REL, MRMAP.REL = RQ to ICD-10-CM CODE<br/>
+		 MRREL.RELA, MRMAP.RELA = "default_inpatient_classification" </td>
+      </tr>
+      <tr>
+        <td>PRCCSR DESCRIPTION</td>
 
         <td>MRCONSO.STR; TTY = SP</td>
       </tr>
-
-      <tr>
-        <td>MULTI CCS LVL 1</td>
-
-        <td>MRCONSO.CODE; TTY = MV</td>
-      </tr>
-
-      <tr>
-        <td>MULTI CCS LVL 1 LABEL</td>
-
-        <td>MRCONSO.STR; TTY = MV</td>
-      </tr>
-
-      <tr>
-        <td>MULTI CCS LVL 2</td>
-
-        <td>MRCONSO.CODE; TTY = MV<br>
-        MRMAP.TOEXPR</td>
-      </tr>
-
-      <tr>
-        <td>MULTI CCS LVL 2 LABEL</td>
-
-        <td>MRCONSO.STR; TTY = MV</td>
-      </tr>
+	  <tr>
+		<td>CLINICAL DOMAIN</td>
+		<td>MRCONSO.STR; TTY = HT</td>
+  
     </tbody>
   </table>
 

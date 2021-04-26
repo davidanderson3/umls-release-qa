@@ -1,6 +1,6 @@
-title=NUCCPT (National Uniform Claim Committee - Health Care Provider Taxonomy) - Source Representation
+title=NUCCHCPT (National Uniform Claim Committee - Health Care Provider Taxonomy) - Source Representation
 date=2017-11-06
-updated=2020-11-02
+updated=2021-05-03
 type=page
 status=published
 ~~~~~~
@@ -33,8 +33,10 @@ status=published
       id="general"></a>
     	<div id="change_summary">
 	        <h3>Summary of Changes</h3>
-			        There were no changes to the original file format or to Metathesaurus source processing.
-
+			<ul>
+			<li>The SAB was changed from NUCCPT to NUCCHCPT.</li>
+			<li>TTY = MP was deprecated because the characteristics file was not processed.</li>
+			</ul>
 	      </div>
 	      <hr>
 	      <div id="file_summary">
@@ -48,14 +50,10 @@ status=published
 				<th>Description</th>
 				</tr>
 				<tr>
-				<td>nucc_taxonomy_200.csv</td>
+				<td>nucc_taxonomy_201.csv</td>
 				<td>NUCC taxonomy.  Comma-separated data file</td>
 				</tr>
-				<tr>
-				<td>nucc_characteristics_40.csv</td>
-				<td>Provider Characteristics code set.  Comma-separated data file</td>
-				</tr>
-	        	</tbody>
+				</tbody>
 			</table>
 
       </div>
@@ -68,7 +66,7 @@ status=published
         columns, separated by ";" and "," respectively, e.g. the STR for 101YS0200X is
         "Behavioral Health &amp; Social Service Providers; Counselor, School"
         <div class="rep_block_level_two"><a id="file1"></a><br/>
-        File: nucc_taxonomy_200.csv<br/>
+        File: nucc_taxonomy_201.csv<br/>
           <table>
             <tbody>
               <tr>
@@ -105,23 +103,7 @@ status=published
               </tbody>
           </table>
 
-		File: nucc_characteristics_40.csv<br/>
-		<table>
-			<tbody>
-				<tr>
-				<th>Element</th>
-				<th>Representation</th>
-		        </tr>
-		        <tr>
-		        	<td>Code</td>
-		        	<td>MRCONSO.CODE, MRCONSO.SCUI</td>
-		        </tr>
-		        <tr>
-		        	<td>Description</td>
-		        	<td>MRCONSO.STR; TTY = MP</td>
-		        </tr>
-		        </tbody>
-		        </table>
+		
           <br/>
         </div>
         </div>

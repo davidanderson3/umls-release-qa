@@ -1,6 +1,6 @@
-title=NUCCPT (National Uniform Claim Committee - Health Care Provider Taxonomy) - Metathesaurus Representation
+title=NUCCHCPT (National Uniform Claim Committee - Health Care Provider Taxonomy) - Metathesaurus Representation
 date=2017-11-06
-updated=2020-11-02
+updated=2021-05-03
 type=page
 status=published
 ~~~~~~
@@ -28,11 +28,15 @@ status=published
     	<div class="col-sm-auto border-left"><a href="#attributes">Attributes</a></div>
     	<div class="col-sm-auto border-left"><a href="#definitions">Definitions</a></div>
     </div>
-      <p><strong>VSAB:</strong> NUCCPT_20.0</p>
+      <p><strong>VSAB:</strong> NUCCHCPT_20.1</p>
       <hr>
       <div id="rep_identifiers" class="rep_block_level_one">
         <h3>Summary of Changes</h3>
-        There were no changes to the original file formats or to Metathesaurus source processing.
+		<ul>
+		<li>The SAB was changed from NUCCPT to NUCCHCPT.</li>
+		<li>TTY = MP was deprecated because the characteristics file was not processed.</li>
+		</ul>
+          
        <hr>
         <h3>Source Provided Files: </h3>
         <p>The input files are in standard comma-separated-values (csv) format, with fields descriptions in the first line. </p>
@@ -44,13 +48,10 @@ status=published
 			<th>Description</th>
 			</tr>
 			<tr>
-			<td>nucc_taxonomy_200.csv</td>
+			<td>nucc_taxonomy_201.csv</td>
 			<td>Provider taxonomy data file</td>
 			</tr>
-			<tr>
-			<td>nucc_characteristics_40.csv</td>
-			<td>Provider Characteristics code set</td>
-        	</tbody>
+			</tbody>
 		</table>
 
       </div>
@@ -98,22 +99,16 @@ status=published
                 <th>Term Type</th>
                 <th>Origin of CODE</th>
                 <th>Origin of STR </th>
-
               </tr>
               <tr>
                 <td>PT</td>
-                <td>CODE, SCUI: Code value from nucc_taxonomy_200.csv</td>
+                <td>CODE, SCUI: Code value from nucc_taxonomy_201.csv</td>
                 <td>Created by concatenating &lt;Grouping&gt;; &lt;Classification&gt;, &lt;Specialization&gt; fields<br/>
                 For example, the STR for 101YS0200X is "Behavioral Health &amp; Social Service Providers; Counselor, School"</td>
               </tr>
-              <tr>
-              	<td>MP</td>
-              	<td>CODE, SCUI:  Code value from nucc_characteristics_40.csv</td>
-              	<td>Description value from nucc_characteristics_40.csv</td>
-              </tr>
-			  <tr>
+ 			  <tr>
 				<td>OP</td>
-				<td>CODE, SCUI: Code value from nucc_taxonomy_200.csv</td>
+				<td>CODE, SCUI: Code value from nucc_taxonomy_201.csv</td>
 				<td>Created by concatenating &lt;Grouping&gt;; &lt;Classification&gt;, &lt;Specialization&gt; fields<br/>
 				For example, the STR for 103GC0700X is "Behavioral Health &amp; Social Service Providers; Clinical Neuropsychologist, Clinical"<br/>
 				TTY = OP is assigned when the "Notes" field indicates that the code is inactive.
