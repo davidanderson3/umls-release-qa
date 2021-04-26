@@ -77,9 +77,9 @@
 
             <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/CCS/">CCS</a></li>
 
-            <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/CCS_10/">CCS_10</a></li>
+            <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/CCSR_ICD10CM/">CCSR_ICD10CM</a></li>
             
-            <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/CCSR_10/">CCSR_10</a></li>
+            <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/CCSR_ICD10PCS/">CCSR_ICD10PCS</a></li>
 
             <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/CDT/">CDT</a></li>
 
@@ -467,6 +467,8 @@
             <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/MEDCIN/">MEDCIN</a></li>
 
             <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/MEDLINEPLUS/">MEDLINEPLUS</a></li>
+            
+            <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/MEDLINEPLUS_SPA/">MEDLINEPLUS_SPA</a></li>
 
             <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/MMSL/">MMSL</a></li>
 
@@ -561,6 +563,8 @@
 
             <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/NCI_BioC/">NCI_BioC</a></li>
             
+            <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/NCI_caDSR/">NCI_caDSR</a></li>
+            
             <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/NCI_CBDD/">NCI_CBDD</a></li>
 
             <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/NCI_CDC/">NCI_CDC</a></li>
@@ -578,6 +582,8 @@
             <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/NCI_CTCAE_3/">NCI_CTCAE_3</a></li>
 
             <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/NCI_CTCAE_5/">NCI_CTCAE_5</a></li>
+            
+            <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/NCI_CTDC/">NCI_CTDC</a></li>
 
             <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/NCI_CTEP-SDC/">NCI_CTEP-SDC</a></li>
 
@@ -620,6 +626,8 @@
             <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/NCI_NCPDP/">NCI_NCPDP</a></li>
 
             <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/NCI_NICHD/">NCI_NICHD</a></li>
+            
+            <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/NCI_PCDC/">NCI_PCDC</a></li>
 
             <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/NCI_PI-RADS/">NCI_PI-RADS</a></li>
 
@@ -639,7 +647,7 @@
 
             <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/NOC/">NOC</a></li>
 
-            <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/NUCCPT/">NUCCPT</a></li>
+            <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/NUCCHCPT/">NUCCHCPT</a></li>
 
           </ul>
 

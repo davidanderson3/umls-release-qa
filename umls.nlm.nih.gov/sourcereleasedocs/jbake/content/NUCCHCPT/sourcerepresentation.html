@@ -1,0 +1,110 @@
+title=NUCCHCPT (National Uniform Claim Committee - Health Care Provider Taxonomy) - Source Representation
+date=2017-11-06
+updated=2021-05-03
+type=page
+status=published
+~~~~~~
+
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+<!--endmenu-->
+<br/>
+    <p>This page lists specific source data elements and provides
+      information on their representation in the UMLS Metathesaurus.</p>
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#change_summary">Summary of Changes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_summary">Summary of Source-Provided Files</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_details">Source-Provided File Details</a></div>
+    </div>
+    <hr>
+        <a
+      id="general"></a>
+    	<div id="change_summary">
+	        <h3>Summary of Changes</h3>
+			<ul>
+			<li>The SAB was changed from NUCCPT to NUCCHCPT.</li>
+			<li>TTY = MP was deprecated because the characteristics file was not processed.</li>
+			</ul>
+	      </div>
+	      <hr>
+	      <div id="file_summary">
+	        <h3>Source Provided Files: </h3>
+	        <p>The input files are in standard comma-separated-values format, with fields descriptions in the first line. </p>
+
+	        <table>
+	        	<tbody>
+	        	<tr>
+	        	<th>File Name</th>
+				<th>Description</th>
+				</tr>
+				<tr>
+				<td>nucc_taxonomy_201.csv</td>
+				<td>NUCC taxonomy.  Comma-separated data file</td>
+				</tr>
+				</tbody>
+			</table>
+
+      </div>
+       <hr>
+        <div id="file_details">
+        <h3>Source-Provided Files: Details</h3>
+
+        <p>The following is a list of elements in the NUCCPT .csv source files: </p>
+        Note:  For TTY = PT/OP, MRCONSO.STR values are created by concatenating "Grouping," "Classification," and "Specialization"
+        columns, separated by ";" and "," respectively, e.g. the STR for 101YS0200X is
+        "Behavioral Health &amp; Social Service Providers; Counselor, School"
+        <div class="rep_block_level_two"><a id="file1"></a><br/>
+        File: nucc_taxonomy_201.csv<br/>
+          <table>
+            <tbody>
+              <tr>
+                <th>Element</th>
+                <th>Representation</th>
+
+              </tr>
+              <tr>
+                <td>Code</td>
+                <td>MRCONSO.CODE, MRCONSO.SCUI</td>
+              </tr>
+              <tr>
+                <td>Grouping</td>
+                <td>First element of MRCONSO.STR (followed by ";")<br/>
+
+                </td>
+              </tr>
+              <tr>
+                <td>Classification</td>
+                <td>Second element of MRCONSO.STR (followed by ",")</td>
+              </tr>
+              <tr>
+                <td>Specialization</td>
+                <td>Third element of MRCONSO.STR</td>
+              </tr>
+              <tr>
+                <td>Definition</td>
+                <td>MRDEF.DEF</td>
+              </tr>
+              <tr>
+                <td>Notes</td>
+                <td>MRSAT.ATN = "NOTE"</td>
+              </tr>
+              </tbody>
+          </table>
+
+		
+          <br/>
+        </div>
+        </div>
+

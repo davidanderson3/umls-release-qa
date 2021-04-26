@@ -1,6 +1,6 @@
 title=PNDS (Perioperative Nursing Data Set) - Statistics
 date=
-updated=2021-03-03
+updated=2021-05-03
 type=page
 status=published
 ~~~~~~
@@ -71,34 +71,34 @@ status=published
 <td>TORSAB</td><td>Root source abbreviation for the "to" identifiers of a map set</td><td>1</td>
 </tr>
 <tr>
-<td>TOVSAB</td><td>Versioned source abbreviation for the "to" identifiers of a map set</td><td>1</td>
-</tr>
-<tr>
 <td>MTH_MAPTOCOMPLEXITY</td><td>Indicates the complexity of "to" expressions in a map set</td><td>1</td>
 </tr>
 <tr>
-<td>MTH_MAPSETCOMPLEXITY</td><td>Indicates the overall complexity of a map set</td><td>1</td>
-</tr>
-<tr>
-<td>MTH_MAPFROMCOMPLEXITY</td><td>Indicates the complexity of "from" expressions used in a map set</td><td>1</td>
+<td>TOVSAB</td><td>Versioned source abbreviation for the "to" identifiers of a map set</td><td>1</td>
 </tr>
 <tr>
 <td>FROMVSAB</td><td>Versioned source abbreviation for the "from" identifiers of a map set</td><td>1</td>
 </tr>
 <tr>
-<td>MAPSETTYPE</td><td>Indicates the nature of a map set. Its value is map set specific. It can be used to indicate the inclusion of one to one, one to many and choices of maps.</td><td>1</td>
+<td>MTH_MAPFROMCOMPLEXITY</td><td>Indicates the complexity of "from" expressions used in a map set</td><td>1</td>
+</tr>
+<tr>
+<td>MTH_MAPSETCOMPLEXITY</td><td>Indicates the overall complexity of a map set</td><td>1</td>
 </tr>
 <tr>
 <td>MTH_MAPFROMEXHAUSTIVE</td><td>Indicates whether or not the "from" source of a map set is completely mapped</td><td>1</td>
 </tr>
 <tr>
+<td>MAPSETTYPE</td><td>Indicates the nature of a map set. Its value is map set specific. It can be used to indicate the inclusion of one to one, one to many and choices of maps.</td><td>1</td>
+</tr>
+<tr>
 <td>MAPSETVSAB</td><td>Versioned source abbreviation for a map set</td><td>1</td>
 </tr>
 <tr>
-<td>FROMRSAB</td><td>Root source abbreviation for the "from" identifiers of a map set</td><td>1</td>
+<td>MAPSETRSAB</td><td>Root source abbreviation for a map set</td><td>1</td>
 </tr>
 <tr>
-<td>MAPSETRSAB</td><td>Root source abbreviation for a map set</td><td>1</td>
+<td>FROMRSAB</td><td>Root source abbreviation for the "from" identifiers of a map set</td><td>1</td>
 </tr>
 </table>
 <h2>Relationship Counts</h2>
@@ -107,13 +107,10 @@ status=published
 <th>Relation Name/Additional Label</th><th>Expanded Form</th><th>Count </th>
 </tr>
 <tr>
-<td>SIB/</td><td>has sibling relationship in a Metathesaurus source vocabulary./Empty relationship attribute</td><td>2384</td>
+<td>CHD/</td><td>has child relationship in a Metathesaurus source vocabulary /Empty relationship attribute</td><td>281</td>
 </tr>
 <tr>
 <td>PAR/</td><td>has parent relationship in a Metathesaurus source vocabulary /Empty relationship attribute</td><td>281</td>
-</tr>
-<tr>
-<td>CHD/</td><td>has child relationship in a Metathesaurus source vocabulary /Empty relationship attribute</td><td>281</td>
 </tr>
 <tr>
 <td>RQ/mapped_from</td><td>related and possibly synonymous./Mapped from</td><td>256</td>
@@ -287,7 +284,13 @@ status=published
 <td>SNM</td><td>5/261</td><td>1.9</td>
 </tr>
 <tr>
+<td>MEDLINEPLUS_SPA</td><td>4/261</td><td>1.5</td>
+</tr>
+<tr>
 <td>NCI_CTRP</td><td>4/261</td><td>1.5</td>
+</tr>
+<tr>
+<td>NCI_caDSR</td><td>4/261</td><td>1.5</td>
 </tr>
 <tr>
 <td>NIC</td><td>4/261</td><td>1.5</td>

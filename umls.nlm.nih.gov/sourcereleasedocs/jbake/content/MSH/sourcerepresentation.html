@@ -1,6 +1,6 @@
 title=MSH (MeSH) - Source Representation
 date=2018-05-07
-updated=2020-11-02
+updated=2021-05-03
 type=page
 status=published
 ~~~~~~
@@ -29,7 +29,7 @@ status=published
     </div>
    <hr>
     <div id="general" class="rep_block_level_one">
-      <p><strong>VSAB: </strong>MSH2021_2020_07_16</p>
+      <p><strong>VSAB: </strong>MSH2021_2021_01_25</p>
       <h3>Notes</h3>
       <p>MeSH for the Metathesaurus is processed from the xml files. In
         addition to data from the xml files, top levels of the hierarchy
@@ -246,22 +246,6 @@ status=published
             </tr>
             <tr>
               <td>1</td>
-              <td>&lt;ActiveMeSHYearList&gt;<br/>
-                Description: MeSH year(s) in which the record was active
-                since it was last modified. (So, for example, a record
-                not modified in the five years it has been in MeSH will
-                have five &lt;Year&gt; elements. A record modified in
-                the latest MeSH year will have one element.) Example: <br/>
-&lt;ActiveMeSHYearList&gt;&lt;Year&gt;2003&lt;/Year&gt;&lt;/ActiveMeSHYearList&gt;<br/>
-                Subelement of: &lt;DescriptorRecord&gt;;
-                &lt;QualifierRecord&gt;; &lt;SupplementalRecord&gt;<br/>
-                Record Type: D, Q, SCR<br/>
-                Repeating element: yes<br/>
-                Required element: yes</td>
-              <td>Not included</td>
-            </tr>
-            <tr>
-              <td>2</td>
               <td>&lt;Annotation&gt;<br/>
                 Description: Free-text information for indexers and
                 catalogers concerning the use of the
@@ -271,12 +255,12 @@ status=published
                 specific&lt;/Annotation&gt;<br/>
                 Subelement of: &lt;DescriptorRecord&gt;<br/>
                 Record Type: D, Q<br/>
-                Repeating element: no<br/>
+                Repeating element: yes<br/>
                 Required element: no</td>
               <td> MRSAT.ATN = AN</td>
             </tr>
             <tr>
-              <td>3</td>
+              <td>2</td>
               <td>&lt;Abbreviation&gt;<br/>
                 Description: Two-letter abbreviation for Qualifier
                 terms. Example: <br/>
@@ -289,7 +273,7 @@ status=published
               </td>
             </tr>
             <tr>
-              <td>4</td>
+              <td>3</td>
               <td>&lt;AllowableQualifier&gt;<br/>
                 Description: A specific Qualifier allowed in combination
                 with the Descriptor for indexing. Example:
@@ -310,7 +294,7 @@ status=published
                 MRREL.REL = AQ/QB </td>
             </tr>
             <tr>
-              <td>5</td>
+              <td>4</td>
               <td>&lt;AllowableQualifiersList&gt;<br/>
                 Description: List of multiple occurrences of the
                 &lt;AllowableQualifier&gt; element for a given
@@ -327,7 +311,7 @@ status=published
               <td>See &lt;AllowableQualifier&gt;</td>
             </tr>
             <tr>
-              <td>6</td>
+              <td>5</td>
               <td>&lt;CASN1Name&gt;<br/>
                 Description: Chemical Abstracts Type N1 Name. A
                 free-text element containing the systematic name used in
@@ -344,7 +328,7 @@ status=published
               <td>MRCONSO.STR (TTY = N1)</td>
             </tr>
             <tr>
-              <td>7</td>
+              <td>6</td>
               <td>&lt;Concept&gt;<br/>
                 Description: The bearer of linguistic meaning in MeSH as
                 defined by the &lt;ScopeNote&gt;, comprising a
@@ -377,7 +361,7 @@ status=published
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>8</td>
+              <td>7</td>
               <td>&lt;Concept1UI&gt;<br/>
                 Description: The &lt;ConceptUI&gt; of first concept in
                 the &lt;ConceptRelation&gt; element Subelement of:
@@ -389,7 +373,7 @@ status=published
                 Concept1UI</td>
             </tr>
             <tr>
-              <td>9</td>
+              <td>8</td>
               <td> &lt;Concept2UI&gt;<br/>
                 Description: The &lt;ConceptUI&gt; of second concept in
                 the &lt;ConceptRelation&gt; element. Subelement of:
@@ -401,7 +385,7 @@ status=published
                 Concept2UI</td>
             </tr>
             <tr>
-              <td>10</td>
+              <td>9</td>
               <td>&lt;ConceptList&gt;<br/>
                 Description: Set of one or more &lt;Concept&gt; elements
                 in a Descriptor, Qualifier, or Supplementary Concept
@@ -415,7 +399,7 @@ status=published
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>11</td>
+              <td>10</td>
               <td>&lt;ConceptName&gt;<br/>
                 Description: The &lt;Term&gt; that uniquely names the
                 &lt;Concept&gt; and, along with the &lt;ConceptName&gt;,
@@ -428,7 +412,7 @@ status=published
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>12</td>
+              <td>11</td>
               <td>&lt;ConceptPreferredTermYN&gt;<br/>
                 Description: Attribute of the &lt;Term&gt; element which
                 indicates whether or not the term is the preferred term
@@ -452,7 +436,7 @@ status=published
                 for details</td>
             </tr>
             <tr>
-              <td>13</td>
+              <td>12</td>
               <td>&lt;ConceptRelation&gt;<br/>
                 Description: A semantic relation between a given
                 &lt;Concept&gt; and another &lt;Concept&gt;. The most
@@ -481,7 +465,7 @@ status=published
               <td>See &lt;RelationName&gt;</td>
             </tr>
             <tr>
-              <td>14</td>
+              <td>13</td>
               <td>&lt;ConceptRelationList&gt;<br/>
                 Description: The set of one or more named relations
                 between a given &lt;Concept&gt; and another
@@ -495,7 +479,7 @@ status=published
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>15</td>
+              <td>14</td>
               <td>&lt;ConceptUI&gt;<br/>
                 Description: Concept Unique Identifier. Eight-character
                 alpha-numeric string uniquely identifying a
@@ -510,7 +494,7 @@ status=published
               <td>MRCONSO.SCUI</td>
             </tr>
             <tr>
-              <td>16</td>
+              <td>15</td>
               <td>&lt;ConceptUMLSUI&gt;<br/>
                 Description: Eight-character alpha-numeric string
                 uniquely identifying a MeSH &lt;Concept&gt; within the
@@ -524,7 +508,7 @@ status=published
               <td>Not included</td>
             </tr>
             <tr>
-              <td>17</td>
+              <td>16</td>
               <td>&lt;ConsiderAlso&gt;<br/>
                 Description: Consider Also cross-reference. Free-text
                 element which refers a user from a Descriptor to other
@@ -539,7 +523,7 @@ status=published
               <td>MRSAT.ATN = "CX"</td>
             </tr>
             <tr>
-              <td>18</td>
+              <td>17</td>
               <td>&lt;DateCreated&gt;<br/>
                 Description: Date when a &lt;Term&gt; or record was
                 first entered in the MeSH data entry system. A
@@ -567,7 +551,7 @@ status=published
                 at the Term (AUI) level. </td>
             </tr>
             <tr>
-              <td>19</td>
+              <td>18</td>
               <td>&lt;DateEstablished&gt;<br/>
                 Description: First day of the first full month when a
                 &lt;DescriptorRecord&gt; or &lt;QualifierRecord&gt;
@@ -592,7 +576,7 @@ status=published
               </td>
             </tr>
             <tr>
-              <td>20</td>
+              <td>19</td>
               <td>&lt;DateRevised&gt;<br/>
                 Description: Date when a record was last changed.
                 Similar in format to the MEDLINE element of the same
@@ -611,7 +595,7 @@ status=published
                 e.g. 20000621 </td>
             </tr>
             <tr>
-              <td>21</td>
+              <td>20</td>
               <td>&lt;Day&gt;<br/>
                 Description: Two-character string giving the day of the
                 month. Similar in format to the MEDLINE element of the
@@ -625,7 +609,7 @@ status=published
                 &lt;DateEstablished&gt; </td>
             </tr>
             <tr>
-              <td>22</td>
+              <td>21</td>
               <td>DescriptorClass Description: Attribute of
                 &lt;DescriptorRecord&gt; having as a value one of four
                 numbers indicating whether a record is (a) a topical
@@ -652,7 +636,7 @@ status=published
               <td>MRSAT.ATN = DC</td>
             </tr>
             <tr>
-              <td>23</td>
+              <td>22</td>
               <td>&lt;DescriptorName&gt;<br/>
                 Description: A term that uniquely refers to its
                 &lt;DescriptorRecord&gt; and, along with the
@@ -674,7 +658,7 @@ status=published
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>24</td>
+              <td>23</td>
               <td>&lt;DescriptorRecord&gt;<br/>
                 Description: Cluster of one or more concepts used for
                 subject indexing and retrieval. Identified uniquely by a
@@ -694,7 +678,7 @@ status=published
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>25</td>
+              <td>24</td>
               <td>&lt;DescriptorRecordSet&gt;<br/>
                 Description: The set of all &lt;DescriptorRecord&gt;
                 elements in the Descriptor XML file.<br/>
@@ -705,7 +689,7 @@ status=published
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>26</td>
+              <td>25</td>
               <td>&lt;DescriptorReferredTo&gt;<br/>
                 Description: The pair of elements &lt;DescriptorUI&gt;
                 and &lt;DescriptorName&gt; each of which uniquely refers
@@ -740,7 +724,7 @@ status=published
                 MRREL.RELA=mapped_to</td>
             </tr>
             <tr>
-              <td>27</td>
+              <td>26</td>
               <td>&lt;DescriptorUI&gt;<br/>
                 Description: Descriptor Unique Identifier.
                 Seven-character alpha-numeric string uniquely
@@ -760,7 +744,7 @@ status=published
                 appropriate</td>
             </tr>
             <tr>
-              <td>28</td>
+              <td>27</td>
               <td>&lt;ECIN&gt;<br/>
                 Description: Descriptor/Qualifier combination prohibited
                 in the &lt;EntryCombination&gt; of a given
@@ -774,7 +758,7 @@ status=published
               </td>
             </tr>
             <tr>
-              <td>29</td>
+              <td>28</td>
               <td>&lt;ECOUT&gt;<br/>
                 Description: Descriptor or Descriptor/Qualifier
                 combination recommended in place of the prohibited
@@ -789,7 +773,7 @@ status=published
               </td>
             </tr>
             <tr>
-              <td>30</td>
+              <td>29</td>
               <td>&lt;EntryCombination&gt;<br/>
                 Description: A reference to a specific Qualifier that is
                 not to be used with the Descriptor in indexing. The
@@ -849,7 +833,7 @@ status=published
               </td>
             </tr>
             <tr>
-              <td>31</td>
+              <td>30</td>
               <td>&lt;EntryCombinationList&gt;<br/>
                 Description: The set of one or more &lt;ECIN&gt; and
                 &lt;ECOUT&gt; pairs in the &lt;EntryCombination&gt;
@@ -861,7 +845,7 @@ status=published
               <td> See &lt;EntryCombination&gt;</td>
             </tr>
             <tr>
-              <td>32</td>
+              <td>31</td>
               <td>&lt;EntryVersion&gt;<br/>
                 Description: Custom short form of a &lt;Term&gt; used
                 for NLM indexing and searching. All upper case. Example:
@@ -878,7 +862,7 @@ status=published
                 MRREL.RELA=entry_version_of </td>
             </tr>
             <tr>
-              <td>33</td>
+              <td>32</td>
               <td>&lt;Frequency&gt;<br/>
                 Description: Number of citations indexed with the SCR in
                 PubMed. Automatically incremented monthly. Example: <br/>
@@ -890,7 +874,7 @@ status=published
               <td>MRSAT.ATN = FR</td>
             </tr>
             <tr>
-              <td>34</td>
+              <td>33</td>
               <td>&lt;HeadingMappedTo&gt;<br/>
                 Description: &lt;DescriptorRecord&gt; or
                 &lt;DescriptorRecord&gt;&lt;QualifierRecord&gt;
@@ -925,7 +909,7 @@ status=published
               </td>
             </tr>
             <tr>
-              <td>35</td>
+              <td>34</td>
               <td>&lt;HeadingMappedToList&gt;<br/>
                 Description: Set of one or more &lt;HeadingMapped&gt;
                 elements.<br/>
@@ -936,7 +920,7 @@ status=published
               <td> See &lt;HeadingMappedTo&gt; </td>
             </tr>
             <tr>
-              <td>36</td>
+              <td>35</td>
               <td>&lt;HistoryNote&gt;<br/>
                 Description: Free-text giving information deemed helpful
                 to the online searcher. Headings and entry terms are
@@ -963,36 +947,22 @@ status=published
               <td>MRSAT.ATN = HN</td>
             </tr>
             <tr>
-              <td>37</td>
+              <td>36</td>
               <td>&lt;IndexingInformation&gt;<br/>
-                Description: &lt;DescriptorRecord&gt; or
+                Description: &lt;DescriptorRecord&gt; 				or &lt;SupplementalRecordUI&gt; or
                 &lt;DescriptorRecord&gt;&lt;QualifierRecord&gt;
                 combination which is usually broader than the SCR, and
-                which is suggested for addition to the citation. Example
-                (from C000063): <br/>
-                &lt;IndexingInformation&gt;<br/>
-                &lt;DescriptorReferredTo&gt;<br/>
-                &lt;DescriptorUI&gt;D007918&lt;/DescriptorUI&gt;<br/>
-                &lt;DescriptorName&gt;<br/>
-                &lt;String&gt;Leprosy&lt;/String&gt;<br/>
-                &lt;/DescriptorName&gt;<br/>
-                &lt;/DescriptorReferredTo&gt;<br/>
-                &lt;QualifierReferredTo&gt;<br/>
-                &lt;QualifierUI&gt;Q000188&lt;/QualifierUI&gt;<br/>
-                &lt;QualifierName&gt;<br/>
-                &lt;/QualifierName&lt;<br/>
-                &lt;/QualifierReferredTo&gt;<br/>
-                &lt;/IndexingInformation&gt;<br/>
+                which is suggested for addition to the citation. 
                 Subelement of: &lt;IndexingInformationList&gt;<br/>
                 Record Type: SCR<br/>
                 Repeating element: yes<br/>
-                Required element: yes</td>
+                Required element: no</td>
               <td>MRSAT.ATN = II <br/>
                 <br/>
               </td>
             </tr>
             <tr>
-              <td>38</td>
+              <td>37</td>
               <td>&lt;IndexingInformationList&gt;<br/>
                 Description: Set of one or more
                 &lt;IndexingInformation&gt; elements. Subelement of:
@@ -1001,7 +971,7 @@ status=published
               <td> See &lt;IndexingInformation&gt;</td>
             </tr>
             <tr>
-              <td>39</td>
+              <td>38</td>
               <td>IsPermutedTermYN<br/>
                 Description: Attribute of the &lt;Term&gt; element which
                 indicates whether or not the term is created
@@ -1024,7 +994,7 @@ status=published
                 for details</td>
             </tr>
             <tr>
-              <td>40</td>
+              <td>39</td>
               <td>LanguageCode<br/>
                 Description: Attribute of &lt;DescriptorRecordSet&gt;
                 having as values abbreviations for the language of the
@@ -1037,7 +1007,7 @@ status=published
               <td> MRSAB.LAT</td>
             </tr>
             <tr>
-              <td>41</td>
+              <td>40</td>
               <td>LexicalTag<br/>
                 Description: Attribute of the &lt;Term&gt; element,
                 consisting of one of the following lexical categories:<br/>
@@ -1068,7 +1038,7 @@ status=published
                 Metathesaurus</td>
             </tr>
             <tr>
-              <td>42</td>
+              <td>41</td>
               <td>&lt;Month&gt;<br/>
                 Description: Two-character string giving the month of
                 the year. Similar in format to the MEDLINE element of
@@ -1082,7 +1052,7 @@ status=published
                 &lt;DateEstablished&gt;</td>
             </tr>
             <tr>
-              <td>43</td>
+              <td>42</td>
               <td>&lt;Note&gt;<br/>
                 Description: Free-text narrative giving information
                 about the substance particularly its biological
@@ -1099,7 +1069,7 @@ status=published
               <td>MRSAT.ATN = SOS</td>
             </tr>
             <tr>
-              <td>44</td>
+              <td>43</td>
               <td>&lt;OnlineNote&gt;<br/>
                 Description: Free-text information formerly intended to
                 help the online searcher. The Online Note is superseded
@@ -1114,7 +1084,7 @@ status=published
               <td>MRSAT.ATN = OL</td>
             </tr>
             <tr>
-              <td>45</td>
+              <td>44</td>
               <td>&lt;PharmacologicalAction&gt;<br/>
                 Description: Reference to a Descriptor describing
                 observed biological activity of an exogenously
@@ -1136,7 +1106,7 @@ status=published
                 MRSAT.ATN = PA</td>
             </tr>
             <tr>
-              <td>46</td>
+              <td>45</td>
               <td>&lt;PharmacologicalActionList&gt;<br/>
                 Description: Set of one or more instances of a
                 &lt;PharmacologicalAction &gt; in a Descriptor or SCR.
@@ -1156,7 +1126,7 @@ status=published
               <td>See &lt;PharmacologicalAction&gt;</td>
             </tr>
             <tr>
-              <td>47</td>
+              <td>46</td>
               <td>PreferredConceptYN<br/>
                 Description: Attribute of the &lt;Concept&gt; element,
                 indicating whether or not the concept is the preferred
@@ -1177,7 +1147,7 @@ status=published
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>48</td>
+              <td>47</td>
               <td>&lt;PreviousIndexing&gt;<br/>
                 Description: The Descriptors or
                 Descriptor/Qualifier combinations refer to the Heading
@@ -1195,7 +1165,7 @@ status=published
               <td>MRSAT.ATN = PI</td>
             </tr>
             <tr>
-              <td>49</td>
+              <td>48</td>
               <td>&lt;PreviousIndexingList&gt;<br/>
                 Description: Set of one or more &lt;PreviousIndexing&gt;
                 elements in a Descriptor or Supplementary Concept
@@ -1207,7 +1177,7 @@ status=published
               <td> See &lt;PreviousIndexing&gt;</td>
             </tr>
             <tr>
-              <td>50</td>
+              <td>49</td>
               <td>&lt;PublicMeSHNote&gt;<br/>
                 Description: Free-text information about the history of
                 changes in the record that may be helpful to the user of
@@ -1234,7 +1204,7 @@ status=published
               <td>MRSAT.ATN = PM</td>
             </tr>
             <tr>
-              <td>51</td>
+              <td>50</td>
               <td>&lt;QualifierName&gt;<br/>
                 Description: Term that uniquely names its
                 &lt;QualifierRecord&gt; and, along with the
@@ -1253,7 +1223,7 @@ status=published
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>52</td>
+              <td>51</td>
               <td>&lt;QualifierRecord&gt;<br/>
                 Description: Cluster of one or more concepts used in
                 combination with a &lt;DescriptorRecord&gt; for subject
@@ -1271,7 +1241,7 @@ status=published
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>53</td>
+              <td>52</td>
               <td>&lt;QualifierRecordSet&gt;<br/>
                 Description: The set of all &lt;QualifierRecord&gt;
                 elements in the Qualifier XML file.<br/>
@@ -1283,7 +1253,7 @@ status=published
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>54</td>
+              <td>53</td>
               <td>&lt;QualifierReferredTo&gt;<br/>
                 Description: The pair of elements &lt;QualifierUI&gt;
                 and &lt;QualifierName&gt; each of which uniquely refers
@@ -1304,7 +1274,7 @@ status=published
                 &lt;HeadingMappedTo&gt;</td>
             </tr>
             <tr>
-              <td>55</td>
+              <td>54</td>
               <td>QualifierType<br/>
                 Description: Attribute of &lt;QualifierRecord&gt;,
                 formerly used to indicate presence in Index Medicus.
@@ -1319,7 +1289,7 @@ status=published
               <td>Not included</td>
             </tr>
             <tr>
-              <td>56</td>
+              <td>55</td>
               <td>&lt;QualifierUI&gt;<br/>
                 Description: Qualifier Unique Identifier.
                 Seven-character alpha-numeric string uniquely
@@ -1335,7 +1305,7 @@ status=published
               <td> MRCONSO.CODE, MRCONSO.SDUI</td>
             </tr>
             <tr>
-              <td>57</td>
+              <td>56</td>
               <td>&lt;RecordAuthorizer&gt;<br/>
                 Description: Three-character user name of the MeSH
                 analyst or supervisor authorizing the record in the MeSH
@@ -1348,7 +1318,7 @@ status=published
               <td>Not included</td>
             </tr>
             <tr>
-              <td>58</td>
+              <td>57</td>
               <td>&lt;RecordMaintainer&gt;<br/>
                 Description: User name of the NLM editor
                 who most recently modified the record in the MeSH
@@ -1361,7 +1331,7 @@ status=published
               <td>Not included</td>
             </tr>
             <tr>
-              <td>59</td>
+              <td>58</td>
               <td>&lt;RecordOriginator&gt;<br/>
                 Description: Three-character user name of the NLM editor
                 who created the original record in the MeSH maintenance
@@ -1377,7 +1347,7 @@ status=published
               <td>Not included</td>
             </tr>
             <tr>
-              <td>60</td>
+              <td>59</td>
               <td>&lt;RecordOriginatorsList&gt;<br/>
                 Description: Set of one or more of the elements
                 &lt;RecordOriginator&gt;, &lt;RecordMaintainer&gt;,
@@ -1390,7 +1360,7 @@ status=published
               <td>Not included</td>
             </tr>
             <tr>
-              <td>61</td>
+              <td>60</td>
               <td>RecordPreferredTermYN<br/>
                 Description: Attribute of the &lt;Term&gt; element which
                 indicates whether or not the term is the preferred term
@@ -1413,7 +1383,7 @@ status=published
                 for details.</td>
             </tr>
             <tr>
-              <td>62</td>
+              <td>61</td>
               <td>&lt;RegistryNumber&gt;<br/>
                 Description: Originally a Registry Number from CAS
                 (Chemical Abstracts Service) for the same chemical.
@@ -1456,7 +1426,7 @@ status=published
               <td>MRSAT.ATN = RR</td>
             </tr>
             <tr>
-              <td>64</td>
+              <td>63</td>
               <td>&lt;RelatedRegistryNumberList&gt;<br/>
                 Description: The set of one or more occurrences of the
                 &lt;RelatedRegistryNumber&gt;.<br/>
@@ -1467,7 +1437,7 @@ status=published
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>65</td>
+              <td>64</td>
               <td>&lt;RelationAttribute&gt;<br/>
                 Description: Further specification of the particular
                 relationship between two concepts specified in
@@ -1480,7 +1450,7 @@ status=published
               <td>Not applicable</td>
             </tr>
             <tr>
-              <td>66</td>
+              <td>65</td>
               <td>RelationName<br/>
                 Description: Attribute of the &lt;ConceptRelation&gt;
                 element which indicates the relation between the two
@@ -1498,7 +1468,7 @@ status=published
               </td>
             </tr>
             <tr>
-              <td>67</td>
+              <td>66</td>
               <td>&lt;RunningHead&gt;<br/>
                 Description: The header string that was printed at the
                 top of each page in the Tree Structures section of the
@@ -1518,7 +1488,7 @@ status=published
               <td>Not included</td>
             </tr>
             <tr>
-              <td>68</td>
+              <td>67</td>
               <td>&lt;ScopeNote&gt;<br/>
                 Description: Free-text narrative giving the scope and
                 meaning of a &lt;Concept&gt;.<br/>
@@ -1532,7 +1502,7 @@ status=published
               <td>MRDEF.DEF</td>
             </tr>
             <tr>
-              <td>69</td>
+              <td>68</td>
               <td>SCRClass<br/>
                 Description: Attribute of &lt;DescriptorRecord&gt;
                 having as a value one of four numbers: <br/>
@@ -1550,7 +1520,7 @@ status=published
               <td>MRSAT.ATN = SC</td>
             </tr>
             <tr>
-              <td>70</td>
+              <td>69</td>
               <td>&lt;SeeRelatedDescriptor&gt;<br/>
                 Description: Reference to a specific Descriptor to which
                 a user is referred by a "see related" cross-reference.
@@ -1577,7 +1547,7 @@ status=published
                 MRSAT.ATN = FX</td>
             </tr>
             <tr>
-              <td>71</td>
+              <td>70</td>
               <td>&lt;SeeRelatedList&gt;<br/>
                 Description: Set of one or more
                 &lt;SeeRelatedDescriptor&gt; elements in a Descriptor
@@ -1589,7 +1559,7 @@ status=published
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>72</td>
+              <td>71</td>
               <td>&lt;SemanticType&gt;<br/>
                 Description: One of approximately 140 categories in the
                 UMLS Semantic Network which name properties of
@@ -1607,7 +1577,7 @@ status=published
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>73</td>
+              <td>72</td>
               <td>&lt;SemanticTypeList&gt;<br/>
                 Description: Set of one or more &lt;SemanticType&gt;
                 elements.<br/>
@@ -1618,7 +1588,7 @@ status=published
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>74</td>
+              <td>73</td>
               <td>&lt;SemanticTypeName&gt;<br/>
                 Description: Unique term for each of the approximately
                 140 categories in the UMLS Semantic Network. Used, along
@@ -1638,7 +1608,7 @@ status=published
                 in MRSTY.RRF, there are significant differences.</td>
             </tr>
             <tr>
-              <td>75</td>
+              <td>74</td>
               <td>&lt;SemanticTypeUI&gt;<br/>
                 Description: Unique four-character alphanumeric
                 identifier for each of the approximately 140 categories
@@ -1653,7 +1623,7 @@ status=published
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>76</td>
+              <td>75</td>
               <td>&lt;SortVersion&gt;<br/>
                 Description: Custom version of a &lt;Term&gt; that was
                 used to sort print output in printed Medical Subject
@@ -1670,7 +1640,7 @@ status=published
                 MRREL.REL=SY MRREL.RELA=sort_version_of</td>
             </tr>
             <tr>
-              <td>77</td>
+              <td>76</td>
               <td>&lt;Source&gt;<br/>
                 Description: Citation reference in which the indexing
                 concept was first found. Single occurrence since 1980.
@@ -1683,7 +1653,7 @@ status=published
               <td> MRSAT.ATN = SRC</td>
             </tr>
             <tr>
-              <td>78</td>
+              <td>77</td>
               <td>&lt;SourceList&gt;<br/>
                 Description: Set of one or more &lt;Source&gt; elements.<br/>
                 Subelement of: &lt;SupplementalRecord&gt;<br/>
@@ -1693,7 +1663,7 @@ status=published
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>79</td>
+              <td>78</td>
               <td>&lt;String&gt;<br/>
                 Description: The string itself that constitutes a
                 &lt;Term&gt; as well as object names, such as the
@@ -1718,7 +1688,7 @@ status=published
               <td> As subelement of &lt;Term&gt;: MRCONSO.STR</td>
             </tr>
             <tr>
-              <td>80</td>
+              <td>79</td>
               <td>&lt;SupplementalRecord&gt;<br/>
                 Description: Cluster of one or more concepts used for
                 subject indexing and retrieval. Identified uniquely by a
@@ -1736,7 +1706,7 @@ status=published
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>81</td>
+              <td>80</td>
               <td>&lt;SupplementalRecordName&gt;<br/>
                 Description: A term that uniquely names its
                 &lt;SupplementalRecord&gt; (SCR) and, along with the
@@ -1755,7 +1725,7 @@ status=published
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>82</td>
+              <td>81</td>
               <td>&lt;SupplementalRecordSet&gt;<br/>
                 Description: The set of all &lt;SupplementalRecord&gt;
                 elements in the SCR XML file.<br/>
@@ -1766,7 +1736,7 @@ status=published
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>83</td>
+              <td>82</td>
               <td>&lt;SupplementalRecordUI&gt; Description: Unique
                 Identifier for SCRs. Seven-character alpha-numeric
                 string uniquely identifying a &lt;SupplementalRecord&gt;
@@ -1780,7 +1750,7 @@ status=published
               <td>MRCONSO.CODE MRCONSO.SDUI</td>
             </tr>
             <tr>
-              <td>84</td>
+              <td>83</td>
               <td>&lt;Term&gt;<br/>
                 Description: Alpha-numeric string which comprises the
                 basic unit of the MeSH vocabulary. Also functions as the
@@ -1812,7 +1782,7 @@ status=published
               <td> See subelements</td>
             </tr>
             <tr>
-              <td>85</td>
+              <td>84</td>
               <td>&lt;TermList&gt;<br/>
                 Description: Set of one or more &lt;Term&gt; elements in
                 a &lt;Concept&gt;.<br/>
@@ -1823,7 +1793,7 @@ status=published
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>86</td>
+              <td>85</td>
               <td>&lt;TermNote&gt; (Term Note)<br/>
                 Description: For institutions that translate MeSH into
                 their own language. Internal notes about a given term
@@ -1835,7 +1805,7 @@ status=published
               <td>Not applicable</td>
             </tr>
             <tr>
-              <td>87</td>
+              <td>86</td>
               <td>&lt;TermUI&gt; (Term Unique Identifier)<br/>
                 Description: Seven-character alpha-numeric string
                 uniquely identifying a &lt;Term&gt; (except
@@ -1849,7 +1819,7 @@ status=published
               <td> MRSAT.ATN = TERMUI</td>
             </tr>
             <tr>
-              <td>88</td>
+              <td>87</td>
               <td>&lt;ThesaurusID&gt;<br/>
                 Description: Name of a Thesaurus in which the terms
                 occurs, including NLM (=MeSH).<br/>
@@ -1861,7 +1831,7 @@ status=published
               <td> MRSAT.ATN = TH</td>
             </tr>
             <tr>
-              <td>89</td>
+              <td>88</td>
               <td>&lt;ThesaurusIDList&gt;<br/>
                 Description: Set of one or more &lt;ThesaurusID&gt;
                 elements in a Descriptor or SCR &lt;Term&gt;.<br/>
@@ -1872,7 +1842,7 @@ status=published
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>90</td>
+              <td>89</td>
               <td>&lt;TranslatorsEnglishScopeNote&gt;<br/>
                 Description: For institutions that translate MeSH into
                 their own language. The translator's English scope note
@@ -1885,7 +1855,7 @@ status=published
               <td>Not applicable</td>
             </tr>
             <tr>
-              <td>91</td>
+              <td>90</td>
               <td>&lt;TranslatorsScopeNote&gt;<br/>
                 Description: For institutions that translate MeSH into
                 their own language. Translation of an existing
@@ -1899,7 +1869,7 @@ status=published
               <td>Not applicable</td>
             </tr>
             <tr>
-              <td>92</td>
+              <td>91</td>
               <td>&lt;TreeNodeAllowed&gt;<br/>
                 Description: Name of a subcategory in the MeSH Trees,
                 indicating that for most Descriptors in that
@@ -1916,7 +1886,7 @@ status=published
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>93</td>
+              <td>92</td>
               <td>&lt;TreeNodeAllowedList&gt;<br/>
                 Description: Set of one or more &lt;TreeNodeAllowed&gt;
                 elements. Subelement of:<br/>
@@ -1926,7 +1896,7 @@ status=published
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>94</td>
+              <td>93</td>
               <td>&lt;TreeNumber&gt;<br/>
                 Description: Alpha-numeric string referring to location
                 within a Descriptor or Qualifier hierarchy. Used for
@@ -1946,7 +1916,7 @@ status=published
                 MRSAT.ATN = MN</td>
             </tr>
             <tr>
-              <td>95</td>
+              <td>94</td>
               <td>&lt;TreeNumberList&gt;<br/>
                 Description: Set of one or more &lt;TreeNumber&gt;
                 elements in a Descriptor or Qualifier record.<br/>
@@ -1959,7 +1929,7 @@ status=published
               <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>96</td>
+              <td>95</td>
               <td>&lt;Year&gt;<br/>
                 Description: Four-character year date in YYYY format.
                 Similar in format to the MEDLINE element of the same
