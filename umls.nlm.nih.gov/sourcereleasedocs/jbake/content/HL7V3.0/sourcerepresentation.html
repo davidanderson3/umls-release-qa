@@ -1,6 +1,6 @@
 title=HL7V3.0 (HL7 Version 3.0) - Source Representation
 date=2018-05-07
-updated=2020-11-02
+updated=2021-05-03
 type=page
 status=published
 ~~~~~~
@@ -31,10 +31,20 @@ status=published
 <div id="change_summary" class="rep_block_level_one">
   <h3>Summary of Changes:</h3>&nbsp;&nbsp;
 
+  <p>New attribute name(s) (ATN):</p>
+  <ul>
+   <li>HL7LT|HL7 license terms</li>
+   <li>HL7UN|HL7 usage notes</li>
+  </ul>
   <p>Dropped attribute name(s) (ATN):</p>
   <ul>
-     <li>HL7LT (HL7 license terms)</li>
-     <li>HL7VP (HL7 versioning policy)</li>
+     <li>HL7CO|HL7 contributor</li>
+     <li>HL7DH|HL7 default handling code</li>
+     <li>HL7DV|HL7 default value</li>   
+     <li>HL7NO|HL7 notation</li>   
+     <li>HL7OAN|HL7 other annotation</li>
+     <li>HL7OI|HL7 open issue</li>
+     <li>HL7PV|HL7 publisher version Id</li>
   </ul>
 </div>
 <hr>
@@ -43,7 +53,7 @@ status=published
 
   <h3>Source-Provided Files: Summary</h3>&nbsp;&nbsp;
 
-  <p>The HL7V3.0 source is provided in DEFN.UV.VO.1451-20191215.coremif. Elements in this file can be described by their path of xml tags starting from the root. In the xml path descriptions below, an XPath-like format is used to describe the origin of various items, but the top-level &lt;vocabularyModel&gt; path element is omitted for brevity.<br>
+  <p>The HL7V3.0 source is provided in DEFN.UV.VO.2.0.0.coremif.txt. Elements in this file can be described by their path of xml tags starting from the root. In the xml path descriptions below, an XPath-like format is used to describe the origin of various items, but the top-level &lt;vocabularyModel&gt; path element is omitted for brevity.<br>
   <br>
   Note that some HL7V3.0 elements, such as &lt;conceptProperty&gt;, use a "name, value" format instead of nested xml tags to represent properties, e.g., &lt;conceptProperty name="status" value="retired"/&gt; instead of &lt;conceptProperty&gt;&lt;status&gt;retired&lt;/status&gt;&lt;/conceptProperty&gt;. Such a "name, value" item is represented in the xml path descriptions below using the format "conceptProperty/@name=status".</p>
 <hr>
@@ -132,17 +142,11 @@ status=published
           </tr>
 
           <tr>
-            <td>codeSystem/header/contributor</td>
+            <td>codeSystem/header/legalese/licenseTerms</td>
 
-            <td>MRSAT.ATN="HL7CO" for the codeSystem concept</td>
+            <td>MRSAT.ATN="HL7LT" for the codeSystem concept</td>
           </tr>
-
-          <tr>
-            <td>codeSystem/header/legalese/notation</td>
-
-            <td>MRSAT.ATN="HL7NO" for the codeSystem concept</td>
-          </tr>
-
+          
           <tr>
             <td>codeSystem/header/responsibleGroup/@organizationName</td>
 
@@ -168,12 +172,6 @@ status=published
           </tr>
 
           <tr>
-            <td>codeSystem/releasedVersion/@publisherVersionId</td>
-
-            <td>MRSAT.ATN="HL7PV" for the codeSystem concept</td>
-          </tr>
-
-          <tr>
             <td>codeSystem/releasedVersion/@releaseDate</td>
 
             <td>MRSAT.ATN="HL7RD" for the codeSystem concept</td>
@@ -192,17 +190,17 @@ status=published
           </tr>
 
           <tr>
-            <td>codeSystem/releasedVersion/concept/annotations/appInfo/openIssue/text</td>
-
-            <td>MRSAT.ATN="HL7OI" for the concept</td>
-          </tr>
-
-          <tr>
             <td>codeSystem/releasedVersion/concept/annotations/documentation/definition/text</td>
 
             <td>MRDEF.DEF for the concept</td>
           </tr>
 
+          <tr>
+            <td>codeSystem/releasedVersion/concept/annotations/documentation/usageNotes/text</td>
+
+            <td>MRSAT.ATN="HL7UN" for the concept</td>
+          </tr>
+          
           <tr>
             <td>codeSystem/releasedVersion/concept/code/@status</td>
 
@@ -350,18 +348,6 @@ status=published
           </tr>
 
           <tr>
-            <td>codeSystem/releasedVersion/supportedConceptProperty/@defaultHandlingCode</td>
-
-            <td>MRSAT.ATN="HL7DH" for the supportedConceptProperty concept</td>
-          </tr>
-
-          <tr>
-            <td>codeSystem/releasedVersion/supportedConceptProperty/@defaultValue</td>
-
-            <td>MRSAT.ATN="HL7DV" for the supportedConceptProperty concept</td>
-          </tr>
-
-          <tr>
             <td>codeSystem/releasedVersion/supportedConceptProperty/@isMandatoryIndicator</td>
 
             <td>MRSAT.ATN="HL7IM" for the supportedConceptProperty concept</td>
@@ -459,17 +445,17 @@ status=published
           </tr>
 
           <tr>
-            <td>conceptDomain/annotations/appInfo/openIssue/text</td>
-
-            <td>MRSAT.ATN="HL7OI" for the conceptDomain concept</td>
-          </tr>
-
-          <tr>
             <td>conceptDomain/annotations/documentation/definition/text</td>
 
             <td>MRDEF.DEF for the conceptDomain concept</td>
           </tr>
 
+          <tr>
+            <td>conceptDomain/annotations/documentation/usageNotes/text</td>
+
+            <td>MRSAT.ATN="HL7UN" for the conceptDomain concept</td>
+          </tr>
+          
           <tr>
             <td>conceptDomain/property/@name=ConceptualSpaceForClassCode</td>
 
@@ -584,12 +570,6 @@ status=published
             <td>valueSet/annotations/documentation/description/text</td>
 
             <td>MRDEF.DEF for the valueSet concept</td>
-          </tr>
-
-          <tr>
-            <td>valueSet/annotations/documentation/otherAnnotation</td>
-
-            <td>MRSAT.ATN = "HL7OAN" for the valueSet concept</td>
           </tr>
 
           <tr>

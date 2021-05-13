@@ -1,6 +1,6 @@
 title=NCI (NCI Thesaurus) - Metathesaurus Representation
 date=2018-05-07
-updated=2020-11-02
+updated=2021-05-03
 type=page
 status=published
 ~~~~~~
@@ -24,7 +24,7 @@ status=published
 <p>This page list UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
 <a id="top-of-page"></a> <span class = "nav">Skip to: <a href = "#atoms">Atoms</a>, <a href = "#attributes">Attributes</a>, <a href = "#definitions">Definitions</a>, <a href = "#relationships">Relationships</a>, <a href = "#mappings">Mappings</a></span>
 <div id = "general" class = "rep_block_level_one">
-<p><strong>VSAB: </strong>NCI2020_02D</p>
+<p><strong>VSAB: </strong>NCI2020_09D</p>
 <div id = "rep_identifiers" class = "rep_block_level_one">
 <h3>general notes/Comments:</h3>
 <p>NCI Thesaurus (NCIt) is a widely recognized standard for biomedical coding and reference. It covers vocabulary for clinical care, translational and basic research, public information and administrative activities and is used by a broad variety of public and private partners both nationally and internationally.The scope of NCI is determined by the combined scope of its source vocabularies which include the following:</p>
@@ -52,6 +52,10 @@ status=published
 <tr>
     <td>BRIDG_5_3</td>
     <td>Biomedical Research Integrated Domain Group Model 5.3</td>
+</tr>
+<tr>
+    <td>caDSR</td>
+    <td>Cancer Data Standards Registry and Repository</td>
 </tr>
 <tr>
     <td>CARELEX</td>
@@ -92,6 +96,10 @@ status=published
 <tr>
     <td>CTCAE_5</td>
     <td>Common Terminology Criteria for Adverse Events 5.0</td>
+</tr>
+<tr>
+    <td>CTDC</td>
+    <td>Clinical Trial Data Commons</td>
 </tr>
 <tr>
     <td>CTEP-SDC</td>
@@ -174,6 +182,10 @@ status=published
     <td>National Institute of Child Health and Human Development</td>
 </tr>
 <tr>
+    <td>PCDC</td>
+    <td>Pediatric Cancer Data Commons</td>
+</tr>
+<tr>
     <td>PI-RADS</td>
     <td>Prostate Imaging Reporting and Data System</td>
 </tr>
@@ -198,32 +210,31 @@ status=published
 <h3>Summary of Changes</h3>
 <p>New subsource(s):</p>
 <ul>
-  <li>ACC-AHA (American College of Cardiology/American Heart Association Clinical Data Terminology</li>
-  <li>BRIDG_5_3 (Biomedical Research Integrated Domain Group Model 5.3)</li>
-  <li>CELLOSAURUS (Cellosaurus)</li>
-  <li>GDC (NCI Genomic Data Commons Terms)</li>
-  <li>ICDC (NCI Integrated Canine Data Commons Terms)</li>
+  <li>caDSR (Cancer Data Standards Registry and Repository)</li>
+  <li>CTDC (Clinical Trial Data Commons)</li>
+  <li>PCDC(Pediatric Cancer Data Commons)</li>
 </ul>
 <p>New termgroup(s):</p>
 <ul>
-  <li>ACC-AHA/PT</li>
-  <li>BRIDG_5_3/PT</li>
-  <li>CBDD/SY</li>
-  <li>CELLOSAURUS/PT</li>
-  <li>GDC/PT, SY</li>
-  <li>ICDC/PT, SY</li>
-  <li>INC/SY</li>
+  <li>caDSR/SY</li>
+  <li>ACC-AHA/SY</li>
+  <li>CTCAE/SY</li>
+  <li>CTDC/DN,PT,SY</li>
+  <li>PCDC/PT,SY</li>
+  
 </ul>
 <p>New property(s):</p>
 <ul>
-  <li>P398 Value_Set_Pair</li>
+  <li>P175 NSC_NUMBER (property name updated from 'NSC_CODE)</li>
 </ul>
 <p>New associations(s) | Inverse(s):</p>
 <ul>
-  <li>A23|Has_PCDC_Data_Type|PCDC_Data_Type_Of</li>
-  <li>A24|Has_PCDC_AML_Permissible_Value|PCDC_AML_Permissible_Value_Of</li>
+  <li>A24|is_pcdc_aml_permissible_value_for_variable (association name updated from 'pcdc_aml_permissible_value_of')|has_pcdc_aml_permissible_value</li>
+  <li>A25|value_set_is_paired_with|is_paired_with_value_set</li>
+  <li>A27|has_ctdc_value|is_ctdc_value_of</li>
 </ul>
-<p>Mappings to external sources per P375 property (Mapped_To) has been deprecated.</p>
+
+<p>For NCI and all subsources, TTY=AB has suppressible = Y.</p>
 </div>
 <div id = "rep_change_summary" class = "rep_block_level_one">
 <h3>Original Files:</h3>
@@ -293,6 +304,7 @@ status=published
 </div>
 <h3>Suppressibility</h3>
 <p>For term type OP, the suppressible value is "O" (obsolete). For all others, the value is "N" (not suppressible).</p>
+<p>For term type AB, the suppressible value is "Y".</p>
 </div>
 <div id = "rep_attributes" class = "rep_block_level_two">
 <a id= "attributes">&nbsp;</a><br/>
@@ -357,7 +369,7 @@ status=published
 <td>&lt;P363 rdf:datatype="http://www.w3.org.../P363&gt;</td></tr>
 <tr><td>NICHD_HIERARCHY_TERM</td>
 <td>&lt;P371 rdf:datatype="http://www.w3.org.../P371&gt;</td></tr>
-<tr><td>NSC_CODE</td>
+<tr><td>NSC_NUMBER</td>
 <td>&lt;P175 rdf:datatype="http://www.w3.org.../P175&gt;</td></tr>
 <tr><td>NUTRIENT</td>
 <td>&lt;P358 rdf:datatype="http://www.w3.org.../P358&gt;</td></tr>
@@ -589,19 +601,23 @@ Alt_Definition: &lt;P325...ncicp:complexDefinition xmlns:ncicp.../P325&gt;
 <tr><td>RT</td>
 <td>has_ctcae_5_parent/ctcae_5_parent_of</td><td>A15</td></tr>
 <tr><td>RT</td>
+<td>has_ctdc_value/is_ctdc_value_of</td><td>A27</td></tr>
+<tr><td>RT</td>
 <td>has_data_element/data_element_of</td><td>A12</td></tr>
 <tr><td>RT</td>
 <td>has_inc_parent/inc_parent_of</td><td>A16</td></tr>
 <tr><td>RT</td>
 <td>has_nichd_parent/nichd_parent_of</td><td>A11</td></tr>
 <tr><td>RT</td>
-<td>has_pcdc_data_type/pcdc_data_type_of</td><td>A23</td></tr>
+<td>has_pcdc_aml_permissible_value/is_pcdc_aml_permissible_value_for_variable</td><td>A26</td></tr>
 <tr><td>RT</td>
-<td>has_pcdc_aml_permissible_value/pcdc_aml_permissible_value_of</td><td>A24</td></tr>
+<td>has_pcdc_data_type/pcdc_data_type_of</td><td>A23</td></tr>
 <tr><td>RT</td>
 <td>has_salt_form/has_free_acid_or_base_form</td><td>A5</td></tr>
 <tr><td>RT</td>
 <td>has_target/is_target_of_agent</td><td>A7</td></tr>
+<tr><td>RT</td>
+<td>is_pcdc_aml_permissible_value_for_variable/has_pcdc_aml_permissible_value</td><td>A24</td></tr>
 <tr><td>RT</td>
 <td>is_related_To_endogenous_product/endogenous_product_related_to</td><td>A9</td></tr>
 <tr><td>RT</td>
@@ -650,6 +666,8 @@ Alt_Definition: &lt;P325...ncicp:complexDefinition xmlns:ncicp.../P325&gt;
 <td>role_has_range/kind_is_range_of</td><td>A2</td></tr>
 <tr><td>SY</td>
 <td>tradename_of/has_tradename</td><td>Brand names and generic names are not considered synonyms in NCI, so a relationship is created to link the two concepts.  This data is added during Metathesaurus source processing.</td></tr>
+<tr><td>RT</td>
+<td>value_set_is_paired_with/is_paired_with_value_set</td><td>A25</td>
 </table>
 <p>(1) The relationship group is generated from the 'owl:Restriction' and 'owl:intersectionOf' tag in the source data file.</p>
 </div>

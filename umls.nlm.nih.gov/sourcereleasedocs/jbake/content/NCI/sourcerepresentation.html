@@ -1,6 +1,6 @@
 title=NCI (NCI Thesaurus) - Source Representation
 date=2018-05-07
-updated=2020-11-02
+updated=2021-05-03
 type=page
 status=published
 ~~~~~~
@@ -25,7 +25,7 @@ status=published
 <a id="top-of-page"></a> <span class = "nav">Skip to: <a href = "#general">General Notes/Comments</a>, <a href = "#change_summary">Summary of Changes</a>, <a href = "#file_summary">Summary of Source-Provided Files</a> <a href = "#file_details">Source-Provided File Details</a></span>
 <a id= "general">&nbsp;</a>
 <div id = "rep_general" class = "rep_block_level_one">
-<h3>VSAB: NCI2020_02D</h3>
+<h3>VSAB: NCI2020_09D</h3>
 <h3>General Notes/Comments:</h3>
 <p>NCI Thesaurus (NCIt) is a widely recognized standard for biomedical coding and reference. It covers vocabulary for clinical care, translational and basic research, public information and administrative activities and is used by a broad variety of public and private partners both nationally and internationally.
 The scope of NCI is determined by the combined scope of its source vocabularies which include the following:</p>
@@ -45,6 +45,9 @@ The scope of NCI is determined by the combined scope of its source vocabularies 
 </tr>
 <tr>
     <td>BRIDG_5_3</td><td>Biomedical Research Integrated Domain Group Model 5.3</td>
+</tr>
+<tr>
+    <td>caDSR</td><td>Cancer Data Standards Registry and Repository</td>
 </tr>
 <tr>
     <td>CARELEX</td><td>Content Archive Resource Exchange Lexicon</td>
@@ -75,6 +78,9 @@ The scope of NCI is determined by the combined scope of its source vocabularies 
 </tr>
 <tr>
     <td>CTCAE_5</td><td>Common Terminology Criteria for Adverse Events 5.0</td>
+</tr>
+<tr>
+    <td>CTDC</td><td>Clinical Trial Data Commons</td>
 </tr>
 <tr>
     <td>CTEP-SDC</td><td>Cancer Therapy Evaluation Program - Simple Disease Classification</td>
@@ -139,6 +145,9 @@ The scope of NCI is determined by the combined scope of its source vocabularies 
     <td>NICHD</td><td>National Institute of Child Health and Human Development</td>
 </tr>
 <tr>
+    <td>PCDC</td><td>Pediatric Cancer Data Commons</td>
+</tr>
+<tr>
     <td>PI-RADS</td><td>Prostate Imaging Reporting and Data System</td>
 </tr>
 <tr>
@@ -160,32 +169,29 @@ The scope of NCI is determined by the combined scope of its source vocabularies 
 <h3>Summary of Changes</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top-of-page">top</a></span>)
 <p>New subsource(s):</p>
 <ul>
-  <li>ACC-AHA (American College of Cardiology/American Heart Association Clinical Data Terminology)</li>
-  <li>BRIDG_5_3 (Biomedical Research Integrated Domain Group Model 5.3)</li>
-  <li>CELLOSAURUS (Cellosaurus)</li>
-  <li>GDC (NCI Genomic Data Commons Terms)</li>
-  <li>ICDC (NCI Integrated Canine Data Commons Terms)</li>
+  <li>caDSR (Cancer Data Standards Registry and Repository)</li>
+  <li>CTDC (Clinical Trial Data Commons)</li>
+  <li>PCDC(Pediatric Cancer Data Commons)</li>
 </ul>
 <p>New termgroup(s):</p>
 <ul>
-  <li>ACC-AHA/PT</li>
-  <li>BRIDG_5_3/PT</li>
-  <li>CBDD/SY</li>
-  <li>CELLOSAURUS/PT</li>
-  <li>GDC/PT, SY</li>
-  <li>ICDC/ PT, SY</li>
-  <li>INC/SY</li>
+  <li>caDSR/SY</li>
+  <li>ACC-AHA/SY</li>
+  <li>CTCAE/SY</li>
+  <li>CTDC/DN,PT,SY</li>
+  <li>PCDC/PT,SY</li>
 </ul>
 <p>New property(s):</p>
 <ul>
-  <li>P398 Value_Set_Pair</li>
+  <li>P175 NSC_NUMBER (property name updated from 'NSC_CODE)</li>
 </ul>
 <p>New associations(s) | Inverse(s):</p>
 <ul>
-  <li>A23|Has_PCDC_Data_Type|PCDC_Data_Type_Of</li>
-  <li>A24|Has_PCDC_AML_Permissible_Value|PCDC_AML_Permissible_Value_Of</li>
+  <li>A24|is_pcdc_aml_permissible_value_for_variable (association name updated from 'pcdc_aml_permissible_value_of')|has_pcdc_aml_permissible_value</li>
+  <li>A25|value_set_is_paired_with|is_paired_with_value_set</li>
+  <li>A27|has_ctdc_value|is_ctdc_value_of</li>
 </ul>
-<p>Mappings to external sources via P375 (Mapped_To) has been deprecated.</p>
+<p>For NCI and all subsources, TTY=AB has suppressible = Y.</p>
 </div>
 <div id = "rep_file_summary" class = "rep_block_level_one"></div>
 <a id= "file_summary">&nbsp;</a>
@@ -237,7 +243,10 @@ The scope of NCI is determined by the combined scope of its source vocabularies 
 <tr><td  class = "file_field_name">&lt;A21 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_Pharmaceutical_Release_Characteristics</td><td>MRREL.CUI*; MRREL.RELA=has_pharmaceutical_release_characteristics</td></tr>
 <tr><td  class = "file_field_name">&lt;A21 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_Pharmaceutical_Transformation</td><td>MRREL.CUI*; MRREL.RELA=has_pharmaceutical_transformation</td></tr>
 <tr><td  class = "file_field_name">&lt;A23 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_PCDC_Data_Type</td><td>MRREL.CUI*; MRREL.RELA=has_pcdc_data_type</td></tr>
-<tr><td  class = "file_field_name">&lt;A24 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_PCDC_AML_Permissible_Value</td><td>MRREL.CUI*; MRREL.RELA=has_pcdc_permissible_value</td></tr>
+<tr><td  class = "file_field_name">&lt;A24 rdf:resource="http://...owl#A..."/&gt;</td><td>Is_PCDC_AML_Permissible_Value_For_Variable</td><td>MRREL.CUI*; MRREL.RELA=is_pcdc_aml_permissible_value_for_variable</td></tr>
+<tr><td  class = "file_field_name">&lt;A25 rdf:resource="http://...owl#A..."/&gt;</td><td>Value_Set_Is_Paired_With</td><td>MRREL.CUI*; MRREL.RELA=value_set_is_paired_with</td></tr>
+<tr><td  class = "file_field_name">&lt;A26 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_PCDC_AML_Permissible_Value</td><td>MRREL.CUI*; MRREL.RELA=has_pcdc_permissible_value</td></tr>
+<tr><td  class = "file_field_name">&lt;A27 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_CTDC_Value</td><td>MRREL.CUI*; MRREL.RELA=has_ctdc_value</td></tr>
 <tr><td  class = "file_field_name">&lt;P90 rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"&gt;&lt;ncicp:ComplexTerm
 xmlns:ncicp="http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#"&gt;&lt;ncicp:term-name&gt;...&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;...&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;...&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplextTerm&gt;&lt;/P90&gt;
 </td><td>FULL_SYN. Includes term name, term type, term source, and source code.</td><td>MRCONSO.STR = term name; MRCONSO.TTY = term type; MRCONSO.SAB = term source. NCI/PTs are not processed and NCI/CNUs are assigned to the ATN = CNU.</td></tr>
@@ -254,7 +263,7 @@ MRDEF.DEF = definition if source=NCI, an NCI subsource, or an NCI local source.<
 <tr><td  class = "file_field_name">&lt;P107 rdf:datatype="http://www... &lt;/P107&gt;</td><td>Display_Name</td><td>Not processed</td></tr>
 <tr><td  class = "file_field_name">&lt;P108 rdf:datatype="http://www... &lt;/P108&gt;</td><td>Preferred_Name</td><td>MRCONSO.STR</td></tr>
 <tr><td  class = "file_field_name">&lt;P171 rdf:datatype="http://www... &lt;/P171&gt;</td><td>PubMedID_Primary_Reference</td><td>MRSAT.ATN=PUBMEDID_PRIMARY_REFERENCE</td></tr>
-<tr><td  class = "file_field_name">&lt;P175 rdf:datatype="http://www... &lt;/P175&gt;</td><td>NSC_Code</td><td>MRSAT.ATN=NSC_CODE</td></tr>
+<tr><td  class = "file_field_name">&lt;P175 rdf:datatype="http://www... &lt;/P175&gt;</td><td>NSC Number</td><td>MRSAT.ATN=NSC_NUMBER</td></tr>
 <tr><td  class = "file_field_name">&lt;P201 rdf:datatype="http://www... &lt;/P201&gt;</td><td>OLD_CHILD</td><td>Not processed</td></tr>
 <tr><td  class = "file_field_name">&lt;P205 rdf:datatype="http://www... &lt;/P205&gt;</td><td>OLD_STATE</td><td>Not processed</td></tr>
 <tr><td  class = "file_field_name">&lt;P207 rdf:datatype="http://www... &lt;/P207&gt;</td><td>UMLS_CUI</td><td>Not processed</td></tr>

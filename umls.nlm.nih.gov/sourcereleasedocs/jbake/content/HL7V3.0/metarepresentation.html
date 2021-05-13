@@ -1,6 +1,6 @@
 title=HL7V3.0 (HL7 Version 3.0) - Metathesaurus Representation
 date=2018-05-07
-updated=2020-11-02
+updated=2021-05-03
 type=page
 status=published
 ~~~~~~
@@ -32,19 +32,29 @@ status=published
     </div>
 
 <div id="general" class="rep_block_level_one">
-  <p><b>VSAB:</b> HL7V3.0_2019_12</p>
+  <p><b>VSAB:</b> HL7V3.0_2020_11</p>
 <hr>
   <div id="rep_identifiers" class="rep_block_level_one">
     <h3>Summary of Changes</h3>
-    <p>Dropped attribute name(s) (ATN): </p>
+    <p>New attribute name(s) (ATN): </p>
     <ul>
-     <li>HL7LT (HL7 license terms)</li>
-     <li>HL7VP (HL7 versioning policy)</li>
+     <li>HL7LT|HL7 license terms</li>
+     <li>HL7UN|HL7 usage notes</li>
+    </ul>
+    <p>Dropped attribute name(s) (ATN)</p>
+    <ul>
+     <li>HL7CO|HL7 contributor</li>
+     <li>HL7DH|HL7 default handling code</li>
+     <li>HL7DV|HL7 default value</li>   
+     <li>HL7NO|HL7 notation</li>   
+     <li>HL7OAN|HL7 other annotation</li>
+     <li>HL7OI|HL7 open issue</li>
+     <li>HL7PV|HL7 publisher version Id</li>
     </ul>
   </div>
 <hr>
   <div id="rep_change_summary" class="rep_block_level_one">
-    <h3>Source Provided Files:</h3>The HL7V3.0 source is provided in DEFN=UV=VO=1451-20191215.coremif. Elements in this file can be described by their path of xml tags starting from the root. In the xml path descriptions below, an XPath-like format is used to describe the origin of various items, but the top-level &lt;vocabularyModel&gt; path element is omitted for brevity.<br>
+    <h3>Source Provided Files:</h3>The HL7V3.0 source is provided in DEFN.UV.VO.2.0.0.coremif.txt. Elements in this file can be described by their path of xml tags starting from the root. In the xml path descriptions below, an XPath-like format is used to describe the origin of various items, but the top-level &lt;vocabularyModel&gt; path element is omitted for brevity.<br>
     <br>
     Note that some HL7V3.0 elements, such as &lt;conceptProperty&gt;, use a "name, value" format instead of nested xml tags to represent properties, e.g., &lt;conceptProperty name="status" value="retired"/&gt; instead of &lt;conceptProperty&gt;&lt;status&gt;retired&lt;/status&gt;&lt;/conceptProperty&gt;. Such a "name, value" item is represented in the xml path descriptions below using the format "conceptProperty/@name=status".
   </div>
@@ -225,12 +235,6 @@ status=published
           </tr>
 
           <tr>
-            <td>HL7CO</td>
-            <td>CSY</td>
-            <td>codeSystem/header/contributor</td>
-          </tr>
-
-          <tr>
             <td>HL7CP</td>
             <td>root</td>
             <td>header/legalese/@copyrightOwner</td>
@@ -261,12 +265,6 @@ status=published
           </tr>
 
           <tr>
-            <td>HL7DH</td>
-            <td>CPR</td>
-            <td>codeSystem/releasedVersion/supportedConceptProperty/@defaultHandlingCode</td>
-          </tr>
-
-          <tr>
             <td>HL7DI</td>
             <td>CDO</td>
             <td>conceptDomain/annotations/appInfo/deprecationInfo</td>
@@ -294,12 +292,6 @@ status=published
             <td>HL7DK</td>
             <td>root</td>
             <td>@definitionKind</td>
-          </tr>
-
-          <tr>
-            <td>HL7DV</td>
-            <td>CPR</td>
-            <td>codeSystem/releasedVersion/supportedConceptProperty/@defaultValue</td>
           </tr>
 
           <tr>
@@ -345,11 +337,17 @@ status=published
           </tr>
 
           <tr>
+            <td>HL7LT</td>
+            <td>CSY</td>
+            <td>codeSystem/header/legalese/licenseTerms</td>
+          </tr>
+
+          <tr>
             <td>HL7MI</td>
             <td>CSY</td>
             <td>codeSystem/releasedVersion/@hl7MaintainedIndicator</td>
           </tr>
-
+          
           <tr>
             <td>HL7MN</td>
             <td>root</td>
@@ -363,12 +361,6 @@ status=published
           </tr>
 
           <tr>
-            <td>HL7NO</td>
-            <td>CSY</td>
-            <td>codeSystem/header/legalese/notation</td>
-          </tr>
-
-          <tr>
             <td>HL7OA</td>
             <td>BR</td>
             <td>bindingRealm/@owningAffiliate</td>
@@ -378,24 +370,6 @@ status=published
             <td>HL7OD</td>
             <td>PT</td>
             <td>codeSystem/releasedVersion/concept/conceptProperty/@name=OID</td>
-          </tr>
-
-          <tr>
-            <td>HL7OI</td>
-            <td>CDO</td>
-            <td>conceptDomain/annotations/appInfo/openIssue/text</td>
-          </tr>
-
-          <tr>
-            <td>HL7OI</td>
-            <td>PT</td>
-            <td>codeSystem/releasedVersion/concept/annotations/appInfo/openIssue/text</td>
-          </tr>
-
-          <tr>
-            <td>HL7OAN</td>
-            <td>VS</td>
-            <td>valueSet/annotations/documentation/otherAnnotation</td>
           </tr>
 
           <tr>
@@ -414,12 +388,6 @@ status=published
             <td>HL7PR</td>
             <td>root</td>
             <td>packageLocation/@root</td>
-          </tr>
-
-          <tr>
-            <td>HL7PV</td>
-            <td>CSY</td>
-            <td>codeSystem/releasedVersion/@publisherVersionId</td>
           </tr>
 
           <tr>
@@ -518,6 +486,18 @@ status=published
             <td>codeSystem/releasedVersion/supportedConceptProperty/@type</td>
           </tr>
 
+          <tr>
+            <td>HL7UN</td>
+            <td>CDO</td>
+            <td>conceptDomain/annotations/documentation/usageNotes/text</td>
+          </tr>
+          
+          <tr>
+            <td>HL7UN</td>
+            <td>PT</td>
+            <td>codeSystem/releasedVersion/concept/annotations/documentation/usageNotes/text</td>
+          </tr>
+          
           <tr>
             <td>HL7VC</td>
             <td>VS</td>
