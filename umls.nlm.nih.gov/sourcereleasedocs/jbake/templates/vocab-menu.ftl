@@ -370,8 +370,6 @@
             <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/LCH_NW/">LCH_NW</a></li>
 
             <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/LNC/">LNC</a></li>
-            
-            <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/LNC_SPECIAL_USE/">LNC_SPECIAL_USE</a></li>
 
             <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/LNC-DE-AT/">LNC-DE-AT</a></li>
 
