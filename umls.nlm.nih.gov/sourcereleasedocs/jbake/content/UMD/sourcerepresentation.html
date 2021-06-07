@@ -1,6 +1,6 @@
 title=UMD (UMDNS) - Source Representation
 date=2018-05-07
-updated=2020-11-02
+updated=2021-05-03
 type=page
 status=published
 ~~~~~~
@@ -18,6 +18,7 @@ status=published
   </div>
  </div>
 </div>
+
 <!--endmenu-->
 <br/>
     <div class="row py-2 mb-2 mini-menu">  
@@ -30,10 +31,11 @@ status=published
 <div id="rep_general" class="rep_block_level_one">
   <a id="general"></a>
 
-  <h3>Notes</h3>
+  <h3>Note</h3>
 
-  <p>UMDNS is maintained in Apelon's TDE tool, and is submitted in "ontylog" xml format. The file processed for UMD2020 was "20191015_NLMTaskII2019.XML".<br>
-  The information provided here applies explicitly to the English version of UMDNS. The German translation of UMDNS, DMDUMD, was last updated in 1996, and much of the information on this page is not applicable.</p>
+		<ul>
+		<li>The information provided here applies explicitly to the English version of UMDNS. The German translation of UMDNS, DMDUMD, was last updated in 1996, and much of the information on this page is not relevant.</li>
+		</ul>
 </div>
 <hr>
 <div id="rep_change_summary" class="rep_block_level_one">
@@ -41,7 +43,7 @@ status=published
 
   <h3>Summary of Changes in this version</h3>
 
-  <p>No changes have been made to the original data files or to representation of UMDNS in 2020AA.</p>
+  <p>No changes have been made to the original data files or to representation of UMDNS.</p>
 </div>
 <hr>
 <div id="rep_file_summary" class="rep_block_level_one">
@@ -49,7 +51,7 @@ status=published
 
   <h3>Source-Provided Files: Summary</h3>
 
-  <p>The UMDNS submission to the UMLS Metathesaurus includes a single xml file.</p>
+  <p>The UMLS uses an xml version of UMDNS. The file used for 2021AA is "NLM_UMLS_UMDNS2020_version7.xml"</p>
 
   <div class="rep_block_level_two">
     <!-- Make a table of each file that comes from the source   -->
@@ -67,7 +69,7 @@ status=published
         </tr>
 
         <tr>
-          <td>20191015_NLMTaskII2019.XML</td>
+          <td>NLM_UMLS_UMDNS2020_version7.xml</td>
 
           <td>UMDNS data file</td>
         </tr>
@@ -83,11 +85,11 @@ status=published
 
       <li>Concepts with a "DEVICE_TYPE" of "Place Holder Terms" are excluded</li>
 
-      <li>Only definitions with a "Definition_Status" qualifier value of "Releasable" are used. Definitions with other qualifier values, including "Not Releasable," "Copyediting" or "&lt;blank&gt;" are excluded</li>
+      <li>Only definitions with a "Definition_Status" qualifier value of "Releasable" are included.</li>
 
-      <li>Kind: Only concepts with kind = "UMDNS_Kind" are being included. The kind is not explicitly represented as an attribute.<br></li>
+      <li>Kind: Only concepts with kind = "UMDNS_Kind" are included. The kind is not explicitly represented as an attribute; "Retired_Kind" concepts are not processed.<br></li>
 
-      <li>Data in the "&lt;code&gt;" and "&lt;id&gt;" tags is specific to the TDE and is not processed</li>
+      <li>Data in the "code" and "id" tags is not directly processed</li>
     </ul>
   </div>
 </div>
@@ -97,12 +99,10 @@ status=published
 
   <h3>Source-Provided Files: Details</h3>
 
-  <h4>NLM_TaskII_2018v4.xml</h4>
-
   <table>
     <tbody>
       <tr>
-        <th>Tag/Element (examples)</th>
+        <th>Property/Qualifier(s)</th>
 
         <th>Description</th>
 
@@ -110,109 +110,82 @@ status=published
       </tr><!-- xml row -->
 
       <tr>
-        <td>&lt;kindDef&gt;<br>
-        &lt;name&gt;UMDNS_Kind&lt;/name&gt;<br>
-        &lt;code&gt;K21&lt;/code&gt;<br>
-        &lt;id&gt;21&lt;/id&gt;<br>
-        &lt;namespace&gt;N3800&lt;/namespace&gt;<br>
-        &lt;/kindDef&gt;<br></td>
+        <td>kind</td>
 
-        <td>UMDNS_Kind identifies active, non-retired UMDNS concepts.</td>
-
-        <td>All concepts with UMDNS_Kind are included in the Metathesaurus. The kind is not represented explicitly as an attribute.</td>
+        <td>UMDNS_Kind (K21) identifies active, non-retired UMDNS concepts. Retired_Kind (K25)identifies those UMDNS concepts that have been retired from the nomenclature.</td>
+        <td>All concepts with UMDNS_Kind are included in the Metathesaurus. Concepts with "Retired_Kind" are not included in the Metathesaurus.  The kind is not represented explicitly as an attribute.</td>
       </tr>
 
       <tr>
-        <td>&lt;kindDef reference="false"&gt;<br>
-        &lt;name&gt;Retired_Kind&lt;/name&gt;<br>
-        &lt;code&gt;K25&lt;/code&gt;<br>
-        &lt;id&gt;25&lt;/id&gt;<br>
-        &lt;namespace&gt;N3800&lt;/namespace&gt;<br>
-        &lt;/kindDef&gt;</td>
-
-        <td>Retired_Kind identifies those UMDNS concepts that have been retired from the nomenclature.</td>
-
-        <td>Retired concepts are not included in the UMLS Metathesaurus.</td>
-      </tr>
-
+		<td>conceptDef/name</td>
+		<td>Concept preferred name</td>
+		<td>MRCONSO.STR</br>
+		TTY = SY</br>
+		CODE = CODE_IN_SOURCE</td>
+	  </tr>
+	  
       <tr>
-        <td>&lt;propertyDef&gt;<br>
-        &lt;name&gt;ATTRIBUTE&lt;/name&gt;<br>
-        &lt;code&gt;P6&lt;/code&gt;<br>
-        &lt;id&gt;6&lt;/id&gt;<br>
-        &lt;namespace&gt;N3800&lt;/namespace&gt;<br>
-        &lt;range&gt;string&lt;/range&gt;<br>
-        &lt;containsIndex/&gt;<br>
-        &lt;pickList&gt;<br>
-        &lt;pickListItem&gt;Trackable Device&lt;/pickListItem&gt;<br>
-        &lt;pickListItem&gt;Capital Equipment&lt;/pickListItem&gt;<br>
-        &lt;pickListItem&gt;Exclude from SB/UMDNS production&lt;/pickListItem&gt;<br>
-        &lt;pickListItem&gt;Counter terrorism suppression&lt;/pickListItem&gt;<br>
-        &lt;pickListItem&gt;Previously Trackable Device&lt;/pickListItem&gt;<br>
-        &lt;/pickList&gt;<br>
-        &lt;/propertyDef&gt;<br></td>
+        <td>CODE_IN_SOURCE (P4)</td>
 
-        <td>This element is not included in the Metathesaurus.</td>
-
-        <td>N/A</td>
-      </tr>
-
-      <tr>
-        <td>&lt;propertyDef&gt;<br>
-        &lt;name&gt;CODE_IN_SOURCE&lt;/name&gt;<br>
-        &lt;code&gt;P4&lt;/code&gt;<br>
-        &lt;id&gt;4&lt;/id&gt;<br>
-        &lt;namespace&gt;N3800&lt;/namespace&gt;<br>
-        &lt;range&gt;real_long_string&lt;/range&gt;<br>
-        &lt;/propertyDef&gt;<br></td>
-
-        <td>Contains the UMDNS code either (1) as assigned by the ECRI legacy system (through July 2005) or (2) as assigned by the Apelon TDE. Associated only with UMDNS preferred concepts, entry terms, related terms or hierarchical terms. UMDNS synonyms are not associated with a CODE_IN_SOURCE.</td>
+        <td>UMDNS Code. Associated only with UMDNS preferred concepts, entry terms, related terms or hierarchical terms. UMDNS synonyms are not associated with a CODE_IN_SOURCE.</td>
 
         <td>MRCONSO.CODE,SCUI,SDUI for "PT", "RT", "SY" and "HT" atoms.<br>
         MRCONSO.CODE,SCUI for "ET" atoms.<br>
         The SDUI value for "ET"s is the "CODE_IN_SOURCE" value of the associated "PT".</td>
       </tr>
-
+	  
       <tr>
-        <td>&lt;propertyDef&gt;<br>
-        &lt;name&gt;DEFINITION&lt;/name&gt;<br>
-        &lt;code&gt;P5&lt;/code&gt;<br>
-        &lt;id&gt;5&lt;/id&gt;<br>
-        &lt;namespace&gt;N3800&lt;/namespace&gt;<br>
-        &lt;range&gt;real_long_string&lt;/range&gt;<br>
-        &lt;/propertyDef&gt;<br>
-        &lt;qualifierDef type="CP"&gt;<br>
-        &lt;name&gt;Definition_Status&lt;/name&gt;<br>
-        &lt;code&gt;Q72&lt;/code&gt;<br>
-        &lt;id&gt;72&lt;/id&gt;<br>
-        &lt;namespace&gt;N3800&lt;/namespace&gt;<br>
-        &lt;pickList&gt;<br>
-        &lt;pickListItem&gt;Releasable&lt;/pickListItem&gt;<br>
-        &lt;pickListItem&gt;NotReleasable&lt;/pickListItem&gt;<br>
-        &lt;pickListItem&gt;Copyediting&lt;/pickListItem&gt;<br>
-        &lt;/pickList&gt;<br>
-        &lt;/qualifierDef&gt;</td>
+        <td>PREFERRED_TERM (P3)</td>
 
-        <td>The "DEFINITION" property contains the UMDNS definition value.<br>
-        The Definition_Status qualifier qualifies the "DEFINITION" property. MRDEF.DEF.</td>
-
-        <td>Only definitions with the qualifier "Releasable" are included in the UMLS Metathesaurus.</td>
-      </tr>
-
-      <tr>
-        <td>&lt;propertyDef&gt;<br>
-        &lt;name&gt;PREFERRED_TERM&lt;/name&gt;<br>
-        &lt;code&gt;P3&lt;/code&gt;<br>
-        &lt;id&gt;3&lt;/id&gt;<br>
-        &lt;namespace&gt;N3800&lt;/namespace&gt;<br>
-        &lt;range&gt;string&lt;/range&gt;<br>
-        &lt;containsIndex/&gt;<br>
-        &lt;/propertyDef&gt;<br></td>
-
-        <td>When present, this element value is redundant to the conceptDef name, and is not used in Metathesaurus source processing.</td>
+        <td>This element value is redundant to the conceptDef name, and is not used directly in Metathesaurus source processing.</td>
 
         <td>N/A</td>
       </tr>
+	  
+	  <tr>
+		<td>SYNONYM (P2)</br>
+		Synonym_Code (Q70)</br>
+		Synonym_Device_Type (Q71)</td>
+		<td>Synonym</td>
+		<td>MRCONSO.STR</br>
+		TTY = SY</br>
+		CODE = CODE_IN_SOURCE of associated PT</td>
+		<td></td>
+	  </tr>
+
+	  <tr>
+		<td>DEVICE_TYPE (P1)</td>
+		<td>DEVICE_TYPE value is used to assign TTY; original value is also represented as an attribute</td>
+		<td>CATEGORY EXPANDED BELOW entry with SEE ALSO references: TTY = PT</br>
+		CATEGORY EXPANDED BELOW entry: TTY = PT</br>
+		Device has SEE ALSO references: TTY = PT</br>
+		Device is a SEE reference: TTY = ET</br>
+		Device is a USE MORE SPECIFIC TERM entry: TTY = RT</br>
+		Hierarchical Term: TTY = HT</br>
+		Main Device Term: TTY = PT</br>
+		NIR entry: TTY = PT</br>
+		</br>
+		MRSAT.ATN = DEVTYPE</br>
+		</td>
+	  </tr>
+	  
+	  <tr>  
+		<td>DEFINITION (P5)</br>
+        Definition_Status(Q72);<br>
+	  </td>
+	  <td>The "DEFINITION" property contains the UMDNS definition value.<br>
+        The Definition_Status qualifier qualifies the "DEFINITION" property.</td>
+
+        <td>MRDEF.DEF. Only definitions with the status "Releasable" are included in the UMLS Metathesaurus.</td>
+      </tr>
+	  
+	  <tr>
+		<td>RELATED_DEVICE (A31)</td>
+		<td>Relationships between concepts</td>
+		<td>MRREL.REL</br>
+		Relationships are also assigned based on Term Types </td>
+      </tr>
+
     </tbody>
   </table>
 </div>

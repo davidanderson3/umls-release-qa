@@ -1,6 +1,6 @@
 title=ICNP (International Classification for Nursing Practice) - Statistics
 date=
-updated=2021-03-03
+updated=2021-05-03
 type=page
 status=published
 ~~~~~~
@@ -16,6 +16,7 @@ status=published
   </div>
  </div>
 </div>
+
 <!--endmenu-->
 <br/><h2>Semantic Type Distribution</h2>
 <table>
@@ -23,7 +24,7 @@ status=published
 <th>Semantic Type ID</th><th>Semantic Type Name</th><th>Count </th><th>Percentage Distribution</th>
 </tr>
 <tr>
-<td>T058</td><td>Health Care Activity</td><td>841</td><td>41.4</td>
+<td>T058</td><td>Health Care Activity</td><td>840</td><td>41.4</td>
 </tr>
 <tr>
 <td>T033</td><td>Finding</td><td>703</td><td>34.6</td>
@@ -32,7 +33,7 @@ status=published
 <td>T065</td><td>Educational Activity</td><td>156</td><td>7.7</td>
 </tr>
 <tr>
-<td>T061</td><td>Therapeutic or Preventive Procedure</td><td>141</td><td>6.9</td>
+<td>T061</td><td>Therapeutic or Preventive Procedure</td><td>142</td><td>7.0</td>
 </tr>
 <tr>
 <td>T184</td><td>Sign or Symptom</td><td>43</td><td>2.1</td>
@@ -68,13 +69,13 @@ status=published
 <td>ICNP_TYPE</td><td>ICNP Type Codes: Defines if the code is a Diagnosis/Outcome (DC), Intervention (IC)</td><td>2041</td>
 </tr>
 <tr>
+<td>TOVSAB</td><td>Versioned source abbreviation for the "to" identifiers of a map set</td><td>1</td>
+</tr>
+<tr>
 <td>MAPSETVSAB</td><td>Versioned source abbreviation for a map set</td><td>1</td>
 </tr>
 <tr>
 <td>MTH_MAPFROMEXHAUSTIVE</td><td>Indicates whether or not the "from" source of a map set is completely mapped</td><td>1</td>
-</tr>
-<tr>
-<td>TOVSAB</td><td>Versioned source abbreviation for the "to" identifiers of a map set</td><td>1</td>
 </tr>
 <tr>
 <td>FROMVSAB</td><td>Versioned source abbreviation for the "from" identifiers of a map set</td><td>1</td>
@@ -83,22 +84,22 @@ status=published
 <td>MAPSETRSAB</td><td>Root source abbreviation for a map set</td><td>1</td>
 </tr>
 <tr>
-<td>FROMRSAB</td><td>Root source abbreviation for the "from" identifiers of a map set</td><td>1</td>
-</tr>
-<tr>
 <td>MTH_MAPSETCOMPLEXITY</td><td>Indicates the overall complexity of a map set</td><td>1</td>
 </tr>
 <tr>
 <td>MAPSETVERSION</td><td>Version of the map set</td><td>1</td>
 </tr>
 <tr>
+<td>FROMRSAB</td><td>Root source abbreviation for the "from" identifiers of a map set</td><td>1</td>
+</tr>
+<tr>
 <td>MTH_MAPTOCOMPLEXITY</td><td>Indicates the complexity of "to" expressions in a map set</td><td>1</td>
 </tr>
 <tr>
-<td>MTH_MAPFROMCOMPLEXITY</td><td>Indicates the complexity of "from" expressions used in a map set</td><td>1</td>
+<td>MTH_MAPTOEXHAUSTIVE</td><td>Indicates whether or not the "to" source is completely mapped</td><td>1</td>
 </tr>
 <tr>
-<td>MTH_MAPTOEXHAUSTIVE</td><td>Indicates whether or not the "to" source is completely mapped</td><td>1</td>
+<td>MTH_MAPFROMCOMPLEXITY</td><td>Indicates the complexity of "from" expressions used in a map set</td><td>1</td>
 </tr>
 <tr>
 <td>TORSAB</td><td>Root source abbreviation for the "to" identifiers of a map set</td><td>1</td>
@@ -110,13 +111,10 @@ status=published
 <th>Relation Name/Additional Label</th><th>Expanded Form</th><th>Count </th>
 </tr>
 <tr>
-<td>SIB/</td><td>has sibling relationship in a Metathesaurus source vocabulary./Empty relationship attribute</td><td>529250</td>
+<td>PAR/</td><td>has parent relationship in a Metathesaurus source vocabulary /Empty relationship attribute</td><td>2085</td>
 </tr>
 <tr>
 <td>CHD/</td><td>has child relationship in a Metathesaurus source vocabulary /Empty relationship attribute</td><td>2085</td>
-</tr>
-<tr>
-<td>PAR/</td><td>has parent relationship in a Metathesaurus source vocabulary /Empty relationship attribute</td><td>2085</td>
 </tr>
 <tr>
 <td>SY/mapped_to</td><td>source asserted synonymy./Mapped to</td><td>1522</td>
@@ -125,10 +123,10 @@ status=published
 <td>SY/mapped_from</td><td>source asserted synonymy./Mapped from</td><td>1522</td>
 </tr>
 <tr>
-<td>SY/mth_has_british_form</td><td>source asserted synonymy./MTH has British form</td><td>123</td>
+<td>SY/mth_british_form_of</td><td>source asserted synonymy./MTH British form of</td><td>123</td>
 </tr>
 <tr>
-<td>SY/mth_british_form_of</td><td>source asserted synonymy./MTH British form of</td><td>123</td>
+<td>SY/mth_has_british_form</td><td>source asserted synonymy./MTH has British form</td><td>123</td>
 </tr>
 </table>
 <h2>Definition Count</h2>
@@ -146,64 +144,64 @@ status=published
 <th>Source</th><th># Concepts Sharing Atom/# Total Concepts</th><th>Percentage Distribution</th>
 </tr>
 <tr>
-<td>SNOMEDCT_US</td><td>814/2029</td><td>40.1</td>
+<td>SNOMEDCT_US</td><td>815/2029</td><td>40.2</td>
 </tr>
 <tr>
-<td>SCTSPA</td><td>808/2029</td><td>39.8</td>
+<td>SCTSPA</td><td>809/2029</td><td>39.9</td>
 </tr>
 <tr>
-<td>CHV</td><td>320/2029</td><td>15.8</td>
+<td>CHV</td><td>321/2029</td><td>15.8</td>
 </tr>
 <tr>
-<td>RCD</td><td>310/2029</td><td>15.3</td>
+<td>RCD</td><td>311/2029</td><td>15.3</td>
 </tr>
 <tr>
-<td>MEDCIN</td><td>284/2029</td><td>14.0</td>
+<td>MEDCIN</td><td>285/2029</td><td>14.0</td>
 </tr>
 <tr>
-<td>SNMI</td><td>245/2029</td><td>12.1</td>
+<td>SNMI</td><td>247/2029</td><td>12.2</td>
 </tr>
 <tr>
-<td>LNC</td><td>223/2029</td><td>11.0</td>
+<td>LNC</td><td>226/2029</td><td>11.1</td>
 </tr>
 <tr>
-<td>MDR</td><td>199/2029</td><td>9.8</td>
+<td>MDR</td><td>201/2029</td><td>9.9</td>
 </tr>
 <tr>
-<td>MDRBPO</td><td>199/2029</td><td>9.8</td>
+<td>MDRBPO</td><td>201/2029</td><td>9.9</td>
 </tr>
 <tr>
-<td>MDRCZE</td><td>199/2029</td><td>9.8</td>
+<td>MDRCZE</td><td>201/2029</td><td>9.9</td>
 </tr>
 <tr>
-<td>MDRDUT</td><td>199/2029</td><td>9.8</td>
+<td>MDRDUT</td><td>201/2029</td><td>9.9</td>
 </tr>
 <tr>
-<td>MDRFRE</td><td>199/2029</td><td>9.8</td>
+<td>MDRFRE</td><td>201/2029</td><td>9.9</td>
 </tr>
 <tr>
-<td>MDRGER</td><td>199/2029</td><td>9.8</td>
+<td>MDRGER</td><td>201/2029</td><td>9.9</td>
 </tr>
 <tr>
-<td>MDRHUN</td><td>199/2029</td><td>9.8</td>
+<td>MDRHUN</td><td>201/2029</td><td>9.9</td>
 </tr>
 <tr>
-<td>MDRITA</td><td>199/2029</td><td>9.8</td>
+<td>MDRITA</td><td>201/2029</td><td>9.9</td>
 </tr>
 <tr>
-<td>MDRJPN</td><td>199/2029</td><td>9.8</td>
+<td>MDRJPN</td><td>201/2029</td><td>9.9</td>
 </tr>
 <tr>
-<td>MDRKOR</td><td>199/2029</td><td>9.8</td>
+<td>MDRKOR</td><td>201/2029</td><td>9.9</td>
 </tr>
 <tr>
-<td>MDRPOR</td><td>199/2029</td><td>9.8</td>
+<td>MDRPOR</td><td>201/2029</td><td>9.9</td>
 </tr>
 <tr>
-<td>MDRRUS</td><td>199/2029</td><td>9.8</td>
+<td>MDRRUS</td><td>201/2029</td><td>9.9</td>
 </tr>
 <tr>
-<td>MDRSPA</td><td>199/2029</td><td>9.8</td>
+<td>MDRSPA</td><td>201/2029</td><td>9.9</td>
 </tr>
 <tr>
 <td>NANDA-I</td><td>193/2029</td><td>9.5</td>
@@ -212,31 +210,31 @@ status=published
 <td>CCC</td><td>163/2029</td><td>8.0</td>
 </tr>
 <tr>
-<td>MSH</td><td>160/2029</td><td>7.9</td>
+<td>MSHCZE</td><td>160/2029</td><td>7.9</td>
 </tr>
 <tr>
-<td>MSHCZE</td><td>158/2029</td><td>7.8</td>
+<td>MSH</td><td>161/2029</td><td>7.9</td>
 </tr>
 <tr>
-<td>MSHFRE</td><td>156/2029</td><td>7.7</td>
+<td>MSHFRE</td><td>158/2029</td><td>7.8</td>
 </tr>
 <tr>
-<td>MSHNOR</td><td>156/2029</td><td>7.7</td>
+<td>MSHNOR</td><td>157/2029</td><td>7.7</td>
 </tr>
 <tr>
-<td>NCI</td><td>150/2029</td><td>7.4</td>
+<td>NCI</td><td>154/2029</td><td>7.6</td>
 </tr>
 <tr>
-<td>MSHITA</td><td>149/2029</td><td>7.3</td>
+<td>MSHITA</td><td>150/2029</td><td>7.4</td>
 </tr>
 <tr>
-<td>MSHPOR</td><td>149/2029</td><td>7.3</td>
+<td>MSHPOR</td><td>150/2029</td><td>7.4</td>
 </tr>
 <tr>
-<td>MSHSPA</td><td>149/2029</td><td>7.3</td>
+<td>MSHSPA</td><td>150/2029</td><td>7.4</td>
 </tr>
 <tr>
-<td>MSHGER</td><td>147/2029</td><td>7.2</td>
+<td>MSHGER</td><td>148/2029</td><td>7.3</td>
 </tr>
 <tr>
 <td>SNM</td><td>135/2029</td><td>6.7</td>
@@ -248,19 +246,19 @@ status=published
 <td>ICPC2P</td><td>134/2029</td><td>6.6</td>
 </tr>
 <tr>
-<td>AOD</td><td>129/2029</td><td>6.4</td>
+<td>AOD</td><td>130/2029</td><td>6.4</td>
 </tr>
 <tr>
-<td>MSHPOL</td><td>126/2029</td><td>6.2</td>
+<td>MSHSWE</td><td>127/2029</td><td>6.3</td>
 </tr>
 <tr>
-<td>MSHRUS</td><td>126/2029</td><td>6.2</td>
+<td>MSHPOL</td><td>128/2029</td><td>6.3</td>
 </tr>
 <tr>
-<td>MSHSWE</td><td>126/2029</td><td>6.2</td>
+<td>MSHRUS</td><td>128/2029</td><td>6.3</td>
 </tr>
 <tr>
-<td>MSHDUT</td><td>124/2029</td><td>6.1</td>
+<td>MSHDUT</td><td>125/2029</td><td>6.2</td>
 </tr>
 <tr>
 <td>CCPSS</td><td>120/2029</td><td>5.9</td>
@@ -269,16 +267,16 @@ status=published
 <td>ICPC2ICD10ENG</td><td>116/2029</td><td>5.7</td>
 </tr>
 <tr>
-<td>PSY</td><td>114/2029</td><td>5.6</td>
+<td>MSHFIN</td><td>113/2029</td><td>5.6</td>
 </tr>
 <tr>
-<td>MSHFIN</td><td>112/2029</td><td>5.5</td>
+<td>PSY</td><td>114/2029</td><td>5.6</td>
 </tr>
 <tr>
 <td>CSP</td><td>109/2029</td><td>5.4</td>
 </tr>
 <tr>
-<td>MSHJPN</td><td>109/2029</td><td>5.4</td>
+<td>MSHJPN</td><td>110/2029</td><td>5.4</td>
 </tr>
 <tr>
 <td>CPM</td><td>104/2029</td><td>5.1</td>
@@ -290,37 +288,37 @@ status=published
 <td>OMIM</td><td>93/2029</td><td>4.6</td>
 </tr>
 <tr>
-<td>CST</td><td>89/2029</td><td>4.4</td>
+<td>CST</td><td>90/2029</td><td>4.4</td>
 </tr>
 <tr>
 <td>MSHSCR</td><td>85/2029</td><td>4.2</td>
 </tr>
 <tr>
-<td>WHO</td><td>85/2029</td><td>4.2</td>
+<td>WHO</td><td>86/2029</td><td>4.2</td>
 </tr>
 <tr>
-<td>WHOFRE</td><td>85/2029</td><td>4.2</td>
+<td>WHOFRE</td><td>86/2029</td><td>4.2</td>
 </tr>
 <tr>
-<td>WHOPOR</td><td>85/2029</td><td>4.2</td>
+<td>WHOPOR</td><td>86/2029</td><td>4.2</td>
 </tr>
 <tr>
-<td>DXP</td><td>83/2029</td><td>4.1</td>
-</tr>
-<tr>
-<td>WHOGER</td><td>83/2029</td><td>4.1</td>
+<td>DXP</td><td>84/2029</td><td>4.1</td>
 </tr>
 <tr>
 <td>HPO</td><td>84/2029</td><td>4.1</td>
 </tr>
 <tr>
+<td>WHOGER</td><td>84/2029</td><td>4.1</td>
+</tr>
+<tr>
 <td>NCI_NICHD</td><td>79/2029</td><td>3.9</td>
 </tr>
 <tr>
-<td>WHOSPA</td><td>79/2029</td><td>3.9</td>
+<td>COSTAR</td><td>80/2029</td><td>3.9</td>
 </tr>
 <tr>
-<td>COSTAR</td><td>80/2029</td><td>3.9</td>
+<td>WHOSPA</td><td>80/2029</td><td>3.9</td>
 </tr>
 <tr>
 <td>PCDS</td><td>75/2029</td><td>3.7</td>
@@ -344,7 +342,7 @@ status=published
 <td>MEDLINEPLUS</td><td>61/2029</td><td>3.0</td>
 </tr>
 <tr>
-<td>NCI_NCI-GLOSS</td><td>52/2029</td><td>2.6</td>
+<td>NCI_NCI-GLOSS</td><td>53/2029</td><td>2.6</td>
 </tr>
 <tr>
 <td>MTHICD9</td><td>50/2029</td><td>2.5</td>
@@ -353,13 +351,13 @@ status=published
 <td>NCI_CTCAE</td><td>51/2029</td><td>2.5</td>
 </tr>
 <tr>
+<td>NCI_FDA</td><td>51/2029</td><td>2.5</td>
+</tr>
+<tr>
 <td>BI</td><td>46/2029</td><td>2.3</td>
 </tr>
 <tr>
 <td>ICD10AM</td><td>44/2029</td><td>2.2</td>
-</tr>
-<tr>
-<td>NCI_FDA</td><td>42/2029</td><td>2.1</td>
 </tr>
 <tr>
 <td>RCDSY</td><td>43/2029</td><td>2.1</td>
@@ -368,7 +366,13 @@ status=published
 <td>NCI_CTRP</td><td>40/2029</td><td>2.0</td>
 </tr>
 <tr>
+<td>MEDLINEPLUS_SPA</td><td>38/2029</td><td>1.9</td>
+</tr>
+<tr>
 <td>RCDAE</td><td>38/2029</td><td>1.9</td>
+</tr>
+<tr>
+<td>ALT</td><td>36/2029</td><td>1.8</td>
 </tr>
 <tr>
 <td>DMDICD10</td><td>36/2029</td><td>1.8</td>
@@ -386,9 +390,6 @@ status=published
 <td>PDQ</td><td>34/2029</td><td>1.7</td>
 </tr>
 <tr>
-<td>ALT</td><td>35/2029</td><td>1.7</td>
-</tr>
-<tr>
 <td>PNDS</td><td>32/2029</td><td>1.6</td>
 </tr>
 <tr>
@@ -396,6 +397,9 @@ status=published
 </tr>
 <tr>
 <td>ICPC2EENG</td><td>28/2029</td><td>1.4</td>
+</tr>
+<tr>
+<td>NCI_caDSR</td><td>29/2029</td><td>1.4</td>
 </tr>
 <tr>
 <td>ICPC</td><td>26/2029</td><td>1.3</td>

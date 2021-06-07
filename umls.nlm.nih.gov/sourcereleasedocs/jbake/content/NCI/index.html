@@ -1,6 +1,6 @@
 title=NCI (NCI Thesaurus) - Synopsis
 date=2018-05-07
-updated=2020-11-02
+updated=2021-05-03
 type=page
 status=published
 ~~~~~~
@@ -18,6 +18,27 @@ status=published
   </div>
  </div>
 </div>
+
+
+<div class="border-top border-bottom p-2">
+   <div class="pl-2">
+      <strong>Search NCI in the UMLS Metathesaurus</strong> 
+   </div>
+   <div class="row pt-2 px-4">
+      <form class="form-inline" action="https://uts.nlm.nih.gov/uts/umls/searchResults" method="GET" target="_blank">
+         <div class="input-group">
+            <input class="form-control" type="text" name="searchString" value=""/>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <input id="NCI" name="vocabulary" type="hidden" value="NCI">
+            <input id="returnType" name="returnType" type="hidden" value="code">
+         </div>
+      </form>
+   </div>
+   <div class="pl-2 pt-2">
+      (requires a free <a href="https://uts.nlm.nih.gov/uts/signup-login" target="_blank">UMLS license</a>)
+   </div>
+</div>
+
 <!--endmenu-->
 <br/>
 <div id = "summary">
@@ -52,11 +73,13 @@ NCI Thesaurus provides definitions, synonyms, and other information on nearly 10
 <li><a href="../NCI_CDC/index.html">NCI_CDC</a></li>
 <li><a href="../NCI_CDISC-GLOSS/index.html">NCI_CDISC-GLOSS</a></li>
 <li><a href="../NCI_CDISC/index.html">NCI_CDISC</a></li>
+<li><a href="../NCI_caDSR/index.html">NCI_caDSR</a></li>
 	<li><a href="../NCI_CELLOSAURUS/index.html">NCI_CELLOSAURUS</a></li>
 <li><a href="../NCI_CRCH/index.html">NCI_CRCH</a></li>
 <li><a href="../NCI_CTCAE/index.html">NCI_CTCAE</a></li>
 <li><a href="../NCI_CTCAE_3/index.html">NCI_CTCAE_3</a></li>
 <li><a href="../NCI_CTCAE_5/index.html">NCI_CTCAE_5</a></li>
+<li><a href="../NCI_CTDC/index.html">NCI_CTDC</a></li>
 <li><a href="../NCI_CTEP-SDC/index.html">NCI_CTEP-SDC</a></li>
 <li><a href="../NCI_CTRP/index.html">NCI_CTRP 
 </a></li>
@@ -79,6 +102,7 @@ NCI Thesaurus provides definitions, synonyms, and other information on nearly 10
 <li><a href="../NCI_NCI-HL7/index.html">NCI_NCI-HL7</a></li>
 <li><a href="../NCI_NCPDP/index.html">NCI_NCPDP</a></li>
 <li><a href="../NCI_NICHD/index.html">NCI_NICHD</a></li>
+<li><a href="../NCI_PCDC/index.html">NCI_PCDC</a></li>
 <li><a href="../NCI_PI-RADS/index.html">NCI_PI-RADS</a></li>
 <li><a href="../NCI_PID/index.html">NCI_PID</a></li>
 <li><a href="../NCI_RENI/index.html">NCI_RENI</a></li>

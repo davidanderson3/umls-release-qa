@@ -1,6 +1,6 @@
 title=LNC (LOINC) - Metathesaurus Representation
 date=2018-05-07
-updated=2020-11-02
+updated=2021-05-03
 type=page
 status=published
 ~~~~~~
@@ -18,6 +18,7 @@ status=published
   </div>
  </div>
 </div>
+
 <!--endmenu-->
 <br/>
     <p>This page lists UMLS Metathesaurus data elements and traces them
@@ -30,7 +31,7 @@ status=published
     	<div class="col-sm-auto border-left"><a href="#relationships">Relationships</a></div>
     	<div class="col-sm-auto border-left"><a href="#mappings">Mappings</a></div>
     </div>
-    <p><strong>VSAB: </strong>LNC268</p>
+    <p><strong>VSAB: </strong>LNC269</p>
     <hr>
     <div id="rep_change_summary" class="rep_block_level_one"></div>
       <h3>Summary of Changes:</h3>
@@ -42,19 +43,82 @@ status=published
       			<th>Class</th>
       		</tr>
       		<tr>
-      			<td>EYE.LENSOMETRY</td>
-      			<td>Lensometry</td>
+      			<td>PANEL.SURVEY.BADS</td>
+      			<td>Brief Anxiety and Depression Scale set</td>
       		</tr>
       		<tr>
-         <td>PANEL.SURVEY.SEEK</td>
-         <td>Safe Environment for Every Kid</td>
+         <td>PANEL.SURVEY.BCAT</td>
+         <td>Brief Cognitive Assessment Tool set</td>
         </tr>
         <tr>
-         <td>SURVEY.SEEK</td>
-         <td>Safe Environment for Every Kid</td>
+         <td>PANEL.SURVEY.BRIEF</td>
+         <td>BRIEF Health Literacy Screening Tool set</td>
+        </tr>
+        <tr>
+      			<td>PANEL.SURVEY.HITS</td>
+      			<td>HITS Survey set</td>
+      		</tr>
+      		<tr>
+         <td>PANEL.SURVEY.NIDA</td>
+         <td>National Institute on Drug Abuse set</td>
+        </tr>
+        <tr>
+         <td>PANEL.SURVEY.NPASS</td>
+         <td>Neonatal Pain, Agitation and Sedation Scale set</td>
+        </tr>
+        <tr>
+      			<td>PANEL.SURVEY.SDOH</td>
+      			<td>Social determinants of health set</td>
+      		</tr>
+      		<tr>
+         <td>PANEL.SURVEY.SKINDEX</td>
+         <td>Skindex set</td>
+        </tr>
+        <tr>
+         <td>SURVEY.BADS</td>
+         <td>Brief Anxiety and Depression Scale (BADS)</td>
+        </tr>
+        <tr>
+         <td>SURVEY.BCAT</td>
+         <td>Brief Cognitive Assessment Tool (BCAT)</td>
+        </tr>
+        <tr>
+      			<td>SURVEY.BRIEF</td>
+      			<td>BRIEF Survey</td>
+      		</tr>
+      		<tr>
+         <td>SURVEY.HITS</td>
+         <td>HITS Survey</td>
+        </tr>
+        <tr>
+         <td>SURVEY.NIDA</td>
+         <td>National Institute on Drug Abuse</td>
+        </tr>
+        <tr>
+         <td>SURVEY.NPASS</td>
+         <td>Neonatal Pain, Agitation and Sedation Scale)</td>
+        </tr>
+        <tr>
+         <td>SURVEY.SDOH</td>
+         <td>Social Determinants of Health)</td>
+        </tr>
+        <tr>
+      			<td>SURVEY.SKINDEX</td>
+      			<td>Skindex</td>
+      		</tr>
+      		<tr>
+         <td>EYE.ERG</td>
+         <td>electroretinogram concepts</td>
         </tr>
        </tbody>
       </table>
+      
+      <p>Deprecated ATNs:</p>
+      <ul>
+       <li>LSP</li>
+       <li>TOP_2000_LAB_RESULTS_SI</li>
+       <li>TOP_2000_LAB_RESULTS_US</li>
+      </ul>
       <br/>
 	  <div>
     <h4>Original Files:</h4>
@@ -68,8 +132,6 @@ status=published
       <li>PanelsAndForms.csv</li>
       <li>LoincIeeeMedicalDeviceCodeMappingTable.csv</li>
       <li>LoincRsnaRadiologyPlaybook.csv</li>
-      <li>Top2000CommonLabResultsSi.csv</li>
-      <li>Top2000CommonLabResultsUs.csv</li>
       <li>LoincUniversalLabOrdersValueSet.csv</li>
       <li>AnswerList.csv</li>
       <li>LoincAnswerListLink.csv</li>
@@ -83,9 +145,9 @@ status=published
 	  
     </ul>
     <p>In addition, the UMLS receives two files to facilitate building
-      the hierarchy. For 2.68 these files were:
+      the hierarchy. For 2.69 these files were:
       "PartLinks.csv,"  and "Parts.csv."  Additional information, such as
-      expansions of abbreviations, is extracted from LOINCManual.pdf. </p>
+      expansions of abbreviations, is extracted from LOINCUsersGuide.pdf. </p>
   </div>
   <hr>
     <div id="rep_identifiers" class="rep_block_level_one">
@@ -93,7 +155,7 @@ status=published
       <hr>
       <h4>Identifiers</h4>
       <p>LOINC Identifiers in the UMLS are generally based on field 1 of
-        loinc.csv, or field 1 of LOINC_PARTS (L_PART_ID). For some
+        Loinc.csv, or field 1 of Parts.csv (L_PART_ID). For some
         termtypes, the atom may be associated with multiple LOINC
         entities. For example, a component may be a part of multiple
         fully-specified names. In these cases, the atom (e.g. a CN, or
@@ -122,7 +184,7 @@ status=published
       <h4>Expansions</h4>
       <p>Expanded forms of certain atoms are created during
         Metathesaurus source processing by applying abbreviation
-        expansions extracted from the LOINC Manual. In these cases, the
+        expansions extracted from the LOINC Users Guide. In these cases, the
         expanded form is generally assigned the same identifier as its
         original form. Expansions may also include converting patterns
         such as "little e" or "super little b" to "e" or "^b"
@@ -144,21 +206,21 @@ status=published
                 CODE = MTHU#, assigned during Metathesaurus source
                 processing; same as CODE for respective MTH_CN as
                 applicable.<br/>
-                STR = loinc.csv field 2, subfield 1 (COMPONENT).</td>
+                STR = Loinc.csv field 2, subfield 1 (COMPONENT).</td>
             </tr>
             <tr>
               <td>DN</td>
               <td>Display Name:<br/>
-                CODE = loinc.csv field 1 (LOINC_NUM)<br/>
-                STR = loinc.csv field 46 (DisplayName)</td>
+                CODE = Loinc.csv field 1 (LOINC_NUM)<br/>
+                STR = Loinc.csv field 45 (DisplayName)</td>
             </tr>
             <tr>
               <td>HC</td>
               <td>Hierarchical class:<br/>
                 CODE = MTHU#, assigned during Metathesaurus source
                 processing (same as CODE for respective HS).<br/>
-                STR = expanded form of loinc.csv field 8 for CLASS or
-                expanded form of loinc.csv field 14 for CLASSTYPE.<br/>
+                STR = expanded form of Loinc.csv field 8 for CLASS or
+                expanded form of Loinc.csv field 14 for CLASSTYPE.<br/>
                 An additional HC atom, "LOINCCLASSTYPES," is added
                 during Metathesaurus source processing as a hierarchical
                 placeholder.</td>
@@ -168,8 +230,8 @@ status=published
               <td>Short or alternate version of hierarchical term:<br/>
                 CODE = MTHU#, assigned during Metathesaurus source
                 processing (same as CODE for respective HC).<br/>
-                STR = value of loinc.csv field 8 for CLASS, or value of
-                loinc.csv field 14 for CLASSTYPE.</td>
+                STR = value of Loinc.csv field 8 for CLASS, or value of
+                Loinc.csv field 14 for CLASSTYPE.</td>
             </tr>
             <tr>
               <td>LA</td>
@@ -180,8 +242,8 @@ status=published
             <tr>
               <td>LC</td>
               <td>Long common name:<br/>
-                CODE = loinc.csv field 1 (LOINC_NUM)<br/>
-                STR = loinc.csv field 29 (LONG_COMMON_NAME)<br/>
+                CODE = Loinc.csv field 1 (LOINC_NUM)<br/>
+                STR = Loinc.csv field 28 (LONG_COMMON_NAME)<br/>
                 TTY = LC is assigned if field 12 (STATUS) is not =
                 "DEPRECATED"</td>
             </tr>
@@ -194,8 +256,8 @@ status=published
             <tr>
               <td>LN</td>
               <td>Official fully-specified name:<br/>
-                CODE = loinc.csv field 1 (LOINC_NUM)<br/>
-                STR = loinc.csv fields 2-7, concatenated with colons,
+                CODE = Loinc.csv field 1 (LOINC_NUM)<br/>
+                STR = Loinc.csv fields 2-7, concatenated with colons,
                 i.e. F2:F3:F4:F5:F6:F7<br/>
                 TTY = LN is assigned if field 12 (STATUS) is not =
                 "DEPRECATED"</td>
@@ -203,8 +265,8 @@ status=published
             <tr>
               <td>LO</td>
               <td>Obsolete official fully specified name:<br/>
-                CODE = loinc.csv field 1 (LOINC_NUM)<br/>
-                STR = loinc.csv fields 2-7, concatenated with colons,
+                CODE = Loinc.csv field 1 (LOINC_NUM)<br/>
+                STR = Loinc.csv fields 2-7, concatenated with colons,
                 i.e. F2:F3:F4:F5:F6:F7<br/>
                 TTY = LO is assigned if field 12 (STATUS) = "DEPRECATED"<br/>
                 SUPPRESS = "O"</td>
@@ -212,16 +274,16 @@ status=published
             <tr>
               <td>LPDN</td>
               <td>Parts display name:<br/>
-                CODE = LOINC_PARTS_*.txt field 1 (L_PART_ID)<br/>
-                STR = LOINC_PARTS_*.txt field 4 (DISPLAY_NAME)<br/>
+                CODE = Parts.csv field 1 (L_PART_ID)<br/>
+                STR = Parts.csv field 4 (DISPLAY_NAME)<br/>
                 LPDN atoms are only created for strings containing the
                 pattern "Allergen Mix."</td>
             </tr>
             <tr>
               <td>LPN</td>
               <td>Parts name:<br/>
-                CODE = LOINC_PARTS_*.txt field 1 (L_PART_ID)<br/>
-                STR = LOINC_PARTS_*.txt field 3 (NAME_CASE_INSENSITIVE)<br/>
+                CODE = Parts.csv field 1 (L_PART_ID)<br/>
+                STR = Parts.csv field 3 (NAME_CASE_INSENSITIVE)<br/>
                 An additional LPN, "LOINCPARTS," is added during
                 Metathesaurus source processing as a hierarchical
                 placeholder.</td>
@@ -231,7 +293,7 @@ status=published
               <td>Expanded system/sample type:<br/>
                 CODE = MTHU#, assigned during Metathesaurus source
                 processing<br/>
-                STR = Expanded form of loinc.csv field 5, subfield 1
+                STR = Expanded form of Loinc.csv field 5, subfield 1
                 (SYSTEM).</td>
             </tr>
             <tr>
@@ -240,15 +302,15 @@ status=published
                 CODE = MTHU#, assigned during Metathesaurus source
                 processing; same as CODE for respective CN as
                 applicable.<br/>
-                STR = Expanded form of loinc.csv field 2, subfield 1
-                COMPONENT).</td>
+                STR = Expanded form of Loinc.csv field 2, subfield 1
+                (COMPONENT).</td>
             </tr>
             <tr>
               <td>MTH_LN</td>
               <td>Official fully specified name with expanded
                 abbreviations:<br/>
-                CODE = loinc.csv field 1 (LOINC_NUM)<br/>
-                STR = Expanded form of loinc.csv fields 2-7,
+                CODE = Loinc.csv field 1 (LOINC_NUM)<br/>
+                STR = Expanded form of Loinc.csv fields 2-7,
                 concatenated with colons, i.e. F2:F3:F4:F5:F6:F7<br/>
                 TTY = MTH_LN is assigned if field 12 (STATUS) is not =
                 "DEPRECATED"</td>
@@ -256,8 +318,8 @@ status=published
             <tr>
               <td>MTH_LO</td>
               <td>Expanded obsolete fully specified name:<br/>
-                CODE = loinc.csv field 1 (LOINC_NUM)<br/>
-                STR = Expanded form of loinc.csv fields 2-7,
+                CODE = Loinc.csv field 1 (LOINC_NUM)<br/>
+                STR = Expanded form of Loinc.csv fields 2-7,
                 concatenated with colons, i.e. F2:F3:F4:F5:F6:F7<br/>
                 TTY = MTH_LO is assigned if field 12 (STATUS) =
                 "DEPRECATED"<br/>
@@ -266,8 +328,8 @@ status=published
             <tr>
               <td>OLC</td>
               <td>Obsolete long common name:<br/>
-                CODE = loinc.csv field 1 (LOINC_NUM)<br/>
-                STR = loinc.csv field 30 (LONG_COMMON_NAME)<br/>
+                CODE = Loinc.csv field 1 (LOINC_NUM)<br/>
+                STR = Loinc.csv field 28 (LONG_COMMON_NAME)<br/>
                 TTY = OLC is assigned if field 12 (STATUS) =
                 "DEPRECATED"<br/>
                 SUPPRESS = O</td>
@@ -282,17 +344,17 @@ status=published
             <tr>
               <td>OOSN</td>
               <td>Obsolete official short name:<br/>
-                CODE = loinc.csv field 1 (LOINC_NUM)<br/>
-                STR = loinc.csv field 24 (SHORTNAME)<br/>
-                TTY = OOSN is assigned if field 13 (STATUS) =
+                CODE = Loinc.csv field 1 (LOINC_NUM)<br/>
+                STR = Loinc.csv field 22 (SHORTNAME)<br/>
+                TTY = OOSN is assigned if field 12 (STATUS) =
                 "DEPRECATED"<br/>
                 SUPPRESS = "O"</td>
             </tr>
             <tr>
               <td>OSN</td>
               <td>Official short name:<br/>
-                CODE = loinc.csv field 1 (LOINC_NUM)<br/>
-                STR = loinc.csv field 24 (SHORTNAME)<br/>
+                CODE = Loinc.csv field 1 (LOINC_NUM)<br/>
+                STR = Loinc.csv field 22 (SHORTNAME)<br/>
                 TTY OSN is assigned if field 12 (STATUS) is not =
                 "DEPRECATED"</td>
             </tr>
@@ -338,7 +400,7 @@ status=published
             </tr>
             <tr>
               <td>ASK_AT_ORDER_ENTRY</td>
-              <td>loinc.csv field 42<br/>
+              <td>Loinc.csv field 41<br/>
               </td>
             </tr>
             <tr>
@@ -347,36 +409,32 @@ status=published
             </tr>
             <tr>
               <td>COPYRIGHT</td>
-              <td>loinc.csv field 27 (EXTERNAL_COPYRIGHT_NOTICE)</td>
+              <td>Loinc.csv field 26 (EXTERNAL_COPYRIGHT_NOTICE)</td>
             </tr>
             <tr>
               <td>CHANGE_REASON_PUBLIC</td>
-              <td>loinc.csv field 36</td>
+              <td>Loinc.csv field 34</td>
             </tr>
             <tr>
               <td>COMMON_SI_TEST_RANK</td>
-              <td>loinc.csv field 39<br/>
+              <td>Loinc.csv field 37<br/>
               </td>
             </tr>
             <tr>
               <td>COMMON_TEST_RANK</td>
-              <td>loinc.csv field 37</td>
+              <td>Loinc.csv field 35</td>
             </tr>
             <tr>
               <td>COMMON_ORDER_RANK</td>
-              <td>loinc.csv field 38</td>
+              <td>Loinc.csv field 36</td>
             </tr>
             <tr>
               <td>CONSUMER_NAME</td>
-              <td>loinc.csv field 13 - not populated. Use ConsumerName file</td>
+              <td>Loinc.csv field 13 - not populated. Use ConsumerName.csv file</td>
             </tr>
             <tr>
               <td>DESCRIPTION</td>
               <td>ParentGroupAttributes.csv field 2</td>
-            </tr>
-            <tr>
-              <td>DOCUMENT_SECTION</td>
-              <td>loinc.csv field 31</td>
             </tr>
             <tr>
               <td>EQUIVALENCE</td>
@@ -384,19 +442,19 @@ status=published
             </tr>
             <tr>
               <td>EXAMPLE_SI_UCUM_NITS</td>
-              <td>loinc.csv field 33</td>
+              <td>Loinc.csv field 31</td>
             </tr>
             <tr>
               <td>EXAMPLE_UCUM_UNITS</td>
-              <td>loinc.csv field 32</td>
+              <td>Loinc.csv field 30</td>
             </tr>
             <tr>
               <td>EXAMPLE_UNITS</td>
-              <td>loinc.csv field 28</td>
+              <td>Loinc.csv field 27</td>
             </tr>
             <tr>
               <td>EXTERNAL_COPYRIGHT_LINK</td>
-              <td>loinc.csv field 41</td>
+              <td>Loinc.csv field 39</td>
             </tr>
             <tr>
               <td>FROMRSAB</td>
@@ -410,86 +468,74 @@ status=published
             </tr>
             <tr>
               <td>HL7_ATTACHMENT_REQUEST</td>
-              <td>loinc.csv field 46</td>
+              <td>Loinc.csv field 44</td>
             </tr>
             <tr>
               <td>HL7_ATTACHMENT_STRUCTURE</td>
-              <td>loinc.csv field 40</td>
+              <td>Loinc.csv field 38</td>
             </tr>
             <tr>
               <td>HL7_FIELD_SUBFIELD_ID</td>
-              <td>loinc.csv field 26</td>
+              <td>Loinc.csv field 25</td>
             </tr>
             <tr>
               <td>IEEE_CF_CODE10</td>
               <td>LoincIeeeMedicalDeviceCodeMappingTable.csv, field 3</td>
             </tr>
             <tr>
-              <td>IEEE_DESCRIPTION</td>
-              <td>LoincIeeeMedicalDeviceCodeMappingTable.csv, field 5</td>
-            </tr>
-            <tr>
-              <td>IEEE_DIM</td>
-              <td>LoincIeeeMedicalDeviceCodeMappingTable.csv, field 6</td>
-            </tr>
-            <tr>
               <td>IEEE_REFID</td>
               <td>LoincIeeeMedicalDeviceCodeMappingTable.csv, field 4</td>
-            </tr>
-            <tr>
-              <td>IEEE_UOM_UCUM</td>
-              <td>LoincIeeeMedicalDeviceCodeMappingTable.csv, field 7</td>
             </tr>
             <tr>
               <td>IMAGING_DOCUMENT_VALUE_SET</td>
       			     <td>A subset of document codes in LOINC that represent imaging procedures and reports, as indicated in ImagingDocumentCodes.csv.  ATV = "TRUE" when appropriate.
             <tr>
               <td>LCD [CDISC common tests]</td>
-              <td>loinc.csv field 25 (CDISC_COMMON_TESTS)</td>
+              <td>Loinc.csv field 24 (CDISC_COMMON_TESTS)</td>
             </tr>
             <tr>
               <td>LCL [Class]</td>
-              <td>loinc.csv field 8 (CLASS)</td>
+              <td>Loinc.csv field 8 (CLASS)</td>
             </tr>
             <tr>
               <td>LCN [Classtype]</td>
-              <td>loinc.csv field 14 (CLASSTYPE)</td>
+              <td>Loinc.csv field 14 (CLASSTYPE)</td>
             </tr>
             <tr>
               <td>LCS [Status]</td>
-              <td>loinc.csv field 12 (STATUS)</td>
+              <td>Loinc.csv field 12 (STATUS)</td>
             </tr>
             <tr>
               <td>LCT [Change type]</td>
-              <td>loinc.csv field 10 (CHNG_TYPE)</td>
+              <td>Loinc.csv field 10 (CHNG_TYPE)</td>
             </tr>
             <tr>
               <td>LEA [Example answers]</td>
-              <td>loinc.csv field 17 (EXMPL_ANSWERS)</td>
+              <td>Loinc.csv field 16 (EXMPL_ANSWERS)</td>
             </tr>
             <tr>
               <td>LFO [Formula]</td>
-              <td>loinc.csv field 15 (FORMULA)</td>
+              <td>Loinc.csv field 15 (FORMULA)</td>
             </tr>
             <tr>
               <td>LMP [MAP TO code]</td>
-              <td>map_to.csv field 2 (MAP TO)</td>
+              <td>MapTo.csv field 2 (MAP_TO)</td>
             </tr>
             <tr>
               <td>LOINC_COMPONENT</td>
-              <td>loinc.csv field 2 (all subfields)</td>
+              <td>Loinc.csv field 2 (all subfields)</td>
             </tr>
             <tr>
               <td>LOINC_METHOD_TYP</td>
-              <td>loinc.csv field 7</td>
+              <td>Loinc.csv field 7</td>
             </tr>
             <tr>
               <td>LOINC_PROPERTY</td>
-              <td>loinc.csv field 3</td>
+              <td>Loinc.csv field 3</td>
             </tr>
             <tr>
               <td>LOINC_SCALE_TYP</td>
-              <td>loinc.csv field 6</td>
+              <td>Loinc.csv field 6</td>
             </tr>
             <tr>
               <td>LOINC_SCORE</td>
@@ -498,39 +544,35 @@ status=published
             </tr>
             <tr>
               <td>LOINC_SYSTEM</td>
-              <td>loinc.csv field 5</td>
+              <td>Loinc.csv field 5</td>
             </tr>
             <tr>
               <td>LOINC_TIME_ASPECT</td>
-              <td>loinc.csv field 4</td>
+              <td>Loinc.csv field 4</td>
             </tr>
             <tr>
               <td>LOR [Order/observation]</td>
-              <td>loinc.csv field 24 (ORDER_OBS)</td>
+              <td>Loinc.csv field 23 (ORDER_OBS)</td>
             </tr>
             <tr>
               <td>LQS [Survey question source]</td>
-              <td>loinc.csv field 19 (SURVEY_QUEST_SRC)</td>
+              <td>Loinc.csv field 18 (SURVEY_QUEST_SRC)</td>
             </tr>
             <tr>
               <td>LQT [Survey question text]</td>
-              <td>loinc.csv field 18 (SURVEY_QUEST_TXT)</td>
+              <td>Loinc.csv field 17 (SURVEY_QUEST_TXT)</td>
             </tr>
             <tr>
               <td>LRN2 [Related names 2]</td>
-              <td>loinc.csv field 22 (RELATEDNAMES2)</td>
-            </tr>
-            <tr>
-              <td>LSP [Species]</td>
-              <td>loinc.csv field 16 (SPECIES)</td>
+              <td>Loinc.csv field 21 (RELATEDNAMES2)</td>
             </tr>
             <tr>
               <td>LSU [Submitted units]</td>
-              <td>loinc.csv field 21 (SUBMITTED_UNITS)</td>
+              <td>Loinc.csv field 20 (SUBMITTED_UNITS)</td>
             </tr>
             <tr>
               <td>LUR [Units required]</td>
-              <td>loinc.csv field 20 (UNITS_REQUIRED)</td>
+              <td>Loinc.csv field 19 (UNITSREQUIRED)</td>
             </tr>
             <tr>
               <td>MAPSETRSAB</td>
@@ -617,26 +659,16 @@ status=published
             </tr>
             <tr>
               <td>STATUS_REASON</td>
-              <td>loinc.csv field 34</td>
+              <td>Loinc.csv field 32</td>
             </tr>
             <tr>
               <td>STATUS_TEXT</td>
-              <td>loinc.csv field 35</td>
+              <td>Loinc.csv field 33</td>
             </tr>
             <tr>
               <td>SUBSEQUENT_TEXT_PROMPT</td>
               <td>AnswerList.csv
                 field 17 (SubsequentTextPrompt)</td>
-            </tr>
-            <tr>
-              <td>TOP_2000_LAB_RESULTS_SI</td>
-              <td>Top2000CommonLabResultsSi.csv field
-                6 (RANK)</td>
-            </tr>
-            <tr>
-              <td>TOP_2000_LAB_RESUlTS_US</td>
-              <td>Top2000CommonLabResultsUs.csv field
-                6 (RANK)</td>
             </tr>
             <tr>
               <td>TORSAB</td>
@@ -650,7 +682,7 @@ status=published
             </tr>
             <tr>
               <td>UNITS_AND_RANGE</td>
-              <td>loinc.csv field 30</td>
+              <td>Loinc.csv field 29</td>
             </tr> 
             <tr>
               <td>UNIVERSAL_LAB_ORDERS_VALUE_SET</td>
@@ -663,11 +695,11 @@ status=published
             </tr>
             <tr>
               <td>VERSION_FIRST_RELEASED</td>
-              <td>loinc.csv field 45</td>
+              <td>Loinc.csv field 43</td>
             </tr>
             <tr>
               <td>VERSION_LAST_CHANGED</td>
-              <td>loinc.csv field 9</td>
+              <td>Loinc.csv field 9</td>
             </tr>
             <tr>
               <td>XMAP</td>
@@ -715,7 +747,7 @@ status=published
               </td>
               <td>The hierarchy is extracted from:
                 <ul>
-                  <li>loinc.csv, field 8 (CLASS) and field 14
+                  <li>Loinc.csv, field 8 (CLASS) and field 14
                     (CLASSTYPE)</li>
                   <li>MultiAxialHierarchy.csv</li>
                 </ul>
@@ -725,7 +757,7 @@ status=published
               <td>RN</td>
               <td>member_of<br/>
                 has_member</td>
-              <td>Connects LOINC panels and their members, extracted from PanelsAndForms.xlsx</td>
+              <td>Connects LOINC panels and their members, extracted from PanelsAndForms.csv</td>
             </tr>
             <tr>
               <td>RO</td>
@@ -752,7 +784,7 @@ status=published
               <td>has_adjustment<br/>
                 adjustment_of</td>
               <td>Connects LPN where PART_TYPE = "ADJUSTMENT" with LN or
-                LO, as per LOINC_PART_LINKS_*.txt</td>
+                LO, as per PartLinks.csv</td>
             </tr>
             <tr>
               <td>RO</td>
@@ -789,35 +821,35 @@ status=published
               <td>has_challenge<br/>
                 challenge_of</td>
               <td>Connects LPN where PART_TYPE = "CHALLENGE" with LN or
-                LO, as per LOINC_PartLinks_*.txt</td>
+                LO, as per PartLinks.csv</td>
             </tr>
             <tr>
               <td>RO</td>
               <td>has_class<br/>
                 class_of</td>
               <td>Connects LPN where PART_TYPE = "CLASS" with LN or LO,
-                as per LOINC_PART_LINKS_*.txt</td>
+                as per PartLinks.csv</td>
             </tr>
             <tr>
               <td>RO</td>
               <td>has_component<br/>
                 component_of</td>
               <td>Connects LPN where PART_TYPE = "COMPONENT" with LN or
-                LO, as per LOINC_PART_LINKS_*.txt</td>
+                LO, as per PartLinks.csv</td>
             </tr>
             <tr>
               <td>RO</td>
               <td>has_count<br/>
                 count_of</td>
               <td>Connects LPN where PART_TYPE = "COUNT" with LN or LO,
-                as per LOINC_PART_LINKS_*.txt</td>
+                as per PartLinks.csv</td>
             </tr>
             <tr>
               <td>RO</td>
               <td>has_divisor<br/>
                 divisor_of</td>
               <td>Connects LPN where PART_TYPE = "DIVISORS" with LN or
-                LO, as per LOINC_PART_LINKS_*.txt</td>
+                LO, as per PartLinks.csv</td>
             </tr>
             <tr>
               <td>RO</td>
@@ -838,7 +870,7 @@ status=published
               <td>has_fragments_for_synonyms<br/>
                 fragments_for_synonyms_of</td>
               <td>Connects LPN where PART_TYPE = "FRAGMENTS FOR
-                SYNONYMS" with LN or LO, as per LOINC_PART_LINKS_*.txt</td>
+                SYNONYMS" with LN or LO, as per PartLinks.csv</td>
             </tr>
             <tr>
               <td>RO</td>
@@ -891,7 +923,7 @@ status=published
               <td>has_method<br/>
                 method_of</td>
               <td>Connects LPN with PART_TYPE = "METHOD" with LOINC CODE
-                indicated in LOINC_PART_LINKS_*.txt</td>
+                indicated in PartLinks.csv</td>
             </tr>
             <tr>
               <td>RO</td>
@@ -913,7 +945,7 @@ status=published
               <td>has_multipart<br/>
                 multipart_of</td>
               <td>Connects PART_TYPE = "MULTIPART" with LOINC CODE
-                indicated in LOINC_254_PartLinks_12202015.txt</td>
+                indicated in PartLinks.csv</td>
             </tr>
             <tr>
               <td>RO</td>
@@ -958,56 +990,56 @@ status=published
               <td>has_property<br/>
                 property_of</td>
               <td>Connects LPN where PART_TYPE = "PROPERTY" with LN or
-                LO, as per LOINC_PART_LINKS_*.txt</td>
+                LO, as per PartLinks.csv</td>
             </tr>
             <tr>
               <td>RO</td>
               <td>has_quotient<br/>
                 quotient_of</td>
               <td>Connects PART_TYPE = "QUOTIENTS" with LOINC CODE
-                indicated in LOINC_PART_LINKS_*.txt</td>
+                indicated in PartLinks.csv</td>
             </tr>
             <tr>
               <td>RO</td>
               <td>has_scale<br/>
                 scale_of</td>
               <td>Connects LPN where PART_TYPE = "SCALE" with LN or LO,
-                as per LOINC_PART_LINKS_*.txt</td>
+                as per PartLinks.csv</td>
             </tr>
             <tr>
               <td>RO</td>
               <td>has_suffix<br/>
                 suffix_of</td>
               <td>Connects LPN where PART_TYPE = "SUFFIX" with LN or LO,
-                as per LOINC_PART_LINKS_*.txt</td>
+                as per PartLinks.csv</td>
             </tr>
             <tr>
               <td>RO</td>
               <td>has_supersystem<br/>
                 supersystem_of</td>
               <td>Connects LPN where PART_TYPE = "SUPER SYSTEM" with LN
-                or LO, as per LOINC_PART_LINKS_*.txt</td>
+                or LO, as per PartLinks.csv</td>
             </tr>
             <tr>
               <td>RO</td>
               <td>has_system<br/>
                 system_of</td>
               <td>Connects LPN where PART_TYPE = "SYSTEM" with LN or LO,
-                as per LOINC_PART_LINKS_*.txt</td>
+                as per PartLinks.csv</td>
             </tr>
             <tr>
               <td>RO</td>
               <td>has_time_aspect<br/>
                 has_time_aspect</td>
               <td>Connects LPN where PART_TYPE = "TIME" with LN, as per
-                LOINC_PART_LINKS_*.txt</td>
+                PartLinks.csv</td>
             </tr>
             <tr>
               <td>RO</td>
               <td>has_time_modifier<br/>
                 time_modifier_of</td>
               <td>Connects LPN where PART_TYPE = "TIME MODIFIER" with
-                LN, as per LOINC_PART_LINKS_*.txt</td>
+                LN, as per PartLinks.csv</td>
             </tr>
             <tr>
               <td>RO</td>

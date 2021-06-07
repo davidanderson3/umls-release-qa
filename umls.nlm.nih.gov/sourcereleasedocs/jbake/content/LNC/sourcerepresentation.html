@@ -1,6 +1,6 @@
 title=LNC (LOINC) - Source Representation
 date=2018-05-07
-updated=2020-11-02
+updated=2021-05-03
 type=page
 status=published
 ~~~~~~
@@ -18,6 +18,7 @@ status=published
   </div>
  </div>
 </div>
+
 <!--endmenu-->
 <br/>
     <p>This page lists specific source data elements and provides
@@ -31,7 +32,7 @@ status=published
     <div id="rep_change_summary" class="rep_block_level_one"></div>
 
     <a id="change_summary"></a>
-          <p><strong>VSAB: </strong>LNC268</p>
+          <p><strong>VSAB: </strong>LNC269</p>
    <hr>
       <h3>Summary of Changes:</h3>
       New Classes:
@@ -42,19 +43,81 @@ status=published
       			<th>Class</th>
       		</tr>
       		<tr>
-      			<td>EYE.LENSOMETRY</td>
-      			<td>Lensometry</td>
+      			<td>PANEL.SURVEY.BADS</td>
+      			<td>Brief Anxiety and Depression Scale set</td>
       		</tr>
       		<tr>
-      			<td>PANEL.SURVEY.SEEK</td>
-      			<td>Safe Environment for Every Kid</td>
+      			<td>PANEL.SURVEY.BCAT</td>
+      			<td>Brief Cognitive Assessment Tool set</td>
       		</tr>
       		<tr>
-         <td>SURVEY.SEEK</td>
-         <td>Safe Environment for Every Kid</td>
+         <td>PANEL.SURVEY.BRIEF</td>
+         <td>BRIEF Health Literacy Screening Tool set</td>
+        </tr>
+        <tr>
+      			<td>PANEL.SURVEY.HITS</td>
+      			<td>HITS Survey set</td>
+      		</tr>
+      		<tr>
+      			<td>PANEL.SURVEY.NIDA</td>
+      			<td>National Institute on Drug Abuse set</td>
+      		</tr>
+      		<tr>
+         <td>PANEL.SURVEY.NPASS</td>
+         <td>Neonatal Pain, Agitation and Sedation Scale set</td>
+        </tr>
+        <tr>
+      			<td>PANEL.SURVEY.SDOH</td>
+      			<td>Social determinants of health set</td>
+      		</tr>
+      		<tr>
+      			<td>PANEL.SURVEY.SKINDEX</td>
+      			<td>Skindex set</td>
+      		</tr>
+      		<tr>
+         <td>SURVEY.BADS</td>
+         <td>Brief Anxiety and Depression Scale (BADS)</td>
+        </tr>
+        <tr>
+      			<td>SURVEY.BCAT</td>
+      			<td>Brief Cognitive Assessment Tool (BCAT)</td>
+      		</tr>
+      		<tr>
+      			<td>SURVEY.BRIEF</td>
+      			<td>BRIEF Survey</td>
+      		</tr>
+      		<tr>
+         <td>SURVEY.HITS</td>
+         <td>HITS Survey</td>
+        </tr>
+        <tr>
+         <td>SURVEY.NIDA</td>
+         <td>National Institute on Drug Abuse</td>
+        </tr>
+        <tr>
+      			<td>SURVEY.NPASS</td>
+      			<td>Neonatal Pain, Agitation and Sedation Scale)</td>
+      		</tr>
+      		<tr>
+      			<td>SURVEY.SDOH</td>
+      			<td>Social Determinants of Health</td>
+      		</tr>
+      		<tr>
+         <td>SURVEY.SKINDEX</td>
+         <td>Skindex</td>
+        </tr>
+        <tr>
+         <td>EYE.ERG</td>
+         <td>electroretinogram concepts</td>
         </tr>
        </tbody>
 	     </table>
+      <p>Deprecated ATNs:</p>
+      <ul>
+       <li>LSP</li>
+       <li>TOP_2000_LAB_RESULTS_SI</li>
+       <li>TOP_2000_LAB_RESUlTS_US</li>
+      </ul>
 	     <hr>
      	<div id="rep_file_summary" class="rep_block_level_one"></div>
       <a id="file_summary"></a>
@@ -113,56 +176,48 @@ status=published
               are associated with any of the LOINC terms included in the current LOINC release.</td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file9">Top2000CommonLabResultsSi.csv</a></td>
-              <td>Listing of the top 2000 common lab results (SI).</td>
-            </tr>
-            <tr>
-              <td class="file_field_name"><a href="#file10">Top2000CommonLabResultsUs.csv</a></td>
-              <td>Listing of the top 2000 common lab results (US).</td>
-            </tr>
-            <tr>
-              <td class="file_field_name"><a href="#file11">LoincUniversalLabOrdersValueSet.csv</a></td>
+              <td class="file_field_name"><a href="#file9">LoincUniversalLabOrdersValueSet.csv</a></td>
               <td>Members of the LOINC Universal Lab Orders Value Set<br/>
               </td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file12">LoincIeeeMedicalDeviceCodeMappingTable.csv</a></td>
+              <td class="file_field_name"><a href="#file10">LoincIeeeMedicalDeviceCodeMappingTable.csv</a></td>
 			  <td>Linkages between LOINC terms and content from the IEEE 11073(TM) 10101 Standard for Health informatics -
 			  Point-of-care medical device communication - Nomenclature and 10101a Nomenclature Amendment.</td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file13">LoincRsnaRadiologyPlaybook.csv</a></td>
+              <td class="file_field_name"><a href="#file11">LoincRsnaRadiologyPlaybook.csv</a></td>
               <td>Linkages between LOINC radiology terms, the attribute
                 values of the Unified Model as both LOINC Parts and
                 RadLex terms, and any applicable mappings to RadLex
                 Playbook terms.</td>
             </tr>
             <tr>
-            	<td class="file_field_name"><a href="#file14">ImagingDocumentCodes.csv</a></td>
+            	<td class="file_field_name"><a href="#file12">ImagingDocumentCodes.csv</a></td>
             	<td>A subset of document codes in LOINC that represent imaging procedures and reports.</td>
             </tr>
             <tr>
-            	<td class="file_field_name"><a href="#file15">ConsumerName.csv</a></td>
+            	<td class="file_field_name"><a href="#file13">ConsumerName.csv</a></td>
             	<td>LOINC term Consumer Names</td>
             </tr>
             <tr>
-            	<td class="file_field_name"><a href="#file16">Group.csv</a></td>
+            	<td class="file_field_name"><a href="#file14">Group.csv</a></td>
             	<td>Data representing unique Groups. Includes parent, inactive, and deprecated groups.</td>
             </tr>
             <tr>
-            	<td class="file_field_name"><a href="#file17">GroupLoincTerms.csv</a></td>
+            	<td class="file_field_name"><a href="#file15">GroupLoincTerms.csv</a></td>
             	<td>Data representing unique Groups and their unique LOINC terms</td>
             </tr>
             <tr>
-            	<td class="file_field_name"><a href="#file18">GroupAttributes.csv</a></td>
+            	<td class="file_field_name"><a href="#file16">GroupAttributes.csv</a></td>
             	<td>Data representing unique Groups and their attributes</td>
             </tr>
             <tr>
-            	<td class="file_field_name"><a href="#file19">ParentGroup.csv</a></td>
+            	<td class="file_field_name"><a href="#file17">ParentGroup.csv</a></td>
             	<td>Data representing unique Parent Groups</td>
             </tr>
             <tr>
-            	<td class="file_field_name"><a href="#file20">ParentGroupAttributes.csv</a></td>
+            	<td class="file_field_name"><a href="#file18">ParentGroupAttributes.csv</a></td>
             	<td>Data representing unique Parent Groups and their attributes</td>
             </tr>
           </tbody>
@@ -301,7 +356,7 @@ status=published
                 <td>8</td>
                 <td>CLASS</td>
                 <td>Arbitrary classification of the terms for grouping
-                  related observations together. See Table 29 in the
+                  related observations together. See Table 32 in the
                   LOINC Users' Guide for values.</td>
                 <td>
                   <ul>
@@ -383,45 +438,38 @@ status=published
               </tr>
               <tr>
                 <td>16</td>
-                <td>SPECIES</td>
-                <td>Indicates which non-human species this code applies
-                  to</td>
-                <td>MRSAT.ATN = "LSP"</td>
-              </tr>
-              <tr>
-                <td>17</td>
                 <td>EXMPL_ANSWERS</td>
                 <td>Examples of valid answers</td>
                 <td>MRSAT.ATN = "LEA"</td>
               </tr>
               <tr>
-                <td>18<br/>
+                <td>17<br/>
                 </td>
                 <td>SURVEY_QUEST_TXT</td>
                 <td>Question from survey instrument</td>
                 <td>MRSAT.ATN = "LQT"</td>
               </tr>
               <tr>
-                <td>19</td>
+                <td>18</td>
                 <td>SURVEY_QUEST_SRC</td>
                 <td>Name of survey instrument and item/question number</td>
                 <td>MRSAT.ATN = "LQS"</td>
               </tr>
               <tr>
-                <td>20</td>
+                <td>19</td>
                 <td>UNITSREQUIRED</td>
                 <td>Y/N indicates whether units are required for OBX
                   segment in a HIPAA attachment</td>
                 <td>MRSAT.ATN = "LUR"</td>
               </tr>
               <tr>
-                <td>21</td>
+                <td>20</td>
                 <td>SUBMITTED_UNITS</td>
                 <td>Moved to RELMA</td>
                 <td>MRSAT.ATN = "LSU"</td>
               </tr>
               <tr>
-                <td>22</td>
+                <td>21</td>
                 <td>RELATEDNAMES2</td>
                 <td>Synonyms for each part of the fully-specified LOINC
                   name (component, property, time, system, scale,
@@ -429,71 +477,71 @@ status=published
                 <td>MRSAT.ATN = "LRN2"</td>
               </tr>
               <tr>
-                <td>23</td>
+                <td>22</td>
                 <td>SHORTNAME</td>
                 <td>Concatenation of the fully-specified LOINC name</td>
                 <td>MRCONSO.STR, TTY = "OSN", "OOSN"</td>
               </tr>
               <tr>
-                <td>24</td>
+                <td>23</td>
                 <td>ORDER_OBS</td>
                 <td>Defines term as an order only, observation only,
                   both, or Subset</td>
                 <td>MRSAT.ATN = "LOR"</td>
               </tr>
               <tr>
-                <td>25</td>
+                <td>24</td>
                 <td>CDISC_COMMON_TESTS</td>
                 <td>Y indicates member of subset used by CDISC in
                   clinical trials</td>
                 <td>MRSAT.ATN = "LCD"</td>
               </tr>
               <tr>
-                <td>26</td>
+                <td>25</td>
                 <td>HL7_FIELD_SUBFIELD_ID</td>
                 <td>Indicates that the content should be delivered in
                   the named field/subfield of the HL7 message.</td>
                 <td>MRSAT.ATN = "HL7_FIELD_SUBFIELD_ID"</td>
               </tr>
               <tr>
-                <td>27</td>
+                <td>26</td>
                 <td>EXTERNAL_COPYRIGHT_NOTICE</td>
                 <td>External copyright holder information</td>
                 <td>MRSAT.ATN = "COPYRIGHT"</td>
               </tr>
               <tr>
-                <td>28<br/>
+                <td>27<br/>
                 </td>
                 <td>EXAMPLE_UNITS</td>
                 <td>Indicates representative units</td>
                 <td>MRSAT.ATN = "EXAMPLE_UNITS"</td>
               </tr>
               <tr>
-                <td>29</td>
+                <td>28</td>
                 <td>LONG_COMMON_NAME</td>
                 <td>Readable version of LOINC term</td>
                 <td>MRCONSO.STR, TTY = "LC" or "OLC"</td>
               </tr>
               <tr>
-                <td>30</td>
+                <td>29</td>
                 <td>UnitsandRange</td>
                 <td>List of normal ranges and associated units</td>
                 <td>MRSAT.ATN = "UNITS_AND_RANGE"</td>
               </tr>
               <tr>
-                <td>31</td>
+                <td>30</td>
                 <td>EXAMPLE_UCUM_UNITS</td>
                 <td>Example units of measure expressed as UCUM units</td>
                 <td>MRSAT.ATN = "EXAMPLE_UCUM_UNITS"</td>
               </tr>
               <tr>
-                <td>32</td>
+                <td>31</td>
                 <td>EXAMPLE_SI_UCUM_UNITS</td>
                 <td>Example units of measure expressed as SI UCUM</td>
                 <td>MRSAT.ATN = EXAMPLE_SI_UCUM_UNITS</td>
               </tr>
               <tr>
-                <td>33</td>
+                <td>32</td>
                 <td>STATUS_REASON</td>
                 <td>Classification of the reason for concept status.
                   This field will be Null for ACTIVE concepts, and
@@ -503,7 +551,7 @@ status=published
                 <td>MRSAT.ATN = "STATUS_REASON"</td>
               </tr>
               <tr>
-                <td>34</td>
+                <td>33</td>
                 <td>STATUS_TEXT</td>
                 <td>Explanation of concept status in narrative text.
                   This field will be Null for ACTIVE concepts, and
@@ -511,35 +559,35 @@ status=published
                 <td>MRSAT.ATN = "STATUS_TEXT"</td>
               </tr>
               <tr>
-                <td>35</td>
+                <td>34</td>
                 <td>CHANGE_REASON_PUBLIC</td>
                 <td>Detailed explanation about special changes to the
                   term over time.</td>
                 <td>MRSAT.ATN = "CHANGE_REASON_PUBLIC"</td>
               </tr>
               <tr>
-                <td>36</td>
+                <td>35</td>
                 <td>COMMON_TEST_RANK</td>
                 <td>Numeric ranking of approximately 2,000 common tests
                   performed by hospitals.</td>
                 <td>MRSAT.ATN = "COMMON_TEST_RANK"</td>
               </tr>
               <tr>
-                <td>37<br/>
+                <td>36<br/>
                 <td>COMMON_ORDER_RANK</td>
                 <td>Ranking of approximately 300 common orders performed
                   by laboratories in the USA.</td>
                 <td>MRSAT.ATN = "COMMON_ORDER_RANK"</td>
               </tr>
               <tr>
-                <td>38</td>
+                <td>37</td>
                 <td>COMMON_SI_TEST_RANK</td>
                 <td>Corresponding SI terms for 2000 common tests
                   performed by laboratories in USA.</td>
                 <td>MRSAT.ATN = "COMMON_SI_TEST_RANK"</td>
               </tr>
               <tr>
-                <td>39</td>
+                <td>38</td>
                 <td>HL7_ATTACHMENT_STRUCTURE</td>
                 <td>Valid values: STRUCTURED or UNSTRUCTURED. STRUCTURED
                   terms are the allowed document type codes in the
@@ -548,50 +596,49 @@ status=published
                 <td>MRSAT.ATN = "HL7_ATTACHMENT_STRUCTURE"</td>
               </tr>
               <tr>
-                <td>40</td>
+                <td>39</td>
                 <td>EXTERNAL_COPYRIGHT_LINK</td>
                 <td>Used for terms with an additional third party
                   copyright. The field is populated with the
-                  COPYRIGHT_ID from the Source Organization table (Table
-                  28c in the LOINC Manual).<br/>
+                  COPYRIGHT_ID from SourceOrganization.csv.<br/>
                 </td>
                 <td>MRSAT.ATN = "EXTERNAL_COPYRIGHT_LINK"</td>
               </tr>
               <tr>
-                <td>41</td>
+                <td>40</td>
                 <td>PanelType</td>
                 <td>Describes a panel as a "Convenience group",
                   "Organizer", or "Panel'.</td>
                 <td>MRSAT.ATN = "PANEL_TYPE"</td>
               </tr>
               <tr>
-                <td>42</td>
+                <td>41</td>
                 <td>AskAtOrderEntry</td>
                 <td>List of LOINC codes that represent optional Ask at
                   Order Entry (AOE) observations.</td>
                 <td>MRSAT.ATN = "ASK_AT_ORDER_ENTRY"</td>
               </tr>
               <tr>
-                <td>43</td>
+                <td>42</td>
                 <td>AssociatedObservations</td>
                 <td>List of LOINC codes that represent option associated
                   observation(s).</td>
                 <td>MRSAT.ATN = "ASSOC_OBSERVATIONS"</td>
               </tr>
               <tr>
-                <td>44</td>
+                <td>43</td>
                 <td>VersionFirstReleased</td>
                 <td>LOINC version number in which the record was first released. For oldest records where the version released number is not known, this field will be null.</td>
                 <td>MRSAT.ATN = "VERSION_FIRST_RELEASED"</td>
               </tr>
                <tr>
-                <td>45</td>
+                <td>44</td>
                 <td>ValidHL7AttachmentRequest</td>
                 <td>A value of 'Y' indicates that the LOINC code can be sent by a payer as part of an HL7 attachment request for additional information.</td>
                 <td>MRSAT.ATN = "HL7_ATTACHMENT_REQUEST"</td>
               </tr>
                <tr>
-                <td>46</td>
+                <td>45</td>
                 <td>DisplayName</td>
                 <td>Clinician friendly name. Algorithmically created.</td>
                 <td>MRCONSO.STR, TTY = "DN"</td>
@@ -742,7 +789,7 @@ status=published
                   the LOINC CODE and the LOINC PART.<br/>
                   The REL = "RO";<br/>
                   The RELA is assigned based on the
-                  LOINC_PARTS.PART_TYPE of the L_PART_ID as follows:<br/>
+                  PARTS.PART_TYPE of the L_PART_ID as follows:<br/>
                   <br/>
                   <table>
                     <tbody>
@@ -824,7 +871,7 @@ status=published
                   <br/>
                   <p>Note: Some PART TYPEs (e.g., "MULTI-AXIAL" and
                     "SUPERSYSTEMMULTI-AXIAL"<br/>
-                    may not appear in the current "LOINC_PART_LINKS"
+                    may not appear in the current PartLinks.csv
                     file, therefore, no relationships are created for
                     these PART TYPE values.</p>
                 </td>
@@ -833,7 +880,7 @@ status=published
                 <td>2</td>
                 <td>L_PART_ID</td>
                 <td>LOINC PART CODE</td>
-                <td>Relationship created between tthe LOINC_NUM the
+                <td>Relationship created between the LOINC_NUM the
                   L_PART_ID<br/>
                 </td>
               </tr>
@@ -1081,86 +1128,8 @@ status=published
               </tr>
             </tbody>
           </table>
-
-
         </div>
         <div class="rep_block_level_two"><a id="file9"></a>
-          <h4 class="file_field_name">file:
-            Top2000CommonLabResultsSi.csv</h4>
-          <table>
-            <tbody>
-              <tr>
-                <th>#</th>
-                <th>Field</th>
-                <th>Representation</th>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>LOINC_NUM</td>
-                <td>Used as id in attributes</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>LONGNAME</td>
-                <td>Not used</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>SHORTNAME</td>
-                <td>Not used</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>CLASS</td>
-                <td>Not used</td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>RANK</td>
-                <td>MRSAT.ATN=TOP_2000_LAB_RESULTS_SI</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="rep_block_level_two"><a id="file10"></a>
-          <h4 class="file_field_name">file:
-            Top2000CommonLabResultsUs.csv</h4>
-          <table>
-            <tbody>
-              <tr>
-                <th>#</th>
-                <th>Field</th>
-                <th>Representation</th>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>LOINC_NUM</td>
-                <td>Used as id in attributes</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>LONGNAME</td>
-                <td>Not used</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>SHORTNAME</td>
-                <td>Not used</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>CLASS</td>
-                <td>Not used</td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>RANK</td>
-                <td>MRSAT.ATN=TOP_2000_LAB_RESULTS_US</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="rep_block_level_two"><a id="file11"></a>
           <h4 class="file_field_name">file:
             LoincUniversalLabOrdersValueSet.csv<br/>
           </h4>
@@ -1194,7 +1163,7 @@ status=published
             </tbody>
           </table>
         </div>
-        <div class="rep_block_level_two"><a id="file12"></a>
+        <div class="rep_block_level_two"><a id="file10"></a>
           <h4 class="file_field_name">file:LoincIeeeMedicalDeviceCodeMappingTable.csv<br/></h4>
           <table>
             <tbody>
@@ -1225,23 +1194,13 @@ status=published
               </tr>
               <tr>
                 <td>5</td>
-                <td>IEEE_DESCRIPTION</td>
-                <td>MRSAT.ATN=IEEE_DESCRIPTION</td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>IEEE_DIM</td>
-                <td>MRSAT.ATN=IEEE_DIM</td>
-              </tr>
-              <tr>
-                <td>7</td>
-                <td>IEEE_UOM_UCUM</td>
-                <td>MRSAT.ATN=IEEE_UOM_UCUM</td>
+                <td>EQUIVALENCE</td>
+                <td>MRSAT.ATN=EQUIVALENCE</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <div class="rep_block_level_two"><a id="file13"></a>
+        <div class="rep_block_level_two"><a id="file11"></a>
           <h4 class="file_field_name">file:LoincRsnaRadiologyPlaybook.csv<br/></h4>
           <table>
             <tbody>
@@ -1306,7 +1265,7 @@ status=published
             </tbody>
           </table>
         </div>
-        <div class="rep_block_level_two"><a id="file14"></a>
+        <div class="rep_block_level_two"><a id="file12"></a>
 		<h4 class="file_field_name">file: ImagingDocumentCodes.csv<br/></h4>
            <table>
             <tbody>
@@ -1328,7 +1287,7 @@ status=published
             </tbody>
           </table>  
 		 		   </div>
-        <div class="rep_block_level_two"><a id="file15"></a>
+        <div class="rep_block_level_two"><a id="file13"></a>
 		<h4 class="file_field_name">file: ConsumerName.csv<br/></h4>
            <table>
             <tbody>
@@ -1350,7 +1309,7 @@ status=published
             </tbody>
           </table>  
 		 		   </div>
-        <div class="rep_block_level_two"><a id="file16"></a>
+        <div class="rep_block_level_two"><a id="file14"></a>
 		<h4 class="file_field_name">file: Group.csv<br/></h4>
            <table>
             <tbody>
@@ -1393,7 +1352,7 @@ status=published
             </tbody>
           </table>
         </div>
-              <div class="rep_block_level_two"><a id="file17"></a>
+              <div class="rep_block_level_two"><a id="file15"></a>
 		<h4 class="file_field_name">file: GroupLoincTerms.csv<br/></h4>
            <table>
             <tbody>
@@ -1432,7 +1391,7 @@ status=published
             </tbody>
           </table>
               </div>
-              <div class="rep_block_level_two"><a id="file18"></a>
+              <div class="rep_block_level_two"><a id="file16"></a>
 		<h4 class="file_field_name">file: GroupAttributes.csv<br/></h4>
            <table>
             <tbody>
@@ -1464,7 +1423,7 @@ status=published
             </tbody>
           </table>
               </div>
-              <div class="rep_block_level_two"><a id="file19"></a>
+              <div class="rep_block_level_two"><a id="file17"></a>
 		<h4 class="file_field_name">file: ParentGroup.csv<br/></h4>
            <table>
             <tbody>
@@ -1491,7 +1450,7 @@ status=published
             </tbody>
           </table>
               </div>
-              <div class="rep_block_level_two"><a id="file20"></a>
+              <div class="rep_block_level_two"><a id="file18"></a>
 		<h4 class="file_field_name">file: ParentGroupAttributes.csv<br/></h4>
            <table>
             <tbody>

@@ -1,6 +1,6 @@
 title=CHV (Consumer Health Vocabulary) - Synopsis
 date=2017-11-06
-updated=2020-11-02
+updated=2021-05-03
 type=page
 status=published
 ~~~~~~
@@ -18,12 +18,33 @@ status=published
   </div>
  </div>
 </div>
+
+
+<div class="border-top border-bottom p-2">
+   <div class="pl-2">
+      <strong>Search CHV in the UMLS Metathesaurus</strong> 
+   </div>
+   <div class="row pt-2 px-4">
+      <form class="form-inline" action="https://uts.nlm.nih.gov/uts/umls/searchResults" method="GET" target="_blank">
+         <div class="input-group">
+            <input class="form-control" type="text" name="searchString" value=""/>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <input id="CHV" name="vocabulary" type="hidden" value="CHV">
+            <input id="returnType" name="returnType" type="hidden" value="code">
+         </div>
+      </form>
+   </div>
+   <div class="pl-2 pt-2">
+      (requires a free <a href="https://uts.nlm.nih.gov/uts/signup-login" target="_blank">UMLS license</a>)
+   </div>
+</div>
+
 <!--endmenu-->
 <br/><div id="summary">
  <!-- <p><b>Web site:</b><br>
   <a href="http://consumerhealthvocab.org/" target="_blank">http://consumerhealthvocab.org/</a></p>-->
 <p><b>Web site:</b><br>
-    <a href="http://consumerhealthvocab.chpc.utah.edu/CHVwiki/">http://consumerhealthvocab.chpc.utah.edu/CHVwiki/</a></p>
+   http://consumerhealthvocab.chpc.utah.edu/CHVwiki/</p>
 
   <p><b>Authority</b><br>
   The open-access and collaborative (OAC) consumer health&nbsp;vocabulary (CHV) is produced by the Biomedical Informatics Department at the University of Utah, in collaboration with Brigham and Women's Hospital, Harvard Medical School, National Library of Medicine, and University of Wisconsin..&nbsp;</p>

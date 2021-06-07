@@ -1,6 +1,6 @@
 title=CPM (Medical Entities Dictionary) - Synopsis
 date=2017-11-06
-updated=2020-11-02
+updated=2021-05-03
 type=page
 status=published
 ~~~~~~
@@ -16,10 +16,31 @@ status=published
   </div>
  </div>
 </div>
+
+
+<div class="border-top border-bottom p-2">
+   <div class="pl-2">
+      <strong>Search CPM in the UMLS Metathesaurus</strong> 
+   </div>
+   <div class="row pt-2 px-4">
+      <form class="form-inline" action="https://uts.nlm.nih.gov/uts/umls/searchResults" method="GET" target="_blank">
+         <div class="input-group">
+            <input class="form-control" type="text" name="searchString" value=""/>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <input id="CPM" name="vocabulary" type="hidden" value="CPM">
+            <input id="returnType" name="returnType" type="hidden" value="code">
+         </div>
+      </form>
+   </div>
+   <div class="pl-2 pt-2">
+      (requires a free <a href="https://uts.nlm.nih.gov/uts/signup-login" target="_blank">UMLS license</a>)
+   </div>
+</div>
+
 <!--endmenu-->
 <br/><div id="summary">
   <p><b>Web site</b><br>
-  <a href="http://med.dmi.columbia.edu/">http://med.dmi.columbia.edu/</a></p>
+  http://med.dmi.columbia.edu/</p>
 
   <p><b>Authority</b><br>
   Medical Entities Dictionary (MED) was developed and is maintained by the Columbia Presbyterian Medical Center and Columbia University.</p>
@@ -58,6 +79,6 @@ status=published
   <p><b>Sites Consulted</b></p>
 
   <ol>
-    <li>Medical Entities Dictionary [Internet]. New York: Columbia University; [cited 2010 Feb 25]. Available from: <a href="http://med.dmi.columbia.edu/">http://med.dmi.columbia.edu/</a>.</li>
+    <li>Medical Entities Dictionary [Internet]. New York: Columbia University; [cited 2010 Feb 25]. Available from: http://med.dmi.columbia.edu/.</li>
   </ol>
 </div>
