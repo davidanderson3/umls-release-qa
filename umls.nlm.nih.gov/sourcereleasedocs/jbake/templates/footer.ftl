@@ -2,7 +2,7 @@
   <div class="container pt-5">
     <div class="row mt-3">
       <div class="col-md-3 col-sm-6 col-6">
-        <p><a href="https://www.nlm.nih.gov/socialmedia/index.html" class="text-white">Follow NLM</a></p>
+        <p class="text-white"><a href="https://www.nlm.nih.gov/socialmedia/index.html" class="text-white">Connect with NLM</a></p>
         <ul class="list-inline social_media">
           <li class="list-inline-item"><a href="https://www.facebook.com/nationallibraryofmedicine" title="External link: please review our privacy policy." id="anch_451"><img src="/images/Facebook_W.svg" class="img-fluid" alt="Facebook"></a></li>
           <li class="list-inline-item"><a href="https://twitter.com/nlm_news" title="External link: please review our privacy policy." id="anch_452"><img src="/images/Twitter_W.svg" class="img-fluid" alt="Twitter"></a></li>
@@ -15,14 +15,13 @@
           Bethesda, MD 20894 </a></p>
       </div>
       <div class="col-md-3 col-sm-6 col-6">
-        <p><a href="https://www.nlm.nih.gov/copyright.html" class="text-white" id="anch_455"> Copyright </a><br>
+        <p><a href="https://www.nlm.nih.gov/web_policies.html" class="text-white" id="anch_455"> Web Policies </a><br>
           <a href="https://www.nih.gov/institutes-nih/nih-office-director/office-communications-public-liaison/freedom-information-act-office" class="text-white" id="anch_456"> FOIA </a> <br>
-          <a href="https://www.nlm.nih.gov/privacy.html" class="text-white" id="anch_457"> Privacy </a></p>
       </div>
       <div class="col-md-3 col-sm-6 col-6">
-        <p><a class="supportLink text-white" href="//support.nlm.nih.gov?from=https://www.nlm.nih.gov/research/umls/sourcereleasedocs/index.html" id="anch_458"> NLM Support Center </a> <br>
+        <p><a class="supportLink text-white" href="//support.nlm.nih.gov?from=https://documentation.uts.nlm.nih.gov/" id="anch_458"> NLM Support Center </a> <br>
           <a href="https://www.nlm.nih.gov/accessibility.html" class="text-white" id="anch_459"> Accessibility </a><br>
-          <a href="https://www.nlm.nih.gov/careers/careers.html" class="text-white" id="anch_460"> Careers </a></p>
+          <a href="https://www.nlm.nih.gov/careers/jobopenings.html" class="text-white" id="anch_460"> Careers </a></p>
       </div>
     </div>
     <div class="row">
