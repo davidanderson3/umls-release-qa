@@ -10,8 +10,8 @@ echo "<thead>
       <th>Abbreviation</th>
       <th>Last Updated</th>
       <th>Language</th>
-      <th>Restriction Level <a href=\"https://uts.nlm.nih.gov/help/license/licensecategoryhelp.html\" target=\"_blank\">
-               <img style=\"width: 14px; height: 14px;\" src=\"https://uts.nlm.nih.gov//images/help.png\" alt=\"Restriction Category Help\">
+      <th>Restriction Level <a href="https://uts.nlm.nih.gov/uts/license/license-category-help.html" target="_blank">
+               (?)
             </a></th>
       
     </tr>
