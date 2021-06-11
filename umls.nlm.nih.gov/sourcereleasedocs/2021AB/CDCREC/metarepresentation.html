@@ -1,0 +1,117 @@
+title=CDCREC (Race & Ethnicity - CDC) - Metathesaurus Representation
+date=2017-11-06
+updated=2021-05-03
+type=page
+status=published
+~~~~~~
+
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+
+<!--endmenu-->
+<br/>
+    <p>This page lists UMLS Metathesaurus data elements and traces them
+      back to the specific source data that populates them.</p>
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#atoms">Atoms</a></div>
+    	<div class="col-sm-auto border-left"><a href="#attributes">Attributes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#definitions">Definitions</a></div>
+    </div>
+      <p><strong>VSAB:</strong>CDCREC_1.2</p>
+      <hr>
+      <div id="rep_identifiers" class="rep_block_level_one">
+        <h3>Summary of Changes</h3>
+		<ul>
+		<li>This is a new source. Only atoms and a hierarchy were created.</li>
+		</ul>
+          
+       <hr>
+        <h3>Source Provided Files: </h3>
+        <p>The input file was provided in an Excel spreadsheet consisting of five tabs:</p>
+        <ul>
+         <li>Code System Metadata</li>
+         <li>All Codes</li>
+         <li>Ethnicity Relationship Mapping</li>
+         <li>Race Relationship Mapping</li>
+         <li>All Relationships</li>
+        </ul>
+        <table>
+        	<tbody>
+        	<tr>
+        	<th>File Name</th>
+			<th>Description</th>
+			</tr>
+			<tr>
+			<td>PH_RaceAndEthnicity_CDC_v1.2.xlsx</td>
+			<td>Code set for use in coding race and ethnicity data</td>
+			</tr>
+			</tbody>
+		</table>
+
+      </div>
+      <hr>
+      <div id="rep_identifers" class="rep_block_level_one">
+        <h3>Identifiers:</h3>
+        <p>Identifiers are assigned as follows:</p>
+
+
+       <table>
+       <tbody>
+       <tr>
+       	<th> Identifier </th>
+   	   	<th> Origin </th>
+       </tr>
+
+       <tr>
+	          	<td>CODE</td>
+				<td>Concept Code (from the 'All Codes' tab)</td>
+       </tr>
+       <tr>
+       			<td>SAUI</td>
+       			<td>Not applicable</td>
+       </tr>
+       <tr>
+				<td>SCUI</td>
+				<td>Same as CODE</td>
+	   </tr>
+		<tr>
+				<td>SDUI</td>
+				<td>Not applicable</td>
+		</tr>
+
+       </tbody>
+       </table>
+
+<hr>
+        <div id="rep_termtypes" class="rep_block_level_two"> <a
+            id="atoms"></a>
+          <h3>Atoms (MRCONSO):</h3>
+
+          <table>
+            <tbody>
+              <tr>
+                <th>Term Type</th>
+                <th>Origin of CODE</th>
+                <th>Origin of STR </th>
+              </tr>
+              <tr>
+                <td>PT</td>
+                <td>CODE, SCUI: Concept Code value from the 'All Codes' tab</td>
+              </tr>
+            </tbody>
+          </table>
+         
+        </div>
+</div>
