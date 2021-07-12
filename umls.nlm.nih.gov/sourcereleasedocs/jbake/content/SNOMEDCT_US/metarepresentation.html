@@ -1,63 +1,54 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html;
-      charset=utf-8">
-    <title>Meta Representation</title>
-		<style>table, th, td {
-  border: 1px solid black;
-}</style>	
-  </head>
+title=SNOMEDCT_US (SNOMED CT, US Edition) - Metathesaurus Representation
+date=2021-07-12
+updated=2021-07-12
+type=page
+status=published
+~~~~~~
 
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
 
-  <body>
-    <div class="section-4">
-      <ul id="menu">
-        <li id="nav-1"> <a href="index.html">Synopsis</a> </li>
-        <li id="nav-2"> <a href="mrsab.html">MRSAB.RRF</a> </li>
-        <li id="nav-3"> <a href="sourcemetastats.html">Statistics and
-            sample data</a>
-          <ul id="subnav-3">
-            <li> <a href="termtypes.html">Terms and term types</a> </li>
-            <li> <a href="attributes.html">Attributes</a> </li>
-            <li> <a href="relationships.html">Relationships</a> </li>
-            <li> <a href="semtypes.html">Semantic Types</a> </li>
-            <li> <a href="overlap.html">Source Overlap</a> </li>
-          </ul>
-        </li>
-        <li id="nav-4"> <a href="representation.html">Representation</a>
-          <ul id="subnav-4">
-            <li> <a href="sourcerepresentation.html">Source
-                Representation</a> </li>
-            <li> <a href="metarepresentation.html" id="umlsrep">Metathesaurus
-            Representation</a> </li>
-          </ul>
-        </li>
-      </ul>
+<!--endmenu-->
+<br />
+<p>This page lists UMLS Metathesaurus data elements and traces them
+      back to the specific source data that populates them.</p>
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#atoms">Atoms</a></div>
+    	<div class="col-sm-auto border-left"><a href="#attributes">Attributes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#definitions">Definitions</a></div>
+    	<div class="col-sm-auto border-left"><a href="#relationships">Relationships</a></div>
+    	<div class="col-sm-auto border-left"><a href="#mappings">Mappings</a></div>
     </div>
-    <br/>
-    <br/>
-    <br/>
-    <a name="top"></a> <span class="nav">Skip to: <a href="#atoms">Atoms</a>,
-      <a href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
-      <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
     <div id="general" class="rep_block_level_one">
       <p><b>VSAB:</b> SNOMEDCT_2021_03_01<br/>
 	  <b>Version:</b> 20210301<br/> <!-- ??? -->
 	  <b>ReleaseCode:</b> US1000124<br/> <!-- Either US1000124 or INT -->
 	  <b>Edition:</b> USEditionRF2<br/>
     </div>
+    <hr>
     <div id="rep_identifiers" class="rep_block_level_one">
       <h3>Summary of Changes</h3>
       <p>There have been no changes to the SNOMEDCT format or processing
         of the data.</p>
     </div>
+    <hr>
     <div id="rep_change_summary" class="rep_block_level_one">
       <h3>Original Files:</h3>
-      <br/>
+      <p>
       The Metathesaurus SNOMEDCT data is taken from the following
       tab-delimited SNOMEDCT files, found in the specified folders under SnomedCT_&lt;edition&gt;_PRODUCTION_&lt;YYYYMMDD&gt;T120000Z/Snapshot/:
-	  <br/><br/>
+		</p>
 	  <table>
 		<tbody>
 			<tr>
@@ -132,9 +123,8 @@
 			</tr>
 		</tbody>
 		</table>
-	<br/>
 	  </div>
-    <div id="rep_identifers" class="rep_block_level_one"> <br/>
+    <div id="rep_identifers" class="rep_block_level_one"> 
       Identifiers are assigned as follows:
       <ul>
         <li>CODE: Description.conceptId</li>
@@ -143,6 +133,7 @@
         <li>SDUI: Not Applicable</li>
 	  </ul>
 	  </div>
+	  <hr>
       <div id="rep_termtypes" class="rep_block_level_two"> <a
           name="atoms"></a>
         <h3>Atoms (MRCONSO)</h3>
@@ -203,10 +194,6 @@
 			</tr>
           </tbody>
         </table>
-        <p><br/>
-          <br/>
-        </p>
-        <span class="nav">(return to <a href="#top">top</a></span>)<br/>
         <!-- This is essentially the minimum set of values that could be used to compute the TTY.  OAP and OAS are off by a few because there are some outlying inactive desriptions, which SNOMED will not be updating -->
 		<table>
           <tbody>
@@ -433,10 +420,10 @@
           </tbody>
         </table>
       </div>
+      <hr>
       <div id="rep_attributes" class="rep_block_level_two"> <a
-          name="attributes"></a><br/>
+          name="attributes"></a>
         <h3>Attributes (MRSAT)</h3>
-        &nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
         <table>
           <tbody>
             <tr>
@@ -682,10 +669,10 @@
           </tbody>
         </table>
       </div>
+      <hr>
       <div id="rep_definitions" class="rep_block_level_two"> <a
-          name="definitions"></a><br/>
+          name="definitions"></a>
         <h3>Definitions (MRDEF)</h3>
-        &nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
         <table>
           <tbody>
             <tr>
@@ -707,10 +694,10 @@
           </tbody>
         </table>
       </div>
+      <hr>
       <div id="rep_relationships" class="rep_block_level_two"> <a
-          name="relationships"></a><br/>
+          name="relationships"></a>
         <h3>Relationships (MRREL)</h3>
-        &nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
         <table>
           <tbody>
             <tr>
@@ -743,15 +730,14 @@
           </tbody>
         </table>
       </div>
+      <hr>
       <div id="rep_mappings" class="rep_block_level_two"> <a
-          name="mappings"></a><br/>
+          name="mappings"></a>
         <h3>Mappings (MRMAP)</h3>
-        &nbsp;&nbsp;<span class="nav">(return to <a href="#top">top</a></span>)<br/>
         <p>The Metathesaurus includes SNOMEDCT_US mappings (an XM atom,
           along with associated attributes and mappings) to ICD10 and
           ICD10CM. These are extracted from ExtendedMap.<br/>
         </p>
-        <br/>
     </div>
   </body>
 </html>
