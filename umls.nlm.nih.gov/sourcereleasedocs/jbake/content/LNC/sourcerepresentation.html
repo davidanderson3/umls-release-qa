@@ -1,6 +1,6 @@
 title=LNC (LOINC) - Source Representation
 date=2018-05-07
-updated=2021-05-03
+updated=2021-11-01
 type=page
 status=published
 ~~~~~~
@@ -32,10 +32,16 @@ status=published
     <div id="rep_change_summary" class="rep_block_level_one"></div>
 
     <a id="change_summary"></a>
-          <p><strong>VSAB: </strong>LNC269</p>
+          <p><strong>VSAB: </strong>LNC271</p>
    <hr>
       <h3>Summary of Changes:</h3>
-      New Classes:
+      <p>1. Deprecated attribute names (ATNs):</p>
+      <ul>
+       <li>LCD | CDISC common tests</li>
+       <li>LSU | Summitted units</li>
+      </ul>
+      <p>2. Mappings between LNC and CPT have been removed.</p>
+      <p>3. New Classes:</p>
 	     <table>
 	     	<tbody>
         <tr>
@@ -43,82 +49,68 @@ status=published
       			<th>Class</th>
       		</tr>
       		<tr>
-      			<td>PANEL.SURVEY.BADS</td>
-      			<td>Brief Anxiety and Depression Scale set</td>
+      			<td>PANEL.SURVEY.CHILD-PUGH</td>
+      			<td>Child-Pugh set</td>
       		</tr>
       		<tr>
-      			<td>PANEL.SURVEY.BCAT</td>
-      			<td>Brief Cognitive Assessment Tool set</td>
-      		</tr>
-      		<tr>
-         <td>PANEL.SURVEY.BRIEF</td>
-         <td>BRIEF Health Literacy Screening Tool set</td>
+         <td>PANEL.SURVEY.COVID</td>
+         <td>COVID-19 related surveys</td>
         </tr>
         <tr>
-      			<td>PANEL.SURVEY.HITS</td>
-      			<td>HITS Survey set</td>
-      		</tr>
-      		<tr>
-      			<td>PANEL.SURVEY.NIDA</td>
-      			<td>National Institute on Drug Abuse set</td>
-      		</tr>
-      		<tr>
-         <td>PANEL.SURVEY.NPASS</td>
-         <td>Neonatal Pain, Agitation and Sedation Scale set</td>
+         <td>PANEL.SURVEY.RUDAS</td>
+         <td>Rowland Universal Dementia Assessment Scale (RUDAS) set</td>
         </tr>
         <tr>
-      			<td>PANEL.SURVEY.SDOH</td>
-      			<td>Social determinants of health set</td>
+      			<td>SURVEY.CHILD-PUGH</td>
+      			<td>Child-Pugh survey</td>
       		</tr>
       		<tr>
-      			<td>PANEL.SURVEY.SKINDEX</td>
-      			<td>Skindex set</td>
-      		</tr>
-      		<tr>
-         <td>SURVEY.BADS</td>
-         <td>Brief Anxiety and Depression Scale (BADS)</td>
+         <td>SURVEY.COVID</td>
+         <td>COVID-19 related survey questions</td>
         </tr>
         <tr>
-      			<td>SURVEY.BCAT</td>
-      			<td>Brief Cognitive Assessment Tool (BCAT)</td>
-      		</tr>
-      		<tr>
-      			<td>SURVEY.BRIEF</td>
-      			<td>BRIEF Survey</td>
-      		</tr>
-      		<tr>
-         <td>SURVEY.HITS</td>
-         <td>HITS Survey</td>
+         <td>SURVEY.RUDAS</td>
+         <td>Rowland Universal Dementia Assessment Scale (RUDAS)</td>
         </tr>
         <tr>
-         <td>SURVEY.NIDA</td>
-         <td>National Institute on Drug Abuse</td>
-        </tr>
-        <tr>
-      			<td>SURVEY.NPASS</td>
-      			<td>Neonatal Pain, Agitation and Sedation Scale)</td>
+      			<td>NIPS</td>
+      			<td>Neonatal Infant Pain Scale</td>
       		</tr>
       		<tr>
-      			<td>SURVEY.SDOH</td>
-      			<td>Social Determinants of Health</td>
-      		</tr>
+         <td>PANEL.SURVEY.COMI</td>
+         <td>Core Outcome Measures Index (COMI) set</td>
+        </tr>
       		<tr>
-         <td>SURVEY.SKINDEX</td>
-         <td>Skindex</td>
+         <td>PANEL.SURVEY.SOFA</td>
+         <td>Sequential Organ Failure Assessment (SOFA) panel</td>
         </tr>
         <tr>
-         <td>EYE.ERG</td>
-         <td>electroretinogram concepts</td>
+         <td>PANEL.SURVEY.TAPS</td>
+         <td>Tobacco, Alcohol, Prescription medications and other Substance panel</td>
         </tr>
-       </tbody>
+      		<tr>
+      			<td>SURVEY.ALP</td>
+      			<td>RAND 2020 American Life Panel Survey on Impacts of COVID-19</td>
+      		</tr>
+      		<tr>
+         <td>SURVEY.COMI</td>
+         <td>|Core Outcome Measures Index (COMI)</td>
+        </tr>
+        <tr>
+         <td>SURVEY.SOFA</td>
+         <td>Sequential Organ Failure Assessment (SOFA)</td>
+        </tr>
+        <tr>
+         <td>SURVEY.TAPS</td>
+         <td>Tobacco, Alcohol, Prescription medications and other Substance tool</td>
+        </tr>
+        <tr>
+         <td>EYE.HX</td>
+         <td>Eye history concepts</td>
+        </tr>
+      	</tbody>
 	     </table>
-      <p>Deprecated ATNs:</p>
-      <ul>
-       <li>LSP</li>
-       <li>TOP_2000_LAB_RESULTS_SI</li>
-       <li>TOP_2000_LAB_RESUlTS_US</li>
-      </ul>
-	     <hr>
+      <hr>
      	<div id="rep_file_summary" class="rep_block_level_one"></div>
       <a id="file_summary"></a>
       <h3>Source-Provided Files: Summary</h3>
@@ -182,7 +174,7 @@ status=published
             </tr>
             <tr>
               <td class="file_field_name"><a href="#file10">LoincIeeeMedicalDeviceCodeMappingTable.csv</a></td>
-			  <td>Linkages between LOINC terms and content from the IEEE 11073(TM) 10101 Standard for Health informatics -
+              <td>Linkages between LOINC terms and content from the IEEE 11073(TM) 10101 Standard for Health informatics -
 			  Point-of-care medical device communication - Nomenclature and 10101a Nomenclature Amendment.</td>
             </tr>
             <tr>
@@ -466,7 +458,7 @@ status=published
                 <td>20</td>
                 <td>SUBMITTED_UNITS</td>
                 <td>Moved to RELMA</td>
-                <td>MRSAT.ATN = "LSU"</td>
+                <td>MRSAT.ATN = "LSU"; field currently empty</td>
               </tr>
               <tr>
                 <td>21</td>
@@ -494,7 +486,7 @@ status=published
                 <td>CDISC_COMMON_TESTS</td>
                 <td>Y indicates member of subset used by CDISC in
                   clinical trials</td>
-                <td>MRSAT.ATN = "LCD"</td>
+                <td>MRSAT.ATN = "LCD"; field currently empty</td>
               </tr>
               <tr>
                 <td>25</td>
@@ -720,7 +712,7 @@ status=published
         </div>
         <div class="rep_block_level_two"><a id="file4"></a>
           <h4 class="file_field_name">file:
-            Parts.csv</h4>
+            Part.csv</h4>
           <table>
             <tbody>
               <tr>
@@ -730,41 +722,36 @@ status=published
               </tr>
               <tr>
                 <td>1</td>
-                <td>L_PART_ID</td>
+                <td>PartNumber</td>
                 <td>MRCONSO.CODE, SCUI<br/>
                 </td>
               </tr>
               <tr>
                 <td>2</td>
-                <td>PART_TYPE</td>
+                <td>PartTypeName</td>
                 <td>Values are: ADJUSTMENT, CHALLENGE, CLASS,<br/>
                   COMPONENT, COUNT, DIVISORS, FRAGMENTS FOR SYNONYMS,<br/>
                   METHOD, MULTI-AXIAL, MULTIPART, PROPERTY, QUOTIENTS,<br/>
                   SCALE, SUFFIX, SUPER SYSTEM, SUPERSYSTEMMULTI-AXIAL,<br/>
                   SYSTEM, TIME, TIME MODIFIER.<br/>
                   Used to create relationships between LOINC PARTS and
-                  LOINC IDs.</td>
+                  LOINC IDs and value for ATN = PART_TYPE.</td>
               </tr>
               <tr>
                 <td>3</td>
-                <td>NAME_CASE_INSENSITIVE</td>
+                <td>PartName</td>
                 <td>MRCONSO.STR, TTY = "LPN'</td>
               </tr>
               <tr>
                 <td>4</td>
-                <td>DISPLAY_NAME</td>
-                <td>
-                  <ul>
-                    <li>MRCONSO.STR, TTY = "LPDN" (only "DISPLAY_NAME"
-                      values that contain the pattern "Allergen Mix" are
-                      included as LPDN atoms</li>
-                    <li>MRSAT.ATN = "SOS"</li>
-                  </ul>
+                <td>PartDisplayName</td>
+                <td>MRCONSO.STR, TTY = "LPDN";
+                 MRSAT.ATN = "SOS"; ATV = PartTypeName:PartDisplayName
                 </td>
               </tr>
               <tr>
                 <td>5</td>
-                <td>SHORT_NAME_MIXED_CASE</td>
+                <td>Status</td>
                 <td>Not used</td>
               </tr>
             </tbody>
@@ -772,7 +759,7 @@ status=published
         </div>
         <div class="rep_block_level_two"><a id="file5"></a>
           <h4 class="file_field_name">file:
-            PartLinks.csv</h4>
+            LoincPartLink_Primary.csv and LoincPartLink_Supplementary.csv</h4>
           <table>
             <tbody>
               <tr>
@@ -783,13 +770,12 @@ status=published
               </tr>
               <tr>
                 <td>1</td>
-                <td>LOINC_NUM/</td>
-                <td>LOINC CODE</td>
+                <td>LoincNumber</td>
                 <td>A relationship (STYPE = "SCUI") is created between
-                  the LOINC CODE and the LOINC PART.<br/>
+                  the LoincNumber and the PartNumber (field3).<br/>
                   The REL = "RO";<br/>
                   The RELA is assigned based on the
-                  PARTS.PART_TYPE of the L_PART_ID as follows:<br/>
+                  PartTypeName (field 6) as follows:<br/>
                   <br/>
                   <table>
                     <tbody>
@@ -871,31 +857,53 @@ status=published
                   <br/>
                   <p>Note: Some PART TYPEs (e.g., "MULTI-AXIAL" and
                     "SUPERSYSTEMMULTI-AXIAL"<br/>
-                    may not appear in the current PartLinks.csv
+                    may not appear in the Part.csv
                     file, therefore, no relationships are created for
                     these PART TYPE values.</p>
                 </td>
               </tr>
               <tr>
                 <td>2</td>
-                <td>L_PART_ID</td>
-                <td>LOINC PART CODE</td>
-                <td>Relationship created between the LOINC_NUM the
-                  L_PART_ID<br/>
-                </td>
+                <td>LongCommonName</td>
+                <td>Not used</td>
               </tr>
               <tr>
                 <td>3</td>
-                <td>LINK_TYPE</td>
-                <td>Value is always "1"</td>
-                <td>Not processed</td>
+                <td>PartNUmber</td>
+                <td>A relationship (STYPE = "SCUI") is created between
+                  the LoincNumber (field 1) and the PartNumber.</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>PartName</td>
+                <td>Not used</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>PartCodeSystem</td>
+                <td>Not used</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>PartTypeName</td>
+                <td>Not used</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>LinkTypeName</td>
+                <td>Not used</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Property</td>
+                <td>Not used</td>
               </tr>
             </tbody>
           </table>
         </div>
         <div class="rep_block_level_two"><a id="file6"></a>
           <h4 class="file_field_name">file:
-            PanelsAndForms.xlsx</h4>
+            PanelsAndForms.csv</h4>
           <table>
             <tbody>
               <tr>
@@ -921,12 +929,12 @@ status=published
               </tr>
               <tr>
                 <td>4</td>
-                <td>Id</td>
+                <td>ID</td>
                 <td>Not used</td>
               </tr>
               <tr>
                 <td>5</td>
-                <td>Sequence</td>
+                <td>SEQUENCE</td>
                 <td>Not used</td>
               </tr>
               <tr>
@@ -1016,22 +1024,22 @@ status=published
               <tr>
               	<td>1</td>
               	<td>AnswerListId</td>
-              	<td>MRSAT.ATN = ANSWER_LIST_ID (Join field to AnswerList.csv)</td>
+              	<td>MRSAT.ATN = ANSWER_LIST_ID (Join field to LoincAnswerListLink.csv)</td>
               </tr>
-			<tr>
-				<td>2</td>
-				<td>AnswerListName</td>
-				<td>MRSAT.ATN = ANSWER_LIST_NAME</td>
+              <tr>
+               <td>2</td>
+               <td>AnswerListName</td>
+               <td>MRSAT.ATN = ANSWER_LIST_NAME</td>
               </tr>
-			<tr>
-				<td>3</td>
-				<td>AnswerListOID</td>
-				<td>MRSAT.ATN = OID</td>
+              <tr>
+               <td>3</td>
+               <td>AnswerListOID</td>
+               <td>MRSAT.ATN = ANSWER_LIST_OID</td>
               </tr>
-			<tr>
-				<td>4</td>
-				<td>ExtDefinedYN</td>
-				<td>Not used</td>
+              <tr>
+               <td>4</td>
+               <td>ExtDefinedYN</td>
+               <td>Not used</td>
               </tr>
               <tr>
                 <td>5</td>
@@ -1071,23 +1079,6 @@ status=published
               </tr>
               <tr>
                 <td>12</td>
-                <td>AnswerStringID</td>
-                <td>Relationship created between Loinc concept code and
-                  AnswerStringID; RELA = has_answer/answer_to</td>
-              </tr>
-              <tr>
-                <td>10</td>
-                <td>AnswerCode</td>
-                <td>MRSAT.ATN=ANSWER_CODE</td>
-              </tr>
-              <tr>
-                <td>11</td>
-                <td>SequenceNo</td>
-                <td>MRSAT.ATN=SEQ_NO; attached to the rel_id of the
-                  'has_answer/answer_to' relationship.</td>
-              </tr>
-              <tr>
-                <td>12</td>
                 <td>ExtCodeId</td>
                 <td>Not used</td>
               </tr>
@@ -1111,8 +1102,8 @@ status=published
                 <td>ExtCodeSystemCopyrightNotice</td>
                 <td>Not used</td>
               </tr>
-			  <tr>
-				<td>17</td>
+              <tr>
+                <td>17</td>
                 <td>SubsequentTextPrompt</td>
                 <td>MRSAT.ATN=SUBSEQUENT_TEXT_PROMPT</td>
               </tr>
