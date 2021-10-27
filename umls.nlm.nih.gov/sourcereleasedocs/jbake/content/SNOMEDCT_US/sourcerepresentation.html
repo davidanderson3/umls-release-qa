@@ -1,6 +1,6 @@
 title=SNOMEDCT_US (SNOMED CT, US Edition) - Source Representation
 date=2021-06-08
-updated=2021-06-08
+updated=2021-11-01
 type=page
 status=published
 ~~~~~~
@@ -28,11 +28,125 @@ status=published
   <div class="col-sm-auto border-left"><a href="#file_summary">Summary of Source-Provided Files</a></div>
   <div class="col-sm-auto border-left"><a href="#file_details">Source-Provided File Details</a></div>
 </div>
-<p><b>VSAB:</b> SNOMEDCT_2021_03_01</p>
+<p><b>VSAB:</b> SNOMEDCT_2021_09_01</p>
   <hr>
-<div id="change_summary" class="rep_block_level_one"> <a name="change_summary"></a>
+<div id="rep_change_summary" class="rep_block_level_one"> <a name="change_summary"></a>
   <h3>Summary of Changes</h3>
-  <p>---</p>
+  <table>
+		<tbody>
+			<tr>
+				<th>New File</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>Terminology/sct2_RelationshipConcreteValues_Snapshot_US1000124_20210901.txt</td>
+				<td>Used to express strengths and concentrations of clinical drugs as well as ingredient counts, specifically supplying clinical drug strengths 
+				as true numbers, rather than using relationships to concepts which represent those numbers.  See the list of depracated RELA values below.</td>
+			</tr>
+		</tbody>
+	  </table>
+		<br/>
+
+      <table>
+		<tbody>
+			<tr>
+				<th>New Relationship Attributes (RELA)/inverse values</th>
+			</tr>
+			<tr>
+				<td>has_absorbability/absorbability_of</td>
+			</tr>
+			<tr>
+				<td>has_coating_material/coating_material_of</td>
+			</tr>
+			<tr>
+				<td>has_ingredient_qualitative_strength/ingredient_qualitative_strength_of</td>
+			</tr>
+			<tr>
+				<td>has_surface_texture/has_surface_texture</td>
+			</tr>
+			<tr>
+				<td>has_target_population/target_population_of</td>
+			</tr>
+			<tr>
+				<td>is_sterile/answer_to_is_sterile</td>
+			</tr>
+			<tr>
+				<td>process_extends_to/extended_to_by_process</td>
+			</tr>
+		</tbody>
+	  </table>
+	  <br/>
+
+
+	  <table>
+	  		<tbody>
+			<tr>
+				<th>New  Attributes (ATN)</th>
+			</tr>
+			<tr>
+				<td>The following attributes are derived from RelationshipConcreteValues.  The ATV is the value field followed by a "~" character and the value of the relationshipGroup field</td>
+			</tr>
+			<tr>
+				<td>CONCENTRATION_STRENGTH_DENOMINATOR_VALUE</td>
+			<tr>
+				<td>CONCENTRATION_STRENGTH_NUMERATOR_VALUE</td>
+			</tr>
+			<tr>
+				<td>COUNT_OF_ACTIVE_INGREDIENT</td>
+			</tr>
+			<tr>
+				<td>COUNT_OF_BASE_OF_ACTIVE_INGREDIENT</td>
+			</tr>
+			<tr>
+				<td>PRESENTATION_STRENGTH_DENOMINATOR_VALUE</td>
+			</tr>
+			<tr>
+				<td>PRESENTATION_STRENGTH_NUMERATOR_VALUE</td>
+			</tr>
+		</tbody>
+		</table>
+		<br/>
+	
+		<table>
+		<tbody>
+			<tr>
+				<th>Deprecated RELA/inverse values; All MRREL rows with the following RELA values are now suppressible = "O"</th>
+			<tr>
+				<td>has_concentration_strength_denominator_value/concentration_strength_denominator_of ***</td>
+			</tr>
+			<tr>
+				<td>has_concentration_strength_numerator_value/concentration_strength_numerator_of ***</td>
+			</tr>
+			<tr>
+				<td>has_count_of_active_ingredient/count_of_active_ingredient_of ***</td>
+			</tr>
+			<tr>
+				<td>has_count_of_base_of_active_ingredient/count_of_base_of_active_ingredient_of ***</td>
+			</tr>
+			<tr>
+				<td>has_device_characteristic/device_characteristic_of</td>
+			</tr>
+			<tr>
+				<td>has_ingredient_characteristic/ingredient_characteristic_of</td>
+			</tr>
+			<tr>
+				<td>has_presentation_strength_denominator_value/presentation_strength_denominator_value_of ***</td>
+			</tr>
+			<tr>
+				<td>has_presentation_strength_numerator_value/presentation_strength_numerator_value_of ***</td>
+			</tr>
+			<tr>
+				<td>has_product_characteristic/product_characteristic_of</td>
+			</tr>
+			<tr>
+				<td>has_surface_characteristic/surface_characteristic_of</td>
+			</tr>
+			<tr>
+				<td>*** The information from these relationships is now represented as attributes, extracted from the RelationshipConcreteValues file; see MRSAT information</td>
+			</tr>
+		</tbody>
+	  </table>
+
 </div>
 <hr>
 <div id="rep_file_summary" class="rep_block_level_one"> <a name="file_summary"></a>
@@ -82,7 +196,12 @@ status=published
           <td class="file_field_name"><a href="#file3">sct2_Relationship_Snapshot_&lt;version&gt;_&lt;YYYYMMDD&gt;.txt</a></td>
           <td>Relationships</td>
         </tr>
-        <tr>
+		<tr>
+          <td>Terminology</td>
+          <td class="file_field_name"><a href="#file3a">sct2_RelationshipConcreteValues_Snapshot_&lt;ReleaseCode&gt;_&lt;YYYYMMDD&gt;.txt</a></td>
+          <td>Relationship Concrete Values</td>
+        </tr>
+		<tr>
           <td>Terminology</td>
           <td class="file_field_name"><a href="#file4">sct2_TextDefinition_Snapshot_&lt;version&gt;_&lt;YYYYMMDD&gt;.txt</a></td>
           <td>Text Definitions</td>
@@ -616,6 +735,85 @@ status=published
         </tr>
       </tbody>
     </table>
+	
+	 <p>Return to <a href="#data_files">Data Files</a></p>
+    <a name="file3a"></a>
+    <h4 class="file_field_name">file:sct2_RelationshipConcreteValues_Snapshot_&lt;version&gt;_&lt;YYYYMMDD&gt;</h4>
+    <p>Relationship Concrete Values</p>
+    <table>
+      <tbody>
+        <tr>
+          <th>#</th>
+          <th>Field Name</th>
+          <th>Description</th>
+          <th>Representation</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>id</td>
+          <td>SNOMED CT Concrete Relationship ID</td>
+          <td>MRSAT.SATUI</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>effectiveTime</td>
+          <td>Not processed</td>
+          <td>N/A</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>active</td>
+          <td>Active status ("0" = inactive, "1" = active)</td>
+          <td>MRSAT.SUPPRESS ("N" if active is "1", "O" if active is "0")</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>moduleId</td>
+          <td>Not processed</td>
+          <td>N/A</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>sourceId</td>
+          <td>Concept ID of concrete relationship's source concept </td>
+          <td>MRSAT.CUI populated by the Metathesaurus CUI
+            corresponding to sourceId</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>value</td>
+          <td>The concrete value of the relationship</td>
+          <td>The initial portion of MRSAT.ATV (up to the first "~"
+            character) where MRSAT.ATN is derived from the typeId value</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>relationshipGroup</td>
+          <td></td>
+          <td>The final portion of MRSAT.ATV (after the first "~" character) where
+		  MRSAT.ATN is derived from the typeId value</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>typeId</td>
+          <td>Relationship Type identifier</td>
+          <td>ID of SNOMED CT concept used to assign MRSAT.ATN</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>characteristicTypeId</td>
+          <td>Not processed</td>
+          <td>N/A</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>modifierId</td>
+          <td>Not processed</td>
+          <td>N/A</td>
+        </tr>
+	  </tbody>
+	</table>
+	
     <p>Return to <a href="#data_files">Data Files</a></p>
     <a name="file4"></a>
     <h4 class="file_field_name">file:sct2_TextDefinition_Snapshot-en_&lt;version&gt;_&lt;YYYYMMDD&gt;e.txt</h4>

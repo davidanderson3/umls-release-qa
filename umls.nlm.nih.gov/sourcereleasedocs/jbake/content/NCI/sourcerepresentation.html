@@ -1,6 +1,6 @@
 title=NCI (NCI Thesaurus) - Source Representation
 date=2018-05-07
-updated=2021-05-03
+updated=2021-11-01
 type=page
 status=published
 ~~~~~~
@@ -20,13 +20,12 @@ status=published
 </div>
 
 <!--endmenu-->
-<br/>
+
 
 <p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p>
-<a id="top-of-page"></a> <span class = "nav">Skip to: <a href = "#general">General Notes/Comments</a>, <a href = "#change_summary">Summary of Changes</a>, <a href = "#file_summary">Summary of Source-Provided Files</a> <a href = "#file_details">Source-Provided File Details</a></span>
-<a id= "general">&nbsp;</a>
+
 <div id = "rep_general" class = "rep_block_level_one">
-<h3>VSAB: NCI2020_09D</h3>
+<h3>VSAB: NCI2021_02D</h3>
 <h3>General Notes/Comments:</h3>
 <p>NCI Thesaurus (NCIt) is a widely recognized standard for biomedical coding and reference. It covers vocabulary for clinical care, translational and basic research, public information and administrative activities and is used by a broad variety of public and private partners both nationally and internationally.
 The scope of NCI is determined by the combined scope of its source vocabularies which include the following:</p>
@@ -55,6 +54,9 @@ The scope of NCI is determined by the combined scope of its source vocabularies 
 </tr>
 <tr>
     <td>CBDD</td><td>Chemcial Biology and Drug Development Vocabulary</td>
+</tr>
+<tr>
+    <td>CCPS</td><td>Childhood Cancer Predisposition Study Terminology</td>
 </tr>
 <tr>
     <td>CDC</td><td>U.S. Centers for Disease Control and Prevention</td>
@@ -170,29 +172,26 @@ The scope of NCI is determined by the combined scope of its source vocabularies 
 <h3>Summary of Changes</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top-of-page">top</a></span>)
 <p>New subsource(s):</p>
 <ul>
-  <li>caDSR (Cancer Data Standards Registry and Repository)</li>
-  <li>CTDC (Clinical Trial Data Commons)</li>
-  <li>PCDC(Pediatric Cancer Data Commons)</li>
+  <li>CCPS (Childhood Cancer Predisposition Study Terminology)</li>
 </ul>
 <p>New termgroup(s):</p>
 <ul>
-  <li>caDSR/SY</li>
-  <li>ACC-AHA/SY</li>
-  <li>CTCAE/SY</li>
-  <li>CTDC/DN,PT,SY</li>
-  <li>PCDC/PT,SY</li>
+  <li>CCPS/PT</li>
+  <li>caDSR/AB</li>
 </ul>
-<p>New property(s):</p>
+<p>Dropped termgroup(s):</p>
 <ul>
-  <li>P175 NSC_NUMBER (property name updated from 'NSC_CODE)</li>
+  <li>PCDC/SY</li>
 </ul>
-<p>New associations(s) | Inverse(s):</p>
+<p>New relationship attribute(s) (RELA) | Inverse RELA:</p>
 <ul>
-  <li>A24|is_pcdc_aml_permissible_value_for_variable (association name updated from 'pcdc_aml_permissible_value_of')|has_pcdc_aml_permissible_value</li>
-  <li>A25|value_set_is_paired_with|is_paired_with_value_set</li>
-  <li>A27|has_ctdc_value|is_ctdc_value_of</li>
+  <li>is_pcdc_ews_permissible_value_for_variable|has_pcdc_ews_permissible_value</li>
+  <li>has_pcdc_ews_permissible_value|is_pcdc_ews_permissible_value_for_variable</li>
+  <li>has_icdc_value|icdc_value_of</li>
+  <li>is_pcdc_gct_permissible_value_for_variable|has_pcdc_gct_permissible_value</li>
+  <li>has_pcdc_gct_permissible_value|is_pcdc_gct_permissible_value_for_variable</li>
 </ul>
-<p>For NCI and all subsources, TTY=AB has suppressible = Y.</p>
+<p>The source contact information has been updated from Sherri de Coronado to Lyubov Remennik.</p>
 </div>
 <div id = "rep_file_summary" class = "rep_block_level_one"></div>
 <a id= "file_summary">&nbsp;</a>
@@ -205,7 +204,7 @@ The scope of NCI is determined by the combined scope of its source vocabularies 
 <tr><td  class = "file_field_name">nci.cfg</td><td>Configuration file</td></tr>
 <tr><td  class = "file_field_name">ThesaurusInferred.owl</td><td>Complete source data in an OWL2 formatted file</td></tr>
 </table>
-<br/>
+
 </div>
 <a id= "file_details">&nbsp;</a>
 <div id = "rep_file_details" class = "rep_block_level_one"></div>
@@ -246,8 +245,13 @@ The scope of NCI is determined by the combined scope of its source vocabularies 
 <tr><td  class = "file_field_name">&lt;A23 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_PCDC_Data_Type</td><td>MRREL.CUI*; MRREL.RELA=has_pcdc_data_type</td></tr>
 <tr><td  class = "file_field_name">&lt;A24 rdf:resource="http://...owl#A..."/&gt;</td><td>Is_PCDC_AML_Permissible_Value_For_Variable</td><td>MRREL.CUI*; MRREL.RELA=is_pcdc_aml_permissible_value_for_variable</td></tr>
 <tr><td  class = "file_field_name">&lt;A25 rdf:resource="http://...owl#A..."/&gt;</td><td>Value_Set_Is_Paired_With</td><td>MRREL.CUI*; MRREL.RELA=value_set_is_paired_with</td></tr>
-<tr><td  class = "file_field_name">&lt;A26 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_PCDC_AML_Permissible_Value</td><td>MRREL.CUI*; MRREL.RELA=has_pcdc_permissible_value</td></tr>
+<tr><td  class = "file_field_name">&lt;A26 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_PCDC_AML_Permissible_Value</td><td>MRREL.CUI*; MRREL.RELA=has_pcdc_aml_permissible_value</td></tr>
 <tr><td  class = "file_field_name">&lt;A27 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_CTDC_Value</td><td>MRREL.CUI*; MRREL.RELA=has_ctdc_value</td></tr>
+<tr><td  class = "file_field_name">&lt;A28 rdf:resource="http://...owl#A..."/&gt;</td><td>Is_PCDC_EWS_Permissible_Value_For_Variable</td><td>MRREL.CUI*; MRREL.RELA=is_pcdc_ews_permissible_value_for_variable</td></tr>
+<tr><td  class = "file_field_name">&lt;A29 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_PCDC_EWS_Permissible_Value</td><td>MRREL.CUI*; MRREL.RELA=has_pcdc_ews_permissible_value</td></tr>
+<tr><td  class = "file_field_name">&lt;A30 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_ICDC_Value</td><td>MRREL.CUI*; MRREL.RELA=has_icdc_value</td></tr>
+<tr><td  class = "file_field_name">&lt;A33 rdf:resource="http://...owl#A..."/&gt;</td><td>Is_PCDC_GCT_Permissible_Value_For_Variable</td><td>MRREL.CUI*; MRREL.RELA=is_pcdc_gct_permissible_value_for_variable</td></tr>
+<tr><td  class = "file_field_name">&lt;A34 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_PCDC_GCT_Permissible_Value</td><td>MRREL.CUI*; MRREL.RELA=has_pcdc_gct_permissible_value</td></tr>
 <tr><td  class = "file_field_name">&lt;P90 rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"&gt;&lt;ncicp:ComplexTerm
 xmlns:ncicp="http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#"&gt;&lt;ncicp:term-name&gt;...&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;...&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;...&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplextTerm&gt;&lt;/P90&gt;
 </td><td>FULL_SYN. Includes term name, term type, term source, and source code.</td><td>MRCONSO.STR = term name; MRCONSO.TTY = term type; MRCONSO.SAB = term source. NCI/PTs are not processed and NCI/CNUs are assigned to the ATN = CNU.</td></tr>
@@ -503,5 +507,5 @@ regimen_has_accepted_use_for_disease</td></tr>
 <tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R179"&gt;</td><td>Gene_Product_Sequence_Variation_Encoded_By_Gene_Mutant</td><td>MRREL.RELA = gene_product_sequence_variation_encoded_by_gene_mutant</td></tr>
 <tr><td  class = "file_field_name">&lt;owl:ObjectProperty rdf:about="#R182"&gt;</td><td>Gene_Product_Variant_Of_Gene_Product</td><td>MRREL.RELA = gene_product_variant_of_gene_product</td></tr>
 </table>
-<br/>
+
 </div>

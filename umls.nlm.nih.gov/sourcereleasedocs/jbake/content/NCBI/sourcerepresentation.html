@@ -1,6 +1,6 @@
 title=NCBI (NCBI Taxonomy) - Source Representation
 date=2017-11-06
-updated=2021-05-03
+updated=2021-11-01
 type=page
 status=published
 ~~~~~~
@@ -31,11 +31,11 @@ status=published
 <a id="general"></a>
 <div id="rep_general" class="rep_block_level_one">
 
-<strong>VSAB: </strong>NCBI2020_05_21
+<strong>VSAB: </strong>NCBI2021_05_25
 <hr>
 <h3>Notes</h3>
 <p>Many concepts and terms from the NCBI Taxonomy are excluded during
-Metathesarus source processing.&nbsp; The criteria for determining
+Metathesarus source processing.&nbsp; The general criteria for determining
 which concepts and terms are excluded or retained are outlined
 below.&nbsp; See term type descriptions for additional information<br/>
 <br/>
@@ -50,24 +50,19 @@ classes:
 </ul>
 
 2. Exclude all concepts below the "species" level in the
-hierarchy. Selected concepts with a rank of "no rank" may be
+hierarchy. Selected concepts with a rank of "no rank" or "clade" may be
 retained, depending on their hierarchical level.<br/>
 <br/>
 3. Exclude all concepts that have a "division id" value of 11
 (environmental samples) and exclude their descendents.<br/>
 <br/>
 4. Exclude concepts and terms based on certain patterns, e.g.
-remove concepts with rank = "species" and the following words in the
-scientific name "uncultured," "clone," "unidentified," "uncultivated."<br/>
+remove concepts where rank = "species" with the following words in the
+scientific name: "uncultured," "clone," "unidentified," "uncultivated."<br/>
 <br/>
-5. Exclude concepts with ugly names (e.g., "xxxx", "4").<br/>
+
+5. Exclude concepts and their children based on certain punctuation patterns, e.g. if the information is enclosed in single or double quotes<br/>
 <br/>
-6. Exclude concepts and their children if the information is enclosed in single or double quotes<br/>
-<br/>
-7. Exclude concepts starting with "other", "unclassified", "unclassified sequences", "artificial sequences", "insertion sequences", "midivariant sequence", "transposons"
-and all their children.<br/>
-<br/>
-8. Exclude concepts containing "?" and their children<br/>
 
 
 </div>
@@ -83,7 +78,7 @@ and all their children.<br/>
 <h3>Source-Provided Files: Summary</h3>
 
 <p>The complete NCBI release can be downloaded from the taxonomy ftp
-site: <a href="ftp://ftp.ncbi.nih.gov/pub/taxonomy/">ftp://ftp.ncbi.nih.gov/pub/taxonomy/</a></p>
+site: <a href="https://ftp.ncbi.nih.gov/pub/taxonomy/">https://ftp.ncbi.nih.gov/pub/taxonomy/</a></p>
 <div class="rep_block_level_two">
 <!-- Make a table of each file that comes from the source   -->
 <h4>Documentation and Reference</h4>
