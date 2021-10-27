@@ -1,6 +1,6 @@
 title=CCSR_ICD10PCS (Clinical Classifications Software Refined for ICD-10-PCS) - Statistics
 date=
-updated=2021-05-03
+updated=2021-11-01
 type=page
 status=published
 ~~~~~~
@@ -57,34 +57,34 @@ status=published
 <td>MAPSETVSAB</td><td>Versioned source abbreviation for a map set</td><td>1</td>
 </tr>
 <tr>
-<td>FROMRSAB</td><td>Root source abbreviation for the "from" identifiers of a map set</td><td>1</td>
-</tr>
-<tr>
 <td>TORSAB</td><td>Root source abbreviation for the "to" identifiers of a map set</td><td>1</td>
 </tr>
 <tr>
-<td>MTH_MAPFROMEXHAUSTIVE</td><td>Indicates whether or not the "from" source of a map set is completely mapped</td><td>1</td>
+<td>FROMRSAB</td><td>Root source abbreviation for the "from" identifiers of a map set</td><td>1</td>
 </tr>
 <tr>
 <td>MTH_MAPSETCOMPLEXITY</td><td>Indicates the overall complexity of a map set</td><td>1</td>
 </tr>
 <tr>
-<td>TOVSAB</td><td>Versioned source abbreviation for the "to" identifiers of a map set</td><td>1</td>
+<td>MTH_MAPFROMEXHAUSTIVE</td><td>Indicates whether or not the "from" source of a map set is completely mapped</td><td>1</td>
 </tr>
 <tr>
-<td>FROMVSAB</td><td>Versioned source abbreviation for the "from" identifiers of a map set</td><td>1</td>
+<td>TOVSAB</td><td>Versioned source abbreviation for the "to" identifiers of a map set</td><td>1</td>
 </tr>
 <tr>
 <td>MAPSETRSAB</td><td>Root source abbreviation for a map set</td><td>1</td>
 </tr>
 <tr>
-<td>MAPSETVERSION</td><td>Version of the map set</td><td>1</td>
+<td>FROMVSAB</td><td>Versioned source abbreviation for the "from" identifiers of a map set</td><td>1</td>
+</tr>
+<tr>
+<td>MTH_MAPTOEXHAUSTIVE</td><td>Indicates whether or not the "to" source is completely mapped</td><td>1</td>
 </tr>
 <tr>
 <td>MTH_MAPFROMCOMPLEXITY</td><td>Indicates the complexity of "from" expressions used in a map set</td><td>1</td>
 </tr>
 <tr>
-<td>MTH_MAPTOEXHAUSTIVE</td><td>Indicates whether or not the "to" source is completely mapped</td><td>1</td>
+<td>MAPSETVERSION</td><td>Version of the map set</td><td>1</td>
 </tr>
 <tr>
 <td>MTH_MAPTOCOMPLEXITY</td><td>Indicates the complexity of "to" expressions in a map set</td><td>1</td>
@@ -96,16 +96,16 @@ status=published
 <th>Relation Name/Additional Label</th><th>Expanded Form</th><th>Count </th>
 </tr>
 <tr>
-<td>RQ/classified_as</td><td>related and possibly synonymous./Classified as</td><td>78103</td>
+<td>RQ/classifies</td><td>related and possibly synonymous./Classifies</td><td>77996</td>
 </tr>
 <tr>
-<td>RQ/classifies</td><td>related and possibly synonymous./Classifies</td><td>78103</td>
-</tr>
-<tr>
-<td>CHD/</td><td>has child relationship in a Metathesaurus source vocabulary /Empty relationship attribute</td><td>358</td>
+<td>RQ/classified_as</td><td>related and possibly synonymous./Classified as</td><td>77996</td>
 </tr>
 <tr>
 <td>PAR/</td><td>has parent relationship in a Metathesaurus source vocabulary /Empty relationship attribute</td><td>358</td>
+</tr>
+<tr>
+<td>CHD/</td><td>has child relationship in a Metathesaurus source vocabulary /Empty relationship attribute</td><td>358</td>
 </tr>
 </table>
 <h2>Definition Count</h2>
@@ -183,10 +183,10 @@ status=published
 <td>MEDCIN</td><td>77/357</td><td>21.6</td>
 </tr>
 <tr>
-<td>MSH</td><td>69/357</td><td>19.3</td>
+<td>MSHFRE</td><td>70/357</td><td>19.6</td>
 </tr>
 <tr>
-<td>MSHFRE</td><td>69/357</td><td>19.3</td>
+<td>MSH</td><td>69/357</td><td>19.3</td>
 </tr>
 <tr>
 <td>MSHCZE</td><td>68/357</td><td>19.0</td>
@@ -207,6 +207,9 @@ status=published
 <td>MSHSPA</td><td>66/357</td><td>18.5</td>
 </tr>
 <tr>
+<td>MSHSWE</td><td>66/357</td><td>18.5</td>
+</tr>
+<tr>
 <td>SNM</td><td>64/357</td><td>17.9</td>
 </tr>
 <tr>
@@ -217,9 +220,6 @@ status=published
 </tr>
 <tr>
 <td>MSHRUS</td><td>60/357</td><td>16.8</td>
-</tr>
-<tr>
-<td>MSHSWE</td><td>60/357</td><td>16.8</td>
 </tr>
 <tr>
 <td>MSHDUT</td><td>58/357</td><td>16.2</td>
@@ -252,10 +252,10 @@ status=published
 <td>AOD</td><td>41/357</td><td>11.5</td>
 </tr>
 <tr>
-<td>CPT</td><td>39/357</td><td>10.9</td>
+<td>LNC</td><td>41/357</td><td>11.5</td>
 </tr>
 <tr>
-<td>LNC</td><td>39/357</td><td>10.9</td>
+<td>CPT</td><td>39/357</td><td>10.9</td>
 </tr>
 <tr>
 <td>NCI_CTRP</td><td>38/357</td><td>10.6</td>
@@ -316,6 +316,9 @@ status=published
 </tr>
 <tr>
 <td>NANDA-I</td><td>5/357</td><td>1.4</td>
+</tr>
+<tr>
+<td>NCI_PCDC</td><td>5/357</td><td>1.4</td>
 </tr>
 <tr>
 <td>NIC</td><td>5/357</td><td>1.4</td>

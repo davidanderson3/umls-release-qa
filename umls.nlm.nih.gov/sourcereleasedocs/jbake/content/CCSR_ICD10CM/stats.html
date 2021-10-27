@@ -1,6 +1,6 @@
 title=CCSR_ICD10CM (Clinical Classifications Software Refined for ICD-10-CM) - Statistics
 date=
-updated=2021-05-03
+updated=2021-11-01
 type=page
 status=published
 ~~~~~~
@@ -81,25 +81,25 @@ status=published
 <td>MTH_MAPTOCOMPLEXITY</td><td>Indicates the complexity of "to" expressions in a map set</td><td>1</td>
 </tr>
 <tr>
-<td>FROMRSAB</td><td>Root source abbreviation for the "from" identifiers of a map set</td><td>1</td>
-</tr>
-<tr>
 <td>MTH_MAPSETCOMPLEXITY</td><td>Indicates the overall complexity of a map set</td><td>1</td>
 </tr>
 <tr>
-<td>MTH_MAPTOEXHAUSTIVE</td><td>Indicates whether or not the "to" source is completely mapped</td><td>1</td>
-</tr>
-<tr>
-<td>MAPSETVSAB</td><td>Versioned source abbreviation for a map set</td><td>1</td>
-</tr>
-<tr>
-<td>MAPSETRSAB</td><td>Root source abbreviation for a map set</td><td>1</td>
+<td>FROMRSAB</td><td>Root source abbreviation for the "from" identifiers of a map set</td><td>1</td>
 </tr>
 <tr>
 <td>MTH_MAPFROMEXHAUSTIVE</td><td>Indicates whether or not the "from" source of a map set is completely mapped</td><td>1</td>
 </tr>
 <tr>
+<td>MAPSETRSAB</td><td>Root source abbreviation for a map set</td><td>1</td>
+</tr>
+<tr>
+<td>MAPSETVSAB</td><td>Versioned source abbreviation for a map set</td><td>1</td>
+</tr>
+<tr>
 <td>FROMVSAB</td><td>Versioned source abbreviation for the "from" identifiers of a map set</td><td>1</td>
+</tr>
+<tr>
+<td>MTH_MAPTOEXHAUSTIVE</td><td>Indicates whether or not the "to" source is completely mapped</td><td>1</td>
 </tr>
 </table>
 <h2>Relationship Counts</h2>
@@ -108,22 +108,22 @@ status=published
 <th>Relation Name/Additional Label</th><th>Expanded Form</th><th>Count </th>
 </tr>
 <tr>
-<td>RQ/classifies</td><td>related and possibly synonymous./Classifies</td><td>83092</td>
+<td>RQ/classified_as</td><td>related and possibly synonymous./Classified as</td><td>83049</td>
 </tr>
 <tr>
-<td>RQ/classified_as</td><td>related and possibly synonymous./Classified as</td><td>83092</td>
+<td>RQ/classifies</td><td>related and possibly synonymous./Classifies</td><td>83049</td>
 </tr>
 <tr>
-<td>RQ/has_default_outpatient_classification</td><td>related and possibly synonymous./Has default outpatient classification</td><td>72879</td>
+<td>RQ/has_default_outpatient_classification</td><td>related and possibly synonymous./Has default outpatient classification</td><td>72861</td>
 </tr>
 <tr>
-<td>RQ/has_default_inpatient_classification</td><td>related and possibly synonymous./Has default inpatient classification</td><td>72879</td>
+<td>RQ/has_default_inpatient_classification</td><td>related and possibly synonymous./Has default inpatient classification</td><td>72861</td>
 </tr>
 <tr>
-<td>RQ/default_inpatient_classification_of</td><td>related and possibly synonymous./Default inpatient classification of</td><td>72879</td>
+<td>RQ/default_inpatient_classification_of</td><td>related and possibly synonymous./Default inpatient classification of</td><td>72861</td>
 </tr>
 <tr>
-<td>RQ/default_outpatient_classification_of</td><td>related and possibly synonymous./Default outpatient classification of</td><td>72879</td>
+<td>RQ/default_outpatient_classification_of</td><td>related and possibly synonymous./Default outpatient classification of</td><td>72861</td>
 </tr>
 </table>
 <h2>Definition Count</h2>
@@ -204,6 +204,9 @@ status=published
 <td>MSH</td><td>125/542</td><td>23.1</td>
 </tr>
 <tr>
+<td>MSHSWE</td><td>123/542</td><td>22.7</td>
+</tr>
+<tr>
 <td>MSHCZE</td><td>122/542</td><td>22.5</td>
 </tr>
 <tr>
@@ -211,6 +214,9 @@ status=published
 </tr>
 <tr>
 <td>MSHFRE</td><td>120/542</td><td>22.1</td>
+</tr>
+<tr>
+<td>MSHSPA</td><td>120/542</td><td>22.1</td>
 </tr>
 <tr>
 <td>NCI</td><td>120/542</td><td>22.1</td>
@@ -222,25 +228,19 @@ status=published
 <td>MSHITA</td><td>119/542</td><td>22.0</td>
 </tr>
 <tr>
+<td>MSHPOR</td><td>119/542</td><td>22.0</td>
+</tr>
+<tr>
 <td>CCS</td><td>118/542</td><td>21.8</td>
 </tr>
 <tr>
-<td>MSHSPA</td><td>118/542</td><td>21.8</td>
-</tr>
-<tr>
-<td>MSHGER</td><td>117/542</td><td>21.6</td>
-</tr>
-<tr>
-<td>MSHPOR</td><td>116/542</td><td>21.4</td>
+<td>MSHGER</td><td>118/542</td><td>21.8</td>
 </tr>
 <tr>
 <td>MSHPOL</td><td>113/542</td><td>20.8</td>
 </tr>
 <tr>
 <td>MSHRUS</td><td>112/542</td><td>20.7</td>
-</tr>
-<tr>
-<td>MSHSWE</td><td>112/542</td><td>20.7</td>
 </tr>
 <tr>
 <td>ICD10AM</td><td>110/542</td><td>20.3</td>
@@ -273,7 +273,7 @@ status=published
 <td>CCPSS</td><td>100/542</td><td>18.5</td>
 </tr>
 <tr>
-<td>ICPC2P</td><td>100/542</td><td>18.5</td>
+<td>ICPC2P</td><td>99/542</td><td>18.3</td>
 </tr>
 <tr>
 <td>DMDICD10</td><td>98/542</td><td>18.1</td>
@@ -303,7 +303,7 @@ status=published
 <td>DXP</td><td>80/542</td><td>14.8</td>
 </tr>
 <tr>
-<td>OMIM</td><td>78/542</td><td>14.4</td>
+<td>OMIM</td><td>79/542</td><td>14.6</td>
 </tr>
 <tr>
 <td>NCI_NICHD</td><td>76/542</td><td>14.0</td>
@@ -336,7 +336,7 @@ status=published
 <td>LCH</td><td>61/542</td><td>11.3</td>
 </tr>
 <tr>
-<td>LNC</td><td>55/542</td><td>10.1</td>
+<td>LNC</td><td>53/542</td><td>9.8</td>
 </tr>
 <tr>
 <td>BI</td><td>52/542</td><td>9.6</td>
@@ -372,16 +372,13 @@ status=published
 <td>PDQ</td><td>29/542</td><td>5.4</td>
 </tr>
 <tr>
+<td>NCI_GDC</td><td>27/542</td><td>5.0</td>
+</tr>
+<tr>
 <td>ICPC</td><td>26/542</td><td>4.8</td>
 </tr>
 <tr>
 <td>NANDA-I</td><td>26/542</td><td>4.8</td>
-</tr>
-<tr>
-<td>NCI_GDC</td><td>25/542</td><td>4.6</td>
-</tr>
-<tr>
-<td>QMR</td><td>25/542</td><td>4.6</td>
 </tr>
 <tr>
 <td>ICPCDAN</td><td>24/542</td><td>4.4</td>
@@ -415,6 +412,9 @@ status=published
 </tr>
 <tr>
 <td>ICPCSWE</td><td>24/542</td><td>4.4</td>
+</tr>
+<tr>
+<td>QMR</td><td>24/542</td><td>4.4</td>
 </tr>
 <tr>
 <td>ICPCBAQ</td><td>22/542</td><td>4.1</td>

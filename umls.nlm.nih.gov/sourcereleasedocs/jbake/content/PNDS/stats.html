@@ -1,6 +1,6 @@
 title=PNDS (Perioperative Nursing Data Set) - Statistics
 date=
-updated=2021-05-03
+updated=2021-11-01
 type=page
 status=published
 ~~~~~~
@@ -72,34 +72,34 @@ status=published
 <td>TORSAB</td><td>Root source abbreviation for the "to" identifiers of a map set</td><td>1</td>
 </tr>
 <tr>
-<td>MTH_MAPTOCOMPLEXITY</td><td>Indicates the complexity of "to" expressions in a map set</td><td>1</td>
-</tr>
-<tr>
 <td>TOVSAB</td><td>Versioned source abbreviation for the "to" identifiers of a map set</td><td>1</td>
 </tr>
 <tr>
-<td>FROMVSAB</td><td>Versioned source abbreviation for the "from" identifiers of a map set</td><td>1</td>
-</tr>
-<tr>
-<td>MTH_MAPFROMCOMPLEXITY</td><td>Indicates the complexity of "from" expressions used in a map set</td><td>1</td>
+<td>MTH_MAPTOCOMPLEXITY</td><td>Indicates the complexity of "to" expressions in a map set</td><td>1</td>
 </tr>
 <tr>
 <td>MTH_MAPSETCOMPLEXITY</td><td>Indicates the overall complexity of a map set</td><td>1</td>
 </tr>
 <tr>
-<td>MTH_MAPFROMEXHAUSTIVE</td><td>Indicates whether or not the "from" source of a map set is completely mapped</td><td>1</td>
+<td>MTH_MAPFROMCOMPLEXITY</td><td>Indicates the complexity of "from" expressions used in a map set</td><td>1</td>
+</tr>
+<tr>
+<td>FROMVSAB</td><td>Versioned source abbreviation for the "from" identifiers of a map set</td><td>1</td>
 </tr>
 <tr>
 <td>MAPSETTYPE</td><td>Indicates the nature of a map set. Its value is map set specific. It can be used to indicate the inclusion of one to one, one to many and choices of maps.</td><td>1</td>
 </tr>
 <tr>
+<td>MTH_MAPFROMEXHAUSTIVE</td><td>Indicates whether or not the "from" source of a map set is completely mapped</td><td>1</td>
+</tr>
+<tr>
 <td>MAPSETVSAB</td><td>Versioned source abbreviation for a map set</td><td>1</td>
 </tr>
 <tr>
-<td>MAPSETRSAB</td><td>Root source abbreviation for a map set</td><td>1</td>
+<td>FROMRSAB</td><td>Root source abbreviation for the "from" identifiers of a map set</td><td>1</td>
 </tr>
 <tr>
-<td>FROMRSAB</td><td>Root source abbreviation for the "from" identifiers of a map set</td><td>1</td>
+<td>MAPSETRSAB</td><td>Root source abbreviation for a map set</td><td>1</td>
 </tr>
 </table>
 <h2>Relationship Counts</h2>
@@ -108,16 +108,16 @@ status=published
 <th>Relation Name/Additional Label</th><th>Expanded Form</th><th>Count </th>
 </tr>
 <tr>
-<td>CHD/</td><td>has child relationship in a Metathesaurus source vocabulary /Empty relationship attribute</td><td>281</td>
-</tr>
-<tr>
 <td>PAR/</td><td>has parent relationship in a Metathesaurus source vocabulary /Empty relationship attribute</td><td>281</td>
 </tr>
 <tr>
-<td>RQ/mapped_from</td><td>related and possibly synonymous./Mapped from</td><td>256</td>
+<td>CHD/</td><td>has child relationship in a Metathesaurus source vocabulary /Empty relationship attribute</td><td>281</td>
 </tr>
 <tr>
 <td>RQ/mapped_to</td><td>related and possibly synonymous./Mapped to</td><td>256</td>
+</tr>
+<tr>
+<td>RQ/mapped_from</td><td>related and possibly synonymous./Mapped from</td><td>256</td>
 </tr>
 </table>
 <h2>Definition Count</h2>
@@ -141,7 +141,7 @@ status=published
 <td>SNOMEDCT_US</td><td>88/261</td><td>33.7</td>
 </tr>
 <tr>
-<td>ICNP</td><td>32/261</td><td>12.3</td>
+<td>ICNP</td><td>31/261</td><td>11.9</td>
 </tr>
 <tr>
 <td>CHV</td><td>15/261</td><td>5.7</td>
@@ -150,10 +150,10 @@ status=published
 <td>MEDCIN</td><td>15/261</td><td>5.7</td>
 </tr>
 <tr>
-<td>LNC</td><td>12/261</td><td>4.6</td>
+<td>SNMI</td><td>12/261</td><td>4.6</td>
 </tr>
 <tr>
-<td>SNMI</td><td>12/261</td><td>4.6</td>
+<td>LNC</td><td>11/261</td><td>4.2</td>
 </tr>
 <tr>
 <td>RCD</td><td>11/261</td><td>4.2</td>
@@ -169,9 +169,6 @@ status=published
 </tr>
 <tr>
 <td>AOD</td><td>7/261</td><td>2.7</td>
-</tr>
-<tr>
-<td>CPM</td><td>7/261</td><td>2.7</td>
 </tr>
 <tr>
 <td>MSH</td><td>7/261</td><td>2.7</td>
@@ -214,6 +211,9 @@ status=published
 </tr>
 <tr>
 <td>PSY</td><td>7/261</td><td>2.7</td>
+</tr>
+<tr>
+<td>CPM</td><td>6/261</td><td>2.3</td>
 </tr>
 <tr>
 <td>ICPC2P</td><td>6/261</td><td>2.3</td>
@@ -307,6 +307,9 @@ status=published
 </tr>
 <tr>
 <td>NCI_CDISC</td><td>3/261</td><td>1.1</td>
+</tr>
+<tr>
+<td>NCI_CDISC-GLOSS</td><td>3/261</td><td>1.1</td>
 </tr>
 <tr>
 <td>NCI_GDC</td><td>3/261</td><td>1.1</td>

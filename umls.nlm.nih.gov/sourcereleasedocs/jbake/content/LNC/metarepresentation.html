@@ -1,6 +1,6 @@
 title=LNC (LOINC) - Metathesaurus Representation
 date=2018-05-07
-updated=2021-05-03
+updated=2021-11-01
 type=page
 status=published
 ~~~~~~
@@ -31,11 +31,18 @@ status=published
     	<div class="col-sm-auto border-left"><a href="#relationships">Relationships</a></div>
     	<div class="col-sm-auto border-left"><a href="#mappings">Mappings</a></div>
     </div>
-    <p><strong>VSAB: </strong>LNC269</p>
+    <p><strong>VSAB: </strong>LNC271</p>
     <hr>
     <div id="rep_change_summary" class="rep_block_level_one"></div>
       <h3>Summary of Changes:</h3>
-      New Classes:
+      
+      <p>1. Deprecated attribute names (ATNs):</p>
+      <ul>
+       <li>LCD | CDISC common tests</li>
+       <li>LSU | Summitted units</li>
+      </ul>
+      <p>2. Mappings between LNC and CPT have been removed.</p>
+      <p>3. New Classes:</p>     
       <table>
       	<tbody>
       		<tr>
@@ -43,88 +50,72 @@ status=published
       			<th>Class</th>
       		</tr>
       		<tr>
-      			<td>PANEL.SURVEY.BADS</td>
-      			<td>Brief Anxiety and Depression Scale set</td>
+      			<td>PANEL.SURVEY.CHILD-PUGH</td>
+      			<td>Child-Pugh set</td>
       		</tr>
       		<tr>
-         <td>PANEL.SURVEY.BCAT</td>
-         <td>Brief Cognitive Assessment Tool set</td>
+         <td>PANEL.SURVEY.COVID</td>
+         <td>COVID-19 related surveys</td>
         </tr>
         <tr>
-         <td>PANEL.SURVEY.BRIEF</td>
-         <td>BRIEF Health Literacy Screening Tool set</td>
+         <td>PANEL.SURVEY.RUDAS</td>
+         <td>Rowland Universal Dementia Assessment Scale (RUDAS) set</td>
         </tr>
         <tr>
-      			<td>PANEL.SURVEY.HITS</td>
-      			<td>HITS Survey set</td>
+      			<td>SURVEY.CHILD-PUGH</td>
+      			<td>Child-Pugh survey</td>
       		</tr>
       		<tr>
-         <td>PANEL.SURVEY.NIDA</td>
-         <td>National Institute on Drug Abuse set</td>
+         <td>SURVEY.COVID</td>
+         <td>COVID-19 related survey questions</td>
         </tr>
         <tr>
-         <td>PANEL.SURVEY.NPASS</td>
-         <td>Neonatal Pain, Agitation and Sedation Scale set</td>
+         <td>SURVEY.RUDAS</td>
+         <td>Rowland Universal Dementia Assessment Scale (RUDAS)</td>
         </tr>
         <tr>
-      			<td>PANEL.SURVEY.SDOH</td>
-      			<td>Social determinants of health set</td>
+      			<td>NIPS</td>
+      			<td>Neonatal Infant Pain Scale</td>
       		</tr>
       		<tr>
-         <td>PANEL.SURVEY.SKINDEX</td>
-         <td>Skindex set</td>
+         <td>PANEL.SURVEY.COMI</td>
+         <td>Core Outcome Measures Index (COMI) set</td>
         </tr>
         <tr>
-         <td>SURVEY.BADS</td>
-         <td>Brief Anxiety and Depression Scale (BADS)</td>
+         <td>PANEL.SURVEY.SOFA</td>
+         <td>Sequential Organ Failure Assessment (SOFA) panel</td>
         </tr>
         <tr>
-         <td>SURVEY.BCAT</td>
-         <td>Brief Cognitive Assessment Tool (BCAT)</td>
+         <td>PANEL.SURVEY.TAPS</td>
+         <td>Tobacco, Alcohol, Prescription medications and other Substance panel</td>
         </tr>
         <tr>
-      			<td>SURVEY.BRIEF</td>
-      			<td>BRIEF Survey</td>
+      			<td>SURVEY.ALP</td>
+      			<td>RAND 2020 American Life Panel Survey on Impacts of COVID-19</td>
       		</tr>
       		<tr>
-         <td>SURVEY.HITS</td>
-         <td>HITS Survey</td>
+         <td>SURVEY.COMI</td>
+         <td>|Core Outcome Measures Index (COMI)</td>
         </tr>
         <tr>
-         <td>SURVEY.NIDA</td>
-         <td>National Institute on Drug Abuse</td>
+         <td>SURVEY.SOFA</td>
+         <td>Sequential Organ Failure Assessment (SOFA)</td>
         </tr>
         <tr>
-         <td>SURVEY.NPASS</td>
-         <td>Neonatal Pain, Agitation and Sedation Scale)</td>
+         <td>SURVEY.TAPS</td>
+         <td>Tobacco, Alcohol, Prescription medications and other Substance tool</td>
         </tr>
         <tr>
-         <td>SURVEY.SDOH</td>
-         <td>Social Determinants of Health)</td>
-        </tr>
-        <tr>
-      			<td>SURVEY.SKINDEX</td>
-      			<td>Skindex</td>
-      		</tr>
-      		<tr>
-         <td>EYE.ERG</td>
-         <td>electroretinogram concepts</td>
+         <td>EYE.HX</td>
+         <td>Eye history concepts</td>
         </tr>
        </tbody>
       </table>
       
-      <p>Deprecated ATNs:</p>
-      <ul>
-       <li>LSP</li>
-       <li>TOP_2000_LAB_RESULTS_SI</li>
-       <li>TOP_2000_LAB_RESULTS_US</li>
-      </ul>
-      <br/>
-	  <div>
+  <div>
     <h4>Original Files:</h4>
-    <p>The UMLS uses files publically available at <a
-        href="http://www.loinc.org" target="_blank">www.loinc.org</a>,
-      including:</p>
+    <p>The UMLS uses files publicly available at <a
+        href="http://www.loinc.org" target="_blank">www.loinc.org</a>.</p>
     <ul>
       <li>Loinc.csv</li>
       <li>MapTo.csv</li>
@@ -135,6 +126,8 @@ status=published
       <li>LoincUniversalLabOrdersValueSet.csv</li>
       <li>AnswerList.csv</li>
       <li>LoincAnswerListLink.csv</li>
+      <li>LoincPartLink_Primary.csv</li>
+      <li>LoincPartLink_Supplementary.csv</li>
       <li>ImagingDocumentCodes.csv</li>
       <li>ConsumerName.csv</li>
       <li>Group.csv</li>
@@ -142,12 +135,10 @@ status=published
       <li>GroupLoincTerms.csv</li>
       <li>ParentGroup.csv</li>
       <li>ParentGroupAttributes.csv</li>
+      <li>Part.csv</li>
 	  
     </ul>
-    <p>In addition, the UMLS receives two files to facilitate building
-      the hierarchy. For 2.69 these files were:
-      "PartLinks.csv,"  and "Parts.csv."  Additional information, such as
-      expansions of abbreviations, is extracted from LOINCUsersGuide.pdf. </p>
+    <p>In addition, the UMLS receives a file of abbreviations with expansions called 'Loinc_&lt;ver&gt;_Abbreviations_1.1.csv'.</p>
   </div>
   <hr>
     <div id="rep_identifiers" class="rep_block_level_one">
@@ -155,7 +146,7 @@ status=published
       <hr>
       <h4>Identifiers</h4>
       <p>LOINC Identifiers in the UMLS are generally based on field 1 of
-        Loinc.csv, or field 1 of Parts.csv (L_PART_ID). For some
+        Loinc.csv, or field 1 of Part.csv (PartNumber). For some
         termtypes, the atom may be associated with multiple LOINC
         entities. For example, a component may be a part of multiple
         fully-specified names. In these cases, the atom (e.g. a CN, or
@@ -166,8 +157,8 @@ status=published
           <ul>
             <li>For term types DN, LC, LN, LO, MTH_LN, MTH_LO, OLC, OOSN,
               OSN: the LOINC _NUM (field 1) from Loinc.csv</li>
-            <li>For term types LPDN, LPN: the L_PART_ID (field 1) from
-              Parts.csv or PartNumber (field 3) from
+            <li>For term types LPDN, LPN: the PartNumber (field 1) from
+              Part.csv or PartNumber (field 3) from
               LoincRsnaRadiologyPlaybook.csv</li>
             <li>For term types CN, MTH_CN, HC, HS, LS: an MTHU#,
               assigned during Metathesaurus source processing.</li>
@@ -274,16 +265,15 @@ status=published
             <tr>
               <td>LPDN</td>
               <td>Parts display name:<br/>
-                CODE = Parts.csv field 1 (L_PART_ID)<br/>
-                STR = Parts.csv field 4 (DISPLAY_NAME)<br/>
-                LPDN atoms are only created for strings containing the
-                pattern "Allergen Mix."</td>
+                CODE = Part.csv field 1 (PartNumber)<br/>
+                STR = Part.csv field 4 (DISPLAY_NAME)<br/>
+              </td>
             </tr>
             <tr>
               <td>LPN</td>
               <td>Parts name:<br/>
-                CODE = Parts.csv field 1 (L_PART_ID)<br/>
-                STR = Parts.csv field 3 (NAME_CASE_INSENSITIVE)<br/>
+                CODE = Part.csv field 1 (PartNumber)<br/>
+                STR = Part.csv field 3 (NAME_CASE_INSENSITIVE)<br/>
                 An additional LPN, "LOINCPARTS," is added during
                 Metathesaurus source processing as a hierarchical
                 placeholder.</td>
@@ -490,10 +480,6 @@ status=published
               <td>IMAGING_DOCUMENT_VALUE_SET</td>
       			     <td>A subset of document codes in LOINC that represent imaging procedures and reports, as indicated in ImagingDocumentCodes.csv.  ATV = "TRUE" when appropriate.
             <tr>
-              <td>LCD [CDISC common tests]</td>
-              <td>Loinc.csv field 24 (CDISC_COMMON_TESTS)</td>
-            </tr>
-            <tr>
               <td>LCL [Class]</td>
               <td>Loinc.csv field 8 (CLASS)</td>
             </tr>
@@ -565,10 +551,6 @@ status=published
             <tr>
               <td>LRN2 [Related names 2]</td>
               <td>Loinc.csv field 21 (RELATEDNAMES2)</td>
-            </tr>
-            <tr>
-              <td>LSU [Submitted units]</td>
-              <td>Loinc.csv field 20 (SUBMITTED_UNITS)</td>
             </tr>
             <tr>
               <td>LUR [Units required]</td>
@@ -1122,8 +1104,5 @@ status=published
     <div id="rep_mappings" class="rep_block_level_one"> <a
         id="mappings"></a>
       <h4>Mappings</h4>
-      &nbsp;
-      <p>The Metathesaurus includes mappings between <a
-href="http://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/mapping_projects/loinc.html"
-          target="_blank">LOINC 2.15 and CPT2005.</a></p>
+        <p>None</p>
     </div>
