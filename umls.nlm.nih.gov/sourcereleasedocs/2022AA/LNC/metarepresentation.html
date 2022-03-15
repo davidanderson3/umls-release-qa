@@ -1,0 +1,1134 @@
+title=LNC (LOINC) - Metathesaurus Representation
+date=2018-05-07
+updated=2021-11-01
+type=page
+status=published
+~~~~~~
+
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+
+<!--endmenu-->
+<br/>
+    <p>This page lists UMLS Metathesaurus data elements and traces them
+      back to the specific source data that populates them.</p>
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#atoms">Atoms</a></div>
+    	<div class="col-sm-auto border-left"><a href="#attributes">Attributes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#definitions">Definitions</a></div>
+    	<div class="col-sm-auto border-left"><a href="#relationships">Relationships</a></div>
+    	<div class="col-sm-auto border-left"><a href="#mappings">Mappings</a></div>
+    </div>
+    <p><strong>VSAB: </strong>LNC272</p>
+    <hr>
+    <div id="rep_change_summary" class="rep_block_level_one"></div>
+      <h3>Summary of Changes:</h3>
+      
+      <p>New Classes:</p>     
+      <table>
+      	<tbody>
+      		<tr>
+      			<th>Abbreviation</th>
+      			<th>Class</th>
+      		</tr>
+      		<tr>
+      			<td>EYE.LASIK</td>
+      			<td>Laser-assisted in situ keratomileusis</td>
+      		</tr>
+      		<tr>
+         <td>EYE.SPECULAR MICROSCOPY</td>
+         <td>Ophthalmology specular microscopy</td>
+        </tr>
+        <tr>
+         <td>PANEL.NEURO</td>
+         <td>Neurology panel</td>
+        </tr>
+        <tr>
+      			<td>PANEL.SURVEY.CBS-8</td>
+      			<td>Columbia Behavior Scale for Dementia (CBS-8) set</td>
+      		</tr>
+      		<tr>
+         <td>PANEL.SURVEY.CNPI</td>
+         <td>Checklist of Nonverbal Pain Indicators (CNPI) set</td>
+        </tr>
+        <tr>
+         <td>PANEL.SURVEY.LKSS</td>
+         <td>Lysholm Knee Scoring Scale (LKSS) set</td>
+        </tr>
+        <tr>
+      			<td>PANEL.SURVEY.ORTHOPEDICS</td>
+      			<td>Orthopedic survey panels</td>
+      		</tr>
+      		<tr>
+         <td>PANEL.SURVEY.PAIN</td>
+         <td>Pain survey panels</td>
+        </tr>
+        <tr>
+         <td>PANEL.SURVEY.PNDS</td>
+         <td>Perioperative Nursing Data Set outcomes panel</td>
+        </tr>
+        <tr>
+         <td>PANEL.SURVEY.PROWL</td>
+         <td>Patient Reported Outcomes with LASIK sets</td>
+        </tr>
+        <tr>
+      			<td>PANEL.SURVEY.RMDQ</td>
+      			<td>Roland Morris Disability Questionnaire set</td>
+      		</tr>
+      		<tr>
+         <td>PANEL.SURVEY.SLP</td>
+         <td>Speech-language pathology (SLP) panels</td>
+        </tr>
+        <tr>
+         <td>PANEL.SURVEY.WIFI</td>
+         <td>Would Ischemia and Foot Infection set</td>
+        </tr>
+        <tr>
+         <td>SURVEY.CBS-8</td>
+         <td>Columbia Behavior Scale for Dementia survey</td>
+        </tr>
+        <tr>
+         <td>SURVEY.CNPI</td>
+         <td>Checklist of Nonverbal Pain Indicators survey</td>
+        </tr>
+        <tr>
+         <td>SURVEY.LKSS</td>
+         <td>Lysholm Knee Scoring Scale survey</td>
+        </tr>
+        <tr>
+         <td>SURVEY.NEI</td>
+         <td>National Eye Institute survey</td>
+        </tr>
+        <tr>
+         <td>SURVEY.ORTHOPEDICS</td>
+         <td>Orthopedic surveys</td>
+        </tr>
+        <tr>
+         <td>SURVEY.PAIN</td>
+         <td>Pain surveys</td>
+        </tr>
+        <tr>
+         <td>SURVEY.PNDS</td>
+         <td>Perioperative Nursing Data Set (PNDS) survey</td>
+        </tr>
+        <tr>
+         <td>SURVEY.PROWL</td>
+         <td>Patient Reported Outcomes with LASIK surveys</td>
+        </tr>
+        <tr>
+         <td>SURVEY.RMDQ</td>
+         <td>Roland Morris Disability Questionnaire</td>
+        </tr>
+        <tr>
+         <td>SURVEY.SLP</td>
+         <td>Speech-language pathology (SLP) surveys</td>
+        </tr>
+       </tbody>
+      </table>
+      
+  <div>
+    <h4>Original Files:</h4>
+    <p>The UMLS uses files publicly available at <a
+        href="http://www.loinc.org" target="_blank">www.loinc.org</a>.</p>
+    <ul>
+      <li>Loinc.csv</li>
+      <li>MapTo.csv</li>
+      <li>MultiAxialHierarchy.csv</li>
+      <li>PanelsAndForms.csv</li>
+      <li>LoincIeeeMedicalDeviceCodeMappingTable.csv</li>
+      <li>LoincRsnaRadiologyPlaybook.csv</li>
+      <li>LoincUniversalLabOrdersValueSet.csv</li>
+      <li>AnswerList.csv</li>
+      <li>LoincAnswerListLink.csv</li>
+      <li>LoincPartLink_Primary.csv</li>
+      <li>LoincPartLink_Supplementary.csv</li>
+      <li>ImagingDocumentCodes.csv</li>
+      <li>ConsumerName.csv</li>
+      <li>Group.csv</li>
+      <li>GroupAttributes.csv</li>
+      <li>GroupLoincTerms.csv</li>
+      <li>ParentGroup.csv</li>
+      <li>ParentGroupAttributes.csv</li>
+      <li>Part.csv</li>
+	  
+    </ul>
+    <p>In addition, the UMLS receives a file of abbreviations with expansions called 'Loinc_&lt;ver&gt;_Abbreviations_1.1.csv'.</p>
+  </div>
+  <hr>
+    <div id="rep_identifiers" class="rep_block_level_one">
+      <h3>Overview</h3>
+      <hr>
+      <h4>Identifiers</h4>
+      <p>LOINC Identifiers in the UMLS are generally based on field 1 of
+        Loinc.csv, or field 1 of Part.csv (PartNumber). For some
+        termtypes, the atom may be associated with multiple LOINC
+        entities. For example, a component may be a part of multiple
+        fully-specified names. In these cases, the atom (e.g. a CN, or
+        Official Component Name), is assigned an MTHU# during
+        Metathesaurus source processing. </p>
+      <ul>
+        <li>CODE:
+          <ul>
+            <li>For term types DN, LC, LN, LO, MTH_LN, MTH_LO, OLC, OOSN,
+              OSN: the LOINC _NUM (field 1) from Loinc.csv</li>
+            <li>For term types LPDN, LPN: the PartNumber (field 1) from
+              Part.csv or PartNumber (field 3) from
+              LoincRsnaRadiologyPlaybook.csv</li>
+            <li>For term types CN, MTH_CN, HC, HS, LS: an MTHU#,
+              assigned during Metathesaurus source processing.</li>
+            <li>For term type LA: the AnswerStringID from AnswerList.csv</li>
+            <li> For termtypes LG and OLG: the GroupID (field 2) from Group.csv and/or ParentGroupId (field 1) from ParentGroup.csv</li>
+          </ul>
+        </li>
+        <li>SAUI: Not Applicable</li>
+        <li>SCUI: Same as CODE for term types DN, LA, LC, LG, LN, LO, LPDN, LPN,
+          MTH_LN, MTH_LO, OLC, OLG, OOSN, OSN</li>
+        <li>SDUI: Not Applicable</li>
+      </ul>
+      <hr>
+      <h4>Expansions</h4>
+      <p>Expanded forms of certain atoms are created during
+        Metathesaurus source processing by applying abbreviation
+        expansions extracted from the LOINC Users Guide. In these cases, the
+        expanded form is generally assigned the same identifier as its
+        original form. Expansions may also include converting patterns
+        such as "little e" or "super little b" to "e" or "^b"
+        respectively. </p>
+      <div id="rep_termtypes" class="rep_block_level_two"> <a
+          id="termtypes"></a>
+          <hr>
+        <h4>Atoms</h4>
+       
+        <table>
+          <tbody>
+            <tr>
+              <th>TTY</th>
+              <th>ORIGIN</th>
+            </tr>
+            <tr>
+              <td>CN</td>
+              <td>Official component name:<br/>
+                CODE = MTHU#, assigned during Metathesaurus source
+                processing; same as CODE for respective MTH_CN as
+                applicable.<br/>
+                STR = Loinc.csv field 2, subfield 1 (COMPONENT).</td>
+            </tr>
+            <tr>
+              <td>DN</td>
+              <td>Display Name:<br/>
+                CODE = Loinc.csv field 1 (LOINC_NUM)<br/>
+                STR = Loinc.csv field 45 (DisplayName)</td>
+            </tr>
+            <tr>
+              <td>HC</td>
+              <td>Hierarchical class:<br/>
+                CODE = MTHU#, assigned during Metathesaurus source
+                processing (same as CODE for respective HS).<br/>
+                STR = expanded form of Loinc.csv field 8 for CLASS or
+                expanded form of Loinc.csv field 14 for CLASSTYPE.<br/>
+                An additional HC atom, "LOINCCLASSTYPES," is added
+                during Metathesaurus source processing as a hierarchical
+                placeholder.</td>
+            </tr>
+            <tr>
+              <td>HS</td>
+              <td>Short or alternate version of hierarchical term:<br/>
+                CODE = MTHU#, assigned during Metathesaurus source
+                processing (same as CODE for respective HC).<br/>
+                STR = value of Loinc.csv field 8 for CLASS, or value of
+                Loinc.csv field 14 for CLASSTYPE.</td>
+            </tr>
+            <tr>
+              <td>LA</td>
+              <td>LOINC Answer:<br/>
+                CODE = AnswerList.csv field 7 (AnswerStringID)<br/>
+                STR = AnswerList.csv field 11 (DisplayText)</td>
+            </tr>
+            <tr>
+              <td>LC</td>
+              <td>Long common name:<br/>
+                CODE = Loinc.csv field 1 (LOINC_NUM)<br/>
+                STR = Loinc.csv field 28 (LONG_COMMON_NAME)<br/>
+                TTY = LC is assigned if field 12 (STATUS) is not =
+                "DEPRECATED"</td>
+            </tr>
+            <tr>
+              <td>LG</td>
+              <td>Loinc Group Name:<br/>
+                CODE = Group.csv field 2 (GroupId) or ParentGroup.csv field 1 (ParentGroupId)<br/>
+                STR = Group.csv field 3 (Group) or ParentGroup.csv field 2 (ParentGroup)</td>
+            </tr>
+            <tr>
+              <td>LN</td>
+              <td>Official fully-specified name:<br/>
+                CODE = Loinc.csv field 1 (LOINC_NUM)<br/>
+                STR = Loinc.csv fields 2-7, concatenated with colons,
+                i.e. F2:F3:F4:F5:F6:F7<br/>
+                TTY = LN is assigned if field 12 (STATUS) is not =
+                "DEPRECATED"</td>
+            </tr>
+            <tr>
+              <td>LO</td>
+              <td>Obsolete official fully specified name:<br/>
+                CODE = Loinc.csv field 1 (LOINC_NUM)<br/>
+                STR = Loinc.csv fields 2-7, concatenated with colons,
+                i.e. F2:F3:F4:F5:F6:F7<br/>
+                TTY = LO is assigned if field 12 (STATUS) = "DEPRECATED"<br/>
+                SUPPRESS = "O"</td>
+            </tr>
+            <tr>
+              <td>LPDN</td>
+              <td>Parts display name:<br/>
+                CODE = Part.csv field 1 (PartNumber)<br/>
+                STR = Part.csv field 4 (DISPLAY_NAME)<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>LPN</td>
+              <td>Parts name:<br/>
+                CODE = Part.csv field 1 (PartNumber)<br/>
+                STR = Part.csv field 3 (NAME_CASE_INSENSITIVE)<br/>
+                An additional LPN, "LOINCPARTS," is added during
+                Metathesaurus source processing as a hierarchical
+                placeholder.</td>
+            </tr>
+            <tr>
+              <td>LS</td>
+              <td>Expanded system/sample type:<br/>
+                CODE = MTHU#, assigned during Metathesaurus source
+                processing<br/>
+                STR = Expanded form of Loinc.csv field 5, subfield 1
+                (SYSTEM).</td>
+            </tr>
+            <tr>
+              <td>MTH_CN</td>
+              <td>Component, with abbreviations expanded:<br/>
+                CODE = MTHU#, assigned during Metathesaurus source
+                processing; same as CODE for respective CN as
+                applicable.<br/>
+                STR = Expanded form of Loinc.csv field 2, subfield 1
+                (COMPONENT).</td>
+            </tr>
+            <tr>
+              <td>MTH_LN</td>
+              <td>Official fully specified name with expanded
+                abbreviations:<br/>
+                CODE = Loinc.csv field 1 (LOINC_NUM)<br/>
+                STR = Expanded form of Loinc.csv fields 2-7,
+                concatenated with colons, i.e. F2:F3:F4:F5:F6:F7<br/>
+                TTY = MTH_LN is assigned if field 12 (STATUS) is not =
+                "DEPRECATED"</td>
+            </tr>
+            <tr>
+              <td>MTH_LO</td>
+              <td>Expanded obsolete fully specified name:<br/>
+                CODE = Loinc.csv field 1 (LOINC_NUM)<br/>
+                STR = Expanded form of Loinc.csv fields 2-7,
+                concatenated with colons, i.e. F2:F3:F4:F5:F6:F7<br/>
+                TTY = MTH_LO is assigned if field 12 (STATUS) =
+                "DEPRECATED"<br/>
+                SUPPRESS = O</td>
+            </tr>
+            <tr>
+              <td>OLC</td>
+              <td>Obsolete long common name:<br/>
+                CODE = Loinc.csv field 1 (LOINC_NUM)<br/>
+                STR = Loinc.csv field 28 (LONG_COMMON_NAME)<br/>
+                TTY = OLC is assigned if field 12 (STATUS) =
+                "DEPRECATED"<br/>
+                SUPPRESS = O</td>
+            </tr>
+            <tr>
+              <td>OLG</td>
+              <td>Obsolete Loinc Group Name:<br/>
+                CODE = Group.csv field 2 (GroupId) or ParentGroup.csv field 1 (ParentGroupId)<br/>
+                STR = Group.csv field 3 (Group) or ParentGroup.csv field 2 (ParentGroup)<br/>
+                TTY = OLG is assigned if field 5 (Status for Group.csv) or field 3 (Status for ParentGroup.csv) = "DEPRECATED"</td>
+            </tr>
+            <tr>
+              <td>OOSN</td>
+              <td>Obsolete official short name:<br/>
+                CODE = Loinc.csv field 1 (LOINC_NUM)<br/>
+                STR = Loinc.csv field 22 (SHORTNAME)<br/>
+                TTY = OOSN is assigned if field 12 (STATUS) =
+                "DEPRECATED"<br/>
+                SUPPRESS = "O"</td>
+            </tr>
+            <tr>
+              <td>OSN</td>
+              <td>Official short name:<br/>
+                CODE = Loinc.csv field 1 (LOINC_NUM)<br/>
+                STR = Loinc.csv field 22 (SHORTNAME)<br/>
+                TTY OSN is assigned if field 12 (STATUS) is not =
+                "DEPRECATED"</td>
+            </tr>
+            <tr>
+              <td>XM</td>
+              <td>Cross-mapping set:<br/>
+                This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <hr>
+      <div id="rep_attributes" class="rep_block_level_two"> <a
+          id="attributes"></a>
+        <h4>Attributes</h4>
+        
+        <table>
+          <tbody>
+            <tr>
+              <th>ATN [Description]</th>
+              <th>Origin</th>
+            </tr>
+            <tr>
+              <td>ANSWER_CODE</td>
+              <td>AnswerList.csv
+                field 8 (LocalAnswerCode)</td>
+            </tr>
+            <tr>
+              <td>ANSWER_CODE_SYSTEM</td>
+              <td>AnswerList.csv
+                field 9 (LocalAnswerCodeSystem)</td>
+            </tr>
+            <tr>
+              <td>ANSWER_LIST_ID</td>
+              <td>AnswerList.csv
+                field 1 (AnswerListID)</td>
+            </tr>
+            <tr>
+              <td>ANSWER_LIST_NAME</td>
+              <td>AnswerList.csv
+                field 2 (AnswerListName)</td>
+            </tr>
+            <tr>
+              <td>ASK_AT_ORDER_ENTRY</td>
+              <td>Loinc.csv field 41<br/>
+              </td>
+            </tr>
+            <tr>
+             <td>CATEGORY</td>
+             <td>GroupLoincTerms.csv field 1 (Category)</td>
+            </tr>
+            <tr>
+              <td>COPYRIGHT</td>
+              <td>Loinc.csv field 26 (EXTERNAL_COPYRIGHT_NOTICE)</td>
+            </tr>
+            <tr>
+              <td>CHANGE_REASON_PUBLIC</td>
+              <td>Loinc.csv field 34</td>
+            </tr>
+            <tr>
+              <td>COMMON_SI_TEST_RANK</td>
+              <td>Loinc.csv field 37<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>COMMON_TEST_RANK</td>
+              <td>Loinc.csv field 35</td>
+            </tr>
+            <tr>
+              <td>COMMON_ORDER_RANK</td>
+              <td>Loinc.csv field 36</td>
+            </tr>
+            <tr>
+              <td>CONSUMER_NAME</td>
+              <td>Loinc.csv field 13 - not populated. Use ConsumerName.csv file</td>
+            </tr>
+            <tr>
+              <td>DESCRIPTION</td>
+              <td>ParentGroupAttributes.csv field 2</td>
+            </tr>
+            <tr>
+              <td>EQUIVALENCE</td>
+              <td>LoincIeeeMedicalDeviceCodeMappingTable.csv field 5</td>
+            </tr>
+            <tr>
+              <td>EXAMPLE_SI_UCUM_NITS</td>
+              <td>Loinc.csv field 31</td>
+            </tr>
+            <tr>
+              <td>EXAMPLE_UCUM_UNITS</td>
+              <td>Loinc.csv field 30</td>
+            </tr>
+            <tr>
+              <td>EXAMPLE_UNITS</td>
+              <td>Loinc.csv field 27</td>
+            </tr>
+            <tr>
+              <td>EXTERNAL_COPYRIGHT_LINK</td>
+              <td>Loinc.csv field 39</td>
+            </tr>
+            <tr>
+              <td>FROMRSAB</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td>FROMVSAB</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td>HL7_ATTACHMENT_REQUEST</td>
+              <td>Loinc.csv field 44</td>
+            </tr>
+            <tr>
+              <td>HL7_ATTACHMENT_STRUCTURE</td>
+              <td>Loinc.csv field 38</td>
+            </tr>
+            <tr>
+              <td>HL7_FIELD_SUBFIELD_ID</td>
+              <td>Loinc.csv field 25</td>
+            </tr>
+            <tr>
+              <td>IEEE_CF_CODE10</td>
+              <td>LoincIeeeMedicalDeviceCodeMappingTable.csv, field 3</td>
+            </tr>
+            <tr>
+              <td>IEEE_REFID</td>
+              <td>LoincIeeeMedicalDeviceCodeMappingTable.csv, field 4</td>
+            </tr>
+            <tr>
+              <td>IMAGING_DOCUMENT_VALUE_SET</td>
+      			     <td>A subset of document codes in LOINC that represent imaging procedures and reports, as indicated in ImagingDocumentCodes.csv.  ATV = "TRUE" when appropriate.
+            <tr>
+              <td>LCL [Class]</td>
+              <td>Loinc.csv field 8 (CLASS)</td>
+            </tr>
+            <tr>
+              <td>LCN [Classtype]</td>
+              <td>Loinc.csv field 14 (CLASSTYPE)</td>
+            </tr>
+            <tr>
+              <td>LCS [Status]</td>
+              <td>Loinc.csv field 12 (STATUS)</td>
+            </tr>
+            <tr>
+              <td>LCT [Change type]</td>
+              <td>Loinc.csv field 10 (CHNG_TYPE)</td>
+            </tr>
+            <tr>
+              <td>LEA [Example answers]</td>
+              <td>Loinc.csv field 16 (EXMPL_ANSWERS)</td>
+            </tr>
+            <tr>
+              <td>LFO [Formula]</td>
+              <td>Loinc.csv field 15 (FORMULA)</td>
+            </tr>
+            <tr>
+              <td>LMP [MAP TO code]</td>
+              <td>MapTo.csv field 2 (MAP_TO)</td>
+            </tr>
+            <tr>
+              <td>LOINC_COMPONENT</td>
+              <td>Loinc.csv field 2 (all subfields)</td>
+            </tr>
+            <tr>
+              <td>LOINC_METHOD_TYP</td>
+              <td>Loinc.csv field 7</td>
+            </tr>
+            <tr>
+              <td>LOINC_PROPERTY</td>
+              <td>Loinc.csv field 3</td>
+            </tr>
+            <tr>
+              <td>LOINC_SCALE_TYP</td>
+              <td>Loinc.csv field 6</td>
+            </tr>
+            <tr>
+              <td>LOINC_SCORE</td>
+              <td>AnswerList.csv
+                field 19 (Score)</td>
+            </tr>
+            <tr>
+              <td>LOINC_SYSTEM</td>
+              <td>Loinc.csv field 5</td>
+            </tr>
+            <tr>
+              <td>LOINC_TIME_ASPECT</td>
+              <td>Loinc.csv field 4</td>
+            </tr>
+            <tr>
+              <td>LOR [Order/observation]</td>
+              <td>Loinc.csv field 23 (ORDER_OBS)</td>
+            </tr>
+            <tr>
+              <td>LQS [Survey question source]</td>
+              <td>Loinc.csv field 18 (SURVEY_QUEST_SRC)</td>
+            </tr>
+            <tr>
+              <td>LQT [Survey question text]</td>
+              <td>Loinc.csv field 17 (SURVEY_QUEST_TXT)</td>
+            </tr>
+            <tr>
+              <td>LRN2 [Related names 2]</td>
+              <td>Loinc.csv field 21 (RELATEDNAMES2)</td>
+            </tr>
+            <tr>
+              <td>LUR [Units required]</td>
+              <td>Loinc.csv field 19 (UNITSREQUIRED)</td>
+            </tr>
+            <tr>
+              <td>MAPSETRSAB</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td>MAPSETTYPE</td>
+              <td>This data is added only if the information is provided
+                by the source</td>
+            </tr>
+            <tr>
+              <td>MAPSETVERSION</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td>MAPSETVSAB</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td>MOLECULAR_WEIGHT_OF_ANALYTE</td>
+              <td>GroupAttributes.csv field 3 or ParentGroupAttributes.csv field 2</td>
+            </tr>
+            <tr>
+              <td>MTH_MAPFROMCOMPLEXITY</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td>MTH_MAPFROMEXHAUSTIVE</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td>MTH_MAPSETCOMPLEXITY</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td>MTH_MAPTOCOMPLEXITY</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td>MTH_MAPTOEXHAUSTIVE</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td>OID</td>
+              <td>AnswerList.csv
+                field 3 (AnswerListOID)</td>
+            </tr>
+            <tr>
+              <td>PART_SEQ_ORDER</td>
+              <td>LoincRsnaRadiologyPlaybook.csv, field 6</td>
+            </tr>
+            <tr>
+              <td>RADLEX_PLAYBOOK_LONG_NAME</td>
+              <td>LoincRsnaRadiologyPlaybook.csv, field 10</td>
+            </tr>
+            <tr>
+              <td>RADLEX_PREF_NAME</td>
+              <td>LoincRsnaRadiologyPlaybook.csv, field 8</td>
+            </tr>
+            <tr>
+              <td>RID</td>
+              <td>LoincRsnaRadiologyPlaybook.csv, field 7</td>
+            </tr>
+            <tr>
+              <td>RPID</td>
+              <td>LoincRsnaRadiologyPlaybook.csv, field 9</td>
+            </tr>
+            <tr>
+              <td>SEQ_NO</td>
+              <td>AnswerList.csv
+                field 10 (SequenceNumber)</td>
+            </tr>
+            <tr>
+              <td>STATUS</td>
+              <td>Group.csv field 5 or ParentGroup.csv field 3</td>
+            </tr>
+            <tr>
+              <td>STATUS_REASON</td>
+              <td>Loinc.csv field 32</td>
+            </tr>
+            <tr>
+              <td>STATUS_TEXT</td>
+              <td>Loinc.csv field 33</td>
+            </tr>
+            <tr>
+              <td>SUBSEQUENT_TEXT_PROMPT</td>
+              <td>AnswerList.csv
+                field 17 (SubsequentTextPrompt)</td>
+            </tr>
+            <tr>
+              <td>TORSAB</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td>TOVSAB</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td>UNITS_AND_RANGE</td>
+              <td>Loinc.csv field 29</td>
+            </tr> 
+            <tr>
+              <td>UNIVERSAL_LAB_ORDERS_VALUE_SET</td>
+              <td>A value of true indicates that the LOINC
+                CODE is a member of the Universal Lab Orders Value Set</td>
+            </tr>
+            <tr>
+              <td>USAGE_NOTES</td>
+              <td>GroupAttributes.csv field 3 or ParentGroupAttributes.csv field 2</td>
+            </tr>
+            <tr>
+              <td>VERSION_FIRST_RELEASED</td>
+              <td>Loinc.csv field 43</td>
+            </tr>
+            <tr>
+              <td>VERSION_LAST_CHANGED</td>
+              <td>Loinc.csv field 9</td>
+            </tr>
+            <tr>
+              <td>XMAP</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td>XMAPFROM</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+            <tr>
+              <td>XMAPTO</td>
+              <td>This data is added during Metathesaurus source
+                processing</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <hr>
+      <div id="rep_definitions" class="rep_block_level_two"> <a
+          id="definitions"></a><br/>
+        <h4>Definitions</h4>
+      
+        <p>Definitions come from AnswerList.csv field 18 (Description)</p>
+      </div>
+      <hr>
+      <div id="rep_relationships" class="rep_block_level_two"> <a
+          id="relationships"></a><br/>
+        <h4>Relationships</h4>
+       
+        <table>
+          <tbody>
+            <tr>
+              <th>REL</th>
+              <th>RELA<br/>
+                inverse_RELA</th>
+              <th>Origin</th>
+            </tr>
+            <tr>
+              <td>CHD<br/>
+                PAR<br/>
+                SIB</td>
+              <td><br/>
+              </td>
+              <td>The hierarchy is extracted from:
+                <ul>
+                  <li>Loinc.csv, field 8 (CLASS) and field 14
+                    (CLASSTYPE)</li>
+                  <li>MultiAxialHierarchy.csv</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>RN</td>
+              <td>member_of<br/>
+                has_member</td>
+              <td>Connects LOINC panels and their members, extracted from PanelsAndForms.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>analyzed_by<br/>
+                analyzes</td>
+              <td>Connects LS to LN or LO</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>associated_with</td>
+              <td>Connects CN to LO or LN with CLASSTYPE of 3 (Claims
+                Attachment).</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_action_guidance<br/>
+                is_action_guidance_for</td>
+              <td>Connects LPN where PART_TYPE = "Rad.Guidance
+                for.Action" with LN or LO, as per
+                LoincRsnaRadiologyPlaybook.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_adjustment<br/>
+                adjustment_of</td>
+              <td>Connects LPN where PART_TYPE = "ADJUSTMENT" with LN or
+                LO, as per PartLinks.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_aggregation_view<br/>
+                is_aggregation_view_of</td>
+              <td>Connects LPN where PartTypeName =
+                "Rad.View.Aggregation" with LN or LO, as per
+                LoincRsnaRadiologyPlaybook.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_answer<br/>
+                answer_to</td>
+              <td>Connects LN with LA as per
+                LoincAnswerListLink.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_approach_guidance<br/>
+                is_approach_guidance_for</td>
+              <td>Connects LPN where PartTypeName = "Rad.Guidance
+                for.Approach" with LN or LO, as per
+                LoincRsnaRadiologyPlaybook.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_archetype<br/>
+                archetype_of</td>
+              <td>Connects the GroupId to its archetype as per Group.csv. (The
+              archetype is the Loinc Number of the most general representative term for a specific Group.</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_challenge<br/>
+                challenge_of</td>
+              <td>Connects LPN where PART_TYPE = "CHALLENGE" with LN or
+                LO, as per PartLinks.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_class<br/>
+                class_of</td>
+              <td>Connects LPN where PART_TYPE = "CLASS" with LN or LO,
+                as per PartLinks.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_component<br/>
+                component_of</td>
+              <td>Connects LPN where PART_TYPE = "COMPONENT" with LN or
+                LO, as per PartLinks.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_count<br/>
+                count_of</td>
+              <td>Connects LPN where PART_TYPE = "COUNT" with LN or LO,
+                as per PartLinks.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_divisor<br/>
+                divisor_of</td>
+              <td>Connects LPN where PART_TYPE = "DIVISORS" with LN or
+                LO, as per PartLinks.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_evaluation<br/>
+                evaluation_of</td>
+              <td>Connects CN to LO or LN with CLASSTYPE of 4 (Surveys).</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_exam<br/>
+                is_exam_for</td>
+              <td>Connects LPN where PartTypeName = "Rad.Reason for
+                Exam" with LN or LO, as per
+                LoincRsnaRadiologyPlaybook.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_fragments_for_synonyms<br/>
+                fragments_for_synonyms_of</td>
+              <td>Connects LPN where PART_TYPE = "FRAGMENTS FOR
+                SYNONYMS" with LN or LO, as per PartLinks.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_given_pharmaceutical_substance<br/>
+                is_given_pharmacautical_substance_for</td>
+              <td>Connects LPN where PartTypeName =
+                "Rad.Pharmaceutical.Substance Given" with LN or LO, as
+                per LoincRsnaRadiologyPlaybook.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_imaged_location<br/>
+                is_imaged_location_for</td>
+              <td>Connects LPN where PartTypeName = "Rad.Anatomic
+                Location.Region Imaged" with LN or LO, as per
+                LoincRsnaRadiologyPlaybook.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_imaging_focus<br/>
+                is_imaging_focus_of</td>
+              <td>Connects LPN where PartTypeName = "Rad.Anatomic
+                Location.Imaging Focus" with LN or LO, as per
+                LoincRsnaRadiologyPlaybook.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_lateral_anatomic_location<br/>
+                is_lateral_anatomic_location_of</td>
+              <td>Connects LPN where PartTypeName = "Rad.Anatomic
+                Location.Laterality" with LN or LO, as per
+                LoincRsnaRadiologyPlaybook.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_lateral_location_presence<br/>
+                is_presence_of_lateral_location_of</td>
+              <td>Connects LPN where PartTypeName = "Rad.Anatomic
+                Location.Laterality.Presence" with LN or LO, as per
+                LoincRsnaRadiologyPlaybook.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_loinc_number<br/>
+                loinc_number_of</td>
+              <td>Assigns a Loinc number to a Loinc Group as per GroupLoincTerms.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_method<br/>
+                method_of</td>
+              <td>Connects LPN with PART_TYPE = "METHOD" with LOINC CODE
+                indicated in PartLinks.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_modality<br/>
+                is_modality_for</td>
+              <td>Connects LPN where PartTypeName = "Rad.Modality" with
+                LN or LO, as per LoincRsnaRadiologyPlaybook.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_modality_subtype<br/>
+                is_modality_subtype_for</td>
+              <td>Connects LPN where PartTypeName =
+                "Rad.Modality.Subtype" with LN or LO, as per
+                LoincRsnaRadiologyPlaybook.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_multipart<br/>
+                multipart_of</td>
+              <td>Connects PART_TYPE = "MULTIPART" with LOINC CODE
+                indicated in PartLinks.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_object_guidance<br/>
+                is_object_guidance_for</td>
+              <td>Connects LPN where PartTypeName = "Rad.Guidance
+                for.Object" with LN or LO, as per
+                LoincRsnaRadiologyPlaybook.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_parent_group<br/>
+                parent_group_of</td>
+              <td>Connects the GroupId with the ParentGroupID as per Group.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_pharmaceutical_route<br/>
+                is_pharmaceutical_route_for</td>
+              <td>Connects LPN where PartTypeName =
+                "Rad.Pharmaceutical.Route" with LN or LO, as per
+                LoincRsnaRadiologyPlaybook.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_pharmaceutical_timing<br/>
+                is_pharmacautical_timing_of</td>
+              <td>Connects LPN where PartTypeName =
+                "Rad.Pharmaceutical.Timing" with LN or LO, as per
+                LoincRsnaRadiologyPlaybook.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_presence_guidance<br/>
+                is_presence_guidance_for</td>
+              <td>Connects LPN where PartTypeName = "Rad.Guidance
+                for.Presence" with LN or LO, as per
+                LoincRsnaRadiologyPlaybook.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_property<br/>
+                property_of</td>
+              <td>Connects LPN where PART_TYPE = "PROPERTY" with LN or
+                LO, as per PartLinks.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_quotient<br/>
+                quotient_of</td>
+              <td>Connects PART_TYPE = "QUOTIENTS" with LOINC CODE
+                indicated in PartLinks.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_scale<br/>
+                scale_of</td>
+              <td>Connects LPN where PART_TYPE = "SCALE" with LN or LO,
+                as per PartLinks.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_suffix<br/>
+                suffix_of</td>
+              <td>Connects LPN where PART_TYPE = "SUFFIX" with LN or LO,
+                as per PartLinks.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_supersystem<br/>
+                supersystem_of</td>
+              <td>Connects LPN where PART_TYPE = "SUPER SYSTEM" with LN
+                or LO, as per PartLinks.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_system<br/>
+                system_of</td>
+              <td>Connects LPN where PART_TYPE = "SYSTEM" with LN or LO,
+                as per PartLinks.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_time_aspect<br/>
+                has_time_aspect</td>
+              <td>Connects LPN where PART_TYPE = "TIME" with LN, as per
+                PartLinks.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>has_time_modifier<br/>
+                time_modifier_of</td>
+              <td>Connects LPN where PART_TYPE = "TIME MODIFIER" with
+                LN, as per PartLinks.csv</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>is_maneuver_type_for<br/>
+                has_maneuver_type</td>
+              <td>Where PART_TYPE = "Rad.Maneuver.Maneuver type"</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>is_modality_subtype_for<br/>
+                has_modality_subtype</td>
+              <td>Where PART_TYPE = "Rad.Modality.Modality subtype"</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>is_modality_type_for<br/>
+                has_modality_type</td>
+              <td>Where PART_TYPE = "Rad.Modality.Modality type"</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>is_subject_of<br/>
+                has_subject</td>
+              <td>Where PART_TYPE = "Rad.Subject"</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>is_timing_for<br/>
+                has_timing_of</td>
+              <td>Where PART_TYPE = "Rad.Timing"</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>is_view_type_for<br/>
+                has_view_type</td>
+              <td>Where PART_TYPE = "Rad.View.View type"</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>measured_by<br/>
+                measures</td>
+              <td>Connects CN to LO or MTH_LN with CLASSTYPE of 1
+                (Laboratory) or 2 (Clinical).</td>
+            </tr>
+            <tr>
+              <td>RQ</td>
+              <td>mapped_from<br/>
+                mapped_to</td>
+              <td>Connects an atom with an attribute of LCS="DISCOURAGED", "DEPRECATED", or "TRIAL" (TTY=LN or LO) with an atom with an attribute of LCS="ACTIVE" (TTY=LN), indicating possible synonymy between a current, discouraged, or trial code, as per loinc.csv, field 12 (STATUS) and map_to.csv.</td>
+            </tr>
+            <tr>
+              <td>SY</td>
+              <td>common_name_of<br/>
+                has_common_name</td>
+              <td>Connects an LN or LO with its LC or OLC respectively</td>
+            </tr>
+            <tr>
+              <td>SY</td>
+              <td>expanded_form_of<br/>
+                has_expanded_form</td>
+              <td>Connects original and expanded forms of atoms,
+                including: HS &lt;--&gt; HC; OSN &lt;--&gt; LN; OOSN
+                &lt;--&gt; LO</td>
+            </tr>
+            <tr>
+              <td>SY<br/>
+              </td>
+              <td>mth_expanded_form_of<br/>
+                mth_has_expanded_form<br/>
+              </td>
+              <td>Connects original and expanded forms of atoms,
+                including: CN &lt;--&gt; MTH_CN; LN &lt;--&gt; MTH_LN;
+                LO &lt;--&gt; MTH_LO</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <hr>
+    <div id="rep_mappings" class="rep_block_level_one"> <a
+        id="mappings"></a>
+      <h4>Mappings</h4>
+        <p>None</p>
+    </div>
