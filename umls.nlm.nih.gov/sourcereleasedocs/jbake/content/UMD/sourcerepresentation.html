@@ -1,6 +1,6 @@
 title=UMD (UMDNS) - Source Representation
 date=2018-05-07
-updated=2021-11-01
+updated=2022-05-02
 type=page
 status=published
 ~~~~~~
@@ -43,7 +43,12 @@ status=published
 
   <h3>Summary of Changes in this version</h3>
 
-  <p>No changes have been made to the original data files or to representation of UMDNS.</p>
+      <p>The UMDNS xml release format has changed, resulting in changes in the way CODE, SCUI and SDUI values are assigned.<br/>
+	In previous versions, the CODE and SCUI were assigned using the "CODE_IN_SOURCE" property.  The CODE and SDUI values are now assigned from the "code" tag in the xml. No SCUI is assigned.</p>
+		<p>The format of the CODE has changed, e.g. "10-025" is now "10025."  </p>
+		See the "Identifiers" section below for details on how CODE and SDUI are assigned.  <br/>
+		New ATN:  TERM_CODE<br/>
+		Deprecated ATN:  SYCODE<br/>
 </div>
 <hr>
 <div id="rep_file_summary" class="rep_block_level_one">
@@ -51,47 +56,12 @@ status=published
 
   <h3>Source-Provided Files: Summary</h3>
 
-  <p>The UMLS uses an xml version of UMDNS. The file used for 2021AA is "NLM_UMLS_UMDNS2020_version7.xml"</p>
+  <p>The UMLS uses an xml version of UMDNS. Please contact ECRI for source acquisition information.</p>
 
   <div class="rep_block_level_two">
     <!-- Make a table of each file that comes from the source   -->
 
-    <h4>Documentation and Reference</h4>
-
-    <h4>xml Data File</h4>
-
-    <table>
-      <tbody>
-        <tr>
-          <th>File Name</th>
-
-          <th>Description</th>
-        </tr>
-
-        <tr>
-          <td>NLM_UMLS_UMDNS2020_version7.xml</td>
-
-          <td>UMDNS data file</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h4>Not included:</h4>
-
-    <p>The following data is excluded from UMLS processing:</p>
-
-    <ul>
-      <li>Properties: "Attribute," "Comment," and "SPECIALTY_NAME" properties are excluded</li>
-
-      <li>Concepts with a "DEVICE_TYPE" of "Place Holder Terms" are excluded</li>
-
-      <li>Only definitions with a "Definition_Status" qualifier value of "Releasable" are included.</li>
-
-      <li>Kind: Only concepts with kind = "UMDNS_Kind" are included. The kind is not explicitly represented as an attribute; "Retired_Kind" concepts are not processed.<br></li>
-
-      <li>Data in the "code" and "id" tags is not directly processed</li>
-    </ul>
-  </div>
+      </div>
 </div>
 <hr>
 <div id="rep_file_details" class="rep_block_level_one">
@@ -110,68 +80,67 @@ status=published
       </tr><!-- xml row -->
 
       <tr>
-        <td>kind</td>
-
-        <td>UMDNS_Kind (K21) identifies active, non-retired UMDNS concepts. Retired_Kind (K25)identifies those UMDNS concepts that have been retired from the nomenclature.</td>
-        <td>All concepts with UMDNS_Kind are included in the Metathesaurus. Concepts with "Retired_Kind" are not included in the Metathesaurus.  The kind is not represented explicitly as an attribute.</td>
-      </tr>
-
-      <tr>
-		<td>conceptDef/name</td>
+		<td>concept name</td>
 		<td>Concept preferred name</td>
-		<td>MRCONSO.STR</br>
-		TTY = SY</br>
-		CODE = CODE_IN_SOURCE</td>
+		<td>MRCONSO.STR<br/>
+		TTY = PT<br/>
+		CODE = concept/code</td>
 	  </tr>
 	  
       <tr>
-        <td>CODE_IN_SOURCE (P4)</td>
+        <td>concept code</td>
 
-        <td>UMDNS Code. Associated only with UMDNS preferred concepts, entry terms, related terms or hierarchical terms. UMDNS synonyms are not associated with a CODE_IN_SOURCE.</td>
+        <td>UMDNS Code</td>
 
-        <td>MRCONSO.CODE,SCUI,SDUI for "PT", "RT", "SY" and "HT" atoms.<br>
-        MRCONSO.CODE,SCUI for "ET" atoms.<br>
-        The SDUI value for "ET"s is the "CODE_IN_SOURCE" value of the associated "PT".</td>
+        <td>MRCONSO.CODE,SDUI for associated "PT", "ET", "SY" and "HT" atoms.</td>
       </tr>
 	  
-      <tr>
-        <td>PREFERRED_TERM (P3)</td>
-
-        <td>This element value is redundant to the conceptDef name, and is not used directly in Metathesaurus source processing.</td>
-
-        <td>N/A</td>
-      </tr>
-	  
-	  <tr>
-		<td>SYNONYM (P2)</br>
-		Synonym_Code (Q70)</br>
-		Synonym_Device_Type (Q71)</td>
-		<td>Synonym</td>
-		<td>MRCONSO.STR</br>
-		TTY = SY</br>
-		CODE = CODE_IN_SOURCE of associated PT</td>
+	<tr>
+		<td>Synonym<br/>
+		<td>Association to synonymous term</td>
+		<td>MRCONSO.STR<br/>
+		TTY = SY<br/>
+		CODE = concept code</td>
 		<td></td>
 	  </tr>
-
+	<tr>
+		<td>Entry Term<br/>
+		<td>Association to entry term</td>
+		<td>MRCONSO.STR<br/>
+		TTY = ET where Term Device Type = "Device is a SEE reference."<br/>
+		TTY = RT where Term Device Type = "Device is a USE MORE SPECIFIC TERM entry."<br/>
+		CODE = concept code for TTY = ET<br/>
+		For TTY = RT, CODE values were imported from an external value.<br/>
+		MRREL.REL<br/>
+		An RO relationship is created between same-code ETs and PTs<br/>
+		An "RN/RB" relationship is created from an RT to each related concept</td>
+		<td></td>
+	  </tr>
 	  <tr>
-		<td>DEVICE_TYPE (P1)</td>
+		<td>DEVICE_TYPE</td>
 		<td>DEVICE_TYPE value is used to assign TTY; original value is also represented as an attribute</td>
-		<td>CATEGORY EXPANDED BELOW entry with SEE ALSO references: TTY = PT</br>
-		CATEGORY EXPANDED BELOW entry: TTY = PT</br>
-		Device has SEE ALSO references: TTY = PT</br>
-		Device is a SEE reference: TTY = ET</br>
-		Device is a USE MORE SPECIFIC TERM entry: TTY = RT</br>
-		Hierarchical Term: TTY = HT</br>
-		Main Device Term: TTY = PT</br>
-		NIR entry: TTY = PT</br>
-		</br>
-		MRSAT.ATN = DEVTYPE</br>
+		<td>CATEGORY EXPANDED BELOW entry with SEE ALSO references: TTY = PT<br/>
+		CATEGORY EXPANDED BELOW entry: TTY = PT<br/>
+		Device has SEE ALSO references: TTY = PT<br/>
+		Hierarchical Term: TTY = HT<br/>
+		Main Device Term: TTY = PT<br/>
+		NIR entry: TTY = PT<br/>
+		<br/>
+		MRSAT.ATN = DEVTYPE (STYPE = SDUI)<br/>
 		</td>
 	  </tr>
 	  
+	  <tr>
+		<td>Term Device Type</td>
+		<td>Term Device Type value is used to assign TTY for Entry Terms; original value is also represented as an attribute</td>
+		<td>Device is a SEE reference: TTY = ET<br/>
+		Device is a USE MORE SPECIFIC TERM entry: TTY = RT<br/><br/>
+		MRSAT.ATN = DEVTYPE (STYPE = AUI)</td>
+		</tr>
+	  
 	  <tr>  
-		<td>DEFINITION (P5)</br>
-        Definition_Status(Q72);<br>
+		<td>DEFINITION<br/>
+        Definition_Status<br>
 	  </td>
 	  <td>The "DEFINITION" property contains the UMDNS definition value.<br>
         The Definition_Status qualifier qualifies the "DEFINITION" property.</td>
@@ -180,12 +149,23 @@ status=published
       </tr>
 	  
 	  <tr>
-		<td>RELATED_DEVICE (A31)</td>
+		<td>RELATED_DEVICE</td>
 		<td>Relationships between concepts</td>
-		<td>MRREL.REL</br>
-		Relationships are also assigned based on Term Types </td>
+		<td>MRREL.REL<br/>
+		REL = "RO"</td>
       </tr>
+	  
+	  <tr>
+		<td>defining_concept</td>
+		<td>"Parent" concept</td>
+		<td>Used to build hierarchy (MRHIER.RRF)</td>
+	  </tr>
 
+		<tr>
+		<td>Term Code in Source</td>
+		<td>Code of Term</td>
+		<td>MRSAT.ATN = TERM_CODE</td>
+		</tr>
     </tbody>
   </table>
 </div>

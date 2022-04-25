@@ -1,6 +1,6 @@
 title=ICNP (International Classification for Nursing Practice) - Metathesaurus Representation
 date=2017-11-06
-updated=2021-11-01
+updated=2022-05-02
 type=page
 status=published
 ~~~~~~
@@ -26,51 +26,35 @@ status=published
     <div class="row py-2 mb-2 mini-menu">  
     	<div class="col-sm-auto">Skip to:</div>
     	<div class="col-sm-auto"><a href="#atoms">Atoms</a></div>
-    	<div class="col-sm-auto border-left"><a href="#attributes">Attributes</a></div>
-    	<div class="col-sm-auto border-left"><a href="#definitions">Definitions</a></div>
-    	<div class="col-sm-auto border-left"><a href="#relationships">Relationships</a></div>
-    	<div class="col-sm-auto border-left"><a href="#mappings">Mappings</a></div>
+    	
     </div>
     <div id="general" class="rep_block_level_one">
-      <p><strong>VSAB: ICNP_2019</strong>
+      <p><strong>VSAB: ICNP_2021</strong>
       </p>
-      <hr>
       <div id="rep_identifiers" class="rep_block_level_one">
         <h3>Summary of Changes</h3>
-        There are no changes to the primary ICNP terminological data
-        file format or to UMLS source processing.<br/>
-        
+		<p>
+		Under a September, 2021 agreement, ICNP will be fully integrated with
+SNOMEDSNOMED CT, ensuring that SNOMED CT continues to reflect the valuable
+contribution of nursing to health care. SNOMED International will be responsible
+for the distribution of ICNP, while ICN will retain ownership and control of its
+content.</p>
+        		The ICNP 2021 standalone release consists of a subset of SNOMED CT codes and strings.  This data is represented in the UMLS Metathesaurus with SAB = "ICNP."  
+		
+		<ul>
+		<li>Deprecated TTYs: MTH_PT, XM</li>
+		<li>Deprecated ATNs:  FROMRSAB, FROMVSAB,ICNP_TYPE,MAPSETRSAB,MAPSETVERSION, MAPSETVSAB, 
+		<li>MTH_MAPFROMCOMPLEXITY,MTH_MAPFROMEXHAUSTIVE,MTH_MAPSETCOMPLEXITY, MTH_MAPTOCOMPLEXITY, MTH_MAPTOEXHAUSTIVE, TORSAB, TOVSAB</li>
+		<li>Deprecated REL value:  SY</li>
+		<li> Deprecated RELA values:  mapped_from/mapped_to; mth_british_form_of/mth_has_british_form</li>
+		<li> Deprecated REL values: PAR/CHD; there is no hierarchy for ICNP_2021</li>
+		</ul>
       </div>
-      <hr>
       <div id="rep_change_summary" class="rep_block_level_one">
         <h3>Source Provided Files:</h3>
-        The file "ICNP 2019 Release.xlsx" includes the following tabs:<br/>
-        <br/>
-        <div> DC Asserted <br/>
-          IC Asserted<br/>
-          DC Inferred<br/>
-          IC Inferred<br/>
-          <br/>
-        </div>
-      </div>
-      <div id="rep_identifers" class="rep_block_level_one"> The mappings
-        to SNOMEDCT are provided in separate documents:
-        "ICNP-SCT Mapping-DCs 2019.csv" and "ICNP-SCT Mapping-ICs 2019.csv<br/>
-        <hr>
-        <h3>Identifiers:</h3>
-        Identifiers are assigned as follows:<br/>
-        <ul>
-          <li>CODE: concept code<br/>
-          </li>
-          <li>SAUI: N/A<br/>
-          </li>
-          <li>SCUI: concept code<br/>
-          </li>
-          <li>SDUI: N/A<br/>
-          </li>
-        </ul>
-        <hr>
-        <div id="rep_termtypes" class="rep_block_level_two"> <a
+        The file "ICNP 
+	2021.csv" consists of a subset of SNOMED CT codes and strings<br/>
+    <div id="rep_termtypes" class="rep_block_level_two"> <a
             id="atoms"></a>
           <h3>Atoms (MRCONSO):</h3>
           
@@ -81,190 +65,13 @@ status=published
                 <th>Origin</th>
               </tr>
               <tr>
-                <td>MTH_PT
-                </td>
-                <td>American English form
-                  of British PT. This data is added during Metathesaurus
-                  construction.
-                </td>
-              </tr>
-              <tr>
                 <td>PT
                 </td>
-                <td>Extracted from the "Preferred Term" value on the
-                  asserted tabs of the .xlsx file.
-                </td>
-              </tr>
-              <tr>
-                <td>XM
-                </td>
-                <td>Cross mapping atom to represent ICNP-SNOMEDCT map
-                  set. This data is added during Metathesaurus
-                  construction.
-                </td>
+                <td>STR = ICNP preferred term<br/>
+				CODE, SCUI = SCTID</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <hr>
-        <div id="rep_attributes" class="rep_block_level_two"> <a
-            id="attributes"></a>
-          <h3>Attributes (MRSAT):</h3>
-          
-          <table>
-            <tbody>
-              <tr>
-                <th>Attribute Name</th>
-                <th>Origin</th>
-              </tr>
-              <tr>
-                <td>ICNP_TYPE
-                </td>
-                <td>Inferred from the .xlsx file, based on which tab the
-                  concept appears on
-                </td>
-              </tr>
-              <tr>
-                <td>FROMRSAB
-                </td>
-                <td>This data is added
-                  during Metathesaurus construction. </td>
-              </tr>
-              <tr>
-                <td>FROMVSAB
-                </td>
-                <td>This data is added
-                  during Metathesaurus construction. </td>
-              </tr>
-              <tr>
-                <td>MAPSETRSAB
-                </td>
-                <td>This data is added
-                  during Metathesaurus construction. </td>
-              </tr>
-              <tr>
-                <td>MAPSETVERSION
-                </td>
-                <td>This data is added
-                  during Metathesaurus construction. </td>
-              </tr>
-              <tr>
-                <td>MAPSETVSAB
-                </td>
-                <td>This data is added
-                  during Metathesaurus construction. </td>
-              </tr>
-              <tr>
-                <td>MTH_MAPFROMCOMPLEXITY
-                </td>
-                <td>This data is added
-                  during Metathesaurus construction. </td>
-              </tr>
-              <tr>
-                <td>MTH_MAPFROMEXHAUSTIVE
-                </td>
-                <td>This data is added
-                  during Metathesaurus construction. </td>
-              </tr>
-              <tr>
-                <td>MTH_MAPSETCOMPLEXITY
-                </td>
-                <td>This data is added
-                  during Metathesaurus construction. </td>
-              </tr>
-              <tr>
-                <td>MTH_MAPTOCOMPLEXITY
-                </td>
-                <td>This data is added
-                  during Metathesaurus construction. </td>
-              </tr>
-              <tr>
-                <td>MTH_MAPTOEXHAUSTIVE
-                </td>
-                <td>This data is added
-                  during Metathesaurus construction. </td>
-              </tr>
-              <tr>
-                <td>TORSAB
-                </td>
-                <td>This data is added
-                  during Metathesaurus construction. </td>
-              </tr>
-              <tr>
-                <td>TOVSAB
-                </td>
-                <td>This data is added
-                  during Metathesaurus construction. </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <hr>
-        <div id="rep_definitions" class="rep_block_level_two"> <a
-            id="definitions"></a>
-          <h3>Definitions (MRDEF):</h3>
-          
-          <p>No definitions are present for ICNP.<br/>
-          </p>
-        </div>
-        <hr>
-        <div id="rep_relationships" class="rep_block_level_two"> <a
-            id="relationships"></a>
-          <h3>Relationships (MRREL):</h3>
-          
-          <table>
-            <tbody>
-              <tr>
-                <th>REL</th>
-                <th>RELA<br/>
-                  Inverse RELA</th>
-                <th>ORIGIN</th>
-              </tr>
-              <tr>
-                <td>PAR<br/>
-                  CHD<br/>
-                  SIB
-                </td>
-                <td>&lt;no RELA&gt;
-                </td>
-                <td>Represent the hierarchy. Extracted from "Parent
-                  Code" and "Child Code" data on the "inferred" tabs of
-                  the .xlsx file
-                </td>
-              </tr>
-              <tr>
-                <td>SY
-                </td>
-                <td>mapped_to<br/>
-                  mapped_from
-                </td>
-                <td>Represent one-to-one relationships with SNOMED CT.
-                  Mappings where the "Notes" cell is empty are
-                  represented as "SY".
-                </td>
-              </tr>
-              <tr>
-                <td>SY
-                </td>
-                <td>mth_british_form_of<br/>
-                  mth_has_british_form
-                </td>
-                <td>Connect MTH_PT to PT.<br/>
-                  This data is added during Metathesaurus construction
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <hr>
-        <div id="rep_mappings" class="rep_block_level_two"> <a
-            id="mappings"></a>
-          <h3>Mappings (MRMAP, MRSMAP):</h3>
-          
-          <p>SNOMED CT mappings are extracted from
-            "ICNP-SCT Mapping-DCs 2019.csv" and "ICNP-SCT Mapping-ICs 2019.csv."  Mappings are also
-            represented in MRREL.RRF, with REL = "SY," RELA = "mapped_to"<br/>
-          </p>
-        </div>
-      </div>
     </div>
+	</div>
