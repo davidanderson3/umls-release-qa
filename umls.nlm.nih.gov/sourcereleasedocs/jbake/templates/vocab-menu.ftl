@@ -386,6 +386,8 @@
             <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/LNC-ES-CH/">LNC-ES-CH</a></li>
 
             <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/LNC-ES-ES/">LNC-ES-ES</a></li>
+            
+            <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/LNC-ES-MX/">LNC-ES-MX</a></li>
 
             <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/LNC-ET-EE/">LNC-ET-EE</a></li>
 
@@ -402,6 +404,8 @@
             <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/LNC-IT-IT/">LNC-IT-IT</a></li>
 
             <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/LNC-KO-KR/">LNC-KO-KR</a></li>
+            
+            <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/LNC-PL-PL/">LNC-PL-PL</a></li>
 
             <li><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/LNC-NL-NL/">LNC-NL-NL</a></li>
 
