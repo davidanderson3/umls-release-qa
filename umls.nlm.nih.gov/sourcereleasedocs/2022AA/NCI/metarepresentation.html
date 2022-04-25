@@ -1,6 +1,6 @@
 title=NCI (NCI Thesaurus) - Metathesaurus Representation
 date=2018-05-07
-updated=2021-05-03
+updated=2021-11-01
 type=page
 status=published
 ~~~~~~
@@ -23,11 +23,11 @@ status=published
 <br/>
 
 <p>This page list UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
-<a id="top-of-page"></a> <span class = "nav">Skip to: <a href = "#atoms">Atoms</a>, <a href = "#attributes">Attributes</a>, <a href = "#definitions">Definitions</a>, <a href = "#relationships">Relationships</a>, <a href = "#mappings">Mappings</a></span>
+
 <div id = "general" class = "rep_block_level_one">
 <p><strong>VSAB: </strong>NCI2021_09D</p>
 <div id = "rep_identifiers" class = "rep_block_level_one">
-<h3>general notes/Comments:</h3>
+<h3>Notes</h3>
 <p>NCI Thesaurus (NCIt) is a widely recognized standard for biomedical coding and reference. It covers vocabulary for clinical care, translational and basic research, public information and administrative activities and is used by a broad variety of public and private partners both nationally and internationally.The scope of NCI is determined by the combined scope of its source vocabularies which include the following:</p>
 <table>
 <tr>
@@ -213,11 +213,11 @@ status=published
 </table>
 </div>
 <h3>Summary of Changes</h3>
-<p>New attribute name(s) (ATN):</p>
+<p>New attribute names(s) (ATN):</p>
 <ul>
   <li>NCI_DRUG_DICTIONARY_ID (P399)</li>
 </ul>
-<p>Deprecated atribute name(s) (ATN):</p>
+<p>Deprecated attribute name(s) (ATN):</p>
 <ul>
   <li>NICHD_HIERARCHY_TERM (P371)</li>
 </ul>
@@ -228,6 +228,7 @@ status=published
   <li>has_seronet_permissible_value (A37) / is_seronet_permissible_value_for_variable</li>
 </ul>
 
+
 </div>
 <div id = "rep_change_summary" class = "rep_block_level_one">
 <h3>Original Files:</h3>
@@ -235,7 +236,6 @@ status=published
 <tr><th>File Name</th><th>Description</th></tr>
 <tr><td  class = "file_field_name">ThesaurusInferred.owl</td><td>Complete source data in an OWL2 (by code) formatted file.</td></tr>
 </table>
-<br/>
 </div>
 <div id = "rep_identifers" class = "rep_block_level_one">
 <h3>Identifiers</h3>
@@ -247,7 +247,7 @@ status=published
 </ul>
 <div id = "rep_termtypes" class = "rep_block_level_two">
 <a id= "atoms">&nbsp;</a>
-<h3>Atoms (MRCONSO)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top-of-page">top</a></span>)
+<h3>Atoms (MRCONSO)</h3>
 <p>The term names and term types are extracted from the field tagged, "&lt;P90...&lt;ncicp:term-name>...lt;/ncicp:term-name>&lt;ncicp:term-group>...&lt;/ncicp:term-group>...&lt;/P90&gt;" (FULL_SYN), unless otherwise noted.</p>
 <table>
 <tr><th>Term type</th><th>Description</th></tr>
@@ -300,8 +300,8 @@ status=published
 <p>For term type AB, the suppressible value is "Y".</p>
 </div>
 <div id = "rep_attributes" class = "rep_block_level_two">
-<a id= "attributes">&nbsp;</a><br/>
-<h3>Attributes (MRSAT)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top-of-page">top</a></span>)
+<a id= "attributes">&nbsp;</a>
+<h3>Attributes (MRSAT)</h3>
 <table>
 <tr><th>Attribute Name</th><th>Origin: OWL tag</th></tr>
 <tr><td>ACCEPTED_THERAPEUTIC_USE_FOR</td>
@@ -397,16 +397,16 @@ status=published
 </table>
 </div>
 <div id = "rep_definitions" class = "rep_block_level_two">
-<a id= "definitions">&nbsp;</a><br/>
-<h3>Definitions (MRDEF)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top-of-page">top</a></span>)
+<a id= "definitions">&nbsp;</a>
+<h3>Definitions (MRDEF)</h3
 <p>Only definitions with a source of NCI, NCI-GLOSS, or of an NCI subsource are included.  Definitions are attached to their corresponding PT.  For example, an NCI-GLOSS definition is attached to its NCI-GLOSS/PT.  If there is no corresponding PT then the definition is attached to the NCI/PT.  Definition attributions are enclosed within parentheses and appended to the definition.</p>
 Origin:
 <p>Definition: &lt;P97...ncicp:complexDefinition xmlns:ncicp.../P97&gt;</p>
 Alt_Definition: &lt;P325...ncicp:complexDefinition xmlns:ncicp.../P325&gt;
 </div>
 <div id = "rep_relationships" class = "rep_block_level_two">
-<a id= "relationships">&nbsp;</a><br/>
-<h3>Relationships (MRREL)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top-of-page">top</a></span>)
+<a id= "relationships">&nbsp;</a>
+<h3>Relationships (MRREL)</h3>
 <p>Origin of the relationship is derived from the "owl:onPropertyrdf..." code (Roles) and/or the "&lt;A# rdf..." code (Associations).  For example:</p>
 &lt;rdfs:subClassOf&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;owl:Restriction&gt;<br/>
@@ -685,8 +685,7 @@ Alt_Definition: &lt;P325...ncicp:complexDefinition xmlns:ncicp.../P325&gt;
 <p>(1) The relationship group is generated from the 'owl:Restriction' and 'owl:intersectionOf' tag in the source data file.</p>
 </div>
 <h3>Hierarchy (MRHIER)</h3>
-&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top-of-page">top</a></span>)<br/>
+
 <p>The hierarchy is created from the 'rdfs:subClassOfrdf:resource' tag which indicates the parent of the concept.  Sibling information is not included.</p>
 <h3>Mappings (MRMAP)</h3>
-&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top-of-page">top</a></span>)
 <p>No mappings are supplied by NCI.</p>
