@@ -1,6 +1,6 @@
 title=ICNP (International Classification for Nursing Practice) - Source Representation
 date=2017-11-06
-updated=2021-11-01
+updated=2022-05-02
 type=page
 status=published
 ~~~~~~
@@ -29,38 +29,42 @@ status=published
     	<div class="col-sm-auto border-left"><a href="#file_summary">Summary of Source-Provided Files</a></div>
     	<div class="col-sm-auto border-left"><a href="#file_details">Source-Provided File Details</a></div>
     </div>
-    <hr>
+
     <div id="change_summary" class="rep_block_level_one">
       <h3>Summary of Changes:</h3>
 
-      <p>There are no changes to the primary ICNP terminological data file
-      format or to UMLS source processing.</p>
+      <p>Under a September, 2021 agreement, ICNP will be fully integrated with
+SNOMED CT, ensuring that SNOMED CT continues to reflect the valuable
+contribution of nursing to health care. SNOMED International will be responsible
+for the distribution of ICNP, while ICN will retain ownership and control of its
+content.</p>
+        The ICNP 2021 standalone release consists of a subset of SNOMED CT codes and strings.  This data is represented in the UMLS Metathesaurus with SAB = "ICNP."  
+				<ul>
+		<li>Deprecated TTYs: MTH_PT, XM</li>
+		<li>Deprecated ATNs:  FROMRSAB, FROMVSAB,ICNP_TYPE,MAPSETRSAB,MAPSETVERSION, MAPSETVSAB, 
+		<li>MTH_MAPFROMCOMPLEXITY,MTH_MAPFROMEXHAUSTIVE,MTH_MAPSETCOMPLEXITY, MTH_MAPTOCOMPLEXITY, MTH_MAPTOEXHAUSTIVE, TORSAB, TOVSAB</li>
+		<li>Deprecated REL value:  SY</li>
+		<li> Deprecated RELA values:  mapped_from/mapped_to; mth_british_form_of/mth_has_british_form</li>
+		<li> Deprecated REL values: PAR/CHD; there is no hierarchy for ICNP_2021</li>
+		</ul>
+
     </div>
-    <hr>
+
     <div class="rep_block_level_one"> <a
         id="file_summary"></a>
       <h3>Source-Provided Files: Summary</h3>
        
 
-      The file "ICNP 2019 Release.xlsx" includes the following tabs:<br/>
+      The file "ICNP 2021.csv" consists of a subset of SNOMED CT codes and strings<br/>
       <br/>
-      <div> DC Asserted <br/>
-        IC Asserted<br/>
-        DC Inferred<br/>
-        IC Inferred<br/>
-        <br/>
-      </div>
-      The mappings to SNOMEDCT are provided in separate
-      files: "ICNP-SCT Mapping-ICs 2019.csv" and "ICNP-SCT Mapping-DCs 2019.csv"<br/>
-      <hr>
+      
       <h3 id="file_details">Source-Provided Files: Details</h3>
 
-      <p>The following is a list of fields available for ICNP_2019 data:
+      <p>The following is a list of fields available for ICNP_2021 data in "ICNP 2021.csv":
       </p>
       <div class="rep_block_level_two"><a id="file1"></a>
 
-        File: "ICNP 2019 Release.xlsx"<br/>
-        tabs: DC Asserted, IC Asserted<br/>
+       
         <table>
           <tbody>
             <tr>
@@ -68,104 +72,25 @@ status=published
               <th>Representation</th>
             </tr>
             <tr>
-              <td>Code
-              </td>
+              <td>SCTID (SNOMED CT identifier)</td>
               <td>MRCONSO.CODE<br/>
                 MRCONSO.SCUI
               </td>
             </tr>
             <tr>
-              <td>Preferred Term
-              </td>
-              <td>MRCONSO.STR<br/>
-                TTY = PT
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        File: "ICNP 2019 Release.xlsx"<br/>
-        tabs: DC Inferred, IC Inferred<br/>
-        <table>
-          <tbody>
-            <tr>
-              <th>Field</th>
-              <th>Representation</th>
+              <td>SNOMED CT preferred term with semantic tag (SNOMED CT fully-specified name)</td>
+              <td>Not directly processed</td>
             </tr>
             <tr>
-              <td>Child Code
-              </td>
-              <td>Used to build hierarchy
-              </td>
+              <td>ICNP preferred term</td>
+              <td>MRCONSO.STR</td>
             </tr>
             <tr>
-              <td>Preferred Term (Child)
-              </td>
-              <td>Not directly processed
-              </td>
+              <td>SNOMED CT semantic tag</td>
+              <td>Not directly processed</td>
             </tr>
-            <tr>
-              <td>Axis (Child)
-              </td>
-              <td>MRSAT.ATN = ICNP_TYPE
-              </td>
-            </tr>
-            <tr>
-              <td>Parent Code
-              </td>
-              <td>Used to build hierarchy
-              </td>
-            </tr>
-            <tr>
-              <td>Preferred Term (Parent)
-              </td>
-              <td>Not directly processed
-              </td>
-            </tr>
-            <tr>
-              <td>Axis (Parent)
-              </td>
-              <td>MRSAT.ATN = ICNP_TYPE
-              </td>
-            </tr>
-          </tbody>
+            </tbody>
         </table>
       </div>
     </div>
-    <div class="rep_block_level_two"><a id="file2"></a>
-      Files: ICNP-SCT Mapping-DCs 2019.csv, ICNP-SCT Mapping-ICs 2019.csv<br/>
-      tabs:  DC Mapping, IC Mapping<br/>
-      <table>
-        <tbody>
-          <tr>
-            <th>Field</th>
-            <th>Representation</th>
-          </tr>
-          <tr>
-            <td>ICNP Code
-            </td>
-            <td>MRMAP.FROMID<br/>
-              MRREL.SGID
-            </td>
-          </tr>
-          <tr>
-            <td>ICNP Preferred Term (2019 release)
-            </td>
-            <td>Not directly processed
-            </td>
-          </tr>
-          <tr>
-            <td>SNOMED CT Code
-            </td>
-            <td>MRMAP.TOID<br/>
-              MRREL.SGID
-            </td>
-          </tr>
-          <tr>
-            <td>SNOMED CT Fully Specified Name (20180731 release)
-            </td>
-            <td>Not directly processed
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+  

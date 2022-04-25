@@ -1,6 +1,6 @@
 title=NCI (NCI Thesaurus) - Metathesaurus Representation
 date=2018-05-07
-updated=2021-11-01
+updated=2022-05-02
 type=page
 status=published
 ~~~~~~
@@ -23,11 +23,11 @@ status=published
 <br/>
 
 <p>This page list UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
-
+<a id="top-of-page"></a> <span class = "nav">Skip to: <a href = "#atoms">Atoms</a>, <a href = "#attributes">Attributes</a>, <a href = "#definitions">Definitions</a>, <a href = "#relationships">Relationships</a>, <a href = "#mappings">Mappings</a></span>
 <div id = "general" class = "rep_block_level_one">
-<p><strong>VSAB: </strong>NCI2021_02D</p>
+<p><strong>VSAB: </strong>NCI2021_09D</p>
 <div id = "rep_identifiers" class = "rep_block_level_one">
-<h3>Notes</h3>
+<h3>general notes/Comments:</h3>
 <p>NCI Thesaurus (NCIt) is a widely recognized standard for biomedical coding and reference. It covers vocabulary for clinical care, translational and basic research, public information and administrative activities and is used by a broad variety of public and private partners both nationally and internationally.The scope of NCI is determined by the combined scope of its source vocabularies which include the following:</p>
 <table>
 <tr>
@@ -213,26 +213,20 @@ status=published
 </table>
 </div>
 <h3>Summary of Changes</h3>
-<p>New subsource(s):</p>
+<p>New attribute name(s) (ATN):</p>
 <ul>
-  <li>CCPS (Childhood Cancer Predisposition Study Terminology)</li>
+  <li>NCI_DRUG_DICTIONARY_ID (P399)</li>
 </ul>
-<p>New termgroup(s):</p>
+<p>Deprecated atribute name(s) (ATN):</p>
 <ul>
-  <li>CCPS/PT</li>
-  <li>caDSR/AB</li>
-</ul>
-<p>Dropped termgroup(s):</p>
-<ul>
-  <li>PCDC/SY</li>
+  <li>NICHD_HIERARCHY_TERM (P371)</li>
 </ul>
 <p>New relationship attribute(s) (RELA) | Inverse RELA:</p>
 <ul>
-  <li>has_icdc_value|icdc_value_of</li>
-  <li>has_pcdc_ews_permissible_value|is_pcdc_ews_permissible_value_for_variable</li>
-  <li>has_pcdc_gct_permissible_value|is_pcdc_gct_permissible_value_for_variable</li>
+  <li>has_gdc_value (A31) / is_value_for_gdc_property (A32)</li>
+  <li>is_pcdc_all_permissible_value_for_variable (A35) / has_pcdc_all_permissible_value (A36)</li>
+  <li>has_seronet_permissible_value (A37) / is_seronet_permissible_value_for_variable</li>
 </ul>
-<p>The source contact information has been updated from Sherri de Coronado to Lyubov Remennik.</p>
 
 </div>
 <div id = "rep_change_summary" class = "rep_block_level_one">
@@ -241,6 +235,7 @@ status=published
 <tr><th>File Name</th><th>Description</th></tr>
 <tr><td  class = "file_field_name">ThesaurusInferred.owl</td><td>Complete source data in an OWL2 (by code) formatted file.</td></tr>
 </table>
+<br/>
 </div>
 <div id = "rep_identifers" class = "rep_block_level_one">
 <h3>Identifiers</h3>
@@ -252,7 +247,7 @@ status=published
 </ul>
 <div id = "rep_termtypes" class = "rep_block_level_two">
 <a id= "atoms">&nbsp;</a>
-<h3>Atoms (MRCONSO)</h3>
+<h3>Atoms (MRCONSO)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top-of-page">top</a></span>)
 <p>The term names and term types are extracted from the field tagged, "&lt;P90...&lt;ncicp:term-name>...lt;/ncicp:term-name>&lt;ncicp:term-group>...&lt;/ncicp:term-group>...&lt;/P90&gt;" (FULL_SYN), unless otherwise noted.</p>
 <table>
 <tr><th>Term type</th><th>Description</th></tr>
@@ -305,8 +300,8 @@ status=published
 <p>For term type AB, the suppressible value is "Y".</p>
 </div>
 <div id = "rep_attributes" class = "rep_block_level_two">
-<a id= "attributes">&nbsp;</a>
-<h3>Attributes (MRSAT)</h3>
+<a id= "attributes">&nbsp;</a><br/>
+<h3>Attributes (MRSAT)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top-of-page">top</a></span>)
 <table>
 <tr><th>Attribute Name</th><th>Origin: OWL tag</th></tr>
 <tr><td>ACCEPTED_THERAPEUTIC_USE_FOR</td>
@@ -363,10 +358,10 @@ status=published
 <td>&lt;P362 rdf:datatype="http://www.w3.org.../P362&gt;</td></tr>
 <tr><td>NCBI_TAXON_ID</td>
 <td>&lt;P331 rdf:datatype="http://www.w3.org.../P331&gt;</td></tr>
+<tr><td>NCI_DRUG_DICTIONARY_ID</td>
+<td>&lt;P399 rdf:datatype="http://www.w3.org.../P399&gt;</td></tr>
 <tr><td>NEOPLASTIC_STATUS</td>
 <td>&lt;P363 rdf:datatype="http://www.w3.org.../P363&gt;</td></tr>
-<tr><td>NICHD_HIERARCHY_TERM</td>
-<td>&lt;P371 rdf:datatype="http://www.w3.org.../P371&gt;</td></tr>
 <tr><td>NSC_NUMBER</td>
 <td>&lt;P175 rdf:datatype="http://www.w3.org.../P175&gt;</td></tr>
 <tr><td>NUTRIENT</td>
@@ -402,16 +397,16 @@ status=published
 </table>
 </div>
 <div id = "rep_definitions" class = "rep_block_level_two">
-<a id= "definitions">&nbsp;</a>
-<h3>Definitions (MRDEF)</h3
+<a id= "definitions">&nbsp;</a><br/>
+<h3>Definitions (MRDEF)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top-of-page">top</a></span>)
 <p>Only definitions with a source of NCI, NCI-GLOSS, or of an NCI subsource are included.  Definitions are attached to their corresponding PT.  For example, an NCI-GLOSS definition is attached to its NCI-GLOSS/PT.  If there is no corresponding PT then the definition is attached to the NCI/PT.  Definition attributions are enclosed within parentheses and appended to the definition.</p>
 Origin:
 <p>Definition: &lt;P97...ncicp:complexDefinition xmlns:ncicp.../P97&gt;</p>
 Alt_Definition: &lt;P325...ncicp:complexDefinition xmlns:ncicp.../P325&gt;
 </div>
 <div id = "rep_relationships" class = "rep_block_level_two">
-<a id= "relationships">&nbsp;</a>
-<h3>Relationships (MRREL)</h3>
+<a id= "relationships">&nbsp;</a><br/>
+<h3>Relationships (MRREL)</h3>&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top-of-page">top</a></span>)
 <p>Origin of the relationship is derived from the "owl:onPropertyrdf..." code (Roles) and/or the "&lt;A# rdf..." code (Associations).  For example:</p>
 &lt;rdfs:subClassOf&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;owl:Restriction&gt;<br/>
@@ -603,11 +598,15 @@ Alt_Definition: &lt;P325...ncicp:complexDefinition xmlns:ncicp.../P325&gt;
 <tr><td>RT</td>
 <td>has_data_element/data_element_of</td><td>A12</td></tr>
 <tr><td>RT</td>
+<td>has_gdc_value/is_value_for_gdc_property</td><td>A31</td></tr>
+<tr><td>RT</td>
 <td>has_icdc_value/icdc_value_of</td><td>A30</td></tr>
 <tr><td>RT</td>
 <td>has_inc_parent/inc_parent_of</td><td>A16</td></tr>
 <tr><td>RT</td>
 <td>has_nichd_parent/nichd_parent_of</td><td>A11</td></tr>
+<tr><td>RT</td>
+<td>has_pcdc_all_permissible_value/is_pcdc_all_permissible_value_for_variable</td><td>A36</td></tr>
 <tr><td>RT</td>
 <td>has_pcdc_aml_permissible_value/is_pcdc_aml_permissible_value_for_variable</td><td>A26</td></tr>
 <tr><td>RT</td>
@@ -619,7 +618,11 @@ Alt_Definition: &lt;P325...ncicp:complexDefinition xmlns:ncicp.../P325&gt;
 <tr><td>RT</td>
 <td>has_salt_form/has_free_acid_or_base_form</td><td>A5</td></tr>
 <tr><td>RT</td>
+<td>has_seronet_permissible_value/is_seronet_permissible_value_for_variable</td><td>A37</td></tr>
+<tr><td>RT</td>
 <td>has_target/is_target_of_agent</td><td>A7</td></tr>
+<tr><td>RT</td>
+<td>is_pcdc_all_permissible_value_for_variable/has_pcdc_all_permissible_value</td><td>A35</td></tr>
 <tr><td>RT</td>
 <td>is_pcdc_aml_permissible_value_for_variable/has_pcdc_aml_permissible_value</td><td>A24</td></tr>
 <tr><td>RT</td>
@@ -628,6 +631,8 @@ Alt_Definition: &lt;P325...ncicp:complexDefinition xmlns:ncicp.../P325&gt;
 <td>is_pcdc_gct_permissible_value_for_variable/has_pcdc_gtc_permissible_value</td><td>A33</td></tr>
 <tr><td>RT</td>
 <td>is_related_To_endogenous_product/endogenous_product_related_to</td><td>A9</td></tr>
+<tr><td>RT</td>
+<td>is_value_for_gdc_property/has_gdc_value</td><td>A32</td></tr>
 <tr><td>RT</td>
 <td>molecular_abnormality_involves_gene/gene_involved_in_molecular_abnormality</td><td>R177</td></tr>
 <tr><td>RT</td>
@@ -680,7 +685,8 @@ Alt_Definition: &lt;P325...ncicp:complexDefinition xmlns:ncicp.../P325&gt;
 <p>(1) The relationship group is generated from the 'owl:Restriction' and 'owl:intersectionOf' tag in the source data file.</p>
 </div>
 <h3>Hierarchy (MRHIER)</h3>
-
+&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top-of-page">top</a></span>)<br/>
 <p>The hierarchy is created from the 'rdfs:subClassOfrdf:resource' tag which indicates the parent of the concept.  Sibling information is not included.</p>
 <h3>Mappings (MRMAP)</h3>
+&nbsp;&nbsp;<span class = "nav">(return to <a href = "#top-of-page">top</a></span>)
 <p>No mappings are supplied by NCI.</p>

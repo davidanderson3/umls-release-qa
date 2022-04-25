@@ -1,6 +1,6 @@
 title=CCSR_ICD10PCS (Clinical Classifications Software Refined for ICD-10-PCS) - Source Representation
 date=2018-05-07
-updated=2021-11-01
+updated=2022-05-02
 type=page
 status=published
 ~~~~~~
@@ -31,23 +31,8 @@ status=published
 <hr>
 <div id="change_summary" class="rep_block_level_one">
   <h3>Summary of Changes</h3>
+  <p>No changes.</p>
 
-<ul>
-    <li>CCSR_ICD10PCS is a new SAB, but it is an update to CCS_10. Previously CCS_10 mapped ICD10PCS codes to single-level and multi-level 
-	categories. Now CCSR_ICD10PCS maps ICD10PCS codes to CCSR_ICD10PCS categories, each of which is within one of 31 clinical domains.</li>
-
-	<li> Previously the mapping relationships used AUIs but they have been changed to use CODE.</li>
-	
-	<li>Deprecated TTY: 
-	<ul>
-		<li>MV: No multi-level system with additional procedure specificity has been developed for CCSR_ICD10PCS</li>
-	</ul>
-	<li>Deprecated REL/RELA:
-	<ul>	
-		<li>SY/has_single_level_category: Previously connected single-level CCS CATEGORY to MULTI CCS LVL 2 categories, which no longer exist</li>
-	</ul>
-	</li>
-	</ul>
 	</div>
 <hr>
 <div id="file_summary" class="rep_block_level_one">
@@ -62,11 +47,11 @@ status=published
         <th>Description</th>
       </tr>
 		<tr>
-          <td>PRCCSR_v2021-1.CSV</td>
+          <td>PRCCSR_v2022-1.CSV</td>
           <td>Procedure categories and mappings</td>
         </tr>
 		<tr>
-			<td>PRCCSR-User-Guide-v2021-1.pdf</td>
+			<td>PRCCSR-User-Guide-v2022-1.pdf</td>
 			<td>Documentation</td>
 		</tr>
     </tbody>
@@ -76,7 +61,7 @@ status=published
 <div id="file_details">
 <h3>Source-Provided Files: Details</h3>
 
-<p>The following is a list of elements in ccs_pr_icd10pcs_20##_1.csv:</p>
+<p>The following is a list of elements in PRCCSR_v2022-1.CSV:</p>
 
 
   <a id="file1"></a>
@@ -93,7 +78,7 @@ status=published
         <td>ICD-10-PCS</td>
 
         <td>MRMAP.FROMEXPR<br/>
-		MRREL: Relationship to CCSR Category Codes, per below.</td>
+		MRREL: Relationship to CCS Category Codes, per below.</td>
       </tr>
 
      <tr>

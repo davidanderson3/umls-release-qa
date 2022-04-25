@@ -1,6 +1,6 @@
 title=HPO (Human Phenotype Ontology) - Metathesaurus Representation
 date=2018-05-07
-updated=2021-11-01
+updated=2022-05-02
 type=page
 status=published
 ~~~~~~
@@ -34,11 +34,11 @@ status=published
     </div>
 
     <div id="general" class="rep_block_level_one">
-      <p><strong>VSAB:</strong> HPO2021_06_08</p>
+      <p><strong>VSAB:</strong>HPO2021_10_10</p>
       <hr>
       <div id="rep_identifiers" class="rep_block_level_one">
         <h3>Summary of Changes</h3>
-		There were no changes to the source file format or Metathesaurus source processing
+		There were no changes to the source file format or Metathesaurus source processing.  TTY = OET was reintroduced due to presence of obsolete entry terms in this version.
 		<hr>
 		<h3>Source-Provided Files: Summary</h3>
         <p>HPO is released in both owl and obo formats. The obo format
@@ -54,7 +54,7 @@ status=published
               <th>Description</th>
             </tr>
             <tr>
-              <td class="file_field_name">2021_06_08_hp.obo.txt</td>
+              <td class="file_field_name">2021_10_10_hp.obo.txt</td>
               <td>OBO data file
               </td>
             </tr>
@@ -127,6 +127,16 @@ status=published
                   where the scope identifier = "EXACT" and
                   tag="is_obsolete" has a value of "true."
                 </td>
+              </tr>
+			  <tr>
+			  	  <td>OET</td>
+			      <td>CODE: tag = "id"<br/>
+			      STR: tag = "synonym"<br/>
+			      SDUI: tag = "id"<br/>
+			      TTY = "OET" is assigned to the value of tag = "synonym"
+                  where the scope identifier is "BROAD," "NARROW," or
+                  "RELATED" and tag="is_obsolete" has a value of "true."
+			      </td>
               </tr>
               <tr>
                 <td>OP</td>
