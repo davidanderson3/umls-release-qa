@@ -1,6 +1,6 @@
 title=PNDS (Perioperative Nursing Data Set) - Metathesaurus Representation
 date=2017-11-06
-updated=2021-11-01
+updated=2022-05-02
 type=page
 status=published
 ~~~~~~
@@ -38,48 +38,7 @@ status=published
     <div id="rep_identifiers" class="rep_block_level_one">
       <h3>Summary of Changes</h3>
 
-      <p>There have changes made to the layout of the Perioperative Nursing Data Set (PNDS) .xslx file that do not affect content.
-      In addition, there is an new tab to represent "Nursing Problems."  These codes are prefixed with "NP" and are represented
-      with TTY = PT.</p>
-
-      <p>PNDS_4_2018 includes mappings to SNOMEDCT_US.  These are represented in MRREL.RRF as well
-      as in MRMAP.RRF and MRSMAP.RRF.</p>
-
-      New TTY:<br/>
-      <ul>
-      <li>XM</li>
-      </ul>
-
-      New REL/RELA:<br/>
-      <ul>
-      <li>RQ|mapped_to/mapped_from</li>
-      </ul>
-
-      New ATNs:<br/>
-      <ul>
-      	<li>FROMRSAB</li>
-	  	<li>FROMVSAB</li>
-	  	<li>MAPSETRSAB</li>
-	  	<li>MAPSETTYPE</li>
-	  	<li>MAPSETVERSION</li>
-	  	<li>MAPSETVSAB</li>
-	  	<li>MTH_MAPFROMCOMPLEXITY</li>
-	  	<li>MTH_MAPFROMEXHAUSTIVE</li>
-	  	<li>MTH_MAPSETCOMPLEXITY</li>
-	  	<li>MTH_MAPTOCOMPLEXITY</li>
-	  	<li>MTH_MAPTOEXHAUSTIVE</li>
-	  	<li>TORSAB</li>
-	  	<li>TOVSAB</li>
-    <li>XMAP</li>
-    <li>XMAPFROM</li>
-    <li>XMAPTO</li>
-	  </ul>
-
-      Dropped ATNs:<br/>
-	 	<ul>
-	 	<li>INTERPRETIVE_STATEMENT</li>
-	 	<li>RETIRED_CODE</li>
-	 	</ul>
+      <p>There have changes made to the layout of the Perioperative Nursing Data Set (PNDS) .xslx file that do not directly affect content.
 
     </div>
 <hr>
@@ -95,11 +54,10 @@ status=published
 
             <th>Description</th>
           </tr>
-
-          <tr>
-            <td>PNDS VERSION 4 FOR NLM.xlsx</td>
-            <td>An Excel file with 6 tabs: Assessment, Nursing Problem, Implementation, Outcome, Evaluation and Domains.</td>
-          </tr>
+			<tr>
+             <td>PNDS 2021.xlsx</td>
+            <td>An Excel file with 6 tabs: Domain, Assessment, Nursing Problems, Outcomes, Implementation, and Evaluation</td>
+		  </tr>
         </tbody>
       </table>
     </div>
@@ -152,12 +110,12 @@ status=published
             </tr>
             <tr>
               <td>PT<br/></td>
-              <td>PT atoms are created for assessments, evaluations, outcomes, implementations.txt and problems.</td>
+              <td>PT atoms are created for assessments, evaluations, outcomes, implementations and problems.</td>
             </tr>
 			<tr>
               <td>XM</td>
-              <td>Cross Mapping Set</td>
-              <td>This data is added during Metathesaurus source processing.</td>
+              <td>Cross Mapping Set<br/>
+              This data is added during Metathesaurus source processing.</td>
             </tr>
           </tbody>
         </table>
@@ -176,73 +134,74 @@ status=published
             </tr>
             <tr>
             	<td>SOS</td>
-            	<td>For domain atoms: Extension column.<br/>
-            	For the map set, an SOS is added during UMLS Metathesaurus source processing</td>
+            	<td>For domain atoms: Extension column<br/>
+				For outcome atoms:  Interpretive Statement column</td>
+            	<td>For the map set, an SOS is added during UMLS Metathesaurus source processing</td>
             </tr>
 			<tr>
 			  <td>FROMRSAB</td>
 			  <td>N/A</td>
-			  <td>This data is added during Metathesaurus source processing </td>
+			  <td>This data is added during Metathesaurus source processing</td>
 			</tr>
 			<tr>
 			  <td>FROMVSAB</td>
 			  <td>N/A</td>
-			  <td>This data is added during Metathesaurus source processing </td>
+			  <td>This data is added during Metathesaurus source processing</td>
 			</tr>
 			<tr>
 			  <td>MAPSETRSAB</td>
 			  <td>N/A</td>
-			  <td>This data is added during Metathesaurus source processing </td>
+			  <td>This data is added during Metathesaurus source processing</td>
 			</tr>
 			<tr>
 			  <td>MAPSETTYPE</td>
 			  <td>N/A</td>
-			  <td>This data is added during Metathesaurus source processing </td>
+			  <td>This data is added during Metathesaurus source processing</td>
 			</tr>
 			<tr>
 			  <td>MAPSETVERSION</td>
 			  <td>N/A</td>
-			  <td>This data is added during Metathesaurus source processing </td>
+			  <td>This data is added during Metathesaurus source processing</td>
 			</tr>
 			<tr>
 			  <td>MAPSETVSAB</td>
 			  <td>N/A</td>
-			  <td>This data is added during Metathesaurus source processing </td>
+			  <td>This data is added during Metathesaurus source processing</td>
 			</tr>
 			<tr>
 			  <td>MTH_MAPFROMCOMPLEXITY</td>
 			  <td>N/A</td>
-			  <td>This data is added during Metathesaurus source processing </td>
+			  <td>This data is added during Metathesaurus source processing</td>
 			</tr>
 			<tr>
 			  <td>MTH_MAPFROMEXHAUSTIVE</td>
 			  <td>N/A</td>
-			  <td>This data is added during Metathesaurus source processing </td>
+			  <td>This data is added during Metathesaurus source processing</td>
 			</tr>
 			<tr>
 			  <td>MTH_MAPSETCOMPLEXITY</td>
 			  <td>N/A</td>
-			  <td>This data is added during Metathesaurus source processing </td>
+			  <td>This data is added during Metathesaurus source processing</td>
 			</tr>
 			<tr>
 			  <td>MTH_MAPTOCOMPLEXITY</td>
 			  <td>N/A</td>
-			  <td>This data is added during Metathesaurus source processing </td>
+			  <td>This data is added during Metathesaurus source processing</td>
 			</tr>
 			<tr>
 			  <td>MTH_MAPTOEXHAUSTIVE</td>
 			  <td>N/A</td>
-			  <td>This data is added during Metathesaurus source processing </td>
+			  <td>This data is added during Metathesaurus source processing</td>
 			</tr>
 			<tr>
 			  <td>TORSAB</td>
 			  <td>N/A</td>
-			  <td>This data is added during Metathesaurus source processing </td>
+			  <td>This data is added during Metathesaurus source processing</td>
 			</tr>
 			<tr>
 			  <td>TOVSAB</td>
 			  <td>N/A</td>
-			  <td>This data is added during Metathesaurus source processing </td>
+			  <td>This data is added during Metathesaurus source processing</td>
 </tr>
            </tbody>
         </table>
@@ -299,7 +258,7 @@ status=published
             <tr>
             	<td>RQ</td>
             	<td>mapped_to/mapped_from</td>
-            	<td>Created using the "SCT" column.</td>
+            	<td>Created using the "SCT" data.</td>
             </tr>
           </tbody>
         </table>
@@ -310,7 +269,7 @@ status=published
 
         <h3>Mappings (MRMAP):</h3>
 
-        <p>Mappings to SNOMEDCT_US are created using the "SCT" column.</p>
+        <p>Mappings to SNOMEDCT_US are created using the "SCT" data.</p>
       </div>
     </div>
   </div>

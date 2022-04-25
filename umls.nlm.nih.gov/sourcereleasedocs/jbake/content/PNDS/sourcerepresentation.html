@@ -1,6 +1,6 @@
 title=PNDS (Perioperative Nursing Data Set) - Source Representation
 date=2017-11-06
-updated=2021-11-01
+updated=2022-05-02
 type=page
 status=published
 ~~~~~~
@@ -32,50 +32,10 @@ status=published
   <div id="change_summary" class="rep_block_level_one">
     <h3>Summary of Changes:</h3>
 
-          <p>There have changes made to the layout of the Perioperative Nursing Data Set (PNDS) .xslx file that do not affect content.
-	      In addition, there is an new tab to represent "Nursing Problems."  These codes are prefixed with "NP" and are represented
-	      with TTY = PT.</p>
+          <p>There have changes made to the layout of the Perioperative Nursing Data Set (PNDS) .xslx file that do not directly affect content.
+	      </p>
 
-	      <p>PNDS_4_2018 includes mappings to SNOMEDCT_US.  These are represented in MRREL.RRF as well
-	      as in MRMAP.RRF and MRSMAP.RRF.</p>
-
-	      New TTY:<br/>
-	      <ul>
-	      <li>XM</li>
-	      </ul>
-
-	      New REL/RELA:<br/>
-	      <ul>
-	      <li>RQ|mapped_to/mapped_from</li>
-	      </ul>
-
-	      New ATNs:<br/>
-	      <ul>
-	      	<li>FROMRSAB</li>
-		  	<li>FROMVSAB</li>
-		  	<li>MAPSETRSAB</li>
-		  	<li>MAPSETTYPE</li>
-		  	<li>MAPSETVERSION</li>
-		  	<li>MAPSETVSAB</li>
-		  	<li>MTH_MAPFROMCOMPLEXITY</li>
-		  	<li>MTH_MAPFROMEXHAUSTIVE</li>
-		  	<li>MTH_MAPSETCOMPLEXITY</li>
-		  	<li>MTH_MAPTOCOMPLEXITY</li>
-		  	<li>MTH_MAPTOEXHAUSTIVE</li>
-		  	<li>TORSAB</li>
-		  	<li>TOVSAB</li>
-     <li>XMAP</li>
-     <li>XMAPFROM</li>
-     <li>XMAPTO</li>
-		  </ul>
-
-	      Dropped ATNs:<br/>
-		 	<ul>
-		 	<li>INTERPRETIVE_STATEMENT</li>
-		 	<li>RETIRED_CODE</li>
-		 	</ul>
-
-<hr>
+	</div>
   <div id="file_summary" class="rep_block_level_one">
 
     <h3>Source-Provided Files: Summary</h3>
@@ -94,8 +54,8 @@ status=published
           </tr>
 
           <tr>
-            <td>PNDS VERSION 4 FOR NLM.xlsx</td>
-            <td>An Excel file with 6 tabs: Assessment, Nursing Problem, Implementation, Outcome, Evaluation and Domains.</td>
+            <td>PNDS 2021.xlsx</td>
+            <td>An Excel file with 6 tabs: Domain, Assessment, Nursing Problems, Outcomes, Implementation, and Evaluation</td>
           </tr>
         </tbody>
       </table>
@@ -106,6 +66,7 @@ status=published
     <h3 id="file_details">Source-Provided Files: Details</h3>
 
     <p>The following is a list of data elements provided for PNDS:</p>
+	<p>(Note:  CUI and ICNP fields are not processed)</p>
     <h4>Tab: domains</h4>
 
     <div>
@@ -123,7 +84,7 @@ status=published
           </tr>
 
           <tr>
-            <td>Domain</td>
+            <td>Label</td>
             <td>MRCONSO.STR<br/>
             TTY = "HT"</td>
           </tr>
@@ -134,7 +95,7 @@ status=published
           </tr>
 
           <tr>
-            <td>Domain Definition</td>
+            <td>Definition</td>
             <td>MRDEF.DEF</td>
           </tr>
           <tr>
@@ -144,7 +105,7 @@ status=published
         </tbody>
       </table>
     </div>
-    <h4>Tabs: Assessment, Evaluation, Implementation, Problem, Outcomes</h4>
+    <h4>Tabs: Assessment, Nursing Problems, Outcomes, Implementation, and Evaluation</h4>
 
     <div>
 
@@ -156,34 +117,29 @@ status=published
             <th>Representation</th>
           </tr>
 			<tr>
-            <td>CODE</td>
+            <td>Code</td>
             <td>MRCONSO.CODE, MRCONSO.SCUI<br/></td>
           </tr>
 
           <tr>
-            <td>LABEL</td>
+            <td>Label</td>
 			<td>MRCONSO.STR; TTY = PT</td>
           </tr>
-
           <tr>
-            <td>CODE_DEFINITION</td>
-            <td>DEFINITION</td>
+            <td>Definition</td>
+            <td>MRDEF.DEF</td>
           </tr>
-
+		  <tr>
+            <td>Interpretive Statement (Outcomes tab only)</td>
+            <td>MRSAT.ATN = SOS</td>
+          </tr>
           <tr>
-            <td>SCT</td>
+            <td>SCT Code</td>
             <td>Used to create mappings and mapping relationships (RQ|mapped_to/mapped_from)</td>
           </tr>
-          <tr>
-          	<td>SCT_DESCRIPTION</td>
-          	<td>Not used</td>
-          </tr>
-          <tr>
-          	<td>SNOMED UMLS CUI</td>
-          	<td>Not used</td>
-          </tr>
+      
         </tbody>
       </table>
     </div>
-  </div>
+
 

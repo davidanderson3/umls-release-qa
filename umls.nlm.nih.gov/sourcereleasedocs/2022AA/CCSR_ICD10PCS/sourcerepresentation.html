@@ -1,0 +1,109 @@
+title=CCS_10 (Clinical Classifications Software for ICD-10-PCS) - Source Representation
+date=2018-05-07
+updated=2020-11-02
+type=page
+status=published
+~~~~~~
+
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+<!--endmenu-->
+<br/>
+<p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p><!--begin tabbed navigation area-->
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#change_summary">Summary of Changes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_summary">Summary of Source-Provided Files</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_details">Source-Provided File Details</a></div>
+    </div>
+<hr>
+<div id="change_summary" class="rep_block_level_one">
+  <h3>Summary of Changes</h3>
+  <p>No changes.</p>
+
+	</div>
+<hr>
+<div id="file_summary" class="rep_block_level_one">
+  <h3>Source Provided Files:</h3>
+
+  <p>The input files are in standard comma-separated-values format, with fields descriptions in the first line.</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>File Name</th>
+
+        <th>Description</th>
+      </tr>
+		<tr>
+          <td>PRCCSR_v2022-1.CSV</td>
+          <td>Procedure categories and mappings</td>
+        </tr>
+		<tr>
+			<td>PRCCSR-User-Guide-v2022-1.pdf</td>
+			<td>Documentation</td>
+		</tr>
+    </tbody>
+  </table>
+</div>
+<hr>
+<div id="file_details">
+<h3>Source-Provided Files: Details</h3>
+
+<p>The following is a list of elements in PRCCSR_v2022-1.CSV:</p>
+
+
+  <a id="file1"></a>
+
+  <table>
+    <tbody>
+      <tr>
+        <th>Element</th>
+
+        <th>Representation</th>
+      </tr>
+
+      <tr>
+        <td>ICD-10-PCS</td>
+
+        <td>MRMAP.FROMEXPR<br/>
+		MRREL: Relationship to CCS Category Codes, per below.</td>
+      </tr>
+
+     <tr>
+        <td>ICD-10-PCS DESCRIPTION</td>
+
+        <td>Not processed</td>
+      </tr>
+      <tr>
+        <td>PCCSR</td>
+
+        <td>MRCONSO.CODE; TTY = SP<br/>
+		First 3 characters are used to assign codes for TTY = HT (Clinical Domain)<br/>
+        MRMAP.TOEXPR<br/>
+		MRREL.REL, MRMAP.REL = RQ to ICD-10-CM CODE<br/>
+		 MRREL.RELA, MRMAP.RELA = "default_inpatient_classification" </td>
+      </tr>
+      <tr>
+        <td>PRCCSR DESCRIPTION</td>
+
+        <td>MRCONSO.STR; TTY = SP</td>
+      </tr>
+	  <tr>
+		<td>CLINICAL DOMAIN</td>
+		<td>MRCONSO.STR; TTY = HT</td>
+  
+    </tbody>
+  </table>
+
+</div>

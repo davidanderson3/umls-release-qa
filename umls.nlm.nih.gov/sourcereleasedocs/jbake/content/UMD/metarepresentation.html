@@ -1,6 +1,6 @@
 title=UMD (UMDNS) - Metathesaurus Representation
 date=2018-05-07
-updated=2021-11-01
+updated=2022-05-02
 type=page
 status=published
 ~~~~~~
@@ -29,42 +29,47 @@ status=published
     	<div class="col-sm-auto border-left"><a href="#relationships">Relationships</a></div>
     	<div class="col-sm-auto border-left"><a href="#mappings">Mappings</a></div>
     </div>
-<p><b>VSAB</b>:UMD2021</p>
+<p><b>VSAB</b>:UMD2022</p>
 <hr>
 <div id="general" class="rep_block_level_one">
   <div class="rep_block_level_one">
     <h3>Summary of Changes:</h3>
 
-    <p>No changes have been made to the original data files or to representation of UMDNS.</p>
+    <p>The UMDNS xml release format has changed, resulting in changes in the way CODE, SCUI and SDUI values are assigned.<br/>
+	In previous versions, the CODE and SCUI were assigned using the "CODE_IN_SOURCE" property.  The CODE and SDUI values are now assigned from the "code" tag in the xml. No SCUI is assigned.</p>
+		<p>The format of the CODE has changed, e.g. "10-025" is now "10025."  </p>
+		See the "Identifiers" section below for details on how CODE and SDUI are assigned.  <br/>
+		New ATN:  TERM_CODE<br/>
+		Deprecated ATN:  SYCODE<br/>
   </div>
 <hr>
   <div class="rep_block_level_one">
     <h3>Source Provided Files:</h3>
 
-    <p>The UMLS uses an xml version of UMDNS. The file used for 2021AA is "NLM_UMLS_UMDNS2020_version7.xml"</p>
+    <p>The UMLS uses an xml version of UMDNS. Please contact ECRI for source acquisition information.</p>
+	<p>UMDNS includes concepts and associated descriptions, as well as relationships (associations) between concepts, and a hierarchy.  Concepts and terms may have attributes (properties).</p>
 	<p>Note:  Retired UMD concepts are not included in the UMLS Metathesaurus."</p>
   </div>
 <hr>
   <div class="rep_block_level_one">
     <h3>Identifiers:</h3>
 
-    <p>UMDNS includes both concepts, i.e. collections of synonymous atoms, and descriptors, i.e. collections of concepts that are considered to be closely related (but not necessarily synonymous). Therefore, atoms with TTY = "SY" are assigned the same Source-asserted Concept Identifer (SCUI), and Source-asserted Descriptor Identifier (SDUI) as their PT. However, atoms with TTY = "ET" are considered to be in a different concept from their "PT" (different SCUI) but members of the same descriptor (same SDUI). Identifiers are assigned as follows:</p>
+    <p>UMDNS includes concepts and associated descriptions</p>
+	<p>Identifiers are assigned as follows:</p>
 
     <ul>
-      <li>CODE:<br>
-      For termtypes "PT", "ET", "RT", "HT": populated by the "CODE_IN_SOURCE" property.<br>
-      For termtype "SY": populated by the "CODE_IN_SOURCE" value of the "PT"</li>
+      <li>CODE:<br/>
+      For termtypes "PT", "SY," "ET," "HT": populated by the value of the concept "code" tag<br/>
+      For termtype "RT": populated from an external list of values (RTs may be related to more than one PT)</li>
 
-      <li>SAUI:<br>
+      <li>SAUI:<br/>
       Not Applicable</li>
 
-      <li>SCUI:<br>
-      Same as "CODE"</li>
+      <li>SCUI:<br/>
+      Not Applicable</li>
 
-      <li>SDUI:<br>
-      For termtypes "PT", "SY", "ET": CODE of "PT"<br>
-      For termtype "HT": CODE of "HT"<br>
-      For termtype "RT": CODE of "RT" (An "RT" may have multiple "PT"s, so we can't use code of "PT")</li>
+      <li>SDUI:<br/>
+      Same as CODE</li>
     </ul>
     <hr>
     <a id="termtypes"></a>
@@ -84,12 +89,10 @@ status=published
             <td>PT</td>
 
             <td>
-              CODE = value of "CODE_IN_SOURCE" property<br>
-              STR = value of "conceptDef&lt;name&gt;" property<br>
-              SCUI = value of "CODE_IN_SOURCE" property<br>
-              SDUI = value of "CODE_IN_SOURCE" property<br>
-              <br>
-              Termtypes are assigned based on the value of the "DEVICE_TYPE" property. "PT" atoms are created where the "DEVICE_TYPE" is one of:<br>
+              CODE, SDUI = value of  concept "code" tag<br/>
+              STR = value of concept "name" tag<br/>
+              <br/>
+              "PT" atoms are created where the concept "DEVICE_TYPE" is one of:<br/>
 
               <ul>
                 <li>CATEGORY EXPANDED BELOW entry with SEE ALSO references</li>
@@ -109,12 +112,10 @@ status=published
             <td>HT</td>
 
             <td>
-              CODE = value of "CODE_IN_SOURCE" property<br>
-              STR = value of "conceptDef&lt;name&gt;" property<br>
-              SCUI = value of "CODE_IN_SOURCE" property<br>
-              SDUI = value of "CODE_IN_SOURCE" property<br>
-              <br>
-              Termtypes are assigned based on the value of the "DEVICE_TYPE" property. "HT"s are created where the "DEVICE_TYPE" is:
+              CODE,SDUI = value of  concept "code" tag<br/>
+              STR = value of concept "name" tag<br/>
+              <br/>
+              "HT" atoms are created where the concept "DEVICE_TYPE" is:
 
               <ul>
                 <li>Hierarchical Term</li>
@@ -126,12 +127,10 @@ status=published
             <td>RT</td>
 
             <td>
-              CODE = value of "CODE_IN_SOURCE" property<br>
-              STR = value of "conceptDef&lt;name&gt;" property<br>
-              SCUI = value of "CODE_IN_SOURCE" property<br>
-              SDUI = value of "CODE_IN_SOURCE" property<br>
-              <br>
-              Termtypes are assigned based on the value of the "DEVICE_TYPE" property. "RT"s are created where the "DEVICE_TYPE" is:
+              CODE, SDUI = populated from an external list of values (RTs may be related to more than one PT)<br/>
+              STR = value of term "name" tag<br/>
+              <br/>
+              RT atoms are created for Entry Terms where the "Term Device Type" is:
 
               <ul>
                 <li>Device is a USE MORE SPECIFIC TERM entry.</li>
@@ -142,24 +141,20 @@ status=published
           <tr>
             <td>SY</td>
 
-            <td>CODE = value of "CODE_IN_SOURCE" property of associated "PT"<br>
-            STR = value of the "SYNONYM" property<br>
-            SCUI = value of "CODE_IN_SOURCE" property of associated "PT"<br>
-            SDUI = value of "CODE_IN_SOURCE" property of associated "PT"<br>
-            <br>
-            SYs are created when a "SYNONYM" property exists</td>
+            <td>CODE, SDUI = value of  concept "code"<br/>
+            STR = value of the "Synonym" association "to_name"<br/>
+            <br/>
+            SYs are created for "Synonym" associations./td>
           </tr>
 
           <tr>
             <td>ET</td>
 
             <td>
-              CODE = value of "CODE_IN_SOURCE" property<br>
-              STR = value of "conceptDef&lt;name&gt;" property<br>
-              SCUI = value of "CODE_IN_SOURCE" property<br>
-              SDUI = value of "CODE_IN_SOURCE" property of associated "PT"<br>
-              <br>
-              Termtypes are assigned based on the value of the "DEVICE_TYPE" property. ETs are created where the "DEVICE_TYPE" is:
+              CODE, SDUI = value of concept "code" tag<br/>
+              STR = value of "Entry Term" "to_name"<br/>
+              <br/>
+              ET atoms are created for Entry Terms where the "Term Device Type" is:
 
               <ul>
                 <li>Device is a SEE reference.</li>
@@ -187,7 +182,7 @@ status=published
             <td>DEVTYPE</td>
 
             <td>
-              The value of the "DEVICE_TYPE" property. One of the following:
+              The value of the "DEVICE_TYPE" (STYPE = SDUI) or "Term Device Type" property (STYPE = AUI). One of the following:
 
               <ul>
                 <li>CATEGORY EXPANDED BELOW entry with SEE ALSO references</li>
@@ -210,9 +205,9 @@ status=published
           </tr>
 
           <tr>
-            <td>SYCODE</td>
+            <td>TERM_CODE</td>
 
-            <td>The value of the "Synonym_Code" qualifier, if present. Attached to AUI.</td>
+            <td>The value of the "Term Code in Source" property, if present.</td>
           </tr>
         </tbody>
       </table>
@@ -230,7 +225,7 @@ status=published
           </tr>
 
           <tr>
-            <td>The value of the "DEFINITION" property, where value of the "Definition _Status" qualifier = "Releasable." Definitions with other qualifier values are excluded.</td>
+            <td>The value of the "DEFINITION" property, where value of the "Definition _Status"  = "Releasable." Definitions with other status values are excluded.</td>
           </tr>
         </tbody>
       </table>
@@ -252,18 +247,17 @@ status=published
           </tr>
 
           <tr>
-            <td>CHD<br>
-            PAR<br>
-            SIB</td>
+            <td>CHD<br/>
+            PAR</td>
 
             <td>isa/inverse_isa</td>
 
-            <td>Hierarchy extracted from "definingConcept" values in original xml data</td>
+            <td>Hierarchy extracted from "defining_concept" values in original xml data</td>
           </tr>
 
           <tr>
-            <td>RB/RN<br>
-            RO<br></td>
+            <td>RB/RN<br/>
+            RO<br/></td>
 
             <td>&nbsp;&nbsp;</td>
 
@@ -276,8 +270,7 @@ status=published
                 <li>PT - ET: RO</li>
 
                 <li>PT - RT: RN</li>
-              </ul>(The Preferred term is narrower than Related term)<br>
-              It has been acknowledged that this default may result in a small number of semantically incorrect relationships but this is considered the best default
+              </ul>(The Preferred term is narrower than Related term)<br/>
             </td>
           </tr>
         </tbody>

@@ -1,0 +1,96 @@
+title=ICNP (International Classification for Nursing Practice) - Source Representation
+date=2017-11-06
+updated=2021-11-01
+type=page
+status=published
+~~~~~~
+
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+
+<!--endmenu-->
+<br/>
+    <p>This page lists specific source data elements and provides
+      information on their representation in the UMLS Metathesaurus.</p>
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#change_summary">Summary of Changes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_summary">Summary of Source-Provided Files</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_details">Source-Provided File Details</a></div>
+    </div>
+
+    <div id="change_summary" class="rep_block_level_one">
+      <h3>Summary of Changes:</h3>
+
+      <p>Under a September, 2021 agreement, ICNP will be fully integrated with
+SNOMED CT, ensuring that SNOMED CT continues to reflect the valuable
+contribution of nursing to health care. SNOMED International will be responsible
+for the distribution of ICNP, while ICN will retain ownership and control of its
+content.</p>
+        The ICNP 2021 standalone release consists of a subset of SNOMED CT codes and strings.  This data is represented in the UMLS Metathesaurus with SAB = "ICNP."  
+				<ul>
+		<li>Deprecated TTYs: MTH_PT, XM</li>
+		<li>Deprecated ATNs:  FROMRSAB, FROMVSAB,ICNP_TYPE,MAPSETRSAB,MAPSETVERSION, MAPSETVSAB, 
+		<li>MTH_MAPFROMCOMPLEXITY,MTH_MAPFROMEXHAUSTIVE,MTH_MAPSETCOMPLEXITY, MTH_MAPTOCOMPLEXITY, MTH_MAPTOEXHAUSTIVE, TORSAB, TOVSAB</li>
+		<li>Deprecated REL value:  SY</li>
+		<li> Deprecated RELA values:  mapped_from/mapped_to; mth_british_form_of/mth_has_british_form</li>
+		<li> Deprecated REL values: PAR/CHD; there is no hierarchy for ICNP_2021</li>
+		</ul>
+
+    </div>
+
+    <div class="rep_block_level_one"> <a
+        id="file_summary"></a>
+      <h3>Source-Provided Files: Summary</h3>
+       
+
+      The file "ICNP 2021.csv" consists of a subset of SNOMED CT codes and strings<br/>
+      <br/>
+      
+      <h3 id="file_details">Source-Provided Files: Details</h3>
+
+      <p>The following is a list of fields available for ICNP_2021 data in "ICNP 2021.csv":
+      </p>
+      <div class="rep_block_level_two"><a id="file1"></a>
+
+       
+        <table>
+          <tbody>
+            <tr>
+              <th>Field</th>
+              <th>Representation</th>
+            </tr>
+            <tr>
+              <td>SCTID (SNOMED CT identifier)</td>
+              <td>MRCONSO.CODE<br/>
+                MRCONSO.SCUI
+              </td>
+            </tr>
+            <tr>
+              <td>SNOMED CT preferred term with semantic tag (SNOMED CT fully-specified name)</td>
+              <td>Not directly processed</td>
+            </tr>
+            <tr>
+              <td>ICNP preferred term</td>
+              <td>MRCONSO.STR</td>
+            </tr>
+            <tr>
+              <td>SNOMED CT semantic tag</td>
+              <td>Not directly processed</td>
+            </tr>
+            </tbody>
+        </table>
+      </div>
+    </div>
+  
