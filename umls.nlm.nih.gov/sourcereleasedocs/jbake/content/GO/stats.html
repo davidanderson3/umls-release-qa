@@ -24,7 +24,7 @@ status=published
 <th>Semantic Type ID</th><th>Semantic Type Name</th><th>Count </th><th>Percentage Distribution</th>
 </tr>
 <tr>
-<td>T044</td><td>Molecular Function</td><td>30653</td><td>43.0</td>
+<td>T044</td><td>Molecular Function</td><td>30652</td><td>43.0</td>
 </tr>
 <tr>
 <td>T043</td><td>Cell Function</td><td>19239</td><td>27.0</td>
@@ -36,7 +36,7 @@ status=published
 <td>T045</td><td>Genetic Function</td><td>4849</td><td>6.8</td>
 </tr>
 <tr>
-<td>T040</td><td>Organism Function</td><td>4735</td><td>6.6</td>
+<td>T040</td><td>Organism Function</td><td>4734</td><td>6.6</td>
 </tr>
 <tr>
 <td>T042</td><td>Organ or Tissue Function</td><td>2521</td><td>3.5</td>
@@ -132,19 +132,19 @@ status=published
 <td>SY/</td><td>source asserted synonymy./Empty relationship attribute</td><td>149746</td>
 </tr>
 <tr>
-<td>PAR/inverse_isa</td><td>has parent relationship in a Metathesaurus source vocabulary /Inverse is a</td><td>71308</td>
+<td>CHD/isa</td><td>has child relationship in a Metathesaurus source vocabulary /Is a</td><td>71308</td>
 </tr>
 <tr>
-<td>CHD/isa</td><td>has child relationship in a Metathesaurus source vocabulary /Is a</td><td>71308</td>
+<td>PAR/inverse_isa</td><td>has parent relationship in a Metathesaurus source vocabulary /Inverse is a</td><td>71308</td>
 </tr>
 <tr>
 <td>RO/</td><td>has relationship other than synonymous, narrower, or broader/Empty relationship attribute</td><td>58696</td>
 </tr>
 <tr>
-<td>RN/</td><td>has a narrower relationship/Empty relationship attribute</td><td>23347</td>
+<td>RB/</td><td>has a broader relationship/Empty relationship attribute</td><td>23347</td>
 </tr>
 <tr>
-<td>RB/</td><td>has a broader relationship/Empty relationship attribute</td><td>23347</td>
+<td>RN/</td><td>has a narrower relationship/Empty relationship attribute</td><td>23347</td>
 </tr>
 <tr>
 <td>RB/inverse_isa</td><td>has a broader relationship/Inverse is a</td><td>11745</td>
@@ -153,10 +153,10 @@ status=published
 <td>RN/isa</td><td>has a narrower relationship/Is a</td><td>11745</td>
 </tr>
 <tr>
-<td>RN/part_of</td><td>has a narrower relationship/Part of</td><td>10798</td>
+<td>RB/has_part</td><td>has a broader relationship/Has part</td><td>10798</td>
 </tr>
 <tr>
-<td>RB/has_part</td><td>has a broader relationship/Has part</td><td>10798</td>
+<td>RN/part_of</td><td>has a narrower relationship/Part of</td><td>10798</td>
 </tr>
 <tr>
 <td>RO/regulates</td><td>has relationship other than synonymous, narrower, or broader/Regulates</td><td>7138</td>
@@ -165,10 +165,10 @@ status=published
 <td>RO/regulated_by</td><td>has relationship other than synonymous, narrower, or broader/Regulated by</td><td>7138</td>
 </tr>
 <tr>
-<td>RO/negatively_regulates</td><td>has relationship other than synonymous, narrower, or broader/Negatively regulates</td><td>6185</td>
+<td>RO/negatively_regulated_by</td><td>has relationship other than synonymous, narrower, or broader/Negatively regulated by</td><td>6185</td>
 </tr>
 <tr>
-<td>RO/negatively_regulated_by</td><td>has relationship other than synonymous, narrower, or broader/Negatively regulated by</td><td>6185</td>
+<td>RO/negatively_regulates</td><td>has relationship other than synonymous, narrower, or broader/Negatively regulates</td><td>6185</td>
 </tr>
 <tr>
 <td>RO/positively_regulates</td><td>has relationship other than synonymous, narrower, or broader/Positively regulates</td><td>6139</td>
@@ -183,10 +183,10 @@ status=published
 <td>SY/mth_expanded_form_of</td><td>source asserted synonymy./MTH expanded form of</td><td>4225</td>
 </tr>
 <tr>
-<td>RQ/consider_from</td><td>related and possibly synonymous./Consider from</td><td>2011</td>
+<td>RQ/consider</td><td>related and possibly synonymous./Consider</td><td>2011</td>
 </tr>
 <tr>
-<td>RQ/consider</td><td>related and possibly synonymous./Consider</td><td>2011</td>
+<td>RQ/consider_from</td><td>related and possibly synonymous./Consider from</td><td>2011</td>
 </tr>
 <tr>
 <td>RQ/replaces</td><td>related and possibly synonymous./Replaces</td><td>518</td>
