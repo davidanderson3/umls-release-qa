@@ -1,0 +1,131 @@
+title=HGNC (HUGO Gene Nomenclature Committee) - Source Representation
+date=2017-11-06
+updated=2022-05-02
+type=page
+status=published
+~~~~~~
+
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+
+<!--endmenu-->
+<br/>
+<a id = "top"></a>
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#change_summary">Summary of Changes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_summary">Summary of Source-Provided Files</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_details">Source-Provided File Details</a></div>
+    </div>
+
+<strong>VSAB:</strong> HGNC2022_04
+<hr>
+<a id = "general"></a>
+<div id = "rep_general" class = "rep_block_level_one">
+<h3>Notes</h3>
+<p>The HUGO Gene Nomenclature Committee (HGNC) is an international organization whose primary ethos is to promote and sustain collaboration in the field of human genetics.</p>
+<p>Data is supplied in a single, tab-delimited, text file (UTF-8).</p>
+</div>
+<hr>
+<div id = "rep_change_summary" class = "rep_block_level_one">
+<a id = "change_summary"></a>
+<h3>Summary of Changes</h3>
+<p>1. Field 13 changed the field name from 'gene_family' to 'gene_group'. The ATN remains the same at 'GENE_FAM_DESC'.</p>
+<p>2. Field 14 changed the field name from 'gene_family_id' to 'gene_group_id'. The ATN remains the same at 'GENE_FAM_ID'.</p>
+<p>3. New field 53 'mane_select' contains "NCBI and Ensembl transcript IDs/acessions including the version number for one high-quality representative transcript per protein-coding gene that is well-supported by experimental data and represents the biology of the gene". The multiple IDs are delimited by |. ATN = MANE_SELECT.</p>
+<p>4. New field 54 'gencc' contains the "HGNC ID used within the GenCC database as the unique identifier of their gene reports within the GenCC database". ATN = GENCC.</p>
+</div>
+<hr>
+<div id = "rep_file_summary" class = "rep_block_level_one">
+<a id = "file_summary"></a>
+<h3>Summary of Source-Provided Files</h3>
+
+<div class = "rep_block_level_two">
+<!-- Make a table of each file that comes from the source   -->
+<h4>Documentation and Reference</h4>
+<table><tr><td>http://www.genenames.org/help/statistics-downloads</td></tr>
+<tr><td>www.hugo-international.org</td></tr>
+</table>
+ <h4>Data Files</h4>
+<table>
+<tr><th>File Name</th><th>Description</th></tr>
+<tr><td  class = "file_file_name">hgnc_complete_set_04202022.txt</td><td>Tab-delimited text file.</td></tr>
+</table>
+</div>
+</div>
+<hr>
+<div id = "rep_file_details" class = "rep_block_level_one">
+<a id = "file_details"></a>
+<h3>Source-Provided File Details</h3>
+
+<div class = "rep_block_level_two">
+<a id = "file1"></a>
+<table>
+<tr><th>Field Number</th><th>Field Name</th><th>Description</th><th>Representation</th></tr>
+<tr><td  class = "file_field_name">1</td><td>hgnc_id</td><td>A unique ID for every approved symbol</td><td>MRCONSO.CODE; MRCONSO.SCUI</td></tr>
+<tr><td  class = "file_field_name">2</td><td>symbol</td><td>Approved gene symbol</td><td>MRCONSO.STR; MRSAT.ATN=GENESYMBOL</td></tr>
+<tr><td  class = "file_field_name">3</td><td>name</td><td>Approved name for the gene</td><td>MRCONSO.STR</td></tr>
+<tr><td  class = "file_field_name">4</td><td>locus_group</td><td>A group name for a set of related locus types</td><td>MRSAT.ATN=LOCUS_GROUP</td></tr>
+<tr><td  class = "file_field_name">5</td><td>locus_type</td><td>Specifies type as defined by HGNC (e.g., RNA, transfer)</td><td>MRSAT.ATN=LOCUS_TYPE</td></tr>
+<tr><td  class = "file_field_name">6</td><td>status</td><td>Status of the symbol (e.g., Approved or Entry Withdrawn)</td><td>Not Processed</td></tr>
+<tr><td  class = "file_field_name">7</td><td>location</td><td>Cytogenetic location of the gene</td><td>MRSAT.ATN=CYTOGENETIC_LOCATION</td></tr>
+<tr><td  class = "file_field_name">8</td><td>location_sortable</td><td>Same as "location" but single digit chromosomes are prefixed with a 0 enabling them to be sorted in correct number order (e.g., 02q34)</td><td>Not Processed</td></tr>
+<tr><td  class = "file_field_name">9</td><td>alias_symbol</td><td>Other symbols used to refer to the gene</td><td>MRCONSO.STR</td></tr>
+<tr><td  class = "file_field_name">10</td><td>alias_name</td><td>Other names used to refer to the gene</td><td>MRCONSO.STR</td></tr>
+<tr><td  class = "file_field_name">11</td><td>prev_symbol</td><td>Symbols previously approved for this gene</td><td>MRSAT.ATN=PREV_SYMBOL</td></tr>
+<tr><td  class = "file_field_name">12</td><td>prev_name</td><td>Gene names previously approved for this gene</td><td>MRSAT.ATN=PREV_NAME</td></tr>
+<tr><td  class = "file_field_name">13</td><td>gene_group</td><td>Name given to a gene family or group the gene has been assigned to</td><td>MRSAT.ATN=GENE_FAM_DESC</td></tr>
+<tr><td  class = "file_field_name">14</td><td>gene_group_id</td><td>ID used to designate a gene family or group the gene has been assigned to</td><td>MRSAT.ATN=GENE_FAM_ID</td></tr>
+<tr><td  class = "file_field_name">15</td><td>date_approved_reserved</td><td>The date the entry was first approved</td><td>MRSAT.ATN=DATE_CREATED</td></tr>
+<tr><td  class = "file_field_name">16</td><td>date_symbol_changed</td><td>The date the gene symbol was last changed</td><td>MRSAT.ATN=DATE_SYMBOL_CHANGED</td></tr>
+<tr><td  class = "file_field_name">17</td><td>date_name_changed</td><td>The date the gene name was last changed</td><td>MRSAT.ATN=DATE_NAME_CHANGED</td></tr>
+<tr><td  class = "file_field_name">18</td><td>date_modified</td><td>Date the entry was last modified</td><td>MRSAT.ATN=DATE_LAST_MODIFIED</td></tr>
+<tr><td  class = "file_field_name">19</td><td>entrez_id</td><td>Entrez gene ID</td><td>MRSAT.ATN=ENTREZGENE_ID</td></tr>
+<tr><td  class = "file_field_name">20</td><td>ensembl_gene_id</td><td>Ensembl gene ID</td><td>MRSAT.ATN=ENSEMBLGENE_ID</td></tr>
+<tr><td  class = "file_field_name">21</td><td>vega_id</td><td>Vega gene ID</td><td>MRSAT.ATN=VEGA_ID</td></tr>
+<tr><td  class = "file_field_name">22</td><td>ucsc_id</td><td>UCSC gene ID</td><td>MRSAT.ATN=MAPPED_UCSC_ID</td></tr>
+<tr><td  class = "file_field_name">23</td><td>ena</td><td>International Nucleotide Sequence Database Collaboration accession number(s)</td><td>MRSAT.ATN=ENA</td></tr>
+<tr><td  class = "file_field_name">24</td><td>refseq_accession</td><td>RefSeq nucleotide accession(s)</td><td>MRSAT.ATN=REFSEQ_ID</td></tr>
+<tr><td  class = "file_field_name">25</td><td>ccds_id</td><td>Consensus CDS ID</td><td>MRSAT.ATN=CCDS_ID</td></tr>
+<tr><td  class = "file_field_name">26</td><td>uniprot_ids</td><td>UniProt protein accession</td><td>MRSAT.ATN=SWP</td></tr>
+<tr><td  class = "file_field_name">27</td><td>pubmed_id</td><td>Pubmed and Europe Pubmed Cental PMID(s)</td><td>MRSAT.ATN=PMID</td></tr>
+<tr><td  class = "file_field_name">28</td><td>mgd_id</td><td>Mouse genome informatics database ID</td><td>MRSAT.ATN=MGD_ID</td></tr>
+<tr><td  class = "file_field_name">29</td><td>rgd_id</td><td>Rat genome database gene ID</td><td>MRSAT.ATN=RGD_ID</td></tr>
+<tr><td  class = "file_field_name">30</td><td>lsdb</td><td>The name of the Locus specific Mutation Database and URL for the gene separated by a | character</td><td>MRSAT.ATN=LOCUS_SPECIFIC_DB_XR</td></tr>
+<tr><td  class = "file_field_name">31</td><td>cosmic</td><td>Symbol used within the Catalogue of somatic mutations in cancer for the gene</td><td>MRSAT.ATN=DB_XR_ID|COSMIC:</td></tr>
+<tr><td  class = "file_field_name">32</td><td>omim_id</td><td>Online Mendelian Inheritance in Man (OMIM) ID</td><td>MRSAT.ATN=OMIM_ID</td></tr>
+<tr><td  class = "file_field_name">33</td><td>mirbase</td><td>miRBase ID</td><td>MRSAT.ATN=DB_XR_ID|MiRBase:</td></tr>
+<tr><td  class = "file_field_name">34</td><td>homeodb</td><td>Homeobox Database ID</td><td>MRSAT.ATN=DB_XR_ID|HomeoDB:</td></tr>
+<tr><td  class = "file_field_name">35</td><td>snornabase</td><td>SnoRNABase ID</td><td>MRSAT.ATN=DB_XR_ID|snoRNABase:</td></tr>
+<tr><td  class = "file_field_name">36</td><td>bioparadigms_slc</td><td>Symbol used to link to the SLC tables database at bioparadigms.org for the gene</td><td>MRSAT.ATN=DB_XR_ID|BioParadigms:</td></tr>
+<tr><td  class = "file_field_name">37</td><td>orphanet</td><td>Orphanet ID</td><td>MRSAT.ATN=Orphanet:</td></tr>
+<tr><td  class = "file_field_name">38</td><td>pseudogene.org</td><td>Pseudogene.org ID</td><td>MRSAT.ATN=DB_XR_ID|Pseudogene.org:</td></tr>
+<tr><td  class = "file_field_name">39</td><td>horde_id</td><td>Symbol used within HORDE for the gene</td><td>MRSAT.ATN=DB_XR_ID|HORDE_ID:</td></tr>
+<tr><td  class = "file_field_name">40</td><td>merops</td><td>ID used to link to the MEROPS peptidase database</td><td>MRSAT.ATN=DB_XR_ID|MEROPS:</td></tr>
+<tr><td  class = "file_field_name">41</td><td>imgt</td><td>Symbol used within the international ImMunoGeneTics information system</td><td>MRSAT.ATN=DB_XR_ID|IMGT/GENE-DB:</td></tr>
+<tr><td  class = "file_field_name">42</td><td>iuphar</td><td>The objectID used to link to the IUPHAR/BPS Guide to PHAMACOLOGY database.</td><td>MRSAT.ATN=DB_XR_ID|IUPHAR:</td></tr>
+<tr><td  class = "file_field_name">43</td><td>kznf_gene_catalog</td><td>ID used to link to the Human KZNF Gene Catalog</td><td>MRSAT.ATN=DB_XR_ID|KZNF Gene Catalog:</td></tr>
+<tr><td  class = "file_field_name">44</td><td>mamit-trnadb</td><td>ID to link to the Mamit-tRNA database</td><td>MRSAT.ATN=DB_XR_ID|Mamit-tRNAdb:</td></tr>
+<tr><td  class = "file_field_name">45</td><td>cd</td><td>Symbol used within the Human Cell Differentiation Molecule database for the gene</td><td>MRSAT.ATN=DB_XR_ID|CD:</td></tr>
+<tr><td  class = "file_field_name">46</td><td>lncrnadb</td><td>lncRNA Database ID</td><td>MRSAT.ATN=DB_XR_ID|lncRNAdb:</td></tr>
+<tr><td  class = "file_field_name">47</td><td>enzyme_id</td><td>ENZYME EC accession number</td><td>MRSAT.ATN=EZ</td></tr>
+<tr><td  class = "file_field_name">48</td><td>intermediate_filament_db</td><td>ID used to link to the Human Intermediate filament Database</td><td>MRSAT.ATN=DB_XR_ID|Intermediate Filament DB:</td></tr>
+<tr><td  class = "file_field_name">49</td><td>rna_central_ids</td><td>RNA Central ID</td><td>MRSAT.ATN=RNA_CENTRAL_ID</td></tr>
+<tr><td  class = "file_field_name">50</td><td>lncipedia</td><td>Comprehensive compendium of human long non-coding RNAs</td><td>MRSAT.ATN=LNCIPEDIA</td></tr>
+<tr><td  class = "file_field_name">51</td><td>gtrnadb</td><td>Database that contains tRNA gene predictions made by tRNAscan-SE on complete or nearly complete genomes</td><td>MRSAT.ATN=DB_XR_ID|GtRNAdb:</td></tr>
+<tr><td  class = "file_field_name">52</td><td>agr</td><td>Alliance of Genome Resources. HGNC will link to the Human Gene page at the AGR via HGNC ID if such a page exists.</td><td>MRSAT.ATN=AGR</td></tr>
+<tr><td  class = "file_field_name">53</td><td>mane_select</td><td>NCBI and Ensembl transcript IDs/acessions including the version number for one high-quality representative transcript per protein-coding gene that is well-supported by experimental data and represents the biology of the gene. The multiple IDs are delimited by |.</td><td>MRSAT.ATN=MANE_SELECT</td></tr>
+<tr><td  class = "file_field_name">54</td><td>gencc</td><td>HGNC ID used within the GenCC database as the unique identifier of their gene reports within the GenCC database.</td><td>MRSAT.ATN=GENCC</td></tr>
+</table>
+</div></div>
