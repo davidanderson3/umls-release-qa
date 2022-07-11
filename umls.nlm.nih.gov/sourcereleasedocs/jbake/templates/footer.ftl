@@ -34,8 +34,8 @@
 </div>
 </footer>
 
-<script src="//assets.nlm.nih.gov/jquery/jquery-3.3.1.min.js"></script>
-<script src="//assets.nlm.nih.gov/jquery/jquery-migrate-3.0.0.min.js"></script>
+<script src="//assets.nlm.nih.gov/jquery/jquery-latest.min.js"></script>
+<script src="//assets.nlm.nih.gov/jquery/jquery-migrate-latest.min.js"></script>
 <script src="//www.nlm.nih.gov/home_assets/vendor/bootstrap/dist/js/bootstrap.bundle.js"></script>
 <script src="//www.nlm.nih.gov/scripts/nlm.js"></script>
 
