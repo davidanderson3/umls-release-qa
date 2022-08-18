@@ -1,0 +1,289 @@
+title=ICD10CM (International Classification of Diseases, Tenth Revision, Clinical Modification) - Metathesaurus Representation
+date=2017-11-06
+updated=2022-05-02
+type=page
+status=published
+~~~~~~
+
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+
+<!--endmenu-->
+<br/>
+    <p>This page lists UMLS Metathesaurus data elements and traces them
+      back to the specific source data that populates them.</p>
+
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#atoms">Atoms</a></div>
+    	<div class="col-sm-auto border-left"><a href="#attributes">Attributes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#definitions">Definitions</a></div>
+    	<div class="col-sm-auto border-left"><a href="#relationships">Relationships</a></div>
+    	<div class="col-sm-auto border-left"><a href="#mappings">Mappings</a></div>
+    </div>
+
+    <div id="general" class="rep_block_level_one">
+      <p><strong>VSAB:</strong> ICD10CM_2022_04_01</p>
+      <hr>
+      <div id="rep_change_summary" class="rep_block_level_one">
+        <h3>Summary of Changes</h3>
+		<p>There have been no changes to the source format or Metathesaurus source processing. This version includes minor updates to ICD10CM_2022 for reporting COVID-19 vaccination status.</p>
+		<hr>
+        <h3>Source Provided Files: </h3>
+        The following files are downloaded and processed from <a
+          href="http://www.cdc.gov/nchs/icd/icd10cm.htm">http://www.cdc.gov/nchs/icd/icd10cm.htm</a>:<br/>
+        <br/>
+        Documentation: <br/>
+        <ul>
+          <li>icd10OrderFiles.pdf</li>
+          <li>icd10cm_tabular_2022.pdf</li>
+        </ul>
+        Data:<br/>
+        <ul>
+          <li> icd10cm_order_2022.txt</li>
+          <li>icd10cm_tabular_2022.xml</li>
+        </ul>
+
+        The tabular xml file aligns with the order file, and redundant
+        data is not processed.
+        <div id="rep_identifers" class="rep_block_level_one"> 
+        <hr>
+          <h3><strong>Identifiers: </strong></h3>
+          Identifiers are assigned as follows:<br/>
+          <ul>
+            <li>CODE:
+            <ul>
+              <li>Diagnoses, chapters: value of "&lt;name&gt;" tag</li>
+              <li>Diagnoses, 7 character codes: value of "&lt;name&gt;" tag" concatenated with "&lt;SevenChrDef&gt; &lt;extension&gt;" tag
+              <li>Sections: value of "id" attribute of "&lt;section&gt;" tag
+            </ul>
+            </li>
+            <li>SAUI: Not Applicable</li>
+            <li>SCUI: Not Applicable</li>
+            <li>SDUI: same as CODE</li>
+          </ul>
+          <hr>
+          <div id="atoms" class="rep_block_level_two">
+            <h3>Atoms (MRCONSO):</h3>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Term Type</th>
+                  <th>Description</th>
+                  <th>Origin</th>
+                </tr>
+                <tr>
+                  <td>AB</td>
+                  <td>Abbreviation (Short description)</td>
+                  <td>CODE = icd10cm_order_&lt;YYYY&gt;.txt (character
+                    positions 7-13)<br/>
+                    STR = icd10cm_order_&lt;YYYY&gt;.txt (character
+                    positions 17-76)<br/>
+                    SDUI = same as CODE<br/>
+                    SUPPRESS = "Y"<br/>
+                  </td>
+                </tr>
+                <tr>
+                  <td>ET</td>
+                  <td>Entry Term</td>
+                  <td>CODE: value of "&lt;name&gt;" tag in
+                    icd10cm_tabular_&lt;YYYY&gt;.xml<br/>
+                    STR: value of "&lt;includes&gt;" or "&lt;inclusionTerm&gt;" tag in
+                    icd10cm_tabular_&lt;YYYY&gt;.xml<br/>
+                    SDUI: same as CODE<br/>
+                    SUPPRESS = "Y"<br/>
+  					</td>
+                </tr>
+                <tr>
+                  <td>HT</td>
+                  <td>Hierarchical Term</td>
+                  <td>CODE: <br/>
+                    <ul>
+                      <li>For diagnoses or chapters: value of
+                        "&lt;name&gt;" tag</li>
+                      <li>For sections: value of "id" attribute of
+                        "&lt;section&gt;" tag</li>
+                    </ul>
+                    STR: value of "&lt;desc&gt;" tag in
+                    icd10cm_tabular_&lt;YYYY&gt;.xml<br/>
+                    SDUI: same as CODE<br/>
+                    SUPPRESS = "N"<br/>
+                    <br/>
+                    Note: Chapters, Sections, and all "non-leaf" nodes
+                    are assigned TTY = "HT." In
+                    icd10cm_order_&lt;YYYY&gt;.txt, a value of "0" in
+                    character position 15 indicates that the code is not
+                    valid for submission on a UB04.</td>
+                </tr>
+                <tr>
+                  <td>PT</td>
+                  <td>Preferred Term</td>
+                  <td>CODE: Value of "&lt;name&gt;" tag <br/>
+                  	For 7th character extensions:  the "&lt;sevenChrDef extension&gt;" char is appended to the subcategory name value <br/>
+                    STR: value of "&lt;desc&gt;" tag in icd10cm_tabular_&lt;YYYY&gt;.xml<br/>
+                    For 7th character extensions:   The "&lt;sevenChrDef&gt;" value is appended to the desc value <br/>
+                  	SDUI: same as CODE<br/>
+                    SUPPRESS = "N"<br/>
+                    <br/>
+                    Note: All "leaf" nodes are assigned TTY =
+                    "PT." In icd10cm_order_&lt;YYYY&gt;.txt, a
+                    value of "1" in character position 15 indicates that
+                    the code is valid for submission on a UB04.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <hr>
+          <div id="attributes" class="rep_block_level_two"> 
+            <h3>Attributes (MRSAT):</h3>
+            <p>Most attributes are extracted from "&lt;note&gt;" tags in
+              icd10cm_tabular_&lt;YYYY&gt;.xml.
+            </p>
+            
+            <table>
+              <tbody>
+                <tr>
+                  <th>ATN</th>
+                  <th>Note Type</th>
+                  <th>Description</th>
+                </tr>
+                <tr>
+                  <td>CODE_ALSO</td>
+                  <td>codeAlso</td>
+                  <td>Instructs that 2 codes may be required to fully
+                    describe a condition but the sequencing of the two
+                    codes is discretionary, depending on the severity of
+                    the conditions and the reason for the encounter. </td>
+                </tr>
+                <tr>
+                  <td>CODE_FIRST</td>
+                  <td>codeFirst</td>
+                  <td>Certain conditions have both an underlying
+                    etiology and multiple body system manifestations due
+                    to the underlying etiology. ICD-10-CM has a coding
+                    convention that requires the underlying condition be
+                    sequenced first followed by the manifestation.
+                    Wherever such a combination exists there is a "code
+                    first" note at the manifestation code. These
+                    instructional notes indicate the proper sequencing
+                    order of the codes, etiology followed by
+                    manifestation. In most cases the manifestation codes
+                    will have in the code title, "in diseases classified
+                    elsewhere." Codes with this title are a component of
+                    the etiology/manifestation convention. The code
+                    title indicates that it is a manifestation code. </td>
+                </tr>
+                <tr>
+                  <td>EXCLUDES1</td>
+                  <td>excludes1</td>
+                  <td>A pure excludes. It means "NOT CODED HERE!"
+                    Indicates that the code excluded should never be
+                    used at the same time as the code above the
+                    Excludes1 note. Used for when two conditions cannot
+                    occur together, such as a congenital form versus an
+                    acquired form of the same condition. </td>
+                </tr>
+                <tr>
+                  <td>EXCLUDES2</td>
+                  <td>excludes2</td>
+                  <td>Represents "Not included here". Indicates that the
+                    condition excluded is not part of the condition it
+                    is excluded from but a patient may have both
+                    conditions at the same time. When an Excludes2 note
+                    appears under a code it is acceptable to use both
+                    the code and the excluded code together.</td>
+                </tr>
+                <tr>
+                	<td>NOTE</td>
+                	<td>notes</td>
+                	<td></td>
+                </tr>
+                <tr>
+                  <td>ORDER_NO</td>
+                  <td>N/A</td>
+                  <td>Order number (icd10cm_order_&lt;YYYY&gt;.txt
+                    characters 1-5)</td>
+                </tr>
+                <tr>
+                  <td>USE_ADDITIONAL</td>
+                  <td>useAdditionalCode</td>
+                  <td>Certain conditions have both an underlying
+                    etiology and multiple body system manifestations due
+                    to the underlying etiology. ICD-10-CM has a coding
+                    convention that requires the underlying condition be
+                    sequenced first followed by the manifestation.
+                    Wherever such a combination exists there is a "use
+                    additional code" note at the etiology code. These
+                    instructional notes indicate the proper sequencing
+                    order of the codes, etiology followed by
+                    manifestation. In most cases the manifestation codes
+                    will have in the code title, "in diseases classified
+                    elsewhere." Codes with this title are a component of
+                    the etiology/ manifestation convention. The code
+                    title indicates that it is a manifestation code. "In
+                    diseases classified elsewhere" codes are never
+                    permitted to be used as first listed or principle
+                    diagnosis codes. They must be used in conjunction
+                    with an underlying condition code and they must be
+                    listed following the underlying condition. </td>
+                </tr>
+
+                       </tbody>
+            </table>
+
+          </div>
+          <hr>
+          <div id="definitions" class="rep_block_level_two"> 
+            <h3>Definitions (MRDEF):</h3>
+
+            <p>There are no definitions for ICD10CM.
+            </p>
+          </div>
+          <hr>
+          <div id="relationships" class="rep_block_level_two"> 
+            <h3>Relationships (MRREL):</h3>
+            <table>
+              <tbody>
+                <tr>
+                  <th>REL</th>
+                  <th>RELA<br/>
+                    Inverse RELA</th>
+                  <th>Origin</th>
+                </tr>
+                <tr>
+                  <td>CHD<br/>
+                    PAR </td>
+                  <td>(no rela)</td>
+                  <td>Hierarchy created from
+                    icd10cm_tabular_&lt;YYYY&gt;.xml</td>
+                </tr>
+                <tr>
+                  <td>RQ</td>
+                  <td>(no rela) </td>
+                  <td>Connect Entry Terms (TTY = "ET") to their
+                    preferred form (TTY = "PT" or TTY = "HT") </td>
+                </tr>
+                <tr>
+                  <td>SY</td>
+                  <td>expanded_form_of<br/>
+                    has_expanded_form </td>
+                  <td>Connect short forms (TTY = "AB") to their
+                    preferred form (TTY = PT") </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+         </div>
+      </div>
+    </div>
