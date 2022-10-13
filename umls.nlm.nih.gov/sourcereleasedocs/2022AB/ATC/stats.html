@@ -12,16 +12,16 @@ status=published
 <th>Semantic Type ID</th><th>Semantic Type Name</th><th>Count </th><th>Percentage Distribution</th>
 </tr>
 <tr>
-<td>T121</td><td>Pharmacologic Substance</td><td>5017</td><td>47.2</td>
+<td>T121</td><td>Pharmacologic Substance</td><td>5132</td><td>47.3</td>
 </tr>
 <tr>
-<td>T109</td><td>Organic Chemical</td><td>3451</td><td>32.5</td>
+<td>T109</td><td>Organic Chemical</td><td>3507</td><td>32.3</td>
 </tr>
 <tr>
-<td>T116</td><td>Amino Acid, Peptide, or Protein</td><td>540</td><td>5.1</td>
+<td>T116</td><td>Amino Acid, Peptide, or Protein</td><td>566</td><td>5.2</td>
 </tr>
 <tr>
-<td>T129</td><td>Immunologic Factor</td><td>314</td><td>3.0</td>
+<td>T129</td><td>Immunologic Factor</td><td>332</td><td>3.1</td>
 </tr>
 <tr>
 <td>T195</td><td>Antibiotic</td><td>299</td><td>2.8</td>
@@ -30,7 +30,7 @@ status=published
 <td>T130</td><td>Indicator, Reagent, or Diagnostic Aid</td><td>256</td><td>2.4</td>
 </tr>
 <tr>
-<td>T125</td><td>Hormone</td><td>205</td><td>1.9</td>
+<td>T125</td><td>Hormone</td><td>206</td><td>1.9</td>
 </tr>
 </table>
 <h2>Term Type Counts</h2>
@@ -39,13 +39,13 @@ status=published
 <th>Term Type</th><th>Expanded Form</th><th>Count </th>
 </tr>
 <tr>
-<td>IN</td><td>Name for an ingredient</td><td>5154</td>
+<td>IN</td><td>Name for an ingredient</td><td>5268</td>
 </tr>
 <tr>
-<td>PT</td><td>Designated preferred name</td><td>1286</td>
+<td>PT</td><td>Designated preferred name</td><td>1296</td>
 </tr>
 <tr>
-<td>RXN_PT</td><td>Rxnorm Preferred</td><td>605</td>
+<td>RXN_PT</td><td>Rxnorm Preferred</td><td>584</td>
 </tr>
 <tr>
 <td>RXN_IN</td><td>Rxnorm Preferred Ingredient</td><td>62</td>
@@ -57,10 +57,10 @@ status=published
 <th>Attribute Type</th><th>Expanded Form</th><th>Count </th>
 </tr>
 <tr>
-<td>ATC_LEVEL</td><td>ATC LEVEL</td><td>6440</td>
+<td>ATC_LEVEL</td><td>ATC LEVEL</td><td>6564</td>
 </tr>
 <tr>
-<td>IS_DRUG_CLASS</td><td>Is Drug Class</td><td>1286</td>
+<td>IS_DRUG_CLASS</td><td>Is Drug Class</td><td>1296</td>
 </tr>
 </table>
 <h2>Relationship Counts</h2>
@@ -69,16 +69,16 @@ status=published
 <th>Relation Name/Additional Label</th><th>Expanded Form</th><th>Count </th>
 </tr>
 <tr>
-<td>CHD/member_of</td><td>has child relationship in a Metathesaurus source vocabulary /Member of</td><td>5154</td>
+<td>CHD/member_of</td><td>has child relationship in a Metathesaurus source vocabulary /Member of</td><td>5268</td>
 </tr>
 <tr>
-<td>PAR/has_member</td><td>has parent relationship in a Metathesaurus source vocabulary /Has member</td><td>5154</td>
+<td>PAR/has_member</td><td>has parent relationship in a Metathesaurus source vocabulary /Has member</td><td>5268</td>
 </tr>
 <tr>
-<td>CHD/isa</td><td>has child relationship in a Metathesaurus source vocabulary /Is a</td><td>1286</td>
+<td>PAR/inverse_isa</td><td>has parent relationship in a Metathesaurus source vocabulary /Inverse is a</td><td>1296</td>
 </tr>
 <tr>
-<td>PAR/inverse_isa</td><td>has parent relationship in a Metathesaurus source vocabulary /Inverse is a</td><td>1286</td>
+<td>CHD/isa</td><td>has child relationship in a Metathesaurus source vocabulary /Is a</td><td>1296</td>
 </tr>
 </table>
 <h2>Definition Count</h2>
@@ -96,141 +96,123 @@ status=published
 <th>Source</th><th># Concepts Sharing Atom/# Total Concepts</th><th>Percentage Distribution</th>
 </tr>
 <tr>
-<td>MSH</td><td>3303/5677</td><td>58.2</td>
+<td>MSH</td><td>3382/5794</td><td>58.4</td>
 </tr>
 <tr>
-<td>NCI</td><td>3233/5677</td><td>56.9</td>
+<td>NCI</td><td>3327/5794</td><td>57.4</td>
 </tr>
 <tr>
-<td>NCI_FDA</td><td>3063/5677</td><td>54.0</td>
+<td>SNOMEDCT_US</td><td>3046/5794</td><td>52.6</td>
 </tr>
 <tr>
-<td>SNOMEDCT_US</td><td>2992/5677</td><td>52.7</td>
+<td>SCTSPA</td><td>3032/5794</td><td>52.3</td>
 </tr>
 <tr>
-<td>SCTSPA</td><td>2967/5677</td><td>52.3</td>
+<td>RXNORM</td><td>2878/5794</td><td>49.7</td>
 </tr>
 <tr>
-<td>NDDF</td><td>2820/5677</td><td>49.7</td>
+<td>NDDF</td><td>2880/5794</td><td>49.7</td>
 </tr>
 <tr>
-<td>RXNORM</td><td>2808/5677</td><td>49.5</td>
+<td>DRUGBANK</td><td>2614/5794</td><td>45.1</td>
 </tr>
 <tr>
-<td>DRUGBANK</td><td>2525/5677</td><td>44.5</td>
+<td>VANDF</td><td>2183/5794</td><td>37.7</td>
 </tr>
 <tr>
-<td>VANDF</td><td>2120/5677</td><td>37.3</td>
+<td>MMSL</td><td>2026/5794</td><td>35.0</td>
 </tr>
 <tr>
-<td>MMSL</td><td>1958/5677</td><td>34.5</td>
+<td>GS</td><td>1871/5794</td><td>32.3</td>
 </tr>
 <tr>
-<td>CHV</td><td>1860/5677</td><td>32.8</td>
+<td>CHV</td><td>1860/5794</td><td>32.1</td>
 </tr>
 <tr>
-<td>MEDCIN</td><td>1804/5677</td><td>31.8</td>
+<td>MEDCIN</td><td>1850/5794</td><td>31.9</td>
 </tr>
 <tr>
-<td>GS</td><td>1800/5677</td><td>31.7</td>
+<td>MTHSPL</td><td>1851/5794</td><td>31.9</td>
 </tr>
 <tr>
-<td>MTHSPL</td><td>1790/5677</td><td>31.5</td>
+<td>MSHFRE</td><td>1704/5794</td><td>29.4</td>
 </tr>
 <tr>
-<td>MSHFRE</td><td>1704/5677</td><td>30.0</td>
+<td>MSHGER</td><td>1699/5794</td><td>29.3</td>
 </tr>
 <tr>
-<td>MSHGER</td><td>1697/5677</td><td>29.9</td>
+<td>MSHCZE</td><td>1684/5794</td><td>29.1</td>
 </tr>
 <tr>
-<td>MSHCZE</td><td>1684/5677</td><td>29.7</td>
+<td>MSHPOR</td><td>1680/5794</td><td>29.0</td>
 </tr>
 <tr>
-<td>MSHPOR</td><td>1677/5677</td><td>29.5</td>
+<td>MSHSPA</td><td>1663/5794</td><td>28.7</td>
 </tr>
 <tr>
-<td>MSHSPA</td><td>1660/5677</td><td>29.2</td>
+<td>MSHSWE</td><td>1652/5794</td><td>28.5</td>
 </tr>
 <tr>
-<td>MSHSWE</td><td>1652/5677</td><td>29.1</td>
+<td>MSHITA</td><td>1643/5794</td><td>28.4</td>
 </tr>
 <tr>
-<td>MSHITA</td><td>1642/5677</td><td>28.9</td>
+<td>MSHPOL</td><td>1601/5794</td><td>27.6</td>
 </tr>
 <tr>
-<td>MSHPOL</td><td>1600/5677</td><td>28.2</td>
+<td>MSHRUS</td><td>1601/5794</td><td>27.6</td>
 </tr>
 <tr>
-<td>MSHRUS</td><td>1600/5677</td><td>28.2</td>
+<td>SNMI</td><td>1364/5794</td><td>23.5</td>
 </tr>
 <tr>
-<td>SNMI</td><td>1362/5677</td><td>24.0</td>
+<td>MSHFIN</td><td>1357/5794</td><td>23.4</td>
 </tr>
 <tr>
-<td>MSHFIN</td><td>1356/5677</td><td>23.9</td>
+<td>RCD</td><td>1357/5794</td><td>23.4</td>
 </tr>
 <tr>
-<td>RCD</td><td>1357/5677</td><td>23.9</td>
+<td>MSHJPN</td><td>1325/5794</td><td>22.9</td>
 </tr>
 <tr>
-<td>MSHJPN</td><td>1325/5677</td><td>23.3</td>
+<td>LNC</td><td>1164/5794</td><td>20.1</td>
 </tr>
 <tr>
-<td>LNC</td><td>1160/5677</td><td>20.4</td>
+<td>USP</td><td>1000/5794</td><td>17.3</td>
 </tr>
 <tr>
-<td>USP</td><td>997/5677</td><td>17.6</td>
+<td>SNM</td><td>959/5794</td><td>16.6</td>
 </tr>
 <tr>
-<td>SNM</td><td>958/5677</td><td>16.9</td>
+<td>PDQ</td><td>892/5794</td><td>15.4</td>
 </tr>
 <tr>
-<td>PDQ</td><td>872/5677</td><td>15.4</td>
+<td>USPMG</td><td>779/5794</td><td>13.4</td>
 </tr>
 <tr>
-<td>USPMG</td><td>776/5677</td><td>13.7</td>
+<td>CSP</td><td>726/5794</td><td>12.5</td>
 </tr>
 <tr>
-<td>CSP</td><td>727/5677</td><td>12.8</td>
+<td>LCH_NW</td><td>576/5794</td><td>9.9</td>
 </tr>
 <tr>
-<td>NCI_CTRP</td><td>684/5677</td><td>12.0</td>
+<td>AOD</td><td>464/5794</td><td>8.0</td>
 </tr>
 <tr>
-<td>LCH_NW</td><td>576/5677</td><td>10.1</td>
+<td>MSHSCR</td><td>441/5794</td><td>7.6</td>
 </tr>
 <tr>
-<td>NCI_NCI-GLOSS</td><td>523/5677</td><td>9.2</td>
+<td>LCH</td><td>366/5794</td><td>6.3</td>
 </tr>
 <tr>
-<td>AOD</td><td>464/5677</td><td>8.2</td>
+<td>MSHNOR</td><td>352/5794</td><td>6.1</td>
 </tr>
 <tr>
-<td>MSHSCR</td><td>442/5677</td><td>7.8</td>
+<td>PSY</td><td>240/5794</td><td>4.1</td>
 </tr>
 <tr>
-<td>LCH</td><td>366/5677</td><td>6.4</td>
+<td>CPM</td><td>99/5794</td><td>1.7</td>
 </tr>
 <tr>
-<td>MSHNOR</td><td>353/5677</td><td>6.2</td>
-</tr>
-<tr>
-<td>NCI_DCP</td><td>342/5677</td><td>6.0</td>
-</tr>
-<tr>
-<td>PSY</td><td>240/5677</td><td>4.2</td>
-</tr>
-<tr>
-<td>NCI_DTP</td><td>229/5677</td><td>4.0</td>
-</tr>
-<tr>
-<td>CPM</td><td>99/5677</td><td>1.7</td>
-</tr>
-<tr>
-<td>NCI_caDSR</td><td>81/5677</td><td>1.4</td>
-</tr>
-<tr>
-<td>CCPSS</td><td>82/5677</td><td>1.4</td>
+<td>CCPSS</td><td>82/5794</td><td>1.4</td>
 </tr>
 </table>

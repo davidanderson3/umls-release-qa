@@ -1,6 +1,6 @@
 title=HGNC (HUGO Gene Nomenclature Committee) - Metathesaurus Representation
 date=2017-11-06
-updated=2022-05-02
+updated=2022-11-07
 type=page
 status=published
 ~~~~~~
@@ -33,18 +33,21 @@ status=published
     </div>
 
 <div id = "general" class = "rep_block_level_one">
-<p><strong>VSAB:</strong> HGNC2021_03</p>
+<p><strong>VSAB:</strong> HGNC2022_04</p>
 <hr>
 <div id = "rep_identifiers" class = "rep_block_level_one">
 <h3>Summary of Changes</h3>
-<p>None</p>
+<p>1. Field 13 changed the field name from 'gene_family' to 'gene_group'. The ATN remains the same at 'GENE_FAM_DESC'.</p>
+<p>2. Field 14 changed the field name from 'gene_family_id' to 'gene_group_id'. The ATN remains the same at 'GENE_FAM_ID'.</p>
+<p>3. New field 53 'mane_select' contains "NCBI and Ensembl transcript IDs/acessions including the version number for one high-quality representative transcript per protein-coding gene that is well-supported by experimental data and represents the biology of the gene". The multiple IDs are delimited by |. ATN = MANE_SELECT.</p>
+<p>4. New field 54 'gencc' contains the "HGNC ID used within the GenCC database as the unique identifier of their gene reports within the GenCC database". ATN = GENCC.</p>
 </div>
 <hr>
 <div id = "rep_change_summary" class = "rep_block_level_one">
 <h3>Original Files:</h3>
 <table>
 <tr><th>File Name</th><th>Description</th></tr>
-<tr><td  class = "file_field_name"><a href = "#file1">hgnc_complete_set_03212021.txt</a></td><td>Tab-delimited text file (UTF-8).</td></tr>
+<tr><td  class = "file_field_name"><a href = "#file1">hgnc_complete_set_04202022.txt</a></td><td>Tab-delimited text file (UTF-8).</td></tr>
 </table>
 
 </div>
@@ -168,11 +171,13 @@ status=published
 <tr><td>EZ</td>
 <td>enzyme_id field</td></tr>
 <tr><td>GENE_FAM_DESC</td>
-<td>gene_family field</td></tr>
+<td>gene_group field</td></tr>
 <tr><td>GENE_FAM_ID</td>
-<td>gene_family_id field</td></tr>
+<td>gene_group_id field</td></tr>
 <tr><td>GENESYMBOL</td>
 <td>symbol field</td></tr>
+<tr><td>GENCC</td>
+<td>gencc field</td></tr>
 <tr><td>LNCIPEDIA</td>
 <td>lncipedia</td></tr>
 <tr><td>LOCUS_GROUP</td>
@@ -181,6 +186,8 @@ status=published
 <td>lsdb field</td></tr>
 <tr><td>LOCUS_TYPE</td>
 <td>locus_type field</td></tr>
+<tr><td>MANE_SELECT</td>
+<td>mane_select field</td></tr>
 <tr><td>MGD_ID</td>
 <td>mgd_id field</td></tr>
 <tr><td>OMIM_NUMBER</td>
