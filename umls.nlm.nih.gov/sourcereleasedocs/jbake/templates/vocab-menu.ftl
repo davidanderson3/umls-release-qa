@@ -414,6 +414,8 @@
             <li><a href="../LNC-RU-RU/">LNC-RU-RU</a></li>
 
             <li><a href="../LNC-TR-TR/">LNC-TR-TR</a></li>
+            
+            <li><a href="../LNC-UK-UA/">LNC-UK-UA</a></li>
 
             <li><a href="../LNC-ZH-CN/">LNC-ZH-CN</a></li>
 
@@ -459,12 +461,16 @@
             <li><a href="../MDRJPN/">MDRJPN</a></li>
             
             <li><a href="../MDRKOR/">MDRKOR</a></li>
+            
+            <li><a href="../MDRLAV/">MDRLAV</a></li>
 
             <li><a href="../MDRPOR/">MDRPOR</a></li>
             
             <li><a href="../MDRRUS/">MDRRUS</a></li>
 
             <li><a href="../MDRSPA/">MDRSPA</a></li>
+            
+            <li><a href="../MDRSWE/">MDRSWE</a></li>
 
             <li><a href="../MED-RT/">MED-RT</a></li>
 
@@ -556,94 +562,6 @@
             <li><a href="../NCI/">NCI</a></li>
 
             <li><a href="../NCISEER/">NCISEER</a></li>
-            
-            <li><a href="../NCI_ACC-AHA/">NCI_ACC-AHA</a></li>
-
-            <li><a href="../NCI_BRIDG/">NCI_BRIDG</a></li>
-            
-            <li><a href="../NCI_BRIDG_3_0_3/">NCI_BRIDG_3_0_3</a></li>
-            
-            <li><a href="../NCI_BRIDG_5_3/">NCI_BRIDG_5_3</a></li>
-
-            <li><a href="../NCI_BioC/">NCI_BioC</a></li>
-            
-            <li><a href="../NCI_caDSR/">NCI_caDSR</a></li>
-            
-            <li><a href="../NCI_CBDD/">NCI_CBDD</a></li>
-            
-            <li><a href="../NCI_CCPS/">NCI_CCPS</a></li>
-
-            <li><a href="../NCI_CDC/">NCI_CDC</a></li>
-
-            <li><a href="../NCI_CDISC/">NCI_CDISC</a></li>
-
-            <li><a href="../NCI_CDISC-GLOSS/">NCI_CDISC-GLOSS</a></li>
-            
-            <li><a href="../NCI_CELLOSAURUS/">NCI_CELLOSAURUS</a></li> 
-
-            <li><a href="../NCI_CRCH/">NCI_CRCH</a></li>
-
-            <li><a href="../NCI_CTCAE/">NCI_CTCAE</a></li>
-
-            <li><a href="../NCI_CTCAE_3/">NCI_CTCAE_3</a></li>
-
-            <li><a href="../NCI_CTCAE_5/">NCI_CTCAE_5</a></li>
-            
-            <li><a href="../NCI_CTDC/">NCI_CTDC</a></li>
-
-            <li><a href="../NCI_CTEP-SDC/">NCI_CTEP-SDC</a></li>
-
-            <li><a href="../NCI_CTRP/">NCI_CTRP</a></li>
-
-            <li><a href="../NCI_CareLex/">NCI_CareLex</a></li>
-
-            <li><a href="../NCI_DCP/">NCI_DCP</a></li>
-
-            <li><a href="../NCI_DICOM/">NCI_DICOM</a></li>
-
-            <li><a href="../NCI_DTP/">NCI_DTP</a></li>
-
-            <li><a href="../NCI_FDA/">NCI_FDA</a></li>
-            
-            <li><a href="../NCI_EDQM-HC/">NCI_EDQM-HC</a></li>
-
-            <li><a href="../NCI_GAIA/">NCI_GAIA</a></li>
-            
-            <li><a href="../NCI_GDC">NCI_GDC</a></li>
-
-            <li><a href="../NCI_GENC/">NCI_GENC</a></li>
-            
-            <li><a href="../NCI_ICDC/">NCI_ICDC</a></li>
-
-            <li><a href="../NCI_ICH/">NCI_ICH</a></li>
-            
-            <li><a href="../NCI_INC/">NCI_INC</a></li>
-
-            <li><a href="../NCI_JAX/">NCI_JAX</a></li>
-
-            <li><a href="../NCI_KEGG/">NCI_KEGG</a></li>
-
-            <li><a href="../NCI_NCI-GLOSS/">NCI_NCI-GLOSS</a></li>
-
-            <li><a href="../NCI_NCI-HGNC/">NCI_NCI-HGNC</a></li>
-
-            <li><a href="../NCI_NCI-HL7/">NCI_NCI-HL7</a></li>
-
-            <li><a href="../NCI_NCPDP/">NCI_NCPDP</a></li>
-
-            <li><a href="../NCI_NICHD/">NCI_NICHD</a></li>
-            
-            <li><a href="../NCI_PCDC/">NCI_PCDC</a></li>
-
-            <li><a href="../NCI_PI-RADS/">NCI_PI-RADS</a></li>
-
-            <li><a href="../NCI_PID/">NCI_PID</a></li>
-
-            <li><a href="../NCI_RENI/">NCI_RENI</a></li>
-
-            <li><a href="../NCI_UCUM/">NCI_UCUM</a></li>
-
-            <li><a href="../NCI_ZFin/">NCI_ZFin</a></li>
 
             <li><a href="../NDDF/">NDDF</a></li>
 
@@ -679,6 +597,8 @@
             <li><a href="../OMIM/">OMIM</a></li>
 
             <li><a href="../OMS/">OMS</a></li>
+            
+            <li><a href="../ORPHANET/">ORPHANET</a></li>
 
           </ul>
 

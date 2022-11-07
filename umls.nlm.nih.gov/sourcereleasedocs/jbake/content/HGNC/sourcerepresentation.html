@@ -1,6 +1,6 @@
 title=HGNC (HUGO Gene Nomenclature Committee) - Source Representation
 date=2017-11-06
-updated=2022-05-02
+updated=2022-11-07
 type=page
 status=published
 ~~~~~~
@@ -29,7 +29,7 @@ status=published
     	<div class="col-sm-auto border-left"><a href="#file_details">Source-Provided File Details</a></div>
     </div>
 
-<strong>VSAB:</strong> HGNC2021_03
+<strong>VSAB:</strong> HGNC2022_04
 <hr>
 <a id = "general"></a>
 <div id = "rep_general" class = "rep_block_level_one">
@@ -41,7 +41,10 @@ status=published
 <div id = "rep_change_summary" class = "rep_block_level_one">
 <a id = "change_summary"></a>
 <h3>Summary of Changes</h3>
-<p>None</p>
+<p>1. Field 13 changed the field name from 'gene_family' to 'gene_group'. The ATN remains the same at 'GENE_FAM_DESC'.</p>
+<p>2. Field 14 changed the field name from 'gene_family_id' to 'gene_group_id'. The ATN remains the same at 'GENE_FAM_ID'.</p>
+<p>3. New field 53 'mane_select' contains "NCBI and Ensembl transcript IDs/acessions including the version number for one high-quality representative transcript per protein-coding gene that is well-supported by experimental data and represents the biology of the gene". The multiple IDs are delimited by |. ATN = MANE_SELECT.</p>
+<p>4. New field 54 'gencc' contains the "HGNC ID used within the GenCC database as the unique identifier of their gene reports within the GenCC database". ATN = GENCC.</p>
 </div>
 <hr>
 <div id = "rep_file_summary" class = "rep_block_level_one">
@@ -57,7 +60,7 @@ status=published
  <h4>Data Files</h4>
 <table>
 <tr><th>File Name</th><th>Description</th></tr>
-<tr><td  class = "file_file_name">hgnc_complete_set_03212021.txt</td><td>Tab-delimited text file.</td></tr>
+<tr><td  class = "file_file_name">hgnc_complete_set_04202022.txt</td><td>Tab-delimited text file.</td></tr>
 </table>
 </div>
 </div>
@@ -82,8 +85,8 @@ status=published
 <tr><td  class = "file_field_name">10</td><td>alias_name</td><td>Other names used to refer to the gene</td><td>MRCONSO.STR</td></tr>
 <tr><td  class = "file_field_name">11</td><td>prev_symbol</td><td>Symbols previously approved for this gene</td><td>MRSAT.ATN=PREV_SYMBOL</td></tr>
 <tr><td  class = "file_field_name">12</td><td>prev_name</td><td>Gene names previously approved for this gene</td><td>MRSAT.ATN=PREV_NAME</td></tr>
-<tr><td  class = "file_field_name">13</td><td>gene_family</td><td>Name given to a gene family or group the gene has been assigned to</td><td>MRSAT.ATN=GENE_FAM_DESC</td></tr>
-<tr><td  class = "file_field_name">14</td><td>gene_family_id</td><td>ID used to designate a gene family or group the gene has been assigned to</td><td>MRSAT.ATN=GENE_FAM_ID</td></tr>
+<tr><td  class = "file_field_name">13</td><td>gene_group</td><td>Name given to a gene family or group the gene has been assigned to</td><td>MRSAT.ATN=GENE_FAM_DESC</td></tr>
+<tr><td  class = "file_field_name">14</td><td>gene_group_id</td><td>ID used to designate a gene family or group the gene has been assigned to</td><td>MRSAT.ATN=GENE_FAM_ID</td></tr>
 <tr><td  class = "file_field_name">15</td><td>date_approved_reserved</td><td>The date the entry was first approved</td><td>MRSAT.ATN=DATE_CREATED</td></tr>
 <tr><td  class = "file_field_name">16</td><td>date_symbol_changed</td><td>The date the gene symbol was last changed</td><td>MRSAT.ATN=DATE_SYMBOL_CHANGED</td></tr>
 <tr><td  class = "file_field_name">17</td><td>date_name_changed</td><td>The date the gene name was last changed</td><td>MRSAT.ATN=DATE_NAME_CHANGED</td></tr>
@@ -122,5 +125,7 @@ status=published
 <tr><td  class = "file_field_name">50</td><td>lncipedia</td><td>Comprehensive compendium of human long non-coding RNAs</td><td>MRSAT.ATN=LNCIPEDIA</td></tr>
 <tr><td  class = "file_field_name">51</td><td>gtrnadb</td><td>Database that contains tRNA gene predictions made by tRNAscan-SE on complete or nearly complete genomes</td><td>MRSAT.ATN=DB_XR_ID|GtRNAdb:</td></tr>
 <tr><td  class = "file_field_name">52</td><td>agr</td><td>Alliance of Genome Resources. HGNC will link to the Human Gene page at the AGR via HGNC ID if such a page exists.</td><td>MRSAT.ATN=AGR</td></tr>
+<tr><td  class = "file_field_name">53</td><td>mane_select</td><td>NCBI and Ensembl transcript IDs/acessions including the version number for one high-quality representative transcript per protein-coding gene that is well-supported by experimental data and represents the biology of the gene. The multiple IDs are delimited by |.</td><td>MRSAT.ATN=MANE_SELECT</td></tr>
+<tr><td  class = "file_field_name">54</td><td>gencc</td><td>HGNC ID used within the GenCC database as the unique identifier of their gene reports within the GenCC database.</td><td>MRSAT.ATN=GENCC</td></tr>
 </table>
 </div></div>
