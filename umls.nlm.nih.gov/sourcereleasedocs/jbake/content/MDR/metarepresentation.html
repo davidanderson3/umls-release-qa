@@ -1,6 +1,6 @@
 title=MDR (MedDRA) - Metathesaurus Representation
 date=2018-05-07
-updated=2022-05-02
+updated=2022-11-07
 type=page
 status=published
 ~~~~~~
@@ -49,8 +49,6 @@ The UMLS uses MedDRA files distributed in the MedAscii directory:<br/>
   <li>intl_ord.asc</li>
   <li>llt.asc</li>
   <li>mdhier.asc</li>
-  <li>meddra_history_english.asc</li>
-  <li>meddra_release.asc</li>
   <li>pt.asc</li>
   <li>smq_content.asc</li>
   <li>smq_list.asc</li>
@@ -245,11 +243,7 @@ STR = smq_name field of SMQ_List.asc<br/>
 SDUI = smq_code field of SMQ_List.asc
       </td>
     </tr>
-    <tr>
-      <td>XM</td>
-      <td> This data is added during Metathesaurus source processing </td>
-    </tr>
-  </tbody>
+   </tbody>
 </table>
 </div>
 <hr>
@@ -264,26 +258,6 @@ SDUI = smq_code field of SMQ_List.asc
       <th>Origin</th>
     </tr>
     <tr>
-      <td>FROMRSAB</td>
-      <td>This data is added during Metathesaurus source processing</td>
-    </tr>
-    <tr>
-      <td>FROMVSAB</td>
-      <td>This data is added during Metathesaurus source processing</td>
-    </tr>
-    <tr>
-      <td>MAPSETRSAB</td>
-      <td>This data is added during Metathesaurus source processing</td>
-    </tr>
-    <tr>
-      <td>MAPSETVERSION</td>
-      <td>This data is added during Metathesaurus source processing</td>
-    </tr>
-    <tr>
-      <td>MAPSETVSAB</td>
-      <td>This data is added during Metathesaurus source processing</td>
-    </tr>
-    <tr>
       <td>MISO</td>
       <td>Serial code for international System Organ Class sort order.
 Extracted from the intl_ord_code field of intl_ord.asc.</td>
@@ -293,35 +267,7 @@ Extracted from the intl_ord_code field of intl_ord.asc.</td>
       <td>The primary System Organ Class to which a preferred term is
 linked. Extracted from the pt_soc_code field of pt.asc.</td>
     </tr>
-    <tr>
-      <td>MTH_MAPFROMCOMPLEXITY</td>
-      <td>This data is added during Metathesarus source processing</td>
-    </tr>
-    <tr>
-      <td>MTH_MAPFROMEXHAUSTIVE</td>
-      <td>This data is added during Metathesaurus source processing</td>
-    </tr>
-    <tr>
-      <td>MTH_MAPSETCOMPLEXITY</td>
-      <td>This data is added during Metathesaurus source processing</td>
-    </tr>
-    <tr>
-      <td>MTH_MAPTOCOMPLEXITY</td>
-      <td>This data is added during Metathesaurus source processing</td>
-    </tr>
-    <tr>
-      <td>MTH_MAPTOEXHAUSTIVE</td>
-      <td>This data is added during Metathesaurus source processing</td>
-    </tr>
-    <tr>
-      <td>MXR</td>
-      <td>Extracted from the whoart_code, harts_code, costart_sym,
-icd9_code, icd9cm_code, icd10_code, or jart_code in original files,
-e.g. the pt_icd9cm_code field in pt.asc. For codes in sources that are
-present in the Metathesaurus, a mapped_to relationship may also be
-created.</td>
-    </tr>
-    <tr>
+     <tr>
       <td>SMQ_ALGO</td>
       <td>Extracted from the SMQ_Algorithm field of SMQ_List.asc</td>
     </tr>
@@ -371,14 +317,6 @@ SMQ_Content.asc</td>
       <td>SOS</td>
       <td>Extracted from the SMQ_note field of SMQ_List.asc</td>
     </tr>
-    <tr>
-      <td>TORSAB</td>
-      <td>This data is added during Metathesaurus source processing</td>
-    </tr>
-    <tr>
-      <td>TOVSAB</td>
-      <td>This data is added during Metathesaurus source processing</td>
-    </tr>
   </tbody>
 </table>
 </div>
@@ -427,22 +365,7 @@ hlgt_hlt.asc, soc_hlgt.asc files (can also be computed from mdhier.asc).</td>
 the
 llt_code and pt_code fields of llt.asc.</td>
     </tr>
-    <tr>
-      <td>RQ</td>
-      <td>mapped_to/mapped_from</td>
-      <td>Connects a MedDRA atom to a CODE from another source included
-in the Metathesaurus. Data is derived from the icd9cm_code and
-costart_sym fields in original data files, e.g. a "PT" gets a mapping
-relationship to the value present in the pt_icd9cm_code field of pt.asc.
-Due to version differences, some code values provided by MedDRA for
-other sources are not present in the Metathesaurus, so relationships
-cannot be created. Therefore, complete MedDRA-asserted cross-reference
-data is included in the "MXR" attribute.
-Note that in many cases UMLS editors have determined that the MedDRA
-atom has the same meaning as the code in the other source, so they will
-share the same CUI in addition to the mapping relationship.</td>
-    </tr>
-    <tr>
+     <tr>
       <td>RO</td>
       <td>has_member/member_of</td>
       <td>Connects a Standardised MedDRA Query (SMQ) with subordinate
@@ -472,14 +395,4 @@ This data is added during Metathesaurus source processing.</td>
 </table>
 </div>
 <hr>
-<div id="mappings" class="rep_block_level_two">
-<h3>Mappings (MRMAP):</h3>
-
-<p>When available, two Mapsets ("XM" atoms, along with associated attributes and
-mappings), are included for MedDRA. These are extracted from the
-ICD9_CM code and COSTART symbol fields in the relevant MedDRA files.
-An &#8220;RQ|mapped_to&#8221; REL/RELA are assigned. When possible, these mappings
-are also present in MRREL.RRF, however due to version issues a small
-portion of this data cannot be represented in MRREL.RRF. </p>
-</div>
 </div>

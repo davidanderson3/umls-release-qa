@@ -1,6 +1,6 @@
 title=LNC (LOINC) - Source Representation
 date=2018-05-07
-updated=2022-05-02
+updated=2022-11-07
 type=page
 status=published
 ~~~~~~
@@ -32,10 +32,10 @@ status=published
     <div id="rep_change_summary" class="rep_block_level_one"></div>
 
     <a id="change_summary"></a>
-          <p><strong>VSAB: </strong>LNC272</p>
+          <p><strong>VSAB: </strong>LNC273</p>
    <hr>
       <h3>Summary of Changes:</h3>
-      <p>New Classes:</p>
+      <p>1. New Class:</p>
 	     <table>
 	     	<tbody>
         <tr>
@@ -43,99 +43,43 @@ status=published
       			<th>Class</th>
       		</tr>
       		<tr>
-      			<td>EYE.LASIK</td>
-      			<td>Laser-assisted in situ keratomileusis</td>
+      			<td>ENDO.PULM</td>
+      			<td>Endo Pulmonary</td>
       		</tr>
-      		<tr>
-         <td>EYE.SPECULAR MICROSCOPY</td>
-         <td>Ophthalmology specular microscopy</td>
-        </tr>
-        <tr>
-         <td>PANEL.NEURO</td>
-         <td>Neurology panel</td>
-        </tr>
-        <tr>
-      			<td>PANEL.SURVEY.CBS-8</td>
-      			<td>Columbia Behavior Scale for Dementia (CBS-8) set</td>
-      		</tr>
-      		<tr>
-         <td>PANEL.SURVEY.CNPI</td>
-         <td>Checklist of Nonverbal Pain Indicators (CNPI) set</td>
-        </tr>
-        <tr>
-         <td>PANEL.SURVEY.LKSS</td>
-         <td>Lysholm Knee Scoring Scale (LKSS) set</td>
-        </tr>
-        <tr>
-      			<td>PANEL.SURVEY.ORTHOPEDICS</td>
-      			<td>Orthopedic survey panels</td>
-      		</tr>
-      		<tr>
-         <td>PANEL.SURVEY.PAIN</td>
-         <td>Pain survey panels</td>
-        </tr>
-      		<tr>
-         <td>PANEL.SURVEY.PNDS</td>
-         <td>Perioperative Nursing Data Set outcomes panel</td>
-        </tr>
-        <tr>
-         <td>PANEL.SURVEY.PROWL</td>
-         <td>Patient Reported Outcomes with LASIK sets</td>
-        </tr>
-      		<tr>
-      			<td>PANEL.SURVEY.RMDQ</td>
-      			<td>Roland Morris Disability Questionnaire set</td>
-      		</tr>
-      		<tr>
-         <td>PANEL.SURVEY.SLP</td>
-         <td>Speech-language pathology (SLP) panels</td>
-        </tr>
-        <tr>
-         <td>PANEL.SURVEY.WIFI</td>
-         <td>Would Ischemia and Foot Infection set</td>
-        </tr>
-        <tr>
-         <td>SURVEY.CBS-8</td>
-         <td>Columbia Behavior Scale for Dementia survey</td>
-        </tr>
-        <tr>
-         <td>SURVEY.CNPI</td>
-         <td>Checklist of Nonverbal Pain Indicators survey</td>
-        </tr>
-        <tr>
-         <td>SURVEY.LKSS</td>
-         <td>Lysholm Knee Scoring Scale survey</td>
-        </tr>
-        <tr>
-         <td>SURVEY.NEI</td>
-         <td>National Eye Institute survey</td>
-        </tr>
-        <tr>
-         <td>SURVEY.ORTHOPEDICS</td>
-         <td>Orthopedic surveys</td>
-        </tr>
-        <tr>
-         <td>SURVEY.PAIN</td>
-         <td>Pain surveys</td>
-        </tr>
-        <tr>
-         <td>SURVEY.PNDS</td>
-         <td>Perioperative Nursing Data Set (PNDS) survey</td>
-        </tr>
-        <tr>
-         <td>SURVEY.PROWL</td>
-         <td>Patient Reported Outcomes with LASIK surveys</td>
-        </tr>
-        <tr>
-         <td>SURVEY.RMDQ</td>
-         <td>Roland Morris Disability Questionnaire</td>
-        </tr>
-        <tr>
-         <td>SURVEY.SLP</td>
-         <td>Speech-language pathology (SLP) surveys</td>
-        </tr>
-      	</tbody>
+      		</tbody>
 	     </table>
+      
+      <p>2. Deprecated attributes:</p>
+      <table>
+       <tbody>
+        <tr>
+         <th>Field Name</th>
+         <th>ATN</th>
+        </tr>
+        <tr>
+         <td>CDISC_COMMON_TESTS</td>
+         <td>LCD</td>
+        </tr>
+        <tr>
+         <td>EXAMPLE_SI_UCUM_UNITS</td>
+         <td>EXAMPLE_SI_UCUM_UNITS</td>
+        </tr>
+        <tr>
+         <td>SUBMITTED_UNITS</td>
+         <td>LSU</td>
+        </tr>
+        <tr>
+         <td>UnitsAndRange</td>
+         <td>UNITS_AND_RANGE</td>
+        </tr>
+       </tbody>
+      </table>
+      <p>3. Refreshed rankings of the 20,000 most commonly used LOINC
+codes in the U.S. These rankings replace the previous "Top 2000" lab 
+codes which were out of date and included only lab. The new rankings 
+encompass clinical as well and are in the COMMON_TEST_RANK field of 
+the Loinc.csv file.</p>
+      <p>4. The 'Multiaxial Hierarchy' file was renamed to 'ComponentHierarchy'.</p>
       <hr>
      	<div id="rep_file_summary" class="rep_block_level_one"></div>
       <a id="file_summary"></a>
@@ -163,7 +107,7 @@ status=published
               <td>Mappings between current and retired codes</td>
             </tr>
             <tr>
-              <td class="file_field_name"><a href="#file3">MultiAxialHierarchy.csv</a></td>
+              <td class="file_field_name"><a href="#file3">ComponentHierarchyBySystem.csv</a></td>
               <td>The records in this file represent nodes of the
                 hierarchy, whether LOINC Parts or full LOINC codes.<br/>
                 The ordered sequence at any level of the hierarchy is
@@ -463,7 +407,7 @@ status=published
               <tr>
                 <td>17<br/>
                 </td>
-                <td>SURVEY_QUEST_TXT</td>
+                <td>SURVEY_QUEST_TEXT</td>
                 <td>Question from survey instrument</td>
                 <td>MRSAT.ATN = "LQT"</td>
               </tr>
@@ -482,12 +426,6 @@ status=published
               </tr>
               <tr>
                 <td>20</td>
-                <td>SUBMITTED_UNITS</td>
-                <td>Moved to RELMA</td>
-                <td>MRSAT.ATN = "LSU"; field currently empty</td>
-              </tr>
-              <tr>
-                <td>21</td>
                 <td>RELATEDNAMES2</td>
                 <td>Synonyms for each part of the fully-specified LOINC
                   name (component, property, time, system, scale,
@@ -495,71 +433,52 @@ status=published
                 <td>MRSAT.ATN = "LRN2"</td>
               </tr>
               <tr>
-                <td>22</td>
+                <td>21</td>
                 <td>SHORTNAME</td>
                 <td>Concatenation of the fully-specified LOINC name</td>
                 <td>MRCONSO.STR, TTY = "OSN", "OOSN"</td>
               </tr>
               <tr>
-                <td>23</td>
+                <td>22</td>
                 <td>ORDER_OBS</td>
                 <td>Defines term as an order only, observation only,
                   both, or Subset</td>
                 <td>MRSAT.ATN = "LOR"</td>
               </tr>
               <tr>
-                <td>24</td>
-                <td>CDISC_COMMON_TESTS</td>
-                <td>Y indicates member of subset used by CDISC in
-                  clinical trials</td>
-                <td>MRSAT.ATN = "LCD"; field currently empty</td>
-              </tr>
-              <tr>
-                <td>25</td>
+                <td>23</td>
                 <td>HL7_FIELD_SUBFIELD_ID</td>
                 <td>Indicates that the content should be delivered in
                   the named field/subfield of the HL7 message.</td>
                 <td>MRSAT.ATN = "HL7_FIELD_SUBFIELD_ID"</td>
               </tr>
               <tr>
-                <td>26</td>
+                <td>24</td>
                 <td>EXTERNAL_COPYRIGHT_NOTICE</td>
                 <td>External copyright holder information</td>
                 <td>MRSAT.ATN = "COPYRIGHT"</td>
               </tr>
               <tr>
-                <td>27<br/>
+                <td>25<br/>
                 </td>
                 <td>EXAMPLE_UNITS</td>
                 <td>Indicates representative units</td>
                 <td>MRSAT.ATN = "EXAMPLE_UNITS"</td>
               </tr>
               <tr>
-                <td>28</td>
+                <td>26</td>
                 <td>LONG_COMMON_NAME</td>
                 <td>Readable version of LOINC term</td>
                 <td>MRCONSO.STR, TTY = "LC" or "OLC"</td>
               </tr>
               <tr>
-                <td>29</td>
-                <td>UnitsandRange</td>
-                <td>List of normal ranges and associated units</td>
-                <td>MRSAT.ATN = "UNITS_AND_RANGE"</td>
-              </tr>
-              <tr>
-                <td>30</td>
+                <td>27</td>
                 <td>EXAMPLE_UCUM_UNITS</td>
                 <td>Example units of measure expressed as UCUM units</td>
                 <td>MRSAT.ATN = "EXAMPLE_UCUM_UNITS"</td>
               </tr>
               <tr>
-                <td>31</td>
-                <td>EXAMPLE_SI_UCUM_UNITS</td>
-                <td>Example units of measure expressed as SI UCUM</td>
-                <td>MRSAT.ATN = EXAMPLE_SI_UCUM_UNITS</td>
-              </tr>
-              <tr>
-                <td>32</td>
+                <td>28</td>
                 <td>STATUS_REASON</td>
                 <td>Classification of the reason for concept status.
                   This field will be Null for ACTIVE concepts, and
@@ -569,7 +488,7 @@ status=published
                 <td>MRSAT.ATN = "STATUS_REASON"</td>
               </tr>
               <tr>
-                <td>33</td>
+                <td>29</td>
                 <td>STATUS_TEXT</td>
                 <td>Explanation of concept status in narrative text.
                   This field will be Null for ACTIVE concepts, and
@@ -577,35 +496,35 @@ status=published
                 <td>MRSAT.ATN = "STATUS_TEXT"</td>
               </tr>
               <tr>
-                <td>34</td>
+                <td>30</td>
                 <td>CHANGE_REASON_PUBLIC</td>
                 <td>Detailed explanation about special changes to the
                   term over time.</td>
                 <td>MRSAT.ATN = "CHANGE_REASON_PUBLIC"</td>
               </tr>
               <tr>
-                <td>35</td>
+                <td>31</td>
                 <td>COMMON_TEST_RANK</td>
                 <td>Numeric ranking of approximately 2,000 common tests
                   performed by hospitals.</td>
                 <td>MRSAT.ATN = "COMMON_TEST_RANK"</td>
               </tr>
               <tr>
-                <td>36<br/>
+                <td>32<br/>
                 <td>COMMON_ORDER_RANK</td>
                 <td>Ranking of approximately 300 common orders performed
                   by laboratories in the USA.</td>
                 <td>MRSAT.ATN = "COMMON_ORDER_RANK"</td>
               </tr>
               <tr>
-                <td>37</td>
+                <td>33</td>
                 <td>COMMON_SI_TEST_RANK</td>
                 <td>Corresponding SI terms for 2000 common tests
                   performed by laboratories in USA.</td>
                 <td>MRSAT.ATN = "COMMON_SI_TEST_RANK"</td>
               </tr>
               <tr>
-                <td>38</td>
+                <td>34</td>
                 <td>HL7_ATTACHMENT_STRUCTURE</td>
                 <td>Valid values: STRUCTURED or UNSTRUCTURED. STRUCTURED
                   terms are the allowed document type codes in the
@@ -614,7 +533,7 @@ status=published
                 <td>MRSAT.ATN = "HL7_ATTACHMENT_STRUCTURE"</td>
               </tr>
               <tr>
-                <td>39</td>
+                <td>35</td>
                 <td>EXTERNAL_COPYRIGHT_LINK</td>
                 <td>Used for terms with an additional third party
                   copyright. The field is populated with the
@@ -623,40 +542,40 @@ status=published
                 <td>MRSAT.ATN = "EXTERNAL_COPYRIGHT_LINK"</td>
               </tr>
               <tr>
-                <td>40</td>
+                <td>36</td>
                 <td>PanelType</td>
                 <td>Describes a panel as a "Convenience group",
                   "Organizer", or "Panel'.</td>
                 <td>MRSAT.ATN = "PANEL_TYPE"</td>
               </tr>
               <tr>
-                <td>41</td>
+                <td>37</td>
                 <td>AskAtOrderEntry</td>
                 <td>List of LOINC codes that represent optional Ask at
                   Order Entry (AOE) observations.</td>
                 <td>MRSAT.ATN = "ASK_AT_ORDER_ENTRY"</td>
               </tr>
               <tr>
-                <td>42</td>
+                <td>38</td>
                 <td>AssociatedObservations</td>
                 <td>List of LOINC codes that represent option associated
                   observation(s).</td>
                 <td>MRSAT.ATN = "ASSOC_OBSERVATIONS"</td>
               </tr>
               <tr>
-                <td>43</td>
+                <td>39</td>
                 <td>VersionFirstReleased</td>
                 <td>LOINC version number in which the record was first released. For oldest records where the version released number is not known, this field will be null.</td>
                 <td>MRSAT.ATN = "VERSION_FIRST_RELEASED"</td>
               </tr>
                <tr>
-                <td>44</td>
+                <td>40</td>
                 <td>ValidHL7AttachmentRequest</td>
                 <td>A value of 'Y' indicates that the LOINC code can be sent by a payer as part of an HL7 attachment request for additional information.</td>
                 <td>MRSAT.ATN = "HL7_ATTACHMENT_REQUEST"</td>
               </tr>
                <tr>
-                <td>45</td>
+                <td>41</td>
                 <td>DisplayName</td>
                 <td>Clinician friendly name. Algorithmically created.</td>
                 <td>MRCONSO.STR, TTY = "DN"</td>
@@ -698,7 +617,7 @@ status=published
         </div>
         <div class="rep_block_level_two"><a id="file3"></a>
           <h4 class="file_field_name">file:
-            MultiAxialHierarchy.csv</h4>
+            ComponentHierarchyBySystem.csv</h4>
           <table>
             <tbody>
               <tr>
@@ -912,7 +831,7 @@ status=published
               <tr>
                 <td>6</td>
                 <td>PartTypeName</td>
-                <td>Not used</td>
+                <td>Used to assign the RELA</td>
               </tr>
               <tr>
                 <td>7</td>

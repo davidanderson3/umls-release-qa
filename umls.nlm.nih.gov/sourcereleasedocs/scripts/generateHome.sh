@@ -6,8 +6,8 @@ echo "<p>Basic information about the source vocabularies represented in the UMLS
 <table id=\"example\" class=\"display\" style=\"display:none;\" >" >> home_table.html
 echo "<thead>
     <tr>
-      <th>Vocabulary</th>
       <th>Abbreviation</th>
+      <th>Name</th>
       <th>Last Updated</th>
       <th>Language</th>
       <th>Restriction Level <a href="https://uts.nlm.nih.gov/uts/license/license-category-help.html" target="_blank">
@@ -19,8 +19,8 @@ echo "<thead>
 
 CREATEDATE='2017-11-06'
 while IFS='|' read -r VCUI RCUI VSAB RSAB SON SF SVER VSTART VEND IMETA RMETA SLC SCC SRL TFR CFR CXTY TTYL ATNL LAT CENC CURVER SABIN SSN SCIT; do
-echo "<tr><td><a href=\"//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/"$RSAB"\">$SSN</a></td>" >> home_table.html;
-echo "<td>"$RSAB"</td>" >> home_table.html;
+echo "<tr><td><a href=\"//www.nlm.nih.gov/research/umls/sourcereleasedocs/current/"$RSAB"\">$RSAB</a></td>" >> home_table.html;
+echo "<td>"$SSN"</td>" >> home_table.html;
 echo "<td>"$IMETA"</td>" >> home_table.html;
 echo "<td>"$LAT"</td>" >> home_table.html;
 echo "<td>"$SRL"</td></tr>" >> home_table.html;

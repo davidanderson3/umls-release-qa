@@ -1,6 +1,6 @@
 title=MDR (MedDRA) - Source Representation
 date=2018-05-07
-updated=2022-05-02
+updated=2022-11-07
 type=page
 status=published
 ~~~~~~
@@ -59,7 +59,7 @@ For additional information about the translations, see the representation pages 
 <div id="rep_change_summary" class="rep_block_level_one">
 <a id="change_summary"></a>
 <h3>Summary of Changes:</h3>
-<p>There were no changes to the original file format or in the Metathesaurus source processing.</p>
+<p>There were no changes to the original file format or in the Metathesaurus source processing.  Two new translations, Latvian (MDRLAV) and Swedish (MDRSWE) are now included.</p>
 </div>
 <a id="file_summary"></a>
 <div id="rep_file_summary" class="rep_block_level_one">
@@ -181,56 +181,8 @@ All information from the MedAscii files is included in
 the UMLS representation. Certain fields and files may not be directly
 processed because they contain redundant data.</p>
 
-<h4>Consecutive data files</h4>
-<table>
-  <tbody>
-    <tr>
-      <th>File Name</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td>SeqAscii/hlgt.seq </td>
-      <td>High Level Group Terms</td>
-    </tr>
-    <tr>
-      <td>SeqAscii/hlgt_hlt.seq </td>
-      <td>Relationships between HLGT and HLT codes</td>
-    </tr>
-    <tr>
-      <td>SeqAscii/hlt.seq </td>
-      <td>High Level Terms</td>
-    </tr>
-    <tr>
-      <td>SeqAscii/hlt_pt.seq </td>
-      <td>Relationships between HLT and PT codes</td>
-    </tr>
-    <tr>
-      <td>SeqAscii/intl_ord.seq </td>
-      <td>International SOC sort order data</td>
-    </tr>
-    <tr>
-      <td>SeqAscii/llt.seq </td>
-      <td>Lower Level Terms</td>
-    </tr>
-    <tr>
-      <td>SeqAscii/mdhier.seq </td>
-      <td>Hierarchy data: data in this file is redundant to data in
-soc_hlgt.asc, hlgt_hlt.asc and hlt_pt.asc</td>
-    </tr>
-    <tr>
-      <td>SeqAscii/pt.seq </td>
-      <td>Preferred Terms</td>
-    </tr>
-    <tr>
-      <td>SeqAscii/soc.seq </td>
-      <td>System Organ Classes</td>
-    </tr>
-    <tr>
-      <td>SeqAscii/soc_hlgt.seq </td>
-      <td>Relationships between SOC and HLGT codes</td>
-    </tr>
-  </tbody>
-</table>
+<h4>Consecutive data files (SeqAscii) are not processed for the UMLS Metathesaurus</h4>
+
 
 </div>
 </div>
@@ -283,38 +235,38 @@ related but not necessarily synonymous.
       <td>4</td>
       <td>llt_whoart_code</td>
       <td>Code allocated by the WHO-ART terminology</td>
-      <td>MRSAT: ATN="MXR"; ATV = "WHOART: &lt;value&gt;"</td>
+      <td>Not populated</td>
     </tr>
     <tr>
       <td>5</td>
       <td>llt_harts_code</td>
       <td>Code allocated by the HARTS terminology</td>
-      <td>MRSAT: ATN="MXR"; ATV = "HARTS: &lt;value&gt;"</td>
+      <td>Not populated</td>
     </tr>
     <tr>
       <td>6</td>
       <td>llt_costart_sym</td>
       <td>Symbol allocated by the COSTART terminology</td>
-      <td>MRSAT: ATN="MXR"; ATV = "COSTART: &lt;value&gt;" Also represented in MRMAP, MRSMAP</td>
+      <td>Not populated</td>
     </tr>
     <tr>
       <td>7</td>
       <td>llt_icd9_code</td>
       <td>Code allocated by the 9th Revision of the International
 Classification of Diseases, ICD-9</td>
-      <td>MRSAT: ATN="MXR"; ATV = "ICD9: &lt;value&gt;"</td>
+      <td>Not populated</td>
     </tr>
     <tr>
       <td>8</td>
       <td>llt_icd9cm_code </td>
       <td>Code allocated by the 9th Revision of the International Classification of Diseases, Clinical Modification ICD-9-CM</td>
-      <td>MRSAT: ATN="MXR"; ATV = "COSTART: &lt;value&gt;" Also represented in MRMAP, MRSMAP</td>
+      <td>Not populated</td>
     </tr>
     <tr>
       <td>9</td>
       <td>llt_icd10_code </td>
       <td>Code allocated by the 10th revision of the International Classification of Diseases, ICD-10 </td>
-      <td>NOTE: ALWAYS NULL</td>
+      <td>Not populated</td>
     </tr>
     <tr>
       <td>10</td>
@@ -326,7 +278,7 @@ Classification of Diseases, ICD-9</td>
       <td>11</td>
       <td>llt_jart_code </td>
       <td>Code allocated by the J-ART terminology </td>
-      <td>MRSAT: ATN = "MXR"; ATV = "J-ART": &lt;value&gt;"</td>
+      <td>Not populated</td>
     </tr>
   </tbody>
 </table>
@@ -358,7 +310,7 @@ Classification of Diseases, ICD-9</td>
       <td>3</td>
       <td>null_field </td>
       <td>This field is null </td>
-      <td>&nbsp;</td>
+      <td>Not applicable</td>
     </tr>
     <tr>
       <td>4</td>
@@ -371,48 +323,46 @@ linked </td>
       <td>5</td>
       <td>pt_whoart_code </td>
       <td>Code allocated by the WHO-ART terminology </td>
-      <td>MRSAT: ATN = "MXR"; ATV = "WHOART: &lt;value&gt;"</td>
+      <td>Not populated</td>
     </tr>
     <tr>
       <td>6</td>
       <td>pt_harts_code </td>
       <td>Code allocated by the HARTS terminology </td>
-      <td>MRSAT: ATN = "MXR"; ATV = "HARTS: &lt;value&gt;"</td>
+      <td>Not populated</td>
     </tr>
     <tr>
       <td>7</td>
       <td>pt_costart_sym </td>
       <td>Symbol allocated by the COSTART terminology </td>
-      <td>MRSAT: ATN = "MXR"; ATV = "COSTART: &lt;value&gt;" Also
-represented in MRMAP, MRSMAP</td>
+      <td>Not populated/td>
     </tr>
     <tr>
       <td>8</td>
       <td>pt_icd9_code </td>
       <td>Code allocated by the 9th Revision of the International
 Classification of Diseases, ICD-9 </td>
-      <td>MRSAT: ATN = "MXR"; ATV = "ICD9: &lt;value&gt;"</td>
+      <td>Not populated</td>
     </tr>
     <tr>
       <td>9</td>
       <td>pt_icd9cm_code </td>
       <td>Code allocated by the 9th Revision of the International
 Classification of Diseases, Clinical Modification, ICD-9-CM </td>
-      <td>MRSAT: ATN = "MXR"; ATV = "ICD9CM: &lt;value&gt;"Also
-represented in MRMAP, MRSMAP</td>
+      <td>Not populated</td>
     </tr>
     <tr>
       <td>10</td>
       <td>pt_icd10_code </td>
       <td>Code allocated by the 10th revision of the International
 Classification of Diseases, ICD-10 </td>
-      <td>Note: ALWAYS NULL</td>
+      <td>Not populated</td>
     </tr>
     <tr>
       <td>11</td>
       <td>pt_jart_code </td>
       <td>Code allocated by the J-ART terminology </td>
-      <td>MRSAT: ATN = "MXR"; ATV = "J-ART: &lt;value&gt;"</td>
+      <td>Not populated</td>
     </tr>
   </tbody>
 </table>
@@ -444,49 +394,46 @@ Classification of Diseases, ICD-10 </td>
       <td>3</td>
       <td>hlt_whoart_code </td>
       <td>Code allocated by the WHO-ART terminology </td>
-      <td>MRSAT: ATN = "MXR"; ATV = "WHOART: &lt;value&gt;"NOTE:" All
-null
-except one case</td>
+      <td>Not populated</td>
     </tr>
     <tr>
       <td>4</td>
       <td>hlt_harts_code </td>
       <td>Code allocated by the HARTS terminology </td>
-      <td>NOTE: ALWAYS NULL</td>
+      <td>Not populated</td>
     </tr>
     <tr>
       <td>5</td>
       <td>hlt_costart_sym </td>
       <td>Symbol allocated by the COSTART terminology </td>
-      <td>MRSAT: ATN = "MXR"; ATV = "COSTART: &lt;value&gt;"NOTE:" All
-null except one case; also represented in MRMAP, MRSMAP</td>
+      <td>Not populated</td>
     </tr>
     <tr>
       <td>6</td>
       <td>hlt_icd9_code </td>
       <td>Code allocated by the 9th Revision of the International
 Classification of Diseases, ICD-9 </td>
-      <td>NOTE: ALWAYS NULL</td>
+      <td>Not populated</td>
     </tr>
     <tr>
       <td>7</td>
       <td>hlt_icd9cm_code </td>
       <td>Code allocated by the 9th Revision of the International
 Classification of Diseases, Clinical Modification ICD-9-CM </td>
-      <td>NOTE: ALWAYS NULL</td>
+      <td>Not populated</td>
     </tr>
     <tr>
       <td>8</td>
       <td>hlt_icd10_code </td>
       <td>Code allocated by the 10th revision of the International
 Classification of Diseases, ICD-10 </td>
-      <td>NOTE: ALWAYS NULL</td>
+      <td>Not populated</td>
     </tr>
     <tr>
       <td>9</td>
       <td>hlt_jart_code </td>
       <td>Code allocated by the J-ART terminology </td>
-      <td>NOTE: ALWAYS NULL</td>
+      <td>Not populated</td>
     </tr>
   </tbody>
 </table>
@@ -519,46 +466,46 @@ Classification of Diseases, ICD-10 </td>
       <td>3</td>
       <td>hlgt_whoart_code </td>
       <td>Code allocated by the WHO-ART terminology </td>
-      <td>NOTE: ALWAYS NULL</td>
+      <td>Not populated</td>
     </tr>
     <tr>
       <td>4</td>
       <td>hlgt_harts_code </td>
       <td>Code allocated by the HARTS terminology </td>
-      <td>NOTE: ALWAYS NULL</td>
+      <td>Not populated</td>
     </tr>
     <tr>
       <td>5</td>
       <td>hlgt_costart_sym </td>
       <td>Symbol allocated by the COSTART terminology </td>
-      <td>NOTE: ALWAYS NULL</td>
+      <td>Not populated</td>
     </tr>
     <tr>
       <td>6</td>
       <td>hlgt_icd9_code </td>
       <td>Code allocated by the 9th Revision of the International
 Classification of Diseases, ICD-9 </td>
-      <td>NOTE: ALWAYS NULL</td>
+      <td>Not populated</td>
     </tr>
     <tr>
       <td>7</td>
       <td>hlgt_icd9cm_code </td>
       <td>Code allocated by the 9th Revision of the International
 Classification of Diseases, Clinical Modification ICD-9-CM </td>
-      <td>NOTE: ALWAYS NULL</td>
+      <td>Not populated</td>
     </tr>
     <tr>
       <td>8</td>
       <td>hlgt_icd10_code </td>
       <td>Code allocated by the 10th revision of the International
 Classification of Diseases, ICD-10 </td>
-      <td>NOTE: ALWAYS NULL</td>
+      <td>Not populated</td>
     </tr>
     <tr>
       <td>9</td>
       <td>hlgt_jart_code </td>
       <td>Code allocated by the J-ART terminology </td>
-      <td>NOTE: ALWAYS NULL </td>
+      <td>Not populated</td>
     </tr>
   </tbody>
 </table>
@@ -596,46 +543,46 @@ Classification of Diseases, ICD-10 </td>
       <td>4</td>
       <td>soc_whoart_code </td>
       <td>Code allocated by the WHO-ART terminology </td>
-      <td>NOTE: ALWAYS NULL</td>
+      <td>Not populated</td>
     </tr>
     <tr>
       <td>5</td>
       <td>soc_harts_code </td>
       <td>Code allocated by the HARTS terminology </td>
-      <td>NOTE: ALWAYS NULL</td>
+      <td>Not populated</td>
     </tr>
     <tr>
       <td>6</td>
       <td>soc_costart_sym </td>
       <td>Symbol allocated by the COSTART terminology </td>
-      <td>NOTE: ALWAYS NULL</td>
+      <td>Not populated</td>
     </tr>
     <tr>
       <td>7</td>
       <td>soc_icd9_code </td>
       <td>Code allocated by the 9th Revision of the International
 Classification of Diseases, ICD-9 </td>
-      <td>NOTE: ALWAYS NULL</td>
+      <td>Not populated</td>
     </tr>
     <tr>
       <td>8</td>
       <td>soc_icd9cm_code </td>
       <td>Code allocated by the 9th Revision of the International
 Classification of Diseases, Clinical Modification ICD-9-CM </td>
-      <td>NOTE: ALWAYS NULL</td>
+      <td>Not populated</td>
     </tr>
     <tr>
       <td>9</td>
       <td>soc_icd10_code </td>
       <td>Code allocated by the 10th revision of the International
 Classification of Diseases, ICD-10 </td>
-      <td>NOTE: ALWAYS NULL</td>
+      <td>Not populated</td>
     </tr>
     <tr>
       <td>10</td>
       <td>soc_jart_code </td>
       <td>Code allocated by the J-ART terminology </td>
-      <td>NOTE: ALWAYS NULL </td>
+      <td>Not populated</td>
     </tr>
   </tbody>
 </table>

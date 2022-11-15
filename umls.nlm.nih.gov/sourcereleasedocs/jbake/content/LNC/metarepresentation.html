@@ -1,6 +1,6 @@
 title=LNC (LOINC) - Metathesaurus Representation
 date=2018-05-07
-updated=2022-05-02
+updated=2022-11-07
 type=page
 status=published
 ~~~~~~
@@ -31,12 +31,12 @@ status=published
     	<div class="col-sm-auto border-left"><a href="#relationships">Relationships</a></div>
     	<div class="col-sm-auto border-left"><a href="#mappings">Mappings</a></div>
     </div>
-    <p><strong>VSAB: </strong>LNC272</p>
+    <p><strong>VSAB: </strong>LNC273</p>
     <hr>
     <div id="rep_change_summary" class="rep_block_level_one"></div>
       <h3>Summary of Changes:</h3>
       
-      <p>New Classes:</p>     
+      <p>1. New Class:</p>     
       <table>
       	<tbody>
       		<tr>
@@ -44,100 +44,42 @@ status=published
       			<th>Class</th>
       		</tr>
       		<tr>
-      			<td>EYE.LASIK</td>
-      			<td>Laser-assisted in situ keratomileusis</td>
+      			<td>ENDO.PULM</td>
+      			<td>Endo Pulmonary</td>
       		</tr>
-      		<tr>
-         <td>EYE.SPECULAR MICROSCOPY</td>
-         <td>Ophthalmology specular microscopy</td>
+      		</tbody>
+      </table>
+      <p>2. Deprecated attributes:</p>
+      <table>
+       <tbody>
+        <tr>
+         <th>Field Name</th>
+         <th>ATN</th>
         </tr>
         <tr>
-         <td>PANEL.NEURO</td>
-         <td>Neurology panel</td>
+         <td>CDISC_COMMON_TESTS</td>
+         <td>LCD</td>
         </tr>
         <tr>
-      			<td>PANEL.SURVEY.CBS-8</td>
-      			<td>Columbia Behavior Scale for Dementia (CBS-8) set</td>
-      		</tr>
-      		<tr>
-         <td>PANEL.SURVEY.CNPI</td>
-         <td>Checklist of Nonverbal Pain Indicators (CNPI) set</td>
+         <td>EXAMPLE_SI_UCUM_UNITS</td>
+         <td>EXAMPLE_SI_UCUM_UNITS</td>
         </tr>
         <tr>
-         <td>PANEL.SURVEY.LKSS</td>
-         <td>Lysholm Knee Scoring Scale (LKSS) set</td>
+         <td>SUBMITTED_UNITS</td>
+         <td>LSU</td>
         </tr>
         <tr>
-      			<td>PANEL.SURVEY.ORTHOPEDICS</td>
-      			<td>Orthopedic survey panels</td>
-      		</tr>
-      		<tr>
-         <td>PANEL.SURVEY.PAIN</td>
-         <td>Pain survey panels</td>
-        </tr>
-        <tr>
-         <td>PANEL.SURVEY.PNDS</td>
-         <td>Perioperative Nursing Data Set outcomes panel</td>
-        </tr>
-        <tr>
-         <td>PANEL.SURVEY.PROWL</td>
-         <td>Patient Reported Outcomes with LASIK sets</td>
-        </tr>
-        <tr>
-      			<td>PANEL.SURVEY.RMDQ</td>
-      			<td>Roland Morris Disability Questionnaire set</td>
-      		</tr>
-      		<tr>
-         <td>PANEL.SURVEY.SLP</td>
-         <td>Speech-language pathology (SLP) panels</td>
-        </tr>
-        <tr>
-         <td>PANEL.SURVEY.WIFI</td>
-         <td>Would Ischemia and Foot Infection set</td>
-        </tr>
-        <tr>
-         <td>SURVEY.CBS-8</td>
-         <td>Columbia Behavior Scale for Dementia survey</td>
-        </tr>
-        <tr>
-         <td>SURVEY.CNPI</td>
-         <td>Checklist of Nonverbal Pain Indicators survey</td>
-        </tr>
-        <tr>
-         <td>SURVEY.LKSS</td>
-         <td>Lysholm Knee Scoring Scale survey</td>
-        </tr>
-        <tr>
-         <td>SURVEY.NEI</td>
-         <td>National Eye Institute survey</td>
-        </tr>
-        <tr>
-         <td>SURVEY.ORTHOPEDICS</td>
-         <td>Orthopedic surveys</td>
-        </tr>
-        <tr>
-         <td>SURVEY.PAIN</td>
-         <td>Pain surveys</td>
-        </tr>
-        <tr>
-         <td>SURVEY.PNDS</td>
-         <td>Perioperative Nursing Data Set (PNDS) survey</td>
-        </tr>
-        <tr>
-         <td>SURVEY.PROWL</td>
-         <td>Patient Reported Outcomes with LASIK surveys</td>
-        </tr>
-        <tr>
-         <td>SURVEY.RMDQ</td>
-         <td>Roland Morris Disability Questionnaire</td>
-        </tr>
-        <tr>
-         <td>SURVEY.SLP</td>
-         <td>Speech-language pathology (SLP) surveys</td>
+         <td>UnitsAndRange</td>
+         <td>UNITS_AND_RANGE</td>
         </tr>
        </tbody>
       </table>
-      
+      <p>3. Refreshed rankings of the 20,000 most commonly used LOINC
+codes in the U.S. These rankings replace the previous "Top 2000" lab 
+codes which were out of date and included only lab. The new rankings 
+encompass clinical as well and are in the COMMON_TEST_RANK field of 
+the Loinc.csv file.</p>
+      <p>4. The 'Multiaxial Hierarchy' file was renamed to 'ComponentHierarchy'.</p>
   <div>
     <h4>Original Files:</h4>
     <p>The UMLS uses files publicly available at <a
@@ -145,7 +87,7 @@ status=published
     <ul>
       <li>Loinc.csv</li>
       <li>MapTo.csv</li>
-      <li>MultiAxialHierarchy.csv</li>
+      <li>ComponentHierarchyBySystem.csv</li>
       <li>PanelsAndForms.csv</li>
       <li>LoincIeeeMedicalDeviceCodeMappingTable.csv</li>
       <li>LoincRsnaRadiologyPlaybook.csv</li>
@@ -164,7 +106,7 @@ status=published
       <li>Part.csv</li>
 	  
     </ul>
-    <p>In addition, the UMLS receives a file of abbreviations with expansions called 'Loinc_&lt;ver&gt;_Abbreviations_1.1.csv'.</p>
+    <p>In addition, the UMLS receives a file of abbreviations with expansions called 'Loinc_&lt;ver&gt;_Abbreviations.csv'.</p>
   </div>
   <hr>
     <div id="rep_identifiers" class="rep_block_level_one">
@@ -229,7 +171,7 @@ status=published
               <td>DN</td>
               <td>Display Name:<br/>
                 CODE = Loinc.csv field 1 (LOINC_NUM)<br/>
-                STR = Loinc.csv field 45 (DisplayName)</td>
+                STR = Loinc.csv field 41 (DisplayName)</td>
             </tr>
             <tr>
               <td>HC</td>
@@ -260,7 +202,7 @@ status=published
               <td>LC</td>
               <td>Long common name:<br/>
                 CODE = Loinc.csv field 1 (LOINC_NUM)<br/>
-                STR = Loinc.csv field 28 (LONG_COMMON_NAME)<br/>
+                STR = Loinc.csv field 26 (LONG_COMMON_NAME)<br/>
                 TTY = LC is assigned if field 12 (STATUS) is not =
                 "DEPRECATED"</td>
             </tr>
@@ -345,7 +287,7 @@ status=published
               <td>OLC</td>
               <td>Obsolete long common name:<br/>
                 CODE = Loinc.csv field 1 (LOINC_NUM)<br/>
-                STR = Loinc.csv field 28 (LONG_COMMON_NAME)<br/>
+                STR = Loinc.csv field 26 (LONG_COMMON_NAME)<br/>
                 TTY = OLC is assigned if field 12 (STATUS) =
                 "DEPRECATED"<br/>
                 SUPPRESS = O</td>
@@ -361,7 +303,7 @@ status=published
               <td>OOSN</td>
               <td>Obsolete official short name:<br/>
                 CODE = Loinc.csv field 1 (LOINC_NUM)<br/>
-                STR = Loinc.csv field 22 (SHORTNAME)<br/>
+                STR = Loinc.csv field 21 (SHORTNAME)<br/>
                 TTY = OOSN is assigned if field 12 (STATUS) =
                 "DEPRECATED"<br/>
                 SUPPRESS = "O"</td>
@@ -370,7 +312,7 @@ status=published
               <td>OSN</td>
               <td>Official short name:<br/>
                 CODE = Loinc.csv field 1 (LOINC_NUM)<br/>
-                STR = Loinc.csv field 22 (SHORTNAME)<br/>
+                STR = Loinc.csv field 21 (SHORTNAME)<br/>
                 TTY OSN is assigned if field 12 (STATUS) is not =
                 "DEPRECATED"</td>
             </tr>
@@ -416,7 +358,7 @@ status=published
             </tr>
             <tr>
               <td>ASK_AT_ORDER_ENTRY</td>
-              <td>Loinc.csv field 41<br/>
+              <td>Loinc.csv field 37<br/>
               </td>
             </tr>
             <tr>
@@ -425,24 +367,24 @@ status=published
             </tr>
             <tr>
               <td>COPYRIGHT</td>
-              <td>Loinc.csv field 26 (EXTERNAL_COPYRIGHT_NOTICE)</td>
+              <td>Loinc.csv field 24 (EXTERNAL_COPYRIGHT_NOTICE)</td>
             </tr>
             <tr>
               <td>CHANGE_REASON_PUBLIC</td>
-              <td>Loinc.csv field 34</td>
+              <td>Loinc.csv field 30</td>
             </tr>
             <tr>
               <td>COMMON_SI_TEST_RANK</td>
-              <td>Loinc.csv field 37<br/>
+              <td>Loinc.csv field 33<br/>
               </td>
             </tr>
             <tr>
               <td>COMMON_TEST_RANK</td>
-              <td>Loinc.csv field 35</td>
+              <td>Loinc.csv field 31</td>
             </tr>
             <tr>
               <td>COMMON_ORDER_RANK</td>
-              <td>Loinc.csv field 36</td>
+              <td>Loinc.csv field 32</td>
             </tr>
             <tr>
               <td>CONSUMER_NAME</td>
@@ -457,20 +399,16 @@ status=published
               <td>LoincIeeeMedicalDeviceCodeMappingTable.csv field 5</td>
             </tr>
             <tr>
-              <td>EXAMPLE_SI_UCUM_NITS</td>
-              <td>Loinc.csv field 31</td>
-            </tr>
-            <tr>
               <td>EXAMPLE_UCUM_UNITS</td>
-              <td>Loinc.csv field 30</td>
-            </tr>
-            <tr>
-              <td>EXAMPLE_UNITS</td>
               <td>Loinc.csv field 27</td>
             </tr>
             <tr>
+              <td>EXAMPLE_UNITS</td>
+              <td>Loinc.csv field 25</td>
+            </tr>
+            <tr>
               <td>EXTERNAL_COPYRIGHT_LINK</td>
-              <td>Loinc.csv field 39</td>
+              <td>Loinc.csv field 24</td>
             </tr>
             <tr>
               <td>FROMRSAB</td>
@@ -484,15 +422,15 @@ status=published
             </tr>
             <tr>
               <td>HL7_ATTACHMENT_REQUEST</td>
-              <td>Loinc.csv field 44</td>
+              <td>Loinc.csv field 40</td>
             </tr>
             <tr>
               <td>HL7_ATTACHMENT_STRUCTURE</td>
-              <td>Loinc.csv field 38</td>
+              <td>Loinc.csv field 34</td>
             </tr>
             <tr>
               <td>HL7_FIELD_SUBFIELD_ID</td>
-              <td>Loinc.csv field 25</td>
+              <td>Loinc.csv field 23</td>
             </tr>
             <tr>
               <td>IEEE_CF_CODE10</td>
@@ -564,7 +502,7 @@ status=published
             </tr>
             <tr>
               <td>LOR [Order/observation]</td>
-              <td>Loinc.csv field 23 (ORDER_OBS)</td>
+              <td>Loinc.csv field 22 (ORDER_OBS)</td>
             </tr>
             <tr>
               <td>LQS [Survey question source]</td>
@@ -572,11 +510,11 @@ status=published
             </tr>
             <tr>
               <td>LQT [Survey question text]</td>
-              <td>Loinc.csv field 17 (SURVEY_QUEST_TXT)</td>
+              <td>Loinc.csv field 17 (SURVEY_QUEST_TEXT)</td>
             </tr>
             <tr>
               <td>LRN2 [Related names 2]</td>
-              <td>Loinc.csv field 21 (RELATEDNAMES2)</td>
+              <td>Loinc.csv field 20 (RELATEDNAMES2)</td>
             </tr>
             <tr>
               <td>LUR [Units required]</td>
@@ -667,11 +605,11 @@ status=published
             </tr>
             <tr>
               <td>STATUS_REASON</td>
-              <td>Loinc.csv field 32</td>
+              <td>Loinc.csv field 28</td>
             </tr>
             <tr>
               <td>STATUS_TEXT</td>
-              <td>Loinc.csv field 33</td>
+              <td>Loinc.csv field 29</td>
             </tr>
             <tr>
               <td>SUBSEQUENT_TEXT_PROMPT</td>
@@ -689,10 +627,6 @@ status=published
                 processing</td>
             </tr>
             <tr>
-              <td>UNITS_AND_RANGE</td>
-              <td>Loinc.csv field 29</td>
-            </tr> 
-            <tr>
               <td>UNIVERSAL_LAB_ORDERS_VALUE_SET</td>
               <td>A value of true indicates that the LOINC
                 CODE is a member of the Universal Lab Orders Value Set</td>
@@ -703,7 +637,7 @@ status=published
             </tr>
             <tr>
               <td>VERSION_FIRST_RELEASED</td>
-              <td>Loinc.csv field 43</td>
+              <td>Loinc.csv field 39</td>
             </tr>
             <tr>
               <td>VERSION_LAST_CHANGED</td>
