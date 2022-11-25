@@ -1,21 +1,22 @@
 <div class="col-lg-3 col-xl-2 d-none d-lg-block border-right px-2 py-4">
   <h3 class="pb-3 text-center"><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/index.html">UMLS Vocabularies</a></h3>
   <div id="accordion-umls-vocabularies" class="mb-3">
-    <div class="card">
-      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-1">
-        <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-1" aria-expanded="false" aria-controls="umls-vocabularies-section-1">
-                    <h4 class="mb-0">
+    <div class="accordion-item">
+      <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-1">
+        <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-1" aria-expanded="false" aria-controls="umls-vocabularies-section-1">
+                    <h4 class="mb-0 float-left p-1">
                          A
 
                     </h4>
-                    <div>
-                         <i class="fas fa-angle-down"></i>
+					<div>
+                         <i class="fas fa-angle-down float-right p-1"></i>
                     </div>
+
                </button>
       </div>
-      <div id="umls-vocabularies-section-1" class="collapse" aria-labelledby="heading-umls-vocabularies-section-1" data-parent="#accordion-umls-vocabularies">
-        <div class="card-body">
-          <ul class="list-unstyled">
+      <div id="umls-vocabularies-section-1" class="collapse" aria-labelledby="heading-umls-vocabularies-section-1" data-bs-parent="#accordion-umls-vocabularies">
+        <div class="accordion-body">
+          <ul class="list-unstyled pl-4">
 
             <li><a href="../AIR/">AIR</a></li>
 
@@ -32,21 +33,22 @@
         </div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-2">
-        <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-2" aria-expanded="false" aria-controls="umls-vocabularies-section-2">
-                    <h4 class="mb-0">
+    <div class="accordion-item">
+      <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-2">
+        <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-2" aria-expanded="false" aria-controls="umls-vocabularies-section-2">
+                    <h4 class="mb-0 float-left p-1">
                          B
 
                     </h4>
-                    <div>
-                         <i class="fas fa-angle-down"></i>
+					<div>
+                         <i class="fas fa-angle-down float-right p-1"></i>
                     </div>
+
                </button>
       </div>
-      <div id="umls-vocabularies-section-2" class="collapse" aria-labelledby="heading-umls-vocabularies-section-2" data-parent="#accordion-umls-vocabularies">
-        <div class="card-body">
-          <ul class="list-unstyled">
+      <div id="umls-vocabularies-section-2" class="collapse" aria-labelledby="heading-umls-vocabularies-section-2" data-bs-parent="#accordion-umls-vocabularies">
+        <div class="accordion-body">
+          <ul class="list-unstyled pl-4">
 
             <li><a href="../BI/">BI</a></li>
 
@@ -55,21 +57,22 @@
         </div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-3">
-        <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-3" aria-expanded="false" aria-controls="umls-vocabularies-section-3">
-                    <h4 class="mb-0">
+    <div class="accordion-item">
+      <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-3">
+        <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-3" aria-expanded="false" aria-controls="umls-vocabularies-section-3">
+                    <h4 class="mb-0 float-left p-1">
                          C
 
                     </h4>
-                    <div>
-                         <i class="fas fa-angle-down"></i>
+					<div>
+                         <i class="fas fa-angle-down float-right p-1"></i>
                     </div>
+
                </button>
       </div>
-      <div id="umls-vocabularies-section-3" class="collapse" aria-labelledby="heading-umls-vocabularies-section-3" data-parent="#accordion-umls-vocabularies">
-        <div class="card-body">
-          <ul class="list-unstyled">
+      <div id="umls-vocabularies-section-3" class="collapse" aria-labelledby="heading-umls-vocabularies-section-3" data-bs-parent="#accordion-umls-vocabularies">
+        <div class="accordion-body">
+          <ul class="list-unstyled pl-4">
 
             <li><a href="../CCC/">CCC</a></li>
 
@@ -106,21 +109,22 @@
         </div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-4">
-        <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-4" aria-expanded="false" aria-controls="umls-vocabularies-section-4">
-                    <h4 class="mb-0">
+    <div class="accordion-item">
+      <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-4">
+        <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-4" aria-expanded="false" aria-controls="umls-vocabularies-section-4">
+                    <h4 class="mb-0 float-left p-1">
                          D
 
                     </h4>
-                    <div>
-                         <i class="fas fa-angle-down"></i>
+					<div>
+                         <i class="fas fa-angle-down float-right p-1"></i>
                     </div>
+
                </button>
       </div>
-      <div id="umls-vocabularies-section-4" class="collapse" aria-labelledby="heading-umls-vocabularies-section-4" data-parent="#accordion-umls-vocabularies">
-        <div class="card-body">
-          <ul class="list-unstyled">
+      <div id="umls-vocabularies-section-4" class="collapse" aria-labelledby="heading-umls-vocabularies-section-4" data-bs-parent="#accordion-umls-vocabularies">
+        <div class="accordion-body">
+          <ul class="list-unstyled pl-4">
 
             <li><a href="../DDB/">DDB</a></li>
 
@@ -139,21 +143,22 @@
         </div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-5">
-        <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-5" aria-expanded="false" aria-controls="umls-vocabularies-section-5">
-                    <h4 class="mb-0">
+    <div class="accordion-item">
+      <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-5">
+        <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-5" aria-expanded="false" aria-controls="umls-vocabularies-section-5">
+                    <h4 class="mb-0 float-left p-1">
                          F
 
                     </h4>
-                    <div>
-                         <i class="fas fa-angle-down"></i>
+					<div>
+                         <i class="fas fa-angle-down float-right p-1"></i>
                     </div>
+
                </button>
       </div>
-      <div id="umls-vocabularies-section-5" class="collapse" aria-labelledby="heading-umls-vocabularies-section-5" data-parent="#accordion-umls-vocabularies">
-        <div class="card-body">
-          <ul class="list-unstyled">
+      <div id="umls-vocabularies-section-5" class="collapse" aria-labelledby="heading-umls-vocabularies-section-5" data-bs-parent="#accordion-umls-vocabularies">
+        <div class="accordion-body">
+          <ul class="list-unstyled pl-4">
 
             <li><a href="../FMA/">FMA</a></li>
 
@@ -162,21 +167,22 @@
         </div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-6">
-        <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-6" aria-expanded="false" aria-controls="umls-vocabularies-section-6">
-                    <h4 class="mb-0">
+    <div class="accordion-item">
+      <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-6">
+        <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-6" aria-expanded="false" aria-controls="umls-vocabularies-section-6">
+                    <h4 class="mb-0 float-left p-1">
                          G
 
                     </h4>
-                    <div>
-                         <i class="fas fa-angle-down"></i>
+					<div>
+                         <i class="fas fa-angle-down float-right p-1"></i>
                     </div>
+
                </button>
       </div>
-      <div id="umls-vocabularies-section-6" class="collapse" aria-labelledby="heading-umls-vocabularies-section-6" data-parent="#accordion-umls-vocabularies">
-        <div class="card-body">
-          <ul class="list-unstyled">
+      <div id="umls-vocabularies-section-6" class="collapse" aria-labelledby="heading-umls-vocabularies-section-6" data-bs-parent="#accordion-umls-vocabularies">
+        <div class="accordion-body">
+          <ul class="list-unstyled pl-4">
 
             <li><a href="../GO/">GO</a></li>
 
@@ -187,21 +193,22 @@
         </div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-7">
-        <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-7" aria-expanded="false" aria-controls="umls-vocabularies-section-7">
-                    <h4 class="mb-0">
+    <div class="accordion-item">
+      <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-7">
+        <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-7" aria-expanded="false" aria-controls="umls-vocabularies-section-7">
+                    <h4 class="mb-0 float-left p-1">
                          H
 
                     </h4>
-                    <div>
-                         <i class="fas fa-angle-down"></i>
+					<div>
+                         <i class="fas fa-angle-down float-right p-1"></i>
                     </div>
+
                </button>
       </div>
-      <div id="umls-vocabularies-section-7" class="collapse" aria-labelledby="heading-umls-vocabularies-section-7" data-parent="#accordion-umls-vocabularies">
-        <div class="card-body">
-          <ul class="list-unstyled">
+      <div id="umls-vocabularies-section-7" class="collapse" aria-labelledby="heading-umls-vocabularies-section-7" data-bs-parent="#accordion-umls-vocabularies">
+        <div class="accordion-body">
+          <ul class="list-unstyled pl-4">
 
             <li><a href="../HCDT/">HCDT</a></li>
 
@@ -224,21 +231,22 @@
         </div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-8">
-        <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-8" aria-expanded="false" aria-controls="umls-vocabularies-section-8">
-                    <h4 class="mb-0">
+    <div class="accordion-item">
+      <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-8">
+        <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-8" aria-expanded="false" aria-controls="umls-vocabularies-section-8">
+                    <h4 class="mb-0 float-left p-1">
                          I
 
                     </h4>
-                    <div>
-                         <i class="fas fa-angle-down"></i>
+					<div>
+                         <i class="fas fa-angle-down float-right p-1"></i>
                     </div>
+
                </button>
       </div>
-      <div id="umls-vocabularies-section-8" class="collapse" aria-labelledby="heading-umls-vocabularies-section-8" data-parent="#accordion-umls-vocabularies">
-        <div class="card-body">
-          <ul class="list-unstyled">
+      <div id="umls-vocabularies-section-8" class="collapse" aria-labelledby="heading-umls-vocabularies-section-8" data-bs-parent="#accordion-umls-vocabularies">
+        <div class="accordion-body">
+          <ul class="list-unstyled pl-4">
 
             <li><a href="../ICD10/">ICD10</a></li>
 
@@ -305,21 +313,22 @@
         </div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-9">
-        <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-9" aria-expanded="false" aria-controls="umls-vocabularies-section-9">
-                    <h4 class="mb-0">
+    <div class="accordion-item">
+      <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-9">
+        <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-9" aria-expanded="false" aria-controls="umls-vocabularies-section-9">
+                    <h4 class="mb-0 float-left p-1">
                          J
 
                     </h4>
-                    <div>
-                         <i class="fas fa-angle-down"></i>
+					<div>
+                         <i class="fas fa-angle-down float-right p-1"></i>
                     </div>
+
                </button>
       </div>
-      <div id="umls-vocabularies-section-9" class="collapse" aria-labelledby="heading-umls-vocabularies-section-9" data-parent="#accordion-umls-vocabularies">
-        <div class="card-body">
-          <ul class="list-unstyled">
+      <div id="umls-vocabularies-section-9" class="collapse" aria-labelledby="heading-umls-vocabularies-section-9" data-bs-parent="#accordion-umls-vocabularies">
+        <div class="accordion-body">
+          <ul class="list-unstyled pl-4">
 
             <li><a href="../JABL/">JABL</a></li>
 
@@ -328,21 +337,22 @@
         </div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-10">
-        <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-10" aria-expanded="false" aria-controls="umls-vocabularies-section-10">
-                    <h4 class="mb-0">
+    <div class="accordion-item">
+      <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-10">
+        <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-10" aria-expanded="false" aria-controls="umls-vocabularies-section-10">
+                    <h4 class="mb-0 float-left p-1">
                          K
 
                     </h4>
-                    <div>
-                         <i class="fas fa-angle-down"></i>
+					<div>
+                         <i class="fas fa-angle-down float-right p-1"></i>
                     </div>
+
                </button>
       </div>
-      <div id="umls-vocabularies-section-10" class="collapse" aria-labelledby="heading-umls-vocabularies-section-10" data-parent="#accordion-umls-vocabularies">
-        <div class="card-body">
-          <ul class="list-unstyled">
+      <div id="umls-vocabularies-section-10" class="collapse" aria-labelledby="heading-umls-vocabularies-section-10" data-bs-parent="#accordion-umls-vocabularies">
+        <div class="accordion-body">
+          <ul class="list-unstyled pl-4">
 
             <li><a href="../KCD5/">KCD5</a></li>
 
@@ -351,21 +361,22 @@
         </div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-11">
-        <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-11" aria-expanded="false" aria-controls="umls-vocabularies-section-11">
-                    <h4 class="mb-0">
+    <div class="accordion-item">
+      <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-11">
+        <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-11" aria-expanded="false" aria-controls="umls-vocabularies-section-11">
+                    <h4 class="mb-0 float-left p-1">
                          L
 
                     </h4>
-                    <div>
-                         <i class="fas fa-angle-down"></i>
+					<div>
+                         <i class="fas fa-angle-down float-right p-1"></i>
                     </div>
+
                </button>
       </div>
-      <div id="umls-vocabularies-section-11" class="collapse" aria-labelledby="heading-umls-vocabularies-section-11" data-parent="#accordion-umls-vocabularies">
-        <div class="card-body">
-          <ul class="list-unstyled">
+      <div id="umls-vocabularies-section-11" class="collapse" aria-labelledby="heading-umls-vocabularies-section-11" data-bs-parent="#accordion-umls-vocabularies">
+        <div class="accordion-body">
+          <ul class="list-unstyled pl-4">
 
             <li><a href="../LCH/">LCH</a></li>
 
@@ -424,21 +435,22 @@
         </div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-12">
-        <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-12" aria-expanded="false" aria-controls="umls-vocabularies-section-12">
-                    <h4 class="mb-0">
+    <div class="accordion-item">
+      <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-12">
+        <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-12" aria-expanded="false" aria-controls="umls-vocabularies-section-12">
+                    <h4 class="mb-0 float-left p-1">
                          M
 
                     </h4>
-                    <div>
-                         <i class="fas fa-angle-down"></i>
+					<div>
+                         <i class="fas fa-angle-down float-right p-1"></i>
                     </div>
+
                </button>
       </div>
-      <div id="umls-vocabularies-section-12" class="collapse" aria-labelledby="heading-umls-vocabularies-section-12" data-parent="#accordion-umls-vocabularies">
-        <div class="card-body">
-          <ul class="list-unstyled">
+      <div id="umls-vocabularies-section-12" class="collapse" aria-labelledby="heading-umls-vocabularies-section-12" data-bs-parent="#accordion-umls-vocabularies">
+        <div class="accordion-body">
+          <ul class="list-unstyled pl-4">
 
             <li><a href="../MCM/">MCM</a></li>
 
@@ -541,21 +553,22 @@
         </div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-13">
-        <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-13" aria-expanded="false" aria-controls="umls-vocabularies-section-13">
-                    <h4 class="mb-0">
+    <div class="accordion-item">
+      <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-13">
+        <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-13" aria-expanded="false" aria-controls="umls-vocabularies-section-13">
+                    <h4 class="mb-0 float-left p-1">
                          N
 
                     </h4>
-                    <div>
-                         <i class="fas fa-angle-down"></i>
+					<div>
+                         <i class="fas fa-angle-down float-right p-1"></i>
                     </div>
+
                </button>
       </div>
-      <div id="umls-vocabularies-section-13" class="collapse" aria-labelledby="heading-umls-vocabularies-section-13" data-parent="#accordion-umls-vocabularies">
-        <div class="card-body">
-          <ul class="list-unstyled">
+      <div id="umls-vocabularies-section-13" class="collapse" aria-labelledby="heading-umls-vocabularies-section-13" data-bs-parent="#accordion-umls-vocabularies">
+        <div class="accordion-body">
+          <ul class="list-unstyled pl-4">
 
             <li><a href="../NCBI/">NCBI</a></li>
 
@@ -578,21 +591,22 @@
         </div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-14">
-        <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-14" aria-expanded="false" aria-controls="umls-vocabularies-section-14">
-                    <h4 class="mb-0">
+    <div class="accordion-item">
+      <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-14">
+        <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-14" aria-expanded="false" aria-controls="umls-vocabularies-section-14">
+                    <h4 class="mb-0 float-left p-1">
                          O
 
                     </h4>
-                    <div>
-                         <i class="fas fa-angle-down"></i>
+					<div>
+                         <i class="fas fa-angle-down float-right p-1"></i>
                     </div>
+
                </button>
       </div>
-      <div id="umls-vocabularies-section-14" class="collapse" aria-labelledby="heading-umls-vocabularies-section-14" data-parent="#accordion-umls-vocabularies">
-        <div class="card-body">
-          <ul class="list-unstyled">
+      <div id="umls-vocabularies-section-14" class="collapse" aria-labelledby="heading-umls-vocabularies-section-14" data-bs-parent="#accordion-umls-vocabularies">
+        <div class="accordion-body">
+          <ul class="list-unstyled pl-4">
 
             <li><a href="../OMIM/">OMIM</a></li>
 
@@ -605,21 +619,21 @@
         </div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-15">
-        <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-15" aria-expanded="false" aria-controls="umls-vocabularies-section-15">
-                    <h4 class="mb-0">
+    <div class="accordion-item">
+      <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-15">
+        <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-15" aria-expanded="false" aria-controls="umls-vocabularies-section-15">
+                    <h4 class="mb-0 float-left p-1">
                          P
-
                     </h4>
-                    <div>
-                         <i class="fas fa-angle-down"></i>
+					<div>
+                         <i class="fas fa-angle-down float-right p-1"></i>
                     </div>
                </button>
+               
       </div>
-      <div id="umls-vocabularies-section-15" class="collapse" aria-labelledby="heading-umls-vocabularies-section-15" data-parent="#accordion-umls-vocabularies">
-        <div class="card-body">
-          <ul class="list-unstyled">
+      <div id="umls-vocabularies-section-15" class="collapse" aria-labelledby="heading-umls-vocabularies-section-15" data-bs-parent="#accordion-umls-vocabularies">
+        <div class="accordion-body">
+          <ul class="list-unstyled pl-4">
 
             <li><a href="../PCDS/">PCDS</a></li>
 
@@ -636,21 +650,22 @@
         </div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-16">
-        <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-16" aria-expanded="false" aria-controls="umls-vocabularies-section-16">
-                    <h4 class="mb-0">
+    <div class="accordion-item">
+      <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-16">
+        <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-16" aria-expanded="false" aria-controls="umls-vocabularies-section-16">
+                    <h4 class="mb-0 float-left p-1">
                          Q
 
                     </h4>
-                    <div>
-                         <i class="fas fa-angle-down"></i>
+					<div>
+                         <i class="fas fa-angle-down float-right p-1"></i>
                     </div>
+
                </button>
       </div>
-      <div id="umls-vocabularies-section-16" class="collapse" aria-labelledby="heading-umls-vocabularies-section-16" data-parent="#accordion-umls-vocabularies">
-        <div class="card-body">
-          <ul class="list-unstyled">
+      <div id="umls-vocabularies-section-16" class="collapse" aria-labelledby="heading-umls-vocabularies-section-16" data-bs-parent="#accordion-umls-vocabularies">
+        <div class="accordion-body">
+          <ul class="list-unstyled pl-4">
 
             <li><a href="../QMR/">QMR</a></li>
 
@@ -659,21 +674,22 @@
         </div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-17">
-        <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-17" aria-expanded="false" aria-controls="umls-vocabularies-section-17">
-                    <h4 class="mb-0">
+    <div class="accordion-item">
+      <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-17">
+        <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-17" aria-expanded="false" aria-controls="umls-vocabularies-section-17">
+                    <h4 class="mb-0 float-left p-1">
                          R
 
                     </h4>
-                    <div>
-                         <i class="fas fa-angle-down"></i>
+					<div>
+                         <i class="fas fa-angle-down float-right p-1"></i>
                     </div>
+
                </button>
       </div>
-      <div id="umls-vocabularies-section-17" class="collapse" aria-labelledby="heading-umls-vocabularies-section-17" data-parent="#accordion-umls-vocabularies">
-        <div class="card-body">
-          <ul class="list-unstyled">
+      <div id="umls-vocabularies-section-17" class="collapse" aria-labelledby="heading-umls-vocabularies-section-17" data-bs-parent="#accordion-umls-vocabularies">
+        <div class="accordion-body">
+          <ul class="list-unstyled pl-4">
 
             <li><a href="../RAM/">RAM</a></li>
 
@@ -692,21 +708,22 @@
         </div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-18">
-        <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-18" aria-expanded="false" aria-controls="umls-vocabularies-section-18">
-                    <h4 class="mb-0">
+    <div class="accordion-item">
+      <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-18">
+        <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-18" aria-expanded="false" aria-controls="umls-vocabularies-section-18">
+                    <h4 class="mb-0 float-left p-1">
                          S
 
                     </h4>
-                    <div>
-                         <i class="fas fa-angle-down"></i>
+					<div>
+                         <i class="fas fa-angle-down float-right p-1"></i>
                     </div>
+
                </button>
       </div>
-      <div id="umls-vocabularies-section-18" class="collapse" aria-labelledby="heading-umls-vocabularies-section-18" data-parent="#accordion-umls-vocabularies">
-        <div class="card-body">
-          <ul class="list-unstyled">
+      <div id="umls-vocabularies-section-18" class="collapse" aria-labelledby="heading-umls-vocabularies-section-18" data-bs-parent="#accordion-umls-vocabularies">
+        <div class="accordion-body">
+          <ul class="list-unstyled pl-4">
 
             <li><a href="../SCTSPA/">SCTSPA</a></li>
 
@@ -729,21 +746,22 @@
         </div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-19">
-        <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-19" aria-expanded="false" aria-controls="umls-vocabularies-section-19">
-                    <h4 class="mb-0">
+    <div class="accordion-item">
+      <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-19">
+        <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-19" aria-expanded="false" aria-controls="umls-vocabularies-section-19">
+                    <h4 class="mb-0 float-left p-1">
                          T
 
                     </h4>
-                    <div>
-                         <i class="fas fa-angle-down"></i>
+					<div>
+                         <i class="fas fa-angle-down float-right p-1"></i>
                     </div>
+
                </button>
       </div>
-      <div id="umls-vocabularies-section-19" class="collapse" aria-labelledby="heading-umls-vocabularies-section-19" data-parent="#accordion-umls-vocabularies">
-        <div class="card-body">
-          <ul class="list-unstyled">
+      <div id="umls-vocabularies-section-19" class="collapse" aria-labelledby="heading-umls-vocabularies-section-19" data-bs-parent="#accordion-umls-vocabularies">
+        <div class="accordion-body">
+          <ul class="list-unstyled pl-4">
 
             <li><a href="../TKMT/">TKMT</a></li>
 
@@ -752,21 +770,22 @@
         </div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-20">
-        <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-20" aria-expanded="false" aria-controls="umls-vocabularies-section-20">
-                    <h4 class="mb-0">
+    <div class="accordion-item">
+      <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-20">
+        <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-20" aria-expanded="false" aria-controls="umls-vocabularies-section-20">
+                    <h4 class="mb-0 float-left p-1">
                          U
 
                     </h4>
-                    <div>
-                         <i class="fas fa-angle-down"></i>
+					<div>
+                         <i class="fas fa-angle-down float-right p-1"></i>
                     </div>
+
                </button>
       </div>
-      <div id="umls-vocabularies-section-20" class="collapse" aria-labelledby="heading-umls-vocabularies-section-20" data-parent="#accordion-umls-vocabularies">
-        <div class="card-body">
-          <ul class="list-unstyled">
+      <div id="umls-vocabularies-section-20" class="collapse" aria-labelledby="heading-umls-vocabularies-section-20" data-bs-parent="#accordion-umls-vocabularies">
+        <div class="accordion-body">
+          <ul class="list-unstyled pl-4">
 
             <li><a href="../ULT/">ULT</a></li>
 
@@ -783,21 +802,22 @@
         </div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-21">
-        <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-21" aria-expanded="false" aria-controls="umls-vocabularies-section-21">
-                    <h4 class="mb-0">
+    <div class="accordion-item">
+      <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-21">
+        <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-21" aria-expanded="false" aria-controls="umls-vocabularies-section-21">
+                    <h4 class="mb-0 float-left p-1">
                          V
 
                     </h4>
-                    <div>
-                         <i class="fas fa-angle-down"></i>
+					<div>
+                         <i class="fas fa-angle-down float-right p-1"></i>
                     </div>
+
                </button>
       </div>
-      <div id="umls-vocabularies-section-21" class="collapse" aria-labelledby="heading-umls-vocabularies-section-21" data-parent="#accordion-umls-vocabularies">
-        <div class="card-body">
-          <ul class="list-unstyled">
+      <div id="umls-vocabularies-section-21" class="collapse" aria-labelledby="heading-umls-vocabularies-section-21" data-bs-parent="#accordion-umls-vocabularies">
+        <div class="accordion-body">
+          <ul class="list-unstyled pl-4">
 
             <li><a href="../VANDF/">VANDF</a></li>
 
@@ -806,21 +826,22 @@
         </div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-header vocab-left-menu" id="heading-umls-vocabularies-section-22">
-        <button class="btn btn-link btn-block d-flex justify-content-between px-0 collapsed" data-toggle="collapse" data-target="#umls-vocabularies-section-22" aria-expanded="false" aria-controls="umls-vocabularies-section-22">
-                    <h4 class="mb-0">
+    <div class="accordion-item">
+      <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-22">
+        <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-22" aria-expanded="false" aria-controls="umls-vocabularies-section-22">
+                    <h4 class="mb-0 float-left p-1">
                          W
 
                     </h4>
-                    <div>
-                         <i class="fas fa-angle-down"></i>
+					<div>
+                         <i class="fas fa-angle-down float-right p-1"></i>
                     </div>
+
                </button>
       </div>
-      <div id="umls-vocabularies-section-22" class="collapse" aria-labelledby="heading-umls-vocabularies-section-22" data-parent="#accordion-umls-vocabularies">
-        <div class="card-body">
-          <ul class="list-unstyled">
+      <div id="umls-vocabularies-section-22" class="collapse" aria-labelledby="heading-umls-vocabularies-section-22" data-bs-parent="#accordion-umls-vocabularies">
+        <div class="accordion-body">
+          <ul class="list-unstyled pl-4">
 
             <li><a href="../WHO/">WHO</a></li>
 
