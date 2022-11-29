@@ -36,20 +36,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <body onload="prettyPrint();hljs.initHighlighting();">
   <noscript><iframe src="//www.googletagmanager.com/ns.html?id= GTM-MT6MLL " height="0" width="0" style="display:none;visibility:hidden" title="googletagmanager"></iframe></noscript>
   <header>
-<div class="container-fluid bg-primary">
+<div class="container-fluid   bg-primary">
     <div class="container branding">
-      <div class="row container">
-        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 pb-md-0 pb-2 pl-3 pl-sm-0">
-      <a href="/" id="anch_1"><img src="https://www.nlm.nih.gov/images/NLM_White.png" class="img-fluid" alt="NLM logo"></a>
-        </div>
-        <div class="col-lg-4 offset-lg-4 col-md-6 col-sm-6 col-xs-12 pt-xl-4 pt-lg-3 pt-md-4 pt-sm-3 pt-xs-0">
-          <form method="get" action="//vsearch.nlm.nih.gov/vivisimo/cgi-bin/query-meta" target="_self" name="searchForm" id="searchForm2" class="form-inline mb-3 mb-md-0 mt-0 mt-xl-2">
-            <input type="text" name="query" placeholder="Search NLM" aria-label="Search" class="form-control col-10 ui-autocomplete-input" id="search2" autocomplete="off">
-            <input type="hidden" name="v:project" value="nlm-main-website">
-            <button class="btn btn-search" type="submit" aria-label="Search NLM"><i class="fas fa-search"></i></button>
+      <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-9 pb-md-0 pb-2"> <a href="https://www.nlm.nih.gov/" id="anch_1"><img src="//www.nlm.nih.gov/images/NLM_White.png" class="img-fluid" alt="NLM logo"></a> </div>
+        <div class="col-lg-4 offset-lg-4 col-md-6 col-sm-6 col-xs-12 pt-xl-2 pt-lg-1 pt-md-2"> 
+              <form method="get" action="//vsearch.nlm.nih.gov/vivisimo/cgi-bin/query-meta" target="_self" name="searchForm" id="searchForm2" class="form-inline mt-4">            
+            <div class="input-group mb-3">
+<input type="text" name="query" placeholder="Search NLM" aria-label="Search" class="form-control col-10 ui-autocomplete-input" id="search2" autocomplete="off">
+                <input type="hidden" name="v:project" value="nlm-main-website">
+              <button class="btn btn-outline-secondary" type="submit" aria-label="Search NLM" id="button-addon2"><i class="fas fa-search"></i></button>
+            </div>
           </form>
-        </div>  
-      </div>  
-    </div>  
+        </div>
+      </div>
+    </div>
   </div>
   </header>   
