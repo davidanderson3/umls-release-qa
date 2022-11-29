@@ -4,13 +4,11 @@
     <div class="accordion-item">
       <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-1">
         <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-1" aria-expanded="false" aria-controls="umls-vocabularies-section-1">
-                    <h4 class="mb-0 float-left p-1">
+                    <h4 class="mb-0 float-left">
                          A
 
                     </h4>
-					<div>
-                         <i class="fas fa-angle-down float-right p-1"></i>
-                    </div>
+
 
                </button>
       </div>
@@ -36,13 +34,11 @@
     <div class="accordion-item">
       <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-2">
         <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-2" aria-expanded="false" aria-controls="umls-vocabularies-section-2">
-                    <h4 class="mb-0 float-left p-1">
+                    <h4 class="mb-0 float-left">
                          B
 
                     </h4>
-					<div>
-                         <i class="fas fa-angle-down float-right p-1"></i>
-                    </div>
+
 
                </button>
       </div>
@@ -60,13 +56,11 @@
     <div class="accordion-item">
       <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-3">
         <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-3" aria-expanded="false" aria-controls="umls-vocabularies-section-3">
-                    <h4 class="mb-0 float-left p-1">
+                    <h4 class="mb-0 float-left">
                          C
 
                     </h4>
-					<div>
-                         <i class="fas fa-angle-down float-right p-1"></i>
-                    </div>
+
 
                </button>
       </div>
@@ -112,13 +106,11 @@
     <div class="accordion-item">
       <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-4">
         <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-4" aria-expanded="false" aria-controls="umls-vocabularies-section-4">
-                    <h4 class="mb-0 float-left p-1">
+                    <h4 class="mb-0 float-left">
                          D
 
                     </h4>
-					<div>
-                         <i class="fas fa-angle-down float-right p-1"></i>
-                    </div>
+
 
                </button>
       </div>
@@ -146,13 +138,11 @@
     <div class="accordion-item">
       <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-5">
         <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-5" aria-expanded="false" aria-controls="umls-vocabularies-section-5">
-                    <h4 class="mb-0 float-left p-1">
+                    <h4 class="mb-0 float-left">
                          F
 
                     </h4>
-					<div>
-                         <i class="fas fa-angle-down float-right p-1"></i>
-                    </div>
+
 
                </button>
       </div>
@@ -170,13 +160,11 @@
     <div class="accordion-item">
       <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-6">
         <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-6" aria-expanded="false" aria-controls="umls-vocabularies-section-6">
-                    <h4 class="mb-0 float-left p-1">
+                    <h4 class="mb-0 float-left">
                          G
 
                     </h4>
-					<div>
-                         <i class="fas fa-angle-down float-right p-1"></i>
-                    </div>
+
 
                </button>
       </div>
@@ -196,13 +184,11 @@
     <div class="accordion-item">
       <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-7">
         <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-7" aria-expanded="false" aria-controls="umls-vocabularies-section-7">
-                    <h4 class="mb-0 float-left p-1">
+                    <h4 class="mb-0 float-left">
                          H
 
                     </h4>
-					<div>
-                         <i class="fas fa-angle-down float-right p-1"></i>
-                    </div>
+
 
                </button>
       </div>
@@ -234,13 +220,11 @@
     <div class="accordion-item">
       <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-8">
         <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-8" aria-expanded="false" aria-controls="umls-vocabularies-section-8">
-                    <h4 class="mb-0 float-left p-1">
+                    <h4 class="mb-0 float-left">
                          I
 
                     </h4>
-					<div>
-                         <i class="fas fa-angle-down float-right p-1"></i>
-                    </div>
+
 
                </button>
       </div>
@@ -316,13 +300,11 @@
     <div class="accordion-item">
       <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-9">
         <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-9" aria-expanded="false" aria-controls="umls-vocabularies-section-9">
-                    <h4 class="mb-0 float-left p-1">
+                    <h4 class="mb-0 float-left">
                          J
 
                     </h4>
-					<div>
-                         <i class="fas fa-angle-down float-right p-1"></i>
-                    </div>
+
 
                </button>
       </div>
@@ -340,13 +322,11 @@
     <div class="accordion-item">
       <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-10">
         <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-10" aria-expanded="false" aria-controls="umls-vocabularies-section-10">
-                    <h4 class="mb-0 float-left p-1">
+                    <h4 class="mb-0 float-left">
                          K
 
                     </h4>
-					<div>
-                         <i class="fas fa-angle-down float-right p-1"></i>
-                    </div>
+
 
                </button>
       </div>
@@ -364,13 +344,11 @@
     <div class="accordion-item">
       <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-11">
         <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-11" aria-expanded="false" aria-controls="umls-vocabularies-section-11">
-                    <h4 class="mb-0 float-left p-1">
+                    <h4 class="mb-0 float-left">
                          L
 
                     </h4>
-					<div>
-                         <i class="fas fa-angle-down float-right p-1"></i>
-                    </div>
+
 
                </button>
       </div>
@@ -438,13 +416,11 @@
     <div class="accordion-item">
       <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-12">
         <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-12" aria-expanded="false" aria-controls="umls-vocabularies-section-12">
-                    <h4 class="mb-0 float-left p-1">
+                    <h4 class="mb-0 float-left">
                          M
 
                     </h4>
-					<div>
-                         <i class="fas fa-angle-down float-right p-1"></i>
-                    </div>
+
 
                </button>
       </div>
@@ -556,13 +532,11 @@
     <div class="accordion-item">
       <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-13">
         <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-13" aria-expanded="false" aria-controls="umls-vocabularies-section-13">
-                    <h4 class="mb-0 float-left p-1">
+                    <h4 class="mb-0 float-left">
                          N
 
                     </h4>
-					<div>
-                         <i class="fas fa-angle-down float-right p-1"></i>
-                    </div>
+
 
                </button>
       </div>
@@ -594,13 +568,11 @@
     <div class="accordion-item">
       <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-14">
         <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-14" aria-expanded="false" aria-controls="umls-vocabularies-section-14">
-                    <h4 class="mb-0 float-left p-1">
+                    <h4 class="mb-0 float-left">
                          O
 
                     </h4>
-					<div>
-                         <i class="fas fa-angle-down float-right p-1"></i>
-                    </div>
+
 
                </button>
       </div>
@@ -622,12 +594,10 @@
     <div class="accordion-item">
       <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-15">
         <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-15" aria-expanded="false" aria-controls="umls-vocabularies-section-15">
-                    <h4 class="mb-0 float-left p-1">
+                    <h4 class="mb-0 float-left">
                          P
                     </h4>
-					<div>
-                         <i class="fas fa-angle-down float-right p-1"></i>
-                    </div>
+
                </button>
                
       </div>
@@ -653,13 +623,11 @@
     <div class="accordion-item">
       <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-16">
         <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-16" aria-expanded="false" aria-controls="umls-vocabularies-section-16">
-                    <h4 class="mb-0 float-left p-1">
+                    <h4 class="mb-0 float-left">
                          Q
 
                     </h4>
-					<div>
-                         <i class="fas fa-angle-down float-right p-1"></i>
-                    </div>
+
 
                </button>
       </div>
@@ -677,13 +645,11 @@
     <div class="accordion-item">
       <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-17">
         <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-17" aria-expanded="false" aria-controls="umls-vocabularies-section-17">
-                    <h4 class="mb-0 float-left p-1">
+                    <h4 class="mb-0 float-left">
                          R
 
                     </h4>
-					<div>
-                         <i class="fas fa-angle-down float-right p-1"></i>
-                    </div>
+
 
                </button>
       </div>
@@ -711,13 +677,11 @@
     <div class="accordion-item">
       <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-18">
         <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-18" aria-expanded="false" aria-controls="umls-vocabularies-section-18">
-                    <h4 class="mb-0 float-left p-1">
+                    <h4 class="mb-0 float-left">
                          S
 
                     </h4>
-					<div>
-                         <i class="fas fa-angle-down float-right p-1"></i>
-                    </div>
+
 
                </button>
       </div>
@@ -749,13 +713,11 @@
     <div class="accordion-item">
       <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-19">
         <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-19" aria-expanded="false" aria-controls="umls-vocabularies-section-19">
-                    <h4 class="mb-0 float-left p-1">
+                    <h4 class="mb-0 float-left">
                          T
 
                     </h4>
-					<div>
-                         <i class="fas fa-angle-down float-right p-1"></i>
-                    </div>
+
 
                </button>
       </div>
@@ -773,13 +735,11 @@
     <div class="accordion-item">
       <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-20">
         <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-20" aria-expanded="false" aria-controls="umls-vocabularies-section-20">
-                    <h4 class="mb-0 float-left p-1">
+                    <h4 class="mb-0 float-left">
                          U
 
                     </h4>
-					<div>
-                         <i class="fas fa-angle-down float-right p-1"></i>
-                    </div>
+
 
                </button>
       </div>
@@ -805,13 +765,11 @@
     <div class="accordion-item">
       <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-21">
         <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-21" aria-expanded="false" aria-controls="umls-vocabularies-section-21">
-                    <h4 class="mb-0 float-left p-1">
+                    <h4 class="mb-0 float-left">
                          V
 
                     </h4>
-					<div>
-                         <i class="fas fa-angle-down float-right p-1"></i>
-                    </div>
+
 
                </button>
       </div>
@@ -829,13 +787,11 @@
     <div class="accordion-item">
       <div class="accordion-header vocab-left-menu" id="heading-umls-vocabularies-section-22">
         <button class="accordion-button btn-block collapsed bg-secondary border" type="button" data-bs-toggle="collapse" data-bs-target="#umls-vocabularies-section-22" aria-expanded="false" aria-controls="umls-vocabularies-section-22">
-                    <h4 class="mb-0 float-left p-1">
+                    <h4 class="mb-0 float-left">
                          W
 
                     </h4>
-					<div>
-                         <i class="fas fa-angle-down float-right p-1"></i>
-                    </div>
+
 
                </button>
       </div>
