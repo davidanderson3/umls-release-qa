@@ -29,31 +29,16 @@ status=published
     	
     </div>
     <div id="general" class="rep_block_level_one">
-      <p><strong>VSAB: ICNP_2021</strong>
+      <p><strong>VSAB: ICNP_2022</strong>
       </p>
       <div id="rep_identifiers" class="rep_block_level_one">
         <h3>Summary of Changes</h3>
-		<p>
-		Under a September, 2021 agreement, ICNP will be fully integrated with
-SNOMED CT, ensuring that SNOMED CT continues to reflect the valuable
-contribution of nursing to health care. SNOMED International will be responsible
-for the distribution of ICNP, while ICN will retain ownership and control of its
-content.</p>
-        		The ICNP 2021 standalone release consists of a subset of SNOMED CT codes and strings.  This data is represented in the UMLS Metathesaurus with SAB = "ICNP."  
-		
-		<ul>
-		<li>Deprecated TTYs: MTH_PT, XM</li>
-		<li>Deprecated ATNs:  FROMRSAB, FROMVSAB,ICNP_TYPE,MAPSETRSAB,MAPSETVERSION, MAPSETVSAB, 
-		<li>MTH_MAPFROMCOMPLEXITY,MTH_MAPFROMEXHAUSTIVE,MTH_MAPSETCOMPLEXITY, MTH_MAPTOCOMPLEXITY, MTH_MAPTOEXHAUSTIVE, TORSAB, TOVSAB</li>
-		<li>Deprecated REL value:  SY</li>
-		<li> Deprecated RELA values:  mapped_from/mapped_to; mth_british_form_of/mth_has_british_form</li>
-		<li> Deprecated REL values: PAR/CHD; there is no hierarchy for ICNP_2021</li>
-		</ul>
+		<p> The submitted file format has changed slightly, and the "ICNP preferred term" string is not necessarily the same as the SNOMEDCT_US PT string.  All ICNP PTs are in the same CUI with the SNOMEDCT_US PT with the same code.
+		</p>
       </div>
       <div id="rep_change_summary" class="rep_block_level_one">
         <h3>Source Provided Files:</h3>
-        The file "ICNP 
-	2021.csv" consists of a subset of SNOMED CT codes and strings<br/>
+        The files "ICNP-SCT DC.csv" and "ICNP-SCT IC.csv" consist of a subset of SNOMED CT codes and ICNP preferred terms<br/>
     <div id="rep_termtypes" class="rep_block_level_two"> <a
             id="atoms"></a>
           <h3>Atoms (MRCONSO):</h3>
@@ -67,8 +52,22 @@ content.</p>
               <tr>
                 <td>PT
                 </td>
-                <td>STR = ICNP preferred term<br/>
+                <td>STR = ICNP preferred term (Diagnosis/Outcome or Intervention)<br/>
 				CODE, SCUI = SCTID</td>
+              </tr>
+            </tbody>
+          </table>
+		  <h3>Attributes (MRSAT):</h3>
+          
+          <table>
+            <tbody>
+              <tr>
+                <th>ATN</th>
+                <th>Origin</th>
+              </tr>
+              <tr>
+                <td>ICNP_ID</td>
+				<td>ICNP-SCT DC.csv/ICNP-SCT IC.csv: ICNP ID</td>
               </tr>
             </tbody>
           </table>
