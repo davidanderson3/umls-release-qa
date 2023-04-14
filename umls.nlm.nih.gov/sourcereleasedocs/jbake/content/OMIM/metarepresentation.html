@@ -1,6 +1,6 @@
 title=OMIM (Online Mendelian Inheritance in Man) - Metathesaurus Representation
 date=2018-05-07
-updated=2022-11-07
+updated=2023-05-01
 type=page
 status=published
 ~~~~~~
@@ -31,21 +31,18 @@ status=published
     	<div class="col-sm-auto border-left"><a href="#relationships">Relationships</a></div>
     	<div class="col-sm-auto border-left"><a href="#mappings">Mappings</a></div>
     </div>
-      <p><strong>VSAB: OMIM2022_07_25</strong>
+      <p><strong>VSAB: OMIM2023_02_05</strong>
       </p>
       <hr>
       <div id="rep_identifiers" class="rep_block_level_one">
         <h3>Summary of Changes</h3>
-        <p>No changes were made to the OMIM source format or Metathesaurus processing.</p>
+        <p>No changes were made to the OMIM source format.  In the Metathesaurus, relationships (RQ/entry_term_of) were added between PTs and their ETs.</p>
 		</div>
       <hr>
       <div id="rep_change_summary" class="rep_block_level_one">
         <h3>Source Provided Files:</h3>
         <p>XML records are formatted to Metathesaurus specifications.</p>
-        <p>The DTD is available here:<br/>
-        <a href="http://www.ncbi.nlm.nih.gov/dtd/NCBI_Mim.mod.dtd">http://www.ncbi.nlm.nih.gov/dtd/NCBI_Mim.mod.dtd</a></p>
-
-      </div>
+             </div>
       <hr>
       <div id="rep_identifers" class="rep_block_level_one">
         <h3>Identifiers:</h3>
@@ -321,7 +318,6 @@ status=published
               <tr>
                 <td>PAR<br/>
                   CHD<br/>
-
                 </td>
                 <td>(no rela)
                 </td>
@@ -331,15 +327,7 @@ status=published
                   hierarchy.
                 </td>
               </tr>
-              <tr>
-                <td>RQ</td>
-                <td>allelic_variant_of<br/>
-                  has_allelic_variant
-                </td>
-                <td>Connects PTAV atom to its PT atom
-                </td>
-              </tr>
-              <tr>
+                            <tr>
                 <td>RO</td>
                 <td>has_inheritance_type<br/>
                   inheritance_type_of
@@ -353,6 +341,13 @@ status=published
                 </td>
                 <td>Connects PTCS atom not treed under inheritance to PT atom</td>
               </tr>
+			  <tr>
+                <td>RO</td>
+                <td>phenotype_of<br/>
+                  has_phenotype
+                </td>
+                <td>Connects PTAV to PHENO or PHENO_ET</td>
+              </tr>
               <tr>
                 <td>RQ</td>
                 <td>alias_of<br/>
@@ -361,12 +356,18 @@ status=published
                 <td>Connects ETAL atom to PT atom </td>
               </tr>
               <tr>
-                <td>RO</td>
-                <td>phenotype_of<br/>
-                  has_phenotype
+                <td>RQ</td>
+                <td>allelic_variant_of<br/>
+                  has_allelic_variant
                 </td>
-                <td>Connects PTAV to PHENO or PHENO_ET
+                <td>Connects PTAV atom to its PT atom</td>
+              </tr>
+			  <tr>
+                <td>RQ</td>
+                <td>entry_term_of<br/>
+                  has_entry_term
                 </td>
+                <td>Connects PT atom to its ET atoms</td>
               </tr>
               <tr>
                 <td>SY</td>
