@@ -1,12 +1,21 @@
+
 #!/usr/bin/python
 
 import csv
+import os
+import sys
 
-with open('MRSAB_all.txt', 'r') as f:
-    reader = csv.reader(f, delimiter='|')
-    for row in reader:
-        with open('/Users/andersondm2/umlsdoc/umls.nlm.nih.gov/sourcereleasedocs/jbake/content/'+row[3]+'/metadata.html', 'w') as f:
-            f.write(	"title=" + "\n"
+os.system ("awk -F\| '$22==\"Y\"' MRSAB.RRF > MRSAB_all.txt")
+os.system ("awk -F\| '$22==\"Y\"' MRSAB.RRF | awk -F\| '$10==\"2017AB\"' | cut -f3 -d\| | sort | uniq > vsab.txt")
+os.system ("awk -F\| '$22==\"Y\"' MRSAB.RRF | awk -F\| '$10==\"2017AB\"' > MRSAB_2018AA.txt")
+
+f = file('MRSAB_all.txt', 'rb')
+reader = csv.reader(f, delimiter='|')
+
+for row in reader:
+	f = open('jbake/content/'+row[3]+'/metadata.html', 'wb')
+	f.write(
+	"title=" + "\n"
 	"date=2017-11-06" + "\n"
 	"updated=" + "\n"
 	"type=page" + "\n"
@@ -31,4 +40,7 @@ with open('MRSAB_all.txt', 'r') as f:
     "<tr><td>License Contact</td><td>" + row[11] + "</td></tr>" + "\n"
     "<tr><td>Content Contact</td><td>" + row[12] + "</td></tr>" + "\n"
     "<tr><td>Citation</td><td>" + row[24] + "</td></tr>" + "\n"
-    "</table>") 
+    "</table>"
+	)
+	f.close()
+	
