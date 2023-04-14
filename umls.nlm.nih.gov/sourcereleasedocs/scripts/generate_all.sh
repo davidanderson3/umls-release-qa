@@ -10,7 +10,7 @@ bash scripts/syncLatestVersion.sh
 
 # makes a derivative of MRSAB.RRF and then makes metadata.html files for each vocabulary
 
-python scripts/process_mrsab.py
+python3 scripts/process_mrsab.py
 
 # removes semicolons from metadata.html files
 
