@@ -543,6 +543,8 @@
       <div id="umls-vocabularies-section-13" class="collapse" aria-labelledby="heading-umls-vocabularies-section-13" data-bs-parent="#accordion-umls-vocabularies">
         <div class="accordion-body">
           <ul class="list-unstyled pl-4">
+          
+            <li><a href="../NANDA-I/">NANDA-I</a></li>
 
             <li><a href="../NCBI/">NCBI</a></li>
 
