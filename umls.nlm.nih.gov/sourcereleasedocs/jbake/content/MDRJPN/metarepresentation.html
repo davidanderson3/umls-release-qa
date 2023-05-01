@@ -1,6 +1,6 @@
 title=MDRJPN (MedDRA Japanese) - Metathesaurus Representation
 date=2018-05-07
-updated=2022-11-07
+updated=2023-05-01
 type=page
 status=published
 ~~~~~~
@@ -26,14 +26,14 @@ status=published
  href="#attributes">Attributes</a>, <a href="#definitions">Definitions</a>,
 <a href="#relationships">Relationships</a>, <a href="#mappings">Mappings</a></span>
 <div id="general" class="rep_block_level_one">
-<p><strong>VSAB: </strong>MDRJPN25_0</p>
+<p><strong>VSAB: </strong>MDRJPN25_1</p>
 <div id="rep_identifiers" class="rep_block_level_one">
 <h3>Summary of Changes:</h3>
 <p>None</p>
 </div>
 <div id="rep_change_summary" class="rep_block_level_one">
 <h3>Source Provided Files:</h3>
-The UMLS uses MedDRA files distributed in the ASCII/MDRA_J250_UTF8 directory:<br/>
+The UMLS uses MedDRA files distributed in the ASCII/MDRA_J251_UTF8 directory:<br/>
 <ul>
   <li>hlgt_hlt.asc</li>
   <li>hlgt_j.asc</li>
@@ -125,14 +125,14 @@ LT atoms are created where llt_jcurr field of llt_j.asc = "Y"<br /><br />
       </td>
     </tr>
     <tr>
-      <td>LTJKN</td>
+      <td>LLTJKN</td>
       <td>CODE = llt_code field of llt_j.asc<br/>
 STR = llt_kana field of llt_j.asc<br/>
 SDUI = SDUI of corresponding MedDRA English atom based on llt code<br /><br />
       </td>
     </tr>
     <tr>
-      <td>LTJKN1</td>
+      <td>LLTJKN1</td>
       <td>CODE = llt_code field of llt_j.asc<br/>
 STR = llt_kana1 field of llt_j.asc<br/>
 SDUI = SDUI of corresponding MedDRA English atom based on llt code<br /><br />
@@ -289,8 +289,7 @@ of the SMQ including inclusion and exclusion criteria.
     </tr>
     <tr>
       <td>CHD<br/>
-PAR<br/>
-SIB</td>
+PAR</td>
       <td>(no rela)</td>
       <td>Hierarchy extracted from hlt_pt.asc,
 hlgt_hlt.asc, soc_hlgt.asc files (can also be computed from mdhier.asc) using the kanji name as the proxy for the whole concept.</td>

@@ -1,6 +1,6 @@
 title=NCBI (NCBI Taxonomy) - Source Representation
 date=2017-11-06
-updated=2022-11-07
+updated=2023-05-01
 type=page
 status=published
 ~~~~~~
@@ -31,39 +31,11 @@ status=published
 <a id="general"></a>
 <div id="rep_general" class="rep_block_level_one">
 
-<strong>VSAB: </strong>NCBI2022_04_29
+<strong>VSAB: </strong>NCBI2022_12_07
 <hr>
 <h3>Notes</h3>
-<p>Many concepts and terms from the NCBI Taxonomy are excluded during
-Metathesarus source processing.&nbsp; The general criteria for determining
-which concepts and terms are excluded or retained are outlined
-below.&nbsp; See term type descriptions for additional information<br/>
-<br/>
-1. Exclude all names that do not have one of the following name
-classes:
-<ul>
-	<li>scientific name</li>
-	<li>synonym</li>
-	<li>equivalent name</li>
-	<li>common name</li>
-	<li>authority</li>
-</ul>
-
-2. Exclude all concepts below the "species" level in the
-hierarchy. Selected concepts with a rank of "no rank" or "clade" may be
-retained, depending on their hierarchical level.<br/>
-<br/>
-3. Exclude all concepts that have a "division id" value of 11
-(environmental samples) and exclude their descendents.<br/>
-<br/>
-4. Exclude concepts and terms based on certain patterns, e.g.
-remove concepts where rank = "species" with the following words in the
-scientific name: "uncultured," "clone," "unidentified," "uncultivated."<br/>
-<br/>
-
-5. Exclude concepts and their children based on certain punctuation patterns, e.g. if the information is enclosed in single or double quotes<br/>
-<br/>
-
+The UMLS includes concepts where the "specified_species" value in nodes.dmp = 1, indicating that a species in the node's lineage has a formal name. All higher level concepts needed to make a complete hierarchy are also included.
+Other concepts are excluded.
 
 </div>
 <hr>
@@ -71,7 +43,20 @@ scientific name: "uncultured," "clone," "unidentified," "uncultivated."<br/>
 <a id="change_summary"></a>
 <h3>Summary of Changes:</h3>
 
-<p>No changes have been made to the source data format or to Metathesaurus source processing.</p>
+<p>Significant changes to Metathesaurus source processing were made for 2023AA<br/><br/>
+The UMLS will no longer use the algorithm for excluding concepts based on string patterns or hierarchy level.  Beginning with this version, we will include concepts where the "specified_species" value in nodes.dmp = 1, 
+indicating that a species in the node's lineage has a formal name. All higher level concepts needed to make a complete hierarchy are also included.
+Other concepts are excluded.
+<br/><br/>
+Deprecated TTYs:<br/>
+AUN, UAUN
+<br/><br/>
+New ATN: <br/>
+AUTHORITY_NAME
+<br/><br/>
+Explanation:<br/>
+Names in names.dmp where class = "authority" are now represented as attributes in MRSAT, rather than atoms in MRCONSO.
+</p>
 </div>
 <div id="rep_file_summary" class="rep_block_level_one">
 <a id="file_summary"></a>
@@ -143,7 +128,7 @@ site: <a href="https://ftp.ncbi.nih.gov/pub/taxonomy/">https://ftp.ncbi.nih.gov/
 </table>
 
 <p>Not included:
-Selected files and fields are not processed.&nbsp; In addition,
+Selected files and fields are not processed. In addition,
 certain concepts and terms are not included in the Metathesaurus based
 on the criteria described in the "Notes" section above.
 </p>
@@ -235,8 +220,7 @@ Only the following name class values are included in the Metathesaurus:<br/><br/
 scientific name<br/>
 synonym<br/>
 equivalent name<br/>
-common name<br/>
-authority</td>
+common name</td>
       <td>Used to assign MRCONSO.TTY<br/><br/>
 TTY values are assigned as follows:<br/>
       <table>
@@ -266,18 +250,12 @@ TTY values are assigned as follows:<br/>
             <td>CMN</td>
             <td>UCN</td>
           </tr>
-          <tr>
-            <td>authority</td>
-            <td>AUN</td>
-            <td>UAUN</td>
-          </tr>
         </tbody>
       </table>
       <br/>
       <br/>
-Atoms with other "name class" values are excluded during
-UMLS source processing<br/>
-      </td>
+	  NCBI names with name class = "authority" are used to create MRSAT.ATN = "AUTHORITY_NAME".
+Atoms with other "name class" values are excluded</td>
     </tr>
   </tbody>
 </table>
@@ -296,26 +274,20 @@ UMLS source processing<br/>
       <td>1</td>
       <td>tax_id</td>
       <td>node id in GenBank taxonomy database</td>
-      <td>Used to create the hierarchy.<br/>
-Also used to identify concepts to be excluded based on "rank":&nbsp;
-all concepts below the "species" level are excluded.</td>
+      <td>Used to create the hierarchy</td>
     </tr>
     <tr>
       <td>2</td>
       <td>parent_tax_id</td>
       <td>parent node id in GenBank taxonomy database</td>
-      <td>Used to create the hierarchy.<br/>
-Also used to identify concepts to be excluded based on "rank":&nbsp;
-all concepts below the "species" level are excluded.</td>
+      <td>Used to create the hierarchy</td>
     </tr>
     <tr>
       <td>3</td>
       <td>rank</td>
       <td>rank of this node (e.g.
 superkingdome, kingdom, etc.)</td>
-      <td>MRSAT.ATN = "RANK"<br/>
-Also used to identify concepts to be excluded based on "rank":&nbsp;
-all concepts below the "species" level are excluded.</td>
+      <td>MRSAT.ATN = "RANK"</td>
     </tr>
     <tr>
       <td>4</td>
@@ -358,15 +330,13 @@ division.dmp</td>
     <tr>
       <td>10</td>
       <td>inherited MGC flag</td>
-      <td>1 if node inherits mitochondrial
-gencode from parent</td>
+      <td>1 if node inherits mitochondrial gencode from parent</td>
       <td>not processed</td>
     </tr>
     <tr>
       <td>11</td>
       <td>GenBank hidden flag</td>
-      <td>1 if name is suppressed in
-GenBank entry lineage</td>
+      <td>1 if name is suppressed in GenBank entry lineage</td>
       <td>not processed</td>
     </tr>
     <tr>
@@ -381,6 +351,25 @@ GenBank entry lineage</td>
       <td>free text comments and citations</td>
       <td>not processed</td>
     </tr>
+	<tr>
+		<td>14</td>
+		<td>plastid genetic code id</td>
+		<td>see gencode.dmp file</td>
+		<td>not processed</td>
+	</tr>
+	<tr>
+        <td>15</td>
+		<td>inherited PGC flag</td>
+		<td>1 if node inherits plastid gencode from parent</td>
+		<td>not processed</td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>specified_species</td>
+		<td>1 if species in the node's lineage has formal name</td>
+		<td>Used to identify atoms to include UMLS processing; see "Note" above</td>
+	</tr>
+
   </tbody>
 </table>
 </div>

@@ -1,6 +1,6 @@
 title=OMIM (Online Mendelian Inheritance in Man) - Source Representation
 date=2018-05-07
-updated=2022-11-07
+updated=2023-05-01
 type=page
 status=published
 ~~~~~~
@@ -29,12 +29,12 @@ status=published
     	<div class="col-sm-auto border-left"><a href="#file_summary">Summary of Source-Provided Files</a></div>
     	<div class="col-sm-auto border-left"><a href="#file_details">Source-Provided File Details</a></div>
     </div>
-    <p><strong>VSAB: OMIM2022_01_24</strong>
+    <p><strong>VSAB: OMIM2023_02_05</strong>
       </p>
       <hr>
     <div id="change_summary" class="rep_block_level_one"> 
             <h3>Summary of Changes</h3>
-        <p>No changes were made to the OMIM source format or Metathesaurus processing.</p>
+        <p>No changes were made to the OMIM source format.  In the Metathesaurus, relationships (RQ/entry_term_of) were added between PTs and their ETs.</p>
 		
 </div>
       <hr>
@@ -51,12 +51,6 @@ status=published
             <tr>
               <th>File Name</th>
               <th>Description</th>
-            </tr>
-            <tr>
-              <td class="file_field_name"><a
-                  href="http://www.ncbi.nlm.nih.gov/dtd/NCBI_Mim.mod.dtd">http://www.ncbi.nlm.nih.gov/dtd/NCBI_Mim.mod.dtd</a>
-              </td>
-              <td>XML dtd</td>
             </tr>
             <tr>
               <td class="file_field_name"><a
@@ -183,7 +177,10 @@ status=published
                 <br/>
                 Relationships are created to connect PT to ACR atoms:<br/>
                 REL = SY<br/>
-                RELA = expanded_form_of/has_expanded_form
+                RELA = expanded_form_of/has_expanded_form<br/><br/>
+				Relationships are created to connect PT to ET atoms:<br/>
+				REL = RQ<br/>
+				RELA = entry_term_of/has_entry_term<br/>
               </td>
             </tr>
           </tbody>
@@ -244,6 +241,9 @@ status=published
                 Information before the first semicolon is used
                   to create ET atoms<br/>
                   <br/>
+				Relationships are created to connect ET to PT atoms:<br/>
+				REL = RQ<br/>
+				RELA = entry_term_of/has_entry_term<br/><br/>
                 Information after the semicolon is parsed to
                 create ACR atoms<br/>
                 <br/>
@@ -251,8 +251,7 @@ status=published
                 <br/>
                 Relationships are created to connect ET to ACR atoms:<br/>
                 REL = SY<br/>
-                RELA = expanded_form_of/has_expanded_form
-              </td>
+                RELA = expanded_form_of/has_expanded_form</td>
             </tr>
             <tr>
               <td>&lt;Mim-allelic-variant_number&gt;</td>

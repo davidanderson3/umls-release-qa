@@ -1,6 +1,6 @@
 title=ICNP (International Classification for Nursing Practice) - Source Representation
 date=2017-11-06
-updated=2022-11-07
+updated=2023-05-01
 type=page
 status=published
 ~~~~~~
@@ -32,35 +32,18 @@ status=published
 
     <div id="change_summary" class="rep_block_level_one">
       <h3>Summary of Changes:</h3>
-
-      <p>Under a September, 2021 agreement, ICNP will be fully integrated with
-SNOMED CT, ensuring that SNOMED CT continues to reflect the valuable
-contribution of nursing to health care. SNOMED International will be responsible
-for the distribution of ICNP, while ICN will retain ownership and control of its
-content.</p>
-        The ICNP 2021 standalone release consists of a subset of SNOMED CT codes and strings.  This data is represented in the UMLS Metathesaurus with SAB = "ICNP."  
-				<ul>
-		<li>Deprecated TTYs: MTH_PT, XM</li>
-		<li>Deprecated ATNs:  FROMRSAB, FROMVSAB,ICNP_TYPE,MAPSETRSAB,MAPSETVERSION, MAPSETVSAB, 
-		<li>MTH_MAPFROMCOMPLEXITY,MTH_MAPFROMEXHAUSTIVE,MTH_MAPSETCOMPLEXITY, MTH_MAPTOCOMPLEXITY, MTH_MAPTOEXHAUSTIVE, TORSAB, TOVSAB</li>
-		<li>Deprecated REL value:  SY</li>
-		<li> Deprecated RELA values:  mapped_from/mapped_to; mth_british_form_of/mth_has_british_form</li>
-		<li> Deprecated REL values: PAR/CHD; there is no hierarchy for ICNP_2021</li>
-		</ul>
-
     </div>
 
     <div class="rep_block_level_one"> <a
         id="file_summary"></a>
       <h3>Source-Provided Files: Summary</h3>
        
-
-      The file "ICNP 2021.csv" consists of a subset of SNOMED CT codes and strings<br/>
+      The files "ICNP-SCT DC.csv" and "ICNP-SCT IC.csv" consist of a subset of SNOMED CT codes and ICNP preferred terms<br/>
       <br/>
       
       <h3 id="file_details">Source-Provided Files: Details</h3>
 
-      <p>The following is a list of fields available for ICNP_2021 data in "ICNP 2021.csv":
+      <p>The following is a list of fields available for ICNP_2022 data in "ICNP-SCT DC.csv" and "ICNP-SCT IC.csv"
       </p>
       <div class="rep_block_level_two"><a id="file1"></a>
 
@@ -71,22 +54,21 @@ content.</p>
               <th>Field</th>
               <th>Representation</th>
             </tr>
+			<tr>
+              <td>ICNP ID</td>
+              <td>MRSAT.ATN = ICNP_ID</td>
+            </tr>
+			<tr>
+              <td>ICNP preferred term (Diagnosis/Outcome or Intervention)</td>
+              <td>MRCONSO.STR</td>
+            </tr>
             <tr>
               <td>SCTID (SNOMED CT identifier)</td>
-              <td>MRCONSO.CODE<br/>
-                MRCONSO.SCUI
+              <td>MRCONSO.CODE, MRCONSO.SCUI
               </td>
             </tr>
             <tr>
               <td>SNOMED CT preferred term with semantic tag (SNOMED CT fully-specified name)</td>
-              <td>Not directly processed</td>
-            </tr>
-            <tr>
-              <td>ICNP preferred term</td>
-              <td>MRCONSO.STR</td>
-            </tr>
-            <tr>
-              <td>SNOMED CT semantic tag</td>
               <td>Not directly processed</td>
             </tr>
             </tbody>

@@ -1,6 +1,6 @@
 title=NCBI (NCBI Taxonomy) - Metathesaurus Representation
 date=2017-11-06
-updated=2022-11-07
+updated=2023-05-01
 type=page
 status=published
 ~~~~~~
@@ -32,45 +32,32 @@ status=published
     	<div class="col-sm-auto border-left"><a href="#mappings">Mappings</a></div>
     </div>
 <div id="general" class="rep_block_level_one">
-<p><strong>VSAB: </strong>NCBI2022_04_29
+<p><strong>VSAB: </strong>NCBI2022_12_07
 </p>
 <hr>
 <div id="rep_identifiers" class="rep_block_level_one">
 <h3>Summary of Changes</h3>
-No changes have been made to the source data format or to Metathesaurus source processing.<br/>
+Significant changes to Metathesaurus source processing were made for 2023AA<br/><br/>
+The UMLS will no longer use the algorithm for excluding concepts based on string patterns or hierarchy level.  Beginning with this version, we will include concepts where the "specified_species" value in nodes.dmp = 1, 
+indicating that a species in the node's lineage has a formal name. All higher level concepts needed to make a complete hierarchy are also included.
+Other concepts are excluded.
+<br/><br/>
+Deprecated TTYs:<br/>
+AUN, UAUN
+<br/><br/>
+New ATN: <br/>
+AUTHORITY_NAME
+<br/><br/>
+Explanation:<br/>
+Names in names.dmp where class = "authority" are now represented as attributes in MRSAT, rather than atoms in MRCONSO.
 
 </div>
 <hr>
 <div id="rep_change_summary" class="rep_block_level_one">
 <h3>Notes:</h3>
-Many concepts and terms from the NCBI Taxonomy are excluded during
-Metathesarus source processing. The general criteria for determining
-which concepts and terms are excluded or retained are outlined
-below. See term type descriptions for additional information.<br/>
-<br/>
-1. Exclude all names that do not have one of the following name
-classes:
-<ul>
-	<li>scientific name</li>
-	<li>synonym</li>
-	<li>equivalent name</li>
-	<li>common name</li>
-	<li>authority</li>
-</ul>
+The UMLS includes concepts where the "specified_species" value in nodes.dmp = 1, indicating that a species in the node's lineage has a formal name. All higher level concepts needed to make a complete hierarchy are also included.
+Other concepts are excluded.
 
-2. Exclude all concepts below the "species" level in the
-hierarchy. Selected concepts with a rank of "no rank" or "clade" may be
-retained, depending on their hierarchical level.<br/>
-<br/>
-3. Exclude all concepts that have a "division id" value of 11
-(environmental samples) and exclude their descendents.<br/>
-<br/>
-4. Exclude concepts and terms based on certain patterns, e.g.
-remove concepts where rank = "species" with the following words in the
-scientific name: "uncultured," "clone," "unidentified," "uncultivated."<br/>
-<br/>
-
-5. Exclude concepts and their children based on certain punctuation patterns, e.g. if the information is enclosed in single or double quotes<br/>
 <br/>
 
 
@@ -146,14 +133,6 @@ Identifiers are assigned as follows:<br/>
       <th>Origin</th>
     </tr>
     <tr>
-      <td>AUN</td>
-      <td>Authority name</td>
-      <td>CODE = names.dmp.tax_id<br/>
-      STRING = names.dmp.name_txt<br/>
-      SCUI = names.dmp.tax_id<br/>
-      TTY = "AUN" is assigned where "name class" = "authority"</td>
-    </tr>
-    <tr>
       <td>CMN</td>
       <td>Common name</td>
       <td>CODE = names.dmp.tax_id<br/>
@@ -184,14 +163,6 @@ Identifiers are assigned as follows:<br/>
       STRING = names.dmp.name_txt<br/>
       SCUI = names.dmp.tax_id<br/>
       TTY = "SY" is assigned where "name class" = "synonym"</td>
-    </tr>
-    <tr>
-      <td>UAUN</td>
-      <td>Unique authority name</td>
-      <td>CODE = names.dmp.tax_id<br/>
-      STRING = names.dmp.unique_name<br/>
-      SCUI = names.dmp.tax_id<br/>
-      TTY = "UAUN" is assigned where "name class" = "authority"</td>
     </tr>
     <tr>
       <td>UCN</td>
@@ -228,8 +199,6 @@ Identifiers are assigned as follows:<br/>
   </tbody>
 </table>
 </div>
-<p>Note on suppressibility:&nbsp; For term types "AUN" and "UAUN,"
-MRCONSO.SUPPRESS is set to "Y"</p>
 <p>
 Atoms with other term types may systematically be
 set to "E" based on certain string patterns which indicate ambiguity or
@@ -248,6 +217,12 @@ created from "name_txt" will have SUPPRESS set to "E." </p>
       <th>Description</th>
       <th>Origin</th>
     </tr>
+	<tr>
+		<td>AUTHORITY_NAME</td>
+		<td>Authority name</td>
+		<td>names.dmp.name<br/>
+		<td>Created where class = "authority"</td>
+	</tr>
     <tr>
       <td>DIV</td>
       <td>Division/phyla</td>
