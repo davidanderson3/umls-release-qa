@@ -12,6 +12,7 @@ def insert_div_after_endmenu(file_path):
             div.decompose()
 
         new_div = '''
+        <br/>
         <div class="archived border border-danger p-3" style="background-color:#faf1f0;">
             <b>This source is no longer available in the current version of the UMLS Metathesaurus. To obtain content from this source, download the <a href="https://www.nlm.nih.gov/research/umls/licensedcontent/umlsarchives04.html">2022AA UMLS release</a>. The content is also available in the <a href="https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html#umls-history-files">UMLS History Files</a>.</b>
         </div>
