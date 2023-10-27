@@ -1,0 +1,237 @@
+title=ICD10PCS (ICD-10 Procedure Coding System) - Source Representation
+date=2017-11-06
+updated=2023-05-01
+type=page
+status=published
+~~~~~~
+
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+
+<!--endmenu-->
+<br/>
+<p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p>
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#change_summary">Summary of Changes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_summary">Summary of Source-Provided Files</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_details">Source-Provided File Details</a></div>
+    </div>
+    <hr>
+    <div id="change_summary" class="rep_block_level_one">
+      <h3>Summary of Changes:</h3>
+        <br/>No updates for this version.<br/>
+	  	</div>
+	  	    <hr>
+    <div id="file_summary" class="rep_block_level_one">
+      <h3>Source-Provided Files: Summary</h3>
+
+     <p>Numerous documentation and data files are available at: <a href =
+	         "https://www.cms.gov/medicare/icd-10/2024-icd-10-pcs">https://www.cms.gov/medicare/icd-10/2024-icd-10-pcs</a>
+          , including the following:
+      </p>
+        <strong>Documentation and Reference</strong>
+        
+        <table>
+          <tbody>
+            <tr>
+              <th>File</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>definitions_addenda_2024.pdf</td>
+				<td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>icd10pcsCodesFile.pdf</td>
+				<td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>icd10pcsOrderFile.pdf</td>
+				<td>Documentation for the icd10pcs_order_2024.txt file</td>
+            </tr>
+            <tr>
+              <td>icd10pcs_definitions.xsd</td>
+              <td>xml schema document describing definitions xml format</td>
+            </tr>
+            <tr>
+              <td>icd10pcs_index.xsd</td>
+				<td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>icd10pcs_tables.xsd</td>
+				<td>xml schema document describing tabular xml format</td>
+            </tr>
+            <tr>
+              <td>index_addenda_2024.pdf</td>
+				<td>&nbsp;</td>
+            <tr>
+              <td>pcs_2024.pdf</td>
+              <td>Information about tables indicating meaning
+                of codes for specific character positions; index to
+                codes</td>
+            </tr>
+            <tr>
+              <td>pcs_update_summary_2024.pdf</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>tables_addenda_2024.pdf</td>
+              <td>&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    <strong>Data files</strong>
+    <br/>
+    <table>
+      <tbody>
+        <tr>
+          <th>File</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>icd10pcs_order_2024.txt</td>
+          <td>Long and short descriptions</td>
+        </tr>
+        <tr>
+          <td>icd10pcs_tables_2024.xml</td>
+          <td>Tabular data</td>
+        </tr>
+      </tbody>
+    </table>
+      
+      <strong>Not included</strong>:
+      
+    <br/>
+      All data from the order file is represented in the
+      Metathesaurus.  Selected tags from the xml file are not
+      processed at this time, including &lt;explanation&gt; and
+      &lt;includes&gt;.<br/>
+      <div id="file_details" class="rep_block_level_one">
+       <hr>
+      <h3>Source-Provided Files: Details</h3>
+
+      <p>The following is a list of elements available for ICD-10-PCS
+        data:
+      </p>
+      <div class="rep_block_level_two"><a id="file1"></a>
+        <span style="font-weight: bold;">File:
+          icd10pcs_order_YYYY.txt</span>
+        <table>
+          <tbody>
+            <tr>
+              <th>Character<br/>
+                Position
+              </th>
+              <th>Length</th>
+              <th>Description</th>
+              <th>Representation</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td class="file_field_name">5</td>
+              <td>Order number, right justified, zero filled.</td>
+              <td>MRSAT.ATN = ORDER_NO</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td class="file_field_name">1</td>
+              <td>Blank</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>7</td>
+              <td>ICD-10-PCS code. Dots are not included.</td>
+              <td>MRCONSO.CODE<br/>
+                MRCONSO.SCUI
+              </td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>1</td>
+              <td>Blank</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>1</td>
+              <td>0 if the code is a
+                'header' not valid for submission on a UB04.<br/>
+                1 if the code is valid for submission on a UB04.</td>
+              <td>Determines TTY:  "0" for "HS" or "HT"; "1" for "AB" or "PT"</td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td>1</td>
+              <td>Blank</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>17</td>
+              <td>60</td>
+              <td>Short description</td>
+              <td>MRCONSO.STR<br/>
+                TTY = AB or HS, based on value in character position 15</td>
+            </tr>
+            <tr>
+              <td>77</td>
+              <td>1</td>
+              <td>Blank</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>78</td>
+              <td>Up to 300</td>
+              <td>Long description</td>
+              <td>MRCONSO.STR<br/>
+                TTY = HT or PT, based on value in character position 15
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="rep_block_level_two"><a id="file2"></a><br/>
+        <strong>File: icd10pcs_tables_YYYY.xml</strong>
+        <br/>
+        <p>        This file is parsed to extract data for codes at each level of
+        the table, as well as information in the "&lt;definition&gt;"
+        tag.</p>
+        <table>
+          <tbody>
+            <tr>
+              <th>Tag</th>
+              <th>Representation</th>
+            </tr>
+            <tr>
+              <td>&lt;axis&gt;</td>
+              <td>Letter or number of each character of code:
+                concatenated to create MRCONSO.CODE, MRCONSO.SCUI for
+                TTY = HX, MTH_HX, PX<br/>
+                <br/>
+                Description for the value:  concatenated, using "@"
+                as a subfield separator to create MRCONSO.STR for TTY =
+                HX, MTH_HX, PX
+              </td>
+            </tr>
+            <tr>
+              <td>&lt;definition&gt;</td>
+              <td>MRSAT.ATN = ADDED_MEANING
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>

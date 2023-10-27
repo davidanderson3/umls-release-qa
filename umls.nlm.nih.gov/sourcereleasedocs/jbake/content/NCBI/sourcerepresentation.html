@@ -1,6 +1,6 @@
 title=NCBI (NCBI Taxonomy) - Source Representation
 date=2017-11-06
-updated=2023-05-01
+updated=2023-11-06
 type=page
 status=published
 ~~~~~~
@@ -31,11 +31,11 @@ status=published
 <a id="general"></a>
 <div id="rep_general" class="rep_block_level_one">
 
-<strong>VSAB: </strong>NCBI2022_12_07
+<strong>VSAB: </strong>NCBI2023_04_13
 <hr>
 <h3>Notes</h3>
-The UMLS includes concepts where the "specified_species" value in nodes.dmp = 1, indicating that a species in the node's lineage has a formal name. All higher level concepts needed to make a complete hierarchy are also included.
-Other concepts are excluded.
+<p>The UMLS includes concepts where the "specified_species" value in nodes.dmp = 1, indicating that a species in the node's lineage has a formal name. All higher level concepts needed to make a complete hierarchy are also included.
+Other concepts are excluded.</p>
 
 </div>
 <hr>
@@ -43,19 +43,8 @@ Other concepts are excluded.
 <a id="change_summary"></a>
 <h3>Summary of Changes:</h3>
 
-<p>Significant changes to Metathesaurus source processing were made for 2023AA<br/><br/>
-The UMLS will no longer use the algorithm for excluding concepts based on string patterns or hierarchy level.  Beginning with this version, we will include concepts where the "specified_species" value in nodes.dmp = 1, 
-indicating that a species in the node's lineage has a formal name. All higher level concepts needed to make a complete hierarchy are also included.
-Other concepts are excluded.
-<br/><br/>
-Deprecated TTYs:<br/>
-AUN, UAUN
-<br/><br/>
-New ATN: <br/>
-AUTHORITY_NAME
-<br/><br/>
-Explanation:<br/>
-Names in names.dmp where class = "authority" are now represented as attributes in MRSAT, rather than atoms in MRCONSO.
+No changes were made to the source data format or to Metathesaurus source processing
+
 </p>
 </div>
 <div id="rep_file_summary" class="rep_block_level_one">
