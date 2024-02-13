@@ -1,0 +1,312 @@
+title=MEDLINEPLUS (MedlinePlus Health Topics) - Metathesaurus Representation
+date=2018-05-07
+updated=2023-05-01
+type=page
+status=published
+~~~~~~
+
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+
+<!--endmenu-->
+<br/>
+
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#atoms">Atoms</a></div>
+    	<div class="col-sm-auto border-left"><a href="#attributes">Attributes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#definitions">Definitions</a></div>
+    	<div class="col-sm-auto border-left"><a href="#relationships">Relationships</a></div>
+    	<div class="col-sm-auto border-left"><a href="#mappings">Mappings</a></div>
+    </div>
+<div id="general" class="rep_block_level_one">
+  <p><b>VSAB:</b>MEDLINEPLUS_20231101</p>
+  <hr>
+
+  <div id="rep_identifiers" class="rep_block_level_one">
+    <h3>Summary of Changes:</h3>
+       <p>None</p>
+      
+    </div>
+<hr>
+  <h3>Source Provided Files:</h3>The UMLS uses MedlinePlus xml files.<br>
+  <br>
+  Files used were:<br>
+
+  <ul>
+    <li>mplus_topics_2023-11-01.xml</li>
+
+    <li>mplus_topic_groups_2023-11-01.xml</li>
+  </ul>
+</div>
+<hr>
+<div id="rep_identifers" class="rep_block_level_one">
+  <h3>Identifiers:</h3> 
+
+  <table>
+    <tbody>
+      <tr>
+        <th><br></th>
+
+        <th>health-topic</th>
+
+        <th>health-topic groups</th>
+      </tr>
+
+      <tr>
+        <td>CODE<br></td>
+
+        <td>Value of &lt;health-topic id&gt; in mplus_topics_YYYY-MM-DD.xml<br></td>
+
+        <td>Value of &lt;group id&gt; in mplus_topic_groups_YYYY-MM-DD.xml<br></td>
+      </tr>
+
+      <tr>
+        <td>SAUI<br></td>
+
+        <td>Not applicable<br></td>
+
+        <td>Not applicable<br></td>
+      </tr>
+
+      <tr>
+        <td>SCUI<br></td>
+
+        <td>Not applicable<br></td>
+
+        <td>Not applicable<br></td>
+      </tr>
+
+      <tr>
+        <td>SDUI<br></td>
+
+        <td>Not applicable<br></td>
+
+        <td>Not applicable<br></td>
+      </tr>
+    </tbody>
+  </table><a id="atoms"></a>
+<hr>
+  <div id="rep_termtypes" class="rep_block_level_two">
+    <h3>Atoms (MRCONSO):</h3>
+
+    <p> Notes:</p>
+
+    <ul>
+      <li>Only English language records (language="English") are processed for the Metathesaurus.&nbsp; Spanish language records (language="Spanish") are not included.</li>
+
+      <li>&nbsp;Even when duplicated, both ETs and SYs are included for complete representation of the source.<br></li>
+    </ul>
+
+    <table>
+      <tbody>
+        <tr>
+          <th>Term Type</th>
+
+          <th>Description</th>
+
+          <th>Origin:&nbsp; XML tag<br></th>
+
+          <td style="vertical-align: top;"><span style="font-weight: bold;">File(s)</span><br></td>
+        </tr>
+
+        <tr>
+          <td>ET<br></td>
+
+          <td>Entry term<br></td>
+
+          <td>CODE = &lt;health-topic id&gt;<br>
+          STR = &lt;see-reference&gt;<br></td>
+
+          <td style="vertical-align: top;">mplus_topics_YYYY-MM-DD.xml<br></td>
+        </tr>
+
+        <tr>
+          <td>HT<br></td>
+
+          <td>Hierarchical term<br></td>
+
+          <td>CODE = &lt;group id&gt;<br>
+          STR = &lt;group&gt;<br></td>
+
+          <td style="vertical-align: top;">mplus_topic_groups_YYYY-MM-DD.xml</td>
+        </tr>
+
+        <tr>
+          <td>PT<br></td>
+
+          <td>Preferred term<br></td>
+
+          <td>CODE = &lt;health-topic id&gt;<br>
+          STR = &lt;health-topic title&gt;<br></td>
+
+          <td style="vertical-align: top;">mplus_topics_YYYY-MM-DD.xml<br></td>
+        </tr>
+
+        <tr>
+          <td>SY<br></td>
+
+          <td>Synonym<br></td>
+
+          <td>CODE = &lt;health-topic id&gt;<br>
+          STR = &lt;also-called&gt;<br></td>
+
+          <td style="vertical-align: top;">mplus_topics_YYYY-MM-DD.xml<br></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<hr>
+  <div id="rep_attributes" class="rep_block_level_two">
+    <a id="attributes"></a>
+
+    <h3>Attributes (MRSAT):</h3>
+
+
+    <table>
+      <tbody>
+        <tr>
+          <th>Attribute Name</th>
+
+          <th>Origin: XML tag</th>
+
+          <th>File(s)</th>
+        </tr>
+
+        <tr>
+          <td>DATE_CREATED<br></td>
+
+          <td>&lt;health-topics date-created&gt;<br></td>
+
+          <td>mplus_topics_YYYY-MM-DD.xml</td>
+        </tr>
+
+        <tr>
+          <td>MP_OTHER_LANGUAGE_URL<br></td>
+
+          <td>&lt;other-language url&gt;<br></td>
+
+          <td>mplus_topics_YYYY-MM-DD.xml</td>
+        </tr>
+
+        <tr>
+          <td>MP_PRIMARY_INSTITUTE_URL<br></td>
+
+          <td>&lt;primary-institute url&gt;<br></td>
+
+          <td>mplus_topics_YYYY-MM-DD.xml</td>
+        </tr>
+
+        <tr>
+          <td>MP_GROUP_URL<br></td>
+
+          <td>&lt;group url&gt;<br></td>
+
+          <td>mplus_topic_groups_YYYY-MM-DD.xml<br></td>
+        </tr>
+        <tr>
+          <td>SOS<br></td>
+
+          <td>&lt;health-topic meta-desc + health topic url&gt;<br></td>
+
+          <td>mplus_topics_YYYY-MM-DD.xml<br></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<hr>
+  <div id="rep_definitions" class="rep_block_level_two">
+    <a id="definitions"></a>
+
+    <h3>Definitions (MRDEF):</h3>Definitions are created from the value of the &lt;full-summary&gt; tag in the MedlinePlus data.<br>
+
+  </div>
+
+  <div id="rep_relationships" class="rep_block_level_two">
+    Relationships (MRREL): 
+
+    <table>
+      <tbody>
+        <tr>
+          <th>REL</th>
+
+          <th>RELA<br>
+          Inverse RELA</th>
+
+          <th>Origin</th>
+        </tr>
+
+        <tr>
+          <td>CHD<br>
+          PAR<br>
+          SIB</td>
+
+          <td>(no rela)</td>
+
+          <td>Hierarchy created from the &lt;group id&gt; tag values in mplus_topics_YYYY-MM-DD.xml<br></td>
+        </tr>
+
+        <tr>
+          <td>RO<br></td>
+
+          <td>related_to<br></td>
+
+          <td>Connect PT atoms to related topic atoms<br></td>
+        </tr>
+
+        <tr>
+          <td>RQ<br></td>
+
+          <td>(no rela)<br></td>
+
+          <td>Connect ET atoms to PT atoms</td>
+        </tr>
+
+        <tr>
+          <td style="vertical-align: top;">RQ<br></td>
+
+          <td style="vertical-align: top;">mapped_from<br>
+          mapped_to<br></td>
+
+          <td style="vertical-align: top;">Connect PT atoms to MeSH Descriptor (if present). Note: Because the combination of the Descriptor and Qualifier taken together represent the expressed relationship, the pair of rels are given a relationship group to link them together.</td>
+        </tr>
+
+        <tr>
+          <td style="vertical-align: top;">RO<br></td>
+
+          <td style="vertical-align: top;">mapping_qualifier_of<br>
+          has_mapping_qualifier<br></td>
+
+          <td style="vertical-align: top;">Connect PT atoms to MeSH Qualifier (if present). Note: Because the combination of the Descriptor and Qualifier taken together represent the expressed relationship, the pair of rels are given a relationship group to link them together.</td>
+        </tr>
+
+        <tr>
+          <td>SY</td>
+
+          <td>(no rela)<br></td>
+
+          <td>Connect SY atoms to PT atoms<br></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<hr>
+  <div id="mappings" class="rep_block_level_two">
+    <h3>Hierarchy (MRHIER):</h3>
+    <p>The hierarchy is created by connecting a health topic with its health topic group using &lt;group id&gt; tag values in mplus_topics_YYYY-MM-DD.xml.</p>
+    <h3>Mappings (MRMAP):</h3>
+
+    <p>No mappings are represented for MedlinePlus.</p>
+  </div>
+</div>
