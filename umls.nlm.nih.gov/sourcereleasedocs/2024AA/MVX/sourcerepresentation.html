@@ -1,0 +1,175 @@
+title=MVX (Manufacturers of Vaccines) - Source Representation
+date=2018-05-07
+updated=2023-11-06
+type=page
+status=published
+~~~~~~
+
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+
+<!--endmenu-->
+<br/>
+    <p>This page lists specific source data elements and provides
+      information on their representation in the UMLS Metathesaurus.</p>
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#change_summary">Summary of Changes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_summary">Summary of Source-Provided Files</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_details">Source-Provided File Details</a></div>
+    </div>
+
+    <div id="rep_change_summary" class="rep_block_level_one"> <a id="change_summary"></a>
+    <p><strong>VSAB:</strong> MVX2024_02_12</p>
+    <hr>
+      <h3>Summary of Changes:</h3>
+
+      <p>CVX code = 318 (CYFENDUS) not in current RXNORM_20AA_240205F. Removed code from mvx_2024_02_12_TRADENAME.txt and notified source.</p>
+
+    </div>
+    <hr>
+    <div id="file_summary" class="rep_block_level_one">
+      <h3>Source-Provided Files: Summary</h3>
+
+      <div id="file_details" class="rep_block_level_one">
+
+        <h4>Data Files</h4>
+        <a id="data_files"></a>
+        <table>
+          <tbody>
+            <tr>
+              <th>File Name</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>mvx_20240212.txt</td>
+              <td>MVX data file
+              </td>
+            </tr>
+            <tr>
+              <td>mvx_2024_02_12_TRADENAME.txt</td>
+              <td>File connecting manufacturer names (MVX) to vaccine names (CVX)
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      
+        </div>
+<hr>
+       <div class="rep_block_level_two">
+        <h3>Source-Provided Files: Details</h3>
+        <div class="rep_block_level_two"> <a id="file1"></a>
+          </h4>
+          <table>
+            <tbody>
+              <tr>
+                <th>Field Name</th>
+                <th>Representation</th>
+              </tr>
+              <tr>
+                <td>MVX CODE
+                </td>
+                <td>MRCONSO.CODE, MRCONSO.SCUI</td>
+              </tr>
+              <tr>
+                <td>MANUFACTURER NAME
+                </td>
+                <td>MRCONSO.STR, MRCONSO.TTY = PT</td>
+              </tr>
+              <tr>
+                <td>NOTES
+                </td>
+                <td>MRSAT.ATN = SOS
+                </td>
+              </tr>
+              <tr>
+                <td>MANUFACTURER STATUS
+                </td>
+
+                <td>MRSAT.ATN = MANUFACTURER_STATUS, MRSAT.ATV = Active/Inactive<br/></td>
+              </tr>
+              <tr>
+                <td>LAST UPDATED DATE</td>
+                <td>MRSAT.ATN = DATE_MODIFIED, MRSAT.STYPE = SCUI</td>
+              </tr>
+             </tbody>
+          </table>
+
+          <a id="file2"></a>
+          </h4>
+          Used to create relationships between Manufacturers in MVX and
+          vaccines in CVX. <br/>
+          MRREL.REL = RO<br/>
+          MRREL.RELA = manufactures/manufactured_by<br/>
+
+          <table>
+            <tbody>
+              <tr>
+                <th>Field Name</th>
+                <th>Representation</th>
+              </tr>
+              <tr>
+                <td>CDC PRODUCT NAME</td>
+                <td>Not directly used (represented in SAB = CVX)
+                </td>
+              </tr>
+              <tr>
+                <td>SHORT DESCRIPTION
+                </td>
+                <td>Not directly used (represented in SAB = CVX)
+                </td>
+              </tr>
+              <tr>
+                <td>CVX CODE
+                </td>
+                <td>Used to assign MRREL.CUI
+                </td>
+              </tr>
+              <tr>
+                <td>MANUFACTURER
+                </td>
+                <td>Not directly used
+                </td>
+              </tr>
+              <tr>
+                <td>MVX CODE
+                </td>
+                <td>Used to assign MRREL.CUI
+                </td>
+              </tr>
+              <tr>
+                <td>MVX STATUS
+                </td>
+                <td>Not directly used
+                </td>
+              </tr>
+              <tr>
+                <td>PRODUCT NAME STATUS
+                </td>
+                <td>
+                  <p>
+                    Not directly used (represented in SAB = CVX)
+                </td>
+              </tr>
+              <tr>
+                <td>LAST UPDATED DATE
+                </td>
+                <td>MRSAT.ATN = DATE_MODIFIED, MRSAT.STYPE = RUI<br/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
