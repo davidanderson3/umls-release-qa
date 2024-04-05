@@ -1,0 +1,145 @@
+title=NUCCHCPT (National Uniform Claim Committee - Health Care Provider Taxonomy) - Metathesaurus Representation
+date=2017-11-06
+updated=2023-11-06
+type=page
+status=published
+~~~~~~
+
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+
+<!--endmenu-->
+<br/>
+    <p>This page lists UMLS Metathesaurus data elements and traces them
+      back to the specific source data that populates them.</p>
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#atoms">Atoms</a></div>
+    	<div class="col-sm-auto border-left"><a href="#attributes">Attributes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#definitions">Definitions</a></div>
+    </div>
+      <p><strong>VSAB:</strong>NUCCHCPT_23.1</p>
+      <hr>
+      <div id="rep_identifiers" class="rep_block_level_one">
+        <h3>Summary of Changes</h3>
+		<p>There were no changes to the source format or to Metathesaurus source processing</p>
+       <hr>
+        <h3>Source Provided Files: </h3>
+        <p>The input files are in standard comma-separated-values (csv) format, with fields descriptions in the first line. </p>
+
+        <table>
+        	<tbody>
+        	<tr>
+        	<th>File Name</th>
+			<th>Description</th>
+			</tr>
+			<tr>
+			<td>nucc_taxonomy_231.csv</td>
+			<td>Provider taxonomy data file</td>
+			</tr>
+			</tbody>
+		</table>
+
+      </div>
+      <hr>
+      <div id="rep_identifers" class="rep_block_level_one">
+        <h3>Identifiers:</h3>
+        <p>Identifiers are assigned as follows:</p>
+
+
+       <table>
+       <tbody>
+       <tr>
+       	<th> Identifier </th>
+   	   	<th> Origin </th>
+       </tr>
+
+       <tr>
+	          	<td>CODE</td>
+				<td>Code</td>
+       </tr>
+       <tr>
+       			<td>SAUI</td>
+       			<td>Not applicable</td>
+       </tr>
+       <tr>
+				<td>SCUI</td>
+				<td>Same as CODE</td>
+	   </tr>
+		<tr>
+				<td>SDUI</td>
+				<td>Not applicable</td>
+		</tr>
+
+       </tbody>
+       </table>
+
+<hr>
+        <div id="rep_termtypes" class="rep_block_level_two"> <a
+            id="atoms"></a>
+          <h3>Atoms (MRCONSO):</h3>
+
+          <table>
+            <tbody>
+              <tr>
+                <th>Term Type</th>
+                <th>Origin of CODE</th>
+                <th>Origin of STR </th>
+              </tr>
+              <tr>
+                <td>PT</td>
+                <td>CODE, SCUI: Code value from nucc_taxonomy_231.csv</td>
+                <td>Created by concatenating &lt;Grouping&gt;; &lt;Classification&gt;, &lt;Specialization&gt; fields<br/>
+                For example, the STR for 101YS0200X is "Behavioral Health &amp; Social Service Providers; Counselor, School"</td>
+              </tr>
+ 			  <tr>
+				<td>OP</td>
+				<td>CODE, SCUI: Code value from nucc_taxonomy_231.csv</td>
+				<td>Created by concatenating &lt;Grouping&gt;; &lt;Classification&gt;, &lt;Specialization&gt; fields<br/>
+				For example, the STR for 103GC0700X is "Behavioral Health &amp; Social Service Providers; Clinical Neuropsychologist, Clinical"<br/>
+				TTY = OP is assigned when the "Notes" field indicates that the code is inactive.
+				</td>
+              </tr>
+            </tbody>
+          </table>
+         
+        </div>
+        <hr>
+        <div id="rep_attributes" class="rep_block_level_two"> <a
+            id="attributes"></a>
+            <h3>Attributes (MRSAT):</h3>
+		<table>
+            <tbody>
+              <tr>
+                <th>ATN</th>
+                <th>Origin</th>
+              </tr>
+              <tr>
+              	<td>NOTE</td>
+              	<td>Notes field</td>
+              </tr>
+            </tbody>
+        </table>
+        </div>
+        <hr>
+        <div id="rep_definitions" class="rep_block_level_two"> <a
+            id="definitions"></a>
+          <h3>Definitions (MRDEF):</h3>
+
+          <p>Extracted from "Definition" field<br/>
+          </p>
+        </div>
+
+
+    </div>

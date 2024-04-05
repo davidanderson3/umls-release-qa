@@ -1,0 +1,209 @@
+title=PNDS (Perioperative Nursing Data Set) - Metathesaurus Representation
+date=2017-11-06
+updated=2023-11-06
+type=page
+status=published
+~~~~~~
+
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+
+<!--endmenu-->
+<br/>
+<p>This page lists UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
+
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#atoms">Atoms</a></div>
+    	<div class="col-sm-auto border-left"><a href="#attributes">Attributes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#definitions">Definitions</a></div>
+    	<div class="col-sm-auto border-left"><a href="#relationships">Relationships</a></div>
+    	<div class="col-sm-auto border-left"><a href="#mappings">Mappings</a></div>
+    </div>
+
+  <div id="general" class="rep_block_level_one">
+    <p><b>VSAB:</b> PNDS_2024</p>
+<hr>
+    <div id="rep_identifiers" class="rep_block_level_one">
+      <h3>Summary of Changes</h3>
+
+      <p>PNDS now includes synonyms.</p>
+	  <p>SNOMEDCT_US mappings are no longer provided</p>
+
+    </div>
+<hr>
+    <div id="rep_change_summary" class="rep_block_level_one">
+      <h3>Source Provided Files:</h3>The PNDS distribution includes the following:<br/>
+
+      <h4>Data Files</h4><a name="data_files" id="data_files"></a>
+
+      <table>
+        <tbody>
+          <tr>
+            <th>File Name</th>
+
+            <th>Description</th>
+          </tr>
+			<tr>
+             <td>PNDS Version 2024 for UMLS.xlsx</td>
+            <td>An Excel file with 6 content tabs: Domain, Assessment, Nursing Problems, Outcomes, Implementation, and Evaluation</td>
+		  </tr>
+        </tbody>
+      </table>
+    </div>
+<hr>
+    <div id="rep_identifers" class="rep_block_level_one">
+      <h3>Identifiers:</h3>
+      <p>Identifiers are assigned as follows:</p>
+      
+
+      <table>
+        <tbody>
+          <tr>
+            <td>CODE</td>
+            <td>Value of CODE column<br/>
+            Additional hierarchical navigational atoms: MTHU# assigned during Metathesaurus source processing</td>
+          </tr>
+
+          <tr>
+            <td>SAUI</td>
+            <td>Not Applicable</td>
+          </tr>
+
+          <tr>
+            <td>SCUI</td>
+            <td>Same as CODE</td>
+          </tr>
+
+          <tr>
+            <td>SDUI</td>
+            <td>Not applicable</td>
+          </tr>
+        </tbody>
+      </table>
+<hr>
+      <div id="rep_termtypes" class="rep_block_level_two">
+        <a name="atoms" id="atoms"></a>
+
+        <h3>Atoms (MRCONSO):</h3>
+
+        <table>
+          <tbody>
+            <tr>
+              <th>Term Type</th>
+              <th>Origin</th>
+            </tr>
+            <tr>
+              <td>HT</td>
+              <td>HT atoms are created for each "Domain."  In addtion, for navigational purposes, HT atoms are created for
+              each tab:  Assessment, Problem, Implementation, Outcome, Evaluation</td>
+            </tr>
+            <tr>
+              <td>PT<br/></td>
+              <td>PT atoms are created from the "Label" field for assessments, evaluations, outcomes, implementations and problems.</td>
+            </tr>
+			<tr>
+              <td>SY</td>
+              <td>SY atoms are created from the "Short Label" field for assessments, evaluations, outcomes, implementations and problems.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+<hr>
+      <div id="rep_attributes" class="rep_block_level_two">
+        <a name="attributes" id="attributes"></a>
+
+        <h3>Attributes (MRSAT):</h3>
+
+        <table>
+          <tbody>
+            <tr>
+              <th>Attribute Name</th>
+              <th>Origin</th>
+            </tr>
+            <tr>
+            	<td>SOS</td>
+            	<td>For domain atoms: Extension column<br/>
+				For outcome atoms:  Interpretive Statement column</td>
+            </tr>
+           </tbody>
+        </table>
+      </div>
+<hr>
+      <div id="rep_definitions" class="rep_block_level_two">
+        <a name="definitions" id="definitions"></a>
+
+        <h3>Definitions (MRDEF):</h3>
+
+        <p>For Domains, definitions are created from data in the "Domain definition" column. For all other tabs,
+        definitions are created from data in the "CODE_DEFINITION" column.</p>
+      </div>
+<hr>
+      <div id="rep_relationships" class="rep_block_level_two">
+        <a name="relationships" id="relationships"></a>
+
+        <h3>Relationships (MRREL):</h3>
+
+        <table>
+          <tbody>
+            <tr>
+              <th>REL</th>
+
+              <th>RELA<br/>
+              Inverse RELA</th>
+
+              <th>ORIGIN</th>
+            </tr>
+
+            <tr>
+              <td>PAR<br/>
+              CHD<br/></td>
+
+              <td>N/A</td>
+
+              <td>
+                Hierarchical relationships created from the following data:<br/>
+
+                <ul>
+                  <li>Parent-child relationships based on code:  In the "CODE" column, the child code is represented
+                  with the same code as the parent with a decimal and incremental numbers for each child. For example,
+                  the children of Im.280 are Im.280.1 and Im.280.2.</li>
+
+                  <li>Domains: Domains are added to the hierarchy based on the "Domain Range" column</li>
+
+                  <li>Additional HTs were created for Assessment, Evaluation, Implementation, and Outcome.
+                  These atoms are used to create the top of the multi-level representation.
+                  Each domain encompasses a range of codes. For example, for interventions relating to
+                  "Assessment," codes A.0 - A.199 fall under Domain 1, "Safety."  PNDS contexts were built to reflect this organization.<br/></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+            	<td>SY</td>
+            	<td>expanded_form_of/has_expanded_form</td>
+            	<td>Connect SY atoms to PTs</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+<hr>
+      <div id="rep_mappings" class="rep_block_level_two">
+        <a name="mappings" id="mappings"></a>
+
+        <h3>Mappings (MRMAP):</h3>
+
+        <p>No mappings to external sources are provided for PNDS.</p>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,211 @@
+title=MEDCIN (MEDCIN) - Metathesaurus Representation
+date=2018-05-07
+updated=2023-11-06
+type=page
+status=published
+~~~~~~
+
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+
+<!--endmenu-->
+<br/>
+<p>This page lists UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
+<a id="top-of-page"></a>
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#atoms">Atoms</a></div>
+    	<div class="col-sm-auto border-left"><a href="#attributes">Attributes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#definitions">Definitions</a></div>
+    	<div class="col-sm-auto border-left"><a href="#relationships">Relationships</a></div>
+    	<div class="col-sm-auto border-left"><a href="#mappings">Mappings</a></div>
+    </div>
+<div id="general" class="rep_block_level_one">
+<p><strong>VSAB:</strong> MEDCIN3_2023_12_19</p>
+</div>
+<hr>
+<div id="rep_identifiers" class="rep_block_level_one">
+</div>
+<h3>Summary of Changes</h3>
+<p>Mappings to SNOMEDCT_US_2023_09_01</p>
+<hr>
+<div id="rep_change_summary" class="rep_block_level_one">
+<h3>Source Provided Files:</h3>
+
+The Metathesaurus uses the following four pipe-delimited MEDCIN files:
+<ul>
+  <li>UMLS_MEDCIN_CONCEPTS2023-12-19.txt</li>
+  <li>UMLS_MEDCIN_DESCRIPTIONS2023-12-19.txt</li>
+  <li>UMLS_MEDCIN_HIERARCHY2023-12-19.txt</li>
+  <li>UMLS_MEDCIN_SNOMED2023-12-19.txt</li>
+</ul>
+</div>
+<hr>
+<div id="rep_identifers" class="rep_block_level_one">
+<h3>Identifiers:</h3>
+
+Identifiers are assigned as follows:<br/>
+<ul>
+  <li>CODE: MEDCIN ID</li>
+  <li>SAUI: Not Applicable</li>
+  <li>SCUI: MEDCIN ID</li>
+  <li>SDUI: Not Applicable</li>
+</ul>
+<div id="rep_termtypes" class="rep_block_level_two">
+<a id="atoms"></a>
+<h3>Atoms (MRCONSO):</h3>
+&nbsp;&nbsp;<br/>
+<table>
+  <tbody>
+    <tr>
+      <th>Term Type</th>
+      <th>Origin</th>
+    </tr>
+    <tr>
+      <td>FN</td>
+      <td>An "FN" atom is created for each line of
+UMLS_MEDCIN_CONCEPTSyyyy-mm-dd.TXT, as follows: <br/>
+      CODE = MEDCINID<br/>
+STR = CONCEPT_DESCRIPTION<br/>
+SCUI = MEDCIN ID<br/>
+      </td>
+    </tr>
+    <tr>
+      <td>PT</td>
+      <td>A "PT" atom is created for each line of
+UMLS_MEDCIN_DESCRIPTIONSyyyy-mm-dd.TXT having PREF_FLAG_ID=1, as
+follows: <br/>
+      CODE = MEDCIN ID<br/>
+STR = DESCRIPTION<br/>
+SCUI = MEDCIN ID
+      </td>
+    </tr>
+    <tr>
+      <td>SY</td>
+      <td>An "SY" atom is created for each line of
+UMLS_MEDCIN_DESCRIPTIONSyyyy-mm-dd.TXT having PREF_FLAG_ID=0, as
+follows: <br/>
+      CODE = MEDCIN ID<br/>
+STR = DESCRIPTION<br/>
+SCUI = MEDCIN ID
+      </td>
+    </tr>
+    <tr>
+      <td>XM</td>
+      <td>One"XM"(cross mapping set) atom is generated, as follows: <br/>
+      CODE = "MTHU000001"<br/>
+STR = "MEDCIN3_yyyy_mm_dd to SNOMEDCT_US_yyyy_mm_dd Mappings"<br/>
+SCUI = "" (blank)<br/>
+This data is added during Metathesaurus source processing.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<hr>
+<div id="rep_attributes" class="rep_block_level_two">
+<a id="attributes"></a>
+<h3>Attributes (MRSAT):</h3>
+<table>
+  <tbody>
+    <tr>
+      <th>Attribute Name</th>
+      <th>STYPE</th>
+      <th>Origin</th>
+    </tr>
+    <tr>
+      <td>PREF_FLAG_ID</td>
+      <td>AUI</td>
+      <td>PREF_FLAG_ID from UMLS_MEDCIN_DESCRIPTIONSyyyy-mm-dd.TXT</td>
+    </tr>
+    <tr>
+      <td>PREF_FLAG_ID</td>
+      <td>RUI</td>
+      <td>PREF_FLAG_ID from UMLS_MEDCIN_SNOMEDyyyy-mm-dd.TXT</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<hr>
+<div id="rep_definitions" class="rep_block_level_two">
+<br/>
+In addition, the following map set attributes are added during
+Metathesaurus source processing:<br/>
+<div style="margin-left: 40px;">FROMRSAB<br/>
+FROMVSAB<br/>
+MAPSETRSAB<br/>
+MAPSETVERSION<br/>
+MAPSETVSAB<br/>
+MTH_MAPFROMCOMPLEXITY<br/>
+MTH_MAPFROMEXHAUSTIVE<br/>
+MTH_MAPSETCOMPLEXITY<br/>
+MTH_MAPTOCOMPLEXITY<br/>
+MTH_MAPTOEXHAUSTIVE<br/>
+TORSAB<br/>
+TOVSAB<br/>
+XMAP<br/>
+XMAPFROM<br/>
+XMAPTO<br/>
+</div>
+<hr>
+<a id="definitions"></a>
+<h3>Definitions (MRDEF):</h3>
+
+<p>No definitions are provided for MEDCIN.</p>
+</div>
+<hr> 
+<div id="rep_relationships" class="rep_block_level_two">
+<a id="relationships"></a>
+<h3>Relationships (MRREL):</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <th>REL</th>
+      <th>RELA/Inverse RELA</th>
+      <th>ORIGIN</th>
+    </tr>
+    <tr>
+      <td>CHD<br/>
+PAR</td>
+      <td>(blank)</td>
+      <td>Hierarchical relationships derived from the "NODEKEY" values
+in UMLS_MEDCIN_HIERARCHYyyyy-mm-dd.TXT. The final two-character token
+is removed from each concept's "NODEKEY" to produce the "NODEKEY" of
+the concept's parent. These two concepts are then linked by a pair of
+"PAR/CHD" relationships.</td>
+    </tr>
+    <tr>
+      <td>RB<br/>
+RN<br/>
+RO<br/>
+SY</td>
+      <td>(many RELA values)</td>
+      <td>Relationships are created for the MEDCIN-to-SNOMEDCT mappings
+in UMLS_MEDCIN_SNOMEDyyyy-mm-dd.TXT. The "REL" and "RELA" are set
+corresponding to the "RELATIONSHIPTYPE" field.</td>
+    </tr>
+  </tbody>
+</table> 
+</div>
+<hr>
+<div id="mappings" class="rep_block_level_two">
+<h3>Mappings (MRMAP):</h3>
+
+<p>One map set ("XM" atom, along with associated attributes and
+mappings) is included for MEDCIN.&nbsp; Mappings are extracted from the
+file "UMLS_MEDCIN_SNOMEDyy-mm-dd.TXT.&nbsp; Mappings are created for
+entries where the RELATIONSHIPTYPE = "168666000" (same_as).</p>
+</div>
+</div>
+
