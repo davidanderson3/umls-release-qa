@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+app-sources tr td{
+  border-width: 1px;
+  padding: 5px;
+}
+
+app-sources h2 {
+margin: 10px 0px 10px 0px;
+padding: 10px 0px 10px 0px;
+}
+
+nav[aria-label="breadcrumb"] {
+font-size: 0.8em;
+padding: 10px 0px 10px 0px;
+}
+
