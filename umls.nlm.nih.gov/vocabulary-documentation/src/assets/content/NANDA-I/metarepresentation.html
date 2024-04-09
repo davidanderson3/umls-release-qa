@@ -1,0 +1,262 @@
+
+<br/>
+<p>This page lists UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
+
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#atoms">Atoms</a></div>
+    	<div class="col-sm-auto border-left"><a href="#attributes">Attributes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#definitions">Definitions</a></div>
+    	<div class="col-sm-auto border-left"><a href="#relationships">Relationships</a></div>
+    	<div class="col-sm-auto border-left"><a href="#mappings">Mappings</a></div>
+    </div>
+
+<div id="general" class="rep_block_level_one">
+  <p><strong>VSAB:</strong> NANDA-I_2018-2020</p>
+<hr>
+  <div id="rep_identifiers" class="rep_block_level_one">
+    <h3>Summary of Changes</h3>
+
+	<p>The NANDA-I data format had signficant changes, and UMLS source processing was adjusted accordingly.</p>
+
+    New ATNS:
+    <ul>
+	<li>LOE</li>
+	<li>SOS</li>
+	</ul>
+
+	New RELA/RELA_INVERSE:
+	<ul>
+	<li>associated_condition_of/has_associated_condition</li>
+	<li>population_at_risk_for/has_at_risk_population</li>
+	</ul>
+
+  </div>
+<hr>
+  <div id="rep_change_summary" class="rep_block_level_one">
+    <h3>Source Provided Files:</h3>
+
+    <table>
+      <tbody>
+        <tr>
+          <th>File Name</th>
+
+          <th>Description</th>
+        </tr>
+
+        <tr>
+          <td>NANDA_ALLDATA_EXCEL_English_updated-20180108.xlsx</td>
+
+          <td>Data file</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<hr>
+  <div id="rep_identifers" class="rep_block_level_one">
+   
+
+    <h3>Identifiers:</h3>
+
+    <p>Identifiers are assigned as follows:</p>CODE:
+
+    <ul>
+      <li>TTY = HC: Domain Id concatenated with Class Id (e.g. 3_10) </li>
+
+      <li>TTY = HT: Domain Id</li>
+
+      <li>TTY = PT: Diagnosis Code</li>
+
+      <li>TTY = RT: Phrase Code</li>
+    </ul>SAUI: Not applicable<br/>
+    SCUI: Not applicable<br/>
+    SDUI: Not applicable<br/>
+<hr>
+    <div id="rep_termtypes" class="rep_block_level_two">
+      <a id="atoms"></a>
+
+      <h3>Atoms (MRCONSO):</h3>
+
+      <table>
+        <tbody>
+          <tr>
+            <th>Term Type</th>
+
+            <th>Origin</th>
+          </tr>
+
+          <tr>
+            <td>HC</td>
+
+            <td>Domain Id concatenated with Class Id<br/>
+            STR: Class Label<br/>
+            Suppress = "N"</td>
+          </tr>
+
+          <tr>
+            <td>HT</td>
+
+            <td>CODE: Domain Id <br/>
+            STR: Class Label<br/>
+            Suppress = "N"</td>
+          </tr>
+
+          <tr>
+            <td>PT</td>
+
+            <td>CODE: Diagnosis Code<br/>
+            STR: Diagnosis Label<br/>
+            Suppress = "N"</td>
+          </tr>
+
+          <tr>
+            <td>RT</td>
+
+            <td>CODE: Phrase Code<br/>
+            STR: Phrase<br/>
+            Suppress = "N"</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+<hr>
+    <div id="rep_attributes" class="rep_block_level_two">
+      <a id="attributes"></a>
+
+      <h3>Attributes (MRSAT):</h3>
+
+      <table>
+        <tbody>
+          <tr>
+            <th>ATN</th>
+
+            <th>Origin</th>
+
+            <th>Notes</th>
+          </tr>
+
+          <tr>
+            <td>DATE_CREATED</td>
+
+            <td>Year Established</td>
+
+            <td>&lt;YYYY&gt; format</td>
+          </tr>
+
+          <tr>
+            <td>DATE_LAST_MODIFIED</td>
+
+            <td>Revision Year</td>
+
+            <td>May have multiple &lt;YYYY&gt; values</td>
+          </tr>
+          <tr>
+          	<td>LOE</td>
+          	<td>LOE</td>
+          	<td>Level of Effort; for clarity, the ATV includes the numeric value of the LOE as well as an expanded explanation</td>
+          </tr>
+          <tr>
+          	<td>SOS</td>
+          	<td>Footnote</td>
+          	<td></td>
+          </tr>
+          <tr>
+            <td>SUBCATEGORY</td>
+
+            <td>Subcategory</td>
+
+            <td>Indicates a subheading designated by the DC/ReF/RiF field. Attached to the RUI for the relationship between the PT and RT atoms.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+<hr>
+    <div id="rep_definitions" class="rep_block_level_two">
+      <a id="definitions"></a>
+
+      <h3>Definitions (MRDEF):</h3>
+
+      Extracted from "Domain Definition," "Class Definition," and "Diagnosis Definition" fields.
+    </div>
+<hr>
+    <div id="rep_relationships" class="rep_block_level_two">
+      <a id="relationships"></a>
+
+      <h3>Relationships (MRREL); Hierarchy (MRHIER)</h3>
+
+      <table>
+        <tbody>
+          <tr>
+            <th>REL</th>
+
+            <th>RELA<br/>
+            Inverse RELA</th>
+
+            <th>Origin</th>
+          </tr>
+
+		  <tr>
+		    <td>RO</td>
+		    <td>associated_condition_of<br/>
+		    has_associated_condition</td>
+		    <td>Connect PT to RTs; RELA RELA assigned based on the value of the Category field.</td>
+		  </tr>
+          <tr>
+            <td>RO</td>
+
+            <td>defining_characteristic_of<br/>
+            has_defining_characteristic</td>
+
+            <td>Connect PT to RTs; RELA assigned based on the value of the Category field.</td>
+          </tr>
+		  <tr>
+		    <td>RO</td>
+		    <td>population_at_risk_for<br/>
+		    has_at_risk_population</td>
+		    <td>Connect PT to RTs; RELA RELA assigned based on the value of the Category field.</td>
+		  </tr>
+          <tr>
+            <td>RO</td>
+
+            <td>related_factor_of<br/>
+            has_related_factor</td>
+
+            <td>Connect PT to RTs; RELA assigned based on the value of the Category.</td>
+          </tr>
+
+          <tr>
+            <td>RO</td>
+
+            <td>risk_factor_of<br/>
+            has_risk_factor</td>
+
+            <td>Connect PT to RTs; RELA assigned based on the value of the Category.</td>
+          </tr>
+
+          <tr>
+            <td>CHD<br/>
+            PAR</td>
+
+            <td>(no RELA)</td>
+
+            <td>Hierarchy, created based on the Domain, Class and Diagnosis</td>
+          </tr>
+
+          <tr>
+            <td>SIB</td>
+
+            <td>(no RELA)</td>
+
+            <td>Relationships between codes with the same parents.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+<hr>
+    <div id="mappings" class="rep_block_level_two">
+      <h3>Mappings (MRMAP):</h3>
+
+      <p>No mappings are supplied for NANDA-I.</p>
+    </div>
+  </div>
+</div>

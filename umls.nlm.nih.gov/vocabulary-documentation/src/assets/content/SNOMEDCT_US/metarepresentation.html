@@ -1,0 +1,772 @@
+
+<br />
+<p>This page lists UMLS Metathesaurus data elements and traces them
+      back to the specific source data that populates them.</p>
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#atoms">Atoms</a></div>
+    	<div class="col-sm-auto border-left"><a href="#attributes">Attributes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#definitions">Definitions</a></div>
+    	<div class="col-sm-auto border-left"><a href="#relationships">Relationships</a></div>
+    	<div class="col-sm-auto border-left"><a href="#mappings">Mappings</a></div>
+    </div>
+    <div id="general" class="rep_block_level_one">
+      <p><b>VSAB:</b> SNOMEDCT_2023_03_01<br/>
+	  <b>Version:</b> 20230301<br/> <!-- ??? -->
+	  <b>ReleaseCode:</b> US1000124<br/> <!-- Either US1000124 or INT -->
+	  <b>Edition:</b> USEditionRF2<br/>
+	  </p>
+    </div>
+    <hr>
+    <div id="rep_identifiers" class="rep_block_level_one">
+      <h3>Summary of Changes</h3>
+
+There were no changes to the SNOMEDCT_US format or to Metathesaurus source processing.  The following is a new Attribute (ATN) value:<table>
+		<tbody>
+			<tr>
+				<td>COUNT_OF_BASE_AND_MODIFICATION_PAIR</td>
+			</tr>
+		</tbody>
+	  </table>
+
+    </div>
+		<br/>
+		<div id="rep_change_summary" class="rep_block_level_one">
+      <h3>Original Files:</h3>
+      <p>
+      The Metathesaurus SNOMEDCT data is taken from the following
+      tab-delimited SNOMEDCT files, found in the specified folders under SnomedCT_&lt;edition&gt;_PRODUCTION_&lt;YYYYMMDD&gt;T120000Z/Snapshot/:
+		</p>
+		
+	  <table>
+		<tbody>
+			<tr>
+				<th>Subfolder</th>
+				<th>File name</th>
+				<th>Short name</th>
+			</tr>
+			<tr>
+				<td>Terminology</td>
+				<td>sct2_Concept_Snapshot_&lt;ReleaseCode&gt;_&lt;YYYYMMDD&gt;.txt</td>
+				<td>Concept</td>
+			</tr>
+			<tr>
+				<td>Terminology</td>
+				<td>sct2_Description_Snapshot-en_&lt;ReleaseCode&gt;_&lt;YYYYMMDD&gt;.txt</td>
+				<td>Description</td>
+			</tr>
+			<tr>
+				<td>Terminology</td>
+				<td>sct2_Relationship_Snapshot_&lt;ReleaseCode&gt;_&lt;YYYYMMDD&gt;.txt</td>
+				<td>Relationship</td>
+			</tr>
+			<tr>
+				<td>Terminology</td>
+				<td>sct2__RelationshipConcreteValues_Snapshot_&lt;ReleaseCode&gt;_&lt;YYYYMMDD&gt;.txt</td>
+				<td>RelationshipConcreteValues</td>
+			</tr>
+			<tr>
+				<td>Terminology</td>
+				<td>sct2_TextDefinition_Snapshot_&lt;ReleaseCode&gt;_&lt;YYYYMMDD&gt;.txt</td>
+				<td>Definition</td>
+			</tr>
+			<tr>
+				<td>Refset/Content</td>
+				<td>der2_cRefset_AssociationSnapshot_&lt;ReleaseCode&gt;_&lt;YYYYMMDD&gt;.txt</td>
+				<td>Association</td>
+			</tr>
+			<tr>
+				<td>Refset/Content</td>
+				<td>der2_cRefset_AttributeValueSnapshot_&lt;ReleaseCode&gt;_&lt;YYYYMMDD&gt;.txt</td>
+				<td>AttributeValue</td>
+			</tr>
+			<tr>
+				<td>Refset/Content</td>
+				<td>der2_Refset_SimpleSnapshot_&lt;ReleaseCode&gt;_&lt;YYYYMMDD&gt;.txt</td>
+				<td>Simple</td>
+			</tr>
+			<tr>
+				<td>Refset/Language</td>
+				<td>der2_cRefset_LanguageSnapshot-en_&lt;ReleaseCode&gt;_&lt;YYYYMMDD&gt;.txt</td>
+				<td>Language</td>
+			</tr>
+			<tr>
+				<td>Refset/Map</td>
+				<td>der2_iisssccRefset_ExtendedMapSnapshot_&lt;ReleaseCode&gt;_&lt;YYYYMMDD&gt;.txt</td>
+				<td>ExtendedMap</td>
+			</tr>
+			<tr>
+				<td>Refset/Map</td>
+				<td>der2_sRefset_SimpleMapSnapshot_&lt;ReleaseCode&gt;_&lt;YYYYMMDD&gt;.txt</td>
+				<td>SimpleMap</td>
+			</tr>
+			<tr>
+				<td>Refset/Metadata</td>
+				<td>der2_ciRefset_DescriptionTypeSnapshot_&lt;ReleaseCode&gt;_&lt;YYYYMMDD&gt;.txt</td>
+				<td>DescriptionType</td>
+			</tr>
+			<tr>
+				<td>Refset/Metadata</td>
+				<td>der2_ssRefset_ModuleDependencySnapshot_&lt;ReleaseCode&gt;_&lt;YYYYMMDD&gt;.txt</td>
+				<td>ModuleDependency</td>
+			</tr>
+			<tr>
+				<td>Refset/Metadata</td>
+				<td>der2_cciRefset_RefsetDescriptorSnapshot_&lt;ReleaseCode&gt;_&lt;YYYYMMDD&gt;.txt</td>
+				<td>RefsetDescriptor</td>
+			</tr>
+		</tbody>
+		</table>
+	  </div>
+	  <br/>
+    <div id="rep_identifers" class="rep_block_level_one"> 
+      Identifiers are assigned as follows:
+      <ul>
+        <li>CODE: Description.conceptId</li>
+        <li>SAUI: Description.id</li>
+        <li>SCUI: Same as CODE</li>
+        <li>SDUI: Not Applicable</li>
+	  </ul>
+	  </div>
+	  <hr>
+      <div id="rep_termtypes" class="rep_block_level_two"> <a
+          name="atoms"></a>
+        <h3>Atoms (MRCONSO)</h3>
+        <p>
+		For readability, selected field values are mapped as follows in this documentation:<br/>
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <th>File.field</th>
+              <th>Value</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>Description.typeId</td>
+              <td>900000000000003001</td>
+              <td>Fully specified name (FSN)</td>
+            </tr>
+            <tr>
+              <td>Description.typeId</td>
+              <td>900000000000013009 </td>
+              <td>Synonym</td>
+            </tr>
+            <tr>
+              <td>Description/Concept/Language.active</td>
+              <td>1</td>
+              <td>Active</td>
+            </tr>
+            <tr>
+              <td>Description/Concept/Language.active</td>
+              <td>0</td>
+              <td>Inactive</td>
+            </tr>
+            <tr>
+              <td>Language.refSetId</td>
+              <td>900000000000509007 </td>
+              <td>US English</td>
+            </tr>
+            <tr>
+              <td>Language.refSetId</td>
+              <td>900000000000508004</td>
+              <td>Great Britain English (GB)</td>
+            </tr>
+            <tr>
+              <td>Language.acceptabilityId</td>
+              <td>900000000000548007 </td>
+              <td>Preferred</td>
+            </tr>
+            <tr>
+              <td>Language.acceptabilityId</td>
+              <td>900000000000549004</td>
+              <td>Acceptable</td>
+            </tr>
+			<tr>
+				<td>Description/Concept.ModuleId</td>
+				<td>900000000000207008</td>
+				<td>SNOMEDCT Core</td>
+			</tr>
+          </tbody>
+        </table>
+        <!-- This is essentially the minimum set of values that could be used to compute the TTY.  OAP and OAS are off by a few because there are some outlying inactive desriptions, which SNOMED will not be updating -->
+		<table>
+          <tbody>
+            <tr>
+              <th>Term Type</th>
+              <th>Origin</th>
+            </tr>
+            <tr>
+              <td>FN</td>
+              <td>Full form of descriptor<br/>
+			  <br/>
+                Description..typeId = FSN<br/>
+                Description.active = Active<br/>
+                Concept.active = Active<br/>
+                <br/>
+                CODE, SCUI = Description.conceptId<br/>
+                SAUI = Description.id<br/>
+                STR = Description.term<br/>
+                SUPPRESSIBLE=N
+              </td>
+            </tr>
+            <tr>
+              <td>OF</td>
+              <td>Obsolete fully specified name<br/>
+                <br/>
+                Description.typeId = FSN<br/>
+                Description.active = Inactive<br/>
+				<br/>
+                CODE, SCUI = Description.conceptId<br/>
+                SAUI = Description.id<br/>
+                STR = Description.term<br/>
+                SUPPRESSIBLE=O
+              </td>
+            </tr>
+            <tr>
+              <td>OAF</td>
+              <td>Obsolete active fully specified name<br/>
+                Description.typeId = FSN<br/>
+                Description.active = Active<br/>
+                Concept.active = Inactive<br/>
+                <br/>
+                CODE, SCUI = Description.conceptId<br/>
+                SAUI = Description.id<br/>
+                STR = Description.term<br/>
+                SUPPRESSIBLE = O
+				</td>
+            </tr>
+            <tr>
+              <td>PT</td>
+              <td>Designated preferred name<br/>
+                <br/>
+                Description.typeId = Synonym<br/>
+                Description.active = Active<br/>
+                Concept.active= Active<br/>
+                Language.refSetId = US English Language reference set (Active)<br/>
+                Language.acceptabilityId = Preferred<br/>
+                <br/>
+                CODE, SCUI = Description.conceptId<br/>
+                SAUI = Description.id<br/>
+                STR = Description.term<br/>
+                SUPPRESSIBLE=N
+              </td>
+            </tr>
+            <tr>
+              <td>PTGB</td>
+              <td>British Preferred Term<br/>
+                <br/>
+                Description.typeId = Synonym<br/>
+                Description.active = Active<br/>
+                Concept.active = Active<br/>
+                Language.refSetId = GB (not Active in US refSet)<br/>
+                Language.acceptablityId = Preferred<br/>
+                <br/>
+                CODE, SCUI = Description.conceptId<br/>
+                SAUI = Description.id<br/>
+                STR = Description.term<br/>
+                SUPPRESSIBLE=N
+              </td>
+            </tr>
+            <tr>
+              <td>OP</td>
+              <td>Obsolete preferred name<br/>
+                <br/>
+                Description.typeId = Synonym<br/>
+                Description.active = Inactive<br/>
+                Language.acceptabilityId = Preferred<br/>
+                <br/>
+                CODE, SCUI = Description.conceptId<br/>
+                SAUI = Description.id<br/>
+                STR = Description.term<br/>
+                SUPPRESSIBLE=O
+              </td>
+            </tr>
+            <tr>
+              <td>OAP</td>
+              <td>Obsolete active preferred term<br/>
+                <br/>
+                Description.typeId = Synonym<br/>
+                Description.active = Active<br/>
+                Concept.active = Inactive<br/>
+                Language.acceptabilityId: Preferred (not Acceptable in US refset)<br/>
+                <br/>
+                CODE, SCUI = Description.conceptId<br/>
+                SAUI = Description.id<br/>
+                STR = Description.term<br/>
+                SUPPRESSIBLE = O
+              </td>
+            </tr>
+            <tr>
+              <td>SY</td>
+              <td>Synonym<br/>
+			  <br/>
+                Description.typeId = Synonym<br/>
+                Description.active = Active<br/>
+                Concept.active= Active<br/>
+                Language.refSetId = US English Language reference set (Active)<br/>
+                Language.acceptabilityId = Acceptable<br/>
+                  <br/>
+                CODE, SCUI = Description.conceptId<br/>
+                SAUI = Description.id<br/>
+                STR = Description.term<br/>
+                SUPPRESSIBLE=N
+              </td>
+            </tr>
+            <tr>
+              <td>SYGB</td>
+              <td>British Synonym<br/>
+			  <br/>
+                Description.typeId = Synonym<br/>
+                Description.active = Active<br/>
+                Concept.active = Active<br/>
+                Language.refSetId = GB (not Active in US refSet)<br/>
+                Language.acceptablityId = Acceptable<br/>
+                <br/>
+                CODE, SCUI = Description.conceptId<br/>
+                SAUI = Description.id<br/>
+                STR = Description.term<br/>
+                SUPPRESSIBLE=N
+              </td>
+            </tr>
+            <tr>
+              <td>IS</td>
+              <td>Obsolete Synonym<br/>
+                <br/>
+                Description.typeId = Synonym<br/>
+                Description.active = Inactive<br/>
+                Language.acceptabilityId = Not Preferred in any refset<br/>
+                <br/>
+                CODE, SCUI = Description.conceptId<br/>
+                SAUI = Description.id<br/>
+                STR = Description.term<br/>
+                SUPPRESSIBLE=O
+              </td>
+            </tr>
+            <tr>
+              <td>OAS</td>
+              <td>Obsolete active synonym<br/>
+                <br/>
+                Description.typeId = Synonym<br/>
+                Description.active = Active<br/>
+                Concept.active = Inactive<br/>
+                Language.acceptabilityId = Acceptable (not Preferred in US Refset)<br/>
+                <br/>
+                CODE, SCUI = Description.conceptId<br/>
+                SAUI = Description.id<br/>
+                STR = Description.term<br/>
+                SUPPRESSIBLE = O
+              </td>
+            </tr>
+            <tr>
+              <td>MTH_FN<br/>
+                MTH_OF<br/>
+                MTH_OAF<br/>
+                MTH_PT<br/>
+                MTH_PTGB<br/>
+                MTH_OP<br/>
+                MTH_OAP<br/>
+                MTH_SY<br/>
+                MTH_SYGB<br/>
+                MTH_IS<br/>
+                MTH_OAS<br/>
+              </td>
+              <td>Special MTH_* forms are algorithmically generated for
+                atoms with the termtypes listed above as follows:<br/>
+				<br/>
+                  If the STR contains the markup syntax SNOMEDCT uses to
+                  indicate superscripts ("^sup^") and/or subscripts
+                  ("&gt;sub&lt;"), two MTH_* forms are generated:<br/>
+                  1. One in which the markup
+                    syntax is removed, e.g., "CO&gt;2&lt;" becomes "CO2"<br/>
+                    2. One in which the markup syntax is converted to an
+                    xml-style syntax using "&lt;sup&gt; for superscripts
+                    and "&lt;sub&gt;" for subscripts, e.g.,
+                    "CO&gt;2&lt;" becomes "CO&lt;sub&gt;2&lt;/sub&gt;".<br/>
+                    <br/>
+                    This data is added during Metathesaurus source
+                    processing<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>SB</td>
+              <td>Subset<br/>
+			  <br/>
+			  For any conceptId that occurs as a refsetId in any refSet, its PT is duplicated as an SB atom.<br/>
+			  <br/>
+              CODE, SCUI = refsetId<br/>
+			  SAUI = Not populated<br/>
+              STR = Description.term<br/>
+			  SUPPRESSIBLE = N
+              </td>
+            </tr>
+            <tr>
+              <td>XM</td>
+              <td>Cross Mapping Set<br/>
+			  One XM (cross Mapping set) atom is generated for each
+                refsetId in ExtendedMap as follows:<br/>
+				<br/>
+                CODE, SCUI = refsetId<br/>
+				SAUI = Not populated<br/>
+                STR = "SNOMEDCT_US_yyyy_mm_dd to &lt;VSAB&gt; Mappings"<br/>
+				SUPPRESSIBLE = N
+               </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <hr>
+      <div id="rep_attributes" class="rep_block_level_two"> <a
+          name="attributes"></a>
+        <h3>Attributes (MRSAT)</h3>
+        <table>
+          <tbody>
+            <tr>
+              <th>Attribute Name</th>
+              <th>STYPE</th>
+              <th>Origin</th>
+            </tr>
+            <tr>
+              <td>ACTIVE</td>
+              <td>SCUI</td>
+              <td>Concept.active<br/>
+			  also affects the TTY values of this concept's descriptions</td>
+            </tr>
+            <tr>
+              <td>CASE_SIGNIFICANCE_ID</td>
+              <td>AUI</td>
+              <td>Description.caseSignificanceId<br/>
+                <br/>
+                900000000000017005 - Entire term case sensitive<br/>
+                900000000000020002 - Initial character case insensitive<br/>
+                900000000000448009 - Case insensitive<br/>
+              </td>
+            </tr>
+            <tr>
+              <td>CHARACTERISTIC_TYPE_ID</td>
+              <td>RUI</td>
+              <td>Relationship.characteristicTypeId</td>
+            </tr>
+			<tr>
+				<td>CONCENTRATION_STRENGTH_DENOMINATOR_VALUE</td>
+				<td>SCUI</td>
+				<td>RelationshipConcreteValues.value ~ RelationshipConcreteValues.relationshipGroup where typeId = 1142137007</td>
+			</tr>
+			<tr>
+				<td>CONCENTRATION_STRENGTH_NUMERATOR_VALUE</td>
+				<td>SCUI</td>
+				<td>RelationshipConcreteValues.value ~ RelationshipConcreteValues.relationshipGroup where typeId = 1142138002</td>
+			</tr>
+			<tr>
+				<td>COUNT_OF_ACTIVE_INGREDIENT</td>
+				<td>SCUI</td>
+				<td>RelationshipConcreteValues.value ~ RelationshipConcreteValues.relationshipGroup where typeId = 1142140007</td>
+			</tr>
+			<tr>
+				<td>COUNT_OF_BASE_AND_MODIFICATION_PAIR</td>
+				<td>SCUI</td>
+				<td>RelationshipConcreteValues.value ~ RelationshipConcreteValues.relationshipGroup where typeId = 1142141006</td>
+			</tr>
+			<tr>
+				<td>COUNT_OF_BASE_OF_ACTIVE_INGREDIENT</td>
+				<td>SCUI</td>
+				<td>RelationshipConcreteValues.value ~ RelationshipConcreteValues.relationshipGroup where typeId = 1142139005</td>
+			</tr>
+            <tr>
+              <td>CTV3ID</td>
+              <td>SCUI</td>
+              <td>SimpleMap.mapTarget where refSetId = 900000000000497000 (CTV3 simple map)</td>
+            </tr>
+            <tr>
+              <td>DEFAULT_LANGUAGECODE</td>
+              <td>SCUI</td>
+              <td>The 2-character ISO639-1 code indicating the language of the source (attached to the SCUI of the source root)</td>
+            </tr>
+            <tr>
+              <td>DEFAULT_MODULE_ID</td>
+              <td>SCUI</td>
+              <td>Core Module Identifier (attached to the SCUI of the source root)</td>
+            </tr>
+            <tr>
+              <td>DEFINITION_STATUS_ID</td>
+              <td>SCUI</td>
+              <td>Concept.definitionStatusId - indicates whether this concept is primitive or
+                fully defined</td>
+            </tr>
+            <tr>
+              <td>DESCRIPTION_FORMAT</td>
+              <td>SCUI</td>
+              <td>DescriptionType.descriptionFormat</td>
+            </tr>
+            <tr>
+              <td>DESCRIPTION_LENGTH</td>
+              <td>SCUI</td>
+              <td>DescriptionType.descriptionLength</td>
+            </tr>
+            <tr>
+              <td>EFFECTIVE_TIME</td>
+              <td>SCUI</td>
+              <td>Concept.effectiveTime</td>
+            </tr>
+            <tr>
+              <td>FROMRSAB</td>
+              <td>AUI</td>
+              <td>SNOMEDCT_US, attached to the XM atom for the Cross Map
+                Set</td>
+            </tr>
+            <tr>
+              <td>FROMVSAB</td>
+              <td>AUI</td>
+              <td>"SNOMEDCT_US_yyyy_mm_dd", attached to the XM atom for the
+                Cross Map Set</td>
+            </tr>
+            <tr>
+              <td>ICD-O-3_CODE</td>
+              <td>SCUI</td>
+              <td>SimpleMap.mapTarget where refSetId = 446608001 (ICD-O simple map reference set)</td>
+            </tr>
+            <tr>
+              <td>INACTIVATION_INDICATOR</td>
+              <td>AUI</td>
+              <td>AttributeValue.valueId where refSetId = 900000000000489007 (Description inactivation indicator reference set)</td>
+            </tr>
+            <tr>
+              <td>INACTIVATION_INDICATOR</td>
+              <td>SCUI</td>
+              <td>AttributeValue.valueId where refSetId = 900000000000490003 (Concept inactivation indicator reference set)</td>
+            </tr>
+            <tr>
+              <td>MAPSETNAME</td>
+              <td>AUI</td>
+              <td>A MAPSETNAME attribute is created for each unique value of refsetId ExtendedMap, attached to the
+                XM atom for the Cross Map Set.  The ATV value is the STR of the relevant SB atom.</td>
+            </tr>
+            <tr>
+              <td>MAPSETRSAB</td>
+              <td>AUI</td>
+              <td>"SNOMEDCT_US", attached to the XM atom for the Cross Map
+                Set</td>
+            </tr>
+            <tr>
+              <td>MAPSETSID</td>
+              <td>AUI</td>
+              <td>A MAPSETSID attribute is created for each unique value of ExtendedMap.refSetId,
+                attached to the XM atom for the Cross Map Set</td>
+            </tr>
+            <tr>
+              <td>MAPSETVERSION</td>
+              <td>AUI</td>
+              <td>Version, attached to the XM atom for the Cross Map Set</td>
+            </tr>
+            <tr>
+              <td>MAPSETVSAB</td>
+              <td>AUI</td>
+              <td>"SNOMEDCT_yyyy_mm_dd", attached to the XM atom for the
+                Cross Map Set</td>
+            </tr>
+            <tr>
+              <td>MODIFIER_ID</td>
+              <td>RUI</td>
+              <td>Relationship.modifierId; always 900000000000973015 (Existential)</td>
+            </tr>
+            <tr>
+              <td>MODULE_ID</td>
+              <td>AUI</td>
+              <td>Description.moduleId; only included when
+			    moduleId is not the default (core) module</td>
+            </tr>
+            <tr>
+              <td>MODULE_ID</td>
+              <td>RUI</td>
+              <td>Relationship.moduleId; only included when
+                moduleId is not the default (core) module</td>
+            </tr>
+            <tr>
+              <td>MODULE_ID</td>
+              <td>SCUI</td>
+              <td>Concept.moduleId; only included when moduleId is not the
+                default (core) module</td>
+            </tr>
+            <tr>
+              <td>MTH_MAPFROMCOMPLEXITY</td>
+              <td>AUI</td>
+              <td>"SINGLE_SCUI", attached to the XM atom for the Cross
+                Map Set; this data is added during Metathesaurus
+                Source processing.</td>
+            </tr>
+            <tr>
+              <td>MTH_MAPFROMEXHAUSTIVE</td>
+              <td>AUI</td>
+              <td>"N", attached to the XM atom for the Cross Map
+                Set; this data is added during Metathesaurus
+                Source processing</td>
+            </tr>
+            <tr>
+              <td>MTH_MAPSETCOMPLEXITY</td>
+              <td>AUI</td>
+              <td>"N TO N", attached to the XM atom for the Cross Map
+                Set; this data is added during Metathesaurus
+                Source processing</td>
+            </tr>
+            <tr>
+              <td>MTH_MAPTOCOMPLEXITY</td>
+              <td>AUI</td>
+              <td>"SINGLE SDUI, MULTIPLE SDUI", attached to the XM atom
+                for the Cross Map Set; this data is added during
+                Metathesaurus Source processing</td>
+            </tr>
+            <tr>
+              <td>MTH_MAPTOEXHAUSTIVE</td>
+              <td>AUI</td>
+              <td>"N", attached to the XM atom for the Cross Map
+                Set; this data is added during Metathesaurus
+                Source processing</td>
+            </tr>
+			<tr>
+				<td>PRESENTATION_STRENGTH_DENOMINATOR_VALUE</td>
+				<td>SCUI</td>
+				<td>RelationshipConcreteValues.value ~ RelationshipConcreteValues.relationshipGroup where typeId = 1142136003</td>
+			</tr><tr>
+				<td>PRESENTATION_STRENGTH_NUMERATOR_VALUE</td>
+				<td>SCUI</td>
+				<td>RelationshipConcreteValues.value ~ RelationshipConcreteValues.relationshipGroup where typeId = 1142135004</td>
+			</tr>
+            <tr>
+              <td>REFSET_PATTERN</td>
+              <td>SCUI</td>
+              <td>A name for the type (corresponding to the collection of included fields) of the referenced RefSet; attached to the SCUI of RefsetDescriptor.moduleId</td>
+            </tr>
+            <tr>
+              <td>SOS</td>
+              <td>AUI</td>
+              <td>Describes the Cross Map set; attached to the AUI of the XM atom</td>
+            </tr>
+            <tr>
+              <td>SOURCE_EFFECTIVE_TIME</td>
+              <td>RUI</td>
+              <td>ModuleDependency.sourceEffectiveTime</td>
+            </tr>
+            <tr>
+              <td>SUBSET_MEMBER</td>
+              <td>AUI</td>
+              <td>Attached to each member (referencedComponentId) of each RefSet, 
+			  this attribute includes the refsetId optionally followed by a "~" character, a refSet membership-attribute name, another "~", and a 
+			  the value of the refset membership-attribute</td>
+            </tr>
+            <tr>
+              <td>SUBSET_MEMBER</td>
+              <td>SCUI</td>
+              <td>Attached to each member (referencedComponentId) of each RefSet, 
+			  this attribute includes the refsetId optionally followed by a "~" character, a refSet membership-attribute name, another "~", and a 
+			  the value of the refset membership-attribute</td>
+            </tr>
+            <tr>
+              <td>TARGET_EFFECTIVE_TIME</td>
+              <td>RUI</td>
+              <td>ModuleDependency.targetEffectiveTime</td>
+            </tr>
+            <tr>
+              <td>TORSAB</td>
+              <td>AUI</td>
+              <td>The RSAB corresponding to the
+                target source of the cross map set, per release notes</td>
+            </tr>
+            <tr>
+              <td>TOVSAB</td>
+              <td>AUI</td>
+              <td>The VSAB of the target source, per release notes</td>
+            </tr>
+            <tr>
+              <td>TYPE_ID</td>
+              <td>AUI</td>
+              <td>Description.typeId</td>
+            </tr>
+            <tr>
+              <td>UMLSREL</td>
+              <td>SCUI</td>
+              <td>The REL for MRREL.RRF, attached to the
+                concept for each typeId value used in
+                the Relation file.</td>
+            </tr>
+            <tr>
+              <td>UMLSRELA</td>
+              <td>SCUI</td>
+              <td>The RELA value used in MRREL.RRF, attached to the
+                concept for each typeId value used in
+                the Relation file.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <hr>
+      <div id="rep_definitions" class="rep_block_level_two"> <a
+          name="definitions"></a>
+        <h3>Definitions (MRDEF)</h3>
+        <table>
+          <tbody>
+            <tr>
+			  <th>Field</th>
+              <th>Origin</th>
+            </tr>
+			<tr>
+				<td>SATUI</td>
+				<td>Definition.id</td>
+			</tr>
+            <tr>
+              <td>DEF</td>
+			  <td>Definition.term</td>
+            </tr>
+			<tr>
+				<td>SUPPRESS</td>
+				<td>Definition.active (N for active = 1; O for active = 0)</td>
+			</tr>
+          </tbody>
+        </table>
+      </div>
+      <hr>
+      <div id="rep_relationships" class="rep_block_level_two"> <a
+          name="relationships"></a>
+        <h3>Relationships (MRREL)</h3>
+        <table>
+          <tbody>
+            <tr>
+              <th>REL/Inverse REL</th>
+              <th>RELA/Inverse RELA</th>
+              <th>ORIGIN</th>
+            </tr>
+            <tr>
+              <td>CHD/PAR</td>
+              <td>isa/inverse_isa</td>
+              <td>Hierarchical relationships are derived from rows of
+                relationships where type.Id = 116680003 ("Is a")</td>
+            </tr>
+            <tr>
+              <td>RB/RN<br/>
+			      RO<br/>
+				  SY</td>
+              <td>(many RELA values)</td>
+              <td>Derived from rows of relationships where typeId is not 116680003 ("Is a")<br/>
+                REL and RELA values used for each typeId are specified
+                by UMLSREL and UMLSRELA attributes, respectively (see
+                above).</td>
+            </tr>
+            <tr>
+              <td>RO</td>
+              <td>mapped_from, mapped_to</td>
+              <td>Represent the 1 - 1 cross maps in
+                ExtendedMaps</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <hr>
+      <div id="rep_mappings" class="rep_block_level_two"> <a
+          name="mappings"></a>
+        <h3>Mappings (MRMAP)</h3>
+        <p>The Metathesaurus includes SNOMEDCT_US mappings (an XM atom,
+          along with associated attributes and mappings) to ICD10 and
+          ICD10CM. These are extracted from ExtendedMap.<br/>
+        </p>
+    </div>
+  </body>
+</html>
