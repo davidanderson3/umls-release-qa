@@ -1,0 +1,299 @@
+title=MED-RT (Medication Reference Terminology) - Source Representation
+date=2018-05-07
+updated=2023-11-06
+type=page
+status=published
+~~~~~~
+
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+
+<!--endmenu-->
+<br/>
+    <p>This page lists specific source data elements and provides
+      information on their representation in the UMLS Metathesaurus.</p>
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#change_summary">Summary of Changes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_summary">Summary of Source-Provided Files</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_details">Source-Provided File Details</a></div>
+    </div>
+    <hr>
+    <div id="change_summary" class="rep_block_level_one"> </div>
+      <h3>Summary of Changes:</h3>
+		<p>There have been no changes to the MED-RT release format or Metathesaurus source processing.</p>
+    <div id="file_summary1" class="rep_block_level_one"> <a 
+	id="file_summary"></a> </div>
+      <h3>Source Provided Files:</h3>
+	          <p>
+	          All source files, including documentation, are available on the MED-RT download site: 
+	          <a href="https://evs.nci.nih.gov/ftp1/MED-RT/">https://evs.nci.nih.gov/ftp1/MED-RT/</a><br/>
+	          </p>
+	          <table>
+	          <tbody>
+	          <tr>
+	          	<th>File</th>
+	          	<th>Description</th>
+	          </tr>
+	          <tr>
+	          	<td>Core_MEDRT_YYYY.MM.DD_XML.xml</td>
+	          	<td>Data file</td>
+	          </tr>
+	          <tr>
+	         		<td>MED-RT Documentation.pdf</td>
+	         		<td>Documentation</td>
+	         	</tr>
+	         	<tr>
+	  			<td>MED-RT_Schema_v1.xsd</td>
+	  			<td>XML schema definition</td>
+	  		</tr>
+	  		</tbody>
+		</table>
+<hr>
+      <h3 id="file_details">Source-Provided Data: Details </h3>
+
+      <p>The following data is processed for the UMLS; some element values are implied or redundant and are not directly processed<br/>
+      </p>
+      <p><strong>concept</strong>
+      </p>
+        <table>
+          <tbody>
+            <tr>
+              <th>Element</th>
+              <th>Description</th>
+              <th>Representation</th>
+            </tr>
+            <tr>
+              <td>&lt;name&gt;</td>
+              <td>Fully-specified concept name, including Concept Type suffix</td>
+              <td>MRCONSO.STR, TTY = FN</td>
+            </tr>
+            <tr>
+              <td>&lt;code&gt;</td>
+              <td>Code in source identifier</td>
+              <td>MRCONSO.CODE, MRCONSO.SDUI</td>
+            </tr>
+            <tr>
+            	<td>&lt;status&gt;</td>
+            	<td>Status</td>
+            	<td>MRSAT.ATN = STATUS, ATV = A</td>
+            </tr>
+            <tr>
+            <td>&lt;property&gt;&lt;name&gt; = CTY</td>
+			<td>Concept type: a category or label assigned only to every concept owned by MEDRT.
+            	Valid CTY values include: <br/>
+                <ul>
+                	<li>EPC - FDA SPL established pharmacologic class</li>
+					<li>APC - additional pharmacologic class</li>
+                	<li>MoA - mechanism of action</li>
+                	<li>PE - physiologic effect</li>
+                	<li>TC - therapeutic category</li>
+                	<li>PK - pharmacokinetics</li>
+                	<li>EXT - local terminology extensions</li>
+                	<li>HC - local hierarchical concept to aggregate subconcepts, alphabetically or conceptually</li>
+                </ul></td>
+            	<td>MRSAT.ATN = CONCEPT_TYPE</td>
+            </tr>
+            <tr>
+            	<td>&lt;property&gt;&lt;name&gt; = NUI</td>
+            	<td>Alphanumeric unique concept identifier</td>
+            	<td>MRCONSO.CODE, MRCONSO.SDUI (same as "code" value)</td>
+            </tr>
+            <tr>
+            	<td>&lt;synonym&gt;&lt;name&gt;</td>
+            	<td>Valid values are: "Preferred Term" or "Synonym"; corresponds to &lt;preferred&gt; = true</td>
+            	<td>MRCONSO.TTY = PT or SY as indicated</td>
+            </tr>
+            <tr>
+            	<td>&lt;synonym&gt;&lt;to_name&gt;</td>
+            	<td>Every concept may have zero or more synonymous names</td>
+            	<td>MRCONSO.STR; TTY = SY</td>
+            </tr>
+            <tr>
+            	<td>&lt;synonym&gt;&lt;preferred&gt;</td>
+            	<td>Valid values are: "true" or "false"; corresponds to "Preferred Term" or "Synonym" values</td>
+            	<td>MRCONSO.STR; TTY = SY</td>
+            </tr>
+          </tbody>
+        </table>
+
+
+      <p><strong>association</strong>
+      </p>
+            <table>
+              <tbody>
+              	<tr>
+              		<th>MED-RT association name</th>
+              		<th>MRREL.REL</th>
+              		<th>MRREL.RELA/RELA inverse</th>
+              		<th>Target concept terminology or CTY</th>
+              	</tr>
+              	<tr>
+              		<td>CI_ChemClass</td>
+              		<td>RO</td>
+              		<td>contraindicated_class_of/has_contraindicated_class</td>
+              		<td>MeSH</td>
+              	<tr>
+              		<td>CI_MoA</td>
+              		<td>RO</td>
+              		<td>contraindicated_mechanism_of_action_of/has_contraindicated_mechanism_of_action</td>
+              		<td>CTY: MoA</td>
+              	</tr>
+              	<tr>
+              		<td>CI_PE</td>
+              		<td>RO</td>
+              		<td>contraindicated_physiologic_effect_of/has_contraindicated_physiologic_effect</td>
+              		<td>CTY: PE</td>
+              	</tr>
+              	<tr>
+              		<td>CI_with</td>
+              		<td>RO</td>
+              		<td>contraindicated_with_disease/has_contraindicated_drug</td>
+              		<td>MeSH</td>
+              	</tr>
+              	<tr>
+              		<td>Parent Of</td>
+              		<td>PAR/CHD</td>
+              		<td>parent_of/has_parent; associations between two MED-RT concepts are used to build a MED-RT-only hierarchy.
+              		Parent/Child relationships involving concepts in other sources are not included in the hierarchy,
+              		they are only included as pairwise relationships in MRREL.RRF</td>
+              		<td>CTY: same CTY as concept of origin (e.g., MoA, PE, EPC, PK, TC, EXT) if MED-RT target, or
+              		Target: SNOMED CT US Edition or MeSH if mapped into external terminology hierarchy</td>
+              	<tr>
+              		<td>effect_may_be_inhibited_by</td>
+              		<td>RO</td>
+              		<td>effect_may_be_inhibited_by/may_inhibit_effect_of</td>
+              		<td>MeSH</td>
+              	</tr>
+			  	<tr>
+			  		<td>has_MoA</td>
+			  		<td>RO</td>
+			  		<td>has_mechanism_of_action/mechanism_of_action_of</td>
+			  		<td>CTY: MoA</td>
+			  	</tr>
+			  	<tr>
+			  		<td>has_PE</td>
+			  		<td>RO</td>
+			  		<td>has_physiologic_effect/physiologic_effect_of</td>
+			  		<td>CTY: PE</td>
+			  	</tr>
+			  	<tr>
+			  		<td>has_PK</td>
+			  		<td>RO</td>
+			  		<td>has_pharmacokinetics/pharmacokinetics_of</td>
+			  		<td>CTY: PK</td>
+			  	</tr>
+				<tr>
+					<td>has_SC</td>
+					<td>RO</td>
+					<td>has_structural_class/structural_class_of</td>
+					<td>MeSH</td>
+			  	</tr>
+			  	<tr>
+			  		<td>has_TC</td>
+			  		<td>RO</td>
+			  		<td>has_therapeutic_class/therapeutic_class_of</td>
+			  		<td>CTY: TC</td>
+			  	</tr>
+			  	<tr>
+			  		<td>has_active_metabolites</td>
+			  		<td>RO</td>
+			  		<td>has_active_metabolites/active_metabolites_of</td>
+			  		<td>MeSH</td>
+			  	</tr>
+			  	<tr>
+			  		<td>induces</td>
+			  		<td>RO</td>
+			  		<td>induces/induced_by</td>
+			  		<td>MeSH</td>
+			  	</tr>
+			  	<tr>
+			  		<td>may_diagnose</td>
+			  		<td>RO</td>
+			  		<td>may_diagnose/may_be_diagnosed_by</td>
+			  		<td>MeSH</td>
+			  	</tr>
+			  	<tr>
+			  		<td>may_prevent</td>
+			  		<td>RO</td>
+			  		<td>may_prevent/may_be_prevented_by</td>
+			  		<td>MeSH</td>
+			  	</tr>
+			  	<tr>
+			  		<td>may_treat</td>
+			  		<td>RO</td>
+			  		<td>may_treat/may_be_treated_by</td>
+			  		<td>MeSH</td>
+			  	</tr>
+			  	<tr>
+			  		<td>site_of_metabolism</td>
+			  		<td>RO</td>
+			  		<td>site_of_metabolism/metabolic_site_of</td>
+			  		<td>CTY: PK</td>
+			  	</tr>
+				<tr>
+					<td>Synonym Of</td>
+					<td>SY</td>
+					<td></td>
+					<td>SNOMED CT US Edition or MeSH</td>
+			  	</tr>
+			</tbody>
+			</table>
+
+		<table>
+		<tbody>
+			<tr>
+				<th>Element</th>
+				<th>Description</th>
+				<th>Representation</th>
+			</tr>
+            <tr>
+              <td>&lt;from_namespace&gt;</td>
+              <td>Values are: MED-RT, MeSH, RXNORM</td>
+              <td>SAB of MRREL.AUI</td>
+            </tr>
+            <tr>
+            	<td>&lt;from_code&gt;</td>
+            	<td>Code in specified from_namespace (note:  a small number of from_code values are
+            	invalid in the designated namespace; these are not processed)</td>
+            	<td>CODE or SCUI referenced by MRREL.AUI</td>
+            </tr>
+            <tr>
+            	<td>&lt;to_namespace&gt;</td>
+            	<td>Values are: MED-RT, MeSH, RXNORM, SNOMED-CT</td>
+            	<td>SAB of MRREL.AUI</td>
+            </tr>
+            <tr>
+            	<td>&lt;to_code&gt;</td>
+            	<td>Code in specified to_namespace (note:  a small number of to_code values are
+            	invalid in the designated namespace; these are not processed)</td>
+            	<td>CODE or SCUI reference by MRREL.AUI</td>
+            </tr>
+            <tr>
+            	<td>&lt;qualifier&gt;&lt;name&gt; = Authority</td>
+            	<td>All MED-RT relationships have an Authority qualifier which contains the acronym of its
+            	asserting source authority. Conflicting relationships from different authorities can co-exist
+            	in the knowledge base. Valid relationship source authorities are:<br/>
+            	<ul>
+            		<li>MEDRT - relationship asserted by legacy NDF-RT subject matter experts or by MED-RT</li>
+            		<li>FMTSME - relationship recommended by FMT subject matter experts for SPL</li>
+					<li>FDASPL - relationship assigned by FDA SPL to active ingredient moieties</li>
+					<li>NLMUMLS - relationship assigned by NLM to terminology concepts in the UMLS Metathesaurus</li>
+				</ul>
+				</td>
+            	<td>MRSAT.ATN = AUTHORITY</td>
+            </tr>
+          </tbody>
+        </table>
+
