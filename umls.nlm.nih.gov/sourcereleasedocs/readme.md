@@ -56,4 +56,4 @@ The generate_all.sh script includes a perl script (getSources.pl) that makes xml
 
 ## DEPLOYING TO THE WEB
 
-Once you are comfortable with the release in your local branch, merge the changes into the develop branch. Test again. Then merge the changes into the master branch. Deploy using Bamboo here: (https://cis.nlm.nih.gov/browse/UDOC-UTSSRC). 
+Once you are comfortable with the release in your local branch, merge the changes into the develop branch. Test again. Then merge the changes into the master branch. Deploy here: https://gitlab.nlm.nih.gov/mms/documentation/umls-source-release. 
