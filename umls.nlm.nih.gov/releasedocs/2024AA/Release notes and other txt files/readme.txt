@@ -1,3 +1,8 @@
+May 2024
+
+README
+
+UMLS 2024AA Release
 
 What's New
 -------------------
@@ -110,3 +115,28 @@ Be sure to include a link to your source code so that other UMLS users can adapt
 We value your feedback! For more information about improvements we have made to the UMLS based on user feedback, as well as information about UMLS use in general, see our UMLS User Feedback Page: https://www.nlm.nih.gov/research/umls/implementation_resources/community/user_feedback.html
 
 
+
+-------------------
+For information on the Unified Medical Language System (UMLS), consult the UMLS homepage at: https://www.nlm.nih.gov/research/umls.
+
+The latest Release Notes list all known issues, including bugs and fixes, and are available at: https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/notes.html.
+
+UMLS data files and MetamorphoSys are available by download from the UMLS Web site at: https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html. Users must have an active UMLS Terminology Services (UTS) account to download the files. All files must be downloaded into the same directory.  MetamorphoSys must be unzipped before it can be used.
+
+
+
+HARDWARE AND SOFTWARE REQUIREMENTS
+------------------------------------------------------------------
+
+Supported operating systems:
+
+Windows
+Linux
+macOS
+
+Hardware Requirements
+
+  - A MINIMUM 40 GB of free hard disk space.  
+  - A MINIMUM of 2 GB of RAM, preferably more. Smaller memory size will cause virtual memory paging with exponentially increased processing time.
+  - A CPU speed of at least 2 GHz for reasonable installation times.
+ 
