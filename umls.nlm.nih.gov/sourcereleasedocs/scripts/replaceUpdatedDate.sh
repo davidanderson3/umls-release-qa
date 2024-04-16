@@ -2,7 +2,7 @@
 # Updates the 'updated' date in the jbake metadata. Should match the latest release date. 
 # set a value for the UPDATEDATE variable before running
 # run from the base directory (.../sourcereleasedocs/)
-UPDATEDATE='2023-11-06'
+UPDATEDATE='2024-05-06'
 while IFS='|' read -r VCUI RCUI VSAB RSAB SON SF SVER VSTART VEND IMETA RMETA SLC SCC SRL TFR CFR CXTY TTYL ATNL LAT CENC CURVER SABIN SSN SCIT; do
 [ -f jbake/content/"$RSAB"/index.html ] && sed -i '' -e "/updated=/c\ 
 updated=$UPDATEDATE" jbake/content/"$RSAB"/index.html;
