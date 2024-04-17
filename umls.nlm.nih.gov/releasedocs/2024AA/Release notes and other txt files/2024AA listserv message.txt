@@ -36,11 +36,13 @@ Two new translations:
 
 33 English sources and 46 translation sources were updated.  These include MeSH®, MedDRA, RxNorm, and SNOMED CT® (English and Spanish).  For detailed information on changes in this version of the Metathesaurus, see the Updated Sources (Expanded) section.  Additional release statistics may be found in the Statistics section.
 
+
 SPECIALIST Lexicon and Lexical Tools
 -------------------
  - The release includes the updated SPECIALIST Lexicon (2024 Release).
  - The release includes the updated Lexical Tools (2024 Release) which integrate data from the SPECIALIST Lexicon, 2024 Release. The Lexical Tools include the Full and Lite versions of lvg.2024.
 The Metathesaurus index files were processed using the updated lvg files.
+
 
 MetamorphoSys
 -------------------
@@ -49,6 +51,8 @@ MetamorphoSys
 Reported bugs may be viewed on the Release Notes and Bugs Web page. 
 
 MetamorphoSys can generate custom load scripts for MySQL, Oracle, or Microsoft Access when creating a Metathesaurus subset or installing the Semantic Network. Instructions are available on the UMLS Load Scripts homepage. 
+
+ 
 
 Release Information
 -------------------
@@ -108,5 +112,6 @@ Be sure to include a link to your source code so that other UMLS users can adapt
  - Applications that leverage UMLS in the processing of text
 
 We value your feedback! For more information about improvements we have made to the UMLS based on user feedback, as well as information about UMLS use in general, see our UMLS User Feedback Page: https://www.nlm.nih.gov/research/umls/implementation_resources/community/user_feedback.html
+
 
 
