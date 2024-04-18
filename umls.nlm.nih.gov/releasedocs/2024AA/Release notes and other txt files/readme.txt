@@ -6,7 +6,7 @@ UMLS 2024AA Release
 
 What's New
 -------------------
-The 2024AA release of the Unified Medical Language System® (UMLS) Knowledge Sources is available for download as of May 6, 2024. 
+The 2024AA release of the Unified Medical Language SystemR (UMLS) Knowledge Sources is available for download as of May 6, 2024. 
 
 The available downloads are:
  - UMLS Metathesaurus Precomputed Subsets (Requires no installation, see below for more information.)
@@ -28,7 +28,7 @@ UMLS Metathesaurus History Files
  - Source Vocabulary History (MRSAB_HISTORY.txt) - This file includes a row for every version of every UMLS source vocabulary updated in the UMLS Metathesaurus MRSAB.RRF file starting with the 2004AA release.
 These files are available from the UMLS Download page: https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html
 
-Please let us know if you find these files useful with comments to the NLM Help Desk (https://support.nlm.nih.gov/support/create-case/) using the subject line: “UMLS History Files”.
+Please let us know if you find these files useful with comments to the NLM Help Desk (https://support.nlm.nih.gov/support/create-case/) using the subject line: "UMLS History Files".
 
 
 Metathesaurus
@@ -39,7 +39,7 @@ Two new translations:
  - MDREST (Estoninan Edition of the Medical Dictionary for Regulatory Activities Terminology (MedDRA).
  - MDRFIN (Finnish Edition of the Medical Dictionary for Regulatory Activities Terminology (MedDRA).
 
-33 English sources and 46 translation sources were updated.  These include MeSH®, MedDRA, RxNorm, and SNOMED CT® (English and Spanish).  For detailed information on changes in this version of the Metathesaurus, see the Updated Sources (Expanded) section.  Additional release statistics may be found in the Statistics section.
+33 English sources and 46 translation sources were updated.  These include MeSHR, MedDRA, RxNorm, and SNOMED CTR (English and Spanish).  For detailed information on changes in this version of the Metathesaurus, see the Updated Sources (Expanded) section.  Additional release statistics may be found in the Statistics section.
 
 SPECIALIST Lexicon and Lexical Tools
 -------------------
@@ -57,7 +57,7 @@ MetamorphoSys can generate custom load scripts for MySQL, Oracle, or Microsoft A
 
 Release Information
 -------------------
-To access the UMLS Release files, you must have an active UMLS Metathesaurus® License and a valid UTS account.  You will be prompted to authenticate with an identity provider with the UTS when downloading the files. 
+To access the UMLS Release files, you must have an active UMLS MetathesaurusR License and a valid UTS account.  You will be prompted to authenticate with an identity provider with the UTS when downloading the files. 
 
 UMLS Learning Resources
 -------------------
@@ -104,7 +104,7 @@ UMLS User Contributions
 -------------------
 UMLS users have extended the functionality of the UMLS in a variety of ways by developing APIs, automation scripts, and natural language processing tools. You can find a list of these on the UMLS Community web page: https://www.nlm.nih.gov/research/umls/implementation_resources/community/index.html. 
 
-Want to add your tool? Send a request to the NLM Help Desk (https://support.nlm.nih.gov/support/create-case/) with the subject line: “UMLS Community.” 
+Want to add your tool? Send a request to the NLM Help Desk (https://support.nlm.nih.gov/support/create-case/) with the subject line: "UMLS Community" 
 
 Be sure to include a link to your source code so that other UMLS users can adapt your tool. We are especially interested in:
  - Database load scripts 
