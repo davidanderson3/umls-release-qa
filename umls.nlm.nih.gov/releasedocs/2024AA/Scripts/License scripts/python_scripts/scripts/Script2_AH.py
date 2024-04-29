@@ -15,7 +15,7 @@ import re
 
 
 #load the local html file modify the input location path as needed
-with open(r'C:\Users\rewolinskija\Documents\umls-source-release\umls.nlm.nih.gov\releasedocs\2024AA\License scripts\begin with this file\script2\initial_license_agreement.html', encoding="utf8") as f:
+with open(r'C:\Users\rewolinskija\Documents\umls-source-release\umls.nlm.nih.gov\releasedocs\2024AA\Scripts\License scripts\begin_with_this_file\script2\initial_license_agreement.html', encoding="utf8") as f:
     soup = BeautifulSoup(f, "html.parser")
 
 #removing the <HTML>,<head>,<body> tags using beautifulSoup's unwrap() method.
@@ -124,7 +124,7 @@ soup.div.insert_after(comment6)
 
 
 #load the local html file modify the input location path as needed
-with open(r'C:\Users\rewolinskija\Documents\umls-source-release\umls.nlm.nih.gov\releasedocs\2024AA\License scripts\begin with this file\script2\license_agreement_appendix.html', encoding="utf8") as f2:
+with open(r'C:\Users\rewolinskija\Documents\umls-source-release\umls.nlm.nih.gov\releasedocs\2024AA\Scripts\License scripts\begin_with_this_file\script2\license_agreement_appendix.html', encoding="utf8") as f2:
     soup2 = BeautifulSoup(f2, "html.parser")
 
 #removing the <HTML>,<head>,<body> tags using beautifulSoup's unwrap() and decompose().
@@ -158,7 +158,7 @@ for ct in  range(0, len(comments2)):
 
 
 #load the local html file modify the input location path as needed
-with open(r'C:\Users\rewolinskija\Documents\umls-source-release\umls.nlm.nih.gov\releasedocs\2024AA\License scripts\begin with this file\script2\license_agreement_snomed.html', encoding="utf8") as f3:
+with open(r'C:\Users\rewolinskija\Documents\umls-source-release\umls.nlm.nih.gov\releasedocs\2024AA\Scripts\License scripts\begin_with_this_file\script2\license_agreement_snomed.html', encoding="utf8") as f3:
     soup3 = BeautifulSoup(f3, "html.parser")
 
 #removing <DOCTYPE> tag
@@ -228,6 +228,6 @@ for y in soup3.find_all():
 #print(soup.prettify(formatter="html") + soup2.prettify(formatter="html") + soup3.prettify(formatter="html"))
 
 # write the output to html file with BeautifulSoup
-with open(r'C:\Users\rewolinskija\Documents\umls-source-release\umls.nlm.nih.gov\releasedocs\2024AA\License scripts\begin with this file\script3\LicenseAgreement.html', 'w') as f4:
+with open(r'C:\Users\rewolinskija\Documents\umls-source-release\umls.nlm.nih.gov\releasedocs\2024AA\Scripts\License scripts\begin_with_this_file\script3\LicenseAgreement.html', 'w') as f4:
     pretty_soup = str(soup.prettify(formatter="html") + soup2.prettify(formatter="html") + soup3.prettify(formatter="html"))
     f4.write(pretty_soup)

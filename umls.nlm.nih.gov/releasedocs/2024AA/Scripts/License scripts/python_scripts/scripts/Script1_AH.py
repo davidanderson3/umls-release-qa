@@ -17,7 +17,7 @@ import re
 
 
 #load the local html file modify the input location path as needed
-with open(r'C:\Users\rewolinskija\Documents\umls-source-release\umls.nlm.nih.gov\releasedocs\2024AA\License scripts\begin with this file\script1\input_license_agreement_appendix.html', encoding="utf8") as f:
+with open(r'C:\Users\rewolinskija\Documents\umls-source-release\umls.nlm.nih.gov\releasedocs\2024AA\Scripts\License scripts\begin_with_this_file\script1\input_license_agreement_appendix.html', encoding="utf8") as f:
     soup = BeautifulSoup(f, "html.parser")
 
 
@@ -144,6 +144,6 @@ for element in del_tags:
 #print(soup.prettify(formatter="html"))
 
 # write the output to html file with BeautifulSoup
-with open(r'C:\Users\rewolinskija\Documents\umls-source-release\umls.nlm.nih.gov\releasedocs\2024AA\License scripts\begin with this file\script2\license_agreement_appendix.html', 'w') as f2:
+with open(r'C:\Users\rewolinskija\Documents\umls-source-release\umls.nlm.nih.gov\releasedocs\2024AA\Scripts\License scripts\begin_with_this_file\script2\license_agreement_appendix.html', 'w') as f2:
     pretty_soup = str(soup.prettify(formatter="html"))
     f2.write(pretty_soup)

@@ -6,7 +6,7 @@ UMLS 2024AA Release
 
 What's New
 -------------------
-The 2024AA release of the Unified Medical Language SystemR (UMLS) Knowledge Sources is available for download as of May 6, 2024. 
+The 2024AA release of the Unified Medical Language System(R) (UMLS) Knowledge Sources is available for download as of May 6, 2024. 
 
 The available downloads are:
  - UMLS Metathesaurus Precomputed Subsets (Requires no installation, see below for more information.)
