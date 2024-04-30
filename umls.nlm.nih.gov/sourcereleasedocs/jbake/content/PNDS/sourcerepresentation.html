@@ -30,10 +30,10 @@ status=published
     </div>
     <hr>
   <div id="change_summary" class="rep_block_level_one">
-    <h3>Summary of Changes:</h3>
+    <h3>Summary of Changes: </h3>
 
-          <p>There have changes made to the layout of the Perioperative Nursing Data Set (PNDS) .xslx file that do not directly affect content.
-	      </p>
+      <p>PNDS now includes synonyms.</p>
+	  <p>SNOMEDCT_US mappings are no longer provided</p>
 
 	</div>
   <div id="file_summary" class="rep_block_level_one">
@@ -54,8 +54,8 @@ status=published
           </tr>
 
           <tr>
-            <td>PNDS 2021.xlsx</td>
-            <td>An Excel file with 6 tabs: Domain, Assessment, Nursing Problems, Outcomes, Implementation, and Evaluation</td>
+            <td>PNDS Version 2024 for UMLS.xlsx</td>
+            <td>An Excel file with 6 content tabs: Domain, Assessment, Nursing Problems, Outcomes, Implementation, and Evaluation</td>
           </tr>
         </tbody>
       </table>
@@ -84,7 +84,7 @@ status=published
           </tr>
 
           <tr>
-            <td>Label</td>
+            <td>Domain</td>
             <td>MRCONSO.STR<br/>
             TTY = "HT"</td>
           </tr>
@@ -99,13 +99,13 @@ status=published
             <td>MRDEF.DEF</td>
           </tr>
           <tr>
-          	<td>Domain Range</td>
+          	<td>Range</td>
           	<td>Used to create hierarchy</td>
           </tr>
         </tbody>
       </table>
     </div>
-    <h4>Tabs: Assessment, Nursing Problems, Outcomes, Implementation, and Evaluation</h4>
+    <h4>Tabs: Assessment, Nursing Problems, Outcome, Implementation, and Evaluation</h4>
 
     <div>
 
@@ -125,6 +125,10 @@ status=published
             <td>Label</td>
 			<td>MRCONSO.STR; TTY = PT</td>
           </tr>
+		  <tr>
+            <td>Short Label</td>
+			<td>MRCONSO.STR; TTY = SY</td>
+          </tr>
           <tr>
             <td>Definition</td>
             <td>MRDEF.DEF</td>
@@ -134,8 +138,8 @@ status=published
             <td>MRSAT.ATN = SOS</td>
           </tr>
           <tr>
-            <td>SCT Code</td>
-            <td>Used to create mappings and mapping relationships (RQ|mapped_to/mapped_from)</td>
+            <td>Domain</td>
+            <td>Used to build hierarchy</td>
           </tr>
       
         </tbody>

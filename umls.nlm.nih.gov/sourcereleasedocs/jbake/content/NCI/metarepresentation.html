@@ -1,6 +1,6 @@
 title=NCI (NCI Thesaurus) - Metathesaurus Representation
 date=2018-05-07
-updated=2023-11-06
+updated=2022-11-07
 type=page
 status=published
 ~~~~~~
@@ -25,31 +25,13 @@ status=published
 <p>This page list UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
 
 <div id = "general" class = "rep_block_level_one">
-<p><strong>VSAB: </strong>NCI2023_03D</p>
+<p><strong>VSAB: </strong>NCI2023_09D</p>
 <div id = "rep_identifiers" class = "rep_block_level_one">
 <h3>Notes</h3>
 <p>NCI Thesaurus (NCIt) is a widely recognized standard for biomedical coding and reference. It covers vocabulary for clinical care, translational and basic research, public information and administrative activities and is used by a broad variety of public and private partners both nationally and internationally.</p>
 </div>
 <h3>Summary of Changes</h3>
-<p>New associations</p>
-<ul>
-<li>A42 - Has_OORO_PC_Value</li>
-<li>A48 - Has_ACC-AHA_SARS2_Authorized_Value</li>
-
-<P>Updated association names. The word 'Permissible' was changed to 'Authorized' for the following associations:</P>
-<li>A24 - Is_PCDC_AML_Authorized_Value_For_Variable</li>
-<li>A26 - Has_PCDC_AML_Authorized_Value</li>
-<li>A28 - Is_PCDC_EWS_Authorized_Value_For_Variable</li>
-<li>A29 - Has_PCDC_EWS_Authorized_Value</li>
-<li>A33 - Is_PCDC_GCT_Authorized_Value_For_Variable</li>
-<li>A34 - Has_PCDC_GCT_Authorized_Value</li>
-<li>A35 - Is_PCDC_ALL_Authorized_Value_For_Variable</li>
-<li>A36 - Has_PCDC_ALL_Authorized_Value</li>
-<li>A37 - Has_SeroNet_Authorized_Value</li>
-<li>A38 - Has_PCDC_OS_Authorized_Value</li>
-<li>A39 - Has_PCDC_HL_Authorized_Value</li> 
-<li>A40 - Has_DIPG_DMG_Authorized_Value</li>
-</ul>
+<p>None</p>
 </div>
 <div id = "rep_change_summary" class = "rep_block_level_one">
 <h3>Original Files:</h3>
@@ -413,6 +395,8 @@ Origin:
 <tr><td>RT</td>
 <td>gene_product_variant_of_gene_product/gene_product_has_gene_product_variant</td><td>R182</td></tr>
 <tr><td>RT</td>
+<td>has_acc-aha_sars2_authorized_value</td><td>A48</td></tr>
+<tr><td>RT</td>
 <td>has_cdrh_parent/cdrh_parent_of</td><td>A10</td></tr>
 <tr><td>RT</td>
 <td>has_ctcae_5_parent/ctcae_5_parent_of</td><td>A15</td></tr>
@@ -421,7 +405,7 @@ Origin:
 <tr><td>RT</td>
 <td>has_data_element/data_element_of</td><td>A12</td></tr>
 <tr><td>RT</td>
-<td>has_dipg_dmg_permissible_value/is_dipg_dmg_permissible_value_for_variable</td><td>A40</td></tr>
+<td>has_dipg_dmg_authorized_value/is_dipg_dmg_authorized_value_for_variable</td><td>A40</td></tr>
 <tr><td>RT</td>
 <td>has_gdc_value/is_value_for_gdc_property</td><td>A31</td></tr>
 <tr><td>RT</td>
@@ -431,17 +415,17 @@ Origin:
 <tr><td>RT</td>
 <td>has_nichd_parent/nichd_parent_of</td><td>A11</td></tr>
 <tr><td>RT</td>
-<td>has_pcdc_all_permissible_value/is_pcdc_all_permissible_value_for_variable</td><td>A36</td></tr>
+<td>has_pcdc_all_authorized_value/is_pcdc_all_authorized_value_for_variable</td><td>A36</td></tr>
 <tr><td>RT</td>
-<td>has_pcdc_aml_permissible_value/is_pcdc_aml_permissible_value_for_variable</td><td>A26</td></tr>
+<td>has_pcdc_aml_authorized_value/is_pcdc_aml_authorized_value_for_variable</td><td>A26</td></tr>
 <tr><td>RT</td>
-<td>has_pcdc_hl_permissible_value/is_pcdc_hl_permissible_value_for_variable</td><td>A39</td></tr>
+<td>has_pcdc_hl_authorized_value/is_pcdc_hl_authorized_value_for_variable</td><td>A39</td></tr>
 <tr><td>RT</td>
-<td>has_pcdc_ews_permissible_value/is_pcdc_ews_permissible_value_for_variable</td><td>A29</td></tr>
+<td>has_pcdc_ews_authorized_value/is_pcdc_ews_authorized_value_for_variable</td><td>A29</td></tr>
 <tr><td>RT</td>
-<td>has_pcdc_gct_permissible_value/is_pcdc_gct_permissible_value_for_variable</td><td>A34</td></tr>
+<td>has_pcdc_gct_authorized_value/is_pcdc_gct_authorized_value_for_variable</td><td>A34</td></tr>
 <tr><td>RT</td>
-<td>has_pcdc_os_permissible_value/is_pcdc_os_permissible_value_for_variable</td><td>A38</td></tr>
+<td>has_pcdc_os_authorized_value/is_pcdc_os_authorized_value_for_variable</td><td>A38</td></tr>
 <tr><td>RT</td>
 <td>has_pcdc_data_type/pcdc_data_type_of</td><td>A23</td></tr>
 <tr><td>RT</td>
@@ -449,17 +433,17 @@ Origin:
 <tr><td>RT</td>
 <td>has_salt_form/has_free_acid_or_base_form</td><td>A5</td></tr>
 <tr><td>RT</td>
-<td>has_seronet_permissible_value/is_seronet_permissible_value_for_variable</td><td>A37</td></tr>
+<td>has_seronet_authorized_value/is_seronet_authorized_value_for_variable</td><td>A37</td></tr>
 <tr><td>RT</td>
 <td>has_target/is_target_of_agent</td><td>A7</td></tr>
 <tr><td>RT</td>
-<td>is_pcdc_all_permissible_value_for_variable/has_pcdc_all_permissible_value</td><td>A35</td></tr>
+<td>is_pcdc_all_authorized_value_for_variable/has_pcdc_all_authorized_value</td><td>A35</td></tr>
 <tr><td>RT</td>
-<td>is_pcdc_aml_permissible_value_for_variable/has_pcdc_aml_permissible_value</td><td>A24</td></tr>
+<td>is_pcdc_aml_authorized_value_for_variable/has_pcdc_aml_authorized_value</td><td>A24</td></tr>
 <tr><td>RT</td>
-<td>is_pcdc_ews_permissible_value_for_variable/has_pcdc_ews_permissible_value</td><td>A28</td></tr>
+<td>is_pcdc_ews_authorized_value_for_variable/has_pcdc_ews_authorized_value</td><td>A28</td></tr>
 <tr><td>RT</td>
-<td>is_pcdc_gct_permissible_value_for_variable/has_pcdc_gtc_permissible_value</td><td>A33</td></tr>
+<td>is_pcdc_gct_authorized_value_for_variable/has_pcdc_gtc_authorized_value</td><td>A33</td></tr>
 <tr><td>RT</td>
 <td>is_related_To_endogenous_product/endogenous_product_related_to</td><td>A9</td></tr>
 <tr><td>RT</td>

@@ -32,7 +32,7 @@ status=published
     <div id="rep_change_summary" class="rep_block_level_one"></div>
 
     <a id="change_summary"></a>
-          <p><strong>VSAB: </strong>LNC274</p>
+          <p><strong>VSAB: </strong>LNC277</p>
    <hr>
       <h3>Summary of Changes:</h3>
       <p>1. New Class:</p>
@@ -43,19 +43,36 @@ status=published
       			<th>Class</th>
       		</tr>
       		<tr>
-      			<td>PANEL.EYE.SPECULAR MICROSCOPY</td>
-      			<td>Specular microscopy panel</td>
+      			<td>EYE.ANGIO</td>
+      			<td>Eye Angiography</td>
       		</tr>
         <tr>
-      			<td>PANEL.SURVEY.CoVSocEcon</td>
-      			<td>SARS-CoV-2 Related Socioeconomic Questionnaire panel</td>
+      			<td>HL7.SMP</td>
+      			<td>HL7 SMP</td>
       		</tr>	
        <tr>
-      			<td>SURVEY.CoVSocEcon</td>
-      			<td>SARS-CoV-2 Related Socioeconomic Questionnaire survey</td>
-      		</tr>	
+      			<td>ICP</td>
+      			<td>Inductively Coupled Plasma</td>
+      		</tr>
+       <tr>
+      			<td>ICU</td>
+      			<td>ICU</td>
+      		</tr>
+       <tr>
+      			<td>PANEL.SURVEY.HENDRICH</td>
+      			<td>PANEL SURVEY HENDRICH</td>
+      		</tr>
+       <tr>
+      			<td>PANEL.SURVEY.UNMETHELNEED</td>
+      			<td>Unmet Health Need</td>
+      		</tr>
+       <tr>
+      			<td>SURVEY.UNMETHELNEED</td>
+      			<td>Unmet Health Need</td>
+      		</tr>
       		</tbody>
 	     </table>
+      <p>2. Deprecated ATN = COMMON_SI_TEST_RANK</p>
       <hr>
      	<div id="rep_file_summary" class="rep_block_level_one"></div>
       <a id="file_summary"></a>
@@ -494,13 +511,6 @@ status=published
               </tr>
               <tr>
                 <td>33</td>
-                <td>COMMON_SI_TEST_RANK</td>
-                <td>Corresponding SI terms for 2000 common tests
-                  performed by laboratories in USA.</td>
-                <td>MRSAT.ATN = "COMMON_SI_TEST_RANK"</td>
-              </tr>
-              <tr>
-                <td>34</td>
                 <td>HL7_ATTACHMENT_STRUCTURE</td>
                 <td>Valid values: STRUCTURED or UNSTRUCTURED. STRUCTURED
                   terms are the allowed document type codes in the
@@ -509,7 +519,7 @@ status=published
                 <td>MRSAT.ATN = "HL7_ATTACHMENT_STRUCTURE"</td>
               </tr>
               <tr>
-                <td>35</td>
+                <td>34</td>
                 <td>EXTERNAL_COPYRIGHT_LINK</td>
                 <td>Used for terms with an additional third party
                   copyright. The field is populated with the
@@ -518,40 +528,40 @@ status=published
                 <td>MRSAT.ATN = "EXTERNAL_COPYRIGHT_LINK"</td>
               </tr>
               <tr>
-                <td>36</td>
+                <td>35</td>
                 <td>PanelType</td>
                 <td>Describes a panel as a "Convenience group",
                   "Organizer", or "Panel'.</td>
                 <td>MRSAT.ATN = "PANEL_TYPE"</td>
               </tr>
               <tr>
-                <td>37</td>
+                <td>36</td>
                 <td>AskAtOrderEntry</td>
                 <td>List of LOINC codes that represent optional Ask at
                   Order Entry (AOE) observations.</td>
                 <td>MRSAT.ATN = "ASK_AT_ORDER_ENTRY"</td>
               </tr>
               <tr>
-                <td>38</td>
+                <td>37</td>
                 <td>AssociatedObservations</td>
                 <td>List of LOINC codes that represent option associated
                   observation(s).</td>
                 <td>MRSAT.ATN = "ASSOC_OBSERVATIONS"</td>
               </tr>
               <tr>
-                <td>39</td>
+                <td>38</td>
                 <td>VersionFirstReleased</td>
                 <td>LOINC version number in which the record was first released. For oldest records where the version released number is not known, this field will be null.</td>
                 <td>MRSAT.ATN = "VERSION_FIRST_RELEASED"</td>
               </tr>
                <tr>
-                <td>40</td>
+                <td>39</td>
                 <td>ValidHL7AttachmentRequest</td>
                 <td>A value of 'Y' indicates that the LOINC code can be sent by a payer as part of an HL7 attachment request for additional information.</td>
                 <td>MRSAT.ATN = "HL7_ATTACHMENT_REQUEST"</td>
               </tr>
                <tr>
-                <td>41</td>
+                <td>40</td>
                 <td>DisplayName</td>
                 <td>Clinician friendly name. Algorithmically created.</td>
                 <td>MRCONSO.STR, TTY = "DN"</td>

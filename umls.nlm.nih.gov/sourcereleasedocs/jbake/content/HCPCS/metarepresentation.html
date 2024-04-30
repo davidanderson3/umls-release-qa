@@ -31,24 +31,29 @@ status=published
     	<div class="col-sm-auto border-left"><a href="#mappings">Mappings</a></div>
     </div>
     
-<p><b>VSABs:</b> HCPCS2023, HCDT2023, HCPT2023</p>
+<p><b>VSABs:</b> HCPCS2024, HCPT2024</p>
 <hr>
 <div id="rep_identifiers" class="rep_block_level_one">
   <h3>Summary of Changes:</h3>
-<!-- Did not mention that HCDT/HIR attributes went away, that seems confusing -->
-  <p>No changes to the HCPCS file format or Metathesaurua source processing.</p>
-<hr>
+<!-- Since HCDT was not updated for 2024 due to licensing issues, if it is included in the future we will have to add it back in to certain sections -->
+<!-- so review VSAB list, CODE, SAB assignment below -->
+
+<p>New attribute:  HPF<b/>
+	If the long description for a HCPCS code exceeds 3000 characters, the atom_name is truncated and the entire field is included in MRSAT.ATN = "HPF."
+	</p>
+	
+  <p>No additional changes to the HCPCS file format or Metathesaurua source processing.</p><hr>
   <h3>Source Provided Files:</h3>
 
   <p>The Metathesaurus uses a fixed-length field file submitted by the Centers for Medicare &amp; Medicaid Services
-  (CMS). The file used for 2023 is: HCPC2023_JAN_CONTR.txt.</p>
+  (CMS). The file used for 2024 is: HCPC2024_JAN_Contr_v2.txt.</p>
 
   <p>Not included: Field 2 (sequence number; character positions 6-10) is excluded from Metathesaurus processing.</p>
 <hr>
   <h3>Identifiers:</h3>
 
   <ul>
-    <li>CODE: For HCPCS, HCPT, HCDT atoms: Field 1 (HCPCS Procedure or Modifier Code; Character positions 1-5).<br/>
+    <li>CODE: For HCPCS, HCPT atoms: Field 1 (HCPCS Procedure or Modifier Code; Character positions 1-5).<br/>
     For MTH_HT atoms: An MTHU# is generated during Metathesaurus source processing</li>
 
     <li>SAUI: Not Applicable</li>
@@ -69,7 +74,7 @@ status=published
 
       <li>HCPT: 2 or 5-digit numeric code or 4 digits followed by T or F</li>
 
-      <li>HCDT: "D" followed by 4 digits: HCDT</li>
+      <!-- <li>HCDT: "D" followed by 4 digits: HCDT</li> -->
 
       <li>HCPCS: All other codes from the HCPCS data file, plus hierarchical terms generated during Metathesaurus source processing</li>
     </ul>
@@ -184,7 +189,7 @@ status=published
         <tr>
           <td>CPF</td>
 
-          <td>HCPCS Long Description (character positions 12-91). For modifiers, the STR is truncated at the ":", and the entire Long Description is represented with ATN=CPF.</td>
+          <td>HCPCS Long Description (character positions 12-91). For modifiers, the STR is truncated at the ":", and the entire field is represented with ATN=CPF.</td>
         </tr>
 
         <tr>
@@ -259,6 +264,12 @@ status=published
           <td>HCPCS ASC Payment Group Code (character positions 231-232)</td>
         </tr>
 
+        <tr>
+          <td>HPF</td>
+
+          <td>	If the long description for a HCPCS code exceeds 3000 characters, the atom_name is truncated and the entire field is included in MRSAT.ATN = "HPF."</td>
+        </tr>
+		
         <tr>
           <td>HPI</td>
 
