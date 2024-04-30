@@ -8,26 +8,24 @@ status=published
 
 <!--menu-->
 <div class="row">
-   <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
-      <div class="btn-group navbar-btn visible-*" role="group">
-         <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
-         <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
-         <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
-         <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
-         <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
-      </div>
-   </div>
+ <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+  </div>
+ </div>
 </div>
 
 
 <div class="border-top border-bottom p-2">
    <div class="pl-2">
-      <strong>Search MDRFIN in the UMLS Metathesaurus</strong>
+      <strong>Search MDRFIN in the UMLS Metathesaurus</strong> 
    </div>
    <div class="row pt-2 px-4">
       <form class="form-inline" action="https://uts.nlm.nih.gov/uts/umls/searchResults" method="GET" target="_blank">
          <div class="input-group">
-            <input class="form-control" type="text" name="searchString" value="" />
+            <input class="form-control" type="text" name="searchString" value=""/>
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             <input id="MDRFIN" name="vocabulary" type="hidden" value="MDRFIN">
             <input id="returnType" name="returnType" type="hidden" value="code">
