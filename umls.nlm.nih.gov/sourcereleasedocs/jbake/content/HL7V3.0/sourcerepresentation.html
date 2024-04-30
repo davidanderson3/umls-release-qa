@@ -1,6 +1,6 @@
 title=HL7V3.0 (HL7 Version 3.0) - Source Representation
 date=2018-05-07
-updated=2023-11-06
+updated=2024-05-06
 type=page
 status=published
 ~~~~~~
@@ -31,7 +31,10 @@ status=published
 <hr>
 <div id="change_summary" class="rep_block_level_one">
   <h3>Summary of Changes:</h3>
-  <p>None.</p>
+  <p>Dropped attribute name(s) and description:</p>
+    <ul><li>HL7LT -- HL7 license terms</li>
+    <li>HL7RG -- HL7 responsible group organization name</li>
+    </ul>
 </div>
 <hr>
 <div id="rep_file_summary" class="rep_block_level_one">
@@ -125,18 +128,6 @@ status=published
             <td>codeSystem/annotations/documentation/description/text</td>
 
             <td>MRDEF.DEF for the codeSystem concept</td>
-          </tr>
-
-          <tr>
-            <td>codeSystem/header/legalese/licenseTerms</td>
-
-            <td>MRSAT.ATN="HL7LT" for the codeSystem concept</td>
-          </tr>
-          
-          <tr>
-            <td>codeSystem/header/responsibleGroup/@organizationName</td>
-
-            <td>MRSAT.ATN="HL7RG" for the codeSystem concept</td>
           </tr>
 
           <tr>

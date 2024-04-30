@@ -5,7 +5,7 @@ import csv
 with open('MRSAB_all.txt', 'r') as f:
     reader = csv.reader(f, delimiter='|')
     for row in reader:
-        with open('/Users/andersondm2/umlsdoc/umls.nlm.nih.gov/sourcereleasedocs/jbake/content/'+row[3]+'/metadata.html', 'w') as f:
+        with open('/Users/andersondm2/umls-source-release/umls.nlm.nih.gov/sourcereleasedocs/jbake/content/'+row[3]+'/metadata.html', 'w') as f:
             f.write(	"title=" + "\n"
 	"date=2017-11-06" + "\n"
 	"updated=" + "\n"
