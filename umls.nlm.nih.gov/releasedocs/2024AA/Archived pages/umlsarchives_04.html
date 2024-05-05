@@ -1,53 +1,60 @@
-<!-- 	files and tables -->
+
+
+
+<div class="grid-row"><!-- start row-->
+  <div class="tablet:grid-col"><!-- start column-->
+
+
+    <p> Please visit the
+      <a href="https://www.ncbi.nlm.nih.gov/books/NBK9676/">UMLS Reference Manual
+      </a> for details about the archived UMLS release files below. The current release is located at this
+      <a href="https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/index.html">link
+      </a>.
+    </p>
+
+
+
+    <!--button group -->
+
+    <ul class="usa-button-group">
+      <li class="usa-button-group__item">
+        <a href="#table1" class="usa-button">2016AB-present</a>
+      </li>
+      <li class="usa-button-group__item">
+        <a href="#table2" class="usa-button">2004-2016AA</a>
+      </li>
+      <li class="usa-button-group__item">
+        <a href="#table3" class="usa-button">2002-2003</a>
+      </li>
+    </ul>
+    <br>
+  </div><!-- end row-->
+</div><!-- end col-->
+
+
+<!-- Tables -->
+
+<!-- start div tables-->
 <div>
-  <!-- <h2>UMLS Release File Archives</h2> -->
-  <br>
-  <p> Please visit the
-    <a href="https://www.ncbi.nlm.nih.gov/books/NBK9676/">UMLS Reference Manual
-    </a> for details about the UMLS release files below. The current release is located at this
-    <a href="https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/index.html">link
-    </a>
-  </p>
-  <!--Nav tabs -->
-  <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
-      <a class="nav-link active" href="#tab-table1" data-bs-toggle="tab">
-        <h4>2016AB-present
-        </h4>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#tab-table2" data-bs-toggle="tab">
-        <h4>2004-2016AA
-        </h4>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#tab-table3" data-bs-toggle="tab">
-        <h4>2002-2003
-        </h4>
-      </a>
-    </li>
-  </ul>
 
-  <!-- Tab panes -->
-  <div class="tab-content">
-    <div id="tab-table1" class="container-fluid tab-pane active">
-      <!-- start table.less_columns_2016AB-present -->
+  <div class="grid-row"><!-- start row-->
+    <div class="tablet:grid-col"><!-- start column-->
 
-      <table id="myTable1" class="usa-table">
 
+      <table id=" table1" class="usa-table">
+        <h4> 2016AB - present </h4>
         <thead>
+		
           <tr>
-            <th>Version
+            <th scope="col">Version
             </th>
-            <th>Date released
+            <th scope="col">Date released
             </th>
-            <th>Full Release Files
+            <th scope="col">Full Release Files
             </th>
-            <th>UMLS Metathesaurus Files
+            <th scope="col">UMLS Metathesaurus Files
             </th>
-            <th>MRCONSO.RRF
+            <th scope="col">MRCONSO.RRF
             </th>
           </tr>
         </thead>
@@ -84,12 +91,6 @@
               </a>
             </td>
           </tr>
-
-
-
-
-
-
 
 
 
@@ -419,35 +420,39 @@
             </td>
           </tr>
         </tbody>
-      </table>
-    </div>
-    <!-- end table.less_columns_2016AB-present -->
-
-
-    <!-- start new table with unique column headers and additional files -->
-    <div id="tab-table2" class="container-fluid tab-pane fade">
+      </table><!-- end table1 2016AB-present -->
       <br>
-      <!-- start table.more_columns_2004-2016AA -->
-      <p> Note: Releases from 2013AA-2016AA contained active and full release files.
-      </p>
-      <table id="myTable2" class="usa-table">
+    </div><!-- end row-->
+  </div><!-- end col-->
 
+
+
+  <!-- start table2 2004-2016AA -->
+
+  <div class="grid-row"><!-- start row-->
+    <div class="tablet:grid-col"><!-- start column-->
+
+      <table id="table2" class="usa-table">
+        <h4> 2004-2016AA </h4>
+        <p> Note: Releases from 2013AA-2016AA contained active and full release files.
+        </p>
         <thead>
-          <!-- <h4>2004-2016AA</h4> -->
+		
+
           <tr>
 
-            <th>Version
+            <th scope="col">Version
             </th>
-            <th>Date released
+            <th scope="col">Date released
             </th>
-            <th>CHK and MD5
+            <th scope="col">CHK and MD5
             </th>
-            <th>1-meta.nlm, 2-meta.nlm,
+            <th scope="col">1-meta.nlm, 2-meta.nlm,
               <br> and otherks.nlm
             </th>
-            <th>mmsys.zip
+            <th scope="col">mmsys.zip
             </th>
-            <th>copyright notice and README.txt
+            <th scope="col">copyright notice and README.txt
             </th>
 
           </tr>
@@ -1877,33 +1882,35 @@
             </td>
           </tr>
         </tbody>
-      </table>
-    </div>
-    <!-- end table.more_columns_2004-2016AA -->
+      </table><!-- end table2 2004-2016AA -->
 
-
-    <!-- Start Table 3 with 2002-2003 archive files -->
-    <div id="tab-table3" class="container-fluid tab-pane fade">
       <br>
-      <p> Note: Each release from 2002-2003 came in two formats: ISO and UNIX.
-      </p>
-      <table id="myTable3" class="usa-table">
+    </div><!-- end col-->
+  </div><!-- end row-->
 
+  <!-- start table3 2002-2003 -->
+
+  <div class="grid-row"><!-- start row-->
+    <div class="tablet:grid-col"><!-- start column-->
+
+      <table id="table3" class="usa-table">
+        <h4> 2002 - 2003 </h4>
+        <p> Note: Each release from 2002-2003 came in two formats: ISO and UNIX.</p>
         <thead>
-          <!-- <h4>2002-2003</h4> -->
+
           <tr>
 
-            <th>Version
+            <th scope="col">Version
             </th>
-            <th>Format
+            <th scope="col">Format
             </th>
-            <th>Date released
+            <th scope="col">Date released
             </th>
-            <th>CHK and MD5
+            <th scope="col">CHK and MD5
             </th>
-            <th>ZIP or TGZ _1 and _2
+            <th scope="col">ZIP or TGZ _1 and _2
             </th>
-            <th>copyright notice and additional documentation
+            <th scope="col">copyright notice and additional documentation
             </th>
           </tr>
 
@@ -2101,6 +2108,7 @@
             <td>
               <a href="https://download.nlm.nih.gov/umls/kss/2003AA_01/tar/2003AA.CHK">2003AA.CHK
               </a>
+              <br>
               <a href="https://download.nlm.nih.gov/umls/kss/2003AA_01/tar/2003AA.MD5">2003AA.MD5
               </a>
             </td>
@@ -2503,9 +2511,14 @@
           </tr>
         </tbody>
       </table>
-    </div>
-    <!-- End Table 3 files -->
-    <!-- End files -->
-  </div>
-</div>
-<!-- end div tab content -->
+      <!-- end table 3 2002-2003 -->
+      <br>
+
+      <button class="usa-button usa-button--outline" type="button">
+        <a href="#top">Back to Top</a>
+      </button>
+      <br>
+    </div><!-- end col-->
+  </div><!-- end row-->
+
+</div><!-- end page-->
