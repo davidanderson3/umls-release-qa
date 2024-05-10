@@ -1,0 +1,30 @@
+<div class="left-menu">
+  <div class="bg-light border-right" id="sidebar-wrapper">
+    <div class="sidebar-heading">
+      <h3 class="py-3 text-center left-menu-heading">
+        <a href="/">UMLS Vocabularies</a>
+      </h3>
+    </div>
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let key of objectKeys(groupedSources)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{ key }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="list-group list-group-flush">
+          <a href="current/{{ source.abbreviation }}"
+             class="list-group-item list-group-item-action bg-light"
+             *ngFor="let source of groupedSources[key]"
+             (click)="onSourceClick(source)">
+             {{ source.abbreviation }}
+          </a>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+  <div class="w-100">
+    <!-- This is where your main content will go -->
+    <ng-content></ng-content>
+  </div>
+</div>

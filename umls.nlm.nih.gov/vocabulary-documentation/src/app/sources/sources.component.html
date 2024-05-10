@@ -1,0 +1,46 @@
+<div class="container-fluid">
+<app-header></app-header>
+  <div class="row">
+    <div class="col-xl-2 d-none d-xl-block border-right px-2 py-2">
+      <app-left-menu></app-left-menu>
+    </div>
+    <div class="col-xl-10">
+      <div class="bg-white"> <!-- Sticky-top and background here -->
+      <nav aria-label="breadcrumb">
+  <ol class="breadcrumb mb-0">
+    <li class="breadcrumb-item"><a href="//www.nlm.nih.gov/" title="National Library of Medicine home page">Home</a></li>
+    <li class="breadcrumb-item"><a href="//www.nlm.nih.gov/healthit/index.html">Health IT</a></li>
+    <li class="breadcrumb-item"><a href="//www.nlm.nih.gov/research/umls/">UMLS</a></li>
+    <li class="breadcrumb-item"><a href="/">Vocabulary Documentation</a></li>
+    <li class="breadcrumb-item">{{ dynamicHeading }} ({{ sourceData.shortName }})</li>
+  </ol>
+</nav>
+<div class="sticky-top">
+        <div id="source-name" class="heading">
+        <h1 class="border-bottom p-2">{{ dynamicHeading }} ({{ sourceData.shortName }})</h1>
+        </div>
+        <!-- Tab navigation -->
+        <ul class="nav nav-tabs" id="myTabs">
+          <li class="nav-item">
+            <a (click)="setActiveTab('synopsis')" [class.active]="activeTab === 'synopsis'" class="nav-link" data-toggle="tab">Synopsis</a>
+          </li>
+          <li class="nav-item">
+            <a (click)="setActiveTab('metadata')" [class.active]="activeTab === 'metadata'" class="nav-link" data-toggle="tab">Metadata</a>
+          </li>
+          <li class="nav-item">
+            <a (click)="setActiveTab('statistics')" [class.active]="activeTab === 'statistics'" class="nav-link" data-toggle="tab">Statistics</a>
+          </li>
+  <li class="nav-item" *ngIf="displayTabs.includes('sourcerepresentation')">
+    <a (click)="setActiveTab('sourcerepresentation')" [class.active]="activeTab === 'source'" class="nav-link" data-toggle="tab">Source Representation</a>
+  </li>
+  <li class="nav-item" *ngIf="displayTabs.includes('metarepresentation')">
+    <a (click)="setActiveTab('metarepresentation')" [class.active]="activeTab === 'meta'" class="nav-link" data-toggle="tab">Metathesaurus Representation</a>
+  </li>
+        </ul>
+      </div>
+    </div>
+      <div class="tab-content mt-2" [innerHtml]="htmlContent[activeTab]" (click)="onAnchorClick($event)"></div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>
