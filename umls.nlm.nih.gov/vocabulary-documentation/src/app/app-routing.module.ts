@@ -22,4 +22,5 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-RouterModule.forRoot(routes, { enableTracing: true }) // <-- debugging purposes only
+RouterModule.forRoot(routes, { enableTracing: true, initialNavigation: 'enabledBlocking' }) // <-- debugging purposes only
+ // <-- debugging purposes only

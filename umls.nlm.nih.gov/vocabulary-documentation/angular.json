@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/vocabulary-documentation",
+            "outputPath": "dist/vocabulary-documentation/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -97,6 +97,60 @@
             ],
             "scripts": []
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/vocabulary-documentation/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false,
+              "vendorChunk": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "vocabulary-documentation:build:development",
+              "serverTarget": "vocabulary-documentation:server:development"
+            },
+            "production": {
+              "browserTarget": "vocabulary-documentation:build:production",
+              "serverTarget": "vocabulary-documentation:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "vocabulary-documentation:build:production",
+              "serverTarget": "vocabulary-documentation:server:production"
+            },
+            "development": {
+              "browserTarget": "vocabulary-documentation:build:development",
+              "serverTarget": "vocabulary-documentation:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

@@ -45,7 +45,9 @@ const routes: Routes = [
 		MatButtonModule,
 		MatIconModule,
 		FormsModule,
-		RouterModule.forRoot(routes),
+		RouterModule.forRoot(routes, {
+    initialNavigation: 'enabledBlocking'
+}),
 		AppRoutingModule,
 		MatExpansionModule
 	],
