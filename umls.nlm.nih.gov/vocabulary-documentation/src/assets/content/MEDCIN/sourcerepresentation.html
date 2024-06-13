@@ -1,4 +1,25 @@
+title=MEDCIN (MEDCIN) - Source Representation
+date=2018-05-07
+updated=2024-05-06
+type=page
+status=published
+~~~~~~
 
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+
+<!--endmenu-->
 <br/>
 <p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p>
     <div class="row py-2 mb-2 mini-menu">  
@@ -8,7 +29,7 @@
     	<div class="col-sm-auto border-left"><a href="#file_details">Source-Provided File Details</a></div>
     </div>
 
-<p><strong>VSAB: MEDCIN3_2023_01_19</strong></p>
+<p><strong>VSAB: MEDCIN3_2023_12_19</strong></p>
 <hr>
 <a id="general"></a>
 <div id="rep_general" class="rep_block_level_one">
@@ -19,7 +40,7 @@
 <div id="rep_change_summary" class="rep_block_level_one">
 <a id="change_summary"></a>
 <h3>Summary of Changes</h3>
-<p>Mappings to SNOMEDCT_US_2022_12_31</p>
+<p>Mappings to SNOMEDCT_US_2023_09_01</p>
 </div>
 <hr>
 <div id="rep_file_summary" class="rep_block_level_one">
@@ -38,19 +59,19 @@
       <th>Description</th>
     </tr>
     <tr>
-      <td><a href="#file1">UMLS_MEDCIN_CONCEPTS2023-01-19.txt</a></td>
+      <td><a href="#file1">UMLS_MEDCIN_CONCEPTS2023-12-19.txt</a></td>
       <td>Concepts - Pipe-Delimited Format</td>
     </tr>
     <tr>
-      <td><a href="#file2">UMLS_MEDCIN_DESCRIPTIONS2023-01-19.TXT</a></td>
+      <td><a href="#file2">UMLS_MEDCIN_DESCRIPTIONS2023-12-19.txt</a></td>
       <td>Descriptions - Pipe-Delimited Format</td>
     </tr>
     <tr>
-      <td><a href="#file3">UMLS_MEDCIN_HIERARCHY202023-01-19.TXT</a></td>
+      <td><a href="#file3">UMLS_MEDCIN_HIERARCHY2023-12-19.txt</a></td>
       <td>Hierarchy - Pipe-Delimited Format</td>
     </tr>
     <tr>
-      <td><a href="#file4">UMLS_MEDCIN_SNOMED2023-01-19.TXT</a></td>
+      <td><a href="#file4">UMLS_MEDCIN_SNOMED2023-12-19.txt</a></td>
       <td>MEDCIN to SNOMEDCT mappings - Pipe-Delimited Format</td>
     </tr>
   </tbody>
@@ -180,7 +201,7 @@ characters have not been removed from the HCD value.
       <td>1</td>
       <td>MEDCINID</td>
       <td>MEDCIN concept ID</td>
-      <td>MRREL.CUI1 populated by the Metathesaurus CUI corresponding
+      <td>MRREL.CUI2 populated by the Metathesaurus CUI corresponding
 to MEDCINID</td>
     </tr>
     <tr>
@@ -202,7 +223,7 @@ entries are also created.
       <td>SCT_CONCEPTID</td>
       <td>The SNOMEDCT CONCEPTID of the concept having the specified
 type of relationship to the concept indicated by MEDCINID</td>
-      <td>MRREL.CUI2 populated by the Metathesaurus CUI corresponding
+      <td>MRREL.CUI1 populated by the Metathesaurus CUI corresponding
 to SCT_CONCEPTID</td>
     </tr>
     <tr>

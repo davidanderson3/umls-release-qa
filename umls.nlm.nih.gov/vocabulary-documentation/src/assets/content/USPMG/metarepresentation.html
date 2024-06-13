@@ -1,4 +1,25 @@
+title=USPMG (USP Model Guidelines) - Metathesaurus Representation
+date=2017-11-06
+updated=2024-05-06
+type=page
+status=published
+~~~~~~
 
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+
+<!--endmenu-->
 <br/>   
 <p>This page lists UMLS Metathesaurus data elements and traces them
       back to the specific source data that populates them.</p>
@@ -11,13 +32,12 @@
     	<div class="col-sm-auto border-left"><a href="#mappings">Mappings</a></div>
     </div>
     <div id="general" class="rep_block_level_one">
-      <p><strong>VSAB:</strong> USPMG_2020</p>
+      <p><strong>VSAB:</strong> USPMG_2023</p>
       <hr>
       <div id="rep_identifiers" class="rep_block_level_one">
         <h3>Summary of Changes</h3>
         <div>
-  		The "Salt/Ester" column has been removed from the original data file.  Many of the MRCONSO.STR values that were previously created by concatenating the "Example Drugs" 
-		with the "Salt/Ester" column are now included in the "Example Drugs" column (previously labeled "Example Part D Eligible Drugs"). 
+  		There have been no changes to the source format or to Metathesaurus source processing. 
         </div>
       </div>
       <hr>
@@ -34,7 +54,7 @@
               <th>Description</th>
             </tr>
             <tr>
-              <td class="file_field_name">USP_Medicare_Model_Guidelines_v8.0__All_Excel_Spreadsheets_.xlsx</td>
+              <td class="file_field_name">USP_Medicare_Model_Guidelines_v9.0__All_Excel_Spreadsheets___1.0_.xlsx</td>
               <td>Data file
               </td>
             </tr>
@@ -128,7 +148,7 @@
                 <td>LEVEL</td>
                 <td>Value of column from original spreadsheet.
                   Values are:<br/>
-                  Example Drugs<br/>
+                  Example Part D Eligible Drugs<br/>
                   USP Category<br/>
                   USP Class
                 </td>
@@ -159,8 +179,7 @@
               </tr>
               <tr>
                 <td>CHD<br/>
-                  PAR<br/>
-                  SIB
+                  PAR
                 </td>
                 <td>&lt;no RELA&gt;<br/>
                 </td>

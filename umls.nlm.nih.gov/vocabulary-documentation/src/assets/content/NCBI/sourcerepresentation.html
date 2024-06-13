@@ -1,4 +1,25 @@
+title=NCBI (NCBI Taxonomy) - Source Representation
+date=2017-11-06
+updated=2024-05-06
+type=page
+status=published
+~~~~~~
 
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+
+<!--endmenu-->
 <br/>
 <p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p>
     <div class="row py-2 mb-2 mini-menu">  
@@ -10,11 +31,11 @@
 <a id="general"></a>
 <div id="rep_general" class="rep_block_level_one">
 
-<strong>VSAB: </strong>NCBI2022_12_07
+<strong>VSAB: </strong>NCBI2023_11_01
 <hr>
 <h3>Notes</h3>
-The UMLS includes concepts where the "specified_species" value in nodes.dmp = 1, indicating that a species in the node's lineage has a formal name. All higher level concepts needed to make a complete hierarchy are also included.
-Other concepts are excluded.
+<p>The UMLS includes concepts where the "specified_species" value in nodes.dmp = 1, indicating that a species in the node's lineage has a formal name. All higher level concepts needed to make a complete hierarchy are also included.
+Other concepts are excluded.</p>
 
 </div>
 <hr>
@@ -22,19 +43,8 @@ Other concepts are excluded.
 <a id="change_summary"></a>
 <h3>Summary of Changes:</h3>
 
-<p>Significant changes to Metathesaurus source processing were made for 2023AA<br/><br/>
-The UMLS will no longer use the algorithm for excluding concepts based on string patterns or hierarchy level.  Beginning with this version, we will include concepts where the "specified_species" value in nodes.dmp = 1, 
-indicating that a species in the node's lineage has a formal name. All higher level concepts needed to make a complete hierarchy are also included.
-Other concepts are excluded.
-<br/><br/>
-Deprecated TTYs:<br/>
-AUN, UAUN
-<br/><br/>
-New ATN: <br/>
-AUTHORITY_NAME
-<br/><br/>
-Explanation:<br/>
-Names in names.dmp where class = "authority" are now represented as attributes in MRSAT, rather than atoms in MRCONSO.
+No changes were made to the source data format or to Metathesaurus source processing
+
 </p>
 </div>
 <div id="rep_file_summary" class="rep_block_level_one">

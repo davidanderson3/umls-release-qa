@@ -1,4 +1,25 @@
+title=HCPCS (HCPCS - Healthcare Common Procedure Coding System) - Source Representation
+date=2018-05-07
+updated=2024-05-06
+type=page
+status=published
+~~~~~~
 
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+
+<!--endmenu-->
 <br/>
     <div class="row py-2 mb-2 mini-menu">  
     	<div class="col-sm-auto">Skip to:</div>
@@ -9,7 +30,7 @@
 <div id="rep_general" class="rep_block_level_one">
   <a id="general"></a>
 
-  <p><b>VSABs: HCPCS2023, HCDT2023, HCPT2023</b></p>
+  <p><b>VSABs: HCPCS2024, HCPT2024</b></p>
   <hr>
 
   <h3>Notes</h3>
@@ -19,13 +40,13 @@
   <ul>
     <li>Level I codes are copyrighted by the American Medical Association (AMA) and are assigned RSAB = "HCPT".</li>
 
-    <li>Level II codes include data copyrighted by the American Dental Association&rsquo;s Current Dental Terminology (CDT). 5-character alpha-numeric codes beginning with the letter "D," and are assigned RSAB = "HCDT". All other Level II codes are assigned RSAB = "HCPCS."</li>
+    <li>Level II codes include 5-character alpha-numeric codes beginning with the letter "D," which are copyrighted by the American Dental Association's Current Dental Terminology (CDT). HCDT was not updated for 2024AB.  All other Level II codes are assigned RSAB = "HCPCS."</li>
   </ul>
 
-  <p>The standard HCPCS data files do not include a hierarchy. The NLM uses the printed book and other resources to generate a hierarchy during Metathesaurus source processing. This hierarchy has not been reviewed by CMS and is attributed to SAB = HCPCS, TTY = MTH_HT.</p>
+  <p>The standard HCPCS data files do not include a hierarchy. The NLM uses the printed book and other resources to generate a hierarchy during Metathesaurus source processing. This hierarchy has not been reviewed by CMS and is assigned TTY = MTH_HT.</p>
 
   <p>HCPCS includes many attributes. When possible, NLM source processing has attempted to include an expanded value in the ATV field of MRSAT to enable the data to be self-documenting.<br/>
-  The expanded values have been extracted from HCPCS2023_recordlayout.txt and proc_notes_JAN2023.txt as appropriate.<br/>
+  The expanded values have been extracted from HCPCS2024_recordlayout.txt and proc_notes_JAN2024.txt as appropriate.<br/>
   For example, for the HCPCS Multiple Pricing Indicator Code is assigned an ATN of "HMP" in MRSAT.RRF.<br/>
   A value that appears as "A"in the data file is given an expanded ATV of "A=Not applicable as HCPCS priced under one methodology" in MRSAT.RRF.</p>
 </div>
@@ -34,9 +55,15 @@
   <a id="change_summary"></a>
 
   <h3>Summary of Changes</h3>&nbsp;
-<!-- Did not mention that HCDT/HIR attributes went away, that seems confusing -->
+<!-- Since HCDT was not updated for 2024 due to licensing issues, if it is included in the future we will have to add it back in to certain sections -->
+<!-- so review VSAB list CODE, SAB assignment below -->
 
-  <p>No changes to the HCPCS file format or Metathesaurua source processing.</p>
+  <p>HCDT was not updated for 2024AB.</p>
+  <p>New attribute:  HPF<b/>
+	If the long description for a HCPCS code exceeds 3000 characters, the atom_name is truncated and the entire filed is included in MRSAT.ATN = "HPF."
+	</p>
+	
+  <p>No additional changes to the HCPCS file format or Metathesaurua source processing.</p>
 </div>
 <hr>
 <div id="rep_file_summary" class="rep_block_level_one">
@@ -155,7 +182,7 @@
         <td>12</td>
         <td>91</td>
         <td>Contains all text of procedure or modifier long description</td>
-        <td>MRCONSO.STR, TTY = "PT", "OP", "OM" or "OP" depending on values of the "Record Identification Code" and the "Termination Date." The "MP" atom is generally created by extracting the text before the first ":". Material appearing after the first ":" is included in MRSAT.ATN = "CPF".</td>
+        <td>MRCONSO.STR, TTY = "PT", "OP", "OM" or "OP" depending on values of the "Record Identification Code" and the "Termination Date." The "MP" atom is generally created by extracting the text before the first ":". Material appearing after the first ":" is included in MRSAT.ATN = "CPF".  If the long description for a HCPCS code exceeds 3000 characters, the atom_name is truncated and the entire filed is included in MRSAT.ATN = "HPF."</td>
       </tr>
 
       <tr>

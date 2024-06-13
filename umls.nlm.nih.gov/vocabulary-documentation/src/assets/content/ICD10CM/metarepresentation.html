@@ -1,4 +1,25 @@
+title=ICD10CM (International Classification of Diseases, Tenth Revision, Clinical Modification) - Metathesaurus Representation
+date=2017-11-06
+updated=2024-05-06
+type=page
+status=published
+~~~~~~
 
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+
+<!--endmenu-->
 <br/>
     <p>This page lists UMLS Metathesaurus data elements and traces them
       back to the specific source data that populates them.</p>
@@ -13,7 +34,7 @@
     </div>
 
     <div id="general" class="rep_block_level_one">
-      <p><strong>VSAB:</strong> ICD10CM_2023</p>
+      <p><strong>VSAB:</strong> ICD10CM_2024</p>
       <hr>
       <div id="rep_change_summary" class="rep_block_level_one">
         <h3>Summary of Changes</h3>
@@ -26,12 +47,12 @@
         Documentation: <br/>
         <ul>
           <li>icd10OrderFiles.pdf</li>
-          <li>icd10cm_tabular_2023.pdf</li>
+          <li>icd10cm_tabular_YYYY.pdf</li>
         </ul>
         Data:<br/>
         <ul>
-          <li> icd10cm_order_2023.txt</li>
-          <li>icd10cm_tabular_2023.xml</li>
+          <li> icd10cm_order_YYYY.txt</li>
+          <li>icd10cm_tabular_YYYY.xml</li>
         </ul>
 
         The tabular xml file aligns with the order file, and redundant
@@ -44,8 +65,8 @@
             <li>CODE:
             <ul>
               <li>Diagnoses, chapters: value of "&lt;name&gt;" tag</li>
-              <li>Diagnoses, 7 character codes: value of "&lt;name&gt;" tag" concatenated with "&lt;SevenChrDef&gt; &lt;extension&gt;" tag
-              <li>Sections: value of "id" attribute of "&lt;section&gt;" tag
+              <li>Diagnoses, 7 character codes: value of "&lt;name&gt;" tag" concatenated with "&lt;SevenChrDef&gt; &lt;extension&gt;" tag </li>
+              <li>Sections: value of "id" attribute of "&lt;section&gt;" tag </li>
             </ul>
             </li>
             <li>SAUI: Not Applicable</li>

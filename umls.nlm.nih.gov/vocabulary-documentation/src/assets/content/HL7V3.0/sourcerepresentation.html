@@ -1,4 +1,25 @@
+title=HL7V3.0 (HL7 Version 3.0) - Source Representation
+date=2018-05-07
+updated=2024-05-06
+type=page
+status=published
+~~~~~~
 
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+
+<!--endmenu-->
 <br/>
     <div class="row py-2 mb-2 mini-menu">  
     	<div class="col-sm-auto">Skip to:</div>
@@ -10,7 +31,10 @@
 <hr>
 <div id="change_summary" class="rep_block_level_one">
   <h3>Summary of Changes:</h3>
-  <p>None.</p>
+  <p>Dropped attribute name(s) and description:</p>
+    <ul><li>HL7LT -- HL7 license terms</li>
+    <li>HL7RG -- HL7 responsible group organization name</li>
+    </ul>
 </div>
 <hr>
 <div id="rep_file_summary" class="rep_block_level_one">
@@ -104,18 +128,6 @@
             <td>codeSystem/annotations/documentation/description/text</td>
 
             <td>MRDEF.DEF for the codeSystem concept</td>
-          </tr>
-
-          <tr>
-            <td>codeSystem/header/legalese/licenseTerms</td>
-
-            <td>MRSAT.ATN="HL7LT" for the codeSystem concept</td>
-          </tr>
-          
-          <tr>
-            <td>codeSystem/header/responsibleGroup/@organizationName</td>
-
-            <td>MRSAT.ATN="HL7RG" for the codeSystem concept</td>
           </tr>
 
           <tr>

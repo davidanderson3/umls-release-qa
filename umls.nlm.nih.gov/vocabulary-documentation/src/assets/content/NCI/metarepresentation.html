@@ -1,17 +1,37 @@
+title=NCI (NCI Thesaurus) - Metathesaurus Representation
+date=2018-05-07
+updated=2024-05-06
+type=page
+status=published
+~~~~~~
 
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+
+<!--endmenu-->
 <br/>
 
 <p>This page list UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
 
 <div id = "general" class = "rep_block_level_one">
-<p><strong>VSAB: </strong>NCI2022_09D</p>
+<p><strong>VSAB: </strong>NCI2023_09D</p>
 <div id = "rep_identifiers" class = "rep_block_level_one">
 <h3>Notes</h3>
 <p>NCI Thesaurus (NCIt) is a widely recognized standard for biomedical coding and reference. It covers vocabulary for clinical care, translational and basic research, public information and administrative activities and is used by a broad variety of public and private partners both nationally and internationally.</p>
 </div>
 <h3>Summary of Changes</h3>
 <p>None</p>
-
 </div>
 <div id = "rep_change_summary" class = "rep_block_level_one">
 <h3>Original Files:</h3>
@@ -184,8 +204,8 @@
 <div id = "rep_definitions" class = "rep_block_level_two">
 <a id= "definitions">&nbsp;</a>
 <h3>Definitions (MRDEF)</h3
-<p>Only definitions with a source of NCI, NCI-GLOSS, or of an NCI subsource are included.  Definitions are attached to their corresponding PT.  For example, an NCI-GLOSS definition is attached to its NCI-GLOSS/PT.  If there is no corresponding PT then the definition is attached to the NCI/PT.  Definition attributions are enclosed within parentheses and appended to the definition.</p>
-<p>Origin:</p>
+<p>Only definitions with a source of NCI, NCI-GLOSS, or of an NCI subsource are included.  Definitions are attached to their corresponding PT.  For example, an NCI-GLOSS definition is attached to its NCI-GLOSS/PT.  If there is no corresponding PT then the definition is attached to the NCI/PT.  Definition attributions are enclosed within parentheses and appended to the definition.
+Origin:
 <p>Definition: &lt;P97...ncicp:complexDefinition xmlns:ncicp.../P97&gt;</p>
 <p>Alt_Definition: &lt;P325...ncicp:complexDefinition xmlns:ncicp.../P325&gt;</p>
 </div>
@@ -375,6 +395,8 @@
 <tr><td>RT</td>
 <td>gene_product_variant_of_gene_product/gene_product_has_gene_product_variant</td><td>R182</td></tr>
 <tr><td>RT</td>
+<td>has_acc-aha_sars2_authorized_value</td><td>A48</td></tr>
+<tr><td>RT</td>
 <td>has_cdrh_parent/cdrh_parent_of</td><td>A10</td></tr>
 <tr><td>RT</td>
 <td>has_ctcae_5_parent/ctcae_5_parent_of</td><td>A15</td></tr>
@@ -383,7 +405,7 @@
 <tr><td>RT</td>
 <td>has_data_element/data_element_of</td><td>A12</td></tr>
 <tr><td>RT</td>
-<td>has_dipg_dmg_permissible_value/is_dipg_dmg_permissible_value_for_variable</td><td>A40</td></tr>
+<td>has_dipg_dmg_authorized_value/is_dipg_dmg_authorized_value_for_variable</td><td>A40</td></tr>
 <tr><td>RT</td>
 <td>has_gdc_value/is_value_for_gdc_property</td><td>A31</td></tr>
 <tr><td>RT</td>
@@ -393,17 +415,17 @@
 <tr><td>RT</td>
 <td>has_nichd_parent/nichd_parent_of</td><td>A11</td></tr>
 <tr><td>RT</td>
-<td>has_pcdc_all_permissible_value/is_pcdc_all_permissible_value_for_variable</td><td>A36</td></tr>
+<td>has_pcdc_all_authorized_value/is_pcdc_all_authorized_value_for_variable</td><td>A36</td></tr>
 <tr><td>RT</td>
-<td>has_pcdc_aml_permissible_value/is_pcdc_aml_permissible_value_for_variable</td><td>A26</td></tr>
+<td>has_pcdc_aml_authorized_value/is_pcdc_aml_authorized_value_for_variable</td><td>A26</td></tr>
 <tr><td>RT</td>
-<td>has_pcdc_hl_permissible_value/is_pcdc_hl_permissible_value_for_variable</td><td>A39</td></tr>
+<td>has_pcdc_hl_authorized_value/is_pcdc_hl_authorized_value_for_variable</td><td>A39</td></tr>
 <tr><td>RT</td>
-<td>has_pcdc_ews_permissible_value/is_pcdc_ews_permissible_value_for_variable</td><td>A29</td></tr>
+<td>has_pcdc_ews_authorized_value/is_pcdc_ews_authorized_value_for_variable</td><td>A29</td></tr>
 <tr><td>RT</td>
-<td>has_pcdc_gct_permissible_value/is_pcdc_gct_permissible_value_for_variable</td><td>A34</td></tr>
+<td>has_pcdc_gct_authorized_value/is_pcdc_gct_authorized_value_for_variable</td><td>A34</td></tr>
 <tr><td>RT</td>
-<td>has_pcdc_os_permissible_value/is_pcdc_os_permissible_value_for_variable</td><td>A38</td></tr>
+<td>has_pcdc_os_authorized_value/is_pcdc_os_authorized_value_for_variable</td><td>A38</td></tr>
 <tr><td>RT</td>
 <td>has_pcdc_data_type/pcdc_data_type_of</td><td>A23</td></tr>
 <tr><td>RT</td>
@@ -411,17 +433,17 @@
 <tr><td>RT</td>
 <td>has_salt_form/has_free_acid_or_base_form</td><td>A5</td></tr>
 <tr><td>RT</td>
-<td>has_seronet_permissible_value/is_seronet_permissible_value_for_variable</td><td>A37</td></tr>
+<td>has_seronet_authorized_value/is_seronet_authorized_value_for_variable</td><td>A37</td></tr>
 <tr><td>RT</td>
 <td>has_target/is_target_of_agent</td><td>A7</td></tr>
 <tr><td>RT</td>
-<td>is_pcdc_all_permissible_value_for_variable/has_pcdc_all_permissible_value</td><td>A35</td></tr>
+<td>is_pcdc_all_authorized_value_for_variable/has_pcdc_all_authorized_value</td><td>A35</td></tr>
 <tr><td>RT</td>
-<td>is_pcdc_aml_permissible_value_for_variable/has_pcdc_aml_permissible_value</td><td>A24</td></tr>
+<td>is_pcdc_aml_authorized_value_for_variable/has_pcdc_aml_authorized_value</td><td>A24</td></tr>
 <tr><td>RT</td>
-<td>is_pcdc_ews_permissible_value_for_variable/has_pcdc_ews_permissible_value</td><td>A28</td></tr>
+<td>is_pcdc_ews_authorized_value_for_variable/has_pcdc_ews_authorized_value</td><td>A28</td></tr>
 <tr><td>RT</td>
-<td>is_pcdc_gct_permissible_value_for_variable/has_pcdc_gtc_permissible_value</td><td>A33</td></tr>
+<td>is_pcdc_gct_authorized_value_for_variable/has_pcdc_gtc_authorized_value</td><td>A33</td></tr>
 <tr><td>RT</td>
 <td>is_related_To_endogenous_product/endogenous_product_related_to</td><td>A9</td></tr>
 <tr><td>RT</td>

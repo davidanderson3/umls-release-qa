@@ -1,4 +1,25 @@
+title=CDCREC (Race & Ethnicity - CDC) - Source Representation
+date=2017-11-06
+updated=2024-05-06
+type=page
+status=published
+~~~~~~
 
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+
+<!--endmenu-->
 <br/>
     <p>This page lists specific source data elements and provides
       information on their representation in the UMLS Metathesaurus.</p>
@@ -13,20 +34,25 @@
       id="general"></a>
     	<div id="change_summary">
 	        <h3>Summary of Changes</h3>
-			<ul>
-			<li>This is a new source. Only atoms and a hierarchy were created.</li>
-			</ul>
-	      </div>
+         <p>Substantial changes to the format and content in this version.</p>
+         <ul>
+           <li>Atoms have all new codes.</li>
+           <li>New TTY = OP</li>
+           <li>New RELA = has_category/category_of</li>
+           <li>New attributes: COMMENT, DATE_ADDED_TO_VERSION, HAS_PREV_CODE, ONE_TO_MANY_RELATIONSHIP, STATUS, </li>
+         </ul>
+	    </div>
 	      <hr>
 	      <div id="file_summary">
 	        <h3>Source Provided Files: </h3>
-	        <p>The input file was provided in an Excel spreadsheet consisting of five tabs:</p>
+	        <p>The input file was provided in an Excel spreadsheet consisting of 6 tabs:</p>
          <ul>
-         <li>Code System Metadata</li>
-         <li>All Codes</li>
-         <li>Ethnicity Relationship Mapping</li>
-         <li>Race Relationship Mapping</li>
-         <li>All Relationships</li>
+         <li>Race2022</li>
+         <li>RaceVMapping2022to2000</li>
+         <li>Ethnicity2022</li>
+         <li>EthnicityMapping2022to2000</li>
+         <li>Retired2022-Race</li>
+         <li>Retired2020-Ethnicity</li>
          </ul>
 
 	        <table>
@@ -36,7 +62,7 @@
 				<th>Description</th>
 				</tr>
 				<tr>
-				<td>PH_RaceAndEthnicity_CDC_v1.2.xlsx</td>
+				<td>2022_RaceAndEthnicityFinal_TablesforPub_Final.xlsx</td>
 				<td>Code set for use in coding race and ethnicity data</td>
 				</tr>
 				</tbody>
@@ -48,51 +74,7 @@
         <h3>Source-Provided Files: Details</h3>
 
         <div class="rep_block_level_two"><a id="file1"></a><br/>
-        Tab: Code System Metadata<br/>
-          <table>
-            <tbody>
-              <tr>
-                <th>Element</th>
-                <th>Representation</th>
-
-              </tr>
-              <tr>
-                <td>CodeSystemOID</td>
-                <td>Not used</td>
-              </tr>
-              <tr>
-                <td>HL70396Identifier</td>
-                <td>Not used<br/>
-
-                </td>
-              </tr>
-              <tr>
-                <td>CodeSystemCode</td>
-                <td>Not used</td>
-              </tr>
-              <tr>
-                <td>CodeSystemName</td>
-                <td>Not used</td>
-              </tr>
-              <tr>
-                <td>CodeSystemVersion</td>
-                <td>Not used</td>
-              </tr>
-              <tr>
-                <td>VersionDescriptionText</td>
-                <td>Not used</td>
-              </tr>
-              <tr>
-                <td>CodeSystemSourceURL</td>
-                <td>Not used</td>
-              </tr>
-              </tbody>
-          </table>
-
-          <br/>
-        </div>
-        <div class="rep_block_level_two"><a id="file2"></a><br/>
-        Tab: All Codes<br/>
+        Tab: Race2022<br/>
           <table>
             <tbody>
               <tr>
@@ -106,136 +88,197 @@
               </tr>
               <tr>
                 <td>Hierarchical Code</td>
-                <td>Not used. Use the 'All Relationships' tab to build contexts.<br/>
-
+                <td>Used to build the hierarchy<br/>
                 </td>
               </tr>
               <tr>
-                <td>Concept Name</td>
-                <td>Not used. Use the 'Preferred Concept Name' field within the 'All Codes' tab.</td>
-              </tr>
-              <tr>
-                <td>Preferred Concept Name</td>
+                <td>Concept</td>
                 <td>MRCONSO.STR, MRCONSO.TTY = PT</td>
               </tr>
               <tr>
-                <td>SDOConceptStatus</td>
+                <td>Synonym</td>
+                <td>Currently empty</td>
+              </tr>
+              <tr>
+                <td>Race Category (Name)</td>
                 <td>Not used</td>
               </tr>
               <tr>
-                <td>SDOConceptCreateDate</td>
-                <td>Not used</td>
+                <td>Race Category (Code)</td>
+                <td>MRREL.CUI*; MRREL.RELA=has_category</td>
               </tr>
               <tr>
-                <td>CodeSystem</td>
-                <td>Not used</td>
+                <td>Date added to Version</td>
+                <td>MRSAT.ATN=DATE_ADDED_TO_VERSION</td>
               </tr>
               </tbody>
           </table>
-
-		
           <br/>
         </div>
+        
+        <div class="rep_block_level_two"><a id="file2"></a><br/>
+        Tab: RaceVMapping2022To2000<br/>
+          <table>
+            <tbody>
+              <tr>
+                <th>Element</th>
+                <th>Representation</th>
+
+              </tr>
+              <tr>
+                <td>Concept Code 2022</td>
+                <td>Not used.</td>
+              </tr>
+              <tr>
+                <td>Hierarchical Code</td>
+                <td>Not used.<br/>
+
+                </td>
+              </tr>
+              <tr>
+                <td>Concept 2022</td>
+                <td>Not used.</td>
+              </tr>
+              <tr>
+                <td>Concept Code 2000</td>
+                <td>MRSAT.ATN=HAS_PREV_CODE</td>
+              </tr>
+              <tr>
+                <td>Concept 2000</td>
+                <td>Not used</td>
+              </tr>
+              <tr>
+                <td>1 to Many Relationship</td>
+                <td>MRSAT.ATN=ONE_TO_MANY_RELATIONSHIP</td>
+              </tr>
+            </tbody>
+          </table>
+		          <br/>
+        </div>
+        
         <div class="rep_block_level_two"><a id="file3"></a><br/>
-        Tab: Ethnicity Relationship Mapping<br/>
+        Tab: Ethnicity2022<br/>
           <table>
             <tbody>
               <tr>
                 <th>Element</th>
                 <th>Representation</th>
-
               </tr>
               <tr>
-                <td>Concept Name</td>
-                <td>Not used. Value is included in the 'All Codes' tab.</td>
-              </tr>
-              <tr>
-                <td>Concept Code</td>
-                <td>Not used. Value is included in the 'All Codes' tab.<br/>
-
-                </td>
+                <td>2022 Code</td>
+                <td>MRCONSO.CODE, MRCONSO.SCUI</td>
               </tr>
               <tr>
                 <td>Hierarchical Code</td>
-                <td>Not used. Use the 'All Relationships' tab to build contexts.</td>
-              </tr>
-              <tr>
-                <td>Ethnicity Group (Concept Name)</td>
-                <td>Not used. Value is included in the 'All Codes' tab.</td>
-              </tr>
-              <tr>
-                <td>Ethnicity Group (Concept Code)</td>
-                <td>Not used. Value is included in the 'All Codes' tab.</td>
-              </tr>
-              </tbody>
-          </table>
-          <br/>
-        </div>
-        <div class="rep_block_level_two"><a id="file4"></a><br/>
-        Tab: Race Relationship Mapping<br/>
-          <table>
-            <tbody>
-              <tr>
-                <th>Element</th>
-                <th>Representation</th>
-
-              </tr>
-              <tr>
-                <td>Concept Name</td>
-                <td>Not used. Value is included in the 'All Codes' tab.</td>
-              </tr>
-              <tr>
-                <td>Concept Code</td>
-                <td>Not used. Value is included in the 'All Codes' tab.<br/>
-
+                <td>Used to build the hierarchy<br/>
                 </td>
               </tr>
               <tr>
-                <td>Hierarchical Code</td>
-                <td>Not used. Use the 'All Relationships' tab to build contexts.</td>
+                <td>Concept</td>
+                <td>MRCONSO.STR, MRCONSO.TTY = PT</td>
               </tr>
               <tr>
-                <td>Race Category (Concept Name)</td>
-                <td>Not used. Value is included in the 'All Codes' tab.</td>
+                <td>Synonym</td>
+                <td>Currently empty</td>
               </tr>
               <tr>
-                <td>Race Category (Concept Code)</td>
-                <td>Not used. Value is included in the 'All Codes' tab.</td>
-              </tr>
-              <tr>
-                <td>Hierarchical Code</td>
-                <td>Not used. Use the 'All Relationships' tab to build contexts.</td>
-              </tr>
-              </tbody>
-          </table>
-          <br/>
-        </div>
-        <div class="rep_block_level_two"><a id="file5"></a><br/>
-        Tab: All Relationships<br/>
-          <table>
-            <tbody>
-              <tr>
-                <th>Element</th>
-                <th>Representation</th>
-
-              </tr>
-              <tr>
-                <td>Concept Code1 (Parent)</td>
-                <td>Used to build contexts.</td>
-              </tr>
-              <tr>
-                <td>CodeSystemOID2</td>
-                <td>Not used<br/>
-
-                </td>
-              </tr>
-              <tr>
-                <td>RelationshipType</td>
+                <td>Ethnicity Category (Name)</td>
                 <td>Not used</td>
               </tr>
               <tr>
-                <td>ConceptCode2 (Child)</td>
-                <td>Used to build contexts</td>
+                <td>Ethnicity Category (Code)</td>
+                <td>MRREL.CUI*; MRREL.RELA=has_category</td>
+              </tr>
+              <tr>
+                <td>Date added to Version</td>
+                <td>MRSAT.ATN=DATE_ADDED_TO_VERSION</td>
+              </tr>
+              </tbody>
+          </table>
+          <br/>
+        </div>
+        
+        <div class="rep_block_level_two"><a id="file4"></a><br/>
+        Tab: EthnicityMapping2022to2000<br/>
+          <table>
+            <tbody>
+              <tr>
+                <th>Element</th>
+                <th>Representation</th>
+              </tr>
+              <tr>
+                <td>Concept Code 2022</td>
+                <td>Not used</td>
+              </tr>
+              <tr>
+                <td>Hierarchical Code</td>
+                <td>Not used</td>
+              </tr>
+              <tr>
+                <td>Concept-Ethnicity</td>
+                <td>Not used</td>
+              </tr>
+              <tr>
+                <td>Concept Code Ethnicity 2000</td>
+                <td>MRSAT.ATN=HAS_PREV_CODE</td>
+              </tr>
+              <tr>
+                <td>Concept Ethnicity 2000</td>
+                <td>Not used</td>
+              </tr>
+            </tbody>
+          </table>
+          <br/>
+        </div>
+        
+        <div class="rep_block_level_two"><a id="file5"></a><br/>
+        Tab: Retired2022-Race<br/>
+          <table>
+            <tbody>
+              <tr>
+                <th>Element</th>
+                <th>Representation</th>
+              </tr>
+              <tr>
+                <td>Concept Code 2000</td>
+                <td>MRCONSO.CODE, MRCONSO.SCUI</td>
+              </tr>
+              <tr>
+                <td>Concept2000</td>
+                <td>MRCONSO.STR, MRCONSO.TTY = OP</td>
+              </tr>
+              <tr>
+                <td>Concept Status</td>
+                <td>MRSAT.ATN=STATUS</td>
+              </tr>
+              <tr>
+                <td>Comments</td>
+                <td>MRSAT.ATN=COMMENT</td>
+              </tr>
+              </tbody>
+          </table>
+          <br/>
+        </div>
+        
+        <div class="rep_block_level_two"><a id="file6"></a><br/>
+        Tab: Retired2020-Ethnicity<br/>
+          <table>
+            <tbody>
+              <tr>
+                <th>Element</th>
+                <th>Representation</th>
+              </tr>
+              <tr>
+                <td>Concept Code 2000</td>
+                <td>MRCONSO.CODE, MRCONSO.SCUI</td>
+              </tr>
+              <tr>
+                <td>Concept2000</td>
+                <td>MRCONSO.STR, MRCONSO.TTY = OP</td>
+              </tr>
+              <tr>
+                <td>Comments</td>
+                <td>MRSAT.ATN=STATUS</td>
               </tr>
               </tbody>
           </table>
