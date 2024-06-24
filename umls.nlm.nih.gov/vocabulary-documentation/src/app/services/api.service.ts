@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { map, catchError, tap } from 'rxjs/operators';
+import { map, catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
 
-  private apiUrl = 'https://uts-ws.nlm.nih.gov/rest/metadata/2023AB/sources';
+  private apiUrl = 'https://uts-ws.nlm.nih.gov/rest/metadata/2024AA/sources';
   private sourcesCache: any[] | null = null;
 
   constructor(private http: HttpClient) { }
@@ -39,11 +39,38 @@ export class ApiService {
             restrictionLevel: source.restrictionLevel,
             expandedForm: source.expandedForm,
             family: source.family,
+            acquisitionContact: source.acquisitionContact,
+            contentContact: source.contentContact ? {
+              name: source.contentContact.name,
+              organization: source.contentContact.organization,
+              address1: source.contentContact.address1,
+              address2: source.contentContact.address2,
+              city: source.contentContact.city,
+              stateOrProvince: source.contentContact.stateOrProvince,
+              zipCode: source.contentContact.zipCode,
+              email: source.contentContact.email,
+            } : null,
+            licenseContact: source.licenseContact ? {
+              name: source.licenseContact.name,
+              organization: source.licenseContact.organization,
+              address1: source.licenseContact.address1,
+              address2: source.licenseContact.address2,
+              city: source.licenseContact.city,
+              stateOrProvince: source.licenseContact.stateOrProvince,
+              zipCode: source.licenseContact.zipCode,
+              email: source.licenseContact.email,
+            } : null,
+            preferredName: source.preferredName,
+            synonymousNames: source.synonymousNames,
           };
         });
         // Cache the data
         this.setCache(transformedSources);
         return transformedSources;
+      }),
+      catchError(error => {
+        console.error('Error in getSources:', error);
+        return of([]);
       })
     );
   }
