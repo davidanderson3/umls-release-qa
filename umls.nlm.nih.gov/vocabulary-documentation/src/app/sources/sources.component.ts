@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ContentService } from '../content.service';
-import { forkJoin } from 'rxjs';
 import { ApiService } from '../services/api.service';
 import { HttpClient } from '@angular/common/http';
 import { ViewportScroller } from '@angular/common';
@@ -65,7 +64,6 @@ export class SourcesComponent implements OnInit {
     });
   }
   
-
   checkFileExistence(): Promise<void> {
     return new Promise((resolve, reject) => {
       const filesToCheck = {
@@ -82,11 +80,15 @@ export class SourcesComponent implements OnInit {
       Promise.all(checks).then(() => resolve());
     });
   }
+
   fetchSourceData(): void {
     if (this.folderName) {
       this.apiService.getSourceByAbbreviation(this.folderName).subscribe(
         response => {
           this.sourceData = response; // Assigning the fetched data to the sourceData property
+          if (this.activeTab === 'metadata') {
+            this.loadMetadataContent();
+          }
         },
         error => {
           console.error('Error fetching data for abbreviation:', error);
@@ -96,6 +98,7 @@ export class SourcesComponent implements OnInit {
       console.error('No folderName specified');
     }
   }
+
   getTabNameFromUrl(path: string): string {
     switch (path) {
       case 'index.html': return 'synopsis';
@@ -110,22 +113,29 @@ export class SourcesComponent implements OnInit {
 
   setActiveTab(tab: string): void {
     this.activeTab = tab;
-    if (!this.htmlContent[tab]) {
-      this.loadHtmlContent(tab);
-    }
+    if (tab === 'metadata') {
+      this.loadMetadataContent();
+    } else {
+      if (!this.htmlContent[tab]) {
+        this.loadHtmlContent(tab);
+      }
   
-    // Find the title div element with the ID 'source-name' and scroll to its position
-    const titleElement = document.getElementById('source-name');
-    if (titleElement) {
-      const titlePosition = titleElement.getBoundingClientRect().top + window.pageYOffset - 10; // 10px offset for a small gap
-      window.scrollTo({ top: titlePosition, behavior: 'smooth' });
+      // Find the title div element with the ID 'source-name' and scroll to its position
+      const titleElement = document.getElementById('source-name');
+      if (titleElement) {
+        const titlePosition = titleElement.getBoundingClientRect().top + window.pageYOffset - 10; // 10px offset for a small gap
+        window.scrollTo({ top: titlePosition, behavior: 'smooth' });
+      }
     }
-  
+
     // Navigate to the new URL with 'current' included
     let routePath: string;
     switch (tab) {
       case 'synopsis':
         routePath = 'index.html';
+        break;
+      case 'metadata':
+        routePath = 'metadata.html';
         break;
       case 'statistics':
         routePath = 'stats.html';
@@ -141,12 +151,15 @@ export class SourcesComponent implements OnInit {
     }
     this.router.navigate(['/current', this.folderName, routePath]);
   }
-  
-  
-  
-  
+
   loadHtmlContent(tab: string): Promise<void> {
     return new Promise((resolve, reject) => {
+      if (tab === 'metadata' && this.sourceData) {
+        this.loadMetadataContent();
+        resolve();
+        return;
+      }
+
       let filename;
       switch (tab) {
         case 'synopsis':
@@ -179,7 +192,68 @@ export class SourcesComponent implements OnInit {
         });
     });
   }
-  
+
+  loadMetadataContent(): void {
+    if (this.sourceData) {
+      const contentContactDetails = this.sourceData.contentContact ? `
+      ${this.sourceData.contentContact.name}<br>
+      ${this.sourceData.contentContact.organization}<br>
+      ${this.sourceData.contentContact.address1}<br>
+      ${this.sourceData.contentContact.address2 ? this.sourceData.contentContact.address2 + '<br>' : ''}
+      ${this.sourceData.contentContact.city}, ${this.sourceData.contentContact.stateOrProvince} ${this.sourceData.contentContact.zipCode}<br>
+      ${this.sourceData.contentContact.email}
+    ` : 'N/A';
+
+    const licenseContactDetails = this.sourceData.licenseContact ? `
+      ${this.sourceData.licenseContact.name}<br>
+      ${this.sourceData.licenseContact.organization}<br>
+      ${this.sourceData.licenseContact.address1}<br>
+      ${this.sourceData.licenseContact.address2 ? this.sourceData.licenseContact.address2 + '<br>' : ''}
+      ${this.sourceData.licenseContact.city}, ${this.sourceData.licenseContact.stateOrProvince} ${this.sourceData.licenseContact.zipCode}<br>
+      ${this.sourceData.licenseContact.email}
+    ` : 'N/A';
+      const metadataHtml = `
+        <div>
+          
+          <table>
+          <tr>
+          <td><strong>Source Official Name:</strong></td>
+          <td>${this.sourceData.preferredName}</td>
+        </tr>
+            <tr>
+              <td><strong>Short Name:</strong></td>
+              <td>${this.sourceData.shortName}</td>
+            </tr>
+            <tr>
+            <td><strong>Family:</strong></td>
+            <td>${this.sourceData.family}</td>
+            </tr>
+            <tr>
+            <td><strong>Restriction Level:</strong></td>
+            <td>${this.sourceData.restrictionLevel}</td>
+          </tr>
+            <tr>
+              <td><strong>Language:</strong></td>
+              <td>${this.sourceData.languageAbbreviation}</td>
+            </tr>
+            <tr>
+            <td><strong>Content Contact:</strong></td>
+            <td>${contentContactDetails}</td>
+          </tr>
+          <tr>
+            <td><strong>License Contact:</strong></td>
+            <td>${licenseContactDetails}</td>
+          </tr>
+
+          </table>
+        </div>
+      `;
+      this.htmlContent['metadata'] = this.sanitizer.bypassSecurityTrustHtml(metadataHtml);
+    } else {
+      console.error('No source data available to load metadata content');
+    }
+  }
+
   onAnchorClick(event: Event): void {
     const anchor = event.target as HTMLAnchorElement;
     if (anchor.hash) {
@@ -192,15 +266,8 @@ export class SourcesComponent implements OnInit {
   private scrollToElement(elementId: string): void {
     const element = document.getElementById(elementId);
     if (element) {
-      const headerOffset = this.getHeaderOffset();
-      console.log("Header offset:", headerOffset);
-  
       const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-      console.log("Element position from top:", elementPosition);
-  
-      const offsetPosition = elementPosition - headerOffset;
-      console.log("Offset position:", offsetPosition);
-  
+      const offsetPosition = elementPosition - 10; // Adjust the offset as needed
       window.scrollTo({
         top: offsetPosition,
         behavior: 'smooth'
@@ -209,13 +276,4 @@ export class SourcesComponent implements OnInit {
       console.log("Element not found for ID:", elementId);
     }
   }
-  
-  
-  
-  private getHeaderOffset(): number {
-    const headerElement = document.querySelector('.header');
-    return headerElement ? headerElement.clientHeight : 500;
-  }
-  
-  
 }
