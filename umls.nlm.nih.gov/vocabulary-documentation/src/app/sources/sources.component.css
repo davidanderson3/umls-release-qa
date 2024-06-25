@@ -38,4 +38,19 @@ h1 {
     height: 80px;  /* Fixed height */
 }
 
+.nav-link {
+  border: 1px solid transparent;
+  border-bottom: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.nav-link.active-tab {
+  font-weight: bold;
+  background-color: #eaebed !important;
+  border-color: #a3a5a7 #a3a5a7 transparent;
+  border-bottom: none !important;
+  border-radius: 4px 4px 0 0;
+}
+
 

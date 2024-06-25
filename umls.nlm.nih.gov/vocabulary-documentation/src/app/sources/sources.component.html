@@ -22,21 +22,23 @@
         <!-- Tab navigation -->
         <ul class="nav nav-tabs" id="myTabs">
           <li class="nav-item">
-            <a (click)="setActiveTab('synopsis')" [class.active]="activeTab === 'synopsis'" class="nav-link" data-toggle="tab">Synopsis</a>
+            <a (click)="setActiveTab('synopsis')" [ngClass]="{'active-tab': activeTab === 'synopsis'}" class="nav-link">Synopsis</a>
           </li>
           <li class="nav-item">
-            <a (click)="setActiveTab('metadata')" [class.active]="activeTab === 'metadata'" class="nav-link" data-toggle="tab">Metadata</a>
+            <a (click)="setActiveTab('metadata')" [ngClass]="{'active-tab': activeTab === 'metadata'}" class="nav-link">Metadata</a>
           </li>
           <li class="nav-item">
-            <a (click)="setActiveTab('statistics')" [class.active]="activeTab === 'statistics'" class="nav-link" data-toggle="tab">Statistics</a>
+            <a (click)="setActiveTab('statistics')" [ngClass]="{'active-tab': activeTab === 'statistics'}" class="nav-link">Statistics</a>
           </li>
-  <li class="nav-item" *ngIf="displayTabs.includes('sourcerepresentation')">
-    <a (click)="setActiveTab('sourcerepresentation')" [class.active]="activeTab === 'source'" class="nav-link" data-toggle="tab">Source Representation</a>
-  </li>
-  <li class="nav-item" *ngIf="displayTabs.includes('metarepresentation')">
-    <a (click)="setActiveTab('metarepresentation')" [class.active]="activeTab === 'meta'" class="nav-link" data-toggle="tab">Metathesaurus Representation</a>
-  </li>
+          <li class="nav-item" *ngIf="displayTabs.includes('sourcerepresentation')">
+            <a (click)="setActiveTab('sourcerepresentation')" [ngClass]="{'active-tab': activeTab === 'sourcerepresentation'}" class="nav-link">Source Representation</a>
+          </li>
+          <li class="nav-item" *ngIf="displayTabs.includes('metarepresentation')">
+            <a (click)="setActiveTab('metarepresentation')" [ngClass]="{'active-tab': activeTab === 'metarepresentation'}" class="nav-link">Metathesaurus Representation</a>
+          </li>
         </ul>
+        
+        
       </div>
     </div>
       <div class="tab-content mt-2" [innerHtml]="htmlContent[activeTab]" (click)="onAnchorClick($event)"></div>
