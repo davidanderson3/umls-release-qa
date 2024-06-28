@@ -34,7 +34,7 @@ export class SourcesComponent implements OnInit {
     private http: HttpClient,
     private viewportScroller: ViewportScroller,
     private titleService: Title,
-    private router: Router 
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -63,7 +63,7 @@ export class SourcesComponent implements OnInit {
       }
     });
   }
-  
+
   checkFileExistence(): Promise<void> {
     return new Promise((resolve, reject) => {
       const filesToCheck = {
@@ -119,14 +119,10 @@ export class SourcesComponent implements OnInit {
       if (!this.htmlContent[tab]) {
         this.loadHtmlContent(tab);
       }
-  
-      // Find the title div element with the ID 'source-name' and scroll to its position
-      const titleElement = document.getElementById('source-name');
-      if (titleElement) {
-        const titlePosition = titleElement.getBoundingClientRect().top + window.pageYOffset - 10; // 10px offset for a small gap
-        window.scrollTo({ top: titlePosition, behavior: 'smooth' });
-      }
     }
+
+    // Scroll to the top of the page
+    this.viewportScroller.scrollToPosition([0, 0]);
 
     // Navigate to the new URL with 'current' included
     let routePath: string;
@@ -260,20 +256,6 @@ export class SourcesComponent implements OnInit {
       event.preventDefault();
       const elementId = anchor.hash.slice(1); // Remove the '#' symbol
       this.viewportScroller.scrollToAnchor(elementId);
-    }
-  }
-
-  private scrollToElement(elementId: string): void {
-    const element = document.getElementById(elementId);
-    if (element) {
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-      const offsetPosition = elementPosition - 10; // Adjust the offset as needed
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    } else {
-      console.log("Element not found for ID:", elementId);
     }
   }
 }
