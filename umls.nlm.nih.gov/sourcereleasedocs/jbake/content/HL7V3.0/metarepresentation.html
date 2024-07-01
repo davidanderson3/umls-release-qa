@@ -33,11 +33,14 @@ status=published
     </div>
 
 <div id="general" class="rep_block_level_one">
-  <p><b>VSAB:</b>HL7V3.0_2021_12</p>
+  <p><b>VSAB:</b>HL7V3.0_2023_11</p>
 <hr>
   <div id="rep_identifiers" class="rep_block_level_one">
     <h3>Summary of Changes</h3>
-    <p>None </p>
+    <p>Dropped attribute name(s) and description:</p>
+    <ul><li>HL7LT -- HL7 license terms</li>
+    <li>HL7RG -- HL7 responsible group organization name</li>
+    </ul>
   </div>
 <hr>
   <div id="rep_change_summary" class="rep_block_level_one">
@@ -324,12 +327,6 @@ status=published
           </tr>
 
           <tr>
-            <td>HL7LT</td>
-            <td>CSY</td>
-            <td>codeSystem/header/legalese/licenseTerms</td>
-          </tr>
-
-          <tr>
             <td>HL7MI</td>
             <td>CSY</td>
             <td>codeSystem/releasedVersion/@hl7MaintainedIndicator</td>
@@ -393,12 +390,6 @@ status=published
             <td>HL7RF</td>
             <td>CR</td>
             <td>codeSystem/releasedVersion/supportedConceptRelationship/@reflexivity</td>
-          </tr>
-
-          <tr>
-            <td>HL7RG</td>
-            <td>CSY</td>
-            <td>codeSystem/header/responsibleGroup/@organizationName</td>
           </tr>
 
           <tr>
