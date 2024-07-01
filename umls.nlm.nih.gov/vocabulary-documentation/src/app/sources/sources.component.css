@@ -1,0 +1,41 @@
+.nav-item .nav-link {
+  cursor: pointer;
+}
+
+/* Custom CSS class for the h1 to handle z-index and background */
+.custom-sticky-heading {
+  z-index: 1000; /* Optional: set as needed */
+  background-color: white; /* Recommended: Set it according to your design */
+}
+
+/* Custom CSS class for the nav-tabs to set the margin-top */
+.custom-nav-tabs {
+  margin-top: 40px; /* Set this to the approximate height of your h1 */
+}
+
+.bg-primary {
+    background-color: #326295 !important;
+}
+
+.tab-content {
+    overflow-x: auto;
+    width: 100%;
+}
+
+/* Disable sticky-top on mobile */
+@media (max-width: 767px) {
+  .sticky-top {
+    position: static !important;
+  }
+}
+h1 {
+      font-size: 2.4vw; /* Adjust based on your needs */
+      white-space: nowrap;
+      overflow-x: auto;  /* Enable horizontal scrolling */
+    }
+
+.heading{
+    height: 80px;  /* Fixed height */
+}
+
+

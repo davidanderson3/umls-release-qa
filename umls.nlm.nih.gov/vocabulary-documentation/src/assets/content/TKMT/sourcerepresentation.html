@@ -1,0 +1,202 @@
+
+<br/>
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#change_summary">Summary of Changes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_summary">Summary of Source-Provided Files</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_details">Source-Provided File Details</a></div>
+    </div>
+    <hr>
+  <div id="change_summary" class="rep_block_level_one">
+    <p>a)&nbsp; Unlike other non-English sources, TKMT is not a translation source.&nbsp; There is no English-language version of TKMT.<br></p>
+
+    <p>b)&nbsp; The original TKMT files do not explicitly represent a hierarchy.&nbsp; However a hierarchy was constructed during Metathesaurus source processing, using strings containing the pattern "* acupuncture points" as parent nodes.<br>
+    <br>
+    The parent nodes are:<br></p>
+
+    <div style="margin-left: 40px;">
+      Lung acupuncture points<br>
+      Large intestine acupuncture points<br>
+      Stomach acupuncture points<br>
+      Spleen acupuncture points<br>
+      Heart acupuncture points<br>
+      Small intestine acupuncture points<br>
+      Bladder acupuncture points<br>
+      Kidney acupuncture points<br>
+      Pericardium acupuncture points<br>
+      Triple energizer acupuncture points<br>
+      Gallbladder acupuncture points<br>
+      Liver acupuncture points<br>
+      Governing vessel acupuncture points<br>
+      Conception vessel acupuncture points<br>
+      <br>
+    </div>c)&nbsp; Herbal medicine concepts are not included in the hierarchy<br>
+ <hr>
+    <h3>Summary of Changes:</h3>
+
+    <p>For TKMT in 2011AB, new concepts related to herbal medicine were added to existing acupunture content.</p>
+  </div>
+ <hr>
+  <div id="file_summary" class="rep_block_level_one">
+
+    <h3>Source-Provided Files: Summary</h3>"|" - delimited data files:<br>
+    <br>
+    KIOM-AP.RRF:<br>
+    <br>
+    TKMTHERBGP1-1.RRF<br>
+    Format is:<br>
+    UMLS_CUI| ENGLISH_STRING|Chinese character name of concept|Chinese pinyin name of concept| Japanese name of concept| KOREAN_STRING<br>
+    <br>
+    TKMTHERBGP2-1.RRF&nbsp;<br>
+    Format is:<br>
+    UMLS_CUI| ENGLISH_STRING|Chinese character name of concept (EMPTY)|Chinese pinyin name of concept| Japanese name of concept (EMPTY)| KOREAN_STRING<br>
+    <br>
+    TKMTHERBGP2-2.RRF<br>
+    UMLS_CUI| ENGLISH_STRING|Chinese character name of concept|Chinese pinyin name of concept| Japanese name of concept| KOREAN_STRING<br>
+    <br>
+    TKMTHERBGP3.RRF<br>
+    UMLS_CUI| ENGLISH_STRING|Chinese character name of concept|Chinese pinyin name of concept| Japanese name of concept| KOREAN_STRING<br>
+    <br>
+    Note:&nbsp; The UMLS_CUI and KOREAN_STRING in TKMTHERBGP2-2.RRF are redundant to the information in TKMTHERBGP2-1.RRF so only one file is processed.<br>
+<br>
+    <div class="rep_block_level_two">
+      <a name="data_files" id="data_files"></a>
+      <p><b>Not included</b>:</p>
+    </div>
+  </div>
+
+  <div id="file_details" class="rep_block_level_one">
+    
+    Chinese and Japanese names are not represented in the Metathesaurus as part of TKMT.<br>
+    <br>
+    In addition, some data in these files is redundant and may not be directly processed or explicitly represented in the Metathesaurus release files.<br>
+ <hr>
+    <h3>Source-Provided Files: Details</h3>
+    <p>KIOM-AP.RRF:</p>
+
+    <div class="rep_block_level_two">
+      <table class="elements">
+        <tbody>
+          <tr>
+            <th>#</th>
+
+            <th>Field</th>
+
+            <th>Representation</th>
+          </tr>
+
+          <tr>
+            <td>1</td>
+
+            <td>UMLS_CUI<br></td>
+
+            <td>Used to assist in determining which Metathesaurus concept a Korean string belongs in<br></td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+
+            <td>Language<br></td>
+
+            <td>Not represented (always "ENG")<br></td>
+          </tr>
+
+          <tr>
+            <td>3</td>
+
+            <td>ENGLISH_STRING<br></td>
+
+            <td>Not directly processed;&nbsp; used to assist in determining which Metathesaurus concept a Korean string belongs in</td>
+          </tr>
+
+          <tr>
+            <td>4</td>
+
+            <td>SEMANTIC_TYPE<br></td>
+
+            <td>Not directly processed</td>
+          </tr>
+
+          <tr>
+            <td>5</td>
+
+            <td>&lt;EMPTY&gt;<br></td>
+
+            <td>Not applicable<br></td>
+          </tr>
+
+          <tr>
+            <td>6</td>
+
+            <td>KOREAN_STRING<br></td>
+
+            <td>MRCONSO.STR<br></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>TKMTHERBGP*.RRF</p>
+    <div class="rep_block_level_two">
+      <table>
+        <tbody>
+          <tr>
+            <th>#</th>
+
+            <th>Field</th>
+
+            <th>Representation</th>
+          </tr>
+
+          <tr>
+            <td>1</td>
+
+            <td>UMLS_CUI<br></td>
+
+            <td>Used to assist in determining which Metathesaurus concept a Korean string belongs in<br></td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+
+            <td>ENGLISH_STRING<br></td>
+
+            <td>Not directly processed;&nbsp; used to assist in determining which Metathesaurus concept a Korean string belongs in</td>
+          </tr>
+
+          <tr>
+            <td>3</td>
+
+            <td>Chinese character name of concept<br></td>
+
+            <td>Not processed<br></td>
+          </tr>
+
+          <tr>
+            <td>4</td>
+
+            <td>Chinese pinyin name of concept<br></td>
+
+            <td>Not processed<br></td>
+          </tr>
+
+          <tr>
+            <td>5</td>
+
+            <td>Japanese name of concept<br></td>
+
+            <td>Not processed<br></td>
+          </tr>
+
+          <tr>
+            <td>6</td>
+
+            <td>KOREAN_STRING<br></td>
+
+            <td>MRCONSO.STR<br></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

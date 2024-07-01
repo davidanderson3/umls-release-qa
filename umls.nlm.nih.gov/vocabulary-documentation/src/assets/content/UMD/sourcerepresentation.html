@@ -1,0 +1,146 @@
+
+<br/>
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#change_summary">Summary of Changes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_summary">Summary of Source-Provided Files</a></div>
+    	<div class="col-sm-auto border-left"><a href="#file_details">Source-Provided File Details</a></div>
+    </div>
+<hr>
+<div id="rep_general" class="rep_block_level_one">
+  <a id="general"></a>
+
+  <h3>Note</h3>
+
+		<ul>
+		<li>The information provided here applies explicitly to the English version of UMDNS. The German translation of UMDNS, DMDUMD, was last updated in 1996, and much of the information on this page is not relevant.</li>
+		</ul>
+</div>
+<hr>
+<div id="rep_change_summary" class="rep_block_level_one">
+  <a id="change_summary"></a>
+
+  <h3>Summary of Changes in this version</h3>
+
+          <p>There have been no changes to the UMDNS release format or to UMLS source processing.</p>
+
+</div>
+<hr>
+<div id="rep_file_summary" class="rep_block_level_one">
+  <a id="file_summary"></a>
+
+  <h3>Source-Provided Files: Summary</h3>
+
+  <p>The UMLS uses an xml version of UMDNS. Please contact ECRI for source acquisition information.</p>
+
+  <div class="rep_block_level_two">
+    <!-- Make a table of each file that comes from the source   -->
+
+      </div>
+</div>
+<hr>
+<div id="rep_file_details" class="rep_block_level_one">
+  <a id="file_details"></a>
+
+  <h3>Source-Provided Files: Details</h3>
+
+  <table>
+    <tbody>
+      <tr>
+        <th>Property/Qualifier(s)</th>
+
+        <th>Description</th>
+
+        <th>Representation</th>
+      </tr><!-- xml row -->
+
+      <tr>
+		<td>concept name</td>
+		<td>Concept preferred name</td>
+		<td>MRCONSO.STR<br/>
+		TTY = PT<br/>
+		CODE = concept/code</td>
+	  </tr>
+	  
+      <tr>
+        <td>concept code</td>
+
+        <td>UMDNS Code</td>
+
+        <td>MRCONSO.CODE,SDUI for associated "PT", "ET", "SY" and "HT" atoms.</td>
+      </tr>
+	  
+	<tr>
+		<td>Synonym<br/>
+		<td>Association to synonymous term</td>
+		<td>MRCONSO.STR<br/>
+		TTY = SY<br/>
+		CODE = concept code</td>
+		<td></td>
+	  </tr>
+	<tr>
+		<td>Entry Term<br/>
+		<td>Association to entry term</td>
+		<td>MRCONSO.STR<br/>
+		TTY = ET where Term Device Type = "Device is a SEE reference."<br/>
+		TTY = RT where Term Device Type = "Device is a USE MORE SPECIFIC TERM entry."<br/>
+		CODE = concept code for TTY = ET<br/>
+		For TTY = RT, CODE values were imported from an external value.<br/>
+		MRREL.REL<br/>
+		An RO relationship is created between same-code ETs and PTs<br/>
+		An "RN/RB" relationship is created from an RT to each related concept</td>
+		<td></td>
+	  </tr>
+	  <tr>
+		<td>DEVICE_TYPE</td>
+		<td>DEVICE_TYPE value is used to assign TTY; original value is also represented as an attribute</td>
+		<td>CATEGORY EXPANDED BELOW entry with SEE ALSO references: TTY = PT<br/>
+		CATEGORY EXPANDED BELOW entry: TTY = PT<br/>
+		Device has SEE ALSO references: TTY = PT<br/>
+		Hierarchical Term: TTY = HT<br/>
+		Main Device Term: TTY = PT<br/>
+		NIR entry: TTY = PT<br/>
+		<br/>
+		MRSAT.ATN = DEVTYPE (STYPE = SDUI)<br/>
+		</td>
+	  </tr>
+	  
+	  <tr>
+		<td>Term Device Type</td>
+		<td>Term Device Type value is used to assign TTY for Entry Terms; original value is also represented as an attribute</td>
+		<td>Device is a SEE reference: TTY = ET<br/>
+		Device is a USE MORE SPECIFIC TERM entry: TTY = RT<br/><br/>
+		MRSAT.ATN = DEVTYPE (STYPE = AUI)</td>
+		</tr>
+	  
+	  <tr>  
+		<td>DEFINITION<br/>
+        Definition_Status<br>
+	  </td>
+	  <td>The "DEFINITION" property contains the UMDNS definition value.<br>
+        The Definition_Status qualifier qualifies the "DEFINITION" property.</td>
+
+        <td>MRDEF.DEF. Only definitions with the status "Releasable" are included in the UMLS Metathesaurus.</td>
+      </tr>
+	  
+	  <tr>
+		<td>RELATED_DEVICE</td>
+		<td>Relationships between concepts</td>
+		<td>MRREL.REL<br/>
+		REL = "RO"</td>
+      </tr>
+	  
+	  <tr>
+		<td>defining_concept</td>
+		<td>"Parent" concept</td>
+		<td>Used to build hierarchy (MRHIER.RRF)</td>
+	  </tr>
+
+		<tr>
+		<td>Term Code in Source</td>
+		<td>Code of Term</td>
+		<td>MRSAT.ATN = TERM_CODE</td>
+		</tr>
+    </tbody>
+  </table>
+</div>
