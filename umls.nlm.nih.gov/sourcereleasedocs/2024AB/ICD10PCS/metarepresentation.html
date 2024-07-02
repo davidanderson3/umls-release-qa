@@ -1,0 +1,272 @@
+title=ICD10PCS (ICD-10 Procedure Coding System) - Metathesaurus Representation
+date=2017-11-06
+updated=2023-11-06
+type=page
+status=published
+~~~~~~
+
+
+<!--menu-->
+<div class="row">
+ <div class="container-fluid navbar navbar-default vocab-docs-navbar" role="navigation">
+  <div class="btn-group navbar-btn visible-*" role="group">
+   <a class="btn btn-md" role="button" href="index.html">Synopsis</a>
+   <a class="btn btn-md" role="button" href="metadata.html">Metadata</a>
+   <a class="btn btn-md" role="button" href="stats.html">Statistics</a>
+   <a class="btn btn-md" role="button" href="sourcerepresentation.html">Source Representation</a>
+   <a class="btn btn-md" role="button" href="metarepresentation.html">Metathesaurus Representation</a>
+  </div>
+ </div>
+</div>
+
+<!--endmenu-->
+<br/>
+    <p>This page lists UMLS Metathesaurus data elements and traces them
+      back to the specific source data that populates them.</p>
+    <div class="row py-2 mb-2 mini-menu">  
+    	<div class="col-sm-auto">Skip to:</div>
+    	<div class="col-sm-auto"><a href="#atoms">Atoms</a></div>
+    	<div class="col-sm-auto border-left"><a href="#attributes">Attributes</a></div>
+    	<div class="col-sm-auto border-left"><a href="#relationships">Relationships</a></div>
+    </div>
+    <div id="general" class="rep_block_level_one">
+      <p><strong>VSAB:</strong> ICD10PCS_2025
+      </p>
+      <hr>
+      <div id="rep_identifiers" class="rep_block_level_one">
+        <h3>Summary of Changes</h3>
+        No updates for this version.<br/>
+		  </div>
+		  <hr>
+      <div id="rep_change_summary" class="rep_block_level_one">
+        <h3>Source Provided Files:</h3>
+        <p>Numerous documentation and data files are available at: <a href =
+        "https://www.cms.gov/medicare/coding-billing/icd-10-codes/2025-icd-10-pcs">https://www.cms.gov/medicare/coding-billing/icd-10-codes/2025-icd-10-pcs</a>
+          , including the following:
+        </p>
+        <strong>Documentation and Reference</strong><br/>
+        <table>
+          <tbody>
+            <tr>
+              <th>File</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>definitions_addenda_2025.pdf</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>icd10pcsCodesFile.pdf</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>icd10pcsOrderFile.pdf</td>
+              <td>Documentation for the icd10pcs_order_2025.txt file</td>
+            </tr> 
+            
+            <tr>
+              <td>icd10pcs_definitions.xsd</td>
+              <td>xml schema document describing definitions xml format</td>
+            </tr>
+            <tr>
+              <td>icd10pcs_index.xsd</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>icd10pcs_tables.xsd</td>
+              <td>xml schema document describing tabular xml format</td>
+            </tr>
+            <tr>
+              <td>index_addenda_2025.pdf</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>pcs_2025.pdf</td>
+              <td>Information about tables indicating meaning
+                of codes for specific character positions; index to
+                codes</td>
+            </tr>
+            <tr>
+              <td>pcs_update_summary_2025.pdf</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>tables_addenda_2025.pdf</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <strong>Data files</strong>
+    <table>
+      <tbody>
+        <tr>
+          <th>File</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>icd10pcs_order_2025.txt</td>
+          <td>Long and short descriptions</td>
+        </tr>
+        <tr>
+          <td>icd10pcs_tables_2025.xml</td>
+          <td>Tabular data</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr>
+    <div id="rep_identifers" class="rep_block_level_one">
+      <h3>Identifiers:</h3>
+      Identifiers are assigned as follows:<br/>
+      <ul>
+        <li>CODE: 3 or 7-character code from icd10pcs_order_YYYY.txt, or
+          assembled code from icd10pcs_tables_YYYY.xml</li>
+        <li>SAUI: Not applicable</li>
+        <li>SCUI: same as CODE </li>
+        <li>SDUI: Not applicable</li>
+      </ul>
+      <hr>
+      <div id="atoms" class="rep_block_level_two"> 
+        <h3>Atoms (MRCONSO):</h3>
+        <table>
+          <tbody>
+            <tr>
+              <th>Term Type</th>
+              <th>Origin</th>
+            </tr>
+            <tr>
+              <td>AB</td>
+              <td>CODE: 7-character code from
+                icd10pcs_order_YYYY.txt (character positions 7-13)<br/>
+                STR: Short description from icd10pcs_order_YYYY.txt
+                (character positions 17-76)<br/>
+                SCUI: same as CODE<br/>
+                SUPPRESS = "Y"<br/>
+                <br/>
+                Note:  AB atoms are created when character position
+                15 = "1", indicating that the code is valid for
+                submission on a UB04</td>
+            </tr>
+            <tr>
+              <td>HS</td>
+              <td>CODE: 3-character code from
+                icd10pcs_order_YYYY.txt (character positions 7-9)<br/>
+                STR: Short description from icd10pcs_order_YYYY.txt
+                (character positions 17-76)<br/>
+                SCUI: same as CODE<br/>
+                SUPPRESS = "Y"<br/>
+                <br/>
+                Note:  HS atoms are created when character position
+                15 = "0", indicating that the code is a "header" -- not
+                valid for submission on a UB04</td>
+            </tr>
+            <tr>
+              <td>HT</td>
+              <td>CODE: 3-character code from icd10pcs_order_YYYY.txt
+                (character positions 7-9)<br/>
+                STR: Short description from icd10pcs_order_YYYY.txt
+                (character positions 17-76)<br/>
+                SCUI: Same as CODE<br/>
+                <br/>
+                Note:  HS atoms are created when character position
+                15 = "0", indicating that the code is a "header" -- not
+                valid for submission on a UB04</td>
+            </tr>
+            <tr>
+              <td>HX</td>
+              <td>CODE:  assembled
+                from values icd10pcs_tables_XXXX.xml<br/>
+                STR:  assembled from values in
+                icd10pcs_tables_XXXX.xml, using "@" as a subfield
+                separator<br/>
+                SCUI: same as CODE<br/>
+                <br/>
+                TTY = "HX" atoms are created for levels 2-6</td>
+            </tr>
+            <tr>
+              <td>MTH_HX</td>
+              <td>CODE:  assembled from values
+                icd10pcs_tables_YYYY.xml<br/>
+                STR:  assembled from values in
+                icd10pcs_tables_YYYY.xml, using "@" as a subfield
+                separator;  the string "(Therapy)" or "(Procedure)"
+                is appended as appropriate<br/>
+                SCUI: same as CODE<br/>
+                <br/>
+                TTY = "MTH_HT" atoms are created for levels 1-2</td>
+            </tr>
+            <tr>
+              <td>PT</td>
+              <td>CODE: 7-character code from icd10pcs_order_YYYY.txt
+                (character positions 7-13)<br/>
+                STR: Long description from icd10pcs_order_YYYY.txt
+                (character positions 78 - end)<br/>
+                SCUI: same as CODE<br/>
+                SUPPRESS = "N"<br/>
+                <br/>
+                Note:  PT atoms are created when character position
+                15 = "1", indicating that the code is valid for
+                submission on a UB04</td>
+            </tr>
+            <tr>
+              <td>PX</td>
+              <td>CODE:  assembled from values
+                icd10pcs_tables_YYYY.xml<br/>
+                STR:  assembled from values in
+                icd10pcs_tables_YYYY.xml, using "@" as a subfield
+                separator<br/>
+                SCUI: same as CODE<br/>
+                <br/>
+                TTY = "PX" atoms are created for level 7</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <hr>
+      <div id="attributes" class="rep_block_level_two"> 
+        <h3>Attributes (MRSAT):</h3>
+        <table>
+          <tbody>
+            <tr>
+              <th>Attribute Name</th>
+              <th>Origin</th>
+            </tr>
+            <tr>
+              <td>ADDED_MEANING</td>
+              <td>Additional descriptive information about a header term extracted from &lt;definition&gt; tag in
+                icd10pcs_definitions_YYYY.xml</td>
+            </tr>
+            <tr>
+              <td>ORDER_NO</td>
+              <td>Order number from icd10pcs_order_YYYY.txt (character positions 1-5)</td>
+            </tr>
+           </tbody>
+        </table>
+      </div>
+      <hr>
+      <div id="relationships" class="rep_block_level_two"> 
+        <h3>Relationships (MRREL):</h3>
+        <table>
+          <tbody>
+            <tr>
+              <th>REL</th>
+              <th>RELA<br/>
+                Inverse RELA</th>
+              <th>ORIGIN</th>
+            </tr>
+            <tr>
+              <td>SY</td>
+              <td>expanded_form_of<br/>
+                has_expanded_form
+              </td>
+              <td>Connect AB and PT descriptions<br/>
+                Connect PT and PX descriptions<br/>
+                Connect HS and HT descriptions<br/>
+                Connect HT and HX descriptions
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+     </div>
