@@ -2,13 +2,13 @@
   <div class="bg-light border-right" id="sidebar-wrapper">
     <div class="sidebar-heading">
       <h3 class="py-3 text-center left-menu-heading">
-        <a href="/">UMLS Vocabularies</a>
+        <a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/index.html">UMLS Vocabularies</a>
       </h3>
     </div>
     <mat-accordion>
       <mat-expansion-panel *ngFor="let key of objectKeys(groupedSources)">
         <mat-expansion-panel-header>
-          <mat-panel-title>
+          <mat-panel-title class="letters">
             {{ key }}
           </mat-panel-title>
         </mat-expansion-panel-header>
