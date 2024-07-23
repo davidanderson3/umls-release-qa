@@ -192,63 +192,68 @@ export class SourcesComponent implements OnInit {
   loadMetadataContent(): void {
     if (this.sourceData) {
       const contentContactDetails = this.sourceData.contentContact ? `
-      ${this.sourceData.contentContact.name}<br>
-      ${this.sourceData.contentContact.organization}<br>
-      ${this.sourceData.contentContact.address1}<br>
-      ${this.sourceData.contentContact.address2 ? this.sourceData.contentContact.address2 + '<br>' : ''}
-      ${this.sourceData.contentContact.city}, ${this.sourceData.contentContact.stateOrProvince} ${this.sourceData.contentContact.zipCode}<br>
-      ${this.sourceData.contentContact.email}
-    ` : 'N/A';
-
-    const licenseContactDetails = this.sourceData.licenseContact ? `
-      ${this.sourceData.licenseContact.name}<br>
-      ${this.sourceData.licenseContact.organization}<br>
-      ${this.sourceData.licenseContact.address1}<br>
-      ${this.sourceData.licenseContact.address2 ? this.sourceData.licenseContact.address2 + '<br>' : ''}
-      ${this.sourceData.licenseContact.city}, ${this.sourceData.licenseContact.stateOrProvince} ${this.sourceData.licenseContact.zipCode}<br>
-      ${this.sourceData.licenseContact.email}
-    ` : 'N/A';
+        ${this.sourceData.contentContact.name !== 'NONE' ? this.sourceData.contentContact.name + '<br>' : ''}
+        ${this.sourceData.contentContact.organization !== 'NONE' ? this.sourceData.contentContact.organization + '<br>' : ''}
+        ${this.sourceData.contentContact.address1 !== 'NONE' ? this.sourceData.contentContact.address1 + '<br>' : ''}
+        ${this.sourceData.contentContact.address2 && this.sourceData.contentContact.address2 !== 'NONE' ? this.sourceData.contentContact.address2 + '<br>' : ''}
+        ${this.sourceData.contentContact.city !== 'NONE' ? this.sourceData.contentContact.city + ', ' : ''}
+        ${this.sourceData.contentContact.stateOrProvince !== 'NONE' ? this.sourceData.contentContact.stateOrProvince + ' ' : ''}
+        ${this.sourceData.contentContact.zipCode !== 'NONE' ? this.sourceData.contentContact.zipCode + '<br>' : ''}
+        ${this.sourceData.contentContact.email !== 'NONE' ? this.sourceData.contentContact.email : ''}
+      ` : 'N/A';
+  
+      const licenseContactDetails = this.sourceData.licenseContact ? `
+        ${this.sourceData.licenseContact.name !== 'NONE' ? this.sourceData.licenseContact.name + '<br>' : ''}
+        ${this.sourceData.licenseContact.organization !== 'NONE' ? this.sourceData.licenseContact.organization + '<br>' : ''}
+        ${this.sourceData.licenseContact.address1 !== 'NONE' ? this.sourceData.licenseContact.address1 + '<br>' : ''}
+        ${this.sourceData.licenseContact.address2 && this.sourceData.licenseContact.address2 !== 'NONE' ? this.sourceData.licenseContact.address2 + '<br>' : ''}
+        ${this.sourceData.licenseContact.city !== 'NONE' ? this.sourceData.licenseContact.city + ', ' : ''}
+        ${this.sourceData.licenseContact.stateOrProvince !== 'NONE' ? this.sourceData.licenseContact.stateOrProvince + ' ' : ''}
+        ${this.sourceData.licenseContact.zipCode !== 'NONE' ? this.sourceData.licenseContact.zipCode + '<br>' : ''}
+        ${this.sourceData.licenseContact.email !== 'NONE' ? this.sourceData.licenseContact.email : ''}
+      ` : 'N/A';
+  
       const metadataHtml = `
         <div>
-          
           <table>
-          <tr>
-          <td><strong>Source Official Name:</strong></td>
-          <td>${this.sourceData.preferredName}</td>
-        </tr>
+            <tr>
+              <td><strong>Source Official Name:</strong></td>
+              <td>${this.sourceData.preferredName !== 'NONE' ? this.sourceData.preferredName : ''}</td>
+            </tr>
             <tr>
               <td><strong>Short Name:</strong></td>
-              <td>${this.sourceData.shortName}</td>
+              <td>${this.sourceData.shortName !== 'NONE' ? this.sourceData.shortName : ''}</td>
             </tr>
             <tr>
-            <td><strong>Family:</strong></td>
-            <td>${this.sourceData.family}</td>
+              <td><strong>Family:</strong></td>
+              <td>${this.sourceData.family !== 'NONE' ? this.sourceData.family : ''}</td>
             </tr>
             <tr>
-            <td><strong>Restriction Level:</strong></td>
-            <td>${this.sourceData.restrictionLevel}</td>
-          </tr>
+              <td><strong>Restriction Level:</strong></td>
+              <td>${this.sourceData.restrictionLevel !== 'NONE' ? this.sourceData.restrictionLevel : ''}</td>
+            </tr>
             <tr>
               <td><strong>Language:</strong></td>
-              <td>${this.sourceData.languageAbbreviation}</td>
+              <td>${this.sourceData.languageAbbreviation !== 'NONE' ? this.sourceData.languageAbbreviation : ''}</td>
             </tr>
             <tr>
-            <td><strong>Content Contact:</strong></td>
-            <td>${contentContactDetails}</td>
-          </tr>
-          <tr>
-            <td><strong>License Contact:</strong></td>
-            <td>${licenseContactDetails}</td>
-          </tr>
-
+              <td><strong>Content Contact:</strong></td>
+              <td>${contentContactDetails !== 'NONE' ? contentContactDetails : ''}</td>
+            </tr>
+            <tr>
+              <td><strong>License Contact:</strong></td>
+              <td>${licenseContactDetails !== 'NONE' ? licenseContactDetails : ''}</td>
+            </tr>
           </table>
         </div>
       `;
+  
       this.htmlContent['metadata'] = this.sanitizer.bypassSecurityTrustHtml(metadataHtml);
     } else {
       console.error('No source data available to load metadata content');
     }
   }
+  
 
   onAnchorClick(event: Event): void {
     const anchor = event.target as HTMLAnchorElement;
