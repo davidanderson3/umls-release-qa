@@ -8,7 +8,7 @@ import { map, catchError } from 'rxjs/operators';
 })
 export class ApiService {
 
-  private apiUrl = 'https://uts-ws.nlm.nih.gov/rest/metadata/2024AA/sources';
+  private fileUrl = 'assets/MRSAB.RRF';
   private sourcesCache: any[] | null = null;
 
   constructor(private http: HttpClient) { }
@@ -21,55 +21,43 @@ export class ApiService {
     return this.sourcesCache;
   }
 
+  private parseRRF(data: string): any[] {
+    console.log('Raw data:', data);  // Log raw data
+    const lines = data.split('\n').filter(line => line.trim() !== '');
+    const parsedData = lines.map(line => {
+      const columns = line.split('|');
+      return {
+        abbreviation: columns[3],
+        vsab: columns[2],
+        shortName: columns[23],
+        languageAbbreviation: columns[19],
+        restrictionLevel: columns[13],
+        sourceOfficialName: columns[4],
+        lastUpdated: columns[9],
+        family: columns[5],
+        licenseContact: columns[11],
+        contentContact: columns[12],
+        citation: columns[24]
+      };
+    });
+    console.log('Parsed data:', parsedData);  // Log parsed data
+    return parsedData;
+}
+
   getSources(): Observable<any> {
-    // Check if the data is already cached
     const cachedData = this.getCache();
     if (cachedData) {
       return of(cachedData);
     }
 
-    // Otherwise, fetch from the API
-    return this.http.get(this.apiUrl).pipe(
-      map((data: any) => {
-        const transformedSources = data.result.map((source: any) => {
-          return {
-            abbreviation: source.abbreviation,
-            shortName: source.shortName,
-            languageAbbreviation: source.language?.expandedForm,
-            restrictionLevel: source.restrictionLevel,
-            expandedForm: source.expandedForm,
-            family: source.family,
-            acquisitionContact: source.acquisitionContact,
-            contentContact: source.contentContact ? {
-              name: source.contentContact.name,
-              organization: source.contentContact.organization,
-              address1: source.contentContact.address1,
-              address2: source.contentContact.address2,
-              city: source.contentContact.city,
-              stateOrProvince: source.contentContact.stateOrProvince,
-              zipCode: source.contentContact.zipCode,
-              email: source.contentContact.email,
-            } : null,
-            licenseContact: source.licenseContact ? {
-              name: source.licenseContact.name,
-              organization: source.licenseContact.organization,
-              address1: source.licenseContact.address1,
-              address2: source.licenseContact.address2,
-              city: source.licenseContact.city,
-              stateOrProvince: source.licenseContact.stateOrProvince,
-              zipCode: source.licenseContact.zipCode,
-              email: source.licenseContact.email,
-            } : null,
-            preferredName: source.preferredName,
-            synonymousNames: source.synonymousNames,
-          };
-        });
-        // Cache the data
+    return this.http.get(this.fileUrl, { responseType: 'text' }).pipe(
+      map((data: string) => {
+        const transformedSources = this.parseRRF(data);
         this.setCache(transformedSources);
         return transformedSources;
       }),
       catchError(error => {
-        console.error('Error in getSources:', error);
+        console.error('Error fetching sources:', error);
         return of([]);
       })
     );

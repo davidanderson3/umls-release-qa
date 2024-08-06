@@ -191,34 +191,24 @@ export class SourcesComponent implements OnInit {
 
   loadMetadataContent(): void {
     if (this.sourceData) {
-      const contentContactDetails = this.sourceData.contentContact ? `
-        ${this.sourceData.contentContact.name !== 'NONE' ? this.sourceData.contentContact.name + '<br>' : ''}
-        ${this.sourceData.contentContact.organization !== 'NONE' ? this.sourceData.contentContact.organization + '<br>' : ''}
-        ${this.sourceData.contentContact.address1 !== 'NONE' ? this.sourceData.contentContact.address1 + '<br>' : ''}
-        ${this.sourceData.contentContact.address2 && this.sourceData.contentContact.address2 !== 'NONE' ? this.sourceData.contentContact.address2 + '<br>' : ''}
-        ${this.sourceData.contentContact.city !== 'NONE' ? this.sourceData.contentContact.city + ', ' : ''}
-        ${this.sourceData.contentContact.stateOrProvince !== 'NONE' ? this.sourceData.contentContact.stateOrProvince + ' ' : ''}
-        ${this.sourceData.contentContact.zipCode !== 'NONE' ? this.sourceData.contentContact.zipCode + '<br>' : ''}
-        ${this.sourceData.contentContact.email !== 'NONE' ? this.sourceData.contentContact.email : ''}
-      ` : 'N/A';
+      const formatField = (field: string) => {
+        return field !== 'NONE' ? field.replace(/^;+/, '').replace(/;+/g, '<br>') : 'N/A';
+      };
   
-      const licenseContactDetails = this.sourceData.licenseContact ? `
-        ${this.sourceData.licenseContact.name !== 'NONE' ? this.sourceData.licenseContact.name + '<br>' : ''}
-        ${this.sourceData.licenseContact.organization !== 'NONE' ? this.sourceData.licenseContact.organization + '<br>' : ''}
-        ${this.sourceData.licenseContact.address1 !== 'NONE' ? this.sourceData.licenseContact.address1 + '<br>' : ''}
-        ${this.sourceData.licenseContact.address2 && this.sourceData.licenseContact.address2 !== 'NONE' ? this.sourceData.licenseContact.address2 + '<br>' : ''}
-        ${this.sourceData.licenseContact.city !== 'NONE' ? this.sourceData.licenseContact.city + ', ' : ''}
-        ${this.sourceData.licenseContact.stateOrProvince !== 'NONE' ? this.sourceData.licenseContact.stateOrProvince + ' ' : ''}
-        ${this.sourceData.licenseContact.zipCode !== 'NONE' ? this.sourceData.licenseContact.zipCode + '<br>' : ''}
-        ${this.sourceData.licenseContact.email !== 'NONE' ? this.sourceData.licenseContact.email : ''}
-      ` : 'N/A';
+      const contentContactDetails = formatField(this.sourceData.contentContact);
+      const licenseContactDetails = formatField(this.sourceData.licenseContact);
+      const citationDetails = formatField(this.sourceData.citation);
   
       const metadataHtml = `
         <div>
           <table>
             <tr>
+              <td><strong>Versioned Source Abbreviation:</strong></td>
+              <td>${this.sourceData.vsab !== 'NONE' ? this.sourceData.vsab : ''}</td>
+            </tr>
+            <tr>
               <td><strong>Source Official Name:</strong></td>
-              <td>${this.sourceData.preferredName !== 'NONE' ? this.sourceData.preferredName : ''}</td>
+              <td>${this.sourceData.sourceOfficialName !== 'NONE' ? this.sourceData.sourceOfficialName : ''}</td>
             </tr>
             <tr>
               <td><strong>Short Name:</strong></td>
@@ -229,6 +219,10 @@ export class SourcesComponent implements OnInit {
               <td>${this.sourceData.family !== 'NONE' ? this.sourceData.family : ''}</td>
             </tr>
             <tr>
+              <td><strong>Last Updated:</strong></td>
+              <td>${this.sourceData.lastUpdated !== 'NONE' ? this.sourceData.lastUpdated : ''}</td>
+            </tr>
+            <tr>
               <td><strong>Restriction Level:</strong></td>
               <td>${this.sourceData.restrictionLevel !== 'NONE' ? this.sourceData.restrictionLevel : ''}</td>
             </tr>
@@ -237,22 +231,27 @@ export class SourcesComponent implements OnInit {
               <td>${this.sourceData.languageAbbreviation !== 'NONE' ? this.sourceData.languageAbbreviation : ''}</td>
             </tr>
             <tr>
-              <td><strong>Content Contact:</strong></td>
-              <td>${contentContactDetails !== 'NONE' ? contentContactDetails : ''}</td>
+              <td><strong>License Contact:</strong></td>
+              <td>${licenseContactDetails}</td>
             </tr>
             <tr>
-              <td><strong>License Contact:</strong></td>
-              <td>${licenseContactDetails !== 'NONE' ? licenseContactDetails : ''}</td>
+              <td><strong>Content Contact:</strong></td>
+              <td>${contentContactDetails}</td>
+            </tr>
+            <tr>
+              <td><strong>Citation:</strong></td>
+              <td>${citationDetails}</td>
             </tr>
           </table>
         </div>
       `;
-  
+    
       this.htmlContent['metadata'] = this.sanitizer.bypassSecurityTrustHtml(metadataHtml);
     } else {
       console.error('No source data available to load metadata content');
     }
   }
+  
   
 
   onAnchorClick(event: Event): void {
