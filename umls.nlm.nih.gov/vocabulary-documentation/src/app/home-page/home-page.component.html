@@ -15,7 +15,7 @@
     <input type="text" placeholder="Search..." [(ngModel)]="searchText" (input)="applyFilter()"/>
     <br/><br/><label><input type="checkbox" [(ngModel)]="showTranslations" (change)="applyFilter()"/> Show Translations</label>
 
-    <table mat-table [dataSource]="filteredDataSource" matSort>
+    <table mat-table [dataSource]="filteredDataSource" matSort class="vocabulary-list">
 
       <ng-container matColumnDef="abbreviation">
         <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>Abbreviation</th>
