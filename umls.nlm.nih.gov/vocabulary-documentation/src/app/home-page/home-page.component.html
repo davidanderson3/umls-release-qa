@@ -14,8 +14,8 @@
     <p>Basic information about the source vocabularies represented in the UMLS.</p>
     <input type="text" placeholder="Search..." [(ngModel)]="searchText" (input)="applyFilter()"/>
     <br/><br/><label><input type="checkbox" [(ngModel)]="showTranslations" (change)="applyFilter()"/> Show Translations</label>
-
-    <table mat-table [dataSource]="filteredDataSource" matSort class="vocabulary-list">
+    <div class="vocabulary-list">
+    <table mat-table [dataSource]="filteredDataSource" matSort>
 
       <ng-container matColumnDef="abbreviation">
         <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>Abbreviation</th>
@@ -47,6 +47,7 @@
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
     </table>
+    </div>
   </div>
   <app-footer></app-footer>
 </div>
