@@ -14,7 +14,7 @@
     <p>Basic information about the source vocabularies represented in the UMLS.</p>
     <input type="text" placeholder="Search..." [(ngModel)]="searchText" (input)="applyFilter()"/>
     <br/><br/><label><input type="checkbox" [(ngModel)]="showTranslations" (change)="applyFilter()"/> Show Translations</label>
-    <div class="vocabulary-list">
+    <div class="vocabulary-list" style="font-size: 20px;">
     <table mat-table [dataSource]="filteredDataSource" matSort>
 
       <ng-container matColumnDef="abbreviation">
