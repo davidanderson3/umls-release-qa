@@ -20,3 +20,12 @@ padding: 10px 0px 10px 0px;
 .bg-secondary {
   background-color: #edf2f7 !important;
 }
+
+.mat-mdc-row .vocabulary-list,
+.mdc-data-table__content .vocabulary-list {
+    font-size: 20px !important;
+}
+
+.mat-mdc-row, .mdc-data-table__content {
+  font-size: 20px !important;
+}
