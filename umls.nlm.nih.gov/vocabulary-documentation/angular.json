@@ -36,6 +36,14 @@
           },
           "configurations": {
             "production": {
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                  "minify": true,
+                  "inlineCritical": false  // Ensure critical styles aren't inlined or deferred
+                }
+              },
+              "outputHashing": "all",
               "budgets": [
                 {
                   "type": "initial",
@@ -47,8 +55,7 @@
                   "maximumWarning": "2kb",
                   "maximumError": "4kb"
                 }
-              ],
-              "outputHashing": "all"
+              ]
             },
             "development": {
               "buildOptimizer": false,
@@ -59,6 +66,7 @@
               "namedChunks": true
             }
           },
+          
           "defaultConfiguration": "production"
         },
         "serve": {
