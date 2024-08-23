@@ -9,22 +9,26 @@ import { map, catchError } from 'rxjs/operators';
 export class ApiService {
 
   private fileUrl = 'assets/MRSAB.RRF';
-  private sourcesCache: any[] | null = null;
+  private sourcesCache: Source[] | null = null;
 
   constructor(private http: HttpClient) { }
 
-  private setCache(sources: any[]): void {
+  private setCache(sources: Source[]): void {
     this.sourcesCache = sources;
   }
 
-  private getCache(): any[] | null {
+  private getCache(): Source[] | null {
     return this.sourcesCache;
   }
 
-  private parseRRF(data: string): any[] {
+  private parseRRF(data: string): Source[] {
     console.log('Raw data:', data);  // Log raw data
-    const lines = data.split('\n').filter(line => line.trim() !== '');
-    const parsedData = lines.map(line => {
+    const lines = data.split('\n').filter(line => {
+      const columns = line.split('|');
+      return columns[0].trim() !== ''; // Ensure the first column is not empty
+    });
+    
+    const parsedData: Source[] = lines.map(line => {
       const columns = line.split('|');
       return {
         abbreviation: columns[3],
@@ -40,11 +44,13 @@ export class ApiService {
         citation: columns[24]
       };
     });
+  
     console.log('Parsed data:', parsedData);  // Log parsed data
     return parsedData;
-}
+  }
+  
 
-  getSources(): Observable<any> {
+  getSources(): Observable<Source[]> {
     const cachedData = this.getCache();
     if (cachedData) {
       return of(cachedData);
@@ -63,10 +69,10 @@ export class ApiService {
     );
   }
 
-  getSourceByAbbreviation(abbreviation: string): Observable<any> {
+  getSourceByAbbreviation(abbreviation: string): Observable<Source | null> {
     return this.getSources().pipe(
       map(sources => {
-        const found = sources.find((source: any) => source.abbreviation === abbreviation);
+        const found = sources.find(source => source.abbreviation === abbreviation);
         if (found) {
           return found;
         } else {
@@ -79,4 +85,18 @@ export class ApiService {
       })
     );
   }
+}
+
+interface Source {
+  abbreviation: string;
+  vsab: string;
+  shortName: string;
+  languageAbbreviation: string;
+  restrictionLevel: string;
+  sourceOfficialName: string;
+  lastUpdated: string;
+  family: string;
+  licenseContact: string;
+  contentContact: string;
+  citation: string;
 }
