@@ -41,28 +41,54 @@ export class SourcesComponent implements OnInit {
     this.route.paramMap.subscribe((params: ParamMap) => {
       // Extract the segments from the URL
       const urlSegments = this.route.snapshot.url.map(segment => segment.path);
-      
-      // Assuming the structure is ['current', 'folder_name', ...]
-      // Check if the first segment is 'current' and extract the folder name accordingly
+  
       if (urlSegments.length > 1 && urlSegments[0] === 'current') {
         this.folderName = urlSegments[1];
         this.dynamicHeading = this.folderName.toUpperCase();
-        this.fetchSourceData();
         this.titleService.setTitle(`UMLS - ${this.dynamicHeading}`);
-        this.checkFileExistence().then(() => {
-          // Logic for setting the active tab
+        
+        // First, fetch the source data before attempting to load any content
+        this.fetchSourceData().then(() => {
+          // Ensure `sourceData` is available, then load content
           if (urlSegments.length > 2) {
             const tabName = this.getTabNameFromUrl(urlSegments[2]);
             this.setActiveTab(tabName);
           } else {
-            this.loadHtmlContent('synopsis'); // Load default tab content
+            this.loadHtmlContent('synopsis'); // Load default 'synopsis' content
           }
+  
+          // Now check for additional file existence asynchronously (optional)
+          this.checkFileExistence();
+        }).catch(error => {
+          console.error('Error fetching source data, cannot load content:', error);
         });
       } else {
         console.error('URL structure not as expected');
       }
     });
   }
+  
+  fetchSourceData(): Promise<void> {
+    return new Promise((resolve, reject) => {
+      if (this.folderName) {
+        this.apiService.getSourceByAbbreviation(this.folderName).subscribe(
+          response => {
+            this.sourceData = response; // Assign the fetched data to the sourceData property
+            console.log('Fetched sourceData:', this.sourceData);
+            resolve();
+          },
+          error => {
+            console.error('Error fetching data for abbreviation:', error);
+            reject(error);
+          }
+        );
+      } else {
+        console.error('No folderName specified');
+        reject('No folderName specified');
+      }
+    });
+  }
+  
 
   checkFileExistence(): Promise<void> {
     return new Promise((resolve, reject) => {
@@ -79,24 +105,6 @@ export class SourcesComponent implements OnInit {
   
       Promise.all(checks).then(() => resolve());
     });
-  }
-
-  fetchSourceData(): void {
-    if (this.folderName) {
-      this.apiService.getSourceByAbbreviation(this.folderName).subscribe(
-        response => {
-          this.sourceData = response; // Assigning the fetched data to the sourceData property
-          if (this.activeTab === 'metadata') {
-            this.loadMetadataContent();
-          }
-        },
-        error => {
-          console.error('Error fetching data for abbreviation:', error);
-        }
-      );
-    } else {
-      console.error('No folderName specified');
-    }
   }
 
   getTabNameFromUrl(path: string): string {
