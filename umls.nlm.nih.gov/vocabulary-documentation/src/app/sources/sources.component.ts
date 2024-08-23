@@ -121,17 +121,17 @@ export class SourcesComponent implements OnInit {
 
   setActiveTab(tab: string): void {
     this.activeTab = tab;
-    if (tab === 'metadata') {
-      this.loadMetadataContent();
-    } else {
-      if (!this.htmlContent[tab]) {
-        this.loadHtmlContent(tab);
-      }
+  
+    // Only load content if it hasn't been loaded before (cache it after the first load)
+    if (!this.htmlContent[tab]) {
+      this.loadHtmlContent(tab).then(() => {
+        console.log(`Content for ${tab} loaded and cached.`);
+      });
     }
-
-    // Scroll to the top of the page
+  
+    // Scroll to top of the page when tab is set
     this.viewportScroller.scrollToPosition([0, 0]);
-
+  
     // Navigate to the new URL with 'current' included
     let routePath: string;
     switch (tab) {
@@ -155,6 +155,7 @@ export class SourcesComponent implements OnInit {
     }
     this.router.navigate(['/current', this.folderName, routePath]);
   }
+  
 
   loadHtmlContent(tab: string): Promise<void> {
     return new Promise((resolve, reject) => {
