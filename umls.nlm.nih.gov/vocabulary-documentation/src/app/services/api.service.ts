@@ -10,24 +10,36 @@ export class ApiService {
 
   private fileUrl = 'assets/MRSAB.RRF';
   private sourcesCache: Source[] | null = null;
+  private cacheVersionKey = 'cachedSourcesVersion';
+  private currentDataVersion = '2024AA'; 
 
   constructor(private http: HttpClient) { }
 
   private setCache(sources: Source[]): void {
     this.sourcesCache = sources;
+    localStorage.setItem('cachedSources', JSON.stringify(sources));
+    localStorage.setItem(this.cacheVersionKey, this.currentDataVersion); // Store the current version
   }
 
   private getCache(): Source[] | null {
-    return this.sourcesCache;
+    const cachedVersion = localStorage.getItem(this.cacheVersionKey);
+    if (cachedVersion === this.currentDataVersion) {
+      const cachedSources = localStorage.getItem('cachedSources');
+      return cachedSources ? JSON.parse(cachedSources) : null;
+    }
+    // If the versions don't match, invalidate the cache
+    this.clearCache();
+    return null;
+  }
+
+  private clearCache(): void {
+    localStorage.removeItem('cachedSources');
+    localStorage.removeItem(this.cacheVersionKey);
   }
 
   private parseRRF(data: string): Source[] {
     console.log('Raw data:', data);  // Log raw data
-    const lines = data.split('\n').filter(line => {
-      const columns = line.split('|');
-      return columns[0].trim() !== ''; // Ensure the first column is not empty
-    });
-    
+    const lines = data.split('\n').filter(line => line.trim() !== '');
     const parsedData: Source[] = lines.map(line => {
       const columns = line.split('|');
       return {
@@ -44,11 +56,9 @@ export class ApiService {
         citation: columns[24]
       };
     });
-  
     console.log('Parsed data:', parsedData);  // Log parsed data
     return parsedData;
   }
-  
 
   getSources(): Observable<Source[]> {
     const cachedData = this.getCache();
@@ -83,6 +93,12 @@ export class ApiService {
         console.error('Error in getSourceByAbbreviation:', error);
         return of(null);
       })
+    );
+  }
+
+  getSourceAbbreviations(): Observable<string[]> {
+    return this.getSources().pipe(
+      map(sources => sources.map(source => source.abbreviation)) // Extract only abbreviations
     );
   }
 }
