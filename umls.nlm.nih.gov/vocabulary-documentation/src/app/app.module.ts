@@ -18,7 +18,8 @@ import { AppRoutingModule } from './app-routing.module'
 import { HomePageComponent } from './home-page/home-page.component'
 import { LeftMenuComponent } from './left-menu/left-menu.component'
 import { HeaderComponent } from './header/header.component'
-import { FooterComponent } from './footer/footer.component'
+import { FooterComponent } from './footer/footer.component';
+import { NotFoundComponent } from './not-found/not-found.component'
 
 const routes: Routes = [
 	// ... other routes
@@ -33,7 +34,8 @@ const routes: Routes = [
 		HomePageComponent,
 		LeftMenuComponent,
 		HeaderComponent,
-		FooterComponent
+		FooterComponent,
+  NotFoundComponent
 	],
 	imports: [
 		BrowserModule,
