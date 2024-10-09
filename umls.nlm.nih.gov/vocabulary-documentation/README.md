@@ -1,27 +1,53 @@
-# VocabularyDocumentation
+# UMLS Vocabulary Documentation Angular Site
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7.
+## Installation
+
+Install Node version 18.20.4 (https://nodejs.org/en/about/previous-releases) 
+
+Once installed (Windows only):
+
+Find the npm global installation path: 
+
+Open the command prompt.
+ 
+Run this command to find where npm installs global packages:
+ 
+`npm config get prefix`
+ 
+This will give you a path like C:\Users\<Your-Username>\AppData\Roaming\npm.
+ 
+Add it to the PATH:
+
+* Right-click This PC or My Computer and select Properties.
+* Click Advanced system settings on the left.
+* In the System Properties window, click the Environment Variables button.
+* Under System Variables, find the variable called Path and select it. Click Edit.
+* Click New and add the npm global path from step 1, like C:\Users\<Your-Username>\AppData\Roaming\npm.
+* Click OK to save the changes, and then restart your terminal.
+
+These commands should return a version number:
+
+`node -v`
+
+`npm -v`
+
+## Installing Angular
+
+Open the command prompt. 
+
+Navigate to the directory where you have cloned this repository:
+
+`cd c:\SOME-DIRECTORY\umls-source-release\umls.nlm.nih.gov\vocabulary-documentation`
+
+Run: 
+
+`npm install`
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
