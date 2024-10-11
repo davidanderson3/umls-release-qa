@@ -47,6 +47,18 @@ Run:
 
 Run `npx ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
+## UMLS Release Documentation
+
+Replace the MRSAB.RRF file in the assets folder of the versioned branch (for example, 2024AB branch)
+
+Once the documentation is finalized for the next release, do a pull request to merge that version branch into master (for example, merge 2024AB branch into master branch). 
+
+QA the site. 
+
+Publish the changes on release day. 
+
+
+
 
 
 
