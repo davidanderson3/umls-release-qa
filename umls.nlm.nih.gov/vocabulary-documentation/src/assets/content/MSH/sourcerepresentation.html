@@ -1,4 +1,3 @@
-
 <br/>
 <p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p>
     <div class="row py-2 mb-2 mini-menu">  
@@ -9,7 +8,7 @@
     </div>
    <hr>
     <div id="general" class="rep_block_level_one">
-      <p><strong>VSAB:</strong>MSH2024_2024_02_01</p>
+      <p><strong>VSAB:</strong>MSH2025_2024_08_19</p>
       <h3>Notes</h3>
       <p>MeSH for the Metathesaurus is processed from the xml files. In
         addition to data from the xml files, top levels of the hierarchy
@@ -22,7 +21,13 @@
     <div id="change_summary" class="rep_block_level_one">
       <h3>Summary of Changes:</h3>
  
-		<p>No changes to the original file format or to the Metathesaurus source processing.</p>
+		<p>Deprecated TTYS:<br/>
+		DSV<br/>
+		QSV</p>
+		<p>
+		Deprecated RELA:<br/>
+		sort_version_of/has_sort_version</p>
+		<p>Explanation:  "&lt;SortVersion&gt;" has been removed from the xml</p>
     </div>
        <hr>
     <div id="file_summary" class="rep_block_level_one">
@@ -42,15 +47,15 @@
               <th>Description</th>
             </tr>
             <tr>
-              <td class="file_field_name">nlmdescriptorrecordset_20240101.dtd.txt</td>
+              <td class="file_field_name">nlmdescriptorrecordset_20250101.dtd.txt</td>
               <td>Descriptor DTD</td>
             </tr>
             <tr>
-              <td class="file_field_name">nlmqualifierrecordset_20240101.dtd.txt</td>
+              <td class="file_field_name">nlmqualifierrecordset_20250101.dtd.txt</td>
               <td>Qualifier DTD</td>
             </tr>
             <tr>
-              <td class="file_field_name">nlmsupplementalrecordset_20240101.dtd.txt</td>
+              <td class="file_field_name">nlmsupplementalrecordset_20250101.dtd.txt</td>
               <td>SCR (Supplementary Concept Records) DTD</td>
             </tr>
           </tbody>
@@ -64,15 +69,15 @@
               <th>Description</th>
             </tr>
             <tr>
-              <td class="file_field_name">desc2024.xml</td>
+              <td class="file_field_name">desc2025.xml</td>
               <td>Descriptor XML MeSH</td>
             </tr>
             <tr>
-              <td class="file_field_name">qual2024.xml</td>
+              <td class="file_field_name">qual2025.xml</td>
               <td>Qualifier XML MeSH</td>
             </tr>
             <tr>
-              <td class="file_field_name">supp2024.xml</td>
+              <td class="file_field_name">supp2025.xml</td>
               <td>SCR XML MeSH</td>
             </tr>
           </tbody>
@@ -127,8 +132,8 @@
         </table>
 
         <p>XML tags &lt;CASN1Name&gt;, &lt;EntryVersion&gt; and
-          &lt;SortVersion&gt; are used to create atoms with term types
-          N1, DEV, and DSV, respectively.</p>
+           are used to create atoms with term types
+          N1 and DEV, respectively.</p>
         <h4>Qualifier MeSH (file: qual*.xml):</h4>
         <table>
           <tbody>
@@ -1601,23 +1606,6 @@
                 Repeating element: yes<br/>
                 Required element: no </td>
               <td>Not directly processed</td>
-            </tr>
-            <tr>
-              <td>75</td>
-              <td>&lt;SortVersion&gt;<br/>
-                Description: Custom version of a &lt;Term&gt; that was
-                used to sort print output in printed Medical Subject
-                Headings (discontinued 2007) when sorting according to
-                the &lt;Term&gt; is not desired. All upper case.
-                Example: <br/>
-                &lt;SortVersion&gt;KETOACYL COA THIOLASE
-                03&lt;/SortVersion&gt;<br/>
-                Subelement of: &lt;Term&gt;<br/>
-                Record Type: D, Q<br/>
-                Repeating element: yes<br/>
-                Required element: no</td>
-              <td> MRCONSO.STR TTY = QSV (qmesh) TTY = DSV (dmesh)
-                MRREL.REL=SY MRREL.RELA=sort_version_of</td>
             </tr>
             <tr>
               <td>76</td>

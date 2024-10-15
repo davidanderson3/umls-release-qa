@@ -1,4 +1,3 @@
-
 <br/>
 
 <p>This page lists UMLS Metathesaurus data elements and traces them back to the specific source data that populates them.</p>
@@ -11,11 +10,17 @@
     	<div class="col-sm-auto border-left"><a href="#mappings">Mappings</a></div>
     </div>
     <div id="general" class="rep_block_level_one">
-      <p><strong>VSAB:</strong>MSH2024_2024_02_01</p>
+      <p><strong>VSAB:</strong>MSH2025_2024_08_19</p>
       <hr>
       <div id="rep_identifiers" class="rep_block_level_one">
         <h3>Summary of Changes:</h3>
-        <p>No changes to the original file format or to the Metathesaurus source processing.</p>
+        <p>Deprecated TTYS:<br/>
+		DSV<br/>
+		QSV</p>
+		<p>
+		Deprecated RELA:<br/>
+		sort_version_of/has_sort_version</p>
+		<p>Explanation:  "&lt;SortVersion&gt;" has been removed from the xml</p>
       </div>
        <hr>
       <div id="rep_files" class="rep_block_level_one">
@@ -23,11 +28,11 @@
         &nbsp;&nbsp;The UMLS uses MeSH xml files can be downloaded from <a
           href="https://www.nlm.nih.gov/databases/download/mesh.html">https://www.nlm.nih.gov/databases/download/mesh.html</a><br/>
         <ul>
-          <li>desc2024.xml
+          <li>desc2025.xml
           </li>
-          <li>qual2024.xml
+          <li>qual2025.xml
           </li>
-          <li>supp2024.xml
+          <li>supp2025.xml
           </li>
         </ul>
       </div>
@@ -108,16 +113,6 @@
                 <td>Descriptor entry version</td>
                 <td>CODE = DescriptorUI<br/>
                   STR = value of &lt;TermList&gt;&lt;Term&gt;&lt;EntryVersion&gt;<br/>
-                  SCUI = ConceptUI<br/>
-                  SDUI = DescriptorUI<br/>
-                  File: desc*.xml
-                </td>
-              </tr>
-              <tr>
-                <td>DSV</td>
-                <td>Descriptor sort version</td>
-                <td>CODE = DescriptorUI<br/>
-                  STR = value of &lt;TermList&gt;&lt;Term&gt;&lt;SortVersion&gt;<br/>
                   SCUI = ConceptUI<br/>
                   SDUI = DescriptorUI<br/>
                   File: desc*.xml
@@ -284,15 +279,6 @@
                 <td>CODE = QualifierUI<br/>
                   STR = value of
                   &lt;TermList&gt;&lt;Term&gt;&lt;EntryVersion&gt;<br/>
-                  SCUI = ConceptUI<br/>
-                  SDUI = QualifierUI</td>
-              </tr>
-              <tr>
-                <td>QSV</td>
-                <td>Qualifier sort version</td>
-                <td>CODE = QualifierUI<br/>
-                  STR = value of
-                  &lt;TermList&gt;&lt;Term&gt;&lt;SortVersion&gt;<br/>
                   SCUI = ConceptUI<br/>
                   SDUI = QualifierUI</td>
               </tr>
@@ -711,16 +697,6 @@ to &lt;HeadingMappedTo&gt;&lt;QualifierReferredTo&gt;&lt;QualifierUI&gt;<br/>
                   string where IsPermutedTermYN="N" to AUI of string
                   where IsPermutedTermYN="Y"
                 </td>
-                <td>desc*.xml</td>
-              </tr>
-              <tr>
-                <td>SY</td>
-                <td>has_sort_version<br/>
-                  sort_version_of
-                </td>
-                <td>Connect: AUI of
-                  &lt;TermList&gt;&lt;Term&gt;&lt;String&gt; with AUI of
-                  string in &lt;SortVersion&gt; tag </td>
                 <td>desc*.xml</td>
               </tr>
             </tbody>
