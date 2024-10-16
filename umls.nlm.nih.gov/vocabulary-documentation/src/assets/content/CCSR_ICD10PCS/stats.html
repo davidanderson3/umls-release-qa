@@ -1,5 +1,4 @@
-
-<br/><h2>Semantic Type Distribution</h2>
+<h2>Semantic Type Distribution</h2>
 <table>
 <tr>
 <th>Semantic Type ID</th><th>Semantic Type Name</th><th>Count </th><th>Percentage Distribution</th>
@@ -38,10 +37,10 @@
 <td>MAPSETVSAB</td><td>Versioned source abbreviation for a map set</td><td>1</td>
 </tr>
 <tr>
-<td>TORSAB</td><td>Root source abbreviation for the "to" identifiers of a map set</td><td>1</td>
+<td>FROMRSAB</td><td>Root source abbreviation for the "from" identifiers of a map set</td><td>1</td>
 </tr>
 <tr>
-<td>FROMRSAB</td><td>Root source abbreviation for the "from" identifiers of a map set</td><td>1</td>
+<td>TORSAB</td><td>Root source abbreviation for the "to" identifiers of a map set</td><td>1</td>
 </tr>
 <tr>
 <td>MTH_MAPSETCOMPLEXITY</td><td>Indicates the overall complexity of a map set</td><td>1</td>
@@ -62,10 +61,10 @@
 <td>MTH_MAPFROMCOMPLEXITY</td><td>Indicates the complexity of "from" expressions used in a map set</td><td>1</td>
 </tr>
 <tr>
-<td>MTH_MAPTOEXHAUSTIVE</td><td>Indicates whether or not the "to" source is completely mapped</td><td>1</td>
+<td>MAPSETVERSION</td><td>Version of the map set</td><td>1</td>
 </tr>
 <tr>
-<td>MAPSETVERSION</td><td>Version of the map set</td><td>1</td>
+<td>MTH_MAPTOEXHAUSTIVE</td><td>Indicates whether or not the "to" source is completely mapped</td><td>1</td>
 </tr>
 <tr>
 <td>MTH_MAPTOCOMPLEXITY</td><td>Indicates the complexity of "to" expressions in a map set</td><td>1</td>
@@ -77,10 +76,10 @@
 <th>Relation Name/Additional Label</th><th>Expanded Form</th><th>Count </th>
 </tr>
 <tr>
-<td>RQ/classified_as</td><td>related and possibly synonymous./Classified as</td><td>78491</td>
+<td>RQ/classified_as</td><td>related and possibly synonymous./Classified as</td><td>78536</td>
 </tr>
 <tr>
-<td>RQ/classifies</td><td>related and possibly synonymous./Classifies</td><td>78491</td>
+<td>RQ/classifies</td><td>related and possibly synonymous./Classifies</td><td>78536</td>
 </tr>
 <tr>
 <td>PAR/</td><td>has parent relationship in a Metathesaurus source vocabulary /Empty relationship attribute</td><td>359</td>
@@ -104,13 +103,16 @@
 <th>Source</th><th># Concepts Sharing Atom/# Total Concepts</th><th>Percentage Distribution</th>
 </tr>
 <tr>
-<td>SNOMEDCT_US</td><td>119/358</td><td>33.2</td>
+<td>SNOMEDCT_US</td><td>120/358</td><td>33.5</td>
 </tr>
 <tr>
-<td>SCTSPA</td><td>117/358</td><td>32.7</td>
+<td>SCTSPA</td><td>118/358</td><td>33.0</td>
 </tr>
 <tr>
 <td>CHV</td><td>99/358</td><td>27.7</td>
+</tr>
+<tr>
+<td>MEDCIN</td><td>93/358</td><td>26.0</td>
 </tr>
 <tr>
 <td>RCD</td><td>92/358</td><td>25.7</td>
@@ -131,6 +133,12 @@
 <td>MDRDUT</td><td>91/358</td><td>25.4</td>
 </tr>
 <tr>
+<td>MDREST</td><td>91/358</td><td>25.4</td>
+</tr>
+<tr>
+<td>MDRFIN</td><td>91/358</td><td>25.4</td>
+</tr>
+<tr>
 <td>MDRFRE</td><td>91/358</td><td>25.4</td>
 </tr>
 <tr>
@@ -138,6 +146,9 @@
 </tr>
 <tr>
 <td>MDRGRE</td><td>91/358</td><td>25.4</td>
+</tr>
+<tr>
+<td>MDRHRV</td><td>91/358</td><td>25.4</td>
 </tr>
 <tr>
 <td>MDRHUN</td><td>91/358</td><td>25.4</td>
@@ -153,6 +164,9 @@
 </tr>
 <tr>
 <td>MDRLAV</td><td>91/358</td><td>25.4</td>
+</tr>
+<tr>
+<td>MDRLIT</td><td>91/358</td><td>25.4</td>
 </tr>
 <tr>
 <td>MDRPOL</td><td>91/358</td><td>25.4</td>
@@ -171,9 +185,6 @@
 </tr>
 <tr>
 <td>SNMI</td><td>90/358</td><td>25.1</td>
-</tr>
-<tr>
-<td>MEDCIN</td><td>87/358</td><td>24.3</td>
 </tr>
 <tr>
 <td>NCI</td><td>82/358</td><td>22.9</td>
@@ -251,7 +262,7 @@
 <td>LNC</td><td>41/358</td><td>11.5</td>
 </tr>
 <tr>
-<td>CPT</td><td>36/358</td><td>10.1</td>
+<td>CPT</td><td>37/358</td><td>10.3</td>
 </tr>
 <tr>
 <td>CCS</td><td>35/358</td><td>9.8</td>
@@ -290,10 +301,10 @@
 <td>ICD10PCS</td><td>7/358</td><td>2.0</td>
 </tr>
 <tr>
-<td>BI</td><td>6/358</td><td>1.7</td>
+<td>ICPC2ICD10ENG</td><td>7/358</td><td>2.0</td>
 </tr>
 <tr>
-<td>ICPC2ICD10ENG</td><td>6/358</td><td>1.7</td>
+<td>BI</td><td>6/358</td><td>1.7</td>
 </tr>
 <tr>
 <td>NANDA-I</td><td>5/358</td><td>1.4</td>

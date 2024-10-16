@@ -67,10 +67,10 @@
 <td>SMQ</td><td>Standardised MedDRA Query</td><td>230</td>
 </tr>
 <tr>
-<td>AB</td><td>Abbreviation in any source vocabulary</td><td>27</td>
+<td>OS</td><td>System-organ class</td><td>27</td>
 </tr>
 <tr>
-<td>OS</td><td>System-organ class</td><td>27</td>
+<td>AB</td><td>Abbreviation in any source vocabulary</td><td>27</td>
 </tr>
 </table>
 <h2>Attribute Counts</h2>
@@ -79,22 +79,22 @@
 <th>Attribute Type</th><th>Expanded Form</th><th>Count </th>
 </tr>
 <tr>
-<td>SMQ_TERM_LMVERSION</td><td>Standardised MedDRA Query (SMQ) Last Modified Version. Version of MedDRA in which term was last modified in the SMQ.</td><td>191002</td>
-</tr>
-<tr>
-<td>SMQ_TERM_ADDVERSION</td><td>Standardised MedDRA Query (SMQ) Addition Version. Version of MedDRA in which term was added to the SMQ.</td><td>191002</td>
+<td>SMQ_TERM_STATUS</td><td>Standardised MedDRA Query (SMQ) Term Status. Identifies a term as active ("A") or inactive ("I") within this SMQ.</td><td>191002</td>
 </tr>
 <tr>
 <td>SMQ_TERM_SCOPE</td><td>Standardised MedDRA Query (SMQ) Term Scope. Defines the MedDRA term as a member of the broad scope (1), narrow scope (2) of the SMQ search, or a child SMQ (0) (zero).</td><td>191002</td>
 </tr>
 <tr>
-<td>SMQ_TERM_CAT</td><td>Standardised MedDRA Query (SMQ) Term Category. A single alphabetical letter indicating the category of the term for application of the SMQ algorithm. If the SMQ does not use algorithms, then all Term_category values are assigned "A." For a child SMQ, this field is assigned "S."</td><td>191002</td>
-</tr>
-<tr>
 <td>SMQ_TERM_WEIGHT</td><td>Standardised MedDRA Query (SMQ) Term Weight. Used for some SMQ algorithms; "0" is used as default.</td><td>191002</td>
 </tr>
 <tr>
-<td>SMQ_TERM_STATUS</td><td>Standardised MedDRA Query (SMQ) Term Status. Identifies a term as active ("A") or inactive ("I") within this SMQ.</td><td>191002</td>
+<td>SMQ_TERM_LMVERSION</td><td>Standardised MedDRA Query (SMQ) Last Modified Version. Version of MedDRA in which term was last modified in the SMQ.</td><td>191002</td>
+</tr>
+<tr>
+<td>SMQ_TERM_CAT</td><td>Standardised MedDRA Query (SMQ) Term Category. A single alphabetical letter indicating the category of the term for application of the SMQ algorithm. If the SMQ does not use algorithms, then all Term_category values are assigned "A." For a child SMQ, this field is assigned "S."</td><td>191002</td>
+</tr>
+<tr>
+<td>SMQ_TERM_ADDVERSION</td><td>Standardised MedDRA Query (SMQ) Addition Version. Version of MedDRA in which term was added to the SMQ.</td><td>191002</td>
 </tr>
 <tr>
 <td>SMQ_TERM_LEVEL</td><td>Standardised MedDRA Query (SMQ) Term Level. The MedDRA hierarchy level of a term (4=PT, 5=LLT) or 0 (zero) for a child SMQ.</td><td>57085</td>
@@ -139,10 +139,10 @@
 <td>RO/has_member</td><td>has relationship other than synonymous, narrower, or broader/Has member</td><td>95501</td>
 </tr>
 <tr>
-<td>RQ/classified_as</td><td>related and possibly synonymous./Classified as</td><td>88345</td>
+<td>RQ/classifies</td><td>related and possibly synonymous./Classifies</td><td>88345</td>
 </tr>
 <tr>
-<td>RQ/classifies</td><td>related and possibly synonymous./Classifies</td><td>88345</td>
+<td>RQ/classified_as</td><td>related and possibly synonymous./Classified as</td><td>88345</td>
 </tr>
 <tr>
 <td>PAR/</td><td>has parent relationship in a Metathesaurus source vocabulary /Empty relationship attribute</td><td>40886</td>
@@ -176,6 +176,9 @@
 </tr>
 <tr>
 <td>MDR</td><td>62841/62841</td><td>100.0</td>
+</tr>
+<tr>
+<td>MDRARA</td><td>62841/62841</td><td>100.0</td>
 </tr>
 <tr>
 <td>MDRBPO</td><td>62841/62841</td><td>100.0</td>
@@ -215,9 +218,6 @@
 </tr>
 <tr>
 <td>MDRLAV</td><td>62841/62841</td><td>100.0</td>
-</tr>
-<tr>
-<td>MDRLIT</td><td>62841/62841</td><td>100.0</td>
 </tr>
 <tr>
 <td>MDRPOL</td><td>62841/62841</td><td>100.0</td>

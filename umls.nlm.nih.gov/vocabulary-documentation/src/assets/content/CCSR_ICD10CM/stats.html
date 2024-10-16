@@ -1,5 +1,4 @@
-
-<br/><h2>Semantic Type Distribution</h2>
+<h2>Semantic Type Distribution</h2>
 <table>
 <tr>
 <th>Semantic Type ID</th><th>Semantic Type Name</th><th>Count </th><th>Percentage Distribution</th>
@@ -47,10 +46,10 @@
 <th>Attribute Type</th><th>Expanded Form</th><th>Count </th>
 </tr>
 <tr>
-<td>TOVSAB</td><td>Versioned source abbreviation for the "to" identifiers of a map set</td><td>1</td>
+<td>MTH_MAPFROMCOMPLEXITY</td><td>Indicates the complexity of "from" expressions used in a map set</td><td>1</td>
 </tr>
 <tr>
-<td>MTH_MAPFROMCOMPLEXITY</td><td>Indicates the complexity of "from" expressions used in a map set</td><td>1</td>
+<td>TOVSAB</td><td>Versioned source abbreviation for the "to" identifiers of a map set</td><td>1</td>
 </tr>
 <tr>
 <td>MAPSETVERSION</td><td>Version of the map set</td><td>1</td>
@@ -62,10 +61,10 @@
 <td>MTH_MAPTOCOMPLEXITY</td><td>Indicates the complexity of "to" expressions in a map set</td><td>1</td>
 </tr>
 <tr>
-<td>MTH_MAPSETCOMPLEXITY</td><td>Indicates the overall complexity of a map set</td><td>1</td>
+<td>FROMRSAB</td><td>Root source abbreviation for the "from" identifiers of a map set</td><td>1</td>
 </tr>
 <tr>
-<td>FROMRSAB</td><td>Root source abbreviation for the "from" identifiers of a map set</td><td>1</td>
+<td>MTH_MAPSETCOMPLEXITY</td><td>Indicates the overall complexity of a map set</td><td>1</td>
 </tr>
 <tr>
 <td>MTH_MAPFROMEXHAUSTIVE</td><td>Indicates whether or not the "from" source of a map set is completely mapped</td><td>1</td>
@@ -77,10 +76,10 @@
 <td>MAPSETVSAB</td><td>Versioned source abbreviation for a map set</td><td>1</td>
 </tr>
 <tr>
-<td>MTH_MAPTOEXHAUSTIVE</td><td>Indicates whether or not the "to" source is completely mapped</td><td>1</td>
+<td>FROMVSAB</td><td>Versioned source abbreviation for the "from" identifiers of a map set</td><td>1</td>
 </tr>
 <tr>
-<td>FROMVSAB</td><td>Versioned source abbreviation for the "from" identifiers of a map set</td><td>1</td>
+<td>MTH_MAPTOEXHAUSTIVE</td><td>Indicates whether or not the "to" source is completely mapped</td><td>1</td>
 </tr>
 </table>
 <h2>Relationship Counts</h2>
@@ -89,22 +88,22 @@
 <th>Relation Name/Additional Label</th><th>Expanded Form</th><th>Count </th>
 </tr>
 <tr>
-<td>RQ/classifies</td><td>related and possibly synonymous./Classifies</td><td>85508</td>
+<td>RQ/classified_as</td><td>related and possibly synonymous./Classified as</td><td>86068</td>
 </tr>
 <tr>
-<td>RQ/classified_as</td><td>related and possibly synonymous./Classified as</td><td>85508</td>
+<td>RQ/classifies</td><td>related and possibly synonymous./Classifies</td><td>86068</td>
 </tr>
 <tr>
-<td>RQ/has_default_inpatient_classification</td><td>related and possibly synonymous./Has default inpatient classification</td><td>73954</td>
+<td>RQ/default_inpatient_classification_of</td><td>related and possibly synonymous./Default inpatient classification of</td><td>74384</td>
 </tr>
 <tr>
-<td>RQ/has_default_outpatient_classification</td><td>related and possibly synonymous./Has default outpatient classification</td><td>73954</td>
+<td>RQ/has_default_inpatient_classification</td><td>related and possibly synonymous./Has default inpatient classification</td><td>74384</td>
 </tr>
 <tr>
-<td>RQ/default_outpatient_classification_of</td><td>related and possibly synonymous./Default outpatient classification of</td><td>73954</td>
+<td>RQ/default_outpatient_classification_of</td><td>related and possibly synonymous./Default outpatient classification of</td><td>74384</td>
 </tr>
 <tr>
-<td>RQ/default_inpatient_classification_of</td><td>related and possibly synonymous./Default inpatient classification of</td><td>73954</td>
+<td>RQ/has_default_outpatient_classification</td><td>related and possibly synonymous./Has default outpatient classification</td><td>74384</td>
 </tr>
 </table>
 <h2>Definition Count</h2>
@@ -143,6 +142,12 @@
 <td>MDRDUT</td><td>143/545</td><td>26.2</td>
 </tr>
 <tr>
+<td>MDREST</td><td>143/545</td><td>26.2</td>
+</tr>
+<tr>
+<td>MDRFIN</td><td>143/545</td><td>26.2</td>
+</tr>
+<tr>
 <td>MDRFRE</td><td>143/545</td><td>26.2</td>
 </tr>
 <tr>
@@ -150,6 +155,9 @@
 </tr>
 <tr>
 <td>MDRGRE</td><td>143/545</td><td>26.2</td>
+</tr>
+<tr>
+<td>MDRHRV</td><td>143/545</td><td>26.2</td>
 </tr>
 <tr>
 <td>MDRHUN</td><td>143/545</td><td>26.2</td>
@@ -162,6 +170,9 @@
 </tr>
 <tr>
 <td>MDRLAV</td><td>143/545</td><td>26.2</td>
+</tr>
+<tr>
+<td>MDRLIT</td><td>143/545</td><td>26.2</td>
 </tr>
 <tr>
 <td>MDRPOL</td><td>143/545</td><td>26.2</td>
@@ -194,13 +205,16 @@
 <td>CHV</td><td>125/545</td><td>22.9</td>
 </tr>
 <tr>
-<td>MSH</td><td>124/545</td><td>22.8</td>
+<td>MSHCZE</td><td>124/545</td><td>22.8</td>
 </tr>
 <tr>
 <td>SNMI</td><td>124/545</td><td>22.8</td>
 </tr>
 <tr>
-<td>MSHCZE</td><td>123/545</td><td>22.6</td>
+<td>MSH</td><td>123/545</td><td>22.6</td>
+</tr>
+<tr>
+<td>MSHFRE</td><td>122/545</td><td>22.4</td>
 </tr>
 <tr>
 <td>MSHNOR</td><td>122/545</td><td>22.4</td>
@@ -209,22 +223,19 @@
 <td>MSHSWE</td><td>122/545</td><td>22.4</td>
 </tr>
 <tr>
-<td>MSHFRE</td><td>121/545</td><td>22.2</td>
+<td>MSHPOR</td><td>121/545</td><td>22.2</td>
 </tr>
 <tr>
-<td>NCI</td><td>121/545</td><td>22.2</td>
+<td>MSHGER</td><td>120/545</td><td>22.0</td>
 </tr>
 <tr>
 <td>MSHITA</td><td>120/545</td><td>22.0</td>
 </tr>
 <tr>
-<td>MSHPOR</td><td>120/545</td><td>22.0</td>
+<td>NCI</td><td>120/545</td><td>22.0</td>
 </tr>
 <tr>
 <td>CCS</td><td>119/545</td><td>21.8</td>
-</tr>
-<tr>
-<td>MSHGER</td><td>119/545</td><td>21.8</td>
 </tr>
 <tr>
 <td>MSHSPA</td><td>119/545</td><td>21.8</td>
@@ -233,10 +244,10 @@
 <td>ICPC2ICD10ENG</td><td>118/545</td><td>21.7</td>
 </tr>
 <tr>
-<td>MSHPOL</td><td>112/545</td><td>20.6</td>
+<td>MSHRUS</td><td>113/545</td><td>20.7</td>
 </tr>
 <tr>
-<td>MSHRUS</td><td>112/545</td><td>20.6</td>
+<td>MSHPOL</td><td>112/545</td><td>20.6</td>
 </tr>
 <tr>
 <td>ICD10AM</td><td>110/545</td><td>20.2</td>
@@ -254,7 +265,7 @@
 <td>ICPC2ICD10DUT</td><td>106/545</td><td>19.4</td>
 </tr>
 <tr>
-<td>MSHDUT</td><td>103/545</td><td>18.9</td>
+<td>MSHDUT</td><td>102/545</td><td>18.7</td>
 </tr>
 <tr>
 <td>MSHJPN</td><td>102/545</td><td>18.7</td>
@@ -296,10 +307,10 @@
 <td>CST</td><td>81/545</td><td>14.9</td>
 </tr>
 <tr>
-<td>DXP</td><td>79/545</td><td>14.5</td>
+<td>OMIM</td><td>81/545</td><td>14.9</td>
 </tr>
 <tr>
-<td>OMIM</td><td>79/545</td><td>14.5</td>
+<td>DXP</td><td>79/545</td><td>14.5</td>
 </tr>
 <tr>
 <td>HPO</td><td>74/545</td><td>13.6</td>
@@ -407,10 +418,10 @@
 <td>RCDAE</td><td>18/545</td><td>3.3</td>
 </tr>
 <tr>
-<td>ORPHANET</td><td>16/545</td><td>2.9</td>
+<td>NOC</td><td>17/545</td><td>3.1</td>
 </tr>
 <tr>
-<td>NOC</td><td>15/545</td><td>2.8</td>
+<td>ORPHANET</td><td>16/545</td><td>2.9</td>
 </tr>
 <tr>
 <td>ICD10AE</td><td>11/545</td><td>2.0</td>

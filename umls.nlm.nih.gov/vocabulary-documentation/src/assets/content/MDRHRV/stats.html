@@ -67,10 +67,10 @@
 <td>SMQ</td><td>Standardised MedDRA Query</td><td>230</td>
 </tr>
 <tr>
-<td>AB</td><td>Abbreviation in any source vocabulary</td><td>27</td>
+<td>OS</td><td>System-organ class</td><td>27</td>
 </tr>
 <tr>
-<td>OS</td><td>System-organ class</td><td>27</td>
+<td>AB</td><td>Abbreviation in any source vocabulary</td><td>27</td>
 </tr>
 </table>
 <h2>Attribute Counts</h2>
@@ -79,19 +79,19 @@
 <th>Attribute Type</th><th>Expanded Form</th><th>Count </th>
 </tr>
 <tr>
-<td>SMQ_TERM_LMVERSION</td><td>Standardised MedDRA Query (SMQ) Last Modified Version. Version of MedDRA in which term was last modified in the SMQ.</td><td>191002</td>
+<td>SMQ_TERM_SCOPE</td><td>Standardised MedDRA Query (SMQ) Term Scope. Defines the MedDRA term as a member of the broad scope (1), narrow scope (2) of the SMQ search, or a child SMQ (0) (zero).</td><td>191002</td>
 </tr>
 <tr>
 <td>SMQ_TERM_ADDVERSION</td><td>Standardised MedDRA Query (SMQ) Addition Version. Version of MedDRA in which term was added to the SMQ.</td><td>191002</td>
 </tr>
 <tr>
-<td>SMQ_TERM_SCOPE</td><td>Standardised MedDRA Query (SMQ) Term Scope. Defines the MedDRA term as a member of the broad scope (1), narrow scope (2) of the SMQ search, or a child SMQ (0) (zero).</td><td>191002</td>
+<td>SMQ_TERM_WEIGHT</td><td>Standardised MedDRA Query (SMQ) Term Weight. Used for some SMQ algorithms; "0" is used as default.</td><td>191002</td>
+</tr>
+<tr>
+<td>SMQ_TERM_LMVERSION</td><td>Standardised MedDRA Query (SMQ) Last Modified Version. Version of MedDRA in which term was last modified in the SMQ.</td><td>191002</td>
 </tr>
 <tr>
 <td>SMQ_TERM_CAT</td><td>Standardised MedDRA Query (SMQ) Term Category. A single alphabetical letter indicating the category of the term for application of the SMQ algorithm. If the SMQ does not use algorithms, then all Term_category values are assigned "A." For a child SMQ, this field is assigned "S."</td><td>191002</td>
-</tr>
-<tr>
-<td>SMQ_TERM_WEIGHT</td><td>Standardised MedDRA Query (SMQ) Term Weight. Used for some SMQ algorithms; "0" is used as default.</td><td>191002</td>
 </tr>
 <tr>
 <td>SMQ_TERM_STATUS</td><td>Standardised MedDRA Query (SMQ) Term Status. Identifies a term as active ("A") or inactive ("I") within this SMQ.</td><td>191002</td>
@@ -103,10 +103,10 @@
 <td>MPS</td><td>MedDRA primary SOC (PTs may have multiple treepositions, but each has a primary soc)</td><td>26409</td>
 </tr>
 <tr>
-<td>SMQ_STATUS</td><td>Standardised MedDRA Query (SMQ) Status. "A" = active; "I" = inactive.</td><td>230</td>
+<td>SMQ_LEVEL</td><td>Standardised MedDRA Query (SMQ) Level. Value between 1 and 5 identifying the level of the SMQ within the hierarchy of SMQs; 1 is the most general, 5 is the most narrow.</td><td>230</td>
 </tr>
 <tr>
-<td>SMQ_LEVEL</td><td>Standardised MedDRA Query (SMQ) Level. Value between 1 and 5 identifying the level of the SMQ within the hierarchy of SMQs; 1 is the most general, 5 is the most narrow.</td><td>230</td>
+<td>SMQ_STATUS</td><td>Standardised MedDRA Query (SMQ) Status. "A" = active; "I" = inactive.</td><td>230</td>
 </tr>
 <tr>
 <td>SMQ_ALGO</td><td>Standardised MedDRA Query (SMQ) Algorithm. Boolean expression of algorithm for the SMQ. "N" if the SMQ does not utilize an algorithm.</td><td>230</td>
@@ -133,10 +133,10 @@
 <td>SY/has_translation</td><td>source asserted synonymy./Has translation</td><td>117113</td>
 </tr>
 <tr>
-<td>RO/member_of</td><td>has relationship other than synonymous, narrower, or broader/Member of</td><td>95501</td>
+<td>RO/has_member</td><td>has relationship other than synonymous, narrower, or broader/Has member</td><td>95501</td>
 </tr>
 <tr>
-<td>RO/has_member</td><td>has relationship other than synonymous, narrower, or broader/Has member</td><td>95501</td>
+<td>RO/member_of</td><td>has relationship other than synonymous, narrower, or broader/Member of</td><td>95501</td>
 </tr>
 <tr>
 <td>RQ/classified_as</td><td>related and possibly synonymous./Classified as</td><td>88345</td>
@@ -151,10 +151,10 @@
 <td>CHD/</td><td>has child relationship in a Metathesaurus source vocabulary /Empty relationship attribute</td><td>40886</td>
 </tr>
 <tr>
-<td>SY/has_expanded_form</td><td>source asserted synonymy./Has expanded form</td><td>27</td>
+<td>SY/expanded_form_of</td><td>source asserted synonymy./Expanded form of</td><td>27</td>
 </tr>
 <tr>
-<td>SY/expanded_form_of</td><td>source asserted synonymy./Expanded form of</td><td>27</td>
+<td>SY/has_expanded_form</td><td>source asserted synonymy./Has expanded form</td><td>27</td>
 </tr>
 </table>
 <h2>Definition Count</h2>
@@ -176,6 +176,9 @@
 </tr>
 <tr>
 <td>MDR</td><td>62841/62841</td><td>100.0</td>
+</tr>
+<tr>
+<td>MDRARA</td><td>62841/62841</td><td>100.0</td>
 </tr>
 <tr>
 <td>MDRBPO</td><td>62841/62841</td><td>100.0</td>
@@ -200,9 +203,6 @@
 </tr>
 <tr>
 <td>MDRGRE</td><td>62841/62841</td><td>100.0</td>
-</tr>
-<tr>
-<td>MDRHRV</td><td>62841/62841</td><td>100.0</td>
 </tr>
 <tr>
 <td>MDRHUN</td><td>62841/62841</td><td>100.0</td>
