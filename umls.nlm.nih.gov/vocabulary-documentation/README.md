@@ -1,5 +1,23 @@
 # UMLS Vocabulary Documentation Angular Site
 
+## UMLS Release Documentation
+
+Once index.html, metarepresentation.html, and sourcerepresentation.html updates are finalized, check out the branch for this version (for example, 2024AB)
+
+Run the following command to update MRSAB.RRF (Mac Terminal or SourceTree Terminal). Update the {VERSION} and the {ROOT_DIRECTORY}.
+
+`rsync -avz andersondm2@devmlbapp01.nlm.nih.gov:/umls_s/dist_root/{VERSION}/RRF_usr/META/MRSAB.RRF /{ROOT_DIRECTORY}/umls-source-release/umls.nlm.nih.gov/vocabulary-documentation/src/assets/`
+
+Run the following command (Mac Terminal or SourceTree Terminal) to update the stats.html pages: 
+
+`rsync -avz --include '*/' --include '*.html' --exclude '*' andersondm2@devmlbapp01.nlm.nih.gov:/umls_s/dist_root/{VERSION}/RRF_usr/HTML/StatisticalReport/ {ROOT DIRECTORY}/umls-source-release/umls.nlm.nih.gov/vocabulary-documentation/src/assets/content/`
+
+Do a merge request to merge the versioned branch into master (for example, merge 2024AB branch into master branch). 
+
+QA the site. 
+
+Publish the changes on release day. 
+
 ## Installation
 
 Install Node version 18.20.4 (https://nodejs.org/en/about/previous-releases) 
@@ -47,15 +65,7 @@ Run:
 
 Run `npx ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## UMLS Release Documentation
 
-Replace the MRSAB.RRF file in the assets folder of the versioned branch (for example, 2024AB branch)
-
-Once the documentation is finalized for the next release, do a pull request to merge that version branch into master (for example, merge 2024AB branch into master branch). 
-
-QA the site. 
-
-Publish the changes on release day. 
 
 
 
