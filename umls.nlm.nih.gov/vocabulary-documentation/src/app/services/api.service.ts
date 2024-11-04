@@ -11,30 +11,21 @@ export class ApiService {
   private fileUrl = 'assets/MRSAB.RRF';
   private sourcesCache: Source[] | null = null;
   private cacheVersionKey = 'cachedSourcesVersion';
-  private currentDataVersion = '2024AA'; 
 
   constructor(private http: HttpClient) { }
 
   private setCache(sources: Source[]): void {
     this.sourcesCache = sources;
     localStorage.setItem('cachedSources', JSON.stringify(sources));
-    localStorage.setItem(this.cacheVersionKey, this.currentDataVersion); // Store the current version
   }
 
   private getCache(): Source[] | null {
-    const cachedVersion = localStorage.getItem(this.cacheVersionKey);
-    if (cachedVersion === this.currentDataVersion) {
-      const cachedSources = localStorage.getItem('cachedSources');
-      return cachedSources ? JSON.parse(cachedSources) : null;
-    }
-    // If the versions don't match, invalidate the cache
-    this.clearCache();
-    return null;
+    const cachedSources = localStorage.getItem('cachedSources');
+    return cachedSources ? JSON.parse(cachedSources) : null;
   }
 
   private clearCache(): void {
     localStorage.removeItem('cachedSources');
-    localStorage.removeItem(this.cacheVersionKey);
   }
 
   private parseRRF(data: string): Source[] {
@@ -60,13 +51,20 @@ export class ApiService {
     return parsedData;
   }
 
+  private getDynamicFileUrl(): string {
+    // Append a unique timestamp to the URL for cache-busting
+    const timestamp = new Date().getTime();
+    return `${this.fileUrl}?v=${timestamp}`;
+  }
+
   getSources(): Observable<Source[]> {
     const cachedData = this.getCache();
     if (cachedData) {
       return of(cachedData);
     }
 
-    return this.http.get(this.fileUrl, { responseType: 'text' }).pipe(
+    // Use the dynamically generated file URL
+    return this.http.get(this.getDynamicFileUrl(), { responseType: 'text' }).pipe(
       map((data: string) => {
         const transformedSources = this.parseRRF(data);
         this.setCache(transformedSources);
