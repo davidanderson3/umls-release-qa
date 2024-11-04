@@ -9,14 +9,12 @@ import { map, catchError, tap } from 'rxjs/operators';
 export class ApiService {
 
   private fileUrl = 'assets/MRSAB.RRF';
-  private sourcesCache: Source[] | null = null;
   private cacheVersionKey = 'cachedSourcesVersion';
   private cacheDataKey = 'cachedSources';
 
   constructor(private http: HttpClient) { }
 
   private setCache(sources: Source[], version: string): void {
-    this.sourcesCache = sources;
     localStorage.setItem(this.cacheDataKey, JSON.stringify(sources));
     localStorage.setItem(this.cacheVersionKey, version);
   }
@@ -26,9 +24,8 @@ export class ApiService {
     return cachedSources ? JSON.parse(cachedSources) : null;
   }
 
-  private clearCache(): void {
-    localStorage.removeItem(this.cacheDataKey);
-    localStorage.removeItem(this.cacheVersionKey);
+  private getCachedVersion(): string | null {
+    return localStorage.getItem(this.cacheVersionKey);
   }
 
   private parseRRF(data: string): Source[] {
@@ -63,20 +60,21 @@ export class ApiService {
   }
 
   getSources(): Observable<Source[]> {
-    const cachedData = this.getCache();
-    const cachedVersion = localStorage.getItem(this.cacheVersionKey);
-
-    if (cachedData && cachedVersion) {
-      return of(cachedData); // Return cached data if it exists and version matches
-    }
-
-    // Fetch new data if no cache or version mismatch
     return this.http.get(this.fileUrl, { responseType: 'text' }).pipe(
       map((data: string) => {
-        const transformedSources = this.parseRRF(data);
         const newVersion = this.generateVersion(data);
-        this.setCache(transformedSources, newVersion); // Cache new data and version
-        return transformedSources;
+        const cachedVersion = this.getCachedVersion();
+        const cachedData = this.getCache();
+
+        if (cachedData && cachedVersion === newVersion) {
+          // Return cached data if the version matches
+          return cachedData;
+        } else {
+          // Parse and cache new data if there's a version mismatch
+          const transformedSources = this.parseRRF(data);
+          this.setCache(transformedSources, newVersion);
+          return transformedSources;
+        }
       }),
       catchError(error => {
         console.error('Error fetching sources:', error);
