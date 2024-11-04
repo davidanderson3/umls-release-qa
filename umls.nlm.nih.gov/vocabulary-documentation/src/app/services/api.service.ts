@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { map, catchError } from 'rxjs/operators';
+import { map, catchError, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -11,27 +11,29 @@ export class ApiService {
   private fileUrl = 'assets/MRSAB.RRF';
   private sourcesCache: Source[] | null = null;
   private cacheVersionKey = 'cachedSourcesVersion';
+  private cacheDataKey = 'cachedSources';
 
   constructor(private http: HttpClient) { }
 
-  private setCache(sources: Source[]): void {
+  private setCache(sources: Source[], version: string): void {
     this.sourcesCache = sources;
-    localStorage.setItem('cachedSources', JSON.stringify(sources));
+    localStorage.setItem(this.cacheDataKey, JSON.stringify(sources));
+    localStorage.setItem(this.cacheVersionKey, version);
   }
 
   private getCache(): Source[] | null {
-    const cachedSources = localStorage.getItem('cachedSources');
+    const cachedSources = localStorage.getItem(this.cacheDataKey);
     return cachedSources ? JSON.parse(cachedSources) : null;
   }
 
   private clearCache(): void {
-    localStorage.removeItem('cachedSources');
+    localStorage.removeItem(this.cacheDataKey);
+    localStorage.removeItem(this.cacheVersionKey);
   }
 
   private parseRRF(data: string): Source[] {
-    console.log('Raw data:', data);  // Log raw data
     const lines = data.split('\n').filter(line => line.trim() !== '');
-    const parsedData: Source[] = lines.map(line => {
+    return lines.map(line => {
       const columns = line.split('|');
       return {
         abbreviation: columns[3],
@@ -47,27 +49,33 @@ export class ApiService {
         citation: columns[24]
       };
     });
-    console.log('Parsed data:', parsedData);  // Log parsed data
-    return parsedData;
   }
 
-  private getDynamicFileUrl(): string {
-    // Append a unique timestamp to the URL for cache-busting
-    const timestamp = new Date().getTime();
-    return `${this.fileUrl}?v=${timestamp}`;
+  private generateVersion(data: string): string {
+    // Simple hash function to create a unique version based on the data content
+    let hash = 0;
+    for (let i = 0; i < data.length; i++) {
+      const char = data.charCodeAt(i);
+      hash = ((hash << 5) - hash) + char;
+      hash = hash & hash;
+    }
+    return hash.toString();
   }
 
   getSources(): Observable<Source[]> {
     const cachedData = this.getCache();
-    if (cachedData) {
-      return of(cachedData);
+    const cachedVersion = localStorage.getItem(this.cacheVersionKey);
+
+    if (cachedData && cachedVersion) {
+      return of(cachedData); // Return cached data if it exists and version matches
     }
 
-    // Use the dynamically generated file URL
-    return this.http.get(this.getDynamicFileUrl(), { responseType: 'text' }).pipe(
+    // Fetch new data if no cache or version mismatch
+    return this.http.get(this.fileUrl, { responseType: 'text' }).pipe(
       map((data: string) => {
         const transformedSources = this.parseRRF(data);
-        this.setCache(transformedSources);
+        const newVersion = this.generateVersion(data);
+        this.setCache(transformedSources, newVersion); // Cache new data and version
         return transformedSources;
       }),
       catchError(error => {
@@ -79,14 +87,7 @@ export class ApiService {
 
   getSourceByAbbreviation(abbreviation: string): Observable<Source | null> {
     return this.getSources().pipe(
-      map(sources => {
-        const found = sources.find(source => source.abbreviation === abbreviation);
-        if (found) {
-          return found;
-        } else {
-          throw new Error('Abbreviation not found');
-        }
-      }),
+      map(sources => sources.find(source => source.abbreviation === abbreviation) || null),
       catchError(error => {
         console.error('Error in getSourceByAbbreviation:', error);
         return of(null);
@@ -96,7 +97,7 @@ export class ApiService {
 
   getSourceAbbreviations(): Observable<string[]> {
     return this.getSources().pipe(
-      map(sources => sources.map(source => source.abbreviation)) // Extract only abbreviations
+      map(sources => sources.map(source => source.abbreviation))
     );
   }
 }

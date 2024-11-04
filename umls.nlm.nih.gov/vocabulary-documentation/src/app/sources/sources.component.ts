@@ -14,7 +14,6 @@ import { SourceModel } from '../source.model';
   templateUrl: './sources.component.html',
   styleUrls: ['./sources.component.css']
 })
-
 export class SourcesComponent implements OnInit {
 
   htmlContent: { [key: string]: SafeHtml } = {}; // Stores HTML content for each tab
@@ -47,9 +46,8 @@ export class SourcesComponent implements OnInit {
         this.dynamicHeading = this.folderName.toUpperCase();
         this.titleService.setTitle(`UMLS - ${this.dynamicHeading}`);
         
-        // First, fetch the source data before attempting to load any content
+        // Fetch the source data, relying on ApiService's caching logic
         this.fetchSourceData().then(() => {
-          // Ensure `sourceData` is available, then load content
           if (urlSegments.length > 2) {
             const tabName = this.getTabNameFromUrl(urlSegments[2]);
             this.setActiveTab(tabName);
@@ -57,7 +55,7 @@ export class SourcesComponent implements OnInit {
             this.loadHtmlContent('synopsis'); // Load default 'synopsis' content
           }
   
-          // Now check for additional file existence asynchronously (optional)
+          // Check for additional file existence asynchronously (optional)
           this.checkFileExistence();
         }).catch(error => {
           console.error('Error fetching source data, cannot load content:', error);
@@ -73,7 +71,7 @@ export class SourcesComponent implements OnInit {
       if (this.folderName) {
         this.apiService.getSourceByAbbreviation(this.folderName).subscribe(
           response => {
-            this.sourceData = response; // Assign the fetched data to the sourceData property
+            this.sourceData = response;
             console.log('Fetched sourceData:', this.sourceData);
             resolve();
           },
@@ -88,7 +86,6 @@ export class SourcesComponent implements OnInit {
       }
     });
   }
-  
 
   checkFileExistence(): Promise<void> {
     return new Promise((resolve, reject) => {
@@ -114,7 +111,6 @@ export class SourcesComponent implements OnInit {
       case 'stats.html': return 'statistics';
       case 'metarepresentation.html': return 'metarepresentation';
       case 'sourcerepresentation.html': return 'sourcerepresentation';
-      // Add cases for other tabs if necessary
       default: return 'synopsis';
     }
   }
@@ -122,17 +118,14 @@ export class SourcesComponent implements OnInit {
   setActiveTab(tab: string): void {
     this.activeTab = tab;
   
-    // Only load content if it hasn't been loaded before (cache it after the first load)
     if (!this.htmlContent[tab]) {
       this.loadHtmlContent(tab).then(() => {
         console.log(`Content for ${tab} loaded and cached.`);
       });
     }
   
-    // Scroll to top of the page when tab is set
     this.viewportScroller.scrollToPosition([0, 0]);
   
-    // Navigate to the new URL with 'current' included
     let routePath: string;
     switch (tab) {
       case 'synopsis':
@@ -156,7 +149,6 @@ export class SourcesComponent implements OnInit {
     this.router.navigate(['/current', this.folderName, routePath]);
   }
   
-
   loadHtmlContent(tab: string): Promise<void> {
     return new Promise((resolve, reject) => {
       if (tab === 'metadata' && this.sourceData) {
@@ -184,7 +176,7 @@ export class SourcesComponent implements OnInit {
       }
   
       const filePath = `assets/content/${this.folderName}/${filename}.html`;
-      console.log('Fetching content from:', filePath); // For debugging
+      console.log('Fetching content from:', filePath);
   
       this.contentService.getHtmlContent(filePath).toPromise()
         .then(content => {
@@ -261,13 +253,11 @@ export class SourcesComponent implements OnInit {
     }
   }
   
-  
-
   onAnchorClick(event: Event): void {
     const anchor = event.target as HTMLAnchorElement;
     if (anchor.hash) {
       event.preventDefault();
-      const elementId = anchor.hash.slice(1); // Remove the '#' symbol
+      const elementId = anchor.hash.slice(1);
       this.viewportScroller.scrollToAnchor(elementId);
     }
   }
