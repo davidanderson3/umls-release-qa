@@ -151,11 +151,13 @@
           "configurations": {
             "production": {
               "browserTarget": "vocabulary-documentation:build:production",
-              "serverTarget": "vocabulary-documentation:server:production"
+              "serverTarget": "vocabulary-documentation:server:production",
+              "outputHashing": "all"
             },
             "development": {
               "browserTarget": "vocabulary-documentation:build:development",
-              "serverTarget": "vocabulary-documentation:server:development"
+              "serverTarget": "vocabulary-documentation:server:development",
+              "outputHashing": "all"
             }
           },
           "defaultConfiguration": "production"
