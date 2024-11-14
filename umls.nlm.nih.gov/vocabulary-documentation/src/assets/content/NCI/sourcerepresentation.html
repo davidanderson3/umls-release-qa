@@ -3,7 +3,7 @@
 <p>This page lists specific source data elements and provides information on their representation in the UMLS Metathesaurus.</p>
 
 <div id = "rep_general" class = "rep_block_level_one">
-<h3>VSAB: NCI2024_03D</h3>
+<h3>VSAB: NCI2024_10D</h3>
 <h3>General Notes/Comments:</h3>
 <p>NCI Thesaurus (NCIt) is a widely recognized standard for biomedical coding and reference. It covers vocabulary for clinical care, translational and basic research, public information and administrative activities and is used by a broad variety of public and private partners both nationally and internationally.
 </p>
@@ -11,7 +11,15 @@
 <div id = "rep_change_summary" class = "rep_block_level_one">
 <a id= "change_summary"></a>
 <h3>Summary of Changes</h3>
-<p>No changes in this version.</p>
+<p>New associations with inverses:</p>
+<ul>
+ <li>A49|has_pro-ctcae_attribute|is_pro-ctcae_attribute_of</li>
+ <li>A50|has_ped-pro-ctcae_attribute|is_ped-pro-ctcae_attribute_of</li>
+ <li>A51|has_pro-ctcae_attribute_value|is_pro-ctcae_attribute_value_of</li>
+ <li>A52|has_ped-pro-ctcae_attribute_value|is_ped-pro-ctcae_attribute_value_of</li>
+ <li>A53|has_pro-ctcae_parent|is_pro-ctcae_parent_of</li>
+ <li>A54|has_ped-pro-ctcae_parent|is_ped-pro-ctcae_parent_of</li>
+</ul>
 </div>
 <div id = "rep_file_summary" class = "rep_block_level_one"></div>
 <a id= "file_summary">&nbsp;</a>
@@ -82,6 +90,13 @@
 <tr><td  class = "file_field_name">&lt;A40 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_DIPG_DMG_Authorized_Value</td><td>MRREL.CUI*; MRREL.RELA=has_dipg_dmg_authorized_value</td></tr>
 <tr><td  class = "file_field_name">&lt;A41 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_Pharmaceutical_Basic_Administrable_Dose_Form</td><td>MRREL.CUI*; MRREL.RELA=has_pharmaceutical_basic_administrable_dose_form</td></tr>
 <tr><td  class = "file_field_name">&lt;A48 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_ACC-AHA_SARS2_Authorized_Value</td><td>MRREL.CUI*; MRREL.RELA=has_acc-aha_sars2_authorized_value</td></tr>
+<tr><td  class = "file_field_name">&lt;A49 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_PRO-CTCAE_Attribute</td><td>MRREL.CUI*; MRREL.RELA=has_pro-ctcae_attribute</td></tr>
+<tr><td  class = "file_field_name">&lt;A50 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_Ped-PRO-CTCAE_Attribute</td><td>MRREL.CUI*; MRREL.RELA=has_ped-pro-ctcae_attribute</td></tr>
+<tr><td  class = "file_field_name">&lt;A51 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_PRO-CTCAE_Attribute_Value</td><td>MRREL.CUI*; MRREL.RELA=has_pro-ctcae_attribute_value</td></tr>
+<tr><td  class = "file_field_name">&lt;A52 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_Ped-PRO-CTCAE_Attribute_Value</td><td>MRREL.CUI*; MRREL.RELA=has_ped-pro-ctcae_attribute_value</td></tr>
+<tr><td  class = "file_field_name">&lt;A53 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_PRO-CTCAE_Parent</td><td>MRREL.CUI*; MRREL.RELA=has_pro-ctcae_parent</td></tr>
+<tr><td  class = "file_field_name">&lt;A54 rdf:resource="http://...owl#A..."/&gt;</td><td>Has_Ped-PRO-CTCAE_Parent</td><td>MRREL.CUI*; MRREL.RELA=has_ped-pro-ctcae_parent</td></tr>
+
 <tr><td  class = "file_field_name">&lt;P90 rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"&gt;&lt;ncicp:ComplexTerm
 xmlns:ncicp="http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#"&gt;&lt;ncicp:term-name&gt;...&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;...&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;...&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplextTerm&gt;&lt;/P90&gt;
 </td><td>FULL_SYN. Includes term name, term type, term source, and source code.</td><td>MRCONSO.STR = term name; MRCONSO.TTY = term type; MRCONSO.SAB = term source. NCI/PTs are not processed and NCI/CNUs are assigned to the ATN = CNU.</td></tr>
