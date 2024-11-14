@@ -14,47 +14,27 @@ export class LeftMenuComponent implements OnInit {
   constructor(private apiService: ApiService, private cdr: ChangeDetectorRef) {}
 
   ngOnInit(): void {
-  const cachedSources = localStorage.getItem('cachedSources');
-  const cachedGroupedSources = localStorage.getItem('cachedGroupedSources');
-
-  if (cachedSources && cachedGroupedSources) {
-
-    this.sources = JSON.parse(cachedSources);
-
-    // Explicitly call these methods to ensure data integrity
-    this.groupByFirstLetter();
-    this.sortKeysAndSources();
-
-    console.log('Cached Sources:', this.sources);
-    console.log('Cached Grouped Sources:', this.groupedSources);
-    console.log('Cached Sorted Keys:', this.sortedKeys);
-
-    this.cdr.detectChanges();
-  } else {
+    // Fetch sources from ApiService, relying on its caching mechanism
     this.apiService.getSources().subscribe(
       data => {
-        console.log('Fetched from API:', data);
         this.sources = data;
         this.groupByFirstLetter();
         this.sortKeysAndSources();
 
-        // Cache the results
-        localStorage.setItem('cachedSources', JSON.stringify(this.sources));
-        localStorage.setItem('cachedGroupedSources', JSON.stringify(this.groupedSources));
+        console.log('Fetched and processed Sources:', this.sources);
+        console.log('Grouped Sources:', this.groupedSources);
+        console.log('Sorted Keys:', this.sortedKeys);
 
-        console.log('Live Sources:', this.sources);
-        console.log('Live Grouped Sources:', this.groupedSources);
-        console.log('Live Sorted Keys:', this.sortedKeys);
+        this.cdr.detectChanges(); // Trigger change detection to update the view
       },
       error => {
         console.error('Error fetching sources:', error);
       }
     );
   }
-}
-
 
   groupByFirstLetter(): void {
+    this.groupedSources = {}; // Reset before grouping
     this.sources.forEach((source) => {
       const firstLetter = source.abbreviation.charAt(0).toUpperCase();
       if (!this.groupedSources[firstLetter]) {

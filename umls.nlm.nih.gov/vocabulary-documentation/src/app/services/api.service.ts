@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { map, catchError } from 'rxjs/operators';
+import { map, catchError, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -9,38 +9,28 @@ import { map, catchError } from 'rxjs/operators';
 export class ApiService {
 
   private fileUrl = 'assets/MRSAB.RRF';
-  private sourcesCache: Source[] | null = null;
   private cacheVersionKey = 'cachedSourcesVersion';
-  private currentDataVersion = '2024AA'; 
+  private cacheDataKey = 'cachedSources';
 
   constructor(private http: HttpClient) { }
 
-  private setCache(sources: Source[]): void {
-    this.sourcesCache = sources;
-    localStorage.setItem('cachedSources', JSON.stringify(sources));
-    localStorage.setItem(this.cacheVersionKey, this.currentDataVersion); // Store the current version
+  private setCache(sources: Source[], version: string): void {
+    localStorage.setItem(this.cacheDataKey, JSON.stringify(sources));
+    localStorage.setItem(this.cacheVersionKey, version);
   }
 
   private getCache(): Source[] | null {
-    const cachedVersion = localStorage.getItem(this.cacheVersionKey);
-    if (cachedVersion === this.currentDataVersion) {
-      const cachedSources = localStorage.getItem('cachedSources');
-      return cachedSources ? JSON.parse(cachedSources) : null;
-    }
-    // If the versions don't match, invalidate the cache
-    this.clearCache();
-    return null;
+    const cachedSources = localStorage.getItem(this.cacheDataKey);
+    return cachedSources ? JSON.parse(cachedSources) : null;
   }
 
-  private clearCache(): void {
-    localStorage.removeItem('cachedSources');
-    localStorage.removeItem(this.cacheVersionKey);
+  private getCachedVersion(): string | null {
+    return localStorage.getItem(this.cacheVersionKey);
   }
 
   private parseRRF(data: string): Source[] {
-    console.log('Raw data:', data);  // Log raw data
     const lines = data.split('\n').filter(line => line.trim() !== '');
-    const parsedData: Source[] = lines.map(line => {
+    return lines.map(line => {
       const columns = line.split('|');
       return {
         abbreviation: columns[3],
@@ -56,21 +46,35 @@ export class ApiService {
         citation: columns[24]
       };
     });
-    console.log('Parsed data:', parsedData);  // Log parsed data
-    return parsedData;
+  }
+
+  private generateVersion(data: string): string {
+    // Simple hash function to create a unique version based on the data content
+    let hash = 0;
+    for (let i = 0; i < data.length; i++) {
+      const char = data.charCodeAt(i);
+      hash = ((hash << 5) - hash) + char;
+      hash = hash & hash;
+    }
+    return hash.toString();
   }
 
   getSources(): Observable<Source[]> {
-    const cachedData = this.getCache();
-    if (cachedData) {
-      return of(cachedData);
-    }
-
     return this.http.get(this.fileUrl, { responseType: 'text' }).pipe(
       map((data: string) => {
-        const transformedSources = this.parseRRF(data);
-        this.setCache(transformedSources);
-        return transformedSources;
+        const newVersion = this.generateVersion(data);
+        const cachedVersion = this.getCachedVersion();
+        const cachedData = this.getCache();
+
+        if (cachedData && cachedVersion === newVersion) {
+          // Return cached data if the version matches
+          return cachedData;
+        } else {
+          // Parse and cache new data if there's a version mismatch
+          const transformedSources = this.parseRRF(data);
+          this.setCache(transformedSources, newVersion);
+          return transformedSources;
+        }
       }),
       catchError(error => {
         console.error('Error fetching sources:', error);
@@ -81,14 +85,7 @@ export class ApiService {
 
   getSourceByAbbreviation(abbreviation: string): Observable<Source | null> {
     return this.getSources().pipe(
-      map(sources => {
-        const found = sources.find(source => source.abbreviation === abbreviation);
-        if (found) {
-          return found;
-        } else {
-          throw new Error('Abbreviation not found');
-        }
-      }),
+      map(sources => sources.find(source => source.abbreviation === abbreviation) || null),
       catchError(error => {
         console.error('Error in getSourceByAbbreviation:', error);
         return of(null);
@@ -98,7 +95,7 @@ export class ApiService {
 
   getSourceAbbreviations(): Observable<string[]> {
     return this.getSources().pipe(
-      map(sources => sources.map(source => source.abbreviation)) // Extract only abbreviations
+      map(sources => sources.map(source => source.abbreviation))
     );
   }
 }

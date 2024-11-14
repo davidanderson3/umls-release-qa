@@ -1,11 +1,11 @@
-<div class="container-fluid">
+<div class="container-fluid d-flex flex-column" style="min-height: 100vh;">
   <app-header></app-header>
-  <div class="row">
+  <div class="row flex-grow-1">
     <div class="col-xl-2 d-none d-xl-block border-right px-2 py-2">
       <app-left-menu></app-left-menu>
     </div>
-    <div class="col-xl-10">
-      <div class="bg-white">
+    <div class="col-xl-10 d-flex flex-column">
+      <div class="flex-grow-1 bg-white">
         <!-- Breadcrumb navigation -->
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb mb-0">
@@ -13,14 +13,18 @@
             <li class="breadcrumb-item"><a href="//www.nlm.nih.gov/healthit/index.html">Health IT</a></li>
             <li class="breadcrumb-item"><a href="//www.nlm.nih.gov/research/umls/">UMLS</a></li>
             <li class="breadcrumb-item"><a href="//www.nlm.nih.gov/research/umls/sourcereleasedocs/index.html">Vocabulary Documentation</a></li>
-            <li class="breadcrumb-item">{{ dynamicHeading }} ({{ sourceData.shortName }})</li>
+            <li class="breadcrumb-item" *ngIf="sourceData">
+              {{ dynamicHeading }} ({{ sourceData.shortName }})
+            </li>
           </ol>
         </nav>
         
         <!-- Sticky top header with tabs -->
         <div class="sticky-top">
           <div id="source-name" class="heading">
-            <h1 class="border-bottom p-2 wrap-text">{{ dynamicHeading }} ({{ sourceData.shortName }})</h1>
+            <h1 class="border-bottom p-2 wrap-text" *ngIf="sourceData">
+              {{ dynamicHeading }} ({{ sourceData.shortName }})
+            </h1>
           </div>
           
           <!-- Tab navigation -->
@@ -45,9 +49,9 @@
       </div>
 
       <!-- Tab content -->
-      <div class="tab-content mt-2" [innerHtml]="htmlContent[activeTab]" (click)="onAnchorClick($event)"></div>
+      <div class="tab-content mt-2 flex-grow-1" [innerHtml]="htmlContent[activeTab]" (click)="onAnchorClick($event)"></div>
+      
     </div>
   </div>
-  <app-footer></app-footer>
+  <app-footer class="mt-auto"></app-footer>
 </div>
-
