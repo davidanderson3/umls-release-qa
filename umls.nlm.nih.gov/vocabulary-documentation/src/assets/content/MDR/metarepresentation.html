@@ -9,11 +9,13 @@
     	<div class="col-sm-auto border-left"><a href="#mappings">Mappings</a></div>
     </div>
 <div id="general" class="rep_block_level_one">
-<p><strong>VSAB: </strong>MDR27_0</p>
+<p><strong>VSAB: </strong>MDR27_1</p>
 <hr>
 <div id="rep_identifiers" class="rep_block_level_one">
 <h3>Summary of Changes:</h3>
-<p>There were no changes to the original file format or to Metathesaurus source processing.  Beginning with MDR27_1 in the 2025AA release, we will no longer create "Americanized" versions of strings.  We will continue to create expansions of strings with abbreviations.</p>
+<p>Deprecated REL/RELA:<br/>
+SY|mth_british_forom_of/has_british_form</br>
+ As of this release, the UMLS no longer creates atoms for American spellings of MedDRA.  The original MedDRA data includes both the British spelling and the American spelling counterpart of the same term are included at the LLT level.  We continue to create expansions of strings with abbreviations.</p>
 </div>
 <hr>
 <div id="rep_change_summary" class="rep_block_level_one">
@@ -133,7 +135,7 @@ SDUI = pt_code field of llt.asc
     <tr>
       <td>MTH_HG</td>
       <td>CODE = hlgt_code field of hlgt.asc<br/>
-STR = hlgt_name field of hlgt.asc, with Americanization or abbreviation
+STR = hlgt_name field of hlgt.asc, with abbreviation
 expansion algorithm applied<br/>
 SDUI = hlgt_code field of hlgt.asc.<br/>
 This data is added during Metathesaurus source processing.
@@ -142,7 +144,7 @@ This data is added during Metathesaurus source processing.
     <tr>
       <td>MTH_HT</td>
       <td>CODE = hlt_code field of hlt.asc<br/>
-STR = hlt_name field of hlt.asc, with Americanization or abbreviation
+STR = hlt_name field of hlt.asc, with abbreviation
 expansion algorithm applied<br/>
 SDUI = hlt_code field of hlt.asc.<br/>
 This data is added during Metathesaurus source processing.
@@ -151,7 +153,7 @@ This data is added during Metathesaurus source processing.
     <tr>
       <td>MTH_LLT</td>
       <td>CODE = llt_code field of llt.asc<br/>
-STR = llt_name field of llt.asc, with Americanization or abbreviation expansion algorithm applied<br/>
+STR = llt_name field of llt.asc, with abbreviation expansion algorithm applied<br/>
 SDUI = pt_code field of llt.asc.<br/>
 LLT atoms are created where llt_currency field of llt.asc = "Y"<br/>
 This data is added during Metathesaurus source processing.
@@ -160,7 +162,7 @@ This data is added during Metathesaurus source processing.
     <tr>
       <td>MTH_OL</td>
       <td>CODE = llt_code field of llt.asc<br/>
-STR = llt_name field of llt.asc, with Americanization or abbreviation expansion algorithm applied<br/>
+STR = llt_name field of llt.asc, with abbreviation expansion algorithm applied<br/>
 SDUI = pt_code field of llt.asc.<br/>
 SUPRESS = "Y"<br/>
 OL atoms are created where llt_currency field of llt.asc = "Y"<br/>
@@ -170,7 +172,7 @@ This data is added during Metathesaurus source processing.
     <tr>
       <td>MTH_OS</td>
       <td>CODE = soc_code field of soc.asc<br/>
-STR = soc_name field of soc.asc, with Americanization or abbreviation expansion algorithm applied<br/>
+STR = soc_name field of soc.asc, with abbreviation expansion algorithm applied<br/>
 SDUI = soc_code field of soc.asc<br/>
 This data is added during Metathesaurus source processing.
       </td>
@@ -178,7 +180,7 @@ This data is added during Metathesaurus source processing.
     <tr>
       <td>MTH_PT</td>
       <td>CODE = pt_code field of pt.asc<br/>
-STR = pt_name field of pt.asc, with Americanization or abbreviation expansion algorithmn applied<br/>
+STR = pt_name field of pt.asc, with abbreviation expansion algorithmn applied<br/>
 SDUI = pt_code field of pt.asc<br/>
 This data is added during Metathesaurus source processing.
       </td>
@@ -186,7 +188,7 @@ This data is added during Metathesaurus source processing.
     <tr>
       <td>MTH_SMQ</td>
       <td>CODE = smq_code field of SMQ_List.asc<br/>
-STR = smq_name field of SMQ_List.asc, with Americanization or abbreviation expansion algorithm applied<br/>
+STR = smq_name field of SMQ_List.asc, with abbreviation expansion algorithm applied<br/>
 SDUI = smq_code field of SMQ_List.asc<br/>
 This data is added during Metathesaurus source processing.
       </td>
@@ -354,12 +356,6 @@ SMQ_content.asc.</td>
       <td>expanded_form_of/has_expanded_form</td>
       <td>Connects atoms with TTY = "OS" (Organ System) to their short
 forms (TTY = "AB").</td>
-    </tr>
-    <tr>
-      <td>SY</td>
-      <td>mth_british_form_of/mth_has_british_form</td>
-      <td>Connects atoms with British spelling to atoms with American
-spelling. This data is added during Metathesaurus source processing.</td>
     </tr>
     <tr>
       <td>SY</td>
