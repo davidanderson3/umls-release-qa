@@ -49,7 +49,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     const filterValue = this.searchText.trim().toLowerCase();
     this.filteredDataSource.data = this.dataSource.data.filter(row => {
       const textMatch = filterValue ? row.abbreviation.toLowerCase().includes(filterValue) || row.shortName.toLowerCase().includes(filterValue) : true;
-      const langMatch = this.showTranslations ? true : row.languageAbbreviation === 'ENG';
+      const langMatch = this.showTranslations ? true : row.languageAbbreviation === 'ENG' || row.languageAbbreviation === 'English'
       return textMatch && langMatch;
     });
   }
