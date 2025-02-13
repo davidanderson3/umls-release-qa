@@ -12,7 +12,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class HomePageComponent implements OnInit, AfterViewInit {
   sources!: { abbreviation: string; shortName: string; lastUpdated: string; languageAbbreviation: string; restrictionLevel: string; expandedForm: string; family: string }[];
-  displayedColumns: string[] = ['abbreviation', 'shortName', 'lastUpdated','languageAbbreviation', 'restrictionLevel'];
+  displayedColumns: string[] = ['abbreviation', 'shortName', 'lastUpdated', 'languageAbbreviation', 'restrictionLevel'];
   dataSource: MatTableDataSource<any>;
   searchText: string = '';
   showTranslations: boolean = false;
@@ -20,7 +20,11 @@ export class HomePageComponent implements OnInit, AfterViewInit {
 
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private apiService: ApiService, private router: Router, private titleService: Title) {
+  constructor(
+    private apiService: ApiService,
+    private router: Router,
+    private titleService: Title
+  ) {
     this.dataSource = new MatTableDataSource<any>();
     this.filteredDataSource = new MatTableDataSource<any>();
   }
@@ -48,8 +52,20 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   applyFilter() {
     const filterValue = this.searchText.trim().toLowerCase();
     this.filteredDataSource.data = this.dataSource.data.filter(row => {
-      const textMatch = filterValue ? row.abbreviation.toLowerCase().includes(filterValue) || row.shortName.toLowerCase().includes(filterValue) : true;
-      const langMatch = this.showTranslations ? true : row.languageAbbreviation === 'ENG' || row.languageAbbreviation === 'English'
+      // textMatch: abbreviation or shortName must match the search text (if any)
+      const textMatch = filterValue
+        ? row.abbreviation.toLowerCase().includes(filterValue) ||
+          row.shortName.toLowerCase().includes(filterValue)
+        : true;
+
+      // langMatch: if showTranslations is false, only match rows where
+      // languageAbbreviation is "ENG", "English", or empty
+      // If showTranslations is true, skip this check and allow all languages.
+      const lang = row.languageAbbreviation || ''; // guard if it's undefined
+      const langMatch = this.showTranslations
+        ? true
+        : (lang === 'ENG' || lang === 'English' || lang.trim() === '');
+
       return textMatch && langMatch;
     });
   }

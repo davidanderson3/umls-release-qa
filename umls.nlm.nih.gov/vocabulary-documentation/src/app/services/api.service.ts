@@ -13,22 +13,26 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   /**
-   * Filters out rows that have fewer than 18 columns or if the 1st (columns[0])
-   * or 18th (columns[17]) columns are empty.
+   * Filters out rows that have fewer than 18 columns.
+   * Rows are also excluded if the first column is empty *unless*
+   * the 4th column (columns[3]) is 'SRC' or 'MTH'.
    */
   private parseRRF(data: string): Source[] {
     let lines = data.split('\n').filter(line => line.trim() !== '');
 
     lines = lines.filter(line => {
       const columns = line.split('|');
+      
       // Exclude any row with fewer than 18 columns
       if (columns.length < 18) {
         return false;
       }
-      // Exclude rows where the first or 18th column is empty
-      if (!columns[0].trim() || !columns[17].trim()) {
+
+      // If the first column is empty and the 4th column isn't SRC or MTH, exclude it
+      if (!columns[0].trim() && columns[3].trim() !== 'SRC' && columns[3].trim() !== 'MTH') {
         return false;
       }
+
       return true;
     });
 
