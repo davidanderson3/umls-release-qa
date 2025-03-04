@@ -9,23 +9,23 @@
 <div id="rep_general" class="rep_block_level_one">
   <a id="general"></a>
 
-  <p><b>VSABs: HCPCS2024, HCPT2024</b></p>
+  <p><b>VSABs: HCPCS2025_04, HCPT2025_04</b></p>
   <hr>
 
   <h3>Notes</h3>
 
-  <p>Three SABs are assigned to HCPCS data, based on the code value.</p>
+  <p>Two SABs are assigned to HCPCS data, based on the code value.</p>
 
   <ul>
     <li>Level I codes are copyrighted by the American Medical Association (AMA) and are assigned RSAB = "HCPT".</li>
 
-    <li>Level II codes include 5-character alpha-numeric codes beginning with the letter "D," which are copyrighted by the American Dental Association's Current Dental Terminology (CDT). HCDT was not updated for 2024AB.  All other Level II codes are assigned RSAB = "HCPCS."</li>
+    <li>Level II codes include 5-character alpha-numeric codes beginning with the letter "D," which are copyrighted by the American Dental Association's Current Dental Terminology (CDT). HCDT was not updated for 2025AA.  All other Level II codes are assigned RSAB = "HCPCS."</li>
   </ul>
 
   <p>The standard HCPCS data files do not include a hierarchy. The NLM uses the printed book and other resources to generate a hierarchy during Metathesaurus source processing. This hierarchy has not been reviewed by CMS and is assigned TTY = MTH_HT.</p>
 
   <p>HCPCS includes many attributes. When possible, NLM source processing has attempted to include an expanded value in the ATV field of MRSAT to enable the data to be self-documenting.<br/>
-  The expanded values have been extracted from HCPCS2024_recordlayout.txt and proc_notes_JAN2024.txt as appropriate.<br/>
+  The expanded values were extracted from HCPCS2025_recordlayout.txt and proc_notes_APR2025.txt as appropriate.<br/>
   For example, for the HCPCS Multiple Pricing Indicator Code is assigned an ATN of "HMP" in MRSAT.RRF.<br/>
   A value that appears as "A"in the data file is given an expanded ATV of "A=Not applicable as HCPCS priced under one methodology" in MRSAT.RRF.</p>
 </div>
@@ -37,12 +37,8 @@
 <!-- Since HCDT was not updated for 2024 due to licensing issues, if it is included in the future we will have to add it back in to certain sections -->
 <!-- so review VSAB list CODE, SAB assignment below -->
 
-  <p>HCDT was not updated for 2024AB.</p>
-  <p>New attribute:  HPF<b/>
-	If the long description for a HCPCS code exceeds 3000 characters, the atom_name is truncated and the entire filed is included in MRSAT.ATN = "HPF."
-	</p>
-	
-  <p>No additional changes to the HCPCS file format or Metathesaurua source processing.</p>
+
+  <p>No changes to the HCPCS file format or Metathesaurua source processing.</p>
 </div>
 <hr>
 <div id="rep_file_summary" class="rep_block_level_one">
