@@ -17,14 +17,14 @@ export class LeftMenuComponent implements OnInit {
     // Fetch sources from ApiService, relying on its caching mechanism
     this.apiService.getSources().subscribe(
       data => {
-        this.sources = data;
+        this.sources = this.removeDuplicates(data); // Remove duplicates
         this.groupByFirstLetter();
         this.sortKeysAndSources();
-
+  
         console.log('Fetched and processed Sources:', this.sources);
         console.log('Grouped Sources:', this.groupedSources);
         console.log('Sorted Keys:', this.sortedKeys);
-
+  
         this.cdr.detectChanges(); // Trigger change detection to update the view
       },
       error => {
@@ -32,6 +32,22 @@ export class LeftMenuComponent implements OnInit {
       }
     );
   }
+  
+  /**
+   * Remove duplicate sources based on a unique property like `abbreviation`.
+   */
+  removeDuplicates(data: any[]): any[] {
+    const seen = new Set();
+    return data.filter(source => {
+      const abbreviation = source.abbreviation.toLowerCase(); // Normalize for case-insensitivity
+      if (seen.has(abbreviation)) {
+        return false;
+      }
+      seen.add(abbreviation);
+      return true;
+    });
+  }
+  
 
   groupByFirstLetter(): void {
     this.groupedSources = {}; // Reset before grouping

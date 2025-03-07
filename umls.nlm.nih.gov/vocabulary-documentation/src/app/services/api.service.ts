@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { map, catchError, tap } from 'rxjs/operators';
+import { map, catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -9,29 +9,40 @@ import { map, catchError, tap } from 'rxjs/operators';
 export class ApiService {
 
   private fileUrl = 'assets/MRSAB.RRF';
-  private cacheVersionKey = 'cachedSourcesVersion';
-  private cacheDataKey = 'cachedSources';
 
   constructor(private http: HttpClient) { }
 
-  private setCache(sources: Source[], version: string): void {
-    localStorage.setItem(this.cacheDataKey, JSON.stringify(sources));
-    localStorage.setItem(this.cacheVersionKey, version);
-  }
-
-  private getCache(): Source[] | null {
-    const cachedSources = localStorage.getItem(this.cacheDataKey);
-    return cachedSources ? JSON.parse(cachedSources) : null;
-  }
-
-  private getCachedVersion(): string | null {
-    return localStorage.getItem(this.cacheVersionKey);
-  }
-
+  /**
+   * Filters out rows that have fewer than 18 columns.
+   * Rows are also excluded if the first column is empty *unless*
+   * the 4th column (columns[3]) is 'SRC' or 'MTH'.
+   */
   private parseRRF(data: string): Source[] {
-    const lines = data.split('\n').filter(line => line.trim() !== '');
-    return lines.map(line => {
+    let lines = data.split('\n').filter(line => line.trim() !== '');
+
+    lines = lines.filter(line => {
       const columns = line.split('|');
+      
+      // Exclude any row with fewer than 18 columns
+      if (columns.length < 18) {
+        return false;
+      }
+
+      // If the first column is empty and the 4th column isn't SRC or MTH, exclude it
+      if (!columns[0].trim() && columns[3].trim() !== 'SRC' && columns[3].trim() !== 'MTH') {
+        return false;
+      }
+
+      return true;
+    });
+
+    // Map each line into a Source object
+    return lines.map((line, index) => {
+      const columns = line.split('|');
+      // Log the first few lines if you want to verify columns
+      if (index < 5) {
+        console.log('Kept line #', index, columns);
+      }
       return {
         abbreviation: columns[3],
         vsab: columns[2],
@@ -48,34 +59,12 @@ export class ApiService {
     });
   }
 
-  private generateVersion(data: string): string {
-    // Simple hash function to create a unique version based on the data content
-    let hash = 0;
-    for (let i = 0; i < data.length; i++) {
-      const char = data.charCodeAt(i);
-      hash = ((hash << 5) - hash) + char;
-      hash = hash & hash;
-    }
-    return hash.toString();
-  }
-
+  /**
+   * Fetch the raw text of MRSAB.RRF, parse it, and return the resulting array of Source objects.
+   */
   getSources(): Observable<Source[]> {
     return this.http.get(this.fileUrl, { responseType: 'text' }).pipe(
-      map((data: string) => {
-        const newVersion = this.generateVersion(data);
-        const cachedVersion = this.getCachedVersion();
-        const cachedData = this.getCache();
-
-        if (cachedData && cachedVersion === newVersion) {
-          // Return cached data if the version matches
-          return cachedData;
-        } else {
-          // Parse and cache new data if there's a version mismatch
-          const transformedSources = this.parseRRF(data);
-          this.setCache(transformedSources, newVersion);
-          return transformedSources;
-        }
-      }),
+      map((data: string) => this.parseRRF(data)),
       catchError(error => {
         console.error('Error fetching sources:', error);
         return of([]);
@@ -100,7 +89,7 @@ export class ApiService {
   }
 }
 
-interface Source {
+export interface Source {
   abbreviation: string;
   vsab: string;
   shortName: string;
