@@ -1,59 +1,87 @@
-from datetime import datetime, timedelta, date
-import json
+import logging
+import os
 from pathlib import Path
+from typing import List, Tuple
 from jinja2 import Environment, FileSystemLoader
+from pydantic import BaseModel, Field, ValidationError
+import yaml
 from calc_release_date import calculate_release_date
 
-import sys
-sys.path.append("C:\Users\rewolinskija\Documents\umls-source-release-1\umls.nlm.nih.gov\releasedocs\scripts\Misc scripts")
-from get_loinc_efg import scrape_website
+# --- Logging Configuration ---
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.FileHandler("render_templates.log"),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
 
+# --- Settings Schema ---
+class Settings(BaseModel):
+    template_dir: Path = Field(..., alias="TEMPLATE_DIR")
+    output_dir: Path = Field(..., alias="OUTPUT_DIR")
+    include_dir: Path = Field(..., alias="INCLUDE_DIR")
+    release_version: str = Field(..., alias="RELEASE_VERSION")
 
-# Example release version
-release_version = '2025AA'
+    @classmethod
+    def from_yaml(cls, path: Path) -> "Settings":
+        """Load and validate configuration settings from a YAML file."""
+        try:
+            with open(path, "r") as f:
+                config = yaml.safe_load(f)
+            return cls(**config)
+        except (FileNotFoundError, ValidationError, yaml.YAMLError) as e:
+            logger.error("Failed to load or validate settings from '%s': %s", path, e)
+            raise
 
-# Set the paths for the template directory and output directory
+def load_settings() -> Settings:
+    """Load settings from a YAML file, using the environment variable if available."""
+    # Print current working directory for debugging purposes
+    print(f"Current working directory: {Path.cwd()}")
 
-template_dir = Path("C:\Users\rewolinskija\Documents\umls-source-release-1\umls.nlm.nih.gov\releasedocs\templates")
-output_dir = Path("C:\Users\rewolinskija\Documents\umls-source-release-1\umls.nlm.nih.gov\releasedocs\output")
+    # Use environment variable for config file path, default to "config/settings.yaml"
+    settings_path = os.getenv("SETTINGS_PATH", "config/settings.yaml")
+    settings_path = Path(settings_path).resolve()  # Resolve the full absolute path
 
-# Create the template environment
-template_env = Environment(loader=FileSystemLoader(template_dir))
+    # Check if the settings file exists
+    if not settings_path.exists():
+        logger.error("Settings file not found: %s", settings_path)
+        raise FileNotFoundError(f"Settings file not found: {settings_path}")
 
+    return Settings.from_yaml(settings_path)
 
-# ============================================
-# Data preparation
+def get_template_environment(*paths: Path) -> Environment:
+    """Return a Jinja2 environment with multiple template search paths."""
+    return Environment(loader=FileSystemLoader([*paths]))
 
-# Call the calculate_release_date function to get the release info dictionary and JSON data
-release_info, json_data = calculate_release_date(release_version)
+def write_rendered_template(env: Environment, template_name: str, context: dict, output_path: Path) -> None:
+    """Render a Jinja2 template with the given context and write to the output path."""
+    try:
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        rendered = env.get_template(template_name).render(**context)
+        output_path.write_text(rendered, encoding="utf-8")
+        logger.info("Rendered and saved: %s", output_path)
+    except Exception as e:
+        logger.error("Failed to render or save template '%s': %s", template_name, e)
+        raise
 
-# Call the scrape_website function to get additional data
-loinc_efg_data = scrape_website()
+def main():
+    settings = load_settings()  # Load settings using the new function
+    env = get_template_environment(settings.template_dir, settings.include_dir)
 
-# ============================================
-# Template rendering
+    release_info, _ = calculate_release_date(settings.release_version)
 
-# Define the templates and their contexts
-templates = {
-    "template_rss.txt": {
-        "release_info": release_info,
-        "output_file": output_dir / "rss_output.txt"
-    },
-    "template_copyright_notice.txt": {
-        "release_info": release_info,
-        "loinc_efg_data": loinc_efg_data,
-        "output_file": output_dir / "copyright_notice_output.txt"
-    },
-}
+    template_tasks: List[Tuple[str, dict, Path]] = [
+        ("template_rss.txt", {"release_info": release_info}, settings.output_dir / "rss_output.txt"),
+        ("template_copyright_notice.txt", {
+            "release_info": release_info
+        }, settings.output_dir / "copyright_notice_output.txt"),
+    ]
 
-# ============================================
+    for template_name, context, output_path in template_tasks:
+        write_rendered_template(env, template_name, context, output_path)
 
-# Render the templates with the release information and additional data
-for template_name, context in templates.items():
-    template = template_env.get_template(template_name)
-    rendered_template = template.render(**context)
-
-    # Save the rendered template to the desired output file using a context manager
-    output_file = output_dir / f"{template_name}_output.txt"
-    with open(output_file, "w", encoding='utf-8') as file:
-        file.write(rendered_template)
+if __name__ == "__main__":
+    main()
