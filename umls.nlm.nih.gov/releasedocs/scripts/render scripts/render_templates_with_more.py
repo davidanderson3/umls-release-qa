@@ -5,17 +5,17 @@ from jinja2 import Environment, FileSystemLoader
 from calc_release_date import calculate_release_date
 
 import sys
-sys.path.append("C:/Users/rewolinskija/Desktop/Learning python/Scripts templates and output/Scripts_to_render_template")
+sys.path.append(r"C:\Users\rewolinskija\Documents\umls-source-release-1\umls.nlm.nih.gov\releasedocs\scripts\render scripts")
 from get_loinc_efg import scrape_website
 
 
 # Example release version
-release_version = '2023AB'
+release_version = '2025AA'
 
 # Set the paths for the template directory and output directory
 
-template_dir = Path("C:/Users/rewolinskija/Desktop/Learning python/Scripts templates and output/Templates")
-output_dir = Path("C:/Users/rewolinskija/Learning python/Scripts templates and output/Output")
+template_dir = Path(r"C:\Users\rewolinskija\Documents\umls-source-release-1\umls.nlm.nih.gov\releasedocs\templates")
+output_dir = Path(r"C:\Users\rewolinskija\Documents\umls-source-release-1\umls.nlm.nih.gov\releasedocs\output")
 
 # Create the template environment
 template_env = Environment(loader=FileSystemLoader(template_dir))

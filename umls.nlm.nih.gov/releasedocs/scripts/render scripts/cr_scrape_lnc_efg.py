@@ -62,7 +62,7 @@ def scrape_lnc_efg():
         # --- Test result prints to html file ---
         # Step 6: Save the formatted HTML to a file
         #Project_file_path = r"C:/Users/rewolinskija/Desktop/Learning python/Scripts templates and output"
-        project_path = r"L:\SHARE\Rewolinski\Automating release files\Learning python\Scripts templates and output\Output"
+        project_path = r"C:\Users\rewolinskija\Documents\umls-source-release-1\umls.nlm.nih.gov\releasedocs\output\testing"
         html_file_path = Path(project_path) / "loinc_efg.html"
         with open(html_file_path, "w") as file:
             file.write(formatted_html)
