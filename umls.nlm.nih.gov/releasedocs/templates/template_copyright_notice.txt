@@ -60,7 +60,7 @@ LOINC(R) is a registered United States trademark of Regenstrief Institute, Inc.
 {# ------ #}
 
 {# The following function (scrape_lnc_efg) returns the first paragraph of Notice of Third-Party Content heading and returns three paragraphs (letters efg) from that heading #}
-{% include 'L:\SHARE\Rewolinski\Automating release files\Learning python\Scripts templates and output\Output\loinc_efg.txt' %}
+{% include 'loinc_efg.txt' %}
 
 LOINC license URL: https://loinc.org/kb/license/
 {# End LOINC section #}

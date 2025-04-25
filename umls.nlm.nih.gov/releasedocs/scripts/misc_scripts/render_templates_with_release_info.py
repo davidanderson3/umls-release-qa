@@ -8,13 +8,13 @@ from calc_release_date import calculate_release_date
 
 
 # Example release version
-release_version = '2024AA'
+release_version = '2025AA'
 
 # ============================================
 
 # Set the paths for the template directory and output directory
-template_dir = Path("L:\SHARE\Rewolinski\Automating release files\Learning python\Scripts templates and output\Templates")   # Path to the directory containing the templates
-output_dir = Path("L:\SHARE\Rewolinski\Automating release files\Learning python\Scripts templates and output\Output")  # Path to the directory where the output files will be saved
+template_dir = Path(r"C:\Users\rewolinskija\Documents\umls-source-release-1\umls.nlm.nih.gov\releasedocs\templates")   # Path to the directory containing the templates
+output_dir = Path(r"C:\Users\rewolinskija\Documents\umls-source-release-1\umls.nlm.nih.gov\releasedocs\output")  # Path to the directory where the output files will be saved
 
 
 # Create the template environment
