@@ -1,43 +1,24 @@
+/* Nav item cursor */
 .nav-item .nav-link {
   cursor: pointer;
 }
 
-/* Custom CSS class for the h1 to handle z-index and background */
-.custom-sticky-heading {
-  z-index: 1000; /* Optional: set as needed */
-  background-color: white; /* Recommended: Set it according to your design */
+/* H1 styling */
+h1, #source-name h1, .wrap-text {
+  font-size: clamp(1.5rem, 2vw, 2.2rem); /* Smarter shrink based on viewport */
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
 }
 
-/* Custom CSS class for the nav-tabs to set the margin-top */
-.custom-nav-tabs {
-  margin-top: 40px; /* Set this to the approximate height of your h1 */
-}
-
+/* Background for primary areas */
 .bg-primary {
-    background-color: #326295 !important;
+  background-color: #326295 !important;
 }
 
-.tab-content {
-    overflow-x: auto;
-    width: 100%;
-}
-
-/* Disable sticky-top on mobile */
-@media (max-width: 767px) {
-  .sticky-top {
-    position: static !important;
-  }
-}
-h1 {
-      font-size: 2.4vw; /* Adjust based on your needs */
-      white-space: nowrap;
-      overflow-x: auto;  /* Enable horizontal scrolling */
-    }
-
-.heading{
-    height: 80px;  /* Fixed height */
-}
-
+/* Tab navigation appearance */
 .nav-link {
   border: 1px solid transparent;
   border-bottom: none;
@@ -53,15 +34,25 @@ h1 {
   border-radius: 4px 4px 0 0;
 }
 
-.wrap-text {
-  word-wrap: break-word;
-  white-space: normal;
+/* Tabs responsiveness */
+.tab-content {
+  overflow-x: auto;
+  width: 100%;
 }
 
+/* Sticky tabs only - mobile friendly */
+@media (max-width: 767px) {
+  .sticky-top {
+    position: static !important;
+  }
+}
+
+/* Sticky tabs padding */
 .sticky-top {
-  padding-bottom: 1rem; /* Add some space below the sticky element */
+  padding-bottom: 0.5rem; /* Smaller gap under sticky element */
 }
 
+/* Tabs container spacing */
 .nav-tabs {
-  margin-top: 1rem; /* Add space above the tabs */
+  margin-top: 1rem; /* space above tabs */
 }
