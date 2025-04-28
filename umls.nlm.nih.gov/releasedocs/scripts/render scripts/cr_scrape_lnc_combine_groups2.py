@@ -102,7 +102,11 @@ def scrape_lnc_groupinfo():
         formatted_html = "<ul>\n" + "\n".join([f"<li>{group}</li>" for group in group_li + groupinfo_p]) + "\n</ul>"
 
         # Step 6: Save the formatted HTML to a file
+<<<<<<<< HEAD:umls.nlm.nih.gov/releasedocs/scripts/render scripts/cr_scrape_lnc_combine_groups2.py
+        project_path = r"C:\Users\rewolinskija\Documents\umls-source-release-1\umls.nlm.nih.gov\releasedocs\output\testing"
+========
         project_path = r"/testing"
+>>>>>>>> origin/2025AA:umls.nlm.nih.gov/releasedocs/scripts/misc_scripts/cr_scrape_lnc_combine_groups2.py
         html_file_path = Path(project_path) / "loinc_group.html"
         with open(html_file_path, "w") as file:
             file.write(formatted_html)

@@ -8,9 +8,14 @@ import { map, catchError } from 'rxjs/operators';
 })
 export class ApiService {
 
-  private fileUrl = 'assets/MRSAB.RRF';
-
   constructor(private http: HttpClient) { }
+
+  /**
+   * Returns the URL for fetching MRSAB.RRF with a cache-busting query parameter.
+   */
+  private getFileUrl(): string {
+    return `assets/MRSAB.RRF?v=${new Date().getTime()}`;
+  }
 
   /**
    * Filters out rows that have fewer than 18 columns.
@@ -63,7 +68,7 @@ export class ApiService {
    * Fetch the raw text of MRSAB.RRF, parse it, and return the resulting array of Source objects.
    */
   getSources(): Observable<Source[]> {
-    return this.http.get(this.fileUrl, { responseType: 'text' }).pipe(
+    return this.http.get(this.getFileUrl(), { responseType: 'text' }).pipe(
       map((data: string) => this.parseRRF(data)),
       catchError(error => {
         console.error('Error fetching sources:', error);

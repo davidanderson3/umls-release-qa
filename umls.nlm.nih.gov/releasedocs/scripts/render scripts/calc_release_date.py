@@ -111,7 +111,7 @@ comments += "# You can then use the calc_release_date.py function (which results
 file_name = f"Dict_release_info for {release_info['targetVersion']}.txt"
 
 # Prepare the file path in the "testing" folder
-testing_folder = Path(r"C:\Users\rewolinskija\Documents\umls-source-release-1\umls.nlm.nih.gov\releasedocs\testing")
+testing_folder = Path(r"C:\Users\rewolinskija\Documents\umls-source-release-1\umls.nlm.nih.gov\releasedocs\output\testing")
 file_path = testing_folder / file_name
 
 # Write the result to the file
