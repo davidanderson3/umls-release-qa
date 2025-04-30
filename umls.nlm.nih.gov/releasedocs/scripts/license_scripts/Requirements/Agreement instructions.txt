@@ -1,0 +1,34 @@
+
+
+license_agreement.html - don't need to update
+license_agreement_appendix 1 - need to update
+	script to remove link rel to button and add start/end comments
+	Remove duplicates (see David's email)
+	Script to make sure divs looks like David's email
+	Check for non ascii characters
+license_agreement_snomed - don't need to update
+
+
+License Agreement.html
+Use template and script to pull divs from 3 files
+Remove back to top button
+	<!-- back to top button -->
+				<button id="topBtn">
+					<a href="#top">Back to Top</a>
+				</button>
+				<p></p>
+				<!-- end back to top button -->
+
+
+
+licenseText.html
+Open LicenseAgreement.html
+Remove yellow box>Save as licenseText.html
+
+
+LicenseAgreement.pdf
+Go to Adobe Acrobat Pro>Create>LicenseAgreement.html>Check to see how it looks
+Remove header and footer
+	Tools>Edit PDF>Remove header and footer
+Add 3 bookmarks/set destinations and remove local disk bookmarks/set
+
