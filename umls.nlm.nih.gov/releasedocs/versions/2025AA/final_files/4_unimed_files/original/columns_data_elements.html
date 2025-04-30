@@ -1,0 +1,958 @@
+
+<!-- saved from url=(0088)https://unimed2.nlm.nih.gov/MRD/Documentation/2025AA/APPENDIX/columns_data_elements.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="./columns_data_elements_files/appendix_style.css">
+</head><body><a name="top"></a>
+<button id="myBtn"><a href="https://unimed2.nlm.nih.gov/MRD/Documentation/2025AA/APPENDIX/columns_data_elements.html#top" style="color: white">Back to Top</a></button><p>All data elements in the Metathesaurus are described in
+		this section. The data elements have been divided into
+		Column Descriptions and Attribute Descriptions. The
+		descriptions are arranged alphabetically by data element
+		abbreviation.</p>
+<p>Columns are described for Rich Release Format (RRF) in <a href="http://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/columns_data_elements.html#rrf">Table 1</a>, and for Original Release Format (ORF) in <a href="http://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/columns_data_elements.html#orf">Table 2</a>.</p>
+<hr>
+<br>
+<h2>
+<a id="rrf"></a>Table 1. Columns and Data Elements in Rich Release Format (RRF)</h2>
+<table>
+<thead>
+<tr>
+<th>Abbreviation</th><th>Description</th><th>File</th><th>Length of Value in characters</th><th>Average Length of Value in characters</th><th>SQL92 Datatype</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ATN</strong></td><td>Attribute name</td><td>MRSAT.RRF</td><td>2 -
+			      62</td><td>11.51</td><td>varchar(100)</td>
+</tr>
+<tr>
+<td><strong>ATNL</strong></td><td>Attribute name list for a source.</td><td>MRSAB.RRF</td><td>0 -
+			      1178</td><td>72.08</td><td>varchar(4000)</td>
+</tr>
+<tr>
+<td><strong>ATUI</strong></td><td>Unique identifier for attribute.</td><td>MRSTY.RRF<br>MRDEF.RRF<br>MRSAT.RRF</td><td>10 -
+			      11<br>10 -
+			      11<br>10 -
+			      11</td><td>10.65<br>10.87<br>10.89</td><td>varchar(11)<br>varchar(11)<br>varchar(11)</td>
+</tr>
+<tr>
+<td><strong>ATV</strong></td><td>Attribute value</td><td>MRSAT.RRF</td><td>1 -
+			      35985</td><td>14.07</td><td>varchar(65000)</td>
+</tr>
+<tr>
+<td><strong>AUI</strong></td><td>Unique identifier for atom</td><td>MRHIER.RRF<br>MRDEF.RRF<br>MRCONSO.RRF</td><td>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9</td><td>8.66<br>8.76<br>8.80</td><td>varchar(9)<br>varchar(9)<br>varchar(9)</td>
+</tr>
+<tr>
+<td><strong>AUI1</strong></td><td>Unique identifier for first atom</td><td>MRREL.RRF<br>MRAUI.RRF</td><td>0 -
+			      9<br>8 -
+			      9</td><td>8.56<br>8.60</td><td>varchar(9)<br>varchar(9)</td>
+</tr>
+<tr>
+<td><strong>AUI2</strong></td><td>Unique identifier for second atom</td><td>MRREL.RRF<br>MRAUI.RRF</td><td>0 -
+			      9<br>8 -
+			      9</td><td>8.56<br>8.60</td><td>varchar(9)<br>varchar(9)</td>
+</tr>
+<tr>
+<td><strong>AV</strong></td><td>Average Length, Characters</td><td>MRCOLS.RRF</td><td>4 -
+			      6</td><td>4.13</td><td>numeric(5,2)</td>
+</tr>
+<tr>
+<td><strong>BTS</strong></td><td>Size in Bytes</td><td>MRFILES.RRF</td><td>1 -
+			      10</td><td>7.54</td><td>integer</td>
+</tr>
+<tr>
+<td><strong>CENC</strong></td><td>Character encoding of a source as specified by IANA</td><td>MRSAB.RRF</td><td>5</td><td>5.00</td><td>varchar(20)</td>
+</tr>
+<tr>
+<td><strong>CFR</strong></td><td>CUI frequency for a source</td><td>MRSAB.RRF</td><td>1 -
+			      6</td><td>4.24</td><td>integer</td>
+</tr>
+<tr>
+<td><strong>CHANGEKEY</strong></td><td>CONCEPTSTATUS (if history relates to a SNOMED CT concept) or DESCRIPTIONSTATUS (if history relates to a SNOMED CT atom or "description")</td><td>MRHIST.RRF</td><td>0</td><td>0.00</td><td>varchar(1000)</td>
+</tr>
+<tr>
+<td><strong>CHANGETYPE</strong></td><td>Source asserted code for type of change</td><td>MRHIST.RRF</td><td>0</td><td>0.00</td><td>varchar(1000)</td>
+</tr>
+<tr>
+<td><strong>CHANGEVAL</strong></td><td>SNOMED CT CONCEPTSTATUS or DESCRIPTIONSTATUS value after the change took place</td><td>MRHIST.RRF</td><td>0</td><td>0.00</td><td>varchar(1000)</td>
+</tr>
+<tr>
+<td><strong>CLS</strong></td><td>Number of columns</td><td>MRFILES.RRF</td><td>1 -
+			      2</td><td>1.11</td><td>integer</td>
+</tr>
+<tr>
+<td><strong>CODE</strong></td><td>Unique Identifier or code for string in source</td><td>MRSAT.RRF<br>MRCONSO.RRF</td><td>0 -
+			      56<br>1 -
+			      95</td><td>4.20<br>7.56</td><td>varchar(100)<br>varchar(100)</td>
+</tr>
+<tr>
+<td><strong>COL</strong></td><td>Column or data element name</td><td>MRCOLS.RRF</td><td>2 -
+			      11</td><td>3.68</td><td>varchar(20)</td>
+</tr>
+<tr>
+<td><strong>CUI</strong></td><td>Unique identifier for concept</td><td>MRHIST.RRF<br>AMBIGLUI.RRF<br>AMBIGSUI.RRF<br>CHANGE/MERGEDCUI.RRF<br>MRCONSO.RRF<br>MRDEF.RRF<br>MRHIER.RRF<br>MRSAT.RRF<br>MRSTY.RRF<br>MRXNS_ENG.RRF<br>MRXNW_ENG.RRF<br>MRXW_ARA.RRF<br>MRXW_BAQ.RRF<br>MRXW_CHI.RRF<br>MRXW_CZE.RRF<br>MRXW_DAN.RRF<br>MRXW_DUT.RRF<br>MRXW_ENG.RRF<br>MRXW_EST.RRF<br>MRXW_FIN.RRF<br>MRXW_FRE.RRF<br>MRXW_GER.RRF<br>MRXW_GRE.RRF<br>MRXW_HEB.RRF<br>MRXW_HUN.RRF<br>MRXW_ISL.RRF<br>MRXW_ITA.RRF<br>MRXW_JPN.RRF<br>MRXW_KOR.RRF<br>MRXW_LAV.RRF<br>MRXW_LIT.RRF<br>MRXW_NOR.RRF<br>MRXW_POL.RRF<br>MRXW_POR.RRF<br>MRXW_RUS.RRF<br>MRXW_SCR.RRF<br>MRXW_SPA.RRF<br>MRXW_SWE.RRF<br>MRXW_TUR.RRF<br>MRXW_UKR.RRF</td><td>0<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8</td><td>0.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00</td><td>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)</td>
+</tr>
+<tr>
+<td><strong>CUI1</strong></td><td>Unique identifier for first concept</td><td>MRAUI.RRF<br>MRCUI.RRF<br>MRREL.RRF</td><td>8<br>8<br>8</td><td>8.00<br>8.00<br>8.00</td><td>char(8)<br>char(8)<br>char(8)</td>
+</tr>
+<tr>
+<td><strong>CUI2</strong></td><td>Unique identifier for second concept</td><td>MRCUI.RRF<br>MRAUI.RRF<br>MRREL.RRF</td><td>0 -
+			      8<br>8<br>8</td><td>3.78<br>8.00<br>8.00</td><td>char(8)<br>char(8)<br>char(8)</td>
+</tr>
+<tr>
+<td><strong>CURVER</strong></td><td>Current Version flag</td><td>MRSAB.RRF</td><td>1</td><td>1.00</td><td>char(1)</td>
+</tr>
+<tr>
+<td><strong>CVF</strong></td><td>Content view flag</td><td>MRDEF.RRF<br>MRHIER.RRF<br>MRHIST.RRF<br>MRMAP.RRF<br>MRREL.RRF<br>MRSAT.RRF<br>MRSMAP.RRF<br>MRCONSO.RRF<br>MRSTY.RRF</td><td>0<br>0<br>0<br>0<br>0<br>0<br>0<br>0 -
+			      5<br>0 -
+			      5</td><td>0.00<br>0.00<br>0.00<br>0.00<br>0.00<br>0.00<br>0.00<br>0.94<br>1.81</td><td>varchar(50)<br>varchar(50)<br>varchar(50)<br>varchar(50)<br>varchar(50)<br>varchar(50)<br>varchar(50)<br>varchar(50)<br>varchar(50)</td>
+</tr>
+<tr>
+<td><strong>CXN</strong></td><td>The context number if the atom has multiple contexts</td><td>MRHIER.RRF</td><td>1 -
+			      5</td><td>2.26</td><td>integer</td>
+</tr>
+<tr>
+<td><strong>CXTY</strong></td><td>Context type for a source</td><td>MRSAB.RRF</td><td>0 -
+			      13</td><td>5.37</td><td>varchar(50)</td>
+</tr>
+<tr>
+<td><strong>DEF</strong></td><td>Definition</td><td>MRDEF.RRF</td><td>1 -
+			      10914</td><td>232.69</td><td>varchar(16000)</td>
+</tr>
+<tr>
+<td><strong>DES</strong></td><td>Descriptive Name</td><td>MRCOLS.RRF<br>MRFILES.RRF</td><td>5 -
+			      136<br>8 -
+			      42</td><td>28.67<br>18.33</td><td>varchar(200)<br>varchar(200)</td>
+</tr>
+<tr>
+<td><strong>DIR</strong></td><td>Source asserted directionality flag</td><td>MRREL.RRF</td><td>0 -
+			      1</td><td>0.24</td><td>varchar(1)</td>
+</tr>
+<tr>
+<td><strong>DOCKEY</strong></td><td>Key to be documented</td><td>MRDOC.RRF</td><td>2 -
+			      8</td><td>3.65</td><td>varchar(50)</td>
+</tr>
+<tr>
+<td><strong>DTY</strong></td><td>SQL-92 data type for this column</td><td>MRCOLS.RRF</td><td>7 -
+			      14</td><td>10.01</td><td>varchar(20)</td>
+</tr>
+<tr>
+<td><strong>EXPL</strong></td><td>Detailed explanation</td><td>MRDOC.RRF</td><td>0 -
+			      941</td><td>26.29</td><td>varchar(1000)</td>
+</tr>
+<tr>
+<td><strong>FIL</strong></td><td>Physical FILENAME</td><td>MRCOLS.RRF<br>MRFILES.RRF</td><td>9 -
+			      21<br>9 -
+			      21</td><td>11.02<br>12.11</td><td>varchar(50)<br>varchar(50)</td>
+</tr>
+<tr>
+<td><strong>FMT</strong></td><td>Comma separated list of COL</td><td>MRFILES.RRF</td><td>7 -
+			      190</td><td>29.26</td><td>varchar(300)</td>
+</tr>
+<tr>
+<td><strong>FROMEXPR</strong></td><td>The expression that a mapping is mapped from</td><td>MRSMAP.RRF<br>MRMAP.RRF</td><td>1 -
+			      8<br>1 -
+			      18</td><td>6.91<br>8.46</td><td>varchar(4000)<br>varchar(4000)</td>
+</tr>
+<tr>
+<td><strong>FROMID</strong></td><td>Metathesaurus identifier for the entity being mapped from</td><td>MRMAP.RRF</td><td>1 -
+			      18</td><td>7.54</td><td>varchar(50)</td>
+</tr>
+<tr>
+<td><strong>FROMRES</strong></td><td>Restriction applicable to the entity being mapped from</td><td>MRMAP.RRF</td><td>0</td><td>0.00</td><td>varchar(4000)</td>
+</tr>
+<tr>
+<td><strong>FROMRULE</strong></td><td>Machine processible rule applicable to the entity being mapped from</td><td>MRMAP.RRF</td><td>0</td><td>0.00</td><td>varchar(4000)</td>
+</tr>
+<tr>
+<td><strong>FROMSID</strong></td><td>Source asserted identifier for the entity being mapped from</td><td>MRMAP.RRF</td><td>0</td><td>0.00</td><td>varchar(50)</td>
+</tr>
+<tr>
+<td><strong>FROMTYPE</strong></td><td>The type of expression that a mapping is mapped from</td><td>MRSMAP.RRF<br>MRMAP.RRF</td><td>3 -
+			      4<br>3 -
+			      4</td><td>3.98<br>3.99</td><td>varchar(50)<br>varchar(50)</td>
+</tr>
+<tr>
+<td><strong>HCD</strong></td><td>Source asserted hierarchical number or code of context member (if it exists)</td><td>MRHIER.RRF</td><td>0 -
+			      51</td><td>0.41</td><td>varchar(100)</td>
+</tr>
+<tr>
+<td><strong>IMETA</strong></td><td>Version of the Metathesaurus that a source was added</td><td>MRSAB.RRF</td><td>6</td><td>6.00</td><td>varchar(10)</td>
+</tr>
+<tr>
+<td><strong>ISPREF</strong></td><td>Indicates whether AUI is preferred</td><td>MRCONSO.RRF</td><td>1</td><td>1.00</td><td>char(1)</td>
+</tr>
+<tr>
+<td><strong>LAT</strong></td><td>Language of Term(s)</td><td>MRSAB.RRF<br>CHANGE/DELETEDSUI.RRF<br>MRCONSO.RRF<br>MRXNS_ENG.RRF<br>MRXNW_ENG.RRF<br>MRXW_ARA.RRF<br>MRXW_BAQ.RRF<br>MRXW_CHI.RRF<br>MRXW_CZE.RRF<br>MRXW_DAN.RRF<br>MRXW_DUT.RRF<br>MRXW_ENG.RRF<br>MRXW_EST.RRF<br>MRXW_FIN.RRF<br>MRXW_FRE.RRF<br>MRXW_GER.RRF<br>MRXW_GRE.RRF<br>MRXW_HEB.RRF<br>MRXW_HUN.RRF<br>MRXW_ISL.RRF<br>MRXW_ITA.RRF<br>MRXW_JPN.RRF<br>MRXW_KOR.RRF<br>MRXW_LAV.RRF<br>MRXW_LIT.RRF<br>MRXW_NOR.RRF<br>MRXW_POL.RRF<br>MRXW_POR.RRF<br>MRXW_RUS.RRF<br>MRXW_SCR.RRF<br>MRXW_SPA.RRF<br>MRXW_SWE.RRF<br>MRXW_TUR.RRF<br>MRXW_UKR.RRF</td><td>0 -
+			      3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3</td><td>2.97<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00</td><td>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)</td>
+</tr>
+<tr>
+<td><strong>LUI</strong></td><td>Unique identifier for term</td><td>MRSAT.RRF<br>MRXW_BAQ.RRF<br>MRXW_DAN.RRF<br>MRXW_HEB.RRF<br>MRXW_JPN.RRF<br>AMBIGLUI.RRF<br>MRXW_CZE.RRF<br>MRCONSO.RRF<br>MRXNS_ENG.RRF<br>MRXW_ENG.RRF<br>MRXNW_ENG.RRF<br>MRXW_GER.RRF<br>MRXW_SPA.RRF<br>MRXW_DUT.RRF<br>MRXW_ITA.RRF<br>MRXW_POR.RRF<br>MRXW_FRE.RRF<br>MRXW_RUS.RRF<br>MRXW_FIN.RRF<br>MRXW_POL.RRF<br>MRXW_SWE.RRF<br>CHANGE/MERGEDLUI.RRF<br>MRXW_KOR.RRF<br>MRXW_SCR.RRF<br>MRXW_NOR.RRF<br>MRXW_HUN.RRF<br>MRXW_LAV.RRF<br>MRXW_ARA.RRF<br>MRXW_CHI.RRF<br>MRXW_EST.RRF<br>MRXW_GRE.RRF<br>MRXW_ISL.RRF<br>MRXW_LIT.RRF<br>MRXW_TUR.RRF<br>MRXW_UKR.RRF</td><td>0 -
+			      9<br>8<br>8<br>8<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>9<br>9<br>9<br>9<br>9<br>9<br>9<br>9</td><td>4.20<br>8.00<br>8.00<br>8.00<br>8.21<br>8.27<br>8.45<br>8.46<br>8.46<br>8.46<br>8.47<br>8.57<br>8.57<br>8.67<br>8.76<br>8.76<br>8.79<br>8.79<br>8.84<br>8.85<br>8.86<br>8.87<br>8.91<br>8.94<br>8.98<br>8.99<br>8.99<br>9.00<br>9.00<br>9.00<br>9.00<br>9.00<br>9.00<br>9.00<br>9.00</td><td>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)</td>
+</tr>
+<tr>
+<td><strong>MAPATN</strong></td><td>Mapping attribute name (for future use)</td><td>MRMAP.RRF</td><td>0 -
+			      6</td><td>2.94</td><td>varchar(20)</td>
+</tr>
+<tr>
+<td><strong>MAPATV</strong></td><td>Mapping attribute value (for future use)</td><td>MRMAP.RRF</td><td>0 -
+			      1</td><td>0.00</td><td>varchar(4000)</td>
+</tr>
+<tr>
+<td><strong>MAPID</strong></td><td>Metathesaurus asserted identifier for mapping</td><td>MRSMAP.RRF<br>MRMAP.RRF</td><td>10 -
+			      11<br>10 -
+			      11</td><td>10.98<br>10.99</td><td>varchar(50)<br>varchar(50)</td>
+</tr>
+<tr>
+<td><strong>MAPIN</strong></td><td>Mapping in current subset</td><td>MRCUI.RRF<br>MRAUI.RRF</td><td>0 -
+			      1<br>1</td><td>0.47<br>1.00</td><td>char(1)<br>char(1)</td>
+</tr>
+<tr>
+<td><strong>MAPRANK</strong></td><td>Order in which mappings in a subset should be applied</td><td>MRMAP.RRF</td><td>0 -
+			      2</td><td>0.51</td><td>integer</td>
+</tr>
+<tr>
+<td><strong>MAPREASON</strong></td><td>Reason for mapping</td><td>MRCUI.RRF<br>MRAUI.RRF</td><td>0 -
+			      4<br>4</td><td>0.00<br>4.00</td><td>varchar(4000)<br>varchar(4000)</td>
+</tr>
+<tr>
+<td><strong>MAPRES</strong></td><td>Restriction applicable to this mapping</td><td>MRMAP.RRF</td><td>0 -
+			      429</td><td>38.67</td><td>varchar(4000)</td>
+</tr>
+<tr>
+<td><strong>MAPRULE</strong></td><td>Machine processible rule applicable to this mapping</td><td>MRMAP.RRF</td><td>0 -
+			      336</td><td>11.54</td><td>varchar(4000)</td>
+</tr>
+<tr>
+<td><strong>MAPSETCUI</strong></td><td>CUI of the map set</td><td>MRMAP.RRF<br>MRSMAP.RRF</td><td>8<br>8</td><td>8.00<br>8.00</td><td>char(8)<br>char(8)</td>
+</tr>
+<tr>
+<td><strong>MAPSETSAB</strong></td><td>SAB of the map set</td><td>MRSMAP.RRF<br>MRMAP.RRF</td><td>3 -
+			      13<br>3 -
+			      13</td><td>10.49<br>10.67</td><td>varchar(40)<br>varchar(40)</td>
+</tr>
+<tr>
+<td><strong>MAPSID</strong></td><td>Source asserted identifier for mapping</td><td>MRSMAP.RRF<br>MRMAP.RRF</td><td>0<br>0 -
+			      36</td><td>0.00<br>0.00</td><td>varchar(50)<br>varchar(50)</td>
+</tr>
+<tr>
+<td><strong>MAPSUBSETID</strong></td><td>Map subset identifier used to identify a subset of related mappings within a map set</td><td>MRMAP.RRF</td><td>0 -
+			      1</td><td>0.51</td><td>varchar(10)</td>
+</tr>
+<tr>
+<td><strong>MAPTYPE</strong></td><td>Type of mapping</td><td>MRMAP.RRF</td><td>0 -
+			      9</td><td>4.44</td><td>varchar(50)</td>
+</tr>
+<tr>
+<td><strong>MAX</strong></td><td>Maximum Length</td><td>MRCOLS.RRF</td><td>1 -
+			      5</td><td>1.39</td><td>integer</td>
+</tr>
+<tr>
+<td><strong>METAUI</strong></td><td>Metathesaurus asserted unique identifier</td><td>MRSAT.RRF</td><td>0 -
+			      10</td><td>8.28</td><td>varchar(50)</td>
+</tr>
+<tr>
+<td><strong>MIN</strong></td><td>Minimum Length</td><td>MRCOLS.RRF</td><td>1 -
+			      2</td><td>1.03</td><td>integer</td>
+</tr>
+<tr>
+<td><strong>NSTR</strong></td><td>Normalized string</td><td>MRXNS_ENG.RRF</td><td>1 -
+			      2528</td><td>39.23</td><td>varchar(3000)</td>
+</tr>
+<tr>
+<td><strong>NWD</strong></td><td>Normalized word</td><td>MRXNW_ENG.RRF</td><td>1 -
+			      80</td><td>6.46</td><td>varchar(100)</td>
+</tr>
+<tr>
+<td><strong>PAUI</strong></td><td>Unique identifier for parent atom</td><td>MRHIER.RRF</td><td>0 -
+			      9</td><td>8.55</td><td>varchar(9)</td>
+</tr>
+<tr>
+<td><strong>PCUI</strong></td><td>Concept unique identifier in the previous Metathesaurus</td><td>CHANGE/DELETEDCUI.RRF<br>CHANGE/MERGEDCUI.RRF</td><td>8<br>8</td><td>8.00<br>8.00</td><td>char(8)<br>char(8)</td>
+</tr>
+<tr>
+<td><strong>PLUI</strong></td><td>Lexical unique identifier in the previous Metathesaurus</td><td>CHANGE/DELETEDLUI.RRF<br>CHANGE/MERGEDLUI.RRF</td><td>8 -
+			      9<br>8 -
+			      9</td><td>8.83<br>8.97</td><td>varchar(10)<br>varchar(10)</td>
+</tr>
+<tr>
+<td><strong>PSTR</strong></td><td>Preferred name in the previous Metathesaurus</td><td>CHANGE/DELETEDSUI.RRF<br>CHANGE/DELETEDLUI.RRF<br>CHANGE/DELETEDCUI.RRF</td><td>2 -
+			      2875<br>2 -
+			      2875<br>5 -
+			      2875</td><td>66.59<br>67.82<br>71.70</td><td>varchar(3000)<br>varchar(3000)<br>varchar(3000)</td>
+</tr>
+<tr>
+<td><strong>PSUI</strong></td><td>String unique identifier in the previous Metathesaurus</td><td>CHANGE/DELETEDSUI.RRF</td><td>8 -
+			      9</td><td>8.86</td><td>varchar(10)</td>
+</tr>
+<tr>
+<td><strong>PTR</strong></td><td>Path to root</td><td>MRHIER.RRF</td><td>0 -
+			      353</td><td>105.07</td><td>varchar(1000)</td>
+</tr>
+<tr>
+<td><strong>RANK</strong></td><td>Termgroup ranking</td><td>MRRANK.RRF</td><td>4</td><td>4.00</td><td>integer</td>
+</tr>
+<tr>
+<td><strong>RCUI</strong></td><td>Unique identifier for root SRC concept</td><td>MRSAB.RRF</td><td>8</td><td>8.00</td><td>char(8)</td>
+</tr>
+<tr>
+<td><strong>REASON</strong></td><td>Explanation of change, if present</td><td>MRHIST.RRF</td><td>0</td><td>0.00</td><td>varchar(1000)</td>
+</tr>
+<tr>
+<td><strong>REF</strong></td><td>Documentation Section Number</td><td>MRCOLS.RRF</td><td>0</td><td>0.00</td><td>varchar(20)</td>
+</tr>
+<tr>
+<td><strong>REL</strong></td><td>Relationship label</td><td>MRAUI.RRF<br>MRMAP.RRF<br>MRSMAP.RRF<br>MRREL.RRF<br>MRCUI.RRF</td><td>0<br>2<br>2<br>2 -
+			      3<br>2 -
+			      3</td><td>0.00<br>2.00<br>2.00<br>2.22<br>2.53</td><td>varchar(4)<br>varchar(4)<br>varchar(4)<br>varchar(4)<br>varchar(4)</td>
+</tr>
+<tr>
+<td><strong>RELA</strong></td><td>Additional relationship label</td><td>MRAUI.RRF<br>MRCUI.RRF<br>MRREL.RRF<br>MRMAP.RRF<br>MRSMAP.RRF<br>MRHIER.RRF</td><td>0<br>0<br>0 -
+			      54<br>0 -
+			      37<br>0 -
+			      37<br>0 -
+			      12</td><td>0.00<br>0.00<br>11.42<br>13.70<br>19.61<br>2.72</td><td>varchar(100)<br>varchar(100)<br>varchar(100)<br>varchar(100)<br>varchar(100)<br>varchar(100)</td>
+</tr>
+<tr>
+<td><strong>RG</strong></td><td>Relationship group</td><td>MRREL.RRF</td><td>0 -
+			      3</td><td>0.11</td><td>varchar(10)</td>
+</tr>
+<tr>
+<td><strong>RMETA</strong></td><td>Version of the Metathesaurus where a version is removed</td><td>MRSAB.RRF</td><td>0 -
+			      6</td><td>0.09</td><td>varchar(10)</td>
+</tr>
+<tr>
+<td><strong>RSAB</strong></td><td>Root source abbreviation</td><td>MRSAB.RRF</td><td>2 -
+			      15</td><td>5.91</td><td>varchar(40)</td>
+</tr>
+<tr>
+<td><strong>RUI</strong></td><td>Unique identifier for relationship</td><td>MRREL.RRF</td><td>9 -
+			      10</td><td>9.80</td><td>varchar(10)</td>
+</tr>
+<tr>
+<td><strong>RWS</strong></td><td>Number of rows</td><td>MRFILES.RRF</td><td>1 -
+			      8</td><td>5.76</td><td>integer</td>
+</tr>
+<tr>
+<td><strong>SAB</strong></td><td>Source abbreviation</td><td>MRHIST.RRF<br>MRDEF.RRF<br>MRRANK.RRF<br>MRCONSO.RRF<br>MRREL.RRF<br>MRSAT.RRF<br>MRHIER.RRF</td><td>0<br>2 -
+			      11<br>2 -
+			      15<br>2 -
+			      15<br>2 -
+			      15<br>2 -
+			      13<br>2 -
+			      13</td><td>0.00<br>4.15<br>5.52<br>5.92<br>5.97<br>6.34<br>7.90</td><td>varchar(40)<br>varchar(40)<br>varchar(40)<br>varchar(40)<br>varchar(40)<br>varchar(40)<br>varchar(40)</td>
+</tr>
+<tr>
+<td><strong>SABIN</strong></td><td>Source in current subset</td><td>MRSAB.RRF</td><td>1</td><td>1.00</td><td>char(1)</td>
+</tr>
+<tr>
+<td><strong>SATUI</strong></td><td>Source asserted attribute identifier</td><td>MRDEF.RRF<br>MRSAT.RRF</td><td>0 -
+			      17<br>0 -
+			      36</td><td>0.59<br>4.36</td><td>varchar(50)<br>varchar(50)</td>
+</tr>
+<tr>
+<td><strong>SAUI</strong></td><td>Source asserted atom identifier</td><td>MRCONSO.RRF</td><td>0 -
+			      18</td><td>2.19</td><td>varchar(100)</td>
+</tr>
+<tr>
+<td><strong>SCC</strong></td><td>Content contact info for a source</td><td>MRSAB.RRF</td><td>12 -
+			      332</td><td>151.96</td><td>varchar(1000)</td>
+</tr>
+<tr>
+<td><strong>SCIT</strong></td><td>Source citation</td><td>MRSAB.RRF</td><td>54 -
+			      674</td><td>163.06</td><td>varchar(4000)</td>
+</tr>
+<tr>
+<td><strong>SCUI</strong></td><td>Source asserted concept identifier</td><td>MRCONSO.RRF</td><td>0 -
+			      95</td><td>5.20</td><td>varchar(100)</td>
+</tr>
+<tr>
+<td><strong>SDUI</strong></td><td>Source asserted descriptor identifier</td><td>MRCONSO.RRF</td><td>0 -
+			      13</td><td>2.64</td><td>varchar(100)</td>
+</tr>
+<tr>
+<td><strong>SF</strong></td><td>Source Family</td><td>MRSAB.RRF</td><td>2 -
+			      13</td><td>4.15</td><td>varchar(40)</td>
+</tr>
+<tr>
+<td><strong>SL</strong></td><td>Source of relationship labels</td><td>MRREL.RRF</td><td>2 -
+			      15</td><td>5.97</td><td>varchar(40)</td>
+</tr>
+<tr>
+<td><strong>SLC</strong></td><td>License contact info for a source</td><td>MRSAB.RRF</td><td>12 -
+			      346</td><td>167.50</td><td>varchar(1000)</td>
+</tr>
+<tr>
+<td><strong>SON</strong></td><td>Source Official Name</td><td>MRSAB.RRF</td><td>10 -
+			      145</td><td>49.61</td><td>varchar(3000)</td>
+</tr>
+<tr>
+<td><strong>SOURCEUI</strong></td><td>Source asserted unique identifier</td><td>MRHIST.RRF</td><td>0</td><td>0.00</td><td>varchar(50)</td>
+</tr>
+<tr>
+<td><strong>SRL</strong></td><td>Source Restriction Level</td><td>MRCONSO.RRF<br>MRSAB.RRF</td><td>1<br>1</td><td>1.00<br>1.00</td><td>integer<br>integer</td>
+</tr>
+<tr>
+<td><strong>SRUI</strong></td><td>Source attributed relationship identifier</td><td>MRREL.RRF</td><td>0 -
+			      36</td><td>2.50</td><td>varchar(50)</td>
+</tr>
+<tr>
+<td><strong>SSN</strong></td><td>Source short name</td><td>MRSAB.RRF</td><td>3 -
+			      89</td><td>26.70</td><td>varchar(3000)</td>
+</tr>
+<tr>
+<td><strong>STN</strong></td><td>Semantic type tree number</td><td>MRSTY.RRF</td><td>1 -
+			      14</td><td>7.77</td><td>varchar(100)</td>
+</tr>
+<tr>
+<td><strong>STR</strong></td><td>String</td><td>MRCONSO.RRF</td><td>1 -
+			      2864</td><td>39.24</td><td>varchar(3000)</td>
+</tr>
+<tr>
+<td><strong>STT</strong></td><td>String type</td><td>MRCONSO.RRF</td><td>2 -
+			      3</td><td>2.01</td><td>varchar(3)</td>
+</tr>
+<tr>
+<td><strong>STY</strong></td><td>Semantic type</td><td>MRSTY.RRF</td><td>4 -
+			      39</td><td>17.42</td><td>varchar(50)</td>
+</tr>
+<tr>
+<td><strong>STYPE</strong></td><td>The name of the column in MRCONSO.RRF or MRREL.RRF that contains the identifier to which the attribute is attached</td><td>MRSAT.RRF</td><td>3 -
+			      4</td><td>3.21</td><td>varchar(50)</td>
+</tr>
+<tr>
+<td><strong>STYPE1</strong></td><td>The name of the column in MRCONSO.RRF that contains the first identifier to which the relationship is attached</td><td>MRREL.RRF</td><td>3 -
+			      4</td><td>3.64</td><td>varchar(50)</td>
+</tr>
+<tr>
+<td><strong>STYPE2</strong></td><td>The name of the column in MRCONSO.RRF that contains the second identifier to which the relationship is attached</td><td>MRREL.RRF</td><td>3 -
+			      4</td><td>3.64</td><td>varchar(50)</td>
+</tr>
+<tr>
+<td><strong>SUI</strong></td><td>Unique identifier for string</td><td>MRSAT.RRF<br>MRXW_BAQ.RRF<br>MRXW_DAN.RRF<br>MRXW_HEB.RRF<br>MRXW_JPN.RRF<br>AMBIGSUI.RRF<br>MRCONSO.RRF<br>MRXW_GER.RRF<br>MRXW_SPA.RRF<br>MRXNS_ENG.RRF<br>MRXW_ENG.RRF<br>MRXNW_ENG.RRF<br>MRXW_DUT.RRF<br>MRXW_POR.RRF<br>MRXW_ITA.RRF<br>MRXW_RUS.RRF<br>MRXW_FIN.RRF<br>MRXW_FRE.RRF<br>MRXW_SWE.RRF<br>MRXW_CZE.RRF<br>MRXW_NOR.RRF<br>MRXW_HUN.RRF<br>MRXW_ARA.RRF<br>MRXW_CHI.RRF<br>MRXW_EST.RRF<br>MRXW_GRE.RRF<br>MRXW_ISL.RRF<br>MRXW_KOR.RRF<br>MRXW_LAV.RRF<br>MRXW_LIT.RRF<br>MRXW_POL.RRF<br>MRXW_SCR.RRF<br>MRXW_TUR.RRF<br>MRXW_UKR.RRF</td><td>0 -
+			      9<br>8<br>8<br>8<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>9<br>9<br>9<br>9<br>9<br>9<br>9<br>9<br>9<br>9<br>9<br>9</td><td>4.26<br>8.00<br>8.00<br>8.00<br>8.36<br>8.37<br>8.59<br>8.60<br>8.61<br>8.65<br>8.67<br>8.68<br>8.68<br>8.78<br>8.79<br>8.80<br>8.84<br>8.84<br>8.87<br>8.88<br>8.98<br>8.99<br>9.00<br>9.00<br>9.00<br>9.00<br>9.00<br>9.00<br>9.00<br>9.00<br>9.00<br>9.00<br>9.00<br>9.00</td><td>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)</td>
+</tr>
+<tr>
+<td><strong>SUPPRESS</strong></td><td>Suppressible flag</td><td>MRCONSO.RRF<br>MRDEF.RRF<br>MRRANK.RRF<br>MRREL.RRF<br>MRSAT.RRF</td><td>1<br>1<br>1<br>1<br>1</td><td>1.00<br>1.00<br>1.00<br>1.00<br>1.00</td><td>char(1)<br>char(1)<br>char(1)<br>char(1)<br>char(1)</td>
+</tr>
+<tr>
+<td><strong>SVER</strong></td><td>Release date or version number of a source</td><td>MRHIST.RRF<br>MRSAB.RRF</td><td>0<br>0 -
+			      15</td><td>0.00<br>5.02</td><td>varchar(20)<br>varchar(20)</td>
+</tr>
+<tr>
+<td><strong>TFR</strong></td><td>Term frequency for a source</td><td>MRSAB.RRF</td><td>1 -
+			      7</td><td>4.56</td><td>integer</td>
+</tr>
+<tr>
+<td><strong>TOEXPR</strong></td><td>The expression that a mapping is mapped to</td><td>MRMAP.RRF<br>MRSMAP.RRF</td><td>0 -
+			      242<br>1 -
+			      242</td><td>6.07<br>7.02</td><td>varchar(4000)<br>varchar(4000)</td>
+</tr>
+<tr>
+<td><strong>TOID</strong></td><td>Metathesaurus identifier for the entity being mapped to</td><td>MRMAP.RRF</td><td>0 -
+			      18</td><td>5.27</td><td>varchar(50)</td>
+</tr>
+<tr>
+<td><strong>TORES</strong></td><td>Restriction applicable to the entity being mapped to</td><td>MRMAP.RRF</td><td>0</td><td>0.00</td><td>varchar(4000)</td>
+</tr>
+<tr>
+<td><strong>TORULE</strong></td><td>Machine processible rule applicable to the entity being mapped to</td><td>MRMAP.RRF</td><td>0</td><td>0.00</td><td>varchar(4000)</td>
+</tr>
+<tr>
+<td><strong>TOSID</strong></td><td>Source asserted identifier for the entity being mapped to</td><td>MRMAP.RRF</td><td>0</td><td>0.00</td><td>varchar(50)</td>
+</tr>
+<tr>
+<td><strong>TOTYPE</strong></td><td>The type of expression that a mapping is mapped to</td><td>MRMAP.RRF<br>MRSMAP.RRF</td><td>0 -
+			      23<br>4 -
+			      22</td><td>3.96<br>4.35</td><td>varchar(50)<br>varchar(50)</td>
+</tr>
+<tr>
+<td><strong>TS</strong></td><td>Term status</td><td>MRCONSO.RRF</td><td>1</td><td>1.00</td><td>char(1)</td>
+</tr>
+<tr>
+<td><strong>TTY</strong></td><td>Term type in source</td><td>MRCONSO.RRF<br>MRRANK.RRF</td><td>2 -
+			      11<br>2 -
+			      11</td><td>2.38<br>2.59</td><td>varchar(20)<br>varchar(20)</td>
+</tr>
+<tr>
+<td><strong>TTYL</strong></td><td>Term type list for a source</td><td>MRSAB.RRF</td><td>0 -
+			      129</td><td>15.76</td><td>varchar(400)</td>
+</tr>
+<tr>
+<td><strong>TUI</strong></td><td>Unique identifier of Semantic type</td><td>MRSTY.RRF</td><td>4</td><td>4.00</td><td>char(4)</td>
+</tr>
+<tr>
+<td><strong>TYPE</strong></td><td>Type of information</td><td>MRDOC.RRF</td><td>3 -
+			      21</td><td>13.03</td><td>varchar(50)</td>
+</tr>
+<tr>
+<td><strong>VALUE</strong></td><td>Value</td><td>MRDOC.RRF</td><td>0 -
+			      62</td><td>15.88</td><td>varchar(200)</td>
+</tr>
+<tr>
+<td><strong>VCUI</strong></td><td>Unique identifier for versioned SRC concept</td><td>MRSAB.RRF</td><td>0 -
+			      8</td><td>7.76</td><td>char(8)</td>
+</tr>
+<tr>
+<td><strong>VEND</strong></td><td>Valid end date for a source</td><td>MRSAB.RRF</td><td>0</td><td>0.00</td><td>char(8)</td>
+</tr>
+<tr>
+<td><strong>VER</strong></td><td>Last release version in which CUI1 was valid</td><td>MRAUI.RRF<br>MRCUI.RRF</td><td>6<br>6</td><td>6.00<br>6.00</td><td>varchar(10)<br>varchar(10)</td>
+</tr>
+<tr>
+<td><strong>VSAB</strong></td><td>Versioned source abbreviation</td><td>MRSAB.RRF</td><td>3 -
+			      24</td><td>11.33</td><td>varchar(40)</td>
+</tr>
+<tr>
+<td><strong>VSTART</strong></td><td>Valid start date for a source</td><td>MRSAB.RRF</td><td>0</td><td>0.00</td><td>char(8)</td>
+</tr>
+<tr>
+<td><strong>WD</strong></td><td>Word in lower-case</td><td>MRXW_KOR.RRF<br>MRXW_CHI.RRF<br>MRXW_TUR.RRF<br>MRXW_ARA.RRF<br>MRXW_POR.RRF<br>MRXW_ITA.RRF<br>MRXW_HEB.RRF<br>MRXW_GRE.RRF<br>MRXW_ENG.RRF<br>MRXW_UKR.RRF<br>MRXW_DAN.RRF<br>MRXW_SPA.RRF<br>MRXW_FRE.RRF<br>MRXW_EST.RRF<br>MRXW_DUT.RRF<br>MRXW_BAQ.RRF<br>MRXW_RUS.RRF<br>MRXW_POL.RRF<br>MRXW_ISL.RRF<br>MRXW_CZE.RRF<br>MRXW_SCR.RRF<br>MRXW_LAV.RRF<br>MRXW_LIT.RRF<br>MRXW_HUN.RRF<br>MRXW_GER.RRF<br>MRXW_SWE.RRF<br>MRXW_NOR.RRF<br>MRXW_JPN.RRF<br>MRXW_FIN.RRF</td><td>1 -
+			      38<br>1 -
+			      68<br>1 -
+			      37<br>1 -
+			      22<br>1 -
+			      38<br>1 -
+			      38<br>1 -
+			      19<br>1 -
+			      38<br>1 -
+			      80<br>1 -
+			      27<br>1 -
+			      25<br>1 -
+			      46<br>1 -
+			      39<br>1 -
+			      35<br>1 -
+			      51<br>1 -
+			      18<br>1 -
+			      40<br>1 -
+			      48<br>1 -
+			      42<br>1 -
+			      52<br>1 -
+			      37<br>1 -
+			      29<br>1 -
+			      31<br>1 -
+			      27<br>1 -
+			      43<br>1 -
+			      39<br>1 -
+			      44<br>1 -
+			      93<br>1 -
+			      54</td><td>2.84<br>3.66<br>5.26<br>5.35<br>5.72<br>5.91<br>6.12<br>6.13<br>6.15<br>6.36<br>6.38<br>6.62<br>6.77<br>7.01<br>7.15<br>7.17<br>7.17<br>7.25<br>7.33<br>7.45<br>7.70<br>7.76<br>7.82<br>7.87<br>8.26<br>8.32<br>9.11<br>9.13<br>9.94</td><td>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<hr>
+<br>
+
+<link rel="stylesheet" href="./columns_data_elements_files/appendix_style.css">
+<a name="top"></a>
+<button id="myBtn"><a href="https://unimed2.nlm.nih.gov/MRD/Documentation/2025AA/APPENDIX/columns_data_elements.html#top" style="color: white">Back to Top</a></button><h2>
+<a id="orf"></a>Table 2. Columns and Data Elements in Original Release Format (ORF)</h2>
+<table>
+<thead>
+<tr>
+<th>Abbreviation</th><th>Description</th><th>File</th><th>Length of Value in characters</th><th>Average Length of Value in characters</th><th>SQL92 Datatype</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ATN</strong></td><td>Attribute name</td><td>MRSAT</td><td>2 -
+			      62</td><td>7.87</td><td>varchar(100)</td>
+</tr>
+<tr>
+<td><strong>ATNL</strong></td><td>Attribute name list for a source</td><td>MRSAB</td><td>0 -
+			      1169</td><td>55.52</td><td>varchar(4000)</td>
+</tr>
+<tr>
+<td><strong>ATV</strong></td><td>Attribute value</td><td>MRSAT</td><td>1 -
+			      35985</td><td>12.63</td><td>varchar(65000)</td>
+</tr>
+<tr>
+<td><strong>ATX</strong></td><td>Associated expression</td><td>MRATX</td><td>5 -
+			      242</td><td>35.66</td><td>varchar(300)</td>
+</tr>
+<tr>
+<td><strong>AV</strong></td><td>Average Length, Characters</td><td>MRCOLS</td><td>4 -
+			      6</td><td>4.10</td><td>numeric(5,2)</td>
+</tr>
+<tr>
+<td><strong>BTS</strong></td><td>Size in Bytes</td><td>MRFILES</td><td>4 -
+			      10</td><td>7.57</td><td>integer</td>
+</tr>
+<tr>
+<td><strong>CENC</strong></td><td>Character encoding of a source as specified by IANA</td><td>MRSAB</td><td>5</td><td>5.00</td><td>varchar(20)</td>
+</tr>
+<tr>
+<td><strong>CFR</strong></td><td>CUI frequency for a source</td><td>MRSAB</td><td>1 -
+			      6</td><td>4.24</td><td>integer</td>
+</tr>
+<tr>
+<td><strong>CLS</strong></td><td>Number of columns</td><td>MRFILES</td><td>1 -
+			      2</td><td>1.02</td><td>integer</td>
+</tr>
+<tr>
+<td><strong>CODE</strong></td><td>Unique Identifier or code for string in source</td><td>MRSAT<br>MRSO</td><td>0 -
+			      56<br>1 -
+			      95</td><td>6.38<br>7.56</td><td>varchar(50)<br>varchar(50)</td>
+</tr>
+<tr>
+<td><strong>COL</strong></td><td>Column or data element name</td><td>MRCOLS</td><td>2 -
+			      6</td><td>3.07</td><td>varchar(10)</td>
+</tr>
+<tr>
+<td><strong>CREL</strong></td><td>Relationship to retired CUI (CUI1) to current CUI (CUI2)</td><td>MRCUI</td><td>2 -
+			      3</td><td>2.53</td><td>varchar(4)</td>
+</tr>
+<tr>
+<td><strong>CUI</strong></td><td>Unique identifier for concept</td><td>AMBIG.LUI<br>AMBIG.SUI<br>CHANGE/MERGED.CUI<br>MRATX<br>MRCON<br>MRDEF<br>MRSAT<br>MRSO<br>MRSTY<br>MRXNS.ENG<br>MRXNW.ENG<br>MRXW.ARA<br>MRXW.BAQ<br>MRXW.CHI<br>MRXW.CZE<br>MRXW.DAN<br>MRXW.DUT<br>MRXW.ENG<br>MRXW.EST<br>MRXW.FIN<br>MRXW.FRE<br>MRXW.GER<br>MRXW.GRE<br>MRXW.HEB<br>MRXW.HUN<br>MRXW.ISL<br>MRXW.ITA<br>MRXW.JPN<br>MRXW.KOR<br>MRXW.LAV<br>MRXW.LIT<br>MRXW.NOR<br>MRXW.POL<br>MRXW.POR<br>MRXW.RUS<br>MRXW.SCR<br>MRXW.SPA<br>MRXW.SWE<br>MRXW.TUR<br>MRXW.UKR</td><td>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8</td><td>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00<br>8.00</td><td>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)<br>char(8)</td>
+</tr>
+<tr>
+<td><strong>CUI1</strong></td><td>Unique identifier of first concept</td><td>MRCUI<br>MRREL</td><td>8<br>8</td><td>8.00<br>8.00</td><td>char(8)<br>char(8)</td>
+</tr>
+<tr>
+<td><strong>CUI2</strong></td><td>Unique identifier of second concept</td><td>MRCUI<br>MRREL</td><td>0 -
+			      8<br>8</td><td>3.78<br>8.00</td><td>char(8)<br>char(8)</td>
+</tr>
+<tr>
+<td><strong>CURVER</strong></td><td>Current Version flag</td><td>MRSAB</td><td>1</td><td>1.00</td><td>char(1)</td>
+</tr>
+<tr>
+<td><strong>CXTY</strong></td><td>Context type for a source (as per section 2.3.2)</td><td>MRSAB</td><td>0 -
+			      13</td><td>5.37</td><td>varchar(50)</td>
+</tr>
+<tr>
+<td><strong>DEF</strong></td><td>Definition</td><td>MRDEF</td><td>1 -
+			      10914</td><td>233.40</td><td>varchar(16000)</td>
+</tr>
+<tr>
+<td><strong>DES</strong></td><td>Descriptive Name</td><td>MRCOLS<br>MRFILES</td><td>5 -
+			      56<br>7 -
+			      42</td><td>25.54<br>18.20</td><td>varchar(100)<br>varchar(100)</td>
+</tr>
+<tr>
+<td><strong>DOCKEY</strong></td><td>Key to be documented</td><td>MRDOC</td><td>2 -
+			      8</td><td>3.64</td><td>varchar(50)</td>
+</tr>
+<tr>
+<td><strong>DTY</strong></td><td>SQL-92 data type for this column</td><td>MRCOLS</td><td>7 -
+			      14</td><td>9.67</td><td>varchar(20)</td>
+</tr>
+<tr>
+<td><strong>EXPL</strong></td><td>Detailed explanation</td><td>MRDOC</td><td>0 -
+			      941</td><td>25.97</td><td>varchar(1000)</td>
+</tr>
+<tr>
+<td><strong>FIL</strong></td><td>Physical FILENAME</td><td>MRCOLS<br>MRFILES</td><td>4 -
+			      18<br>4 -
+			      18</td><td>7.50<br>8.31</td><td>varchar(50)<br>varchar(50)</td>
+</tr>
+<tr>
+<td><strong>FMT</strong></td><td>Comma separated list of COL</td><td>MRFILES</td><td>7 -
+			      112</td><td>19.67</td><td>varchar(150)</td>
+</tr>
+<tr>
+<td><strong>IMETA</strong></td><td>Version of the Metathesaurus that a source was added</td><td>MRSAB</td><td>6</td><td>6.00</td><td>varchar(10)</td>
+</tr>
+<tr>
+<td><strong>LAT</strong></td><td>Language of Term(s)</td><td>MRSAB<br>CHANGE/DELETED.SUI<br>MRCON<br>MRXNS.ENG<br>MRXNW.ENG<br>MRXW.ARA<br>MRXW.BAQ<br>MRXW.CHI<br>MRXW.CZE<br>MRXW.DAN<br>MRXW.DUT<br>MRXW.ENG<br>MRXW.EST<br>MRXW.FIN<br>MRXW.FRE<br>MRXW.GER<br>MRXW.GRE<br>MRXW.HEB<br>MRXW.HUN<br>MRXW.ISL<br>MRXW.ITA<br>MRXW.JPN<br>MRXW.KOR<br>MRXW.LAV<br>MRXW.LIT<br>MRXW.NOR<br>MRXW.POL<br>MRXW.POR<br>MRXW.RUS<br>MRXW.SCR<br>MRXW.SPA<br>MRXW.SWE<br>MRXW.TUR<br>MRXW.UKR</td><td>0 -
+			      3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3<br>3</td><td>2.97<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00<br>3.00</td><td>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)<br>char(3)</td>
+</tr>
+<tr>
+<td><strong>LRL</strong></td><td>Least Restriction Level</td><td>MRCON</td><td>1</td><td>1.00</td><td>integer</td>
+</tr>
+<tr>
+<td><strong>LUI</strong></td><td>Unique identifier for term</td><td>MRSAT<br>MRXW.BAQ<br>MRXW.DAN<br>MRXW.HEB<br>MRXW.JPN<br>AMBIG.LUI<br>MRXW.CZE<br>MRSO<br>MRXNS.ENG<br>MRXW.ENG<br>MRXNW.ENG<br>MRCON<br>MRXW.GER<br>MRXW.SPA<br>MRXW.DUT<br>MRXW.ITA<br>MRXW.POR<br>MRXW.FRE<br>MRXW.RUS<br>MRXW.FIN<br>MRXW.POL<br>MRXW.SWE<br>CHANGE/MERGED.LUI<br>MRXW.KOR<br>MRXW.SCR<br>MRXW.NOR<br>MRXW.HUN<br>MRXW.LAV<br>MRXW.ARA<br>MRXW.CHI<br>MRXW.EST<br>MRXW.GRE<br>MRXW.ISL<br>MRXW.LIT<br>MRXW.TUR<br>MRXW.UKR</td><td>0 -
+			      9<br>8<br>8<br>8<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>9<br>9<br>9<br>9<br>9<br>9<br>9<br>9</td><td>6.62<br>8.00<br>8.00<br>8.00<br>8.21<br>8.27<br>8.45<br>8.46<br>8.46<br>8.46<br>8.47<br>8.48<br>8.57<br>8.57<br>8.67<br>8.76<br>8.76<br>8.79<br>8.79<br>8.84<br>8.85<br>8.86<br>8.87<br>8.91<br>8.94<br>8.98<br>8.99<br>8.99<br>9.00<br>9.00<br>9.00<br>9.00<br>9.00<br>9.00<br>9.00<br>9.00</td><td>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)</td>
+</tr>
+<tr>
+<td><strong>MAPIN</strong></td><td>Mapping in current subset</td><td>MRCUI</td><td>0 -
+			      1</td><td>0.47</td><td>char(1)</td>
+</tr>
+<tr>
+<td><strong>MAX</strong></td><td>Maximum Length</td><td>MRCOLS</td><td>1 -
+			      5</td><td>1.37</td><td>integer</td>
+</tr>
+<tr>
+<td><strong>MEND</strong></td><td>Metathesaurus end date for a source</td><td>MRSAB</td><td>0</td><td>0.00</td><td>char(8)</td>
+</tr>
+<tr>
+<td><strong>MG</strong></td><td>Machine generated and unverified indicator</td><td>MRREL</td><td>0</td><td>0.00</td><td>varchar(1)</td>
+</tr>
+<tr>
+<td><strong>MIN</strong></td><td>Minimum Length</td><td>MRCOLS</td><td>1 -
+			      2</td><td>1.01</td><td>integer</td>
+</tr>
+<tr>
+<td><strong>MSTART</strong></td><td>Metathesaurus start date for a source</td><td>MRSAB</td><td>0</td><td>0.00</td><td>char(8)</td>
+</tr>
+<tr>
+<td><strong>NSTR</strong></td><td>Normalized string</td><td>MRXNS.ENG</td><td>1 -
+			      2528</td><td>39.23</td><td>varchar(3000)</td>
+</tr>
+<tr>
+<td><strong>NWD</strong></td><td>Normalized word</td><td>MRXNW.ENG</td><td>1 -
+			      80</td><td>6.46</td><td>varchar(100)</td>
+</tr>
+<tr>
+<td><strong>PCUI</strong></td><td>Concept unique identifier in the previous Metathesaurus</td><td>CHANGE/DELETED.CUI<br>CHANGE/MERGED.CUI</td><td>8<br>8</td><td>8.00<br>8.00</td><td>char(8)<br>char(8)</td>
+</tr>
+<tr>
+<td><strong>PLUI</strong></td><td>Lexical unique identifier in the previous Metathesaurus</td><td>CHANGE/DELETED.LUI<br>CHANGE/MERGED.LUI</td><td>8 -
+			      9<br>8 -
+			      9</td><td>8.83<br>8.97</td><td>varchar(10)<br>varchar(10)</td>
+</tr>
+<tr>
+<td><strong>PSTR</strong></td><td>Preferred name in the previous Metathesaurus</td><td>CHANGE/DELETED.SUI<br>CHANGE/DELETED.LUI<br>CHANGE/DELETED.CUI</td><td>2 -
+			      2875<br>2 -
+			      2875<br>5 -
+			      2875</td><td>66.59<br>67.82<br>71.70</td><td>varchar(3000)<br>varchar(3000)<br>varchar(3000)</td>
+</tr>
+<tr>
+<td><strong>PSUI</strong></td><td>String unique identifier in the previous Metathesaurus</td><td>CHANGE/DELETED.SUI</td><td>8 -
+			      9</td><td>8.86</td><td>varchar(10)</td>
+</tr>
+<tr>
+<td><strong>RANK</strong></td><td>Termgroup ranking</td><td>MRRANK</td><td>4</td><td>4.00</td><td>integer</td>
+</tr>
+<tr>
+<td><strong>RCUI</strong></td><td>Unique identifier for root SRC concept</td><td>MRSAB</td><td>8</td><td>8.00</td><td>char(8)</td>
+</tr>
+<tr>
+<td><strong>REF</strong></td><td>Documentation Section Number</td><td>MRCOLS</td><td>0</td><td>0.00</td><td>varchar(20)</td>
+</tr>
+<tr>
+<td><strong>REL</strong></td><td>Relationship label</td><td>MRATX<br>MRREL</td><td>2<br>2 -
+			      3</td><td>2.00<br>2.28</td><td>varchar(3)<br>varchar(3)</td>
+</tr>
+<tr>
+<td><strong>RELA</strong></td><td>Additional relationship label</td><td>MRREL</td><td>0 -
+			      54</td><td>10.58</td><td>varchar(100)</td>
+</tr>
+<tr>
+<td><strong>RMETA</strong></td><td>Version of the Metathesaurus where a version is removed</td><td>MRSAB</td><td>0 -
+			      6</td><td>0.09</td><td>varchar(10)</td>
+</tr>
+<tr>
+<td><strong>RSAB</strong></td><td>Root source abbreviation</td><td>MRSAB</td><td>2 -
+			      15</td><td>5.91</td><td>varchar(40)</td>
+</tr>
+<tr>
+<td><strong>RWS</strong></td><td>Number of rows</td><td>MRFILES</td><td>2 -
+			      8</td><td>5.80</td><td>integer</td>
+</tr>
+<tr>
+<td><strong>SAB</strong></td><td>Source abbreviation</td><td>MRDEF<br>MRSAT<br>MRRANK<br>MRREL<br>MRSO<br>MRATX</td><td>2 -
+			      11<br>2 -
+			      13<br>2 -
+			      15<br>2 -
+			      15<br>2 -
+			      15<br>3</td><td>4.14<br>5.20<br>5.52<br>5.77<br>5.92<br>3.00</td><td>varchar(40)<br>varchar(40)<br>varchar(40)<br>varchar(40)<br>varchar(40)<br>varchar(40)</td>
+</tr>
+<tr>
+<td><strong>SABIN</strong></td><td>Source in current subset</td><td>MRSAB</td><td>1</td><td>1.00</td><td>char(1)</td>
+</tr>
+<tr>
+<td><strong>SCC</strong></td><td>Content contact info for a source</td><td>MRSAB</td><td>12 -
+			      332</td><td>151.96</td><td>varchar(1000)</td>
+</tr>
+<tr>
+<td><strong>SF</strong></td><td>Source Family</td><td>MRSAB</td><td>2 -
+			      13</td><td>4.15</td><td>varchar(40)</td>
+</tr>
+<tr>
+<td><strong>SL</strong></td><td>Source of relationship labels</td><td>MRREL</td><td>2 -
+			      15</td><td>5.77</td><td>varchar(40)</td>
+</tr>
+<tr>
+<td><strong>SLC</strong></td><td>License contact info for a source</td><td>MRSAB</td><td>12 -
+			      346</td><td>167.50</td><td>varchar(1000)</td>
+</tr>
+<tr>
+<td><strong>SON</strong></td><td>Source Official Name</td><td>MRSAB</td><td>10 -
+			      145</td><td>49.61</td><td>varchar(3000)</td>
+</tr>
+<tr>
+<td><strong>SRL</strong></td><td>Source Restriction Level</td><td>MRSAB<br>MRSO</td><td>1<br>1</td><td>1.00<br>1.00</td><td>integer<br>integer</td>
+</tr>
+<tr>
+<td><strong>STR</strong></td><td>String</td><td>MRCON</td><td>1 -
+			      2864</td><td>41.28</td><td>varchar(3000)</td>
+</tr>
+<tr>
+<td><strong>STT</strong></td><td>String type</td><td>MRCON</td><td>2 -
+			      3</td><td>2.01</td><td>varchar(3)</td>
+</tr>
+<tr>
+<td><strong>STY</strong></td><td>Semantic type</td><td>MRSTY</td><td>4 -
+			      39</td><td>17.42</td><td>varchar(50)</td>
+</tr>
+<tr>
+<td><strong>SUI</strong></td><td>Unique identifier for string</td><td>MRSAT<br>MRXW.BAQ<br>MRXW.DAN<br>MRXW.HEB<br>MRXW.JPN<br>AMBIG.SUI<br>MRSO<br>MRXW.GER<br>MRXW.SPA<br>MRCON<br>MRXNS.ENG<br>MRXW.ENG<br>MRXNW.ENG<br>MRXW.DUT<br>MRXW.POR<br>MRXW.ITA<br>MRXW.RUS<br>MRXW.FIN<br>MRXW.FRE<br>MRXW.SWE<br>MRXW.CZE<br>MRXW.NOR<br>MRXW.HUN<br>MRXW.ARA<br>MRXW.CHI<br>MRXW.EST<br>MRXW.GRE<br>MRXW.ISL<br>MRXW.KOR<br>MRXW.LAV<br>MRXW.LIT<br>MRXW.POL<br>MRXW.SCR<br>MRXW.TUR<br>MRXW.UKR</td><td>0 -
+			      9<br>8<br>8<br>8<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>8 -
+			      9<br>9<br>9<br>9<br>9<br>9<br>9<br>9<br>9<br>9<br>9<br>9<br>9</td><td>6.74<br>8.00<br>8.00<br>8.00<br>8.36<br>8.37<br>8.59<br>8.60<br>8.61<br>8.62<br>8.65<br>8.67<br>8.68<br>8.68<br>8.78<br>8.79<br>8.80<br>8.84<br>8.84<br>8.87<br>8.88<br>8.98<br>8.99<br>9.00<br>9.00<br>9.00<br>9.00<br>9.00<br>9.00<br>9.00<br>9.00<br>9.00<br>9.00<br>9.00<br>9.00</td><td>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)<br>varchar(10)</td>
+</tr>
+<tr>
+<td><strong>SUPRES</strong></td><td>Suppressible flag</td><td>MRRANK</td><td>1</td><td>1.00</td><td>char(1)</td>
+</tr>
+<tr>
+<td><strong>SVER</strong></td><td>Release date or version number of a source</td><td>MRSAB</td><td>0 -
+			      15</td><td>5.02</td><td>varchar(20)</td>
+</tr>
+<tr>
+<td><strong>TFR</strong></td><td>Term frequency for a source</td><td>MRSAB</td><td>1 -
+			      7</td><td>4.56</td><td>integer</td>
+</tr>
+<tr>
+<td><strong>TS</strong></td><td>Term status</td><td>MRCON</td><td>1</td><td>1.00</td><td>char(1)</td>
+</tr>
+<tr>
+<td><strong>TTY</strong></td><td>Term type in source</td><td>MRSO<br>MRRANK</td><td>2 -
+			      11<br>2 -
+			      11</td><td>2.38<br>2.59</td><td>varchar(20)<br>varchar(20)</td>
+</tr>
+<tr>
+<td><strong>TTYL</strong></td><td>Term type list for a source</td><td>MRSAB</td><td>0 -
+			      129</td><td>15.76</td><td>varchar(400)</td>
+</tr>
+<tr>
+<td><strong>TUI</strong></td><td>Unique identifier of Semantic type</td><td>MRSTY</td><td>4</td><td>4.00</td><td>char(4)</td>
+</tr>
+<tr>
+<td><strong>TYPE</strong></td><td>Type of information</td><td>MRDOC</td><td>3 -
+			      21</td><td>13.04</td><td>varchar(50)</td>
+</tr>
+<tr>
+<td><strong>VALUE</strong></td><td>Value</td><td>MRDOC</td><td>0 -
+			      62</td><td>16.02</td><td>varchar(200)</td>
+</tr>
+<tr>
+<td><strong>VCUI</strong></td><td>Unique identifier for versioned SRC concept</td><td>MRSAB</td><td>0 -
+			      8</td><td>7.76</td><td>char(8)</td>
+</tr>
+<tr>
+<td><strong>VER</strong></td><td>Last release version in which CUI1 was valid</td><td>MRCUI</td><td>6</td><td>6.00</td><td>varchar(10)</td>
+</tr>
+<tr>
+<td><strong>VSAB</strong></td><td>Versioned source abbreviation</td><td>MRSAB</td><td>3 -
+			      24</td><td>11.33</td><td>varchar(40)</td>
+</tr>
+<tr>
+<td><strong>WD</strong></td><td>Word in lower-case</td><td>MRXW.KOR<br>MRXW.CHI<br>MRXW.TUR<br>MRXW.ARA<br>MRXW.POR<br>MRXW.ITA<br>MRXW.HEB<br>MRXW.GRE<br>MRXW.ENG<br>MRXW.UKR<br>MRXW.DAN<br>MRXW.SPA<br>MRXW.FRE<br>MRXW.EST<br>MRXW.DUT<br>MRXW.BAQ<br>MRXW.RUS<br>MRXW.POL<br>MRXW.ISL<br>MRXW.CZE<br>MRXW.SCR<br>MRXW.LAV<br>MRXW.LIT<br>MRXW.HUN<br>MRXW.GER<br>MRXW.SWE<br>MRXW.NOR<br>MRXW.JPN<br>MRXW.FIN</td><td>1 -
+			      38<br>1 -
+			      68<br>1 -
+			      37<br>1 -
+			      22<br>1 -
+			      38<br>1 -
+			      38<br>1 -
+			      19<br>1 -
+			      38<br>1 -
+			      80<br>1 -
+			      27<br>1 -
+			      25<br>1 -
+			      46<br>1 -
+			      39<br>1 -
+			      35<br>1 -
+			      51<br>1 -
+			      18<br>1 -
+			      40<br>1 -
+			      48<br>1 -
+			      42<br>1 -
+			      52<br>1 -
+			      37<br>1 -
+			      29<br>1 -
+			      31<br>1 -
+			      27<br>1 -
+			      43<br>1 -
+			      39<br>1 -
+			      44<br>1 -
+			      93<br>1 -
+			      54</td><td>2.84<br>3.66<br>5.26<br>5.35<br>5.72<br>5.91<br>6.12<br>6.13<br>6.15<br>6.36<br>6.38<br>6.62<br>6.77<br>7.01<br>7.15<br>7.17<br>7.17<br>7.25<br>7.33<br>7.45<br>7.70<br>7.76<br>7.82<br>7.87<br>8.26<br>8.32<br>9.11<br>9.13<br>9.94</td><td>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)<br>varchar(500)</td>
+</tr>
+</tbody>
+</table>
+
+</body></html>

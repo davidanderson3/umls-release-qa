@@ -1,0 +1,13 @@
+Index: umls.nlm.nih.gov/releasedocs/scripts/misc_scripts/render_templates.log
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>2025-04-08 20:28:05,613 - ERROR - Failed to load or validate settings: [Errno 2] No such file or directory: 'settings.yaml'\r\n2025-04-08 20:34:49,464 - ERROR - Failed to load or validate settings: [Errno 2] No such file or directory: 'settings.yaml'\r\n2025-04-08 20:36:42,169 - ERROR - Settings file not found: config\\settings.yaml\r\n2025-04-08 20:37:00,514 - ERROR - Settings file not found: config\\settings.yaml\r\n2025-04-08 20:38:49,739 - ERROR - Settings file not found: config\\settings.yaml\r\n
+===================================================================
+diff --git a/umls.nlm.nih.gov/releasedocs/scripts/misc_scripts/render_templates.log b/umls.nlm.nih.gov/releasedocs/scripts/misc_scripts/render_templates.log
+--- a/umls.nlm.nih.gov/releasedocs/scripts/misc_scripts/render_templates.log	(revision cd97fa5aa9b6f10167aa72d64f91e78a855b539c)
++++ b/umls.nlm.nih.gov/releasedocs/scripts/misc_scripts/render_templates.log	(date 1745012783469)
+@@ -3,3 +3,4 @@
+ 2025-04-08 20:36:42,169 - ERROR - Settings file not found: config\settings.yaml
+ 2025-04-08 20:37:00,514 - ERROR - Settings file not found: config\settings.yaml
+ 2025-04-08 20:38:49,739 - ERROR - Settings file not found: config\settings.yaml
++2025-04-18 17:46:23,469 - ERROR - Settings file not found: config\settings.yaml
