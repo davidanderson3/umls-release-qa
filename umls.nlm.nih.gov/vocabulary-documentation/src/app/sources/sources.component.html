@@ -18,35 +18,34 @@
             </li>
           </ol>
         </nav>
-        
-        <!-- Sticky top header with tabs -->
-        <div class="sticky-top">
-          <div id="source-name" class="heading">
-            <h1 class="border-bottom p-2 wrap-text" *ngIf="sourceData">
-              {{ dynamicHeading }} ({{ sourceData.shortName }})
-            </h1>
-          </div>
-          
-          <!-- Tab navigation -->
-          <ul class="nav nav-tabs" id="myTabs">
-            <li class="nav-item">
-              <a (click)="setActiveTab('synopsis')" [ngClass]="{'active-tab': activeTab === 'synopsis'}" class="nav-link">Synopsis</a>
-            </li>
-            <li class="nav-item">
-              <a (click)="setActiveTab('metadata')" [ngClass]="{'active-tab': activeTab === 'metadata'}" class="nav-link">Metadata</a>
-            </li>
-            <li class="nav-item">
-              <a (click)="setActiveTab('statistics')" [ngClass]="{'active-tab': activeTab === 'statistics'}" class="nav-link">Statistics</a>
-            </li>
-            <li class="nav-item" *ngIf="displayTabs.includes('sourcerepresentation')">
-              <a (click)="setActiveTab('sourcerepresentation')" [ngClass]="{'active-tab': activeTab === 'sourcerepresentation'}" class="nav-link">Source Representation</a>
-            </li>
-            <li class="nav-item" *ngIf="displayTabs.includes('metarepresentation')">
-              <a (click)="setActiveTab('metarepresentation')" [ngClass]="{'active-tab': activeTab === 'metarepresentation'}" class="nav-link">Metathesaurus Representation</a>
-            </li>
-          </ul>
+      
+        <!-- Heading (NOT sticky) -->
+        <div id="source-name" class="heading">
+          <h1 class="border-bottom p-2 wrap-text" *ngIf="sourceData">
+            {{ dynamicHeading }} ({{ sourceData.shortName }})
+          </h1>
         </div>
+      
+        <!-- Only Tabs are sticky -->
+        <ul class="nav nav-tabs sticky-top bg-white" id="myTabs">
+          <li class="nav-item">
+            <a (click)="setActiveTab('synopsis')" [ngClass]="{'active-tab': activeTab === 'synopsis'}" class="nav-link">Synopsis</a>
+          </li>
+          <li class="nav-item">
+            <a (click)="setActiveTab('metadata')" [ngClass]="{'active-tab': activeTab === 'metadata'}" class="nav-link">Metadata</a>
+          </li>
+          <li class="nav-item">
+            <a (click)="setActiveTab('statistics')" [ngClass]="{'active-tab': activeTab === 'statistics'}" class="nav-link">Statistics</a>
+          </li>
+          <li class="nav-item" *ngIf="displayTabs.includes('sourcerepresentation')">
+            <a (click)="setActiveTab('sourcerepresentation')" [ngClass]="{'active-tab': activeTab === 'sourcerepresentation'}" class="nav-link">Source Representation</a>
+          </li>
+          <li class="nav-item" *ngIf="displayTabs.includes('metarepresentation')">
+            <a (click)="setActiveTab('metarepresentation')" [ngClass]="{'active-tab': activeTab === 'metarepresentation'}" class="nav-link">Metathesaurus Representation</a>
+          </li>
+        </ul>
       </div>
+      
 
       <!-- Tab content -->
       <div class="tab-content mt-2 flex-grow-1" [innerHtml]="htmlContent[activeTab]" (click)="onAnchorClick($event)"></div>
