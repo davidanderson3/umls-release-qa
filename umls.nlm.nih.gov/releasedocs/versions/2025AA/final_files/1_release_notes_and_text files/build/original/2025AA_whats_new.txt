@@ -1,0 +1,143 @@
+What's New for 2025AA
+
+General Information:  
+
+For 2025AA, there is 1 new translation source (MDRISL_27_1) and 81 updated sources (including translation sources and subsources).  
+
+MDRISL is the Icelandic Edition of the Medical Dictionary for Regulatory Activities Terminology (MedDRA).
+
+For detailed information about sources that are new or have had changes made (e.g., new term types, new attribute names, etc.):
+
+	Healthcare Common Procedure Coding System, HCPCS2025_04
+	LOINC, LNC280
+	Medical Dictionary for Regulatory Activities Terminology (MedDRA), MDR27_1
+	Medical Dictionary for Regulatory Activities Terminology (MedDRA), Icelandic Edition, MDRISL27_1
+	MEDCIN, MEDCIN3_2024_12_20
+	NCI Thesaurus, NCI2024_10D
+	RXNORM Vocabulary, RXNORM_20AA_250303F
+------------------------------------------
+
+Source: Healthcare Common Procedure Coding System 
+VSAB: HCPCS2025_04 
+
+This version includes HCPT2025_04, the HCPCS Version of Current Procedural Terminology (CPT).
+
+
+Discussion:
+
+HCDT has not been updated due to licensing issues.
+------------------------------------------
+
+Source: LOINC
+VSAB: LNC280
+
+1. New abbreviation| Expansion:
+	ElecCon|Electrical Conductivity (Property)
+	XR.3D|X-ray 3 dimensional (Method)
+
+2. New class| Description:
+	PANEL.SURVEY.WHYMP|West Haven-Yale Multidimensional Pain Inventory
+	PANEL.CLIN.VET|Clin Vet Panel
+-------------------------------------------------------
+
+Source: Medical Dictionary for Regulatory Activities Terminology (MedDRA)
+VSAB: MDR27_1
+
+Dropped relationship | relationship attribute (RELA) | RELA inverse:
+	SY|mth_british_form_of|mth_has_british_form
+
+
+Discussion:
+As of this release, the UMLS will no longer create atoms for the 
+American spellings of MDR. MDR data includes British spellings with its 
+American spelling counterpart included at the LLT level.  
+
+The relationship attribute (RELA) "mth_british_form_of/mth_has_british_form" has been deprecated.
+
+Expanded versions of strings with identified abbreviations will continue 
+to be made.
+-------------------------------------------------------
+
+Source: Medical Dictionary for Regulatory Activities Terminology (MedDRA), Icelandic Edition
+VSAB: MDRISL27_1
+
+1. New termtype (TTY) | Description
+    AB|Abbreviation
+    HG|High Level Group Term
+    HT|Hierarchical term
+    LLT|Lower Level Term
+    OL|Non-current Lower Level Term
+    OS|System-organ class
+    PT|Designated preferred name
+    SMQ|Standardised MedDRA Query 
+
+2. New relationship | relationship attribute (RELA) | RELA inverse:
+    RQ|classifies|classified_as
+    RO|has_member|member_of
+    RO|member_of|has_member
+    RO|translation_of|has_translation
+    SY|expanded_form_of|has_expanded_form
+    SY|translation_of|has_translation
+
+3.  New attribute name (ATN) | Description:
+    MISO|MedDRA Serial Code International SOC Sort Order Digit (01-26)
+    MPS|MedDRA primary SOC (PTs may have multiple treepositions, but each has a primary soc)
+    SMQ_ALGO|Standardised MedDRA Query (SMQ) Algorithm. Boolean expression of algorithm for the SMQ. "N" if the SMQ does not utilize an algorithm.
+    SMQ_LEVEL|Standardised MedDRA Query (SMQ) Level. Value between 1 and 5 identifying the level of the SMQ within the hierarchy of SMQs; 1 is the most general, 5 is the most narrow.
+    SMQ_SOURCE|Standardised MedDRA Query (SMQ) Source. Source for the development of the SMQ, e.g. medical references.
+    SMQ_STATUS|Standardised MedDRA Query (SMQ) Status. "A" = active; "I" = inactive.
+    SMQ_TERM_ADDVERSION|Standardised MedDRA Query (SMQ) Addition Version. Version of MedDRA in which term was added to the SMQ.
+    SMQ_TERM_CAT|Standardised MedDRA Query (SMQ) Term Category. A single alphabetical letter indicating the category of the term for application of the SMQ algorithm. If the SMQ does not use algorithms, then all Term_category values are assigned "A." For a child SMQ, this field is assigned "S."
+    SMQ_TERM_LEVEL|Standardised MedDRA Query (SMQ) Level. Value between 1 and 5 identifying the level of the SMQ within the hierarchy of SMQs; 1 is the most general, 5 is the most narrow.
+    SMQ_TERM_LMVERSION|Standardised MedDRA Query (SMQ) Last Modified Version. Version of MedDRA in which term was last modified in the SMQ.
+    SMQ_TERM_SCOPE|expanded_form|Standardised MedDRA Query (SMQ) Term Scope. Defines the MedDRA term as a member of the broad scope (1), narrow scope (2) of the SMQ search, or a child SMQ (0) (zero).
+    SMQ_TERM_STATUS|Standardised MedDRA Query (SMQ) Term Status. Identifies a term as active ("A") or inactive ("I") within this SMQ.
+    SMQ_TERM_WEIGHT|Standardised MedDRA Query (SMQ) Term Weight. Used for some SMQ algorithms; "0" is used as default.
+    SOS|Scope Statement
+
+
+Discussion:
+
+New translation source.
+------------------------------------------
+
+Source: MEDCIN
+VSAB: MEDCIN3_2024_12_20
+
+Dropped relationship | relationship attribute (RELA) | RELA inverse:
+	RO|has_definitional_manifestation|definitional_manifestation_of
+-------------------------------------------------------
+
+Source: NCI Thesaurus
+VSAB: NCI2024_10D
+
+New relationship | relationship attribute (RELA) | RELA inverse:
+RO|has_pro-ctcae_attribute|is_pro-ctcae_attribute_of
+RO|has_ped-pro-ctcae_attribute|is_ped-pro-ctcae_attribute_of
+RO|has_pro-ctcae_attribute_value|is_pro-ctcae_attribute_value_of
+RO|has_ped-pro-ctcae_attribute_value|is_ped-pro-ctcae_attribute_value_of
+RO|has_pro-ctcae_parent|is_pro-ctcae_parent_of
+RO|has_ped-pro-ctcae_parent|is_ped-pro-ctcae_parent_of
+------------------------------------------
+
+Source: RXNORM Vocabulary
+VSAB: RXNORM_20AA_250303F
+
+This version includes:
+    ATC_2025_02_10 (Anatomical Therapeutic Chemical Classification System)
+    CVX_2024_12_18_25_03_03 (Vaccines Administered)
+    DRUGBANK5.0_2025_02_06 (DrugBank)
+    GS_2025_02_07 (Gold Standard Drug Database)
+    MMSL_2025_02_01 (Multum MediSource Lexicon)
+    MMX_2025_02_07 (Micromedex RED BOOK)
+    MTHCMSFRF_2020_25_03_03 (Metathesaurus CMS Formulary Reference File)
+    MTHSPL_2025_02_22 (Metathesaurus FDA Structured Product Labels)
+    NDDF_2025_02_05 (FDB MedKnowledge)
+    USP_2025_01_30 (USP Compendial Nomenclature)
+    VANDF_2025_01_31 (Veterans Health Administration National Drug File)
+
+
+Dropped attribute name (ATN):
+	DIETARY_SUPPLEMENT
+-----------------------------------------------
+
