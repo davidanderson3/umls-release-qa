@@ -1,93 +1,68 @@
-from pathlib import Path  # Cross-platform filesystem paths
-from bs4 import BeautifulSoup, Comment  # HTML parsing and comment handling
+from pathlib import Path  # Cross-platform filesystem path handling
+from bs4 import BeautifulSoup, Comment, Tag  # HTML parsing, comment, and tag handling
 
 # ----------------------------------------------------------------------------
 # script1.py
-# Purpose: Update the appendix HTML file per requirements:
-#   1. Remove the initial metadata comment
-#   2. Clean up <head> by removing legacy tags and injecting Back-To-Top styles
-#   3. Simplify <body> by removing old links/buttons and converting superscripts
-#   4. Insert a Back-To-Top button with annotation comments
-#   5. Wrap content in inner and outer <div> containers for structure
-#   6. Annotate sections with comments and stable IDs
-#   7. Deduplicate specific SNOMED license links and enforce new-tab behavior
+# Purpose: Transform the appendix HTML file by:
+#   1. Removing initial metadata comments
+#   2. Cleaning the <head> section and injecting Back-To-Top CSS
+#   3. Simplifying <body>: removing anchors/buttons, converting <sup> to text
+#   4. Inserting a Back-To-Top button with markers
+#   5. Wrapping content: placing the first <h2> in outer and the rest in inner <div>
+#   6. Annotating sections with comments and stable IDs
+#   7. Deduplicating SNOMED license links and enforcing target="_blank"
 # ----------------------------------------------------------------------------
 
-# Configuration
-encoding = "utf-8"  # Use UTF-8 for consistent file encoding
-project_root = Path(
-    r"C:\Users\rewolinskija\Documents\umls-source-release-1"
-    r"\umls.nlm.nih.gov\releasedocs\versions\2025AA"
-)
-input_file = (
-    project_root
-    / "license_scripts"
-    / "Begin_with_this_file"
-    / "script1"
-    / "input_license_agreement_appendix.html"
-)
-output_file = (
-    project_root
-    / "license_scripts"
-    / "Begin_with_this_file"
-    / "script2"
-    / "license_agreement_appendix.html"
-)
+# Set up directories based on this script's location
+script_dir = Path(__file__).resolve().parent
+source_dir = script_dir / "Begin_with_this_file" / "script1"
+output_dir = script_dir / "Begin_with_this_file" / "script2"
+output_dir.mkdir(parents=True, exist_ok=True)
 
-# Ensure the output directory exists
-output_file.parent.mkdir(parents=True, exist_ok=True)
+# Define file paths
+input_file = source_dir / "input_license_agreement_appendix.html"
+output_file = output_dir / "license_agreement_appendix.html"
 
-# ----------------------------------------------------------------------------
-# Step 1: Load and parse the HTML document
-# ----------------------------------------------------------------------------
-with input_file.open(encoding=encoding) as infile:
-    soup = BeautifulSoup(infile, "html.parser")
+# Step 1: Load HTML document
+with input_file.open(encoding="utf-8") as f:
+    soup = BeautifulSoup(f, "html.parser")
 
-# ----------------------------------------------------------------------------
 # Step 2: Remove the first HTML comment (metadata/disclaimer)
-# ----------------------------------------------------------------------------
 first_comment = soup.find(string=lambda t: isinstance(t, Comment))
 if first_comment:
     first_comment.extract()
 
-# ----------------------------------------------------------------------------
-# Step 3: Clean <head> section
-#   - Remove all <meta> and <link> tags
-#   - Add custom <style> for Back-To-Top button
-# ----------------------------------------------------------------------------
-style_tag = soup.new_tag("style")
-style_tag.string = (
-    "/* Back-To-Top Button Styles */\n"
-    "#topBtn { background-color: #e6e6e6; border: 1px solid DimGray;"
-    " padding: 6px 7px; font-size: 12px; font-family: 'Roboto', monospace; }\n"
-    "#topBtn:hover { background-color: #87cefa; text-decoration: none; }"
-)
-head = soup.find("head")
-if head:
-    for tag in head.find_all(["meta", "link"]):
+# Step 3: Clean the <head> section
+if soup.head:
+    # Remove all <meta> and <link> tags to avoid legacy references
+    for tag in soup.head.find_all(["meta", "link"]):
         tag.decompose()
-    head.append(style_tag)
+    # Inject Back-To-Top button CSS
+    style = soup.new_tag("style")
+    style.string = (
+        "#topBtn { background-color: #e6e6e6; border: 1px solid DimGray;"
+        " padding: 6px 7px; font-size: 12px; font-family: 'Roboto', monospace; }"
+        "#topBtn:hover { background-color: #87cefa; text-decoration: none; }"
+    )
+    soup.head.append(style)
 
-# ----------------------------------------------------------------------------
-# Step 4: Simplify <body> content
-#   - Remove legacy <a> and <button> tags
-#   - Convert <sup> tags to plain text
-#   - Insert Back-To-Top button with markers
-# ----------------------------------------------------------------------------
-body = soup.find("body")
-if body:
-    first_a = body.find("a")
-    if first_a:
-        first_a.decompose()
-
-    existing_btn = body.find("button", id="topBtn")
-    if existing_btn:
-        existing_btn.decompose()
-
+# Step 4: Simplify the <body> content
+if soup.body:
+    body = soup.body
+    # Remove any <a name="top"> anchors
+    top_anchor = body.find("a", attrs={"name": "top"})
+    if top_anchor:
+        top_anchor.decompose()
+    # Remove existing Back-To-Top buttons by ID
+    for btn_id in ("myBtn", "topBtn"):
+        btn = body.find("button", id=btn_id)
+        if btn:
+            btn.decompose()
+    # Convert all <sup> tags to their text content
     for sup in body.find_all("sup"):
         sup.replace_with(sup.get_text())
-
-    body.insert(-1, Comment("back to top button"))
+    # Insert new Back-To-Top button with comment markers
+    body.append(Comment("back to top button"))
     back_btn = soup.new_tag("button", id="topBtn")
     link = soup.new_tag("a", href="#top")
     link.string = "Back to Top"
@@ -95,52 +70,53 @@ if body:
     body.append(back_btn)
     back_btn.append(Comment("end back to top button"))
 
-    # Wrap remaining content in an inner div for styling
-    inner = soup.new_tag("div", **{"class": "gwt-HTML"})
-    children = list(body.children)
-    first_elem = children[1] if len(children) > 1 else None
+# Step 5: Wrap content into outer and inner divs
+if soup.body:
+    body = soup.body
+    # Capture all current nodes (including text and tags)
+    all_nodes = list(body.contents)
+    # Clear body for restructuring
     body.clear()
-    if first_elem:
-        body.append(first_elem)
-    if body.h2:
-        body.h2.insert_after(inner)
-    for child in children[2:]:
-        inner.append(child)
-
-    # Wrap the inner div in an outer container with a unique ID
+    # Add start marker
+    body.append(Comment("START APPENDIX 1"))
+    # Create outer container
     outer = soup.new_tag("div", id="license_agreement_appendix1")
-    contents = list(body.children)
-    body.clear()
     body.append(outer)
-    for item in contents:
-        outer.append(item)
-
-    # Annotate sections and assign stable IDs
+    # Inside outer, place first <h2> (if any)
+    first_h2 = None
+    for node in all_nodes:
+        if isinstance(node, Tag) and node.name == "h2":
+            first_h2 = node
+            break
+    if first_h2:
+        first_h2.extract()
+        first_h2["id"] = "appendix1"
+        outer.append(first_h2)
+    # Create inner container for remaining content
+    inner = soup.new_tag("div", **{"class": "gwt-HTML"})
+    outer.append(inner)
+    # Append all other nodes to inner
+    for node in all_nodes:
+        if node is first_h2:
+            continue
+        inner.append(node)
+    # Close outer div and mark end of section
     outer.append(Comment("end div Appendix1"))
     body.append(Comment("body"))
-    body.insert(0, Comment("START APPENDIX 1"))
-    h2 = soup.find("h2")
-    if h2:
-        h2["id"] = "appendix1"
 
-    # Ensure all external links open in a new tab
-    for a in soup.find_all("a"):
-        a["target"] = "_blank"
+# Step 6: Ensure all links open in a new tab
+for a in soup.find_all("a"):
+    a["target"] = "_blank"
 
-    # Remove duplicate SNOMED license links (every second occurrence)
-    dup_links = soup.find_all(
-        "a",
-        href=(
-            "https://www.nlm.nih.gov/research/umls/knowledge_sources/"
-            "metathesaurus/release/license_agreement_snomed.html"
-        ),
-    )
-    for dup in dup_links[1::2]:
-        if dup.parent:
-            dup.parent.decompose()
+# Step 7: Deduplicate SNOMED license links
+snomed_href = (
+    "https://www.nlm.nih.gov/research/umls/knowledge_sources/"
+    "metathesaurus/release/license_agreement_snomed.html"
+)
+for dup in soup.find_all("a", href=snomed_href)[1::2]:
+    if dup.parent:
+        dup.parent.decompose()
 
-# ----------------------------------------------------------------------------
-# Step 5: Write the transformed HTML back to disk
-# ----------------------------------------------------------------------------
-with output_file.open("w", encoding=encoding) as outfile:
-    outfile.write(soup.prettify())
+# Final Step: Write the transformed HTML to output
+with output_file.open("w", encoding="utf-8") as f:
+    f.write(soup.prettify())
