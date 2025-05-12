@@ -12,11 +12,17 @@ Run the following command (Mac Terminal or SourceTree Terminal) to update the st
 
 `rsync -avz --include '*/' --include '*.html' --exclude '*' andersondm2@devmlbapp01.nlm.nih.gov:/umls_s/dist_root/{VERSION}/RRF_usr/HTML/StatisticalReport/ {ROOT DIRECTORY}/umls-source-release/umls.nlm.nih.gov/vocabulary-documentation/src/assets/content/`
 
+Review the changes locally (`npx ng serve` then http://localhost:4200/, see Installation directions below).
+
+Commit and push the changes to origin. 
+
 Do a merge request to merge the versioned branch into master (for example, merge 2024AB branch into master branch). 
 
-QA the site. 
+To view the changes in QA - Build > Pipelines > New pipeline > Variable Env VOCABULARY_QA > New Pipeline
 
-Publish the changes on release day. 
+Review at https://mainweb.awsqa.nlm.nih.gov/research/umls/sourcereleasedocs/
+
+Publish the changes on release day - Build > Pipelines > New pipeline > Variable Env VOCABULARY_PROD > New Pipeline. 
 
 ## Installation
 
