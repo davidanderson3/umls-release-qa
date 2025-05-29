@@ -8,6 +8,7 @@ import { ViewportScroller } from '@angular/common';
 import { Title } from '@angular/platform-browser';
 import { MatTableDataSource } from '@angular/material/table';
 import { SourceModel } from '../source.model';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-sources',
@@ -24,6 +25,7 @@ export class SourcesComponent implements OnInit {
   dataSource!: MatTableDataSource<any>;
   sources!: SourceModel[];
   sourceData: any;
+  cachedShortName: string = '';
 
   constructor(
     private contentService: ContentService,
@@ -33,29 +35,24 @@ export class SourcesComponent implements OnInit {
     private http: HttpClient,
     private viewportScroller: ViewportScroller,
     private titleService: Title,
-    private router: Router
-  ) {}
+    private router: Router,
+    private location: Location
+  ) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params: ParamMap) => {
-      // Extract the segments from the URL
       const urlSegments = this.route.snapshot.url.map(segment => segment.path);
-  
+
       if (urlSegments.length > 1 && urlSegments[0] === 'current') {
         this.folderName = urlSegments[1];
-        this.dynamicHeading = this.folderName.toUpperCase();
-        this.titleService.setTitle(`UMLS - ${this.dynamicHeading}`);
-        
-        // Fetch the source data, relying on ApiService's caching logic
+
         this.fetchSourceData().then(() => {
-          if (urlSegments.length > 2) {
-            const tabName = this.getTabNameFromUrl(urlSegments[2]);
-            this.setActiveTab(tabName);
-          } else {
-            this.loadHtmlContent('synopsis'); // Load default 'synopsis' content
-          }
-  
-          // Check for additional file existence asynchronously (optional)
+          const tabName = urlSegments.length > 2
+            ? this.getTabNameFromUrl(urlSegments[2])
+            : 'synopsis';
+
+          this.setActiveTab(tabName); // ✅ Call this only after sourceData and cachedShortName are ready
+
           this.checkFileExistence();
         }).catch(error => {
           console.error('Error fetching source data, cannot load content:', error);
@@ -65,13 +62,15 @@ export class SourcesComponent implements OnInit {
       }
     });
   }
-  
+
+
   fetchSourceData(): Promise<void> {
     return new Promise((resolve, reject) => {
       if (this.folderName) {
         this.apiService.getSourceByAbbreviation(this.folderName).subscribe(
           response => {
             this.sourceData = response;
+            this.cachedShortName = this.sourceData?.shortName || ''; // ✅ <-- ADD THIS
             console.log('Fetched sourceData:', this.sourceData);
             resolve();
           },
@@ -87,6 +86,7 @@ export class SourcesComponent implements OnInit {
     });
   }
 
+
   checkFileExistence(): Promise<void> {
     return new Promise((resolve, reject) => {
       const filesToCheck = {
@@ -99,7 +99,7 @@ export class SourcesComponent implements OnInit {
           .then(() => this.displayTabs.push(tabName))
           .catch((error) => console.log(`File ${fileName} does not exist for tab ${tabName}`));
       });
-  
+
       Promise.all(checks).then(() => resolve());
     });
   }
@@ -117,38 +117,48 @@ export class SourcesComponent implements OnInit {
 
   setActiveTab(tab: string): void {
     this.activeTab = tab;
-  
+
+    const tabTitleMap: { [key: string]: string } = {
+      synopsis: 'Synopsis',
+      metadata: 'Metadata',
+      statistics: 'Statistics',
+      sourcerepresentation: 'Source Representation',
+      metarepresentation: 'Metathesaurus Representation'
+    };
+    const tabLabel = tabTitleMap[tab] || tab;
+
+    const setPageTitle = () => {
+      const finalTitle = `UMLS - ${this.folderName} - ${tabLabel}`;
+      console.log('🚩 Setting title to:', finalTitle);
+      this.titleService.setTitle(finalTitle);
+      document.title = finalTitle; // Force override
+    };
+
     if (!this.htmlContent[tab]) {
       this.loadHtmlContent(tab).then(() => {
         console.log(`Content for ${tab} loaded and cached.`);
+        setPageTitle();
       });
+    } else {
+      setPageTitle();
     }
-  
+
     this.viewportScroller.scrollToPosition([0, 0]);
-  
-    let routePath: string;
-    switch (tab) {
-      case 'synopsis':
-        routePath = 'index.html';
-        break;
-      case 'metadata':
-        routePath = 'metadata.html';
-        break;
-      case 'statistics':
-        routePath = 'stats.html';
-        break;
-      case 'metarepresentation':
-        routePath = 'metarepresentation.html';
-        break;
-      case 'sourcerepresentation':
-        routePath = 'sourcerepresentation.html';
-        break;
-      default:
-        routePath = `${tab}.html`;
-    }
-    this.router.navigate(['/current', this.folderName, routePath]);
+
+    const routePathMap: { [key: string]: string } = {
+      synopsis: 'index.html',
+      metadata: 'metadata.html',
+      statistics: 'stats.html',
+      metarepresentation: 'metarepresentation.html',
+      sourcerepresentation: 'sourcerepresentation.html'
+    };
+
+    const routePath = routePathMap[tab] || `${tab}.html`;
+    this.location.replaceState(`/current/${this.folderName}/${routePath}`);
   }
-  
+
+
+
   loadHtmlContent(tab: string): Promise<void> {
     return new Promise((resolve, reject) => {
       if (tab === 'metadata' && this.sourceData) {
@@ -174,10 +184,10 @@ export class SourcesComponent implements OnInit {
         default:
           filename = tab;
       }
-  
+
       const filePath = `assets/content/${this.folderName}/${filename}.html`;
       console.log('Fetching content from:', filePath);
-  
+
       this.contentService.getHtmlContent(filePath).toPromise()
         .then(content => {
           this.htmlContent[tab] = this.sanitizer.bypassSecurityTrustHtml(content || '');
@@ -195,11 +205,11 @@ export class SourcesComponent implements OnInit {
       const formatField = (field: string) => {
         return field !== 'NONE' ? field.replace(/^;+/, '').replace(/;+/g, '<br>') : 'N/A';
       };
-  
+
       const contentContactDetails = formatField(this.sourceData.contentContact);
       const licenseContactDetails = formatField(this.sourceData.licenseContact);
       const citationDetails = formatField(this.sourceData.citation);
-  
+
       const metadataHtml = `
         <div>
           <table>
@@ -246,13 +256,13 @@ export class SourcesComponent implements OnInit {
           </table>
         </div>
       `;
-    
+
       this.htmlContent['metadata'] = this.sanitizer.bypassSecurityTrustHtml(metadataHtml);
     } else {
       console.error('No source data available to load metadata content');
     }
   }
-  
+
   onAnchorClick(event: Event): void {
     const anchor = event.target as HTMLAnchorElement;
     if (anchor.hash) {
