@@ -10,6 +10,7 @@ export async function run({ ui }) {
     const data = await resp.json();
     const { current, previous, releaseList } = data;
 
+
     ui.appendSummary(`
       <h3>Release Directory Check</h3>
       <p>Releases found: ${releaseList.join(', ') || 'none'}</p>
