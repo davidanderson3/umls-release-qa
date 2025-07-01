@@ -1,56 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <title>UMLS Release QA</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <title>UMLS Release QA</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-    <div class="container">
-        <h1>UMLS Release QA</h1>
-        <p>Run each QA test in order to validate the latest release. Results will appear below as each test completes.</p>
+  <div class="container">
+    <h1>UMLS Release QA</h1>
+    <div id="status"></div>
+  </div>
 
-        <!-- 1) META folder selector -->
-        <section class="file-inputs">
-            <label>
-                Select META Folder:
-                <!-- `webkitdirectory` + `directory` allows the user to pick a folder in Chromium/Firefox -->
-                <input type="file" id="metaFolder" webkitdirectory directory multiple />
-            </label>
-        </section>
-
-        <!-- 2) MRCONSO file inputs -->
-        <section class="file-inputs">
-            <label>
-                Base MRCONSO:
-                <input type="file" id="baseFile" accept=".rrf,.txt">
-            </label>
-            <label>
-                Compare MRCONSO:
-                <input type="file" id="compareFile" accept=".rrf,.txt">
-            </label>
-        </section>
-
-        <!-- Modules & Tests (stubbed for now) -->
-        <section id="modules-section">
-            <h2>Modules & Tests</h2>
-            <ul id="module-list"></ul>
-            <button id="run-selected">Run Selected</button>
-            <button id="run-all">Run All</button>
-        </section>
-
-        <!-- Results -->
-        <section id="results">
-            <h2>Summary</h2>
-            <div id="summary"></div>
-            <h2>Details</h2>
-            <div id="details"></div>
-        </section>
-    </div>
-
-    <script type="module" src="js/modules/main.js"></script>
+  <script type="module">
+    async function checkReleases() {
+      const status = document.getElementById('status');
+      try {
+        const resp = await fetch('/api/releases');
+        if (!resp.ok) {
+          status.innerHTML = `<p style="color:red">Failed to check releases: ${resp.status}</p>`;
+          return;
+        }
+        const { current, previous, releaseList } = await resp.json();
+        if (current && previous) {
+          status.innerHTML = `
+            <p>Current release: <strong>${current}</strong></p>
+            <p>Previous release: <strong>${previous}</strong></p>
+            <p style="color:green">Folders are ready for comparison.</p>
+          `;
+        } else {
+          status.innerHTML = `
+            <p style="color:red">Could not find at least two release folders.</p>
+            <p>Please download the UMLS Metathesaurus Full Subset for the two latest releases and copy the complete contents after unzipping into the <code>releases</code> folder.</p>
+          `;
+        }
+      } catch (err) {
+        status.innerHTML = `<p style="color:red">Error checking releases: ${err.message}</p>`;
+      }
+    }
+    checkReleases();
+  </script>
 </body>
-
 </html>
