@@ -12,9 +12,10 @@ const releasesDir = process.env.RELEASES_DIR ||
 // Serve static files from repo root
 app.use(express.static(path.join(__dirname)));
 
-// Detect available releases and return the two most recent
+async function detectReleases() {
 app.get('/api/releases', async (req, res) => {
   let releaseList = [];
+
   let current = null;
   let previous = null;
 
@@ -41,11 +42,50 @@ app.get('/api/releases', async (req, res) => {
     releaseList.sort().reverse();
     current = releaseList[0] || null;
     previous = releaseList[1] || null;
-  } catch (err) {
+  } catch {
     // ignore if releasesDir doesn't exist
   }
 
-  res.json({ current, previous, releaseList });
+  return { current, previous, releaseList };
+}
+
+// Detect available releases and return the two most recent
+app.get('/api/releases', async (req, res) => {
+  const result = await detectReleases();
+  res.json(result);
+});
+
+function safeStatSize(file) {
+  return fsp.stat(file).then(s => s.size).catch(() => null);
+}
+
+// Compare file sizes in META between current and previous release
+app.get('/api/file-size-diff', async (req, res) => {
+  const { current, previous } = await detectReleases();
+  if (!current || !previous) {
+    return res.status(400).json({ error: 'Need at least two releases' });
+  }
+
+  const currentMeta = path.join(releasesDir, current, 'META');
+  const previousMeta = path.join(releasesDir, previous, 'META');
+  const result = [];
+
+  try {
+    const currFiles = await fsp.readdir(currentMeta);
+    const prevFiles = await fsp.readdir(previousMeta);
+    const all = Array.from(new Set([...currFiles, ...prevFiles]));
+
+    for (const name of all) {
+      const curSize = await safeStatSize(path.join(currentMeta, name));
+      const prevSize = await safeStatSize(path.join(previousMeta, name));
+      if (curSize === null && prevSize === null) continue;
+      result.push({ name, current: curSize, previous: prevSize });
+    }
+  } catch (err) {
+    return res.status(500).json({ error: err.message });
+  }
+
+  res.json({ current, previous, files: result });
 });
 
 app.listen(PORT, () => {
