@@ -114,7 +114,15 @@
     async function loadSABSummary() {
       try {
         const resp = await fetch('/api/sab-diff');
-        if (!resp.ok) return;
+        if (!resp.ok) {
+          let msg = 'Report not available. Run preprocessing.';
+          try {
+            const data = await resp.json();
+            if (data.error) msg = data.error;
+          } catch {}
+          document.getElementById('sab-summary').innerHTML = `<p style="color:red">${msg}</p>`;
+          return;
+        }
         const data = await resp.json();
         const { summary, current, previous } = data;
         if (!summary.length) return;
@@ -127,7 +135,9 @@
         }
         html += '</tbody></table>';
         document.getElementById('sab-summary').innerHTML = html;
-      } catch {}
+      } catch (err) {
+        document.getElementById('sab-summary').innerHTML = `<p style="color:red">Error loading report: ${err.message}</p>`;
+      }
     }
     loadSABSummary();
 
