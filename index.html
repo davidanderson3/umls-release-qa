@@ -7,7 +7,11 @@
 </head>
 <body>
   <div class="container">
-    <h1>UMLS Release QA</h1>
+    <h1 id="page-title">UMLS Release QA</h1>
+    <div class="admin-controls">
+      <button id="admin-toggle">Admin Mode</button>
+      <button id="save-texts" style="display:none">Save</button>
+    </div>
     <div id="status"></div>
     <div id="sab-summary"></div>
     <button id="run-preprocess">Run Preprocessing</button>
@@ -17,6 +21,69 @@
   </div>
 
   <script type="module">
+    let texts = {};
+
+    async function loadTexts() {
+      try {
+        const resp = await fetch('/api/texts');
+        if (resp.ok) {
+          texts = await resp.json();
+        }
+      } catch {}
+      texts = texts || {};
+      document.title = texts.title || 'UMLS Release QA';
+      document.getElementById('page-title').textContent = texts.header || 'UMLS Release QA';
+      document.getElementById('run-preprocess').textContent = texts.runPreprocessButton || 'Run Preprocessing';
+      document.getElementById('compare-lines').textContent = texts.compareLinesButton || 'Compare Line Counts';
+    }
+
+    loadTexts();
+
+    const adminToggle = document.getElementById('admin-toggle');
+    const saveBtn = document.getElementById('save-texts');
+    function setEditable(on) {
+      document.getElementById('page-title').contentEditable = on;
+      document.getElementById('run-preprocess').contentEditable = on;
+      document.getElementById('compare-lines').contentEditable = on;
+    }
+    adminToggle.addEventListener('click', () => {
+      const editing = adminToggle.dataset.editing === 'true';
+      if (editing) {
+        adminToggle.dataset.editing = 'false';
+        adminToggle.textContent = 'Admin Mode';
+        saveBtn.style.display = 'none';
+        setEditable(false);
+      } else {
+        adminToggle.dataset.editing = 'true';
+        adminToggle.textContent = 'Exit Admin';
+        saveBtn.style.display = '';
+        setEditable(true);
+      }
+    });
+
+    saveBtn.addEventListener('click', async () => {
+      const payload = {
+        title: document.title,
+        header: document.getElementById('page-title').textContent,
+        runPreprocessButton: document.getElementById('run-preprocess').textContent,
+        compareLinesButton: document.getElementById('compare-lines').textContent
+      };
+      try {
+        const resp = await fetch('/api/texts', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        if (resp.ok) {
+          alert('Saved');
+        } else {
+          alert('Save failed');
+        }
+      } catch {
+        alert('Save failed');
+      }
+    });
+
     async function checkReleases() {
       const status = document.getElementById('status');
       try {
