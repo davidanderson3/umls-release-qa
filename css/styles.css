@@ -1,0 +1,23 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+.file-inputs label {
+  display: block;
+  margin-bottom: 10px;
+}
+#module-list {
+  list-style: none;
+  padding: 0;
+}
+#module-list li {
+  margin-bottom: 5px;
+}
+#summary p {
+  margin: 4px 0;
+}
