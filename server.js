@@ -79,11 +79,24 @@ async function listFiles(dir, base = dir) {
   return result;
 }
 
+// Allow both POST and GET so users don't accidentally receive a 404 when
+// they visit the endpoint directly. GET simply informs them how to run the
+// preprocessing while POST actually performs it.
+app.get('/api/preprocess', (req, res) => {
+  res.status(405).json({ error: 'Use POST to run preprocessing.' });
+});
+
 app.post('/api/preprocess', (req, res) => {
   const script = path.join(__dirname, 'preprocess.js');
   exec(`node ${script}`, { cwd: __dirname }, (error, stdout, stderr) => {
     if (error) {
-      res.status(500).json({ error: error.message });
+      // Detect the common "not enough releases" message and return a 400
+      const msg = (stderr || error.message || '').trim();
+      if (msg.includes('Need at least two releases')) {
+        res.status(400).json({ error: msg });
+      } else {
+        res.status(500).json({ error: msg });
+      }
       return;
     }
     res.json({ message: 'Preprocessing complete.' });
