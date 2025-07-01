@@ -13,7 +13,9 @@ const releasesDir = process.env.RELEASES_DIR ||
 app.use(express.static(path.join(__dirname)));
 
 async function detectReleases() {
-  const releaseList = [];
+app.get('/api/releases', async (req, res) => {
+  let releaseList = [];
+
   let current = null;
   let previous = null;
 
