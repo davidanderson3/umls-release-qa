@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const readline = require('readline');
-const { exec } = require('child_process');
+const { exec, spawn } = require('child_process');
 const fsp = fs.promises;
 const reportsDir = path.join(__dirname, 'reports');
 const textsFile = path.join(__dirname, 'texts.json');
@@ -140,6 +140,34 @@ app.post('/api/preprocess', (req, res) => {
   });
 });
 
+app.get('/api/preprocess-stream', (req, res) => {
+  res.setHeader('Content-Type', 'text/event-stream');
+  res.setHeader('Cache-Control', 'no-cache');
+  res.setHeader('Connection', 'keep-alive');
+
+  const script = path.join(__dirname, 'preprocess.js');
+  const child = spawn('node', [script], { cwd: __dirname });
+
+  child.stdout.on('data', chunk => {
+    const data = chunk.toString().trim();
+    if (data) {
+      res.write(`data: ${data}\n\n`);
+    }
+  });
+
+  child.stderr.on('data', chunk => {
+    const data = chunk.toString().trim();
+    if (data) {
+      res.write(`data: ERROR: ${data}\n\n`);
+    }
+  });
+
+  child.on('close', code => {
+    res.write(`event: done\ndata: ${code}\n\n`);
+    res.end();
+  });
+});
+
 app.get('/api/line-count-diff', async (req, res) => {
   const { current, previous } = await detectReleases();
   if (!current || !previous) {
@@ -176,6 +204,24 @@ app.get('/api/line-count-diff', async (req, res) => {
   }
 
   res.json({ current, previous, files: result });
+});
+
+app.get('/api/sab-diff', async (req, res) => {
+  const { current, previous } = await detectReleases();
+  if (!current || !previous) {
+    res.status(400).json({ error: 'Need at least two releases' });
+    return;
+  }
+
+  const precomputed = path.join(reportsDir, 'SAB_TTY_count_differences.json');
+  try {
+    const data = await fsp.readFile(precomputed, 'utf-8');
+    res.setHeader('Content-Type', 'application/json');
+    res.send(data);
+    return;
+  } catch {}
+
+  res.status(404).json({ error: 'Report not found. Run preprocessing.' });
 });
 
 app.listen(PORT, () => {

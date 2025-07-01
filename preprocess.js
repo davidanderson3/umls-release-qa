@@ -119,7 +119,7 @@ async function readMRCONSO(file) {
   return { rows, counts };
 }
 
-function buildDiffHTML(sab, tty, baseRows, prevRows) {
+function buildDiffData(sab, tty, baseRows, prevRows) {
   const base = baseRows.filter(r => r.SAB === sab && r.TTY === tty);
   const prev = prevRows.filter(r => r.SAB === sab && r.TTY === tty);
   if (!base.length && !prev.length) return null;
@@ -144,32 +144,7 @@ function buildDiffHTML(sab, tty, baseRows, prevRows) {
     }
   }
   if (!added.length && !dropped.length && !moved.length) return null;
-  let html = '';
-  if (added.length) {
-    html += '<h1>Added Atoms</h1>';
-    html += '<table><thead><tr><th>AUI</th><th>CUI</th><th>STR</th></tr></thead><tbody>';
-    for (const r of added) {
-      html += `<tr><td>${r.AUI}</td><td>${r.CUI}</td><td>${escapeHTML(r.STR)}</td></tr>`;
-    }
-    html += '</tbody></table>';
-  }
-  if (dropped.length) {
-    html += '<h1>Dropped Atoms</h1>';
-    html += '<table><thead><tr><th>AUI</th><th>CUI</th><th>STR</th></tr></thead><tbody>';
-    for (const r of dropped) {
-      html += `<tr><td>${r.AUI}</td><td>${r.CUI}</td><td>${escapeHTML(r.STR)}</td></tr>`;
-    }
-    html += '</tbody></table>';
-  }
-  if (moved.length) {
-    html += '<h1>Moved Atoms</h1>';
-    html += '<table><thead><tr><th>AUI</th><th>CUI (current)</th><th>CUI (previous)</th><th>STR</th></tr></thead><tbody>';
-    for (const m of moved) {
-      html += `<tr><td>${m.AUI}</td><td>${m.currentCUI}</td><td>${m.previousCUI}</td><td>${escapeHTML(m.STR)}</td></tr>`;
-    }
-    html += '</tbody></table>';
-  }
-  return html;
+  return { sab, tty, added, dropped, moved };
 }
 
 async function generateSABDiff(current, previous) {
@@ -190,35 +165,31 @@ async function generateSABDiff(current, previous) {
     const include = percent < 0 || percent > 5 || sab === 'SRC';
     let link = '';
     if (include) {
-      const diffHtml = buildDiffHTML(sab, tty, baseRows, prevRows);
-      if (diffHtml) {
-        const fileName = `${sab}_${tty}_differences.html`;
+      const diffData = buildDiffData(sab, tty, baseRows, prevRows);
+      if (diffData) {
+        const fileName = `${sab}_${tty}_differences.json`;
         const filePath = path.join(diffsDir, fileName);
-        await fsp.writeFile(filePath, diffHtml);
+        await fsp.writeFile(filePath, JSON.stringify(diffData, null, 2));
         link = `diffs/${fileName}`;
       }
       summary.push({ SAB: sab, TTY: tty, Previous: previousCount, Current: currentCount, Difference: difference, Percent: percent, link });
     }
   }
 
-  let html = '<table><thead><tr><th>SAB</th><th>TTY</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th><th></th></tr></thead><tbody>';
-  for (const row of summary) {
-    const style = row.Difference < 0 ? ' style="color:red"' : '';
-    const percentStr = isFinite(row.Percent) ? row.Percent.toFixed(2) : 'inf';
-    const linkHtml = row.link ? `<a href="${row.link}">details</a>` : '';
-    html += `<tr><td>${row.SAB}</td><td>${row.TTY}</td><td>${row.Previous}</td><td>${row.Current}</td><td${style}>${row.Difference}</td><td>${percentStr}</td><td>${linkHtml}</td></tr>`;
-  }
-  html += '</tbody></table>';
-  await fsp.writeFile(path.join(reportsDir, 'SAB_TTY_count_differences.html'), html);
+  const summaryPath = path.join(reportsDir, 'SAB_TTY_count_differences.json');
+  await fsp.writeFile(summaryPath, JSON.stringify({ current, previous, summary }, null, 2));
 }
 
 (async () => {
+  console.log('Detecting available releases...');
   const { current, previous } = await detectReleases();
   if (!current || !previous) {
     console.error('Need at least two releases in releases/');
     process.exit(1);
   }
+  console.log(`Processing line counts for ${current} vs ${previous}...`);
   await generateLineCountDiff(current, previous);
+  console.log('Generating SAB/TTY differences...');
   await generateSABDiff(current, previous);
   console.log('Reports generated in', reportsDir);
 })();
