@@ -1,5 +1,5 @@
 // js/main.js
-import tests from './tests/index.js';
+import tests from '../tests/index.js';
 
 // Element references
 const metaInput = document.getElementById('metaFolder');
@@ -40,16 +40,6 @@ const ui = {
 // Core runner
 async function runTests(selectedIdxs) {
     ui.clear();
-
-    // Ensure files/folder selected
-    if (!metaInput.files.length) {
-        alert('Please select a META folder first.');
-        return;
-    }
-    if (!baseInput.files[0] || !compareInput.files[0]) {
-        alert('Please select both MRCONSO files.');
-        return;
-    }
 
     const metaFiles = Array.from(metaInput.files);
     const baseFile = baseInput.files[0];
