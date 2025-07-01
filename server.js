@@ -3,6 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const readline = require('readline');
 const fsp = fs.promises;
+const reportsDir = path.join(__dirname, 'reports');
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -83,6 +84,14 @@ app.get('/api/line-count-diff', async (req, res) => {
     res.status(400).json({ error: 'Need at least two releases' });
     return;
   }
+
+  const precomputed = path.join(reportsDir, 'line-count-diff.json');
+  try {
+    const data = await fsp.readFile(precomputed, 'utf-8');
+    res.setHeader('Content-Type', 'application/json');
+    res.send(data);
+    return;
+  } catch {}
 
   const currentMeta = path.join(releasesDir, current, 'META');
   const previousMeta = path.join(releasesDir, previous, 'META');
