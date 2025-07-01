@@ -9,6 +9,8 @@
   <div class="container">
     <h1>UMLS Release QA</h1>
     <div id="status"></div>
+    <button id="compare-sizes">Compare File Sizes</button>
+    <div id="size-results"></div>
   </div>
 
   <script type="module">
@@ -38,6 +40,39 @@
       }
     }
     checkReleases();
+
+    document.getElementById('compare-sizes').addEventListener('click', async () => {
+      const results = document.getElementById('size-results');
+      results.innerHTML = '<p>Comparing...</p>';
+      try {
+        const resp = await fetch('/api/file-size-diff');
+        if (!resp.ok) {
+          results.innerHTML = `<p style="color:red">Failed: ${resp.status}</p>`;
+          return;
+        }
+        const data = await resp.json();
+        const { current, previous, files } = data;
+        if (!files.length) {
+          results.innerHTML = '<p>No files found.</p>';
+          return;
+        }
+        let html = `<h3>File Size Comparison (${current} vs ${previous})</h3>`;
+        html += '<table><thead><tr><th>File</th><th>Previous (bytes)</th><th>Current (bytes)</th><th>Change</th><th>% Change</th></tr></thead><tbody>';
+        for (const f of files) {
+          const prev = f.previous ?? 0;
+          const cur = f.current ?? 0;
+          const diff = cur - prev;
+          const percent = prev ? (diff / prev) * 100 : 0;
+          const highlight = percent > 5 ? ' style="background:#fffa90"' : '';
+          const decrease = diff < 0 ? ' style="color:red"' : '';
+          html += `<tr${highlight}><td>${f.name}</td><td>${prev}</td><td>${cur}</td><td${decrease}>${diff}</td><td${decrease}>${percent.toFixed(2)}%</td></tr>`;
+        }
+        html += '</tbody></table>';
+        results.innerHTML = html;
+      } catch (err) {
+        results.innerHTML = `<p style="color:red">Error: ${err.message}</p>`;
+      }
+    });
   </script>
 </body>
 </html>
