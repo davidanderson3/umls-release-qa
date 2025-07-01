@@ -5,11 +5,19 @@ const readline = require('readline');
 const { exec } = require('child_process');
 const fsp = fs.promises;
 const reportsDir = path.join(__dirname, 'reports');
+const textsFile = path.join(__dirname, 'texts.json');
+const defaultTexts = {
+  title: 'UMLS Release QA',
+  header: 'UMLS Release QA',
+  runPreprocessButton: 'Run Preprocessing',
+  compareLinesButton: 'Compare Line Counts'
+};
 
 const app = express();
 const PORT = process.env.PORT || 8080;
 const releasesDir = process.env.RELEASES_DIR || path.join(__dirname, 'releases');
 
+app.use(express.json());
 app.use(express.static(path.join(__dirname)));
 
 async function detectReleases() {
@@ -78,6 +86,35 @@ async function listFiles(dir, base = dir) {
   }
   return result;
 }
+
+async function loadTexts() {
+  try {
+    const data = await fsp.readFile(textsFile, 'utf-8');
+    return { ...defaultTexts, ...JSON.parse(data) };
+  } catch {
+    return { ...defaultTexts };
+  }
+}
+
+async function saveTexts(texts) {
+  const merged = { ...defaultTexts, ...texts };
+  await fsp.writeFile(textsFile, JSON.stringify(merged, null, 2));
+  return merged;
+}
+
+app.get('/api/texts', async (req, res) => {
+  const data = await loadTexts();
+  res.json(data);
+});
+
+app.post('/api/texts', async (req, res) => {
+  try {
+    const newTexts = await saveTexts(req.body || {});
+    res.json(newTexts);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
 
 // Allow both POST and GET so users don't accidentally receive a 404 when
 // they visit the endpoint directly. GET simply informs them how to run the
