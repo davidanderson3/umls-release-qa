@@ -8,17 +8,18 @@ export async function run({ ui }) {
       return;
     }
     const data = await resp.json();
-    const { currentExists, previousExists, releaseList } = data;
+    const { current, previous, releaseList } = data;
+
 
     ui.appendSummary(`
       <h3>Release Directory Check</h3>
       <p>Releases found: ${releaseList.join(', ') || 'none'}</p>
     `);
 
-    if (currentExists && previousExists) {
-      ui.appendSummary('<p style="color:green">✅ Both current and previous releases are present.</p>');
+    if (current && previous) {
+      ui.appendSummary(`<p style="color:green">✅ Current release: ${current}, Previous release: ${previous}</p>`);
     } else {
-      ui.appendSummary('<p style="color:red">❌ Missing releases. Ensure both "current" and "previous" directories exist in the releases folder.</p>');
+      ui.appendSummary('<p style="color:red">❌ Could not find at least two releases (with META folders) in the releases directory.</p>');
     }
   } catch (err) {
     ui.appendSummary(`<p style="color:red">Error checking releases: ${err.message}</p>`);

@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+const fsp = fs.promises;
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -8,22 +9,31 @@ const PORT = process.env.PORT || 8080;
 // Serve static files from repo root
 app.use(express.static(path.join(__dirname)));
 
-// Check releases folder for current and previous directories
-app.get('/api/releases', (req, res) => {
+// Detect available releases and return the two most recent
+app.get('/api/releases', async (req, res) => {
   const releasesDir = path.join(__dirname, 'releases');
-  let currentExists = false;
-  let previousExists = false;
   let releaseList = [];
+  let current = null;
+  let previous = null;
 
-  if (fs.existsSync(releasesDir)) {
-    releaseList = fs.readdirSync(releasesDir).filter((file) => {
-      return fs.statSync(path.join(releasesDir, file)).isDirectory();
-    });
-    currentExists = releaseList.includes('current');
-    previousExists = releaseList.includes('previous');
+  try {
+    await fsp.access(releasesDir);
+    const entries = await fsp.readdir(releasesDir);
+    for (const entry of entries) {
+      const full = path.join(releasesDir, entry);
+      const stat = await fsp.stat(full);
+      if (stat.isDirectory() && fs.existsSync(path.join(full, 'META'))) {
+        releaseList.push(entry);
+      }
+    }
+    releaseList.sort().reverse();
+    current = releaseList[0] || null;
+    previous = releaseList[1] || null;
+  } catch (err) {
+    // ignore if releasesDir doesn't exist
   }
 
-  res.json({ currentExists, previousExists, releaseList });
+  res.json({ current, previous, releaseList });
 });
 
 app.listen(PORT, () => {
