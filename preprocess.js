@@ -138,6 +138,32 @@ async function gatherRows(file, keys) {
   return rows;
 }
 
+// Gather rows for a single SAB|TTY combination. This avoids keeping data
+// for all keys in memory at once, which can lead to excessive usage on large
+// files. Only rows matching the target key are returned.
+async function gatherRowsForKey(file, key) {
+  const rows = [];
+  try {
+    const rl = readline.createInterface({ input: fs.createReadStream(file) });
+    for await (const line of rl) {
+      const parts = line.split('|');
+      if (parts.length < 18) continue;
+      const CUI = parts[0];
+      const AUI = parts[7];
+      const SAB = parts[11] || 'MISSING';
+      const TTY = parts[12] || 'MISSING';
+      const STR = parts[14];
+      if (!AUI) continue;
+      if (`${SAB}|${TTY}` === key) {
+        rows.push({ SAB, TTY, CUI, AUI, STR });
+      }
+    }
+  } catch {
+    return [];
+  }
+  return rows;
+}
+
 function buildDiffData(sab, tty, baseRows, prevRows) {
   const base = baseRows;
   const prev = prevRows;
@@ -188,14 +214,14 @@ async function generateSABDiff(current, previous) {
     summary.push(entry);
   }
 
-  // gather rows only for the SAB/TTY combinations that need detailed diffs
+  // Gather rows for each SAB/TTY individually to keep memory usage low.
   if (detailKeys.size) {
-    const baseRows = await gatherRows(currentFile, detailKeys);
-    const prevRows = await gatherRows(previousFile, detailKeys);
     for (const entry of summary) {
       const key = `${entry.SAB}|${entry.TTY}`;
       if (!detailKeys.has(key)) continue;
-      const diffData = buildDiffData(entry.SAB, entry.TTY, baseRows.get(key) || [], prevRows.get(key) || []);
+      const baseRows = await gatherRowsForKey(currentFile, key);
+      const prevRows = await gatherRowsForKey(previousFile, key);
+      const diffData = buildDiffData(entry.SAB, entry.TTY, baseRows, prevRows);
       if (diffData) {
         const fileName = `${entry.SAB}_${entry.TTY}_differences.json`;
         const filePath = path.join(diffsDir, fileName);
