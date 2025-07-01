@@ -7,16 +7,16 @@
 </head>
 <body>
   <div class="container">
-    <h1 id="page-title">UMLS Release QA</h1>
+    <h1 id="page-title" class="editable">UMLS Release QA</h1>
     <div class="admin-controls">
-      <button id="admin-toggle">Admin Mode</button>
-      <button id="save-texts" style="display:none">Save</button>
+      <button id="admin-toggle" class="editable">Admin Mode</button>
+      <button id="save-texts" class="editable" style="display:none">Save</button>
     </div>
     <div id="status"></div>
     <div id="sab-summary"></div>
-    <button id="run-preprocess">Run Preprocessing</button>
+    <button id="run-preprocess" class="editable">Run Preprocessing</button>
     <div id="preprocess-results"></div>
-    <button id="compare-lines">Compare Line Counts</button>
+    <button id="compare-lines" class="editable">Compare Line Counts</button>
     <div id="line-results"></div>
   </div>
 
@@ -35,6 +35,8 @@
       document.getElementById('page-title').textContent = texts.header || 'UMLS Release QA';
       document.getElementById('run-preprocess').textContent = texts.runPreprocessButton || 'Run Preprocessing';
       document.getElementById('compare-lines').textContent = texts.compareLinesButton || 'Compare Line Counts';
+      adminToggle.textContent = texts.adminToggleOff || 'Admin Mode';
+      saveBtn.textContent = texts.saveButton || 'Save';
     }
 
     loadTexts();
@@ -42,31 +44,42 @@
     const adminToggle = document.getElementById('admin-toggle');
     const saveBtn = document.getElementById('save-texts');
     function setEditable(on) {
-      document.getElementById('page-title').contentEditable = on;
-      document.getElementById('run-preprocess').contentEditable = on;
-      document.getElementById('compare-lines').contentEditable = on;
+      document.querySelectorAll('.editable').forEach(el => {
+        el.contentEditable = on;
+      });
     }
     adminToggle.addEventListener('click', () => {
       const editing = adminToggle.dataset.editing === 'true';
       if (editing) {
+        texts.adminToggleOn = adminToggle.textContent;
         adminToggle.dataset.editing = 'false';
-        adminToggle.textContent = 'Admin Mode';
+        adminToggle.textContent = texts.adminToggleOff || 'Admin Mode';
         saveBtn.style.display = 'none';
         setEditable(false);
       } else {
+        texts.adminToggleOff = adminToggle.textContent;
         adminToggle.dataset.editing = 'true';
-        adminToggle.textContent = 'Exit Admin';
+        adminToggle.textContent = texts.adminToggleOn || 'Exit Admin';
         saveBtn.style.display = '';
         setEditable(true);
       }
     });
 
     saveBtn.addEventListener('click', async () => {
+      if (adminToggle.dataset.editing === 'true') {
+        texts.adminToggleOn = adminToggle.textContent;
+      } else {
+        texts.adminToggleOff = adminToggle.textContent;
+      }
+      texts.saveButton = saveBtn.textContent;
       const payload = {
         title: document.title,
         header: document.getElementById('page-title').textContent,
         runPreprocessButton: document.getElementById('run-preprocess').textContent,
-        compareLinesButton: document.getElementById('compare-lines').textContent
+        compareLinesButton: document.getElementById('compare-lines').textContent,
+        adminToggleOn: texts.adminToggleOn,
+        adminToggleOff: texts.adminToggleOff,
+        saveButton: texts.saveButton
       };
       try {
         const resp = await fetch('/api/texts', {

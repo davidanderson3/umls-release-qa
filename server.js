@@ -10,7 +10,10 @@ const defaultTexts = {
   title: 'UMLS Release QA',
   header: 'UMLS Release QA',
   runPreprocessButton: 'Run Preprocessing',
-  compareLinesButton: 'Compare Line Counts'
+  compareLinesButton: 'Compare Line Counts',
+  adminToggleOff: 'Admin Mode',
+  adminToggleOn: 'Exit Admin',
+  saveButton: 'Save'
 };
 
 const app = express();
