@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const readline = require('readline');
+const { exec } = require('child_process');
 const fsp = fs.promises;
 const reportsDir = path.join(__dirname, 'reports');
 
@@ -77,6 +78,17 @@ async function listFiles(dir, base = dir) {
   }
   return result;
 }
+
+app.post('/api/preprocess', (req, res) => {
+  const script = path.join(__dirname, 'preprocess.js');
+  exec(`node ${script}`, { cwd: __dirname }, (error, stdout, stderr) => {
+    if (error) {
+      res.status(500).json({ error: error.message });
+      return;
+    }
+    res.json({ message: 'Preprocessing complete.' });
+  });
+});
 
 app.get('/api/line-count-diff', async (req, res) => {
   const { current, previous } = await detectReleases();
