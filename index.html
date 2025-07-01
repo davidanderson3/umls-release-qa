@@ -9,6 +9,7 @@
   <div class="container">
     <h1>UMLS Release QA</h1>
     <div id="status"></div>
+    <div id="sab-summary"></div>
     <button id="compare-lines">Compare Line Counts</button>
     <div id="line-results"></div>
   </div>
@@ -40,6 +41,17 @@
       }
     }
     checkReleases();
+
+    async function loadSABSummary() {
+      try {
+        const resp = await fetch('reports/SAB_TTY_count_differences.html');
+        if (resp.ok) {
+          const html = await resp.text();
+          document.getElementById('sab-summary').innerHTML = html;
+        }
+      } catch {}
+    }
+    loadSABSummary();
 
     document.getElementById('compare-lines').addEventListener('click', async () => {
       const results = document.getElementById('line-results');
