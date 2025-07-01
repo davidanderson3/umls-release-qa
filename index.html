@@ -46,30 +46,39 @@
 
     async function loadSABSummary() {
       try {
-        const resp = await fetch('reports/SAB_TTY_count_differences.html');
-        if (resp.ok) {
-          const html = await resp.text();
-          document.getElementById('sab-summary').innerHTML = html;
+        const resp = await fetch('/api/sab-diff');
+        if (!resp.ok) return;
+        const data = await resp.json();
+        const { summary, current, previous } = data;
+        if (!summary.length) return;
+        let html = `<h3>SAB/TTY Differences (${current} vs ${previous})</h3>`;
+        html += '<table><thead><tr><th>SAB</th><th>TTY</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th></tr></thead><tbody>';
+        for (const row of summary) {
+          const style = row.Difference < 0 ? ' style="color:red"' : '';
+          const pct = isFinite(row.Percent) ? row.Percent.toFixed(2) : 'inf';
+          html += `<tr><td>${row.SAB}</td><td>${row.TTY}</td><td>${row.Previous}</td><td>${row.Current}</td><td${style}>${row.Difference}</td><td>${pct}</td></tr>`;
         }
+        html += '</tbody></table>';
+        document.getElementById('sab-summary').innerHTML = html;
       } catch {}
     }
     loadSABSummary();
 
-    document.getElementById('run-preprocess').addEventListener('click', async () => {
+    document.getElementById('run-preprocess').addEventListener('click', () => {
       const output = document.getElementById('preprocess-results');
       output.innerHTML = '<p>Running preprocessing...</p>';
-      try {
-        const resp = await fetch('/api/preprocess', { method: 'POST' });
-        if (!resp.ok) {
-          output.innerHTML = `<p style="color:red">Failed: ${resp.status}</p>`;
-          return;
-        }
-        const data = await resp.json();
-        output.innerHTML = `<p>${data.message}</p>`;
+      const es = new EventSource('/api/preprocess-stream');
+      es.onmessage = (e) => {
+        output.insertAdjacentHTML('beforeend', `<pre>${e.data}</pre>`);
+      };
+      es.addEventListener('done', () => {
+        es.close();
         loadSABSummary();
-      } catch (err) {
-        output.innerHTML = `<p style="color:red">Error: ${err.message}</p>`;
-      }
+      });
+      es.onerror = () => {
+        output.insertAdjacentHTML('beforeend', '<p style="color:red">Error running preprocessing.</p>');
+        es.close();
+      };
     });
 
     document.getElementById('compare-lines').addEventListener('click', async () => {
