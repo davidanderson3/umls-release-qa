@@ -10,6 +10,8 @@
     <h1>UMLS Release QA</h1>
     <div id="status"></div>
     <div id="sab-summary"></div>
+    <button id="run-preprocess">Run Preprocessing</button>
+    <div id="preprocess-results"></div>
     <button id="compare-lines">Compare Line Counts</button>
     <div id="line-results"></div>
   </div>
@@ -52,6 +54,23 @@
       } catch {}
     }
     loadSABSummary();
+
+    document.getElementById('run-preprocess').addEventListener('click', async () => {
+      const output = document.getElementById('preprocess-results');
+      output.innerHTML = '<p>Running preprocessing...</p>';
+      try {
+        const resp = await fetch('/api/preprocess', { method: 'POST' });
+        if (!resp.ok) {
+          output.innerHTML = `<p style="color:red">Failed: ${resp.status}</p>`;
+          return;
+        }
+        const data = await resp.json();
+        output.innerHTML = `<p>${data.message}</p>`;
+        loadSABSummary();
+      } catch (err) {
+        output.innerHTML = `<p style="color:red">Error: ${err.message}</p>`;
+      }
+    });
 
     document.getElementById('compare-lines').addEventListener('click', async () => {
       const results = document.getElementById('line-results');
