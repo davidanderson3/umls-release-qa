@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+const readline = require('readline');
 const fsp = fs.promises;
 
 const app = express();
@@ -48,7 +49,35 @@ function safeStatSize(file) {
   return fsp.stat(file).then(s => s.size).catch(() => null);
 }
 
-app.get('/api/file-size-diff', async (req, res) => {
+async function safeLineCount(file) {
+  try {
+    let count = 0;
+    const rl = readline.createInterface({ input: fs.createReadStream(file) });
+    for await (const _ of rl) {
+      count++;
+    }
+    return count;
+  } catch {
+    return null;
+  }
+}
+
+async function listFiles(dir, base = dir) {
+  let result = [];
+  const entries = await fsp.readdir(dir, { withFileTypes: true });
+  for (const entry of entries) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      const sub = await listFiles(full, base);
+      result = result.concat(sub.map(s => path.join(entry.name, s)));
+    } else {
+      result.push(path.relative(base, full));
+    }
+  }
+  return result;
+}
+
+app.get('/api/line-count-diff', async (req, res) => {
   const { current, previous } = await detectReleases();
   if (!current || !previous) {
     res.status(400).json({ error: 'Need at least two releases' });
@@ -60,15 +89,15 @@ app.get('/api/file-size-diff', async (req, res) => {
   const result = [];
 
   try {
-    const currFiles = await fsp.readdir(currentMeta);
-    const prevFiles = await fsp.readdir(previousMeta);
+    const currFiles = await listFiles(currentMeta).catch(() => []);
+    const prevFiles = await listFiles(previousMeta).catch(() => []);
     const allFiles = Array.from(new Set([...currFiles, ...prevFiles]));
 
     for (const name of allFiles) {
-      const curSize = await safeStatSize(path.join(currentMeta, name));
-      const prevSize = await safeStatSize(path.join(previousMeta, name));
-      if (curSize === null && prevSize === null) continue;
-      result.push({ name, current: curSize, previous: prevSize });
+      const curCount = await safeLineCount(path.join(currentMeta, name));
+      const prevCount = await safeLineCount(path.join(previousMeta, name));
+      if (curCount === null && prevCount === null) continue;
+      result.push({ name, current: curCount, previous: prevCount });
     }
   } catch (err) {
     res.status(500).json({ error: err.message });
