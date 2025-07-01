@@ -95,9 +95,27 @@ function escapeHTML(str) {
   return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
-async function readMRCONSO(file) {
-  const rows = [];
+async function readCounts(file) {
   const counts = new Map();
+  try {
+    const rl = readline.createInterface({ input: fs.createReadStream(file) });
+    for await (const line of rl) {
+      const parts = line.split('|');
+      if (parts.length < 13) continue;
+      const SAB = parts[11] || 'MISSING';
+      const TTY = parts[12] || 'MISSING';
+      const key = `${SAB}|${TTY}`;
+      counts.set(key, (counts.get(key) || 0) + 1);
+    }
+  } catch {
+    return new Map();
+  }
+  return counts;
+}
+
+async function gatherRows(file, keys) {
+  const rows = new Map();
+  for (const key of keys) rows.set(key, []);
   try {
     const rl = readline.createInterface({ input: fs.createReadStream(file) });
     for await (const line of rl) {
@@ -110,18 +128,19 @@ async function readMRCONSO(file) {
       const STR = parts[14];
       if (!AUI) continue;
       const key = `${SAB}|${TTY}`;
-      counts.set(key, (counts.get(key) || 0) + 1);
-      rows.push({ SAB, TTY, CUI, AUI, STR });
+      if (rows.has(key)) {
+        rows.get(key).push({ SAB, TTY, CUI, AUI, STR });
+      }
     }
   } catch {
-    return { rows: [], counts: new Map() };
+    return new Map();
   }
-  return { rows, counts };
+  return rows;
 }
 
 function buildDiffData(sab, tty, baseRows, prevRows) {
-  const base = baseRows.filter(r => r.SAB === sab && r.TTY === tty);
-  const prev = prevRows.filter(r => r.SAB === sab && r.TTY === tty);
+  const base = baseRows;
+  const prev = prevRows;
   if (!base.length && !prev.length) return null;
   const baseMap = new Map(base.map(r => [r.AUI, r]));
   const prevMap = new Map(prev.map(r => [r.AUI, r]));
@@ -150,12 +169,13 @@ function buildDiffData(sab, tty, baseRows, prevRows) {
 async function generateSABDiff(current, previous) {
   const currentFile = path.join(releasesDir, current, 'META', 'MRCONSO.RRF');
   const previousFile = path.join(releasesDir, previous, 'META', 'MRCONSO.RRF');
-  const { rows: baseRows, counts: baseCounts } = await readMRCONSO(currentFile);
-  const { rows: prevRows, counts: prevCounts } = await readMRCONSO(previousFile);
+  const baseCounts = await readCounts(currentFile);
+  const prevCounts = await readCounts(previousFile);
 
   await fsp.mkdir(diffsDir, { recursive: true });
   const summary = [];
   const allKeys = new Set([...baseCounts.keys(), ...prevCounts.keys()]);
+  const detailKeys = new Set();
   for (const key of allKeys) {
     const [sab, tty] = key.split('|');
     const currentCount = baseCounts.get(key) || 0;
@@ -163,16 +183,25 @@ async function generateSABDiff(current, previous) {
     const difference = currentCount - previousCount;
     const percent = previousCount === 0 ? Infinity : (difference / previousCount * 100);
     const include = percent < 0 || percent > 5 || sab === 'SRC';
-    let link = '';
-    if (include) {
-      const diffData = buildDiffData(sab, tty, baseRows, prevRows);
+    const entry = { SAB: sab, TTY: tty, Previous: previousCount, Current: currentCount, Difference: difference, Percent: percent, link: '' };
+    if (include) detailKeys.add(key);
+    summary.push(entry);
+  }
+
+  // gather rows only for the SAB/TTY combinations that need detailed diffs
+  if (detailKeys.size) {
+    const baseRows = await gatherRows(currentFile, detailKeys);
+    const prevRows = await gatherRows(previousFile, detailKeys);
+    for (const entry of summary) {
+      const key = `${entry.SAB}|${entry.TTY}`;
+      if (!detailKeys.has(key)) continue;
+      const diffData = buildDiffData(entry.SAB, entry.TTY, baseRows.get(key) || [], prevRows.get(key) || []);
       if (diffData) {
-        const fileName = `${sab}_${tty}_differences.json`;
+        const fileName = `${entry.SAB}_${entry.TTY}_differences.json`;
         const filePath = path.join(diffsDir, fileName);
         await fsp.writeFile(filePath, JSON.stringify(diffData, null, 2));
-        link = `diffs/${fileName}`;
+        entry.link = `diffs/${fileName}`;
       }
-      summary.push({ SAB: sab, TTY: tty, Previous: previousCount, Current: currentCount, Difference: difference, Percent: percent, link });
     }
   }
 
