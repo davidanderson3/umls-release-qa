@@ -22,7 +22,8 @@
 
   <script type="module">
     let texts = {};
-    let lineInterval = null;
+    let reportInterval = null;
+    let sabLoaded = false;
 
     async function loadTexts() {
       try {
@@ -35,7 +36,6 @@
       document.title = texts.title || 'UMLS Release QA';
       document.getElementById('page-title').textContent = texts.header || 'UMLS Release QA';
       document.getElementById('run-preprocess').textContent = texts.runPreprocessButton || 'Run Reports';
-      document.getElementById('compare-lines').textContent = texts.compareLinesButton || 'Compare Line Counts';
       document.getElementById('note1').textContent = texts.note1 || '';
       document.getElementById('note2').textContent = texts.note2 || '';
       document.getElementById('note3').textContent = texts.note3 || '';
@@ -57,7 +57,6 @@
         title: document.title,
         header: document.getElementById('page-title').textContent,
         runPreprocessButton: document.getElementById('run-preprocess').textContent,
-        compareLinesButton: document.getElementById('compare-lines').textContent,
         note1: document.getElementById('note1').textContent,
         note2: document.getElementById('note2').textContent,
         note3: document.getElementById('note3').textContent
@@ -86,6 +85,7 @@
             <p>Previous release: <strong>${previous}</strong></p>
             <p style="color:green">Releases are ready for comparison.</p>
           `;
+          loadReports();
         } else {
           status.innerHTML = `
             <p style="color:red">Could not find at least two release folders.</p>
@@ -128,7 +128,7 @@
         document.getElementById('sab-summary').innerHTML = `<p style="color:red">Error loading report: ${err.message}</p>`;
       }
     }
-    // SAB/TTY table is generated during the reporting step; no need to display it automatically
+    // Automatically check for finished reports when running preprocessing
 
     document.getElementById('run-preprocess').addEventListener('click', () => {
       const output = document.getElementById('preprocess-results');
@@ -137,69 +137,65 @@
       es.onmessage = (e) => {
         output.insertAdjacentHTML('beforeend', `<pre>${e.data}</pre>`);
         if (e.data.includes('Generating MRCONSO report')) {
-          loadLineCounts();
-          if (!lineInterval) lineInterval = setInterval(loadLineCounts, 5000);
+          loadReports();
+          if (!reportInterval) reportInterval = setInterval(loadReports, 5000);
         }
       };
       es.addEventListener('done', () => {
         es.close();
-        clearInterval(lineInterval);
-        lineInterval = null;
+        clearInterval(reportInterval);
+        reportInterval = null;
         output.insertAdjacentHTML('beforeend', '<p>Reports done.</p>');
-        loadLineCounts();
+        loadReports();
       });
       es.onerror = () => {
         output.insertAdjacentHTML('beforeend', '<p style="color:red">Error running reports.</p>');
         es.close();
-        clearInterval(lineInterval);
-        lineInterval = null;
+        clearInterval(reportInterval);
+        reportInterval = null;
       };
     });
 
-    async function loadLineCounts() {
-      const results = document.getElementById('line-results');
-      results.innerHTML = '<p>Comparing...</p>';
+    async function fileExists(url) {
       try {
-        const resp = await fetch('/api/line-count-diff');
-        if (!resp.ok) {
-          results.innerHTML = `<p style="color:red">Failed: ${resp.status}</p>`;
-          return;
-        }
-        const data = await resp.json();
-        const { current, previous, files } = data;
-        if (!files.length) {
-          results.innerHTML = '<p>No files found.</p>';
-          return;
-        }
-        let html = `<h3>Line Count Comparison (${current} vs ${previous})</h3>`;
-        html += '<table><thead><tr><th>File</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th><th>Status</th><th>Report</th></tr></thead><tbody>';
-        const unchanged = [];
-        let pending = false;
-        for (const f of files) {
-          const prev = f.previous ?? 0;
-          const cur = f.current ?? 0;
-          const diff = cur - prev;
-          const pct = (f.percent == null || !isFinite(f.percent))
-            ? 'inf'
-            : f.percent.toFixed(2);
-          if (diff === 0) {
-            unchanged.push(f.name);
-            continue;
-          }
-          const decrease = diff < 0 ? ' style="color:red"' : '';
-          const linkCell = f.link ? `<a href="reports/${f.link}">view</a>` : '';
-          if (f.status !== 'ready') pending = true;
-          html += `<tr><td>${f.name}</td><td>${prev}</td><td>${cur}</td><td${decrease}>${diff}</td><td>${pct}</td><td>${f.status}</td><td>${linkCell}</td></tr>`;
-        }
-        html += '</tbody></table>';
-        if (unchanged.length) {
-          html += `<p>Unchanged files: ${unchanged.join(', ')}</p>`;
-        }
-        results.innerHTML = html;
-        if (pending && lineInterval) setTimeout(loadLineCounts, 5000);
-      } catch (err) {
-        results.innerHTML = `<p style="color:red">Error: ${err.message}</p>`;
+        const resp = await fetch(url, { method: 'HEAD' });
+        return resp.ok;
+      } catch {
+        return false;
       }
+    }
+
+    async function loadReports() {
+      const results = document.getElementById('line-results');
+      results.innerHTML = '<p>Checking reports...</p>';
+      const reports = [
+        ['line-count-diff.html', 'Line Count Comparison'],
+        ['MRCONSO_report.html', 'MRCONSO'],
+        ['MRSAB_report.html', 'MRSAB'],
+        ['MRREL_report.html', 'MRREL'],
+        ['MRSTY_report.html', 'MRSTY'],
+        ['MRDEF_report.html', 'MRDEF'],
+        ['MRSAT_report.html', 'MRSAT']
+      ];
+      const items = [];
+      let allReady = true;
+      for (const [file, label] of reports) {
+        if (await fileExists(`reports/${file}`)) {
+          items.push(`<li><a href="reports/${file}">${label}</a></li>`);
+          if (file === 'MRCONSO_report.html' && !sabLoaded) {
+            loadSABSummary();
+            sabLoaded = true;
+          }
+        } else {
+          allReady = false;
+        }
+      }
+      if (items.length) {
+        results.innerHTML = `<h3>Reports</h3><ul>${items.join('')}</ul>`;
+      } else {
+        results.innerHTML = '<p>No reports available.</p>';
+      }
+      return allReady;
     }
 
   </script>
