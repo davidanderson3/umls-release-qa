@@ -5,6 +5,7 @@ const readline = require('readline');
 const { exec, spawn } = require('child_process');
 const fsp = fs.promises;
 const reportsDir = path.join(__dirname, 'reports');
+const configFile = path.join(reportsDir, 'config.json');
 const textsFile = path.join(__dirname, 'texts.json');
 const defaultTexts = {
   title: 'UMLS Release QA',
@@ -124,7 +125,19 @@ app.get('/api/preprocess', (req, res) => {
   res.status(405).json({ error: 'Use POST to run preprocessing.' });
 });
 
-app.post('/api/preprocess', (req, res) => {
+app.post('/api/preprocess', async (req, res) => {
+  const { current, previous } = await detectReleases();
+  if (!current || !previous) {
+    res.status(400).json({ error: 'Need at least two releases' });
+    return;
+  }
+  try {
+    const cfg = JSON.parse(await fsp.readFile(configFile, 'utf-8'));
+    if (cfg.current === current && cfg.previous === previous) {
+      res.json({ message: 'Preprocessing already up to date.' });
+      return;
+    }
+  } catch {}
   const script = path.join(__dirname, 'preprocess.js');
   exec(`node --max-old-space-size=8192 ${script}`, { cwd: __dirname }, (error, stdout, stderr) => {
     if (error) {
@@ -141,10 +154,23 @@ app.post('/api/preprocess', (req, res) => {
   });
 });
 
-app.get('/api/preprocess-stream', (req, res) => {
+app.get('/api/preprocess-stream', async (req, res) => {
   res.setHeader('Content-Type', 'text/event-stream');
   res.setHeader('Cache-Control', 'no-cache');
   res.setHeader('Connection', 'keep-alive');
+
+  const { current, previous } = await detectReleases();
+  if (current && previous) {
+    try {
+      const cfg = JSON.parse(await fsp.readFile(configFile, 'utf-8'));
+      if (cfg.current === current && cfg.previous === previous) {
+        res.write(`data: Preprocessing already up to date.\n\n`);
+        res.write(`event: done\ndata: 0\n\n`);
+        res.end();
+        return;
+      }
+    } catch {}
+  }
 
   const script = path.join(__dirname, 'preprocess.js');
   const child = spawn('node', ['--max-old-space-size=8192', script], { cwd: __dirname });

@@ -6,6 +6,7 @@ const readline = require('readline');
 const releasesDir = path.join(__dirname, 'releases');
 const reportsDir = path.join(__dirname, 'reports');
 const diffsDir = path.join(reportsDir, 'diffs');
+const configFile = path.join(reportsDir, 'config.json');
 
 async function detectReleases() {
   let releaseList = [];
@@ -322,6 +323,8 @@ async function generateCountReport(current, previous, fileName, indices, tableNa
   await generateCountReport(current, previous, 'MRDEF.RRF', [4], 'MRDEF');
   await generateCountReport(current, previous, 'MRREL.RRF', [3], 'MRREL');
   await generateCountReport(current, previous, 'MRSAT.RRF', [9], 'MRSAT');
+  await fsp.mkdir(reportsDir, { recursive: true });
+  await fsp.writeFile(configFile, JSON.stringify({ current, previous }, null, 2));
   console.log('Reports generated in', reportsDir);
 })();
 
