@@ -133,7 +133,7 @@ app.post('/api/preprocess', async (req, res) => {
   try {
     const cfg = JSON.parse(await fsp.readFile(configFile, 'utf-8'));
     if (cfg.current === current && cfg.previous === previous) {
-      res.json({ message: 'Preprocessing already up to date.' });
+      res.json({ message: 'Preprocessing complete.' });
       return;
     }
   } catch (err) {
@@ -165,7 +165,6 @@ app.get('/api/preprocess-stream', async (req, res) => {
     try {
       const cfg = JSON.parse(await fsp.readFile(configFile, 'utf-8'));
       if (cfg.current === current && cfg.previous === previous) {
-        res.write(`data: Preprocessing already up to date.\n\n`);
         res.write(`event: done\ndata: 0\n\n`);
         res.end();
         return;
@@ -174,7 +173,6 @@ app.get('/api/preprocess-stream', async (req, res) => {
       try {
         const alt = JSON.parse(await fsp.readFile(path.join(reportsDir, 'line-count-diff.json'), 'utf-8'));
         if (alt.current === current && alt.previous === previous) {
-          res.write(`data: Preprocessing already up to date.\n\n`);
           res.write(`event: done\ndata: 0\n\n`);
           res.end();
           return;

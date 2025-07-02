@@ -48,3 +48,11 @@ tbody tr:hover {
   border: 1px dashed #888;
   padding: 4px;
 }
+
+#status p,
+#sab-summary p,
+#preprocess-results p,
+#preprocess-results pre,
+#line-results p {
+  margin: 2px 0;
+}

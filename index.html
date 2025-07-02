@@ -9,7 +9,6 @@
   <div class="container">
     <h1 id="page-title" class="editable">UMLS Release QA</h1>
     <div id="status"></div>
-    <p class="editable note"></p>
     <div id="sab-summary"></div>
     <p class="editable note"></p>
     <button id="run-preprocess" class="editable">Run Reports</button>
@@ -78,7 +77,7 @@
           status.innerHTML = `
             <p>Current release: <strong>${current}</strong></p>
             <p>Previous release: <strong>${previous}</strong></p>
-            <p style="color:green">Folders are ready for comparison.</p>
+            <p style="color:green">Releases are ready for comparison.</p>
           `;
         } else {
           status.innerHTML = `
