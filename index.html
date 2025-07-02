@@ -195,13 +195,12 @@
           html += `<p>Unchanged files: ${unchanged.join(', ')}</p>`;
         }
         results.innerHTML = html;
-        if (pending) setTimeout(loadLineCounts, 5000);
+        if (pending && lineInterval) setTimeout(loadLineCounts, 5000);
       } catch (err) {
         results.innerHTML = `<p style="color:red">Error: ${err.message}</p>`;
       }
     }
 
-    document.getElementById('compare-lines').addEventListener('click', loadLineCounts);
   </script>
 </body>
 </html>
