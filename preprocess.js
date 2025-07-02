@@ -8,6 +8,10 @@ const reportsDir = path.join(__dirname, 'reports');
 const diffsDir = path.join(reportsDir, 'diffs');
 const configFile = path.join(reportsDir, 'config.json');
 
+function wrapHtml(title, body) {
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../css/styles.css"></head><body>${body}</body></html>`;
+}
+
 async function detectReleases() {
   let releaseList = [];
   try {
@@ -101,7 +105,8 @@ async function generateLineCountDiff(current, previous) {
   if (unchanged.length) {
     html += `<p>Unchanged files: ${unchanged.join(', ')}</p>`;
   }
-  await fsp.writeFile(path.join(reportsDir, 'line-count-diff.html'), html);
+  const wrapped = wrapHtml('Line Count Comparison', html);
+  await fsp.writeFile(path.join(reportsDir, 'line-count-diff.html'), wrapped);
 }
 
 function escapeHTML(str) {
@@ -275,7 +280,8 @@ async function generateSABDiff(current, previous) {
     html += `<tr><td>${row.SAB}</td><td>${row.TTY}</td><td>${row.Previous}</td><td>${row.Current}</td><td${style}>${row.Difference}</td><td>${pct}</td><td>${linkCell}</td></tr>`;
   }
   html += '</tbody></table>';
-  await fsp.writeFile(path.join(reportsDir, 'MRCONSO_report.html'), html);
+  const wrapped = wrapHtml('MRCONSO Report', html);
+  await fsp.writeFile(path.join(reportsDir, 'MRCONSO_report.html'), wrapped);
 }
 
 async function generateCountReport(current, previous, fileName, indices, tableName) {
@@ -303,7 +309,8 @@ async function generateCountReport(current, previous, fileName, indices, tableNa
     html += `<tr><td>${escapeHTML(row.Key)}</td><td>${row.Previous}</td><td>${row.Current}</td><td${style}>${row.Difference}</td><td>${pctTxt}</td></tr>`;
   }
   html += '</tbody></table>';
-  await fsp.writeFile(path.join(reportsDir, `${tableName}_report.html`), html);
+  const wrapped = wrapHtml(`${tableName} Report`, html);
+  await fsp.writeFile(path.join(reportsDir, `${tableName}_report.html`), wrapped);
 }
 
 (async () => {
