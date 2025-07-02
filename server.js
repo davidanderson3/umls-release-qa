@@ -203,9 +203,22 @@ app.get('/api/line-count-diff', async (req, res) => {
 
   const precomputed = path.join(reportsDir, 'line-count-diff.json');
   try {
-    const data = await fsp.readFile(precomputed, 'utf-8');
-    res.setHeader('Content-Type', 'application/json');
-    res.send(data);
+    const data = JSON.parse(await fsp.readFile(precomputed, 'utf-8'));
+    for (const file of data.files || []) {
+      if (file.link) {
+        try {
+          await fsp.access(path.join(reportsDir, file.link));
+          file.status = 'ready';
+        } catch {
+          file.status = 'missing';
+        }
+      } else {
+        file.status = 'n/a';
+      }
+    }
+    await fsp.mkdir(reportsDir, { recursive: true });
+    await fsp.writeFile(configFile, JSON.stringify({ current: data.current, previous: data.previous }, null, 2));
+    res.json(data);
     return;
   } catch {}
 
@@ -232,27 +245,37 @@ app.get('/api/line-count-diff', async (req, res) => {
       else if (/^MRDEF\.RRF$/i.test(base)) link = 'MRDEF_report.html';
       else if (/^MRREL\.RRF$/i.test(base)) link = 'MRREL_report.html';
       else if (/^MRSAT\.RRF$/i.test(base)) link = 'MRSAT_report.html';
-      result.push({ name, current: curCount, previous: prevCount, diff, percent, link });
+      let status = 'n/a';
+      if (link) {
+        try {
+          await fsp.access(path.join(reportsDir, link));
+          status = 'ready';
+        } catch {
+          status = 'missing';
+        }
+      }
+      result.push({ name, current: curCount, previous: prevCount, diff, percent, link, status });
     }
 
     await fsp.mkdir(reportsDir, { recursive: true });
     await fsp.writeFile(precomputed, JSON.stringify({ current, previous, files: result }, null, 2));
 
     let html = `<h3>Line Count Comparison (${current} vs ${previous})</h3>`;
-    html += '<table><thead><tr><th>File</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th><th>Report</th></tr></thead><tbody>';
+    html += '<table><thead><tr><th>File</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th><th>Status</th><th>Report</th></tr></thead><tbody>';
     const unchanged = [];
     for (const f of result) {
       if (f.diff === 0) { unchanged.push(f.name); continue; }
       const style = f.diff < 0 ? ' style="color:red"' : '';
       const pct = isFinite(f.percent) ? f.percent.toFixed(2) : 'inf';
       const linkCell = f.link ? `<a href="${f.link}">view</a>` : '';
-      html += `<tr><td>${f.name}</td><td>${f.previous ?? 0}</td><td>${f.current ?? 0}</td><td${style}>${f.diff}</td><td>${pct}</td><td>${linkCell}</td></tr>`;
+      html += `<tr><td>${f.name}</td><td>${f.previous ?? 0}</td><td>${f.current ?? 0}</td><td${style}>${f.diff}</td><td>${pct}</td><td>${f.status}</td><td>${linkCell}</td></tr>`;
     }
     html += '</tbody></table>';
     if (unchanged.length) {
       html += `<p>Unchanged files: ${unchanged.join(', ')}</p>`;
     }
     await fsp.writeFile(path.join(reportsDir, 'line-count-diff.html'), html);
+    await fsp.writeFile(configFile, JSON.stringify({ current, previous }, null, 2));
   } catch (err) {
     res.status(500).json({ error: err.message });
     return;
