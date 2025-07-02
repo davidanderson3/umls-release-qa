@@ -313,8 +313,23 @@ async function generateCountReport(current, previous, fileName, indices, tableNa
     console.error('Need at least two releases in releases/');
     process.exit(1);
   }
-  console.log(`Processing line counts for ${current} vs ${previous}...`);
-  await generateLineCountDiff(current, previous);
+
+  let needCounts = true;
+  const diffFile = path.join(reportsDir, 'line-count-diff.json');
+  try {
+    await fsp.access(diffFile);
+    console.log('Existing line count diff found, skipping regeneration.');
+    needCounts = false;
+  } catch {}
+
+  if (needCounts) {
+    console.log(`Processing line counts for ${current} vs ${previous}...`);
+    try {
+      await generateLineCountDiff(current, previous);
+    } catch (err) {
+      console.error('Failed generating line counts:', err.message);
+    }
+  }
   console.log('Generating MRCONSO report...');
   await generateSABDiff(current, previous);
   console.log('MRCONSO report done.');
@@ -327,5 +342,8 @@ async function generateCountReport(current, previous, fileName, indices, tableNa
   await fsp.mkdir(reportsDir, { recursive: true });
   await fsp.writeFile(configFile, JSON.stringify({ current, previous }, null, 2));
   console.log('Reports generated in', reportsDir);
-})();
+})().catch(err => {
+  console.error(err);
+  process.exit(1);
+});
 

@@ -133,6 +133,7 @@
       es.addEventListener('done', () => {
         es.close();
         output.insertAdjacentHTML('beforeend', '<p>MRCONSO report done.</p>');
+        loadLineCounts();
       });
       es.onerror = () => {
         output.insertAdjacentHTML('beforeend', '<p style="color:red">Error running preprocessing.</p>');
@@ -140,7 +141,7 @@
       };
     });
 
-    document.getElementById('compare-lines').addEventListener('click', async () => {
+    async function loadLineCounts() {
       const results = document.getElementById('line-results');
       results.innerHTML = '<p>Comparing...</p>';
       try {
@@ -156,8 +157,9 @@
           return;
         }
         let html = `<h3>Line Count Comparison (${current} vs ${previous})</h3>`;
-        html += '<table><thead><tr><th>File</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th><th>Report</th></tr></thead><tbody>';
+        html += '<table><thead><tr><th>File</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th><th>Status</th><th>Report</th></tr></thead><tbody>';
         const unchanged = [];
+        let pending = false;
         for (const f of files) {
           const prev = f.previous ?? 0;
           const cur = f.current ?? 0;
@@ -171,17 +173,21 @@
           }
           const decrease = diff < 0 ? ' style="color:red"' : '';
           const linkCell = f.link ? `<a href="reports/${f.link}">view</a>` : '';
-          html += `<tr><td>${f.name}</td><td>${prev}</td><td>${cur}</td><td${decrease}>${diff}</td><td>${pct}</td><td>${linkCell}</td></tr>`;
+          if (f.status !== 'ready') pending = true;
+          html += `<tr><td>${f.name}</td><td>${prev}</td><td>${cur}</td><td${decrease}>${diff}</td><td>${pct}</td><td>${f.status}</td><td>${linkCell}</td></tr>`;
         }
         html += '</tbody></table>';
         if (unchanged.length) {
           html += `<p>Unchanged files: ${unchanged.join(', ')}</p>`;
         }
         results.innerHTML = html;
+        if (pending) setTimeout(loadLineCounts, 5000);
       } catch (err) {
         results.innerHTML = `<p style="color:red">Error: ${err.message}</p>`;
       }
-    });
+    }
+
+    document.getElementById('compare-lines').addEventListener('click', loadLineCounts);
   </script>
 </body>
 </html>
