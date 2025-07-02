@@ -11,8 +11,6 @@ const defaultTexts = {
   header: 'UMLS Release QA',
   runPreprocessButton: 'Run Preprocessing',
   compareLinesButton: 'Compare Line Counts',
-  adminToggleOff: 'Admin Mode',
-  adminToggleOn: 'Exit Admin',
   saveButton: 'Save'
 };
 
