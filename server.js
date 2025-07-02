@@ -136,7 +136,9 @@ app.post('/api/preprocess', async (req, res) => {
       res.json({ message: 'Preprocessing already up to date.' });
       return;
     }
-  } catch {}
+  } catch (err) {
+    console.error('Failed to load precomputed diff:', err.message);
+  }
   const script = path.join(__dirname, 'preprocess.js');
   exec(`node --max-old-space-size=8192 ${script}`, { cwd: __dirname }, (error, stdout, stderr) => {
     if (error) {
@@ -168,7 +170,17 @@ app.get('/api/preprocess-stream', async (req, res) => {
         res.end();
         return;
       }
-    } catch {}
+    } catch {
+      try {
+        const alt = JSON.parse(await fsp.readFile(path.join(reportsDir, 'line-count-diff.json'), 'utf-8'));
+        if (alt.current === current && alt.previous === previous) {
+          res.write(`data: Preprocessing already up to date.\n\n`);
+          res.write(`event: done\ndata: 0\n\n`);
+          res.end();
+          return;
+        }
+      } catch {}
+    }
   }
 
   const script = path.join(__dirname, 'preprocess.js');
@@ -277,6 +289,7 @@ app.get('/api/line-count-diff', async (req, res) => {
     await fsp.writeFile(path.join(reportsDir, 'line-count-diff.html'), html);
     await fsp.writeFile(configFile, JSON.stringify({ current, previous }, null, 2));
   } catch (err) {
+    console.error('Error generating line count diff:', err.message);
     res.status(500).json({ error: err.message });
     return;
   }
