@@ -199,7 +199,17 @@ app.get('/api/line-count-diff', async (req, res) => {
       const curCount = await safeLineCount(path.join(currentMeta, name));
       const prevCount = await safeLineCount(path.join(previousMeta, name));
       if (curCount === null && prevCount === null) continue;
-      result.push({ name, current: curCount, previous: prevCount });
+      const diff = (curCount ?? 0) - (prevCount ?? 0);
+      const percent = prevCount === 0 || prevCount === null ? Infinity : (diff / prevCount * 100);
+      let link = '';
+      const base = path.basename(name);
+      if (/^MRCONSO\.RRF$/i.test(base)) link = 'MRCONSO_report.html';
+      else if (/^MRSTY\.RRF$/i.test(base)) link = 'MRSTY_report.html';
+      else if (/^MRSAB\.RRF$/i.test(base)) link = 'MRSAB_report.html';
+      else if (/^MRDEF\.RRF$/i.test(base)) link = 'MRDEF_report.html';
+      else if (/^MRREL\.RRF$/i.test(base)) link = 'MRREL_report.html';
+      else if (/^MRSAT\.RRF$/i.test(base)) link = 'MRSAT_report.html';
+      result.push({ name, current: curCount, previous: prevCount, diff, percent, link });
     }
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -216,7 +226,7 @@ app.get('/api/sab-diff', async (req, res) => {
     return;
   }
 
-  const precomputed = path.join(reportsDir, 'SAB_TTY_count_differences.json');
+  const precomputed = path.join(reportsDir, 'MRCONSO_report.json');
   try {
     const data = await fsp.readFile(precomputed, 'utf-8');
     res.setHeader('Content-Type', 'application/json');
