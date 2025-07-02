@@ -10,12 +10,13 @@
     <h1 id="page-title" class="editable">UMLS Release QA</h1>
     <div id="status"></div>
     <div id="sab-summary"></div>
-    <p class="editable note"></p>
+    <p id="note1" class="editable note"></p>
     <button id="run-preprocess" class="editable">Run Reports</button>
     <div id="preprocess-results"></div>
-    <p class="editable note"></p>
+    <p id="note2" class="editable note"></p>
+    <button id="compare-lines" class="editable">Compare Line Counts</button>
     <div id="line-results"></div>
-    <p class="editable note"></p>
+    <p id="note3" class="editable note"></p>
   </div>
 
   <script type="module">
@@ -33,6 +34,10 @@
       document.title = texts.title || 'UMLS Release QA';
       document.getElementById('page-title').textContent = texts.header || 'UMLS Release QA';
       document.getElementById('run-preprocess').textContent = texts.runPreprocessButton || 'Run Reports';
+      document.getElementById('compare-lines').textContent = texts.compareLinesButton || 'Compare Line Counts';
+      document.getElementById('note1').textContent = texts.note1 || '';
+      document.getElementById('note2').textContent = texts.note2 || '';
+      document.getElementById('note3').textContent = texts.note3 || '';
     }
     function setEditable(on) {
       document.querySelectorAll('.editable').forEach(el => {
@@ -50,7 +55,11 @@
       const payload = {
         title: document.title,
         header: document.getElementById('page-title').textContent,
-        runPreprocessButton: document.getElementById('run-preprocess').textContent
+        runPreprocessButton: document.getElementById('run-preprocess').textContent,
+        compareLinesButton: document.getElementById('compare-lines').textContent,
+        note1: document.getElementById('note1').textContent,
+        note2: document.getElementById('note2').textContent,
+        note3: document.getElementById('note3').textContent
       };
       try {
         await fetch('/api/texts', {
