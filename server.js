@@ -10,8 +10,7 @@ const textsFile = path.join(__dirname, 'texts.json');
 const defaultTexts = {
   title: 'UMLS Release QA',
   header: 'UMLS Release QA',
-  runPreprocessButton: 'Run Reports',
-  compareLinesButton: 'Compare Line Counts'
+  runPreprocessButton: 'Run Reports'
 };
 
 function wrapHtml(title, body) {
