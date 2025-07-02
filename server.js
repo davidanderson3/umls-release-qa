@@ -234,6 +234,25 @@ app.get('/api/line-count-diff', async (req, res) => {
       else if (/^MRSAT\.RRF$/i.test(base)) link = 'MRSAT_report.html';
       result.push({ name, current: curCount, previous: prevCount, diff, percent, link });
     }
+
+    await fsp.mkdir(reportsDir, { recursive: true });
+    await fsp.writeFile(precomputed, JSON.stringify({ current, previous, files: result }, null, 2));
+
+    let html = `<h3>Line Count Comparison (${current} vs ${previous})</h3>`;
+    html += '<table><thead><tr><th>File</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th><th>Report</th></tr></thead><tbody>';
+    const unchanged = [];
+    for (const f of result) {
+      if (f.diff === 0) { unchanged.push(f.name); continue; }
+      const style = f.diff < 0 ? ' style="color:red"' : '';
+      const pct = isFinite(f.percent) ? f.percent.toFixed(2) : 'inf';
+      const linkCell = f.link ? `<a href="${f.link}">view</a>` : '';
+      html += `<tr><td>${f.name}</td><td>${f.previous ?? 0}</td><td>${f.current ?? 0}</td><td${style}>${f.diff}</td><td>${pct}</td><td>${linkCell}</td></tr>`;
+    }
+    html += '</tbody></table>';
+    if (unchanged.length) {
+      html += `<p>Unchanged files: ${unchanged.join(', ')}</p>`;
+    }
+    await fsp.writeFile(path.join(reportsDir, 'line-count-diff.html'), html);
   } catch (err) {
     res.status(500).json({ error: err.message });
     return;
