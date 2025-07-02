@@ -216,6 +216,8 @@ app.get('/api/line-count-diff', async (req, res) => {
         file.status = 'n/a';
       }
     }
+    await fsp.mkdir(reportsDir, { recursive: true });
+    await fsp.writeFile(configFile, JSON.stringify({ current: data.current, previous: data.previous }, null, 2));
     res.json(data);
     return;
   } catch {}
@@ -273,6 +275,7 @@ app.get('/api/line-count-diff', async (req, res) => {
       html += `<p>Unchanged files: ${unchanged.join(', ')}</p>`;
     }
     await fsp.writeFile(path.join(reportsDir, 'line-count-diff.html'), html);
+    await fsp.writeFile(configFile, JSON.stringify({ current, previous }, null, 2));
   } catch (err) {
     res.status(500).json({ error: err.message });
     return;
