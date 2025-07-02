@@ -121,7 +121,7 @@
         document.getElementById('sab-summary').innerHTML = `<p style="color:red">Error loading report: ${err.message}</p>`;
       }
     }
-    loadSABSummary();
+    // SAB/TTY table is generated during preprocessing; no need to display it automatically
 
     document.getElementById('run-preprocess').addEventListener('click', () => {
       const output = document.getElementById('preprocess-results');
@@ -132,7 +132,7 @@
       };
       es.addEventListener('done', () => {
         es.close();
-        loadSABSummary();
+        output.insertAdjacentHTML('beforeend', '<p>MRCONSO report done.</p>');
       });
       es.onerror = () => {
         output.insertAdjacentHTML('beforeend', '<p style="color:red">Error running preprocessing.</p>');
