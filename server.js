@@ -11,8 +11,7 @@ const defaultTexts = {
   title: 'UMLS Release QA',
   header: 'UMLS Release QA',
   runPreprocessButton: 'Run Preprocessing',
-  compareLinesButton: 'Compare Line Counts',
-  saveButton: 'Save'
+  compareLinesButton: 'Compare Line Counts'
 };
 
 const app = express();

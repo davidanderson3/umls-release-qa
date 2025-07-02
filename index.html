@@ -8,9 +8,6 @@
 <body>
   <div class="container">
     <h1 id="page-title" class="editable">UMLS Release QA</h1>
-    <div class="admin-controls">
-      <button id="save-texts" class="editable">Save</button>
-    </div>
     <div id="status"></div>
     <p class="editable note"></p>
     <div id="sab-summary"></div>
@@ -38,10 +35,7 @@
       document.getElementById('page-title').textContent = texts.header || 'UMLS Release QA';
       document.getElementById('run-preprocess').textContent = texts.runPreprocessButton || 'Run Preprocessing';
       document.getElementById('compare-lines').textContent = texts.compareLinesButton || 'Compare Line Counts';
-      saveBtn.textContent = texts.saveButton || 'Save';
     }
-
-    const saveBtn = document.getElementById('save-texts');
     function setEditable(on) {
       document.querySelectorAll('.editable').forEach(el => {
         el.contentEditable = on;
@@ -49,32 +43,26 @@
     }
     loadTexts().then(() => {
       setEditable(true);
+      document.querySelectorAll('.editable').forEach(el => {
+        el.addEventListener('blur', saveTexts);
+      });
     });
 
-    saveBtn.addEventListener('click', async () => {
-      texts.saveButton = saveBtn.textContent;
+    async function saveTexts() {
       const payload = {
         title: document.title,
         header: document.getElementById('page-title').textContent,
         runPreprocessButton: document.getElementById('run-preprocess').textContent,
-        compareLinesButton: document.getElementById('compare-lines').textContent,
-        saveButton: texts.saveButton
+        compareLinesButton: document.getElementById('compare-lines').textContent
       };
       try {
-        const resp = await fetch('/api/texts', {
+        await fetch('/api/texts', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
         });
-        if (resp.ok) {
-          alert('Saved');
-        } else {
-          alert('Save failed');
-        }
-      } catch {
-        alert('Save failed');
-      }
-    });
+      } catch {}
+    }
 
     async function checkReleases() {
       const status = document.getElementById('status');
