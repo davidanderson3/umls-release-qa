@@ -11,7 +11,6 @@
   <div class="container">
     <h1 id="page-title" class="editable">UMLS Release QA</h1>
     <div id="status"></div>
-    <div id="sab-summary"></div>
     <p id="note1" class="editable note"></p>
     <button id="run-preprocess" class="editable">Run Reports</button>
     <div id="preprocess-results"></div>
@@ -23,7 +22,6 @@
   <script type="module">
     let texts = {};
     let reportInterval = null;
-    let sabLoaded = false;
 
     async function loadTexts() {
       try {
@@ -98,36 +96,6 @@
     }
     checkReleases();
 
-    async function loadSABSummary() {
-      try {
-        const resp = await fetch('/api/sab-diff');
-        if (!resp.ok) {
-          let msg = 'Report not available. Run reports.';
-          try {
-            const data = await resp.json();
-            if (data.error) msg = data.error;
-          } catch { }
-          document.getElementById('sab-summary').innerHTML = `<p style="color:red">${msg}</p>`;
-          return;
-        }
-        const data = await resp.json();
-        const { summary, current, previous } = data;
-        if (!summary.length) return;
-        let html = `<h3>SAB/TTY Differences (${current} vs ${previous})</h3>`;
-        html += '<table><thead><tr><th>SAB</th><th>TTY</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th></tr></thead><tbody>';
-        for (const row of summary) {
-          const style = row.Difference < 0 ? ' style="color:red"' : '';
-          const pct = (row.Percent == null || !isFinite(row.Percent))
-            ? 'inf'
-            : row.Percent.toFixed(2);
-          html += `<tr><td>${row.SAB}</td><td>${row.TTY}</td><td>${row.Previous}</td><td>${row.Current}</td><td${style}>${row.Difference}</td><td>${pct}</td></tr>`;
-        }
-        html += '</tbody></table>';
-        document.getElementById('sab-summary').innerHTML = html;
-      } catch (err) {
-        document.getElementById('sab-summary').innerHTML = `<p style="color:red">Error loading report: ${err.message}</p>`;
-      }
-    }
     // Automatically check for finished reports when running preprocessing
 
     document.getElementById('run-preprocess').addEventListener('click', () => {
@@ -182,10 +150,6 @@
       for (const [file, label] of reports) {
         if (await fileExists(`reports/${file}`)) {
           items.push(`<li><a href="reports/${file}">${label}</a></li>`);
-          if (file === 'MRCONSO_report.html' && !sabLoaded) {
-            loadSABSummary();
-            sabLoaded = true;
-          }
         } else {
           allReady = false;
         }
