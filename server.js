@@ -11,7 +11,10 @@ const defaultTexts = {
   title: 'UMLS Release QA',
   header: 'UMLS Release QA',
   runPreprocessButton: 'Run Reports',
-  compareLinesButton: 'Compare Line Counts'
+  compareLinesButton: 'Compare Line Counts',
+  note1: '',
+  note2: '',
+  note3: ''
 };
 
 function wrapHtml(title, body) {
