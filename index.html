@@ -132,7 +132,7 @@
       };
       es.addEventListener('done', () => {
         es.close();
-        loadSABSummary();
+        output.insertAdjacentHTML('beforeend', '<p>MRCONSO report done.</p>');
       });
       es.onerror = () => {
         output.insertAdjacentHTML('beforeend', '<p style="color:red">Error running preprocessing.</p>');
