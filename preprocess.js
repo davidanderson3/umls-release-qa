@@ -69,7 +69,17 @@ async function generateLineCountDiff(current, previous) {
     const cur = await safeLineCount(path.join(currentMeta, name));
     const prev = await safeLineCount(path.join(previousMeta, name));
     if (cur === null && prev === null) continue;
-    result.push({ name, current: cur, previous: prev, diff: (cur ?? 0) - (prev ?? 0) });
+    const diff = (cur ?? 0) - (prev ?? 0);
+    const percent = prev === 0 || prev === null ? Infinity : (diff / prev * 100);
+    let link = '';
+    const base = path.basename(name);
+    if (/^MRCONSO\.RRF$/i.test(base)) link = 'MRCONSO_report.html';
+    else if (/^MRSTY\.RRF$/i.test(base)) link = 'MRSTY_report.html';
+    else if (/^MRSAB\.RRF$/i.test(base)) link = 'MRSAB_report.html';
+    else if (/^MRDEF\.RRF$/i.test(base)) link = 'MRDEF_report.html';
+    else if (/^MRREL\.RRF$/i.test(base)) link = 'MRREL_report.html';
+    else if (/^MRSAT\.RRF$/i.test(base)) link = 'MRSAT_report.html';
+    result.push({ name, current: cur, previous: prev, diff, percent, link });
   }
 
   await fsp.mkdir(reportsDir, { recursive: true });
@@ -77,12 +87,14 @@ async function generateLineCountDiff(current, previous) {
   await fsp.writeFile(jsonPath, JSON.stringify({ current, previous, files: result }, null, 2));
 
   let html = `<h3>Line Count Comparison (${current} vs ${previous})</h3>`;
-  html += '<table><thead><tr><th>File</th><th>Previous</th><th>Current</th><th>Change</th></tr></thead><tbody>';
+  html += '<table><thead><tr><th>File</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th><th>Report</th></tr></thead><tbody>';
   const unchanged = [];
   for (const f of result) {
     if (f.diff === 0) { unchanged.push(f.name); continue; }
     const style = f.diff < 0 ? ' style="color:red"' : '';
-    html += `<tr><td>${f.name}</td><td>${f.previous ?? 0}</td><td>${f.current ?? 0}</td><td${style}>${f.diff}</td></tr>`;
+    const pct = isFinite(f.percent) ? f.percent.toFixed(2) : 'inf';
+    const linkCell = f.link ? `<a href="${f.link}">view</a>` : '';
+    html += `<tr><td>${f.name}</td><td>${f.previous ?? 0}</td><td>${f.current ?? 0}</td><td${style}>${f.diff}</td><td>${pct}</td><td>${linkCell}</td></tr>`;
   }
   html += '</tbody></table>';
   if (unchanged.length) {
@@ -95,7 +107,7 @@ function escapeHTML(str) {
   return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
-async function readCounts(file) {
+async function readCountsMRCONSO(file) {
   const counts = new Map();
   try {
     const rl = readline.createInterface({ input: fs.createReadStream(file) });
@@ -105,6 +117,25 @@ async function readCounts(file) {
       const SAB = parts[11] || 'MISSING';
       const TTY = parts[12] || 'MISSING';
       const key = `${SAB}|${TTY}`;
+      counts.set(key, (counts.get(key) || 0) + 1);
+    }
+  } catch {
+    return new Map();
+  }
+  return counts;
+}
+
+async function readCountsByIndices(file, indices) {
+  const counts = new Map();
+  try {
+    const rl = readline.createInterface({ input: fs.createReadStream(file) });
+    for await (const line of rl) {
+      const parts = line.split('|');
+      const keyParts = [];
+      for (const idx of indices) {
+        keyParts.push(parts[idx] || 'MISSING');
+      }
+      const key = keyParts.join('|');
       counts.set(key, (counts.get(key) || 0) + 1);
     }
   } catch {
@@ -195,8 +226,8 @@ function buildDiffData(sab, tty, baseRows, prevRows) {
 async function generateSABDiff(current, previous) {
   const currentFile = path.join(releasesDir, current, 'META', 'MRCONSO.RRF');
   const previousFile = path.join(releasesDir, previous, 'META', 'MRCONSO.RRF');
-  const baseCounts = await readCounts(currentFile);
-  const prevCounts = await readCounts(previousFile);
+  const baseCounts = await readCountsMRCONSO(currentFile);
+  const prevCounts = await readCountsMRCONSO(previousFile);
 
   await fsp.mkdir(diffsDir, { recursive: true });
   const summary = [];
@@ -231,8 +262,47 @@ async function generateSABDiff(current, previous) {
     }
   }
 
-  const summaryPath = path.join(reportsDir, 'SAB_TTY_count_differences.json');
+  const summaryPath = path.join(reportsDir, 'MRCONSO_report.json');
   await fsp.writeFile(summaryPath, JSON.stringify({ current, previous, summary }, null, 2));
+
+  let html = `<h3>MRCONSO SAB/TTY Differences (${current} vs ${previous})</h3>`;
+  html += '<table><thead><tr><th>SAB</th><th>TTY</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th><th>Diff</th></tr></thead><tbody>';
+  for (const row of summary) {
+    const style = row.Difference < 0 ? ' style="color:red"' : '';
+    const pct = isFinite(row.Percent) ? row.Percent.toFixed(2) : 'inf';
+    const linkCell = row.link ? `<a href="${row.link.replace(/\.json$/, '.html')}">view</a>` : '';
+    html += `<tr><td>${row.SAB}</td><td>${row.TTY}</td><td>${row.Previous}</td><td>${row.Current}</td><td${style}>${row.Difference}</td><td>${pct}</td><td>${linkCell}</td></tr>`;
+  }
+  html += '</tbody></table>';
+  await fsp.writeFile(path.join(reportsDir, 'MRCONSO_report.html'), html);
+}
+
+async function generateCountReport(current, previous, fileName, indices, tableName) {
+  const currentFile = path.join(releasesDir, current, 'META', fileName);
+  const previousFile = path.join(releasesDir, previous, 'META', fileName);
+  const baseCounts = await readCountsByIndices(currentFile, indices);
+  const prevCounts = await readCountsByIndices(previousFile, indices);
+  const summary = [];
+  const keys = new Set([...baseCounts.keys(), ...prevCounts.keys()]);
+  for (const key of keys) {
+    const currentCount = baseCounts.get(key) || 0;
+    const previousCount = prevCounts.get(key) || 0;
+    const diff = currentCount - previousCount;
+    const pct = previousCount === 0 ? Infinity : (diff / previousCount * 100);
+    summary.push({ Key: key, Previous: previousCount, Current: currentCount, Difference: diff, Percent: pct });
+  }
+  const jsonName = `${tableName}_report.json`;
+  await fsp.writeFile(path.join(reportsDir, jsonName), JSON.stringify({ current, previous, summary }, null, 2));
+
+  let html = `<h3>${tableName} Report (${current} vs ${previous})</h3>`;
+  html += '<table><thead><tr><th>Key</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th></tr></thead><tbody>';
+  for (const row of summary) {
+    const style = row.Difference < 0 ? ' style="color:red"' : '';
+    const pctTxt = isFinite(row.Percent) ? row.Percent.toFixed(2) : 'inf';
+    html += `<tr><td>${escapeHTML(row.Key)}</td><td>${row.Previous}</td><td>${row.Current}</td><td${style}>${row.Difference}</td><td>${pctTxt}</td></tr>`;
+  }
+  html += '</tbody></table>';
+  await fsp.writeFile(path.join(reportsDir, `${tableName}_report.html`), html);
 }
 
 (async () => {
@@ -246,6 +316,12 @@ async function generateSABDiff(current, previous) {
   await generateLineCountDiff(current, previous);
   console.log('Generating SAB/TTY differences...');
   await generateSABDiff(current, previous);
+  console.log('Generating additional table reports...');
+  await generateCountReport(current, previous, 'MRSTY.RRF', [3], 'MRSTY');
+  await generateCountReport(current, previous, 'MRSAB.RRF', [3], 'MRSAB');
+  await generateCountReport(current, previous, 'MRDEF.RRF', [4], 'MRDEF');
+  await generateCountReport(current, previous, 'MRREL.RRF', [3], 'MRREL');
+  await generateCountReport(current, previous, 'MRSAT.RRF', [9], 'MRSAT');
   console.log('Reports generated in', reportsDir);
 })();
 
