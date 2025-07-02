@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>UMLS Release QA</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
   <div class="container">
     <h1 id="page-title" class="editable">UMLS Release QA</h1>
@@ -14,7 +16,6 @@
     <button id="run-preprocess" class="editable">Run Reports</button>
     <div id="preprocess-results"></div>
     <p id="note2" class="editable note"></p>
-    <button id="compare-lines" class="editable">Compare Line Counts</button>
     <div id="line-results"></div>
     <p id="note3" class="editable note"></p>
   </div>
@@ -29,7 +30,7 @@
         if (resp.ok) {
           texts = await resp.json();
         }
-      } catch {}
+      } catch { }
       texts = texts || {};
       document.title = texts.title || 'UMLS Release QA';
       document.getElementById('page-title').textContent = texts.header || 'UMLS Release QA';
@@ -67,7 +68,7 @@
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
         });
-      } catch {}
+      } catch { }
     }
 
     async function checkReleases() {
@@ -105,7 +106,7 @@
           try {
             const data = await resp.json();
             if (data.error) msg = data.error;
-          } catch {}
+          } catch { }
           document.getElementById('sab-summary').innerHTML = `<p style="color:red">${msg}</p>`;
           return;
         }
@@ -203,4 +204,5 @@
 
   </script>
 </body>
+
 </html>
