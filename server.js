@@ -14,6 +14,10 @@ const defaultTexts = {
   compareLinesButton: 'Compare Line Counts'
 };
 
+function wrapHtml(title, body) {
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../css/styles.css"></head><body>${body}</body></html>`;
+}
+
 const app = express();
 const PORT = process.env.PORT || 8080;
 const releasesDir = process.env.RELEASES_DIR || path.join(__dirname, 'releases');
@@ -286,7 +290,8 @@ app.get('/api/line-count-diff', async (req, res) => {
     if (unchanged.length) {
       html += `<p>Unchanged files: ${unchanged.join(', ')}</p>`;
     }
-    await fsp.writeFile(path.join(reportsDir, 'line-count-diff.html'), html);
+    const wrapped = wrapHtml('Line Count Comparison', html);
+    await fsp.writeFile(path.join(reportsDir, 'line-count-diff.html'), wrapped);
     await fsp.writeFile(configFile, JSON.stringify({ current, previous }, null, 2));
   } catch (err) {
     console.error('Error generating line count diff:', err.message);
