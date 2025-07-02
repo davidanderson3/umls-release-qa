@@ -12,7 +12,7 @@
     <p class="editable note"></p>
     <div id="sab-summary"></div>
     <p class="editable note"></p>
-    <button id="run-preprocess" class="editable">Run Preprocessing</button>
+    <button id="run-preprocess" class="editable">Run Reports</button>
     <div id="preprocess-results"></div>
     <p class="editable note"></p>
     <button id="compare-lines" class="editable">Compare Line Counts</button>
@@ -22,6 +22,7 @@
 
   <script type="module">
     let texts = {};
+    let lineInterval = null;
 
     async function loadTexts() {
       try {
@@ -33,7 +34,7 @@
       texts = texts || {};
       document.title = texts.title || 'UMLS Release QA';
       document.getElementById('page-title').textContent = texts.header || 'UMLS Release QA';
-      document.getElementById('run-preprocess').textContent = texts.runPreprocessButton || 'Run Preprocessing';
+      document.getElementById('run-preprocess').textContent = texts.runPreprocessButton || 'Run Reports';
       document.getElementById('compare-lines').textContent = texts.compareLinesButton || 'Compare Line Counts';
     }
     function setEditable(on) {
@@ -95,7 +96,7 @@
       try {
         const resp = await fetch('/api/sab-diff');
         if (!resp.ok) {
-          let msg = 'Report not available. Run preprocessing.';
+          let msg = 'Report not available. Run reports.';
           try {
             const data = await resp.json();
             if (data.error) msg = data.error;
@@ -121,23 +122,31 @@
         document.getElementById('sab-summary').innerHTML = `<p style="color:red">Error loading report: ${err.message}</p>`;
       }
     }
-    // SAB/TTY table is generated during preprocessing; no need to display it automatically
+    // SAB/TTY table is generated during the reporting step; no need to display it automatically
 
     document.getElementById('run-preprocess').addEventListener('click', () => {
       const output = document.getElementById('preprocess-results');
-      output.innerHTML = '<p>Running preprocessing...</p>';
+      output.innerHTML = '<p>Running reports...</p>';
       const es = new EventSource('/api/preprocess-stream');
       es.onmessage = (e) => {
         output.insertAdjacentHTML('beforeend', `<pre>${e.data}</pre>`);
+        if (e.data.includes('Generating MRCONSO report')) {
+          loadLineCounts();
+          if (!lineInterval) lineInterval = setInterval(loadLineCounts, 5000);
+        }
       };
       es.addEventListener('done', () => {
         es.close();
-        output.insertAdjacentHTML('beforeend', '<p>MRCONSO report done.</p>');
+        clearInterval(lineInterval);
+        lineInterval = null;
+        output.insertAdjacentHTML('beforeend', '<p>Reports done.</p>');
         loadLineCounts();
       });
       es.onerror = () => {
-        output.insertAdjacentHTML('beforeend', '<p style="color:red">Error running preprocessing.</p>');
+        output.insertAdjacentHTML('beforeend', '<p style="color:red">Error running reports.</p>');
         es.close();
+        clearInterval(lineInterval);
+        lineInterval = null;
       };
     });
 
