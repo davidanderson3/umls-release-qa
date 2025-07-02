@@ -315,8 +315,9 @@ async function generateCountReport(current, previous, fileName, indices, tableNa
   }
   console.log(`Processing line counts for ${current} vs ${previous}...`);
   await generateLineCountDiff(current, previous);
-  console.log('Generating SAB/TTY differences...');
+  console.log('Generating MRCONSO report...');
   await generateSABDiff(current, previous);
+  console.log('MRCONSO report done.');
   console.log('Generating additional table reports...');
   await generateCountReport(current, previous, 'MRSTY.RRF', [3], 'MRSTY');
   await generateCountReport(current, previous, 'MRSAB.RRF', [3], 'MRSAB');
