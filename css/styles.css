@@ -43,6 +43,14 @@ tbody tr:hover {
   background-color: #eef5ff;
 }
 
+.positive {
+  color: #006600;
+}
+
+.negative {
+  color: #b30000;
+}
+
 .note {
   min-height: 1em;
   border: 1px dashed #888;
