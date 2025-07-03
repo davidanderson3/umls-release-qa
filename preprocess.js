@@ -96,10 +96,10 @@ async function generateLineCountDiff(current, previous) {
   const unchanged = [];
   for (const f of result) {
     if (f.diff === 0) { unchanged.push(f.name); continue; }
-    const style = f.diff < 0 ? ' style="color:red"' : '';
+    const diffClass = f.diff < 0 ? 'negative' : 'positive';
     const pct = isFinite(f.percent) ? f.percent.toFixed(2) : 'inf';
     const linkCell = f.link ? `<a href="${f.link}">view</a>` : '';
-    html += `<tr><td>${f.name}</td><td>${f.previous ?? 0}</td><td>${f.current ?? 0}</td><td${style}>${f.diff}</td><td>${pct}</td><td>${linkCell}</td></tr>`;
+    html += `<tr><td>${f.name}</td><td>${f.previous ?? 0}</td><td>${f.current ?? 0}</td><td class="${diffClass}">${f.diff}</td><td>${pct}</td><td>${linkCell}</td></tr>`;
   }
   html += '</tbody></table>';
   if (unchanged.length) {
@@ -274,10 +274,10 @@ async function generateSABDiff(current, previous) {
   let html = `<h3>MRCONSO SAB/TTY Differences (${current} vs ${previous})</h3>`;
   html += '<table><thead><tr><th>SAB</th><th>TTY</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th><th>Diff</th></tr></thead><tbody>';
   for (const row of summary) {
-    const style = row.Difference < 0 ? ' style="color:red"' : '';
+    const diffClass = row.Difference < 0 ? 'negative' : 'positive';
     const pct = isFinite(row.Percent) ? row.Percent.toFixed(2) : 'inf';
     const linkCell = row.link ? `<a href="${row.link.replace(/\.json$/, '.html')}">view</a>` : '';
-    html += `<tr><td>${row.SAB}</td><td>${row.TTY}</td><td>${row.Previous}</td><td>${row.Current}</td><td${style}>${row.Difference}</td><td>${pct}</td><td>${linkCell}</td></tr>`;
+    html += `<tr><td>${row.SAB}</td><td>${row.TTY}</td><td>${row.Previous}</td><td>${row.Current}</td><td class="${diffClass}">${row.Difference}</td><td>${pct}</td><td>${linkCell}</td></tr>`;
   }
   html += '</tbody></table>';
   const wrapped = wrapHtml('MRCONSO Report', html);
@@ -304,9 +304,9 @@ async function generateCountReport(current, previous, fileName, indices, tableNa
   let html = `<h3>${tableName} Report (${current} vs ${previous})</h3>`;
   html += '<table><thead><tr><th>Key</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th></tr></thead><tbody>';
   for (const row of summary) {
-    const style = row.Difference < 0 ? ' style="color:red"' : '';
+    const diffClass = row.Difference < 0 ? 'negative' : 'positive';
     const pctTxt = isFinite(row.Percent) ? row.Percent.toFixed(2) : 'inf';
-    html += `<tr><td>${escapeHTML(row.Key)}</td><td>${row.Previous}</td><td>${row.Current}</td><td${style}>${row.Difference}</td><td>${pctTxt}</td></tr>`;
+    html += `<tr><td>${escapeHTML(row.Key)}</td><td>${row.Previous}</td><td>${row.Current}</td><td class="${diffClass}">${row.Difference}</td><td>${pctTxt}</td></tr>`;
   }
   html += '</tbody></table>';
   const wrapped = wrapHtml(`${tableName} Report`, html);
