@@ -18,7 +18,7 @@ const defaultTexts = {
 };
 
 function wrapHtml(title, body) {
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../css/styles.css"></head><body>${body}</body></html>`;
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../css/styles.css"></head><body><h1>${title}</h1>${body}</body></html>`;
 }
 
 const app = express();
@@ -27,6 +27,7 @@ const releasesDir = process.env.RELEASES_DIR || path.join(__dirname, 'releases')
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname)));
+app.use('/reports', express.static(reportsDir));
 
 async function detectReleases() {
   let releaseList = [];

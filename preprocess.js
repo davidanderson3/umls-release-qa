@@ -9,11 +9,11 @@ const diffsDir = path.join(reportsDir, 'diffs');
 const configFile = path.join(reportsDir, 'config.json');
 
 function wrapHtml(title, body) {
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../css/styles.css"></head><body>${body}</body></html>`;
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../css/styles.css"></head><body><h1>${title}</h1>${body}</body></html>`;
 }
 
 function wrapDiffHtml(title, body) {
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../css/styles.css"></head><body>${body}</body></html>`;
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../css/styles.css"></head><body><h1>${title}</h1>${body}</body></html>`;
 }
 
 async function detectReleases() {
