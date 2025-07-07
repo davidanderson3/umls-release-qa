@@ -12,6 +12,10 @@ function wrapHtml(title, body) {
   return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../css/styles.css"></head><body>${body}</body></html>`;
 }
 
+function wrapDiffHtml(title, body) {
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../css/styles.css"></head><body>${body}</body></html>`;
+}
+
 async function detectReleases() {
   let releaseList = [];
   try {
@@ -229,6 +233,39 @@ function buildDiffData(sab, tty, baseRows, prevRows) {
   return { sab, tty, added, dropped, moved };
 }
 
+function diffDataToHtml(data) {
+  let html = `<h3>${data.sab} ${data.tty} Differences</h3>`;
+
+  if (data.added && data.added.length) {
+    html += `<h4>Added (${data.added.length})</h4>`;
+    html += '<table><thead><tr><th>CUI</th><th>AUI</th><th>STR</th></tr></thead><tbody>';
+    for (const row of data.added) {
+      html += `<tr><td>${row.CUI}</td><td>${row.AUI}</td><td>${escapeHTML(row.STR)}</td></tr>`;
+    }
+    html += '</tbody></table>';
+  }
+
+  if (data.dropped && data.dropped.length) {
+    html += `<h4>Dropped (${data.dropped.length})</h4>`;
+    html += '<table><thead><tr><th>CUI</th><th>AUI</th><th>STR</th></tr></thead><tbody>';
+    for (const row of data.dropped) {
+      html += `<tr><td>${row.CUI}</td><td>${row.AUI}</td><td>${escapeHTML(row.STR)}</td></tr>`;
+    }
+    html += '</tbody></table>';
+  }
+
+  if (data.moved && data.moved.length) {
+    html += `<h4>Moved (${data.moved.length})</h4>`;
+    html += '<table><thead><tr><th>AUI</th><th>Previous CUI</th><th>Current CUI</th><th>STR</th></tr></thead><tbody>';
+    for (const row of data.moved) {
+      html += `<tr><td>${row.AUI}</td><td>${row.previousCUI}</td><td>${row.currentCUI}</td><td>${escapeHTML(row.STR)}</td></tr>`;
+    }
+    html += '</tbody></table>';
+  }
+
+  return wrapDiffHtml(`${data.sab} ${data.tty} Differences`, html);
+}
+
 async function generateSABDiff(current, previous) {
   const currentFile = path.join(releasesDir, current, 'META', 'MRCONSO.RRF');
   const previousFile = path.join(releasesDir, previous, 'META', 'MRCONSO.RRF');
@@ -263,6 +300,8 @@ async function generateSABDiff(current, previous) {
         const fileName = `${entry.SAB}_${entry.TTY}_differences.json`;
         const filePath = path.join(diffsDir, fileName);
         await fsp.writeFile(filePath, JSON.stringify(diffData, null, 2));
+        const htmlName = fileName.replace(/\.json$/, '.html');
+        await fsp.writeFile(path.join(diffsDir, htmlName), diffDataToHtml(diffData));
         entry.link = `diffs/${fileName}`;
       }
     }
