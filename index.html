@@ -145,17 +145,17 @@
         ['MRDEF_report.html', 'MRDEF'],
         ['MRSAT_report.html', 'MRSAT']
       ];
-      const items = [];
+      const rows = [];
       let allReady = true;
       for (const [file, label] of reports) {
         if (await fileExists(`reports/${file}`)) {
-          items.push(`<li><a href="reports/${file}">${label}</a></li>`);
+          rows.push(`<tr><td><a href="reports/${file}">${label}</a></td></tr>`);
         } else {
           allReady = false;
         }
       }
-      if (items.length) {
-        results.innerHTML = `<h3>Reports</h3><ul>${items.join('')}</ul>`;
+      if (rows.length) {
+        results.innerHTML = `<h3>Reports</h3><table><thead><tr><th>Report</th></tr></thead><tbody>${rows.join('')}</tbody></table>`;
       } else {
         results.innerHTML = '<p>No reports available.</p>';
       }
