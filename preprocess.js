@@ -352,6 +352,53 @@ async function generateCountReport(current, previous, fileName, indices, tableNa
   await fsp.writeFile(path.join(reportsDir, `${tableName}_report.html`), wrapped);
 }
 
+async function readSABs(file) {
+  const sabs = new Set();
+  try {
+    const rl = readline.createInterface({ input: fs.createReadStream(file) });
+    for await (const line of rl) {
+      const parts = line.split('|');
+      if (parts.length > 3) {
+        const sab = parts[3];
+        if (sab) sabs.add(sab);
+      }
+    }
+  } catch {
+    return new Set();
+  }
+  return sabs;
+}
+
+async function generateMRSABChangeReport(current, previous) {
+  const currentFile = path.join(releasesDir, current, 'META', 'MRSAB.RRF');
+  const previousFile = path.join(releasesDir, previous, 'META', 'MRSAB.RRF');
+  const currentSABs = await readSABs(currentFile);
+  const previousSABs = await readSABs(previousFile);
+
+  const added = [...currentSABs].filter(s => !previousSABs.has(s)).sort();
+  const dropped = [...previousSABs].filter(s => !currentSABs.has(s)).sort();
+
+  const jsonData = { current, previous, added, dropped };
+  await fsp.writeFile(path.join(reportsDir, 'MRSAB_report.json'), JSON.stringify(jsonData, null, 2));
+
+  let html = `<h3>MRSAB Added/Dropped (${current} vs ${previous})</h3>`;
+  if (added.length) {
+    html += `<h4>Added (${added.length})</h4><ul>`;
+    for (const sab of added) html += `<li>${escapeHTML(sab)}</li>`;
+    html += '</ul>';
+  }
+  if (dropped.length) {
+    html += `<h4>Dropped (${dropped.length})</h4><ul>`;
+    for (const sab of dropped) html += `<li>${escapeHTML(sab)}</li>`;
+    html += '</ul>';
+  }
+  if (!added.length && !dropped.length) {
+    html += '<p>No SAB changes.</p>';
+  }
+  const wrapped = wrapHtml('MRSAB Report', html);
+  await fsp.writeFile(path.join(reportsDir, 'MRSAB_report.html'), wrapped);
+}
+
 (async () => {
   console.log('Detecting available releases...');
   const { current, previous } = await detectReleases();
@@ -381,7 +428,7 @@ async function generateCountReport(current, previous, fileName, indices, tableNa
   console.log('MRCONSO report done.');
   console.log('Generating additional table reports...');
   await generateCountReport(current, previous, 'MRSTY.RRF', [3], 'MRSTY');
-  await generateCountReport(current, previous, 'MRSAB.RRF', [3], 'MRSAB');
+  await generateMRSABChangeReport(current, previous);
   await generateCountReport(current, previous, 'MRDEF.RRF', [4], 'MRDEF');
   await generateCountReport(current, previous, 'MRREL.RRF', [3], 'MRREL');
   await generateCountReport(current, previous, 'MRSAT.RRF', [9], 'MRSAT');
