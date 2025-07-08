@@ -574,28 +574,43 @@ async function readSABs(file) {
 async function generateMRSABChangeReport(current, previous) {
   const currentFile = path.join(releasesDir, current, 'META', 'MRSAB.RRF');
   const previousFile = path.join(releasesDir, previous, 'META', 'MRSAB.RRF');
+  const currentLines = await readAllLines(currentFile);
+  const previousLines = await readAllLines(previousFile);
+
+  const curSet = new Set(currentLines);
+  const prevSet = new Set(previousLines);
+
+  const addedRows = currentLines.filter(l => !prevSet.has(l));
+  const removedRows = previousLines.filter(l => !curSet.has(l));
+
   const currentSABs = await readSABs(currentFile);
   const previousSABs = await readSABs(previousFile);
 
   const added = [...currentSABs].filter(s => !previousSABs.has(s)).sort();
   const dropped = [...previousSABs].filter(s => !currentSABs.has(s)).sort();
 
-  const jsonData = { current, previous, added, dropped };
+  const jsonData = { current, previous, added, dropped, addedRows, removedRows };
   await fsp.writeFile(path.join(reportsDir, 'MRSAB_report.json'), JSON.stringify(jsonData, null, 2));
 
   let html = `<h3>MRSAB Added/Dropped (${current} vs ${previous})</h3>`;
   if (added.length) {
-    html += `<h4>Added (${added.length})</h4><ul>`;
+    html += `<h4>Added SABs (${added.length})</h4><ul>`;
     for (const sab of added) html += `<li>${escapeHTML(sab)}</li>`;
     html += '</ul>';
   }
   if (dropped.length) {
-    html += `<h4>Dropped (${dropped.length})</h4><ul>`;
+    html += `<h4>Dropped SABs (${dropped.length})</h4><ul>`;
     for (const sab of dropped) html += `<li>${escapeHTML(sab)}</li>`;
     html += '</ul>';
   }
-  if (!added.length && !dropped.length) {
-    html += '<p>No SAB changes.</p>';
+  if (addedRows.length) {
+    html += `<h4>Added Rows (${addedRows.length})</h4><pre>${addedRows.map(escapeHTML).join('\n')}</pre>`;
+  }
+  if (removedRows.length) {
+    html += `<h4>Removed Rows (${removedRows.length})</h4><pre>${removedRows.map(escapeHTML).join('\n')}</pre>`;
+  }
+  if (!added.length && !dropped.length && !addedRows.length && !removedRows.length) {
+    html += '<p>No MRSAB changes.</p>';
   }
   const wrapped = wrapHtml('MRSAB Report', html);
   if (generateHtml) {
