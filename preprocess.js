@@ -9,11 +9,13 @@ const diffsDir = path.join(reportsDir, 'diffs');
 const configFile = path.join(reportsDir, 'config.json');
 
 function wrapHtml(title, body) {
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../css/styles.css"></head><body><h1>${title}</h1>${body}</body></html>`;
+  const style = '<style>table{width:100%;border-collapse:collapse;border:1px solid #ccc;margin-top:10px;font-size:0.9em}table th,table td{border:1px solid #ccc;padding:6px 10px;text-align:left}thead{background-color:#f2f2f2}</style>';
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../css/styles.css">${style}</head><body><h1>${title}</h1>${body}</body></html>`;
 }
 
 function wrapDiffHtml(title, body) {
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../css/styles.css"></head><body><h1>${title}</h1>${body}</body></html>`;
+  const style = '<style>table{width:100%;border-collapse:collapse;border:1px solid #ccc;margin-top:10px;font-size:0.9em}table th,table td{border:1px solid #ccc;padding:6px 10px;text-align:left}thead{background-color:#f2f2f2}</style>';
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../css/styles.css">${style}</head><body><h1>${title}</h1>${body}</body></html>`;
 }
 
 async function detectReleases() {
@@ -96,7 +98,7 @@ async function generateLineCountDiff(current, previous) {
   await fsp.writeFile(jsonPath, JSON.stringify({ current, previous, files: result }, null, 2));
 
   let html = `<h3>Line Count Comparison (${current} vs ${previous})</h3>`;
-  html += '<table><thead><tr><th>File</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th><th>Report</th></tr></thead><tbody>';
+  html += '<table style="border:1px solid #ccc;border-collapse:collapse"><thead><tr><th>File</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th><th>Report</th></tr></thead><tbody>';
   const unchanged = [];
   for (const f of result) {
     if (f.diff === 0) { unchanged.push(f.name); continue; }
@@ -238,7 +240,7 @@ function diffDataToHtml(data) {
 
   if (data.added && data.added.length) {
     html += `<h4>Added (${data.added.length})</h4>`;
-    html += '<table><thead><tr><th>CUI</th><th>AUI</th><th>STR</th></tr></thead><tbody>';
+    html += '<table style="border:1px solid #ccc;border-collapse:collapse"><thead><tr><th>CUI</th><th>AUI</th><th>STR</th></tr></thead><tbody>';
     for (const row of data.added) {
       html += `<tr><td>${row.CUI}</td><td>${row.AUI}</td><td>${escapeHTML(row.STR)}</td></tr>`;
     }
@@ -247,7 +249,7 @@ function diffDataToHtml(data) {
 
   if (data.dropped && data.dropped.length) {
     html += `<h4>Dropped (${data.dropped.length})</h4>`;
-    html += '<table><thead><tr><th>CUI</th><th>AUI</th><th>STR</th></tr></thead><tbody>';
+    html += '<table style="border:1px solid #ccc;border-collapse:collapse"><thead><tr><th>CUI</th><th>AUI</th><th>STR</th></tr></thead><tbody>';
     for (const row of data.dropped) {
       html += `<tr><td>${row.CUI}</td><td>${row.AUI}</td><td>${escapeHTML(row.STR)}</td></tr>`;
     }
@@ -256,7 +258,7 @@ function diffDataToHtml(data) {
 
   if (data.moved && data.moved.length) {
     html += `<h4>Moved (${data.moved.length})</h4>`;
-    html += '<table><thead><tr><th>AUI</th><th>Previous CUI</th><th>Current CUI</th><th>STR</th></tr></thead><tbody>';
+    html += '<table style="border:1px solid #ccc;border-collapse:collapse"><thead><tr><th>AUI</th><th>Previous CUI</th><th>Current CUI</th><th>STR</th></tr></thead><tbody>';
     for (const row of data.moved) {
       html += `<tr><td>${row.AUI}</td><td>${row.previousCUI}</td><td>${row.currentCUI}</td><td>${escapeHTML(row.STR)}</td></tr>`;
     }
@@ -311,7 +313,7 @@ async function generateSABDiff(current, previous) {
   await fsp.writeFile(summaryPath, JSON.stringify({ current, previous, summary }, null, 2));
 
   let html = `<h3>MRCONSO SAB/TTY Differences (${current} vs ${previous})</h3>`;
-  html += '<table><thead><tr><th>SAB</th><th>TTY</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th><th>Diff</th></tr></thead><tbody>';
+  html += '<table style="border:1px solid #ccc;border-collapse:collapse"><thead><tr><th>SAB</th><th>TTY</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th><th>Diff</th></tr></thead><tbody>';
   for (const row of summary) {
     const diffClass = row.Difference < 0 ? 'negative' : 'positive';
     const pct = isFinite(row.Percent) ? row.Percent.toFixed(2) : 'inf';
@@ -341,7 +343,7 @@ async function generateCountReport(current, previous, fileName, indices, tableNa
   await fsp.writeFile(path.join(reportsDir, jsonName), JSON.stringify({ current, previous, summary }, null, 2));
 
   let html = `<h3>${tableName} Report (${current} vs ${previous})</h3>`;
-  html += '<table><thead><tr><th>Key</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th></tr></thead><tbody>';
+  html += '<table style="border:1px solid #ccc;border-collapse:collapse"><thead><tr><th>Key</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th></tr></thead><tbody>';
   for (const row of summary) {
     const diffClass = row.Difference < 0 ? 'negative' : 'positive';
     const pctTxt = isFinite(row.Percent) ? row.Percent.toFixed(2) : 'inf';
