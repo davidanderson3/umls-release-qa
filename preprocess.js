@@ -605,6 +605,142 @@ async function generateMRSABChangeReport(current, previous) {
   }
 }
 
+// Gather rows for a specific SAB|REL|RELA combination in MRREL
+async function gatherMRRELRowsForKey(file, key) {
+  const rows = [];
+  try {
+    const rl = readline.createInterface({ input: fs.createReadStream(file) });
+    for await (const line of rl) {
+      const parts = line.split('|');
+      if (parts.length < 11) continue;
+      const sab = parts[10] || 'MISSING';
+      const rel = parts[3] || 'MISSING';
+      const rela = parts[7] || 'MISSING';
+      if (`${sab}|${rel}|${rela}` === key) {
+        rows.push({
+          RUI: parts[8],
+          CUI1: parts[0],
+          REL: rel,
+          CUI2: parts[4],
+          SAB: sab,
+          RELA: rela
+        });
+      }
+    }
+  } catch {
+    return [];
+  }
+  return rows;
+}
+
+function buildMRRELDiffData(key, baseRows, prevRows) {
+  const [sab, rel, rela] = key.split('|');
+  const baseMap = new Map(baseRows.map(r => [r.RUI, r]));
+  const prevMap = new Map(prevRows.map(r => [r.RUI, r]));
+  const added = [];
+  const dropped = [];
+  for (const [id, row] of baseMap) {
+    if (!prevMap.has(id)) added.push(row);
+  }
+  for (const [id, row] of prevMap) {
+    if (!baseMap.has(id)) dropped.push(row);
+  }
+  if (!added.length && !dropped.length) return null;
+  return { sab, rel, rela, added, dropped };
+}
+
+function mrrelDiffToHtml(data) {
+  let html = `<h3>${data.sab} ${data.rel} ${data.rela} Differences</h3>`;
+  if (data.added && data.added.length) {
+    html += `<h4>Added (${data.added.length})</h4>`;
+    html += '<table><thead><tr><th>RUI</th><th>CUI1</th><th>REL</th><th>CUI2</th></tr></thead><tbody>';
+    for (const r of data.added) {
+      html += `<tr><td>${r.RUI}</td><td>${r.CUI1}</td><td>${r.REL}</td><td>${r.CUI2}</td></tr>`;
+    }
+    html += '</tbody></table>';
+  }
+  if (data.dropped && data.dropped.length) {
+    html += `<h4>Dropped (${data.dropped.length})</h4>`;
+    html += '<table><thead><tr><th>RUI</th><th>CUI1</th><th>REL</th><th>CUI2</th></tr></thead><tbody>';
+    for (const r of data.dropped) {
+      html += `<tr><td>${r.RUI}</td><td>${r.CUI1}</td><td>${r.REL}</td><td>${r.CUI2}</td></tr>`;
+    }
+    html += '</tbody></table>';
+  }
+  return wrapDiffHtml(`${data.sab} ${data.rel} ${data.rela} Differences`, html);
+}
+
+async function generateMRRELReport(current, previous) {
+  const currentFile = path.join(releasesDir, current, 'META', 'MRREL.RRF');
+  const previousFile = path.join(releasesDir, previous, 'META', 'MRREL.RRF');
+  const baseCounts = await readCountsByIndices(currentFile, [10, 3, 7]);
+  const prevCounts = await readCountsByIndices(previousFile, [10, 3, 7]);
+  await fsp.mkdir(diffsDir, { recursive: true });
+  const summary = [];
+  const diffKeys = new Set();
+  const keys = new Set([...baseCounts.keys(), ...prevCounts.keys()]);
+  for (const key of keys) {
+    const currentCount = baseCounts.get(key) || 0;
+    const previousCount = prevCounts.get(key) || 0;
+    const diff = currentCount - previousCount;
+    const pct = previousCount === 0 ? Infinity : (diff / previousCount * 100);
+    const [sab, rel, rela] = key.split('|');
+    const entry = { SAB: sab, REL: rel, RELA: rela, Previous: previousCount, Current: currentCount, Difference: diff, Percent: pct, link: '' };
+    if (Math.abs(pct) >= 5) diffKeys.add(key);
+    summary.push(entry);
+  }
+
+  if (diffKeys.size) {
+    for (const entry of summary) {
+      const key = `${entry.SAB}|${entry.REL}|${entry.RELA}`;
+      if (!diffKeys.has(key)) continue;
+      const baseRows = await gatherMRRELRowsForKey(currentFile, key);
+      const prevRows = await gatherMRRELRowsForKey(previousFile, key);
+      const diffData = buildMRRELDiffData(key, baseRows, prevRows);
+      if (diffData) {
+        const safe = key.replace(/[^A-Za-z0-9_-]/g, '_');
+        const fileName = `MRREL_${safe}_diff.json`;
+        await fsp.writeFile(path.join(diffsDir, fileName), JSON.stringify(diffData, null, 2));
+        if (generateHtml) {
+          const htmlName = fileName.replace(/\.json$/, '.html');
+          await fsp.writeFile(path.join(diffsDir, htmlName), mrrelDiffToHtml(diffData));
+        }
+        entry.link = `diffs/${fileName}`;
+      }
+    }
+  }
+
+  const jsonPath = path.join(reportsDir, 'MRREL_report.json');
+  await fsp.writeFile(jsonPath, JSON.stringify({ current, previous, summary }, null, 2));
+
+  let html = `<h3>MRREL Report (${current} vs ${previous})</h3>`;
+  const changed = summary.filter(r => Math.abs(r.Percent) >= 5);
+  if (changed.length) {
+    html += '<h4>Changes \u22655%</h4>';
+    html += '<table><thead><tr><th>SAB</th><th>REL</th><th>RELA</th><th>Prev</th><th>Curr</th><th>%</th><th>Diff</th></tr></thead><tbody>';
+    for (const row of changed) {
+      const pctTxt = isFinite(row.Percent) ? row.Percent.toFixed(2) : 'inf';
+      const diffClass = row.Difference < 0 ? 'negative' : 'positive';
+      const linkCell = row.link ? `<a href="${row.link.replace(/\.json$/, '.html')}">view</a>` : '';
+      html += `<tr><td>${escapeHTML(row.SAB)}</td><td>${escapeHTML(row.REL)}</td><td>${escapeHTML(row.RELA)}</td><td>${row.Previous}</td><td>${row.Current}</td><td>${pctTxt}</td><td class="${diffClass}">${row.Difference}</td><td>${linkCell}</td></tr>`;
+    }
+    html += '</tbody></table>';
+  }
+
+  html += '<table style="border:1px solid #ccc;border-collapse:collapse"><thead><tr><th>SAB</th><th>REL</th><th>RELA</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th><th>Diff</th></tr></thead><tbody>';
+  for (const row of summary) {
+    const diffClass = row.Difference < 0 ? 'negative' : 'positive';
+    const pctTxt = isFinite(row.Percent) ? row.Percent.toFixed(2) : 'inf';
+    const linkCell = row.link ? `<a href="${row.link.replace(/\.json$/, '.html')}">view</a>` : '';
+    html += `<tr><td>${escapeHTML(row.SAB)}</td><td>${escapeHTML(row.REL)}</td><td>${escapeHTML(row.RELA)}</td><td>${row.Previous}</td><td>${row.Current}</td><td class="${diffClass}">${row.Difference}</td><td>${pctTxt}</td><td>${linkCell}</td></tr>`;
+  }
+  html += '</tbody></table>';
+  const wrapped = wrapHtml('MRREL Report', html);
+  if (generateHtml) {
+    await fsp.writeFile(path.join(reportsDir, 'MRREL_report.html'), wrapped);
+  }
+}
+
 (async () => {
   console.log('Detecting available releases...');
   const { current, previous } = await detectReleases();
@@ -652,7 +788,7 @@ async function generateMRSABChangeReport(current, previous) {
   await generateCountReport(current, previous, 'MRSAB.RRF', [3], 'MRSAB');
   await generateMRSABChangeReport(current, previous);
   await generateCountReport(current, previous, 'MRDEF.RRF', [4], 'MRDEF');
-  await generateCountReport(current, previous, 'MRREL.RRF', [3], 'MRREL');
+  await generateMRRELReport(current, previous);
   await generateCountReport(current, previous, 'MRSAT.RRF', [9], 'MRSAT');
   await fsp.mkdir(reportsDir, { recursive: true });
   await fsp.writeFile(
