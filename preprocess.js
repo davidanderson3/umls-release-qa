@@ -101,6 +101,7 @@ async function generateLineCountDiff(current, previous) {
     else if (/^MRSTY\.RRF$/i.test(base)) link = 'MRSTY_report.html';
     else if (/^MRSAB\.RRF$/i.test(base)) link = 'MRSAB_report.html';
     else if (/^MRDEF\.RRF$/i.test(base)) link = 'MRDEF_report.html';
+    else if (/^MRDOC\.RRF$/i.test(base)) link = 'MRDOC_report.html';
     else if (/^MRREL\.RRF$/i.test(base)) link = 'MRREL_report.html';
     else if (/^MRSAT\.RRF$/i.test(base)) link = 'MRSAT_report.html';
     result.push({ name, current: cur, previous: prev, diff, percent, link });
@@ -605,6 +606,66 @@ async function generateMRSABChangeReport(current, previous) {
   }
 }
 
+async function readMRDOCMap(file) {
+  const map = new Map();
+  try {
+    const rl = readline.createInterface({ input: fs.createReadStream(file) });
+    for await (const line of rl) {
+      const parts = line.split('|');
+      if (parts.length < 2) continue;
+      map.set(parts[0], parts[1]);
+    }
+  } catch {
+    return new Map();
+  }
+  return map;
+}
+
+async function generateMRDOCReport(current, previous) {
+  const currentFile = path.join(releasesDir, current, 'META', 'MRDOC.RRF');
+  const previousFile = path.join(releasesDir, previous, 'META', 'MRDOC.RRF');
+  const curMap = await readMRDOCMap(currentFile);
+  const prevMap = await readMRDOCMap(previousFile);
+
+  const summary = [];
+  const keys = new Set([...curMap.keys(), ...prevMap.keys()]);
+  for (const key of keys) {
+    const curVal = curMap.get(key) ?? '';
+    const prevVal = prevMap.get(key) ?? '';
+    const curNum = Number(curVal);
+    const prevNum = Number(prevVal);
+    let diff = 0;
+    let pct = 0;
+    if (!isNaN(curNum) && !isNaN(prevNum)) {
+      diff = curNum - prevNum;
+      pct = prevNum === 0 ? Infinity : (diff / prevNum * 100);
+    } else if (curVal !== prevVal) {
+      diff = NaN;
+      pct = NaN;
+    }
+    summary.push({ Key: key, Previous: prevVal, Current: curVal, Difference: diff, Percent: pct });
+  }
+
+  await fsp.writeFile(
+    path.join(reportsDir, 'MRDOC_report.json'),
+    JSON.stringify({ current, previous, summary }, null, 2)
+  );
+
+  let html = `<h3>MRDOC Report (${current} vs ${previous})</h3>`;
+  html += '<table style="border:1px solid #ccc;border-collapse:collapse"><thead><tr><th>Key</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th></tr></thead><tbody>';
+  for (const row of summary) {
+    const diffClass = row.Difference < 0 ? 'negative' : 'positive';
+    const diffTxt = isNaN(row.Difference) ? '' : row.Difference;
+    const pctTxt = isNaN(row.Percent) ? '' : (isFinite(row.Percent) ? row.Percent.toFixed(2) : 'inf');
+    html += `<tr><td>${escapeHTML(row.Key)}</td><td>${escapeHTML(row.Previous)}</td><td>${escapeHTML(row.Current)}</td><td class="${diffClass}">${diffTxt}</td><td>${pctTxt}</td></tr>`;
+  }
+  html += '</tbody></table>';
+  const wrapped = wrapHtml('MRDOC Report', html);
+  if (generateHtml) {
+    await fsp.writeFile(path.join(reportsDir, 'MRDOC_report.html'), wrapped);
+  }
+}
+
 // Gather rows for a specific SAB|REL|RELA combination in MRREL
 async function gatherMRRELRowsForKey(file, key) {
   const rows = [];
@@ -788,6 +849,7 @@ async function generateMRRELReport(current, previous) {
   await generateCountReport(current, previous, 'MRSAB.RRF', [3], 'MRSAB');
   await generateMRSABChangeReport(current, previous);
   await generateCountReport(current, previous, 'MRDEF.RRF', [4], 'MRDEF');
+  await generateMRDOCReport(current, previous);
   await generateMRRELReport(current, previous);
   await generateCountReport(current, previous, 'MRSAT.RRF', [9], 'MRSAT');
   await fsp.mkdir(reportsDir, { recursive: true });
