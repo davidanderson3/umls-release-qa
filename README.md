@@ -18,6 +18,7 @@ what was used previously, preprocessing is skipped.
 ## Usage
 
 1. Place at least two release directories under `releases/`.
-2. Run `npm run preprocess` to generate reports.
+2. Run `npm run preprocess` to generate reports with HTML output.
+   Use `npm run preprocess:data` to generate only the JSON data without HTML.
 
-HTML reports will be saved to the `reports/` folder.
+Reports are saved to the `reports/` folder.
