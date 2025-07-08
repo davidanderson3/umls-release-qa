@@ -11,8 +11,6 @@
   <div class="container">
     <h1 id="page-title" class="editable">UMLS Release QA</h1>
     <div id="status"></div>
-    <p id="note1" class="editable note"></p>
-    <button id="run-preprocess" class="editable">Run Reports</button>
     <div id="preprocess-results"></div>
     <p id="note2" class="editable note"></p>
     <div id="line-results"></div>
@@ -21,7 +19,6 @@
 
   <script type="module">
     let texts = {};
-    let reportInterval = null;
 
     async function loadTexts() {
       try {
@@ -33,8 +30,6 @@
       texts = texts || {};
       document.title = texts.title || 'UMLS Release QA';
       document.getElementById('page-title').textContent = texts.header || 'UMLS Release QA';
-      document.getElementById('run-preprocess').textContent = texts.runPreprocessButton || 'Run Reports';
-      document.getElementById('note1').textContent = texts.note1 || '';
       document.getElementById('note2').textContent = texts.note2 || '';
       document.getElementById('note3').textContent = texts.note3 || '';
     }
@@ -54,8 +49,6 @@
       const payload = {
         title: document.title,
         header: document.getElementById('page-title').textContent,
-        runPreprocessButton: document.getElementById('run-preprocess').textContent,
-        note1: document.getElementById('note1').textContent,
         note2: document.getElementById('note2').textContent,
         note3: document.getElementById('note3').textContent
       };
@@ -96,33 +89,7 @@
     }
     checkReleases();
 
-    // Automatically check for finished reports when running preprocessing
 
-    document.getElementById('run-preprocess').addEventListener('click', () => {
-      const output = document.getElementById('preprocess-results');
-      output.innerHTML = '<p>Running reports...</p>';
-      const es = new EventSource('/api/preprocess-stream');
-      es.onmessage = (e) => {
-        output.insertAdjacentHTML('beforeend', `<pre>${e.data}</pre>`);
-        if (e.data.includes('Generating MRCONSO report')) {
-          loadReports();
-          if (!reportInterval) reportInterval = setInterval(loadReports, 5000);
-        }
-      };
-      es.addEventListener('done', () => {
-        es.close();
-        clearInterval(reportInterval);
-        reportInterval = null;
-        output.insertAdjacentHTML('beforeend', '<p>Reports done.</p>');
-        loadReports();
-      });
-      es.onerror = () => {
-        output.insertAdjacentHTML('beforeend', '<p style="color:red">Error running reports.</p>');
-        es.close();
-        clearInterval(reportInterval);
-        reportInterval = null;
-      };
-    });
 
     async function fileExists(url) {
       try {
