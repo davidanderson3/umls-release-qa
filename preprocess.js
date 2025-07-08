@@ -108,6 +108,7 @@ async function generateLineCountDiff(current, previous) {
     else if (/^MRDEF\.RRF$/i.test(base)) link = 'MRDEF_report.html';
     else if (/^MRREL\.RRF$/i.test(base)) link = 'MRREL_report.html';
     else if (/^MRSAT\.RRF$/i.test(base)) link = 'MRSAT_report.html';
+    else if (/^MRHIER\.RRF$/i.test(base)) link = 'MRHIER_report.html';
     result.push({ name, current: cur, previous: prev, diff, percent, link });
   }
 
@@ -823,8 +824,9 @@ async function generateMRRELReport(current, previous) {
     await generateCountReport(current, previous, 'MRSAB.RRF', [3], 'MRSAB');
     await generateCountReport(current, previous, 'MRDEF.RRF', [4], 'MRDEF');
     await generateCountReport(current, previous, 'MRSAT.RRF', [9], 'MRSAT');
+    await generateCountReport(current, previous, 'MRHIER.RRF', [4], 'MRHIER');
   } else {
-    console.log('Count report logic unchanged; skipping MRSAB/MRDEF/MRSAT counts.');
+    console.log('Count report logic unchanged; skipping MRSAB/MRDEF/MRSAT/MRHIER counts.');
   }
 
   if (runMRSABChange) {
