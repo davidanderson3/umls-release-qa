@@ -264,6 +264,7 @@ app.get('/api/line-count-diff', async (req, res) => {
       else if (/^MRDEF\.RRF$/i.test(base)) link = 'MRDEF_report.html';
       else if (/^MRREL\.RRF$/i.test(base)) link = 'MRREL_report.html';
       else if (/^MRSAT\.RRF$/i.test(base)) link = 'MRSAT_report.html';
+      else if (/^MRHIER\.RRF$/i.test(base)) link = 'MRHIER_report.html';
       let status = 'n/a';
       if (link) {
         try {
