@@ -6,6 +6,7 @@ const readline = require('readline');
 const releasesDir = path.join(__dirname, 'releases');
 const reportsDir = path.join(__dirname, 'reports');
 const diffsDir = path.join(reportsDir, 'diffs');
+const styBreakdownDir = path.join(reportsDir, 'sty_breakdowns');
 const configFile = path.join(reportsDir, 'config.json');
 
 function wrapHtml(title, body) {
@@ -325,6 +326,148 @@ async function generateSABDiff(current, previous) {
   await fsp.writeFile(path.join(reportsDir, 'MRCONSO_report.html'), wrapped);
 }
 
+// Read mapping of CUI to set of Semantic Types (STYs)
+async function readSTYMap(file) {
+  const map = new Map();
+  try {
+    const rl = readline.createInterface({ input: fs.createReadStream(file) });
+    for await (const line of rl) {
+      const parts = line.split('|');
+      if (parts.length < 4) continue;
+      const CUI = parts[0];
+      const STY = parts[3];
+      if (!map.has(CUI)) map.set(CUI, new Set());
+      map.get(CUI).add(STY);
+    }
+  } catch {
+    return new Map();
+  }
+  return map;
+}
+
+// Read mapping of CUI to set of SABs
+async function readCUISABMap(file) {
+  const map = new Map();
+  try {
+    const rl = readline.createInterface({ input: fs.createReadStream(file) });
+    for await (const line of rl) {
+      const parts = line.split('|');
+      if (parts.length < 12) continue;
+      const CUI = parts[0];
+      const SAB = parts[11] || 'MISSING';
+      if (!map.has(CUI)) map.set(CUI, new Set());
+      map.get(CUI).add(SAB);
+    }
+  } catch {
+    return new Map();
+  }
+  return map;
+}
+
+function computeSTYCounts(styMap) {
+  const counts = new Map();
+  for (const set of styMap.values()) {
+    for (const sty of set) {
+      counts.set(sty, (counts.get(sty) || 0) + 1);
+    }
+  }
+  return counts;
+}
+
+function computeSTYSABCounts(styMap, cuiSabMap) {
+  const counts = new Map();
+  for (const [cui, stySet] of styMap) {
+    const sabs = cuiSabMap.get(cui);
+    if (!sabs) continue;
+    for (const sty of stySet) {
+      for (const sab of sabs) {
+        const key = `${sty}|${sab}`;
+        counts.set(key, (counts.get(key) || 0) + 1);
+      }
+    }
+  }
+  return counts;
+}
+
+function sanitizeComponent(str) {
+  return str.replace(/\s+/g, '_').replace(/[^A-Za-z0-9_-]/g, '');
+}
+
+async function generateSTYReports(current, previous) {
+  const styCurFile = path.join(releasesDir, current, 'META', 'MRSTY.RRF');
+  const styPrevFile = path.join(releasesDir, previous, 'META', 'MRSTY.RRF');
+  const consoCurFile = path.join(releasesDir, current, 'META', 'MRCONSO.RRF');
+  const consoPrevFile = path.join(releasesDir, previous, 'META', 'MRCONSO.RRF');
+
+  const styCurMap = await readSTYMap(styCurFile);
+  const styPrevMap = await readSTYMap(styPrevFile);
+  const sabCurMap = await readCUISABMap(consoCurFile);
+  const sabPrevMap = await readCUISABMap(consoPrevFile);
+
+  const curCounts = computeSTYCounts(styCurMap);
+  const prevCounts = computeSTYCounts(styPrevMap);
+  const curSabCounts = computeSTYSABCounts(styCurMap, sabCurMap);
+  const prevSabCounts = computeSTYSABCounts(styPrevMap, sabPrevMap);
+
+  await fsp.mkdir(styBreakdownDir, { recursive: true });
+
+  const summary = [];
+  const allSTYs = new Set([...curCounts.keys(), ...prevCounts.keys()]);
+  for (const sty of allSTYs) {
+    const currentCount = curCounts.get(sty) || 0;
+    const previousCount = prevCounts.get(sty) || 0;
+    const diff = currentCount - previousCount;
+    const pct = previousCount === 0 ? Infinity : (diff / previousCount * 100);
+    let link = '';
+    if (diff !== 0) {
+      const detail = [];
+      const sabKeys = new Set();
+      for (const k of curSabCounts.keys()) if (k.startsWith(sty + '|')) sabKeys.add(k.split('|')[1]);
+      for (const k of prevSabCounts.keys()) if (k.startsWith(sty + '|')) sabKeys.add(k.split('|')[1]);
+      for (const sab of sabKeys) {
+        const c = curSabCounts.get(`${sty}|${sab}`) || 0;
+        const p = prevSabCounts.get(`${sty}|${sab}`) || 0;
+        const d = c - p;
+        if (d !== 0) {
+          const pp = p === 0 ? Infinity : (d / p * 100);
+          detail.push({ SAB: sab, Previous: p, Current: c, Difference: d, Percent: pp });
+        }
+      }
+      if (detail.length) {
+        const safe = sanitizeComponent(sty);
+        const jsonName = `${safe}_SAB_breakdown.json`;
+        const htmlName = jsonName.replace(/\.json$/, '.html');
+        await fsp.writeFile(path.join(styBreakdownDir, jsonName), JSON.stringify({ current, previous, sty, detail }, null, 2));
+        let html = `<h3>${escapeHTML(sty)} by SAB (${current} vs ${previous})</h3>`;
+        html += '<table><thead><tr><th>SAB</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th></tr></thead><tbody>';
+        for (const row of detail) {
+          const diffClass = row.Difference < 0 ? 'negative' : 'positive';
+          const pctTxt = isFinite(row.Percent) ? row.Percent.toFixed(2) : 'inf';
+          html += `<tr><td>${row.SAB}</td><td>${row.Previous}</td><td>${row.Current}</td><td class="${diffClass}">${row.Difference}</td><td>${pctTxt}</td></tr>`;
+        }
+        html += '</tbody></table>';
+        await fsp.writeFile(path.join(styBreakdownDir, htmlName), wrapDiffHtml(`${sty} by SAB`, html));
+        link = `sty_breakdowns/${jsonName}`;
+      }
+    }
+    summary.push({ Key: sty, Previous: previousCount, Current: currentCount, Difference: diff, Percent: pct, link });
+  }
+
+  const summaryPath = path.join(reportsDir, 'MRSTY_report.json');
+  await fsp.writeFile(summaryPath, JSON.stringify({ current, previous, summary }, null, 2));
+
+  let html = `<h3>MRSTY Report (${current} vs ${previous})</h3>`;
+  html += '<table><thead><tr><th>STY</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th><th>Details</th></tr></thead><tbody>';
+  for (const row of summary) {
+    const diffClass = row.Difference < 0 ? 'negative' : 'positive';
+    const pctTxt = isFinite(row.Percent) ? row.Percent.toFixed(2) : 'inf';
+    const linkCell = row.link ? `<a href="${row.link.replace(/\.json$/, '.html')}">view</a>` : '';
+    html += `<tr><td>${escapeHTML(row.Key)}</td><td>${row.Previous}</td><td>${row.Current}</td><td class="${diffClass}">${row.Difference}</td><td>${pctTxt}</td><td>${linkCell}</td></tr>`;
+  }
+  html += '</tbody></table>';
+  await fsp.writeFile(path.join(reportsDir, 'MRSTY_report.html'), wrapHtml('MRSTY Report', html));
+}
+
 async function generateCountReport(current, previous, fileName, indices, tableName) {
   const currentFile = path.join(releasesDir, current, 'META', fileName);
   const previousFile = path.join(releasesDir, previous, 'META', fileName);
@@ -429,7 +572,8 @@ async function generateMRSABChangeReport(current, previous) {
   await generateSABDiff(current, previous);
   console.log('MRCONSO report done.');
   console.log('Generating additional table reports...');
-  await generateCountReport(current, previous, 'MRSTY.RRF', [3], 'MRSTY');
+  await generateSTYReports(current, previous);
+  await generateCountReport(current, previous, 'MRSAB.RRF', [3], 'MRSAB');
   await generateMRSABChangeReport(current, previous);
   await generateCountReport(current, previous, 'MRDEF.RRF', [4], 'MRDEF');
   await generateCountReport(current, previous, 'MRREL.RRF', [3], 'MRREL');
