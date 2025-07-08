@@ -155,7 +155,7 @@
         }
       }
       if (rows.length) {
-        results.innerHTML = `<h3>Reports</h3><table><thead><tr><th>Report</th></tr></thead><tbody>${rows.join('')}</tbody></table>`;
+        results.innerHTML = `<h3>Reports</h3><table style="border:1px solid #ccc;border-collapse:collapse"><thead><tr><th>Report</th></tr></thead><tbody>${rows.join('')}</tbody></table>`;
       } else {
         results.innerHTML = '<p>No reports available.</p>';
       }
