@@ -28,6 +28,48 @@ const releasesDir = process.env.RELEASES_DIR || path.join(__dirname, 'releases')
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname)));
+// Dynamically generate the MRCONSO report HTML from the JSON summary so we can
+// control ordering without modifying the preprocessing step.
+app.get('/reports/MRCONSO_report.html', async (req, res, next) => {
+  try {
+    const jsonPath = path.join(reportsDir, 'MRCONSO_report.json');
+    const data = JSON.parse(await fsp.readFile(jsonPath, 'utf-8'));
+    const summary = Array.isArray(data.summary) ? data.summary.slice() : [];
+    // Sort by SAB then TTY
+    summary.sort((a, b) => {
+      const sabCmp = a.SAB.localeCompare(b.SAB);
+      return sabCmp !== 0 ? sabCmp : a.TTY.localeCompare(b.TTY);
+    });
+    const notable = summary.filter(r => r.include);
+
+    let html = `<h3>MRCONSO SAB/TTY Differences (${data.current} vs ${data.previous})</h3>`;
+    if (notable.length) {
+      html += '<h4>Notable Changes</h4>';
+      html += '<table style="border:1px solid #ccc;border-collapse:collapse"><thead><tr><th>SAB</th><th>TTY</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th><th>Diff</th></tr></thead><tbody>';
+      for (const row of notable) {
+        const diffClass = row.Difference < 0 ? 'negative' : 'positive';
+        const pct = isFinite(row.Percent) ? row.Percent.toFixed(2) : 'inf';
+        const linkCell = row.link ? `<a href="${row.link.replace(/\.json$/, '.html')}">view</a>` : '';
+        html += `<tr><td>${row.SAB}</td><td>${row.TTY}</td><td>${row.Previous}</td><td>${row.Current}</td><td class="${diffClass}">${row.Difference}</td><td>${pct}</td><td>${linkCell}</td></tr>`;
+      }
+      html += '</tbody></table>';
+    }
+
+    html += '<h4>All changes</h4>';
+    html += '<table style="border:1px solid #ccc;border-collapse:collapse"><thead><tr><th>SAB</th><th>TTY</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th><th>Diff</th></tr></thead><tbody>';
+    for (const row of summary) {
+      const diffClass = row.Difference < 0 ? 'negative' : 'positive';
+      const pct = isFinite(row.Percent) ? row.Percent.toFixed(2) : 'inf';
+      const linkCell = row.link ? `<a href="${row.link.replace(/\.json$/, '.html')}">view</a>` : '';
+      html += `<tr><td>${row.SAB}</td><td>${row.TTY}</td><td>${row.Previous}</td><td>${row.Current}</td><td class="${diffClass}">${row.Difference}</td><td>${pct}</td><td>${linkCell}</td></tr>`;
+    }
+    html += '</tbody></table>';
+
+    res.send(wrapHtml('MRCONSO Report', html));
+  } catch (err) {
+    next();
+  }
+});
 app.use('/reports', express.static(reportsDir));
 
 async function detectReleases() {
