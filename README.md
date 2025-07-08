@@ -1,0 +1,23 @@
+# UMLS Release QA
+
+This project generates HTML reports comparing two UMLS releases.
+
+## Configuration
+
+Report behavior can be configured by editing `report-config.json` in the project
+root. Currently the only option is:
+
+- `includeStyBreakdowns` – when `true` (default) the MRSTY report will include
+  per-SAB breakdowns for semantic types. Set to `false` to skip these detailed
+  tables.
+
+When preprocessing runs it stores the last used configuration in
+`reports/config.json`. If the current configuration and release selection match
+what was used previously, preprocessing is skipped.
+
+## Usage
+
+1. Place at least two release directories under `releases/`.
+2. Run `npm run preprocess` to generate reports.
+
+HTML reports will be saved to the `reports/` folder.

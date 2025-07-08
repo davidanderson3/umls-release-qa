@@ -8,6 +8,16 @@ const reportsDir = path.join(__dirname, 'reports');
 const diffsDir = path.join(reportsDir, 'diffs');
 const styBreakdownDir = path.join(reportsDir, 'sty_breakdowns');
 const configFile = path.join(reportsDir, 'config.json');
+const userConfigPath = path.join(__dirname, 'report-config.json');
+
+async function loadReportConfig() {
+  try {
+    const raw = await fsp.readFile(userConfigPath, 'utf-8');
+    return JSON.parse(raw);
+  } catch {
+    return {};
+  }
+}
 
 function wrapHtml(title, body) {
   const style = '<style>table{width:100%;border-collapse:collapse;border:1px solid #ccc;margin-top:10px;font-size:0.9em}table th,table td{border:1px solid #ccc;padding:6px 10px;text-align:left}thead{background-color:#f2f2f2}</style>';
@@ -393,7 +403,7 @@ function sanitizeComponent(str) {
   return str.replace(/\s+/g, '_').replace(/[^A-Za-z0-9_-]/g, '');
 }
 
-async function generateSTYReports(current, previous) {
+async function generateSTYReports(current, previous, reportConfig = {}) {
   const styCurFile = path.join(releasesDir, current, 'META', 'MRSTY.RRF');
   const styPrevFile = path.join(releasesDir, previous, 'META', 'MRSTY.RRF');
   const consoCurFile = path.join(releasesDir, current, 'META', 'MRCONSO.RRF');
@@ -406,8 +416,9 @@ async function generateSTYReports(current, previous) {
 
   const curCounts = computeSTYCounts(styCurMap);
   const prevCounts = computeSTYCounts(styPrevMap);
-  const curSabCounts = computeSTYSABCounts(styCurMap, sabCurMap);
-  const prevSabCounts = computeSTYSABCounts(styPrevMap, sabPrevMap);
+  const includeBreakdowns = reportConfig.includeStyBreakdowns !== false;
+  const curSabCounts = includeBreakdowns ? computeSTYSABCounts(styCurMap, sabCurMap) : new Map();
+  const prevSabCounts = includeBreakdowns ? computeSTYSABCounts(styPrevMap, sabPrevMap) : new Map();
 
   await fsp.mkdir(styBreakdownDir, { recursive: true });
 
@@ -419,7 +430,7 @@ async function generateSTYReports(current, previous) {
     const diff = currentCount - previousCount;
     const pct = previousCount === 0 ? Infinity : (diff / previousCount * 100);
     let link = '';
-    if (diff !== 0) {
+    if (includeBreakdowns && diff !== 0) {
       const detail = [];
       const sabKeys = new Set();
       for (const k of curSabCounts.keys()) if (k.startsWith(sty + '|')) sabKeys.add(k.split('|')[1]);
@@ -457,12 +468,25 @@ async function generateSTYReports(current, previous) {
   await fsp.writeFile(summaryPath, JSON.stringify({ current, previous, summary }, null, 2));
 
   let html = `<h3>MRSTY Report (${current} vs ${previous})</h3>`;
-  html += '<table><thead><tr><th>STY</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th><th>Details</th></tr></thead><tbody>';
+  const header = includeBreakdowns ?
+    '<table><thead><tr><th>STY</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th><th>Details</th></tr></thead><tbody>' :
+    '<table><thead><tr><th>STY</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th></tr></thead><tbody>';
+  html += header;
   for (const row of summary) {
     const diffClass = row.Difference < 0 ? 'negative' : 'positive';
     const pctTxt = isFinite(row.Percent) ? row.Percent.toFixed(2) : 'inf';
-    const linkCell = row.link ? `<a href="${row.link.replace(/\.json$/, '.html')}">view</a>` : '';
-    html += `<tr><td>${escapeHTML(row.Key)}</td><td>${row.Previous}</td><td>${row.Current}</td><td class="${diffClass}">${row.Difference}</td><td>${pctTxt}</td><td>${linkCell}</td></tr>`;
+    const cells = [
+      escapeHTML(row.Key),
+      row.Previous,
+      row.Current,
+      `<span class="${diffClass}">${row.Difference}</span>`,
+      pctTxt
+    ];
+    if (includeBreakdowns) {
+      const linkCell = row.link ? `<a href="${row.link.replace(/\.json$/, '.html')}">view</a>` : '';
+      cells.push(linkCell);
+    }
+    html += `<tr><td>${cells.join('</td><td>')}</td></tr>`;
   }
   html += '</tbody></table>';
   await fsp.writeFile(path.join(reportsDir, 'MRSTY_report.html'), wrapHtml('MRSTY Report', html));
@@ -552,6 +576,21 @@ async function generateMRSABChangeReport(current, previous) {
     process.exit(1);
   }
 
+  const reportConfig = await loadReportConfig();
+
+  let lastConfig = null;
+  try {
+    lastConfig = JSON.parse(await fsp.readFile(configFile, 'utf-8'));
+  } catch {}
+
+  const sameReleases = lastConfig && lastConfig.current === current && lastConfig.previous === previous;
+  const sameConfig = lastConfig && JSON.stringify(lastConfig.reportConfig || {}) === JSON.stringify(reportConfig);
+
+  if (sameReleases && sameConfig) {
+    console.log('Report configuration unchanged. Skipping regeneration.');
+    return;
+  }
+
   let needCounts = true;
   const diffFile = path.join(reportsDir, 'line-count-diff.json');
   try {
@@ -572,14 +611,17 @@ async function generateMRSABChangeReport(current, previous) {
   await generateSABDiff(current, previous);
   console.log('MRCONSO report done.');
   console.log('Generating additional table reports...');
-  await generateSTYReports(current, previous);
+  await generateSTYReports(current, previous, reportConfig);
   await generateCountReport(current, previous, 'MRSAB.RRF', [3], 'MRSAB');
   await generateMRSABChangeReport(current, previous);
   await generateCountReport(current, previous, 'MRDEF.RRF', [4], 'MRDEF');
   await generateCountReport(current, previous, 'MRREL.RRF', [3], 'MRREL');
   await generateCountReport(current, previous, 'MRSAT.RRF', [9], 'MRSAT');
   await fsp.mkdir(reportsDir, { recursive: true });
-  await fsp.writeFile(configFile, JSON.stringify({ current, previous }, null, 2));
+  await fsp.writeFile(
+    configFile,
+    JSON.stringify({ current, previous, reportConfig }, null, 2)
+  );
   console.log('Reports generated in', reportsDir);
 })().catch(err => {
   console.error(err);
