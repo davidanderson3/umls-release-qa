@@ -308,7 +308,7 @@ async function generateSABDiff(current, previous) {
     const difference = currentCount - previousCount;
     const percent = previousCount === 0 ? Infinity : (difference / previousCount * 100);
     const include = percent < 0 || percent > 5 || sab === 'SRC';
-    const entry = { SAB: sab, TTY: tty, Previous: previousCount, Current: currentCount, Difference: difference, Percent: percent, link: '' };
+    const entry = { SAB: sab, TTY: tty, Previous: previousCount, Current: currentCount, Difference: difference, Percent: percent, link: '', include };
     if (include) detailKeys.add(key);
     summary.push(entry);
   }
@@ -337,7 +337,20 @@ async function generateSABDiff(current, previous) {
   const summaryPath = path.join(reportsDir, 'MRCONSO_report.json');
   await fsp.writeFile(summaryPath, JSON.stringify({ current, previous, summary }, null, 2));
 
+  const notable = summary.filter(r => r.include);
   let html = `<h3>MRCONSO SAB/TTY Differences (${current} vs ${previous})</h3>`;
+  if (notable.length) {
+    html += '<h4>Notable Changes</h4>';
+    html += '<table style="border:1px solid #ccc;border-collapse:collapse"><thead><tr><th>SAB</th><th>TTY</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th><th>Diff</th></tr></thead><tbody>';
+    for (const row of notable) {
+      const diffClass = row.Difference < 0 ? 'negative' : 'positive';
+      const pct = isFinite(row.Percent) ? row.Percent.toFixed(2) : 'inf';
+      const linkCell = row.link ? `<a href="${row.link.replace(/\.json$/, '.html')}">view</a>` : '';
+      html += `<tr><td>${row.SAB}</td><td>${row.TTY}</td><td>${row.Previous}</td><td>${row.Current}</td><td class="${diffClass}">${row.Difference}</td><td>${pct}</td><td>${linkCell}</td></tr>`;
+    }
+    html += '</tbody></table>';
+  }
+
   html += '<table style="border:1px solid #ccc;border-collapse:collapse"><thead><tr><th>SAB</th><th>TTY</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th><th>Diff</th></tr></thead><tbody>';
   for (const row of summary) {
     const diffClass = row.Difference < 0 ? 'negative' : 'positive';
