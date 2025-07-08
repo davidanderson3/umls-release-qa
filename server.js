@@ -11,7 +11,6 @@ const defaultTexts = {
   title: 'UMLS Release QA',
   header: 'UMLS Release QA',
   runPreprocessButton: 'Run Reports',
-  compareLinesButton: 'Compare Line Counts',
   note1: '',
   note2: '',
   note3: ''
@@ -106,10 +105,6 @@ app.get('/api/releases', async (req, res) => {
   const result = await detectReleases();
   res.json(result);
 });
-
-function safeStatSize(file) {
-  return fsp.stat(file).then(s => s.size).catch(() => null);
-}
 
 async function safeLineCount(file) {
   try {

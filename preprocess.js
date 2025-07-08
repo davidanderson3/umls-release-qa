@@ -215,31 +215,6 @@ async function gatherRows(file, keys) {
   return rows;
 }
 
-// Gather rows for a single SAB|TTY combination. This avoids keeping data
-// for all keys in memory at once, which can lead to excessive usage on large
-// files. Only rows matching the target key are returned.
-async function gatherRowsForKey(file, key) {
-  const rows = [];
-  try {
-    const rl = readline.createInterface({ input: fs.createReadStream(file) });
-    for await (const line of rl) {
-      const parts = line.split('|');
-      if (parts.length < 18) continue;
-      const CUI = parts[0];
-      const AUI = parts[7];
-      const SAB = parts[11] || 'MISSING';
-      const TTY = parts[12] || 'MISSING';
-      const STR = parts[14];
-      if (!AUI) continue;
-      if (`${SAB}|${TTY}` === key) {
-        rows.push({ SAB, TTY, CUI, AUI, STR });
-      }
-    }
-  } catch {
-    return [];
-  }
-  return rows;
-}
 
 function buildDiffData(sab, tty, baseRows, prevRows) {
   const base = baseRows;
