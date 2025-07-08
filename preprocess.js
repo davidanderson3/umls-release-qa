@@ -9,6 +9,8 @@ const diffsDir = path.join(reportsDir, 'diffs');
 const styBreakdownDir = path.join(reportsDir, 'sty_breakdowns');
 const configFile = path.join(reportsDir, 'config.json');
 const userConfigPath = path.join(__dirname, 'report-config.json');
+// If --data-only is passed, skip generating HTML output
+const generateHtml = !process.argv.includes('--data-only');
 
 async function loadReportConfig() {
   try {
@@ -123,7 +125,9 @@ async function generateLineCountDiff(current, previous) {
     html += `<p>Unchanged files: ${unchanged.join(', ')}</p>`;
   }
   const wrapped = wrapHtml('Line Count Comparison', html);
-  await fsp.writeFile(path.join(reportsDir, 'line-count-diff.html'), wrapped);
+  if (generateHtml) {
+    await fsp.writeFile(path.join(reportsDir, 'line-count-diff.html'), wrapped);
+  }
 }
 
 function escapeHTML(str) {
@@ -322,7 +326,9 @@ async function generateSABDiff(current, previous) {
         const filePath = path.join(diffsDir, fileName);
         await fsp.writeFile(filePath, JSON.stringify(diffData, null, 2));
         const htmlName = fileName.replace(/\.json$/, '.html');
-        await fsp.writeFile(path.join(diffsDir, htmlName), diffDataToHtml(diffData));
+        if (generateHtml) {
+          await fsp.writeFile(path.join(diffsDir, htmlName), diffDataToHtml(diffData));
+        }
         entry.link = `diffs/${fileName}`;
       }
     }
@@ -341,7 +347,9 @@ async function generateSABDiff(current, previous) {
   }
   html += '</tbody></table>';
   const wrapped = wrapHtml('MRCONSO Report', html);
-  await fsp.writeFile(path.join(reportsDir, 'MRCONSO_report.html'), wrapped);
+  if (generateHtml) {
+    await fsp.writeFile(path.join(reportsDir, 'MRCONSO_report.html'), wrapped);
+  }
 }
 
 // Read mapping of CUI to set of Semantic Types (STYs)
@@ -465,7 +473,9 @@ async function generateSTYReports(current, previous, reportConfig = {}) {
           html += `<tr><td>${row.SAB}</td><td>${row.Previous}</td><td>${row.Current}</td><td class="${diffClass}">${row.Difference}</td><td>${pctTxt}</td></tr>`;
         }
         html += '</tbody></table>';
-        await fsp.writeFile(path.join(styBreakdownDir, htmlName), wrapDiffHtml(`${sty} by SAB`, html));
+        if (generateHtml) {
+          await fsp.writeFile(path.join(styBreakdownDir, htmlName), wrapDiffHtml(`${sty} by SAB`, html));
+        }
         link = `sty_breakdowns/${jsonName}`;
       }
     }
@@ -497,7 +507,9 @@ async function generateSTYReports(current, previous, reportConfig = {}) {
     html += `<tr><td>${cells.join('</td><td>')}</td></tr>`;
   }
   html += '</tbody></table>';
-  await fsp.writeFile(path.join(reportsDir, 'MRSTY_report.html'), wrapHtml('MRSTY Report', html));
+  if (generateHtml) {
+    await fsp.writeFile(path.join(reportsDir, 'MRSTY_report.html'), wrapHtml('MRSTY Report', html));
+  }
 }
 
 async function generateCountReport(current, previous, fileName, indices, tableName) {
@@ -526,7 +538,9 @@ async function generateCountReport(current, previous, fileName, indices, tableNa
   }
   html += '</tbody></table>';
   const wrapped = wrapHtml(`${tableName} Report`, html);
-  await fsp.writeFile(path.join(reportsDir, `${tableName}_report.html`), wrapped);
+  if (generateHtml) {
+    await fsp.writeFile(path.join(reportsDir, `${tableName}_report.html`), wrapped);
+  }
 }
 
 async function readSABs(file) {
@@ -573,7 +587,9 @@ async function generateMRSABChangeReport(current, previous) {
     html += '<p>No SAB changes.</p>';
   }
   const wrapped = wrapHtml('MRSAB Report', html);
-  await fsp.writeFile(path.join(reportsDir, 'MRSAB_report.html'), wrapped);
+  if (generateHtml) {
+    await fsp.writeFile(path.join(reportsDir, 'MRSAB_report.html'), wrapped);
+  }
 }
 
 (async () => {
