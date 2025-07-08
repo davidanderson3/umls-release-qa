@@ -332,13 +332,17 @@ async function generateSABDiff(current, previous) {
     summary.push(entry);
   }
 
-  // Gather rows for each SAB/TTY individually to keep memory usage low.
+  // Gather rows for all selected SAB/TTY pairs in a single pass to avoid
+  // repeatedly scanning the large MRCONSO files.
   if (detailKeys.size) {
+    const baseRowsMap = await gatherRows(currentFile, detailKeys);
+    const prevRowsMap = await gatherRows(previousFile, detailKeys);
+
     for (const entry of summary) {
       const key = `${entry.SAB}|${entry.TTY}`;
       if (!detailKeys.has(key)) continue;
-      const baseRows = await gatherRowsForKey(currentFile, key);
-      const prevRows = await gatherRowsForKey(previousFile, key);
+      const baseRows = baseRowsMap.get(key) || [];
+      const prevRows = prevRowsMap.get(key) || [];
       const diffData = buildDiffData(entry.SAB, entry.TTY, baseRows, prevRows);
       if (diffData) {
         const fileName = `${entry.SAB}_${entry.TTY}_differences.json`;
