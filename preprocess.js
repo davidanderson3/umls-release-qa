@@ -8,6 +8,31 @@ const reportsDir = path.join(__dirname, 'reports');
 const diffsDir = path.join(reportsDir, 'diffs');
 const configFile = path.join(reportsDir, 'config.json');
 
+// Configuration for table reports. Each entry defines the indices used to
+// generate the counts and optional threshold for filtering by percent change.
+const tableConfigs = {
+  MRSTY: { indices: [3] },
+  MRDEF: { indices: [4] },
+  // Updated configuration for MRREL to group by SAB, REL and RELA and only
+  // include rows that changed by more than 5%.
+  MRREL: { indices: [10, 3, 4], threshold: 5 },
+  MRSAT: { indices: [9] }
+};
+
+function configsEqual(a, b) {
+  return JSON.stringify(a) === JSON.stringify(b);
+}
+
+async function reportUpToDate(jsonPath, current, previous, cfg) {
+  try {
+    const data = JSON.parse(await fsp.readFile(jsonPath, 'utf-8'));
+    return data.current === current && data.previous === previous &&
+           configsEqual(data.config, cfg);
+  } catch {
+    return false;
+  }
+}
+
 function wrapHtml(title, body) {
   const style = '<style>table{width:100%;border-collapse:collapse;border:1px solid #ccc;margin-top:10px;font-size:0.9em}table th,table td{border:1px solid #ccc;padding:6px 10px;text-align:left}thead{background-color:#f2f2f2}</style>';
   return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../css/styles.css">${style}</head><body><h1>${title}</h1>${body}</body></html>`;
@@ -269,6 +294,13 @@ function diffDataToHtml(data) {
 }
 
 async function generateSABDiff(current, previous) {
+  const cfg = { threshold: 5 };
+  const summaryPath = path.join(reportsDir, 'MRCONSO_report.json');
+  if (await reportUpToDate(summaryPath, current, previous, cfg)) {
+    console.log('MRCONSO report up to date.');
+    return;
+  }
+
   const currentFile = path.join(releasesDir, current, 'META', 'MRCONSO.RRF');
   const previousFile = path.join(releasesDir, previous, 'META', 'MRCONSO.RRF');
   const baseCounts = await readCountsMRCONSO(currentFile);
@@ -309,8 +341,7 @@ async function generateSABDiff(current, previous) {
     }
   }
 
-  const summaryPath = path.join(reportsDir, 'MRCONSO_report.json');
-  await fsp.writeFile(summaryPath, JSON.stringify({ current, previous, summary }, null, 2));
+  await fsp.writeFile(summaryPath, JSON.stringify({ current, previous, summary, config: cfg }, null, 2));
 
   let html = `<h3>MRCONSO SAB/TTY Differences (${current} vs ${previous})</h3>`;
   html += '<table style="border:1px solid #ccc;border-collapse:collapse"><thead><tr><th>SAB</th><th>TTY</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th><th>Diff</th></tr></thead><tbody>';
@@ -325,7 +356,15 @@ async function generateSABDiff(current, previous) {
   await fsp.writeFile(path.join(reportsDir, 'MRCONSO_report.html'), wrapped);
 }
 
-async function generateCountReport(current, previous, fileName, indices, tableName) {
+async function generateCountReport(current, previous, fileName, cfg, tableName) {
+  const jsonName = `${tableName}_report.json`;
+  const jsonPath = path.join(reportsDir, jsonName);
+  if (await reportUpToDate(jsonPath, current, previous, cfg)) {
+    console.log(`${tableName} report up to date.`);
+    return;
+  }
+
+  const { indices, threshold = 0 } = cfg;
   const currentFile = path.join(releasesDir, current, 'META', fileName);
   const previousFile = path.join(releasesDir, previous, 'META', fileName);
   const baseCounts = await readCountsByIndices(currentFile, indices);
@@ -337,10 +376,11 @@ async function generateCountReport(current, previous, fileName, indices, tableNa
     const previousCount = prevCounts.get(key) || 0;
     const diff = currentCount - previousCount;
     const pct = previousCount === 0 ? Infinity : (diff / previousCount * 100);
+    if (Math.abs(pct) <= threshold) continue;
     summary.push({ Key: key, Previous: previousCount, Current: currentCount, Difference: diff, Percent: pct });
   }
-  const jsonName = `${tableName}_report.json`;
-  await fsp.writeFile(path.join(reportsDir, jsonName), JSON.stringify({ current, previous, summary }, null, 2));
+
+  await fsp.writeFile(jsonPath, JSON.stringify({ current, previous, summary, config: cfg }, null, 2));
 
   let html = `<h3>${tableName} Report (${current} vs ${previous})</h3>`;
   html += '<table style="border:1px solid #ccc;border-collapse:collapse"><thead><tr><th>Key</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th></tr></thead><tbody>';
@@ -372,6 +412,12 @@ async function readSABs(file) {
 }
 
 async function generateMRSABChangeReport(current, previous) {
+  const cfg = {};
+  const jsonPath = path.join(reportsDir, 'MRSAB_report.json');
+  if (await reportUpToDate(jsonPath, current, previous, cfg)) {
+    console.log('MRSAB report up to date.');
+    return;
+  }
   const currentFile = path.join(releasesDir, current, 'META', 'MRSAB.RRF');
   const previousFile = path.join(releasesDir, previous, 'META', 'MRSAB.RRF');
   const currentSABs = await readSABs(currentFile);
@@ -380,8 +426,8 @@ async function generateMRSABChangeReport(current, previous) {
   const added = [...currentSABs].filter(s => !previousSABs.has(s)).sort();
   const dropped = [...previousSABs].filter(s => !currentSABs.has(s)).sort();
 
-  const jsonData = { current, previous, added, dropped };
-  await fsp.writeFile(path.join(reportsDir, 'MRSAB_report.json'), JSON.stringify(jsonData, null, 2));
+  const jsonData = { current, previous, added, dropped, config: cfg };
+  await fsp.writeFile(jsonPath, JSON.stringify(jsonData, null, 2));
 
   let html = `<h3>MRSAB Added/Dropped (${current} vs ${previous})</h3>`;
   if (added.length) {
@@ -429,13 +475,13 @@ async function generateMRSABChangeReport(current, previous) {
   await generateSABDiff(current, previous);
   console.log('MRCONSO report done.');
   console.log('Generating additional table reports...');
-  await generateCountReport(current, previous, 'MRSTY.RRF', [3], 'MRSTY');
+  await generateCountReport(current, previous, 'MRSTY.RRF', tableConfigs.MRSTY, 'MRSTY');
   await generateMRSABChangeReport(current, previous);
-  await generateCountReport(current, previous, 'MRDEF.RRF', [4], 'MRDEF');
-  await generateCountReport(current, previous, 'MRREL.RRF', [3], 'MRREL');
-  await generateCountReport(current, previous, 'MRSAT.RRF', [9], 'MRSAT');
+  await generateCountReport(current, previous, 'MRDEF.RRF', tableConfigs.MRDEF, 'MRDEF');
+  await generateCountReport(current, previous, 'MRREL.RRF', tableConfigs.MRREL, 'MRREL');
+  await generateCountReport(current, previous, 'MRSAT.RRF', tableConfigs.MRSAT, 'MRSAT');
   await fsp.mkdir(reportsDir, { recursive: true });
-  await fsp.writeFile(configFile, JSON.stringify({ current, previous }, null, 2));
+  await fsp.writeFile(configFile, JSON.stringify({ current, previous, tableConfigs }, null, 2));
   console.log('Reports generated in', reportsDir);
 })().catch(err => {
   console.error(err);
