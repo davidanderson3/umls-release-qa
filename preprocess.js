@@ -102,6 +102,7 @@ async function generateLineCountDiff(current, previous) {
     else if (/^MRSAB\.RRF$/i.test(base)) link = 'MRSAB_report.html';
     else if (/^MRDEF\.RRF$/i.test(base)) link = 'MRDEF_report.html';
     else if (/^MRREL\.RRF$/i.test(base)) link = 'MRREL_report.html';
+    else if (/^MRRANK\.RRF$/i.test(base)) link = 'MRRANK_report.html';
     else if (/^MRSAT\.RRF$/i.test(base)) link = 'MRSAT_report.html';
     result.push({ name, current: cur, previous: prev, diff, percent, link });
   }
@@ -789,6 +790,7 @@ async function generateMRRELReport(current, previous) {
   await generateMRSABChangeReport(current, previous);
   await generateCountReport(current, previous, 'MRDEF.RRF', [4], 'MRDEF');
   await generateMRRELReport(current, previous);
+  await generateCountReport(current, previous, 'MRRANK.RRF', [2, 3], 'MRRANK');
   await generateCountReport(current, previous, 'MRSAT.RRF', [9], 'MRSAT');
   await fsp.mkdir(reportsDir, { recursive: true });
   await fsp.writeFile(
