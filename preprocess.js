@@ -71,6 +71,19 @@ async function safeLineCount(file) {
   }
 }
 
+async function readAllLines(file) {
+  const lines = [];
+  try {
+    const rl = readline.createInterface({ input: fs.createReadStream(file) });
+    for await (const line of rl) {
+      lines.push(line);
+    }
+  } catch {
+    return [];
+  }
+  return lines;
+}
+
 async function listFiles(dir, base = dir) {
   let result = [];
   const entries = await fsp.readdir(dir, { withFileTypes: true });
@@ -746,6 +759,34 @@ async function generateMRRELReport(current, previous) {
   }
 }
 
+async function generateMRDOCReport(current, previous) {
+  const currentFile = path.join(releasesDir, current, 'META', 'MRDOC.RRF');
+  const previousFile = path.join(releasesDir, previous, 'META', 'MRDOC.RRF');
+  const curLines = await readAllLines(currentFile);
+  const prevLines = await readAllLines(previousFile);
+  const curSet = new Set(curLines);
+  const prevSet = new Set(prevLines);
+  const added = curLines.filter(l => !prevSet.has(l));
+  const removed = prevLines.filter(l => !curSet.has(l));
+  const jsonPath = path.join(reportsDir, 'MRDOC_report.json');
+  await fsp.writeFile(jsonPath, JSON.stringify({ current, previous, added, removed }, null, 2));
+
+  let html = `<h3>MRDOC Differences (${current} vs ${previous})</h3>`;
+  if (!added.length && !removed.length) {
+    html += '<p>No differences found.</p>';
+  } else {
+    if (added.length) {
+      html += `<h4>Added (${added.length})</h4><pre>${added.map(escapeHTML).join('\n')}</pre>`;
+    }
+    if (removed.length) {
+      html += `<h4>Removed (${removed.length})</h4><pre>${removed.map(escapeHTML).join('\n')}</pre>`;
+    }
+  }
+  if (generateHtml) {
+    await fsp.writeFile(path.join(reportsDir, 'MRDOC_report.html'), wrapHtml('MRDOC Report', html));
+  }
+}
+
 (async () => {
   console.log('Detecting available releases...');
   const { current, previous } = await detectReleases();
@@ -762,7 +803,8 @@ async function generateMRRELReport(current, previous) {
     STYReports: hashOf(generateSTYReports.toString()),
     countReport: hashOf(generateCountReport.toString()),
     MRSABChange: hashOf(generateMRSABChangeReport.toString()),
-    MRREL: hashOf(generateMRRELReport.toString())
+    MRREL: hashOf(generateMRRELReport.toString()),
+    MRDOC: hashOf(generateMRDOCReport.toString())
   };
 
   let lastConfig = null;
@@ -803,6 +845,7 @@ async function generateMRRELReport(current, previous) {
   const runCount = !sameReleases || lastHashes.countReport !== currentHashes.countReport;
   const runMRSABChange = !sameReleases || lastHashes.MRSABChange !== currentHashes.MRSABChange;
   const runMRREL = !sameReleases || lastHashes.MRREL !== currentHashes.MRREL;
+  const runMRDOC = !sameReleases || lastHashes.MRDOC !== currentHashes.MRDOC;
 
   if (runMRCONSO) {
     console.log('Generating MRCONSO report...');
@@ -837,6 +880,11 @@ async function generateMRRELReport(current, previous) {
     await generateMRRELReport(current, previous);
   } else {
     console.log('MRREL logic unchanged; skipping.');
+  }
+  if (runMRDOC) {
+    await generateMRDOCReport(current, previous);
+  } else {
+    console.log('MRDOC logic unchanged; skipping.');
   }
   await fsp.mkdir(reportsDir, { recursive: true });
   await fsp.writeFile(
