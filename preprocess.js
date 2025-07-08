@@ -2,6 +2,7 @@ const fs = require('fs');
 const fsp = fs.promises;
 const path = require('path');
 const readline = require('readline');
+const crypto = require('crypto');
 
 const releasesDir = path.join(__dirname, 'releases');
 const reportsDir = path.join(__dirname, 'reports');
@@ -11,6 +12,10 @@ const configFile = path.join(reportsDir, 'config.json');
 const userConfigPath = path.join(__dirname, 'report-config.json');
 // If --data-only is passed, skip generating HTML output
 const generateHtml = !process.argv.includes('--data-only');
+
+function hashOf(str) {
+  return crypto.createHash('sha256').update(str).digest('hex');
+}
 
 async function loadReportConfig() {
   try {
@@ -751,6 +756,15 @@ async function generateMRRELReport(current, previous) {
 
   const reportConfig = await loadReportConfig();
 
+  const currentHashes = {
+    lineCountDiff: hashOf(generateLineCountDiff.toString()),
+    MRCONSO: hashOf(generateSABDiff.toString()),
+    STYReports: hashOf(generateSTYReports.toString()),
+    countReport: hashOf(generateCountReport.toString()),
+    MRSABChange: hashOf(generateMRSABChangeReport.toString()),
+    MRREL: hashOf(generateMRRELReport.toString())
+  };
+
   let lastConfig = null;
   try {
     lastConfig = JSON.parse(await fsp.readFile(configFile, 'utf-8'));
@@ -758,19 +772,23 @@ async function generateMRRELReport(current, previous) {
 
   const sameReleases = lastConfig && lastConfig.current === current && lastConfig.previous === previous;
   const sameConfig = lastConfig && JSON.stringify(lastConfig.reportConfig || {}) === JSON.stringify(reportConfig);
-
-  if (sameReleases && sameConfig) {
-    console.log('Report configuration unchanged. Skipping regeneration.');
+  const lastHashes = (lastConfig && lastConfig.logicHashes) || {};
+  const sameHashes = JSON.stringify(lastHashes) === JSON.stringify(currentHashes);
+  if (sameReleases && sameConfig && sameHashes) {
+    console.log('Report configuration and logic unchanged. Skipping regeneration.');
     return;
   }
 
-  let needCounts = true;
+  let needCounts = !sameReleases || lastHashes.lineCountDiff !== currentHashes.lineCountDiff;
   const diffFile = path.join(reportsDir, 'line-count-diff.json');
-  try {
-    await fsp.access(diffFile);
-    console.log('Existing line count diff found, skipping regeneration.');
-    needCounts = false;
-  } catch {}
+  if (!needCounts) {
+    try {
+      await fsp.access(diffFile);
+      console.log('Existing line count diff found, skipping regeneration.');
+    } catch {
+      needCounts = true;
+    }
+  }
 
   if (needCounts) {
     console.log(`Processing line counts for ${current} vs ${previous}...`);
@@ -780,20 +798,50 @@ async function generateMRRELReport(current, previous) {
       console.error('Failed generating line counts:', err.message);
     }
   }
-  console.log('Generating MRCONSO report...');
-  await generateSABDiff(current, previous);
-  console.log('MRCONSO report done.');
-  console.log('Generating additional table reports...');
-  await generateSTYReports(current, previous, reportConfig);
-  await generateCountReport(current, previous, 'MRSAB.RRF', [3], 'MRSAB');
-  await generateMRSABChangeReport(current, previous);
-  await generateCountReport(current, previous, 'MRDEF.RRF', [4], 'MRDEF');
-  await generateMRRELReport(current, previous);
-  await generateCountReport(current, previous, 'MRSAT.RRF', [9], 'MRSAT');
+  const runMRCONSO = !sameReleases || lastHashes.MRCONSO !== currentHashes.MRCONSO;
+  const runSTYReports = !sameReleases || lastHashes.STYReports !== currentHashes.STYReports || !sameConfig;
+  const runCount = !sameReleases || lastHashes.countReport !== currentHashes.countReport;
+  const runMRSABChange = !sameReleases || lastHashes.MRSABChange !== currentHashes.MRSABChange;
+  const runMRREL = !sameReleases || lastHashes.MRREL !== currentHashes.MRREL;
+
+  if (runMRCONSO) {
+    console.log('Generating MRCONSO report...');
+    await generateSABDiff(current, previous);
+    console.log('MRCONSO report done.');
+  } else {
+    console.log('MRCONSO logic unchanged; skipping.');
+  }
+
+  if (runSTYReports) {
+    console.log('Generating additional table reports...');
+    await generateSTYReports(current, previous, reportConfig);
+  } else {
+    console.log('STY report logic unchanged; skipping.');
+  }
+
+  if (runCount) {
+    await generateCountReport(current, previous, 'MRSAB.RRF', [3], 'MRSAB');
+    await generateCountReport(current, previous, 'MRDEF.RRF', [4], 'MRDEF');
+    await generateCountReport(current, previous, 'MRSAT.RRF', [9], 'MRSAT');
+  } else {
+    console.log('Count report logic unchanged; skipping MRSAB/MRDEF/MRSAT counts.');
+  }
+
+  if (runMRSABChange) {
+    await generateMRSABChangeReport(current, previous);
+  } else {
+    console.log('MRSAB change logic unchanged; skipping.');
+  }
+
+  if (runMRREL) {
+    await generateMRRELReport(current, previous);
+  } else {
+    console.log('MRREL logic unchanged; skipping.');
+  }
   await fsp.mkdir(reportsDir, { recursive: true });
   await fsp.writeFile(
     configFile,
-    JSON.stringify({ current, previous, reportConfig }, null, 2)
+    JSON.stringify({ current, previous, reportConfig, logicHashes: currentHashes }, null, 2)
   );
   console.log('Reports generated in', reportsDir);
 })().catch(err => {
