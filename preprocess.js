@@ -247,10 +247,18 @@ function buildDiffData(sab, tty, baseRows, prevRows) {
 }
 
 function diffDataToHtml(data) {
+  const links = [];
+  if (data.added && data.added.length) links.push('<a href="#added">Added</a>');
+  if (data.dropped && data.dropped.length) links.push('<a href="#dropped">Dropped</a>');
+  if (data.moved && data.moved.length) links.push('<a href="#moved">Moved</a>');
+
   let html = `<h3>${data.sab} ${data.tty} Differences</h3>`;
+  if (links.length) {
+    html += `<div class="sticky-links">${links.join(' | ')}</div>`;
+  }
 
   if (data.added && data.added.length) {
-    html += `<h4>Added (${data.added.length})</h4>`;
+    html += `<h4 id="added">Added (${data.added.length})</h4>`;
     html += '<table style="border:1px solid #ccc;border-collapse:collapse"><thead><tr><th>CUI</th><th>AUI</th><th>STR</th></tr></thead><tbody>';
     for (const row of data.added) {
       html += `<tr><td>${row.CUI}</td><td>${row.AUI}</td><td>${escapeHTML(row.STR)}</td></tr>`;
@@ -259,7 +267,7 @@ function diffDataToHtml(data) {
   }
 
   if (data.dropped && data.dropped.length) {
-    html += `<h4>Dropped (${data.dropped.length})</h4>`;
+    html += `<h4 id="dropped">Dropped (${data.dropped.length})</h4>`;
     html += '<table style="border:1px solid #ccc;border-collapse:collapse"><thead><tr><th>CUI</th><th>AUI</th><th>STR</th></tr></thead><tbody>';
     for (const row of data.dropped) {
       html += `<tr><td>${row.CUI}</td><td>${row.AUI}</td><td>${escapeHTML(row.STR)}</td></tr>`;
@@ -268,7 +276,7 @@ function diffDataToHtml(data) {
   }
 
   if (data.moved && data.moved.length) {
-    html += `<h4>Moved (${data.moved.length})</h4>`;
+    html += `<h4 id="moved">Moved (${data.moved.length})</h4>`;
     html += '<table style="border:1px solid #ccc;border-collapse:collapse"><thead><tr><th>AUI</th><th>Previous CUI</th><th>Current CUI</th><th>STR</th></tr></thead><tbody>';
     for (const row of data.moved) {
       html += `<tr><td>${row.AUI}</td><td>${row.previousCUI}</td><td>${row.currentCUI}</td><td>${escapeHTML(row.STR)}</td></tr>`;
