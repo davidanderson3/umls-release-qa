@@ -4,6 +4,16 @@ const path = require('path');
 const readline = require('readline');
 const crypto = require('crypto');
 
+process.on('unhandledRejection', err => {
+  console.error('Unhandled rejection:', err);
+  process.exit(1);
+});
+
+process.on('uncaughtException', err => {
+  console.error('Uncaught exception:', err);
+  process.exit(1);
+});
+
 const releasesDir = path.join(__dirname, 'releases');
 const reportsDir = path.join(__dirname, 'reports');
 const diffsDir = path.join(reportsDir, 'diffs');
@@ -431,6 +441,7 @@ function sanitizeComponent(str) {
 }
 
 async function generateSTYReports(current, previous, reportConfig = {}) {
+  console.log('  Reading MRSTY/MRCONSO files...');
   const styCurFile = path.join(releasesDir, current, 'META', 'MRSTY.RRF');
   const styPrevFile = path.join(releasesDir, previous, 'META', 'MRSTY.RRF');
   const consoCurFile = path.join(releasesDir, current, 'META', 'MRCONSO.RRF');
@@ -451,6 +462,7 @@ async function generateSTYReports(current, previous, reportConfig = {}) {
 
   const summary = [];
   const allSTYs = new Set([...curCounts.keys(), ...prevCounts.keys()]);
+  console.log(`  Processing ${allSTYs.size} semantic types...`);
   for (const sty of allSTYs) {
     const currentCount = curCounts.get(sty) || 0;
     const previousCount = prevCounts.get(sty) || 0;
@@ -521,6 +533,7 @@ async function generateSTYReports(current, previous, reportConfig = {}) {
   if (generateHtml) {
     await fsp.writeFile(path.join(reportsDir, 'MRSTY_report.html'), wrapHtml('MRSTY Report', html));
   }
+  console.log('  STY reports complete.');
 }
 
 async function generateCountReport(current, previous, fileName, indices, tableName) {
@@ -844,41 +857,74 @@ async function generateMRDOCReport(current, previous) {
 
   if (runMRCONSO) {
     console.log('Generating MRCONSO report...');
-    await generateSABDiff(current, previous);
-    console.log('MRCONSO report done.');
+    try {
+      await generateSABDiff(current, previous);
+      console.log('MRCONSO report done.');
+    } catch (err) {
+      console.error('Failed MRCONSO report:', err.message);
+    }
   } else {
     console.log('MRCONSO logic unchanged; skipping.');
   }
 
   if (runSTYReports) {
     console.log('Generating additional table reports...');
-    await generateSTYReports(current, previous, reportConfig);
+    try {
+      await generateSTYReports(current, previous, reportConfig);
+      console.log('Additional table reports done.');
+    } catch (err) {
+      console.error('Failed STY reports:', err.message);
+    }
   } else {
     console.log('STY report logic unchanged; skipping.');
   }
 
   if (runCount) {
-    await generateCountReport(current, previous, 'MRSAB.RRF', [3], 'MRSAB');
-    await generateCountReport(current, previous, 'MRDEF.RRF', [4], 'MRDEF');
-    await generateCountReport(current, previous, 'MRSAT.RRF', [9], 'MRSAT');
-    await generateCountReport(current, previous, 'MRHIER.RRF', [4], 'MRHIER');
+    console.log('Generating count reports...');
+    try {
+      await generateCountReport(current, previous, 'MRSAB.RRF', [3], 'MRSAB');
+      await generateCountReport(current, previous, 'MRDEF.RRF', [4], 'MRDEF');
+      await generateCountReport(current, previous, 'MRSAT.RRF', [9], 'MRSAT');
+      await generateCountReport(current, previous, 'MRHIER.RRF', [4], 'MRHIER');
+      console.log('Count reports done.');
+    } catch (err) {
+      console.error('Failed count reports:', err.message);
+    }
   } else {
     console.log('Count report logic unchanged; skipping MRSAB/MRDEF/MRSAT/MRHIER counts.');
   }
 
   if (runMRSABChange) {
-    await generateMRSABChangeReport(current, previous);
+    console.log('Generating MRSAB change report...');
+    try {
+      await generateMRSABChangeReport(current, previous);
+      console.log('MRSAB change report done.');
+    } catch (err) {
+      console.error('Failed MRSAB change report:', err.message);
+    }
   } else {
     console.log('MRSAB change logic unchanged; skipping.');
   }
 
   if (runMRREL) {
-    await generateMRRELReport(current, previous);
+    console.log('Generating MRREL report...');
+    try {
+      await generateMRRELReport(current, previous);
+      console.log('MRREL report done.');
+    } catch (err) {
+      console.error('Failed MRREL report:', err.message);
+    }
   } else {
     console.log('MRREL logic unchanged; skipping.');
   }
   if (runMRDOC) {
-    await generateMRDOCReport(current, previous);
+    console.log('Generating MRDOC report...');
+    try {
+      await generateMRDOCReport(current, previous);
+      console.log('MRDOC report done.');
+    } catch (err) {
+      console.error('Failed MRDOC report:', err.message);
+    }
   } else {
     console.log('MRDOC logic unchanged; skipping.');
   }
