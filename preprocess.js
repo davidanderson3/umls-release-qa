@@ -108,6 +108,7 @@ async function generateLineCountDiff(current, previous) {
     else if (/^MRDEF\.RRF$/i.test(base)) link = 'MRDEF_report.html';
     else if (/^MRREL\.RRF$/i.test(base)) link = 'MRREL_report.html';
     else if (/^MRSAT\.RRF$/i.test(base)) link = 'MRSAT_report.html';
+    else if (/^MRRANK\.RRF$/i.test(base)) link = 'MRRANK_report.html';
     result.push({ name, current: cur, previous: prev, diff, percent, link });
   }
 
@@ -610,6 +611,78 @@ async function generateMRSABChangeReport(current, previous) {
   }
 }
 
+async function readMRRANK(file) {
+  const map = new Map();
+  try {
+    const rl = readline.createInterface({ input: fs.createReadStream(file) });
+    for await (const line of rl) {
+      const parts = line.split('|');
+      if (parts.length >= 3) {
+        const sab = parts[0] || 'MISSING';
+        const tty = parts[1] || 'MISSING';
+        const rank = parseInt(parts[2], 10);
+        const key = `${sab}|${tty}`;
+        map.set(key, isNaN(rank) ? null : rank);
+      }
+    }
+  } catch {
+    return new Map();
+  }
+  return map;
+}
+
+async function generateMRRANKReport(current, previous) {
+  const curFile = path.join(releasesDir, current, 'META', 'MRRANK.RRF');
+  const prevFile = path.join(releasesDir, previous, 'META', 'MRRANK.RRF');
+  const curMap = await readMRRANK(curFile);
+  const prevMap = await readMRRANK(prevFile);
+
+  const added = [];
+  const dropped = [];
+  const changed = [];
+  const keys = new Set([...curMap.keys(), ...prevMap.keys()]);
+  for (const key of keys) {
+    const cur = curMap.get(key);
+    const prev = prevMap.get(key);
+    if (prev === undefined) {
+      added.push({ Key: key, Current: cur });
+    } else if (cur === undefined) {
+      dropped.push({ Key: key, Previous: prev });
+    } else if (cur !== prev) {
+      changed.push({ Key: key, Previous: prev, Current: cur });
+    }
+  }
+
+  const jsonData = { current, previous, added, dropped, changed };
+  await fsp.writeFile(path.join(reportsDir, 'MRRANK_report.json'), JSON.stringify(jsonData, null, 2));
+
+  let html = `<h3>MRRANK Changes (${current} vs ${previous})</h3>`;
+  if (added.length) {
+    html += `<h4>Added (${added.length})</h4><ul>`;
+    for (const row of added) html += `<li>${escapeHTML(row.Key)} = ${row.Current}</li>`;
+    html += '</ul>';
+  }
+  if (dropped.length) {
+    html += `<h4>Dropped (${dropped.length})</h4><ul>`;
+    for (const row of dropped) html += `<li>${escapeHTML(row.Key)} = ${row.Previous}</li>`;
+    html += '</ul>';
+  }
+  if (changed.length) {
+    html += `<h4>Changed (${changed.length})</h4>`;
+    html += '<table><thead><tr><th>Key</th><th>Previous</th><th>Current</th></tr></thead><tbody>';
+    for (const row of changed) {
+      html += `<tr><td>${escapeHTML(row.Key)}</td><td>${row.Previous}</td><td>${row.Current}</td></tr>`;
+    }
+    html += '</tbody></table>';
+  }
+  if (!added.length && !dropped.length && !changed.length) {
+    html += '<p>No MRRANK changes.</p>';
+  }
+  if (generateHtml) {
+    await fsp.writeFile(path.join(reportsDir, 'MRRANK_report.html'), wrapHtml('MRRANK Report', html));
+  }
+}
+
 // Gather rows for a specific SAB|REL|RELA combination in MRREL
 async function gatherMRRELRowsForKey(file, key) {
   const rows = [];
@@ -762,7 +835,8 @@ async function generateMRRELReport(current, previous) {
     STYReports: hashOf(generateSTYReports.toString()),
     countReport: hashOf(generateCountReport.toString()),
     MRSABChange: hashOf(generateMRSABChangeReport.toString()),
-    MRREL: hashOf(generateMRRELReport.toString())
+    MRREL: hashOf(generateMRRELReport.toString()),
+    MRRANK: hashOf(generateMRRANKReport.toString())
   };
 
   let lastConfig = null;
@@ -803,6 +877,7 @@ async function generateMRRELReport(current, previous) {
   const runCount = !sameReleases || lastHashes.countReport !== currentHashes.countReport;
   const runMRSABChange = !sameReleases || lastHashes.MRSABChange !== currentHashes.MRSABChange;
   const runMRREL = !sameReleases || lastHashes.MRREL !== currentHashes.MRREL;
+  const runMRRANK = !sameReleases || lastHashes.MRRANK !== currentHashes.MRRANK;
 
   if (runMRCONSO) {
     console.log('Generating MRCONSO report...');
@@ -825,6 +900,12 @@ async function generateMRRELReport(current, previous) {
     await generateCountReport(current, previous, 'MRSAT.RRF', [9], 'MRSAT');
   } else {
     console.log('Count report logic unchanged; skipping MRSAB/MRDEF/MRSAT counts.');
+  }
+
+  if (runMRRANK) {
+    await generateMRRANKReport(current, previous);
+  } else {
+    console.log('MRRANK logic unchanged; skipping.');
   }
 
   if (runMRSABChange) {
