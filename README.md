@@ -26,4 +26,5 @@ The preprocessing step generates HTML and JSON reports for several UMLS tables
 including MRCONSO, MRREL, MRSTY, MRDEF, MRSAB, MRSAT, MRDOC, MRCOLS, MRFILES,
 and MRRANK.
 The MRFILES report lists added, dropped, and size-changed files in sortable
-tables for easier review.
+tables for easier review. Size changes now include a percentage column to show
+relative growth or shrinkage.
