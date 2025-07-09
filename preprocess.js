@@ -18,6 +18,7 @@ const releasesDir = path.join(__dirname, 'releases');
 const reportsDir = path.join(__dirname, 'reports');
 const diffsDir = path.join(reportsDir, 'diffs');
 const styBreakdownDir = path.join(reportsDir, 'sty_breakdowns');
+const stySourceDiffDir = path.join(reportsDir, 'sty_source_diffs');
 const configFile = path.join(reportsDir, 'config.json');
 const userConfigPath = path.join(__dirname, 'report-config.json');
 // If --data-only is passed, skip generating HTML output
@@ -319,6 +320,20 @@ function diffDataToHtml(data) {
   return wrapDiffHtml(`${data.sab} ${data.tty} Differences`, html);
 }
 
+function stySabDiffToHtml(data) {
+  let html = `<h3>${escapeHTML(data.sty)} - ${escapeHTML(data.sab)} Changes</h3>`;
+  if (data.added && data.added.length) {
+    html += `<h4>Added (${data.added.length})</h4><pre>${data.added.map(escapeHTML).join('\n')}</pre>`;
+  }
+  if (data.removed && data.removed.length) {
+    html += `<h4>Removed (${data.removed.length})</h4><pre>${data.removed.map(escapeHTML).join('\n')}</pre>`;
+  }
+  if (!data.added.length && !data.removed.length) {
+    html += '<p>No changes.</p>';
+  }
+  return wrapDiffHtml(`${data.sty} ${data.sab} Changes`, html);
+}
+
 async function generateSABDiff(current, previous) {
   const currentFile = path.join(releasesDir, current, 'META', 'MRCONSO.RRF');
   const previousFile = path.join(releasesDir, previous, 'META', 'MRCONSO.RRF');
@@ -460,6 +475,22 @@ function computeSTYSABCounts(styMap, cuiSabMap) {
   return counts;
 }
 
+function computeSTYSABCUIMap(styMap, cuiSabMap) {
+  const map = new Map();
+  for (const [cui, stySet] of styMap) {
+    const sabs = cuiSabMap.get(cui);
+    if (!sabs) continue;
+    for (const sty of stySet) {
+      for (const sab of sabs) {
+        const key = `${sty}|${sab}`;
+        if (!map.has(key)) map.set(key, new Set());
+        map.get(key).add(cui);
+      }
+    }
+  }
+  return map;
+}
+
 function sanitizeComponent(str) {
   return str.replace(/\s+/g, '_').replace(/[^A-Za-z0-9_-]/g, '');
 }
@@ -481,8 +512,11 @@ async function generateSTYReports(current, previous, reportConfig = {}) {
   const includeBreakdowns = reportConfig.includeStyBreakdowns !== false;
   const curSabCounts = includeBreakdowns ? computeSTYSABCounts(styCurMap, sabCurMap) : new Map();
   const prevSabCounts = includeBreakdowns ? computeSTYSABCounts(styPrevMap, sabPrevMap) : new Map();
+  const curSabCUIs = includeBreakdowns ? computeSTYSABCUIMap(styCurMap, sabCurMap) : new Map();
+  const prevSabCUIs = includeBreakdowns ? computeSTYSABCUIMap(styPrevMap, sabPrevMap) : new Map();
 
   await fsp.mkdir(styBreakdownDir, { recursive: true });
+  await fsp.mkdir(stySourceDiffDir, { recursive: true });
 
   const summary = [];
   const allSTYs = new Set([...curCounts.keys(), ...prevCounts.keys()]);
@@ -499,12 +533,30 @@ async function generateSTYReports(current, previous, reportConfig = {}) {
       for (const k of curSabCounts.keys()) if (k.startsWith(sty + '|')) sabKeys.add(k.split('|')[1]);
       for (const k of prevSabCounts.keys()) if (k.startsWith(sty + '|')) sabKeys.add(k.split('|')[1]);
       for (const sab of sabKeys) {
-        const c = curSabCounts.get(`${sty}|${sab}`) || 0;
-        const p = prevSabCounts.get(`${sty}|${sab}`) || 0;
+        const key = `${sty}|${sab}`;
+        const c = curSabCounts.get(key) || 0;
+        const p = prevSabCounts.get(key) || 0;
         const d = c - p;
+        let link2 = '';
         if (d !== 0) {
           const pp = p === 0 ? Infinity : (d / p * 100);
-          detail.push({ SAB: sab, Previous: p, Current: c, Difference: d, Percent: pp });
+          const curSet = curSabCUIs.get(key) || new Set();
+          const prevSet = prevSabCUIs.get(key) || new Set();
+          const added = [...curSet].filter(x => !prevSet.has(x));
+          const removed = [...prevSet].filter(x => !curSet.has(x));
+          if (added.length || removed.length) {
+            const safeSty = sanitizeComponent(sty);
+            const safeSab = sanitizeComponent(sab);
+            const jsonDiff = `${safeSty}_${safeSab}_changes.json`;
+            const htmlDiff = jsonDiff.replace(/\.json$/, '.html');
+            const diffData = { current, previous, sty, sab, added, removed };
+            await fsp.writeFile(path.join(stySourceDiffDir, jsonDiff), JSON.stringify(diffData, null, 2));
+            if (generateHtml) {
+              await fsp.writeFile(path.join(stySourceDiffDir, htmlDiff), stySabDiffToHtml(diffData));
+            }
+            link2 = `sty_source_diffs/${jsonDiff}`;
+          }
+          detail.push({ SAB: sab, Previous: p, Current: c, Difference: d, Percent: pp, link: link2 });
         }
       }
       if (detail.length) {
@@ -513,11 +565,12 @@ async function generateSTYReports(current, previous, reportConfig = {}) {
         const htmlName = jsonName.replace(/\.json$/, '.html');
         await fsp.writeFile(path.join(styBreakdownDir, jsonName), JSON.stringify({ current, previous, sty, detail }, null, 2));
         let html = `<h3>${escapeHTML(sty)} by SAB (${current} vs ${previous})</h3>`;
-        html += '<table><thead><tr><th>SAB</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th></tr></thead><tbody>';
+        html += '<table><thead><tr><th>SAB</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th><th>Diff</th></tr></thead><tbody>';
         for (const row of detail) {
           const diffClass = row.Difference < 0 ? 'negative' : 'positive';
           const pctTxt = isFinite(row.Percent) ? row.Percent.toFixed(2) : 'inf';
-          html += `<tr><td>${row.SAB}</td><td>${row.Previous}</td><td>${row.Current}</td><td class="${diffClass}">${row.Difference}</td><td>${pctTxt}</td></tr>`;
+          const diffLink = row.link ? `<a href="../${row.link.replace(/\.json$/, '.html')}">view</a>` : '';
+          html += `<tr><td>${row.SAB}</td><td>${row.Previous}</td><td>${row.Current}</td><td class="${diffClass}">${row.Difference}</td><td>${pctTxt}</td><td>${diffLink}</td></tr>`;
         }
         html += '</tbody></table>';
         if (generateHtml) {
