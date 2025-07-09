@@ -781,19 +781,24 @@ async function generateMRSABChangeReport(current, previous) {
   }
 }
 
-// Gather rows for a specific SAB|REL|RELA combination in MRREL
-async function gatherMRRELRowsForKey(file, key) {
-  const rows = [];
+// Gather rows for a set of SAB|REL|RELA keys in MRREL
+// Returns a Map from key -> array of row objects
+async function gatherMRRELRows(file, keys) {
+  const rowsMap = new Map();
+  for (const k of keys) rowsMap.set(k, []);
   try {
     const rl = readline.createInterface({ input: fs.createReadStream(file) });
+    let i = 0;
     for await (const line of rl) {
+      i++;
       const parts = line.split('|');
       if (parts.length < 11) continue;
       const sab = parts[10] || 'MISSING';
       const rel = parts[3] || 'MISSING';
       const rela = parts[7] || 'MISSING';
-      if (`${sab}|${rel}|${rela}` === key) {
-        rows.push({
+      const key = `${sab}|${rel}|${rela}`;
+      if (rowsMap.has(key)) {
+        rowsMap.get(key).push({
           RUI: parts[8],
           CUI1: parts[0],
           AUI1: parts[1],
@@ -804,11 +809,14 @@ async function gatherMRRELRowsForKey(file, key) {
           RELA: rela
         });
       }
+      if (i % 100000 === 0) {
+        console.log(`  Processed ${i} lines of ${path.basename(file)}...`);
+      }
     }
   } catch {
-    return [];
+    return new Map();
   }
-  return rows;
+  return rowsMap;
 }
 
 async function collectConsoNames(file, auis, cuis) {
@@ -892,11 +900,14 @@ async function generateMRRELReport(current, previous) {
   }
 
   if (diffKeys.size) {
+    const curRowsMap = await gatherMRRELRows(currentFile, diffKeys);
+    const prevRowsMap = await gatherMRRELRows(previousFile, diffKeys);
+
     for (const entry of summary) {
       const key = `${entry.SAB}|${entry.REL}|${entry.RELA}`;
       if (!diffKeys.has(key)) continue;
-      const baseRows = await gatherMRRELRowsForKey(currentFile, key);
-      const prevRows = await gatherMRRELRowsForKey(previousFile, key);
+      const baseRows = curRowsMap.get(key) || [];
+      const prevRows = prevRowsMap.get(key) || [];
       const diffData = buildMRRELDiffData(key, baseRows, prevRows);
       if (diffData) {
         for (const r of diffData.added) {
