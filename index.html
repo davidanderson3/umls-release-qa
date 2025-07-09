@@ -138,12 +138,18 @@
       results.innerHTML = '<p>Checking report...</p>';
       const file = 'line-count-diff.html';
       if (await fileExists(`reports/${file}`)) {
-        results.innerHTML = `<iframe src="reports/${file}" style="width:100%;height:800px;border:none"></iframe>`;
+        results.innerHTML = `<iframe id="report-frame" src="reports/${file}" style="width:100%;border:none;overflow:hidden"></iframe>`;
+        const frame = document.getElementById('report-frame');
+        frame.addEventListener('load', () => {
+          try {
+            const doc = frame.contentWindow.document;
+            frame.style.height = doc.documentElement.scrollHeight + 'px';
+          } catch {}
+        });
         return true;
       } else {
         results.innerHTML = '<p>No reports available.</p>';
         return false;
       }
     }
-
   </script>  <script src="js/sortable.js"></script></body></html>
