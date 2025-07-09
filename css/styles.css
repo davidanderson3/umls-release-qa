@@ -38,6 +38,9 @@ table td {
   padding: 6px 10px;
   text-align: left;
 }
+table.sortable th {
+  cursor: pointer;
+}
 tbody tr:nth-child(even) {
   background-color: #fafafa;
 }
