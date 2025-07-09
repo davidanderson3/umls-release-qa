@@ -193,6 +193,24 @@ function escapeHTML(str) {
   return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
+function linesToHtmlTable(lines) {
+  if (!lines.length) return '';
+  const firstParts = lines[0].split('|');
+  if (firstParts[firstParts.length - 1] === '') firstParts.pop();
+  let html = '<table><thead><tr>';
+  for (let i = 0; i < firstParts.length; i++) {
+    html += `<th>${i + 1}</th>`;
+  }
+  html += '</tr></thead><tbody>';
+  for (const line of lines) {
+    const parts = line.split('|');
+    if (parts[parts.length - 1] === '') parts.pop();
+    html += '<tr>' + parts.map(p => `<td>${escapeHTML(p)}</td>`).join('') + '</tr>';
+  }
+  html += '</tbody></table>';
+  return html;
+}
+
 async function readCountsMRCONSO(file) {
   const counts = new Map();
   try {
@@ -247,6 +265,28 @@ async function readKeysByIndices(file, indices) {
     return [];
   }
   return keys;
+}
+
+// Read lines from a file and group them by a key built from the given columns
+// Returns a Map of key -> array of raw line strings
+async function readLineMapByIndices(file, indices) {
+  const map = new Map();
+  try {
+    const rl = readline.createInterface({ input: fs.createReadStream(file) });
+    for await (const line of rl) {
+      const parts = line.split('|');
+      const keyParts = [];
+      for (const idx of indices) {
+        keyParts.push(parts[idx] || 'MISSING');
+      }
+      const key = keyParts.join('|');
+      if (!map.has(key)) map.set(key, []);
+      map.get(key).push(line);
+    }
+  } catch {
+    return new Map();
+  }
+  return map;
 }
 
 async function gatherRows(file, keys) {
@@ -739,14 +779,25 @@ async function generateMRSABChangeReport(current, previous) {
   const currentFile = path.join(releasesDir, current, 'META', 'MRSAB.RRF');
   const previousFile = path.join(releasesDir, previous, 'META', 'MRSAB.RRF');
 
-  // Compare rows using only the second and third columns
-  const curKeys = await readKeysByIndices(currentFile, [1, 2]);
-  const prevKeys = await readKeysByIndices(previousFile, [1, 2]);
-  const curSet = new Set(curKeys);
-  const prevSet = new Set(prevKeys);
+  // Build maps keyed by the 2nd and 3rd columns so we can detect
+  // added/dropped rows while still retaining the full line content
+  const curMap = await readLineMapByIndices(currentFile, [1, 2]);
+  const prevMap = await readLineMapByIndices(previousFile, [1, 2]);
 
-  const addedRows = curKeys.filter(k => !prevSet.has(k));
-  const removedRows = prevKeys.filter(k => !curSet.has(k));
+  const curKeys = Array.from(curMap.keys());
+  const prevKeys = Array.from(prevMap.keys());
+  const addedRows = [];
+  const removedRows = [];
+  for (const k of curKeys) {
+    if (!prevMap.has(k)) {
+      addedRows.push(...curMap.get(k));
+    }
+  }
+  for (const k of prevKeys) {
+    if (!curMap.has(k)) {
+      removedRows.push(...prevMap.get(k));
+    }
+  }
 
   const currentSABs = await readSABs(currentFile);
   const previousSABs = await readSABs(previousFile);
@@ -769,10 +820,12 @@ async function generateMRSABChangeReport(current, previous) {
     html += '</ul>';
   }
   if (addedRows.length) {
-    html += `<h4>Added Rows (${addedRows.length})</h4><pre>${addedRows.map(escapeHTML).join('\n')}</pre>`;
+    html += `<h4>Added Rows (${addedRows.length})</h4>`;
+    html += linesToHtmlTable(addedRows);
   }
   if (removedRows.length) {
-    html += `<h4>Removed Rows (${removedRows.length})</h4><pre>${removedRows.map(escapeHTML).join('\n')}</pre>`;
+    html += `<h4>Removed Rows (${removedRows.length})</h4>`;
+    html += linesToHtmlTable(removedRows);
   }
   if (!added.length && !dropped.length && !addedRows.length && !removedRows.length) {
     html += '<p>No MRSAB changes.</p>';
