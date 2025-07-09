@@ -21,19 +21,4 @@ what was used previously, preprocessing is skipped.
 2. Run `npm run preprocess` to generate reports with HTML output.
    Use `npm run preprocess:data` to generate only the JSON data without HTML.
 
-Reports are saved to the `reports/` folder. The preprocessing step generates
-HTML and JSON reports for several UMLS tables including MRCONSO, MRREL, MRSTY,
-MRDEF, MRSAB, MRSAT, MRDOC, MRCOLS, MRFILES, MRRANK, and a new MRHIER branch
-report that joins hierarchy pointers with MRCONSO names. The MRHIER branch
-diff uses temporary files and streaming to minimize memory usage, but very
-large releases may still require increasing Node's heap limit. The
-provided npm scripts allocate about 8&nbsp;GB by default, but you can
-override this by setting the `NODE_OPTIONS` environment variable before
-running the preprocessing step. For example:
-
-```bash
-NODE_OPTIONS=--max-old-space-size=16384 npm run preprocess
-```
-
-This sets the heap limit to roughly 16&nbsp;GB. Increase the value if you
-still encounter "JavaScript heap out of memory" errors.
+Reports are saved to the `reports/` folder.
