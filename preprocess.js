@@ -1173,6 +1173,117 @@ async function generateMRRANKReport(current, previous) {
   }
 }
 
+// Read hierarchical branches from MRHIER indexed by SAB
+async function readMRHIERBranches(file) {
+  const map = new Map();
+  const auis = new Set();
+  try {
+    const rl = readline.createInterface({ input: fs.createReadStream(file) });
+    for await (const line of rl) {
+      const parts = line.split('|');
+      if (parts.length < 7) continue;
+      const sab = parts[4] || 'MISSING';
+      const ptr = parts[6];
+      if (!ptr) continue;
+      if (!map.has(sab)) map.set(sab, new Set());
+      map.get(sab).add(ptr);
+      for (const a of ptr.split('.')) if (a) auis.add(a);
+    }
+  } catch {
+    return { map: new Map(), auis: new Set() };
+  }
+  return { map, auis };
+}
+
+// Collect names for a set of AUIs from MRCONSO
+async function collectAUINames(file, auis) {
+  const names = new Map();
+  if (!auis.size) return names;
+  try {
+    const rl = readline.createInterface({ input: fs.createReadStream(file) });
+    for await (const line of rl) {
+      const parts = line.split('|');
+      const aui = parts[7];
+      const str = parts[14];
+      if (aui && auis.has(aui) && !names.has(aui)) {
+        names.set(aui, str);
+        if (names.size === auis.size) break;
+      }
+    }
+  } catch {}
+  return names;
+}
+
+function branchString(ptr, names) {
+  const parts = ptr.split('.').filter(Boolean);
+  const lines = parts.map((a, i) => `${'  '.repeat(i)}${names.get(a) || a}`);
+  return lines.join('\n');
+}
+
+function hierDiffToHtml(data) {
+  let html = `<h3>${data.sab} Hierarchy Differences</h3>`;
+  if (data.added.length) {
+    html += `<h4 id="added">Added (${data.added.length})</h4><pre>${data.added.map(escapeHTML).join('\n\n')}</pre>`;
+  }
+  if (data.dropped.length) {
+    html += `<h4 id="dropped">Dropped (${data.dropped.length})</h4><pre>${data.dropped.map(escapeHTML).join('\n\n')}</pre>`;
+  }
+  if (!data.added.length && !data.dropped.length) {
+    html += '<p>No differences found.</p>';
+  }
+  return wrapDiffHtml(`${data.sab} Hierarchy Differences`, html);
+}
+
+async function generateMRHIERBranchReport(current, previous) {
+  const curFile = path.join(releasesDir, current, 'META', 'MRHIER.RRF');
+  const prevFile = path.join(releasesDir, previous, 'META', 'MRHIER.RRF');
+  const consoCur = path.join(releasesDir, current, 'META', 'MRCONSO.RRF');
+  const consoPrev = path.join(releasesDir, previous, 'META', 'MRCONSO.RRF');
+
+  const curData = await readMRHIERBranches(curFile);
+  const prevData = await readMRHIERBranches(prevFile);
+  await fsp.mkdir(diffsDir, { recursive: true });
+
+  const curNames = await collectAUINames(consoCur, curData.auis);
+  const prevNames = await collectAUINames(consoPrev, prevData.auis);
+
+  const sabs = new Set([...curData.map.keys(), ...prevData.map.keys()]);
+  const summary = [];
+  for (const sab of sabs) {
+    const curSet = curData.map.get(sab) || new Set();
+    const prevSet = prevData.map.get(sab) || new Set();
+    const addedPtrs = [...curSet].filter(p => !prevSet.has(p));
+    const droppedPtrs = [...prevSet].filter(p => !curSet.has(p));
+    let link = '';
+    if (addedPtrs.length || droppedPtrs.length) {
+      const added = addedPtrs.map(p => branchString(p, curNames));
+      const dropped = droppedPtrs.map(p => branchString(p, prevNames));
+      const safe = sanitizeComponent(sab);
+      const jsonName = `MRHIER_${safe}_branches.json`;
+      const htmlName = jsonName.replace(/\.json$/, '.html');
+      await fsp.writeFile(path.join(diffsDir, jsonName), JSON.stringify({ sab, added, dropped }, null, 2));
+      if (generateHtml) {
+        await fsp.writeFile(path.join(diffsDir, htmlName), hierDiffToHtml({ sab, added, dropped }));
+      }
+      link = `diffs/${jsonName}`;
+    }
+    summary.push({ SAB: sab, Added: addedPtrs.length, Dropped: droppedPtrs.length, link });
+  }
+
+  await fsp.writeFile(path.join(reportsDir, 'MRHIER_branch_report.json'), JSON.stringify({ current, previous, summary }, null, 2));
+
+  let html = `<h3>MRHIER Branch Changes (${current} vs ${previous})</h3>`;
+  html += '<table><thead><tr><th>SAB</th><th>Added</th><th>Dropped</th><th>Diff</th></tr></thead><tbody>';
+  for (const row of summary) {
+    const linkCell = row.link ? `<a href="${row.link.replace(/\.json$/, '.html')}">view</a>` : '';
+    html += `<tr><td>${escapeHTML(row.SAB)}</td><td>${row.Added}</td><td>${row.Dropped}</td><td>${linkCell}</td></tr>`;
+  }
+  html += '</tbody></table>';
+  if (generateHtml) {
+    await fsp.writeFile(path.join(reportsDir, 'MRHIER_branch_report.html'), wrapHtml('MRHIER Branch Report', html));
+  }
+}
+
 (async () => {
   console.log('Detecting available releases...');
   const { current, previous } = await detectReleases();
@@ -1194,6 +1305,7 @@ async function generateMRRANKReport(current, previous) {
     MRCOLS: hashOf(generateMRCOLSReport.toString()),
     MRFILES: hashOf(generateMRFILESReport.toString()),
     MRRANK: hashOf(generateMRRANKReport.toString()),
+    MRHIERBranch: hashOf(generateMRHIERBranchReport.toString()),
     wrapHtml: hashOf(wrapHtml.toString()),
     wrapDiffHtml: hashOf(wrapDiffHtml.toString())
   };
@@ -1240,6 +1352,7 @@ async function generateMRRANKReport(current, previous) {
   const runMRCOLS = !sameReleases || lastHashes.MRCOLS !== currentHashes.MRCOLS;
   const runMRFILES = !sameReleases || lastHashes.MRFILES !== currentHashes.MRFILES;
   const runMRRANK = !sameReleases || lastHashes.MRRANK !== currentHashes.MRRANK;
+  const runMRHIERBranch = !sameReleases || lastHashes.MRHIERBranch !== currentHashes.MRHIERBranch;
 
   if (runMRCONSO) {
     console.log('Generating MRCONSO report...');
@@ -1349,6 +1462,18 @@ async function generateMRRANKReport(current, previous) {
     }
   } else {
     console.log('MRRANK logic unchanged; skipping.');
+  }
+
+  if (runMRHIERBranch) {
+    console.log('Generating MRHIER branch report...');
+    try {
+      await generateMRHIERBranchReport(current, previous);
+      console.log('MRHIER branch report done.');
+    } catch (err) {
+      console.error('Failed MRHIER branch report:', err.message);
+    }
+  } else {
+    console.log('MRHIER branch logic unchanged; skipping.');
   }
   await fsp.mkdir(reportsDir, { recursive: true });
   await fsp.writeFile(
