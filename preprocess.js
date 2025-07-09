@@ -1307,7 +1307,8 @@ async function generateMRHIERBranchReport(current, previous) {
     MRRANK: hashOf(generateMRRANKReport.toString()),
     MRHIERBranch: hashOf(generateMRHIERBranchReport.toString()),
     wrapHtml: hashOf(wrapHtml.toString()),
-    wrapDiffHtml: hashOf(wrapDiffHtml.toString())
+    wrapDiffHtml: hashOf(wrapDiffHtml.toString()),
+    preprocessFile: hashOf(fs.readFileSync(__filename, 'utf8'))
   };
 
   let lastConfig = null;
