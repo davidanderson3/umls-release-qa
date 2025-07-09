@@ -1159,7 +1159,9 @@ async function generateMRFILESReport(current, previous) {
     } else {
       const prevSize = prevMap.get(file);
       if (prevSize !== size) {
-        changed.push({ file, previous: prevSize, current: size });
+        const diff = size - prevSize;
+        const percent = prevSize === 0 ? Infinity : diff / prevSize * 100;
+        changed.push({ file, previous: prevSize, current: size, diff, percent });
       }
     }
   }
@@ -1194,10 +1196,10 @@ async function generateMRFILESReport(current, previous) {
     }
     if (changed.length) {
       html += `<h4>Size Changes (${changed.length})</h4>`;
-      html += '<table><thead><tr><th>File</th><th>Previous</th><th>Current</th><th>Diff</th></tr></thead><tbody>';
+      html += '<table><thead><tr><th>File</th><th>Previous</th><th>Current</th><th>Diff</th><th>%</th></tr></thead><tbody>';
       for (const c of changed) {
-        const diff = c.current - c.previous;
-        html += `<tr><td>${escapeHTML(c.file)}</td><td>${c.previous}</td><td>${c.current}</td><td>${diff}</td></tr>`;
+        const pct = isFinite(c.percent) ? c.percent.toFixed(2) : 'inf';
+        html += `<tr><td>${escapeHTML(c.file)}</td><td>${c.previous}</td><td>${c.current}</td><td>${c.diff}</td><td>${pct}</td></tr>`;
       }
       html += '</tbody></table>';
     }
