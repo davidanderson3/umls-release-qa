@@ -134,27 +134,47 @@
       }
     }
 
-    async function loadReports() {
+    function updateUrl(report) {
+      const url = new URL(window.location);
+      if (report && report !== 'line-count-diff.html') {
+        url.searchParams.set('report', report);
+      } else {
+        url.searchParams.delete('report');
+      }
+      history.replaceState(null, '', url);
+    }
+
+    function initialReport() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('report') || 'line-count-diff.html';
+    }
+
+    async function loadReports(file = initialReport()) {
       const results = document.getElementById('line-results');
       results.innerHTML = '<p>Checking report...</p>';
-      const file = 'line-count-diff.html';
       if (await fileExists(`reports/${file}`)) {
         results.innerHTML = `<iframe id="report-frame" src="reports/${file}" style="width:100%;border:none;overflow:hidden"></iframe>`;
         const frame = document.getElementById('report-frame');
-        frame.addEventListener('load', () => {
+        const sync = () => {
           try {
             const doc = frame.contentWindow.document;
             frame.style.height = doc.documentElement.scrollHeight + 'px';
+            const p = frame.contentWindow.location.pathname.replace(/^\//, '');
+            if (p.startsWith('reports/')) updateUrl(p.slice('reports/'.length));
             doc.addEventListener('click', ev => {
               if (ev.target.closest('a')) {
                 document.getElementById('line-results').scrollIntoView({ behavior: 'smooth' });
               }
             });
           } catch {}
-        });
+        };
+        frame.addEventListener('load', sync);
+        if (frame.contentDocument && frame.contentDocument.readyState === 'complete') {
+          sync();
+        }
         return true;
       } else {
         results.innerHTML = '<p>No reports available.</p>';
         return false;
-      }
-    }  </script>  <script src="js/sortable.js"></script></body></html>
+      }    }
+  </script>  <script src="js/sortable.js"></script></body></html>
