@@ -739,9 +739,9 @@ async function generateMRSABChangeReport(current, previous) {
   const currentFile = path.join(releasesDir, current, 'META', 'MRSAB.RRF');
   const previousFile = path.join(releasesDir, previous, 'META', 'MRSAB.RRF');
 
-  // Compare rows using only the first three columns
-  const curKeys = await readKeysByIndices(currentFile, [0, 1, 2]);
-  const prevKeys = await readKeysByIndices(previousFile, [0, 1, 2]);
+  // Compare rows using only the second and third columns
+  const curKeys = await readKeysByIndices(currentFile, [1, 2]);
+  const prevKeys = await readKeysByIndices(previousFile, [1, 2]);
   const curSet = new Set(curKeys);
   const prevSet = new Set(prevKeys);
 
@@ -1270,7 +1270,7 @@ async function generateMRRANKReport(current, previous) {
   if (runCount) {
     console.log('Generating count reports...');
     try {
-      await generateCountReport(current, previous, 'MRSAB.RRF', [3], 'MRSAB');
+      await generateCountReport(current, previous, 'MRSAB.RRF', [1, 2], 'MRSAB');
       await generateCountReport(current, previous, 'MRDEF.RRF', [4], 'MRDEF');
       await generateCountReport(current, previous, 'MRSAT.RRF', [9], 'MRSAT');
       await generateCountReport(current, previous, 'MRHIER.RRF', [4], 'MRHIER');
