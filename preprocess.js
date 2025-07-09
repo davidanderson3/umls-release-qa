@@ -1185,7 +1185,9 @@ async function generateMRRANKReport(current, previous) {
     MRDOC: hashOf(generateMRDOCReport.toString()),
     MRCOLS: hashOf(generateMRCOLSReport.toString()),
     MRFILES: hashOf(generateMRFILESReport.toString()),
-    MRRANK: hashOf(generateMRRANKReport.toString())
+    MRRANK: hashOf(generateMRRANKReport.toString()),
+    wrapHtml: hashOf(wrapHtml.toString()),
+    wrapDiffHtml: hashOf(wrapDiffHtml.toString())
   };
 
   let lastConfig = null;
