@@ -135,37 +135,15 @@
 
     async function loadReports() {
       const results = document.getElementById('line-results');
-      results.innerHTML = '<p>Checking reports...</p>';
-      const reports = [
-        ['line-count-diff.html', 'Line Count Comparison'],
-        ['MRCONSO_report.html', 'MRCONSO'],
-        ['MRSAB_report.html', 'MRSAB'],
-        ['MRREL_report.html', 'MRREL'],
-        ['MRDOC_report.html', 'MRDOC'],
-        ['MRSTY_report.html', 'MRSTY'],
-        ['MRDEF_report.html', 'MRDEF'],
-        ['MRSAT_report.html', 'MRSAT'],
-        ['MRHIER_report.html', 'MRHIER'],
-        ['MRCOLS_report.html', 'MRCOLS'],
-        ['MRFILES_report.html', 'MRFILES'],
-        ['MRRANK_report.html', 'MRRANK']
-      ];
-      const rows = [];
-      let allReady = true;
-      for (const [file, label] of reports) {
-        if (await fileExists(`reports/${file}`)) {
-          rows.push(`<tr><td><a href="reports/${file}">${label}</a></td></tr>`);
-        } else {
-          allReady = false;
-        }
-      }
-      if (rows.length) {
-        results.innerHTML = `<h3>Reports</h3><table style="border:1px solid #ccc;border-collapse:collapse"><thead><tr><th>Report</th></tr></thead><tbody>${rows.join('')}</tbody></table>`;
+      results.innerHTML = '<p>Checking report...</p>';
+      const file = 'line-count-diff.html';
+      if (await fileExists(`reports/${file}`)) {
+        results.innerHTML = `<iframe src="reports/${file}" style="width:100%;height:800px;border:none"></iframe>`;
+        return true;
       } else {
         results.innerHTML = '<p>No reports available.</p>';
+        return false;
       }
-      return allReady;
     }
 
-  </script>
-  <script src="js/sortable.js"></script></body></html>
+  </script>  <script src="js/sortable.js"></script></body></html>
