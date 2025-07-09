@@ -854,9 +854,17 @@ function buildMRRELDiffData(key, baseRows, prevRows) {
 }
 
 function mrrelDiffToHtml(data) {
+  const links = [];
+  if (data.added && data.added.length) links.push('<a href="#added">Added</a>');
+  if (data.dropped && data.dropped.length) links.push('<a href="#dropped">Dropped</a>');
+
   let html = `<h3>${data.sab} ${data.rel} ${data.rela} Differences</h3>`;
+  if (links.length) {
+    html += `<div class="sticky-links">${links.join(' | ')}</div>`;
+  }
+
   if (data.added && data.added.length) {
-    html += `<h4>Added (${data.added.length})</h4>`;
+    html += `<h4 id="added">Added (${data.added.length})</h4>`;
     html += '<table><thead><tr><th>RUI</th><th>CUI1</th><th>Name1</th><th>REL</th><th>CUI2</th><th>Name2</th></tr></thead><tbody>';
     for (const r of data.added) {
       html += `<tr><td>${r.RUI}</td><td>${r.CUI1}</td><td>${escapeHTML(r.STR1 || '')}</td><td>${r.REL}</td><td>${r.CUI2}</td><td>${escapeHTML(r.STR2 || '')}</td></tr>`;
@@ -864,7 +872,7 @@ function mrrelDiffToHtml(data) {
     html += '</tbody></table>';
   }
   if (data.dropped && data.dropped.length) {
-    html += `<h4>Dropped (${data.dropped.length})</h4>`;
+    html += `<h4 id="dropped">Dropped (${data.dropped.length})</h4>`;
     html += '<table><thead><tr><th>RUI</th><th>CUI1</th><th>Name1</th><th>REL</th><th>CUI2</th><th>Name2</th></tr></thead><tbody>';
     for (const r of data.dropped) {
       html += `<tr><td>${r.RUI}</td><td>${r.CUI1}</td><td>${escapeHTML(r.STR1 || '')}</td><td>${r.REL}</td><td>${r.CUI2}</td><td>${escapeHTML(r.STR2 || '')}</td></tr>`;
