@@ -1176,7 +1176,6 @@ async function generateMRRANKReport(current, previous) {
 // Read hierarchical branches from MRHIER indexed by SAB
 async function readMRHIERBranches(file) {
   const map = new Map();
-  const auis = new Set();
   try {
     const rl = readline.createInterface({ input: fs.createReadStream(file) });
     for await (const line of rl) {
@@ -1187,12 +1186,11 @@ async function readMRHIERBranches(file) {
       if (!ptr) continue;
       if (!map.has(sab)) map.set(sab, new Set());
       map.get(sab).add(ptr);
-      for (const a of ptr.split('.')) if (a) auis.add(a);
     }
   } catch {
-    return { map: new Map(), auis: new Set() };
+    return new Map();
   }
-  return { map, auis };
+  return map;
 }
 
 // Collect names for a set of AUIs from MRCONSO
@@ -1240,20 +1238,34 @@ async function generateMRHIERBranchReport(current, previous) {
   const consoCur = path.join(releasesDir, current, 'META', 'MRCONSO.RRF');
   const consoPrev = path.join(releasesDir, previous, 'META', 'MRCONSO.RRF');
 
-  const curData = await readMRHIERBranches(curFile);
-  const prevData = await readMRHIERBranches(prevFile);
+  const curMap = await readMRHIERBranches(curFile);
+  const prevMap = await readMRHIERBranches(prevFile);
   await fsp.mkdir(diffsDir, { recursive: true });
 
-  const curNames = await collectAUINames(consoCur, curData.auis);
-  const prevNames = await collectAUINames(consoPrev, prevData.auis);
+  const addedBySab = new Map();
+  const droppedBySab = new Map();
+  const curAUIs = new Set();
+  const prevAUIs = new Set();
 
-  const sabs = new Set([...curData.map.keys(), ...prevData.map.keys()]);
-  const summary = [];
+  const sabs = new Set([...curMap.keys(), ...prevMap.keys()]);
   for (const sab of sabs) {
-    const curSet = curData.map.get(sab) || new Set();
-    const prevSet = prevData.map.get(sab) || new Set();
+    const curSet = curMap.get(sab) || new Set();
+    const prevSet = prevMap.get(sab) || new Set();
     const addedPtrs = [...curSet].filter(p => !prevSet.has(p));
     const droppedPtrs = [...prevSet].filter(p => !curSet.has(p));
+    addedBySab.set(sab, addedPtrs);
+    droppedBySab.set(sab, droppedPtrs);
+    for (const ptr of addedPtrs) for (const a of ptr.split('.')) if (a) curAUIs.add(a);
+    for (const ptr of droppedPtrs) for (const a of ptr.split('.')) if (a) prevAUIs.add(a);
+  }
+
+  const curNames = await collectAUINames(consoCur, curAUIs);
+  const prevNames = await collectAUINames(consoPrev, prevAUIs);
+
+  const summary = [];
+  for (const sab of sabs) {
+    const addedPtrs = addedBySab.get(sab) || [];
+    const droppedPtrs = droppedBySab.get(sab) || [];
     let link = '';
     if (addedPtrs.length || droppedPtrs.length) {
       const added = addedPtrs.map(p => branchString(p, curNames));
