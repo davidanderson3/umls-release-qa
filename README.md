@@ -22,3 +22,6 @@ what was used previously, preprocessing is skipped.
    Use `npm run preprocess:data` to generate only the JSON data without HTML.
 
 Reports are saved to the `reports/` folder.
+The preprocessing step generates HTML and JSON reports for several UMLS tables
+including MRCONSO, MRREL, MRSTY, MRDEF, MRSAB, MRSAT, MRDOC, MRCOLS, MRFILES,
+and MRRANK.
