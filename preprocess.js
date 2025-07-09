@@ -228,6 +228,25 @@ async function readCountsByIndices(file, indices) {
   return counts;
 }
 
+// Read all lines from a file but return only specific fields joined by "|"
+async function readKeysByIndices(file, indices) {
+  const keys = [];
+  try {
+    const rl = readline.createInterface({ input: fs.createReadStream(file) });
+    for await (const line of rl) {
+      const parts = line.split('|');
+      const keyParts = [];
+      for (const idx of indices) {
+        keyParts.push(parts[idx] || 'MISSING');
+      }
+      keys.push(keyParts.join('|'));
+    }
+  } catch {
+    return [];
+  }
+  return keys;
+}
+
 async function gatherRows(file, keys) {
   const rows = new Map();
   for (const key of keys) rows.set(key, []);
@@ -878,12 +897,12 @@ async function generateMRDOCReport(current, previous) {
 async function generateMRCOLSReport(current, previous) {
   const currentFile = path.join(releasesDir, current, 'META', 'MRCOLS.RRF');
   const previousFile = path.join(releasesDir, previous, 'META', 'MRCOLS.RRF');
-  const curLines = await readAllLines(currentFile);
-  const prevLines = await readAllLines(previousFile);
-  const curSet = new Set(curLines);
-  const prevSet = new Set(prevLines);
-  const added = curLines.filter(l => !prevSet.has(l));
-  const removed = prevLines.filter(l => !curSet.has(l));
+  const curKeys = await readKeysByIndices(currentFile, [0, 1, 6]);
+  const prevKeys = await readKeysByIndices(previousFile, [0, 1, 6]);
+  const curSet = new Set(curKeys);
+  const prevSet = new Set(prevKeys);
+  const added = curKeys.filter(k => !prevSet.has(k));
+  const removed = prevKeys.filter(k => !curSet.has(k));
   const jsonPath = path.join(reportsDir, 'MRCOLS_report.json');
   await fsp.writeFile(jsonPath, JSON.stringify({ current, previous, added, removed }, null, 2));
 
