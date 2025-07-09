@@ -991,6 +991,68 @@ async function generateMRFILESReport(current, previous) {
   }
 }
 
+async function readMRRANKOrders(file) {
+  const map = new Map();
+  try {
+    const rl = readline.createInterface({ input: fs.createReadStream(file) });
+    for await (const line of rl) {
+      const parts = line.split('|');
+      if (parts.length < 3) continue;
+      const rank = parseInt(parts[0], 10);
+      const sab = parts[1];
+      const tty = parts[2];
+      if (!sab || !tty || isNaN(rank)) continue;
+      if (!map.has(sab)) map.set(sab, []);
+      map.get(sab).push({ rank, tty });
+    }
+    for (const [sab, arr] of map) {
+      arr.sort((a, b) => a.rank - b.rank);
+      map.set(sab, arr.map(r => r.tty));
+    }
+  } catch {
+    return new Map();
+  }
+  return map;
+}
+
+async function generateMRRANKReport(current, previous) {
+  const curFile = path.join(releasesDir, current, 'META', 'MRRANK.RRF');
+  const prevFile = path.join(releasesDir, previous, 'META', 'MRRANK.RRF');
+  const curMap = await readMRRANKOrders(curFile);
+  const prevMap = await readMRRANKOrders(prevFile);
+
+  const sabs = new Set([...curMap.keys(), ...prevMap.keys()]);
+  const summary = [];
+  for (const sab of sabs) {
+    const curOrder = curMap.get(sab) || [];
+    const prevOrder = prevMap.get(sab) || [];
+    const added = curOrder.filter(t => !prevOrder.includes(t));
+    const removed = prevOrder.filter(t => !curOrder.includes(t));
+    if (added.length || removed.length || curOrder.join('|') !== prevOrder.join('|')) {
+      summary.push({ SAB: sab, previousOrder: prevOrder, currentOrder: curOrder, added, removed });
+    }
+  }
+
+  const jsonPath = path.join(reportsDir, 'MRRANK_report.json');
+  await fsp.writeFile(jsonPath, JSON.stringify({ current, previous, summary }, null, 2));
+
+  let html = `<h3>MRRANK Order Changes (${current} vs ${previous})</h3>`;
+  if (!summary.length) {
+    html += '<p>No differences found.</p>';
+  } else {
+    html += '<table style="border:1px solid #ccc;border-collapse:collapse"><thead><tr><th>SAB</th><th>Previous Order</th><th>Current Order</th><th>Added</th><th>Removed</th></tr></thead><tbody>';
+    for (const row of summary) {
+      const addedTxt = row.added.join(', ');
+      const remTxt = row.removed.join(', ');
+      html += `<tr><td>${escapeHTML(row.SAB)}</td><td>${escapeHTML(row.previousOrder.join(', '))}</td><td>${escapeHTML(row.currentOrder.join(', '))}</td><td>${escapeHTML(addedTxt)}</td><td>${escapeHTML(remTxt)}</td></tr>`;
+    }
+    html += '</tbody></table>';
+  }
+  if (generateHtml) {
+    await fsp.writeFile(path.join(reportsDir, 'MRRANK_report.html'), wrapHtml('MRRANK Report', html));
+  }
+}
+
 (async () => {
   console.log('Detecting available releases...');
   const { current, previous } = await detectReleases();
@@ -1010,7 +1072,8 @@ async function generateMRFILESReport(current, previous) {
     MRREL: hashOf(generateMRRELReport.toString()),
     MRDOC: hashOf(generateMRDOCReport.toString()),
     MRCOLS: hashOf(generateMRCOLSReport.toString()),
-    MRFILES: hashOf(generateMRFILESReport.toString())
+    MRFILES: hashOf(generateMRFILESReport.toString()),
+    MRRANK: hashOf(generateMRRANKReport.toString())
   };
 
   let lastConfig = null;
@@ -1054,6 +1117,7 @@ async function generateMRFILESReport(current, previous) {
   const runMRDOC = !sameReleases || lastHashes.MRDOC !== currentHashes.MRDOC;
   const runMRCOLS = !sameReleases || lastHashes.MRCOLS !== currentHashes.MRCOLS;
   const runMRFILES = !sameReleases || lastHashes.MRFILES !== currentHashes.MRFILES;
+  const runMRRANK = !sameReleases || lastHashes.MRRANK !== currentHashes.MRRANK;
 
   if (runMRCONSO) {
     console.log('Generating MRCONSO report...');
@@ -1151,6 +1215,18 @@ async function generateMRFILESReport(current, previous) {
     }
   } else {
     console.log('MRFILES logic unchanged; skipping.');
+  }
+
+  if (runMRRANK) {
+    console.log('Generating MRRANK report...');
+    try {
+      await generateMRRANKReport(current, previous);
+      console.log('MRRANK report done.');
+    } catch (err) {
+      console.error('Failed MRRANK report:', err.message);
+    }
+  } else {
+    console.log('MRRANK logic unchanged; skipping.');
   }
   await fsp.mkdir(reportsDir, { recursive: true });
   await fsp.writeFile(
