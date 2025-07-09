@@ -745,8 +745,10 @@ async function gatherMRRELRowsForKey(file, key) {
         rows.push({
           RUI: parts[8],
           CUI1: parts[0],
+          AUI1: parts[1],
           REL: rel,
           CUI2: parts[4],
+          AUI2: parts[5],
           SAB: sab,
           RELA: rela
         });
@@ -756,6 +758,24 @@ async function gatherMRRELRowsForKey(file, key) {
     return [];
   }
   return rows;
+}
+
+async function collectConsoNames(file, auis, cuis) {
+  const byAUI = new Map();
+  const byCUI = new Map();
+  try {
+    const rl = readline.createInterface({ input: fs.createReadStream(file) });
+    for await (const line of rl) {
+      const parts = line.split('|');
+      const cui = parts[0];
+      const aui = parts[7];
+      const str = parts[14];
+      if (aui && auis.has(aui) && !byAUI.has(aui)) byAUI.set(aui, str);
+      if (cui && cuis.has(cui) && !byCUI.has(cui)) byCUI.set(cui, str);
+      if (byAUI.size === auis.size && byCUI.size === cuis.size) break;
+    }
+  } catch {}
+  return { byAUI, byCUI };
 }
 
 function buildMRRELDiffData(key, baseRows, prevRows) {
@@ -778,17 +798,17 @@ function mrrelDiffToHtml(data) {
   let html = `<h3>${data.sab} ${data.rel} ${data.rela} Differences</h3>`;
   if (data.added && data.added.length) {
     html += `<h4>Added (${data.added.length})</h4>`;
-    html += '<table><thead><tr><th>RUI</th><th>CUI1</th><th>REL</th><th>CUI2</th></tr></thead><tbody>';
+    html += '<table><thead><tr><th>RUI</th><th>CUI1</th><th>Name1</th><th>REL</th><th>CUI2</th><th>Name2</th></tr></thead><tbody>';
     for (const r of data.added) {
-      html += `<tr><td>${r.RUI}</td><td>${r.CUI1}</td><td>${r.REL}</td><td>${r.CUI2}</td></tr>`;
+      html += `<tr><td>${r.RUI}</td><td>${r.CUI1}</td><td>${escapeHTML(r.STR1 || '')}</td><td>${r.REL}</td><td>${r.CUI2}</td><td>${escapeHTML(r.STR2 || '')}</td></tr>`;
     }
     html += '</tbody></table>';
   }
   if (data.dropped && data.dropped.length) {
     html += `<h4>Dropped (${data.dropped.length})</h4>`;
-    html += '<table><thead><tr><th>RUI</th><th>CUI1</th><th>REL</th><th>CUI2</th></tr></thead><tbody>';
+    html += '<table><thead><tr><th>RUI</th><th>CUI1</th><th>Name1</th><th>REL</th><th>CUI2</th><th>Name2</th></tr></thead><tbody>';
     for (const r of data.dropped) {
-      html += `<tr><td>${r.RUI}</td><td>${r.CUI1}</td><td>${r.REL}</td><td>${r.CUI2}</td></tr>`;
+      html += `<tr><td>${r.RUI}</td><td>${r.CUI1}</td><td>${escapeHTML(r.STR1 || '')}</td><td>${r.REL}</td><td>${r.CUI2}</td><td>${escapeHTML(r.STR2 || '')}</td></tr>`;
     }
     html += '</tbody></table>';
   }
@@ -803,6 +823,11 @@ async function generateMRRELReport(current, previous) {
   await fsp.mkdir(diffsDir, { recursive: true });
   const summary = [];
   const diffKeys = new Set();
+  const diffEntries = [];
+  const curAUIs = new Set();
+  const curCUIs = new Set();
+  const prevAUIs = new Set();
+  const prevCUIs = new Set();
   const keys = new Set([...baseCounts.keys(), ...prevCounts.keys()]);
   for (const key of keys) {
     const currentCount = baseCounts.get(key) || 0;
@@ -823,15 +848,38 @@ async function generateMRRELReport(current, previous) {
       const prevRows = await gatherMRRELRowsForKey(previousFile, key);
       const diffData = buildMRRELDiffData(key, baseRows, prevRows);
       if (diffData) {
-        const safe = key.replace(/[^A-Za-z0-9_-]/g, '_');
-        const fileName = `MRREL_${safe}_diff.json`;
-        await fsp.writeFile(path.join(diffsDir, fileName), JSON.stringify(diffData, null, 2));
-        if (generateHtml) {
-          const htmlName = fileName.replace(/\.json$/, '.html');
-          await fsp.writeFile(path.join(diffsDir, htmlName), mrrelDiffToHtml(diffData));
+        for (const r of diffData.added) {
+          if (r.AUI1) curAUIs.add(r.AUI1); else curCUIs.add(r.CUI1);
+          if (r.AUI2) curAUIs.add(r.AUI2); else curCUIs.add(r.CUI2);
         }
-        entry.link = `diffs/${fileName}`;
+        for (const r of diffData.dropped) {
+          if (r.AUI1) prevAUIs.add(r.AUI1); else prevCUIs.add(r.CUI1);
+          if (r.AUI2) prevAUIs.add(r.AUI2); else prevCUIs.add(r.CUI2);
+        }
+        const safe = key.replace(/[^A-Za-z0-9_-]/g, '_');
+        diffEntries.push({ entry, key, diffData, safe });
       }
+    }
+
+    const curNames = await collectConsoNames(path.join(releasesDir, current, 'META', 'MRCONSO.RRF'), curAUIs, curCUIs);
+    const prevNames = await collectConsoNames(path.join(releasesDir, previous, 'META', 'MRCONSO.RRF'), prevAUIs, prevCUIs);
+
+    for (const { entry, diffData, safe } of diffEntries) {
+      for (const r of diffData.added) {
+        r.STR1 = curNames.byAUI.get(r.AUI1) || curNames.byCUI.get(r.CUI1) || '';
+        r.STR2 = curNames.byAUI.get(r.AUI2) || curNames.byCUI.get(r.CUI2) || '';
+      }
+      for (const r of diffData.dropped) {
+        r.STR1 = prevNames.byAUI.get(r.AUI1) || prevNames.byCUI.get(r.CUI1) || '';
+        r.STR2 = prevNames.byAUI.get(r.AUI2) || prevNames.byCUI.get(r.CUI2) || '';
+      }
+      const fileName = `MRREL_${safe}_diff.json`;
+      await fsp.writeFile(path.join(diffsDir, fileName), JSON.stringify(diffData, null, 2));
+      if (generateHtml) {
+        const htmlName = fileName.replace(/\.json$/, '.html');
+        await fsp.writeFile(path.join(diffsDir, htmlName), mrrelDiffToHtml(diffData));
+      }
+      entry.link = `diffs/${fileName}`;
     }
   }
 
