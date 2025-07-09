@@ -1150,13 +1150,29 @@ async function generateMRFILESReport(current, previous) {
     html += '<p>No differences found.</p>';
   } else {
     if (added.length) {
-      html += `<h4>Added Files (${added.length})</h4><pre>${added.map(a => escapeHTML(`${a.file} (${a.size} bytes)`)).join('\n')}</pre>`;
+      html += `<h4>Added Files (${added.length})</h4>`;
+      html += '<table><thead><tr><th>File</th><th>Size</th></tr></thead><tbody>';
+      for (const a of added) {
+        html += `<tr><td>${escapeHTML(a.file)}</td><td>${a.size}</td></tr>`;
+      }
+      html += '</tbody></table>';
     }
     if (removed.length) {
-      html += `<h4>Dropped Files (${removed.length})</h4><pre>${removed.map(r => escapeHTML(`${r.file} (${r.size} bytes)`)).join('\n')}</pre>`;
+      html += `<h4>Dropped Files (${removed.length})</h4>`;
+      html += '<table><thead><tr><th>File</th><th>Size</th></tr></thead><tbody>';
+      for (const r of removed) {
+        html += `<tr><td>${escapeHTML(r.file)}</td><td>${r.size}</td></tr>`;
+      }
+      html += '</tbody></table>';
     }
     if (changed.length) {
-      html += `<h4>Size Changes (${changed.length})</h4><pre>${changed.map(c => escapeHTML(`${c.file}: ${c.previous} -> ${c.current}`)).join('\n')}</pre>`;
+      html += `<h4>Size Changes (${changed.length})</h4>`;
+      html += '<table><thead><tr><th>File</th><th>Previous</th><th>Current</th><th>Diff</th></tr></thead><tbody>';
+      for (const c of changed) {
+        const diff = c.current - c.previous;
+        html += `<tr><td>${escapeHTML(c.file)}</td><td>${c.previous}</td><td>${c.current}</td><td>${diff}</td></tr>`;
+      }
+      html += '</tbody></table>';
     }
   }
   if (generateHtml) {
