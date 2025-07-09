@@ -43,9 +43,13 @@ function wrapHtml(title, body) {
   return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../css/styles.css">${style}</head><body>${crumbs}<h1>${title}</h1>${body}<script src="../js/sortable.js"></script></body></html>`;
 }
 
-function wrapDiffHtml(title, body) {
+function wrapDiffHtml(title, body, parentTitle = '', parentLink = '') {
   const style = '<style>table{width:100%;border-collapse:collapse;border:1px solid #ccc;margin-top:10px;font-size:0.9em}table th,table td{border:1px solid #ccc;padding:6px 10px;text-align:left}thead{background-color:#f2f2f2}</style>';
-  const crumbs = '<nav class="breadcrumbs"><a href="../../index.html">Home</a> &gt; <a href="../line-count-diff.html">Line Count Comparison</a></nav>';
+  let crumbs = '<nav class="breadcrumbs"><a href="../../index.html">Home</a> &gt; <a href="../line-count-diff.html">Line Count Comparison</a>';
+  if (parentTitle && parentLink) {
+    crumbs += ` &gt; <a href="${parentLink}">${parentTitle}</a>`;
+  }
+  crumbs += '</nav>';
   return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../css/styles.css">${style}</head><body>${crumbs}<h1>${title}</h1>${body}<script src="../../js/sortable.js"></script></body></html>`;
 }
 
@@ -381,7 +385,12 @@ function diffDataToHtml(data) {
     html += '</tbody></table>';
   }
 
-  return wrapDiffHtml(`${data.sab} ${data.tty} Differences`, html);
+  return wrapDiffHtml(
+    `${data.sab} ${data.tty} Differences`,
+    html,
+    'MRCONSO Report',
+    '../MRCONSO_report.html'
+  );
 }
 
 function stySabDiffToHtml(data) {
@@ -405,7 +414,12 @@ function stySabDiffToHtml(data) {
   if (!data.added.length && !data.removed.length) {
     html += '<p>No changes.</p>';
   }
-  return wrapDiffHtml(`${data.sty} ${data.sab} Changes`, html);
+  return wrapDiffHtml(
+    `${data.sty} ${data.sab} Changes`,
+    html,
+    'MRSTY Report',
+    '../MRSTY_report.html'
+  );
 }
 
 async function generateSABDiff(current, previous) {
@@ -675,7 +689,15 @@ async function generateSTYReports(current, previous, reportConfig = {}) {
         }
         html += '</tbody></table>';
         if (generateHtml) {
-          await fsp.writeFile(path.join(styBreakdownDir, htmlName), wrapDiffHtml(`${sty} by SAB`, html));
+          await fsp.writeFile(
+            path.join(styBreakdownDir, htmlName),
+            wrapDiffHtml(
+              `${sty} by SAB`,
+              html,
+              'MRSTY Report',
+              '../MRSTY_report.html'
+            )
+          );
         }
         link = `sty_breakdowns/${jsonName}`;
       }
@@ -934,7 +956,12 @@ function mrrelDiffToHtml(data) {
     }
     html += '</tbody></table>';
   }
-  return wrapDiffHtml(`${data.sab} ${data.rel} ${data.rela} Differences`, html);
+  return wrapDiffHtml(
+    `${data.sab} ${data.rel} ${data.rela} Differences`,
+    html,
+    'MRREL Report',
+    '../MRREL_report.html'
+  );
 }
 
 async function generateMRRELReport(current, previous) {
