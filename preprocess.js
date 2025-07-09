@@ -1173,6 +1173,46 @@ async function generateMRRANKReport(current, previous) {
   }
 }
 
+// Split MRHIER into per-SAB files to avoid storing everything in memory
+async function splitMRHIERBySAB(inFile, outDir) {
+  const sabMap = new Map();
+  await fsp.rm(outDir, { recursive: true, force: true });
+  await fsp.mkdir(outDir, { recursive: true });
+  const writers = new Map();
+  try {
+    const rl = readline.createInterface({ input: fs.createReadStream(inFile) });
+    for await (const line of rl) {
+      const parts = line.split('|');
+      if (parts.length < 7) continue;
+      const sab = parts[4] || 'MISSING';
+      const ptr = parts[6];
+      if (!ptr) continue;
+      const safe = sanitizeComponent(sab);
+      if (!writers.has(safe)) {
+        writers.set(safe, fs.createWriteStream(path.join(outDir, `${safe}.txt`)));
+        sabMap.set(safe, sab);
+      }
+      writers.get(safe).write(ptr + '\n');
+    }
+  } finally {
+    await Promise.all([...writers.values()].map(w => new Promise(r => w.end(r))));
+  }
+  return sabMap;
+}
+
+// Load pointers for a single SAB from a split file
+async function loadPointerSet(file) {
+  const set = new Set();
+  try {
+    const rl = readline.createInterface({ input: fs.createReadStream(file) });
+    for await (const line of rl) {
+      const ptr = line.trim();
+      if (ptr) set.add(ptr);
+    }
+  } catch {}
+  return set;
+}
+
 // Read hierarchical branches from MRHIER indexed by SAB
 async function readMRHIERBranches(file) {
   const map = new Map();
@@ -1238,39 +1278,48 @@ async function generateMRHIERBranchReport(current, previous) {
   const consoCur = path.join(releasesDir, current, 'META', 'MRCONSO.RRF');
   const consoPrev = path.join(releasesDir, previous, 'META', 'MRCONSO.RRF');
 
-  const curMap = await readMRHIERBranches(curFile);
-  const prevMap = await readMRHIERBranches(prevFile);
+  const tmpDir = path.join(reportsDir, 'tmp_mrhier');
+  const curTmp = path.join(tmpDir, 'cur');
+  const prevTmp = path.join(tmpDir, 'prev');
+
+  console.log('  Splitting MRHIER files by SAB...');
+  const curSabNames = await splitMRHIERBySAB(curFile, curTmp);
+  const prevSabNames = await splitMRHIERBySAB(prevFile, prevTmp);
   await fsp.mkdir(diffsDir, { recursive: true });
+
+  const sabNames = new Map([...curSabNames, ...prevSabNames]);
 
   const addedBySab = new Map();
   const droppedBySab = new Map();
   const curAUIs = new Set();
   const prevAUIs = new Set();
 
-  const sabs = new Set([...curMap.keys(), ...prevMap.keys()]);
-  for (const sab of sabs) {
-    const curSet = curMap.get(sab) || new Set();
-    const prevSet = prevMap.get(sab) || new Set();
+  const sabs = new Set([...sabNames.keys()]);
+  for (const safe of sabs) {
+    const curSet = await loadPointerSet(path.join(curTmp, `${safe}.txt`));
+    const prevSet = await loadPointerSet(path.join(prevTmp, `${safe}.txt`));
     const addedPtrs = [...curSet].filter(p => !prevSet.has(p));
     const droppedPtrs = [...prevSet].filter(p => !curSet.has(p));
-    addedBySab.set(sab, addedPtrs);
-    droppedBySab.set(sab, droppedPtrs);
+    addedBySab.set(safe, addedPtrs);
+    droppedBySab.set(safe, droppedPtrs);
     for (const ptr of addedPtrs) for (const a of ptr.split('.')) if (a) curAUIs.add(a);
     for (const ptr of droppedPtrs) for (const a of ptr.split('.')) if (a) prevAUIs.add(a);
   }
+
+  await fsp.rm(tmpDir, { recursive: true, force: true });
 
   const curNames = await collectAUINames(consoCur, curAUIs);
   const prevNames = await collectAUINames(consoPrev, prevAUIs);
 
   const summary = [];
-  for (const sab of sabs) {
-    const addedPtrs = addedBySab.get(sab) || [];
-    const droppedPtrs = droppedBySab.get(sab) || [];
+  for (const safe of sabs) {
+    const sab = sabNames.get(safe) || safe;
+    const addedPtrs = addedBySab.get(safe) || [];
+    const droppedPtrs = droppedBySab.get(safe) || [];
     let link = '';
     if (addedPtrs.length || droppedPtrs.length) {
       const added = addedPtrs.map(p => branchString(p, curNames));
       const dropped = droppedPtrs.map(p => branchString(p, prevNames));
-      const safe = sanitizeComponent(sab);
       const jsonName = `MRHIER_${safe}_branches.json`;
       const htmlName = jsonName.replace(/\.json$/, '.html');
       await fsp.writeFile(path.join(diffsDir, jsonName), JSON.stringify({ sab, added, dropped }, null, 2));
