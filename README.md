@@ -23,4 +23,5 @@ what was used previously, preprocessing is skipped.
 
 Reports are saved to the `reports/` folder. The preprocessing step generates
 HTML and JSON reports for several UMLS tables including MRCONSO, MRREL, MRSTY,
-MRDEF, MRSAB, MRSAT, MRDOC, MRCOLS, MRFILES, and MRRANK.
+MRDEF, MRSAB, MRSAT, MRDOC, MRCOLS, MRFILES, MRRANK, and a new MRHIER branch
+report that joins hierarchy pointers with MRCONSO names.
