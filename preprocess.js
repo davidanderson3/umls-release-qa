@@ -922,27 +922,68 @@ async function generateMRCOLSReport(current, previous) {
   }
 }
 
+async function collectMRFILESizes(release) {
+  const file = path.join(releasesDir, release, 'META', 'MRFILES.RRF');
+  const lines = await readAllLines(file);
+  const result = new Map();
+  for (const line of lines) {
+    const parts = line.split('|');
+    const fname = parts[0];
+    if (!fname) continue;
+    const possible = [
+      path.join(releasesDir, release, fname),
+      path.join(releasesDir, release, 'META', fname)
+    ];
+    for (const p of possible) {
+      try {
+        const stat = await fsp.stat(p);
+        result.set(fname, stat.size);
+        break;
+      } catch {}
+    }
+  }
+  return result;
+}
+
 async function generateMRFILESReport(current, previous) {
-  const currentFile = path.join(releasesDir, current, 'META', 'MRFILES.RRF');
-  const previousFile = path.join(releasesDir, previous, 'META', 'MRFILES.RRF');
-  const curLines = await readAllLines(currentFile);
-  const prevLines = await readAllLines(previousFile);
-  const curSet = new Set(curLines);
-  const prevSet = new Set(prevLines);
-  const added = curLines.filter(l => !prevSet.has(l));
-  const removed = prevLines.filter(l => !curSet.has(l));
+  const curMap = await collectMRFILESizes(current);
+  const prevMap = await collectMRFILESizes(previous);
+
+  const added = [];
+  const removed = [];
+  const changed = [];
+
+  for (const [file, size] of curMap) {
+    if (!prevMap.has(file)) {
+      added.push({ file, size });
+    } else {
+      const prevSize = prevMap.get(file);
+      if (prevSize !== size) {
+        changed.push({ file, previous: prevSize, current: size });
+      }
+    }
+  }
+  for (const [file, size] of prevMap) {
+    if (!curMap.has(file)) {
+      removed.push({ file, size });
+    }
+  }
+
   const jsonPath = path.join(reportsDir, 'MRFILES_report.json');
-  await fsp.writeFile(jsonPath, JSON.stringify({ current, previous, added, removed }, null, 2));
+  await fsp.writeFile(jsonPath, JSON.stringify({ current, previous, added, removed, changed }, null, 2));
 
   let html = `<h3>MRFILES Differences (${current} vs ${previous})</h3>`;
-  if (!added.length && !removed.length) {
+  if (!added.length && !removed.length && !changed.length) {
     html += '<p>No differences found.</p>';
   } else {
     if (added.length) {
-      html += `<h4>Added (${added.length})</h4><pre>${added.map(escapeHTML).join('\n')}</pre>`;
+      html += `<h4>Added Files (${added.length})</h4><pre>${added.map(a => escapeHTML(`${a.file} (${a.size} bytes)`)).join('\n')}</pre>`;
     }
     if (removed.length) {
-      html += `<h4>Removed (${removed.length})</h4><pre>${removed.map(escapeHTML).join('\n')}</pre>`;
+      html += `<h4>Dropped Files (${removed.length})</h4><pre>${removed.map(r => escapeHTML(`${r.file} (${r.size} bytes)`)).join('\n')}</pre>`;
+    }
+    if (changed.length) {
+      html += `<h4>Size Changes (${changed.length})</h4><pre>${changed.map(c => escapeHTML(`${c.file}: ${c.previous} -> ${c.current}`)).join('\n')}</pre>`;
     }
   }
   if (generateHtml) {
