@@ -2,6 +2,7 @@
   function makeSortable(table){
     if(table.dataset.sortable) return;
     table.dataset.sortable = 'true';
+    table.classList.add('sortable');
     const head = table.tHead;
     if(!head) return;
     head.addEventListener('click', function(ev){
