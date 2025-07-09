@@ -144,6 +144,11 @@
           try {
             const doc = frame.contentWindow.document;
             frame.style.height = doc.documentElement.scrollHeight + 'px';
+            doc.addEventListener('click', ev => {
+              if (ev.target.closest('a')) {
+                document.getElementById('line-results').scrollIntoView({ behavior: 'smooth' });
+              }
+            });
           } catch {}
         });
         return true;
@@ -151,5 +156,4 @@
         results.innerHTML = '<p>No reports available.</p>';
         return false;
       }
-    }
-  </script>  <script src="js/sortable.js"></script></body></html>
+    }  </script>  <script src="js/sortable.js"></script></body></html>
