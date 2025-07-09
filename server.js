@@ -337,7 +337,7 @@ app.get('/api/line-count-diff', async (req, res) => {
       const pct = isFinite(f.percent) ? f.percent.toFixed(2) : 'inf';
       const linkCell = f.link ? `<a href="${f.link}">view</a>` : '';
       const note = escapeHTML(notes[f.name] || '');
-      html += `<tr><td>${f.name}</td><td>${f.previous ?? 0}</td><td>${f.current ?? 0}</td><td${style}>${f.diff}</td><td>${pct}</td><td>${f.status}</td><td>${linkCell}</td><td class="editable" data-file="${escapeHTML(f.name)}">${note}</td></tr>`;
+      html += `<tr><td>${f.name}</td><td>${f.previous ?? 0}</td><td>${f.current ?? 0}</td><td${style}>${f.diff}</td><td>${pct}</td><td>${f.status}</td><td>${linkCell}</td><td class="editable line-note" data-file="${escapeHTML(f.name)}">${note}</td></tr>`;
     }
     html += '</tbody></table>';
     if (unchanged.length) {

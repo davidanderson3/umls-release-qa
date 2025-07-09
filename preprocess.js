@@ -151,7 +151,7 @@ async function generateLineCountDiff(current, previous) {
     const diffClass = f.diff < 0 ? 'negative' : 'positive';
     const pct = isFinite(f.percent) ? f.percent.toFixed(2) : 'inf';
     const linkCell = f.link ? `<a href="${f.link}">view</a>` : '';
-    html += `<tr><td>${f.name}</td><td>${f.previous ?? 0}</td><td>${f.current ?? 0}</td><td class="${diffClass}">${f.diff}</td><td>${pct}</td><td>${linkCell}</td><td class="editable" data-file="${f.name}"></td></tr>`;
+    html += `<tr><td>${f.name}</td><td>${f.previous ?? 0}</td><td>${f.current ?? 0}</td><td class="${diffClass}">${f.diff}</td><td>${pct}</td><td>${linkCell}</td><td class="editable line-note" data-file="${f.name}"></td></tr>`;
   }
   html += '</tbody></table>';
   if (unchanged.length) {

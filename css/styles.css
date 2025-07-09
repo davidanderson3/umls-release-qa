@@ -62,6 +62,13 @@ tbody tr:hover {
   padding: 4px;
 }
 
+/* Notes column in line count diff table */
+.line-note {
+  max-width: 30%;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
 #status p,
 #preprocess-results p,
 #preprocess-results pre,
