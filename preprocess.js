@@ -686,14 +686,15 @@ async function readSABs(file) {
 async function generateMRSABChangeReport(current, previous) {
   const currentFile = path.join(releasesDir, current, 'META', 'MRSAB.RRF');
   const previousFile = path.join(releasesDir, previous, 'META', 'MRSAB.RRF');
-  const currentLines = await readAllLines(currentFile);
-  const previousLines = await readAllLines(previousFile);
 
-  const curSet = new Set(currentLines);
-  const prevSet = new Set(previousLines);
+  // Compare rows using only the first three columns
+  const curKeys = await readKeysByIndices(currentFile, [0, 1, 2]);
+  const prevKeys = await readKeysByIndices(previousFile, [0, 1, 2]);
+  const curSet = new Set(curKeys);
+  const prevSet = new Set(prevKeys);
 
-  const addedRows = currentLines.filter(l => !prevSet.has(l));
-  const removedRows = previousLines.filter(l => !curSet.has(l));
+  const addedRows = curKeys.filter(k => !prevSet.has(k));
+  const removedRows = prevKeys.filter(k => !curSet.has(k));
 
   const currentSABs = await readSABs(currentFile);
   const previousSABs = await readSABs(previousFile);
