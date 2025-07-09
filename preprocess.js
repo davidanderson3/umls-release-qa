@@ -39,12 +39,14 @@ async function loadReportConfig() {
 
 function wrapHtml(title, body) {
   const style = '<style>table{width:100%;border-collapse:collapse;border:1px solid #ccc;margin-top:10px;font-size:0.9em}table th,table td{border:1px solid #ccc;padding:6px 10px;text-align:left}thead{background-color:#f2f2f2}</style>';
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../css/styles.css">${style}</head><body><h1>${title}</h1>${body}<script src="../js/sortable.js"></script></body></html>`;
+  const crumbs = '<nav class="breadcrumbs"><a href="../index.html">Home</a> &gt; <a href="line-count-diff.html">Line Count Comparison</a></nav>';
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../css/styles.css">${style}</head><body>${crumbs}<h1>${title}</h1>${body}<script src="../js/sortable.js"></script></body></html>`;
 }
 
 function wrapDiffHtml(title, body) {
   const style = '<style>table{width:100%;border-collapse:collapse;border:1px solid #ccc;margin-top:10px;font-size:0.9em}table th,table td{border:1px solid #ccc;padding:6px 10px;text-align:left}thead{background-color:#f2f2f2}</style>';
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../css/styles.css">${style}</head><body><h1>${title}</h1>${body}<script src="../../js/sortable.js"></script></body></html>`;
+  const crumbs = '<nav class="breadcrumbs"><a href="../../index.html">Home</a> &gt; <a href="../line-count-diff.html">Line Count Comparison</a></nav>';
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../css/styles.css">${style}</head><body>${crumbs}<h1>${title}</h1>${body}<script src="../../js/sortable.js"></script></body></html>`;
 }
 
 async function detectReleases() {

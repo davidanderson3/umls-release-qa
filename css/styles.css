@@ -107,3 +107,17 @@ h5[id],
 h6[id] {
   scroll-margin-top: 2.5em;
 }
+
+nav.breadcrumbs {
+  font-size: 0.9em;
+  margin: 10px 0;
+}
+
+nav.breadcrumbs a {
+  color: #0645ad;
+  text-decoration: none;
+  margin-right: 6px;
+}
+
+nav.breadcrumbs a:hover {
+  text-decoration: underline;}
