@@ -140,19 +140,43 @@ async function generateLineCountDiff(current, previous) {
   await fsp.writeFile(jsonPath, JSON.stringify({ current, previous, files: result }, null, 2));
 
   let html = `<h3>Line Count Comparison (${current} vs ${previous})</h3>`;
-  html += '<table style="border:1px solid #ccc;border-collapse:collapse"><thead><tr><th>File</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th><th>Report</th></tr></thead><tbody>';
+  html += '<table style="border:1px solid #ccc;border-collapse:collapse"><thead><tr><th>File</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th><th>Report</th><th>Notes</th></tr></thead><tbody>';
   const unchanged = [];
   for (const f of result) {
     if (f.diff === 0) { unchanged.push(f.name); continue; }
     const diffClass = f.diff < 0 ? 'negative' : 'positive';
     const pct = isFinite(f.percent) ? f.percent.toFixed(2) : 'inf';
     const linkCell = f.link ? `<a href="${f.link}">view</a>` : '';
-    html += `<tr><td>${f.name}</td><td>${f.previous ?? 0}</td><td>${f.current ?? 0}</td><td class="${diffClass}">${f.diff}</td><td>${pct}</td><td>${linkCell}</td></tr>`;
+    html += `<tr><td>${f.name}</td><td>${f.previous ?? 0}</td><td>${f.current ?? 0}</td><td class="${diffClass}">${f.diff}</td><td>${pct}</td><td>${linkCell}</td><td class="editable" data-file="${f.name}"></td></tr>`;
   }
   html += '</tbody></table>';
   if (unchanged.length) {
     html += `<p>Unchanged files: ${unchanged.join(', ')}</p>`;
   }
+  html += `<script type="module">
+    async function load() {
+      try {
+        const resp = await fetch('/api/texts');
+        const data = resp.ok ? await resp.json() : {};
+        const notes = data.lineCountNotes || {};
+        document.querySelectorAll('td[data-file]').forEach(td => {
+          td.textContent = notes[td.dataset.file] || td.textContent;
+          td.contentEditable = true;
+          td.addEventListener('blur', save);
+        });
+      } catch {}
+    }
+    async function save() {
+      const notes = {};
+      document.querySelectorAll('td[data-file]').forEach(td => {
+        notes[td.dataset.file] = td.textContent;
+      });
+      try {
+        await fetch('/api/texts', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ lineCountNotes: notes }) });
+      } catch {}
+    }
+    load();
+  </script>`;
   const wrapped = wrapHtml('Line Count Comparison', html);
   if (generateHtml) {
     await fsp.writeFile(path.join(reportsDir, 'line-count-diff.html'), wrapped);
