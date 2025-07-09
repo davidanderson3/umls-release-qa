@@ -133,6 +133,7 @@ async function generateLineCountDiff(current, previous) {
     else if (/^MRREL\.RRF$/i.test(base)) link = 'MRREL_report.html';
     else if (/^MRSAT\.RRF$/i.test(base)) link = 'MRSAT_report.html';
     else if (/^MRHIER\.RRF$/i.test(base)) link = 'MRHIER_report.html';
+    else if (/^MRDOC\.RRF$/i.test(base)) link = 'MRDOC_report.html';
     else if (/^MRCOLS\.RRF$/i.test(base)) link = 'MRCOLS_report.html';
     result.push({ name, current: cur, previous: prev, diff, percent, link });
   }
