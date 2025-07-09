@@ -345,10 +345,20 @@ function diffDataToHtml(data) {
 function stySabDiffToHtml(data) {
   let html = `<h3>${escapeHTML(data.sty)} - ${escapeHTML(data.sab)} Changes</h3>`;
   if (data.added && data.added.length) {
-    html += `<h4>Added (${data.added.length})</h4><pre>${data.added.map(escapeHTML).join('\n')}</pre>`;
+    html += `<h4>Added (${data.added.length})</h4>`;
+    html += '<table><thead><tr><th>CUI</th><th>Name</th></tr></thead><tbody>';
+    for (const r of data.added) {
+      html += `<tr><td>${r.CUI}</td><td>${escapeHTML(r.Name || '')}</td></tr>`;
+    }
+    html += '</tbody></table>';
   }
   if (data.removed && data.removed.length) {
-    html += `<h4>Removed (${data.removed.length})</h4><pre>${data.removed.map(escapeHTML).join('\n')}</pre>`;
+    html += `<h4>Removed (${data.removed.length})</h4>`;
+    html += '<table><thead><tr><th>CUI</th><th>Name</th></tr></thead><tbody>';
+    for (const r of data.removed) {
+      html += `<tr><td>${r.CUI}</td><td>${escapeHTML(r.Name || '')}</td></tr>`;
+    }
+    html += '</tbody></table>';
   }
   if (!data.added.length && !data.removed.length) {
     html += '<p>No changes.</p>';
@@ -472,6 +482,30 @@ async function readCUISABMap(file) {
   return map;
 }
 
+// Collect preferred names for a set of CUIs from MRCONSO
+// Only rows with TS=P, STT=PF, and ISPREF=Y are considered
+async function collectPreferredNames(file, cuis) {
+  const names = new Map();
+  if (!cuis.size) return names;
+  try {
+    const rl = readline.createInterface({ input: fs.createReadStream(file) });
+    for await (const line of rl) {
+      const parts = line.split('|');
+      if (parts.length < 15) continue;
+      const cui = parts[0];
+      if (!cuis.has(cui) || names.has(cui)) continue;
+      const ts = parts[2];
+      const stt = parts[4];
+      const ispref = parts[6];
+      if (ts === 'P' && stt === 'PF' && ispref === 'Y') {
+        names.set(cui, parts[14]);
+        if (names.size === cuis.size) break;
+      }
+    }
+  } catch {}
+  return names;
+}
+
 function computeSTYCounts(styMap) {
   const counts = new Map();
   for (const set of styMap.values()) {
@@ -537,6 +571,10 @@ async function generateSTYReports(current, previous, reportConfig = {}) {
   const curSabCUIs = includeBreakdowns ? computeSTYSABCUIMap(styCurMap, sabCurMap) : new Map();
   const prevSabCUIs = includeBreakdowns ? computeSTYSABCUIMap(styPrevMap, sabPrevMap) : new Map();
 
+  const diffEntries = [];
+  const addedCUIs = new Set();
+  const removedCUIs = new Set();
+
   await fsp.mkdir(styBreakdownDir, { recursive: true });
   await fsp.mkdir(stySourceDiffDir, { recursive: true });
 
@@ -572,10 +610,9 @@ async function generateSTYReports(current, previous, reportConfig = {}) {
             const jsonDiff = `${safeSty}_${safeSab}_changes.json`;
             const htmlDiff = jsonDiff.replace(/\.json$/, '.html');
             const diffData = { current, previous, sty, sab, added, removed };
-            await fsp.writeFile(path.join(stySourceDiffDir, jsonDiff), JSON.stringify(diffData, null, 2));
-            if (generateHtml) {
-              await fsp.writeFile(path.join(stySourceDiffDir, htmlDiff), stySabDiffToHtml(diffData));
-            }
+            diffEntries.push({ jsonDiff, htmlDiff, diffData });
+            for (const c of added) addedCUIs.add(c);
+            for (const c of removed) removedCUIs.add(c);
             link2 = `sty_source_diffs/${jsonDiff}`;
           }
           detail.push({ SAB: sab, Previous: p, Current: c, Difference: d, Percent: pp, link: link2 });
@@ -602,6 +639,19 @@ async function generateSTYReports(current, previous, reportConfig = {}) {
       }
     }
     summary.push({ Key: sty, Previous: previousCount, Current: currentCount, Difference: diff, Percent: pct, link });
+  }
+
+  if (diffEntries.length) {
+    const curNames = await collectPreferredNames(consoCurFile, addedCUIs);
+    const prevNames = await collectPreferredNames(consoPrevFile, removedCUIs);
+    for (const { jsonDiff, htmlDiff, diffData } of diffEntries) {
+      diffData.added = diffData.added.map(cui => ({ CUI: cui, Name: curNames.get(cui) || '' }));
+      diffData.removed = diffData.removed.map(cui => ({ CUI: cui, Name: prevNames.get(cui) || '' }));
+      await fsp.writeFile(path.join(stySourceDiffDir, jsonDiff), JSON.stringify(diffData, null, 2));
+      if (generateHtml) {
+        await fsp.writeFile(path.join(stySourceDiffDir, htmlDiff), stySabDiffToHtml(diffData));
+      }
+    }
   }
 
   const summaryPath = path.join(reportsDir, 'MRSTY_report.json');
