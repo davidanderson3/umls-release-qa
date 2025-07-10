@@ -989,6 +989,12 @@ async function generateMRRELReport(current, previous) {
     summary.push(entry);
   }
 
+  summary.sort((a, b) => {
+    if (a.SAB !== b.SAB) return a.SAB.localeCompare(b.SAB);
+    if (a.REL !== b.REL) return a.REL.localeCompare(b.REL);
+    return a.RELA.localeCompare(b.RELA);
+  });
+
   if (diffKeys.size) {
     const curRowsMap = await gatherMRRELRows(currentFile, diffKeys);
     const prevRowsMap = await gatherMRRELRows(previousFile, diffKeys);
