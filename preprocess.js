@@ -802,10 +802,10 @@ async function generateMRSABChangeReport(current, previous) {
   const currentFile = path.join(releasesDir, current, 'META', 'MRSAB.RRF');
   const previousFile = path.join(releasesDir, previous, 'META', 'MRSAB.RRF');
 
-  // Build maps keyed by the 2nd and 3rd columns so we can detect
+  // Build maps keyed by the 2nd column so we can detect
   // added/dropped rows while still retaining the full line content
-  const curMap = await readLineMapByIndices(currentFile, [1, 2]);
-  const prevMap = await readLineMapByIndices(previousFile, [1, 2]);
+  const curMap = await readLineMapByIndices(currentFile, [1]);
+  const prevMap = await readLineMapByIndices(previousFile, [1]);
 
   const curKeys = Array.from(curMap.keys());
   const prevKeys = Array.from(prevMap.keys());
