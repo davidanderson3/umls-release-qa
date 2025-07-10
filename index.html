@@ -101,10 +101,18 @@
 
     document.getElementById('run-preprocess').addEventListener('click', () => {
       const output = document.getElementById('preprocess-results');
+      const append = (text) => {
+        const pre = document.createElement('pre');
+        pre.textContent = text;
+        output.appendChild(pre);
+        pre.scrollIntoView({ behavior: 'smooth', block: 'end' });
+        console.log(text);
+      };
+
       output.innerHTML = '<p>Running reports...</p>';
       const es = new EventSource('/api/preprocess-stream');
       es.onmessage = (e) => {
-        output.insertAdjacentHTML('beforeend', `<pre>${e.data}</pre>`);
+        append(e.data);
         if (e.data.includes('Generating MRCONSO report')) {
           loadReports();
           if (!reportInterval) reportInterval = setInterval(loadReports, 5000);
@@ -114,11 +122,11 @@
         es.close();
         clearInterval(reportInterval);
         reportInterval = null;
-        output.insertAdjacentHTML('beforeend', '<p>Reports done.</p>');
+        append('Reports done.');
         loadReports();
       });
       es.onerror = () => {
-        output.insertAdjacentHTML('beforeend', '<p style="color:red">Error running reports.</p>');
+        append('Error running reports.');
         es.close();
         clearInterval(reportInterval);
         reportInterval = null;
