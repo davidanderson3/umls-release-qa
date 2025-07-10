@@ -212,6 +212,8 @@ app.get('/api/preprocess-stream', async (req, res) => {
   res.setHeader('Content-Type', 'text/event-stream');
   res.setHeader('Cache-Control', 'no-cache');
   res.setHeader('Connection', 'keep-alive');
+  res.flushHeaders();
+  res.write(': connected\n\n');
 
   const { current, previous } = await detectReleases();
   if (current && previous) {
