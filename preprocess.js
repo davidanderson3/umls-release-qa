@@ -15,11 +15,12 @@ process.on('uncaughtException', err => {
 });
 
 const releasesDir = path.join(__dirname, 'releases');
-const reportsDir = path.join(__dirname, 'reports');
-const diffsDir = path.join(reportsDir, 'diffs');
-const styBreakdownDir = path.join(reportsDir, 'sty_breakdowns');
-const stySourceDiffDir = path.join(reportsDir, 'sty_source_diffs');
-const configFile = path.join(reportsDir, 'config.json');
+const baseReportsDir = path.join(__dirname, 'reports');
+let reportsDir = baseReportsDir;
+let diffsDir = path.join(reportsDir, 'diffs');
+let styBreakdownDir = path.join(reportsDir, 'sty_breakdowns');
+let stySourceDiffDir = path.join(reportsDir, 'sty_source_diffs');
+let configFile = path.join(reportsDir, 'config.json');
 const userConfigPath = path.join(__dirname, 'report-config.json');
 // If --data-only is passed, skip generating HTML output
 const generateHtml = !process.argv.includes('--data-only');
@@ -39,18 +40,18 @@ async function loadReportConfig() {
 
 function wrapHtml(title, body) {
   const style = '<style>table{width:100%;border-collapse:collapse;border:1px solid #ccc;margin-top:10px;font-size:0.9em}table th,table td{border:1px solid #ccc;padding:6px 10px;text-align:left}thead{background-color:#f2f2f2}</style>';
-  const crumbs = '<nav class="breadcrumbs"><a href="../index.html">Home</a></nav>';
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../css/styles.css">${style}</head><body>${crumbs}<h1>${title}</h1>${body}<script src="../js/sortable.js"></script></body></html>`;
+  const crumbs = '<nav class="breadcrumbs"><a href="../../index.html">Home</a></nav>';
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../css/styles.css">${style}</head><body>${crumbs}<h1>${title}</h1>${body}<script src="../../js/sortable.js"></script></body></html>`;
 }
 
 function wrapDiffHtml(title, body, parentTitle = '', parentLink = '') {
   const style = '<style>table{width:100%;border-collapse:collapse;border:1px solid #ccc;margin-top:10px;font-size:0.9em}table th,table td{border:1px solid #ccc;padding:6px 10px;text-align:left}thead{background-color:#f2f2f2}</style>';
-  let crumbs = '<nav class="breadcrumbs"><a href="../../index.html">Home</a>';
+  let crumbs = '<nav class="breadcrumbs"><a href="../../../index.html">Home</a>';
   if (parentTitle && parentLink) {
     crumbs += ` &gt; <a href="${parentLink}">${parentTitle}</a>`;
   }
   crumbs += '</nav>';
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../css/styles.css">${style}</head><body>${crumbs}<h1>${title}</h1>${body}<script src="../../js/sortable.js"></script></body></html>`;
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../../css/styles.css">${style}</head><body>${crumbs}<h1>${title}</h1>${body}<script src="../../../js/sortable.js"></script></body></html>`;
 }
 
 async function detectReleases() {
@@ -1288,6 +1289,12 @@ async function generateMRRANKReport(current, previous) {
     console.error('Need at least two releases in releases/');
     process.exit(1);
   }
+
+  reportsDir = path.join(baseReportsDir, current);
+  diffsDir = path.join(reportsDir, 'diffs');
+  styBreakdownDir = path.join(reportsDir, 'sty_breakdowns');
+  stySourceDiffDir = path.join(reportsDir, 'sty_source_diffs');
+  configFile = path.join(reportsDir, 'config.json');
 
   const reportConfig = await loadReportConfig();
 

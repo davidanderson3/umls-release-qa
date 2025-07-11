@@ -4,8 +4,7 @@ const fs = require('fs');
 const readline = require('readline');
 const { exec, spawn } = require('child_process');
 const fsp = fs.promises;
-const reportsDir = path.join(__dirname, 'reports');
-const configFile = path.join(reportsDir, 'config.json');
+const baseReportsDir = path.join(__dirname, 'reports');
 const textsFile = path.join(__dirname, 'texts.json');
 const defaultTexts = {
   title: 'UMLS Release QA',
@@ -19,8 +18,8 @@ const defaultTexts = {
 
 function wrapHtml(title, body) {
   const style = '<style>table{width:100%;border-collapse:collapse;border:1px solid #ccc;margin-top:10px;font-size:0.9em}table th,table td{border:1px solid #ccc;padding:6px 10px;text-align:left}thead{background-color:#f2f2f2}</style>';
-  const crumbs = '<nav class="breadcrumbs"><a href="../index.html">Home</a></nav>';
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../css/styles.css">${style}</head><body>${crumbs}<h1>${title}</h1>${body}<script src="../js/sortable.js"></script></body></html>`;
+  const crumbs = '<nav class="breadcrumbs"><a href="../../index.html">Home</a></nav>';
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../css/styles.css">${style}</head><body>${crumbs}<h1>${title}</h1>${body}<script src="../../js/sortable.js"></script></body></html>`;
 }
 
 function escapeHTML(str) {
@@ -37,6 +36,7 @@ app.use(express.static(path.join(__dirname)));
 // control ordering without modifying the preprocessing step.
 app.get('/reports/MRCONSO_report.html', async (req, res, next) => {
   try {
+    const reportsDir = await getReportsDir();
     const jsonPath = path.join(reportsDir, 'MRCONSO_report.json');
     const data = JSON.parse(await fsp.readFile(jsonPath, 'utf-8'));
     const summary = Array.isArray(data.summary) ? data.summary.slice() : [];
@@ -75,7 +75,14 @@ app.get('/reports/MRCONSO_report.html', async (req, res, next) => {
     next();
   }
 });
-app.use('/reports', express.static(reportsDir));
+app.use('/reports', (req, res, next) => {
+  detectReleases()
+    .then(({ current }) => {
+      const dir = path.join(baseReportsDir, current || '');
+      express.static(dir)(req, res, next);
+    })
+    .catch(next);
+});
 
 async function detectReleases() {
   let releaseList = [];
@@ -105,6 +112,16 @@ async function detectReleases() {
   } catch { }
 
   return { current, previous, releaseList };
+}
+
+async function getReportsDir() {
+  const { current } = await detectReleases();
+  return path.join(baseReportsDir, current || '');
+}
+
+async function getConfigFile() {
+  const dir = await getReportsDir();
+  return path.join(dir, 'config.json');
 }
 
 app.get('/api/releases', async (req, res) => {
@@ -179,6 +196,8 @@ app.get('/api/preprocess', (req, res) => {
 
 app.post('/api/preprocess', async (req, res) => {
   const { current, previous } = await detectReleases();
+  const reportsDir = await getReportsDir();
+  const configFile = await getConfigFile();
   if (!current || !previous) {
     res.status(400).json({ error: 'Need at least two releases' });
     return;
@@ -216,6 +235,8 @@ app.get('/api/preprocess-stream', async (req, res) => {
   res.write(': connected\n\n');
 
   const { current, previous } = await detectReleases();
+  const configFile = await getConfigFile();
+  const reportsDir = await getReportsDir();
   if (current && previous) {
     try {
       const cfg = JSON.parse(await fsp.readFile(configFile, 'utf-8'));
@@ -261,6 +282,8 @@ app.get('/api/preprocess-stream', async (req, res) => {
 
 app.get('/api/line-count-diff', async (req, res) => {
   const { current, previous } = await detectReleases();
+  const reportsDir = await getReportsDir();
+  const configFile = await getConfigFile();
   if (!current || !previous) {
     res.status(400).json({ error: 'Need at least two releases' });
     return;
@@ -385,6 +408,7 @@ app.get('/api/line-count-diff', async (req, res) => {
 
 app.get('/api/sab-diff', async (req, res) => {
   const { current, previous } = await detectReleases();
+  const reportsDir = await getReportsDir();
   if (!current || !previous) {
     res.status(400).json({ error: 'Need at least two releases' });
     return;
