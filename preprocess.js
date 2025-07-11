@@ -722,7 +722,7 @@ async function generateSTYReports(current, previous, reportConfig = {}) {
   const summaryPath = path.join(reportsDir, 'MRSTY_report.json');
   await fsp.writeFile(summaryPath, JSON.stringify({ current, previous, summary }, null, 2));
 
-  let html = `<h3>MRSTY Report (${current} vs ${previous})</h3>`;
+  let html = '';
   const header = includeBreakdowns ?
     '<table><thead><tr><th>STY</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th><th>Details</th></tr></thead><tbody>' :
     '<table><thead><tr><th>STY</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th></tr></thead><tbody>';
@@ -745,7 +745,8 @@ async function generateSTYReports(current, previous, reportConfig = {}) {
   }
   html += '</tbody></table>';
   if (generateHtml) {
-    await fsp.writeFile(path.join(reportsDir, 'MRSTY_report.html'), wrapHtml('MRSTY Report', html));
+      const title = `MRSTY Report (${current} vs ${previous})`;
+      await fsp.writeFile(path.join(reportsDir, 'MRSTY_report.html'), wrapHtml(title, html));
   }
   console.log('  STY reports complete.');
 }
@@ -767,7 +768,7 @@ async function generateCountReport(current, previous, fileName, indices, tableNa
   const jsonName = `${tableName}_report.json`;
   await fsp.writeFile(path.join(reportsDir, jsonName), JSON.stringify({ current, previous, summary }, null, 2));
 
-  let html = `<h3>${tableName} Report (${current} vs ${previous})</h3>`;
+  let html = '';
   html += '<table style="border:1px solid #ccc;border-collapse:collapse"><thead><tr><th>Key</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th></tr></thead><tbody>';
   for (const row of summary) {
     const diffClass = row.Difference < 0 ? 'negative' : 'positive';
@@ -775,7 +776,7 @@ async function generateCountReport(current, previous, fileName, indices, tableNa
     html += `<tr><td>${escapeHTML(row.Key)}</td><td>${row.Previous}</td><td>${row.Current}</td><td class="${diffClass}">${row.Difference}</td><td>${pctTxt}</td></tr>`;
   }
   html += '</tbody></table>';
-  const wrapped = wrapHtml(`${tableName} Report`, html);
+  const wrapped = wrapHtml(`${tableName} Report (${current} vs ${previous})`, html);
   if (generateHtml) {
     await fsp.writeFile(path.join(reportsDir, `${tableName}_report.html`), wrapped);
   }
@@ -1045,7 +1046,7 @@ async function generateMRRELReport(current, previous) {
   const jsonPath = path.join(reportsDir, 'MRREL_report.json');
   await fsp.writeFile(jsonPath, JSON.stringify({ current, previous, summary }, null, 2));
 
-  let html = `<h3>MRREL Report (${current} vs ${previous})</h3>`;
+  let html = '';
   const changed = summary.filter(r => Math.abs(r.Percent) >= 5);
   if (changed.length) {
     html += '<h4>Changes \u22655%</h4>';
@@ -1067,7 +1068,8 @@ async function generateMRRELReport(current, previous) {
     html += `<tr><td>${escapeHTML(row.SAB)}</td><td>${escapeHTML(row.REL)}</td><td>${escapeHTML(row.RELA)}</td><td>${row.Previous}</td><td>${row.Current}</td><td class="${diffClass}">${row.Difference}</td><td>${pctTxt}</td><td>${linkCell}</td></tr>`;
   }
   html += '</tbody></table>';
-  const wrapped = wrapHtml('MRREL Report', html);
+  const title = `MRREL Report (${current} vs ${previous})`;
+  const wrapped = wrapHtml(title, html);
   if (generateHtml) {
     await fsp.writeFile(path.join(reportsDir, 'MRREL_report.html'), wrapped);
   }
