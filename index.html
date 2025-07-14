@@ -165,7 +165,9 @@
       } else {
         url.searchParams.delete('report');
       }
-      history.replaceState(null, '', url);
+      if (url.href !== window.location.href) {
+        history.pushState(null, '', url);
+      }
     }
 
     function initialReport() {
@@ -199,10 +201,9 @@
       } else {
         results.innerHTML = '<p>No reports available.</p>';
         return false;
-      }
-    }
-  </script>
-  <script src="js/sortable.js"></script>
-</body>
+      }    }
+    window.addEventListener('popstate', () => {
+      loadReports(initialReport());
+    });
+  </script>  <script src="js/sortable.js"></script></body></html>
 
-</html>
