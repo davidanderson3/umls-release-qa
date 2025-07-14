@@ -1121,10 +1121,28 @@ async function generateMRCOLSReport(current, previous) {
     html += '<p>No differences found.</p>';
   } else {
     if (added.length) {
-      html += `<h4>Added (${added.length})</h4><pre>${added.map(escapeHTML).join('\n')}</pre>`;
+      html += `<h4>Added (${added.length})</h4>`;
+      html += '<table><thead><tr><th>File</th><th>Column</th><th>Type</th></tr></thead><tbody>';
+      for (const row of added) {
+        const parts = row.split('|');
+        const file = parts[0] || '';
+        const col = parts[1] || '';
+        const type = parts[2] || '';
+        html += `<tr><td>${escapeHTML(file)}</td><td>${escapeHTML(col)}</td><td>${escapeHTML(type)}</td></tr>`;
+      }
+      html += '</tbody></table>';
     }
     if (removed.length) {
-      html += `<h4>Removed (${removed.length})</h4><pre>${removed.map(escapeHTML).join('\n')}</pre>`;
+      html += `<h4>Removed (${removed.length})</h4>`;
+      html += '<table><thead><tr><th>File</th><th>Column</th><th>Type</th></tr></thead><tbody>';
+      for (const row of removed) {
+        const parts = row.split('|');
+        const file = parts[0] || '';
+        const col = parts[1] || '';
+        const type = parts[2] || '';
+        html += `<tr><td>${escapeHTML(file)}</td><td>${escapeHTML(col)}</td><td>${escapeHTML(type)}</td></tr>`;
+      }
+      html += '</tbody></table>';
     }
   }
   if (generateHtml) {
