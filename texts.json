@@ -1,6 +1,6 @@
 {
   "title": "UMLS Release QA",
-  "header": "UMLS Release QA in progress",
+  "header": "UMLS Release QA",
   "runPreprocessButton": "Run Reports",
   "rerunAllButton": "Re-run All Reports",
   "note1": "This application compares different versions of the UMLS Metathesaurus for QA purposes. Use the UMLS Metathesaurus Full Subset. The META folder for the current release and the previous release must be in the releases folder (e.g. releases/2025AA/META). The reports take some time to run. You can monitor their progress in the terminal after running 'npm start'. ",

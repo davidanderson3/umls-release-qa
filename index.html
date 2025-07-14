@@ -9,7 +9,6 @@
 
 <body>
   <div class="container">
-    <nav class="breadcrumbs"><a href="reports/line-count-diff.html">Line Count Comparison</a></nav>
     <h1 id="page-title" class="editable">UMLS Release QA</h1>
     <div id="status"></div>
     <p id="note1" class="editable note"></p>
@@ -192,7 +191,7 @@
                 document.getElementById('line-results').scrollIntoView({ behavior: 'smooth' });
               }
             });
-          } catch {}
+          } catch { }
         };
         frame.addEventListener('load', sync);
         if (frame.contentDocument && frame.contentDocument.readyState === 'complete') {
@@ -207,3 +206,4 @@
       loadReports(initialReport());
     });
   </script>  <script src="js/sortable.js"></script></body></html>
+
