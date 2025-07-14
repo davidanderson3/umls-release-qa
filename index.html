@@ -14,6 +14,7 @@
     <div id="status"></div>
     <p id="note1" class="editable note"></p>
     <button id="run-preprocess" class="editable">Run Reports</button>
+    <button id="rerun-preprocess">Re-run All Reports</button>
     <div id="preprocess-results"></div>
     <p id="note2" class="editable note"></p>
     <div id="line-results"></div>
@@ -43,6 +44,7 @@
       document.title = texts.title || 'UMLS Release QA';
       document.getElementById('page-title').textContent = texts.header || 'UMLS Release QA';
       document.getElementById('run-preprocess').textContent = texts.runPreprocessButton || 'Run Reports';
+      document.getElementById('rerun-preprocess').textContent = texts.rerunAllButton || 'Re-run All Reports';
       document.getElementById('note1').textContent = texts.note1 || '';
       document.getElementById('note2').textContent = texts.note2 || '';
       document.getElementById('note3').textContent = texts.note3 || '';
@@ -64,6 +66,7 @@
         title: document.title,
         header: document.getElementById('page-title').textContent,
         runPreprocessButton: document.getElementById('run-preprocess').textContent,
+        rerunAllButton: document.getElementById('rerun-preprocess').textContent,
         note1: document.getElementById('note1').textContent,
         note2: document.getElementById('note2').textContent,
         note3: document.getElementById('note3').textContent
@@ -107,7 +110,7 @@
 
     // Automatically check for finished reports when running preprocessing
 
-    document.getElementById('run-preprocess').addEventListener('click', () => {
+    function runReports(force = false) {
       const output = document.getElementById('preprocess-results');
       const append = (text) => {
         const pre = document.createElement('pre');
@@ -118,7 +121,8 @@
       };
 
       output.innerHTML = '<p>Running reports...</p>';
-      const es = new EventSource(apiUrl('/api/preprocess-stream'));
+      const url = force ? apiUrl('/api/preprocess-stream?force=1') : apiUrl('/api/preprocess-stream');
+      const es = new EventSource(url);
       es.onmessage = (e) => {
         append(e.data);
         if (e.data.includes('Generating MRCONSO report')) {
@@ -139,7 +143,12 @@
         clearInterval(reportInterval);
         reportInterval = null;
       };
-    });
+    }
+
+    window.runReports = runReports;
+
+    document.getElementById('run-preprocess').addEventListener('click', () => runReports(false));
+    document.getElementById('rerun-preprocess').addEventListener('click', () => runReports(true));
 
     async function fileExists(url) {
       try {
