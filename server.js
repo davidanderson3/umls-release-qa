@@ -49,7 +49,7 @@ app.get('/reports/MRCONSO_report.html', async (req, res, next) => {
 
     let html = `<h3>MRCONSO SAB/TTY Differences (${data.current} vs ${data.previous})</h3>`;
     if (notable.length) {
-      html += '<h4>Notable Changes</h4>';
+      html += '<h4>Notable Changes (decreases, >5% increases, or SAB=SRC)</h4>';
       html += '<table style="border:1px solid #ccc;border-collapse:collapse"><thead><tr><th>SAB</th><th>TTY</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th><th>Diff</th></tr></thead><tbody>';
       for (const row of notable) {
         const diffClass = row.Difference < 0 ? 'negative' : 'positive';
