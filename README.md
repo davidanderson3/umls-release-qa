@@ -37,3 +37,6 @@ Start the server with `npm start` and navigate to `http://localhost:8080/<releas
 where `<release>` is the version you want to view (for example `2025AA`). You can
 link directly to a specific report by including the `report` query parameter, e.g.
 `http://localhost:8080/2025AA?report=diffs%2FNCI_CCN_differences.html`.
+As you browse reports the current report is now reflected in the URL so the
+browser back button works and bookmarks or page refreshes keep you on the same
+report.
