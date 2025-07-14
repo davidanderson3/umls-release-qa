@@ -30,3 +30,10 @@ and MRRANK.
 The MRFILES report lists added, dropped, and size-changed files in sortable
 tables for easier review. Size changes now include a percentage column to show
 relative growth or shrinkage.
+
+### Viewing Reports
+
+Start the server with `npm start` and navigate to `http://localhost:8080/<release>`
+where `<release>` is the version you want to view (for example `2025AA`). You can
+link directly to a specific report by including the `report` query parameter, e.g.
+`http://localhost:8080/2025AA?report=diffs%2FNCI_CCN_differences.html`.

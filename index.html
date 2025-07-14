@@ -23,10 +23,18 @@
   <script type="module">
     let texts = {};
     let reportInterval = null;
+    const releaseMatch = window.location.pathname.match(/^\/([^/]+)/);
+    const currentRelease = releaseMatch ? releaseMatch[1] : '';
+
+    function apiUrl(path) {
+      const url = new URL(path, window.location);
+      if (currentRelease) url.searchParams.set('release', currentRelease);
+      return url.pathname + url.search;
+    }
 
     async function loadTexts() {
       try {
-        const resp = await fetch('/api/texts');
+        const resp = await fetch(apiUrl('/api/texts'));
         if (resp.ok) {
           texts = await resp.json();
         }
@@ -61,7 +69,7 @@
         note3: document.getElementById('note3').textContent
       };
       try {
-        await fetch('/api/texts', {
+        await fetch(apiUrl('/api/texts'), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
@@ -72,7 +80,7 @@
     async function checkReleases() {
       const status = document.getElementById('status');
       try {
-        const resp = await fetch('/api/releases');
+        const resp = await fetch(apiUrl('/api/releases'));
         if (!resp.ok) {
           status.innerHTML = `<p style="color:red">Failed to check releases: ${resp.status}</p>`;
           return;
@@ -110,7 +118,7 @@
       };
 
       output.innerHTML = '<p>Running reports...</p>';
-      const es = new EventSource('/api/preprocess-stream');
+      const es = new EventSource(apiUrl('/api/preprocess-stream'));
       es.onmessage = (e) => {
         append(e.data);
         if (e.data.includes('Generating MRCONSO report')) {

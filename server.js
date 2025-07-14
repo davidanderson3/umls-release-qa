@@ -31,12 +31,23 @@ const PORT = process.env.PORT || 8080;
 const releasesDir = process.env.RELEASES_DIR || path.join(__dirname, 'releases');
 
 app.use(express.json());
+app.get('/:release', async (req, res, next) => {
+  try {
+    const { release } = req.params;
+    const { releaseList } = await detectReleases();
+    if (releaseList.includes(release)) {
+      res.sendFile(path.join(__dirname, 'index.html'));
+      return;
+    }
+  } catch {}
+  next();
+});
 app.use(express.static(path.join(__dirname)));
 // Dynamically generate the MRCONSO report HTML from the JSON summary so we can
 // control ordering without modifying the preprocessing step.
-app.get('/reports/MRCONSO_report.html', async (req, res, next) => {
+app.get(['/reports/MRCONSO_report.html', '/:release/reports/MRCONSO_report.html'], async (req, res, next) => {
   try {
-    const reportsDir = await getReportsDir();
+    const reportsDir = await getReportsDir(req.params.release);
     const jsonPath = path.join(reportsDir, 'MRCONSO_report.json');
     const data = JSON.parse(await fsp.readFile(jsonPath, 'utf-8'));
     const summary = Array.isArray(data.summary) ? data.summary.slice() : [];
@@ -75,6 +86,16 @@ app.get('/reports/MRCONSO_report.html', async (req, res, next) => {
     next();
   }
 });
+app.use('/:release/reports', (req, res, next) => {
+  const rel = req.params.release;
+  detectReleases(rel)
+    .then(({ current }) => {
+      const dir = path.join(baseReportsDir, current || '');
+      express.static(dir)(req, res, next);
+    })
+    .catch(next);
+});
+
 app.use('/reports', (req, res, next) => {
   detectReleases()
     .then(({ current }) => {
@@ -84,7 +105,7 @@ app.use('/reports', (req, res, next) => {
     .catch(next);
 });
 
-async function detectReleases() {
+async function detectReleases(selected) {
   let releaseList = [];
   let current = null;
   let previous = null;
@@ -107,25 +128,32 @@ async function detectReleases() {
     }
 
     releaseList.sort().reverse();
-    current = releaseList[0] || null;
-    previous = releaseList[1] || null;
+    if (selected && releaseList.includes(selected)) {
+      current = selected;
+      const idx = releaseList.indexOf(selected);
+      previous = releaseList[idx + 1] || null;
+    } else {
+      current = releaseList[0] || null;
+      previous = releaseList[1] || null;
+    }
   } catch { }
 
   return { current, previous, releaseList };
 }
 
-async function getReportsDir() {
-  const { current } = await detectReleases();
+async function getReportsDir(selected) {
+  const { current } = await detectReleases(selected);
   return path.join(baseReportsDir, current || '');
 }
 
-async function getConfigFile() {
-  const dir = await getReportsDir();
+async function getConfigFile(selected) {
+  const dir = await getReportsDir(selected);
   return path.join(dir, 'config.json');
 }
 
 app.get('/api/releases', async (req, res) => {
-  const result = await detectReleases();
+  const rel = req.query.release;
+  const result = await detectReleases(rel);
   res.json(result);
 });
 
@@ -195,9 +223,10 @@ app.get('/api/preprocess', (req, res) => {
 });
 
 app.post('/api/preprocess', async (req, res) => {
-  const { current, previous } = await detectReleases();
-  const reportsDir = await getReportsDir();
-  const configFile = await getConfigFile();
+  const rel = req.query.release;
+  const { current, previous } = await detectReleases(rel);
+  const reportsDir = await getReportsDir(rel);
+  const configFile = await getConfigFile(rel);
   if (!current || !previous) {
     res.status(400).json({ error: 'Need at least two releases' });
     return;
@@ -234,9 +263,10 @@ app.get('/api/preprocess-stream', async (req, res) => {
   res.flushHeaders();
   res.write(': connected\n\n');
 
-  const { current, previous } = await detectReleases();
-  const configFile = await getConfigFile();
-  const reportsDir = await getReportsDir();
+  const rel = req.query.release;
+  const { current, previous } = await detectReleases(rel);
+  const configFile = await getConfigFile(rel);
+  const reportsDir = await getReportsDir(rel);
   if (current && previous) {
     try {
       const cfg = JSON.parse(await fsp.readFile(configFile, 'utf-8'));
@@ -281,9 +311,10 @@ app.get('/api/preprocess-stream', async (req, res) => {
 });
 
 app.get('/api/line-count-diff', async (req, res) => {
-  const { current, previous } = await detectReleases();
-  const reportsDir = await getReportsDir();
-  const configFile = await getConfigFile();
+  const rel = req.query.release;
+  const { current, previous } = await detectReleases(rel);
+  const reportsDir = await getReportsDir(rel);
+  const configFile = await getConfigFile(rel);
   if (!current || !previous) {
     res.status(400).json({ error: 'Need at least two releases' });
     return;
@@ -407,8 +438,9 @@ app.get('/api/line-count-diff', async (req, res) => {
 });
 
 app.get('/api/sab-diff', async (req, res) => {
-  const { current, previous } = await detectReleases();
-  const reportsDir = await getReportsDir();
+  const rel = req.query.release;
+  const { current, previous } = await detectReleases(rel);
+  const reportsDir = await getReportsDir(rel);
   if (!current || !previous) {
     res.status(400).json({ error: 'Need at least two releases' });
     return;
