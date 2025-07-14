@@ -10,6 +10,7 @@ const defaultTexts = {
   title: 'UMLS Release QA',
   header: 'UMLS Release QA',
   runPreprocessButton: 'Run Reports',
+  rerunAllButton: 'Re-run All Reports',
   note1: '',
   note2: '',
   note3: '',
@@ -19,7 +20,9 @@ const defaultTexts = {
 function wrapHtml(title, body) {
   const style = '<style>table{width:100%;border-collapse:collapse;border:1px solid #ccc;margin-top:10px;font-size:0.9em}table th,table td{border:1px solid #ccc;padding:6px 10px;text-align:left}thead{background-color:#f2f2f2}</style>';
   const crumbs = '<nav class="breadcrumbs"><a href="line-count-diff.html">Line Count Comparison</a></nav>';
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../css/styles.css">${style}</head><body>${crumbs}<h1>${title}</h1>${body}<script src="../../js/sortable.js"></script></body></html>`;
+  const button = '<button id="rerun-report">Re-run Report</button><div id="rerun-status"></div>';
+  const script = `<script>document.getElementById('rerun-report').addEventListener('click',()=>{if(parent&&parent.runReports){parent.runReports(true);}else{location.reload();}});</script>`;
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../css/styles.css">${style}</head><body>${crumbs}<h1>${title}</h1>${button}${body}<script src="../../js/sortable.js"></script>${script}</body></html>`;
 }
 
 function escapeHTML(str) {
@@ -224,6 +227,7 @@ app.get('/api/preprocess', (req, res) => {
 
 app.post('/api/preprocess', async (req, res) => {
   const rel = req.query.release;
+  const force = req.query.force === '1' || req.query.force === 'true';
   const { current, previous } = await detectReleases(rel);
   const reportsDir = await getReportsDir(rel);
   const configFile = await getConfigFile(rel);
@@ -231,14 +235,16 @@ app.post('/api/preprocess', async (req, res) => {
     res.status(400).json({ error: 'Need at least two releases' });
     return;
   }
-  try {
-    const cfg = JSON.parse(await fsp.readFile(configFile, 'utf-8'));
-    if (cfg.current === current && cfg.previous === previous) {
-      res.json({ message: 'Preprocessing complete.' });
-      return;
+  if (!force) {
+    try {
+      const cfg = JSON.parse(await fsp.readFile(configFile, 'utf-8'));
+      if (cfg.current === current && cfg.previous === previous) {
+        res.json({ message: 'Preprocessing complete.' });
+        return;
+      }
+    } catch (err) {
+      console.error('Failed to load precomputed diff:', err.message);
     }
-  } catch (err) {
-    console.error('Failed to load precomputed diff:', err.message);
   }
   const script = path.join(__dirname, 'preprocess.js');
   exec(`node --max-old-space-size=8192 ${script}`, { cwd: __dirname }, (error, stdout, stderr) => {
@@ -264,10 +270,11 @@ app.get('/api/preprocess-stream', async (req, res) => {
   res.write(': connected\n\n');
 
   const rel = req.query.release;
+  const force = req.query.force === '1' || req.query.force === 'true';
   const { current, previous } = await detectReleases(rel);
   const configFile = await getConfigFile(rel);
   const reportsDir = await getReportsDir(rel);
-  if (current && previous) {
+  if (current && previous && !force) {
     try {
       const cfg = JSON.parse(await fsp.readFile(configFile, 'utf-8'));
       if (cfg.current === current && cfg.previous === previous) {
