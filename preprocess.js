@@ -1062,6 +1062,7 @@ async function generateMRRELReport(current, previous) {
     html += '</tbody></table>';
   }
 
+  html += '<h4>All Changes</h4>';
   html += '<table style="border:1px solid #ccc;border-collapse:collapse"><thead><tr><th>SAB</th><th>REL</th><th>RELA</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th><th>Diff</th></tr></thead><tbody>';
   for (const row of summary) {
     const diffClass = row.Difference < 0 ? 'negative' : 'positive';
