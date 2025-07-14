@@ -169,12 +169,11 @@
       const results = document.getElementById('line-results');
       results.innerHTML = '<p>Checking report...</p>';
       if (await fileExists(`reports/${file}`)) {
-        results.innerHTML = `<iframe id="report-frame" src="reports/${file}" style="width:100%;border:none;overflow:hidden"></iframe>`;
+        results.innerHTML = `<iframe id="report-frame" src="reports/${file}" style="width:100%;border:none;height:80vh"></iframe>`;
         const frame = document.getElementById('report-frame');
         const sync = () => {
           try {
             const doc = frame.contentWindow.document;
-            frame.style.height = doc.documentElement.scrollHeight + 'px';
             const p = frame.contentWindow.location.pathname.replace(/^\//, '');
             if (p.startsWith('reports/')) updateUrl(p.slice('reports/'.length));
             doc.addEventListener('click', ev => {
