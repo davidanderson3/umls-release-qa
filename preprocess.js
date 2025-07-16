@@ -904,41 +904,6 @@ async function gatherMRRELRows(file, keys) {
   return rowsMap;
 }
 
-// Gather rows for a single SAB|REL|RELA key in MRREL
-async function gatherMRRELRowsForKey(file, key) {
-  const rows = [];
-  const [expectSab, expectRel, expectRela] = key.split('|');
-  try {
-    const rl = readline.createInterface({ input: fs.createReadStream(file) });
-    let i = 0;
-    for await (const line of rl) {
-      i++;
-      const parts = line.split('|');
-      if (parts.length < 11) continue;
-      const sab = parts[10] || 'MISSING';
-      const rel = parts[3] || 'MISSING';
-      const rela = parts[7] || 'MISSING';
-      if (sab === expectSab && rel === expectRel && rela === expectRela) {
-        rows.push({
-          RUI: parts[8],
-          CUI1: parts[0],
-          AUI1: parts[1],
-          REL: rel,
-          CUI2: parts[4],
-          AUI2: parts[5],
-          SAB: sab,
-          RELA: rela
-        });
-      }
-      if (i % 100000 === 0) {
-        console.log(`  Processed ${i} lines of ${path.basename(file)}...`);
-      }
-    }
-  } catch {
-    return [];
-  }
-  return rows;
-}
 
 async function collectConsoNames(file, auis, cuis) {
   const byAUI = new Map();
@@ -1035,30 +1000,48 @@ async function generateMRRELReport(current, previous) {
   });
 
   if (diffKeys.length) {
+    const baseRowsMap = await gatherMRRELRows(currentFile, diffKeys);
+    const prevRowsMap = await gatherMRRELRows(previousFile, diffKeys);
+
+    const allCurAUIs = new Set();
+    const allCurCUIs = new Set();
+    const allPrevAUIs = new Set();
+    const allPrevCUIs = new Set();
+    const diffInfos = [];
+
     for (const entry of summary) {
       const key = `${entry.SAB}|${entry.REL}|${entry.RELA}`;
       if (!diffKeys.includes(key)) continue;
-      const baseRows = await gatherMRRELRowsForKey(currentFile, key);
-      const prevRows = await gatherMRRELRowsForKey(previousFile, key);
+      const baseRows = baseRowsMap.get(key) || [];
+      const prevRows = prevRowsMap.get(key) || [];
       const diffData = buildMRRELDiffData(key, baseRows, prevRows);
       if (!diffData) continue;
 
-      const curAUIs = new Set();
-      const curCUIs = new Set();
-      const prevAUIs = new Set();
-      const prevCUIs = new Set();
       for (const r of diffData.added) {
-        if (r.AUI1) curAUIs.add(r.AUI1); else curCUIs.add(r.CUI1);
-        if (r.AUI2) curAUIs.add(r.AUI2); else curCUIs.add(r.CUI2);
+        if (r.AUI1) allCurAUIs.add(r.AUI1); else allCurCUIs.add(r.CUI1);
+        if (r.AUI2) allCurAUIs.add(r.AUI2); else allCurCUIs.add(r.CUI2);
       }
       for (const r of diffData.dropped) {
-        if (r.AUI1) prevAUIs.add(r.AUI1); else prevCUIs.add(r.CUI1);
-        if (r.AUI2) prevAUIs.add(r.AUI2); else prevCUIs.add(r.CUI2);
+        if (r.AUI1) allPrevAUIs.add(r.AUI1); else allPrevCUIs.add(r.CUI1);
+        if (r.AUI2) allPrevAUIs.add(r.AUI2); else allPrevCUIs.add(r.CUI2);
       }
 
-      const curNames = await collectConsoNames(path.join(releasesDir, current, 'META', 'MRCONSO.RRF'), curAUIs, curCUIs);
-      const prevNames = await collectConsoNames(path.join(releasesDir, previous, 'META', 'MRCONSO.RRF'), prevAUIs, prevCUIs);
+      const safe = key.replace(/[^A-Za-z0-9_-]/g, '_');
+      diffInfos.push({ entry, diffData, safe });
+    }
 
+    const curNames = await collectConsoNames(
+      path.join(releasesDir, current, 'META', 'MRCONSO.RRF'),
+      allCurAUIs,
+      allCurCUIs
+    );
+    const prevNames = await collectConsoNames(
+      path.join(releasesDir, previous, 'META', 'MRCONSO.RRF'),
+      allPrevAUIs,
+      allPrevCUIs
+    );
+
+    for (const { entry, diffData, safe } of diffInfos) {
       for (const r of diffData.added) {
         r.STR1 = curNames.byAUI.get(r.AUI1) || curNames.byCUI.get(r.CUI1) || '';
         r.STR2 = curNames.byAUI.get(r.AUI2) || curNames.byCUI.get(r.CUI2) || '';
@@ -1068,7 +1051,6 @@ async function generateMRRELReport(current, previous) {
         r.STR2 = prevNames.byAUI.get(r.AUI2) || prevNames.byCUI.get(r.CUI2) || '';
       }
 
-      const safe = key.replace(/[^A-Za-z0-9_-]/g, '_');
       const fileName = `MRREL_${safe}_diff.json`;
       await fsp.writeFile(path.join(diffsDir, fileName), JSON.stringify(diffData, null, 2));
       if (generateHtml) {
