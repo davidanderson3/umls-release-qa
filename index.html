@@ -94,7 +94,7 @@
             <p>Previous release: <strong>${previous}</strong></p>
             <p style="color:green">Releases are ready for comparison.</p>
           `;
-          loadReports();
+          loadReports(undefined, true);
         } else {
           status.innerHTML = `
             <p style="color:red">Could not find at least two release folders.</p>
@@ -158,14 +158,18 @@
       }
     }
 
-    function updateUrl(report) {
+    function updateUrl(report, replace = false) {
       const url = new URL(window.location);
       if (report && report !== 'line-count-diff.html') {
         url.searchParams.set('report', report);
       } else {
         url.searchParams.delete('report');
       }
-      history.replaceState(null, '', url);
+      if (replace) {
+        history.replaceState(null, '', url);
+      } else {
+        history.pushState(null, '', url);
+      }
     }
 
     function initialReport() {
@@ -173,17 +177,19 @@
       return params.get('report') || 'line-count-diff.html';
     }
 
-    async function loadReports(file = initialReport()) {
+    async function loadReports(file = initialReport(), replace = false) {
       const results = document.getElementById('line-results');
       results.innerHTML = '<p>Checking report...</p>';
       if (await fileExists(`reports/${file}`)) {
         results.innerHTML = `<iframe id="report-frame" src="reports/${file}" style="width:100%;border:none;height:80vh"></iframe>`;
         const frame = document.getElementById('report-frame');
+        let firstLoad = true;
         const sync = () => {
           try {
             const doc = frame.contentWindow.document;
             const p = frame.contentWindow.location.pathname.replace(/^\//, '');
-            if (p.startsWith('reports/')) updateUrl(p.slice('reports/'.length));
+            if (p.startsWith('reports/')) updateUrl(p.slice('reports/'.length), firstLoad ? replace : false);
+            firstLoad = false;
             doc.addEventListener('click', ev => {
               if (ev.target.closest('a')) {
                 document.getElementById('line-results').scrollIntoView({ behavior: 'smooth' });
@@ -201,6 +207,10 @@
         return false;
       }
     }
+
+    window.addEventListener('popstate', () => {
+      loadReports(initialReport(), true);
+    });
   </script>
   <script src="js/sortable.js"></script>
 </body>
