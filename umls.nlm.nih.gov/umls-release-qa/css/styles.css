@@ -1,0 +1,123 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.file-inputs label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#module-list {
+  list-style: none;
+  padding: 0;
+}
+
+#module-list li {
+  margin-bottom: 5px;
+}
+
+#summary p {
+  margin: 4px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+thead {
+  background-color: #f2f2f2;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  text-align: left;
+}
+
+table.sortable th {
+  cursor: pointer;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+tbody tr:hover {
+  background-color: #eef5ff;
+}
+
+.positive {
+  color: #006600;
+}
+
+.negative {
+  color: #b30000;
+}
+
+.note {
+  min-height: 1em;
+  border: 1px dashed #888;
+  padding: 4px;
+}
+
+/* Notes column in line count diff table */
+.line-note {
+  max-width: 30%;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+#status p,
+#preprocess-results p,
+#preprocess-results pre,
+#line-results p {
+  margin: 2px 0;
+}
+
+.sticky-links {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  padding: 4px 0;
+  z-index: 10;
+}
+
+.sticky-links a {
+  margin-right: 10px;
+}
+
+/* Offset anchors for sticky headings */
+h1[id],
+h2[id],
+h3[id],
+h4[id],
+h5[id],
+h6[id] {
+  scroll-margin-top: 2.5em;
+}
+
+nav.breadcrumbs {
+  font-size: 0.9em;
+  margin: 10px 0;
+}
+
+nav.breadcrumbs a {
+  color: #0645ad;
+  text-decoration: none;
+  margin-right: 6px;
+}
+
+nav.breadcrumbs a:hover {
+  text-decoration: underline;}
