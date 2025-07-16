@@ -24,6 +24,10 @@ let configFile = path.join(reportsDir, 'config.json');
 const userConfigPath = path.join(__dirname, 'report-config.json');
 // If --data-only is passed, skip generating HTML output
 const generateHtml = !process.argv.includes('--data-only');
+// If --force is passed, do not skip regeneration when configuration and logic
+// have not changed. This allows the UI "Re-run Report" button to always
+// regenerate reports when requested.
+const forceRun = process.argv.includes('--force');
 
 function hashOf(str) {
   return crypto.createHash('sha256').update(str).digest('hex');
@@ -1359,7 +1363,7 @@ async function generateMRRANKReport(current, previous) {
   const sameConfig = lastConfig && JSON.stringify(lastConfig.reportConfig || {}) === JSON.stringify(reportConfig);
   const lastHashes = (lastConfig && lastConfig.logicHashes) || {};
   const sameHashes = JSON.stringify(lastHashes) === JSON.stringify(currentHashes);
-  if (sameReleases && sameConfig && sameHashes) {
+  if (!forceRun && sameReleases && sameConfig && sameHashes) {
     console.log('Report configuration and logic unchanged. Skipping regeneration.');
     return;
   }

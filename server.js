@@ -247,7 +247,8 @@ app.post('/api/preprocess', async (req, res) => {
     }
   }
   const script = path.join(__dirname, 'preprocess.js');
-  exec(`node --max-old-space-size=8192 ${script}`, { cwd: __dirname }, (error, stdout, stderr) => {
+  const cmd = `node --max-old-space-size=8192 ${script}${force ? ' --force' : ''}`;
+  exec(cmd, { cwd: __dirname }, (error, stdout, stderr) => {
     if (error) {
       // Detect the common "not enough releases" message and return a 400
       const msg = (stderr || error.message || '').trim();
@@ -295,7 +296,9 @@ app.get('/api/preprocess-stream', async (req, res) => {
   }
 
   const script = path.join(__dirname, 'preprocess.js');
-  const child = spawn('node', ['--max-old-space-size=8192', script], { cwd: __dirname });
+  const args = ['--max-old-space-size=8192', script];
+  if (force) args.push('--force');
+  const child = spawn('node', args, { cwd: __dirname });
 
   child.stdout.on('data', chunk => {
     const data = chunk.toString().trim();
