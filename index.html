@@ -85,6 +85,7 @@
         const resp = await fetch(apiUrl('/api/releases'));
         if (!resp.ok) {
           status.innerHTML = `<p style="color:red">Failed to check releases: ${resp.status}</p>`;
+          await updateButtons(false);
           return;
         }
         const { current, previous, releaseList } = await resp.json();
@@ -94,15 +95,17 @@
             <p>Previous release: <strong>${previous}</strong></p>
             <p style="color:green">Releases are ready for comparison.</p>
           `;
-          loadReports();
+          await loadReports();
         } else {
           status.innerHTML = `
             <p style="color:red">Could not find at least two release folders.</p>
             <p>Please download the UMLS Metathesaurus Full Subset for the two latest releases and copy the complete contents after unzipping into the <code>releases</code> folder.</p>
           `;
+          await updateButtons(false);
         }
       } catch (err) {
         status.innerHTML = `<p style="color:red">Error checking releases: ${err.message}</p>`;
+        await updateButtons(false);
       }
     }
     checkReleases();
@@ -158,6 +161,21 @@
       }
     }
 
+    async function updateButtons(hasReport) {
+      const runBtn = document.getElementById('run-preprocess');
+      const rerunBtn = document.getElementById('rerun-preprocess');
+      if (hasReport === undefined) {
+        hasReport = await fileExists('reports/line-count-diff.html');
+      }
+      if (hasReport) {
+        runBtn.style.display = 'none';
+        rerunBtn.style.display = '';
+      } else {
+        runBtn.style.display = '';
+        rerunBtn.style.display = 'none';
+      }
+    }
+
     function updateUrl(report) {
       const url = new URL(window.location);
       if (report && report !== 'line-count-diff.html') {
@@ -176,7 +194,8 @@
     async function loadReports(file = initialReport()) {
       const results = document.getElementById('line-results');
       results.innerHTML = '<p>Checking report...</p>';
-      if (await fileExists(`reports/${file}`)) {
+      const exists = await fileExists(`reports/${file}`);
+      if (exists) {
         results.innerHTML = `<iframe id="report-frame" src="reports/${file}" style="width:100%;border:none;height:80vh"></iframe>`;
         const frame = document.getElementById('report-frame');
         const sync = () => {
@@ -195,9 +214,11 @@
         if (frame.contentDocument && frame.contentDocument.readyState === 'complete') {
           sync();
         }
+        await updateButtons(true);
         return true;
       } else {
         results.innerHTML = '<p>No reports available.</p>';
+        await updateButtons(false);
         return false;
       }
     }
