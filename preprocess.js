@@ -1115,10 +1115,12 @@ async function generateMRDOCReport(current, previous) {
     html += '<p>No differences found.</p>';
   } else {
     if (added.length) {
-      html += `<h4>Added (${added.length})</h4><pre>${added.map(escapeHTML).join('\n')}</pre>`;
+      html += `<h4>Added (${added.length})</h4>`;
+      html += linesToHtmlTable(added);
     }
     if (removed.length) {
-      html += `<h4>Removed (${removed.length})</h4><pre>${removed.map(escapeHTML).join('\n')}</pre>`;
+      html += `<h4>Removed (${removed.length})</h4>`;
+      html += linesToHtmlTable(removed);
     }
   }
   if (generateHtml) {
