@@ -811,7 +811,10 @@ async function generateCountReport(current, previous, fileName, indices, tableNa
     const pct = previousCount === 0 ? Infinity : (diff / previousCount * 100);
     summary.push({ Key: key, Previous: previousCount, Current: currentCount, Difference: diff, Percent: pct });
   }
-  summary.sort((a, b) => a.Key.localeCompare(b.Key));
+
+  if (tableName === 'MRHIER') {
+    summary.sort((a, b) => a.Key.localeCompare(b.Key));
+  }
   const jsonName = `${tableName}_report.json`;
   await fsp.writeFile(path.join(reportsDir, jsonName), JSON.stringify({ current, previous, summary }, null, 2));
 
