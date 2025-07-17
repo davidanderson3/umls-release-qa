@@ -199,10 +199,29 @@
     async function loadReports(file = initialReport(), replace = false) {
       const results = document.getElementById('line-results');
       results.innerHTML = '<p>Checking report...</p>';
-      const exists = await fileExists(`reports/${file}`);
-      if (exists) {
-        results.innerHTML = `<iframe id="report-frame" src="reports/${file}" style="width:100%;border:none;"></iframe>`;
-        const frame = document.getElementById('report-frame');
+      const url = `reports/${file}`;
+      const exists = await fileExists(url);
+      if (!exists) {
+        results.innerHTML = '<p>No reports available.</p>';
+        await updateButtons(false);
+        return false;
+      }
+
+      try {
+        const resp = await fetch(url);
+        if (!resp.ok) throw new Error('Failed to load');
+        let html = await resp.text();
+        const base = url.replace(/[^/]*$/, '');
+        html = html.replace(/<head>/i, `<head><base href="${base}">`);
+
+        const frame = document.createElement('iframe');
+        frame.id = 'report-frame';
+        frame.style.width = '100%';
+        frame.style.border = 'none';
+        frame.srcdoc = html;
+        results.innerHTML = '';
+        results.appendChild(frame);
+
         let firstLoad = true;
         const sync = () => {
           try {
@@ -222,10 +241,11 @@
         if (frame.contentDocument && frame.contentDocument.readyState === 'complete') {
           sync();
         }
+
         await updateButtons(true);
         return true;
-      } else {
-        results.innerHTML = '<p>No reports available.</p>';
+      } catch {
+        results.innerHTML = '<p>Error loading report.</p>';
         await updateButtons(false);
         return false;
       }
