@@ -19,6 +19,7 @@ The MRFILES report lists added, dropped, and size-changed files in sortable
 tables for easier review. Size changes now include a percentage column to show
 relative growth or shrinkage.
 Counts in the MRDEF report are sorted alphabetically by SAB.
+MRRANK reports list any rows that were added or removed.
 
 ### Viewing Reports
 
