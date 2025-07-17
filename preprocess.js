@@ -28,6 +28,8 @@ const generateHtml = !process.argv.includes('--data-only');
 // have not changed. This allows the UI "Re-run Report" button to always
 // regenerate reports when requested.
 const forceRun = process.argv.includes('--force');
+const reportArg = process.argv.find(a => a.startsWith('--report='));
+const singleReport = reportArg ? reportArg.slice('--report='.length) : null;
 
 function hashOf(str) {
   return crypto.createHash('sha256').update(str).digest('hex');
@@ -42,15 +44,28 @@ async function loadReportConfig() {
   }
 }
 
-function wrapHtml(title, body) {
+function wrapHtml(title, body, reportKey = '') {
   const style = '<style>table{width:100%;border-collapse:collapse;border:1px solid #ccc;margin-top:10px;font-size:0.9em}table th,table td{border:1px solid #ccc;padding:6px 10px;text-align:left}thead{background-color:#f2f2f2}</style>';
   const crumbs = '<nav class="breadcrumbs"><a href="line-count-diff.html">Line Count Comparison</a></nav>';
   const button = '<button id="rerun-report">Re-run Report</button><div id="rerun-status"></div>';
-  const script = `<script>document.getElementById('rerun-report').addEventListener('click',()=>{if(parent&&parent.runReports){parent.runReports(true);}else{location.reload();}});</script>`;
+  const script = reportKey ?
+    `<script>
+      document.getElementById('rerun-report').addEventListener('click', () => {
+        const out = document.getElementById('rerun-status');
+        out.innerHTML = '';
+        const append = t => { const pre = document.createElement('pre'); pre.textContent = t; out.appendChild(pre); };
+        append('Running report...');
+        const es = new EventSource('/api/run-report-stream?report=${reportKey}');
+        es.onmessage = e => append(e.data);
+        es.addEventListener('done', () => { es.close(); append('Done.'); location.reload(); });
+        es.onerror = () => { es.close(); append('Error running report.'); };
+      });
+    </script>` :
+    `<script>document.getElementById('rerun-report').addEventListener('click',()=>{if(parent&&parent.runReports){parent.runReports(true);}else{location.reload();}});</script>`;
   return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../css/styles.css">${style}</head><body>${crumbs}<h1>${title}</h1>${button}${body}<script src="../../js/sortable.js"></script>${script}</body></html>`;
 }
 
-function wrapDiffHtml(title, body, parentTitle = '', parentLink = '') {
+function wrapDiffHtml(title, body, parentTitle = '', parentLink = '', reportKey = '') {
   const style = '<style>table{width:100%;border-collapse:collapse;border:1px solid #ccc;margin-top:10px;font-size:0.9em}table th,table td{border:1px solid #ccc;padding:6px 10px;text-align:left}thead{background-color:#f2f2f2}</style>';
   let crumbs = '<nav class="breadcrumbs"><a href="../line-count-diff.html">Line Count Comparison</a>';
   if (parentTitle && parentLink) {
@@ -58,7 +73,20 @@ function wrapDiffHtml(title, body, parentTitle = '', parentLink = '') {
   }
   crumbs += '</nav>';
   const button = '<button id="rerun-report">Re-run Report</button><div id="rerun-status"></div>';
-  const script = `<script>document.getElementById('rerun-report').addEventListener('click',()=>{if(parent&&parent.runReports){parent.runReports(true);}else{location.reload();}});</script>`;
+  const script = reportKey ?
+    `<script>
+      document.getElementById('rerun-report').addEventListener('click', () => {
+        const out = document.getElementById('rerun-status');
+        out.innerHTML = '';
+        const append = t => { const pre = document.createElement('pre'); pre.textContent = t; out.appendChild(pre); };
+        append('Running report...');
+        const es = new EventSource('/api/run-report-stream?report=${reportKey}');
+        es.onmessage = e => append(e.data);
+        es.addEventListener('done', () => { es.close(); append('Done.'); location.reload(); });
+        es.onerror = () => { es.close(); append('Error running report.'); };
+      });
+    </script>` :
+    `<script>document.getElementById('rerun-report').addEventListener('click',()=>{if(parent&&parent.runReports){parent.runReports(true);}else{location.reload();}});</script>`;
   return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../../css/styles.css">${style}</head><body>${crumbs}<h1>${title}</h1>${button}${body}<script src="../../../js/sortable.js"></script>${script}</body></html>`;
 }
 
@@ -197,7 +225,7 @@ async function generateLineCountDiff(current, previous) {
     }
     load();
   </script>`;
-  const wrapped = wrapHtml('Line Count Comparison', html);
+  const wrapped = wrapHtml('Line Count Comparison', html, 'line-count-diff');
   if (generateHtml) {
     await fsp.writeFile(path.join(reportsDir, 'line-count-diff.html'), wrapped);
   }
@@ -399,7 +427,8 @@ function diffDataToHtml(data) {
     `${data.sab} ${data.tty} Differences`,
     html,
     'MRCONSO Report',
-    '../MRCONSO_report.html'
+    '../MRCONSO_report.html',
+    'MRCONSO'
   );
 }
 
@@ -428,7 +457,8 @@ function stySabDiffToHtml(data) {
     `${data.sty} ${data.sab} Changes`,
     html,
     'MRSTY Report',
-    '../MRSTY_report.html'
+    '../MRSTY_report.html',
+    'MRSTY'
   );
 }
 
@@ -510,7 +540,7 @@ async function generateSABDiff(current, previous) {
     html += `<tr><td>${row.SAB}</td><td>${row.TTY}</td><td>${row.Previous}</td><td>${row.Current}</td><td class="${diffClass}">${row.Difference}</td><td>${pct}</td><td>${linkCell}</td></tr>`;
   }
   html += '</tbody></table>';
-  const wrapped = wrapHtml('MRCONSO Report', html);
+  const wrapped = wrapHtml('MRCONSO Report', html, 'MRCONSO');
   if (generateHtml) {
     await fsp.writeFile(path.join(reportsDir, 'MRCONSO_report.html'), wrapped);
   }
@@ -711,7 +741,8 @@ async function generateSTYReports(current, previous, reportConfig = {}) {
               `${sty} by SAB`,
               html,
               'MRSTY Report',
-              '../MRSTY_report.html'
+              '../MRSTY_report.html',
+              'MRSTY'
             )
           );
         }
@@ -761,7 +792,7 @@ async function generateSTYReports(current, previous, reportConfig = {}) {
   html += '</tbody></table>';
   if (generateHtml) {
       const title = `MRSTY Report (${current} vs ${previous})`;
-      await fsp.writeFile(path.join(reportsDir, 'MRSTY_report.html'), wrapHtml(title, html));
+      await fsp.writeFile(path.join(reportsDir, 'MRSTY_report.html'), wrapHtml(title, html, 'MRSTY'));
   }
   console.log('  STY reports complete.');
 }
@@ -791,7 +822,7 @@ async function generateCountReport(current, previous, fileName, indices, tableNa
     html += `<tr><td>${escapeHTML(row.Key)}</td><td>${row.Previous}</td><td>${row.Current}</td><td class="${diffClass}">${row.Difference}</td><td>${pctTxt}</td></tr>`;
   }
   html += '</tbody></table>';
-  const wrapped = wrapHtml(`${tableName} Report (${current} vs ${previous})`, html);
+  const wrapped = wrapHtml(`${tableName} Report (${current} vs ${previous})`, html, tableName);
   if (generateHtml) {
     await fsp.writeFile(path.join(reportsDir, `${tableName}_report.html`), wrapped);
   }
@@ -869,7 +900,7 @@ async function generateMRSABChangeReport(current, previous) {
   if (!added.length && !dropped.length && !addedRows.length && !removedRows.length) {
     html += '<p>No MRSAB changes.</p>';
   }
-  const wrapped = wrapHtml('MRSAB Report', html);
+  const wrapped = wrapHtml('MRSAB Report', html, 'MRSAB');
   if (generateHtml) {
     await fsp.writeFile(path.join(reportsDir, 'MRSAB_report.html'), wrapped);
   }
@@ -978,7 +1009,8 @@ function mrrelDiffToHtml(data) {
     `${data.sab} ${data.rel} ${data.rela} Differences`,
     html,
     'MRREL Report',
-    '../MRREL_report.html'
+    '../MRREL_report.html',
+    'MRREL'
   );
 }
 
@@ -1097,7 +1129,7 @@ async function generateMRRELReport(current, previous) {
   }
   html += '</tbody></table>';
   const title = `MRREL Report (${current} vs ${previous})`;
-  const wrapped = wrapHtml(title, html);
+  const wrapped = wrapHtml(title, html, 'MRREL');
   if (generateHtml) {
     await fsp.writeFile(path.join(reportsDir, 'MRREL_report.html'), wrapped);
   }
@@ -1127,7 +1159,7 @@ async function generateMRDOCReport(current, previous) {
     }
   }
   if (generateHtml) {
-    await fsp.writeFile(path.join(reportsDir, 'MRDOC_report.html'), wrapHtml('MRDOC Report', html));
+    await fsp.writeFile(path.join(reportsDir, 'MRDOC_report.html'), wrapHtml('MRDOC Report', html, 'MRDOC'));
   }
 }
 
@@ -1173,7 +1205,7 @@ async function generateMRCOLSReport(current, previous) {
     }
   }
   if (generateHtml) {
-    await fsp.writeFile(path.join(reportsDir, 'MRCOLS_report.html'), wrapHtml('MRCOLS Report', html));
+    await fsp.writeFile(path.join(reportsDir, 'MRCOLS_report.html'), wrapHtml('MRCOLS Report', html, 'MRCOLS'));
   }
 }
 
@@ -1260,7 +1292,7 @@ async function generateMRFILESReport(current, previous) {
     }
   }
   if (generateHtml) {
-    await fsp.writeFile(path.join(reportsDir, 'MRFILES_report.html'), wrapHtml('MRFILES Report', html));
+    await fsp.writeFile(path.join(reportsDir, 'MRFILES_report.html'), wrapHtml('MRFILES Report', html, 'MRFILES'));
   }
 }
 
@@ -1322,7 +1354,7 @@ async function generateMRRANKReport(current, previous) {
     html += '</tbody></table>';
   }
   if (generateHtml) {
-    await fsp.writeFile(path.join(reportsDir, 'MRRANK_report.html'), wrapHtml('MRRANK Report', html));
+    await fsp.writeFile(path.join(reportsDir, 'MRRANK_report.html'), wrapHtml('MRRANK Report', html, 'MRRANK'));
   }
 }
 
@@ -1342,6 +1374,56 @@ async function generateMRRANKReport(current, previous) {
   configFile = path.join(reportsDir, 'config.json');
 
   const reportConfig = await loadReportConfig();
+
+  if (singleReport) {
+    try {
+      switch (singleReport) {
+        case 'line-count-diff':
+          await generateLineCountDiff(current, previous);
+          break;
+        case 'MRCONSO':
+          await generateSABDiff(current, previous);
+          break;
+        case 'MRSTY':
+          await generateSTYReports(current, previous, reportConfig);
+          break;
+        case 'MRSAB':
+          await generateMRSABChangeReport(current, previous);
+          break;
+        case 'MRDEF':
+          await generateCountReport(current, previous, 'MRDEF.RRF', [4], 'MRDEF');
+          break;
+        case 'MRSAT':
+          await generateCountReport(current, previous, 'MRSAT.RRF', [9], 'MRSAT');
+          break;
+        case 'MRHIER':
+          await generateCountReport(current, previous, 'MRHIER.RRF', [4], 'MRHIER');
+          break;
+        case 'MRREL':
+          await generateMRRELReport(current, previous);
+          break;
+        case 'MRDOC':
+          await generateMRDOCReport(current, previous);
+          break;
+        case 'MRCOLS':
+          await generateMRCOLSReport(current, previous);
+          break;
+        case 'MRFILES':
+          await generateMRFILESReport(current, previous);
+          break;
+        case 'MRRANK':
+          await generateMRRANKReport(current, previous);
+          break;
+        default:
+          console.error('Unknown report:', singleReport);
+          process.exit(1);
+      }
+    } catch (err) {
+      console.error('Error generating report:', err.message);
+      process.exit(1);
+    }
+    return;
+  }
 
   const currentHashes = {
     lineCountDiff: hashOf(generateLineCountDiff.toString()),
