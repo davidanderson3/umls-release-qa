@@ -303,6 +303,7 @@ app.get('/api/preprocess-stream', async (req, res) => {
   child.stdout.on('data', chunk => {
     const data = chunk.toString().trim();
     if (data) {
+      console.log(data);
       res.write(`data: ${data}\n\n`);
     }
   });
@@ -310,6 +311,7 @@ app.get('/api/preprocess-stream', async (req, res) => {
   child.stderr.on('data', chunk => {
     const data = chunk.toString().trim();
     if (data) {
+      console.error(data);
       res.write(`data: ERROR: ${data}\n\n`);
     }
   });
@@ -342,6 +344,7 @@ app.get('/api/run-report-stream', async (req, res) => {
   child.stdout.on('data', chunk => {
     const data = chunk.toString().trim();
     if (data) {
+      console.log(data);
       res.write(`data: ${data}\n\n`);
     }
   });
@@ -349,6 +352,7 @@ app.get('/api/run-report-stream', async (req, res) => {
   child.stderr.on('data', chunk => {
     const data = chunk.toString().trim();
     if (data) {
+      console.error(data);
       res.write(`data: ERROR: ${data}\n\n`);
     }
   });
