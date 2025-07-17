@@ -320,6 +320,45 @@ app.get('/api/preprocess-stream', async (req, res) => {
   });
 });
 
+app.get('/api/run-report-stream', async (req, res) => {
+  res.setHeader('Content-Type', 'text/event-stream');
+  res.setHeader('Cache-Control', 'no-cache');
+  res.setHeader('Connection', 'keep-alive');
+  res.flushHeaders();
+  res.write(': connected\n\n');
+
+  const report = req.query.report;
+  if (!report) {
+    res.write('data: ERROR: Missing report parameter\n\n');
+    res.write('event: done\ndata: 1\n\n');
+    res.end();
+    return;
+  }
+
+  const script = path.join(__dirname, 'preprocess.js');
+  const args = ['--max-old-space-size=8192', script, `--report=${report}`];
+  const child = spawn('node', args, { cwd: __dirname });
+
+  child.stdout.on('data', chunk => {
+    const data = chunk.toString().trim();
+    if (data) {
+      res.write(`data: ${data}\n\n`);
+    }
+  });
+
+  child.stderr.on('data', chunk => {
+    const data = chunk.toString().trim();
+    if (data) {
+      res.write(`data: ERROR: ${data}\n\n`);
+    }
+  });
+
+  child.on('close', code => {
+    res.write(`event: done\ndata: ${code}\n\n`);
+    res.end();
+  });
+});
+
 app.get('/api/line-count-diff', async (req, res) => {
   const rel = req.query.release;
   const { current, previous } = await detectReleases(rel);
