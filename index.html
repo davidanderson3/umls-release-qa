@@ -113,8 +113,12 @@
 
     // Automatically check for finished reports when running preprocessing
 
-    function runReports(force = false) {
-      const output = document.getElementById('preprocess-results');
+    function runReports(force = false, targetEl) {
+      const output = targetEl || document.getElementById('preprocess-results');
+      const results = document.getElementById('line-results');
+      if (output.ownerDocument === document) {
+        results.innerHTML = '';
+      }
       const append = (text) => {
         const pre = document.createElement('pre');
         pre.textContent = text;

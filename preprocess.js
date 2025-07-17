@@ -52,6 +52,8 @@ function wrapHtml(title, body, reportKey = '') {
     `<script>
       document.getElementById('rerun-report').addEventListener('click', () => {
         const out = document.getElementById('rerun-status');
+        const content = document.getElementById('report-content');
+        if (content) content.innerHTML = '';
         out.innerHTML = '';
         const append = t => { const pre = document.createElement('pre'); pre.textContent = t; out.appendChild(pre); };
         append('Running report...');
@@ -61,8 +63,8 @@ function wrapHtml(title, body, reportKey = '') {
         es.onerror = () => { es.close(); append('Error running report.'); };
       });
     </script>` :
-    `<script>document.getElementById('rerun-report').addEventListener('click',()=>{if(parent&&parent.runReports){parent.runReports(true);}else{location.reload();}});</script>`;
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../css/styles.css">${style}</head><body>${crumbs}<h1>${title}</h1>${button}${body}<script src="../../js/sortable.js"></script>${script}</body></html>`;
+    `<script>document.getElementById('rerun-report').addEventListener('click',()=>{if(parent&&parent.runReports){parent.runReports(true, document.getElementById('rerun-status'));}else{location.reload();}});</script>`;
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../css/styles.css">${style}</head><body>${crumbs}<h1>${title}</h1>${button}<div id="report-content">${body}</div><script src="../../js/sortable.js"></script>${script}</body></html>`;
 }
 
 function wrapDiffHtml(title, body, parentTitle = '', parentLink = '', reportKey = '') {
@@ -77,6 +79,8 @@ function wrapDiffHtml(title, body, parentTitle = '', parentLink = '', reportKey 
     `<script>
       document.getElementById('rerun-report').addEventListener('click', () => {
         const out = document.getElementById('rerun-status');
+        const content = document.getElementById('report-content');
+        if (content) content.innerHTML = '';
         out.innerHTML = '';
         const append = t => { const pre = document.createElement('pre'); pre.textContent = t; out.appendChild(pre); };
         append('Running report...');
@@ -86,8 +90,8 @@ function wrapDiffHtml(title, body, parentTitle = '', parentLink = '', reportKey 
         es.onerror = () => { es.close(); append('Error running report.'); };
       });
     </script>` :
-    `<script>document.getElementById('rerun-report').addEventListener('click',()=>{if(parent&&parent.runReports){parent.runReports(true);}else{location.reload();}});</script>`;
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../../css/styles.css">${style}</head><body>${crumbs}<h1>${title}</h1>${button}${body}<script src="../../../js/sortable.js"></script>${script}</body></html>`;
+    `<script>document.getElementById('rerun-report').addEventListener('click',()=>{if(parent&&parent.runReports){parent.runReports(true, document.getElementById('rerun-status'));}else{location.reload();}});</script>`;
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../../css/styles.css">${style}</head><body>${crumbs}<h1>${title}</h1>${button}<div id="report-content">${body}</div><script src="../../../js/sortable.js"></script>${script}</body></html>`;
 }
 
 async function detectReleases() {
