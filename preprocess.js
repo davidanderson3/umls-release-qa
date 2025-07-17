@@ -54,6 +54,8 @@ function wrapHtml(title, body, reportKey = '') {
       document.getElementById('rerun-report').addEventListener('click', () => {
         const out = document.getElementById('rerun-status');
         out.innerHTML = '';
+        const container = document.getElementById('report-content');
+        if (container) container.innerHTML = '';
         const append = t => { const pre = document.createElement('pre'); pre.textContent = t; out.appendChild(pre); };
         append('Running report...');
         const es = new EventSource('/api/run-report-stream?report=${reportKey}');
@@ -80,7 +82,7 @@ function wrapHtml(title, body, reportKey = '') {
       loadInstr();
       document.getElementById('instructions').addEventListener('blur',saveInstr);
     </script>` : '';
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../css/styles.css">${style}</head><body>${crumbs}<h1>${title}</h1>${button}${instructions}${body}<script src="../../js/sortable.js"></script>${rerunScript}${instrScript}</body></html>`;
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../css/styles.css">${style}</head><body>${crumbs}<h1>${title}</h1>${button}${instructions}<div id="report-content">${body}</div><script src="../../js/sortable.js"></script>${rerunScript}${instrScript}</body></html>`;
 }
 
 function wrapDiffHtml(title, body, parentTitle = '', parentLink = '', reportKey = '') {
@@ -97,6 +99,8 @@ function wrapDiffHtml(title, body, parentTitle = '', parentLink = '', reportKey 
       document.getElementById('rerun-report').addEventListener('click', () => {
         const out = document.getElementById('rerun-status');
         out.innerHTML = '';
+        const container = document.getElementById('report-content');
+        if (container) container.innerHTML = '';
         const append = t => { const pre = document.createElement('pre'); pre.textContent = t; out.appendChild(pre); };
         append('Running report...');
         const es = new EventSource('/api/run-report-stream?report=${reportKey}');
@@ -123,7 +127,7 @@ function wrapDiffHtml(title, body, parentTitle = '', parentLink = '', reportKey 
       loadInstr();
       document.getElementById('instructions').addEventListener('blur',saveInstr);
     </script>` : '';
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../../css/styles.css">${style}</head><body>${crumbs}<h1>${title}</h1>${button}${instructions}${body}<script src="../../../js/sortable.js"></script>${rerunScript}${instrScript}</body></html>`;
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../../css/styles.css">${style}</head><body>${crumbs}<h1>${title}</h1>${button}${instructions}<div id="report-content">${body}</div><script src="../../../js/sortable.js"></script>${rerunScript}${instrScript}</body></html>`;
 }
 
 async function detectReleases() {

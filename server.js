@@ -41,7 +41,7 @@ function wrapHtml(title, body, reportKey = '') {
       loadInstr();
       document.getElementById('instructions').addEventListener('blur',saveInstr);
     </script>`:'';
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../css/styles.css">${style}</head><body>${crumbs}<h1>${title}</h1>${button}${instructions}${body}<script src="../../js/sortable.js"></script>${rerunScript}${instrScript}</body></html>`;
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../css/styles.css">${style}</head><body>${crumbs}<h1>${title}</h1>${button}${instructions}<div id="report-content">${body}</div><script src="../../js/sortable.js"></script>${rerunScript}${instrScript}</body></html>`;
 }
 
 function escapeHTML(str) {
