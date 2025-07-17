@@ -849,6 +849,26 @@ async function readSABs(file) {
   return sabs;
 }
 
+// Read unique VCUI/RCUI/RSAB combinations from MRSAB
+async function readMRSABCombos(file) {
+  const combos = new Set();
+  try {
+    const rl = readline.createInterface({ input: fs.createReadStream(file) });
+    for await (const line of rl) {
+      const parts = line.split('|');
+      if (parts.length > 3) {
+        const vcui = parts[0];
+        const rcui = parts[1];
+        const rsab = parts[3];
+        combos.add(`${vcui}|${rcui}|${rsab}`);
+      }
+    }
+  } catch {
+    return new Set();
+  }
+  return combos;
+}
+
 async function generateMRSABChangeReport(current, previous) {
   const currentFile = path.join(releasesDir, current, 'META', 'MRSAB.RRF');
   const previousFile = path.join(releasesDir, previous, 'META', 'MRSAB.RRF');
@@ -876,10 +896,25 @@ async function generateMRSABChangeReport(current, previous) {
   const currentSABs = await readSABs(currentFile);
   const previousSABs = await readSABs(previousFile);
 
+  const currentCombos = await readMRSABCombos(currentFile);
+  const previousCombos = await readMRSABCombos(previousFile);
+
+  const addedCombos = [...currentCombos].filter(c => !previousCombos.has(c)).sort();
+  const droppedCombos = [...previousCombos].filter(c => !currentCombos.has(c)).sort();
+
   const added = [...currentSABs].filter(s => !previousSABs.has(s)).sort();
   const dropped = [...previousSABs].filter(s => !currentSABs.has(s)).sort();
 
-  const jsonData = { current, previous, added, dropped, addedRows, removedRows };
+  const jsonData = {
+    current,
+    previous,
+    added,
+    dropped,
+    addedCombos,
+    droppedCombos,
+    addedRows,
+    removedRows
+  };
   await fsp.writeFile(path.join(reportsDir, 'MRSAB_report.json'), JSON.stringify(jsonData, null, 2));
 
   let html = `<h3>MRSAB Added/Dropped (${current} vs ${previous})</h3>`;
@@ -893,6 +928,20 @@ async function generateMRSABChangeReport(current, previous) {
     for (const sab of dropped) html += `<li>${escapeHTML(sab)}</li>`;
     html += '</ul>';
   }
+  if (addedCombos.length) {
+    html += `<h4>Added VCUI/RCUI/RSAB Combos (${addedCombos.length})</h4><ul>`;
+    for (const combo of addedCombos) {
+      html += `<li>${escapeHTML(combo.replace(/\|/g, ' / '))}</li>`;
+    }
+    html += '</ul>';
+  }
+  if (droppedCombos.length) {
+    html += `<h4>Dropped VCUI/RCUI/RSAB Combos (${droppedCombos.length})</h4><ul>`;
+    for (const combo of droppedCombos) {
+      html += `<li>${escapeHTML(combo.replace(/\|/g, ' / '))}</li>`;
+    }
+    html += '</ul>';
+  }
   if (addedRows.length) {
     html += `<h4>Added Rows (${addedRows.length})</h4>`;
     html += linesToHtmlTable(addedRows);
@@ -901,7 +950,9 @@ async function generateMRSABChangeReport(current, previous) {
     html += `<h4>Removed Rows (${removedRows.length})</h4>`;
     html += linesToHtmlTable(removedRows);
   }
-  if (!added.length && !dropped.length && !addedRows.length && !removedRows.length) {
+  if (!added.length && !dropped.length &&
+      !addedCombos.length && !droppedCombos.length &&
+      !addedRows.length && !removedRows.length) {
     html += '<p>No MRSAB changes.</p>';
   }
   const wrapped = wrapHtml('MRSAB Report', html, 'MRSAB');
