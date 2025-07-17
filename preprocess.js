@@ -48,7 +48,8 @@ function wrapHtml(title, body, reportKey = '') {
   const style = '<style>table{width:100%;border-collapse:collapse;border:1px solid #ccc;margin-top:10px;font-size:0.9em}table th,table td{border:1px solid #ccc;padding:6px 10px;text-align:left}thead{background-color:#f2f2f2}</style>';
   const crumbs = '<nav class="breadcrumbs"><a href="line-count-diff.html">Line Count Comparison</a></nav>';
   const button = '<button id="rerun-report">Re-run Report</button><div id="rerun-status"></div>';
-  const script = reportKey ?
+  const instructions = '<div id="instructions" class="note" contenteditable></div>';
+  const rerunScript = reportKey ?
     `<script>
       document.getElementById('rerun-report').addEventListener('click', () => {
         const out = document.getElementById('rerun-status');
@@ -62,7 +63,24 @@ function wrapHtml(title, body, reportKey = '') {
       });
     </script>` :
     `<script>document.getElementById('rerun-report').addEventListener('click',()=>{if(parent&&parent.runReports){parent.runReports(true);}else{location.reload();}});</script>`;
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../css/styles.css">${style}</head><body>${crumbs}<h1>${title}</h1>${button}${body}<script src="../../js/sortable.js"></script>${script}</body></html>`;
+  const instrScript = reportKey ?
+    `<script>
+      async function loadInstr(){
+        try{const resp=await fetch('/api/texts');
+          const data=resp.ok?await resp.json():{};
+          const txt=(data.reportInstructions||{})['${reportKey}']||'';
+          document.getElementById('instructions').textContent=txt;
+        }catch{}
+      }
+      async function saveInstr(){
+        const val=document.getElementById('instructions').textContent;
+        const payload={reportInstructions:{'${reportKey}':val}};
+        try{await fetch('/api/texts',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});}catch{}
+      }
+      loadInstr();
+      document.getElementById('instructions').addEventListener('blur',saveInstr);
+    </script>` : '';
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../css/styles.css">${style}</head><body>${crumbs}<h1>${title}</h1>${button}${instructions}${body}<script src="../../js/sortable.js"></script>${rerunScript}${instrScript}</body></html>`;
 }
 
 function wrapDiffHtml(title, body, parentTitle = '', parentLink = '', reportKey = '') {
@@ -73,7 +91,8 @@ function wrapDiffHtml(title, body, parentTitle = '', parentLink = '', reportKey 
   }
   crumbs += '</nav>';
   const button = '<button id="rerun-report">Re-run Report</button><div id="rerun-status"></div>';
-  const script = reportKey ?
+  const instructions = '<div id="instructions" class="note" contenteditable></div>';
+  const rerunScript = reportKey ?
     `<script>
       document.getElementById('rerun-report').addEventListener('click', () => {
         const out = document.getElementById('rerun-status');
@@ -87,7 +106,24 @@ function wrapDiffHtml(title, body, parentTitle = '', parentLink = '', reportKey 
       });
     </script>` :
     `<script>document.getElementById('rerun-report').addEventListener('click',()=>{if(parent&&parent.runReports){parent.runReports(true);}else{location.reload();}});</script>`;
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../../css/styles.css">${style}</head><body>${crumbs}<h1>${title}</h1>${button}${body}<script src="../../../js/sortable.js"></script>${script}</body></html>`;
+  const instrScript = reportKey ?
+    `<script>
+      async function loadInstr(){
+        try{const resp=await fetch('/api/texts');
+          const data=resp.ok?await resp.json():{};
+          const txt=(data.reportInstructions||{})['${reportKey}']||'';
+          document.getElementById('instructions').textContent=txt;
+        }catch{}
+      }
+      async function saveInstr(){
+        const val=document.getElementById('instructions').textContent;
+        const payload={reportInstructions:{'${reportKey}':val}};
+        try{await fetch('/api/texts',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});}catch{}
+      }
+      loadInstr();
+      document.getElementById('instructions').addEventListener('blur',saveInstr);
+    </script>` : '';
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../../css/styles.css">${style}</head><body>${crumbs}<h1>${title}</h1>${button}${instructions}${body}<script src="../../../js/sortable.js"></script>${rerunScript}${instrScript}</body></html>`;
 }
 
 async function detectReleases() {
