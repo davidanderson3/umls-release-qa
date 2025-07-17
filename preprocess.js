@@ -1331,6 +1331,12 @@ async function generateMRRANKReport(current, previous) {
   const prevFile = path.join(releasesDir, previous, 'META', 'MRRANK.RRF');
   const curMap = await readMRRANKOrders(curFile);
   const prevMap = await readMRRANKOrders(prevFile);
+  const curLines = await readAllLines(curFile);
+  const prevLines = await readAllLines(prevFile);
+  const curSet = new Set(curLines);
+  const prevSet = new Set(prevLines);
+  const addedRows = curLines.filter(l => !prevSet.has(l));
+  const removedRows = prevLines.filter(l => !curSet.has(l));
 
   const sabs = new Set([...curMap.keys(), ...prevMap.keys()]);
   const summary = [];
@@ -1345,10 +1351,13 @@ async function generateMRRANKReport(current, previous) {
   }
 
   const jsonPath = path.join(reportsDir, 'MRRANK_report.json');
-  await fsp.writeFile(jsonPath, JSON.stringify({ current, previous, summary }, null, 2));
+  await fsp.writeFile(
+    jsonPath,
+    JSON.stringify({ current, previous, summary, addedRows, removedRows }, null, 2)
+  );
 
   let html = `<h3>MRRANK Order Changes (${current} vs ${previous})</h3>`;
-  if (!summary.length) {
+  if (!summary.length && !addedRows.length && !removedRows.length) {
     html += '<p>No differences found.</p>';
   } else {
     html += '<table style="border:1px solid #ccc;border-collapse:collapse"><thead><tr><th>SAB</th><th>Previous Order</th><th>Current Order</th><th>Added</th><th>Removed</th></tr></thead><tbody>';
@@ -1358,6 +1367,14 @@ async function generateMRRANKReport(current, previous) {
       html += `<tr><td>${escapeHTML(row.SAB)}</td><td>${escapeHTML(row.previousOrder.join(', '))}</td><td>${escapeHTML(row.currentOrder.join(', '))}</td><td>${escapeHTML(addedTxt)}</td><td>${escapeHTML(remTxt)}</td></tr>`;
     }
     html += '</tbody></table>';
+    if (addedRows.length) {
+      html += `<h4>Added Rows (${addedRows.length})</h4>`;
+      html += linesToHtmlTable(addedRows);
+    }
+    if (removedRows.length) {
+      html += `<h4>Removed Rows (${removedRows.length})</h4>`;
+      html += linesToHtmlTable(removedRows);
+    }
   }
   if (generateHtml) {
     await fsp.writeFile(path.join(reportsDir, 'MRRANK_report.html'), wrapHtml('MRRANK Report', html, 'MRRANK'));
