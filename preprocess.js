@@ -1368,7 +1368,7 @@ async function generateMRRANKReport(current, previous) {
     return;
   }
 
-  let needCounts = !sameReleases || lastHashes.lineCountDiff !== currentHashes.lineCountDiff;
+  let needCounts = forceRun || !sameReleases || lastHashes.lineCountDiff !== currentHashes.lineCountDiff;
   const diffFile = path.join(reportsDir, 'line-count-diff.json');
   if (!needCounts) {
     try {
@@ -1387,15 +1387,15 @@ async function generateMRRANKReport(current, previous) {
       console.error('Failed generating line counts:', err.message);
     }
   }
-  const runMRCONSO = !sameReleases || lastHashes.MRCONSO !== currentHashes.MRCONSO;
-  const runSTYReports = !sameReleases || lastHashes.STYReports !== currentHashes.STYReports || !sameConfig;
-  const runCount = !sameReleases || lastHashes.countReport !== currentHashes.countReport;
-  const runMRSABChange = !sameReleases || lastHashes.MRSABChange !== currentHashes.MRSABChange;
-  const runMRREL = !sameReleases || lastHashes.MRREL !== currentHashes.MRREL;
-  const runMRDOC = !sameReleases || lastHashes.MRDOC !== currentHashes.MRDOC;
-  const runMRCOLS = !sameReleases || lastHashes.MRCOLS !== currentHashes.MRCOLS;
-  const runMRFILES = !sameReleases || lastHashes.MRFILES !== currentHashes.MRFILES;
-  const runMRRANK = !sameReleases || lastHashes.MRRANK !== currentHashes.MRRANK;
+  const runMRCONSO = forceRun || !sameReleases || lastHashes.MRCONSO !== currentHashes.MRCONSO;
+  const runSTYReports = forceRun || !sameReleases || lastHashes.STYReports !== currentHashes.STYReports || !sameConfig;
+  const runCount = forceRun || !sameReleases || lastHashes.countReport !== currentHashes.countReport;
+  const runMRSABChange = forceRun || !sameReleases || lastHashes.MRSABChange !== currentHashes.MRSABChange;
+  const runMRREL = forceRun || !sameReleases || lastHashes.MRREL !== currentHashes.MRREL;
+  const runMRDOC = forceRun || !sameReleases || lastHashes.MRDOC !== currentHashes.MRDOC;
+  const runMRCOLS = forceRun || !sameReleases || lastHashes.MRCOLS !== currentHashes.MRCOLS;
+  const runMRFILES = forceRun || !sameReleases || lastHashes.MRFILES !== currentHashes.MRFILES;
+  const runMRRANK = forceRun || !sameReleases || lastHashes.MRRANK !== currentHashes.MRRANK;
 
   if (runMRCONSO) {
     console.log('Generating MRCONSO report...');
