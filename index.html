@@ -201,7 +201,7 @@
       results.innerHTML = '<p>Checking report...</p>';
       const exists = await fileExists(`reports/${file}`);
       if (exists) {
-        results.innerHTML = `<iframe id="report-frame" src="reports/${file}" style="width:100%;border:none;height:80vh"></iframe>`;
+        results.innerHTML = `<iframe id="report-frame" src="reports/${file}" style="width:100%;border:none;"></iframe>`;
         const frame = document.getElementById('report-frame');
         let firstLoad = true;
         const sync = () => {
@@ -215,6 +215,7 @@
                 document.getElementById('line-results').scrollIntoView({ behavior: 'smooth' });
               }
             });
+            frame.style.height = doc.documentElement.scrollHeight + 'px';
           } catch { }
         };
         frame.addEventListener('load', sync);
