@@ -70,6 +70,7 @@ tbody tr:hover {
   min-height: 1em;
   border: 1px dashed #888;
   padding: 4px;
+  white-space: pre-wrap;
 }
 
 /* Notes column in line count diff table */
@@ -77,6 +78,7 @@ tbody tr:hover {
   max-width: 30%;
   word-wrap: break-word;
   overflow-wrap: anywhere;
+  white-space: pre-wrap;
 }
 
 #status p,
