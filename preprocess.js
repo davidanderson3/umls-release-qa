@@ -454,6 +454,11 @@ async function generateSABDiff(current, previous) {
     summary.push(entry);
   }
 
+  summary.sort((a, b) => {
+    if (a.SAB !== b.SAB) return a.SAB.localeCompare(b.SAB);
+    return a.TTY.localeCompare(b.TTY);
+  });
+
   // Gather rows for all selected SAB/TTY pairs in a single pass to avoid
   // repeatedly scanning the large MRCONSO files.
   if (detailKeys.size) {
