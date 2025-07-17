@@ -14,15 +14,34 @@ const defaultTexts = {
   note1: '',
   note2: '',
   note3: '',
-  lineCountNotes: {}
+  lineCountNotes: {},
+  reportInstructions: {}
 };
 
-function wrapHtml(title, body) {
+function wrapHtml(title, body, reportKey = '') {
   const style = '<style>table{width:100%;border-collapse:collapse;border:1px solid #ccc;margin-top:10px;font-size:0.9em}table th,table td{border:1px solid #ccc;padding:6px 10px;text-align:left}thead{background-color:#f2f2f2}</style>';
   const crumbs = '<nav class="breadcrumbs"><a href="line-count-diff.html">Line Count Comparison</a></nav>';
   const button = '<button id="rerun-report">Re-run Report</button><div id="rerun-status"></div>';
-  const script = `<script>document.getElementById('rerun-report').addEventListener('click',()=>{if(parent&&parent.runReports){parent.runReports(true);}else{location.reload();}});</script>`;
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../css/styles.css">${style}</head><body>${crumbs}<h1>${title}</h1>${button}${body}<script src="../../js/sortable.js"></script>${script}</body></html>`;
+  const instructions = '<div id="instructions" class="note" contenteditable></div>';
+  const rerunScript = `<script>document.getElementById('rerun-report').addEventListener('click',()=>{if(parent&&parent.runReports){parent.runReports(true);}else{location.reload();}});</script>`;
+  const instrScript = reportKey ?
+    `<script>
+      async function loadInstr(){
+        try{const resp=await fetch('/api/texts');
+          const data=resp.ok?await resp.json():{};
+          const txt=(data.reportInstructions||{})['${reportKey}']||'';
+          document.getElementById('instructions').textContent=txt;
+        }catch{}
+      }
+      async function saveInstr(){
+        const val=document.getElementById('instructions').textContent;
+        const payload={reportInstructions:{'${reportKey}':val}};
+        try{await fetch('/api/texts',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});}catch{}
+      }
+      loadInstr();
+      document.getElementById('instructions').addEventListener('blur',saveInstr);
+    </script>`:'';
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${title}</title><link rel="stylesheet" href="../../css/styles.css">${style}</head><body>${crumbs}<h1>${title}</h1>${button}${instructions}${body}<script src="../../js/sortable.js"></script>${rerunScript}${instrScript}</body></html>`;
 }
 
 function escapeHTML(str) {
@@ -84,7 +103,7 @@ app.get(['/reports/MRCONSO_report.html', '/:release/reports/MRCONSO_report.html'
     }
     html += '</tbody></table>';
 
-    res.send(wrapHtml('MRCONSO Report', html));
+    res.send(wrapHtml('MRCONSO Report', html, 'MRCONSO'));
   } catch (err) {
     next();
   }
@@ -474,7 +493,7 @@ app.get('/api/line-count-diff', async (req, res) => {
       }
       load();
     </script>`;
-    const wrapped = wrapHtml('Line Count Comparison', html);
+    const wrapped = wrapHtml('Line Count Comparison', html, 'line-count-diff');
     await fsp.writeFile(path.join(reportsDir, 'line-count-diff.html'), wrapped);
     await fsp.writeFile(configFile, JSON.stringify({ current, previous }, null, 2));
   } catch (err) {
