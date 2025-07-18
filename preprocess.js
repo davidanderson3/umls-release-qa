@@ -718,16 +718,10 @@ function computeSTYCounts(styMap) {
 }
 
 function computeSTYSABCounts(styMap, cuiSabMap) {
+  const map = computeSTYSABCUIMap(styMap, cuiSabMap);
   const counts = new Map();
-  for (const [cui, stySet] of styMap) {
-    const sabs = cuiSabMap.get(cui);
-    if (!sabs) continue;
-    for (const sty of stySet) {
-      for (const sab of sabs) {
-        const key = `${sty}|${sab}`;
-        counts.set(key, (counts.get(key) || 0) + 1);
-      }
-    }
+  for (const [key, set] of map) {
+    counts.set(key, set.size);
   }
   return counts;
 }
@@ -838,23 +832,24 @@ async function generateSTYReports(current, previous, reportConfig = {}) {
       for (const k of prevSabCounts.keys()) if (k.startsWith(sty + '|')) sabKeys.add(k.split('|')[1]);
       for (const sab of sabKeys) {
         const key = `${sty}|${sab}`;
-        const c = curSabCounts.get(key) || 0;
-        const p = prevSabCounts.get(key) || 0;
+        const curSet = curSabCUIs.get(key) || new Set();
+        const prevSet = prevSabCUIs.get(key) || new Set();
+        const c = curSet.size;
+        const p = prevSet.size;
         const d = c - p;
         let link2 = '';
         if (d !== 0) {
           const pp = p === 0 ? Infinity : (d / p * 100);
-          const removed = droppedStySabMap.get(key)
-            ? [...droppedStySabMap.get(key)]
-            : [];
-          const added = [];
-          if (removed.length) {
+          const added = [...curSet].filter(x => !prevSet.has(x));
+          const removed = [...prevSet].filter(x => !curSet.has(x));
+          if (added.length || removed.length) {
             const safeSty = sanitizeComponent(sty);
             const safeSab = sanitizeComponent(sab);
             const jsonDiff = `${safeSty}_${safeSab}_changes.json`;
             const htmlDiff = jsonDiff.replace(/\.json$/, '.html');
             const diffData = { current, previous, sty, sab, added, removed };
             diffEntries.push({ jsonDiff, htmlDiff, diffData });
+            for (const c of added) addedCUIs.add(c);
             for (const c of removed) removedCUIs.add(c);
             link2 = `sty_source_diffs/${jsonDiff}`;
           }
