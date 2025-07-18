@@ -184,6 +184,10 @@
       } else {
         url.searchParams.delete('report');
       }
+
+      // Avoid pushing duplicate history entries when the URL hasn't changed
+      if (url.href === window.location.href) return;
+
       if (replace) {
         history.replaceState(null, '', url);
       } else {
