@@ -580,7 +580,7 @@ async function generateSABDiff(current, previous) {
   const notable = summary.filter(r => r.include);
   let html = `<h3>MRCONSO SAB/TTY Differences (${current} vs ${previous})</h3>`;
   if (notable.length) {
-    html += '<h4>Notable Changes (decreases, >5% increases, or SAB=SRC)</h4>';
+    html += '<h4>Notable Changes (any decrease, increase over 5%, or SAB=SRC)</h4>';
     html += '<table style="border:1px solid #ccc;border-collapse:collapse"><thead><tr><th>SAB</th><th>TTY</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th><th>Diff</th></tr></thead><tbody>';
     for (const row of notable) {
       const diffClass = row.Difference < 0 ? 'negative' : 'positive';
@@ -1223,7 +1223,7 @@ async function generateMRRELReport(current, previous) {
   let html = '';
   const changed = summary.filter(r => Math.abs(r.Percent) >= 5);
   if (changed.length) {
-    html += '<h4>Changes \u22655% increase or decrease</h4>';
+    html += '<h4>Entries with a change of at least 5% (increase or decrease)</h4>';
     html += '<table><thead><tr><th>SAB</th><th>REL</th><th>RELA</th><th>Prev</th><th>Curr</th><th>%</th><th>Diff</th></tr></thead><tbody>';
     for (const row of changed) {
       const pctTxt = isFinite(row.Percent) ? row.Percent.toFixed(2) : 'inf';
