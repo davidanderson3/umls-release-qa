@@ -26,16 +26,20 @@ function wrapHtml(title, body, reportKey = '') {
   const rerunScript = `<script>document.getElementById('rerun-report').addEventListener('click',()=>{if(parent&&parent.runReports){parent.runReports(true);}else{location.reload();}});</script>`;
   const instrScript = reportKey ?
     `<script>
+      const storageKey = 'reportInstr-${reportKey}';
       async function loadInstr(){
+        let val = '';
+        try{const saved=localStorage.getItem(storageKey);if(saved)val=saved;}catch{}
         try{const resp=await fetch('/api/texts');
           const data=resp.ok?await resp.json():{};
-          const txt=(data.reportInstructions||{})['${reportKey}']||'';
-          document.getElementById('instructions').textContent=txt;
+          if(!val) val=(data.reportInstructions||{})['${reportKey}']||'';
         }catch{}
+        document.getElementById('instructions').textContent=val;
       }
       async function saveInstr(){
         const val=document.getElementById('instructions').textContent;
         const payload={reportInstructions:{'${reportKey}':val}};
+        try{localStorage.setItem(storageKey,val);}catch{}
         try{await fetch('/api/texts',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});}catch{}
       }
       loadInstr();
@@ -474,25 +478,38 @@ app.get('/api/line-count-diff', async (req, res) => {
       html += `<p>Unchanged files: ${unchanged.join(', ')}</p>`;
     }
     html += `<script type="module">
+      const relMatch = window.location.pathname.match(/^\\/([^/]+)/);
+      const rel = relMatch && relMatch[1] !== 'reports' ? relMatch[1] : '';
+      const storageKey = rel ? \`lineNotes-\${rel}\` : 'lineNotes';
       async function load() {
+        let notes = {};
+        try {
+          const saved = localStorage.getItem(storageKey);
+          if (saved) notes = JSON.parse(saved);
+        } catch {}
         try {
           const resp = await fetch('/api/texts');
           const data = resp.ok ? await resp.json() : {};
-          const notes = data.lineCountNotes || {};
-          document.querySelectorAll('td[data-file]').forEach(td => {
-            td.textContent = notes[td.dataset.file] || td.textContent;
-            td.contentEditable = true;
-            td.addEventListener('blur', save);
-          });
+          notes = { ...(data.lineCountNotes || {}), ...notes };
         } catch {}
+        document.querySelectorAll('td[data-file]').forEach(td => {
+          td.textContent = notes[td.dataset.file] || td.textContent;
+          td.contentEditable = true;
+          td.addEventListener('blur', save);
+        });
       }
       async function save() {
         const notes = {};
         document.querySelectorAll('td[data-file]').forEach(td => {
           notes[td.dataset.file] = td.textContent;
         });
+        try { localStorage.setItem(storageKey, JSON.stringify(notes)); } catch {}
         try {
-          await fetch('/api/texts', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ lineCountNotes: notes }) });
+          await fetch('/api/texts', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ lineCountNotes: notes })
+          });
         } catch {}
       }
       load();
