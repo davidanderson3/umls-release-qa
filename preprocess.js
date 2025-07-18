@@ -293,6 +293,26 @@ function linesToHtmlTable(lines) {
   return html;
 }
 
+// Like linesToHtmlTable but allows custom header labels
+function linesToHtmlTableWithHeaders(lines, headers = []) {
+  if (!lines.length) return '';
+  const firstParts = lines[0].split('|');
+  if (firstParts[firstParts.length - 1] === '') firstParts.pop();
+  let html = '<table><thead><tr>';
+  for (let i = 0; i < firstParts.length; i++) {
+    const label = headers[i] || (i + 1);
+    html += `<th>${escapeHTML(String(label))}</th>`;
+  }
+  html += '</tr></thead><tbody>';
+  for (const line of lines) {
+    const parts = line.split('|');
+    if (parts[parts.length - 1] === '') parts.pop();
+    html += '<tr>' + parts.map(p => `<td>${escapeHTML(p)}</td>`).join('') + '</tr>';
+  }
+  html += '</tbody></table>';
+  return html;
+}
+
 async function readCountsMRCONSO(file) {
   const counts = new Map();
   try {
@@ -1263,46 +1283,42 @@ async function generateMRDOCReport(current, previous) {
 async function generateMRCOLSReport(current, previous) {
   const currentFile = path.join(releasesDir, current, 'META', 'MRCOLS.RRF');
   const previousFile = path.join(releasesDir, previous, 'META', 'MRCOLS.RRF');
-  const curKeys = await readKeysByIndices(currentFile, [0, 1, 6]);
-  const prevKeys = await readKeysByIndices(previousFile, [0, 1, 6]);
-  const curSet = new Set(curKeys);
-  const prevSet = new Set(prevKeys);
-  const added = curKeys.filter(k => !prevSet.has(k));
-  const removed = prevKeys.filter(k => !curSet.has(k));
+  const curMap = await readLineMapByIndices(currentFile, [0, 1, 6]);
+  const prevMap = await readLineMapByIndices(previousFile, [0, 1, 6]);
+  const curKeys = Array.from(curMap.keys());
+  const prevKeys = Array.from(prevMap.keys());
+  const addedRows = [];
+  const removedRows = [];
+  for (const k of curKeys) {
+    if (!prevMap.has(k)) addedRows.push(...curMap.get(k));
+  }
+  for (const k of prevKeys) {
+    if (!curMap.has(k)) removedRows.push(...prevMap.get(k));
+  }
   const jsonPath = path.join(reportsDir, 'MRCOLS_report.json');
-  await fsp.writeFile(jsonPath, JSON.stringify({ current, previous, added, removed }, null, 2));
+  await fsp.writeFile(
+    jsonPath,
+    JSON.stringify({ current, previous, added: addedRows, removed: removedRows }, null, 2)
+  );
 
   let html = `<h3>MRCOLS Differences (${current} vs ${previous})</h3>`;
-  if (!added.length && !removed.length) {
+  if (!addedRows.length && !removedRows.length) {
     html += '<p>No differences found.</p>';
   } else {
-    if (added.length) {
-      html += `<h4>Added (${added.length})</h4>`;
-      html += '<table><thead><tr><th>File</th><th>Column</th><th>Type</th></tr></thead><tbody>';
-      for (const row of added) {
-        const parts = row.split('|');
-        const file = parts[0] || '';
-        const col = parts[1] || '';
-        const type = parts[2] || '';
-        html += `<tr><td>${escapeHTML(file)}</td><td>${escapeHTML(col)}</td><td>${escapeHTML(type)}</td></tr>`;
-      }
-      html += '</tbody></table>';
+    if (addedRows.length) {
+      html += `<h4>Added (${addedRows.length})</h4>`;
+      html += linesToHtmlTableWithHeaders(addedRows, ['COL', 'DES', 'FIL']);
     }
-    if (removed.length) {
-      html += `<h4>Removed (${removed.length})</h4>`;
-      html += '<table><thead><tr><th>File</th><th>Column</th><th>Type</th></tr></thead><tbody>';
-      for (const row of removed) {
-        const parts = row.split('|');
-        const file = parts[0] || '';
-        const col = parts[1] || '';
-        const type = parts[2] || '';
-        html += `<tr><td>${escapeHTML(file)}</td><td>${escapeHTML(col)}</td><td>${escapeHTML(type)}</td></tr>`;
-      }
-      html += '</tbody></table>';
+    if (removedRows.length) {
+      html += `<h4>Removed (${removedRows.length})</h4>`;
+      html += linesToHtmlTableWithHeaders(removedRows, ['COL', 'DES', 'FIL']);
     }
   }
   if (generateHtml) {
-    await fsp.writeFile(path.join(reportsDir, 'MRCOLS_report.html'), wrapHtml('MRCOLS Report', html, 'MRCOLS'));
+    await fsp.writeFile(
+      path.join(reportsDir, 'MRCOLS_report.html'),
+      wrapHtml('MRCOLS Report', html, 'MRCOLS')
+    );
   }
 }
 
