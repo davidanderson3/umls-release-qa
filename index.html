@@ -177,10 +177,10 @@
       }
     }
 
-    function updateUrl(report) {
+    function updateUrl(report, replace = false) {
       const url = new URL(window.location);
       if (report && report !== 'line-count-diff.html') {
-        url.searchParams.set('report', report);
+        url.searchParams.set('report', encodeURIComponent(report));
       } else {
         url.searchParams.delete('report');
       }
@@ -193,7 +193,8 @@
 
     function initialReport() {
       const params = new URLSearchParams(window.location.search);
-      return params.get('report') || 'line-count-diff.html';
+      const raw = params.get('report');
+      return raw ? decodeURIComponent(raw) : 'line-count-diff.html';
     }
 
     async function loadReports(file = initialReport(), replace = false) {
