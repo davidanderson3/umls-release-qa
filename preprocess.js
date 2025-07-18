@@ -761,6 +761,27 @@ async function generateSTYReports(current, previous, reportConfig = {}) {
   const sabCurMap = await readCUISABMap(consoCurFile);
   const sabPrevMap = await readCUISABMap(consoPrevFile);
 
+  // Track concepts that were removed entirely in the current release
+  const prevCUIs = new Set(styPrevMap.keys());
+  const curCUIs = new Set(styCurMap.keys());
+  const droppedCUIs = new Set([...prevCUIs].filter(cui => !curCUIs.has(cui)));
+
+  // Map of STY|SAB -> set of dropped CUIs for that pair
+  const droppedStySabMap = new Map();
+  if (droppedCUIs.size) {
+    for (const cui of droppedCUIs) {
+      const stys = styPrevMap.get(cui) || new Set();
+      const sabs = sabPrevMap.get(cui) || new Set();
+      for (const sty of stys) {
+        for (const sab of sabs) {
+          const key = `${sty}|${sab}`;
+          if (!droppedStySabMap.has(key)) droppedStySabMap.set(key, new Set());
+          droppedStySabMap.get(key).add(cui);
+        }
+      }
+    }
+  }
+
   const curCounts = computeSTYCounts(styCurMap);
   const prevCounts = computeSTYCounts(styPrevMap);
   const includeBreakdowns = reportConfig.includeStyBreakdowns !== false;
@@ -798,18 +819,17 @@ async function generateSTYReports(current, previous, reportConfig = {}) {
         let link2 = '';
         if (d !== 0) {
           const pp = p === 0 ? Infinity : (d / p * 100);
-          const curSet = curSabCUIs.get(key) || new Set();
-          const prevSet = prevSabCUIs.get(key) || new Set();
-          const added = [...curSet].filter(x => !prevSet.has(x));
-          const removed = [...prevSet].filter(x => !curSet.has(x));
-          if (added.length || removed.length) {
+          const removed = droppedStySabMap.get(key)
+            ? [...droppedStySabMap.get(key)]
+            : [];
+          const added = [];
+          if (removed.length) {
             const safeSty = sanitizeComponent(sty);
             const safeSab = sanitizeComponent(sab);
             const jsonDiff = `${safeSty}_${safeSab}_changes.json`;
             const htmlDiff = jsonDiff.replace(/\.json$/, '.html');
             const diffData = { current, previous, sty, sab, added, removed };
             diffEntries.push({ jsonDiff, htmlDiff, diffData });
-            for (const c of added) addedCUIs.add(c);
             for (const c of removed) removedCUIs.add(c);
             link2 = `sty_source_diffs/${jsonDiff}`;
           }
