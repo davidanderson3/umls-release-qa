@@ -892,129 +892,87 @@ async function generateCountReport(current, previous, fileName, indices, tableNa
   }
 }
 
-async function readSABs(file) {
-  const sabs = new Set();
-  try {
-    const rl = readline.createInterface({ input: fs.createReadStream(file) });
-    for await (const line of rl) {
-      const parts = line.split('|');
-      if (parts.length > 3) {
-        const sab = parts[3];
-        if (sab) sabs.add(sab);
-      }
-    }
-  } catch {
-    return new Set();
-  }
-  return sabs;
-}
-
-// Read unique VCUI/RCUI/RSAB combinations from MRSAB
-async function readMRSABCombos(file) {
-  const combos = new Set();
+async function collectRSABGroups(file) {
+  const withVcui = new Set();
+  const withoutVcui = new Set();
   try {
     const rl = readline.createInterface({ input: fs.createReadStream(file) });
     for await (const line of rl) {
       const parts = line.split('|');
       if (parts.length > 3) {
         const vcui = parts[0];
-        const rcui = parts[1];
         const rsab = parts[3];
-        combos.add(`${vcui}|${rcui}|${rsab}`);
+        if (!rsab) continue;
+        if (vcui) withVcui.add(rsab); else withoutVcui.add(rsab);
       }
     }
-  } catch {
-    return new Set();
-  }
-  return combos;
+  } catch {}
+  return { withVcui, withoutVcui };
 }
 
 async function generateMRSABChangeReport(current, previous) {
   const currentFile = path.join(releasesDir, current, 'META', 'MRSAB.RRF');
   const previousFile = path.join(releasesDir, previous, 'META', 'MRSAB.RRF');
 
-  // Build maps keyed by the 2nd column so we can detect
-  // added/dropped rows while still retaining the full line content
-  const curMap = await readLineMapByIndices(currentFile, [1]);
-  const prevMap = await readLineMapByIndices(previousFile, [1]);
+  const cur = await collectRSABGroups(currentFile);
+  const prev = await collectRSABGroups(previousFile);
 
-  const curKeys = Array.from(curMap.keys());
-  const prevKeys = Array.from(prevMap.keys());
-  const addedRows = [];
-  const removedRows = [];
-  for (const k of curKeys) {
-    if (!prevMap.has(k)) {
-      addedRows.push(...curMap.get(k));
-    }
-  }
-  for (const k of prevKeys) {
-    if (!curMap.has(k)) {
-      removedRows.push(...prevMap.get(k));
-    }
-  }
-
-  const currentSABs = await readSABs(currentFile);
-  const previousSABs = await readSABs(previousFile);
-
-  const currentCombos = await readMRSABCombos(currentFile);
-  const previousCombos = await readMRSABCombos(previousFile);
-
-  const addedCombos = [...currentCombos].filter(c => !previousCombos.has(c)).sort();
-  const droppedCombos = [...previousCombos].filter(c => !currentCombos.has(c)).sort();
-
-  const added = [...currentSABs].filter(s => !previousSABs.has(s)).sort();
-  const dropped = [...previousSABs].filter(s => !currentSABs.has(s)).sort();
+  const addedVcui = [...cur.withVcui].filter(x => !prev.withVcui.has(x)).sort();
+  const droppedVcui = [...prev.withVcui].filter(x => !cur.withVcui.has(x)).sort();
+  const addedNoVcui = [...cur.withoutVcui].filter(x => !prev.withoutVcui.has(x)).sort();
+  const droppedNoVcui = [...prev.withoutVcui].filter(x => !cur.withoutVcui.has(x)).sort();
 
   const jsonData = {
     current,
     previous,
-    added,
-    dropped,
-    addedCombos,
-    droppedCombos,
-    addedRows,
-    removedRows
+    vcuiNotNull: { added: addedVcui, dropped: droppedVcui },
+    vcuiNull: { added: addedNoVcui, dropped: droppedNoVcui }
   };
-  await fsp.writeFile(path.join(reportsDir, 'MRSAB_report.json'), JSON.stringify(jsonData, null, 2));
+  await fsp.writeFile(
+    path.join(reportsDir, 'MRSAB_report.json'),
+    JSON.stringify(jsonData, null, 2)
+  );
 
-  let html = `<h3>MRSAB Added/Dropped (${current} vs ${previous})</h3>`;
-  if (added.length) {
-    html += `<h4>Added SABs (${added.length})</h4><ul>`;
-    for (const sab of added) html += `<li>${escapeHTML(sab)}</li>`;
+  let html = `<h3>MRSAB RSAB Changes (${current} vs ${previous})</h3>`;
+  html += '<h4>VCUI not null</h4>';
+  if (addedVcui.length) {
+    html += `<p>Added RSABs (${addedVcui.length})</p><ul>`;
+    for (const r of addedVcui) html += `<li>${escapeHTML(r)}</li>`;
     html += '</ul>';
   }
-  if (dropped.length) {
-    html += `<h4>Dropped SABs (${dropped.length})</h4><ul>`;
-    for (const sab of dropped) html += `<li>${escapeHTML(sab)}</li>`;
+  if (droppedVcui.length) {
+    html += `<p>Dropped RSABs (${droppedVcui.length})</p><ul>`;
+    for (const r of droppedVcui) html += `<li>${escapeHTML(r)}</li>`;
     html += '</ul>';
   }
-  if (addedCombos.length) {
-    html += `<h4>Added VCUI/RCUI/RSAB Combos (${addedCombos.length})</h4><ul>`;
-    for (const combo of addedCombos) {
-      html += `<li>${escapeHTML(combo.replace(/\|/g, ' / '))}</li>`;
-    }
+  if (!addedVcui.length && !droppedVcui.length) {
+    html += '<p>No changes.</p>';
+  }
+
+  html += '<h4>VCUI null</h4>';
+  if (addedNoVcui.length) {
+    html += `<p>Added RSABs (${addedNoVcui.length})</p><ul>`;
+    for (const r of addedNoVcui) html += `<li>${escapeHTML(r)}</li>`;
     html += '</ul>';
   }
-  if (droppedCombos.length) {
-    html += `<h4>Dropped VCUI/RCUI/RSAB Combos (${droppedCombos.length})</h4><ul>`;
-    for (const combo of droppedCombos) {
-      html += `<li>${escapeHTML(combo.replace(/\|/g, ' / '))}</li>`;
-    }
+  if (droppedNoVcui.length) {
+    html += `<p>Dropped RSABs (${droppedNoVcui.length})</p><ul>`;
+    for (const r of droppedNoVcui) html += `<li>${escapeHTML(r)}</li>`;
     html += '</ul>';
   }
-  if (addedRows.length) {
-    html += `<h4>Added Rows (${addedRows.length})</h4>`;
-    html += linesToHtmlTable(addedRows);
+  if (!addedNoVcui.length && !droppedNoVcui.length) {
+    html += '<p>No changes.</p>';
   }
-  if (removedRows.length) {
-    html += `<h4>Removed Rows (${removedRows.length})</h4>`;
-    html += linesToHtmlTable(removedRows);
-  }
-  if (!added.length && !dropped.length &&
-      !addedCombos.length && !droppedCombos.length &&
-      !addedRows.length && !removedRows.length) {
+
+  if (
+    !addedVcui.length &&
+    !droppedVcui.length &&
+    !addedNoVcui.length &&
+    !droppedNoVcui.length
+  ) {
     html += '<p>No MRSAB changes.</p>';
   }
+
   const wrapped = wrapHtml('MRSAB Report', html, 'MRSAB');
   if (generateHtml) {
     await fsp.writeFile(path.join(reportsDir, 'MRSAB_report.html'), wrapped);
