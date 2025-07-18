@@ -1307,11 +1307,29 @@ async function generateMRCOLSReport(current, previous) {
   } else {
     if (addedRows.length) {
       html += `<h4>Added (${addedRows.length})</h4>`;
-      html += linesToHtmlTableWithHeaders(addedRows, ['COL', 'DES', 'FIL']);
+      html += linesToHtmlTableWithHeaders(addedRows, [
+        'COL',
+        'DES',
+        'REF',
+        'MIN',
+        'AV',
+        'MAX',
+        'FIL',
+        'DTY'
+      ]);
     }
     if (removedRows.length) {
       html += `<h4>Removed (${removedRows.length})</h4>`;
-      html += linesToHtmlTableWithHeaders(removedRows, ['COL', 'DES', 'FIL']);
+      html += linesToHtmlTableWithHeaders(removedRows, [
+        'COL',
+        'DES',
+        'REF',
+        'MIN',
+        'AV',
+        'MAX',
+        'FIL',
+        'DTY'
+      ]);
     }
   }
   if (generateHtml) {
