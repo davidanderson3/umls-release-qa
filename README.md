@@ -27,3 +27,11 @@ Start the server with `npm start` and navigate to `http://localhost:8080/<releas
 where `<release>` is the version you want to view (for example `2025AA`). You can
 link directly to a specific report by including the `report` query parameter, e.g.
 `http://localhost:8080/2025AA?report=diffs%2FNCI_CCN_differences.html`.
+
+### Editing Notes
+
+Page headers, button text, and report notes can be edited directly in the
+browser. Changes are saved to small JSON files on the server so they persist
+across sessions without requiring a git commit. When a specific release is
+viewed (e.g. `/2025AA`), edits are stored in `texts-<release>.json` alongside the
+default `texts.json`.

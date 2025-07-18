@@ -22,7 +22,6 @@
 
   <script type="module">
     let texts = {};
-    const storageKey = currentRelease ? `texts-${currentRelease}` : 'texts';
     let reportInterval = null;
     const releaseMatch = window.location.pathname.match(/^\/([^/]+)/);
     const currentRelease = releaseMatch ? releaseMatch[1] : '';
@@ -34,10 +33,6 @@
     }
 
     async function loadTexts() {
-      try {
-        const saved = localStorage.getItem(storageKey);
-        if (saved) texts = JSON.parse(saved);
-      } catch {}
       try {
         const resp = await fetch(apiUrl('/api/texts'));
         if (resp.ok) {
@@ -76,9 +71,6 @@
         note2: document.getElementById('note2').textContent,
         note3: document.getElementById('note3').textContent
       };
-      try {
-        localStorage.setItem(storageKey, JSON.stringify(payload));
-      } catch {}
       try {
         await fetch(apiUrl('/api/texts'), {
           method: 'POST',
