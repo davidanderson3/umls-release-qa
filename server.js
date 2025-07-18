@@ -288,7 +288,7 @@ app.post('/api/preprocess', async (req, res) => {
       console.error('Failed to load precomputed diff:', err.message);
     }
   }
-  const script = path.join(__dirname, 'preprocess.js');
+  const script = path.join(__dirname, 'process.js');
   const cmd = `node --max-old-space-size=8192 ${script}${force ? ' --force' : ''}`;
   exec(cmd, { cwd: __dirname }, (error, stdout, stderr) => {
     if (error) {
@@ -337,7 +337,7 @@ app.get('/api/preprocess-stream', async (req, res) => {
     }
   }
 
-  const script = path.join(__dirname, 'preprocess.js');
+  const script = path.join(__dirname, 'process.js');
   const args = ['--max-old-space-size=8192', script];
   if (force) args.push('--force');
   const child = spawn('node', args, { cwd: __dirname });
@@ -379,7 +379,7 @@ app.get('/api/run-report-stream', async (req, res) => {
     return;
   }
 
-  const script = path.join(__dirname, 'preprocess.js');
+  const script = path.join(__dirname, 'process.js');
   const args = ['--max-old-space-size=8192', script, `--report=${report}`];
   const child = spawn('node', args, { cwd: __dirname });
 

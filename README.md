@@ -5,7 +5,7 @@ This project generates HTML reports comparing two UMLS releases.
 ## Usage
 
 1. Place at least two release directories under `releases/`.
-2. Run `npm run preprocess` to generate reports with HTML output.
+2. Run `npm run process` to generate reports with HTML output.
    Add `-- --force` to rerun reports even if no logic changes were detected.
    The web UI's **Re-run All Reports** button always uses this option to
    regenerate every report.

@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "preprocess": "node --max-old-space-size=8192 preprocess.js",
-    "preprocess:data": "node --max-old-space-size=8192 preprocess.js --data-only"
+    "process": "node --max-old-space-size=8192 process.js",
+    "process:data": "node --max-old-space-size=8192 process.js --data-only"
   },
   "keywords": [],
   "author": "",
