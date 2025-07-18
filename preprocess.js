@@ -1038,6 +1038,65 @@ async function generateMRSABChangeReport(current, previous) {
   }
 }
 
+async function generateMRSATReport(current, previous) {
+  const currentFile = path.join(releasesDir, current, 'META', 'MRSAT.RRF');
+  const previousFile = path.join(releasesDir, previous, 'META', 'MRSAT.RRF');
+  const curCounts = await readCountsByIndices(currentFile, [9, 8]);
+  const prevCounts = await readCountsByIndices(previousFile, [9, 8]);
+  const summary = [];
+  const keys = new Set([...curCounts.keys(), ...prevCounts.keys()]);
+  for (const key of keys) {
+    const currentCount = curCounts.get(key) || 0;
+    const previousCount = prevCounts.get(key) || 0;
+    const diff = currentCount - previousCount;
+    const pct = previousCount === 0 ? Infinity : (diff / previousCount * 100);
+    const [sab, atn] = key.split('|');
+    summary.push({
+      SAB: sab,
+      ATN: atn,
+      Previous: previousCount,
+      Current: currentCount,
+      Difference: diff,
+      Percent: pct
+    });
+  }
+
+  summary.sort((a, b) => {
+    if (a.SAB !== b.SAB) return a.SAB.localeCompare(b.SAB);
+    return a.ATN.localeCompare(b.ATN);
+  });
+
+  const jsonPath = path.join(reportsDir, 'MRSAT_report.json');
+  await fsp.writeFile(jsonPath, JSON.stringify({ current, previous, summary }, null, 2));
+
+  let html = '';
+  const changed = summary.filter(r => Math.abs(r.Percent) >= 5);
+  if (changed.length) {
+    html += '<h4>Entries with a change of at least 5% (increase or decrease)</h4>';
+    html += '<table><thead><tr><th>SAB</th><th>ATN</th><th>Prev</th><th>Curr</th><th>%</th><th>Diff</th></tr></thead><tbody>';
+    for (const row of changed) {
+      const pctTxt = isFinite(row.Percent) ? row.Percent.toFixed(2) : 'inf';
+      const diffClass = row.Difference < 0 ? 'negative' : 'positive';
+      html += `<tr><td>${escapeHTML(row.SAB)}</td><td>${escapeHTML(row.ATN)}</td><td>${row.Previous}</td><td>${row.Current}</td><td>${pctTxt}</td><td class="${diffClass}">${row.Difference}</td></tr>`;
+    }
+    html += '</tbody></table>';
+  }
+
+  html += '<h4>All Changes</h4>';
+  html += '<table style="border:1px solid #ccc;border-collapse:collapse"><thead><tr><th>SAB</th><th>ATN</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th></tr></thead><tbody>';
+  for (const row of summary) {
+    const diffClass = row.Difference < 0 ? 'negative' : 'positive';
+    const pctTxt = isFinite(row.Percent) ? row.Percent.toFixed(2) : 'inf';
+    html += `<tr><td>${escapeHTML(row.SAB)}</td><td>${escapeHTML(row.ATN)}</td><td>${row.Previous}</td><td>${row.Current}</td><td class="${diffClass}">${row.Difference}</td><td>${pctTxt}</td></tr>`;
+  }
+  html += '</tbody></table>';
+  const title = `MRSAT Report (${current} vs ${previous})`;
+  const wrapped = wrapHtml(title, html, 'MRSAT');
+  if (generateHtml) {
+    await fsp.writeFile(path.join(reportsDir, 'MRSAT_report.html'), wrapped);
+  }
+}
+
 // Gather rows for a set of SAB|REL|RELA keys in MRREL
 // Returns a Map from key -> array of row objects
 async function gatherMRRELRows(file, keys) {
@@ -1552,7 +1611,7 @@ async function generateMRRANKReport(current, previous) {
           await generateCountReport(current, previous, 'MRDEF.RRF', [4], 'MRDEF');
           break;
         case 'MRSAT':
-          await generateCountReport(current, previous, 'MRSAT.RRF', [9], 'MRSAT');
+          await generateMRSATReport(current, previous);
           break;
         case 'MRHIER':
           await generateCountReport(current, previous, 'MRHIER.RRF', [4], 'MRHIER');
@@ -1588,6 +1647,7 @@ async function generateMRRANKReport(current, previous) {
     MRCONSO: hashOf(generateSABDiff.toString()),
     STYReports: hashOf(generateSTYReports.toString()),
     countReport: hashOf(generateCountReport.toString()),
+    MRSAT: hashOf(generateMRSATReport.toString()),
     MRSABChange: hashOf(generateMRSABChangeReport.toString()),
     MRREL: hashOf(generateMRRELReport.toString()),
     MRDOC: hashOf(generateMRDOCReport.toString()),
@@ -1635,6 +1695,7 @@ async function generateMRRANKReport(current, previous) {
   const runMRCONSO = forceRun || !sameReleases || lastHashes.MRCONSO !== currentHashes.MRCONSO;
   const runSTYReports = forceRun || !sameReleases || lastHashes.STYReports !== currentHashes.STYReports || !sameConfig;
   const runCount = forceRun || !sameReleases || lastHashes.countReport !== currentHashes.countReport;
+  const runMRSAT = forceRun || !sameReleases || lastHashes.MRSAT !== currentHashes.MRSAT;
   const runMRSABChange = forceRun || !sameReleases || lastHashes.MRSABChange !== currentHashes.MRSABChange;
   const runMRREL = forceRun || !sameReleases || lastHashes.MRREL !== currentHashes.MRREL;
   const runMRDOC = forceRun || !sameReleases || lastHashes.MRDOC !== currentHashes.MRDOC;
@@ -1671,14 +1732,25 @@ async function generateMRRANKReport(current, previous) {
     try {
       await generateCountReport(current, previous, 'MRSAB.RRF', [1, 2], 'MRSAB');
       await generateCountReport(current, previous, 'MRDEF.RRF', [4], 'MRDEF');
-      await generateCountReport(current, previous, 'MRSAT.RRF', [9], 'MRSAT');
       await generateCountReport(current, previous, 'MRHIER.RRF', [4], 'MRHIER');
       console.log('Count reports done.');
     } catch (err) {
       console.error('Failed count reports:', err.message);
     }
   } else {
-    console.log('Count report logic unchanged; skipping MRSAB/MRDEF/MRSAT/MRHIER counts.');
+    console.log('Count report logic unchanged; skipping MRSAB/MRDEF/MRHIER counts.');
+  }
+
+  if (runMRSAT) {
+    console.log('Generating MRSAT report...');
+    try {
+      await generateMRSATReport(current, previous);
+      console.log('MRSAT report done.');
+    } catch (err) {
+      console.error('Failed MRSAT report:', err.message);
+    }
+  } else {
+    console.log('MRSAT logic unchanged; skipping.');
   }
 
   if (runMRSABChange) {
