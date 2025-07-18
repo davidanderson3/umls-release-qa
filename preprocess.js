@@ -540,12 +540,12 @@ function stySabDiffToHtml(data) {
   }
   if (data.removed && data.removed.length) {
     html += `<h4>Removed (${data.removed.length})</h4>`;
-    html += '<table><thead><tr><th>CUI</th><th>Atoms</th></tr></thead><tbody>';
+    html += '<table><thead><tr><th>CUI</th><th>Names</th></tr></thead><tbody>';
     for (const r of data.removed) {
-      const atomLines = (r.Atoms || [])
-        .map(a => `${a.AUI} ${escapeHTML(a.STR || '')}`)
+      const nameLines = (r.Atoms || [])
+        .map(a => escapeHTML(a.STR || ''))
         .join('<br>');
-      html += `<tr><td>${r.CUI}</td><td>${atomLines}</td></tr>`;
+      html += `<tr><td>${r.CUI}</td><td>${nameLines}</td></tr>`;
     }
     html += '</tbody></table>';
   }
