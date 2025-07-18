@@ -320,8 +320,8 @@ async function readCountsMRCONSO(file) {
     for await (const line of rl) {
       const parts = line.split('|');
       if (parts.length < 13) continue;
-      const SAB = parts[11] || 'MISSING';
-      const TTY = parts[12] || 'MISSING';
+      const SAB = parts[11] || '-';
+      const TTY = parts[12] || '-';
       const key = `${SAB}|${TTY}`;
       counts.set(key, (counts.get(key) || 0) + 1);
     }
@@ -339,7 +339,7 @@ async function readCountsByIndices(file, indices) {
       const parts = line.split('|');
       const keyParts = [];
       for (const idx of indices) {
-        keyParts.push(parts[idx] || 'MISSING');
+        keyParts.push(parts[idx] || '-');
       }
       const key = keyParts.join('|');
       counts.set(key, (counts.get(key) || 0) + 1);
@@ -359,7 +359,7 @@ async function readKeysByIndices(file, indices) {
       const parts = line.split('|');
       const keyParts = [];
       for (const idx of indices) {
-        keyParts.push(parts[idx] || 'MISSING');
+        keyParts.push(parts[idx] || '-');
       }
       keys.push(keyParts.join('|'));
     }
@@ -379,7 +379,7 @@ async function readLineMapByIndices(file, indices) {
       const parts = line.split('|');
       const keyParts = [];
       for (const idx of indices) {
-        keyParts.push(parts[idx] || 'MISSING');
+        keyParts.push(parts[idx] || '-');
       }
       const key = keyParts.join('|');
       if (!map.has(key)) map.set(key, []);
@@ -401,8 +401,8 @@ async function gatherRows(file, keys) {
       if (parts.length < 18) continue;
       const CUI = parts[0];
       const AUI = parts[7];
-      const SAB = parts[11] || 'MISSING';
-      const TTY = parts[12] || 'MISSING';
+      const SAB = parts[11] || '-';
+      const TTY = parts[12] || '-';
       const STR = parts[14];
       if (!AUI) continue;
       const key = `${SAB}|${TTY}`;
@@ -634,7 +634,7 @@ async function readCUISABMap(file) {
       const parts = line.split('|');
       if (parts.length < 12) continue;
       const CUI = parts[0];
-      const SAB = parts[11] || 'MISSING';
+      const SAB = parts[11] || '-';
       if (!map.has(CUI)) map.set(CUI, new Set());
       map.get(CUI).add(SAB);
     }
@@ -1033,9 +1033,9 @@ async function gatherMRRELRows(file, keys) {
       i++;
       const parts = line.split('|');
       if (parts.length < 11) continue;
-      const sab = parts[10] || 'MISSING';
-      const rel = parts[3] || 'MISSING';
-      const rela = parts[7] || 'MISSING';
+      const sab = parts[10] || '-';
+      const rel = parts[3] || '-';
+      const rela = parts[7] || '-';
       const key = `${sab}|${rel}|${rela}`;
       if (rowsMap.has(key)) {
         rowsMap.get(key).push({
