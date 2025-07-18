@@ -540,9 +540,12 @@ function stySabDiffToHtml(data) {
   }
   if (data.removed && data.removed.length) {
     html += `<h4>Removed (${data.removed.length})</h4>`;
-    html += '<table><thead><tr><th>CUI</th><th>Name</th></tr></thead><tbody>';
+    html += '<table><thead><tr><th>CUI</th><th>Atoms</th></tr></thead><tbody>';
     for (const r of data.removed) {
-      html += `<tr><td>${r.CUI}</td><td>${escapeHTML(r.Name || '')}</td></tr>`;
+      const atomLines = (r.Atoms || [])
+        .map(a => `${a.AUI} ${escapeHTML(a.STR || '')}`)
+        .join('<br>');
+      html += `<tr><td>${r.CUI}</td><td>${atomLines}</td></tr>`;
     }
     html += '</tbody></table>';
   }
@@ -745,6 +748,28 @@ function computeSTYSABCUIMap(styMap, cuiSabMap) {
   return map;
 }
 
+async function gatherCuiSabAtoms(file, pairs) {
+  const result = new Map();
+  if (!pairs.size) return result;
+  try {
+    const rl = readline.createInterface({ input: fs.createReadStream(file) });
+    for await (const line of rl) {
+      const parts = line.split('|');
+      if (parts.length < 15) continue;
+      const cui = parts[0];
+      const aui = parts[7];
+      const sab = parts[11] || '-';
+      const str = parts[14];
+      const key = `${cui}|${sab}`;
+      if (pairs.has(key)) {
+        if (!result.has(key)) result.set(key, []);
+        result.get(key).push({ AUI: aui, STR: str });
+      }
+    }
+  } catch {}
+  return result;
+}
+
 function sanitizeComponent(str) {
   return str.replace(/\s+/g, '_').replace(/[^A-Za-z0-9_-]/g, '');
 }
@@ -871,9 +896,20 @@ async function generateSTYReports(current, previous, reportConfig = {}) {
   if (diffEntries.length) {
     const curNames = await collectPreferredNames(consoCurFile, addedCUIs);
     const prevNames = await collectPreferredNames(consoPrevFile, removedCUIs);
+    const pairSet = new Set();
+    for (const { diffData } of diffEntries) {
+      for (const cui of diffData.removed) {
+        pairSet.add(`${cui}|${diffData.sab}`);
+      }
+    }
+    const atomMap = await gatherCuiSabAtoms(consoPrevFile, pairSet);
     for (const { jsonDiff, htmlDiff, diffData } of diffEntries) {
       diffData.added = diffData.added.map(cui => ({ CUI: cui, Name: curNames.get(cui) || '' }));
-      diffData.removed = diffData.removed.map(cui => ({ CUI: cui, Name: prevNames.get(cui) || '' }));
+      diffData.removed = diffData.removed.map(cui => ({
+        CUI: cui,
+        Name: prevNames.get(cui) || '',
+        Atoms: atomMap.get(`${cui}|${diffData.sab}`) || []
+      }));
       await fsp.writeFile(path.join(stySourceDiffDir, jsonDiff), JSON.stringify(diffData, null, 2));
       if (generateHtml) {
         await fsp.writeFile(path.join(stySourceDiffDir, htmlDiff), stySabDiffToHtml(diffData));
