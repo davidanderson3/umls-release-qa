@@ -949,8 +949,8 @@ async function generateCountReport(current, previous, fileName, indices, tableNa
 }
 
 async function collectRSABGroups(file) {
-  const withVcui = new Set();
-  const withoutVcui = new Set();
+  const withVcui = new Map();
+  const withoutVcui = new Map();
   try {
     const rl = readline.createInterface({ input: fs.createReadStream(file) });
     for await (const line of rl) {
@@ -959,7 +959,9 @@ async function collectRSABGroups(file) {
         const vcui = parts[0];
         const rsab = parts[3];
         if (!rsab) continue;
-        if (vcui) withVcui.add(rsab); else withoutVcui.add(rsab);
+        const target = vcui ? withVcui : withoutVcui;
+        if (!target.has(rsab)) target.set(rsab, []);
+        target.get(rsab).push(line);
       }
     }
   } catch {}
@@ -973,16 +975,21 @@ async function generateMRSABChangeReport(current, previous) {
   const cur = await collectRSABGroups(currentFile);
   const prev = await collectRSABGroups(previousFile);
 
-  const addedVcui = [...cur.withVcui].filter(x => !prev.withVcui.has(x)).sort();
-  const droppedVcui = [...prev.withVcui].filter(x => !cur.withVcui.has(x)).sort();
-  const addedNoVcui = [...cur.withoutVcui].filter(x => !prev.withoutVcui.has(x)).sort();
-  const droppedNoVcui = [...prev.withoutVcui].filter(x => !cur.withoutVcui.has(x)).sort();
+  const addedVcui = [...cur.withVcui.keys()].filter(x => !prev.withVcui.has(x)).sort();
+  const droppedVcui = [...prev.withVcui.keys()].filter(x => !cur.withVcui.has(x)).sort();
+  const addedNoVcui = [...cur.withoutVcui.keys()].filter(x => !prev.withoutVcui.has(x)).sort();
+  const droppedNoVcui = [...prev.withoutVcui.keys()].filter(x => !cur.withoutVcui.has(x)).sort();
+
+  const addedVcuiLines = addedVcui.flatMap(r => cur.withVcui.get(r));
+  const droppedVcuiLines = droppedVcui.flatMap(r => prev.withVcui.get(r));
+  const addedNoVcuiLines = addedNoVcui.flatMap(r => cur.withoutVcui.get(r));
+  const droppedNoVcuiLines = droppedNoVcui.flatMap(r => prev.withoutVcui.get(r));
 
   const jsonData = {
     current,
     previous,
-    vcuiNotNull: { added: addedVcui, dropped: droppedVcui },
-    vcuiNull: { added: addedNoVcui, dropped: droppedNoVcui }
+    vcuiNotNull: { added: addedVcuiLines, dropped: droppedVcuiLines },
+    vcuiNull: { added: addedNoVcuiLines, dropped: droppedNoVcuiLines }
   };
   await fsp.writeFile(
     path.join(reportsDir, 'MRSAB_report.json'),
@@ -991,40 +998,36 @@ async function generateMRSABChangeReport(current, previous) {
 
   let html = `<h3>MRSAB RSAB Changes (${current} vs ${previous})</h3>`;
   html += '<h4>VCUI not null</h4>';
-  if (addedVcui.length) {
-    html += `<p>Added RSABs (${addedVcui.length})</p><ul>`;
-    for (const r of addedVcui) html += `<li>${escapeHTML(r)}</li>`;
-    html += '</ul>';
+  if (addedVcuiLines.length) {
+    html += `<p>Added rows (${addedVcuiLines.length})</p>`;
+    html += linesToHtmlTable(addedVcuiLines);
   }
-  if (droppedVcui.length) {
-    html += `<p>Dropped RSABs (${droppedVcui.length})</p><ul>`;
-    for (const r of droppedVcui) html += `<li>${escapeHTML(r)}</li>`;
-    html += '</ul>';
+  if (droppedVcuiLines.length) {
+    html += `<p>Dropped rows (${droppedVcuiLines.length})</p>`;
+    html += linesToHtmlTable(droppedVcuiLines);
   }
-  if (!addedVcui.length && !droppedVcui.length) {
+  if (!addedVcuiLines.length && !droppedVcuiLines.length) {
     html += '<p>No changes.</p>';
   }
 
   html += '<h4>VCUI null</h4>';
-  if (addedNoVcui.length) {
-    html += `<p>Added RSABs (${addedNoVcui.length})</p><ul>`;
-    for (const r of addedNoVcui) html += `<li>${escapeHTML(r)}</li>`;
-    html += '</ul>';
+  if (addedNoVcuiLines.length) {
+    html += `<p>Added rows (${addedNoVcuiLines.length})</p>`;
+    html += linesToHtmlTable(addedNoVcuiLines);
   }
-  if (droppedNoVcui.length) {
-    html += `<p>Dropped RSABs (${droppedNoVcui.length})</p><ul>`;
-    for (const r of droppedNoVcui) html += `<li>${escapeHTML(r)}</li>`;
-    html += '</ul>';
+  if (droppedNoVcuiLines.length) {
+    html += `<p>Dropped rows (${droppedNoVcuiLines.length})</p>`;
+    html += linesToHtmlTable(droppedNoVcuiLines);
   }
-  if (!addedNoVcui.length && !droppedNoVcui.length) {
+  if (!addedNoVcuiLines.length && !droppedNoVcuiLines.length) {
     html += '<p>No changes.</p>';
   }
 
   if (
-    !addedVcui.length &&
-    !droppedVcui.length &&
-    !addedNoVcui.length &&
-    !droppedNoVcui.length
+    !addedVcuiLines.length &&
+    !droppedVcuiLines.length &&
+    !addedNoVcuiLines.length &&
+    !droppedNoVcuiLines.length
   ) {
     html += '<p>No MRSAB changes.</p>';
   }
