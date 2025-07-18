@@ -978,6 +978,14 @@ async function generateCountReport(current, previous, fileName, indices, tableNa
     html += `<tr><td>${escapeHTML(row.Key)}</td><td>${row.Previous}</td><td>${row.Current}</td><td class="${diffClass}">${row.Difference}</td><td>${pctTxt}</td></tr>`;
   }
   html += '</tbody></table>';
+  let removedInfo = null;
+  if (tableName === 'MRHIER') {
+    removedInfo = await generateMRHIERRemovalReport(current, previous);
+    if (removedInfo && removedInfo.count) {
+      const link = removedInfo.link.replace(/\.json$/, '.html');
+      html += `<p>${removedInfo.count} nodes were removed. <a href="${link}">View removed nodes</a></p>`;
+    }
+  }
   const wrapped = wrapHtml(`${tableName} Report (${current} vs ${previous})`, html, tableName);
   if (generateHtml) {
     await fsp.writeFile(path.join(reportsDir, `${tableName}_report.html`), wrapped);
@@ -1480,6 +1488,53 @@ async function generateMRFILESReport(current, previous) {
   }
 }
 
+async function generateMRHIERRemovalReport(current, previous) {
+  const curFile = path.join(releasesDir, current, 'META', 'MRHIER.RRF');
+  const prevFile = path.join(releasesDir, previous, 'META', 'MRHIER.RRF');
+  const curLines = new Set(await readAllLines(curFile));
+  const prevLines = await readAllLines(prevFile);
+  const removedLines = prevLines.filter(l => !curLines.has(l));
+  if (!removedLines.length) {
+    return { count: 0, link: '' };
+  }
+  const auis = new Set();
+  for (const line of removedLines) {
+    const parts = line.split('|');
+    if (parts[1]) auis.add(parts[1]);
+  }
+  const names = await collectConsoNames(
+    path.join(releasesDir, previous, 'META', 'MRCONSO.RRF'),
+    auis,
+    new Set()
+  );
+  const removed = removedLines.map(line => {
+    const p = line.split('|');
+    return {
+      CUI: p[0] || '',
+      AUI: p[1] || '',
+      SAB: p[4] || '',
+      PTR: p[7] || p[6] || '',
+      STR: names.byAUI.get(p[1]) || ''
+    };
+  });
+  await fsp.mkdir(diffsDir, { recursive: true });
+  const jsonName = 'MRHIER_removed_nodes.json';
+  const jsonPath = path.join(diffsDir, jsonName);
+  await fsp.writeFile(jsonPath, JSON.stringify({ current, previous, removed }, null, 2));
+  if (generateHtml) {
+    const htmlName = jsonName.replace(/\.json$/, '.html');
+    let html = `<h3>Removed MRHIER Nodes (${current} vs ${previous})</h3>`;
+    html += '<table><thead><tr><th>CUI</th><th>AUI</th><th>Name</th><th>SAB</th><th>PTR</th></tr></thead><tbody>';
+    for (const r of removed) {
+      html += `<tr><td>${r.CUI}</td><td>${r.AUI}</td><td>${escapeHTML(r.STR)}</td><td>${escapeHTML(r.SAB)}</td><td>${escapeHTML(r.PTR)}</td></tr>`;
+    }
+    html += '</tbody></table>';
+    await fsp.writeFile(path.join(diffsDir, htmlName),
+      wrapDiffHtml('MRHIER Removed Nodes', html, 'MRHIER Report', '../MRHIER_report.html', 'MRHIER'));
+  }
+  return { count: removed.length, link: `diffs/${jsonName}` };
+}
+
 async function readMRRANKOrders(file) {
   const map = new Map();
   try {
@@ -1629,6 +1684,7 @@ async function generateMRRANKReport(current, previous) {
     MRDOC: hashOf(generateMRDOCReport.toString()),
     MRCOLS: hashOf(generateMRCOLSReport.toString()),
     MRFILES: hashOf(generateMRFILESReport.toString()),
+    MRHIERRemoval: hashOf(generateMRHIERRemovalReport.toString()),
     MRRANK: hashOf(generateMRRANKReport.toString()),
     wrapHtml: hashOf(wrapHtml.toString()),
     wrapDiffHtml: hashOf(wrapDiffHtml.toString()),
@@ -1670,7 +1726,9 @@ async function generateMRRANKReport(current, previous) {
   }
   const runMRCONSO = forceRun || !sameReleases || lastHashes.MRCONSO !== currentHashes.MRCONSO;
   const runSTYReports = forceRun || !sameReleases || lastHashes.STYReports !== currentHashes.STYReports || !sameConfig;
-  const runCount = forceRun || !sameReleases || lastHashes.countReport !== currentHashes.countReport;
+  const runCount = forceRun || !sameReleases ||
+    lastHashes.countReport !== currentHashes.countReport ||
+    lastHashes.MRHIERRemoval !== currentHashes.MRHIERRemoval;
   const runMRSABChange = forceRun || !sameReleases || lastHashes.MRSABChange !== currentHashes.MRSABChange;
   const runMRREL = forceRun || !sameReleases || lastHashes.MRREL !== currentHashes.MRREL;
   const runMRDOC = forceRun || !sameReleases || lastHashes.MRDOC !== currentHashes.MRDOC;
