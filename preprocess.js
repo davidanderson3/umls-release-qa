@@ -313,6 +313,42 @@ function linesToHtmlTableWithHeaders(lines, headers = []) {
   return html;
 }
 
+function computeMRRANKDiff(prevLines, curLines) {
+  const prevMap = new Map();
+  for (const line of prevLines) {
+    const key = line.split('|').slice(1).join('|');
+    if (!prevMap.has(key)) prevMap.set(key, line);
+  }
+  const curMap = new Map();
+  for (const line of curLines) {
+    const key = line.split('|').slice(1).join('|');
+    if (!curMap.has(key)) curMap.set(key, line);
+  }
+  const added = [];
+  const removed = [];
+  for (const [key, line] of curMap) {
+    if (!prevMap.has(key)) added.push(line);
+  }
+  for (const [key, line] of prevMap) {
+    if (!curMap.has(key)) removed.push(line);
+  }
+  added.sort();
+  removed.sort();
+  return { added, removed };
+}
+
+function rowsToDiffTable(added, removed) {
+  if (!added.length && !removed.length) return '';
+  let html = '<table class="diff"><tbody>';
+  const max = Math.max(added.length, removed.length);
+  for (let i = 0; i < max; i++) {
+    if (removed[i]) html += `<tr><td class="diff-remove">- ${escapeHTML(removed[i])}</td></tr>`;
+    if (added[i]) html += `<tr><td class="diff-add">+ ${escapeHTML(added[i])}</td></tr>`;
+  }
+  html += '</tbody></table>';
+  return html;
+}
+
 async function readCountsMRCONSO(file) {
   const counts = new Map();
   try {
@@ -1458,10 +1494,7 @@ async function generateMRRANKReport(current, previous) {
   const prevMap = await readMRRANKOrders(prevFile);
   const curLines = await readAllLines(curFile);
   const prevLines = await readAllLines(prevFile);
-  const curSet = new Set(curLines);
-  const prevSet = new Set(prevLines);
-  const addedRows = curLines.filter(l => !prevSet.has(l));
-  const removedRows = prevLines.filter(l => !curSet.has(l));
+  const { added: addedRows, removed: removedRows } = computeMRRANKDiff(prevLines, curLines);
 
   const sabs = new Set([...curMap.keys(), ...prevMap.keys()]);
   const summary = [];
@@ -1492,13 +1525,9 @@ async function generateMRRANKReport(current, previous) {
       html += `<tr><td>${escapeHTML(row.SAB)}</td><td>${escapeHTML(row.previousOrder.join(', '))}</td><td>${escapeHTML(row.currentOrder.join(', '))}</td><td>${escapeHTML(addedTxt)}</td><td>${escapeHTML(remTxt)}</td></tr>`;
     }
     html += '</tbody></table>';
-    if (addedRows.length) {
-      html += `<h4>Added Rows (${addedRows.length})</h4>`;
-      html += linesToHtmlTable(addedRows);
-    }
-    if (removedRows.length) {
-      html += `<h4>Removed Rows (${removedRows.length})</h4>`;
-      html += linesToHtmlTable(removedRows);
+    if (addedRows.length || removedRows.length) {
+      html += '<h4>Row Changes</h4>';
+      html += rowsToDiffTable(addedRows, removedRows);
     }
   }
   if (generateHtml) {
