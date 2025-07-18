@@ -36,7 +36,8 @@
       try {
         const resp = await fetch(apiUrl('/api/texts'));
         if (resp.ok) {
-          texts = await resp.json();
+          const remote = await resp.json();
+          texts = { ...remote, ...texts };
         }
       } catch { }
       texts = texts || {};

@@ -26,17 +26,27 @@ function wrapHtml(title, body, reportKey = '') {
   const rerunScript = `<script>document.getElementById('rerun-report').addEventListener('click',()=>{if(parent&&parent.runReports){parent.runReports(true);}else{location.reload();}});</script>`;
   const instrScript = reportKey ?
     `<script>
+      const match = window.location.pathname.match(/^\\/([^/]+)/);
+      const rel = match && match[1] !== 'reports' ? match[1] : '';
       async function loadInstr(){
-        try{const resp=await fetch('/api/texts');
+        let val = '';
+        try{
+          const url = new URL('/api/texts', window.location);
+          if(rel) url.searchParams.set('release', rel);
+          const resp=await fetch(url);
           const data=resp.ok?await resp.json():{};
-          const txt=(data.reportInstructions||{})['${reportKey}']||'';
-          document.getElementById('instructions').textContent=txt;
+          val=(data.reportInstructions||{})['${reportKey}']||'';
         }catch{}
+        document.getElementById('instructions').textContent=val;
       }
       async function saveInstr(){
         const val=document.getElementById('instructions').textContent;
         const payload={reportInstructions:{'${reportKey}':val}};
-        try{await fetch('/api/texts',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});}catch{}
+        try{
+          const url = new URL('/api/texts', window.location);
+          if(rel) url.searchParams.set('release', rel);
+          await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+        }catch{}
       }
       loadInstr();
       document.getElementById('instructions').addEventListener('blur',saveInstr);
@@ -207,30 +217,43 @@ async function listFiles(dir, base = dir) {
   return result;
 }
 
-async function loadTexts() {
+function getTextsFile(release = '') {
+  return release ? path.join(__dirname, `texts-${release}.json`) : textsFile;
+}
+
+async function loadTexts(release = '') {
+  const base = await (async () => {
+    try { return JSON.parse(await fsp.readFile(textsFile, 'utf-8')); } catch { return {}; }
+  })();
+  if (!release) return { ...defaultTexts, ...base };
   try {
-    const data = await fsp.readFile(textsFile, 'utf-8');
-    return { ...defaultTexts, ...JSON.parse(data) };
+    const data = await fsp.readFile(getTextsFile(release), 'utf-8');
+    return { ...defaultTexts, ...base, ...JSON.parse(data) };
   } catch {
-    return { ...defaultTexts };
+    return { ...defaultTexts, ...base };
   }
 }
 
-async function saveTexts(texts) {
-  const existing = await loadTexts();
-  const merged = { ...defaultTexts, ...existing, ...texts };
-  await fsp.writeFile(textsFile, JSON.stringify(merged, null, 2));
-  return merged;
+async function saveTexts(texts, release = '') {
+  const file = getTextsFile(release);
+  let existing = {};
+  try { existing = JSON.parse(await fsp.readFile(file, 'utf-8')); } catch {}
+  const merged = { ...existing, ...texts };
+  await fsp.writeFile(file, JSON.stringify(merged, null, 2));
+  const base = release ? await loadTexts('') : {};
+  return { ...defaultTexts, ...base, ...merged };
 }
 
 app.get('/api/texts', async (req, res) => {
-  const data = await loadTexts();
+  const rel = req.query.release || '';
+  const data = await loadTexts(rel);
   res.json(data);
 });
 
 app.post('/api/texts', async (req, res) => {
+  const rel = req.query.release || '';
   try {
-    const newTexts = await saveTexts(req.body || {});
+    const newTexts = await saveTexts(req.body || {}, rel);
     res.json(newTexts);
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -456,7 +479,7 @@ app.get('/api/line-count-diff', async (req, res) => {
     await fsp.mkdir(reportsDir, { recursive: true });
     await fsp.writeFile(precomputed, JSON.stringify({ current, previous, files: result }, null, 2));
 
-    const texts = await loadTexts();
+    const texts = await loadTexts(current);
     const notes = texts.lineCountNotes || {};
     let html = `<h3>Line Count Comparison (${current} vs ${previous})</h3>`;
     html += '<table style="border:1px solid #ccc;border-collapse:collapse"><thead><tr><th>File</th><th>Previous</th><th>Current</th><th>Change</th><th>%</th><th>Status</th><th>Report</th><th>Notes</th></tr></thead><tbody>';
@@ -474,17 +497,22 @@ app.get('/api/line-count-diff', async (req, res) => {
       html += `<p>Unchanged files: ${unchanged.join(', ')}</p>`;
     }
     html += `<script type="module">
+      const relMatch = window.location.pathname.match(/^\\/([^/]+)/);
+      const rel = relMatch && relMatch[1] !== 'reports' ? relMatch[1] : '';
       async function load() {
+        let notes = {};
         try {
-          const resp = await fetch('/api/texts');
+          const url = new URL('/api/texts', window.location);
+          if (rel) url.searchParams.set('release', rel);
+          const resp = await fetch(url);
           const data = resp.ok ? await resp.json() : {};
-          const notes = data.lineCountNotes || {};
-          document.querySelectorAll('td[data-file]').forEach(td => {
-            td.textContent = notes[td.dataset.file] || td.textContent;
-            td.contentEditable = true;
-            td.addEventListener('blur', save);
-          });
+          notes = data.lineCountNotes || {};
         } catch {}
+        document.querySelectorAll('td[data-file]').forEach(td => {
+          td.textContent = notes[td.dataset.file] || td.textContent;
+          td.contentEditable = true;
+          td.addEventListener('blur', save);
+        });
       }
       async function save() {
         const notes = {};
@@ -492,7 +520,13 @@ app.get('/api/line-count-diff', async (req, res) => {
           notes[td.dataset.file] = td.textContent;
         });
         try {
-          await fetch('/api/texts', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ lineCountNotes: notes }) });
+          const url = new URL('/api/texts', window.location);
+          if (rel) url.searchParams.set('release', rel);
+          await fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ lineCountNotes: notes })
+          });
         } catch {}
       }
       load();
