@@ -3,8 +3,8 @@
   "header": "UMLS Release QA",
   "runPreprocessButton": "Run Reports",
   "rerunAllButton": "Re-run All Reports",
-  "note1": "This application compares different versions of the UMLS Metathesaurus for QA purposes. Use the UMLS Metathesaurus Full Subset. The META folder for the current release and the previous release must be in the releases folder (e.g. releases/2025AA/META). The reports take some time to run. You can monitor their progress in the terminal after running 'npm start'. ",
-  "note2": "Ultimately we want to do two things with this QA system: -Check for obvious issues with the release. -Identify major changes that might be work mentioning in release notes.",
+  "note1": "This application compares different versions of the UMLS Metathesaurus for QA purposes. Use the UMLS Metathesaurus Full Subset. The META folder for the current release and the previous release must be in the releases folder (e.g. releases/2025AA/META). The reports take some time to run. ",
+  "note2": "Ultimately we want to do two things with this QA system: -Check for obvious issues with the release. -Identify major changes that might be work mentioning in release notes. testing",
   "note3": "",
   "lineCountNotes": {
     "AMBIGLUI.RRF": "Expect small changes.",
@@ -54,7 +54,7 @@
     "mmsys.log": "Expect slight changes. "
   },
   "reportInstructions": {
-    "line-count-diff": "Below, a line count comparison will display. This shows the number of rows in the previous release and the current release and how much it changed. If there is a report for a particular file, it will be linked here. The notes field will guide on on how to interpret the report results. You can edit the notes field. "
+    "MRCOLS": "This will typically not change unless a file is added or removed. A new language could result in a word index being added, such as in the case of Icelandic in 2025AA. "
   },
   "compareLinesButton": "Compare Line Counts"
 }
