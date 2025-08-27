@@ -540,12 +540,12 @@ function stySabDiffToHtml(data) {
   }
   if (data.removed && data.removed.length) {
     html += `<h4>Removed (${data.removed.length})</h4>`;
-    html += '<table><thead><tr><th>CUI</th><th>Names</th></tr></thead><tbody>';
+    html += '<table><thead><tr><th>CUI</th><th>Name</th><th>Atoms</th></tr></thead><tbody>';
     for (const r of data.removed) {
-      const nameLines = (r.Atoms || [])
+      const atomLines = (r.Atoms || [])
         .map(a => escapeHTML(a.STR || ''))
         .join('<br>');
-      html += `<tr><td>${r.CUI}</td><td>${nameLines}</td></tr>`;
+      html += `<tr><td>${r.CUI}</td><td>${escapeHTML(r.Name || '')}</td><td>${atomLines}</td></tr>`;
     }
     html += '</tbody></table>';
   }
@@ -684,9 +684,12 @@ async function readCUISABMap(file) {
 }
 
 // Collect preferred names for a set of CUIs from MRCONSO
-// Only rows with TS=P, STT=PF, and ISPREF=Y are considered
-async function collectPreferredNames(file, cuis) {
+// Only rows with TS=P, STT=PF, and ISPREF=Y are considered.
+// When sabFilter is provided, prefer STR values for that SAB and
+// fall back to a global preferred name if none exist.
+async function collectPreferredNames(file, cuis, sabFilter = '') {
   const names = new Map();
+  const fallback = sabFilter ? new Map() : null;
   if (!cuis.size) return names;
   try {
     const rl = readline.createInterface({ input: fs.createReadStream(file) });
@@ -694,16 +697,33 @@ async function collectPreferredNames(file, cuis) {
       const parts = line.split('|');
       if (parts.length < 15) continue;
       const cui = parts[0];
-      if (!cuis.has(cui) || names.has(cui)) continue;
+      if (!cuis.has(cui)) continue;
       const ts = parts[2];
       const stt = parts[4];
       const ispref = parts[6];
       if (ts === 'P' && stt === 'PF' && ispref === 'Y') {
-        names.set(cui, parts[14]);
-        if (names.size === cuis.size) break;
+        const sab = parts[11] || '-';
+        const str = parts[14];
+        if (sabFilter) {
+          if (sab === sabFilter && !names.has(cui)) {
+            names.set(cui, str);
+          } else if (fallback && !fallback.has(cui)) {
+            fallback.set(cui, str);
+          }
+        } else if (!names.has(cui)) {
+          names.set(cui, str);
+          if (names.size === cuis.size) break;
+        }
       }
     }
   } catch {}
+  if (sabFilter && fallback) {
+    for (const cui of cuis) {
+      if (!names.has(cui) && fallback.has(cui)) {
+        names.set(cui, fallback.get(cui));
+      }
+    }
+  }
   return names;
 }
 
@@ -810,8 +830,8 @@ async function generateSTYReports(current, previous, reportConfig = {}) {
   const prevSabCUIs = includeBreakdowns ? computeSTYSABCUIMap(styPrevMap, sabPrevMap) : new Map();
 
   const diffEntries = [];
-  const addedCUIs = new Set();
-  const removedCUIs = new Set();
+  const sabAddedCUIs = new Map();
+  const sabRemovedCUIs = new Map();
 
   await fsp.mkdir(styBreakdownDir, { recursive: true });
   await fsp.mkdir(stySourceDiffDir, { recursive: true });
@@ -862,8 +882,10 @@ async function generateSTYReports(current, previous, reportConfig = {}) {
           const htmlDiff = jsonDiff.replace(/\.json$/, '.html');
           const diffData = { current, previous, sty, sab, added, removed };
           diffEntries.push({ jsonDiff, htmlDiff, diffData });
-          for (const c of added) addedCUIs.add(c);
-          for (const c of removed) removedCUIs.add(c);
+          if (!sabAddedCUIs.has(sab)) sabAddedCUIs.set(sab, new Set());
+          if (!sabRemovedCUIs.has(sab)) sabRemovedCUIs.set(sab, new Set());
+          for (const c of added) sabAddedCUIs.get(sab).add(c);
+          for (const c of removed) sabRemovedCUIs.get(sab).add(c);
           link2 = `sty_source_diffs/${jsonDiff}`;
           detail.push({ SAB: sab, Removed: removed.length, Added: added.length, Difference: d, Percent: pp, link: link2 });
         }
@@ -901,8 +923,14 @@ async function generateSTYReports(current, previous, reportConfig = {}) {
   }
 
   if (diffEntries.length) {
-    const curNames = await collectPreferredNames(consoCurFile, addedCUIs);
-    const prevNames = await collectPreferredNames(consoPrevFile, removedCUIs);
+    const curNamesBySab = new Map();
+    for (const [sab, set] of sabAddedCUIs) {
+      curNamesBySab.set(sab, await collectPreferredNames(consoCurFile, set, sab));
+    }
+    const prevNamesBySab = new Map();
+    for (const [sab, set] of sabRemovedCUIs) {
+      prevNamesBySab.set(sab, await collectPreferredNames(consoPrevFile, set, sab));
+    }
     const pairSet = new Set();
     for (const { diffData } of diffEntries) {
       for (const cui of diffData.removed) {
@@ -911,11 +939,14 @@ async function generateSTYReports(current, previous, reportConfig = {}) {
     }
     const atomMap = await gatherCuiSabAtoms(consoPrevFile, pairSet);
     for (const { jsonDiff, htmlDiff, diffData } of diffEntries) {
+      const sab = diffData.sab;
+      const curNames = curNamesBySab.get(sab) || new Map();
+      const prevNames = prevNamesBySab.get(sab) || new Map();
       diffData.added = diffData.added.map(cui => ({ CUI: cui, Name: curNames.get(cui) || '' }));
       diffData.removed = diffData.removed.map(cui => ({
         CUI: cui,
         Name: prevNames.get(cui) || '',
-        Atoms: atomMap.get(`${cui}|${diffData.sab}`) || []
+        Atoms: atomMap.get(`${cui}|${sab}`) || []
       }));
       await fsp.writeFile(path.join(stySourceDiffDir, jsonDiff), JSON.stringify(diffData, null, 2));
       if (generateHtml) {
