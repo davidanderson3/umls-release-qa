@@ -838,7 +838,7 @@ async function generateSTYReports(current, previous, reportConfig = {}) {
         const p = prevSet.size;
         const d = c - p;
         let link2 = '';
-        if (d !== 0) {
+        if (d !== 0 && Math.sign(d) === Math.sign(diff)) {
           const pp = p === 0 ? Infinity : (d / p * 100);
           const added = [...curSet].filter(x => !prevSet.has(x));
           const removed = [...prevSet].filter(x => !curSet.has(x));
