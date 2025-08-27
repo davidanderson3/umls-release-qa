@@ -834,8 +834,23 @@ async function generateSTYReports(current, previous, reportConfig = {}) {
         const key = `${sty}|${sab}`;
         const curSet = curSabCUIs.get(key) || new Set();
         const prevSet = prevSabCUIs.get(key) || new Set();
-        const added = [...curSet].filter(x => !prevSet.has(x));
-        const removed = [...prevSet].filter(x => !curSet.has(x));
+
+        // Concepts newly appearing in this SAB (regardless of STY changes)
+        const added = [];
+        for (const cui of curSet) {
+          const prevSabs = sabPrevMap.get(cui) || new Set();
+          if (!prevSabs.has(sab)) added.push(cui);
+        }
+
+        // Concepts no longer present in this SAB
+        const removed = [];
+        const dropped = droppedStySabMap.get(key);
+        if (dropped) removed.push(...dropped);
+        for (const cui of prevSet) {
+          const curSabs = sabCurMap.get(cui) || new Set();
+          if (!curSabs.has(sab) && !removed.includes(cui)) removed.push(cui);
+        }
+
         if (added.length || removed.length) {
           const d = added.length - removed.length;
           const p = prevSet.size;
