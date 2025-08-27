@@ -180,7 +180,8 @@
     function updateUrl(report, replace = false) {
       const url = new URL(window.location);
       if (report && report !== 'line-count-diff.html') {
-        url.searchParams.set('report', encodeURIComponent(report));
+        const clean = decodeURIComponent(report);
+        url.searchParams.set('report', encodeURIComponent(clean));
       } else {
         url.searchParams.delete('report');
       }
@@ -198,7 +199,17 @@
     function initialReport() {
       const params = new URLSearchParams(window.location.search);
       const raw = params.get('report');
-      return raw ? decodeURIComponent(raw) : 'line-count-diff.html';
+      if (!raw) return 'line-count-diff.html';
+      let clean = raw;
+      try {
+        let next;
+        do {
+          next = decodeURIComponent(clean);
+          if (next === clean) break;
+          clean = next;
+        } while (true);
+      } catch { }
+      return clean;
     }
 
     async function loadReports(file = initialReport(), replace = false) {
