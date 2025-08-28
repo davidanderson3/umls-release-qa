@@ -963,24 +963,26 @@ async function generateSTYReports(current, previous, reportConfig = {}) {
         const dropped = droppedStySabMap.get(key);
         if (dropped) removed.push(...dropped);
 
-        if (added.length || removed.length) {
-          const d = added.length - removed.length;
-          const p = prevSet.size;
-          const pp = p === 0 ? Infinity : (d / p * 100);
-          let link2 = '';
-          const safeSty = sanitizeComponent(sty);
-          const safeSab = sanitizeComponent(sab);
-          const jsonDiff = `${safeSty}_${safeSab}_changes.json`;
-          const htmlDiff = jsonDiff.replace(/\.json$/, '.html');
-          const diffData = { current, previous, sty, sab, added, removed };
-          diffEntries.push({ jsonDiff, htmlDiff, diffData });
+        const d = added.length - removed.length;
+        const p = prevSet.size;
+        const pp = p === 0 ? Infinity : (d / p * 100);
+        let link2 = '';
+        const safeSty = sanitizeComponent(sty);
+        const safeSab = sanitizeComponent(sab);
+        const jsonDiff = `${safeSty}_${safeSab}_changes.json`;
+        const htmlDiff = jsonDiff.replace(/\.json$/, '.html');
+        const diffData = { current, previous, sty, sab, added, removed };
+        diffEntries.push({ jsonDiff, htmlDiff, diffData });
+        if (added.length) {
           if (!sabAddedCUIs.has(sab)) sabAddedCUIs.set(sab, new Set());
-          if (!sabRemovedCUIs.has(sab)) sabRemovedCUIs.set(sab, new Set());
           for (const c of added) sabAddedCUIs.get(sab).add(c);
-          for (const c of removed) sabRemovedCUIs.get(sab).add(c);
-          link2 = `sty_source_diffs/${jsonDiff}`;
-          detail.push({ SAB: sab, Removed: removed.length, Added: added.length, Difference: d, Percent: pp, link: link2 });
         }
+        if (removed.length) {
+          if (!sabRemovedCUIs.has(sab)) sabRemovedCUIs.set(sab, new Set());
+          for (const c of removed) sabRemovedCUIs.get(sab).add(c);
+        }
+        link2 = `sty_source_diffs/${jsonDiff}`;
+        detail.push({ SAB: sab, Removed: removed.length, Added: added.length, Difference: d, Percent: pp, link: link2 });
       }
       if (detail.length) {
         // Sort breakdown rows by SAB for readability
