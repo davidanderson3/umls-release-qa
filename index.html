@@ -243,13 +243,28 @@
         const sync = () => {
           try {
             const doc = frame.contentWindow.document;
+            // Fallback: if iframe navigated (not via our click handler), sync URL
             const p = frame.contentWindow.location.pathname.replace(/^\//, '');
             if (p.startsWith('reports/')) updateUrl(p.slice('reports/'.length), firstLoad ? replace : false);
             firstLoad = false;
+            // Intercept clicks inside the iframe so we drive navigation
+            // from the parent (keeps history/back/forward consistent).
             doc.addEventListener('click', ev => {
-              if (ev.target.closest('a')) {
-                document.getElementById('line-results').scrollIntoView({ behavior: 'smooth' });
-              }
+              const anchor = ev.target && ev.target.closest && ev.target.closest('a[href]');
+              if (!anchor) return;
+              const href = anchor.getAttribute('href') || '';
+              if (!href || href.startsWith('#')) return;
+              try {
+                const resolved = new URL(href, frame.contentWindow.location.href);
+                const path = resolved.pathname.replace(/^\/+/, '');
+                if (path.startsWith('reports/')) {
+                  ev.preventDefault();
+                  const file = path.slice('reports/'.length);
+                  document.getElementById('line-results').scrollIntoView({ behavior: 'smooth' });
+                  updateUrl(file, false);
+                  loadReports(file, true);
+                }
+              } catch { /* ignore */ }
             });
             frame.style.height = doc.documentElement.scrollHeight + 'px';
           } catch { }
